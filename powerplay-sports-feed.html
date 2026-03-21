@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PowerPlay Windsor – Sports Feed</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0a0c10;
+  --surface: #12151c;
+  --surface2: #1a1e28;
+  --surface3: #20242f;
+  --border: rgba(255,255,255,0.07);
+  --accent: #e8323a;
+  --accent2: #f5a623;
+  --text: #f0f2f5;
+  --text-muted: #7a8090;
+  --green: #2ecc71;
+  --red-wings: #ce1126;
+  --pistons: #c8102e;
+  --lions: #0076b6;
+  --tigers-navy: #0c2340;
+  --blue-jays: #134a8e;
+  --maple-leafs: #00205b;
+  --canadiens: #af1e2d;
+  --toronto-fc: #b81137;
+  --cfl: #cc0000;
+}
+
+body { font-family:'Barlow',sans-serif; background:var(--bg); color:var(--text); }
+
+#ppw-widget {
+  width:100%; max-width:960px; margin:0 auto;
+  background:var(--bg); border:1px solid var(--border);
+  border-radius:12px; overflow:hidden;
+}
+
+/* ── HEADER ── */
+.ppw-header {
+  background:linear-gradient(135deg,#0d0f14 0%,#1a1e28 100%);
+  border-bottom:2px solid var(--accent);
+  padding:18px 24px; display:flex; align-items:center;
+  justify-content:space-between; flex-wrap:wrap; gap:12px;
+}
+.ppw-logo { display:flex; align-items:center; gap:12px; }
+.ppw-logo-icon {
+  width:40px; height:40px; background:var(--accent); border-radius:8px;
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:18px; color:white; letter-spacing:-1px;
+}
+.ppw-logo-text { font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:22px; letter-spacing:0.5px; line-height:1.1; }
+.ppw-logo-text span { color:var(--accent); }
+.ppw-logo-sub { font-size:11px; color:var(--text-muted); font-weight:400; letter-spacing:1px; text-transform:uppercase; }
+.ppw-refresh-btn {
+  background:rgba(232,50,58,0.15); border:1px solid rgba(232,50,58,0.4);
+  color:var(--accent); font-family:'Barlow Condensed',sans-serif;
+  font-weight:700; font-size:13px; letter-spacing:1px; text-transform:uppercase;
+  padding:8px 16px; border-radius:6px; cursor:pointer; transition:all 0.2s;
+  display:flex; align-items:center; gap:6px;
+}
+.ppw-refresh-btn:hover { background:rgba(232,50,58,0.3); border-color:var(--accent); }
+.ppw-refresh-btn:disabled { opacity:0.5; cursor:not-allowed; }
+
+/* ── VIEW TOGGLE ── */
+.ppw-view-toggle {
+  background:#0d0f14; border-bottom:1px solid var(--border);
+  padding:0 16px; display:flex; overflow-x:auto;
+}
+.ppw-view-btn {
+  font-family:'Barlow Condensed',sans-serif; font-weight:700;
+  font-size:12px; letter-spacing:1px; text-transform:uppercase;
+  padding:12px 16px; background:transparent;
+  border:none; border-bottom:3px solid transparent;
+  color:var(--text-muted); cursor:pointer; transition:all 0.2s; white-space:nowrap;
+}
+.ppw-view-btn:hover { color:var(--text); }
+.ppw-view-btn.active { color:var(--accent); border-bottom-color:var(--accent); }
+
+/* ── TEAM FILTERS ── */
+.ppw-filters {
+  background:var(--surface); padding:10px 16px;
+  display:flex; gap:6px; flex-wrap:wrap;
+  border-bottom:1px solid var(--border);
+}
+.ppw-filter-btn {
+  font-family:'Barlow Condensed',sans-serif; font-weight:700;
+  font-size:11px; letter-spacing:0.5px; text-transform:uppercase;
+  padding:5px 11px; border-radius:20px; border:1px solid var(--border);
+  background:transparent; color:var(--text-muted); cursor:pointer;
+  transition:all 0.2s; white-space:nowrap; display:flex; align-items:center; gap:5px;
+}
+.ppw-filter-btn:hover { color:var(--text); border-color:rgba(255,255,255,0.2); }
+.ppw-filter-btn.active { color:white; border-color:transparent; }
+.ppw-filter-btn[data-team="All"].active         { background:var(--accent); }
+.ppw-filter-btn[data-team="Red Wings"].active    { background:var(--red-wings); }
+.ppw-filter-btn[data-team="Pistons"].active      { background:var(--pistons); }
+.ppw-filter-btn[data-team="Lions"].active        { background:var(--lions); }
+.ppw-filter-btn[data-team="Tigers"].active       { background:var(--tigers-navy); border-color:#f5a623 !important; }
+.ppw-filter-btn[data-team="Blue Jays"].active    { background:var(--blue-jays); }
+.ppw-filter-btn[data-team="Maple Leafs"].active  { background:var(--maple-leafs); }
+.ppw-filter-btn[data-team="Canadiens"].active    { background:var(--canadiens); }
+.ppw-filter-btn[data-team="Toronto FC"].active   { background:var(--toronto-fc); }
+.ppw-filter-btn[data-team="CFL"].active          { background:var(--cfl); }
+.team-dot { width:7px; height:7px; border-radius:50%; display:inline-block; flex-shrink:0; }
+
+/* ── CONTENT ── */
+.ppw-content { padding:20px; min-height:420px; }
+
+.ppw-status {
+  display:flex; align-items:center; justify-content:space-between;
+  margin-bottom:16px; font-size:12px; color:var(--text-muted); font-weight:500;
+}
+.ppw-live-dot {
+  width:7px; height:7px; background:var(--green); border-radius:50%;
+  display:inline-block; margin-right:5px; animation:pulse 2s infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1}50%{opacity:0.3} }
+
+/* ── LOADING / ERROR ── */
+.ppw-loading {
+  display:flex; flex-direction:column; align-items:center;
+  justify-content:center; padding:60px 20px; gap:16px;
+}
+.ppw-spinner {
+  width:40px; height:40px; border:3px solid var(--border);
+  border-top-color:var(--accent); border-radius:50%; animation:spin 0.8s linear infinite;
+}
+@keyframes spin { to{transform:rotate(360deg)} }
+.ppw-loading p { font-family:'Barlow Condensed',sans-serif; font-size:15px; color:var(--text-muted); letter-spacing:1px; text-transform:uppercase; }
+.ppw-error { text-align:center; padding:48px 20px; color:var(--text-muted); }
+.ppw-error-icon { font-size:36px; margin-bottom:12px; }
+.ppw-error h3 { font-family:'Barlow Condensed',sans-serif; font-size:18px; margin-bottom:8px; color:var(--text); }
+.ppw-error p { font-size:14px; line-height:1.5; }
+
+/* ── NEWS CARDS ── */
+.ppw-stories { display:flex; flex-direction:column; gap:12px; }
+.ppw-story-card {
+  background:var(--surface); border:1px solid var(--border);
+  border-radius:10px; padding:16px 18px;
+  transition:all 0.2s; border-left:3px solid transparent;
+  animation:fadeUp 0.4s ease forwards; opacity:0;
+}
+@keyframes fadeUp { from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)} }
+.ppw-story-card:hover { background:var(--surface2); border-color:rgba(255,255,255,0.12); transform:translateX(2px); }
+.ppw-story-card[data-team="Red Wings"]   { border-left-color:var(--red-wings); }
+.ppw-story-card[data-team="Pistons"]     { border-left-color:var(--pistons); }
+.ppw-story-card[data-team="Lions"]       { border-left-color:var(--lions); }
+.ppw-story-card[data-team="Tigers"]      { border-left-color:var(--accent2); }
+.ppw-story-card[data-team="Blue Jays"]   { border-left-color:var(--blue-jays); }
+.ppw-story-card[data-team="Maple Leafs"] { border-left-color:var(--maple-leafs); }
+.ppw-story-card[data-team="Canadiens"]   { border-left-color:var(--canadiens); }
+.ppw-story-card[data-team="Toronto FC"]  { border-left-color:var(--toronto-fc); }
+.ppw-story-card[data-team="CFL"]         { border-left-color:var(--cfl); }
+
+.ppw-story-meta { display:flex; align-items:center; gap:8px; margin-bottom:6px; flex-wrap:wrap; }
+.ppw-team-badge {
+  font-family:'Barlow Condensed',sans-serif; font-weight:700;
+  font-size:10px; letter-spacing:1px; text-transform:uppercase;
+  padding:2px 8px; border-radius:3px; color:white;
+}
+.badge-Red-Wings   { background:var(--red-wings); }
+.badge-Pistons     { background:var(--pistons); }
+.badge-Lions       { background:var(--lions); }
+.badge-Tigers      { background:var(--tigers-navy); color:var(--accent2); border:1px solid var(--accent2); }
+.badge-Blue-Jays   { background:var(--blue-jays); }
+.badge-Maple-Leafs { background:var(--maple-leafs); }
+.badge-Canadiens   { background:var(--canadiens); }
+.badge-Toronto-FC  { background:var(--toronto-fc); }
+.badge-CFL         { background:var(--cfl); }
+
+.ppw-story-source { font-size:11px; color:var(--text-muted); font-weight:500; }
+.ppw-story-title { font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:17px; line-height:1.25; color:var(--text); margin-bottom:6px; }
+.ppw-story-snippet { font-size:13px; line-height:1.55; color:var(--text-muted); display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+
+/* ── GAME CARDS ── */
+.ppw-games-grid { display:flex; flex-direction:column; gap:10px; }
+.ppw-section-label {
+  font-family:'Barlow Condensed',sans-serif; font-weight:800;
+  font-size:11px; letter-spacing:2px; text-transform:uppercase;
+  color:var(--text-muted); padding:4px 0 10px;
+  border-bottom:1px solid var(--border); margin-bottom:12px;
+}
+.ppw-game-card {
+  background:var(--surface); border:1px solid var(--border);
+  border-radius:10px; padding:14px 18px;
+  display:flex; align-items:center; gap:16px;
+  animation:fadeUp 0.4s ease forwards; opacity:0;
+  transition:background 0.2s; border-left:3px solid transparent;
+}
+.ppw-game-card:hover { background:var(--surface2); }
+.ppw-game-card[data-team="Red Wings"]   { border-left-color:var(--red-wings); }
+.ppw-game-card[data-team="Pistons"]     { border-left-color:var(--pistons); }
+.ppw-game-card[data-team="Lions"]       { border-left-color:var(--lions); }
+.ppw-game-card[data-team="Tigers"]      { border-left-color:var(--accent2); }
+.ppw-game-card[data-team="Blue Jays"]   { border-left-color:var(--blue-jays); }
+.ppw-game-card[data-team="Maple Leafs"] { border-left-color:var(--maple-leafs); }
+.ppw-game-card[data-team="Canadiens"]   { border-left-color:var(--canadiens); }
+.ppw-game-card[data-team="Toronto FC"]  { border-left-color:var(--toronto-fc); }
+.ppw-game-card[data-team="CFL"]         { border-left-color:var(--cfl); }
+
+.ppw-game-date { min-width:52px; text-align:center; }
+.ppw-game-date-day { font-family:'Barlow Condensed',sans-serif; font-weight:900; font-size:24px; line-height:1; color:var(--text); }
+.ppw-game-date-mon { font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:11px; letter-spacing:1px; text-transform:uppercase; color:var(--text-muted); }
+.ppw-game-divider { width:1px; height:40px; background:var(--border); flex-shrink:0; }
+.ppw-game-matchup { flex:1; min-width:0; }
+.ppw-game-teams { font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:17px; line-height:1.2; color:var(--text); margin-bottom:4px; display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
+.ppw-game-teams .vs { color:var(--text-muted); font-weight:400; font-size:14px; }
+.ppw-game-venue { font-size:12px; color:var(--text-muted); }
+.ppw-game-right { text-align:right; flex-shrink:0; }
+.ppw-game-time { font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:15px; color:var(--text); white-space:nowrap; }
+.ppw-game-tv { font-size:11px; color:var(--text-muted); margin-top:2px; }
+
+/* ── STANDINGS ── */
+.ppw-standings-toggle {
+  display:flex; gap:6px; margin-bottom:16px;
+}
+.ppw-std-tab {
+  font-family:'Barlow Condensed',sans-serif; font-weight:700;
+  font-size:11px; letter-spacing:1px; text-transform:uppercase;
+  padding:6px 14px; border-radius:6px; border:1px solid var(--border);
+  background:transparent; color:var(--text-muted); cursor:pointer; transition:all 0.2s;
+}
+.ppw-std-tab.active { background:var(--accent); color:white; border-color:var(--accent); }
+
+.ppw-standings-wrap { display:flex; flex-direction:column; gap:20px; }
+
+.ppw-league-block {}
+.ppw-league-title {
+  font-family:'Barlow Condensed',sans-serif; font-weight:900;
+  font-size:13px; letter-spacing:2px; text-transform:uppercase;
+  color:var(--accent); margin-bottom:8px;
+  padding-bottom:6px; border-bottom:1px solid var(--border);
+  display:flex; align-items:center; gap:8px;
+}
+
+.ppw-division-block { margin-bottom:16px; }
+.ppw-division-title {
+  font-family:'Barlow Condensed',sans-serif; font-weight:700;
+  font-size:11px; letter-spacing:2px; text-transform:uppercase;
+  color:var(--text-muted); margin-bottom:6px; padding:4px 0;
+}
+
+.ppw-std-table {
+  width:100%; border-collapse:collapse;
+  background:var(--surface); border-radius:8px; overflow:hidden;
+  font-size:13px;
+}
+.ppw-std-table th {
+  font-family:'Barlow Condensed',sans-serif; font-weight:700;
+  font-size:10px; letter-spacing:1.5px; text-transform:uppercase;
+  color:var(--text-muted); padding:8px 10px; text-align:center;
+  background:var(--surface2); border-bottom:1px solid var(--border);
+}
+.ppw-std-table th:first-child { text-align:left; padding-left:14px; }
+.ppw-std-table td {
+  padding:9px 10px; text-align:center;
+  border-bottom:1px solid var(--border); color:var(--text);
+  transition:background 0.15s;
+}
+.ppw-std-table td:first-child { text-align:left; padding-left:14px; font-weight:600; }
+.ppw-std-table tr:last-child td { border-bottom:none; }
+.ppw-std-table tr:hover td { background:var(--surface2); }
+.ppw-std-table tr.highlight td { background:rgba(232,50,58,0.07); }
+.ppw-std-table tr.highlight td:first-child { border-left:3px solid var(--accent); padding-left:11px; }
+
+.ppw-rank-num {
+  display:inline-flex; align-items:center; justify-content:center;
+  width:20px; height:20px; border-radius:50%;
+  font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:11px;
+  background:var(--surface3); color:var(--text-muted); margin-right:6px;
+}
+.ppw-rank-num.top { background:var(--accent); color:white; }
+
+.ppw-std-pts { font-weight:700; color:var(--text); }
+.ppw-std-form { display:flex; gap:3px; justify-content:center; }
+.ppw-form-dot {
+  width:14px; height:14px; border-radius:50%;
+  font-size:8px; font-weight:700; display:flex; align-items:center; justify-content:center;
+  color:white; font-family:'Barlow Condensed',sans-serif;
+}
+.ppw-form-dot.W { background:#2ecc71; }
+.ppw-form-dot.L { background:#e74c3c; }
+.ppw-form-dot.D { background:#95a5a6; }
+.ppw-form-dot.OTL { background:#e67e22; font-size:6px; }
+
+/* ── FOOTER ── */
+.ppw-footer {
+  background:var(--surface); border-top:1px solid var(--border);
+  padding:10px 20px; display:flex; align-items:center;
+  justify-content:space-between; font-size:11px; color:var(--text-muted);
+}
+.ppw-footer a { color:var(--accent); text-decoration:none; font-weight:600; }
+
+@media(max-width:640px){
+  .ppw-header{padding:14px 16px;}
+  .ppw-content{padding:14px;}
+  .ppw-story-title{font-size:15px;}
+  .ppw-game-card{flex-wrap:wrap;gap:10px;}
+  .ppw-std-table{font-size:11px;}
+  .ppw-std-table th,.ppw-std-table td{padding:7px 6px;}
+}
+</style>
+</head>
+<body>
+<div id="ppw-widget">
+
+  <!-- Header -->
+  <div class="ppw-header">
+    <div class="ppw-logo">
+      <div class="ppw-logo-icon">PP</div>
+      <div>
+        <div class="ppw-logo-text">Power<span>Play</span> Windsor</div>
+        <div class="ppw-logo-sub">Live Sports Feed</div>
+      </div>
+    </div>
+    <button class="ppw-refresh-btn" id="ppw-refresh-btn" onclick="refreshAll()">
+      <span id="ppw-refresh-icon">⟳</span> Refresh
+    </button>
+  </div>
+
+  <!-- View Toggle -->
+  <div class="ppw-view-toggle">
+    <button class="ppw-view-btn active" id="btn-news"      onclick="switchView('news')">📰 News</button>
+    <button class="ppw-view-btn"        id="btn-games"     onclick="switchView('games')">📅 Games</button>
+    <button class="ppw-view-btn"        id="btn-standings" onclick="switchView('standings')">🏆 Standings</button>
+  </div>
+
+  <!-- Team Filters -->
+  <div class="ppw-filters" id="ppw-filters">
+    <button class="ppw-filter-btn active" data-team="All"         onclick="filterTeam('All')">All</button>
+    <button class="ppw-filter-btn"        data-team="Red Wings"   onclick="filterTeam('Red Wings')">  <span class="team-dot" style="background:#ce1126"></span> Red Wings</button>
+    <button class="ppw-filter-btn"        data-team="Pistons"     onclick="filterTeam('Pistons')">    <span class="team-dot" style="background:#c8102e"></span> Pistons</button>
+    <button class="ppw-filter-btn"        data-team="Lions"       onclick="filterTeam('Lions')">      <span class="team-dot" style="background:#0076b6"></span> Lions</button>
+    <button class="ppw-filter-btn"        data-team="Tigers"      onclick="filterTeam('Tigers')">     <span class="team-dot" style="background:#f5a623"></span> Tigers</button>
+    <button class="ppw-filter-btn"        data-team="Blue Jays"   onclick="filterTeam('Blue Jays')">  <span class="team-dot" style="background:#134a8e"></span> Blue Jays</button>
+    <button class="ppw-filter-btn"        data-team="Maple Leafs" onclick="filterTeam('Maple Leafs')"><span class="team-dot" style="background:#00205b"></span> Maple Leafs</button>
+    <button class="ppw-filter-btn"        data-team="Canadiens"   onclick="filterTeam('Canadiens')">  <span class="team-dot" style="background:#af1e2d"></span> Canadiens</button>
+    <button class="ppw-filter-btn"        data-team="Toronto FC"  onclick="filterTeam('Toronto FC')"> <span class="team-dot" style="background:#b81137"></span> Toronto FC</button>
+    <button class="ppw-filter-btn"        data-team="CFL"         onclick="filterTeam('CFL')">        <span class="team-dot" style="background:#cc0000"></span> CFL</button>
+  </div>
+
+  <!-- Content -->
+  <div class="ppw-content" id="ppw-content">
+    <div class="ppw-loading"><div class="ppw-spinner"></div><p>Scouting the latest…</p></div>
+  </div>
+
+  <!-- Footer -->
+  <div class="ppw-footer">
+    <span>Powered by <strong>Buddy AI</strong> + Live Web Search</span>
+    <a href="https://powerplaywindsor.com" target="_blank">powerplaywindsor.com</a>
+  </div>
+
+</div>
+<script>
+// ============================================================
+//  YOUR ANTHROPIC API KEY — replace the value below
+//  Get yours at: https://console.anthropic.com/
+// ============================================================
+const ANTHROPIC_API_KEY = 'YOUR_API_KEY_HERE';
+// ============================================================
+
+let allStories   = [];
+let allGames     = [];
+let allStandings = {};   // { NHL:{divisions:[{name,teams:[]}]}, NBA:{...}, ... }
+let activeTeam   = 'All';
+let activeView   = 'news';
+let stdView      = 'division';  // 'division' | 'table'
+let lastFetch    = null;
+
+const TODAY = () => new Date().toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
+
+/* ── NAVIGATION ── */
+function switchView(view) {
+  activeView = view;
+  ['news','games','standings'].forEach(v =>
+    document.getElementById('btn-'+v).classList.toggle('active', v === view));
+  render();
+}
+
+function filterTeam(team) {
+  activeTeam = team;
+  document.querySelectorAll('.ppw-filter-btn').forEach(b =>
+    b.classList.toggle('active', b.dataset.team === team));
+  render();
+}
+
+/* ── BOOT ── */
+async function refreshAll() {
+  const btn  = document.getElementById('ppw-refresh-btn');
+  const icon = document.getElementById('ppw-refresh-icon');
+  btn.disabled = true;
+  icon.style.cssText = 'animation:spin 0.8s linear infinite;display:inline-block;';
+  showLoading();
+  allStories = []; allGames = []; allStandings = {};
+
+  try {
+    await Promise.all([fetchNews(), fetchGames(), fetchStandings()]);
+    lastFetch = new Date();
+    render();
+  } catch(err) {
+    showError(err.message);
+  } finally {
+    btn.disabled = false;
+    icon.style.cssText = '';
+  }
+}
+
+/* ── FETCH: NEWS ── */
+async function fetchNews() {
+  const prompt = `Today is ${TODAY()}. Search the web for the LATEST sports news for each entry below. Return ONLY a valid JSON array, no markdown.
+
+Entries:
+- Red Wings (Detroit Red Wings NHL)
+- Pistons (Detroit Pistons NBA)
+- Lions (Detroit Lions NFL)
+- Tigers (Detroit Tigers MLB)
+- Blue Jays (Toronto Blue Jays MLB)
+- Maple Leafs (Toronto Maple Leafs NHL)
+- Canadiens (Montreal Canadiens NHL)
+- Toronto FC (Toronto FC MLS soccer)
+- CFL (Canadian Football League general news)
+
+Find 4-5 recent stories (last 7 days) per entry.
+
+JSON: [{"team":"Red Wings","title":"...","snippet":"1-2 sentences max 180 chars","source":"Outlet","url":"url or empty"}]
+
+Team name values must be exactly: Red Wings, Pistons, Lions, Tigers, Blue Jays, Maple Leafs, Canadiens, Toronto FC, CFL
+Return ONLY the JSON array.`;
+
+  const data = await callClaude(prompt);
+  const match = extractText(data).match(/\[[\s\S]*\]/);
+  if (!match) throw new Error('Could not parse news');
+  allStories = JSON.parse(match[0]);
+}
+
+/* ── FETCH: GAMES ── */
+async function fetchGames() {
+  const prompt = `Today is ${TODAY()}. Search the web for the next 3 upcoming scheduled games for each team below. Return ONLY a valid JSON array, no markdown.
+
+Teams:
+- Red Wings (NHL)
+- Pistons (NBA)
+- Lions (NFL)
+- Tigers (MLB)
+- Blue Jays (MLB)
+- Maple Leafs (NHL)
+- Canadiens (NHL)
+- Toronto FC (MLS)
+- CFL (use the next 3 upcoming CFL games across the league)
+
+JSON: [{"team":"Red Wings","day":"24","month":"Mar","homeAway":"vs","opponent":"Boston Bruins","time":"7:00 PM ET","venue":"Little Caesars Arena","tv":"Bally Sports"}]
+
+Rules:
+- "homeAway" = "vs" for home or "@" for away
+- Team name values must exactly match: Red Wings, Pistons, Lions, Tigers, Blue Jays, Maple Leafs, Canadiens, Toronto FC, CFL
+- For CFL entry use opponent as "Team A vs Team B" format
+- Omit a team if they are in off-season
+- Return ONLY the JSON array`;
+
+  const data = await callClaude(prompt);
+  const match = extractText(data).match(/\[[\s\S]*\]/);
+  if (!match) throw new Error('Could not parse games');
+  allGames = JSON.parse(match[0]);
+}
+
+/* ── FETCH: STANDINGS ── */
+async function fetchStandings() {
+  const prompt = `Today is ${TODAY()}. Search the web for the CURRENT standings for each of these leagues. Return ONLY a valid JSON object, no markdown.
+
+Leagues needed:
+1. NHL (current season standings)
+2. NBA (current season standings)
+3. MLB (current season standings, or preseason ranking if regular season not started)
+4. MLS (current Eastern Conference standings — Toronto FC is in the East)
+5. CFL (most recent season final standings, or current if in season)
+
+JSON structure:
+{
+  "NHL": {
+    "divisions": [
+      {
+        "name": "Atlantic Division",
+        "teams": [
+          {"rank":1,"team":"Boston Bruins","gp":60,"w":38,"l":15,"otl":7,"pts":83,"form":["W","W","L","OTL","W"]}
+        ]
+      }
+    ]
+  },
+  "NBA": {
+    "divisions": [
+      {
+        "name": "Eastern Conference",
+        "teams": [
+          {"rank":1,"team":"Boston Celtics","gp":58,"w":40,"l":18,"pct":".690","gb":"—","form":["W","L","W","W","L"]}
+        ]
+      }
+    ]
+  },
+  "MLB": {
+    "divisions": [
+      {
+        "name": "AL East",
+        "teams": [
+          {"rank":1,"team":"New York Yankees","gp":10,"w":7,"l":3,"pct":".700","gb":"—","form":["W","W","L","W","W"]}
+        ]
+      }
+    ]
+  },
+  "MLS": {
+    "divisions": [
+      {
+        "name": "Eastern Conference",
+        "teams": [
+          {"rank":1,"team":"Inter Miami CF","gp":5,"w":4,"l":0,"d":1,"pts":13,"form":["W","W","D","W","W"]}
+        ]
+      }
+    ]
+  },
+  "CFL": {
+    "divisions": [
+      {
+        "name": "East Division",
+        "teams": [
+          {"rank":1,"team":"Toronto Argonauts","gp":18,"w":12,"l":6,"pts":24,"pct":".667","form":["W","L","W","W","L"]}
+        ]
+      }
+    ]
+  }
+}
+
+Rules:
+- Include ALL teams in each division/conference, not just selected ones
+- form array = last 5 results, most recent last, values: "W","L","D","OTL"
+- Use real current data from web search
+- Return ONLY the JSON object`;
+
+  const data = await callClaude(prompt);
+  const text = extractText(data);
+  // try to extract JSON object
+  const match = text.match(/\{[\s\S]*\}/);
+  if (!match) throw new Error('Could not parse standings');
+  allStandings = JSON.parse(match[0]);
+}
+
+/* ── SHARED API CALL ── */
+async function callClaude(prompt) {
+  const res = await fetch('https://api.anthropic.com/v1/messages', {
+    method:'POST',
+    headers:{
+      'Content-Type':'application/json',
+      'x-api-key': ANTHROPIC_API_KEY,
+      'anthropic-version':'2023-06-01',
+      'anthropic-dangerous-direct-browser-access':'true'
+    },
+    body: JSON.stringify({
+      model:'claude-sonnet-4-20250514',
+      max_tokens:4000,
+      tools:[{type:'web_search_20250305',name:'web_search'}],
+      messages:[{role:'user',content:prompt}]
+    })
+  });
+  if (!res.ok) {
+    const e = await res.json().catch(()=>({}));
+    throw new Error(e.error?.message || `API error ${res.status}`);
+  }
+  return res.json();
+}
+
+function extractText(data) {
+  return (data.content||[]).filter(b=>b.type==='text').map(b=>b.text).join('');
+}
+
+/* ── RENDER ROUTER ── */
+function render() {
+  if      (activeView==='news')      renderNews();
+  else if (activeView==='games')     renderGames();
+  else if (activeView==='standings') renderStandings();
+}
+
+/* ── RENDER: NEWS ── */
+function renderNews() {
+  const content = document.getElementById('ppw-content');
+  const stories = activeTeam==='All' ? allStories : allStories.filter(s=>s.team===activeTeam);
+  if (!stories.length) { showEmpty('No news stories found for this team.'); return; }
+
+  const t = lastFetch ? lastFetch.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}) : '—';
+  content.innerHTML = `
+    <div class="ppw-status">
+      <span><span class="ppw-live-dot"></span>${stories.length} stories · Updated ${t}</span>
+      <span>${activeTeam==='All'?'All teams':activeTeam}</span>
+    </div>
+    <div class="ppw-stories" id="ppw-list"></div>`;
+
+  const list = document.getElementById('ppw-list');
+  stories.forEach((s,i) => {
+    const badge = 'badge-'+s.team.replace(/\s+/g,'-');
+    const card  = document.createElement('div');
+    card.className='ppw-story-card'; card.dataset.team=s.team;
+    card.style.animationDelay=`${i*0.04}s`;
+    const inner = `
+      <div class="ppw-story-meta">
+        <span class="ppw-team-badge ${badge}">${esc(s.team)}</span>
+        <span class="ppw-story-source">${esc(s.source||'')}</span>
+      </div>
+      <div class="ppw-story-title">${esc(s.title)}</div>
+      <div class="ppw-story-snippet">${esc(s.snippet)}</div>`;
+    card.innerHTML = s.url
+      ? `<a href="${esc(s.url)}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block;">${inner}</a>`
+      : inner;
+    list.appendChild(card);
+  });
+}
+
+/* ── RENDER: GAMES ── */
+function renderGames() {
+  const content = document.getElementById('ppw-content');
+  const games   = activeTeam==='All' ? allGames : allGames.filter(g=>g.team===activeTeam);
+  if (!games.length) { showEmpty('No upcoming games — team may be in off-season.'); return; }
+
+  const t = lastFetch ? lastFetch.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}) : '—';
+  content.innerHTML = `
+    <div class="ppw-status">
+      <span><span class="ppw-live-dot"></span>${games.length} upcoming games · Updated ${t}</span>
+      <span>${activeTeam==='All'?'All teams':activeTeam}</span>
+    </div>
+    <div class="ppw-section-label">Next scheduled games</div>
+    <div class="ppw-games-grid" id="ppw-list"></div>`;
+
+  const list = document.getElementById('ppw-list');
+  games.forEach((g,i) => {
+    const badge = 'badge-'+g.team.replace(/\s+/g,'-');
+    const card  = document.createElement('div');
+    card.className='ppw-game-card'; card.dataset.team=g.team;
+    card.style.animationDelay=`${i*0.04}s`;
+    card.innerHTML = `
+      <div class="ppw-game-date">
+        <div class="ppw-game-date-day">${esc(g.day)}</div>
+        <div class="ppw-game-date-mon">${esc(g.month)}</div>
+      </div>
+      <div class="ppw-game-divider"></div>
+      <div class="ppw-game-matchup">
+        <div class="ppw-game-teams">
+          <span class="ppw-team-badge ${badge}">${esc(g.team)}</span>
+          <span class="vs">${esc(g.homeAway)}</span> ${esc(g.opponent)}
+        </div>
+        <div class="ppw-game-venue">📍 ${esc(g.venue||'')}</div>
+      </div>
+      <div class="ppw-game-right">
+        <div class="ppw-game-time">${esc(g.time)}</div>
+        <div class="ppw-game-tv">${esc(g.tv||'')}</div>
+      </div>`;
+    list.appendChild(card);
+  });
+}
+
+/* ── RENDER: STANDINGS ── */
+function renderStandings() {
+  const content = document.getElementById('ppw-content');
+
+  if (!Object.keys(allStandings).length) {
+    showEmpty('Standings data not available yet. Try refreshing.'); return;
+  }
+
+  // Determine which leagues to show based on team filter
+  const leagueMap = {
+    'Red Wings':'NHL', 'Maple Leafs':'NHL', 'Canadiens':'NHL',
+    'Pistons':'NBA', 'Lions':'NFL',
+    'Tigers':'MLB', 'Blue Jays':'MLB',
+    'Toronto FC':'MLS', 'CFL':'CFL'
+  };
+
+  let leaguesToShow = Object.keys(allStandings);
+  if (activeTeam !== 'All' && leagueMap[activeTeam]) {
+    leaguesToShow = [leagueMap[activeTeam]];
+  }
+
+  const t = lastFetch ? lastFetch.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}) : '—';
+
+  content.innerHTML = `
+    <div class="ppw-status">
+      <span><span class="ppw-live-dot"></span>Current standings · Updated ${t}</span>
+      <span>${activeTeam==='All'?'All leagues':activeTeam}</span>
+    </div>
+    <div class="ppw-standings-toggle">
+      <button class="ppw-std-tab ${stdView==='division'?'active':''}" onclick="setStdView('division')">By Division</button>
+      <button class="ppw-std-tab ${stdView==='table'?'active':''}"    onclick="setStdView('table')">League Table</button>
+    </div>
+    <div class="ppw-standings-wrap" id="ppw-std-wrap"></div>`;
+
+  renderStandingsInner(leaguesToShow);
+}
+
+function setStdView(v) {
+  stdView = v;
+  document.querySelectorAll('.ppw-std-tab').forEach(b =>
+    b.classList.toggle('active', b.textContent.toLowerCase().includes(v==='division'?'division':'table')));
+  const leagueMap = {
+    'Red Wings':'NHL','Maple Leafs':'NHL','Canadiens':'NHL',
+    'Pistons':'NBA','Lions':'NFL','Tigers':'MLB','Blue Jays':'MLB',
+    'Toronto FC':'MLS','CFL':'CFL'
+  };
+  let leaguesToShow = Object.keys(allStandings);
+  if (activeTeam !== 'All' && leagueMap[activeTeam]) leaguesToShow = [leagueMap[activeTeam]];
+  renderStandingsInner(leaguesToShow);
+}
+
+// Teams we highlight in standings
+const OUR_TEAMS = ['Detroit Red Wings','Toronto Maple Leafs','Montreal Canadiens',
+  'Detroit Pistons','Detroit Lions','Detroit Tigers','Toronto Blue Jays',
+  'Toronto FC','Toronto Argonauts','Hamilton Tiger-Cats','Ottawa Redblacks'];
+
+function isOurTeam(name) {
+  return OUR_TEAMS.some(t => name && name.toLowerCase().includes(t.split(' ').pop().toLowerCase()));
+}
+
+const LEAGUE_LABELS = { NHL:'🏒 NHL', NBA:'🏀 NBA', MLB:'⚾ MLB', MLS:'⚽ MLS', CFL:'🏈 CFL', NFL:'🏈 NFL' };
+
+function renderStandingsInner(leagues) {
+  const wrap = document.getElementById('ppw-std-wrap');
+  if (!wrap) return;
+  wrap.innerHTML = '';
+
+  leagues.forEach(league => {
+    const data = allStandings[league];
+    if (!data || !data.divisions) return;
+
+    const block = document.createElement('div');
+    block.className = 'ppw-league-block';
+    block.innerHTML = `<div class="ppw-league-title">${LEAGUE_LABELS[league]||league}</div>`;
+
+    if (stdView === 'division') {
+      // Group by division
+      data.divisions.forEach(div => {
+        const divEl = document.createElement('div');
+        divEl.className = 'ppw-division-block';
+        divEl.innerHTML = `<div class="ppw-division-title">${esc(div.name)}</div>`;
+
+        const isNHL = league==='NHL';
+        const isMLS = league==='MLS';
+        const isCFL = league==='CFL';
+        const isNBA = league==='NBA';
+        const hasOTL = isNHL || isCFL;
+        const hasDraw = isMLS;
+
+        let headers = '<th>#</th><th style="text-align:left;padding-left:14px;">Team</th><th>GP</th><th>W</th><th>L</th>';
+        if (hasOTL) headers += '<th>OTL</th>';
+        if (hasDraw) headers += '<th>D</th>';
+        if (isNHL||isMLS||isCFL) headers += '<th>PTS</th>';
+        else headers += '<th>PCT</th><th>GB</th>';
+        headers += '<th>Form</th>';
+
+        let rows = '';
+        (div.teams||[]).forEach((tm,idx) => {
+          const hl = isOurTeam(tm.team) ? ' class="highlight"' : '';
+          const rankCls = idx < 3 ? ' top' : '';
+          let cells = `
+            <td><span class="ppw-rank-num${rankCls}">${tm.rank||idx+1}</span></td>
+            <td>${esc(tm.team)}</td>
+            <td>${tm.gp||'—'}</td>
+            <td>${tm.w||0}</td>
+            <td>${tm.l||0}</td>`;
+          if (hasOTL) cells += `<td>${tm.otl||0}</td>`;
+          if (hasDraw) cells += `<td>${tm.d||0}</td>`;
+          if (isNHL||isMLS||isCFL) cells += `<td class="ppw-std-pts">${tm.pts||'—'}</td>`;
+          else cells += `<td class="ppw-std-pts">${tm.pct||'—'}</td><td>${tm.gb||'—'}</td>`;
+          cells += `<td>${renderForm(tm.form)}</td>`;
+          rows += `<tr${hl}>${cells}</tr>`;
+        });
+
+        divEl.innerHTML += `<table class="ppw-std-table"><thead><tr>${headers}</tr></thead><tbody>${rows}</tbody></table>`;
+        block.appendChild(divEl);
+      });
+
+    } else {
+      // Flat league table — merge all divisions, sort by pts or pct
+      let allTeams = [];
+      data.divisions.forEach(div => {
+        (div.teams||[]).forEach(t => allTeams.push({...t, division: div.name}));
+      });
+
+      // Sort
+      allTeams.sort((a,b) => {
+        const ap = parseFloat(a.pts||a.pct||0), bp = parseFloat(b.pts||b.pct||0);
+        return bp - ap;
+      });
+      allTeams.forEach((t,i) => { t.rank = i+1; });
+
+      const isNHL = league==='NHL';
+      const isMLS = league==='MLS';
+      const isCFL = league==='CFL';
+      const hasOTL  = isNHL||isCFL;
+      const hasDraw = isMLS;
+
+      let headers = '<th>#</th><th style="text-align:left;padding-left:14px;">Team</th><th>Div</th><th>GP</th><th>W</th><th>L</th>';
+      if (hasOTL)  headers += '<th>OTL</th>';
+      if (hasDraw) headers += '<th>D</th>';
+      if (isNHL||isMLS||isCFL) headers += '<th>PTS</th>';
+      else headers += '<th>PCT</th>';
+      headers += '<th>Form</th>';
+
+      let rows = '';
+      allTeams.forEach((tm,idx) => {
+        const hl = isOurTeam(tm.team) ? ' class="highlight"' : '';
+        const rankCls = idx < 3 ? ' top' : '';
+        const divShort = (tm.division||'').split(' ')[0];
+        let cells = `
+          <td><span class="ppw-rank-num${rankCls}">${tm.rank}</span></td>
+          <td>${esc(tm.team)}</td>
+          <td style="font-size:10px;color:var(--text-muted)">${esc(divShort)}</td>
+          <td>${tm.gp||'—'}</td>
+          <td>${tm.w||0}</td>
+          <td>${tm.l||0}</td>`;
+        if (hasOTL)  cells += `<td>${tm.otl||0}</td>`;
+        if (hasDraw) cells += `<td>${tm.d||0}</td>`;
+        if (isNHL||isMLS||isCFL) cells += `<td class="ppw-std-pts">${tm.pts||'—'}</td>`;
+        else cells += `<td class="ppw-std-pts">${tm.pct||'—'}</td>`;
+        cells += `<td>${renderForm(tm.form)}</td>`;
+        rows += `<tr${hl}>${cells}</tr>`;
+      });
+
+      block.innerHTML += `<table class="ppw-std-table"><thead><tr>${headers}</tr></thead><tbody>${rows}</tbody></table>`;
+    }
+
+    wrap.appendChild(block);
+  });
+}
+
+function renderForm(form) {
+  if (!form || !form.length) return '—';
+  return '<div class="ppw-std-form">' +
+    form.slice(-5).map(r => `<div class="ppw-form-dot ${r}">${r==='OTL'?'OT':r}</div>`).join('') +
+    '</div>';
+}
+
+/* ── UTILITIES ── */
+function showLoading() {
+  document.getElementById('ppw-content').innerHTML =
+    `<div class="ppw-loading"><div class="ppw-spinner"></div><p>Searching for the latest…</p></div>`;
+}
+function showEmpty(msg) {
+  document.getElementById('ppw-content').innerHTML =
+    `<div class="ppw-error"><div class="ppw-error-icon">📭</div><h3>Nothing here yet</h3><p>${esc(msg)}</p></div>`;
+}
+function showError(msg) {
+  document.getElementById('ppw-content').innerHTML =
+    `<div class="ppw-error"><div class="ppw-error-icon">⚠️</div><h3>Could not load data</h3><p>${esc(msg||'Check your API key and try again.')}</p></div>`;
+}
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// Boot
+refreshAll();
+setInterval(refreshAll, 15 * 60 * 1000);
+</script>
+</body>
+</html>
