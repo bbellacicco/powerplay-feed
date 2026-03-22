@@ -136,14 +136,32 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text)}
 <script>
 // ESPN news + schedule endpoints — no API key needed
 var TEAMS = [
-  { name:'Red Wings',   news:'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/17/news',    schedule:'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/17/schedule' },
-  { name:'Pistons',     news:'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/8/news',  schedule:'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/8/schedule' },
-  { name:'Lions',       news:'https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/8/news',    schedule:'https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/8/schedule' },
-  { name:'Tigers',      news:'https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/teams/6/news',    schedule:'https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/teams/6/schedule' },
-  { name:'Blue Jays',   news:'https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/teams/14/news',   schedule:'https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/teams/14/schedule' },
-  { name:'Maple Leafs', news:'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/10/news',     schedule:'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/10/schedule' },
-  { name:'Canadiens',   news:'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/8/news',      schedule:'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/8/schedule' }
+  { name:'Red Wings',   espnId:'17', sport:'hockey',     league:'nhl',      schedule:'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/17/schedule' },
+  { name:'Pistons',     espnId:'8',  sport:'basketball', league:'nba',      schedule:'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/8/schedule' },
+  { name:'Lions',       espnId:'8',  sport:'football',   league:'nfl',      schedule:'https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/8/schedule' },
+  { name:'Tigers',      espnId:'6',  sport:'baseball',   league:'mlb',      schedule:'https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/teams/6/schedule' },
+  { name:'Blue Jays',   espnId:'28', sport:'baseball',   league:'mlb',      schedule:'https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/teams/28/schedule' },
+  { name:'Maple Leafs', espnId:'10', sport:'hockey',     league:'nhl',      schedule:'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/10/schedule' },
+  { name:'Canadiens',   espnId:'8',  sport:'hockey',     league:'nhl',      schedule:'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/8/schedule' }
 ];
+
+// League news endpoints
+var NEWS_URLS = [
+  { url:'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/news?limit=50',      leagues:['Red Wings','Maple Leafs','Canadiens'] },
+  { url:'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/news?limit=50',   leagues:['Pistons'] },
+  { url:'https://site.api.espn.com/apis/site/v2/sports/football/nfl/news?limit=50',     leagues:['Lions'] },
+  { url:'https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/news?limit=50',     leagues:['Tigers','Blue Jays'] }
+];
+
+var NEWS_KEYWORDS = {
+  'Red Wings':   ['red wings','detroit','drw'],
+  'Pistons':     ['pistons','detroit'],
+  'Lions':       ['lions','detroit'],
+  'Tigers':      ['tigers','detroit'],
+  'Blue Jays':   ['blue jays','toronto','jays'],
+  'Maple Leafs': ['maple leafs','toronto','leafs'],
+  'Canadiens':   ['canadiens','montreal','habs']
+};
 
 var allStories = [], allGames = [];
 var activeTeam = 'All', activeView = 'news';
@@ -170,18 +188,30 @@ function loadAll(){
   setContent('<div class="ppw-loading"><div class="ppw-spinner"></div><p>Loading feed...</p></div>');
   allStories=[]; allGames=[];
 
-  var newsPromises = TEAMS.map(function(team){
-    return fetch(team.news+'?limit=4')
+  var newsPromises = NEWS_URLS.map(function(feed){
+    return fetch(feed.url)
       .then(function(r){ return r.json(); })
       .then(function(data){
         var articles = data.articles || [];
         articles.forEach(function(a){
-          allStories.push({
-            team: team.name,
-            title: a.headline || a.title || '',
-            snippet: a.description || a.summary || '',
-            source: 'ESPN',
-            url: a.links && a.links.web ? a.links.web.href : ''
+          var title = (a.headline || a.title || '').toLowerCase();
+          var desc  = (a.description || a.summary || '').toLowerCase();
+          var combined = title + ' ' + desc;
+          feed.leagues.forEach(function(teamName){
+            var keywords = NEWS_KEYWORDS[teamName] || [];
+            var matched = keywords.some(function(kw){ return combined.indexOf(kw) >= 0; });
+            if(matched){
+              var exists = allStories.some(function(s){ return s.title === (a.headline||a.title); });
+              if(!exists){
+                allStories.push({
+                  team: teamName,
+                  title: a.headline || a.title || '',
+                  snippet: (a.description || a.summary || '').substring(0,160),
+                  source: 'ESPN',
+                  url: a.links && a.links.web ? a.links.web.href : ''
+                });
+              }
+            }
           });
         });
       }).catch(function(){});
