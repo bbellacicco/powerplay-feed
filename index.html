@@ -292,7 +292,7 @@ function today(){ return new Date().toLocaleDateString('en-US',{month:'short',da
 function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 
 document.addEventListener('DOMContentLoaded', init);
-setInterval(function(){ if(API_KEY) doLoad(); }, 15*60*1000);
+setInterval(function(){ if(API_KEY) doLoad(); }, 12*60*60*1000);
 </script>
 </body>
 </html>
