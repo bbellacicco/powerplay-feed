@@ -12,11 +12,11 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text)}
 #ppw-widget{width:100%;max-width:960px;margin:0 auto;background:var(--bg);border:1px solid var(--border);border-radius:12px;overflow:hidden}
 .ppw-header{background:linear-gradient(135deg,#ffd166 0%,#f5c842 100%);border-bottom:2px solid #f5c842;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
 .ppw-logo{display:flex;align-items:center;gap:12px}
-.ppw-logo-icon{width:40px;height:40px;background:rgba(0,0,0,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:18px;color:white;letter-spacing:-1px}
+.ppw-logo-icon{width:40px;height:40px;background:rgba(0,0,0,0.15);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:18px;color:#0a0c10;letter-spacing:-1px}
 .ppw-logo-text{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:26px;letter-spacing:0.5px;line-height:1.1;color:#0a0c10}
-.ppw-logo-sub{font-size:11px;color:rgba(0,0,0,0.6);font-weight:600;letter-spacing:1px;text-transform:uppercase}
-.ppw-refresh-btn{background:rgba(0,0,0,0.15);border:1px solid rgba(0,0,0,0.2);color:#0a0c10;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:1px;text-transform:uppercase;padding:8px 16px;border-radius:6px;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;gap:6px}
-.ppw-refresh-btn:hover{background:rgba(0,0,0,0.25)}
+.ppw-logo-sub{font-size:11px;color:rgba(0,0,0,0.5);font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.ppw-refresh-btn{background:rgba(0,0,0,0.12);border:1px solid rgba(0,0,0,0.2);color:#0a0c10;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:1px;text-transform:uppercase;padding:8px 16px;border-radius:6px;cursor:pointer;transition:all 0.2s;display:flex;align-items:center;gap:6px}
+.ppw-refresh-btn:hover{background:rgba(0,0,0,0.2)}
 .ppw-refresh-btn:disabled{opacity:0.5;cursor:not-allowed}
 .ppw-view-toggle{background:#0d0f14;border-bottom:1px solid var(--border);padding:0 16px;display:flex}
 .ppw-view-btn{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:1px;text-transform:uppercase;padding:12px 20px;background:transparent;border:none;border-bottom:3px solid transparent;color:var(--text-muted);cursor:pointer;transition:all 0.2s;white-space:nowrap}
@@ -30,7 +30,7 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text)}
 .ppw-filter-btn[data-team="Red Wings"].active{background:var(--red-wings)}
 .ppw-filter-btn[data-team="Pistons"].active{background:var(--pistons)}
 .ppw-filter-btn[data-team="Lions"].active{background:var(--lions)}
-.ppw-filter-btn[data-team="Tigers"].active{background:var(--tigers-navy);border-color:#f5a623!important}
+.ppw-filter-btn[data-team="Tigers"].active{background:var(--tigers-navy);border-color:#ffd166!important}
 .ppw-filter-btn[data-team="Blue Jays"].active{background:var(--blue-jays)}
 .ppw-filter-btn[data-team="Maple Leafs"].active{background:var(--maple-leafs)}
 .ppw-filter-btn[data-team="Canadiens"].active{background:var(--canadiens)}
@@ -54,7 +54,7 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text)}
 .ppw-story-card[data-team="Red Wings"]{border-left-color:var(--red-wings)}
 .ppw-story-card[data-team="Pistons"]{border-left-color:var(--pistons)}
 .ppw-story-card[data-team="Lions"]{border-left-color:var(--lions)}
-.ppw-story-card[data-team="Tigers"]{border-left-color:#f5a623}
+.ppw-story-card[data-team="Tigers"]{border-left-color:#ffd166}
 .ppw-story-card[data-team="Blue Jays"]{border-left-color:var(--blue-jays)}
 .ppw-story-card[data-team="Maple Leafs"]{border-left-color:var(--maple-leafs)}
 .ppw-story-card[data-team="Canadiens"]{border-left-color:var(--canadiens)}
@@ -63,7 +63,7 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text)}
 .badge-Red-Wings{background:var(--red-wings)}
 .badge-Pistons{background:var(--pistons)}
 .badge-Lions{background:var(--lions)}
-.badge-Tigers{background:var(--tigers-navy);color:#f5a623;border:1px solid #f5a623}
+.badge-Tigers{background:var(--tigers-navy);color:#ffd166;border:1px solid #ffd166}
 .badge-Blue-Jays{background:var(--blue-jays)}
 .badge-Maple-Leafs{background:var(--maple-leafs)}
 .badge-Canadiens{background:var(--canadiens)}
@@ -77,7 +77,7 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text)}
 .ppw-game-card[data-team="Red Wings"]{border-left-color:var(--red-wings)}
 .ppw-game-card[data-team="Pistons"]{border-left-color:var(--pistons)}
 .ppw-game-card[data-team="Lions"]{border-left-color:var(--lions)}
-.ppw-game-card[data-team="Tigers"]{border-left-color:#f5a623}
+.ppw-game-card[data-team="Tigers"]{border-left-color:#ffd166}
 .ppw-game-card[data-team="Blue Jays"]{border-left-color:var(--blue-jays)}
 .ppw-game-card[data-team="Maple Leafs"]{border-left-color:var(--maple-leafs)}
 .ppw-game-card[data-team="Canadiens"]{border-left-color:var(--canadiens)}
@@ -120,7 +120,7 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text)}
     <button class="ppw-filter-btn" data-team="Red Wings" onclick="filterTeam('Red Wings')"><span class="team-dot" style="background:#ce1126"></span> Red Wings</button>
     <button class="ppw-filter-btn" data-team="Pistons" onclick="filterTeam('Pistons')"><span class="team-dot" style="background:#c8102e"></span> Pistons</button>
     <button class="ppw-filter-btn" data-team="Lions" onclick="filterTeam('Lions')"><span class="team-dot" style="background:#0076b6"></span> Lions</button>
-    <button class="ppw-filter-btn" data-team="Tigers" onclick="filterTeam('Tigers')"><span class="team-dot" style="background:#f5a623"></span> Tigers</button>
+    <button class="ppw-filter-btn" data-team="Tigers" onclick="filterTeam('Tigers')"><span class="team-dot" style="background:#ffd166"></span> Tigers</button>
     <button class="ppw-filter-btn" data-team="Blue Jays" onclick="filterTeam('Blue Jays')"><span class="team-dot" style="background:#134a8e"></span> Blue Jays</button>
     <button class="ppw-filter-btn" data-team="Maple Leafs" onclick="filterTeam('Maple Leafs')"><span class="team-dot" style="background:#00205b"></span> Maple Leafs</button>
     <button class="ppw-filter-btn" data-team="Canadiens" onclick="filterTeam('Canadiens')"><span class="team-dot" style="background:#af1e2d"></span> Canadiens</button>
@@ -129,183 +129,145 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text)}
     <div class="ppw-loading"><div class="ppw-spinner"></div><p>Loading feed...</p></div>
   </div>
   <div class="ppw-footer">
-    <span>News via <strong>TSN · Sportsnet · ESPN</strong></span>
+    <span>Powered by <strong>ESPN</strong></span>
     <a href="https://powerplaywindsor.com" target="_blank">powerplaywindsor.com</a>
   </div>
 </div>
 <script>
-var SCHEDULES = {
-  'Red Wings':   'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/17/schedule',
-  'Pistons':     'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/8/schedule',
-  'Lions':       'https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/8/schedule',
-  'Tigers':      'https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/teams/6/schedule',
-  'Blue Jays':   'https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/teams/14/schedule',
-  'Maple Leafs': 'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/10/schedule',
-  'Canadiens':   'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/8/schedule'
-};
-
-var RSS_PROXY = 'https://api.rss2json.com/v1/api.json?rss_url=';
-var RSS_FEEDS = [
-  { url: 'https://www.tsn.ca/rss/tsn.xml', source: 'TSN' },
-  { url: 'https://www.sportsnet.ca/feed/', source: 'Sportsnet' },
-  { url: 'https://www.espn.com/espn/rss/nhl/news', source: 'ESPN' },
-  { url: 'https://www.espn.com/espn/rss/nba/news', source: 'ESPN' },
-  { url: 'https://www.espn.com/espn/rss/nfl/news', source: 'ESPN' },
-  { url: 'https://www.espn.com/espn/rss/mlb/news', source: 'ESPN' }
+// ESPN news + schedule endpoints — no API key needed
+var TEAMS = [
+  { name:'Red Wings',   news:'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/17/news',    schedule:'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/17/schedule' },
+  { name:'Pistons',     news:'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/8/news',  schedule:'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/8/schedule' },
+  { name:'Lions',       news:'https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/8/news',    schedule:'https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/8/schedule' },
+  { name:'Tigers',      news:'https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/teams/6/news',    schedule:'https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/teams/6/schedule' },
+  { name:'Blue Jays',   news:'https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/teams/14/news',   schedule:'https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/teams/14/schedule' },
+  { name:'Maple Leafs', news:'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/10/news',     schedule:'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/10/schedule' },
+  { name:'Canadiens',   news:'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/8/news',      schedule:'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/8/schedule' }
 ];
-
-var KEYWORDS = {
-  'Red Wings':   ['red wings','detroit hockey'],
-  'Pistons':     ['pistons','detroit basketball'],
-  'Lions':       ['detroit lions'],
-  'Tigers':      ['detroit tigers'],
-  'Blue Jays':   ['blue jays','toronto baseball'],
-  'Maple Leafs': ['maple leafs','toronto hockey'],
-  'Canadiens':   ['canadiens','montreal hockey','habs']
-};
 
 var allStories = [], allGames = [];
 var activeTeam = 'All', activeView = 'news';
 var lastFetch = null;
 
-function switchView(v) {
-  activeView = v;
-  document.getElementById('btn-news').classList.toggle('active', v==='news');
-  document.getElementById('btn-games').classList.toggle('active', v==='games');
+function switchView(v){
+  activeView=v;
+  document.getElementById('btn-news').classList.toggle('active',v==='news');
+  document.getElementById('btn-games').classList.toggle('active',v==='games');
   render();
 }
 
-function filterTeam(t) {
-  activeTeam = t;
-  document.querySelectorAll('.ppw-filter-btn').forEach(function(b){ b.classList.toggle('active', b.dataset.team===t); });
+function filterTeam(t){
+  activeTeam=t;
+  document.querySelectorAll('.ppw-filter-btn').forEach(function(b){ b.classList.toggle('active',b.dataset.team===t); });
   render();
 }
 
-function loadAll() {
-  var btn = document.getElementById('ppw-refresh-btn');
-  var icon = document.getElementById('ppw-refresh-icon');
-  if(btn) btn.disabled = true;
-  if(icon) icon.style.cssText = 'animation:spin 0.8s linear infinite;display:inline-block;';
+function loadAll(){
+  var btn=document.getElementById('ppw-refresh-btn');
+  var icon=document.getElementById('ppw-refresh-icon');
+  if(btn) btn.disabled=true;
+  if(icon) icon.style.cssText='animation:spin 0.8s linear infinite;display:inline-block;';
   setContent('<div class="ppw-loading"><div class="ppw-spinner"></div><p>Loading feed...</p></div>');
-  allStories = []; allGames = [];
+  allStories=[]; allGames=[];
 
-  Promise.all([loadNews(), loadGames()]).then(function() {
-    lastFetch = new Date();
-    render();
-    if(btn) btn.disabled = false;
-    if(icon) icon.style.cssText = '';
-  }).catch(function() {
-    setContent('<div class="ppw-error"><div class="ppw-error-icon">⚠️</div><h3>Could not load feed</h3><p>Please try refreshing.</p></div>');
-    if(btn) btn.disabled = false;
-    if(icon) icon.style.cssText = '';
-  });
-}
-
-function loadNews() {
-  var promises = RSS_FEEDS.map(function(feed) {
-    return fetch(RSS_PROXY + encodeURIComponent(feed.url) + '&count=30')
+  var newsPromises = TEAMS.map(function(team){
+    return fetch(team.news+'?limit=4')
       .then(function(r){ return r.json(); })
-      .then(function(data) {
-        if(!data.items) return;
-        data.items.forEach(function(item) {
-          var combined = ((item.title||'') + ' ' + (item.description||'')).toLowerCase();
-          Object.keys(KEYWORDS).forEach(function(team) {
-            KEYWORDS[team].forEach(function(kw) {
-              if(combined.indexOf(kw) >= 0) {
-                var exists = allStories.some(function(s){ return s.url === item.link; });
-                if(!exists) {
-                  allStories.push({
-                    team: team,
-                    title: item.title || '',
-                    snippet: (item.description||'').replace(/<[^>]*>/g,'').substring(0,160),
-                    source: feed.source,
-                    url: item.link || ''
-                  });
-                }
-              }
-            });
+      .then(function(data){
+        var articles = data.articles || [];
+        articles.forEach(function(a){
+          allStories.push({
+            team: team.name,
+            title: a.headline || a.title || '',
+            snippet: a.description || a.summary || '',
+            source: 'ESPN',
+            url: a.links && a.links.web ? a.links.web.href : ''
           });
         });
       }).catch(function(){});
   });
-  return Promise.all(promises);
-}
 
-function loadGames() {
-  var promises = Object.keys(SCHEDULES).map(function(team) {
-    return fetch(SCHEDULES[team])
+  var gamePromises = TEAMS.map(function(team){
+    return fetch(team.schedule)
       .then(function(r){ return r.json(); })
-      .then(function(data) {
+      .then(function(data){
         var events = data.events || [];
         var now = new Date();
-        var upcoming = events.filter(function(e) {
+        var upcoming = events.filter(function(e){
           return new Date(e.date) > now;
         }).slice(0,3);
-        upcoming.forEach(function(e) {
-          var comp = e.competitions[0];
+        upcoming.forEach(function(e){
+          var comp = e.competitions && e.competitions[0];
           if(!comp) return;
           var home = comp.competitors.find(function(c){ return c.homeAway==='home'; });
           var away = comp.competitors.find(function(c){ return c.homeAway==='away'; });
           if(!home||!away) return;
-          var teamLower = team.toLowerCase().split(' ').pop();
-          var isHome = (home.team.displayName||'').toLowerCase().indexOf(teamLower) >= 0 ||
-                       (home.team.shortDisplayName||'').toLowerCase().indexOf(teamLower) >= 0;
+          var namePart = team.name.toLowerCase().split(' ').pop();
+          var isHome = (home.team.displayName||'').toLowerCase().indexOf(namePart)>=0 ||
+                       (home.team.shortDisplayName||'').toLowerCase().indexOf(namePart)>=0;
           var opponent = isHome ? (away.team.shortDisplayName||away.team.displayName) : (home.team.shortDisplayName||home.team.displayName);
-          var gameDate = new Date(e.date);
-          var tv = '';
-          if(comp.broadcasts && comp.broadcasts[0]) tv = comp.broadcasts[0].names[0] || '';
+          var d = new Date(e.date);
+          var tv = comp.broadcasts && comp.broadcasts[0] && comp.broadcasts[0].names ? comp.broadcasts[0].names[0] : '';
           allGames.push({
-            team: team,
-            day: gameDate.getDate().toString(),
-            month: gameDate.toLocaleDateString('en-US',{month:'short'}),
+            team: team.name,
+            day: d.getDate().toString(),
+            month: d.toLocaleDateString('en-US',{month:'short'}),
             homeAway: isHome ? 'vs' : '@',
             opponent: opponent,
-            time: gameDate.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',hour12:true})+' ET',
+            time: d.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',hour12:true})+' ET',
             venue: comp.venue ? comp.venue.fullName : '',
             tv: tv
           });
         });
       }).catch(function(){});
   });
-  return Promise.all(promises);
+
+  Promise.all(newsPromises.concat(gamePromises)).then(function(){
+    lastFetch = new Date();
+    render();
+    if(btn) btn.disabled=false;
+    if(icon) icon.style.cssText='';
+  }).catch(function(){
+    setContent('<div class="ppw-error"><div class="ppw-error-icon">⚠️</div><h3>Could not load</h3><p>Please try refreshing.</p></div>');
+    if(btn) btn.disabled=false;
+    if(icon) icon.style.cssText='';
+  });
 }
 
-function render() {
-  if(activeView==='news') renderNews(); else renderGames();
-}
+function render(){ if(activeView==='news') renderNews(); else renderGames(); }
 
-function renderNews() {
+function renderNews(){
   var stories = activeTeam==='All' ? allStories : allStories.filter(function(s){ return s.team===activeTeam; });
-  if(!stories.length) { setContent('<div class="ppw-error"><div class="ppw-error-icon">📭</div><h3>No stories found</h3><p>Try refreshing.</p></div>'); return; }
+  if(!stories.length){ setContent('<div class="ppw-error"><div class="ppw-error-icon">📭</div><h3>No stories found</h3><p>Try refreshing.</p></div>'); return; }
   var t = lastFetch ? lastFetch.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}) : '—';
   setContent('<div class="ppw-status"><span><span class="ppw-live-dot"></span>'+stories.length+' stories · Updated '+t+'</span><span>'+(activeTeam==='All'?'All 7 teams':activeTeam)+'</span></div><div class="ppw-stories" id="ppw-list"></div>');
-  var list = document.getElementById('ppw-list');
-  stories.slice(0,50).forEach(function(s,i) {
-    var badge = 'badge-'+s.team.replace(/\s+/g,'-');
-    var card = document.createElement('div');
+  var list=document.getElementById('ppw-list');
+  stories.forEach(function(s,i){
+    var badge='badge-'+s.team.replace(/\s+/g,'-');
+    var card=document.createElement('div');
     card.className='ppw-story-card'; card.dataset.team=s.team; card.style.animationDelay=i*0.03+'s';
-    var inner = '<div class="ppw-story-meta"><span class="ppw-team-badge '+badge+'">'+esc(s.team)+'</span><span class="ppw-story-source">'+esc(s.source)+'</span></div><div class="ppw-story-title">'+esc(s.title)+'</div><div class="ppw-story-snippet">'+esc(s.snippet)+'</div>';
-    card.innerHTML = s.url ? '<a href="'+esc(s.url)+'" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block;">'+inner+'</a>' : inner;
+    var inner='<div class="ppw-story-meta"><span class="ppw-team-badge '+badge+'">'+esc(s.team)+'</span><span class="ppw-story-source">'+esc(s.source)+'</span></div><div class="ppw-story-title">'+esc(s.title)+'</div><div class="ppw-story-snippet">'+esc(s.snippet)+'</div>';
+    card.innerHTML=s.url?'<a href="'+esc(s.url)+'" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block;">'+inner+'</a>':inner;
     list.appendChild(card);
   });
 }
 
-function renderGames() {
+function renderGames(){
   var games = activeTeam==='All' ? allGames : allGames.filter(function(g){ return g.team===activeTeam; });
-  if(!games.length) { setContent('<div class="ppw-error"><div class="ppw-error-icon">📭</div><h3>No upcoming games</h3><p>Team may be in off-season.</p></div>'); return; }
+  if(!games.length){ setContent('<div class="ppw-error"><div class="ppw-error-icon">📭</div><h3>No upcoming games</h3><p>Team may be in off-season.</p></div>'); return; }
   var t = lastFetch ? lastFetch.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}) : '—';
   setContent('<div class="ppw-status"><span><span class="ppw-live-dot"></span>'+games.length+' upcoming games · Updated '+t+'</span><span>'+(activeTeam==='All'?'All 7 teams':activeTeam)+'</span></div><div class="ppw-section-label">Next scheduled games</div><div class="ppw-games-grid" id="ppw-list"></div>');
-  var list = document.getElementById('ppw-list');
-  games.forEach(function(g,i) {
-    var badge = 'badge-'+g.team.replace(/\s+/g,'-');
-    var card = document.createElement('div');
+  var list=document.getElementById('ppw-list');
+  games.forEach(function(g,i){
+    var badge='badge-'+g.team.replace(/\s+/g,'-');
+    var card=document.createElement('div');
     card.className='ppw-game-card'; card.dataset.team=g.team; card.style.animationDelay=i*0.03+'s';
     card.innerHTML='<div class="ppw-game-date"><div class="ppw-game-date-day">'+esc(g.day)+'</div><div class="ppw-game-date-mon">'+esc(g.month)+'</div></div><div class="ppw-game-divider"></div><div class="ppw-game-matchup"><div class="ppw-game-teams"><span class="ppw-team-badge '+badge+'">'+esc(g.team)+'</span><span class="vs">'+esc(g.homeAway)+'</span> '+esc(g.opponent)+'</div><div class="ppw-game-venue">📍 '+esc(g.venue)+'</div></div><div class="ppw-game-right"><div class="ppw-game-time">'+esc(g.time)+'</div><div class="ppw-game-tv">'+esc(g.tv)+'</div></div>';
     list.appendChild(card);
   });
 }
 
-function setContent(html){ var el=document.getElementById('ppw-content'); if(el) el.innerHTML=html; }
+function setContent(h){ var e=document.getElementById('ppw-content'); if(e) e.innerHTML=h; }
 function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 
 document.addEventListener('DOMContentLoaded', loadAll);
