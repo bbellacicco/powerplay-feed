@@ -62,7 +62,6 @@ body { font-family:'Barlow',sans-serif; background:var(--bg); color:var(--text);
 .ppw-error h3 { font-family:'Barlow Condensed',sans-serif; font-size:18px; margin-bottom:8px; color:var(--text); }
 .ppw-error p { font-size:14px; line-height:1.5; }
 
-/* API KEY SETUP SCREEN */
 .ppw-setup { padding:40px 30px; text-align:center; }
 .ppw-setup-icon { font-size:40px; margin-bottom:16px; }
 .ppw-setup h2 { font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:24px; color:var(--text); margin-bottom:8px; }
@@ -75,7 +74,6 @@ body { font-family:'Barlow',sans-serif; background:var(--bg); color:var(--text);
 .ppw-setup-note { font-size:11px; color:var(--text-muted); margin-top:12px; }
 .ppw-setup-note a { color:var(--accent); text-decoration:none; }
 .ppw-reset-key { background:none; border:none; color:var(--text-muted); font-size:11px; cursor:pointer; text-decoration:underline; padding:0; }
-.ppw-reset-key:hover { color:var(--text); }
 
 .ppw-stories { display:flex; flex-direction:column; gap:12px; }
 .ppw-story-card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:16px 18px; transition:all 0.2s; border-left:3px solid transparent; animation:fadeUp 0.4s ease forwards; opacity:0; }
@@ -152,7 +150,7 @@ body { font-family:'Barlow',sans-serif; background:var(--bg); color:var(--text);
     </button>
   </div>
 
-  <div class="ppw-view-toggle" id="ppw-view-toggle" style="display:none">
+  <div class="ppw-view-toggle" id="ppw-nav" style="display:none">
     <button class="ppw-view-btn active" id="btn-news"  onclick="switchView('news')">📰 Latest News</button>
     <button class="ppw-view-btn"        id="btn-games" onclick="switchView('games')">📅 Upcoming Games</button>
   </div>
@@ -177,20 +175,12 @@ body { font-family:'Barlow',sans-serif; background:var(--bg); color:var(--text);
 
 </div>
 <script>
-// Key is stored in the browser — never in the code
 const STORAGE_KEY = 'ppw_api_key';
+let allStories = [], allGames = [];
+let activeTeam = 'All', activeView = 'news';
+let lastFetch = null, gamesReady = false;
+let API_KEY = '';
 
-let allStories = [];
-let allGames   = [];
-let activeTeam = 'All';
-let activeView = 'news';
-let lastFetch  = null;
-let gamesReady = false;
-let API_KEY    = '';
-
-const TODAY = () => new Date().toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
-
-// On load — check if key is already saved
 window.addEventListener('load', () => {
   const saved = localStorage.getItem(STORAGE_KEY);
   if (saved && saved.startsWith('sk-ant-')) {
@@ -198,22 +188,25 @@ window.addEventListener('load', () => {
     showUI();
     refreshAll();
   } else {
-    showSetup();
+    showSetup('Enter your Anthropic API key to load the feed.');
   }
 });
 
 function showUI() {
-  document.getElementById('ppw-refresh-btn').style.display  = 'flex';
-  document.getElementById('ppw-view-toggle').style.display  = 'flex';
-  document.getElementById('ppw-filters').style.display      = 'flex';
+  document.getElementById('ppw-refresh-btn').style.display = 'flex';
+  document.getElementById('ppw-nav').style.display         = 'flex';
+  document.getElementById('ppw-filters').style.display     = 'flex';
 }
 
-function showSetup() {
+function showSetup(msg) {
+  document.getElementById('ppw-refresh-btn').style.display = 'none';
+  document.getElementById('ppw-nav').style.display         = 'none';
+  document.getElementById('ppw-filters').style.display     = 'none';
   document.getElementById('ppw-content').innerHTML = `
     <div class="ppw-setup">
       <div class="ppw-setup-icon">🔑</div>
-      <h2>Enter Your API Key</h2>
-      <p>To load live sports news, enter your Anthropic API key below. It will be saved in your browser and never shared.</p>
+      <h2>Connect Your Feed</h2>
+      <p>${esc(msg)}</p>
       <input class="ppw-setup-input" id="ppw-key-input" type="password" placeholder="sk-ant-api03-..." />
       <br>
       <button class="ppw-setup-btn" onclick="saveKey()">Connect Feed</button>
@@ -222,10 +215,9 @@ function showSetup() {
 }
 
 function saveKey() {
-  const input = document.getElementById('ppw-key-input');
-  const key   = (input ? input.value : '').trim();
+  const key = (document.getElementById('ppw-key-input').value || '').trim();
   if (!key.startsWith('sk-ant-')) {
-    alert('Please enter a valid Anthropic API key starting with sk-ant-');
+    alert('Please enter a valid key starting with sk-ant-');
     return;
   }
   localStorage.setItem(STORAGE_KEY, key);
@@ -237,64 +229,43 @@ function saveKey() {
 function resetKey() {
   localStorage.removeItem(STORAGE_KEY);
   API_KEY = '';
-  document.getElementById('ppw-refresh-btn').style.display  = 'none';
-  document.getElementById('ppw-view-toggle').style.display  = 'none';
-  document.getElementById('ppw-filters').style.display      = 'none';
-  showSetup();
+  showSetup('Enter your Anthropic API key to load the feed.');
 }
 
-function switchView(view) {
-  activeView = view;
-  document.getElementById('btn-news').classList.toggle('active',  view==='news');
-  document.getElementById('btn-games').classList.toggle('active', view==='games');
+function switchView(v) {
+  activeView = v;
+  document.getElementById('btn-news').classList.toggle('active',  v==='news');
+  document.getElementById('btn-games').classList.toggle('active', v==='games');
   render();
 }
 
-function filterTeam(team) {
-  activeTeam = team;
-  document.querySelectorAll('.ppw-filter-btn').forEach(b =>
-    b.classList.toggle('active', b.dataset.team === team));
+function filterTeam(t) {
+  activeTeam = t;
+  document.querySelectorAll('.ppw-filter-btn').forEach(b => b.classList.toggle('active', b.dataset.team===t));
   render();
 }
 
 async function refreshAll() {
-  const btn  = document.getElementById('ppw-refresh-btn');
+  const btn = document.getElementById('ppw-refresh-btn');
   const icon = document.getElementById('ppw-refresh-icon');
   btn.disabled = true;
   icon.style.cssText = 'animation:spin 0.8s linear infinite;display:inline-block;';
   allStories = []; allGames = []; gamesReady = false;
   showLoading('Loading latest news…');
-
   try {
     await fetchNews();
     lastFetch = new Date();
-    if (activeView === 'news') renderNews();
-
-    fetchGames().then(() => {
-      gamesReady = true;
-      if (activeView === 'games') renderGames();
-    }).catch(() => { gamesReady = true; });
-
+    if (activeView==='news') renderNews();
+    fetchGames().then(() => { gamesReady=true; if(activeView==='games') renderGames(); }).catch(() => { gamesReady=true; });
   } catch(err) {
-    // If 401, the key was likely revoked — prompt to re-enter
-    if (err.message.includes('401') || err.message.includes('authentication')) {
+    const msg = err.message||'';
+    if (msg.includes('401') || msg.includes('authentication') || msg.includes('invalid')) {
       localStorage.removeItem(STORAGE_KEY);
-      API_KEY = '';
-      document.getElementById('ppw-refresh-btn').style.display = 'none';
-      document.getElementById('ppw-view-toggle').style.display = 'none';
-      document.getElementById('ppw-filters').style.display     = 'none';
-      document.getElementById('ppw-content').innerHTML = `
-        <div class="ppw-setup">
-          <div class="ppw-setup-icon">🔑</div>
-          <h2>API Key Needs Updating</h2>
-          <p>Your API key was rejected. Please create a new key at console.anthropic.com and enter it below.</p>
-          <input class="ppw-setup-input" id="ppw-key-input" type="password" placeholder="sk-ant-api03-..." />
-          <br>
-          <button class="ppw-setup-btn" onclick="saveKey()">Connect Feed</button>
-          <div class="ppw-setup-note">Get your key at <a href="https://console.anthropic.com" target="_blank">console.anthropic.com</a></div>
-        </div>`;
+      showSetup('Your API key was rejected. Please create a new key at console.anthropic.com and enter it below.');
+    } else if (msg.includes('rate limit') || msg.includes('tokens')) {
+      showError('Rate limit hit — please wait 1 minute then click Refresh.');
     } else {
-      showError(err.message);
+      showError(msg || 'Please try refreshing.');
     }
   } finally {
     btn.disabled = false;
@@ -303,172 +274,122 @@ async function refreshAll() {
 }
 
 async function fetchNews() {
-  const prompt = `Today is ${TODAY()}. Search the web for the latest sports news for these teams and return ONLY a JSON array.
-
-Find 4 recent news stories (last 7 days) for each:
-1. Detroit Red Wings (NHL) — team name "Red Wings"
-2. Detroit Pistons (NBA) — team name "Pistons"
-3. Detroit Lions (NFL) — team name "Lions"
-4. Detroit Tigers (MLB) — team name "Tigers"
-5. Toronto Blue Jays (MLB) — team name "Blue Jays"
-6. Toronto Maple Leafs (NHL) — team name "Maple Leafs"
-7. Montreal Canadiens (NHL) — team name "Canadiens"
-
-Return ONLY this JSON array, nothing else:
-[{"team":"Red Wings","title":"headline","snippet":"summary under 160 chars","source":"outlet","url":"https://..."}]`;
-
-  const data  = await callClaude(prompt);
-  const text  = extractText(data);
+  const d = new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+  const prompt = `Date: ${d}. Search for 4 recent news stories each for: Detroit Red Wings, Detroit Pistons, Detroit Lions, Detroit Tigers, Toronto Blue Jays, Toronto Maple Leafs, Montreal Canadiens. Return ONLY JSON array: [{"team":"Red Wings","title":"...","snippet":"...","source":"...","url":"..."}]. Team values: Red Wings, Pistons, Lions, Tigers, Blue Jays, Maple Leafs, Canadiens.`;
+  const data = await callClaude(prompt);
+  const text = extractText(data);
   const match = text.match(/\[[\s\S]*\]/);
-  if (!match) throw new Error('Could not load news. Please try refreshing.');
+  if (!match) throw new Error('Could not parse news.');
   allStories = JSON.parse(match[0]);
 }
 
 async function fetchGames() {
-  const prompt = `Today is ${TODAY()}. Search the web for the next 3 upcoming games for each team and return ONLY a JSON array.
-
-1. Detroit Red Wings (NHL) — team name "Red Wings"
-2. Detroit Pistons (NBA) — team name "Pistons"
-3. Detroit Lions (NFL) — team name "Lions"
-4. Detroit Tigers (MLB) — team name "Tigers"
-5. Toronto Blue Jays (MLB) — team name "Blue Jays"
-6. Toronto Maple Leafs (NHL) — team name "Maple Leafs"
-7. Montreal Canadiens (NHL) — team name "Canadiens"
-
-Return ONLY this JSON array, nothing else:
-[{"team":"Red Wings","day":"24","month":"Mar","homeAway":"vs","opponent":"Boston Bruins","time":"7:00 PM ET","venue":"Little Caesars Arena","tv":"Bally Sports"}]
-
-homeAway is "vs" for home, "@" for away. Skip off-season teams.`;
-
-  const data  = await callClaude(prompt);
-  const text  = extractText(data);
+  const d = new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+  const prompt = `Date: ${d}. Search for next 3 upcoming games each for: Detroit Red Wings, Detroit Pistons, Detroit Lions, Detroit Tigers, Toronto Blue Jays, Toronto Maple Leafs, Montreal Canadiens. Return ONLY JSON array: [{"team":"Red Wings","day":"24","month":"Mar","homeAway":"vs","opponent":"Boston Bruins","time":"7:00 PM ET","venue":"Little Caesars Arena","tv":"Bally Sports"}]. Team values: Red Wings, Pistons, Lions, Tigers, Blue Jays, Maple Leafs, Canadiens. Skip off-season teams.`;
+  const data = await callClaude(prompt);
+  const text = extractText(data);
   const match = text.match(/\[[\s\S]*\]/);
-  if (!match) throw new Error('Could not load games.');
+  if (!match) throw new Error('Could not parse games.');
   allGames = JSON.parse(match[0]);
 }
 
 async function callClaude(prompt) {
   const res = await fetch('https://api.anthropic.com/v1/messages', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
+    method:'POST',
+    headers:{
+      'Content-Type':'application/json',
       'x-api-key': API_KEY,
-      'anthropic-version': '2023-06-01',
-      'anthropic-dangerous-direct-browser-access': 'true'
+      'anthropic-version':'2023-06-01',
+      'anthropic-dangerous-direct-browser-access':'true'
     },
     body: JSON.stringify({
-      model: 'claude-sonnet-4-20250514',
-      max_tokens: 3000,
-      tools: [{ type: 'web_search_20250305', name: 'web_search' }],
-      messages: [{ role: 'user', content: prompt }]
+      model:'claude-haiku-4-5-20251001',
+      max_tokens:2000,
+      tools:[{type:'web_search_20250305',name:'web_search'}],
+      messages:[{role:'user',content:prompt}]
     })
   });
   if (!res.ok) {
-    const e = await res.json().catch(() => ({}));
+    const e = await res.json().catch(()=>({}));
     throw new Error(e.error?.message || `${res.status}`);
   }
   return res.json();
 }
 
 function extractText(data) {
-  return (data.content || []).filter(b => b.type === 'text').map(b => b.text).join('');
+  return (data.content||[]).filter(b=>b.type==='text').map(b=>b.text).join('');
 }
 
 function render() {
-  if (activeView === 'news') renderNews(); else renderGames();
+  if (activeView==='news') renderNews(); else renderGames();
 }
 
 function renderNews() {
   const content = document.getElementById('ppw-content');
-  const stories = activeTeam === 'All' ? allStories : allStories.filter(s => s.team === activeTeam);
+  const stories = activeTeam==='All' ? allStories : allStories.filter(s=>s.team===activeTeam);
   if (!stories.length) { showEmpty('No stories found. Try refreshing.'); return; }
-  const t = lastFetch ? lastFetch.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'}) : '—';
+  const t = lastFetch ? lastFetch.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}) : '—';
   content.innerHTML = `
     <div class="ppw-status">
       <span><span class="ppw-live-dot"></span>${stories.length} stories · Updated ${t}</span>
-      <span>${activeTeam === 'All' ? 'All 7 teams' : activeTeam} &nbsp;·&nbsp; <button class="ppw-reset-key" onclick="resetKey()">change key</button></span>
+      <span>${activeTeam==='All'?'All 7 teams':activeTeam} · <button class="ppw-reset-key" onclick="resetKey()">change key</button></span>
     </div>
     <div class="ppw-stories" id="ppw-list"></div>`;
   const list = document.getElementById('ppw-list');
-  stories.forEach((s, i) => {
-    const badge = 'badge-' + s.team.replace(/\s+/g, '-');
-    const card  = document.createElement('div');
-    card.className = 'ppw-story-card'; card.dataset.team = s.team;
-    card.style.animationDelay = `${i * 0.04}s`;
-    const inner = `
-      <div class="ppw-story-meta">
-        <span class="ppw-team-badge ${badge}">${esc(s.team)}</span>
-        <span class="ppw-story-source">${esc(s.source || '')}</span>
-      </div>
-      <div class="ppw-story-title">${esc(s.title)}</div>
-      <div class="ppw-story-snippet">${esc(s.snippet)}</div>`;
-    card.innerHTML = s.url
-      ? `<a href="${esc(s.url)}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block;">${inner}</a>`
-      : inner;
+  stories.forEach((s,i) => {
+    const badge = 'badge-'+s.team.replace(/\s+/g,'-');
+    const card = document.createElement('div');
+    card.className='ppw-story-card'; card.dataset.team=s.team; card.style.animationDelay=`${i*0.04}s`;
+    const inner = `<div class="ppw-story-meta"><span class="ppw-team-badge ${badge}">${esc(s.team)}</span><span class="ppw-story-source">${esc(s.source||'')}</span></div><div class="ppw-story-title">${esc(s.title)}</div><div class="ppw-story-snippet">${esc(s.snippet)}</div>`;
+    card.innerHTML = s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block;">${inner}</a>` : inner;
     list.appendChild(card);
   });
 }
 
 function renderGames() {
   const content = document.getElementById('ppw-content');
-  if (!gamesReady) {
-    content.innerHTML = `<div class="ppw-loading"><div class="ppw-spinner"></div><p>Loading upcoming games…</p><small>Almost ready!</small></div>`;
-    return;
-  }
-  const games = activeTeam === 'All' ? allGames : allGames.filter(g => g.team === activeTeam);
+  if (!gamesReady) { content.innerHTML=`<div class="ppw-loading"><div class="ppw-spinner"></div><p>Loading games…</p><small>Almost ready!</small></div>`; return; }
+  const games = activeTeam==='All' ? allGames : allGames.filter(g=>g.team===activeTeam);
   if (!games.length) { showEmpty('No upcoming games — team may be in off-season.'); return; }
-  const t = lastFetch ? lastFetch.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'}) : '—';
+  const t = lastFetch ? lastFetch.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}) : '—';
   content.innerHTML = `
     <div class="ppw-status">
       <span><span class="ppw-live-dot"></span>${games.length} upcoming games · Updated ${t}</span>
-      <span>${activeTeam === 'All' ? 'All 7 teams' : activeTeam}</span>
+      <span>${activeTeam==='All'?'All 7 teams':activeTeam}</span>
     </div>
     <div class="ppw-section-label">Next scheduled games</div>
     <div class="ppw-games-grid" id="ppw-list"></div>`;
   const list = document.getElementById('ppw-list');
-  games.forEach((g, i) => {
-    const badge = 'badge-' + g.team.replace(/\s+/g, '-');
-    const card  = document.createElement('div');
-    card.className = 'ppw-game-card'; card.dataset.team = g.team;
-    card.style.animationDelay = `${i * 0.04}s`;
+  games.forEach((g,i) => {
+    const badge = 'badge-'+g.team.replace(/\s+/g,'-');
+    const card = document.createElement('div');
+    card.className='ppw-game-card'; card.dataset.team=g.team; card.style.animationDelay=`${i*0.04}s`;
     card.innerHTML = `
-      <div class="ppw-game-date">
-        <div class="ppw-game-date-day">${esc(g.day)}</div>
-        <div class="ppw-game-date-mon">${esc(g.month)}</div>
-      </div>
+      <div class="ppw-game-date"><div class="ppw-game-date-day">${esc(g.day)}</div><div class="ppw-game-date-mon">${esc(g.month)}</div></div>
       <div class="ppw-game-divider"></div>
       <div class="ppw-game-matchup">
-        <div class="ppw-game-teams">
-          <span class="ppw-team-badge ${badge}">${esc(g.team)}</span>
-          <span class="vs">${esc(g.homeAway)}</span> ${esc(g.opponent)}
-        </div>
-        <div class="ppw-game-venue">📍 ${esc(g.venue || '')}</div>
+        <div class="ppw-game-teams"><span class="ppw-team-badge ${badge}">${esc(g.team)}</span><span class="vs">${esc(g.homeAway)}</span> ${esc(g.opponent)}</div>
+        <div class="ppw-game-venue">📍 ${esc(g.venue||'')}</div>
       </div>
-      <div class="ppw-game-right">
-        <div class="ppw-game-time">${esc(g.time)}</div>
-        <div class="ppw-game-tv">${esc(g.tv || '')}</div>
-      </div>`;
+      <div class="ppw-game-right"><div class="ppw-game-time">${esc(g.time)}</div><div class="ppw-game-tv">${esc(g.tv||'')}</div></div>`;
     list.appendChild(card);
   });
 }
 
 function showLoading(msg) {
-  document.getElementById('ppw-content').innerHTML =
-    `<div class="ppw-loading"><div class="ppw-spinner"></div><p>${esc(msg||'Loading…')}</p><small>Usually takes 20–30 seconds</small></div>`;
+  document.getElementById('ppw-content').innerHTML=`<div class="ppw-loading"><div class="ppw-spinner"></div><p>${esc(msg||'Loading…')}</p><small>Usually takes 20–30 seconds</small></div>`;
 }
 function showEmpty(msg) {
-  document.getElementById('ppw-content').innerHTML =
-    `<div class="ppw-error"><div class="ppw-error-icon">📭</div><h3>Nothing here yet</h3><p>${esc(msg)}</p></div>`;
+  document.getElementById('ppw-content').innerHTML=`<div class="ppw-error"><div class="ppw-error-icon">📭</div><h3>Nothing here yet</h3><p>${esc(msg)}</p></div>`;
 }
 function showError(msg) {
-  document.getElementById('ppw-content').innerHTML =
-    `<div class="ppw-error"><div class="ppw-error-icon">⚠️</div><h3>Could not load data</h3><p>${esc(msg||'Please try refreshing.')}</p></div>`;
+  document.getElementById('ppw-content').innerHTML=`<div class="ppw-error"><div class="ppw-error-icon">⚠️</div><h3>Could not load data</h3><p>${esc(msg||'Please try refreshing.')}</p></div>`;
 }
 function esc(s) {
   return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
-setInterval(refreshAll, 15 * 60 * 1000);
+setInterval(refreshAll, 15*60*1000);
 </script>
 </body>
 </html>
