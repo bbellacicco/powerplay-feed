@@ -203,10 +203,16 @@ function loadAll(){
           var cats = (a.categories||[]).filter(function(c){return c.type==='team';}).map(function(c){return c.teamId;});
           var title = (a.headline||'').toLowerCase();
           var desc  = (a.description||'').toLowerCase();
+          var combined = title + ' ' + desc;
+
+          // Try to match to a specific team first
+          var matched = false;
           feed.teams.forEach(function(teamName){
-            var byId  = cats.indexOf(TEAM_IDS[teamName]) >= 0;
-            var byKw  = (TEAM_KW[teamName]||[]).some(function(k){ return (title+' '+desc).indexOf(k)>=0; });
+            if(matched) return;
+            var byId = cats.indexOf(TEAM_IDS[teamName]) >= 0;
+            var byKw = (TEAM_KW[teamName]||[]).some(function(k){ return combined.indexOf(k)>=0; });
             if(byId || byKw){
+              matched = true;
               var exists = allStories.some(function(s){ return s.title===(a.headline||''); });
               if(!exists){
                 allStories.push({
@@ -219,6 +225,20 @@ function loadAll(){
               }
             }
           });
+
+          // If no specific team matched, assign to first team in feed
+          if(!matched && feed.teams.length === 1){
+            var exists = allStories.some(function(s){ return s.title===(a.headline||''); });
+            if(!exists){
+              allStories.push({
+                team: feed.teams[0],
+                title: a.headline||'',
+                snippet: (a.description||'').substring(0,160),
+                source: 'ESPN',
+                url: a.links&&a.links.web ? a.links.web.href : ''
+              });
+            }
+          }
         });
       }).catch(function(){});
   });
