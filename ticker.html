@@ -4,172 +4,75 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Powerplay Windsor Ticker</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{background:transparent;overflow:hidden;font-family:'Barlow',sans-serif}
-
-.ticker-wrap{
-  background:#0a0c10;
-  border-top:2px solid #FFB800;
-  border-bottom:2px solid #FFB800;
-  height:44px;
-  display:flex;
-  align-items:center;
-  overflow:hidden;
-  position:relative;
-  width:100%;
-}
-
-.ticker-label{
-  background:#FFB800;
-  color:#0a0c10;
-  font-family:'Bebas Neue',sans-serif;
-  font-size:15px;
-  letter-spacing:2px;
-  padding:0 16px;
-  height:100%;
-  display:flex;
-  align-items:center;
-  white-space:nowrap;
-  flex-shrink:0;
-  z-index:2;
-  position:relative;
-}
-
-.ticker-label::after{
-  content:'';
-  position:absolute;
-  right:-12px;
-  top:0;
-  width:0;
-  height:0;
-  border-top:44px solid transparent;
-  border-left:12px solid #FFB800;
-}
-
-.ticker-track{
-  display:flex;
-  align-items:center;
-  white-space:nowrap;
-  animation:ticker-scroll 30s linear infinite;
-  padding-left:40px;
-}
-
-.ticker-track:hover{
-  animation-play-state:paused;
-}
-
-@keyframes ticker-scroll{
-  0%{transform:translateX(0)}
-  100%{transform:translateX(-50%)}
-}
-
-.ticker-item{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  padding:0 30px;
-  font-size:13px;
-  font-weight:600;
-  color:#f0f2f5;
-  border-right:1px solid rgba(255,184,0,0.3);
-}
-
-.ticker-item:last-child{border-right:none}
-
-.ticker-badge{
-  font-size:10px;
-  font-weight:700;
-  letter-spacing:1px;
-  text-transform:uppercase;
-  padding:2px 6px;
-  border-radius:3px;
-  flex-shrink:0;
-}
-
+html,body{height:44px;overflow:hidden;background:transparent}
+.ticker-wrap{background:#0a0c10;border-top:1px solid rgba(255,184,0,0.5);border-bottom:1px solid rgba(255,184,0,0.5);height:44px;display:flex;align-items:center;overflow:hidden;width:100%}
+.ticker-outer{overflow:hidden;flex:1;height:100%;display:flex;align-items:center;position:relative}
+.ticker-outer::before,.ticker-outer::after{content:'';position:absolute;top:0;width:40px;height:100%;z-index:2;pointer-events:none}
+.ticker-outer::before{left:0;background:linear-gradient(to right,#0a0c10,transparent)}
+.ticker-outer::after{right:0;background:linear-gradient(to left,#0a0c10,transparent)}
+.ticker-track{display:flex;align-items:center;white-space:nowrap;animation:scroll 25s linear infinite;will-change:transform}
+.ticker-track:hover{animation-play-state:paused}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ticker-item{display:inline-flex;align-items:center;gap:8px;padding:0 28px;font-family:'Barlow',sans-serif;font-size:13px;font-weight:600;color:#f0f2f5}
+.ticker-badge{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 6px;border-radius:3px;flex-shrink:0}
 .badge-score{background:#e8323a;color:white}
 .badge-news{background:#0076b6;color:white}
 .badge-update{background:#2ecc71;color:#0a0c10}
-
-.ticker-team{
-  color:#FFB800;
-  font-weight:700;
-}
-
-.ticker-empty{
-  color:rgba(255,255,255,0.4);
-  font-size:13px;
-  padding:0 20px;
-}
-
-.ticker-dot{
-  color:#FFB800;
-  font-size:18px;
-  padding:0 10px;
-}
+.ticker-team{color:#FFB800;font-weight:700}
+.ticker-sep{color:rgba(255,184,0,0.4);padding:0 4px;font-size:16px}
 </style>
 </head>
 <body>
-
 <div class="ticker-wrap">
-  <div class="ticker-label">🏒 POWERPLAY</div>
-  <div style="overflow:hidden;flex:1;position:relative">
+  <div class="ticker-outer">
     <div class="ticker-track" id="ticker-track">
-      <div class="ticker-empty">Loading ticker...</div>
+      <div class="ticker-item"><span style="color:rgba(255,255,255,0.4)">Loading...</span></div>
     </div>
   </div>
 </div>
-
 <script>
-const STORAGE_KEY = 'ppw_ticker_items';
-const ADMIN_URL = 'https://bbellacicco.github.io/powerplay-feed/admin.html';
+var SHEET_ID = '1io3X1yzOoqVF6OflvERfFE5NqoJqJG9b7nGvNIfRj08';
+var SHEET_URL = 'https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?tqx=out:json&sheet=Sheet1';
 
-function getItems() {
-  try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); } catch(e) { return []; }
+function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+function fetchAndRender(){
+  fetch(SHEET_URL + '&t=' + Date.now())
+    .then(function(r){ return r.text(); })
+    .then(function(text){
+      var json = JSON.parse(text.match(/google\.visualization\.Query\.setResponse\(([\s\S]*?)\);/)[1]);
+      var rows = json.table.rows || [];
+      var items = rows.slice(1).map(function(row){
+        return {
+          type: (row.c[0]&&row.c[0].v)||'news',
+          team: (row.c[1]&&row.c[1].v)||'',
+          text: (row.c[2]&&row.c[2].v)||''
+        };
+      }).filter(function(i){ return i.text; });
+
+      var track = document.getElementById('ticker-track');
+      if(!items.length){
+        track.innerHTML = '<div class="ticker-item"><span style="color:rgba(255,255,255,0.5)">⚡ Welcome to Powerplay Windsor — Your home for Detroit &amp; Toronto sports</span></div><div class="ticker-sep">◆</div><div class="ticker-item"><span style="color:rgba(255,255,255,0.5)">⚡ Welcome to Powerplay Windsor — Your home for Detroit &amp; Toronto sports</span></div><div class="ticker-sep">◆</div>';
+        track.style.animationDuration = '20s';
+        return;
+      }
+
+      var html = '';
+      [items,items].forEach(function(set){
+        set.forEach(function(item){
+          html += '<div class="ticker-item"><span class="ticker-badge badge-'+item.type+'">'+item.type+'</span>'+(item.team?'<span class="ticker-team">'+esc(item.team)+'</span>':'')+'<span>'+esc(item.text)+'</span></div><div class="ticker-sep">◆</div>';
+        });
+      });
+      track.innerHTML = html;
+      track.style.animationDuration = Math.max(15, items.length*5)+'s';
+    }).catch(function(){ });
 }
 
-function renderTicker() {
-  var items = getItems();
-  var track = document.getElementById('ticker-track');
-
-  if(!items.length) {
-    track.innerHTML = '<div class="ticker-empty">⚡ Powerplay Windsor · Your home for Detroit & Toronto sports</div>' +
-      '<div class="ticker-dot">·</div>' +
-      '<div class="ticker-empty">⚡ Powerplay Windsor · Your home for Detroit & Toronto sports</div>' +
-      '<div class="ticker-dot">·</div>';
-    return;
-  }
-
-  // Duplicate items for seamless loop
-  var html = '';
-  [items, items].forEach(function(set) {
-    set.forEach(function(item) {
-      html += '<div class="ticker-item">' +
-        '<span class="ticker-badge badge-' + item.type + '">' + item.type + '</span>' +
-        (item.team ? '<span class="ticker-team">' + esc(item.team) + '</span>' : '') +
-        '<span>' + esc(item.text) + '</span>' +
-      '</div>' +
-      '<div class="ticker-dot">◆</div>';
-    });
-  });
-
-  track.innerHTML = html;
-
-  // Adjust animation speed based on content length
-  var speed = Math.max(15, items.length * 6);
-  track.style.animationDuration = speed + 's';
-}
-
-function esc(s) {
-  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-}
-
-// Initial render
-renderTicker();
-
-// Check for updates every 10 seconds
-setInterval(renderTicker, 10000);
+fetchAndRender();
+setInterval(fetchAndRender, 15000);
 </script>
 </body>
 </html>
