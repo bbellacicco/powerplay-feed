@@ -295,19 +295,20 @@ function loadAll(){
         var homeScore = home.score || '';
         var awayScore = away.score || '';
         var result = (home.team.displayName||'') + ' ' + homeScore + ' - ' + (away.team.displayName||'') + ' ' + awayScore;
-        var rapWon = false;
         var rapIsHome = (home.team.id||'') === '28';
-        if(homeScore && awayScore){
-          rapWon = rapIsHome ? parseInt(homeScore) > parseInt(awayScore) : parseInt(awayScore) > parseInt(homeScore);
-        }
+        var rapScore = rapIsHome ? parseInt(homeScore||0) : parseInt(awayScore||0);
+        var oppScore = rapIsHome ? parseInt(awayScore||0) : parseInt(homeScore||0);
+        var rapWon = rapScore > oppScore;
+        var opponent = rapIsHome ? (away.team.shortDisplayName||away.team.displayName) : (home.team.shortDisplayName||home.team.displayName);
         var d = new Date(e.date);
         var dateStr = d.toLocaleDateString('en-US',{month:'short',day:'numeric'});
+        var resultLabel = rapWon ? 'W' : 'L';
         allStories.push({
           team: 'Raptors',
-          title: (rapWon ? '✅ WIN · ' : '❌ LOSS · ') + result,
+          title: resultLabel + ' ' + rapScore + '-' + oppScore + ' vs ' + opponent,
           snippet: dateStr + ' · ' + (comp.venue ? comp.venue.fullName : ''),
           source: 'ESPN',
-          url: 'https://www.espn.com/nba/team/_/name/tor/toronto-raptors'
+          url: e.links && e.links.web ? e.links.web.href : 'https://www.espn.com/nba/team/_/name/tor/toronto-raptors'
         });
       });
     }).catch(function(){});
