@@ -7,7 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500&family=Sigmar&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#0a0c10;--surface:#12151c;--surface2:#1a1e28;--border:rgba(255,255,255,0.07);--accent:#FFB800;--text:#f0f2f5;--text-muted:#7a8090;--green:#2ecc71;--red-wings:#ce1126;--pistons:#c8102e;--lions:#0076b6;--tigers-navy:#0c2340;--blue-jays:#134a8e;--maple-leafs:#00205b;--canadiens:#af1e2d}
+:root{--bg:#0a0c10;--surface:#12151c;--surface2:#1a1e28;--border:rgba(255,255,255,0.07);--accent:#FFB800;--text:#f0f2f5;--text-muted:#7a8090;--green:#2ecc71;--red-wings:#ce1126;--pistons:#c8102e;--lions:#0076b6;--tigers-navy:#0c2340;--blue-jays:#134a8e;--maple-leafs:#00205b;--canadiens:#af1e2d;--raptors:#ce1141;--toronto-fc:#e31837}
 body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text)}
 #ppw-widget{width:100%;max-width:960px;margin:0 auto;background:var(--bg);border:1px solid var(--border);border-radius:12px;overflow:hidden}
 .ppw-header{background:linear-gradient(135deg,#0a0c10 0%,#1a1e28 100%);border-bottom:2px solid #FFB800;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
@@ -34,6 +34,8 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text)}
 .ppw-filter-btn[data-team="Blue Jays"].active{background:var(--blue-jays)}
 .ppw-filter-btn[data-team="Maple Leafs"].active{background:var(--maple-leafs)}
 .ppw-filter-btn[data-team="Canadiens"].active{background:var(--canadiens)}
+.ppw-filter-btn[data-team="Raptors"].active{background:var(--raptors)}
+.ppw-filter-btn[data-team="Toronto FC"].active{background:var(--toronto-fc)}
 .team-dot{width:7px;height:7px;border-radius:50%;display:inline-block;flex-shrink:0}
 .ppw-content{padding:20px;min-height:420px}
 .ppw-status{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;font-size:12px;color:var(--text-muted);font-weight:500}
@@ -58,6 +60,8 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text)}
 .ppw-story-card[data-team="Blue Jays"]{border-left-color:var(--blue-jays)}
 .ppw-story-card[data-team="Maple Leafs"]{border-left-color:var(--maple-leafs)}
 .ppw-story-card[data-team="Canadiens"]{border-left-color:var(--canadiens)}
+.ppw-story-card[data-team="Raptors"]{border-left-color:var(--raptors)}
+.ppw-story-card[data-team="Toronto FC"]{border-left-color:var(--toronto-fc)}
 .ppw-story-meta{display:flex;align-items:center;gap:8px;margin-bottom:6px;flex-wrap:wrap}
 .ppw-team-badge{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:2px 8px;border-radius:3px;color:white}
 .badge-Red-Wings{background:var(--red-wings)}
@@ -67,6 +71,8 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text)}
 .badge-Blue-Jays{background:var(--blue-jays)}
 .badge-Maple-Leafs{background:var(--maple-leafs)}
 .badge-Canadiens{background:var(--canadiens)}
+.badge-Raptors{background:var(--raptors);color:white}
+.badge-Toronto-FC{background:var(--toronto-fc);color:white}
 .ppw-story-source{font-size:11px;color:var(--text-muted);font-weight:500}
 .ppw-story-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:17px;line-height:1.25;color:var(--text);margin-bottom:6px}
 .ppw-story-snippet{font-size:13px;line-height:1.55;color:var(--text-muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
@@ -81,6 +87,8 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text)}
 .ppw-game-card[data-team="Blue Jays"]{border-left-color:var(--blue-jays)}
 .ppw-game-card[data-team="Maple Leafs"]{border-left-color:var(--maple-leafs)}
 .ppw-game-card[data-team="Canadiens"]{border-left-color:var(--canadiens)}
+.ppw-game-card[data-team="Raptors"]{border-left-color:var(--raptors)}
+.ppw-game-card[data-team="Toronto FC"]{border-left-color:var(--toronto-fc)}
 .ppw-game-date{min-width:52px;text-align:center}
 .ppw-game-date-day{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:24px;line-height:1;color:var(--text)}
 .ppw-game-date-mon{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted)}
@@ -123,6 +131,8 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text)}
     <button class="ppw-filter-btn" data-team="Blue Jays" onclick="filterTeam('Blue Jays')"><span class="team-dot" style="background:#134a8e"></span> Blue Jays</button>
     <button class="ppw-filter-btn" data-team="Maple Leafs" onclick="filterTeam('Maple Leafs')"><span class="team-dot" style="background:#00205b"></span> Maple Leafs</button>
     <button class="ppw-filter-btn" data-team="Canadiens" onclick="filterTeam('Canadiens')"><span class="team-dot" style="background:#af1e2d"></span> Canadiens</button>
+    <button class="ppw-filter-btn" data-team="Raptors" onclick="filterTeam('Raptors')"><span class="team-dot" style="background:#ce1141"></span> Raptors</button>
+    <button class="ppw-filter-btn" data-team="Toronto FC" onclick="filterTeam('Toronto FC')"><span class="team-dot" style="background:#e31837"></span> Toronto FC</button>
   </div>
   <div class="ppw-content" id="ppw-content">
     <div class="ppw-loading"><div class="ppw-spinner"></div><p>Loading feed...</p></div>
@@ -142,7 +152,9 @@ var TEAMS = [
   { name:'Tigers',      espnId:6,   sport:'baseball',   league:'mlb',      schedule:'https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/teams/6/schedule' },
   { name:'Blue Jays',   espnId:28,  sport:'baseball',   league:'mlb',      schedule:'https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/teams/28/schedule' },
   { name:'Maple Leafs', espnId:21,  sport:'hockey',     league:'nhl',      schedule:'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/21/schedule' },
-  { name:'Canadiens',   espnId:10,  sport:'hockey',     league:'nhl',      schedule:'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/10/schedule' }
+  { name:'Canadiens',   espnId:10,  sport:'hockey',     league:'nhl',      schedule:'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/10/schedule' },
+  { name:'Raptors',     espnId:28,  sport:'basketball', league:'nba',      schedule:'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/28/schedule' },
+  { name:'Toronto FC',  espnId:7318,sport:'soccer',     league:'usa.1',    schedule:'https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams/7318/schedule' }
 ];
 
 // Use ESPN team IDs to match news from categories
@@ -153,7 +165,9 @@ var TEAM_ESPN_IDS = {
   'Tigers':      6,
   'Blue Jays':   28,
   'Maple Leafs': 21,
-  'Canadiens':   10
+  'Canadiens':   10,
+  'Raptors':     28,
+  'Toronto FC':  7318
 };
 
 // League news — confirmed working endpoints
