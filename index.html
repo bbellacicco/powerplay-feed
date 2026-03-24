@@ -295,20 +295,26 @@ function loadAll(){
         var homeScore = home.score || '';
         var awayScore = away.score || '';
         var result = (home.team.displayName||'') + ' ' + homeScore + ' - ' + (away.team.displayName||'') + ' ' + awayScore;
-        var rapIsHome = (home.team.id||'') === '28';
-        var rapScore = rapIsHome ? parseInt(homeScore||0) : parseInt(awayScore||0);
-        var oppScore = rapIsHome ? parseInt(awayScore||0) : parseInt(homeScore||0);
-        var rapWon = rapScore > oppScore;
-        var opponent = rapIsHome ? (away.team.shortDisplayName||away.team.displayName) : (home.team.shortDisplayName||home.team.displayName);
+        // Check which competitor is the Raptors by abbreviation
+        var rapComp = comp.competitors.find(function(c){ return (c.team.abbreviation||'').toUpperCase() === 'TOR'; });
+        var oppComp = comp.competitors.find(function(c){ return (c.team.abbreviation||'').toUpperCase() !== 'TOR'; });
+        if(!rapComp || !oppComp) return;
+        var rapScore = rapComp.score;
+        var oppScore = oppComp.score;
+        var hasScore = rapScore && oppScore && rapScore !== '0' && oppScore !== '0';
+        var rapWon = hasScore ? parseInt(rapScore) > parseInt(oppScore) : null;
+        var opponent = oppComp.team.shortDisplayName || oppComp.team.displayName || 'Opponent';
         var d = new Date(e.date);
         var dateStr = d.toLocaleDateString('en-US',{month:'short',day:'numeric'});
-        var resultLabel = rapWon ? 'W' : 'L';
+        var title = hasScore
+          ? (rapWon ? 'W ' : 'L ') + rapScore + '-' + oppScore + ' vs ' + opponent
+          : 'vs ' + opponent;
         allStories.push({
           team: 'Raptors',
-          title: resultLabel + ' ' + rapScore + '-' + oppScore + ' vs ' + opponent,
+          title: title,
           snippet: dateStr + ' · ' + (comp.venue ? comp.venue.fullName : ''),
           source: 'ESPN',
-          url: e.links && e.links.web ? e.links.web.href : 'https://www.espn.com/nba/team/_/name/tor/toronto-raptors'
+          url: 'https://www.espn.com/nba/team/_/name/tor/toronto-raptors'
         });
       });
     }).catch(function(){});
