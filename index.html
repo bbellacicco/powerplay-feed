@@ -130,9 +130,7 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text)}
     <button class="ppw-view-btn" id="btn-games" onclick="switchView('games')">📅 Upcoming Games</button>
   </div>
   <div class="ppw-league-filters">
-    <button class="ppw-league-btn" data-league="NHL" onclick="filterLeague('NHL')">🏒 NHL</button>
-    <button class="ppw-league-btn" data-league="NBA" onclick="filterLeague('NBA')">🏀 NBA</button>
-    <button class="ppw-league-btn" data-league="MLB" onclick="filterLeague('MLB')">⚾ MLB</button>
+    <button class="ppw-league-btn" data-league="TRENDING" onclick="filterLeague('TRENDING')">🔥 Trending in Sports</button>
   </div>
   <div class="ppw-filters">
     <button class="ppw-filter-btn active" data-team="All" onclick="filterTeam('All')">All Teams</button>
@@ -201,8 +199,8 @@ var allStories = [], allGames = [];
 var activeLeague = '';
 var activeTeam = 'All', activeView = 'news';
 var lastFetch = null;
-var leagueStories = { NHL:[], NBA:[], MLB:[] };
-var leagueGames   = { NHL:[], NBA:[], MLB:[] };
+var trendingStories = [];
+var todayGames = [];
 
 function filterLeague(league){
   if(activeLeague === league){
@@ -356,59 +354,62 @@ function loadAll(){
       });
     }).catch(function(){});
 
-  // League news — top 3 from each league
-  var today = new Date().toISOString().slice(0,10).replace(/-/g,'');
-  var leagueNewsPromises = [
-    { league:'NHL', url:'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/news?limit=3' },
-    { league:'NBA', url:'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/news?limit=3' },
-    { league:'MLB', url:'https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/news?limit=3' }
-  ].map(function(feed){
+  // Trending — top stories from NHL, NBA, MLB combined
+  var todayStr = new Date().toISOString().slice(0,10).replace(/-/g,'');
+  var trendingFeeds = [
+    { league:'🏒 NHL', url:'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/news?limit=3' },
+    { league:'🏀 NBA', url:'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/news?limit=3' },
+    { league:'⚾ MLB', url:'https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/news?limit=3' }
+  ];
+  var todayFeeds = [
+    { league:'NHL', sport:'hockey/nhl' },
+    { league:'NBA', sport:'basketball/nba' },
+    { league:'MLB', sport:'baseball/mlb' }
+  ];
+
+  var trendingPromises = trendingFeeds.map(function(feed){
     return fetch(feed.url)
       .then(function(r){ return r.json(); })
       .then(function(data){
-        leagueStories[feed.league] = (data.articles||[]).slice(0,3).map(function(a){
-          return {
+        var top = (data.articles||[]).slice(0,3);
+        top.forEach(function(a){
+          trendingStories.push({
+            league: feed.league,
             title: a.headline||'',
             snippet: (a.description||'').substring(0,160),
             url: a.links&&a.links.web ? a.links.web.href : ''
-          };
+          });
         });
       }).catch(function(){});
   });
 
-  // League scoreboard — 5 games for today
-  var leagueGamesPromises = [
-    { league:'NHL', url:'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates='+today },
-    { league:'NBA', url:'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates='+today },
-    { league:'MLB', url:'https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates='+today }
-  ].map(function(feed){
-    return fetch(feed.url)
+  var todayPromises = todayFeeds.map(function(feed){
+    return fetch('https://site.api.espn.com/apis/site/v2/sports/'+feed.sport+'/scoreboard?dates='+todayStr)
       .then(function(r){ return r.json(); })
       .then(function(data){
         var events = (data.events||[]).slice(0,5);
-        leagueGames[feed.league] = events.map(function(e){
+        events.forEach(function(e){
           var comp = e.competitions&&e.competitions[0];
-          if(!comp) return null;
+          if(!comp) return;
           var home = comp.competitors.find(function(c){ return c.homeAway==='home'; });
           var away = comp.competitors.find(function(c){ return c.homeAway==='away'; });
-          if(!home||!away) return null;
+          if(!home||!away) return;
           var d = new Date(e.date);
           var status = comp.status&&comp.status.type ? comp.status.type.description : '';
           var homeScore = home.score||'';
           var awayScore = away.score||'';
-          var scoreStr = (homeScore&&awayScore) ? homeScore+'-'+awayScore : '';
-          return {
+          todayGames.push({
+            league: feed.league,
             home: home.team.shortDisplayName||home.team.displayName,
             away: away.team.shortDisplayName||away.team.displayName,
             time: status==='Final' ? 'Final' : d.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',hour12:true})+' ET',
-            score: scoreStr,
-            status: status
-          };
-        }).filter(Boolean);
+            score: (homeScore&&awayScore) ? awayScore+'-'+homeScore : ''
+          });
+        });
       }).catch(function(){});
   });
 
-  Promise.all(newsPromises.concat(gamePromises).concat([raptorsRecapPromise]).concat(leagueNewsPromises).concat(leagueGamesPromises)).then(function(){
+  Promise.all(newsPromises.concat(gamePromises).concat([raptorsRecapPromise]).concat(trendingPromises).concat(todayPromises)).then(function(){
     lastFetch = new Date();
     render();
     if(btn) btn.disabled=false;
@@ -424,17 +425,16 @@ function render(){ if(activeView==='news') renderNews(); else renderGames(); }
 
 function renderNews(){
   var stories;
-  if(activeLeague){
-    var ls = leagueStories[activeLeague]||[];
-    if(!ls.length){ setContent('<div class="ppw-error"><div class="ppw-error-icon">📭</div><h3>No stories found</h3><p>Try refreshing.</p></div>'); return; }
+  if(activeLeague==='TRENDING'){
+    if(!trendingStories.length){ setContent('<div class="ppw-error"><div class="ppw-error-icon">📭</div><h3>No stories found</h3><p>Try refreshing.</p></div>'); return; }
     var t2 = lastFetch ? lastFetch.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}) : '—';
-    setContent('<div class="ppw-status"><span><span class="ppw-live-dot"></span>'+ls.length+' stories · Updated '+t2+'</span><span>'+activeLeague+'</span></div><div class="ppw-stories" id="ppw-list"></div>');
+    setContent('<div class="ppw-status"><span><span class="ppw-live-dot"></span>'+trendingStories.length+' stories · Updated '+t2+'</span><span>🔥 Trending</span></div><div class="ppw-stories" id="ppw-list"></div>');
     var list2=document.getElementById('ppw-list');
-    ls.forEach(function(s,i){
+    trendingStories.forEach(function(s,i){
       var card=document.createElement('div');
       card.className='ppw-story-card'; card.style.animationDelay=i*0.03+'s';
       card.style.borderLeftColor='var(--accent)';
-      var inner2='<div class="ppw-story-meta"><span class="ppw-team-badge" style="background:#333;color:white">'+activeLeague+'</span><span class="ppw-story-source">ESPN</span></div><div class="ppw-story-title">'+esc(s.title)+'</div><div class="ppw-story-snippet">'+esc(s.snippet)+'</div>';
+      var inner2='<div class="ppw-story-meta"><span class="ppw-team-badge" style="background:#333;color:white">'+esc(s.league)+'</span><span class="ppw-story-source">ESPN</span></div><div class="ppw-story-title">'+esc(s.title)+'</div><div class="ppw-story-snippet">'+esc(s.snippet)+'</div>';
       card.innerHTML=s.url?'<a href="'+esc(s.url)+'" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block;">'+inner2+'</a>':inner2;
       list2.appendChild(card);
     });
@@ -459,17 +459,16 @@ function renderNews(){
 
 function renderGames(){
   var games;
-  if(activeLeague){
-    var lg = leagueGames[activeLeague]||[];
-    if(!lg.length){ setContent('<div class="ppw-error"><div class="ppw-error-icon">📭</div><h3>No games today</h3><p>Check back later.</p></div>'); return; }
+  if(activeLeague==='TRENDING'){
+    if(!todayGames.length){ setContent('<div class="ppw-error"><div class="ppw-error-icon">📭</div><h3>No games today</h3><p>Check back later.</p></div>'); return; }
     var t3 = lastFetch ? lastFetch.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}) : '—';
-    setContent('<div class="ppw-status"><span><span class="ppw-live-dot"></span>'+lg.length+' games today · Updated '+t3+'</span><span>'+activeLeague+'</span></div><div class="ppw-section-label">Today's '+activeLeague+' Games</div><div class="ppw-games-grid" id="ppw-list"></div>');
+    setContent('<div class="ppw-status"><span><span class="ppw-live-dot"></span>'+todayGames.length+" games today · Updated "+t3+'</span><span>🔥 Today\'s Games</span></div><div class="ppw-section-label">Today\'s Schedule</div><div class="ppw-games-grid" id="ppw-list"></div>');
     var list3=document.getElementById('ppw-list');
-    lg.forEach(function(g,i){
+    todayGames.forEach(function(g,i){
       var card=document.createElement('div');
       card.className='ppw-game-card'; card.style.animationDelay=i*0.03+'s';
       card.style.borderLeftColor='var(--accent)';
-      card.innerHTML='<div class="ppw-game-matchup"><div class="ppw-game-teams">'+esc(g.away)+' <span class="vs">@</span> '+esc(g.home)+'</div></div><div class="ppw-game-right"><div class="ppw-game-time">'+(g.score?esc(g.score)+' · ':'')+esc(g.time)+'</div></div>';
+      card.innerHTML='<div class="ppw-game-date"><div class="ppw-game-date-day" style="font-size:11px;color:var(--accent)">'+esc(g.league)+'</div></div><div class="ppw-game-divider"></div><div class="ppw-game-matchup"><div class="ppw-game-teams">'+esc(g.away)+' <span class="vs">@</span> '+esc(g.home)+'</div></div><div class="ppw-game-right"><div class="ppw-game-time">'+(g.score?esc(g.score)+' · ':'')+esc(g.time)+'</div></div>';
       list3.appendChild(card);
     });
     return;
