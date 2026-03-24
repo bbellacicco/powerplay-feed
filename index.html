@@ -22,6 +22,10 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text)}
 .ppw-view-btn{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:1px;text-transform:uppercase;padding:12px 20px;background:transparent;border:none;border-bottom:3px solid transparent;color:var(--text-muted);cursor:pointer;transition:all 0.2s;white-space:nowrap}
 .ppw-view-btn:hover{color:var(--text)}
 .ppw-view-btn.active{color:var(--accent);border-bottom-color:var(--accent)}
+.ppw-league-filters{background:#0d0f14;padding:8px 16px;display:flex;gap:8px;border-bottom:1px solid var(--border)}
+.ppw-league-btn{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:1px;text-transform:uppercase;padding:6px 14px;border-radius:6px;border:1px solid var(--border);background:transparent;color:var(--text-muted);cursor:pointer;transition:all 0.2s}
+.ppw-league-btn:hover{color:var(--text);border-color:rgba(255,255,255,0.2)}
+.ppw-league-btn.active{background:var(--accent);color:#0a0c10;border-color:var(--accent)}
 .ppw-filters{background:var(--surface);padding:10px 16px;display:flex;gap:6px;flex-wrap:wrap;border-bottom:1px solid var(--border)}
 .ppw-filter-btn{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.5px;text-transform:uppercase;padding:5px 11px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--text-muted);cursor:pointer;transition:all 0.2s;white-space:nowrap;display:flex;align-items:center;gap:5px}
 .ppw-filter-btn:hover{color:var(--text);border-color:rgba(255,255,255,0.2)}
@@ -72,6 +76,9 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text)}
 .badge-Maple-Leafs{background:var(--maple-leafs)}
 .badge-Canadiens{background:var(--canadiens)}
 .badge-Raptors{background:var(--raptors);color:white}
+.badge-NHL{background:#0076b6;color:white}
+.badge-NBA{background:#c8102e;color:white}
+.badge-MLB{background:#002d72;color:white}
 .badge-Toronto-FC{background:var(--toronto-fc);color:white}
 .ppw-story-source{font-size:11px;color:var(--text-muted);font-weight:500}
 .ppw-story-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:17px;line-height:1.25;color:var(--text);margin-bottom:6px}
@@ -121,6 +128,11 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text)}
   <div class="ppw-view-toggle">
     <button class="ppw-view-btn active" id="btn-news" onclick="switchView('news')">📰 Latest News</button>
     <button class="ppw-view-btn" id="btn-games" onclick="switchView('games')">📅 Upcoming Games</button>
+  </div>
+  <div class="ppw-league-filters">
+    <button class="ppw-league-btn" data-league="NHL" onclick="filterLeague('NHL')">🏒 NHL</button>
+    <button class="ppw-league-btn" data-league="NBA" onclick="filterLeague('NBA')">🏀 NBA</button>
+    <button class="ppw-league-btn" data-league="MLB" onclick="filterLeague('MLB')">⚾ MLB</button>
   </div>
   <div class="ppw-filters">
     <button class="ppw-filter-btn active" data-team="All" onclick="filterTeam('All')">All Teams</button>
@@ -183,8 +195,24 @@ var TEAM_IDS = { 'Red Wings':5, 'Pistons':8, 'Lions':8, 'Tigers':6, 'Blue Jays':
 var TEAM_KW  = { 'Red Wings':['red wings'],'Pistons':['pistons'],'Lions':['detroit lions'],'Tigers':['detroit tigers'],'Blue Jays':['blue jays'],'Maple Leafs':['maple leafs'],'Canadiens':['canadiens'] };
 
 var allStories = [], allGames = [];
+var activeLeague = '';
 var activeTeam = 'All', activeView = 'news';
 var lastFetch = null;
+
+function filterLeague(league){
+  if(activeLeague === league){
+    // Toggle off
+    activeLeague = '';
+    document.querySelectorAll('.ppw-league-btn').forEach(function(b){ b.classList.remove('active'); });
+  } else {
+    activeLeague = league;
+    document.querySelectorAll('.ppw-league-btn').forEach(function(b){ b.classList.toggle('active', b.dataset.league===league); });
+    // Clear team filter when league selected
+    activeTeam = 'All';
+    document.querySelectorAll('.ppw-filter-btn').forEach(function(b){ b.classList.toggle('active', b.dataset.team==='All'); });
+  }
+  render();
+}
 
 function switchView(v){
   activeView=v;
@@ -195,6 +223,9 @@ function switchView(v){
 
 function filterTeam(t){
   activeTeam=t;
+  // Clear league filter when team selected
+  activeLeague='';
+  document.querySelectorAll('.ppw-league-btn').forEach(function(b){ b.classList.remove('active'); });
   document.querySelectorAll('.ppw-filter-btn').forEach(function(b){ b.classList.toggle('active',b.dataset.team===t); });
   render();
 }
@@ -334,16 +365,22 @@ function loadAll(){
 function render(){ if(activeView==='news') renderNews(); else renderGames(); }
 
 function renderNews(){
-  var stories = activeTeam==='All' ? allStories : allStories.filter(function(s){ return s.team===activeTeam; });
+  var stories;
+  if(activeLeague){
+    stories = allStories.filter(function(s){ return s.team==='_'+activeLeague; });
+  } else {
+    stories = activeTeam==='All' ? allStories.filter(function(s){ return s.team.indexOf('_')!==0; }) : allStories.filter(function(s){ return s.team===activeTeam; });
+  }
   if(!stories.length){ setContent('<div class="ppw-error"><div class="ppw-error-icon">📭</div><h3>No stories found</h3><p>Try refreshing.</p></div>'); return; }
   var t = lastFetch ? lastFetch.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}) : '—';
   setContent('<div class="ppw-status"><span><span class="ppw-live-dot"></span>'+stories.length+' stories · Updated '+t+'</span><span>'+(activeTeam==='All'?'All 7 teams':activeTeam)+'</span></div><div class="ppw-stories" id="ppw-list"></div>');
   var list=document.getElementById('ppw-list');
   stories.forEach(function(s,i){
-    var badge='badge-'+s.team.replace(/\s+/g,'-');
+    var badge='badge-'+(s.team.indexOf('_')===0 ? s.team.substring(1) : s.team.replace(/\s+/g,'-'));
+    var displayTeam = s.team.indexOf('_')===0 ? s.team.substring(1) : s.team;
     var card=document.createElement('div');
     card.className='ppw-story-card'; card.dataset.team=s.team; card.style.animationDelay=i*0.03+'s';
-    var inner='<div class="ppw-story-meta"><span class="ppw-team-badge '+badge+'">'+esc(s.team)+'</span><span class="ppw-story-source">'+esc(s.source)+'</span></div><div class="ppw-story-title">'+esc(s.title)+'</div><div class="ppw-story-snippet">'+esc(s.snippet)+'</div>';
+    var inner='<div class="ppw-story-meta"><span class="ppw-team-badge '+badge+'">'+esc(displayTeam)+'</span><span class="ppw-story-source">'+esc(s.source)+'</span></div><div class="ppw-story-title">'+esc(s.title)+'</div><div class="ppw-story-snippet">'+esc(s.snippet)+'</div>';
     card.innerHTML=s.url?'<a href="'+esc(s.url)+'" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;display:block;">'+inner+'</a>':inner;
     list.appendChild(card);
   });
