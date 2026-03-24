@@ -387,7 +387,18 @@ function renderNews(){
 }
 
 function renderGames(){
-  var games = activeTeam==='All' ? allGames : allGames.filter(function(g){ return g.team===activeTeam; });
+  var games;
+  if(activeLeague){
+    var leagueTeamMap = {
+      'NHL': ['Red Wings','Maple Leafs','Canadiens'],
+      'NBA': ['Pistons','Raptors'],
+      'MLB': ['Tigers','Blue Jays']
+    };
+    var leagueTeams = leagueTeamMap[activeLeague] || [];
+    games = allGames.filter(function(g){ return leagueTeams.indexOf(g.team) >= 0; });
+  } else {
+    games = activeTeam==='All' ? allGames : allGames.filter(function(g){ return g.team===activeTeam; });
+  }
   if(!games.length){ setContent('<div class="ppw-error"><div class="ppw-error-icon">📭</div><h3>No upcoming games</h3><p>Team may be in off-season.</p></div>'); return; }
   var t = lastFetch ? lastFetch.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}) : '—';
   setContent('<div class="ppw-status"><span><span class="ppw-live-dot"></span>'+games.length+' upcoming games · Updated '+t+'</span><span>'+(activeTeam==='All'?'All 7 teams':activeTeam)+'</span></div><div class="ppw-section-label">Next scheduled games</div><div class="ppw-games-grid" id="ppw-list"></div>');
