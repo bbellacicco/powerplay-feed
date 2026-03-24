@@ -211,7 +211,21 @@ function loadAll(){
     return fetch(feed.url)
       .then(function(r){ return r.json(); })
       .then(function(data){
-        var articles = data.articles || [];
+        // Handle both ESPN API format and RSS2JSON format
+        var articles = [];
+        if(feed.rss){
+          // rss2json format
+          articles = (data.items || []).map(function(item){
+            return {
+              headline: item.title,
+              description: item.description ? item.description.replace(/<[^>]*>/g,'').substring(0,160) : '',
+              categories: [],
+              links: { web: { href: item.link } }
+            };
+          });
+        } else {
+          articles = data.articles || [];
+        }
         articles.forEach(function(a){
           var cats = (a.categories||[]).filter(function(c){return c.type==='team';}).map(function(c){return c.teamId;});
           var title = (a.headline||'').toLowerCase();
