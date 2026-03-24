@@ -211,21 +211,7 @@ function loadAll(){
     return fetch(feed.url)
       .then(function(r){ return r.json(); })
       .then(function(data){
-        // Handle both ESPN API format and RSS2JSON format
-        var articles = [];
-        if(feed.rss){
-          // rss2json format
-          articles = (data.items || []).map(function(item){
-            return {
-              headline: item.title,
-              description: item.description ? item.description.replace(/<[^>]*>/g,'').substring(0,160) : '',
-              categories: [],
-              links: { web: { href: item.link } }
-            };
-          });
-        } else {
-          articles = data.articles || [];
-        }
+        var articles = data.articles || [];
         articles.forEach(function(a){
           var cats = (a.categories||[]).filter(function(c){return c.type==='team';}).map(function(c){return c.teamId;});
           var title = (a.headline||'').toLowerCase();
@@ -293,7 +279,40 @@ function loadAll(){
       }).catch(function(){});
   });
 
-  Promise.all(newsPromises.concat(gamePromises)).then(function(){
+  // Raptors recaps from scoreboard
+  var raptorsRecapPromise = fetch('https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/28/schedule')
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      var events = data.events || [];
+      var now = new Date();
+      var past = events.filter(function(e){ return new Date(e.date) < now; }).slice(-5).reverse();
+      past.forEach(function(e){
+        var comp = e.competitions && e.competitions[0];
+        if(!comp) return;
+        var home = comp.competitors.find(function(c){ return c.homeAway==='home'; });
+        var away = comp.competitors.find(function(c){ return c.homeAway==='away'; });
+        if(!home||!away) return;
+        var homeScore = home.score || '';
+        var awayScore = away.score || '';
+        var result = (home.team.displayName||'') + ' ' + homeScore + ' - ' + (away.team.displayName||'') + ' ' + awayScore;
+        var rapWon = false;
+        var rapIsHome = (home.team.id||'') === '28';
+        if(homeScore && awayScore){
+          rapWon = rapIsHome ? parseInt(homeScore) > parseInt(awayScore) : parseInt(awayScore) > parseInt(homeScore);
+        }
+        var d = new Date(e.date);
+        var dateStr = d.toLocaleDateString('en-US',{month:'short',day:'numeric'});
+        allStories.push({
+          team: 'Raptors',
+          title: (rapWon ? '✅ WIN · ' : '❌ LOSS · ') + result,
+          snippet: dateStr + ' · ' + (comp.venue ? comp.venue.fullName : ''),
+          source: 'ESPN',
+          url: 'https://www.espn.com/nba/team/_/name/tor/toronto-raptors'
+        });
+      });
+    }).catch(function(){});
+
+  Promise.all(newsPromises.concat(gamePromises).concat([raptorsRecapPromise])).then(function(){
     lastFetch = new Date();
     render();
     if(btn) btn.disabled=false;
