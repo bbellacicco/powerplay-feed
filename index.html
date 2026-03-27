@@ -314,7 +314,28 @@ function loadAll(){
       }).catch(function(){});
   });
 
-  var raptorsRecapPromise = Promise.resolve(); // Removed recaps
+  // Raptors news — filter out previews/recaps, keep real stories
+  var raptorsRecapPromise = fetch('https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/28/news?limit=10')
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      var articles = (data.articles || []).filter(function(a){
+        var t = a.type || '';
+        // Only include stories and headline news, skip previews/recaps/media
+        return t === 'Story' || t === 'HeadlineNews' || t === 'Feature';
+      });
+      articles.slice(0,5).forEach(function(a){
+        var exists = allStories.some(function(s){ return s.title===(a.headline||''); });
+        if(!exists){
+          allStories.push({
+            team: 'Raptors',
+            title: a.headline||'',
+            snippet: (a.description||'').substring(0,160),
+            source: 'ESPN',
+            url: a.links&&a.links.web ? a.links.web.href : ''
+          });
+        }
+      });
+    }).catch(function(){});
 
   // Trending — top stories from NHL, NBA, MLB combined
   var todayStr = new Date().toISOString().slice(0,10).replace(/-/g,'');
