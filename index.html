@@ -229,11 +229,7 @@ function filterTeam(t){
   activeLeague='';
   document.querySelectorAll('.ppw-league-btn').forEach(function(b){ b.classList.remove('active'); });
   document.querySelectorAll('.ppw-filter-btn').forEach(function(b){ b.classList.toggle('active',b.dataset.team===t); });
-  if(t === 'Raptors'){
-    setContent('<div style="width:100%;height:600px;"><iframe src="https://www.espn.com/nba/team/_/name/tor/toronto-raptors" style="width:100%;height:100%;border:none;border-radius:8px;" title="Toronto Raptors ESPN"></iframe></div>');
-  } else {
-    render();
-  }
+  render();
 }
 
 function loadAll(){
@@ -317,7 +313,11 @@ function loadAll(){
       }).catch(function(){});
   });
 
+  // Raptors — static links to ESPN news pages
   var raptorsRecapPromise = Promise.resolve();
+  allStories.push({team:'Raptors',title:'Toronto Raptors — Latest News & Highlights',snippet:'Click to view the latest Raptors news, scores and highlights on ESPN.',source:'ESPN',url:'https://www.espn.com/nba/team/_/name/tor/toronto-raptors'});
+  allStories.push({team:'Raptors',title:'Toronto Raptors — Schedule & Results',snippet:'Full 2025-26 Raptors schedule with scores and game recaps.',source:'ESPN',url:'https://www.espn.com/nba/team/schedule/_/name/tor/toronto-raptors'});
+  allStories.push({team:'Raptors',title:'Toronto Raptors — Roster & Stats',snippet:'Full roster, stats and player information for the 2025-26 Raptors.',source:'ESPN',url:'https://www.espn.com/nba/team/stats/_/name/tor/toronto-raptors'});
 
   // Trending — top stories from NHL, NBA, MLB combined
   var todayStr = new Date().toISOString().slice(0,10).replace(/-/g,'');
