@@ -183,7 +183,7 @@ var TEAM_ESPN_IDS = {
 // League news — confirmed working endpoints
 var NEWS_URLS = [
   { url:'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/news?limit=50',     teams:['Red Wings','Maple Leafs','Canadiens'] },
-  { url:'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/news?limit=50',  teams:['Pistons'] },
+  { url:'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/news?limit=50',  teams:['Pistons','Raptors'] },
   { url:'https://site.api.espn.com/apis/site/v2/sports/football/nfl/news?limit=50',    teams:['Lions'] },
   { url:'https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/news?limit=50',    teams:['Tigers','Blue Jays'] },
   { url:'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/news?limit=20',     teams:['_NHL'] },
@@ -314,45 +314,7 @@ function loadAll(){
       }).catch(function(){});
   });
 
-  // Raptors recaps from scoreboard
-  var raptorsRecapPromise = fetch('https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/28/schedule')
-    .then(function(r){ return r.json(); })
-    .then(function(data){
-      var events = data.events || [];
-      var now = new Date();
-      var past = events.filter(function(e){ return new Date(e.date) < now; }).slice(-5).reverse();
-      past.forEach(function(e){
-        var comp = e.competitions && e.competitions[0];
-        if(!comp) return;
-        var home = comp.competitors.find(function(c){ return c.homeAway==='home'; });
-        var away = comp.competitors.find(function(c){ return c.homeAway==='away'; });
-        if(!home||!away) return;
-        var homeScore = home.score || '';
-        var awayScore = away.score || '';
-        var result = (home.team.displayName||'') + ' ' + homeScore + ' - ' + (away.team.displayName||'') + ' ' + awayScore;
-        // Check which competitor is the Raptors by abbreviation
-        var rapComp = comp.competitors.find(function(c){ return (c.team.abbreviation||'').toUpperCase() === 'TOR'; });
-        var oppComp = comp.competitors.find(function(c){ return (c.team.abbreviation||'').toUpperCase() !== 'TOR'; });
-        if(!rapComp || !oppComp) return;
-        var rapScore = rapComp.score;
-        var oppScore = oppComp.score;
-        var hasScore = rapScore && oppScore && rapScore !== '0' && oppScore !== '0';
-        var rapWon = hasScore ? parseInt(rapScore) > parseInt(oppScore) : null;
-        var opponent = oppComp.team.shortDisplayName || oppComp.team.displayName || 'Opponent';
-        var d = new Date(e.date);
-        var dateStr = d.toLocaleDateString('en-US',{month:'short',day:'numeric'});
-        var title = hasScore
-          ? (rapWon ? 'W ' : 'L ') + rapScore + '-' + oppScore + ' vs ' + opponent
-          : 'vs ' + opponent;
-        allStories.push({
-          team: 'Raptors',
-          title: title,
-          snippet: dateStr + ' · ' + (comp.venue ? comp.venue.fullName : ''),
-          source: 'ESPN',
-          url: 'https://www.espn.com/nba/team/_/name/tor/toronto-raptors'
-        });
-      });
-    }).catch(function(){});
+  var raptorsRecapPromise = Promise.resolve(); // Removed recaps
 
   // Trending — top stories from NHL, NBA, MLB combined
   var todayStr = new Date().toISOString().slice(0,10).replace(/-/g,'');
