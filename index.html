@@ -452,7 +452,19 @@ function renderGames(){
   } else {
     games = activeTeam==='All' ? allGames : allGames.filter(function(g){ return g.team===activeTeam; });
   }
-  if(!games.length){ setContent('<div class="ppw-error"><div class="ppw-error-icon">📭</div><h3>No upcoming games</h3><p>Team may be in off-season.</p></div>'); return; }
+  if(!games.length){
+    var localLinks = {
+      'Essex Ravens': { msg:'View the full Essex Ravens schedule on their official website.', url:'https://www.essexravens.com/schedule', label:'Essex Ravens Schedule' },
+      'Windsor Clippers': { msg:'View the full Windsor Clippers schedule on their official website.', url:'https://www.windsorclippers.com', label:'Windsor Clippers Schedule' }
+    };
+    var local = localLinks[activeTeam];
+    if(local){
+      setContent('<div class="ppw-error"><div class="ppw-error-icon">📅</div><h3>Schedule not available here</h3><p>'+local.msg+'</p><br><a href="'+local.url+'" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700;font-size:14px;">View '+local.label+' →</a></div>');
+    } else {
+      setContent('<div class="ppw-error"><div class="ppw-error-icon">📭</div><h3>No upcoming games</h3><p>Team may be in off-season.</p></div>');
+    }
+    return;
+  }
   var t = lastFetch ? lastFetch.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}) : '—';
   setContent('<div class="ppw-status"><span><span class="ppw-live-dot"></span>'+games.length+' upcoming games · Updated '+t+'</span><span>'+(activeTeam==='All'?'All 7 teams':activeTeam)+'</span></div><div class="ppw-section-label">Next scheduled games</div><div class="ppw-games-grid" id="ppw-list"></div>');
   var list=document.getElementById('ppw-list');
