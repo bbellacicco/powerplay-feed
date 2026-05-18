@@ -142,15 +142,13 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text)}
   </div>
   <div class="ppw-filters">
     <button class="ppw-filter-btn active" data-team="All" onclick="filterTeam('All')">All Teams</button>
-    <button class="ppw-filter-btn" data-team="Red Wings" onclick="filterTeam('Red Wings')"><span class="team-dot" style="background:#ce1126"></span> Red Wings</button>
     <button class="ppw-filter-btn" data-team="Pistons" onclick="filterTeam('Pistons')"><span class="team-dot" style="background:#c8102e"></span> Pistons</button>
-    <button class="ppw-filter-btn" data-team="Lions" onclick="filterTeam('Lions')"><span class="team-dot" style="background:#0076b6"></span> Lions</button>
     <button class="ppw-filter-btn" data-team="Tigers" onclick="filterTeam('Tigers')"><span class="team-dot" style="background:#FFB800"></span> Tigers</button>
     <button class="ppw-filter-btn" data-team="Blue Jays" onclick="filterTeam('Blue Jays')"><span class="team-dot" style="background:#134a8e"></span> Blue Jays</button>
-    <button class="ppw-filter-btn" data-team="Maple Leafs" onclick="filterTeam('Maple Leafs')"><span class="team-dot" style="background:#00205b"></span> Maple Leafs</button>
     <button class="ppw-filter-btn" data-team="Canadiens" onclick="filterTeam('Canadiens')"><span class="team-dot" style="background:#af1e2d"></span> Canadiens</button>
-    <button class="ppw-filter-btn" data-team="Raptors" onclick="filterTeam('Raptors')"><span class="team-dot" style="background:#ce1141"></span> Raptors</button>
     <button class="ppw-filter-btn" data-team="Toronto FC" onclick="filterTeam('Toronto FC')"><span class="team-dot" style="background:#e31837"></span> Toronto FC</button>
+    <button class="ppw-filter-btn" data-team="Essex Ravens" onclick="filterTeam('Essex Ravens')"><span class="team-dot" style="background:#FFB800"></span> Essex Ravens</button>
+    <button class="ppw-filter-btn" data-team="Windsor Clippers" onclick="filterTeam('Windsor Clippers')"><span class="team-dot" style="background:#005f9e"></span> Windsor Clippers</button>
   </div>
   <div class="ppw-content" id="ppw-content">
     <div class="ppw-loading"><div class="ppw-spinner"></div><p>Loading feed...</p></div>
@@ -328,14 +326,22 @@ function loadAll(){
   // Trending — top stories from NHL, NBA, MLB combined
   var todayStr = new Date().toISOString().slice(0,10).replace(/-/g,'');
   var trendingFeeds = [
-    { league:'🏒 NHL', url:'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/news?limit=3' },
-    { league:'🏀 NBA', url:'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/news?limit=3' },
-    { league:'⚾ MLB', url:'https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/news?limit=3' }
+    { league:'🏒 NHL',      url:'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/news?limit=3' },
+    { league:'🏀 NBA',      url:'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/news?limit=3' },
+    { league:'⚾ MLB',      url:'https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/news?limit=3' },
+    { league:'🏈 NFL',      url:'https://site.api.espn.com/apis/site/v2/sports/football/nfl/news?limit=3' },
+    { league:'⛳ Golf',     url:'https://site.api.espn.com/apis/site/v2/sports/golf/pga/news?limit=3' },
+    { league:'🎾 Tennis',   url:'https://site.api.espn.com/apis/site/v2/sports/tennis/news?limit=3' },
+    { league:'⚽ Soccer',   url:'https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/news?limit=3' },
+    { league:'🏁 NASCAR',   url:'https://site.api.espn.com/apis/site/v2/sports/racing/nascar/news?limit=3' }
   ];
   var todayFeeds = [
-    { league:'NHL', sport:'hockey/nhl' },
-    { league:'NBA', sport:'basketball/nba' },
-    { league:'MLB', sport:'baseball/mlb' }
+    { league:'NHL',    sport:'hockey/nhl' },
+    { league:'NBA',    sport:'basketball/nba' },
+    { league:'MLB',    sport:'baseball/mlb' },
+    { league:'NFL',    sport:'football/nfl' },
+    { league:'Soccer', sport:'soccer/fifa.world' },
+    { league:'Golf',   sport:'golf/pga' }
   ];
 
   var trendingPromises = trendingFeeds.map(function(feed){
