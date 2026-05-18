@@ -80,6 +80,14 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text)}
 .badge-NBA{background:#c8102e;color:white}
 .badge-MLB{background:#002d72;color:white}
 .badge-Toronto-FC{background:var(--toronto-fc);color:white}
+.badge-Essex-Ravens{background:#1a1a1a;color:#FFB800;border:1px solid #FFB800}
+.badge-Windsor-Clippers{background:#005f9e;color:white}
+.ppw-filter-btn[data-team="Essex Ravens"].active{background:#1a1a1a;border-color:#FFB800;color:#FFB800}
+.ppw-filter-btn[data-team="Windsor Clippers"].active{background:#005f9e}
+.ppw-story-card[data-team="Essex Ravens"]{border-left-color:#FFB800}
+.ppw-story-card[data-team="Windsor Clippers"]{border-left-color:#005f9e}
+.ppw-game-card[data-team="Essex Ravens"]{border-left-color:#FFB800}
+.ppw-game-card[data-team="Windsor Clippers"]{border-left-color:#005f9e}
 .ppw-story-source{font-size:11px;color:var(--text-muted);font-weight:500}
 .ppw-story-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:17px;line-height:1.25;color:var(--text);margin-bottom:6px}
 .ppw-story-snippet{font-size:13px;line-height:1.55;color:var(--text-muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
@@ -156,27 +164,19 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text)}
 // ESPN news + schedule endpoints — no API key needed
 // ESPN confirmed team IDs
 var TEAMS = [
-  { name:'Red Wings',   espnId:5,   sport:'hockey',     league:'nhl',      schedule:'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/5/schedule' },
   { name:'Pistons',     espnId:8,   sport:'basketball', league:'nba',      schedule:'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/8/schedule' },
-  { name:'Lions',       espnId:8,   sport:'football',   league:'nfl',      schedule:'https://site.api.espn.com/apis/site/v2/sports/football/nfl/teams/8/schedule' },
   { name:'Tigers',      espnId:6,   sport:'baseball',   league:'mlb',      schedule:'https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/teams/6/schedule' },
   { name:'Blue Jays',   espnId:28,  sport:'baseball',   league:'mlb',      schedule:'https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/teams/28/schedule' },
-  { name:'Maple Leafs', espnId:21,  sport:'hockey',     league:'nhl',      schedule:'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/21/schedule' },
   { name:'Canadiens',   espnId:10,  sport:'hockey',     league:'nhl',      schedule:'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/10/schedule' },
-  { name:'Raptors',     espnId:28,  sport:'basketball', league:'nba',      schedule:'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/28/schedule' },
   { name:'Toronto FC',  espnId:7318,sport:'soccer',     league:'usa.1',    schedule:'https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams/7318/schedule' }
 ];
 
 // Use ESPN team IDs to match news from categories
 var TEAM_ESPN_IDS = {
-  'Red Wings':   5,
   'Pistons':     8,
-  'Lions':       8,
   'Tigers':      6,
   'Blue Jays':   28,
-  'Maple Leafs': 21,
   'Canadiens':   10,
-  'Raptors':     28,
   'Toronto FC':  7318
 };
 
@@ -315,12 +315,15 @@ function loadAll(){
 
   // Raptors — static links to ESPN news pages
   var raptorsRecapPromise = Promise.resolve();
-  allStories.push({team:'Raptors',title:'Toronto Raptors — Latest News & Highlights',snippet:'Click to view the latest Raptors news, scores and highlights on ESPN.',source:'ESPN',url:'https://www.espn.com/nba/team/_/name/tor/toronto-raptors'});
-  allStories.push({team:'Raptors',title:'Toronto Raptors — Schedule & Results',snippet:'Full 2025-26 Raptors schedule with scores and game recaps.',source:'ESPN',url:'https://www.espn.com/nba/team/schedule/_/name/tor/toronto-raptors'});
-  allStories.push({team:'Raptors',title:'Toronto Raptors — Roster & Stats',snippet:'Full roster, stats and player information for the 2025-26 Raptors.',source:'ESPN',url:'https://www.espn.com/nba/team/stats/_/name/tor/toronto-raptors'});
   allStories.push({team:'Toronto FC',title:'Toronto FC — Latest News & Highlights',snippet:'Click to view the latest Toronto FC news, scores and highlights on ESPN.',source:'ESPN',url:'https://www.espn.com/soccer/team/_/id/7318/toronto-fc'});
   allStories.push({team:'Toronto FC',title:'Toronto FC — Schedule & Results',snippet:'Full 2026 Toronto FC MLS schedule with scores and match recaps.',source:'ESPN',url:'https://www.espn.com/soccer/team/fixtures/_/id/7318/usa.toronto_fc'});
   allStories.push({team:'Toronto FC',title:'Toronto FC — Roster & Stats',snippet:'Full roster, stats and player information for Toronto FC 2026.',source:'ESPN',url:'https://www.espn.com/soccer/team/squad/_/id/7318'});
+  allStories.push({team:'Essex Ravens',title:'Essex Ravens — Official Website',snippet:'News, schedule, roster and registration for the Essex County Ravens Football Club.',source:'essexravens.com',url:'https://www.essexravens.com'});
+  allStories.push({team:'Essex Ravens',title:'Essex Ravens — 2026 Schedule',snippet:'View the full 2026 Essex Ravens season schedule and results.',source:'essexravens.com',url:'https://www.essexravens.com/schedule'});
+  allStories.push({team:'Essex Ravens',title:'Essex Ravens — Facebook Updates',snippet:'Follow the Essex Ravens on Facebook for the latest news and game updates.',source:'Facebook',url:'https://www.facebook.com/p/Essex-Ravens-Football-Club-100057330315197/'});
+  allStories.push({team:'Windsor Clippers',title:'Windsor Clippers — Official Website',snippet:'News, schedule and information for the Windsor Clippers Jr. B Lacrosse team.',source:'windsorclippers.com',url:'https://www.windsorclippers.com'});
+  allStories.push({team:'Windsor Clippers',title:'Windsor Clippers — OLA League Page',snippet:'Ontario Lacrosse Association page for the Windsor Clippers with standings and stats.',source:'ontariolacrosse.com',url:'https://ontariolacrosse.com/leagues/junior-b/windsor-clippers'});
+  allStories.push({team:'Windsor Clippers',title:'Windsor Clippers — Facebook Updates',snippet:'Follow the Windsor Clippers on Facebook for the latest news and game updates.',source:'Facebook',url:'https://www.facebook.com/WindsorClippers/'});
 
   // Trending — top stories from NHL, NBA, MLB combined
   var todayStr = new Date().toISOString().slice(0,10).replace(/-/g,'');
