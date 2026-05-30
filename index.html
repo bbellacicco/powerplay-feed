@@ -82,8 +82,20 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text)}
 .badge-Toronto-FC{background:var(--toronto-fc);color:white}
 .badge-Essex-Ravens{background:#1a1a1a;color:#FFB800;border:1px solid #FFB800}
 .badge-Windsor-Clippers{background:#005f9e;color:white}
+.badge-NBA{background:#c8102e;color:white}
+.badge-NHL{background:#0076b6;color:white}
+.badge-CFL{background:#bf0000;color:white}
 .ppw-filter-btn[data-team="Essex Ravens"].active{background:#1a1a1a;border-color:#FFB800;color:#FFB800}
 .ppw-filter-btn[data-team="Windsor Clippers"].active{background:#005f9e}
+.ppw-filter-btn[data-team="NBA"].active{background:#c8102e}
+.ppw-filter-btn[data-team="NHL"].active{background:#0076b6}
+.ppw-filter-btn[data-team="CFL"].active{background:#bf0000}
+.ppw-story-card[data-team="NBA"]{border-left-color:#c8102e}
+.ppw-story-card[data-team="NHL"]{border-left-color:#0076b6}
+.ppw-story-card[data-team="CFL"]{border-left-color:#bf0000}
+.ppw-game-card[data-team="NBA"]{border-left-color:#c8102e}
+.ppw-game-card[data-team="NHL"]{border-left-color:#0076b6}
+.ppw-game-card[data-team="CFL"]{border-left-color:#bf0000}
 .ppw-story-card[data-team="Essex Ravens"]{border-left-color:#FFB800}
 .ppw-story-card[data-team="Windsor Clippers"]{border-left-color:#005f9e}
 .ppw-game-card[data-team="Essex Ravens"]{border-left-color:#FFB800}
@@ -142,10 +154,11 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text)}
   </div>
   <div class="ppw-filters">
     <button class="ppw-filter-btn active" data-team="All" onclick="filterTeam('All')">All Teams</button>
-    <button class="ppw-filter-btn" data-team="Pistons" onclick="filterTeam('Pistons')"><span class="team-dot" style="background:#c8102e"></span> Pistons</button>
+    <button class="ppw-filter-btn" data-team="NBA" onclick="filterTeam('NBA')"><span class="team-dot" style="background:#c8102e"></span> NBA</button>
+    <button class="ppw-filter-btn" data-team="NHL" onclick="filterTeam('NHL')"><span class="team-dot" style="background:#0076b6"></span> NHL</button>
+    <button class="ppw-filter-btn" data-team="CFL" onclick="filterTeam('CFL')"><span class="team-dot" style="background:#bf0000"></span> CFL</button>
     <button class="ppw-filter-btn" data-team="Tigers" onclick="filterTeam('Tigers')"><span class="team-dot" style="background:#FFB800"></span> Tigers</button>
     <button class="ppw-filter-btn" data-team="Blue Jays" onclick="filterTeam('Blue Jays')"><span class="team-dot" style="background:#134a8e"></span> Blue Jays</button>
-    <button class="ppw-filter-btn" data-team="Canadiens" onclick="filterTeam('Canadiens')"><span class="team-dot" style="background:#af1e2d"></span> Canadiens</button>
     <button class="ppw-filter-btn" data-team="Toronto FC" onclick="filterTeam('Toronto FC')"><span class="team-dot" style="background:#e31837"></span> Toronto FC</button>
     <button class="ppw-filter-btn" data-team="Essex Ravens" onclick="filterTeam('Essex Ravens')"><span class="team-dot" style="background:#FFB800"></span> Essex Ravens</button>
     <button class="ppw-filter-btn" data-team="Windsor Clippers" onclick="filterTeam('Windsor Clippers')"><span class="team-dot" style="background:#005f9e"></span> Windsor Clippers</button>
@@ -162,19 +175,15 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text)}
 // ESPN news + schedule endpoints — no API key needed
 // ESPN confirmed team IDs
 var TEAMS = [
-  { name:'Pistons',     espnId:8,   sport:'basketball', league:'nba',      schedule:'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/8/schedule' },
   { name:'Tigers',      espnId:6,   sport:'baseball',   league:'mlb',      schedule:'https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/teams/6/schedule' },
   { name:'Blue Jays',   espnId:28,  sport:'baseball',   league:'mlb',      schedule:'https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/teams/28/schedule' },
-  { name:'Canadiens',   espnId:10,  sport:'hockey',     league:'nhl',      schedule:'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/teams/10/schedule' },
   { name:'Toronto FC',  espnId:7318,sport:'soccer',     league:'usa.1',    schedule:'https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams/7318/schedule' }
 ];
 
 // Use ESPN team IDs to match news from categories
 var TEAM_ESPN_IDS = {
-  'Pistons':     8,
   'Tigers':      6,
   'Blue Jays':   28,
-  'Canadiens':   10,
   'Toronto FC':  7318
 };
 
@@ -313,6 +322,18 @@ function loadAll(){
 
   // Raptors — static links to ESPN news pages
   var raptorsRecapPromise = Promise.resolve();
+  // NHL league news static cards
+  allStories.push({team:'NHL',title:'NHL — Latest News & Highlights',snippet:'Top stories from around the NHL today.',source:'ESPN',url:'https://www.espn.com/nhl/'});
+  allStories.push({team:'NHL',title:'NHL — Standings',snippet:'Current NHL standings and playoff picture.',source:'ESPN',url:'https://www.espn.com/nhl/standings'});
+  allStories.push({team:'NHL',title:'NHL — Scores & Schedule',snippet:'Today's NHL scores and upcoming schedule.',source:'ESPN',url:'https://www.espn.com/nhl/scoreboard'});
+  // NBA league news static cards
+  allStories.push({team:'NBA',title:'NBA — Latest News & Highlights',snippet:'Top stories from around the NBA today.',source:'ESPN',url:'https://www.espn.com/nba/'});
+  allStories.push({team:'NBA',title:'NBA — Standings',snippet:'Current NBA standings and playoff picture.',source:'ESPN',url:'https://www.espn.com/nba/standings'});
+  allStories.push({team:'NBA',title:'NBA — Scores & Schedule',snippet:'Today's NBA scores and upcoming schedule.',source:'ESPN',url:'https://www.espn.com/nba/scoreboard'});
+  // CFL static cards
+  allStories.push({team:'CFL',title:'CFL — Latest News & Highlights',snippet:'Top stories from the Canadian Football League.',source:'CFL.ca',url:'https://www.cfl.ca/news/'});
+  allStories.push({team:'CFL',title:'CFL — 2026 Schedule',snippet:'Full 2026 CFL season schedule and results.',source:'CFL.ca',url:'https://www.cfl.ca/schedule/'});
+  allStories.push({team:'CFL',title:'CFL — Standings',snippet:'Current CFL standings and division leaders.',source:'CFL.ca',url:'https://www.cfl.ca/standings/'});
   allStories.push({team:'Toronto FC',title:'Toronto FC — Latest News & Highlights',snippet:'Click to view the latest Toronto FC news, scores and highlights on ESPN.',source:'ESPN',url:'https://www.espn.com/soccer/team/_/id/7318/toronto-fc'});
   allStories.push({team:'Toronto FC',title:'Toronto FC — Schedule & Results',snippet:'Full 2026 Toronto FC MLS schedule with scores and match recaps.',source:'ESPN',url:'https://www.espn.com/soccer/team/fixtures/_/id/7318/usa.toronto_fc'});
   allStories.push({team:'Toronto FC',title:'Toronto FC — Roster & Stats',snippet:'Full roster, stats and player information for Toronto FC 2026.',source:'ESPN',url:'https://www.espn.com/soccer/team/squad/_/id/7318'});
@@ -340,6 +361,7 @@ function loadAll(){
     { league:'NBA',    sport:'basketball/nba' },
     { league:'MLB',    sport:'baseball/mlb' },
     { league:'NFL',    sport:'football/nfl' },
+    { league:'CFL',    sport:'football/cfl' },
     { league:'Soccer', sport:'soccer/fifa.world' },
     { league:'Golf',   sport:'golf/pga' }
   ];
@@ -455,7 +477,10 @@ function renderGames(){
   if(!games.length){
     var localLinks = {
       'Essex Ravens': { msg:'View the full Essex Ravens schedule on their official website.', url:'https://www.essexravens.com/schedule', label:'Essex Ravens Schedule' },
-      'Windsor Clippers': { msg:'View the full Windsor Clippers schedule on their official website.', url:'https://www.windsorclippers.com', label:'Windsor Clippers Schedule' }
+      'Windsor Clippers': { msg:'View the full Windsor Clippers schedule on their official website.', url:'https://www.windsorclippers.com', label:'Windsor Clippers Schedule' },
+      'CFL': { msg:'View the full CFL schedule on CFL.ca.', url:'https://www.cfl.ca/schedule/', label:'CFL Schedule' },
+      'NHL': { msg:'View the full NHL schedule on ESPN.', url:'https://www.espn.com/nhl/scoreboard', label:'NHL Scoreboard' },
+      'NBA': { msg:'View the full NBA schedule on ESPN.', url:'https://www.espn.com/nba/scoreboard', label:'NBA Scoreboard' }
     };
     var local = localLinks[activeTeam];
     if(local){
