@@ -4,41 +4,14 @@
 <meta charset="UTF-8">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#0a0c10;overflow:hidden}
+body{background:#000;overflow:hidden}
 .ticker-wrap{
   display:flex;
   align-items:center;
   height:44px;
   width:100%;
-  background:#0a0c10;
+  background:#000;
   overflow:hidden;
-}
-.ticker-label{
-  background:#FFB800;
-  color:#0a0c10;
-  font-family:Arial,sans-serif;
-  font-size:13px;
-  font-weight:700;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  padding:0 16px;
-  height:100%;
-  display:flex;
-  align-items:center;
-  white-space:nowrap;
-  flex-shrink:0;
-  position:relative;
-  z-index:2;
-}
-.ticker-label::after{
-  content:'';
-  position:absolute;
-  right:-11px;
-  top:0;
-  width:0;
-  height:0;
-  border-top:44px solid transparent;
-  border-left:12px solid #FFB800;
 }
 .ticker-outer{
   overflow:hidden;
@@ -57,11 +30,11 @@ body{background:#0a0c10;overflow:hidden}
   display:inline-flex;
   align-items:center;
   gap:8px;
-  padding:0 28px;
+  padding:0 32px;
   font-family:Arial,sans-serif;
   font-size:13px;
   font-weight:600;
-  color:#f0f2f5;
+  color:#FFB800;
 }
 .badge{
   font-size:9px;
@@ -74,80 +47,78 @@ body{background:#0a0c10;overflow:hidden}
 }
 .badge-score{background:#e8323a;color:#fff}
 .badge-news{background:#0076b6;color:#fff}
-.badge-update{background:#2ecc71;color:#0a0c10}
-.sep{color:rgba(255,184,0,0.35);padding:0 4px;font-size:18px;font-family:Arial}
+.badge-update{background:#FFB800;color:#000}
+.team{color:#fff;font-weight:700}
+.sep{color:rgba(255,184,0,0.3);padding:0 4px;font-size:18px;font-family:Arial}
 </style>
 </head>
 <body>
 <div class="ticker-wrap">
-  <div class="ticker-label">&#9889; POWERPLAY</div>
   <div class="ticker-outer">
     <div class="ticker-track" id="track">
-      <div class="ticker-item"><span style="color:rgba(255,255,255,0.4)">Loading...</span></div>
+      <div class="ticker-item" style="color:rgba(255,184,0,0.4)">Loading...</div>
     </div>
   </div>
 </div>
 
 <script>
-var SHEET_ID = '1io3X1yzOoqVF6OflvERfFE5NqoJqJG9b7nGvNIfRj08';
-var SHEET_URL = 'https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?tqx=out:json&sheet=Sheet1';
+var SHEET_ID = '1-wAZ-NTyz5v-LbP2hMEB-BGdJcVPC72ZJK1bo6dAiCM';
+var CSV_URL = 'https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?tqx=out:csv&sheet=Sheet1';
 
 var track = document.getElementById('track');
 var pos = 0;
 var half = 0;
 var raf;
-var items = [];
 
-function buildHTML(set) {
-  if (!set.length) {
-    return '<div class="ticker-item"><span style="color:rgba(255,255,255,0.4)">&#9889; Powerplay Windsor &mdash; Windsor-Essex sports coverage</span></div><span class="sep">&#9670;</span>';
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function parseCSV(text) {
+  var lines = text.trim().split('\n');
+  var items = [];
+  for (var i = 1; i < lines.length; i++) {
+    var cols = lines[i].match(/(".*?"|[^,]+)(?=,|$)/g);
+    if (!cols || cols.length < 3) continue;
+    var type = cols[0].replace(/"/g,'').trim().toLowerCase();
+    var team = cols[1].replace(/"/g,'').trim();
+    var text = cols[2].replace(/"/g,'').trim();
+    if (text) items.push({type: type, team: team, text: text});
   }
-  return set.map(function(item) {
+  return items;
+}
+
+function buildHTML(items) {
+  if (!items.length) {
+    return '<div class="ticker-item">&#9889; Powerplay Windsor &mdash; Windsor-Essex sports coverage</div><span class="sep">&#9670;</span><div class="ticker-item">&#9889; Powerplay Windsor &mdash; Windsor-Essex sports coverage</div><span class="sep">&#9670;</span>';
+  }
+  return items.map(function(item) {
+    var badgeClass = (item.type === 'score' || item.type === 'news' || item.type === 'update') ? 'badge-' + item.type : 'badge-update';
     return '<div class="ticker-item">' +
-      '<span class="badge badge-' + esc(item.type) + '">' + esc(item.type) + '</span>' +
-      (item.team ? '<span style="color:#FFB800;font-weight:700">' + esc(item.team) + '</span> ' : '') +
+      '<span class="badge ' + badgeClass + '">' + esc(item.type) + '</span>' +
+      (item.team ? '<span class="team">' + esc(item.team) + '</span>' : '') +
       '<span>' + esc(item.text) + '</span>' +
       '</div><span class="sep">&#9670;</span>';
   }).join('');
 }
 
-function esc(s) {
-  return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-}
-
-function renderTicker(data) {
-  track.innerHTML = buildHTML(data) + buildHTML(data);
-  half = track.scrollWidth / 2;
+function renderTicker(items) {
+  var html = buildHTML(items);
+  track.innerHTML = html + html;
+  setTimeout(function() { half = track.scrollWidth / 2; }, 100);
 }
 
 function fetchSheet() {
-  var s = document.createElement('script');
-  var cb = 'ppwCB_' + Date.now();
-  window[cb] = function(response) {
-    try {
-      var rows = response.table.rows;
-      var parsed = [];
-      for (var i = 0; i < rows.length; i++) {
-        var cols = rows[i].c;
-        var type = cols[0] && cols[0].v ? String(cols[0].v).trim().toLowerCase() : '';
-        var team = cols[1] && cols[1].v ? String(cols[1].v).trim() : '';
-        var text = cols[2] && cols[2].v ? String(cols[2].v).trim() : '';
-        if (text && (type === 'score' || type === 'news' || type === 'update')) {
-          parsed.push({type: type, team: team, text: text});
-        }
-      }
-      if (parsed.length) {
-        items = parsed;
+  fetch(CSV_URL)
+    .then(function(r) { return r.text(); })
+    .then(function(text) {
+      var items = parseCSV(text);
+      if (items.length) {
         pos = 0;
         renderTicker(items);
       }
-    } catch(e) {}
-    delete window[cb];
-    s.parentNode && s.parentNode.removeChild(s);
-  };
-  s.src = SHEET_URL + '&tqx=out:json&tq=select%20A%2CB%2CC%20where%20A%20is%20not%20null&callback=' + cb;
-  s.onerror = function() { delete window[cb]; };
-  document.head.appendChild(s);
+    })
+    .catch(function() {});
 }
 
 function animate() {
