@@ -7,12 +7,12 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#000;overflow:hidden}
 .ticker-wrap{
-  display:flex;
-  align-items:center;
-  height:44px;
   width:100%;
+  height:44px;
   background:#000;
   overflow:hidden;
+  display:flex;
+  align-items:center;
 }
 .ticker-outer{
   overflow:hidden;
@@ -21,11 +21,10 @@ body{background:#000;overflow:hidden}
   display:flex;
   align-items:center;
 }
-.ticker-track{
-  display:flex;
+#track{
+  display:inline-flex;
   align-items:center;
   white-space:nowrap;
-  will-change:transform;
 }
 .ticker-item{
   display:inline-flex;
@@ -52,117 +51,104 @@ body{background:#000;overflow:hidden}
 .badge-upcoming{background:#9b59b6;color:#fff}
 .badge-default{background:#555;color:#fff}
 .team{color:#fff;font-weight:700}
-.sep{color:rgba(255,184,0,0.3);padding:0 4px;font-size:18px;font-family:Arial}
+.sep{color:rgba(255,184,0,0.3);font-size:18px;font-family:Arial;padding:0 4px}
+@keyframes ticker-scroll{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(var(--ticker-offset))}
+}
 </style>
 </head>
 <body>
 <div class="ticker-wrap">
   <div class="ticker-outer">
-    <div class="ticker-track" id="track">
+    <div id="track">
       <div class="ticker-item" style="color:rgba(255,184,0,0.4)">Loading...</div>
     </div>
   </div>
 </div>
-
 <script>
 var SHEET_ID = '1-wAZ-NTyz5v-LbP2hMEB-BGdJcVPC72ZJK1bo6dAiCM';
 var track = document.getElementById('track');
-var pos = 0;
-var half = 0;
-var raf;
-var lastTime = null;
-var SPEED = 40;
 
-function esc(s) {
+function esc(s){
   return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 }
 
-function badgeClass(type) {
+function badgeClass(type){
   var t = type.toLowerCase().trim();
-  if (t === 'score') return 'badge-score';
-  if (t === 'news') return 'badge-news';
-  if (t === 'update') return 'badge-update';
-  if (t === 'upcoming') return 'badge-upcoming';
+  if(t==='score') return 'badge-score';
+  if(t==='news') return 'badge-news';
+  if(t==='update') return 'badge-update';
+  if(t==='upcoming') return 'badge-upcoming';
   return 'badge-default';
 }
 
-function parseCSV(text) {
+function parseCSV(text){
   var lines = text.trim().split('\n');
   var items = [];
-  for (var i = 1; i < lines.length; i++) {
+  for(var i=1;i<lines.length;i++){
     var line = lines[i];
     var cols = [];
-    var current = '';
-    var inQuotes = false;
-    for (var c = 0; c < line.length; c++) {
+    var cur = '';
+    var inQ = false;
+    for(var c=0;c<line.length;c++){
       var ch = line[c];
-      if (ch === '"') { inQuotes = !inQuotes; }
-      else if (ch === ',' && !inQuotes) { cols.push(current.trim()); current = ''; }
-      else { current += ch; }
+      if(ch==='"'){inQ=!inQ;}
+      else if(ch===','&&!inQ){cols.push(cur.trim());cur='';}
+      else{cur+=ch;}
     }
-    cols.push(current.trim());
-    if (cols.length < 3) continue;
+    cols.push(cur.trim());
+    if(cols.length<3) continue;
     var type = cols[0].trim();
     var team = cols[1].trim();
     var text = cols[2].trim();
-    if (text) items.push({type: type, team: team, text: text});
+    if(text) items.push({type:type,team:team,text:text});
   }
   return items;
 }
 
-function buildHTML(items) {
-  if (!items.length) {
-    var d = '<div class="ticker-item">&#9889; Powerplay Windsor &mdash; Windsor-Essex sports coverage</div><span class="sep">&#9670;</span>';
-    return d + d + d;
+function buildItems(items){
+  if(!items.length){
+    return '<div class="ticker-item">&#9889; Powerplay Windsor &mdash; Windsor-Essex sports coverage</div><span class="sep">&#9670;</span>';
   }
-  return items.map(function(item) {
-    return '<div class="ticker-item">' +
-      '<span class="badge ' + badgeClass(item.type) + '">' + esc(item.type) + '</span>' +
-      (item.team ? '<span class="team">' + esc(item.team) + ' </span>' : '') +
-      '<span>' + esc(item.text) + '</span>' +
+  return items.map(function(item){
+    return '<div class="ticker-item">'+
+      '<span class="badge '+badgeClass(item.type)+'">'+esc(item.type)+'</span>'+
+      (item.team?'<span class="team">'+esc(item.team)+' </span>':'')+
+      '<span>'+esc(item.text)+'</span>'+
       '</div><span class="sep">&#9670;</span>';
   }).join('');
 }
 
-function measureAndSet() {
-  half = track.scrollWidth / 3;
+function startTicker(items){
+  var html = buildItems(items);
+  // render 4 copies so loop point is always well past the visible area
+  track.innerHTML = html + html + html + html;
+  track.style.animation = 'none';
+  track.style.transform = 'translateX(0)';
+
+  // wait for fonts and layout to fully settle before measuring
+  setTimeout(function(){
+    var singleWidth = track.scrollWidth / 4;
+    var duration = singleWidth / 60;
+    track.style.setProperty('--ticker-offset', '-' + singleWidth + 'px');
+    track.style.animation = 'ticker-scroll ' + duration.toFixed(1) + 's linear infinite';
+  }, 500);
 }
 
-function renderTicker(items) {
-  var html = buildHTML(items);
-  track.innerHTML = html + html + html;
-  pos = 0;
-  lastTime = null;
-  setTimeout(measureAndSet, 300);
-}
-
-function fetchSheet() {
-  var url = 'https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?tqx=out:csv&sheet=Sheet1&cachebust=' + Date.now();
-  fetch(url, {cache: 'no-store'})
-    .then(function(r) { return r.text(); })
-    .then(function(text) {
+function fetchSheet(){
+  var url = 'https://docs.google.com/spreadsheets/d/'+SHEET_ID+'/gviz/tq?tqx=out:csv&sheet=Sheet1&t='+Date.now();
+  fetch(url,{cache:'no-store'})
+    .then(function(r){return r.text();})
+    .then(function(text){
       var items = parseCSV(text);
-      if (items.length) renderTicker(items);
+      if(items.length) startTicker(items);
     })
-    .catch(function() { setTimeout(fetchSheet, 5000); });
-}
-
-function animate(timestamp) {
-  if (half > 0) {
-    if (lastTime === null) lastTime = timestamp;
-    var delta = (timestamp - lastTime) / 1000;
-    lastTime = timestamp;
-    if (delta > 0.1) delta = 0.1;
-    pos += SPEED * delta;
-    if (pos >= half) pos = pos - half;
-    track.style.transform = 'translateX(-' + pos.toFixed(2) + 'px)';
-  }
-  raf = requestAnimationFrame(animate);
+    .catch(function(){setTimeout(fetchSheet,5000);});
 }
 
 fetchSheet();
-setInterval(fetchSheet, 20000);
-raf = requestAnimationFrame(animate);
+setInterval(fetchSheet,20000);
 </script>
 </body>
 </html>
