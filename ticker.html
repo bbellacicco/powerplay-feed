@@ -49,6 +49,8 @@ body{background:#000;overflow:hidden}
 .badge-score{background:#e8323a;color:#fff}
 .badge-news{background:#0076b6;color:#fff}
 .badge-update{background:#FFB800;color:#000}
+.badge-upcoming{background:#9b59b6;color:#fff}
+.badge-default{background:#555;color:#fff}
 .team{color:#fff;font-weight:700}
 .sep{color:rgba(255,184,0,0.3);padding:0 4px;font-size:18px;font-family:Arial}
 </style>
@@ -64,17 +66,24 @@ body{background:#000;overflow:hidden}
 
 <script>
 var SHEET_ID = '1-wAZ-NTyz5v-LbP2hMEB-BGdJcVPC72ZJK1bo6dAiCM';
-var CSV_URL = 'https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?tqx=out:csv&sheet=Sheet1&cachebust=' + Date.now();
-
 var track = document.getElementById('track');
 var pos = 0;
 var half = 0;
 var raf;
 var lastTime = null;
-var SPEED = 40; // pixels per second — consistent on all devices
+var SPEED = 40;
 
 function esc(s) {
   return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function badgeClass(type) {
+  var t = type.toLowerCase().trim();
+  if (t === 'score') return 'badge-score';
+  if (t === 'news') return 'badge-news';
+  if (t === 'update') return 'badge-update';
+  if (t === 'upcoming') return 'badge-upcoming';
+  return 'badge-default';
 }
 
 function parseCSV(text) {
@@ -93,7 +102,7 @@ function parseCSV(text) {
     }
     cols.push(current.trim());
     if (cols.length < 3) continue;
-    var type = cols[0].toLowerCase().trim();
+    var type = cols[0].trim();
     var team = cols[1].trim();
     var text = cols[2].trim();
     if (text) items.push({type: type, team: team, text: text});
@@ -104,42 +113,38 @@ function parseCSV(text) {
 function buildHTML(items) {
   if (!items.length) {
     var d = '<div class="ticker-item">&#9889; Powerplay Windsor &mdash; Windsor-Essex sports coverage</div><span class="sep">&#9670;</span>';
-    return d + d;
+    return d + d + d;
   }
   return items.map(function(item) {
-    var t = (item.type === 'score' || item.type === 'news' || item.type === 'update') ? item.type : 'update';
     return '<div class="ticker-item">' +
-      '<span class="badge badge-' + t + '">' + esc(item.type) + '</span>' +
+      '<span class="badge ' + badgeClass(item.type) + '">' + esc(item.type) + '</span>' +
       (item.team ? '<span class="team">' + esc(item.team) + ' </span>' : '') +
       '<span>' + esc(item.text) + '</span>' +
       '</div><span class="sep">&#9670;</span>';
   }).join('');
 }
 
+function measureAndSet() {
+  half = track.scrollWidth / 3;
+}
+
 function renderTicker(items) {
   var html = buildHTML(items);
-  track.innerHTML = html + html;
+  track.innerHTML = html + html + html;
   pos = 0;
   lastTime = null;
-  setTimeout(function() {
-    half = track.scrollWidth / 2;
-  }, 200);
+  setTimeout(measureAndSet, 300);
 }
 
 function fetchSheet() {
   var url = 'https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?tqx=out:csv&sheet=Sheet1&cachebust=' + Date.now();
   fetch(url, {cache: 'no-store'})
-    .then(function(r) {
-      if (!r.ok) throw new Error('fetch failed');
-      return r.text();
-    })
+    .then(function(r) { return r.text(); })
     .then(function(text) {
       var items = parseCSV(text);
       if (items.length) renderTicker(items);
     })
-    .catch(function() {
-      setTimeout(fetchSheet, 5000);
-    });
+    .catch(function() { setTimeout(fetchSheet, 5000); });
 }
 
 function animate(timestamp) {
@@ -147,7 +152,7 @@ function animate(timestamp) {
     if (lastTime === null) lastTime = timestamp;
     var delta = (timestamp - lastTime) / 1000;
     lastTime = timestamp;
-    if (delta > 0.1) delta = 0.1; // cap big gaps (tab switching, sleep)
+    if (delta > 0.1) delta = 0.1;
     pos += SPEED * delta;
     if (pos >= half) pos = pos - half;
     track.style.transform = 'translateX(-' + pos.toFixed(2) + 'px)';
