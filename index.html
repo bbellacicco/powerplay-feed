@@ -156,13 +156,8 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text)}
     <button class="ppw-league-btn" data-league="TRENDING" onclick="filterLeague('TRENDING')">🔥 Trending in Sports</button>
   </div>
   <div class="ppw-filters">
-    <button class="ppw-filter-btn active" data-team="All" onclick="filterTeam('All')">All Teams</button>
-    <button class="ppw-filter-btn" data-team="NBA" onclick="filterTeam('NBA')"><span class="team-dot" style="background:#c8102e"></span> NBA</button>
-    <button class="ppw-filter-btn" data-team="NHL" onclick="filterTeam('NHL')"><span class="team-dot" style="background:#0076b6"></span> NHL</button>
-    <button class="ppw-filter-btn" data-team="CFL" onclick="filterTeam('CFL')"><span class="team-dot" style="background:#bf0000"></span> CFL</button>
-    <button class="ppw-filter-btn" data-team="Tigers" onclick="filterTeam('Tigers')"><span class="team-dot" style="background:#FFB800"></span> Tigers</button>
+    <button class="ppw-filter-btn active" data-team="Tigers" onclick="filterTeam('Tigers')"><span class="team-dot" style="background:#FFB800"></span> Tigers</button>
     <button class="ppw-filter-btn" data-team="Blue Jays" onclick="filterTeam('Blue Jays')"><span class="team-dot" style="background:#134a8e"></span> Blue Jays</button>
-    <button class="ppw-filter-btn" data-team="World Cup" onclick="filterTeam('World Cup')"><span class="team-dot" style="background:#1a6b3c"></span> World Cup</button>
   </div>
   <div class="ppw-content" id="ppw-content">
     <div class="ppw-loading"><div class="ppw-spinner"></div><p>Loading feed...</p></div>
@@ -207,7 +202,7 @@ var TEAM_KW  = { 'Red Wings':['red wings'],'Pistons':['pistons'],'Lions':['detro
 
 var allStories = [], allGames = [];
 var activeLeague = '';
-var activeTeam = 'All', activeView = 'news';
+var activeTeam = 'Tigers', activeView = 'news';
 var lastFetch = null;
 var trendingStories = [];
 var todayGames = [];
