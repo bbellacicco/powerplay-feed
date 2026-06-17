@@ -115,7 +115,7 @@ function startTicker(items){
   var setWidth = track.offsetWidth;
   var outerWidth = outer.offsetWidth;
 
-  var repeats = Math.max(4, Math.ceil((outerWidth * 3) / setWidth) + 1);
+  var repeats = Math.max(8, Math.ceil((outerWidth * 5) / setWidth) + 2);
   var fullHTML = '';
   for(var i=0;i<repeats;i++){ fullHTML += oneSetHTML; }
   track.innerHTML = fullHTML;
@@ -130,15 +130,17 @@ function startTicker(items){
     lastTime = timestamp;
     posX -= PIXELS_PER_SECOND * delta;
 
-    if(Math.abs(posX) >= setWidth){
-      posX += setWidth;
-    }
+    // True modulo wrap - always keeps posX within one setWidth of zero
+    // This guarantees a perfectly seamless loop with zero visible jump
+    posX = posX % setWidth;
 
     track.style.transform = 'translateX(' + posX + 'px)';
     animFrame = requestAnimationFrame(step);
   }
   animFrame = requestAnimationFrame(step);
 }
+
+var lastItemsKey = '';
 
 function fetchAndRender(){
   fetch(SHEET_URL + '&t=' + Date.now())
@@ -154,9 +156,18 @@ function fetchAndRender(){
         };
       }).filter(function(i){ return i.text; });
 
-      startTicker(items);
+      // Only rebuild the ticker if the content actually changed
+      // This prevents the scroll position from jumping/resetting every refresh
+      var key = JSON.stringify(items);
+      if(key !== lastItemsKey){
+        lastItemsKey = key;
+        startTicker(items);
+      }
     }).catch(function(){
-      startTicker([]);
+      if(lastItemsKey === ''){
+        lastItemsKey = 'empty';
+        startTicker([]);
+      }
     });
 }
 
