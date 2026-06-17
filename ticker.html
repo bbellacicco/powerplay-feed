@@ -1,42 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Powerplay Windsor Ticker</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#000;overflow:hidden}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:44px;overflow:hidden;background:transparent}
+
 .ticker-wrap{
-  width:100%;
+  background:#0a0c10;
+  border-top:1px solid rgba(255,184,0,0.5);
+  border-bottom:1px solid rgba(255,184,0,0.5);
   height:44px;
-  background:#000;
-  overflow:hidden;
   display:flex;
   align-items:center;
+  overflow:hidden;
+  width:100%;
 }
+
 .ticker-outer{
   overflow:hidden;
   flex:1;
   height:100%;
   display:flex;
   align-items:center;
-}
-#track{
-  display:inline-flex;
-  align-items:center;
+  position:relative;
   white-space:nowrap;
 }
+
+.ticker-outer::before,.ticker-outer::after{
+  content:'';
+  position:absolute;
+  top:0;
+  width:40px;
+  height:100%;
+  z-index:2;
+  pointer-events:none;
+}
+.ticker-outer::before{left:0;background:linear-gradient(to right,#0a0c10,transparent)}
+.ticker-outer::after{right:0;background:linear-gradient(to left,#0a0c10,transparent)}
+
+.ticker-track{
+  display:inline-block;
+  white-space:nowrap;
+  position:relative;
+  will-change:transform;
+}
+
 .ticker-item{
   display:inline-flex;
   align-items:center;
   gap:8px;
-  padding:0 32px;
-  font-family:Arial,sans-serif;
+  padding:0 28px;
+  font-family:'Barlow',sans-serif;
   font-size:13px;
   font-weight:600;
-  color:#FFB800;
+  color:#f0f2f5;
 }
-.badge{
+
+.ticker-badge{
   font-size:9px;
   font-weight:700;
   letter-spacing:1px;
@@ -45,110 +69,99 @@ body{background:#000;overflow:hidden}
   border-radius:3px;
   flex-shrink:0;
 }
-.badge-score{background:#e8323a;color:#fff}
-.badge-news{background:#0076b6;color:#fff}
-.badge-update{background:#FFB800;color:#000}
-.badge-upcoming{background:#9b59b6;color:#fff}
-.badge-default{background:#555;color:#fff}
-.team{color:#fff;font-weight:700}
-.sep{color:rgba(255,184,0,0.3);font-size:18px;font-family:Arial;padding:0 4px}
-@keyframes ticker-scroll{
-  0%{transform:translateX(0)}
-  100%{transform:translateX(var(--ticker-offset))}
-}
+
+.badge-score{background:#e8323a;color:white}
+.badge-news{background:#0076b6;color:white}
+.badge-update{background:#2ecc71;color:#0a0c10}
+
+.ticker-team{color:#FFB800;font-weight:700}
+.ticker-sep{color:rgba(255,184,0,0.4);padding:0 4px;font-size:16px}
 </style>
 </head>
 <body>
 <div class="ticker-wrap">
-  <div class="ticker-outer">
-    <div id="track">
-      <div class="ticker-item" style="color:rgba(255,184,0,0.4)">Loading...</div>
+  <div class="ticker-outer" id="ticker-outer">
+    <div class="ticker-track" id="ticker-track">
+      <span class="ticker-item"><span style="color:rgba(255,255,255,0.4)">Loading...</span></span>
     </div>
   </div>
 </div>
+
 <script>
-var SHEET_ID = '1-wAZ-NTyz5v-LbP2hMEB-BGdJcVPC72ZJK1bo6dAiCM';
-var track = document.getElementById('track');
+var SHEET_ID = '1io3X1yzOoqVF6OflvERfFE5NqoJqJG9b7nGvNIfRj08';
+var SHEET_URL = 'https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?tqx=out:json&sheet=Sheet1';
+var PIXELS_PER_SECOND = 60;
+var animFrame = null;
+var posX = 0;
 
-function esc(s){
-  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-}
+function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
-function badgeClass(type){
-  var t = type.toLowerCase().trim();
-  if(t==='score') return 'badge-score';
-  if(t==='news') return 'badge-news';
-  if(t==='update') return 'badge-update';
-  if(t==='upcoming') return 'badge-upcoming';
-  return 'badge-default';
-}
-
-function parseCSV(text){
-  var lines = text.trim().split('\n');
-  var items = [];
-  for(var i=1;i<lines.length;i++){
-    var line = lines[i];
-    var cols = [];
-    var cur = '';
-    var inQ = false;
-    for(var c=0;c<line.length;c++){
-      var ch = line[c];
-      if(ch==='"'){inQ=!inQ;}
-      else if(ch===','&&!inQ){cols.push(cur.trim());cur='';}
-      else{cur+=ch;}
-    }
-    cols.push(cur.trim());
-    if(cols.length<3) continue;
-    var type = cols[0].trim();
-    var team = cols[1].trim();
-    var text = cols[2].trim();
-    if(text) items.push({type:type,team:team,text:text});
-  }
-  return items;
-}
-
-function buildItems(items){
-  if(!items.length){
-    return '<div class="ticker-item">&#9889; Powerplay Windsor &mdash; Windsor-Essex sports coverage</div><span class="sep">&#9670;</span>';
-  }
-  return items.map(function(item){
-    return '<div class="ticker-item">'+
-      '<span class="badge '+badgeClass(item.type)+'">'+esc(item.type)+'</span>'+
-      (item.team?'<span class="team">'+esc(item.team)+' </span>':'')+
-      '<span>'+esc(item.text)+'</span>'+
-      '</div><span class="sep">&#9670;</span>';
-  }).join('');
+function buildItemHTML(item){
+  return '<span class="ticker-item"><span class="ticker-badge badge-'+item.type+'">'+item.type+'</span>'+
+    (item.team?'<span class="ticker-team">'+esc(item.team)+'</span>':'')+
+    '<span>'+esc(item.text)+'</span></span><span class="ticker-sep">◆</span>';
 }
 
 function startTicker(items){
-  var html = buildItems(items);
-  // render 4 copies so loop point is always well past the visible area
-  track.innerHTML = html + html + html + html;
-  track.style.animation = 'none';
-  track.style.transform = 'translateX(0)';
+  var track = document.getElementById('ticker-track');
+  var outer = document.getElementById('ticker-outer');
 
-  // wait for fonts and layout to fully settle before measuring
-  setTimeout(function(){
-    var singleWidth = track.scrollWidth / 4;
-    var duration = singleWidth / 60;
-    track.style.setProperty('--ticker-offset', '-' + singleWidth + 'px');
-    track.style.animation = 'ticker-scroll ' + duration.toFixed(1) + 's linear infinite';
-  }, 500);
+  if(!items.length){
+    items = [{type:'update',team:'',text:'⚡ Welcome to Powerplay Windsor — Your home for Detroit & Toronto sports'}];
+  }
+
+  var oneSetHTML = items.map(buildItemHTML).join('');
+  track.innerHTML = oneSetHTML;
+  var setWidth = track.offsetWidth;
+  var outerWidth = outer.offsetWidth;
+
+  var repeats = Math.max(4, Math.ceil((outerWidth * 3) / setWidth) + 1);
+  var fullHTML = '';
+  for(var i=0;i<repeats;i++){ fullHTML += oneSetHTML; }
+  track.innerHTML = fullHTML;
+
+  if(animFrame) cancelAnimationFrame(animFrame);
+  posX = 0;
+  var lastTime = null;
+
+  function step(timestamp){
+    if(lastTime === null) lastTime = timestamp;
+    var delta = (timestamp - lastTime) / 1000;
+    lastTime = timestamp;
+    posX -= PIXELS_PER_SECOND * delta;
+
+    if(Math.abs(posX) >= setWidth){
+      posX += setWidth;
+    }
+
+    track.style.transform = 'translateX(' + posX + 'px)';
+    animFrame = requestAnimationFrame(step);
+  }
+  animFrame = requestAnimationFrame(step);
 }
 
-function fetchSheet(){
-  var url = 'https://docs.google.com/spreadsheets/d/'+SHEET_ID+'/gviz/tq?tqx=out:csv&sheet=Sheet1&t='+Date.now();
-  fetch(url,{cache:'no-store'})
-    .then(function(r){return r.text();})
+function fetchAndRender(){
+  fetch(SHEET_URL + '&t=' + Date.now())
+    .then(function(r){ return r.text(); })
     .then(function(text){
-      var items = parseCSV(text);
-      if(items.length) startTicker(items);
-    })
-    .catch(function(){setTimeout(fetchSheet,5000);});
+      var json = JSON.parse(text.match(/google\.visualization\.Query\.setResponse\(([\s\S]*?)\);/)[1]);
+      var rows = json.table.rows || [];
+      var items = rows.slice(1).map(function(row){
+        return {
+          type: (row.c[0]&&row.c[0].v)||'news',
+          team: (row.c[1]&&row.c[1].v)||'',
+          text: (row.c[2]&&row.c[2].v)||''
+        };
+      }).filter(function(i){ return i.text; });
+
+      startTicker(items);
+    }).catch(function(){
+      startTicker([]);
+    });
 }
 
-fetchSheet();
-setInterval(fetchSheet,20000);
+fetchAndRender();
+setInterval(fetchAndRender, 30000);
 </script>
 </body>
 </html>
