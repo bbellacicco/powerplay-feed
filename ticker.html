@@ -1,66 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Powerplay Windsor Ticker</title>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html,body{height:44px;overflow:hidden;background:transparent}
-
-.ticker-wrap{
-  background:#0a0c10;
-  border-top:1px solid rgba(255,184,0,0.5);
-  border-bottom:1px solid rgba(255,184,0,0.5);
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;height:44px;background:#000;overflow:hidden}
+#ticker-viewport{
+  width:100%;
+  height:44px;
+  overflow:hidden;
+  position:relative;
+  background:#000;
+}
+#ticker-stage{
+  position:absolute;
+  top:0;
+  left:0;
   height:44px;
   display:flex;
   align-items:center;
-  overflow:hidden;
-  width:100%;
-}
-
-.ticker-outer{
-  overflow:hidden;
-  flex:1;
-  height:100%;
-  display:flex;
-  align-items:center;
-  position:relative;
   white-space:nowrap;
 }
-
-.ticker-outer::before,.ticker-outer::after{
-  content:'';
-  position:absolute;
-  top:0;
-  width:40px;
-  height:100%;
-  z-index:2;
-  pointer-events:none;
-}
-.ticker-outer::before{left:0;background:linear-gradient(to right,#0a0c10,transparent)}
-.ticker-outer::after{right:0;background:linear-gradient(to left,#0a0c10,transparent)}
-
-.ticker-track{
-  display:inline-block;
-  white-space:nowrap;
-  position:relative;
-  will-change:transform;
-}
-
 .ticker-item{
   display:inline-flex;
   align-items:center;
   gap:8px;
-  padding:0 28px;
-  font-family:'Barlow',sans-serif;
+  padding:0 32px;
+  font-family:Arial,sans-serif;
   font-size:13px;
   font-weight:600;
-  color:#f0f2f5;
+  color:#FFB800;
+  height:44px;
+  box-sizing:border-box;
 }
-
-.ticker-badge{
+.badge{
   font-size:9px;
   font-weight:700;
   letter-spacing:1px;
@@ -69,110 +43,167 @@ html,body{height:44px;overflow:hidden;background:transparent}
   border-radius:3px;
   flex-shrink:0;
 }
-
-.badge-score{background:#e8323a;color:white}
-.badge-news{background:#0076b6;color:white}
-.badge-update{background:#2ecc71;color:#0a0c10}
-
-.ticker-team{color:#FFB800;font-weight:700}
-.ticker-sep{color:rgba(255,184,0,0.4);padding:0 4px;font-size:16px}
+.badge-score{background:#e8323a;color:#fff}
+.badge-news{background:#0076b6;color:#fff}
+.badge-update{background:#FFB800;color:#000}
+.badge-upcoming{background:#9b59b6;color:#fff}
+.badge-default{background:#555;color:#fff}
+.team{color:#fff;font-weight:700}
+.sep{
+  color:rgba(255,184,0,0.3);
+  font-size:18px;
+  font-family:Arial;
+  padding:0 4px;
+  display:inline-block;
+  height:44px;
+  line-height:44px;
+}
 </style>
 </head>
 <body>
-<div class="ticker-wrap">
-  <div class="ticker-outer" id="ticker-outer">
-    <div class="ticker-track" id="ticker-track">
-      <span class="ticker-item"><span style="color:rgba(255,255,255,0.4)">Loading...</span></span>
-    </div>
-  </div>
+<div id="ticker-viewport">
+  <div id="ticker-stage"></div>
 </div>
-
 <script>
 var SHEET_ID = '1-wAZ-NTyz5v-LbP2hMEB-BGdJcVPC72ZJK1bo6dAiCM';
-var SHEET_URL = 'https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?tqx=out:json&sheet=Sheet1';
-var PIXELS_PER_SECOND = 60;
-var animFrame = null;
-var posX = 0;
+var SPEED = 50; // pixels per second
 
-function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+var stage = document.getElementById('ticker-stage');
+var x = 0;
+var loopWidth = 0;
+var lastT = null;
+var raf = null;
+var running = false;
 
-function buildItemHTML(item){
-  return '<span class="ticker-item"><span class="ticker-badge badge-'+item.type+'">'+item.type+'</span>'+
-    (item.team?'<span class="ticker-team">'+esc(item.team)+'</span>':'')+
-    '<span>'+esc(item.text)+'</span></span><span class="ticker-sep">◆</span>';
+function esc(s){
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 }
 
-function startTicker(items){
-  var track = document.getElementById('ticker-track');
-  var outer = document.getElementById('ticker-outer');
-
-  if(!items.length){
-    items = [{type:'update',team:'',text:'⚡ Welcome to Powerplay Windsor — Your home for Detroit & Toronto sports'}];
-  }
-
-  var oneSetHTML = items.map(buildItemHTML).join('');
-  track.innerHTML = oneSetHTML;
-  var setWidth = track.offsetWidth;
-  var outerWidth = outer.offsetWidth;
-
-  var repeats = Math.max(8, Math.ceil((outerWidth * 5) / setWidth) + 2);
-  var fullHTML = '';
-  for(var i=0;i<repeats;i++){ fullHTML += oneSetHTML; }
-  track.innerHTML = fullHTML;
-
-  if(animFrame) cancelAnimationFrame(animFrame);
-  posX = 0;
-  var lastTime = null;
-
-  function step(timestamp){
-    if(lastTime === null) lastTime = timestamp;
-    var delta = (timestamp - lastTime) / 1000;
-    lastTime = timestamp;
-    posX -= PIXELS_PER_SECOND * delta;
-
-    // True modulo wrap - always keeps posX within one setWidth of zero
-    // This guarantees a perfectly seamless loop with zero visible jump
-    posX = posX % setWidth;
-
-    track.style.transform = 'translateX(' + posX + 'px)';
-    animFrame = requestAnimationFrame(step);
-  }
-  animFrame = requestAnimationFrame(step);
+function badgeClass(t){
+  t = t.toLowerCase().trim();
+  if(t==='score') return 'badge-score';
+  if(t==='news') return 'badge-news';
+  if(t==='update') return 'badge-update';
+  if(t==='upcoming') return 'badge-upcoming';
+  return 'badge-default';
 }
 
-var lastItemsKey = '';
+function parseCSV(text){
+  var lines = text.trim().split('\n');
+  var items = [];
+  for(var i=1;i<lines.length;i++){
+    var line=lines[i], cols=[], cur='', inQ=false;
+    for(var c=0;c<line.length;c++){
+      var ch=line[c];
+      if(ch==='"'){inQ=!inQ;}
+      else if(ch===','&&!inQ){cols.push(cur.trim());cur='';}
+      else{cur+=ch;}
+    }
+    cols.push(cur.trim());
+    if(cols.length<3) continue;
+    var type=cols[0].trim(), team=cols[1].trim(), text=cols[2].trim();
+    if(text) items.push({type:type,team:team,text:text});
+  }
+  return items;
+}
 
-function fetchAndRender(){
-  fetch(SHEET_URL + '&t=' + Date.now())
+function makeNode(item){
+  var wrap = document.createElement('div');
+  wrap.className = 'ticker-item';
+  var badge = document.createElement('span');
+  badge.className = 'badge ' + badgeClass(item.type);
+  badge.textContent = item.type;
+  wrap.appendChild(badge);
+  if(item.team){
+    var team = document.createElement('span');
+    team.className = 'team';
+    team.textContent = item.team + ' ';
+    wrap.appendChild(team);
+  }
+  var txt = document.createElement('span');
+  txt.textContent = item.text;
+  wrap.appendChild(txt);
+  return wrap;
+}
+
+function makeSep(){
+  var s = document.createElement('span');
+  s.className = 'sep';
+  s.innerHTML = '&#9670;';
+  return s;
+}
+
+function buildStage(items){
+  // Stop any running animation
+  if(raf){ cancelAnimationFrame(raf); raf=null; }
+  running = false;
+  stage.innerHTML = '';
+  stage.style.transform = 'translateX(0)';
+  x = 0;
+  lastT = null;
+
+  if(!items || !items.length){
+    var d = document.createElement('div');
+    d.className = 'ticker-item';
+    d.style.color = 'rgba(255,184,0,0.4)';
+    d.textContent = 'Powerplay Windsor \u2014 Windsor-Essex sports coverage';
+    stage.appendChild(d);
+    stage.appendChild(makeSep());
+    // duplicate
+    var d2 = d.cloneNode(true);
+    stage.appendChild(d2);
+    stage.appendChild(makeSep());
+  } else {
+    // Build one full set of nodes, append twice
+    var nodes = [];
+    items.forEach(function(item){
+      nodes.push(makeNode(item));
+      nodes.push(makeSep());
+    });
+    nodes.forEach(function(n){ stage.appendChild(n); });
+    nodes.forEach(function(n){ stage.appendChild(n.cloneNode(true)); });
+  }
+
+  // Measure AFTER nodes are in DOM using offsetWidth on each child
+  // This is synchronous and accurate — no timeouts needed
+  var children = stage.children;
+  var half = 0;
+  for(var i=0; i < children.length / 2; i++){
+    half += children[i].offsetWidth;
+  }
+  loopWidth = half;
+
+  // Start
+  running = true;
+  raf = requestAnimationFrame(tick);
+}
+
+function tick(t){
+  if(!running) return;
+  if(lastT !== null){
+    var delta = (t - lastT) / 1000;
+    if(delta > 0.1) delta = 0.1;
+    x += SPEED * delta;
+    if(loopWidth > 0 && x >= loopWidth) x -= loopWidth;
+    stage.style.transform = 'translateX(-' + x.toFixed(1) + 'px)';
+  }
+  lastT = t;
+  raf = requestAnimationFrame(tick);
+}
+
+function fetchSheet(){
+  var url = 'https://docs.google.com/spreadsheets/d/'+SHEET_ID+'/gviz/tq?tqx=out:csv&sheet=Sheet1&t='+Date.now();
+  fetch(url, {cache:'no-store'})
     .then(function(r){ return r.text(); })
     .then(function(text){
-      var json = JSON.parse(text.match(/google\.visualization\.Query\.setResponse\(([\s\S]*?)\);/)[1]);
-      var rows = json.table.rows || [];
-      var items = rows.slice(1).map(function(row){
-        return {
-          type: (row.c[0]&&row.c[0].v)||'news',
-          team: (row.c[1]&&row.c[1].v)||'',
-          text: (row.c[2]&&row.c[2].v)||''
-        };
-      }).filter(function(i){ return i.text; });
-
-      // Only rebuild the ticker if the content actually changed
-      // This prevents the scroll position from jumping/resetting every refresh
-      var key = JSON.stringify(items);
-      if(key !== lastItemsKey){
-        lastItemsKey = key;
-        startTicker(items);
-      }
-    }).catch(function(){
-      if(lastItemsKey === ''){
-        lastItemsKey = 'empty';
-        startTicker([]);
-      }
-    });
+      var items = parseCSV(text);
+      buildStage(items);
+    })
+    .catch(function(){ setTimeout(fetchSheet, 5000); });
 }
 
-fetchAndRender();
-setInterval(fetchAndRender, 30000);
+fetchSheet();
+setInterval(fetchSheet, 30000);
 </script>
 </body>
 </html>
