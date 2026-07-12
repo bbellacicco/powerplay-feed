@@ -17,7 +17,6 @@
     background-color: #0d1b2a;
     display: flex;
     align-items: center;
-    justify-content: center;
     overflow: hidden;
     white-space: nowrap;
     box-sizing: border-box;
@@ -28,6 +27,16 @@
   .ticker-track {
     display: flex;
     align-items: center;
+    animation: scroll-left 18s linear infinite;
+  }
+
+  .ticker-wrap:hover .ticker-track {
+    animation-play-state: paused;
+  }
+
+  @keyframes scroll-left {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
   }
 
   .major-sponsors-label {
@@ -129,7 +138,8 @@
   }
 
   const track = document.getElementById('tickerTrack');
-  track.innerHTML = '<span class="major-sponsors-label">Major Sponsors:</span>' + buildItems();
+  const oneSet = '<span class="major-sponsors-label">Major Sponsors:</span>' + buildItems();
+  track.innerHTML = oneSet + oneSet;
 </script>
 
 </body>
