@@ -30,6 +30,17 @@
     align-items: center;
   }
 
+  .major-sponsors-label {
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-right: 20px;
+    flex-shrink: 0;
+  }
+
   .sponsor-item {
     display: flex;
     align-items: center;
@@ -66,23 +77,3 @@
 <script>
   const sponsors = [
     { name: "St. Clair College Alumni", logo: "" },
-    { name: "Unifor Local 444",         logo: "" },
-    { name: "Unifor Local 2458",        logo: "" }
-  ];
-
-  function buildItems() {
-    return sponsors.map((s, i) => `
-      <div class="sponsor-item">
-        ${s.logo ? `<img src="${s.logo}" alt="${s.name} logo" onerror="this.style.display='none'">` : ''}
-        <span class="sponsor-name">${s.name}</span>
-        ${i < sponsors.length - 1 ? '<span class="divider">|</span>' : ''}
-      </div>
-    `).join('');
-  }
-
-  const track = document.getElementById('tickerTrack');
-  track.innerHTML = buildItems();
-</script>
-
-</body>
-</html>
