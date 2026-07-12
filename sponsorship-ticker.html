@@ -76,4 +76,24 @@
 
 <script>
   const sponsors = [
-    { name: "St. Clair College Alumni", logo: "" },
+    { name: "St. Clair College Alumni", logo: "https://bbellacicco.github.io/powerplay-feed/2024%20Logo%20-%20black%20background.jpg" },
+    { name: "Unifor Local 444",         logo: "https://bbellacicco.github.io/powerplay-feed/289079788_10158659768177623_1109422712028153511_n.jpg" },
+    { name: "Unifor Local 2458",        logo: "https://bbellacicco.github.io/powerplay-feed/Untitled-2%20(1).png" }
+  ];
+
+  function buildItems() {
+    return sponsors.map((s, i) => `
+      <div class="sponsor-item">
+        ${s.logo ? `<img src="${s.logo}" alt="${s.name} logo" onerror="this.style.display='none'">` : ''}
+        <span class="sponsor-name">${s.name}</span>
+        ${i < sponsors.length - 1 ? '<span class="divider">|</span>' : ''}
+      </div>
+    `).join('');
+  }
+
+  const track = document.getElementById('tickerTrack');
+  track.innerHTML = '<span class="major-sponsors-label">Major Sponsors:</span>' + buildItems();
+</script>
+
+</body>
+</html>
