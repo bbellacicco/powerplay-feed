@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sponsor Ticker</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    overflow: hidden;
+  }
+
+  .ticker-wrap {
+    width: 100%;
+    height: 40px;
+    background-color: #0d1b2a; /* dark navy bar - change to your brand color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    border-top: 1px solid #ffffff22;
+    border-bottom: 1px solid #ffffff22;
+  }
+
+  .ticker-track {
+    display: flex;
+    align-items: center;
+  }
+
+  .sponsor-item {
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    flex-shrink: 0;
+  }
+
+  .sponsor-item img {
+    height: 22px;
+    width: auto;
+    margin-right: 10px;
+    object-fit: contain;
+  }
+
+  .sponsor-name {
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .divider {
+    color: #ffffff44;
+    margin: 0 8px;
+  }
+</style>
+</head>
+<body>
+
+<div class="ticker-wrap">
+  <div class="ticker-track" id="tickerTrack">
+    <!-- Content is duplicated once via JS below so the scroll loops seamlessly -->
+  </div>
+</div>
+
+<script>
+  // ---- EDIT THIS LIST WITH YOUR 3 SPONSORS ----
+  const sponsors = [
+    { name: "St. Clair College Alumni", logo: "https://via.placeholder.com/60x22?text=Logo1" },
+    { name: "Unifor Local 444",         logo: "https://via.placeholder.com/60x22?text=Logo2" },
+    { name: "Unifor Local 2458",        logo: "https://via.placeholder.com/60x22?text=Logo3" }
+  ];
+  // ----------------------------------------------
+
+  function buildItems() {
+    return sponsors.map((s, i) => `
+      <div class="sponsor-item">
+        <img src="${s.logo}" alt="${s.name} logo">
+        <span class="sponsor-name">${s.name}</span>
+        ${i < sponsors.length - 1 ? '<span class="divider">|</span>' : ''}
+      </div>
+    `).join('');
+  }
+
+  const track = document.getElementById('tickerTrack');
+  track.innerHTML = buildItems();
+</script>
+
+</body>
+</html>
