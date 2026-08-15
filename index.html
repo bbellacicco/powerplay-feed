@@ -92,6 +92,10 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text)}
 .ppw-filter-btn[data-team="CFL"].active{background:#bf0000}
 .ppw-story-card[data-team="NBA"]{border-left-color:#c8102e}
 .ppw-story-card[data-team="NHL"]{border-left-color:#0076b6}
+.ppw-story-card[data-team="Lions"]{border-left-color:#0076b6}
+.ppw-game-card[data-team="Lions"]{border-left-color:#0076b6}
+.ppw-filter-btn[data-team="Lions"].active{background:#0076b6}
+.badge-Lions{background:#0076b6;color:white}
 .ppw-story-card[data-team="CFL"]{border-left-color:#bf0000}
 .ppw-game-card[data-team="NBA"]{border-left-color:#c8102e}
 .ppw-game-card[data-team="NHL"]{border-left-color:#0076b6}
@@ -158,6 +162,7 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text)}
   <div class="ppw-filters">
     <button class="ppw-filter-btn active" data-team="Tigers" onclick="filterTeam('Tigers')"><span class="team-dot" style="background:#FFB800"></span> Tigers</button>
     <button class="ppw-filter-btn" data-team="Blue Jays" onclick="filterTeam('Blue Jays')"><span class="team-dot" style="background:#134a8e"></span> Blue Jays</button>
+    <button class="ppw-filter-btn" data-team="Lions" onclick="filterTeam('Lions')"><span class="team-dot" style="background:#0076b6"></span> Lions</button>
   </div>
   <div class="ppw-content" id="ppw-content">
     <div class="ppw-loading"><div class="ppw-spinner"></div><p>Loading feed...</p></div>
@@ -182,7 +187,8 @@ var TEAMS = [
 // Use ESPN team IDs to match news from categories
 var TEAM_ESPN_IDS = {
   'Tigers':    6,
-  'Blue Jays': 28
+  'Blue Jays': 28,
+  'Lions':     8
 };
 
 // League news — confirmed working endpoints
@@ -191,6 +197,7 @@ var NEWS_URLS = [
   { url:'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/news?limit=50',  teams:['Pistons','Raptors'] },
   { url:'https://site.api.espn.com/apis/site/v2/sports/football/nfl/news?limit=50',    teams:['Lions'] },
   { url:'https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/news?limit=50',    teams:['Tigers','Blue Jays'] },
+  { url:'https://site.api.espn.com/apis/site/v2/sports/football/nfl/news?limit=50',    teams:['Lions'] },
   { url:'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/news?limit=20',     teams:['_NHL'] },
   { url:'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/news?limit=20', teams:['_NBA'] },
   { url:'https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/news?limit=20',   teams:['_MLB'] }
