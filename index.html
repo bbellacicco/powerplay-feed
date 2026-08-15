@@ -93,6 +93,10 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text)}
 .ppw-story-card[data-team="NBA"]{border-left-color:#c8102e}
 .ppw-story-card[data-team="NHL"]{border-left-color:#0076b6}
 .ppw-story-card[data-team="Lions"]{border-left-color:#0076b6}
+.ppw-story-card[data-team="CFL"]{border-left-color:#bf0000}
+.ppw-game-card[data-team="CFL"]{border-left-color:#bf0000}
+.ppw-filter-btn[data-team="CFL"].active{background:#bf0000}
+.badge-CFL{background:#bf0000;color:white}
 .ppw-game-card[data-team="Lions"]{border-left-color:#0076b6}
 .ppw-filter-btn[data-team="Lions"].active{background:#0076b6}
 .badge-Lions{background:#0076b6;color:white}
@@ -163,6 +167,7 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text)}
     <button class="ppw-filter-btn active" data-team="Tigers" onclick="filterTeam('Tigers')"><span class="team-dot" style="background:#FFB800"></span> Tigers</button>
     <button class="ppw-filter-btn" data-team="Blue Jays" onclick="filterTeam('Blue Jays')"><span class="team-dot" style="background:#134a8e"></span> Blue Jays</button>
     <button class="ppw-filter-btn" data-team="Lions" onclick="filterTeam('Lions')"><span class="team-dot" style="background:#0076b6"></span> Lions</button>
+    <button class="ppw-filter-btn" data-team="CFL" onclick="filterTeam('CFL')"><span class="team-dot" style="background:#bf0000"></span> CFL</button>
   </div>
   <div class="ppw-content" id="ppw-content">
     <div class="ppw-loading"><div class="ppw-spinner"></div><p>Loading feed...</p></div>
@@ -415,15 +420,34 @@ function loadAll(){
     return fetch(feed.url)
       .then(function(r){ return r.json(); })
       .then(function(data){
-        var top = (data.articles||[]);
-        top.forEach(function(a){
+        var articles = [];
+        if(feed.rss){
+          // rss2json format
+          articles = (data.items||[]).map(function(item){
+            return {
+              headline: item.title||'',
+              description: item.description ? item.description.replace(/<[^>]*>/g,'').substring(0,160) : '',
+              url: item.link||''
+            };
+          });
+        } else {
+          // ESPN format
+          articles = (data.articles||[]).map(function(a){
+            return {
+              headline: a.headline||'',
+              description: a.description||'',
+              url: a.links&&a.links.web ? a.links.web.href : ''
+            };
+          });
+        }
+        articles.forEach(function(a){
           if(!a.headline) return;
           trendingStories.push({
             league: feed.league,
             key: feed.key||'',
             title: a.headline,
-            snippet: (a.description||'').substring(0,160),
-            url: a.links&&a.links.web ? a.links.web.href : ''
+            snippet: a.description.substring(0,160),
+            url: a.url
           });
         });
       }).catch(function(){});
