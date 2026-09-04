@@ -1,146 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<title>Sponsor Ticker</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    background: transparent;
-    overflow: hidden;
-  }
-
-  .ticker-wrap {
-    width: 100%;
-    height: 50px;
-    background-color: #0d1b2a;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    white-space: nowrap;
-    box-sizing: border-box;
-    border-top: 1px solid #ffffff22;
-    border-bottom: 1px solid #ffffff22;
-  }
-
-  .ticker-track {
-    display: flex;
-    align-items: center;
-    animation: scroll-left 18s linear infinite;
-  }
-
-  .ticker-wrap:hover .ticker-track {
-    animation-play-state: paused;
-  }
-
-  @keyframes scroll-left {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-
-  .major-sponsors-label {
-    color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    margin-right: 20px;
-    flex-shrink: 0;
-  }
-
-  .sponsor-item {
-    display: flex;
-    align-items: center;
-    padding: 0 24px;
-    flex-shrink: 0;
-  }
-
-  .sponsor-item img {
-    height: 30px;
-    width: auto;
-    max-width: 90px;
-    margin-right: 10px;
-    object-fit: contain;
-    background-color: #ffffff;
-    border-radius: 4px;
-    padding: 3px 6px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-  }
-
-  .logo-box {
-    height: 30px;
-    width: 60px;
-    margin-right: 10px;
-    background-color: #ffffff;
-    border-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .logo-box img {
-    height: 200%;
-    width: 200%;
-    max-width: none;
-    object-fit: contain;
-    background: none;
-    padding: 0;
-    box-shadow: none;
-    margin-right: 0;
-  }
-
-  .sponsor-name {
-    color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-  }
-
-  .divider {
-    color: #ffffff44;
-    margin: 0 8px;
-  }
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;height:50px;background:#0d1b2a;overflow:hidden}
+.bar{
+  width:100%;
+  height:50px;
+  background:#0d1b2a;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:40px;
+  border-top:1px solid rgba(255,255,255,0.1);
+  border-bottom:1px solid rgba(255,255,255,0.1);
+}
+.logo-chip{
+  background:#fff;
+  border-radius:4px;
+  padding:4px 8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:36px;
+  box-shadow:0 1px 3px rgba(0,0,0,0.3);
+}
+.logo-chip img{
+  height:28px;
+  width:auto;
+  max-width:100px;
+  object-fit:contain;
+  display:block;
+}
 </style>
 </head>
 <body>
-
-<div class="ticker-wrap">
-  <div class="ticker-track" id="tickerTrack"></div>
+<div class="bar">
+  <div class="logo-chip">
+    <img src="https://bbellacicco.github.io/powerplay-feed/Untitled-2%20(1).png" alt="St. Clair College Alumni" onerror="this.parentNode.style.display='none'">
+  </div>
+  <div class="logo-chip">
+    <img src="https://bbellacicco.github.io/powerplay-feed/289079788_10158659768177623_1109422712028153511_n.jpg" alt="Unifor Local 444" onerror="this.parentNode.style.display='none'">
+  </div>
+  <div class="logo-chip">
+    <img src="https://bbellacicco.github.io/powerplay-feed/2024%20Logo%20-%20black%20background.jpg" alt="Unifor Local 2458" onerror="this.parentNode.style.display='none'">
+  </div>
 </div>
-
-<script>
-  const sponsors = [
-    { name: "St. Clair College Alumni", logo: "https://bbellacicco.github.io/powerplay-feed/Untitled-2%20(1).png", zoom: true },
-    { name: "Unifor Local 444",         logo: "https://bbellacicco.github.io/powerplay-feed/289079788_10158659768177623_1109422712028153511_n.jpg" },
-    { name: "Unifor Local 2458",        logo: "https://bbellacicco.github.io/powerplay-feed/2024%20Logo%20-%20black%20background.jpg" }
-  ];
-
-  function buildItems() {
-    return sponsors.map((s, i) => {
-      let logoHtml = '';
-      if (s.logo) {
-        logoHtml = s.zoom
-          ? `<div class="logo-box"><img src="${s.logo}" alt="${s.name} logo" onerror="this.parentElement.style.display='none'"></div>`
-          : `<img src="${s.logo}" alt="${s.name} logo" onerror="this.style.display='none'">`;
-      }
-      return `
-      <div class="sponsor-item">
-        ${logoHtml}
-        <span class="sponsor-name">${s.name}</span>
-        ${i < sponsors.length - 1 ? '<span class="divider">|</span>' : ''}
-      </div>
-    `;
-    }).join('');
-  }
-
-  const track = document.getElementById('tickerTrack');
-  const oneSet = '<span class="major-sponsors-label">Major Sponsors:</span>' + buildItems();
-  track.innerHTML = oneSet + oneSet;
-</script>
-
 </body>
 </html>
