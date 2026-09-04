@@ -13,38 +13,39 @@ html,body{width:100%;height:60px;background:#0d1b2a;overflow:hidden}
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:30px;
+  gap:10px;
   border-top:1px solid rgba(255,255,255,0.1);
   border-bottom:1px solid rgba(255,255,255,0.1);
+  padding:0 10px;
 }
 .logo-chip{
   background:#fff;
   border-radius:4px;
-  padding:4px 10px;
+  padding:4px 6px;
   display:flex;
   align-items:center;
   justify-content:center;
   height:44px;
   box-shadow:0 1px 3px rgba(0,0,0,0.3);
   overflow:hidden;
+  flex:1;
+  max-width:90px;
 }
 .logo-chip img{
   height:36px;
-  width:auto;
-  max-width:120px;
+  width:100%;
+  max-width:80px;
   object-fit:contain;
   display:block;
 }
-/* St. Clair — scale up within the chip only */
 .logo-chip.stclair img{
   height:36px;
-  max-width:160px;
   transform:scale(2);
   transform-origin:center;
 }
 .damore-text{
   font-family:Georgia,serif;
-  font-size:11px;
+  font-size:10px;
   font-weight:700;
   color:#1a5276;
   text-align:center;
