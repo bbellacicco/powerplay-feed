@@ -28,7 +28,6 @@ html,body{width:100%;height:60px;background:#0d1b2a;overflow:hidden}
   box-shadow:0 1px 3px rgba(0,0,0,0.3);
   overflow:hidden;
 }
-/* Default logo size */
 .logo-chip img{
   height:36px;
   width:auto;
@@ -36,21 +35,12 @@ html,body{width:100%;height:60px;background:#0d1b2a;overflow:hidden}
   object-fit:contain;
   display:block;
 }
-/* St. Clair — zoom in to fill the chip */
-.logo-chip.stclair{
-  width:110px;
-  padding:0;
-}
+/* St. Clair — scale up within the chip only */
 .logo-chip.stclair img{
-  height:80px;
-  width:140px;
-  max-width:none;
-  object-fit:cover;
-  object-position:center;
-}
-/* D'Amore text fallback chip */
-.logo-chip.damore{
-  padding:4px 12px;
+  height:36px;
+  max-width:160px;
+  transform:scale(2);
+  transform-origin:center;
 }
 .damore-text{
   font-family:Georgia,serif;
@@ -74,7 +64,7 @@ html,body{width:100%;height:60px;background:#0d1b2a;overflow:hidden}
   <div class="logo-chip">
     <img src="https://bbellacicco.github.io/powerplay-feed/2024%20Logo%20-%20black%20background.jpg" alt="Unifor Local 2458" onerror="this.parentNode.style.display='none'">
   </div>
-  <div class="logo-chip damore">
+  <div class="logo-chip">
     <img src="https://bbellacicco.github.io/powerplay-feed/The_Damore_Group_Est_1952_BLUE.png" alt="The D'Amore Group"
       onerror="this.style.display='none';this.parentNode.innerHTML='<div class=\'damore-text\'>THE<br>D\'AMORE<br>GROUP</div>'">
   </div>
