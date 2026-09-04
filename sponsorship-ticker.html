@@ -26,7 +26,9 @@ html,body{width:100%;height:60px;background:#0d1b2a;overflow:hidden}
   justify-content:center;
   height:44px;
   box-shadow:0 1px 3px rgba(0,0,0,0.3);
+  overflow:hidden;
 }
+/* Default logo size */
 .logo-chip img{
   height:36px;
   width:auto;
@@ -34,12 +36,37 @@ html,body{width:100%;height:60px;background:#0d1b2a;overflow:hidden}
   object-fit:contain;
   display:block;
 }
+/* St. Clair — zoom in to fill the chip */
+.logo-chip.stclair{
+  width:110px;
+  padding:0;
+}
+.logo-chip.stclair img{
+  height:80px;
+  width:140px;
+  max-width:none;
+  object-fit:cover;
+  object-position:center;
+}
+/* D'Amore text fallback chip */
+.logo-chip.damore{
+  padding:4px 12px;
+}
+.damore-text{
+  font-family:Georgia,serif;
+  font-size:11px;
+  font-weight:700;
+  color:#1a5276;
+  text-align:center;
+  line-height:1.2;
+  white-space:nowrap;
+}
 </style>
 </head>
 <body>
 <div class="bar">
-  <div class="logo-chip">
-    <img src="https://bbellacicco.github.io/powerplay-feed/Untitled-2%20(1).png" alt="St. Clair College Alumni" onerror="this.parentNode.style.display='none'">
+  <div class="logo-chip stclair">
+    <img src="https://bbellacicco.github.io/powerplay-feed/Untitled-2%20(1).png" alt="St. Clair College Alumni">
   </div>
   <div class="logo-chip">
     <img src="https://bbellacicco.github.io/powerplay-feed/289079788_10158659768177623_1109422712028153511_n.jpg" alt="Unifor Local 444" onerror="this.parentNode.style.display='none'">
@@ -47,8 +74,9 @@ html,body{width:100%;height:60px;background:#0d1b2a;overflow:hidden}
   <div class="logo-chip">
     <img src="https://bbellacicco.github.io/powerplay-feed/2024%20Logo%20-%20black%20background.jpg" alt="Unifor Local 2458" onerror="this.parentNode.style.display='none'">
   </div>
-  <div class="logo-chip">
-    <img src="https://bbellacicco.github.io/powerplay-feed/The_Damore_Group_Est_1952_BLUE.png" alt="The D'Amore Group" onerror="this.parentNode.style.display='none'">
+  <div class="logo-chip damore">
+    <img src="https://bbellacicco.github.io/powerplay-feed/The_Damore_Group_Est_1952_BLUE.png" alt="The D'Amore Group"
+      onerror="this.style.display='none';this.parentNode.innerHTML='<div class=\'damore-text\'>THE<br>D\'AMORE<br>GROUP</div>'">
   </div>
 </div>
 </body>
