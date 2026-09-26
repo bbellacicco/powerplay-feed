@@ -29,6 +29,7 @@
     --spitfires: #d4202c;
     --lancers: #0f6bd6;
     --saints: #1f9d55;
+    --highschool: #8b5cf6;
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; background: var(--bg); color: var(--text);
@@ -55,6 +56,7 @@
   .t-spitfires .stripe { background: var(--spitfires); }
   .t-lancers .stripe { background: var(--lancers); }
   .t-saints .stripe { background: var(--saints); }
+  .t-highschool .stripe { background: var(--highschool); }
   .time { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
   .main { min-width: 0; }
   .who { font-weight: 600; }
@@ -89,16 +91,18 @@
   <div class="bar" id="teams" role="group" aria-label="Team"></div>
   <div class="bar">
     <select class="pill" id="sport" aria-label="Sport"></select>
+    <select class="pill" id="school" aria-label="School"></select>
   </div>
   <div id="list"></div>
-  <footer>Powerplay Windsor · Schedules from chl.ca, golancers.ca and team sources</footer>
+  <footer>Powerplay Windsor · Schedules from chl.ca, golancers.ca and wecssaa.com</footer>
 </div>
 <script>
 (function () {
   var qs = new URLSearchParams(location.search);
   var state = {
     team: qs.get('team') || 'all',
-    sport: 'all'
+    sport: 'all',
+    school: 'all'
   };
   var lockTeam = !!qs.get('team');
   var data = null;
@@ -126,9 +130,25 @@
     keys.forEach(function (k) {
       var b = el('button', 'pill', k === 'all' ? 'All' : data.teams[k].short);
       b.setAttribute('aria-pressed', String(state.team === k));
-      b.onclick = function () { state.team = k; state.sport = 'all'; render(); };
+      b.onclick = function () { state.team = k; state.sport = 'all'; state.school = 'all'; render(); };
       box.appendChild(b);
     });
+  }
+
+  // School picker, shown only on the High School tab
+  function schoolSelect(games) {
+    var sel = document.getElementById('school');
+    if (state.team !== 'highschool') { sel.style.display = 'none'; state.school = 'all'; return; }
+    var set = {};
+    games.forEach(function (g) { if (g.home) set[g.home] = 1; if (g.away) set[g.away] = 1; });
+    var schools = Object.keys(set).sort();
+    sel.style.display = '';
+    sel.innerHTML = '';
+    sel.appendChild(new Option('All schools', 'all'));
+    schools.forEach(function (x) { sel.appendChild(new Option(x, x)); });
+    if (schools.indexOf(state.school) < 0) state.school = 'all';
+    sel.value = state.school;
+    sel.onchange = function () { state.school = sel.value; state.sport = 'all'; render(); };
   }
 
   function sportSelect(games) {
@@ -154,6 +174,8 @@
     teamTabs();
 
     var inView = data.games.filter(function (g) { return state.team === 'all' || g.team === state.team; });
+    schoolSelect(inView);
+    if (state.school !== 'all') inView = inView.filter(function (g) { return g.home === state.school || g.away === state.school; });
     sportSelect(inView);
     if (state.sport !== 'all') inView = inView.filter(function (g) { return g.sport === state.sport; });
 
@@ -181,16 +203,22 @@
     var t = data.teams[g.team] || { short: g.team };
     var r = el('div', 'game t-' + g.team);
     r.appendChild(el('div', 'stripe'));
-    r.appendChild(el('div', 'time', g.time_tbd ? 'TBA' : fmt(new Date(g.start), { hour: 'numeric', minute: '2-digit' }).replace(/\s?([ap])\.?m\.?/i, function (_, x) { return ' ' + x.toUpperCase() + 'M'; })));
+    r.appendChild(el('div', 'time', g.time_tbd ? (g.status === 'final' ? 'Final' : 'TBA') : fmt(new Date(g.start), { hour: 'numeric', minute: '2-digit' }).replace(/\s?([ap])\.?m\.?/i, function (_, x) { return ' ' + x.toUpperCase() + 'M'; })));
 
     var main = el('div', 'main');
     var who = el('div', 'who');
-    who.appendChild(document.createTextNode(t.short + ' '));
-    who.appendChild(el('span', 'vs', g.home_away === 'A' ? '@ ' : 'vs '));
-    who.appendChild(document.createTextNode(g.opponent));
+    if (g.home && g.away) {          // high school: neutral "Visitor @ Home"
+      who.appendChild(document.createTextNode(g.away + ' '));
+      who.appendChild(el('span', 'vs', '@ '));
+      who.appendChild(document.createTextNode(g.home));
+    } else {
+      who.appendChild(document.createTextNode(t.short + ' '));
+      who.appendChild(el('span', 'vs', g.home_away === 'A' ? '@ ' : 'vs '));
+      who.appendChild(document.createTextNode(g.opponent));
+    }
     main.appendChild(who);
     var bits = [g.sport];
-    if (g.home_away === 'H') bits.push('Home'); else if (g.location) bits.push(g.location);
+    if (g.home_away === 'H') bits.push('Home'); else if (g.location && g.location !== g.home) bits.push('at ' + g.location);
     if (g.note) bits.push(g.note);
     var meta = el('div', 'meta', bits.join(' · '));
     main.appendChild(meta);
