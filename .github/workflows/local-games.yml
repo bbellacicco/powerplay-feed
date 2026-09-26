@@ -3,7 +3,7 @@ name: Local games (Spitfires, Lancers, Saints)
 on:
   schedule:
     # Mondays at 10:07 UTC = 6:07 AM Windsor time (5:07 AM in winter).
-    - cron: "7 10 * * 1"
+    - cron: "7 10 * * *"
   workflow_dispatch: {}
 
 permissions:
