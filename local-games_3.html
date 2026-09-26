@@ -30,6 +30,7 @@
     --lancers: #0f6bd6;
     --saints: #1f9d55;
     --highschool: #8b5cf6;
+    --junior: #0ea5a4;
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; background: var(--bg); color: var(--text);
@@ -57,6 +58,7 @@
   .t-lancers .stripe { background: var(--lancers); }
   .t-saints .stripe { background: var(--saints); }
   .t-highschool .stripe { background: var(--highschool); }
+  .t-junior .stripe { background: var(--junior); }
   .time { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
   .main { min-width: 0; }
   .who { font-weight: 600; }
@@ -94,7 +96,7 @@
     <select class="pill" id="school" aria-label="School"></select>
   </div>
   <div id="list"></div>
-  <footer>Powerplay Windsor · Schedules from chl.ca, golancers.ca and wecssaa.com</footer>
+  <footer>Powerplay Windsor · Schedules from chl.ca, golancers.ca, ojhl.ca, gohl.ca, thepjhl.ca, cjfl.org and wecssaa.com</footer>
 </div>
 <script>
 (function () {
@@ -135,16 +137,16 @@
     });
   }
 
-  // School picker, shown only on the High School tab
+  // School picker on the High School tab, team picker on the Junior Hockey tab
   function schoolSelect(games) {
     var sel = document.getElementById('school');
-    if (state.team !== 'highschool') { sel.style.display = 'none'; state.school = 'all'; return; }
+    if (state.team !== 'highschool' && state.team !== 'junior') { sel.style.display = 'none'; state.school = 'all'; return; }
     var set = {};
-    games.forEach(function (g) { if (g.home) set[g.home] = 1; if (g.away) set[g.away] = 1; });
+    games.forEach(function (g) { if (g.home) set[g.home] = 1; if (g.away) set[g.away] = 1; if (g.club) set[g.club] = 1; });
     var schools = Object.keys(set).sort();
     sel.style.display = '';
     sel.innerHTML = '';
-    sel.appendChild(new Option('All schools', 'all'));
+    sel.appendChild(new Option(state.team === 'junior' ? 'All teams' : 'All schools', 'all'));
     schools.forEach(function (x) { sel.appendChild(new Option(x, x)); });
     if (schools.indexOf(state.school) < 0) state.school = 'all';
     sel.value = state.school;
@@ -175,7 +177,7 @@
 
     var inView = data.games.filter(function (g) { return state.team === 'all' || g.team === state.team; });
     schoolSelect(inView);
-    if (state.school !== 'all') inView = inView.filter(function (g) { return g.home === state.school || g.away === state.school; });
+    if (state.school !== 'all') inView = inView.filter(function (g) { return g.home === state.school || g.away === state.school || g.club === state.school; });
     sportSelect(inView);
     if (state.sport !== 'all') inView = inView.filter(function (g) { return g.sport === state.sport; });
 
@@ -212,7 +214,7 @@
       who.appendChild(el('span', 'vs', '@ '));
       who.appendChild(document.createTextNode(g.home));
     } else {
-      who.appendChild(document.createTextNode(t.short + ' '));
+      who.appendChild(document.createTextNode((g.club || t.short) + ' '));
       who.appendChild(el('span', 'vs', g.home_away === 'A' ? '@ ' : 'vs '));
       who.appendChild(document.createTextNode(g.opponent));
     }
