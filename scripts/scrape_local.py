@@ -538,6 +538,75 @@ def scrape_cjfl_saints(today):
             break
     return out
 
+# ------------------------------------------------------------------ CFL (for the pro widget)
+
+# ESPN's CFL data is out of date, so CFL comes from cfl.ca's own schedule page.
+# The pro widget gets NFL / NHL / NBA live from ESPN in the browser.
+
+
+def _nuxt_value(arr, i, depth=0):
+    """Nuxt pages store data as one flat list where objects point to other
+    positions in the list. Follow the pointers for one value."""
+    if not isinstance(i, int) or isinstance(i, bool) or depth > 8 or i < 0 or i >= len(arr):
+        return i
+    v = arr[i]
+    if isinstance(v, list):
+        if v and isinstance(v[0], str) and v[0] in ("Reactive", "ShallowReactive", "Ref", "ShallowRef", "Date"):
+            return v[1] if v[0] == "Date" else _nuxt_value(arr, v[1], depth + 1)
+        return [_nuxt_value(arr, x, depth + 1) for x in v]
+    if isinstance(v, dict):
+        return {k: _nuxt_value(arr, x, depth + 1) for k, x in v.items()}
+    return v
+
+
+def scrape_cfl(today):
+    html = fetch("https://www.cfl.ca/schedule/", "cfl.html" if FIXTURES else None)
+    m = re.search(r'<script[^>]*id="__NUXT_DATA__"[^>]*>(.*?)</script>', html, re.S)
+    if not m:
+        raise RuntimeError("cfl.ca schedule data not found")
+    arr = json.loads(m.group(1))
+    teams, venues, games = {}, {}, []
+    for v in arr:
+        if not isinstance(v, dict) or "ID" not in v:
+            continue
+        if "abbreviation" in v and "region_label" in v:
+            t = {k: _nuxt_value(arr, v[k]) for k in ("ID", "abbreviation", "region_label", "name")}
+            region = str(t["region_label"]).title().replace("B.c.", "B.C.")
+            teams[t["ID"]] = {"abbr": t["abbreviation"], "name": f"{region} {t['name']}".strip()}
+        elif "capacity" in v and "name" in v:
+            venues[_nuxt_value(arr, v["ID"])] = _nuxt_value(arr, v["name"])
+        elif "home_team_id" in v:
+            games.append({k: _nuxt_value(arr, x) for k, x in v.items()
+                          if k not in ("contentfulMatch", "metadata", "genius")})
+    out = []
+    for g in games:
+        h, a = teams.get(g.get("home_team_id")), teams.get(g.get("away_team_id"))
+        if not h or not a or not g.get("start_at"):
+            continue
+        start = datetime.fromisoformat(str(g["start_at"])).astimezone(TZ)
+        hs, as_ = to_int(g.get("home_team_score")), to_int(g.get("away_team_score"))
+        st = str(g.get("game_status") or "").lower()
+        status = "upcoming"
+        if st in ("finished", "final", "complete", "completed") or (hs is not None and as_ is not None and start < datetime.now(TZ) - timedelta(hours=4)):
+            status = "final"
+        elif st in ("in progress", "live", "in_progress"):
+            status = "live"
+        elif "postpon" in st:
+            status = "postponed"
+        elif "cancel" in st:
+            status = "cancelled"
+        gm = game("cfl", "CFL", start, False, "N", h["name"], location=venues.get(g.get("venue_id"), ""),
+                  status=status,
+                  our=as_ if status in ("final", "live") else None,
+                  opp=hs if status in ("final", "live") else None,
+                  note="Preseason" if to_int(g.get("week")) is not None and to_int(g.get("week")) < 1 else "",
+                  links={"gamecentre": "https://www.cfl.ca/schedule/"},
+                  gid=f"cfl{g.get('ID')}")
+        gm["away"], gm["home"] = a["name"], h["name"]
+        gm["away_abbr"], gm["home_abbr"] = a["abbr"], h["abbr"]
+        out.append(gm)
+    return out
+
 # ------------------------------------------------------------------ Manual sheet
 
 
@@ -635,6 +704,20 @@ def main():
     games = [g for g in games if lo <= datetime.fromisoformat(g["start"]) < hi]
     games.sort(key=lambda g: (g["start"], g["team"], g["sport"]))
 
+    pro_games = []
+    try:
+        pro_games = [g for g in scrape_cfl(today)
+                     if lo <= datetime.fromisoformat(g["start"]) < hi]
+        sources["cfl"] = {"ok": True, "count": len(pro_games)}
+        print(f"cfl: {len(pro_games)} games")
+    except Exception as ex:
+        sources["cfl"] = {"ok": False, "error": str(ex)[:200]}
+        print(f"cfl: FAILED - {ex}", file=sys.stderr)
+        try:
+            pro_games = json.load(open(OUT_FILE, encoding="utf-8")).get("pro_games", [])
+        except (OSError, ValueError):
+            pass
+
     payload = {
         "updated": now.isoformat(timespec="seconds"),
         "today": today.isoformat(),
@@ -643,6 +726,7 @@ def main():
         "teams": TEAMS,
         "sources": sources,
         "games": games,
+        "pro_games": pro_games,   # CFL, used by pro-games.html
     }
     os.makedirs(os.path.dirname(OUT_FILE), exist_ok=True)
     new = json.dumps(payload, ensure_ascii=False, indent=1)
@@ -650,7 +734,8 @@ def main():
     if os.path.exists(OUT_FILE):
         try:
             old = json.load(open(OUT_FILE, encoding="utf-8"))
-            if old.get("games") == games and old.get("sources") == sources and old.get("today") == payload["today"]:
+            if (old.get("games") == games and old.get("sources") == sources
+                    and old.get("today") == payload["today"] and old.get("pro_games") == pro_games):
                 print("No changes.")
                 return
         except ValueError:
