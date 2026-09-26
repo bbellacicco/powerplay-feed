@@ -67,7 +67,7 @@ TEAMS = {
 
 OUT_FILE = os.path.join(os.path.dirname(__file__), "..", "data", "local-games.json")
 TZ = ZoneInfo("America/Toronto")
-UA = "PowerplayWindsorFeed/1.0 (+https://www.powerplaywindsor.com)"
+UA = "Mozilla/5.0 (compatible; PowerplayWindsorFeed/1.0; +https://www.powerplaywindsor.com)"
 
 # ------------------------------------------------------------------ helpers
 
