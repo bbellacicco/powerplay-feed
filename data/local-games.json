@@ -1,6 +1,10 @@
 {
- "updated": "2026-09-26T11:26:09-04:00",
- "week_start": "2026-09-21",
+ "updated": "2026-09-26T12:19:26-04:00",
+ "today": "2026-09-26",
+ "range": [
+  "2026-09-23",
+  "2026-09-29"
+ ],
  "teams": {
   "spitfires": {
    "name": "Windsor Spitfires",
@@ -16,16 +20,38 @@
    "name": "St. Clair Saints",
    "short": "Saints",
    "league": "OCAA"
+  },
+  "junior": {
+   "name": "Junior Hockey",
+   "short": "Junior Hockey",
+   "league": "OJHL / GOHL / PJHL"
+  },
+  "highschool": {
+   "name": "High School (WECSSAA)",
+   "short": "High School",
+   "league": "WECSSAA"
   }
  },
  "sources": {
   "spitfires": {
    "ok": true,
-   "count": 20
+   "count": 8
   },
   "lancers": {
    "ok": true,
    "count": 105
+  },
+  "junior": {
+   "ok": true,
+   "count": 160
+  },
+  "saints": {
+   "ok": true,
+   "count": 8
+  },
+  "highschool": {
+   "ok": false,
+   "error": "HTTP Error 403: Forbidden"
   },
   "sheet": {
    "ok": true,
@@ -33,363 +59,6 @@
   }
  },
  "games": [
-  {
-   "id": "lancers-6405",
-   "team": "lancers",
-   "sport": "Baseball",
-   "start": "2026-09-16T19:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "St. Clair Saints",
-   "location": "Lacasse Park",
-   "status": "final",
-   "our_score": 2,
-   "opp_score": 8,
-   "result": "L",
-   "note": "",
-   "links": {}
-  },
-  {
-   "id": "lancers-6379",
-   "team": "lancers",
-   "sport": "Women's Hockey",
-   "start": "2026-09-18T16:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Western Mustangs",
-   "location": "Adie Knox Arena",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 0,
-   "result": "W",
-   "note": "",
-   "links": {}
-  },
-  {
-   "id": "lancers-6182",
-   "team": "lancers",
-   "sport": "Women's Soccer",
-   "start": "2026-09-18T18:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Guelph Gryphons",
-   "location": "Alumni Stadium",
-   "status": "final",
-   "our_score": 1,
-   "opp_score": 2,
-   "result": "L",
-   "note": "",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6182",
-    "recap": "https://golancers.ca/news/2026/9/18/womens-soccer-lancers-unable-to-overcome-no-6-gryphons.aspx"
-   }
-  },
-  {
-   "id": "lancers-6444",
-   "team": "lancers",
-   "sport": "Men's Volleyball",
-   "start": "2026-09-18T19:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Alumni Game",
-   "location": "Toldo Lancer Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {}
-  },
-  {
-   "id": "lancers-6155",
-   "team": "lancers",
-   "sport": "Softball",
-   "start": "2026-09-18T19:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Laurier Golden Hawks",
-   "location": "Dutton, ON",
-   "status": "final",
-   "our_score": 1,
-   "opp_score": 11,
-   "result": "L",
-   "note": "",
-   "links": {}
-  },
-  {
-   "id": "spitfires-28997",
-   "team": "spitfires",
-   "sport": "Hockey",
-   "start": "2026-09-18T19:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "London Knights",
-   "location": "Canada Life Place, London, ON",
-   "status": "final",
-   "our_score": 2,
-   "opp_score": 3,
-   "result": "OTL",
-   "note": "OT",
-   "links": {
-    "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/28997/"
-   }
-  },
-  {
-   "id": "lancers-6125",
-   "team": "lancers",
-   "sport": "Men's Hockey",
-   "start": "2026-09-18T19:30:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Laurier Golden Hawks",
-   "location": "Adie Knox Arena",
-   "status": "final",
-   "our_score": 2,
-   "opp_score": 1,
-   "result": "W",
-   "note": "",
-   "links": {}
-  },
-  {
-   "id": "lancers-6194",
-   "team": "lancers",
-   "sport": "Men's Soccer",
-   "start": "2026-09-18T20:15:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Guelph Gryphons",
-   "location": "Alumni Stadium",
-   "status": "final",
-   "our_score": 1,
-   "opp_score": 2,
-   "result": "L",
-   "note": "",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6194",
-    "recap": "https://golancers.ca/news/2026/9/18/mens-soccer-lancer-knocked-down-by-gryphons.aspx"
-   }
-  },
-  {
-   "id": "lancers-6156",
-   "team": "lancers",
-   "sport": "Softball",
-   "start": "2026-09-18T21:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Laurier Golden Hawks",
-   "location": "Dutton, ON",
-   "status": "final",
-   "our_score": 4,
-   "opp_score": 8,
-   "result": "L",
-   "note": "",
-   "links": {}
-  },
-  {
-   "id": "lancers-6468",
-   "team": "lancers",
-   "sport": "Baseball",
-   "start": "2026-09-19T13:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "McMaster Marauders",
-   "location": "Cullen Field",
-   "status": "postponed",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {}
-  },
-  {
-   "id": "lancers-6120",
-   "team": "lancers",
-   "sport": "Football",
-   "start": "2026-09-19T13:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Waterloo Warriors",
-   "location": "Waterloo, ON",
-   "status": "final",
-   "our_score": 44,
-   "opp_score": 18,
-   "result": "W",
-   "note": "",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6120",
-    "recap": "https://golancers.ca/news/2026/9/19/football-lancers-score-five-touchdowns-in-big-win-at-waterloo.aspx"
-   }
-  },
-  {
-   "id": "lancers-6469",
-   "team": "lancers",
-   "sport": "Baseball",
-   "start": "2026-09-19T16:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "McMaster Marauders",
-   "location": "Cullen Field",
-   "status": "postponed",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {}
-  },
-  {
-   "id": "lancers-6380",
-   "team": "lancers",
-   "sport": "Women's Hockey",
-   "start": "2026-09-19T16:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "York Lions",
-   "location": "Adie Knox Arena",
-   "status": "final",
-   "our_score": 1,
-   "opp_score": 8,
-   "result": "L",
-   "note": "",
-   "links": {}
-  },
-  {
-   "id": "spitfires-29007",
-   "team": "spitfires",
-   "sport": "Hockey",
-   "start": "2026-09-19T19:05:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "London Knights",
-   "location": "WFCU Centre, Windsor",
-   "status": "final",
-   "our_score": 2,
-   "opp_score": 6,
-   "result": "L",
-   "note": "",
-   "links": {
-    "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29007/"
-   }
-  },
-  {
-   "id": "lancers-6408",
-   "team": "lancers",
-   "sport": "Baseball",
-   "start": "2026-09-20T12:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Laurier Golden Hawks",
-   "location": "Waterloo, ON",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 6,
-   "result": "L",
-   "note": "",
-   "links": {}
-  },
-  {
-   "id": "lancers-6470",
-   "team": "lancers",
-   "sport": "Softball",
-   "start": "2026-09-20T12:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Western Mustangs",
-   "location": "Mic Mac Park",
-   "status": "cancelled",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {}
-  },
-  {
-   "id": "lancers-6183",
-   "team": "lancers",
-   "sport": "Women's Soccer",
-   "start": "2026-09-20T13:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "McMaster Marauders",
-   "location": "Hamilton, ON",
-   "status": "final",
-   "our_score": 0,
-   "opp_score": 0,
-   "result": "T",
-   "note": "",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6183",
-    "recap": "https://golancers.ca/news/2026/9/20/womens-soccer-barrette-blanks-marauders-to-earn-draw-for-womens-soccer.aspx"
-   }
-  },
-  {
-   "id": "lancers-6471",
-   "team": "lancers",
-   "sport": "Softball",
-   "start": "2026-09-20T14:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Western Mustangs",
-   "location": "Mic Mac Park",
-   "status": "cancelled",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {}
-  },
-  {
-   "id": "lancers-6409",
-   "team": "lancers",
-   "sport": "Baseball",
-   "start": "2026-09-20T15:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Laurier Golden Hawks",
-   "location": "Waterloo, ON",
-   "status": "final",
-   "our_score": 2,
-   "opp_score": 12,
-   "result": "L",
-   "note": "",
-   "links": {}
-  },
-  {
-   "id": "lancers-6195",
-   "team": "lancers",
-   "sport": "Men's Soccer",
-   "start": "2026-09-20T15:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "McMaster Marauders",
-   "location": "Hamilton, ON",
-   "status": "final",
-   "our_score": 1,
-   "opp_score": 3,
-   "result": "L",
-   "note": "",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6195",
-    "recap": "https://golancers.ca/news/2026/9/20/mens-soccer-lancers-battle-in-road-loss-at-mcmaster.aspx"
-   }
-  },
-  {
-   "id": "lancers-6391",
-   "team": "lancers",
-   "sport": "Golf",
-   "start": "2026-09-21T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "A",
-   "opponent": "Western Invitational",
-   "location": "London, Ontario",
-   "status": "final",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "W - 5th",
-   "links": {
-    "recap": "https://golancers.ca/news/2026/9/22/golf-womens-golf-continues-season-at-western.aspx"
-   }
-  },
   {
    "id": "lancers-6454",
    "team": "lancers",
@@ -407,6 +76,44 @@
    "links": {}
   },
   {
+   "id": "junior-gojhl15499",
+   "team": "junior",
+   "sport": "GOHL (Jr. B)",
+   "start": "2026-09-23T19:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "London Nationals",
+   "location": "Western Fair S.C., London, ON",
+   "status": "final",
+   "our_score": 1,
+   "opp_score": 8,
+   "result": "L",
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.gohl.ca/stats/game-center/15499"
+   },
+   "club": "LaSalle Vipers"
+  },
+  {
+   "id": "junior-gs2960176",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-09-23T19:30:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Blenheim Blades",
+   "location": "Wheatley Area Arena",
+   "status": "final",
+   "our_score": 2,
+   "opp_score": 6,
+   "result": "L",
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960176?configuration=45"
+   },
+   "club": "Wheatley Sharks"
+  },
+  {
    "id": "lancers-6461",
    "team": "lancers",
    "sport": "Women's Hockey",
@@ -421,6 +128,82 @@
    "result": "L",
    "note": "OT",
    "links": {}
+  },
+  {
+   "id": "junior-gojhl15502",
+   "team": "junior",
+   "sport": "GOHL (Jr. B)",
+   "start": "2026-09-24T19:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Sarnia Legionnaires",
+   "location": "Pat Stapleton Arena, Sarnia, ON",
+   "status": "final",
+   "our_score": 5,
+   "opp_score": 3,
+   "result": "W",
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.gohl.ca/stats/game-center/15502"
+   },
+   "club": "LaSalle Vipers"
+  },
+  {
+   "id": "junior-gs2960177",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-09-24T19:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Dresden Kings",
+   "location": "Atlas Tube Centre",
+   "status": "final",
+   "our_score": 4,
+   "opp_score": 3,
+   "result": "W",
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960177?configuration=45"
+   },
+   "club": "Lakeshore Canadiens"
+  },
+  {
+   "id": "junior-ojhl16521",
+   "team": "junior",
+   "sport": "OJHL (Jr. A)",
+   "start": "2026-09-24T19:10:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Collingwood Blues",
+   "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
+   "status": "final",
+   "our_score": 2,
+   "opp_score": 0,
+   "result": "W",
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.ojhl.ca/stats/game-center/16521"
+   },
+   "club": "Leamington Flyers"
+  },
+  {
+   "id": "junior-gs2960183",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-09-24T19:30:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Walpole Island Wild",
+   "location": "Walpole Island Complex",
+   "status": "final",
+   "our_score": 5,
+   "opp_score": 2,
+   "result": "W",
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960183?configuration=45"
+   },
+   "club": "Essex 73's"
   },
   {
    "id": "lancers-6377",
@@ -490,6 +273,25 @@
    "links": {}
   },
   {
+   "id": "junior-gs2960187",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-09-25T19:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Mooretown Flags",
+   "location": "Atlas Tube Centre",
+   "status": "final",
+   "our_score": 4,
+   "opp_score": 3,
+   "result": "W",
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960187?configuration=45"
+   },
+   "club": "Lakeshore Canadiens"
+  },
+  {
    "id": "lancers-6126",
    "team": "lancers",
    "sport": "Men's Hockey",
@@ -506,7 +308,7 @@
    "links": {}
   },
   {
-   "id": "spitfires-29020",
+   "id": "spitfires-ohl29020",
    "team": "spitfires",
    "sport": "Hockey",
    "start": "2026-09-25T19:05:00-04:00",
@@ -522,6 +324,25 @@
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29020/"
    }
+  },
+  {
+   "id": "junior-gs2960196",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-09-25T19:30:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Dresden Kings",
+   "location": "Lambton-Kent Memorial Centre",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Score not posted yet",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960196?configuration=45"
+   },
+   "club": "Amherstburg Admirals"
   },
   {
    "id": "lancers-6196",
@@ -658,6 +479,43 @@
    "links": {}
   },
   {
+   "id": "saints-cjfl45659884",
+   "team": "saints",
+   "sport": "Football",
+   "start": "2026-09-26T16:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Quinte Riptides",
+   "location": "Loyalist College, Wallbridge Loyalist Road, Belleville, ON, Canada",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "CJFL",
+   "links": {
+    "gamecentre": "https://www.cjfl.org/game/show/45659884"
+   }
+  },
+  {
+   "id": "junior-gs2960208",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-09-26T19:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Essex 73's",
+   "location": "Libro Centre",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960208?configuration=45"
+   },
+   "club": "Amherstburg Admirals"
+  },
+  {
    "id": "lancers-6127",
    "team": "lancers",
    "sport": "Men's Hockey",
@@ -690,7 +548,7 @@
    "links": {}
   },
   {
-   "id": "spitfires-29027",
+   "id": "spitfires-ohl29027",
    "team": "spitfires",
    "sport": "Hockey",
    "start": "2026-09-26T19:05:00-04:00",
@@ -707,6 +565,63 @@
     "tickets": "https://www.ticketmaster.com/saginaw-spirit-tickets/artist/836382",
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29027/"
    }
+  },
+  {
+   "id": "junior-gojhl15520",
+   "team": "junior",
+   "sport": "GOHL (Jr. B)",
+   "start": "2026-09-26T19:30:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Strathroy Rockets",
+   "location": "West Middlesex M.C., Strathroy, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.gohl.ca/stats/game-center/15520"
+   },
+   "club": "Chatham Maroons"
+  },
+  {
+   "id": "junior-gs2960218",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-09-26T19:30:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Walpole Island Wild",
+   "location": "Walpole Island Complex",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960218?configuration=45"
+   },
+   "club": "Lakeshore Canadiens"
+  },
+  {
+   "id": "junior-gs2960217",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-09-26T19:30:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Mooretown Flags",
+   "location": "Mooretown Sports Complex",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960217?configuration=45"
+   },
+   "club": "Wheatley Sharks"
   },
   {
    "id": "lancers-6463",
@@ -773,6 +688,25 @@
    "links": {}
   },
   {
+   "id": "junior-ojhl16536",
+   "team": "junior",
+   "sport": "OJHL (Jr. A)",
+   "start": "2026-09-27T14:30:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Caledon Admirals",
+   "location": "Mayfield Recreation Complex, Caledon, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.ojhl.ca/stats/game-center/16536"
+   },
+   "club": "Leamington Flyers"
+  },
+  {
    "id": "lancers-6413",
    "team": "lancers",
    "sport": "Baseball",
@@ -787,6 +721,60 @@
    "result": null,
    "note": "",
    "links": {}
+  },
+  {
+   "id": "junior-gojhl15522",
+   "team": "junior",
+   "sport": "GOHL (Jr. B)",
+   "start": "2026-09-27T19:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Stratford Warriors",
+   "location": "Chatham Memorial Arena, Chatham, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.gohl.ca/stats/game-center/15522"
+   },
+   "club": "Chatham Maroons"
+  },
+  {
+   "id": "lancers-6394",
+   "team": "lancers",
+   "sport": "Golf",
+   "start": "2026-09-28T10:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Gryphon Invitational",
+   "location": "Guelph, Ontario",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {}
+  },
+  {
+   "id": "junior-gs2960231",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-09-29T19:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Walpole Island Wild",
+   "location": "Essex Centre Complex",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960231?configuration=45"
+   },
+   "club": "Essex 73's"
   }
  ]
 }
