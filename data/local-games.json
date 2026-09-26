@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-26T18:42:09-04:00",
+ "updated": "2026-09-26T19:25:31-04:00",
  "today": "2026-09-26",
  "range": [
   "2026-09-23",
@@ -60,6 +60,10 @@
   "cfl": {
    "ok": true,
    "count": 4
+  },
+  "cfl_news": {
+   "ok": true,
+   "count": 30
   }
  },
  "games": [
@@ -338,11 +342,11 @@
    "home_away": "A",
    "opponent": "Dresden Kings",
    "location": "Lambton-Kent Memorial Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Score not posted yet",
+   "status": "final",
+   "our_score": 7,
+   "opp_score": 3,
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960196?configuration=45"
    },
@@ -509,9 +513,9 @@
    "home_away": "H",
    "opponent": "Essex 73's",
    "location": "Libro Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
    "note": "",
    "links": {
@@ -560,13 +564,12 @@
    "home_away": "A",
    "opponent": "Saginaw Spirit",
    "location": "Dow Event Center, Saginaw",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
-   "note": "",
+   "note": "11:04 1st",
    "links": {
-    "tickets": "https://www.ticketmaster.com/saginaw-spirit-tickets/artist/836382",
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29027/"
    }
   },
@@ -598,9 +601,9 @@
    "home_away": "A",
    "opponent": "Walpole Island Wild",
    "location": "Walpole Island Complex",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
    "note": "",
    "links": {
@@ -617,9 +620,9 @@
    "home_away": "A",
    "opponent": "Mooretown Flags",
    "location": "Mooretown Sports Complex",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
    "note": "",
    "links": {
@@ -869,6 +872,403 @@
    "home": "Ottawa REDBLACKS",
    "away_abbr": "CGY",
    "home_abbr": "OTT"
+  }
+ ],
+ "pro_news": [
+  {
+   "league": "cfl",
+   "headline": "CLARK BARNES SEALS IT WITH 60 YARD HOUSE CALL",
+   "summary": "",
+   "published": "2026-09-26T18:34:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/7k24EbF0yugSYaCe0njmbZ/bde33eebdd2feca64f5b8d40c5999175/CGY_3RD_TD.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Stampeders"
+   ],
+   "url": "https://www.cfl.ca/article/clark-barnes-seals-it-with-60-yard-house-call",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Justin Hardy nasty TD to keep things CLOSE!!",
+   "summary": "",
+   "published": "2026-09-26T18:13:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/36SoEa7hmmK3qK6wPSg2dE/6d1b367b1809d2c03ca72f9b3da4cf1e/OTT_3RD_TD.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "REDBLACKS"
+   ],
+   "url": "https://www.cfl.ca/article/justin-hardy-nasty-td-to-keep-things-close",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Mario Anderson CLUTCH third down TD!!!",
+   "summary": "",
+   "published": "2026-09-26T17:50:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/4fYn1DqJmje9fNz8ZBHyww/ddfe53765d60fa98f1f5fb1e336452d4/OTT_2ND_TD.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "REDBLACKS"
+   ],
+   "url": "https://www.cfl.ca/article/mario-anderson-clutch-third-down-td",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Ayden Eberhardt fights through for REDBLACKS TD",
+   "summary": "",
+   "published": "2026-09-26T16:38:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/4GDx8H8dWZnjScuMPMRqCZ/a13b4369c2f62139de0cba8fc938c562/OTT_1ST_TD.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "REDBLACKS"
+   ],
+   "url": "https://www.cfl.ca/article/ayden-eberhardt-fights-through-for-redblacks-td",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Tyreik McAllister goes for LONG TD run after huge Philpot catch!",
+   "summary": "",
+   "published": "2026-09-26T16:11:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/CDxs0CVHu6EcDxdMt2aeS/80f5fab65d407b2340959925d0f7ffa0/CGY_2ND_TD.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Stampeders"
+   ],
+   "url": "https://www.cfl.ca/article/tyreik-mcallister-goes-for-long-td-run-after-huge-philpot-catch",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Clark Barnes great grab sets up early Stampeders TD!",
+   "summary": "",
+   "published": "2026-09-26T15:33:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/2RVWoM8A1xIPrLqrA4YS9w/92ed59a4691904e7ce7c195920ce57db/CGY_FIRST_TD.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Stampeders"
+   ],
+   "url": "https://www.cfl.ca/article/clark-barnes-great-grab-sets-up-early-stampeders-td",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Recap: Toronto 30, Winnipeg 28",
+   "summary": "",
+   "published": "2026-09-26T12:27:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/1IPma6TIlahf4qYaXlBvZ7/6430d666266b1171dc3344a19ceec6f3/TOR_VS_WPG_ENG_THMB.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Argonauts",
+    "Blue Bombers"
+   ],
+   "url": "https://www.cfl.ca/article/recap-toronto-30-winnipeg-28",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Cody Fajardo gives back in a BIG way | The Give Back with NOFRILLS® & CFL",
+   "summary": "",
+   "published": "2026-09-26T08:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/3HKnEDZZz4NWRbncThgWGd/db610860f77898daed81493d4e216041/TheGiveBack_CodyFajardo_Thumbnail-2.png?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/cody-fajardo-gives-back-in-a-big-way-the-give-back-with-nofrills-cfl",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "5 questions that need answering down The Final Stretch",
+   "summary": "",
+   "published": "2026-09-24T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/2meJUCeis2GPajCrh1Kmpe/4b8c572d046e9b8428aa1719b200bdde/Davis_Alexander_2026_6.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/5-questions-that-need-answering-down-the-final-stretch",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Top CFL Fantasy plays at every position for Week 17",
+   "summary": "",
+   "published": "2026-09-24T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/7zYrXoXipRkymcRFax9Xco/fc07cfef2818ec1fc2e9ed7608e74d31/Kiondre_Smith_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/top-cfl-fantasy-plays-at-every-position-for-week-17",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "3 CFL Weekly Fantasy sleepers you need in your lineup in Week 17",
+   "summary": "",
+   "published": "2026-09-24T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/4etK053lwNoIvIwImo1lDK/c32e15224918f54035bd439d68a1361d/D-Sean_Mimbs_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/4-cfl-weekly-fantasy-sleepers-you-need-in-your-lineup-in-week-17",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Lions extend defensive back Deontai Williams Sr. through 2028",
+   "summary": "",
+   "published": "2026-09-24T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/37bzhlUFqeS53GXrbGd1ec/35f9ae59e2665931177d553dc0c24980/Deontai_Williams_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Lions"
+   ],
+   "url": "https://www.cfl.ca/article/lions-extend-defensive-back-deontai-williams-sr-through-2028",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "The story behind the CFL's new Indigenous-themed logo",
+   "summary": "",
+   "published": "2026-09-24T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/1XYIRhvFmWwfdrlwX0It8o/609bfe296d04a1f9b911d9db5365d15e/CFL_Indigenous_Logos.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/the-story-behind-the-cfl-s-new-indigenous-themed-logo",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "A closer look at the CFL's redesigned Indigenous Logo",
+   "summary": "",
+   "published": "2026-09-23T10:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/4mLnFDh9w2fyuDUUKXhQ4O/410144f48ffaa02e5003ffc58469f906/IL_2.png?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/a-closer-look-at-the-cfl-s-redesigned-indigenous-logo",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "113th Grey Cup Playoff Scenarios: Riders set sights on the postseason",
+   "summary": "",
+   "published": "2026-09-23T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/5Fk06qsrp5dHVxpop1rHOw/f57368bdf573a02f5bf17e22d832b3cf/Dhel_Duncan-Busby_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/113th-grey-cup-playoff-scenarios-riders-set-sights-on-the-postseason",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Is 2026 the year of the big-man touchdown?",
+   "summary": "",
+   "published": "2026-09-23T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/6zcDBUW3nF0RDm88HM2DMY/65c174d4ef280a11f2e62bf3eb4b054d/Ralph_Holley_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/is-2026-the-year-of-the-big-man-touchdown",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "4 storylines to watch in Week 17",
+   "summary": "",
+   "published": "2026-09-23T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/2KS8xsH1U6sabO6FWuterE/a0b256edc5579f510504899e909240c4/KeeSean_Johnson_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/4-storylines-to-watch-in-week-17",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "CFL logo undergoes Indigenous redesign to commemorate the National Day for Truth and Reconciliation",
+   "summary": "",
+   "published": "2026-09-22T10:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/5SzwIQadJWeABig8FBYm9g/1694ea55d650b23334cba441eb05ab5d/IL_1.png?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/cfl-logo-undergoes-indigenous-redesign-to-commemorate-the-national-day-for-truth-and-reconciliation",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "KPMG Playoff Probability: What are the odds for a crossover?",
+   "summary": "",
+   "published": "2026-09-22T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/XZ0XcLlPl15T3EVZBnGRJ/1d597708f5b7bff0195f4a559e726f3d/Brady_Oliveira_2026_3.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "REDBLACKS",
+    "Lions",
+    "Stampeders",
+    "Elks",
+    "Tiger-Cats",
+    "Alouettes",
+    "Roughriders",
+    "Argonauts",
+    "Blue Bombers"
+   ],
+   "url": "https://www.cfl.ca/article/kpmg-playoff-probability-what-are-the-odds-for-a-crossover",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "AMSOIL Power Rankings: Als back on top, Argos rising",
+   "summary": "",
+   "published": "2026-09-22T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/4GIM89Dk55M4Essf3aZm6m/c34a4e0240ce58c16aa35a83f24a2a05/Davis_Alexander_2026_5.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "REDBLACKS",
+    "Lions",
+    "Stampeders",
+    "Elks",
+    "Tiger-Cats",
+    "Alouettes",
+    "Roughriders",
+    "Argonauts",
+    "Blue Bombers"
+   ],
+   "url": "https://www.cfl.ca/article/amsoil-power-rankings-als-back-on-top-argos-rising",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Prediction Time: CFL.ca writers' Week 17 picks",
+   "summary": "",
+   "published": "2026-09-22T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/6v32nNqcsvjyoVmWglgdO1/9dd7344930a747d4824eea33c026cd14/Rourke_Horvath_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "REDBLACKS",
+    "Lions",
+    "Stampeders",
+    "Elks",
+    "Tiger-Cats",
+    "Roughriders",
+    "Argonauts",
+    "Blue Bombers"
+   ],
+   "url": "https://www.cfl.ca/article/prediction-time-cfl-ca-writers-week-17-picks",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Weekly Predictor: Who wins in Week 17?",
+   "summary": "",
+   "published": "2026-09-22T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/5J419DVaxTR5RDXkVpGpJl/2eae8e4010f59f83b7b1ad9866cba41f/McLeod_Bethel-Thompson_2026_2.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "REDBLACKS",
+    "Lions",
+    "Stampeders",
+    "Elks",
+    "Tiger-Cats",
+    "Roughriders",
+    "Argonauts",
+    "Blue Bombers"
+   ],
+   "url": "https://www.cfl.ca/article/weekly-predictor-who-wins-in-week-17",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Start vs. Sit: 2 must-plays and who to avoid in Week 17",
+   "summary": "",
+   "published": "2026-09-22T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/5b1IBvhL2abpqfqhdnnIAC/9cca39a703a7225b1d59e4855d98a316/Deonta_McMahon_2026_2.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/start-vs-sit-2-must-plays-and-who-to-avoid-in-week-17",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Elks add receiver Jalon Calhoun to practice roster",
+   "summary": "",
+   "published": "2026-09-22T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/67lVAVwKIEj3UDZFWlfCt8/0060aaf7184bed637aa4293c13a22d55/Jalon_Calhoun_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Elks"
+   ],
+   "url": "https://www.cfl.ca/article/elks-add-receiver-jalon-calhoun-to-practice-roster",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Lions sign defensive back Robert Carter Jr.",
+   "summary": "",
+   "published": "2026-09-22T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/4dojX5TjZtFwKDE84tDvq4/6787857acd31b112c2b40923b52f5d8c/Robert_CarterJr_2025.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Lions"
+   ],
+   "url": "https://www.cfl.ca/article/lions-sign-defensive-back-robert-carter-jr",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "CFL honours Truth and Reconciliation",
+   "summary": "",
+   "published": "2026-09-22T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/2q77EfLRRB5iudXrfmHLeT/069a4b6c6a50600d5b3537729f850aee/Truth_and_Reconciliation_cover.png?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/cfl-honours-truth-and-reconciliation",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Overreaction Monday: 4 hot takes from Week 16",
+   "summary": "",
+   "published": "2026-09-21T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/Jn4dTLQ1wIJuWmEewo5xh/9eccf3c1e2975bb148b9d5e9f2e227a3/Cody_Fajardo_2026_3.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/overreaction-monday-4-hot-takes-from-week-16",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Argos sign American defensive back Nic Toomer",
+   "summary": "",
+   "published": "2026-09-21T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/4T5z5EgOsr1ixcOhIb4Hgn/5ce5f6a73566a4e0203304533786691a/Argos_Generic_Helmet_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Argonauts"
+   ],
+   "url": "https://www.cfl.ca/article/argos-sign-american-defensive-back-nic-toomer",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Bombers add three to practice roster, including Global Thiadric Hansen",
+   "summary": "",
+   "published": "2026-09-21T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/vNvrEedYOpLjsTI8BPWEx/a03a87711a687339bb8694bc8992c889/Thiadric_Hansen_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Blue Bombers"
+   ],
+   "url": "https://www.cfl.ca/article/bombers-add-three-to-practice-roster-including-global-thaidric-hansen",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Stamps sign American running back Tre Stewart",
+   "summary": "",
+   "published": "2026-09-21T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/61TuchkMFJPt1Ko2MigBv9/952ded02f1cceed09f92dfaf3121406d/Generic_Stampeders_Helmet_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Stampeders"
+   ],
+   "url": "https://www.cfl.ca/article/stamps-sign-american-running-back-tre-stewart",
+   "source": "CFL.ca"
   }
  ]
 }
