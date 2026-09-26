@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Powerplay Sports Feed | Powerplay Windsor</title>
+<!--
+  Pro sports story feed. Headlines, a short summary and a photo, each linking
+  to the original story on the publisher's site.
+  NFL, NHL and NBA stories load live from ESPN each time the page opens.
+  CFL stories come from data/local-games.json ("pro_news"), which the GitHub
+  Action fills from cfl.ca every 15 minutes (ESPN's CFL news is out of date).
+
+  Embed in Wix (Embed Code > Embed a site):
+    https://bbellacicco.github.io/powerplay-feed/news-feed.html
+  Optional: ?tab=nfl | nhl | nba | cfl  start on a league instead of "Our Teams"
+-->
+<style>
+  :root {
+    --bg: #0b1a33; --panel: #10244a; --row: #132b57; --line: #1e3a6e;
+    --text: #f2f5fb; --muted: #9fb0cf; --accent: #e8b021;
+    --nfl: #1d4ed8; --nhl: #94a3b8; --nba: #ea580c; --cfl: #dc2626;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text);
+    font: 14px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 12px; }
+  header { margin-bottom: 10px; }
+  h1 { font-size: 17px; margin: 0; letter-spacing: .02em; text-transform: uppercase; }
+  h1 span { color: var(--accent); }
+  .sponsor { color: var(--muted); font-size: 12px; margin-top: 2px; }
+  .sponsor b { color: var(--text); font-weight: 600; }
+  .bar { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; align-items: center; }
+  .pill { border: 1px solid var(--line); background: var(--panel); color: var(--text);
+    padding: 6px 12px; border-radius: 999px; font: inherit; font-size: 13px; cursor: pointer; }
+  .pill[aria-pressed="true"] { background: var(--accent); color: #111; border-color: var(--accent); font-weight: 600; }
+  select.pill { padding-right: 8px; }
+  .story { display: grid; grid-template-columns: 4px 128px 1fr; gap: 12px; align-items: start;
+    background: var(--row); border-radius: 8px; margin-bottom: 8px; overflow: hidden;
+    color: inherit; text-decoration: none; padding-right: 12px; }
+  .story:hover { background: #17336a; }
+  .stripe { align-self: stretch; }
+  .l-nfl .stripe { background: var(--nfl); } .l-nhl .stripe { background: var(--nhl); }
+  .l-nba .stripe { background: var(--nba); } .l-cfl .stripe { background: var(--cfl); }
+  .thumb { width: 128px; height: 80px; margin: 10px 0; border-radius: 6px; object-fit: cover; background: var(--panel); display: block; }
+  .body { padding: 10px 0; min-width: 0; }
+  .headline { font-weight: 700; font-size: 15px; line-height: 1.3; }
+  .summary { color: #d4dcee; font-size: 13px; margin-top: 4px;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .meta { color: var(--muted); font-size: 12px; margin-top: 6px; }
+  .tag { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+    padding: 1px 5px; border-radius: 3px; background: var(--line); color: var(--text); margin-right: 6px; vertical-align: 1px; }
+  .empty { color: var(--muted); padding: 24px 0; text-align: center; }
+  footer { margin-top: 14px; color: var(--muted); font-size: 11px; text-align: center; }
+  @media (max-width: 520px) {
+    .story { grid-template-columns: 4px 96px 1fr; gap: 10px; }
+    .thumb { width: 96px; height: 64px; }
+    .headline { font-size: 14px; }
+    .summary { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Powerplay <span>Sports Feed</span></h1>
+    <div class="sponsor">Brought to you by <b>St. Clair College Alumni Association</b></div>
+  </header>
+  <div class="bar" id="tabs" role="group" aria-label="League"></div>
+  <div class="bar"><select class="pill" id="team" aria-label="Team"></select></div>
+  <div id="list"><div class="empty">Loading stories…</div></div>
+  <footer>Powerplay Windsor · Stories from ESPN and CFL.ca. Tap a story to read it on the original site.</footer>
+</div>
+<script>
+(function () {
+  var TZ = 'America/Toronto';
+  var MAX_AGE_DAYS = 14;         // hide stories older than this
+  var MAX_STORIES = 40;          // per tab
+  var LEAGUES = {
+    nfl: { label: 'NFL', path: 'football/nfl' },
+    nhl: { label: 'NHL', path: 'hockey/nhl' },
+    nba: { label: 'NBA', path: 'basketball/nba' },
+    cfl: { label: 'CFL' }
+  };
+  var OUR_TEAMS = [
+    { league: 'nhl', abbr: 'det', name: 'Detroit Red Wings' },
+    { league: 'nba', abbr: 'det', name: 'Detroit Pistons' },
+    { league: 'nfl', abbr: 'det', name: 'Detroit Lions' },
+    { league: 'nhl', abbr: 'tor', name: 'Toronto Maple Leafs' },
+    { league: 'nhl', abbr: 'mtl', name: 'Montreal Canadiens' },
+    { league: 'nba', abbr: 'tor', name: 'Toronto Raptors' },
+    { league: 'nfl', abbr: 'buf', name: 'Buffalo Bills' }
+  ];
+  var TABS = [['ours', 'Our Teams'], ['nfl', 'NFL'], ['nhl', 'NHL'], ['nba', 'NBA'], ['cfl', 'CFL']];
+
+  var qs = new URLSearchParams(location.search);
+  var state = { tab: LEAGUES[qs.get('tab')] ? qs.get('tab') : 'ours', team: 'all' };
+  var stories = { ours: [], nfl: [], nhl: [], nba: [], cfl: [] };
+
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+
+  function ago(iso) {
+    var t = new Date(iso).getTime(); if (!t) return '';
+    var m = Math.round((Date.now() - t) / 60000);
+    if (m < 60) return Math.max(m, 1) + ' min ago';
+    var h = Math.round(m / 60); if (h < 24) return h + (h === 1 ? ' hour ago' : ' hours ago');
+    var d = Math.round(h / 24); if (d < 7) return d + (d === 1 ? ' day ago' : ' days ago');
+    return new Intl.DateTimeFormat('en-CA', { timeZone: TZ, month: 'short', day: 'numeric' }).format(new Date(t));
+  }
+  function fresh(s) { return !s.published || Date.now() - new Date(s.published).getTime() < MAX_AGE_DAYS * 864e5; }
+
+  function fromEspn(a, league) {
+    var teams = (a.categories || []).filter(function (c) { return c.type === 'team'; }).map(function (c) { return c.description; });
+    return {
+      league: league, headline: a.headline || '', summary: a.description || '',
+      published: a.published || '', image: (a.images && a.images[0] && a.images[0].url) || '',
+      video: a.type === 'Media', teams: teams,
+      url: (a.links && a.links.web && a.links.web.href) || '', source: 'ESPN'
+    };
+  }
+  function espn(league, team) {
+    var url = 'https://site.api.espn.com/apis/site/v2/sports/' + LEAGUES[league].path + '/news?limit=' + (team ? 25 : 40) + (team ? '&team=' + team : '');
+    return fetch(url).then(function (r) { return r.ok ? r.json() : { articles: [] }; })
+      .then(function (j) { return (j.articles || []).map(function (a) { return fromEspn(a, league); }); })
+      .catch(function () { return []; });
+  }
+  function cfl() {
+    return fetch('https://bbellacicco.github.io/powerplay-feed/data/local-games.json?t=' + Date.now())
+      .then(function (r) { return r.json(); })
+      .then(function (j) { return j.pro_news || []; })
+      .catch(function () { return []; });
+  }
+  function clean(list) {
+    var seen = {};
+    return list.filter(function (s) {
+      if (!s.url || !s.headline || seen[s.url] || !fresh(s)) return false;
+      seen[s.url] = 1; return true;
+    }).sort(function (a, b) { return a.published < b.published ? 1 : a.published > b.published ? -1 : 0; })
+      .slice(0, MAX_STORIES);
+  }
+
+  function load() {
+    var ours = OUR_TEAMS.map(function (t) {
+      return espn(t.league, t.abbr).then(function (list) {
+        // keep stories about this team, skip league-wide round-ups tagged with every team
+        return list.filter(function (s) { return s.teams.length > 0 && s.teams.length <= 3 && s.teams.indexOf(t.name) >= 0; })
+          .map(function (s) { s.ourTeam = t.name; return s; });
+      });
+    });
+    Promise.all([
+      Promise.all(ours).then(function (r) { return [].concat.apply([], r); }),
+      espn('nfl'), espn('nhl'), espn('nba'), cfl()
+    ]).then(function (r) {
+      stories = { ours: clean(r[0]), nfl: clean(r[1]), nhl: clean(r[2]), nba: clean(r[3]), cfl: clean(r[4]) };
+      render();
+    });
+  }
+
+  function tabs() {
+    var box = document.getElementById('tabs'); box.innerHTML = '';
+    TABS.forEach(function (t) {
+      var b = el('button', 'pill', t[1]);
+      b.setAttribute('aria-pressed', String(state.tab === t[0]));
+      b.onclick = function () { state.tab = t[0]; state.team = 'all'; render(); };
+      box.appendChild(b);
+    });
+  }
+
+  function teamSelect(list) {
+    var sel = document.getElementById('team');
+    var names = {};
+    if (state.tab === 'ours') OUR_TEAMS.forEach(function (t) { names[t.name] = 1; });
+    else list.forEach(function (s) { (s.teams || []).forEach(function (n) { names[n] = 1; }); });
+    var keys = Object.keys(names).sort();
+    sel.innerHTML = '';
+    sel.appendChild(new Option('All teams', 'all'));
+    keys.forEach(function (n) { sel.appendChild(new Option(n, n)); });
+    if (keys.indexOf(state.team) < 0) state.team = 'all';
+    sel.value = state.team;
+    sel.style.display = keys.length > 1 ? '' : 'none';
+    sel.onchange = function () { state.team = sel.value; render(); };
+  }
+
+  function render() {
+    tabs();
+    var list = stories[state.tab] || [];
+    teamSelect(list);
+    if (state.team !== 'all') list = list.filter(function (s) {
+      return state.tab === 'ours' ? s.ourTeam === state.team : (s.teams || []).indexOf(state.team) >= 0;
+    });
+    var box = document.getElementById('list'); box.innerHTML = '';
+    if (!list.length) { box.appendChild(el('div', 'empty', 'No recent stories.')); return; }
+    list.forEach(function (s) { box.appendChild(card(s)); });
+  }
+
+  function card(s) {
+    var a = el('a', 'story l-' + s.league);
+    a.href = s.url; a.target = '_blank'; a.rel = 'noopener';
+    a.appendChild(el('div', 'stripe'));
+    var img = el('img', 'thumb'); img.alt = ''; img.loading = 'lazy';
+    img.onerror = function () { img.style.visibility = 'hidden'; };
+    if (s.image) img.src = s.image; else img.style.visibility = 'hidden';
+    a.appendChild(img);
+    var body = el('div', 'body');
+    var h = el('div', 'headline');
+    if (s.video) h.appendChild(el('span', 'tag', 'Video'));
+    h.appendChild(document.createTextNode(s.headline));
+    body.appendChild(h);
+    if (s.summary && s.summary !== s.headline) body.appendChild(el('div', 'summary', s.summary));
+    var bits = [LEAGUES[s.league].label, s.source, ago(s.published)];
+    if (state.tab === 'ours' && s.ourTeam) bits.splice(1, 0, s.ourTeam);
+    body.appendChild(el('div', 'meta', bits.filter(Boolean).join(' · ')));
+    a.appendChild(body);
+    return a;
+  }
+
+  render();
+  load();
+  setInterval(load, 5 * 60 * 1000);   // new stories every 5 minutes while the page is open
+})();
+</script>
+</body>
+</html>
