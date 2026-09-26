@@ -248,4 +248,27 @@
       if (g.result) sc.appendChild(el('span', 'badge ' + g.result, g.result));
     } else if (g.status === 'final' && g.result) {
       sc.appendChild(el('span', 'badge ' + g.result, g.result));
-    } else if (g.status === 'postpon
+    } else if (g.status === 'postponed' || g.status === 'cancelled') {
+      sc.appendChild(el('span', 'badge off', g.status === 'postponed' ? 'PPD' : 'CAN'));
+    } else if (g.status === 'live') {
+      sc.appendChild(el('b', null, (g.our_score || 0) + '–' + (g.opp_score || 0)));
+      sc.appendChild(el('span', 'badge', 'LIVE'));
+    } else if (dayKey(new Date(g.start)) >= todayKey && g.links && g.links.tickets) {
+      var a = el('a', 'tix', 'Tickets'); a.href = g.links.tickets; a.target = '_blank'; a.rel = 'noopener';
+      sc.appendChild(a);
+    }
+    var link = g.links && (g.links.recap || g.links.boxscore || g.links.gamecentre || g.links.link);
+    if (link && g.status === 'final') {
+      r.style.cursor = 'pointer';
+      r.title = 'Open game details';
+      r.onclick = function () { window.open(link, '_blank', 'noopener'); };
+    }
+    r.appendChild(sc);
+    return r;
+  }
+
+  load();
+})();
+</script>
+</body>
+</html>
