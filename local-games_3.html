@@ -115,11 +115,27 @@
   function fmt(d, opts) { return new Intl.DateTimeFormat('en-CA', Object.assign({ timeZone: TZ }, opts)).format(d); }
   function dayKey(d) { return fmt(d, { year: 'numeric', month: '2-digit', day: '2-digit' }); }
 
+  var BASE = 'https://bbellacicco.github.io/powerplay-feed/data/';
+  function getJSON(name) {
+    return fetch(BASE + name + '?t=' + Date.now()).then(function (r) { if (!r.ok) throw r.status; return r.json(); });
+  }
   function load() {
-    fetch('https://bbellacicco.github.io/powerplay-feed/data/local-games.json?t=' + Date.now())
-      .then(function (r) { return r.json(); })
-      .then(function (j) { data = j; render(); })
-      .catch(function () { document.getElementById('list').innerHTML = '<div class="empty">Schedule unavailable right now.</div>'; });
+    Promise.all([
+      getJSON('local-games.json'),
+      // high school comes from Buddy's PC (wecssaa.com blocks GitHub); optional
+      getJSON('highschool.json').catch(function () { return null; })
+    ]).then(function (res) {
+      var j = res[0], hs = res[1];
+      if (hs && hs.games && hs.games.length) {
+        var lo = (j.range || [])[0] || '', hi = (j.range || [])[1] || '9999';
+        var extra = hs.games.filter(function (g) { var d = g.start.slice(0, 10); return d >= lo && d <= hi; });
+        j.games = j.games.filter(function (g) { return g.team !== 'highschool'; }).concat(extra)
+          .sort(function (a, b) { return a.start < b.start ? -1 : a.start > b.start ? 1 : 0; });
+        j.teams = j.teams || {};
+        if (!j.teams.highschool) j.teams.highschool = { name: 'High School (WECSSAA)', short: 'High School' };
+      }
+      data = j; render();
+    }).catch(function () { document.getElementById('list').innerHTML = '<div class="empty">Schedule unavailable right now.</div>'; });
   }
 
   function teamTabs() {
@@ -232,27 +248,4 @@
       if (g.result) sc.appendChild(el('span', 'badge ' + g.result, g.result));
     } else if (g.status === 'final' && g.result) {
       sc.appendChild(el('span', 'badge ' + g.result, g.result));
-    } else if (g.status === 'postponed' || g.status === 'cancelled') {
-      sc.appendChild(el('span', 'badge off', g.status === 'postponed' ? 'PPD' : 'CAN'));
-    } else if (g.status === 'live') {
-      sc.appendChild(el('b', null, (g.our_score || 0) + '–' + (g.opp_score || 0)));
-      sc.appendChild(el('span', 'badge', 'LIVE'));
-    } else if (dayKey(new Date(g.start)) >= todayKey && g.links && g.links.tickets) {
-      var a = el('a', 'tix', 'Tickets'); a.href = g.links.tickets; a.target = '_blank'; a.rel = 'noopener';
-      sc.appendChild(a);
-    }
-    var link = g.links && (g.links.recap || g.links.boxscore || g.links.gamecentre || g.links.link);
-    if (link && g.status === 'final') {
-      r.style.cursor = 'pointer';
-      r.title = 'Open game details';
-      r.onclick = function () { window.open(link, '_blank', 'noopener'); };
-    }
-    r.appendChild(sc);
-    return r;
-  }
-
-  load();
-})();
-</script>
-</body>
-</html>
+    } else if (g.status === 'postpon
