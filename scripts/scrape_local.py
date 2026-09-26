@@ -607,6 +607,53 @@ def scrape_cfl(today):
         out.append(gm)
     return out
 
+def _iso_date(val):
+    """cfl.ca mixes date strings and millisecond timestamps; return ISO text."""
+    if isinstance(val, (int, float)) and not isinstance(val, bool):
+        return datetime.fromtimestamp(val / 1000, TZ).isoformat(timespec="seconds")
+    try:
+        return datetime.fromisoformat(str(val)).astimezone(TZ).isoformat(timespec="seconds")
+    except ValueError:
+        return ""
+
+
+def scrape_cfl_news(limit=30):
+    """Latest stories from the cfl.ca home page (headline, short summary, photo, link)."""
+    html = fetch("https://www.cfl.ca/", "cfl_home.html" if FIXTURES else None)
+    m = re.search(r'<script[^>]*id="__NUXT_DATA__"[^>]*>(.*?)</script>', html, re.S)
+    if not m:
+        raise RuntimeError("cfl.ca story data not found")
+    arr = json.loads(m.group(1))
+    out, seen = [], set()
+    for v in arr:
+        if not (isinstance(v, dict) and "headline" in v and "slug" in v and "isVideo" in v):
+            continue
+        slug = _nuxt_value(arr, v["slug"])
+        if not slug or slug in seen:
+            continue
+        seen.add(slug)
+        img = ""
+        hero = _nuxt_value(arr, v.get("heroImage")) if "heroImage" in v else None
+        if isinstance(hero, dict):
+            url = ((hero.get("file") or {}).get("url") or "")
+            if url:
+                img = ("https:" + url if url.startswith("//") else url) + "?w=640&fm=jpg&q=70"
+        teams = _nuxt_value(arr, v["relatedTeams"]) if "relatedTeams" in v else []
+        summary = _nuxt_value(arr, v["summary"]) if "summary" in v else ""
+        out.append({
+            "league": "cfl",
+            "headline": str(_nuxt_value(arr, v["headline"]) or "").strip(),
+            "summary": str(summary or "").strip(),
+            "published": _iso_date(_nuxt_value(arr, v["publishedDate"]) if "publishedDate" in v else ""),
+            "image": img,
+            "video": bool(_nuxt_value(arr, v["isVideo"])),
+            "teams": [t.get("teamName") for t in teams if isinstance(t, dict)] if isinstance(teams, list) else [],
+            "url": f"https://www.cfl.ca/article/{slug}",
+            "source": "CFL.ca",
+        })
+    out.sort(key=lambda a: a["published"] or "", reverse=True)
+    return out[:limit]
+
 # ------------------------------------------------------------------ Manual sheet
 
 
@@ -718,6 +765,19 @@ def main():
         except (OSError, ValueError):
             pass
 
+    pro_news = []
+    try:
+        pro_news = scrape_cfl_news()
+        sources["cfl_news"] = {"ok": True, "count": len(pro_news)}
+        print(f"cfl news: {len(pro_news)} stories")
+    except Exception as ex:
+        sources["cfl_news"] = {"ok": False, "error": str(ex)[:200]}
+        print(f"cfl news: FAILED - {ex}", file=sys.stderr)
+        try:
+            pro_news = json.load(open(OUT_FILE, encoding="utf-8")).get("pro_news", [])
+        except (OSError, ValueError):
+            pass
+
     payload = {
         "updated": now.isoformat(timespec="seconds"),
         "today": today.isoformat(),
@@ -727,6 +787,7 @@ def main():
         "sources": sources,
         "games": games,
         "pro_games": pro_games,   # CFL, used by pro-games.html
+        "pro_news": pro_news,     # CFL stories, used by news-feed.html
     }
     os.makedirs(os.path.dirname(OUT_FILE), exist_ok=True)
     new = json.dumps(payload, ensure_ascii=False, indent=1)
@@ -735,7 +796,8 @@ def main():
         try:
             old = json.load(open(OUT_FILE, encoding="utf-8"))
             if (old.get("games") == games and old.get("sources") == sources
-                    and old.get("today") == payload["today"] and old.get("pro_games") == pro_games):
+                    and old.get("today") == payload["today"] and old.get("pro_games") == pro_games
+                    and old.get("pro_news") == pro_news):
                 print("No changes.")
                 return
         except ValueError:
