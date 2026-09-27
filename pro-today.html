@@ -50,9 +50,9 @@
 <script>
 (function () {
   var TZ = 'America/Toronto';
-  var PATHS = { nfl: 'football/nfl', nhl: 'hockey/nhl', nba: 'basketball/nba' };
-  var LABEL = { nfl: 'NFL', nhl: 'NHL', nba: 'NBA' };
-  var OUR = { nfl: ['DET', 'BUF'], nhl: ['DET', 'TOR', 'MTL'], nba: ['DET', 'TOR'] };
+  var PATHS = { nfl: 'football/nfl', nhl: 'hockey/nhl', nba: 'basketball/nba', mlb: 'baseball/mlb' };
+  var LABEL = { nfl: 'NFL', nhl: 'NHL', nba: 'NBA', mlb: 'MLB' };
+  var OUR = { nfl: ['DET', 'BUF'], nhl: ['DET', 'TOR', 'MTL'], nba: ['DET', 'TOR'], mlb: ['DET', 'TOR'] };
 
   var link = new URLSearchParams(location.search).get('link');
   if (link) document.getElementById('more').href = link;
