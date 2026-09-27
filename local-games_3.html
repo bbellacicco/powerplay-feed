@@ -124,9 +124,17 @@
     Promise.all([
       getJSON('local-games.json'),
       // high school comes from Buddy's PC (wecssaa.com blocks GitHub); optional
-      getJSON('highschool.json').catch(function () { return null; })
+      getJSON('highschool.json').catch(function () { return null; }),
+      // St. Clair (all sports but football) also comes from Buddy's PC; optional
+      getJSON('saints.json').catch(function () { return null; })
     ]).then(function (res) {
-      var j = res[0], hs = res[1];
+      var j = res[0], hs = res[1], sc = res[2];
+      if (sc && sc.games) {
+        var lo2 = (j.range || [])[0] || '', hi2 = (j.range || [])[1] || '9999';
+        j.games = j.games.filter(function (g) { return !(g.team === 'saints' && g.sport !== 'Football'); })
+          .concat(sc.games.filter(function (g) { var d = g.start.slice(0, 10); return g.sport !== 'Football' && d >= lo2 && d <= hi2; }))
+          .sort(function (a, b) { return a.start < b.start ? -1 : a.start > b.start ? 1 : 0; });
+      }
       if (hs && hs.games && hs.games.length) {
         var lo = (j.range || [])[0] || '', hi = (j.range || [])[1] || '9999';
         var extra = hs.games.filter(function (g) { var d = g.start.slice(0, 10); return d >= lo && d <= hi; });
@@ -182,6 +190,9 @@
     sel.onchange = function () { state.sport = sel.value; render(); };
   }
 
+  // A game still marked live 4+ hours after it started means the data is behind
+  function staleLive(g) { return g.status === 'live' && Date.now() - new Date(g.start).getTime() > 4 * 3600e3; }
+
   // Same team priority as the scores ticker:
   // Lancers football, St. Clair football, Spitfires, junior hockey, then everything else.
   function priority(g) {
@@ -194,7 +205,7 @@
   // 6 current scores: games in progress first, then finals from the last 3 days by
   // team priority (newest first within a team group); older finals fill any gaps.
   function currentScores(n) {
-    var scored = data.games.filter(function (g) { return (g.status === 'final' || g.status === 'live') && g.our_score != null; });
+    var scored = data.games.filter(function (g) { return (g.status === 'final' || g.status === 'live') && g.our_score != null && !staleLive(g); });
     var newest = function (a, b) { return a.start < b.start ? 1 : a.start > b.start ? -1 : 0; };
     var byPrio = function (a, b) { return priority(a) - priority(b) || newest(a, b); };
     var since = new Date(Date.now() - 3 * 864e5).toISOString();
@@ -284,6 +295,8 @@
       sc.appendChild(el('span', 'badge ' + g.result, g.result));
     } else if (g.status === 'postponed' || g.status === 'cancelled') {
       sc.appendChild(el('span', 'badge off', g.status === 'postponed' ? 'PPD' : 'CAN'));
+    } else if (staleLive(g)) {
+      sc.appendChild(el('span', 'badge off', 'PENDING'));
     } else if (g.status === 'live') {
       sc.appendChild(el('b', null, (g.our_score || 0) + '–' + (g.opp_score || 0)));
       sc.appendChild(el('span', 'badge live', 'LIVE'));
