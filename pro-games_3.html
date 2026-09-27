@@ -6,20 +6,20 @@
 <title>Pro Sport Hub | Powerplay Windsor</title>
 <!--
   Pro sports widget: a 7-day span (3 days before today, today, 3 days after).
-  NFL, NHL and NBA load live from ESPN each time the page opens, so scores are
+  NFL, NHL, NBA and MLB load live from ESPN each time the page opens, so scores are
   always current. CFL comes from data/local-games.json ("pro_games"), which the
   daily GitHub Action fills from cfl.ca (ESPN's CFL data is out of date).
 
   Embed in Wix (Embed Code > Embed a site):
     https://bbellacicco.github.io/powerplay-feed/pro-games.html
-  Optional: ?tab=nfl | nhl | nba | cfl  start on a league instead of "Our Teams"
+  Optional: ?tab=nfl | nhl | nba | mlb | cfl  start on a league instead of "Our Teams"
 -->
 <style>
   :root {
     --bg: #0b1a33; --panel: #10244a; --row: #132b57; --line: #1e3a6e;
     --text: #f2f5fb; --muted: #9fb0cf; --accent: #e8b021;
     --win: #2fbf71; --loss: #e5484d; --tie: #9fb0cf;
-    --nfl: #1d4ed8; --nhl: #94a3b8; --nba: #ea580c; --cfl: #dc2626;
+    --nfl: #1d4ed8; --nhl: #94a3b8; --nba: #ea580c; --mlb: #0891b2; --cfl: #dc2626;
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; background: var(--bg); color: var(--text);
@@ -43,7 +43,7 @@
   .game { display: grid; grid-template-columns: 4px 64px 1fr auto; gap: 10px; align-items: center;
     background: var(--row); border-radius: 8px; padding: 8px 10px 8px 0; margin-bottom: 5px; overflow: hidden; }
   .stripe { align-self: stretch; }
-  .l-nfl .stripe { background: var(--nfl); } .l-nhl .stripe { background: var(--nhl); }
+  .l-nfl .stripe { background: var(--nfl); } .l-mlb .stripe { background: var(--mlb); } .l-nhl .stripe { background: var(--nhl); }
   .l-nba .stripe { background: var(--nba); } .l-cfl .stripe { background: var(--cfl); }
   .time { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
   .main { min-width: 0; }
@@ -78,7 +78,7 @@
     <select class="pill" id="team" aria-label="Team"></select>
   </div>
   <div id="list"><div class="empty">Loading…</div></div>
-  <footer>Powerplay Windsor · Scores from ESPN (NFL, NHL, NBA) and cfl.ca</footer>
+  <footer>Powerplay Windsor · Scores from ESPN (NFL, NHL, NBA, MLB) and cfl.ca</footer>
 </div>
 <script>
 (function () {
@@ -88,6 +88,7 @@
     nfl: { label: 'NFL', path: 'football/nfl' },
     nhl: { label: 'NHL', path: 'hockey/nhl' },
     nba: { label: 'NBA', path: 'basketball/nba' },
+    mlb: { label: 'MLB', path: 'baseball/mlb' },
     cfl: { label: 'CFL' }
   };
   // "Our Teams": league + ESPN abbreviation
@@ -98,9 +99,11 @@
     { league: 'nhl', abbr: 'TOR', name: 'Toronto Maple Leafs' },
     { league: 'nhl', abbr: 'MTL', name: 'Montreal Canadiens' },
     { league: 'nba', abbr: 'TOR', name: 'Toronto Raptors' },
-    { league: 'nfl', abbr: 'BUF', name: 'Buffalo Bills' }
+    { league: 'nfl', abbr: 'BUF', name: 'Buffalo Bills' },
+    { league: 'mlb', abbr: 'DET', name: 'Detroit Tigers' },
+    { league: 'mlb', abbr: 'TOR', name: 'Toronto Blue Jays' }
   ];
-  var TABS = [['ours', 'Our Teams'], ['nfl', 'NFL'], ['nhl', 'NHL'], ['nba', 'NBA'], ['cfl', 'CFL']];
+  var TABS = [['ours', 'Our Teams'], ['nfl', 'NFL'], ['nhl', 'NHL'], ['nba', 'NBA'], ['mlb', 'MLB'], ['cfl', 'CFL']];
 
   var qs = new URLSearchParams(location.search);
   var state = { tab: LEAGUES[qs.get('tab')] ? qs.get('tab') : 'ours', team: 'all' };
@@ -124,7 +127,7 @@
     return OUR_TEAMS.filter(function (t) { return t.league === g.league && (g.home.abbr === t.abbr || g.away.abbr === t.abbr); })[0];
   }
 
-  // ---- ESPN (NFL / NHL / NBA), one request per league per day
+  // ---- ESPN (NFL / NHL / NBA / MLB), one request per league per day
   function espnDay(key, d) {
     var url = 'https://site.api.espn.com/apis/site/v2/sports/' + LEAGUES[key].path + '/scoreboard?dates=' + ymd(d);
     return fetch(url).then(function (r) { return r.ok ? r.json() : { events: [] }; }).then(function (j) {
@@ -170,7 +173,7 @@
     now = new Date();
     todayKey = dayKey(now);
     var jobs = [cflGames()];
-    ['nfl', 'nhl', 'nba'].forEach(function (k) { dates.forEach(function (d) { jobs.push(espnDay(k, d)); }); });
+    ['nfl', 'nhl', 'nba', 'mlb'].forEach(function (k) { dates.forEach(function (d) { jobs.push(espnDay(k, d)); }); });
     Promise.all(jobs).then(function (res) {
       var seen = {};
       games = [].concat.apply([], res).filter(function (g) {
