@@ -7,19 +7,19 @@
 <!--
   Pro sports story feed. Headlines, a short summary and a photo, each linking
   to the original story on the publisher's site.
-  NFL, NHL and NBA stories load live from ESPN each time the page opens.
+  NFL, NHL, NBA and MLB stories load live from ESPN each time the page opens.
   CFL stories come from data/local-games.json ("pro_news"), which the GitHub
   Action fills from cfl.ca every 15 minutes (ESPN's CFL news is out of date).
 
   Embed in Wix (Embed Code > Embed a site):
     https://bbellacicco.github.io/powerplay-feed/news-feed.html
-  Optional: ?tab=nfl | nhl | nba | cfl  start on a league instead of "Our Teams"
+  Optional: ?tab=nfl | nhl | nba | mlb | cfl  start on a league instead of "Our Teams"
 -->
 <style>
   :root {
     --bg: #0b1a33; --panel: #10244a; --row: #132b57; --line: #1e3a6e;
     --text: #f2f5fb; --muted: #9fb0cf; --accent: #e8b021;
-    --nfl: #1d4ed8; --nhl: #94a3b8; --nba: #ea580c; --cfl: #dc2626;
+    --nfl: #1d4ed8; --nhl: #94a3b8; --nba: #ea580c; --mlb: #0891b2; --cfl: #dc2626;
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; background: var(--bg); color: var(--text);
@@ -41,7 +41,7 @@
   .story:hover { background: #17336a; }
   .stripe { align-self: stretch; }
   .l-nfl .stripe { background: var(--nfl); } .l-nhl .stripe { background: var(--nhl); }
-  .l-nba .stripe { background: var(--nba); } .l-cfl .stripe { background: var(--cfl); }
+  .l-nba .stripe { background: var(--nba); } .l-mlb .stripe { background: var(--mlb); } .l-cfl .stripe { background: var(--cfl); }
   .thumb { width: 128px; height: 80px; margin: 10px 0; border-radius: 6px; object-fit: cover; background: var(--panel); display: block; }
   .body { padding: 10px 0; min-width: 0; }
   .headline { font-weight: 700; font-size: 15px; line-height: 1.3; }
@@ -80,6 +80,7 @@
     nfl: { label: 'NFL', path: 'football/nfl' },
     nhl: { label: 'NHL', path: 'hockey/nhl' },
     nba: { label: 'NBA', path: 'basketball/nba' },
+    mlb: { label: 'MLB', path: 'baseball/mlb' },
     cfl: { label: 'CFL' }
   };
   var OUR_TEAMS = [
@@ -89,13 +90,15 @@
     { league: 'nhl', abbr: 'tor', name: 'Toronto Maple Leafs' },
     { league: 'nhl', abbr: 'mtl', name: 'Montreal Canadiens' },
     { league: 'nba', abbr: 'tor', name: 'Toronto Raptors' },
-    { league: 'nfl', abbr: 'buf', name: 'Buffalo Bills' }
+    { league: 'nfl', abbr: 'buf', name: 'Buffalo Bills' },
+    { league: 'mlb', abbr: 'det', name: 'Detroit Tigers' },
+    { league: 'mlb', abbr: 'tor', name: 'Toronto Blue Jays' }
   ];
-  var TABS = [['ours', 'Our Teams'], ['nfl', 'NFL'], ['nhl', 'NHL'], ['nba', 'NBA'], ['cfl', 'CFL']];
+  var TABS = [['ours', 'Our Teams'], ['nfl', 'NFL'], ['nhl', 'NHL'], ['nba', 'NBA'], ['mlb', 'MLB'], ['cfl', 'CFL']];
 
   var qs = new URLSearchParams(location.search);
   var state = { tab: LEAGUES[qs.get('tab')] ? qs.get('tab') : 'ours', team: 'all' };
-  var stories = { ours: [], nfl: [], nhl: [], nba: [], cfl: [] };
+  var stories = { ours: [], nfl: [], nhl: [], nba: [], mlb: [], cfl: [] };
 
   function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
 
@@ -153,9 +156,9 @@
     });
     Promise.all([
       Promise.all(ours).then(function (r) { return [].concat.apply([], r); }),
-      espn('nfl'), espn('nhl'), espn('nba'), cfl()
+      espn('nfl'), espn('nhl'), espn('nba'), espn('mlb'), cfl()
     ]).then(function (r) {
-      stories = { ours: clean(r[0]), nfl: clean(r[1]), nhl: clean(r[2]), nba: clean(r[3]), cfl: clean(r[4]) };
+      stories = { ours: clean(r[0]), nfl: clean(r[1]), nhl: clean(r[2]), nba: clean(r[3]), mlb: clean(r[4]), cfl: clean(r[5]) };
       render();
     });
   }
