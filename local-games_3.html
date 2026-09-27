@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Local Sports Schedule | Powerplay Windsor</title>
+<title>Local Sports Hub | Powerplay Windsor</title>
 <!--
   Local schedules & results widget: a 7-day span (3 days before today, today,
   3 days after). Data comes from data/local-games.json, refreshed every
@@ -71,6 +71,7 @@
     padding: 2px 5px; border-radius: 4px; margin-left: 6px; color: #fff; background: var(--tie); }
   .badge.W { background: var(--win); } .badge.L, .badge.OTL, .badge.SOL { background: var(--loss); }
   .badge.off { background: #6b7280; }
+  .badge.live { background: var(--loss); }
   .tix { font-size: 12px; color: var(--accent); text-decoration: none; }
   .empty { color: var(--muted); padding: 24px 0; text-align: center; }
   footer { margin-top: 14px; color: var(--muted); font-size: 11px; text-align: center; }
@@ -85,7 +86,7 @@
 <div class="wrap">
   <header>
     <div>
-      <h1>Local <span>Sports Schedule</span></h1>
+      <h1>Local <span>Sports Hub</span></h1>
       <div class="sponsor">Brought to you by <b>Unifor Local 444</b></div>
     </div>
     <div class="updated" id="updated"></div>
@@ -102,7 +103,7 @@
 (function () {
   var qs = new URLSearchParams(location.search);
   var state = {
-    team: qs.get('team') || 'all',
+    team: qs.get('team') || 'latest',   // opens on Latest Scores
     sport: 'all',
     school: 'all'
   };
@@ -144,9 +145,9 @@
     if (lockTeam) { box.style.display = 'none'; return; }
     var present = {};
     data.games.forEach(function (g) { present[g.team] = true; });
-    var keys = ['all'].concat(Object.keys(data.teams).filter(function (k) { return present[k]; }));
+    var keys = ['latest', 'all'].concat(Object.keys(data.teams).filter(function (k) { return present[k]; }));
     keys.forEach(function (k) {
-      var b = el('button', 'pill', k === 'all' ? 'All' : data.teams[k].short);
+      var b = el('button', 'pill', k === 'all' ? 'All' : k === 'latest' ? 'Current Scores' : data.teams[k].short);
       b.setAttribute('aria-pressed', String(state.team === k));
       b.onclick = function () { state.team = k; state.sport = 'all'; state.school = 'all'; render(); };
       box.appendChild(b);
@@ -191,15 +192,23 @@
       fmt(noon(range[0]), { month: 'short', day: 'numeric' }) + ' – ' + fmt(noon(range[1]), { month: 'short', day: 'numeric' });
     teamTabs();
 
-    var inView = data.games.filter(function (g) { return state.team === 'all' || g.team === state.team; });
+    var latest = state.team === 'latest';
+    var inView = latest
+      // 6 current scores: games in progress first, then the newest finals
+      ? data.games.filter(function (g) { return (g.status === 'final' || g.status === 'live') && g.our_score != null; })
+          .sort(function (a, b) {
+            if ((a.status === 'live') !== (b.status === 'live')) return a.status === 'live' ? -1 : 1;
+            return a.start < b.start ? 1 : a.start > b.start ? -1 : 0;
+          }).slice(0, 6)
+      : data.games.filter(function (g) { return state.team === 'all' || g.team === state.team; });
     schoolSelect(inView);
     if (state.school !== 'all') inView = inView.filter(function (g) { return g.home === state.school || g.away === state.school || g.club === state.school; });
-    sportSelect(inView);
-    if (state.sport !== 'all') inView = inView.filter(function (g) { return g.sport === state.sport; });
+    if (latest) document.getElementById('sport').style.display = 'none'; else sportSelect(inView);
+    if (!latest && state.sport !== 'all') inView = inView.filter(function (g) { return g.sport === state.sport; });
 
     var list = document.getElementById('list');
     list.innerHTML = '';
-    if (!inView.length) { list.appendChild(el('div', 'empty', 'No games in this 7-day span.')); return; }
+    if (!inView.length) { list.appendChild(el('div', 'empty', latest ? 'No scores yet this week.' : 'No games in this 7-day span.')); return; }
 
     var groups = [], cur = null;
     inView.forEach(function (g) {
@@ -252,7 +261,7 @@
       sc.appendChild(el('span', 'badge off', g.status === 'postponed' ? 'PPD' : 'CAN'));
     } else if (g.status === 'live') {
       sc.appendChild(el('b', null, (g.our_score || 0) + '–' + (g.opp_score || 0)));
-      sc.appendChild(el('span', 'badge', 'LIVE'));
+      sc.appendChild(el('span', 'badge live', 'LIVE'));
     } else if (dayKey(new Date(g.start)) >= todayKey && g.links && g.links.tickets) {
       var a = el('a', 'tix', 'Tickets'); a.href = g.links.tickets; a.target = '_blank'; a.rel = 'noopener';
       sc.appendChild(a);
@@ -268,6 +277,7 @@
   }
 
   load();
+  setInterval(load, 2 * 60 * 1000);   // pick up new scores while the page is open
 })();
 </script>
 </body>
