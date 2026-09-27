@@ -18,16 +18,18 @@
 html,body{width:100%;height:44px;background:#000;overflow:hidden}
 #ticker-viewport{width:100%;height:44px;overflow:hidden;position:relative;background:#000}
 #ticker-stage{position:absolute;top:0;left:0;height:44px;display:flex;align-items:center;white-space:nowrap;will-change:transform}
-.ticker-item{display:inline-flex;align-items:center;gap:8px;padding:0 28px;font-family:Arial,sans-serif;font-size:13px;font-weight:600;color:#FFB800;height:44px}
-.badge{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 6px;border-radius:3px;flex-shrink:0}
+.ticker-item{display:inline-flex;align-items:center;gap:7px;padding:0 26px;font-family:Arial,sans-serif;font-size:13px;font-weight:600;color:#fff;height:44px}
+/* one accent colour (Powerplay gold) + red only for LIVE; everything else white/grey */
+.badge{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 6px;border-radius:3px;flex-shrink:0;margin-right:2px}
+.badge-final{background:#FFB800;color:#000}
 .badge-live{background:#e8323a;color:#fff}
-.badge-final{background:#555;color:#fff}
-.badge-upcoming{background:#9b59b6;color:#fff}
+.badge-upcoming{background:transparent;color:#FFB800;box-shadow:inset 0 0 0 1px #FFB800}
 .team{color:#fff;font-weight:700}
-.score{color:#fff;font-weight:800}
-.win{color:#FFB800}
-.meta{color:rgba(255,184,0,0.6);font-weight:600}
-.sep{color:rgba(255,184,0,0.3);font-size:18px;font-family:Arial;padding:0 4px;display:inline-block;height:44px;line-height:44px}
+.score{color:#fff;font-weight:800;font-variant-numeric:tabular-nums}
+.lose{color:#8b929c}
+.at{color:#6b7280;font-weight:400}
+.meta{color:#9aa3ad;font-weight:400;font-size:12px;margin-left:4px}
+.sep{color:rgba(255,184,0,0.35);font-size:14px;font-family:Arial;padding:0 2px;display:inline-block;height:44px;line-height:44px}
 </style>
 </head>
 <body>
@@ -135,14 +137,14 @@ function node(it){
   b.className = 'badge badge-' + it.kind;
   b.textContent = it.kind === 'live' ? 'Live' : it.kind === 'final' ? 'Final' : (it.today ? 'Today' : 'Next');
   w.appendChild(b);
-  function side(name, score, win){
-    var t = document.createElement('span'); t.className = 'team' + (win ? ' win' : ''); t.textContent = name; w.appendChild(t);
-    if (score != null) { var s = document.createElement('span'); s.className = 'score' + (win ? ' win' : ''); s.textContent = score; w.appendChild(s); }
+  function side(name, score, lost){
+    var t = document.createElement('span'); t.className = 'team' + (lost ? ' lose' : ''); t.textContent = name; w.appendChild(t);
+    if (score != null) { var s = document.createElement('span'); s.className = 'score' + (lost ? ' lose' : ''); s.textContent = score; w.appendChild(s); }
   }
-  var done = it.kind === 'final';
-  side(it.left, it.ls, done && it.ls > it.rs);
-  var at = document.createElement('span'); at.className = 'meta'; at.textContent = it.vs ? 'vs' : '@'; w.appendChild(at);
-  side(it.right, it.rs, done && it.rs > it.ls);
+  var done = it.kind === 'final';   // in a final, the losing side is dimmed
+  side(it.left, it.ls, done && it.ls < it.rs);
+  var at = document.createElement('span'); at.className = 'at'; at.textContent = it.vs ? 'vs' : '@'; w.appendChild(at);
+  side(it.right, it.rs, done && it.rs < it.ls);
   if (it.meta) { var m = document.createElement('span'); m.className = 'meta'; m.textContent = it.meta; w.appendChild(m); }
   return w;
 }
@@ -156,7 +158,7 @@ function build(items){
   stage.innerHTML = ''; x = 0; lastT = null; stage.style.transform = 'translateX(0)';
   var nodes = [];
   if (!items.length) {
-    var d = document.createElement('div'); d.className = 'ticker-item'; d.style.color = 'rgba(255,184,0,0.5)';
+    var d = document.createElement('div'); d.className = 'ticker-item'; d.style.color = '#9aa3ad';
     d.textContent = 'Powerplay Windsor — scores will appear here on game days';
     nodes.push(d, sep());
   } else items.forEach(function(it){ nodes.push(node(it), sep()); });
