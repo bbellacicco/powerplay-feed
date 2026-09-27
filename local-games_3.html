@@ -208,11 +208,15 @@
     var scored = data.games.filter(function (g) { return (g.status === 'final' || g.status === 'live') && g.our_score != null && !staleLive(g); });
     var newest = function (a, b) { return a.start < b.start ? 1 : a.start > b.start ? -1 : 0; };
     var byPrio = function (a, b) { return priority(a) - priority(b) || newest(a, b); };
-    var since = new Date(Date.now() - 3 * 864e5).toISOString();
+    // a final counts as current for one day after the game started
+    var since = new Date(Date.now() - 864e5).toISOString();
     var live = scored.filter(function (g) { return g.status === 'live'; }).sort(byPrio);
     var recent = scored.filter(function (g) { return g.status === 'final' && new Date(g.start).toISOString() >= since; }).sort(byPrio);
-    var older = scored.filter(function (g) { return g.status === 'final' && new Date(g.start).toISOString() < since; }).sort(newest);
-    return live.concat(recent, older).slice(0, n);
+    // not enough current scores: fill with the next games coming up, soonest first
+    var nowIso = new Date().toISOString();
+    var next = data.games.filter(function (g) { return g.status === 'upcoming' && new Date(g.start).toISOString() >= nowIso; })
+      .sort(function (a, b) { return a.start < b.start ? -1 : a.start > b.start ? 1 : priority(a) - priority(b); });
+    return live.concat(recent, next).slice(0, n);
   }
 
   // Two of our junior clubs playing each other is stored once, from the home club's side.
