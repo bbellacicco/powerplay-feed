@@ -121,7 +121,11 @@
   function espn(league, team) {
     var url = 'https://site.api.espn.com/apis/site/v2/sports/' + LEAGUES[league].path + '/news?limit=' + (team ? 25 : 40) + (team ? '&team=' + team : '');
     return fetch(url).then(function (r) { return r.ok ? r.json() : { articles: [] }; })
-      .then(function (j) { return (j.articles || []).map(function (a) { return fromEspn(a, league); }); })
+      .then(function (j) {
+        // skip ESPN video clips: they're geo-blocked in Canada and won't play
+        return (j.articles || []).filter(function (a) { return a.type !== 'Media'; })
+          .map(function (a) { return fromEspn(a, league); });
+      })
       .catch(function () { return []; });
   }
   function cfl() {
