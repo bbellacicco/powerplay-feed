@@ -1,9 +1,9 @@
 {
- "updated": "2026-09-26T20:52:09-04:00",
- "today": "2026-09-26",
+ "updated": "2026-09-27T02:03:40-04:00",
+ "today": "2026-09-27",
  "range": [
-  "2026-09-23",
-  "2026-09-29"
+  "2026-09-24",
+  "2026-09-30"
  ],
  "teams": {
   "spitfires": {
@@ -67,60 +67,6 @@
   }
  },
  "games": [
-  {
-   "id": "lancers-6454",
-   "team": "lancers",
-   "sport": "Baseball",
-   "start": "2026-09-23T18:30:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Windsor Selects",
-   "location": "Libro Field",
-   "status": "final",
-   "our_score": 8,
-   "opp_score": 3,
-   "result": "W",
-   "note": "",
-   "links": {}
-  },
-  {
-   "id": "junior-gojhl15499",
-   "team": "junior",
-   "sport": "GOHL (Jr. B)",
-   "start": "2026-09-23T19:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "London Nationals",
-   "location": "Western Fair S.C., London, ON",
-   "status": "final",
-   "our_score": 1,
-   "opp_score": 8,
-   "result": "L",
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.gohl.ca/stats/game-center/15499"
-   },
-   "club": "LaSalle Vipers"
-  },
-  {
-   "id": "junior-gs2960176",
-   "team": "junior",
-   "sport": "PJHL (Jr. C)",
-   "start": "2026-09-23T19:30:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Blenheim Blades",
-   "location": "Wheatley Area Arena",
-   "status": "final",
-   "our_score": 2,
-   "opp_score": 6,
-   "result": "L",
-   "note": "",
-   "links": {
-    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960176?configuration=45"
-   },
-   "club": "Wheatley Sharks"
-  },
   {
    "id": "lancers-6461",
    "team": "lancers",
@@ -384,7 +330,7 @@
    "our_score": null,
    "opp_score": null,
    "result": null,
-   "note": "",
+   "note": "W - 1st, M - 4th",
    "links": {}
   },
   {
@@ -529,10 +475,10 @@
    "home_away": "H",
    "opponent": "Essex 73's",
    "location": "Libro Centre",
-   "status": "live",
-   "our_score": 0,
-   "opp_score": 0,
-   "result": null,
+   "status": "final",
+   "our_score": 2,
+   "opp_score": 3,
+   "result": "L",
    "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960208?configuration=45"
@@ -580,11 +526,11 @@
    "home_away": "A",
    "opponent": "Saginaw Spirit",
    "location": "Dow Event Center, Saginaw",
-   "status": "live",
-   "our_score": 3,
-   "opp_score": 2,
-   "result": null,
-   "note": "00:00 2nd",
+   "status": "final",
+   "our_score": 6,
+   "opp_score": 3,
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29027/"
    }
@@ -598,11 +544,11 @@
    "home_away": "A",
    "opponent": "Strathroy Rockets",
    "location": "West Middlesex M.C., Strathroy, ON",
-   "status": "live",
-   "our_score": 2,
-   "opp_score": 2,
-   "result": null,
-   "note": "05:37 2nd",
+   "status": "final",
+   "our_score": 4,
+   "opp_score": 3,
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15520"
    },
@@ -617,10 +563,10 @@
    "home_away": "A",
    "opponent": "Walpole Island Wild",
    "location": "Walpole Island Complex",
-   "status": "live",
-   "our_score": 0,
+   "status": "final",
+   "our_score": 5,
    "opp_score": 0,
-   "result": null,
+   "result": "W",
    "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960218?configuration=45"
@@ -636,10 +582,10 @@
    "home_away": "A",
    "opponent": "Mooretown Flags",
    "location": "Mooretown Sports Complex",
-   "status": "live",
-   "our_score": 0,
-   "opp_score": 0,
-   "result": null,
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 2,
+   "result": "W",
    "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960217?configuration=45"
@@ -679,6 +625,22 @@
    "links": {}
   },
   {
+   "id": "lancers-6412",
+   "team": "lancers",
+   "sport": "Baseball",
+   "start": "2026-09-27T12:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Waterloo Warriors",
+   "location": "Libro Field",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {}
+  },
+  {
    "id": "lancers-6482",
    "team": "lancers",
    "sport": "Women's Volleyball",
@@ -692,22 +654,6 @@
    "opp_score": null,
    "result": null,
    "note": "UNB Tournament",
-   "links": {}
-  },
-  {
-   "id": "lancers-6412",
-   "team": "lancers",
-   "sport": "Baseball",
-   "start": "2026-09-27T13:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "York Lions",
-   "location": "Libro Field",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
    "links": {}
   },
   {
@@ -749,10 +695,10 @@
    "id": "lancers-6413",
    "team": "lancers",
    "sport": "Baseball",
-   "start": "2026-09-27T16:00:00-04:00",
+   "start": "2026-09-27T15:00:00-04:00",
    "time_tbd": false,
    "home_away": "H",
-   "opponent": "York Lions",
+   "opponent": "Waterloo Warriors",
    "location": "Libro Field",
    "status": "upcoming",
    "our_score": null,
@@ -814,6 +760,44 @@
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960231?configuration=45"
    },
    "club": "Essex 73's"
+  },
+  {
+   "id": "junior-gojhl15526",
+   "team": "junior",
+   "sport": "GOHL (Jr. B)",
+   "start": "2026-09-30T19:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Komoka Kings",
+   "location": "Vollmer Culture R.C., LaSalle, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.gohl.ca/stats/game-center/15526"
+   },
+   "club": "LaSalle Vipers"
+  },
+  {
+   "id": "junior-gs2960234",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-09-30T19:30:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Lakeshore Canadiens",
+   "location": "Wheatley Area Arena",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960234?configuration=45"
+   },
+   "club": "Wheatley Sharks"
   }
  ],
  "pro_games": [
@@ -862,28 +846,6 @@
    "home_abbr": "BC"
   },
   {
-   "id": "cfl-cfl6655",
-   "team": "cfl",
-   "sport": "CFL",
-   "start": "2026-09-26T19:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Edmonton Elks",
-   "location": "Play Alberta Field at Commonwealth Stadium",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.cfl.ca/schedule/"
-   },
-   "away": "Hamilton Tiger-Cats",
-   "home": "Edmonton Elks",
-   "away_abbr": "HAM",
-   "home_abbr": "EDM"
-  },
-  {
    "id": "cfl-cfl6654",
    "team": "cfl",
    "sport": "CFL",
@@ -904,9 +866,45 @@
    "home": "Ottawa REDBLACKS",
    "away_abbr": "CGY",
    "home_abbr": "OTT"
+  },
+  {
+   "id": "cfl-cfl6655",
+   "team": "cfl",
+   "sport": "CFL",
+   "start": "2026-09-26T19:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Edmonton Elks",
+   "location": "Play Alberta Field at Commonwealth Stadium",
+   "status": "final",
+   "our_score": 35,
+   "opp_score": 37,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.cfl.ca/schedule/"
+   },
+   "away": "Hamilton Tiger-Cats",
+   "home": "Edmonton Elks",
+   "away_abbr": "HAM",
+   "home_abbr": "EDM"
   }
  ],
  "pro_news": [
+  {
+   "league": "cfl",
+   "headline": "Recap: Edmonton 37, Hamilton 35",
+   "summary": "",
+   "published": "2026-09-27T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/6VmLUuw45If6Ho3RCaBYw8/af915a18e5a8a8438da7953ee02d35c1/recap.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Tiger-Cats",
+    "Elks"
+   ],
+   "url": "https://www.cfl.ca/article/recap-edmonton-37-hamilton-35",
+   "source": "CFL.ca"
+  },
   {
    "league": "cfl",
    "headline": "Recap: Calgary 45, Ottawa 31",
@@ -997,20 +995,6 @@
     "Stampeders"
    ],
    "url": "https://www.cfl.ca/article/clark-barnes-great-grab-sets-up-early-stampeders-td",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Recap: Toronto 30, Winnipeg 28",
-   "summary": "",
-   "published": "2026-09-26T12:27:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/1IPma6TIlahf4qYaXlBvZ7/6430d666266b1171dc3344a19ceec6f3/TOR_VS_WPG_ENG_THMB.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Argonauts",
-    "Blue Bombers"
-   ],
-   "url": "https://www.cfl.ca/article/recap-toronto-30-winnipeg-28",
    "source": "CFL.ca"
   },
   {
