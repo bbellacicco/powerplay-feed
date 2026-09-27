@@ -57,6 +57,22 @@ function dayKey(d){ return fmt(d, {year:'numeric', month:'2-digit', day:'2-digit
 function clock(d){ return fmt(d, {hour:'numeric', minute:'2-digit'}).replace(/\s?([ap])\.?m\.?/i, function(_, a){ return ' ' + a.toUpperCase() + 'M'; }); }
 function getJSON(u){ return fetch(u + (u.indexOf('?') < 0 ? '?' : '&') + 't=' + Date.now(), {cache:'no-store'}).then(function(r){ if(!r.ok) throw 0; return r.json(); }); }
 
+// ---------- priority: lower number shows first within finals / live / upcoming
+function priority(g){
+  if (g.team === 'lancers' && g.sport === 'Football') return 1;   // Lancers football
+  if (g.team === 'saints' && g.sport === 'Football') return 2;    // St. Clair football
+  if (g.team === 'spitfires') return 3;                           // Spitfires
+  if (g.team === 'junior') return 4;                              // junior hockey
+  return 5;                                                       // everything else
+}
+function byPrio(newestFirst){
+  return function(a, b){
+    var pa = a.prio || 5, pb = b.prio || 5;
+    if (pa !== pb) return pa - pb;
+    return newestFirst ? (a.start < b.start ? 1 : -1) : (a.start < b.start ? -1 : 1);
+  };
+}
+
 // ---------- local
 function localItems(){
   return Promise.all([getJSON(BASE + 'local-games.json'), getJSON(BASE + 'highschool.json').catch(function(){ return null; })])
@@ -81,7 +97,7 @@ function localItems(){
         else if (g.home_away === 'H') { ls = g.opp_score; rs = g.our_score; } else { ls = g.our_score; rs = g.opp_score; }
         var label = g.team === 'spitfires' ? 'OHL' : g.team === 'saints' && g.sport === 'Football' ? 'CJFL' : g.sport;
         if (kind === 'upcoming' && d < new Date(Date.now() - 3 * 3600e3)) return;   // started a while ago, no score yet
-        out.push({kind: kind, start: g.start, hs: g.team === 'highschool', vs: g.home_away === 'N' && !(g.home && g.away), left: left, right: right, ls: ls, rs: rs,
+        out.push({kind: kind, start: g.start, hs: g.team === 'highschool', prio: priority(g), vs: g.home_away === 'N' && !(g.home && g.away), left: left, right: right, ls: ls, rs: rs,
                   today: isToday,
                   meta: [label, kind === 'upcoming' ? (isToday ? '' : fmt(d, {weekday: 'short'}) + ' ') + (g.time_tbd ? '' : clock(d)) : '', g.note && kind === 'final' ? g.note : ''].map(function(x){ return String(x).trim(); }).filter(Boolean).join(' · ')});
       });
@@ -117,16 +133,16 @@ function proItems(){
 // Order: current finals first, then games in progress. Once the finals are
 // old (none in the last FRESH_HOURS), show upcoming games instead.
 function order(items){
-  var live = items.filter(function(i){ return i.kind === 'live'; });
+  var live = items.filter(function(i){ return i.kind === 'live'; }).sort(byPrio(false));
   var since = Date.now() - FRESH_HOURS * 3600e3;
   var hsCount = 0;
   var fin = items.filter(function(i){ return i.kind === 'final' && new Date(i.start).getTime() >= since; })
-    .sort(function(a, b){ return a.start < b.start ? 1 : -1; })
+    .sort(byPrio(true))
     .filter(function(i){ return !i.hs || ++hsCount <= MAX_HS_FINALS; })
     .slice(0, MAX_FINALS);
   if (fin.length) return fin.concat(live);
   var up = items.filter(function(i){ return i.kind === 'upcoming'; })
-    .sort(function(a, b){ return a.start < b.start ? -1 : 1; }).slice(0, MAX_UPCOMING);
+    .sort(byPrio(false)).slice(0, MAX_UPCOMING);
   return live.concat(up);
 }
 
