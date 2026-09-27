@@ -7,7 +7,7 @@
 <!--
   Scrolling scores bar, styled like ticker.html (44px, black, gold).
   Shows live games first, then today's upcoming games and the latest finals:
-    - local teams from data/local-games.json + data/highschool.json
+    - local teams from data/local-games.json + data/highschool.json + data/saints.json
     - your pro teams (Red Wings, Pistons, Lions, Leafs, Canadiens, Raptors, Bills) live from ESPN
   Embed in Wix at full width, 44px tall:
     https://bbellacicco.github.io/powerplay-feed/scores-ticker.html
@@ -19,6 +19,11 @@ html,body{width:100%;height:44px;background:#000;overflow:hidden}
 #wrap{display:flex;width:100%;height:44px}
 #brand{flex:0 0 auto;height:44px;display:flex;align-items:center;padding:0 12px 0 10px;background:#000;position:relative;z-index:2;box-shadow:8px 0 10px -4px #000}
 #brand img{height:34px;width:auto;display:block}
+@media (max-width:480px){                      /* phones: smaller logo, tighter spacing */
+  #brand{padding:0 6px 0 6px}
+  #brand img{height:20px}
+  .ticker-item{padding:0 16px}
+}
 #ticker-viewport{flex:1;min-width:0;height:44px;overflow:hidden;position:relative;background:#000}
 #ticker-stage{position:absolute;top:0;left:0;height:44px;display:flex;align-items:center;white-space:nowrap;will-change:transform}
 .ticker-item{display:inline-flex;align-items:center;gap:7px;padding:0 26px;font-family:Arial,sans-serif;font-size:13px;font-weight:600;color:#fff;height:44px}
@@ -85,18 +90,23 @@ function byPrio(newestFirst){
 
 // ---------- local
 function localItems(){
-  return Promise.all([getJSON(BASE + 'local-games.json'), getJSON(BASE + 'highschool.json').catch(function(){ return null; })])
+  return Promise.all([getJSON(BASE + 'local-games.json'), getJSON(BASE + 'highschool.json').catch(function(){ return null; }),
+                      getJSON(BASE + 'saints.json').catch(function(){ return null; })])
     .then(function(r){
-      var j = r[0], hs = r[1], teams = j.teams || {};
+      var j = r[0], hs = r[1], sc = r[2], teams = j.teams || {};
       var games = j.games.filter(function(g){ return g.team !== 'highschool'; })
         .concat(hs && hs.games ? hs.games : j.games.filter(function(g){ return g.team === 'highschool'; }));
+      if (sc && sc.games) games = games.filter(function(g){ return !(g.team === 'saints' && g.sport !== 'Football'); })
+        .concat(sc.games.filter(function(g){ return g.sport !== 'Football'; }));
       var today = dayKey(new Date());
       var out = [];
       games.forEach(function(g){
         var d = new Date(g.start), isToday = dayKey(d) === today;
         var kind = g.status === 'live' ? 'live' : g.status === 'final' ? 'final' : (g.status === 'upcoming' ? 'upcoming' : null);
         if (!kind || (kind !== 'upcoming' && g.our_score == null)) return;
-        if (/volleyball/i.test(g.sport || '')) return;                          // volleyball left off the ticker
+        if (/volleyball/i.test(g.sport || '')) return;
+        // a game still marked live 4+ hours after it started is stale data, not a live game
+        if (kind === 'live' && Date.now() - d.getTime() > 4 * 3600e3) return;                          // volleyball left off the ticker
         var left, right;
         if (g.home && g.away) { left = g.away; right = g.home; }                  // high school: away @ home
         else {
