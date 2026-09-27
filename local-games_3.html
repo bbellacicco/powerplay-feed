@@ -230,7 +230,7 @@
       ? currentScores(6)
       : data.games.filter(function (g) { return state.team === 'all' || g.team === state.team; });
     schoolSelect(inView);
-    if (state.school !== 'all') inView = inView.filter(function (g) { return g.home === state.school || g.away === state.school || g.club === state.school; });
+    if (state.school !== 'all') inView = inView.filter(function (g) { return g.home === state.school || g.away === state.school || g.club === state.school || (g.team === 'junior' && g.opponent === state.school); });
     if (latest) document.getElementById('sport').style.display = 'none'; else sportSelect(inView);
     if (!latest && state.sport !== 'all') inView = inView.filter(function (g) { return g.sport === state.sport; });
 
