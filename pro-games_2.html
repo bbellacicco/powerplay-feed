@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pro Sport Hub | Powerplay Windsor</title>
+<!--
+  Pro sports widget: a 7-day span (3 days before today, today, 3 days after).
+  NFL, NHL and NBA load live from ESPN each time the page opens, so scores are
+  always current. CFL comes from data/local-games.json ("pro_games"), which the
+  daily GitHub Action fills from cfl.ca (ESPN's CFL data is out of date).
+
+  Embed in Wix (Embed Code > Embed a site):
+    https://bbellacicco.github.io/powerplay-feed/pro-games.html
+  Optional: ?tab=nfl | nhl | nba | cfl  start on a league instead of "Our Teams"
+-->
+<style>
+  :root {
+    --bg: #0b1a33; --panel: #10244a; --row: #132b57; --line: #1e3a6e;
+    --text: #f2f5fb; --muted: #9fb0cf; --accent: #e8b021;
+    --win: #2fbf71; --loss: #e5484d; --tie: #9fb0cf;
+    --nfl: #1d4ed8; --nhl: #94a3b8; --nba: #ea580c; --cfl: #dc2626;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text);
+    font: 14px/1.35 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 12px; }
+  header { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+  h1 { font-size: 17px; margin: 0; letter-spacing: .02em; text-transform: uppercase; }
+  h1 span { color: var(--accent); }
+  .sponsor { color: var(--muted); font-size: 12px; margin-top: 2px; }
+  .sponsor b { color: var(--text); font-weight: 600; }
+  .updated { color: var(--muted); font-size: 12px; }
+  .bar { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; align-items: center; }
+  .pill { border: 1px solid var(--line); background: var(--panel); color: var(--text);
+    padding: 6px 12px; border-radius: 999px; font: inherit; font-size: 13px; cursor: pointer; }
+  .pill[aria-pressed="true"] { background: var(--accent); color: #111; border-color: var(--accent); font-weight: 600; }
+  select.pill { padding-right: 8px; }
+  .day { margin-top: 14px; }
+  .day.today h2 { color: #fff; }
+  .day.today h2::after { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); margin-left: 7px; vertical-align: middle; }
+  .day h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin: 0 0 6px; }
+  .game { display: grid; grid-template-columns: 4px 64px 1fr auto; gap: 10px; align-items: center;
+    background: var(--row); border-radius: 8px; padding: 8px 10px 8px 0; margin-bottom: 5px; overflow: hidden; }
+  .stripe { align-self: stretch; }
+  .l-nfl .stripe { background: var(--nfl); } .l-nhl .stripe { background: var(--nhl); }
+  .l-nba .stripe { background: var(--nba); } .l-cfl .stripe { background: var(--cfl); }
+  .time { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+  .main { min-width: 0; }
+  .who { font-weight: 600; }
+  .who .vs { color: var(--muted); font-weight: 400; }
+  .meta { color: var(--muted); font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .score { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .score b { font-size: 16px; }
+  .badge { display: inline-block; min-width: 26px; text-align: center; font-size: 11px; font-weight: 700;
+    padding: 2px 5px; border-radius: 4px; margin-left: 6px; color: #fff; background: var(--tie); }
+  .badge.W { background: var(--win); } .badge.L, .badge.OTL { background: var(--loss); }
+  .badge.off { background: #6b7280; } .badge.live { background: var(--loss); }
+  .empty { color: var(--muted); padding: 24px 0; text-align: center; }
+  footer { margin-top: 14px; color: var(--muted); font-size: 11px; text-align: center; }
+  @media (max-width: 480px) {
+    .game { grid-template-columns: 4px 52px 1fr auto; gap: 8px; }
+    .time { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Pro <span>Sport Hub</span></h1>
+      <div class="sponsor">Brought to you by <b>Unifor Local 2458</b></div>
+    </div>
+    <div class="updated" id="updated"></div>
+  </header>
+  <div class="bar" id="tabs" role="group" aria-label="League"></div>
+  <div class="bar">
+    <select class="pill" id="team" aria-label="Team"></select>
+  </div>
+  <div id="list"><div class="empty">Loading…</div></div>
+  <footer>Powerplay Windsor · Scores from ESPN (NFL, NHL, NBA) and cfl.ca</footer>
+</div>
+<script>
+(function () {
+  var TZ = 'America/Toronto';
+  var DAYS_EACH_SIDE = 3;
+  var LEAGUES = {
+    nfl: { label: 'NFL', path: 'football/nfl' },
+    nhl: { label: 'NHL', path: 'hockey/nhl' },
+    nba: { label: 'NBA', path: 'basketball/nba' },
+    cfl: { label: 'CFL' }
+  };
+  // "Our Teams": league + ESPN abbreviation
+  var OUR_TEAMS = [
+    { league: 'nhl', abbr: 'DET', name: 'Detroit Red Wings' },
+    { league: 'nba', abbr: 'DET', name: 'Detroit Pistons' },
+    { league: 'nfl', abbr: 'DET', name: 'Detroit Lions' },
+    { league: 'nhl', abbr: 'TOR', name: 'Toronto Maple Leafs' },
+    { league: 'nhl', abbr: 'MTL', name: 'Montreal Canadiens' },
+    { league: 'nba', abbr: 'TOR', name: 'Toronto Raptors' },
+    { league: 'nfl', abbr: 'BUF', name: 'Buffalo Bills' }
+  ];
+  var TABS = [['ours', 'Our Teams'], ['nfl', 'NFL'], ['nhl', 'NHL'], ['nba', 'NBA'], ['cfl', 'CFL']];
+
+  var qs = new URLSearchParams(location.search);
+  var state = { tab: LEAGUES[qs.get('tab')] ? qs.get('tab') : 'ours', team: 'all' };
+  var games = [];
+
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function fmt(d, o) { return new Intl.DateTimeFormat('en-CA', Object.assign({ timeZone: TZ }, o)).format(d); }
+  function dayKey(d) { return fmt(d, { year: 'numeric', month: '2-digit', day: '2-digit' }); }
+  function ymd(d) { return dayKey(d).replace(/-/g, ''); }
+
+  var now = new Date();
+  var todayKey = dayKey(now);
+  var dates = [];
+  for (var i = -DAYS_EACH_SIDE; i <= DAYS_EACH_SIDE; i++) dates.push(new Date(now.getTime() + i * 864e5));
+  var loKey = dayKey(dates[0]), hiKey = dayKey(dates[dates.length - 1]);
+
+  function isOurs(g) {
+    return OUR_TEAMS.some(function (t) { return t.league === g.league && (g.home.abbr === t.abbr || g.away.abbr === t.abbr); });
+  }
+  function ourTeam(g) {
+    return OUR_TEAMS.filter(function (t) { return t.league === g.league && (g.home.abbr === t.abbr || g.away.abbr === t.abbr); })[0];
+  }
+
+  // ---- ESPN (NFL / NHL / NBA), one request per league per day
+  function espnDay(key, d) {
+    var url = 'https://site.api.espn.com/apis/site/v2/sports/' + LEAGUES[key].path + '/scoreboard?dates=' + ymd(d);
+    return fetch(url).then(function (r) { return r.ok ? r.json() : { events: [] }; }).then(function (j) {
+      return (j.events || []).map(function (e) {
+        var c = e.competitions[0], st = e.status.type;
+        var side = function (h) {
+          var x = c.competitors.filter(function (t) { return t.homeAway === h; })[0];
+          return { abbr: x.team.abbreviation, name: x.team.displayName, short: x.team.shortDisplayName || x.team.name,
+                   score: x.score !== undefined && x.score !== '' ? Number(x.score) : null, winner: x.winner };
+        };
+        var status = st.state === 'post' ? (st.name === 'STATUS_POSTPONED' ? 'postponed' : st.name === 'STATUS_CANCELED' ? 'cancelled' : 'final')
+                   : st.state === 'in' ? 'live' : (st.name === 'STATUS_POSTPONED' ? 'postponed' : 'upcoming');
+        var season = e.season && e.season.type;
+        return {
+          league: key, start: e.date, status: status, detail: st.shortDetail || '',
+          home: side('home'), away: side('away'),
+          venue: c.venue ? c.venue.fullName : '',
+          note: season === 1 ? 'Preseason' : season === 3 ? 'Playoffs' : '',
+          tbd: e.timeValid === false,
+          link: (e.links && e.links[0] && e.links[0].href) || ''
+        };
+      });
+    }).catch(function () { return []; });
+  }
+
+  // ---- CFL from the daily collector
+  function cflGames() {
+    return fetch('https://bbellacicco.github.io/powerplay-feed/data/local-games.json?t=' + Date.now())
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        return (j.pro_games || []).map(function (g) {
+          return {
+            league: 'cfl', start: g.start, status: g.status, detail: '',
+            home: { abbr: g.home_abbr, name: g.home, short: g.home.split(' ').slice(-1)[0], score: g.opp_score },
+            away: { abbr: g.away_abbr, name: g.away, short: g.away.split(' ').slice(-1)[0], score: g.our_score },
+            venue: g.location, note: g.note, tbd: g.time_tbd, link: 'https://www.cfl.ca/schedule/'
+          };
+        });
+      }).catch(function () { return []; });
+  }
+
+  function load() {
+    now = new Date();
+    todayKey = dayKey(now);
+    var jobs = [cflGames()];
+    ['nfl', 'nhl', 'nba'].forEach(function (k) { dates.forEach(function (d) { jobs.push(espnDay(k, d)); }); });
+    Promise.all(jobs).then(function (res) {
+      var seen = {};
+      games = [].concat.apply([], res).filter(function (g) {
+        var k = g.league + g.start + g.home.abbr + g.away.abbr;
+        if (seen[k]) return false; seen[k] = 1;
+        var d = dayKey(new Date(g.start));
+        return d >= loKey && d <= hiKey;
+      }).sort(function (a, b) { return a.start < b.start ? -1 : a.start > b.start ? 1 : 0; });
+      render();
+      schedule();
+    });
+  }
+
+  function tabs() {
+    var box = document.getElementById('tabs'); box.innerHTML = '';
+    TABS.forEach(function (t) {
+      var b = el('button', 'pill', t[1]);
+      b.setAttribute('aria-pressed', String(state.tab === t[0]));
+      b.onclick = function () { state.tab = t[0]; state.team = 'all'; render(); };
+      box.appendChild(b);
+    });
+  }
+
+  function teamSelect(list) {
+    var sel = document.getElementById('team');
+    var names = {};
+    if (state.tab === 'ours') OUR_TEAMS.forEach(function (t) { names[t.name] = 1; });
+    else list.forEach(function (g) { names[g.home.name] = 1; names[g.away.name] = 1; });
+    var keys = Object.keys(names).sort();
+    sel.innerHTML = '';
+    sel.appendChild(new Option('All teams', 'all'));
+    keys.forEach(function (n) { sel.appendChild(new Option(n, n)); });
+    if (keys.indexOf(state.team) < 0) state.team = 'all';
+    sel.value = state.team;
+    sel.style.display = keys.length > 1 ? '' : 'none';
+    sel.onchange = function () { state.team = sel.value; render(); };
+  }
+
+  function render() {
+    document.getElementById('updated').textContent =
+      fmt(dates[0], { month: 'short', day: 'numeric' }) + ' – ' + fmt(dates[dates.length - 1], { month: 'short', day: 'numeric' });
+    tabs();
+    var list = games.filter(function (g) { return state.tab === 'ours' ? isOurs(g) : g.league === state.tab; });
+    teamSelect(list);
+    if (state.team !== 'all') list = list.filter(function (g) {
+      if (state.tab === 'ours') { var t = ourTeam(g); return t && t.name === state.team; }
+      return g.home.name === state.team || g.away.name === state.team;
+    });
+
+    var box = document.getElementById('list'); box.innerHTML = '';
+    if (!list.length) { box.appendChild(el('div', 'empty', 'No games in this 7-day span.')); return; }
+    var groups = [], cur = null;
+    list.forEach(function (g) {
+      var k = dayKey(new Date(g.start));
+      if (!cur || cur.k !== k) { cur = { k: k, d: new Date(g.start), games: [] }; groups.push(cur); }
+      cur.games.push(g);
+    });
+    groups.forEach(function (grp) {
+      var sec = el('section', 'day' + (grp.k === todayKey ? ' today' : ''));
+      sec.appendChild(el('h2', null, (grp.k === todayKey ? 'Today · ' : '') + fmt(grp.d, { weekday: 'long', month: 'short', day: 'numeric' })));
+      grp.games.forEach(function (g) { sec.appendChild(row(g)); });
+      box.appendChild(sec);
+    });
+  }
+
+  function timeText(g) {
+    if (g.status === 'final') return 'Final';
+    if (g.tbd) return 'TBA';
+    return fmt(new Date(g.start), { hour: 'numeric', minute: '2-digit' })
+      .replace(/\s?([ap])\.?m\.?/i, function (_, x) { return ' ' + x.toUpperCase() + 'M'; });
+  }
+
+  function row(g) {
+    var r = el('div', 'game l-' + g.league);
+    r.appendChild(el('div', 'stripe'));
+    r.appendChild(el('div', 'time', timeText(g)));
+    var main = el('div', 'main'), who = el('div', 'who');
+    var mine = state.tab === 'ours' ? ourTeam(g) : null;
+    var us = null, them = null;
+    if (mine) {                        // from our team's side: "Lions vs Jets"
+      var home = g.home.abbr === mine.abbr;
+      us = home ? g.home : g.away; them = home ? g.away : g.home;
+      who.appendChild(document.createTextNode(us.short + ' '));
+      who.appendChild(el('span', 'vs', home ? 'vs ' : '@ '));
+      who.appendChild(document.createTextNode(them.name));
+    } else {                           // neutral: "Chargers @ Bills"
+      who.appendChild(document.createTextNode(g.away.name + ' '));
+      who.appendChild(el('span', 'vs', '@ '));
+      who.appendChild(document.createTextNode(g.home.name));
+    }
+    main.appendChild(who);
+    var bits = [LEAGUES[g.league].label];
+    if (g.venue) bits.push(g.venue);
+    if (g.note) bits.push(g.note);
+    main.appendChild(el('div', 'meta', bits.join(' · ')));
+    r.appendChild(main);
+
+    var sc = el('div', 'score');
+    var hasScore = g.home.score != null && g.away.score != null;
+    if ((g.status === 'final' || g.status === 'live') && hasScore) {
+      var a = mine ? us.score : g.away.score, b = mine ? them.score : g.home.score;
+      sc.appendChild(el('b', null, a + '–' + b));
+      if (g.status === 'live') sc.appendChild(el('span', 'badge live', 'LIVE'));
+      else if (mine) {
+        var res = a > b ? 'W' : a < b ? ((/OT|SO/.test(g.detail) && g.league === 'nhl') ? 'OTL' : 'L') : 'T';
+        sc.appendChild(el('span', 'badge ' + res, res));
+      }
+    } else if (g.status === 'postponed' || g.status === 'cancelled') {
+      sc.appendChild(el('span', 'badge off', g.status === 'postponed' ? 'PPD' : 'CAN'));
+    }
+    if (g.status === 'live' && g.detail) { var m2 = main.lastChild; m2.textContent = g.detail + ' · ' + m2.textContent; }
+    if (g.link) { r.style.cursor = 'pointer'; r.onclick = function () { window.open(g.link, '_blank', 'noopener'); }; }
+    r.appendChild(sc);
+    return r;
+  }
+
+  // Refresh while the page is open: every 30 seconds when a game is live,
+  // otherwise every 2 minutes.
+  function schedule() {
+    var live = games.some(function (g) { return g.status === 'live'; });
+    setTimeout(function () { load(); }, live ? 30 * 1000 : 2 * 60 * 1000);
+  }
+  render();
+  load();
+})();
+</script>
+</body>
+</html>
