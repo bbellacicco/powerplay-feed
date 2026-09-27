@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-27T17:48:01-04:00",
+ "updated": "2026-09-27T18:48:01-04:00",
  "today": "2026-09-27",
  "games": [
   {
@@ -58,15 +58,31 @@
    "id": "saints-presto2026-09-26-0",
    "team": "saints",
    "sport": "Men's Volleyball",
-   "start": "2026-09-26T12:00:00-04:00",
-   "time_tbd": false,
+   "start": "2026-09-26T00:00:00-04:00",
+   "time_tbd": true,
    "home_away": "N",
    "opponent": "Georgian",
    "location": "DBARC | Mohawk College",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 2,
+   "result": "W",
+   "note": "Exhibition · Mohawk Invitational",
+   "links": {}
+  },
+  {
+   "id": "saints-presto2026-09-26-6",
+   "team": "saints",
+   "sport": "Men's Volleyball",
+   "start": "2026-09-26T00:00:00-04:00",
+   "time_tbd": true,
+   "home_away": "A",
+   "opponent": "Canadore",
+   "location": "",
+   "status": "final",
+   "our_score": 0,
+   "opp_score": 3,
+   "result": "L",
    "note": "Exhibition · Mohawk Invitational",
    "links": {}
   },
@@ -141,22 +157,6 @@
    "links": {
     "boxscore": "https://www.saintsathletics.ca/sports/msoc/2026-27/boxscores/20260926_yiyb.xml"
    }
-  },
-  {
-   "id": "saints-presto2026-09-26-6",
-   "team": "saints",
-   "sport": "Men's Volleyball",
-   "start": "2026-09-26T17:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Canadore",
-   "location": "",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Exhibition · Mohawk Invitational",
-   "links": {}
   },
   {
    "id": "saints-presto2026-09-27-0",
