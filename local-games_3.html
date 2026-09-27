@@ -182,6 +182,28 @@
     sel.onchange = function () { state.sport = sel.value; render(); };
   }
 
+  // Same team priority as the scores ticker:
+  // Lancers football, St. Clair football, Spitfires, junior hockey, then everything else.
+  function priority(g) {
+    if (g.team === 'lancers' && g.sport === 'Football') return 1;
+    if (g.team === 'saints' && g.sport === 'Football') return 2;
+    if (g.team === 'spitfires') return 3;
+    if (g.team === 'junior') return 4;
+    return 5;
+  }
+  // 6 current scores: games in progress first, then finals from the last 3 days by
+  // team priority (newest first within a team group); older finals fill any gaps.
+  function currentScores(n) {
+    var scored = data.games.filter(function (g) { return (g.status === 'final' || g.status === 'live') && g.our_score != null; });
+    var newest = function (a, b) { return a.start < b.start ? 1 : a.start > b.start ? -1 : 0; };
+    var byPrio = function (a, b) { return priority(a) - priority(b) || newest(a, b); };
+    var since = new Date(Date.now() - 3 * 864e5).toISOString();
+    var live = scored.filter(function (g) { return g.status === 'live'; }).sort(byPrio);
+    var recent = scored.filter(function (g) { return g.status === 'final' && new Date(g.start).toISOString() >= since; }).sort(byPrio);
+    var older = scored.filter(function (g) { return g.status === 'final' && new Date(g.start).toISOString() < since; }).sort(newest);
+    return live.concat(recent, older).slice(0, n);
+  }
+
   function render() {
     if (!data) return;
     // "today" is the day the data was collected (each morning)
@@ -194,12 +216,7 @@
 
     var latest = state.team === 'latest';
     var inView = latest
-      // 6 current scores: games in progress first, then the newest finals
-      ? data.games.filter(function (g) { return (g.status === 'final' || g.status === 'live') && g.our_score != null; })
-          .sort(function (a, b) {
-            if ((a.status === 'live') !== (b.status === 'live')) return a.status === 'live' ? -1 : 1;
-            return a.start < b.start ? 1 : a.start > b.start ? -1 : 0;
-          }).slice(0, 6)
+      ? currentScores(6)
       : data.games.filter(function (g) { return state.team === 'all' || g.team === state.team; });
     schoolSelect(inView);
     if (state.school !== 'all') inView = inView.filter(function (g) { return g.home === state.school || g.away === state.school || g.club === state.school; });
@@ -210,6 +227,13 @@
     list.innerHTML = '';
     if (!inView.length) { list.appendChild(el('div', 'empty', latest ? 'No scores yet this week.' : 'No games in this 7-day span.')); return; }
 
+    if (latest) {
+      // priority order isn't by date, so no day headings; each row shows its day instead
+      var sec0 = el('section', 'day');
+      inView.forEach(function (g) { sec0.appendChild(row(g, true)); });
+      list.appendChild(sec0);
+      return;
+    }
     var groups = [], cur = null;
     inView.forEach(function (g) {
       var k = dayKey(new Date(g.start));
@@ -226,7 +250,7 @@
     });
   }
 
-  function row(g) {
+  function row(g, showDay) {
     var t = data.teams[g.team] || { short: g.team };
     var r = el('div', 'game t-' + g.team);
     r.appendChild(el('div', 'stripe'));
@@ -245,6 +269,7 @@
     }
     main.appendChild(who);
     var bits = [g.sport];
+    if (showDay) bits.unshift(dayKey(new Date(g.start)) === todayKey ? 'Today' : fmt(new Date(g.start), { weekday: 'short', month: 'short', day: 'numeric' }));
     if (g.home_away === 'H') bits.push('Home'); else if (g.location && g.location !== g.home) bits.push('at ' + g.location);
     if (g.note) bits.push(g.note);
     var meta = el('div', 'meta', bits.join(' · '));
