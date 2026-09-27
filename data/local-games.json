@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-26T19:25:31-04:00",
+ "updated": "2026-09-26T20:52:09-04:00",
  "today": "2026-09-26",
  "range": [
   "2026-09-23",
@@ -39,7 +39,7 @@
   },
   "lancers": {
    "ok": true,
-   "count": 105
+   "count": 107
   },
   "junior": {
    "ok": true,
@@ -380,7 +380,7 @@
    "home_away": "A",
    "opponent": "Vigars Western Invitational",
    "location": "London, ON",
-   "status": "upcoming",
+   "status": "final",
    "our_score": null,
    "opp_score": null,
    "result": null,
@@ -414,10 +414,10 @@
    "home_away": "A",
    "opponent": "TMU Bold",
    "location": "Toronto, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 4,
+   "result": "L",
    "note": "",
    "links": {}
   },
@@ -430,11 +430,11 @@
    "home_away": "A",
    "opponent": "UNB REDS",
    "location": "Fredericton, NB",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "UNB Tournament",
+   "status": "final",
+   "our_score": 1,
+   "opp_score": 3,
+   "result": "L",
+   "note": "25-20, 22-25, 24-26, 23-25 · UNB Tournament",
    "links": {}
   },
   {
@@ -465,10 +465,10 @@
    "home_away": "H",
    "opponent": "McMaster Marauders",
    "location": "Mic Mac Park #2",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 8,
+   "opp_score": 1,
+   "result": "W",
    "note": "",
    "links": {}
   },
@@ -481,10 +481,10 @@
    "home_away": "A",
    "opponent": "TMU Bold",
    "location": "Toronto, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 16,
+   "opp_score": 6,
+   "result": "W",
    "note": "",
    "links": {}
   },
@@ -497,11 +497,27 @@
    "home_away": "H",
    "opponent": "McMaster Marauders",
    "location": "Mic Mac Park #2",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 4,
+   "result": "L",
    "note": "",
+   "links": {}
+  },
+  {
+   "id": "lancers-6481",
+   "team": "lancers",
+   "sport": "Women's Volleyball",
+   "start": "2026-09-26T18:45:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Brock Badgers",
+   "location": "Fredericton, NB",
+   "status": "final",
+   "our_score": 0,
+   "opp_score": 3,
+   "result": "L",
+   "note": "20-25, 26-28, 20-25 · UNB Tournament",
    "links": {}
   },
   {
@@ -565,10 +581,10 @@
    "opponent": "Saginaw Spirit",
    "location": "Dow Event Center, Saginaw",
    "status": "live",
-   "our_score": 0,
-   "opp_score": 0,
+   "our_score": 3,
+   "opp_score": 2,
    "result": null,
-   "note": "11:04 1st",
+   "note": "00:00 2nd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29027/"
    }
@@ -582,11 +598,11 @@
    "home_away": "A",
    "opponent": "Strathroy Rockets",
    "location": "West Middlesex M.C., Strathroy, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 2,
+   "opp_score": 2,
    "result": null,
-   "note": "",
+   "note": "05:37 2nd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15520"
    },
@@ -660,6 +676,22 @@
    "opp_score": null,
    "result": null,
    "note": "",
+   "links": {}
+  },
+  {
+   "id": "lancers-6482",
+   "team": "lancers",
+   "sport": "Women's Volleyball",
+   "start": "2026-09-27T12:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Dalhousie Tigers",
+   "location": "Fredericton, NB",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "UNB Tournament",
    "links": {}
   },
   {
@@ -877,6 +909,20 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "Recap: Calgary 45, Ottawa 31",
+   "summary": "",
+   "published": "2026-09-26T20:01:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/5PUnewTQGXKyglDpLWqtTf/b2c85e20c448fee3403a7634550c161a/WEEK_17-_CGY_VS_OTT_GAME_RECAP_THUMBNAIL.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "REDBLACKS",
+    "Stampeders"
+   ],
+   "url": "https://www.cfl.ca/article/recap-calgary-45-ottawa-31",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "CLARK BARNES SEALS IT WITH 60 YARD HOUSE CALL",
    "summary": "",
    "published": "2026-09-26T18:34:00-04:00",
@@ -965,17 +1011,6 @@
     "Blue Bombers"
    ],
    "url": "https://www.cfl.ca/article/recap-toronto-30-winnipeg-28",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Cody Fajardo gives back in a BIG way | The Give Back with NOFRILLS® & CFL",
-   "summary": "",
-   "published": "2026-09-26T08:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/3HKnEDZZz4NWRbncThgWGd/db610860f77898daed81493d4e216041/TheGiveBack_CodyFajardo_Thumbnail-2.png?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/cody-fajardo-gives-back-in-a-big-way-the-give-back-with-nofrills-cfl",
    "source": "CFL.ca"
   },
   {
