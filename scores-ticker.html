@@ -19,16 +19,16 @@ html,body{width:100%;height:44px;background:#000;overflow:hidden}
 #ticker-viewport{width:100%;height:44px;overflow:hidden;position:relative;background:#000}
 #ticker-stage{position:absolute;top:0;left:0;height:44px;display:flex;align-items:center;white-space:nowrap;will-change:transform}
 .ticker-item{display:inline-flex;align-items:center;gap:7px;padding:0 26px;font-family:Arial,sans-serif;font-size:13px;font-weight:600;color:#fff;height:44px}
-/* red colour scheme: tags, sport/league label and separators in reds; teams white, losing side grey */
+/* LIVE red, FINAL/upcoming bright yellow, sport label red, teams and scores white; grey only for the @ */
 .badge{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 6px;border-radius:3px;flex-shrink:0;margin-right:2px;display:inline-flex;align-items:center;gap:4px}
 .badge-live{background:#ff2d2d;color:#fff}
 .badge-live::before{content:"";width:6px;height:6px;border-radius:50%;background:#fff;animation:pulse 1.2s infinite}
 @keyframes pulse{50%{opacity:.25}}
-.badge-final{background:#b3121b;color:#fff}
-.badge-upcoming{background:transparent;color:#ff4d4d;box-shadow:inset 0 0 0 1px #ff4d4d}
+.badge-final{background:#FFE600;color:#000}
+.badge-upcoming{background:transparent;color:#FFE600;box-shadow:inset 0 0 0 1.5px #FFE600}
 .team{color:#fff;font-weight:700}
 .score{color:#fff;font-weight:800;font-variant-numeric:tabular-nums}
-.lose{color:#8b929c}
+.lose{color:#fff}
 .at{color:#6b7280;font-weight:400}
 .meta{color:#ff6b6b;font-weight:700;font-size:11px;letter-spacing:.3px;margin-left:4px;text-transform:uppercase}
 .sep{color:rgba(255,45,45,0.45);font-size:14px;font-family:Arial;padding:0 2px;display:inline-block;height:44px;line-height:44px}
@@ -38,7 +38,8 @@ html,body{width:100%;height:44px;background:#000;overflow:hidden}
 <div id="ticker-viewport"><div id="ticker-stage"></div></div>
 <script>
 var SPEED = 50;                 // pixels per second
-var MAX_FINALS = 16;            // how many recent final scores to include
+var MAX_ITEMS = 5;              // total items on the ticker
+var MAX_FINALS = 16;            // how many recent final scores to consider
 var MAX_HS_FINALS = 6;          // of those, at most this many high school games
 var MAX_UPCOMING = 12;          // upcoming games to show once the finals are old
 var FRESH_HOURS = 24;           // a final score counts as "current" for this many hours after the game
@@ -88,6 +89,7 @@ function localItems(){
         var d = new Date(g.start), isToday = dayKey(d) === today;
         var kind = g.status === 'live' ? 'live' : g.status === 'final' ? 'final' : (g.status === 'upcoming' ? 'upcoming' : null);
         if (!kind || (kind !== 'upcoming' && g.our_score == null)) return;
+        if (/volleyball/i.test(g.sport || '')) return;                          // volleyball left off the ticker
         var left, right;
         if (g.home && g.away) { left = g.away; right = g.home; }                  // high school: away @ home
         else {
@@ -142,10 +144,10 @@ function order(items){
     .sort(byPrio(true))
     .filter(function(i){ return !i.hs || ++hsCount <= MAX_HS_FINALS; })
     .slice(0, MAX_FINALS);
-  if (fin.length) return fin.concat(live);
+  if (fin.length) return fin.concat(live).slice(0, MAX_ITEMS);
   var up = items.filter(function(i){ return i.kind === 'upcoming'; })
-    .sort(byPrio(false)).slice(0, MAX_UPCOMING);
-  return live.concat(up);
+    .sort(byPrio(false));
+  return live.concat(up).slice(0, MAX_ITEMS);
 }
 
 // ---------- drawing (same seamless loop as ticker.html)
@@ -176,7 +178,7 @@ function build(items){
   stage.innerHTML = ''; x = 0; lastT = null; stage.style.transform = 'translateX(0)';
   var nodes = [];
   if (!items.length) {
-    var d = document.createElement('div'); d.className = 'ticker-item'; d.style.color = '#9aa3ad';
+    var d = document.createElement('div'); d.className = 'ticker-item'; d.style.color = '#fff';
     d.textContent = 'Powerplay Windsor — scores will appear here on game days';
     nodes.push(d, sep());
   } else items.forEach(function(it){ nodes.push(node(it), sep()); });
