@@ -75,22 +75,21 @@
     });
   }
 
+  var MIN_CARDS = 5;   // fill the strip: if today has fewer games, add the next ones coming up
   var timer;
   function load() {
-    var now = new Date();
-    day(now).then(function (games) {
-      if (games.length) return show(games, 'Today');
-      // nobody plays today: look ahead up to 6 days
-      var i = 1;
-      (function next() {
-        if (i > 6) return show([], 'Today');
-        var d = new Date(now.getTime() + i * 864e5);
-        day(d).then(function (g) {
-          if (g.length) show(g, fmt(d, { weekday: 'long' }));
-          else { i++; next(); }
-        });
-      })();
-    });
+    var now = new Date(), today = ymd(now), all = [], i = 0;
+    (function next() {
+      var d = new Date(now.getTime() + i * 864e5);
+      day(d).then(function (g) {
+        all = all.concat(g);
+        if (all.length >= MIN_CARDS || i >= 6) {
+          var hasToday = all.some(function (e) { return ymd(new Date(e.date)) === today; });
+          return show(all, hasToday ? 'Today' : 'Next Up');
+        }
+        i++; next();
+      });
+    })();
   }
 
   function show(games, when) {
@@ -106,7 +105,7 @@
       s.appendChild(el('span', null, LABEL[k] + (e.season && e.season.type === 1 ? ' · Pre' : '')));
       if (st.state === 'in') { live = true; var l = el('span', 'live', 'LIVE ' + (st.shortDetail || '')); s.appendChild(l); }
       else if (st.state === 'post') s.appendChild(el('span', null, st.shortDetail || 'Final'));
-      else s.appendChild(el('span', null, fmt(new Date(e.date), { hour: 'numeric', minute: '2-digit' }).replace(/\s?([ap])\.?m\.?/i, function (_, x) { return ' ' + x.toUpperCase() + 'M'; })));
+      else s.appendChild(el('span', null, (ymd(new Date(e.date)) === ymd(new Date()) ? '' : fmt(new Date(e.date), { weekday: 'short' }) + ' ') + fmt(new Date(e.date), { hour: 'numeric', minute: '2-digit' }).replace(/\s?([ap])\.?m\.?/i, function (_, x) { return ' ' + x.toUpperCase() + 'M'; })));
       a.appendChild(s);
       var sides = ['away', 'home'].map(function (h) { return comp.competitors.filter(function (c) { return c.homeAway === h; })[0]; });
       sides.forEach(function (c) {
