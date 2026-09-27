@@ -215,6 +215,17 @@
     return live.concat(recent, older).slice(0, n);
   }
 
+  // Two of our junior clubs playing each other is stored once, from the home club's side.
+  // When a fan picks the other club, show it from that club's side (their score first, W/L swapped).
+  function flip(g) {
+    var f = Object.assign({}, g);
+    f.club = g.opponent; f.opponent = g.club;
+    f.home_away = g.home_away === 'H' ? 'A' : g.home_away === 'A' ? 'H' : g.home_away;
+    f.our_score = g.opp_score; f.opp_score = g.our_score;
+    f.result = { W: 'L', L: 'W', T: 'T', OTL: 'W', SOL: 'W' }[g.result] || g.result;
+    return f;
+  }
+
   function render() {
     if (!data) return;
     // "today" is the day the data was collected (each morning)
@@ -230,7 +241,8 @@
       ? currentScores(6)
       : data.games.filter(function (g) { return state.team === 'all' || g.team === state.team; });
     schoolSelect(inView);
-    if (state.school !== 'all') inView = inView.filter(function (g) { return g.home === state.school || g.away === state.school || g.club === state.school || (g.team === 'junior' && g.opponent === state.school); });
+    if (state.school !== 'all') inView = inView.filter(function (g) { return g.home === state.school || g.away === state.school || g.club === state.school || (g.team === 'junior' && g.opponent === state.school); })
+      .map(function (g) { return g.team === 'junior' && g.opponent === state.school ? flip(g) : g; });
     if (latest) document.getElementById('sport').style.display = 'none'; else sportSelect(inView);
     if (!latest && state.sport !== 'all') inView = inView.filter(function (g) { return g.sport === state.sport; });
 
