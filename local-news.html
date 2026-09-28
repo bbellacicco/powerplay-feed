@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Local Feed | Powerplay Windsor</title>
+<!--
+  Local story feed: headlines, a short summary and a photo from the teams' own
+  websites (Spitfires, Lancers, St. Clair Saints and the junior clubs), each
+  linking to the original story. Data: data/local-news.json, collected by the
+  Powerplay PC every 30 minutes.
+
+  Embed in Wix (Embed Code > Embed a site):
+    https://bbellacicco.github.io/powerplay-feed/local-news.html
+  Optional: ?tab=spitfires | lancers | saints | junior   start on one team
+-->
+<style>
+  :root {
+    --bg: #0b1a33; --panel: #10244a; --row: #132b57; --line: #1e3a6e;
+    --text: #f2f5fb; --muted: #9fb0cf; --accent: #e8b021;
+    --spitfires: #d4202a; --lancers: #0b5cad; --saints: #1f9d55; --junior: #0891b2;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text);
+    font: 14px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 12px; }
+  header { margin-bottom: 10px; }
+  h1 { font-size: 17px; margin: 0; letter-spacing: .02em; text-transform: uppercase; }
+  h1 span { color: var(--accent); }
+  .bar { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; align-items: center; }
+  .pill { border: 1px solid var(--line); background: var(--panel); color: var(--text);
+    padding: 6px 12px; border-radius: 999px; font: inherit; font-size: 13px; cursor: pointer; }
+  .pill[aria-pressed="true"] { background: var(--accent); color: #111; border-color: var(--accent); font-weight: 600; }
+  select.pill { padding-right: 8px; }
+  .story { display: grid; grid-template-columns: 4px 128px 1fr; gap: 12px; align-items: start;
+    background: var(--row); border-radius: 8px; margin-bottom: 8px; overflow: hidden;
+    color: inherit; text-decoration: none; padding-right: 12px; }
+  .story:hover { background: #17336a; }
+  .stripe { align-self: stretch; }
+  .t-spitfires .stripe { background: var(--spitfires); } .t-lancers .stripe { background: var(--lancers); }
+  .t-saints .stripe { background: var(--saints); } .t-junior .stripe { background: var(--junior); }
+  .thumb { width: 128px; height: 80px; margin: 10px 0; border-radius: 6px; object-fit: cover; background: var(--panel); display: block; }
+  .body { padding: 10px 0; min-width: 0; }
+  .headline { font-weight: 700; font-size: 15px; line-height: 1.3; }
+  .summary { color: #d4dcee; font-size: 13px; margin-top: 4px;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .meta { color: var(--muted); font-size: 12px; margin-top: 6px; }
+  .empty { color: var(--muted); padding: 24px 0; text-align: center; }
+  footer { margin-top: 14px; color: var(--muted); font-size: 11px; text-align: center; }
+  @media (max-width: 520px) {
+    .story { grid-template-columns: 4px 96px 1fr; gap: 10px; }
+    .thumb { width: 96px; height: 64px; }
+    .headline { font-size: 14px; }
+    .summary { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><h1>Local <span>Feed</span></h1></header>
+  <div class="bar" id="tabs" role="group" aria-label="Team"></div>
+  <div class="bar"><select class="pill" id="sub" aria-label="Filter"></select></div>
+  <div id="list"><div class="empty">Loading stories…</div></div>
+  <footer>Powerplay Windsor · Stories from the teams' own websites. Tap a story to read it there.</footer>
+</div>
+<script>
+(function () {
+  var TZ = 'America/Toronto';
+  var URL = 'https://bbellacicco.github.io/powerplay-feed/data/local-news.json';
+  var MAX_STORIES = 40;
+  var TABS = [['all', 'All'], ['spitfires', 'Spitfires'], ['lancers', 'Lancers'], ['saints', 'Saints'], ['junior', 'Junior Hockey']];
+  var LABEL = { spitfires: 'Spitfires', lancers: 'Lancers', saints: 'Saints', junior: 'Junior Hockey' };
+
+  var qs = new URLSearchParams(location.search);
+  var state = { tab: LABEL[qs.get('tab')] ? qs.get('tab') : 'all', sub: 'all' };
+  var stories = null;
+
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function ago(iso) {
+    var t = new Date(iso).getTime(); if (!t) return '';
+    var m = Math.round((Date.now() - t) / 60000);
+    if (m < 60) return Math.max(m, 1) + ' min ago';
+    var h = Math.round(m / 60); if (h < 24) return h + (h === 1 ? ' hour ago' : ' hours ago');
+    var d = Math.round(h / 24); if (d < 7) return d + (d === 1 ? ' day ago' : ' days ago');
+    return new Intl.DateTimeFormat('en-CA', { timeZone: TZ, month: 'short', day: 'numeric' }).format(new Date(t));
+  }
+
+  function load() {
+    fetch(URL + '?t=' + Date.now(), { cache: 'no-store' })
+      .then(function (r) { if (!r.ok) throw r.status; return r.json(); })
+      .then(function (j) { stories = j.stories || []; render(); })
+      .catch(function () { if (!stories) { document.getElementById('list').innerHTML = '<div class="empty">Stories unavailable right now.</div>'; } });
+  }
+
+  function tabs() {
+    var box = document.getElementById('tabs'); box.innerHTML = '';
+    TABS.forEach(function (t) {
+      var b = el('button', 'pill', t[1]);
+      b.setAttribute('aria-pressed', String(state.tab === t[0]));
+      b.onclick = function () { state.tab = t[0]; state.sub = 'all'; render(); };
+      box.appendChild(b);
+    });
+  }
+
+  // second filter: clubs on the Junior Hockey tab, sports on the Lancers / Saints tabs
+  function subKey(s) { return state.tab === 'junior' ? s.club : s.sport; }
+  function subSelect(list) {
+    var sel = document.getElementById('sub');
+    var names = {};
+    if (state.tab === 'junior' || state.tab === 'lancers' || state.tab === 'saints')
+      list.forEach(function (s) { var k = subKey(s); if (k) names[k] = 1; });
+    var keys = Object.keys(names).sort();
+    sel.innerHTML = '';
+    sel.appendChild(new Option(state.tab === 'junior' ? 'All clubs' : 'All sports', 'all'));
+    keys.forEach(function (n) { sel.appendChild(new Option(n, n)); });
+    if (keys.indexOf(state.sub) < 0) state.sub = 'all';
+    sel.value = state.sub;
+    sel.style.display = keys.length > 1 ? '' : 'none';
+    sel.onchange = function () { state.sub = sel.value; render(); };
+  }
+
+  function render() {
+    tabs();
+    if (!stories) return;
+    var list = state.tab === 'all' ? stories : stories.filter(function (s) { return s.team === state.tab; });
+    subSelect(list);
+    if (state.sub !== 'all') list = list.filter(function (s) { return subKey(s) === state.sub; });
+    list = list.slice(0, MAX_STORIES);
+    var box = document.getElementById('list'); box.innerHTML = '';
+    if (!list.length) { box.appendChild(el('div', 'empty', 'No recent stories.')); return; }
+    list.forEach(function (s) { box.appendChild(card(s)); });
+  }
+
+  function card(s) {
+    var a = el('a', 'story t-' + s.team);
+    a.href = s.url; a.target = '_blank'; a.rel = 'noopener';
+    a.appendChild(el('div', 'stripe'));
+    var img = el('img', 'thumb'); img.alt = ''; img.loading = 'lazy'; img.referrerPolicy = 'no-referrer';
+    img.onerror = function () { img.style.visibility = 'hidden'; };
+    if (s.image) img.src = s.image; else img.style.visibility = 'hidden';
+    a.appendChild(img);
+    var body = el('div', 'body');
+    body.appendChild(el('div', 'headline', s.headline));
+    if (s.summary && s.summary !== s.headline) body.appendChild(el('div', 'summary', s.summary));
+    var who = s.team === 'junior' ? s.club : LABEL[s.team] + (s.sport ? ' · ' + s.sport : '');
+    body.appendChild(el('div', 'meta', [who, ago(s.published)].filter(Boolean).join(' · ')));
+    a.appendChild(body);
+    return a;
+  }
+
+  render();
+  load();
+  setInterval(load, 5 * 60 * 1000);
+})();
+</script>
+</body>
+</html>
