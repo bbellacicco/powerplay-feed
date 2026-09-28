@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-28T17:48:01-04:00",
+ "updated": "2026-09-28T19:48:01-04:00",
  "today": "2026-09-28",
  "games": [
   {
@@ -189,8 +189,8 @@
    "start": "2026-09-29T16:00:00-04:00",
    "time_tbd": false,
    "home_away": "N",
-   "opponent": "Assumption",
-   "location": "Assumption School",
+   "opponent": "Leamington",
+   "location": "Leamington",
    "status": "upcoming",
    "our_score": null,
    "opp_score": null,
@@ -199,8 +199,8 @@
    "links": {
     "standings": "https://wecssaa.com/viewScores.php"
    },
-   "away": "Holy Names",
-   "home": "Assumption"
+   "away": "St. Joseph's",
+   "home": "Leamington"
   },
   {
    "id": "highschool-2026-09-29-64",
@@ -229,8 +229,8 @@
    "start": "2026-09-29T16:00:00-04:00",
    "time_tbd": false,
    "home_away": "N",
-   "opponent": "Leamington",
-   "location": "Leamington",
+   "opponent": "Assumption",
+   "location": "Assumption School",
    "status": "upcoming",
    "our_score": null,
    "opp_score": null,
@@ -239,31 +239,11 @@
    "links": {
     "standings": "https://wecssaa.com/viewScores.php"
    },
-   "away": "St. Joseph's",
-   "home": "Leamington"
+   "away": "Holy Names",
+   "home": "Assumption"
   },
   {
    "id": "highschool-2026-09-29-66",
-   "team": "highschool",
-   "sport": "Junior Boys Volleyball",
-   "start": "2026-09-29T16:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "UMEI",
-   "location": "UMEI",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Riverside",
-   "home": "UMEI"
-  },
-  {
-   "id": "highschool-2026-09-29-67",
    "team": "highschool",
    "sport": "Junior Boys Volleyball",
    "start": "2026-09-29T16:00:00-04:00",
@@ -281,6 +261,26 @@
    },
    "away": "L'Essor",
    "home": "North Star"
+  },
+  {
+   "id": "highschool-2026-09-29-67",
+   "team": "highschool",
+   "sport": "Junior Boys Volleyball",
+   "start": "2026-09-29T16:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Herman",
+   "location": "Herman",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Tier 2",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Catholic Central",
+   "home": "Herman"
   },
   {
    "id": "highschool-2026-09-29-68",
@@ -309,8 +309,8 @@
    "start": "2026-09-29T16:00:00-04:00",
    "time_tbd": false,
    "home_away": "N",
-   "opponent": "Herman",
-   "location": "Herman",
+   "opponent": "UMEI",
+   "location": "UMEI",
    "status": "upcoming",
    "our_score": null,
    "opp_score": null,
@@ -319,31 +319,11 @@
    "links": {
     "standings": "https://wecssaa.com/viewScores.php"
    },
-   "away": "Catholic Central",
-   "home": "Herman"
+   "away": "Riverside",
+   "home": "UMEI"
   },
   {
    "id": "highschool-2026-09-29-55",
-   "team": "highschool",
-   "sport": "Junior Girls Basketball",
-   "start": "2026-09-29T16:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Lajeunesse",
-   "location": "Lajeunesse",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 1",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "St. Joseph's",
-   "home": "Lajeunesse"
-  },
-  {
-   "id": "highschool-2026-09-29-56",
    "team": "highschool",
    "sport": "Junior Girls Basketball",
    "start": "2026-09-29T16:00:00-04:00",
@@ -361,6 +341,26 @@
    },
    "away": "Villanova",
    "home": "Holy Names"
+  },
+  {
+   "id": "highschool-2026-09-29-56",
+   "team": "highschool",
+   "sport": "Junior Girls Basketball",
+   "start": "2026-09-29T16:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Lajeunesse",
+   "location": "Lajeunesse",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Tier 1",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "St. Joseph's",
+   "home": "Lajeunesse"
   },
   {
    "id": "highschool-2026-09-29-70",
@@ -409,26 +409,6 @@
    "start": "2026-09-29T16:00:00-04:00",
    "time_tbd": false,
    "home_away": "N",
-   "opponent": "Belle River",
-   "location": "Belle River",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Herman",
-   "home": "Belle River"
-  },
-  {
-   "id": "highschool-2026-09-29-59",
-   "team": "highschool",
-   "sport": "Senior Girls Basketball",
-   "start": "2026-09-29T16:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
    "opponent": "Tecumseh Vista Academy",
    "location": "Tecumseh Vista Academy",
    "status": "upcoming",
@@ -443,7 +423,7 @@
    "home": "Tecumseh Vista Academy"
   },
   {
-   "id": "highschool-2026-09-29-60",
+   "id": "highschool-2026-09-29-59",
    "team": "highschool",
    "sport": "Senior Girls Basketball",
    "start": "2026-09-29T16:00:00-04:00",
@@ -461,6 +441,26 @@
    },
    "away": "North Star",
    "home": "Sandwich"
+  },
+  {
+   "id": "highschool-2026-09-29-60",
+   "team": "highschool",
+   "sport": "Senior Girls Basketball",
+   "start": "2026-09-29T16:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Belle River",
+   "location": "Belle River",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Tier 2",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Herman",
+   "home": "Belle River"
   },
   {
    "id": "highschool-2026-09-29-61",
@@ -569,8 +569,8 @@
    "start": "2026-09-29T17:15:00-04:00",
    "time_tbd": false,
    "home_away": "N",
-   "opponent": "Herman",
-   "location": "Herman",
+   "opponent": "North Star",
+   "location": "North Star",
    "status": "upcoming",
    "our_score": null,
    "opp_score": null,
@@ -579,8 +579,8 @@
    "links": {
     "standings": "https://wecssaa.com/viewScores.php"
    },
-   "away": "Catholic Central",
-   "home": "Herman"
+   "away": "L'Essor",
+   "home": "North Star"
   },
   {
    "id": "highschool-2026-09-29-76",
@@ -609,8 +609,8 @@
    "start": "2026-09-29T17:15:00-04:00",
    "time_tbd": false,
    "home_away": "N",
-   "opponent": "North Star",
-   "location": "North Star",
+   "opponent": "Herman",
+   "location": "Herman",
    "status": "upcoming",
    "our_score": null,
    "opp_score": null,
@@ -619,8 +619,8 @@
    "links": {
     "standings": "https://wecssaa.com/viewScores.php"
    },
-   "away": "L'Essor",
-   "home": "North Star"
+   "away": "Catholic Central",
+   "home": "Herman"
   },
   {
    "id": "highschool-2026-09-29-78",
@@ -963,27 +963,7 @@
    "home": "Westview Freedom Academy"
   },
   {
-   "id": "highschool-2026-10-01-95",
-   "team": "highschool",
-   "sport": "Junior Girls Basketball",
-   "start": "2026-10-01T16:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "St. Anne",
-   "location": "St. Anne",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 1",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Villanova",
-   "home": "St. Anne"
-  },
-  {
-   "id": "highschool-2026-10-01-101",
+   "id": "highschool-2026-10-01-100",
    "team": "highschool",
    "sport": "Senior Boys Volleyball",
    "start": "2026-10-01T16:00:00-04:00",
@@ -1003,7 +983,7 @@
    "home": "St. Joseph's"
   },
   {
-   "id": "highschool-2026-10-01-102",
+   "id": "highschool-2026-10-01-101",
    "team": "highschool",
    "sport": "Senior Boys Volleyball",
    "start": "2026-10-01T16:00:00-04:00",
@@ -1021,6 +1001,26 @@
    },
    "away": "St. Anne",
    "home": "Villanova"
+  },
+  {
+   "id": "highschool-2026-10-01-102",
+   "team": "highschool",
+   "sport": "Senior Boys Volleyball",
+   "start": "2026-10-01T16:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Massey",
+   "location": "Massey",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Tier 1",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Leamington",
+   "home": "Massey"
   },
   {
    "id": "highschool-2026-10-01-103",
@@ -1049,28 +1049,8 @@
    "start": "2026-10-01T16:00:00-04:00",
    "time_tbd": false,
    "home_away": "N",
-   "opponent": "Massey",
-   "location": "Massey",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 1",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Leamington",
-   "home": "Massey"
-  },
-  {
-   "id": "highschool-2026-10-01-105",
-   "team": "highschool",
-   "sport": "Senior Boys Volleyball",
-   "start": "2026-10-01T16:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Cardinal Carter",
-   "location": "Cardinal Carter",
+   "opponent": "Essex",
+   "location": "Essex",
    "status": "upcoming",
    "our_score": null,
    "opp_score": null,
@@ -1079,11 +1059,11 @@
    "links": {
     "standings": "https://wecssaa.com/viewScores.php"
    },
-   "away": "Belle River",
-   "home": "Cardinal Carter"
+   "away": "L'Essor",
+   "home": "Essex"
   },
   {
-   "id": "highschool-2026-10-01-106",
+   "id": "highschool-2026-10-01-105",
    "team": "highschool",
    "sport": "Senior Boys Volleyball",
    "start": "2026-10-01T16:00:00-04:00",
@@ -1103,27 +1083,7 @@
    "home": "Tecumseh Vista Academy"
   },
   {
-   "id": "highschool-2026-10-01-107",
-   "team": "highschool",
-   "sport": "Senior Boys Volleyball",
-   "start": "2026-10-01T16:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Essex",
-   "location": "Essex",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "L'Essor",
-   "home": "Essex"
-  },
-  {
-   "id": "highschool-2026-10-01-108",
+   "id": "highschool-2026-10-01-106",
    "team": "highschool",
    "sport": "Senior Boys Volleyball",
    "start": "2026-10-01T16:00:00-04:00",
@@ -1143,7 +1103,27 @@
    "home": "Riverside"
   },
   {
-   "id": "highschool-2026-10-01-109",
+   "id": "highschool-2026-10-01-107",
+   "team": "highschool",
+   "sport": "Senior Boys Volleyball",
+   "start": "2026-10-01T16:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Cardinal Carter",
+   "location": "Cardinal Carter",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Tier 2",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Belle River",
+   "home": "Cardinal Carter"
+  },
+  {
+   "id": "highschool-2026-10-01-108",
    "team": "highschool",
    "sport": "Senior Boys Volleyball",
    "start": "2026-10-01T16:00:00-04:00",
@@ -1163,7 +1143,7 @@
    "home": "Lamothe-Cadillac"
   },
   {
-   "id": "highschool-2026-10-01-110",
+   "id": "highschool-2026-10-01-109",
    "team": "highschool",
    "sport": "Senior Boys Volleyball",
    "start": "2026-10-01T16:00:00-04:00",
@@ -1183,7 +1163,7 @@
    "home": "Walkerville"
   },
   {
-   "id": "highschool-2026-10-01-96",
+   "id": "highschool-2026-10-01-95",
    "team": "highschool",
    "sport": "Senior Girls Basketball",
    "start": "2026-10-01T16:00:00-04:00",
@@ -1203,7 +1183,7 @@
    "home": "Lajeunesse"
   },
   {
-   "id": "highschool-2026-10-01-97",
+   "id": "highschool-2026-10-01-96",
    "team": "highschool",
    "sport": "Senior Girls Basketball",
    "start": "2026-10-01T16:00:00-04:00",
@@ -1223,7 +1203,7 @@
    "home": "Sandwich"
   },
   {
-   "id": "highschool-2026-10-01-98",
+   "id": "highschool-2026-10-01-97",
    "team": "highschool",
    "sport": "Senior Girls Basketball",
    "start": "2026-10-01T16:00:00-04:00",
@@ -1243,7 +1223,7 @@
    "home": "North Star"
   },
   {
-   "id": "highschool-2026-10-01-99",
+   "id": "highschool-2026-10-01-98",
    "team": "highschool",
    "sport": "Senior Girls Basketball",
    "start": "2026-10-01T16:00:00-04:00",
@@ -1263,7 +1243,7 @@
    "home": "Massey"
   },
   {
-   "id": "highschool-2026-10-01-100",
+   "id": "highschool-2026-10-01-99",
    "team": "highschool",
    "sport": "Senior Girls Basketball",
    "start": "2026-10-01T16:00:00-04:00",
@@ -1283,7 +1263,7 @@
    "home": "Catholic Central"
   },
   {
-   "id": "highschool-2026-10-01-111",
+   "id": "highschool-2026-10-01-110",
    "team": "highschool",
    "sport": "Senior Girls Basketball",
    "start": "2026-10-01T17:00:00-04:00",
@@ -1303,14 +1283,14 @@
    "home": "Essex"
   },
   {
-   "id": "highschool-2026-10-01-113",
+   "id": "highschool-2026-10-01-112",
    "team": "highschool",
    "sport": "Junior Boys Volleyball",
    "start": "2026-10-01T17:15:00-04:00",
    "time_tbd": false,
    "home_away": "N",
-   "opponent": "St. Joseph's",
-   "location": "St. Joseph's",
+   "opponent": "Holy Names",
+   "location": "Holy Names",
    "status": "upcoming",
    "our_score": null,
    "opp_score": null,
@@ -1319,8 +1299,28 @@
    "links": {
     "standings": "https://wecssaa.com/viewScores.php"
    },
-   "away": "Sandwich",
-   "home": "St. Joseph's"
+   "away": "Kennedy",
+   "home": "Holy Names"
+  },
+  {
+   "id": "highschool-2026-10-01-113",
+   "team": "highschool",
+   "sport": "Junior Boys Volleyball",
+   "start": "2026-10-01T17:15:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Massey",
+   "location": "Massey",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Tier 1",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Leamington",
+   "home": "Massey"
   },
   {
    "id": "highschool-2026-10-01-114",
@@ -1349,8 +1349,8 @@
    "start": "2026-10-01T17:15:00-04:00",
    "time_tbd": false,
    "home_away": "N",
-   "opponent": "Massey",
-   "location": "Massey",
+   "opponent": "St. Joseph's",
+   "location": "St. Joseph's",
    "status": "upcoming",
    "our_score": null,
    "opp_score": null,
@@ -1359,51 +1359,11 @@
    "links": {
     "standings": "https://wecssaa.com/viewScores.php"
    },
-   "away": "Leamington",
-   "home": "Massey"
+   "away": "Sandwich",
+   "home": "St. Joseph's"
   },
   {
    "id": "highschool-2026-10-01-116",
-   "team": "highschool",
-   "sport": "Junior Boys Volleyball",
-   "start": "2026-10-01T17:15:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Holy Names",
-   "location": "Holy Names",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 1",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Kennedy",
-   "home": "Holy Names"
-  },
-  {
-   "id": "highschool-2026-10-01-117",
-   "team": "highschool",
-   "sport": "Junior Boys Volleyball",
-   "start": "2026-10-01T17:15:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Tecumseh Vista Academy",
-   "location": "Tecumseh Vista Academy",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Herman",
-   "home": "Tecumseh Vista Academy"
-  },
-  {
-   "id": "highschool-2026-10-01-118",
    "team": "highschool",
    "sport": "Junior Boys Volleyball",
    "start": "2026-10-01T17:15:00-04:00",
@@ -1423,7 +1383,7 @@
    "home": "Riverside"
   },
   {
-   "id": "highschool-2026-10-01-119",
+   "id": "highschool-2026-10-01-117",
    "team": "highschool",
    "sport": "Junior Boys Volleyball",
    "start": "2026-10-01T17:15:00-04:00",
@@ -1443,7 +1403,27 @@
    "home": "Essex"
   },
   {
-   "id": "highschool-2026-10-01-120",
+   "id": "highschool-2026-10-01-118",
+   "team": "highschool",
+   "sport": "Junior Boys Volleyball",
+   "start": "2026-10-01T17:15:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Tecumseh Vista Academy",
+   "location": "Tecumseh Vista Academy",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Tier 2",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Herman",
+   "home": "Tecumseh Vista Academy"
+  },
+  {
+   "id": "highschool-2026-10-01-119",
    "team": "highschool",
    "sport": "Junior Boys Volleyball",
    "start": "2026-10-01T17:15:00-04:00",
@@ -1463,7 +1443,7 @@
    "home": "Cardinal Carter"
   },
   {
-   "id": "highschool-2026-10-01-112",
+   "id": "highschool-2026-10-01-111",
    "team": "highschool",
    "sport": "Senior Girls Basketball",
    "start": "2026-10-01T17:15:00-04:00",
@@ -1483,7 +1463,7 @@
    "home": "Westview Freedom Academy"
   },
   {
-   "id": "highschool-2026-10-01-122",
+   "id": "highschool-2026-10-01-121",
    "team": "highschool",
    "sport": "Junior Girls Basketball",
    "start": "2026-10-01T17:30:00-04:00",
@@ -1503,7 +1483,7 @@
    "home": "Sandwich"
   },
   {
-   "id": "highschool-2026-10-01-124",
+   "id": "highschool-2026-10-01-123",
    "team": "highschool",
    "sport": "Senior Boys Football",
    "start": "2026-10-01T17:30:00-04:00",
@@ -1523,7 +1503,7 @@
    "home": "Catholic Central"
   },
   {
-   "id": "highschool-2026-10-01-125",
+   "id": "highschool-2026-10-01-124",
    "team": "highschool",
    "sport": "Senior Boys Football",
    "start": "2026-10-01T17:30:00-04:00",
@@ -1543,7 +1523,7 @@
    "home": "Tecumseh Vista Academy"
   },
   {
-   "id": "highschool-2026-10-01-121",
+   "id": "highschool-2026-10-01-120",
    "team": "highschool",
    "sport": "Senior Girls Basketball",
    "start": "2026-10-01T17:30:00-04:00",
@@ -1563,7 +1543,7 @@
    "home": "St. Anne"
   },
   {
-   "id": "highschool-2026-10-01-123",
+   "id": "highschool-2026-10-01-122",
    "team": "highschool",
    "sport": "Senior Girls Basketball",
    "start": "2026-10-01T17:30:00-04:00",
@@ -1583,7 +1563,7 @@
    "home": "Kennedy"
   },
   {
-   "id": "highschool-2026-10-01-126",
+   "id": "highschool-2026-10-01-125",
    "team": "highschool",
    "sport": "Senior Boys Football",
    "start": "2026-10-01T19:00:00-04:00",
@@ -1603,7 +1583,7 @@
    "home": "Essex"
   },
   {
-   "id": "highschool-2026-10-01-127",
+   "id": "highschool-2026-10-01-126",
    "team": "highschool",
    "sport": "Senior Boys Football",
    "start": "2026-10-01T19:30:00-04:00",
