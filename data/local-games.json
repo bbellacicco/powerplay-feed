@@ -1,9 +1,9 @@
 {
- "updated": "2026-09-27T23:49:22-04:00",
- "today": "2026-09-27",
+ "updated": "2026-09-28T00:19:33-04:00",
+ "today": "2026-09-28",
  "range": [
-  "2026-09-24",
-  "2026-09-30"
+  "2026-09-25",
+  "2026-10-01"
  ],
  "teams": {
   "spitfires": {
@@ -39,7 +39,7 @@
   },
   "lancers": {
    "ok": true,
-   "count": 107
+   "count": 148
   },
   "junior": {
    "ok": true,
@@ -67,98 +67,6 @@
   }
  },
  "games": [
-  {
-   "id": "lancers-6461",
-   "team": "lancers",
-   "sport": "Women's Hockey",
-   "start": "2026-09-24T18:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "STU Tommies",
-   "location": "Fredericton, NB",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 4,
-   "result": "L",
-   "note": "OT",
-   "links": {}
-  },
-  {
-   "id": "junior-gojhl15502",
-   "team": "junior",
-   "sport": "GOHL (Jr. B)",
-   "start": "2026-09-24T19:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Sarnia Legionnaires",
-   "location": "Pat Stapleton Arena, Sarnia, ON",
-   "status": "final",
-   "our_score": 5,
-   "opp_score": 3,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.gohl.ca/stats/game-center/15502"
-   },
-   "club": "LaSalle Vipers"
-  },
-  {
-   "id": "junior-gs2960177",
-   "team": "junior",
-   "sport": "PJHL (Jr. C)",
-   "start": "2026-09-24T19:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Dresden Kings",
-   "location": "Atlas Tube Centre",
-   "status": "final",
-   "our_score": 4,
-   "opp_score": 3,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960177?configuration=45"
-   },
-   "club": "Lakeshore Canadiens"
-  },
-  {
-   "id": "junior-ojhl16521",
-   "team": "junior",
-   "sport": "OJHL (Jr. A)",
-   "start": "2026-09-24T19:10:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Collingwood Blues",
-   "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
-   "status": "final",
-   "our_score": 2,
-   "opp_score": 0,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.ojhl.ca/stats/game-center/16521"
-   },
-   "club": "Leamington Flyers"
-  },
-  {
-   "id": "junior-gs2960183",
-   "team": "junior",
-   "sport": "PJHL (Jr. C)",
-   "start": "2026-09-24T19:30:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Walpole Island Wild",
-   "location": "Walpole Island Complex",
-   "status": "final",
-   "our_score": 5,
-   "opp_score": 2,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960183?configuration=45"
-   },
-   "club": "Essex 73's"
-  },
   {
    "id": "lancers-6377",
    "team": "lancers",
@@ -800,6 +708,44 @@
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960234?configuration=45"
    },
    "club": "Wheatley Sharks"
+  },
+  {
+   "id": "spitfires-ohl29035",
+   "team": "spitfires",
+   "sport": "Hockey",
+   "start": "2026-10-01T19:05:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "North Bay Battalion",
+   "location": "WFCU Centre, Windsor",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "tickets": "https://wfcucentre.evenue.net/event/S27/G03",
+    "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29035/"
+   }
+  },
+  {
+   "id": "junior-ojhl16544",
+   "team": "junior",
+   "sport": "OJHL (Jr. A)",
+   "start": "2026-10-01T19:10:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Buffalo Jr. Sabres",
+   "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.ojhl.ca/stats/game-center/16544"
+   },
+   "club": "Leamington Flyers"
   }
  ],
  "pro_games": [
