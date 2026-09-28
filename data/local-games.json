@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-28T10:19:28-04:00",
+ "updated": "2026-09-28T10:49:25-04:00",
  "today": "2026-09-28",
  "range": [
   "2026-09-25",
@@ -275,7 +275,9 @@
    "opp_score": 4,
    "result": "L",
    "note": "",
-   "links": {}
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6410"
+   }
   },
   {
    "id": "lancers-6480",
@@ -344,7 +346,9 @@
    "opp_score": 6,
    "result": "W",
    "note": "",
-   "links": {}
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6411"
+   }
   },
   {
    "id": "lancers-6160",
@@ -356,11 +360,13 @@
    "opponent": "McMaster Marauders",
    "location": "Mic Mac Park #2",
    "status": "final",
-   "our_score": 3,
-   "opp_score": 4,
-   "result": "L",
+   "our_score": 4,
+   "opp_score": 3,
+   "result": "W",
    "note": "",
-   "links": {}
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6160"
+   }
   },
   {
    "id": "lancers-6481",
@@ -438,11 +444,11 @@
    "home_away": "A",
    "opponent": "Saginaw Spirit",
    "location": "Dow Event Center, Saginaw",
-   "status": "final",
+   "status": "live",
    "our_score": 6,
    "opp_score": 3,
-   "result": "W",
-   "note": "",
+   "result": null,
+   "note": "End of Game",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29027/"
    }
@@ -534,7 +540,9 @@
    "opp_score": 1,
    "result": "W",
    "note": "",
-   "links": {}
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6161"
+   }
   },
   {
    "id": "lancers-6412",
@@ -550,7 +558,9 @@
    "opp_score": 6,
    "result": "L",
    "note": "",
-   "links": {}
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6412"
+   }
   },
   {
    "id": "lancers-6482",
@@ -578,11 +588,13 @@
    "opponent": "Western Mustangs",
    "location": "London, ON",
    "status": "final",
-   "our_score": 6,
-   "opp_score": 7,
-   "result": "L",
+   "our_score": 7,
+   "opp_score": 6,
+   "result": "W",
    "note": "",
-   "links": {}
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6162"
+   }
   },
   {
    "id": "junior-ojhl16536",
@@ -617,7 +629,9 @@
    "opp_score": 17,
    "result": "L",
    "note": "",
-   "links": {}
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6413"
+   }
   },
   {
    "id": "junior-gojhl15522",
@@ -850,6 +864,17 @@
    "video": false,
    "teams": [],
    "url": "https://www.cfl.ca/article/mmqb-who-is-in-the-crossover-hunt-down-the-final-stretch",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Overreaction Monday: 5 hot takes from Week 17",
+   "summary": "",
+   "published": "2026-09-28T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/6dCw6bIhweQRb8Dac7bU0J/10400ee07dd94d0b50a78856306212b0/Chad_Kelly-2026_4.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/overreaction-monday-5-hot-takes-from-week-17",
    "source": "CFL.ca"
   },
   {
@@ -1213,19 +1238,6 @@
     "Argonauts"
    ],
    "url": "https://www.cfl.ca/article/argos-sign-american-defensive-back-nic-toomer",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Bombers add three to practice roster, including Global Thiadric Hansen",
-   "summary": "",
-   "published": "2026-09-21T00:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/vNvrEedYOpLjsTI8BPWEx/a03a87711a687339bb8694bc8992c889/Thiadric_Hansen_2026.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Blue Bombers"
-   ],
-   "url": "https://www.cfl.ca/article/bombers-add-three-to-practice-roster-including-global-thaidric-hansen",
    "source": "CFL.ca"
   }
  ]
