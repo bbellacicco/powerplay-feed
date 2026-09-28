@@ -119,10 +119,18 @@
     sel.onchange = function () { state.sub = sel.value; render(); };
   }
 
+  // Powerplay's own stories go to the top of "All" for up to 3 days after they're posted,
+  // newest first; after that they take their normal place by date.
+  var TOP_DAYS = 3;
+  function isTop(s) { return s.team === 'powerplay' && Date.now() - new Date(s.published).getTime() < TOP_DAYS * 864e5; }
+  function featured(list) {
+    return list.filter(isTop).concat(list.filter(function (s) { return !isTop(s); }));
+  }
+
   function render() {
     tabs();
     if (!stories) return;
-    var list = state.tab === 'all' ? stories : stories.filter(function (s) { return s.team === state.tab; });
+    var list = state.tab === 'all' ? featured(stories) : stories.filter(function (s) { return s.team === state.tab; });
     subSelect(list);
     if (state.sub !== 'all') list = list.filter(function (s) { return subKey(s) === state.sub; });
     list = list.slice(0, MAX_STORIES);
