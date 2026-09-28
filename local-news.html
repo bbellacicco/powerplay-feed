@@ -5,20 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Local Feed | Powerplay Windsor</title>
 <!--
-  Local story feed: headlines, a short summary and a photo from the teams' own
+  Local story feed: headlines, a short summary and a photo from Powerplay Windsor and the teams' own
   websites (Spitfires, Lancers, St. Clair Saints and the junior clubs), each
   linking to the original story. Data: data/local-news.json, collected by the
   Powerplay PC every 30 minutes.
 
   Embed in Wix (Embed Code > Embed a site):
     https://bbellacicco.github.io/powerplay-feed/local-news.html
-  Optional: ?tab=spitfires | lancers | saints | junior   start on one team
+  Optional: ?tab=powerplay | spitfires | lancers | saints | junior   start on one team
 -->
 <style>
   :root {
     --bg: #0b1a33; --panel: #10244a; --row: #132b57; --line: #1e3a6e;
     --text: #f2f5fb; --muted: #9fb0cf; --accent: #e8b021;
-    --spitfires: #d4202a; --lancers: #0b5cad; --saints: #1f9d55; --junior: #0891b2;
+    --powerplay: #e8b021; --spitfires: #d4202a; --lancers: #0b5cad; --saints: #1f9d55; --junior: #0891b2;
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; background: var(--bg); color: var(--text);
@@ -37,7 +37,7 @@
     color: inherit; text-decoration: none; padding-right: 12px; }
   .story:hover { background: #17336a; }
   .stripe { align-self: stretch; }
-  .t-spitfires .stripe { background: var(--spitfires); } .t-lancers .stripe { background: var(--lancers); }
+  .t-powerplay .stripe { background: var(--powerplay); } .t-spitfires .stripe { background: var(--spitfires); } .t-lancers .stripe { background: var(--lancers); }
   .t-saints .stripe { background: var(--saints); } .t-junior .stripe { background: var(--junior); }
   .thumb { width: 128px; height: 80px; margin: 10px 0; border-radius: 6px; object-fit: cover; background: var(--panel); display: block; }
   .body { padding: 10px 0; min-width: 0; }
@@ -61,15 +61,15 @@
   <div class="bar" id="tabs" role="group" aria-label="Team"></div>
   <div class="bar"><select class="pill" id="sub" aria-label="Filter"></select></div>
   <div id="list"><div class="empty">Loading stories…</div></div>
-  <footer>Powerplay Windsor · Stories from the teams' own websites. Tap a story to read it there.</footer>
+  <footer>Powerplay Windsor · Stories from Powerplay Windsor and the teams' own websites. Tap a story to read it there.</footer>
 </div>
 <script>
 (function () {
   var TZ = 'America/Toronto';
   var URL = 'https://bbellacicco.github.io/powerplay-feed/data/local-news.json';
   var MAX_STORIES = 40;
-  var TABS = [['all', 'All'], ['spitfires', 'Spitfires'], ['lancers', 'Lancers'], ['saints', 'Saints'], ['junior', 'Junior Hockey']];
-  var LABEL = { spitfires: 'Spitfires', lancers: 'Lancers', saints: 'Saints', junior: 'Junior Hockey' };
+  var TABS = [['all', 'All'], ['powerplay', 'Powerplay'], ['spitfires', 'Spitfires'], ['lancers', 'Lancers'], ['saints', 'Saints'], ['junior', 'Junior Hockey']];
+  var LABEL = { powerplay: 'Powerplay', spitfires: 'Spitfires', lancers: 'Lancers', saints: 'Saints', junior: 'Junior Hockey' };
 
   var qs = new URLSearchParams(location.search);
   var state = { tab: LABEL[qs.get('tab')] ? qs.get('tab') : 'all', sub: 'all' };
@@ -133,7 +133,8 @@
 
   function card(s) {
     var a = el('a', 'story t-' + s.team);
-    a.href = s.url; a.target = '_blank'; a.rel = 'noopener';
+    a.href = s.url; a.rel = 'noopener';
+    a.target = s.team === 'powerplay' ? '_top' : '_blank';   // your own stories open right on your site
     a.appendChild(el('div', 'stripe'));
     var img = el('img', 'thumb'); img.alt = ''; img.loading = 'lazy'; img.referrerPolicy = 'no-referrer';
     img.onerror = function () { img.style.visibility = 'hidden'; };
@@ -142,7 +143,7 @@
     var body = el('div', 'body');
     body.appendChild(el('div', 'headline', s.headline));
     if (s.summary && s.summary !== s.headline) body.appendChild(el('div', 'summary', s.summary));
-    var who = s.team === 'junior' ? s.club : LABEL[s.team] + (s.sport ? ' · ' + s.sport : '');
+    var who = s.team === 'junior' || s.team === 'powerplay' ? s.club : LABEL[s.team] + (s.sport ? ' · ' + s.sport : '');
     body.appendChild(el('div', 'meta', [who, ago(s.published)].filter(Boolean).join(' · ')));
     a.appendChild(body);
     return a;
