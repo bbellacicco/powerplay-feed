@@ -1,87 +1,7 @@
 {
- "updated": "2026-09-28T19:48:01-04:00",
- "today": "2026-09-28",
+ "updated": "2026-09-29T00:18:01-04:00",
+ "today": "2026-09-29",
  "games": [
-  {
-   "id": "highschool-2026-09-25-47",
-   "team": "highschool",
-   "sport": "Senior Boys Football",
-   "start": "2026-09-25T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Belle River",
-   "location": "Sandwich",
-   "status": "final",
-   "our_score": 13,
-   "opp_score": 36,
-   "result": null,
-   "note": "",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "North Star",
-   "home": "Belle River"
-  },
-  {
-   "id": "highschool-2026-09-25-48",
-   "team": "highschool",
-   "sport": "Senior Boys Football",
-   "start": "2026-09-25T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Essex",
-   "location": "Essex",
-   "status": "final",
-   "our_score": 0,
-   "opp_score": 20,
-   "result": null,
-   "note": "",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "L'Essor",
-   "home": "Essex"
-  },
-  {
-   "id": "highschool-2026-09-25-49",
-   "team": "highschool",
-   "sport": "Senior Boys Football",
-   "start": "2026-09-25T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Holy Names",
-   "location": "University of Windsor",
-   "status": "final",
-   "our_score": 28,
-   "opp_score": 28,
-   "result": null,
-   "note": "",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Herman",
-   "home": "Holy Names"
-  },
-  {
-   "id": "highschool-2026-09-25-50",
-   "team": "highschool",
-   "sport": "Senior Boys Football",
-   "start": "2026-09-25T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Sandwich",
-   "location": "Sandwich",
-   "status": "final",
-   "our_score": 0,
-   "opp_score": 36,
-   "result": null,
-   "note": "",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "St. Joseph's",
-   "home": "Sandwich"
-  },
   {
    "id": "highschool-2026-09-28-51",
    "team": "highschool",
@@ -1601,6 +1521,86 @@
    },
    "away": "Massey",
    "home": "Kennedy"
+  },
+  {
+   "id": "highschool-2026-10-02-127",
+   "team": "highschool",
+   "sport": "Senior Boys Football",
+   "start": "2026-10-02T17:30:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Holy Names",
+   "location": "Holy Names",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "St. Joseph's Forfeit",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "St. Joseph's",
+   "home": "Holy Names"
+  },
+  {
+   "id": "highschool-2026-10-02-128",
+   "team": "highschool",
+   "sport": "Senior Boys Football",
+   "start": "2026-10-02T17:30:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Villanova",
+   "location": "Sandwich",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Herman",
+   "home": "Villanova"
+  },
+  {
+   "id": "highschool-2026-10-02-129",
+   "team": "highschool",
+   "sport": "Senior Boys Football",
+   "start": "2026-10-02T17:30:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "North Star",
+   "location": "Libro Credit Union Centre",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "L'Essor",
+   "home": "North Star"
+  },
+  {
+   "id": "highschool-2026-10-02-130",
+   "team": "highschool",
+   "sport": "Senior Boys Football",
+   "start": "2026-10-02T19:30:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Sandwich",
+   "location": "Sandwich",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "St. Anne",
+   "home": "Sandwich"
   }
  ]
 }
