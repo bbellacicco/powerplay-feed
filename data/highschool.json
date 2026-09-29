@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-29T15:18:01-04:00",
+ "updated": "2026-09-29T15:48:01-04:00",
  "today": "2026-09-29",
  "games": [
   {
@@ -23,31 +23,11 @@
    "home": "Lajeunesse"
   },
   {
-   "id": "highschool-2026-09-29-52",
-   "team": "highschool",
-   "sport": "Senior Girls Basketball",
-   "start": "2026-09-29T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Cardinal Carter",
-   "location": "Cardinal Carter",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 3 · Triple Header",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Westview Freedom Academy",
-   "home": "Cardinal Carter"
-  },
-  {
    "id": "highschool-2026-09-29-53",
    "team": "highschool",
    "sport": "Junior Girls Basketball",
-   "start": "2026-09-29T15:30:00-04:00",
-   "time_tbd": false,
+   "start": "2026-09-29T00:00:00-04:00",
+   "time_tbd": true,
    "home_away": "N",
    "opponent": "Walkerville",
    "location": "Walkerville",
@@ -66,8 +46,8 @@
    "id": "highschool-2026-09-29-54",
    "team": "highschool",
    "sport": "Senior Boys Volleyball",
-   "start": "2026-09-29T15:30:00-04:00",
-   "time_tbd": false,
+   "start": "2026-09-29T00:00:00-04:00",
+   "time_tbd": true,
    "home_away": "N",
    "opponent": "Westview Freedom Academy",
    "location": "Westview Freedom Academy",
@@ -81,6 +61,26 @@
    },
    "away": "Windsor Islamic",
    "home": "Westview Freedom Academy"
+  },
+  {
+   "id": "highschool-2026-09-29-52",
+   "team": "highschool",
+   "sport": "Senior Girls Basketball",
+   "start": "2026-09-29T00:00:00-04:00",
+   "time_tbd": true,
+   "home_away": "N",
+   "opponent": "Cardinal Carter",
+   "location": "Cardinal Carter",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Tier 3 · Triple Header",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Westview Freedom Academy",
+   "home": "Cardinal Carter"
   },
   {
    "id": "highschool-2026-09-29-62",
