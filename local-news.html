@@ -59,6 +59,8 @@
   .fb { width: 100%; border: 0; border-radius: 6px; background: #fff; display: block; }
   .yt { position: relative; width: 100%; padding-top: 56.25%; border-radius: 6px; overflow: hidden; background: #000; }
   .yt iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .wall .box { flex: 1 1 260px; max-width: 100%; }
+  @media (min-width: 700px) { .wall .box { flex: 0 1 calc(33.333% - 8px); } }
   .note { color: var(--muted); font-size: 12px; margin-top: 6px; }
   footer { margin-top: 14px; color: var(--muted); font-size: 11px; text-align: center; }
   @media (max-width: 520px) {
@@ -126,9 +128,36 @@
     return h;
   }
 
+  // "All": one small box per team showing its newest Facebook post, Powerplay first
+  var WALL_HEIGHT = 560;
+  function fbFrame(team, w, h) {
+    var f = document.createElement('iframe');
+    f.className = 'fb'; f.height = h; f.title = team.name + ' Facebook posts'; f.loading = 'lazy';
+    f.allow = 'encrypted-media; clipboard-write; web-share';
+    f.src = 'https://www.facebook.com/plugins/page.php?href=' + encodeURIComponent(team.facebook) +
+      '&tabs=timeline&width=' + w + '&height=' + h +
+      '&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false';
+    return f;
+  }
+  function socialWall() {
+    document.getElementById('sub').style.display = 'none';
+    var box = document.getElementById('list'); box.innerHTML = '';
+    var grid = el('div', 'grid wall'); box.appendChild(grid);
+    var all = [].concat(SOCIAL.powerplay, SOCIAL.spitfires, SOCIAL.lancers, SOCIAL.saints, SOCIAL.junior);
+    var boxes = all.map(function (team) {
+      var b = el('div', 'box');
+      b.appendChild(heading(team.name, team.facebook, 'Open ↗'));
+      grid.appendChild(b);
+      return b;
+    });
+    var w = Math.max(180, Math.min(500, Math.floor(boxes[0].clientWidth - 20)));
+    boxes.forEach(function (b, i) { b.appendChild(fbFrame(all[i], w, WALL_HEIGHT)); });
+    box.appendChild(el('div', 'note', "Newest post from each team. Pick a team above for its full feed. Posts not showing? Some browsers' privacy settings block Facebook feeds."));
+  }
+
   function renderSocial() {
-    if (state.tab === 'all') state.tab = 'powerplay';     // social is one team at a time
     tabs();
+    if (state.tab === 'all') return socialWall();
     var list = SOCIAL[state.tab], sel = document.getElementById('sub');
     sel.innerHTML = '';
     list.forEach(function (c, i) { sel.appendChild(new Option(c.name, String(i))); });
@@ -152,13 +181,7 @@
     fb.appendChild(heading(team.name + ' on Facebook', team.facebook, 'Open ↗'));
     grid.appendChild(fb);
     var w = Math.max(180, Math.min(500, Math.floor(fb.clientWidth - 20)));   // Page Plugin wants 180–500px
-    var f2 = document.createElement('iframe');
-    f2.className = 'fb'; f2.height = FB_HEIGHT; f2.title = team.name + ' Facebook posts'; f2.loading = 'lazy';
-    f2.allow = 'encrypted-media; clipboard-write; web-share';
-    f2.src = 'https://www.facebook.com/plugins/page.php?href=' + encodeURIComponent(team.facebook) +
-      '&tabs=timeline&width=' + w + '&height=' + FB_HEIGHT +
-      '&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false';
-    fb.appendChild(f2);
+    fb.appendChild(fbFrame(team, w, FB_HEIGHT));
     fb.appendChild(el('div', 'note', "Posts not showing? Some browsers' privacy settings block Facebook feeds. Use Open ↗ to see them on Facebook."));
   }
   var stories = null;
@@ -183,7 +206,6 @@
   function tabs() {
     var box = document.getElementById('tabs'); box.innerHTML = '';
     TABS.forEach(function (t) {
-      if (state.view === 'social' && t[0] === 'all') return;
       var b = el('button', 'pill', t[1]);
       b.setAttribute('aria-pressed', String(state.tab === t[0]));
       b.onclick = function () { state.tab = t[0]; state.sub = 'all'; state.club = 0; render(); };
