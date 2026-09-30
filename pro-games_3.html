@@ -12,14 +12,14 @@
 
   Embed in Wix (Embed Code > Embed a site):
     https://bbellacicco.github.io/powerplay-feed/pro-games.html
-  Optional: ?tab=all | nfl | nhl | nba | mlb | cfl  start on a league instead of "Our Teams"
+  Optional: ?tab=all | nfl | nhl | pwhl | nba | mlb | cfl  start on a league instead of "Our Teams"
 -->
 <style>
   :root {
     --bg: #0b1a33; --panel: #10244a; --row: #132b57; --line: #1e3a6e;
     --text: #f2f5fb; --muted: #9fb0cf; --accent: #e8b021;
     --win: #2fbf71; --loss: #e5484d; --tie: #9fb0cf;
-    --nfl: #1d4ed8; --nhl: #94a3b8; --nba: #ea580c; --mlb: #0891b2; --cfl: #dc2626;
+    --nfl: #1d4ed8; --nhl: #94a3b8; --nba: #ea580c; --mlb: #0891b2; --cfl: #dc2626; --pwhl: #7c3aed;
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; background: var(--bg); color: var(--text);
@@ -44,7 +44,7 @@
     background: var(--row); border-radius: 8px; padding: 8px 10px 8px 0; margin-bottom: 5px; overflow: hidden; }
   .stripe { align-self: stretch; }
   .l-nfl .stripe { background: var(--nfl); } .l-mlb .stripe { background: var(--mlb); } .l-nhl .stripe { background: var(--nhl); }
-  .l-nba .stripe { background: var(--nba); } .l-cfl .stripe { background: var(--cfl); }
+  .l-nba .stripe { background: var(--nba); } .l-cfl .stripe { background: var(--cfl); } .l-pwhl .stripe { background: var(--pwhl); }
   .time { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
   .main { min-width: 0; }
   .who { font-weight: 600; }
@@ -99,7 +99,7 @@
     <select class="pill" id="team" aria-label="Team"></select>
   </div>
   <div id="list"><div class="empty">Loading…</div></div>
-  <footer>Powerplay Windsor · Scores and standings from ESPN (NFL, NHL, NBA, MLB) and cfl.ca</footer>
+  <footer>Powerplay Windsor · Scores and standings from ESPN (NFL, NHL, NBA, MLB), cfl.ca and thepwhl.com</footer>
 </div>
 <script>
 (function () {
@@ -110,7 +110,8 @@
     nhl: { label: 'NHL', path: 'hockey/nhl' },
     nba: { label: 'NBA', path: 'basketball/nba' },
     mlb: { label: 'MLB', path: 'baseball/mlb' },
-    cfl: { label: 'CFL' }
+    cfl: { label: 'CFL' },
+    pwhl: { label: 'PWHL' }     // women's pro hockey: games and standings come from the collector (not on ESPN)
   };
   // "Our Teams": league + ESPN abbreviation
   var OUR_TEAMS = [
@@ -124,7 +125,7 @@
     { league: 'mlb', abbr: 'DET', name: 'Detroit Tigers' },
     { league: 'mlb', abbr: 'TOR', name: 'Toronto Blue Jays' }
   ];
-  var TABS = [['ours', 'Our Teams'], ['all', 'All'], ['nfl', 'NFL'], ['nhl', 'NHL'], ['nba', 'NBA'], ['mlb', 'MLB'], ['cfl', 'CFL']];
+  var TABS = [['ours', 'Our Teams'], ['all', 'All'], ['nfl', 'NFL'], ['nhl', 'NHL'], ['pwhl', 'PWHL'], ['nba', 'NBA'], ['mlb', 'MLB'], ['cfl', 'CFL']];
 
   var qs = new URLSearchParams(location.search);
   var view = qs.get('view') === 'standings' ? 'standings' : 'games';
@@ -182,10 +183,10 @@
       .then(function (j) {
         return (j.pro_games || []).map(function (g) {
           return {
-            league: 'cfl', start: g.start, status: g.status, detail: '',
+            league: g.league || 'cfl', start: g.start, status: g.status, detail: '',
             home: { abbr: g.home_abbr, name: g.home, short: g.home.split(' ').slice(-1)[0], score: g.opp_score },
             away: { abbr: g.away_abbr, name: g.away, short: g.away.split(' ').slice(-1)[0], score: g.our_score },
-            venue: g.location, note: g.note, tbd: g.time_tbd, link: 'https://www.cfl.ca/schedule/'
+            venue: g.location, note: g.note, tbd: g.time_tbd, link: g.link || 'https://www.cfl.ca/schedule/'
           };
         });
       }).catch(function () { return []; });
@@ -250,7 +251,8 @@
     nba: [['W', 'W'], ['L', 'L'], ['PCT', 'PCT'], ['GB', 'GB'], ['STRK', 'STRK', 1]],
     nfl: [['W', 'W'], ['L', 'L'], ['T', 'T'], ['PCT', 'PCT'], ['DIFF', 'DIFF', 1], ['STRK', 'STRK', 1]],
     mlb: [['W', 'W'], ['L', 'L'], ['PCT', 'PCT'], ['GB', 'GB'], ['STRK', 'STRK', 1]],
-    cfl: [['GP', 'gp'], ['W', 'w'], ['L', 'l'], ['PTS', 'pts'], ['PF', 'pf', 1], ['PA', 'pa', 1]]
+    cfl: [['GP', 'gp'], ['W', 'w'], ['L', 'l'], ['PTS', 'pts'], ['PF', 'pf', 1], ['PA', 'pa', 1]],
+    pwhl: [['GP', 'gp'], ['W', 'w'], ['L', 'l'], ['OTL', 'otl'], ['PTS', 'pts'], ['GF', 'gf', 1], ['GA', 'ga', 1], ['STRK', 'strk', 1]]
   };
   function espnStandings(k) {
     return fetch('https://site.api.espn.com/apis/v2/sports/' + LEAGUES[k].path + '/standings?level=3')
@@ -273,9 +275,10 @@
         return groups;
       });
   }
-  function cflStandings() {
+  function collectorStandings(k) {     // CFL and PWHL, gathered by the collector every 15 minutes
     return fetch('https://bbellacicco.github.io/powerplay-feed/data/local-games.json?t=' + Date.now())
-      .then(function (r) { return r.json(); }).then(function (j) { return j.cfl_standings || []; });
+      .then(function (r) { return r.json(); })
+      .then(function (j) { return k === 'cfl' ? (j.cfl_standings || []) : ((j.standings || {})[k] || []); });
   }
   function renderStandings() {
     if (!LEAGUES[state.tab]) state.tab = 'nhl';
@@ -285,7 +288,7 @@
     var k = state.tab, box = document.getElementById('list');
     if (!standCache[k]) {
       box.innerHTML = '<div class="empty">Loading standings…</div>';
-      standCache[k] = (k === 'cfl' ? cflStandings() : espnStandings(k)).catch(function () { standCache[k] = null; return null; });
+      standCache[k] = (k === 'cfl' || k === 'pwhl' ? collectorStandings(k) : espnStandings(k)).catch(function () { standCache[k] = null; return null; });
     }
     standCache[k].then(function (groups) {
       if (view !== 'standings' || state.tab !== k) return;
@@ -313,6 +316,7 @@
         box.appendChild(sec);
       });
       if (k === 'cfl') box.appendChild(el('div', 'empty', 'x – clinched playoff spot · y – clinched division'));
+      if (k === 'pwhl') box.appendChild(el('div', 'empty', 'PWHL: 3 points for a regulation win, 2 for an overtime or shootout win, 1 for an overtime or shootout loss (OTL).'));
     });
   }
 
