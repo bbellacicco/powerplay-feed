@@ -12,7 +12,7 @@
 
   Embed in Wix (Embed Code > Embed a site):
     https://bbellacicco.github.io/powerplay-feed/pro-games.html
-  Optional: ?tab=nfl | nhl | nba | mlb | cfl  start on a league instead of "Our Teams"
+  Optional: ?tab=all | nfl | nhl | nba | mlb | cfl  start on a league instead of "Our Teams"
 -->
 <style>
   :root {
@@ -103,10 +103,10 @@
     { league: 'mlb', abbr: 'DET', name: 'Detroit Tigers' },
     { league: 'mlb', abbr: 'TOR', name: 'Toronto Blue Jays' }
   ];
-  var TABS = [['ours', 'Our Teams'], ['nfl', 'NFL'], ['nhl', 'NHL'], ['nba', 'NBA'], ['mlb', 'MLB'], ['cfl', 'CFL']];
+  var TABS = [['ours', 'Our Teams'], ['all', 'All'], ['nfl', 'NFL'], ['nhl', 'NHL'], ['nba', 'NBA'], ['mlb', 'MLB'], ['cfl', 'CFL']];
 
   var qs = new URLSearchParams(location.search);
-  var state = { tab: LEAGUES[qs.get('tab')] ? qs.get('tab') : 'ours', team: 'all' };
+  var state = { tab: LEAGUES[qs.get('tab')] || qs.get('tab') === 'all' ? qs.get('tab') : 'ours', team: 'all' };
   var games = [];
 
   function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
@@ -201,7 +201,7 @@
     var sel = document.getElementById('team');
     var names = {};
     if (state.tab === 'ours') OUR_TEAMS.forEach(function (t) { names[t.name] = 1; });
-    else list.forEach(function (g) { names[g.home.name] = 1; names[g.away.name] = 1; });
+    else if (state.tab !== 'all') list.forEach(function (g) { names[g.home.name] = 1; names[g.away.name] = 1; });   // All: every league, too many teams for a list
     var keys = Object.keys(names).sort();
     sel.innerHTML = '';
     sel.appendChild(new Option('All teams', 'all'));
@@ -216,7 +216,7 @@
     document.getElementById('updated').textContent =
       fmt(dates[0], { month: 'short', day: 'numeric' }) + ' – ' + fmt(dates[dates.length - 1], { month: 'short', day: 'numeric' });
     tabs();
-    var list = games.filter(function (g) { return state.tab === 'ours' ? isOurs(g) : g.league === state.tab; });
+    var list = games.filter(function (g) { return state.tab === 'ours' ? isOurs(g) : state.tab === 'all' ? true : g.league === state.tab; });
     teamSelect(list);
     if (state.team !== 'all') list = list.filter(function (g) {
       if (state.tab === 'ours') { var t = ourTeam(g); return t && t.name === state.team; }
