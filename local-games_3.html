@@ -42,6 +42,22 @@
   .sponsor { color: var(--muted); font-size: 12px; margin-top: 2px; }
   .sponsor b { color: var(--text); font-weight: 600; }
   .updated { color: var(--muted); font-size: 12px; }
+  .right { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+  .views { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+  .views button { border: 0; background: var(--panel); color: var(--text); font: inherit; font-size: 13px; padding: 6px 14px; cursor: pointer; }
+  .views button[aria-pressed="true"] { background: var(--accent); color: #111; font-weight: 600; }
+  .stand { margin-top: 12px; }
+  .stand h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin: 0 0 6px; }
+  .stand table { width: 100%; border-collapse: collapse; background: var(--row); border-radius: 8px; overflow: hidden; font-variant-numeric: tabular-nums; }
+  .stand th, .stand td { padding: 6px 8px; text-align: right; white-space: nowrap; }
+  .stand th { font-size: 11px; color: var(--muted); font-weight: 600; background: var(--panel); }
+  .stand th:first-child, .stand td:first-child { text-align: left; width: 100%; white-space: normal; }
+  .stand tr + tr td { border-top: 1px solid var(--line); }
+  .stand td .rk { color: var(--muted); display: inline-block; width: 20px; }
+  .stand tr.ours td { background: rgba(232, 176, 33, .12); }
+  .stand tr.ours td:first-child { color: var(--accent); font-weight: 700; }
+  .snote { color: var(--muted); font-size: 11px; margin-top: 8px; }
+  @media (max-width: 480px) { .stand .wide { display: none; } .right { align-items: flex-start; } }
   .bar { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; align-items: center; }
   .pill { border: 1px solid var(--line); background: var(--panel); color: var(--text);
     padding: 6px 12px; border-radius: 999px; font: inherit; font-size: 13px; cursor: pointer; }
@@ -89,7 +105,10 @@
       <h1>Local <span>Hub</span></h1>
       <div class="sponsor">Brought to you by <b>Unifor Local 444</b></div>
     </div>
-    <div class="updated" id="updated"></div>
+    <div class="right">
+      <div class="views" role="group" aria-label="View"><button id="v-games">Games</button><button id="v-standings">Standings</button></div>
+      <div class="updated" id="updated"></div>
+    </div>
   </header>
   <div class="bar" id="teams" role="group" aria-label="Team"></div>
   <div class="bar">
@@ -108,6 +127,8 @@
     school: 'all'
   };
   var lockTeam = !!qs.get('team');
+  var view = qs.get('view') === 'standings' ? 'standings' : 'games';
+  var standLeague = 'ohl';
   var data = null;
   var todayKey = '';
   var TZ = 'America/Toronto';
@@ -230,8 +251,59 @@
     return f;
   }
 
+  // ---- Standings (collected every 15 minutes from the leagues' own stats sites)
+  var ST_LEAGUES = [['ohl', 'OHL'], ['ojhl', 'OJHL'], ['gohl', 'GOHL'], ['pjhl', 'PJHL']];
+  var ST_COLS = [['GP', 'gp'], ['W', 'w'], ['L', 'l'], ['OTL', 'otl'], ['PTS', 'pts'], ['GF', 'gf', 1], ['GA', 'ga', 1], ['STRK', 'strk', 1]];
+  var OUR_CLUBS = ['Windsor Spitfires', 'Leamington', 'LaSalle', 'Chatham', 'Lakeshore', 'Essex', 'Wheatley', 'Amherstburg'];
+  function isOurClub(name) { return OUR_CLUBS.some(function (c) { return (name || '').indexOf(c) >= 0; }); }
+
+  function views() {
+    [['games', 'v-games'], ['standings', 'v-standings']].forEach(function (v) {
+      var b = document.getElementById(v[1]);
+      b.setAttribute('aria-pressed', String(view === v[0]));
+      b.onclick = function () { if (view !== v[0]) { view = v[0]; render(); } };
+    });
+  }
+
+  function renderStandings() {
+    var bar = document.getElementById('teams'); bar.innerHTML = ''; bar.style.display = '';
+    ST_LEAGUES.forEach(function (l) {
+      var b = el('button', 'pill', l[1]);
+      b.setAttribute('aria-pressed', String(standLeague === l[0]));
+      b.onclick = function () { standLeague = l[0]; render(); };
+      bar.appendChild(b);
+    });
+    document.getElementById('sport').style.display = 'none';
+    document.getElementById('school').style.display = 'none';
+    document.getElementById('updated').textContent = '';
+    var box = document.getElementById('list'); box.innerHTML = '';
+    var groups = (data.standings || {})[standLeague] || [];
+    if (!groups.length) { box.appendChild(el('div', 'empty', 'Standings unavailable right now.')); return; }
+    groups.forEach(function (g) {
+      var sec = el('section', 'stand');
+      sec.appendChild(el('h2', null, g.group));
+      var tbl = el('table'), head = el('tr');
+      head.appendChild(el('th', null, 'Team'));
+      ST_COLS.forEach(function (c) { head.appendChild(el('th', c[2] ? 'wide' : null, c[0])); });
+      tbl.appendChild(head);
+      g.teams.forEach(function (t, i) {
+        var tr = el('tr', isOurClub(t.name) ? 'ours' : null), td = el('td');
+        td.appendChild(el('span', 'rk', String(i + 1)));
+        td.appendChild(document.createTextNode(t.name));
+        tr.appendChild(td);
+        ST_COLS.forEach(function (c) { tr.appendChild(el('td', c[2] ? 'wide' : null, t[c[1]] == null ? '' : String(t[c[1]]))); });
+        tbl.appendChild(tr);
+      });
+      sec.appendChild(tbl);
+      box.appendChild(sec);
+    });
+    box.appendChild(el('div', 'snote', 'OTL includes overtime and shootout losses. Local teams are highlighted.'));
+  }
+
   function render() {
     if (!data) return;
+    views();
+    if (view === 'standings') return renderStandings();
     // "today" is the day the data was collected (each morning)
     todayKey = data.today || dayKey(new Date(data.updated));
     var range = data.range || [todayKey, todayKey];
