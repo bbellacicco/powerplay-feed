@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Powerplay Sports Feed | Powerplay Windsor</title>
+<title>Pro Feed | Powerplay Windsor</title>
 <!--
   Pro sports story feed. Headlines, a short summary and a photo, each linking
   to the original story on the publisher's site.
@@ -13,7 +13,7 @@
 
   Embed in Wix (Embed Code > Embed a site):
     https://bbellacicco.github.io/powerplay-feed/news-feed.html
-  Optional: ?tab=nfl | nhl | nba | mlb | cfl  start on a league instead of "Our Teams"
+  Optional: ?tab=all | nfl | nhl | nba | mlb | cfl  start on a league instead of "Our Teams"
 -->
 <style>
   :root {
@@ -63,7 +63,7 @@
 <body>
 <div class="wrap">
   <header>
-    <h1>Powerplay <span>Sports Feed</span></h1>
+    <h1>Pro <span>Feed</span></h1>
     <div class="sponsor">Brought to you by <b>St. Clair College Alumni Association</b></div>
   </header>
   <div class="bar" id="tabs" role="group" aria-label="League"></div>
@@ -94,11 +94,11 @@
     { league: 'mlb', abbr: 'det', name: 'Detroit Tigers' },
     { league: 'mlb', abbr: 'tor', name: 'Toronto Blue Jays' }
   ];
-  var TABS = [['ours', 'Our Teams'], ['nfl', 'NFL'], ['nhl', 'NHL'], ['nba', 'NBA'], ['mlb', 'MLB'], ['cfl', 'CFL']];
+  var TABS = [['ours', 'Our Teams'], ['all', 'All'], ['nfl', 'NFL'], ['nhl', 'NHL'], ['nba', 'NBA'], ['mlb', 'MLB'], ['cfl', 'CFL']];
 
   var qs = new URLSearchParams(location.search);
-  var state = { tab: LEAGUES[qs.get('tab')] ? qs.get('tab') : 'ours', team: 'all' };
-  var stories = { ours: [], nfl: [], nhl: [], nba: [], mlb: [], cfl: [] };
+  var state = { tab: LEAGUES[qs.get('tab')] || qs.get('tab') === 'all' ? qs.get('tab') : 'ours', team: 'all' };
+  var stories = { ours: [], all: [], nfl: [], nhl: [], nba: [], mlb: [], cfl: [] };
 
   function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
 
@@ -158,7 +158,7 @@
       Promise.all(ours).then(function (r) { return [].concat.apply([], r); }),
       espn('nfl'), espn('nhl'), espn('nba'), espn('mlb'), cfl()
     ]).then(function (r) {
-      stories = { ours: clean(r[0]), nfl: clean(r[1]), nhl: clean(r[2]), nba: clean(r[3]), mlb: clean(r[4]), cfl: clean(r[5]) };
+      stories = { ours: clean(r[0]), all: clean([].concat(r[1], r[2], r[3], r[4], r[5])), nfl: clean(r[1]), nhl: clean(r[2]), nba: clean(r[3]), mlb: clean(r[4]), cfl: clean(r[5]) };
       render();
     });
   }
