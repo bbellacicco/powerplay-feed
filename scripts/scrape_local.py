@@ -805,6 +805,42 @@ def scrape_cfl_news(limit=30):
     out.sort(key=lambda a: a["published"] or "", reverse=True)
     return out[:limit]
 
+def _pwhl_title(t):
+    t = unescape(t).strip()
+    if t.isupper():                  # the PWHL writes headlines in capitals
+        t = re.sub(r"[A-Za-z]+('[A-Za-z]+)?", lambda m: m.group(0).capitalize() if len(m.group(0)) > 3 or m.start() == 0
+                   else m.group(0).lower() if m.group(0).lower() in ("and", "to", "for", "of", "the", "at", "in", "on", "a", "an", "vs")
+                   else m.group(0).capitalize(), t.lower())
+    t = re.sub(r"\b(Pwhl|Nhl|Ncaa|Usa|Ot)\b", lambda m: m.group(0).upper(), t)
+    t = re.sub(r"\b(O|Mc|D)'([a-z])", lambda m: m.group(1) + "'" + m.group(2).upper(), t)   # O'Brien
+    return t
+
+
+def scrape_pwhl_news(limit=30):
+    """Latest stories from thepwhl.com's news page (league and team stories)."""
+    html = fetch("https://www.thepwhl.com/en/news", "pwhl_news.html" if FIXTURES else None)
+    months = {m: i for i, m in enumerate(["january", "february", "march", "april", "may", "june", "july",
+                                          "august", "september", "october", "november", "december"], 1)}
+    out, seen = [], set()
+    for m in re.finditer(r'<a[^>]+href="(/en/(?:teams/([a-z0-9-]+)/)?news/(\d{4})/([a-z]+)/(\d{1,2})/([a-z0-9-]+))"[^>]*>(.*?)</a>', html, re.S):
+        path, team, y, mon, d, slug, body = m.groups()
+        if path in seen or mon not in months:
+            continue
+        seen.add(path)
+        h = re.search(r"<h[1-4][^>]*>(.*?)</h[1-4]>", body, re.S)
+        title = _pwhl_title(re.sub(r"<[^>]+>", "", h.group(1)) if h else slug.replace("-", " ").upper())
+        # cloudinary urls contain commas, so take the first srcset entry up to whitespace
+        src = re.search(r'srcSet="\s*(https://res\.cloudinary\.com/\S+?),?\s', body)
+        img = src
+        t = re.search(r'dateTime="([^"]+)"', body)
+        published = t.group(1).replace("Z", "+00:00") if t else f"{y}-{months[mon]:02d}-{int(d):02d}T12:00:00+00:00"
+        out.append({"league": "pwhl", "headline": title, "summary": "", "published": published,
+                    "image": img.group(1) if img else "", "video": False,
+                    "teams": [team.replace("-", " ").title()] if team else [],
+                    "url": "https://www.thepwhl.com" + path, "source": "thepwhl.com"})
+    out.sort(key=lambda a: a["published"], reverse=True)
+    return out[:limit]
+
 # ------------------------------------------------------------------ Manual sheet
 
 
@@ -966,6 +1002,19 @@ def main():
         except (OSError, ValueError):
             pass
 
+    try:
+        pw_news = scrape_pwhl_news()
+        pro_news = [n for n in pro_news if n.get("league") != "pwhl"] + pw_news
+        sources["pwhl_news"] = {"ok": True, "count": len(pw_news)}
+        print(f"pwhl news: {len(pw_news)} stories")
+    except Exception as ex:
+        sources["pwhl_news"] = {"ok": False, "error": str(ex)[:200]}
+        print(f"pwhl news: FAILED - {ex}", file=sys.stderr)
+        try:
+            pro_news += [n for n in json.load(open(OUT_FILE, encoding="utf-8")).get("pro_news", []) if n.get("league") == "pwhl"]
+        except (OSError, ValueError):
+            pass
+
     payload = {
         "updated": now.isoformat(timespec="seconds"),
         "today": today.isoformat(),
@@ -975,7 +1024,7 @@ def main():
         "sources": sources,
         "games": games,
         "pro_games": pro_games,   # CFL, used by pro-games.html
-        "pro_news": pro_news,     # CFL stories, used by news-feed.html
+        "pro_news": pro_news,     # CFL and PWHL stories, used by news-feed.html
         "cfl_standings": cfl_standings,   # used by the Standings view in pro-games.html
         "standings": standings,           # OHL, OJHL, GOHL, PJHL (Local Hub) and PWHL (Pro Hub)
     }
