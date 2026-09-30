@@ -470,7 +470,7 @@
     clearTimeout(rt); rt = setTimeout(function () { if (state.view === 'social') render(); }, 400); });
   render();
   load();
-  setInterval(load, 5 * 60 * 1000);
+  setInterval(load, 2 * 60 * 1000);   // look for new stories and scores every 2 minutes while the page is open
 })();
 </script>
 </body>
