@@ -213,7 +213,7 @@
   function tabs() {
     var box = document.getElementById('tabs'); box.innerHTML = '';
     TABS.forEach(function (t) {
-      if (view === 'standings' && (t[0] === 'ours' || t[0] === 'all')) return;   // standings are one league at a time
+      if (view === 'standings' && (t[0] === 'ours' || t[0] === 'all' || NO_STANDINGS.indexOf(t[0]) >= 0)) return;   // standings are one league at a time
       var b = el('button', 'pill', t[1]);
       b.setAttribute('aria-pressed', String(state.tab === t[0]));
       b.onclick = function () { state.tab = t[0]; state.team = 'all'; render(); };
@@ -246,6 +246,7 @@
 
   // ---- Standings: ESPN for NHL / NBA / NFL / MLB, the league's own stats site for CFL (via the collector)
   var standCache = {};
+  var NO_STANDINGS = ['mlb'];   // regular season over (playoff games still show under Games); remove 'mlb' next spring
   var COLS = {
     nhl: [['GP', 'GP'], ['W', 'W'], ['L', 'L'], ['OTL', 'OTL'], ['PTS', 'PTS'], ['DIFF', 'DIFF', 1], ['STRK', 'STRK', 1]],
     nba: [['W', 'W'], ['L', 'L'], ['PCT', 'PCT'], ['GB', 'GB'], ['STRK', 'STRK', 1]],
@@ -281,7 +282,7 @@
       .then(function (j) { return k === 'cfl' ? (j.cfl_standings || []) : ((j.standings || {})[k] || []); });
   }
   function renderStandings() {
-    if (!LEAGUES[state.tab]) state.tab = 'nhl';
+    if (!LEAGUES[state.tab] || NO_STANDINGS.indexOf(state.tab) >= 0) state.tab = 'nhl';
     tabs();
     document.getElementById('team').style.display = 'none';
     document.getElementById('updated').textContent = '';
