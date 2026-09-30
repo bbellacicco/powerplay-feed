@@ -617,6 +617,133 @@ def _iso_date(val):
         return ""
 
 
+# ------------------------------------------------------------------ Standings
+# HockeyTech leagues (same public keys the leagues' own sites use)
+STANDINGS_LEAGUES = {
+    "ohl": ("ohl", OHL_KEY),
+    "ojhl": ("ojhl", "77a0bd73d9d363d3"),
+    "gohl": ("gojhl", "34b10d4d34d7b59a"),
+    "pwhl": ("pwhl", "446521baf8c38984"),
+}
+
+
+def _streak(v):
+    """Turn '2-0-0-0' (HockeyTech) or 'Won 6' (GameSheet) into 'W2' / 'W6'."""
+    v = (v or "").strip()
+    m = re.fullmatch(r"(\d+)-(\d+)-(\d+)-(\d+)", v)
+    if m:
+        for n, tag in zip(m.groups(), ("W", "L", "OTL", "SOL")):
+            if int(n):
+                return f"{tag}{n}"
+        return ""
+    m = re.fullmatch(r"(Won|Lost|Tied|W|L|T)\s*(\d+)", v, re.I)
+    if m:
+        return m.group(1)[0].upper() + m.group(2)
+    return v
+
+
+def _hockeytech_standings(client, key):
+    url = ("https://lscluster.hockeytech.com/feed/index.php?feed=statviewfeed&view=teams&groupTeamsBy=division"
+           f"&context=overall&site_id=0&season=&special=false&key={key}&client_code={client}&league_code=&lang=en&fmt=json")
+    raw = fetch(url, f"standings_{client}.json" if FIXTURES else None).strip()
+    if raw.startswith("(") and raw.endswith(")"):
+        raw = raw[1:-1]
+    groups = []
+    for sec in json.loads(raw)[0]["sections"]:
+        title = (((sec.get("headers") or {}).get("name") or {}).get("properties") or {}).get("title") or ""
+        teams = []
+        for d in sec.get("data", []):
+            r = d.get("row", {})
+            otl = (to_int(r.get("ot_losses")) or 0) + (to_int(r.get("shootout_losses")) or 0)
+            if client == "pwhl":        # PWHL: 3 pts regulation win, 2 OT/SO win, 1 OT/SO loss
+                w = (to_int(r.get("regulation_wins")) or 0) + (to_int(r.get("non_reg_wins")) or 0)
+                otl = to_int(r.get("non_reg_losses")) or 0
+            else:
+                w = to_int(r.get("wins"))
+            teams.append({"name": r.get("name", ""), "abbr": r.get("team_code", ""),
+                          "gp": to_int(r.get("games_played")), "w": w, "l": to_int(r.get("losses")),
+                          "otl": otl, "pts": to_int(r.get("points")),
+                          "gf": to_int(r.get("goals_for")), "ga": to_int(r.get("goals_against")),
+                          "strk": _streak(r.get("streak") or r.get("streak_wl"))})
+        if teams:
+            groups.append({"group": title, "teams": teams})
+    return groups
+
+
+def _pjhl_standings(season):
+    """PJHL (GameSheet): only the divisions our Jr. C clubs play in."""
+    html = fetch(f"https://gamesheetstats.com/seasons/{season}/standings?configuration=45",
+                 "pjhl_standings.html" if FIXTURES else None)
+    ours = {cfg["team_id"] for _, _, src, cfg in JUNIOR_TEAMS if src == "gamesheet"}
+    divs, seen = {}, set()
+    for o in _next_payload_objects(html, marker='{"division":'):
+        if o.get("gameType") != "overall" or o.get("id") in seen or not isinstance(o.get("team"), dict):
+            continue
+        seen.add(o.get("id"))
+        st, tm = o.get("stats") or {}, o["team"]
+        d = divs.setdefault(o["division"].get("title", ""), {"ids": set(), "teams": []})
+        d["ids"].add(tm.get("id"))
+        d["teams"].append({"rank": o.get("rank") or 99, "name": tm.get("title", ""), "abbr": tm.get("abbreviation", ""),
+                           "gp": st.get("GP"), "w": st.get("W"), "l": st.get("L"),
+                           "otl": (st.get("OTL") or 0) + (st.get("SOL") or 0), "pts": st.get("PTS"),
+                           "gf": st.get("GF"), "ga": st.get("GA"), "strk": _streak(st.get("STK"))})
+    out = []
+    for title, d in divs.items():
+        if d["ids"] & ours:
+            teams = sorted(d["teams"], key=lambda t: t["rank"])
+            for t in teams:
+                t.pop("rank", None)
+            out.append({"group": "PJHL " + title, "teams": teams})
+    return out
+
+
+def scrape_standings():
+    out, errors = {}, {}
+    for name, (client, key) in STANDINGS_LEAGUES.items():
+        try:
+            out[name] = _hockeytech_standings(client, key)
+        except Exception as ex:
+            errors[name] = str(ex)[:200]
+    try:
+        season = next(cfg["season"] for _, _, src, cfg in JUNIOR_TEAMS if src == "gamesheet")
+        out["pjhl"] = _pjhl_standings(season)
+    except Exception as ex:
+        errors["pjhl"] = str(ex)[:200]
+    return out, errors
+
+
+def scrape_pwhl(today):
+    """Every PWHL game from 3 days back to 3 days ahead, for the Pro Hub (ESPN doesn't carry the PWHL)."""
+    client, key = STANDINGS_LEAGUES["pwhl"]
+    url = ("https://lscluster.hockeytech.com/feed/?feed=modulekit&view=scorebar"
+           f"&key={key}&client_code={client}&numberofdaysback={DAYS_BACK}&numberofdaysahead={DAYS_AHEAD}"
+           "&season_id=&limit=500&lang_code=en&fmt=json")
+    data = json.loads(fetch(url, "pwhl.json" if FIXTURES else None))
+    out = []
+    for g in data["SiteKit"]["Scorebar"]:
+        start = datetime.fromisoformat(g["GameDateISO8601"]).astimezone(TZ)
+        code, period = g.get("GameStatus"), to_int(g.get("Period")) or 0
+        hg, vg = to_int(g["HomeGoals"]), to_int(g["VisitorGoals"])
+        status, note = "upcoming", ""
+        if code == "4":
+            status = "final"
+            note = "OT" if period == 4 else "SO" if period >= 5 else ""
+        elif code in ("2", "3"):
+            status, note = "live", g.get("GameStatusString", "")
+        else:
+            hg = vg = None
+        low = (g.get("GameStatusString") or "").lower()
+        if "postpon" in low:
+            status = "postponed"
+        out.append({"league": "pwhl", "start": start.isoformat(), "status": status,
+                    "home": g["HomeLongName"], "away": g["VisitorLongName"],
+                    "home_abbr": g.get("HomeCode", ""), "away_abbr": g.get("VisitorCode", ""),
+                    "our_score": vg, "opp_score": hg,          # same layout as the CFL games: away, home
+                    "location": g.get("venue_name", ""), "note": note, "time_tbd": g.get("TimeTbd") == "1",
+                    "link": f"https://www.thepwhl.com/en/stats/game-center/{g['ID']}"})
+    return out
+
+
 CFL_NAMES = {"BC": "BC Lions", "CGY": "Calgary Stampeders", "EDM": "Edmonton Elks", "SSK": "Saskatchewan Roughriders",
              "WPG": "Winnipeg Blue Bombers", "HAM": "Hamilton Tiger-Cats", "TOR": "Toronto Argonauts",
              "OTT": "Ottawa Redblacks", "MTL": "Montreal Alouettes"}
@@ -802,6 +929,30 @@ def main():
         except (OSError, ValueError):
             pass
 
+    standings, st_err = scrape_standings()
+    for k in ("ohl", "ojhl", "gohl", "pjhl", "pwhl"):
+        if k in st_err:
+            sources["standings_" + k] = {"ok": False, "error": st_err[k]}
+            print(f"standings {k}: FAILED - {st_err[k]}", file=sys.stderr)
+        else:
+            sources["standings_" + k] = {"ok": True, "count": sum(len(g["teams"]) for g in standings.get(k, []))}
+    if st_err:     # keep the last good copy of anything that failed
+        try:
+            old_st = json.load(open(OUT_FILE, encoding="utf-8")).get("standings", {})
+            for k in st_err:
+                if k in old_st:
+                    standings[k] = old_st[k]
+        except (OSError, ValueError):
+            pass
+    try:
+        pwhl = [g for g in scrape_pwhl(today) if lo <= datetime.fromisoformat(g["start"]) < hi]
+        pro_games = pro_games + pwhl
+        sources["pwhl"] = {"ok": True, "count": len(pwhl)}
+        print(f"pwhl: {len(pwhl)} games")
+    except Exception as ex:
+        sources["pwhl"] = {"ok": False, "error": str(ex)[:200]}
+        print(f"pwhl: FAILED - {ex}", file=sys.stderr)
+
     cfl_standings = []
     try:
         cfl_standings = scrape_cfl_standings(today)
@@ -826,6 +977,7 @@ def main():
         "pro_games": pro_games,   # CFL, used by pro-games.html
         "pro_news": pro_news,     # CFL stories, used by news-feed.html
         "cfl_standings": cfl_standings,   # used by the Standings view in pro-games.html
+        "standings": standings,           # OHL, OJHL, GOHL, PJHL (Local Hub) and PWHL (Pro Hub)
     }
     os.makedirs(os.path.dirname(OUT_FILE), exist_ok=True)
     new = json.dumps(payload, ensure_ascii=False, indent=1)
@@ -835,7 +987,8 @@ def main():
             old = json.load(open(OUT_FILE, encoding="utf-8"))
             if (old.get("games") == games and old.get("sources") == sources
                     and old.get("today") == payload["today"] and old.get("pro_games") == pro_games
-                    and old.get("pro_news") == pro_news and old.get("cfl_standings") == cfl_standings):
+                    and old.get("pro_news") == pro_news and old.get("cfl_standings") == cfl_standings
+                    and old.get("standings") == standings):
                 print("No changes.")
                 return
         except ValueError:
