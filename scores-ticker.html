@@ -52,7 +52,6 @@ html,body{width:100%;height:44px;background:#000;overflow:hidden}
 var SPEED = 50;                 // pixels per second
 var MAX_ITEMS = 5;              // total items on the ticker
 var MAX_FINALS = 16;            // how many recent final scores to consider
-var MAX_HS_FINALS = 6;          // of those, at most this many high school games
 var MAX_UPCOMING = 12;          // upcoming games to show once the finals are old
 var FRESH_HOURS = 24;           // a final score counts as "current" for this many hours after the game
 var TZ = 'America/Toronto';
@@ -88,6 +87,16 @@ function byPrio(newestFirst){
   };
 }
 
+// Which local games count as ticker / feed material (everything else stays in the Local Hub):
+// all Spitfires and junior hockey, Lancers football + basketball, St. Clair football, softball and soccer.
+function pertinent(g){
+  var s = (g.sport || '').toLowerCase();
+  if (g.team === 'spitfires' || g.team === 'junior') return true;
+  if (g.team === 'lancers') return /football|basketball/.test(s);
+  if (g.team === 'saints') return /football|softball|fastball|soccer/.test(s);   // St. Clair calls softball "Fastball"
+  return false;
+}
+
 // ---------- local
 function localItems(){
   return Promise.all([getJSON(BASE + 'local-games.json'), getJSON(BASE + 'highschool.json').catch(function(){ return null; }),
@@ -104,7 +113,7 @@ function localItems(){
         var d = new Date(g.start), isToday = dayKey(d) === today;
         var kind = g.status === 'live' ? 'live' : g.status === 'final' ? 'final' : (g.status === 'upcoming' ? 'upcoming' : null);
         if (!kind || (kind !== 'upcoming' && g.our_score == null)) return;
-        if (/volleyball/i.test(g.sport || '')) return;
+        if (!pertinent(g)) return;                       // high school and other sports stay in the Local Hub
         // a game still marked live 4+ hours after it started is stale data, not a live game
         if (kind === 'live' && Date.now() - d.getTime() > 4 * 3600e3) return;                          // volleyball left off the ticker
         var left, right;
@@ -159,20 +168,21 @@ var KIND_ORDER = { live: 0, final: 1, upcoming: 2 };
 function order(items){
   var now = Date.now(), since = now - FRESH_HOURS * 3600e3;
   var todayKey = dayKey(new Date());
-  var hsCount = 0;
   var live = items.filter(function(i){ return i.kind === 'live'; });
   var fin = items.filter(function(i){ return i.kind === 'final' && new Date(i.start).getTime() >= since; });
   var up = items.filter(function(i){ return i.kind === 'upcoming'; });
-  // with fresh finals around, only today's upcoming games for the top teams get a spot
-  if (fin.length) up = up.filter(function(i){ return (i.prio || 5) <= 3 && dayKey(new Date(i.start)) === todayKey; });
-  return live.concat(fin, up).sort(function(a, b){
+  var byPrio = function(a, b){
     var pa = a.prio || 5, pb = b.prio || 5;
     if (pa !== pb) return pa - pb;
     if (a.kind !== b.kind) return KIND_ORDER[a.kind] - KIND_ORDER[b.kind];
     if (a.kind === 'final') return a.start < b.start ? 1 : -1;
     return a.start < b.start ? -1 : 1;
-  }).filter(function(i){ return !i.hs || ++hsCount <= MAX_HS_FINALS; })
-    .slice(0, MAX_ITEMS);
+  };
+  // live games and fresh finals first; if that's fewer than MAX_ITEMS, the next games coming up
+  // fill the rest (soonest first), so a lone score doesn't just repeat across the bar
+  var top = live.concat(fin).sort(byPrio).slice(0, MAX_ITEMS);
+  var soon = up.sort(function(a, b){ return a.start < b.start ? -1 : a.start > b.start ? 1 : (a.prio || 5) - (b.prio || 5); });
+  return top.concat(soon.slice(0, MAX_ITEMS - top.length));
 }
 
 // ---------- drawing (same seamless loop as ticker.html)
