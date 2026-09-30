@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-30T18:01:34-04:00",
+ "updated": "2026-09-30T18:46:34-04:00",
  "today": "2026-09-30",
  "range": [
   "2026-09-27",
@@ -64,6 +64,30 @@
   "cfl_news": {
    "ok": true,
    "count": 30
+  },
+  "standings_ohl": {
+   "ok": true,
+   "count": 20
+  },
+  "standings_ojhl": {
+   "ok": true,
+   "count": 24
+  },
+  "standings_gohl": {
+   "ok": true,
+   "count": 24
+  },
+  "standings_pjhl": {
+   "ok": false,
+   "error": "HTTP Error 403: Forbidden"
+  },
+  "standings_pwhl": {
+   "ok": true,
+   "count": 12
+  },
+  "pwhl": {
+   "ok": true,
+   "count": 0
   },
   "cfl_standings": {
    "ok": true,
@@ -1326,5 +1350,1020 @@
     }
    ]
   }
- ]
+ ],
+ "standings": {
+  "ohl": [
+   {
+    "group": "East Division",
+    "teams": [
+     {
+      "name": "Brantford Bulldogs",
+      "abbr": "BFD",
+      "gp": 5,
+      "w": 5,
+      "l": 0,
+      "otl": 0,
+      "pts": 10,
+      "gf": 29,
+      "ga": 10,
+      "strk": "W5"
+     },
+     {
+      "name": "Oshawa Generals",
+      "abbr": "OSH",
+      "gp": 5,
+      "w": 3,
+      "l": 2,
+      "otl": 0,
+      "pts": 6,
+      "gf": 17,
+      "ga": 17,
+      "strk": "L1"
+     },
+     {
+      "name": "Kingston Frontenacs",
+      "abbr": "KGN",
+      "gp": 5,
+      "w": 2,
+      "l": 3,
+      "otl": 0,
+      "pts": 4,
+      "gf": 19,
+      "ga": 26,
+      "strk": "L3"
+     },
+     {
+      "name": "Ottawa 67's",
+      "abbr": "OTT",
+      "gp": 3,
+      "w": 1,
+      "l": 1,
+      "otl": 1,
+      "pts": 3,
+      "gf": 11,
+      "ga": 16,
+      "strk": "L1"
+     },
+     {
+      "name": "Peterborough Petes",
+      "abbr": "PBO",
+      "gp": 5,
+      "w": 1,
+      "l": 4,
+      "otl": 0,
+      "pts": 2,
+      "gf": 16,
+      "ga": 23,
+      "strk": "L2"
+     }
+    ]
+   },
+   {
+    "group": "Central Division",
+    "teams": [
+     {
+      "name": "Sudbury Wolves",
+      "abbr": "SBY",
+      "gp": 4,
+      "w": 4,
+      "l": 0,
+      "otl": 0,
+      "pts": 8,
+      "gf": 17,
+      "ga": 5,
+      "strk": "W4"
+     },
+     {
+      "name": "Niagara IceDogs",
+      "abbr": "NIAG",
+      "gp": 4,
+      "w": 2,
+      "l": 2,
+      "otl": 0,
+      "pts": 4,
+      "gf": 13,
+      "ga": 11,
+      "strk": "W1"
+     },
+     {
+      "name": "North Bay Battalion",
+      "abbr": "NB",
+      "gp": 4,
+      "w": 2,
+      "l": 2,
+      "otl": 0,
+      "pts": 4,
+      "gf": 13,
+      "ga": 15,
+      "strk": "L1"
+     },
+     {
+      "name": "Brampton Steelheads",
+      "abbr": "BRAM",
+      "gp": 5,
+      "w": 0,
+      "l": 5,
+      "otl": 0,
+      "pts": 0,
+      "gf": 10,
+      "ga": 22,
+      "strk": "L5"
+     },
+     {
+      "name": "Barrie Colts",
+      "abbr": "BAR",
+      "gp": 4,
+      "w": 0,
+      "l": 4,
+      "otl": 0,
+      "pts": 0,
+      "gf": 5,
+      "ga": 17,
+      "strk": "L4"
+     }
+    ]
+   },
+   {
+    "group": "West Division",
+    "teams": [
+     {
+      "name": "Sarnia Sting",
+      "abbr": "SAR",
+      "gp": 4,
+      "w": 3,
+      "l": 1,
+      "otl": 0,
+      "pts": 6,
+      "gf": 23,
+      "ga": 16,
+      "strk": "W2"
+     },
+     {
+      "name": "Soo Greyhounds",
+      "abbr": "SOO",
+      "gp": 4,
+      "w": 3,
+      "l": 1,
+      "otl": 0,
+      "pts": 6,
+      "gf": 19,
+      "ga": 15,
+      "strk": "W2"
+     },
+     {
+      "name": "Flint Firebirds",
+      "abbr": "FLNT",
+      "gp": 3,
+      "w": 2,
+      "l": 1,
+      "otl": 0,
+      "pts": 4,
+      "gf": 11,
+      "ga": 11,
+      "strk": "L1"
+     },
+     {
+      "name": "Windsor Spitfires",
+      "abbr": "WSR",
+      "gp": 4,
+      "w": 1,
+      "l": 2,
+      "otl": 1,
+      "pts": 3,
+      "gf": 12,
+      "ga": 16,
+      "strk": "W1"
+     },
+     {
+      "name": "Saginaw Spirit",
+      "abbr": "SAG",
+      "gp": 4,
+      "w": 1,
+      "l": 2,
+      "otl": 1,
+      "pts": 3,
+      "gf": 16,
+      "ga": 19,
+      "strk": "L1"
+     }
+    ]
+   },
+   {
+    "group": "Midwest Division",
+    "teams": [
+     {
+      "name": "Kitchener Rangers",
+      "abbr": "KIT",
+      "gp": 5,
+      "w": 3,
+      "l": 2,
+      "otl": 0,
+      "pts": 6,
+      "gf": 17,
+      "ga": 12,
+      "strk": "W2"
+     },
+     {
+      "name": "London Knights",
+      "abbr": "LDN",
+      "gp": 3,
+      "w": 3,
+      "l": 0,
+      "otl": 0,
+      "pts": 6,
+      "gf": 16,
+      "ga": 8,
+      "strk": "W3"
+     },
+     {
+      "name": "Erie Otters",
+      "abbr": "ER",
+      "gp": 3,
+      "w": 2,
+      "l": 0,
+      "otl": 1,
+      "pts": 5,
+      "gf": 12,
+      "ga": 8,
+      "strk": "W2"
+     },
+     {
+      "name": "Guelph Storm",
+      "abbr": "GUE",
+      "gp": 4,
+      "w": 2,
+      "l": 2,
+      "otl": 0,
+      "pts": 4,
+      "gf": 12,
+      "ga": 12,
+      "strk": "W2"
+     },
+     {
+      "name": "Owen Sound Attack",
+      "abbr": "OS",
+      "gp": 4,
+      "w": 1,
+      "l": 3,
+      "otl": 0,
+      "pts": 2,
+      "gf": 7,
+      "ga": 16,
+      "strk": "L3"
+     }
+    ]
+   }
+  ],
+  "ojhl": [
+   {
+    "group": "East Conference",
+    "teams": [
+     {
+      "name": "Markham Royals",
+      "abbr": "MAR",
+      "gp": 11,
+      "w": 11,
+      "l": 0,
+      "otl": 0,
+      "pts": 22,
+      "gf": 50,
+      "ga": 25,
+      "strk": "W11"
+     },
+     {
+      "name": "Wellington Dukes",
+      "abbr": "WEL",
+      "gp": 8,
+      "w": 5,
+      "l": 2,
+      "otl": 1,
+      "pts": 11,
+      "gf": 34,
+      "ga": 23,
+      "strk": "L1"
+     },
+     {
+      "name": "Cobourg Cougars",
+      "abbr": "COB",
+      "gp": 6,
+      "w": 5,
+      "l": 0,
+      "otl": 1,
+      "pts": 11,
+      "gf": 34,
+      "ga": 24,
+      "strk": "W5"
+     },
+     {
+      "name": "St. Michaels Buzzers",
+      "abbr": "STM",
+      "gp": 8,
+      "w": 5,
+      "l": 3,
+      "otl": 0,
+      "pts": 10,
+      "gf": 25,
+      "ga": 37,
+      "strk": "L1"
+     },
+     {
+      "name": "Stouffville Spirit",
+      "abbr": "STO",
+      "gp": 5,
+      "w": 4,
+      "l": 1,
+      "otl": 0,
+      "pts": 8,
+      "gf": 24,
+      "ga": 18,
+      "strk": "W4"
+     },
+     {
+      "name": "Trenton Golden Hawks",
+      "abbr": "TRN",
+      "gp": 7,
+      "w": 3,
+      "l": 3,
+      "otl": 1,
+      "pts": 7,
+      "gf": 33,
+      "ga": 31,
+      "strk": "W1"
+     },
+     {
+      "name": "Pickering Panthers",
+      "abbr": "PIC",
+      "gp": 8,
+      "w": 3,
+      "l": 4,
+      "otl": 1,
+      "pts": 7,
+      "gf": 18,
+      "ga": 21,
+      "strk": "W3"
+     },
+     {
+      "name": "Newmarket Hurricanes",
+      "abbr": "NMH",
+      "gp": 9,
+      "w": 3,
+      "l": 6,
+      "otl": 0,
+      "pts": 6,
+      "gf": 28,
+      "ga": 28,
+      "strk": "L6"
+     },
+     {
+      "name": "Toronto Warriors",
+      "abbr": "TOW",
+      "gp": 9,
+      "w": 2,
+      "l": 5,
+      "otl": 2,
+      "pts": 6,
+      "gf": 18,
+      "ga": 48,
+      "strk": "L2"
+     },
+     {
+      "name": "Lindsay Muskies",
+      "abbr": "LIN",
+      "gp": 8,
+      "w": 2,
+      "l": 6,
+      "otl": 0,
+      "pts": 4,
+      "gf": 31,
+      "ga": 44,
+      "strk": "L5"
+     },
+     {
+      "name": "Aurora Tigers",
+      "abbr": "AUR",
+      "gp": 7,
+      "w": 2,
+      "l": 5,
+      "otl": 0,
+      "pts": 4,
+      "gf": 19,
+      "ga": 31,
+      "strk": "W2"
+     },
+     {
+      "name": "North York Rangers",
+      "abbr": "NYR",
+      "gp": 8,
+      "w": 0,
+      "l": 7,
+      "otl": 1,
+      "pts": 1,
+      "gf": 15,
+      "ga": 36,
+      "strk": "L7"
+     }
+    ]
+   },
+   {
+    "group": "West Conference",
+    "teams": [
+     {
+      "name": "Collingwood Blues",
+      "abbr": "COL",
+      "gp": 9,
+      "w": 8,
+      "l": 1,
+      "otl": 0,
+      "pts": 16,
+      "gf": 52,
+      "ga": 14,
+      "strk": "W2"
+     },
+     {
+      "name": "Milton Menace",
+      "abbr": "MIL",
+      "gp": 9,
+      "w": 7,
+      "l": 2,
+      "otl": 0,
+      "pts": 14,
+      "gf": 29,
+      "ga": 15,
+      "strk": "W1"
+     },
+     {
+      "name": "King Rebellion",
+      "abbr": "KNG",
+      "gp": 8,
+      "w": 7,
+      "l": 1,
+      "otl": 0,
+      "pts": 14,
+      "gf": 30,
+      "ga": 12,
+      "strk": "W3"
+     },
+     {
+      "name": "Leamington Flyers",
+      "abbr": "LEA",
+      "gp": 7,
+      "w": 6,
+      "l": 1,
+      "otl": 0,
+      "pts": 12,
+      "gf": 30,
+      "ga": 13,
+      "strk": "L1"
+     },
+     {
+      "name": "Burlington Cougars",
+      "abbr": "BUR",
+      "gp": 9,
+      "w": 5,
+      "l": 3,
+      "otl": 1,
+      "pts": 11,
+      "gf": 38,
+      "ga": 28,
+      "strk": "W4"
+     },
+     {
+      "name": "Toronto Patriots",
+      "abbr": "PAT",
+      "gp": 7,
+      "w": 5,
+      "l": 2,
+      "otl": 0,
+      "pts": 10,
+      "gf": 39,
+      "ga": 14,
+      "strk": "L1"
+     },
+     {
+      "name": "Caledon Admirals",
+      "abbr": "CAL",
+      "gp": 7,
+      "w": 4,
+      "l": 2,
+      "otl": 1,
+      "pts": 9,
+      "gf": 22,
+      "ga": 23,
+      "strk": "W1"
+     },
+     {
+      "name": "Mississauga Chargers",
+      "abbr": "MIS",
+      "gp": 9,
+      "w": 3,
+      "l": 6,
+      "otl": 0,
+      "pts": 6,
+      "gf": 29,
+      "ga": 44,
+      "strk": "W1"
+     },
+     {
+      "name": "Niagara Falls Canucks",
+      "abbr": "NFC",
+      "gp": 11,
+      "w": 2,
+      "l": 7,
+      "otl": 2,
+      "pts": 6,
+      "gf": 28,
+      "ga": 40,
+      "strk": "L6"
+     },
+     {
+      "name": "Georgetown Raiders",
+      "abbr": "GEO",
+      "gp": 9,
+      "w": 2,
+      "l": 5,
+      "otl": 2,
+      "pts": 6,
+      "gf": 25,
+      "ga": 48,
+      "strk": "L3"
+     },
+     {
+      "name": "Oakville Blades",
+      "abbr": "OAK",
+      "gp": 8,
+      "w": 2,
+      "l": 5,
+      "otl": 1,
+      "pts": 5,
+      "gf": 25,
+      "ga": 40,
+      "strk": "L2"
+     },
+     {
+      "name": "Buffalo Jr. Sabres",
+      "abbr": "BUF",
+      "gp": 9,
+      "w": 2,
+      "l": 7,
+      "otl": 0,
+      "pts": 4,
+      "gf": 18,
+      "ga": 37,
+      "strk": "L2"
+     }
+    ]
+   }
+  ],
+  "gohl": [
+   {
+    "group": "Western Conference",
+    "teams": [
+     {
+      "name": "St. Marys Lincolns",
+      "abbr": "SMY",
+      "gp": 6,
+      "w": 5,
+      "l": 1,
+      "otl": 0,
+      "pts": 10,
+      "gf": 32,
+      "ga": 18,
+      "strk": "W3"
+     },
+     {
+      "name": "Chatham Maroons",
+      "abbr": "CHA",
+      "gp": 6,
+      "w": 5,
+      "l": 1,
+      "otl": 0,
+      "pts": 10,
+      "gf": 29,
+      "ga": 17,
+      "strk": "L1"
+     },
+     {
+      "name": "St. Thomas Stars",
+      "abbr": "STT",
+      "gp": 6,
+      "w": 5,
+      "l": 1,
+      "otl": 0,
+      "pts": 10,
+      "gf": 22,
+      "ga": 15,
+      "strk": "L1"
+     },
+     {
+      "name": "Elmira Sugar Kings",
+      "abbr": "ELM",
+      "gp": 6,
+      "w": 4,
+      "l": 2,
+      "otl": 0,
+      "pts": 8,
+      "gf": 31,
+      "ga": 24,
+      "strk": "L1"
+     },
+     {
+      "name": "Listowel Cyclones",
+      "abbr": "LIS",
+      "gp": 5,
+      "w": 2,
+      "l": 1,
+      "otl": 2,
+      "pts": 6,
+      "gf": 23,
+      "ga": 17,
+      "strk": "W2"
+     },
+     {
+      "name": "Woodstock Navy Vets",
+      "abbr": "WNV",
+      "gp": 6,
+      "w": 3,
+      "l": 3,
+      "otl": 0,
+      "pts": 6,
+      "gf": 21,
+      "ga": 28,
+      "strk": "L1"
+     },
+     {
+      "name": "Komoka Kings",
+      "abbr": "KOM",
+      "gp": 7,
+      "w": 3,
+      "l": 4,
+      "otl": 0,
+      "pts": 6,
+      "gf": 21,
+      "ga": 26,
+      "strk": "W1"
+     },
+     {
+      "name": "LaSalle Vipers",
+      "abbr": "LAS",
+      "gp": 4,
+      "w": 2,
+      "l": 2,
+      "otl": 0,
+      "pts": 4,
+      "gf": 13,
+      "ga": 17,
+      "strk": "W1"
+     },
+     {
+      "name": "Stratford Warriors",
+      "abbr": "SFD",
+      "gp": 5,
+      "w": 2,
+      "l": 3,
+      "otl": 0,
+      "pts": 4,
+      "gf": 18,
+      "ga": 22,
+      "strk": "W2"
+     },
+     {
+      "name": "London Nationals",
+      "abbr": "LON",
+      "gp": 5,
+      "w": 1,
+      "l": 3,
+      "otl": 1,
+      "pts": 3,
+      "gf": 17,
+      "ga": 20,
+      "strk": "W1"
+     },
+     {
+      "name": "Strathroy Rockets",
+      "abbr": "SRY",
+      "gp": 5,
+      "w": 1,
+      "l": 3,
+      "otl": 1,
+      "pts": 3,
+      "gf": 17,
+      "ga": 23,
+      "strk": "L3"
+     },
+     {
+      "name": "Sarnia Legionnaires",
+      "abbr": "SAR",
+      "gp": 4,
+      "w": 0,
+      "l": 4,
+      "otl": 0,
+      "pts": 0,
+      "gf": 6,
+      "ga": 20,
+      "strk": "L4"
+     }
+    ]
+   },
+   {
+    "group": "Eastern Conference",
+    "teams": [
+     {
+      "name": "Cambridge Redhawks",
+      "abbr": "CAM",
+      "gp": 6,
+      "w": 6,
+      "l": 0,
+      "otl": 0,
+      "pts": 12,
+      "gf": 40,
+      "ga": 15,
+      "strk": "W6"
+     },
+     {
+      "name": "St. Catharines Falcons",
+      "abbr": "SCF",
+      "gp": 7,
+      "w": 6,
+      "l": 1,
+      "otl": 0,
+      "pts": 12,
+      "gf": 37,
+      "ga": 16,
+      "strk": "W3"
+     },
+     {
+      "name": "Fort Erie Meteors",
+      "abbr": "FEM",
+      "gp": 5,
+      "w": 5,
+      "l": 0,
+      "otl": 0,
+      "pts": 10,
+      "gf": 28,
+      "ga": 14,
+      "strk": "W5"
+     },
+     {
+      "name": "Pelham Panthers",
+      "abbr": "PEL",
+      "gp": 6,
+      "w": 5,
+      "l": 1,
+      "otl": 0,
+      "pts": 10,
+      "gf": 29,
+      "ga": 18,
+      "strk": "W2"
+     },
+     {
+      "name": "Caledonia Corvairs",
+      "abbr": "CAL",
+      "gp": 6,
+      "w": 4,
+      "l": 1,
+      "otl": 1,
+      "pts": 9,
+      "gf": 21,
+      "ga": 15,
+      "strk": "W1"
+     },
+     {
+      "name": "Ayr Centennials",
+      "abbr": "AYR",
+      "gp": 5,
+      "w": 4,
+      "l": 1,
+      "otl": 0,
+      "pts": 8,
+      "gf": 19,
+      "ga": 14,
+      "strk": "W4"
+     },
+     {
+      "name": "Waterloo Siskins",
+      "abbr": "WAT",
+      "gp": 4,
+      "w": 3,
+      "l": 1,
+      "otl": 0,
+      "pts": 6,
+      "gf": 15,
+      "ga": 9,
+      "strk": "W1"
+     },
+     {
+      "name": "Port Colborne Sailors",
+      "abbr": "PCS",
+      "gp": 5,
+      "w": 2,
+      "l": 3,
+      "otl": 0,
+      "pts": 4,
+      "gf": 20,
+      "ga": 27,
+      "strk": "L1"
+     },
+     {
+      "name": "Brantford Titans",
+      "abbr": "BFD",
+      "gp": 7,
+      "w": 1,
+      "l": 6,
+      "otl": 0,
+      "pts": 2,
+      "gf": 14,
+      "ga": 32,
+      "strk": "L1"
+     },
+     {
+      "name": "Stoney Creek Generals",
+      "abbr": "SCG",
+      "gp": 10,
+      "w": 1,
+      "l": 9,
+      "otl": 0,
+      "pts": 2,
+      "gf": 27,
+      "ga": 47,
+      "strk": "L5"
+     },
+     {
+      "name": "Hamilton Steel",
+      "abbr": "HAM",
+      "gp": 7,
+      "w": 0,
+      "l": 6,
+      "otl": 1,
+      "pts": 1,
+      "gf": 17,
+      "ga": 33,
+      "strk": "L6"
+     },
+     {
+      "name": "Welland Canadians",
+      "abbr": "WEL",
+      "gp": 7,
+      "w": 0,
+      "l": 7,
+      "otl": 0,
+      "pts": 0,
+      "gf": 16,
+      "ga": 46,
+      "strk": "L7"
+     }
+    ]
+   }
+  ],
+  "pwhl": [
+   {
+    "group": "PWHL",
+    "teams": [
+     {
+      "name": "Boston Fleet",
+      "abbr": "BOS",
+      "gp": 0,
+      "w": 0,
+      "l": 0,
+      "otl": 0,
+      "pts": 0,
+      "gf": 0,
+      "ga": 0,
+      "strk": ""
+     },
+     {
+      "name": "Minnesota Frost",
+      "abbr": "MIN",
+      "gp": 0,
+      "w": 0,
+      "l": 0,
+      "otl": 0,
+      "pts": 0,
+      "gf": 0,
+      "ga": 0,
+      "strk": ""
+     },
+     {
+      "name": "Montréal Victoire",
+      "abbr": "MTL",
+      "gp": 0,
+      "w": 0,
+      "l": 0,
+      "otl": 0,
+      "pts": 0,
+      "gf": 0,
+      "ga": 0,
+      "strk": ""
+     },
+     {
+      "name": "New York Sirens",
+      "abbr": "NY",
+      "gp": 0,
+      "w": 0,
+      "l": 0,
+      "otl": 0,
+      "pts": 0,
+      "gf": 0,
+      "ga": 0,
+      "strk": ""
+     },
+     {
+      "name": "Ottawa Charge",
+      "abbr": "OTT",
+      "gp": 0,
+      "w": 0,
+      "l": 0,
+      "otl": 0,
+      "pts": 0,
+      "gf": 0,
+      "ga": 0,
+      "strk": ""
+     },
+     {
+      "name": "Toronto Sceptres",
+      "abbr": "TOR",
+      "gp": 0,
+      "w": 0,
+      "l": 0,
+      "otl": 0,
+      "pts": 0,
+      "gf": 0,
+      "ga": 0,
+      "strk": ""
+     },
+     {
+      "name": "Seattle Torrent",
+      "abbr": "SEA",
+      "gp": 0,
+      "w": 0,
+      "l": 0,
+      "otl": 0,
+      "pts": 0,
+      "gf": 0,
+      "ga": 0,
+      "strk": ""
+     },
+     {
+      "name": "Vancouver Goldeneyes",
+      "abbr": "VAN",
+      "gp": 0,
+      "w": 0,
+      "l": 0,
+      "otl": 0,
+      "pts": 0,
+      "gf": 0,
+      "ga": 0,
+      "strk": ""
+     },
+     {
+      "name": "PWHL Detroit",
+      "abbr": "DET",
+      "gp": 0,
+      "w": 0,
+      "l": 0,
+      "otl": 0,
+      "pts": 0,
+      "gf": 0,
+      "ga": 0,
+      "strk": ""
+     },
+     {
+      "name": "PWHL Hamilton",
+      "abbr": "HAM",
+      "gp": 0,
+      "w": 0,
+      "l": 0,
+      "otl": 0,
+      "pts": 0,
+      "gf": 0,
+      "ga": 0,
+      "strk": ""
+     },
+     {
+      "name": "PWHL Las Vegas",
+      "abbr": "VEG",
+      "gp": 0,
+      "w": 0,
+      "l": 0,
+      "otl": 0,
+      "pts": 0,
+      "gf": 0,
+      "ga": 0,
+      "strk": ""
+     },
+     {
+      "name": "PWHL San Jose",
+      "abbr": "SJ",
+      "gp": 0,
+      "w": 0,
+      "l": 0,
+      "otl": 0,
+      "pts": 0,
+      "gf": 0,
+      "ga": 0,
+      "strk": ""
+     }
+    ]
+   }
+  ]
+ }
 }
