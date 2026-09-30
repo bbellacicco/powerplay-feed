@@ -1,111 +1,7 @@
 {
- "updated": "2026-09-29T00:18:01-04:00",
- "today": "2026-09-29",
+ "updated": "2026-09-30T00:18:02-04:00",
+ "today": "2026-09-30",
  "games": [
-  {
-   "id": "saints-presto2026-09-26-0",
-   "team": "saints",
-   "sport": "Men's Volleyball",
-   "start": "2026-09-26T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Georgian",
-   "location": "DBARC | Mohawk College",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 2,
-   "result": "W",
-   "note": "Exhibition · Mohawk Invitational",
-   "links": {}
-  },
-  {
-   "id": "saints-presto2026-09-26-6",
-   "team": "saints",
-   "sport": "Men's Volleyball",
-   "start": "2026-09-26T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "A",
-   "opponent": "Canadore",
-   "location": "",
-   "status": "final",
-   "our_score": 0,
-   "opp_score": 3,
-   "result": "L",
-   "note": "Exhibition · Mohawk Invitational",
-   "links": {}
-  },
-  {
-   "id": "saints-presto2026-09-26-2",
-   "team": "saints",
-   "sport": "Baseball",
-   "start": "2026-09-26T13:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Sault",
-   "location": "",
-   "status": "final",
-   "our_score": 6,
-   "opp_score": 2,
-   "result": "W",
-   "note": "",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/bsb/2026-27/boxscores/20260926_ibxo.xml"
-   }
-  },
-  {
-   "id": "saints-presto2026-09-26-1",
-   "team": "saints",
-   "sport": "Women's Soccer",
-   "start": "2026-09-26T13:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Conestoga",
-   "location": "",
-   "status": "final",
-   "our_score": 6,
-   "opp_score": 1,
-   "result": "W",
-   "note": "",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/wsoc/2026-27/boxscores/20260926_akn0.xml"
-   }
-  },
-  {
-   "id": "saints-presto2026-09-26-3",
-   "team": "saints",
-   "sport": "Baseball",
-   "start": "2026-09-26T15:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Sault",
-   "location": "",
-   "status": "final",
-   "our_score": 15,
-   "opp_score": 0,
-   "result": "W",
-   "note": "",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/bsb/2026-27/boxscores/20260926_sfor.xml"
-   }
-  },
-  {
-   "id": "saints-presto2026-09-26-4",
-   "team": "saints",
-   "sport": "Men's Soccer",
-   "start": "2026-09-26T15:15:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Conestoga",
-   "location": "",
-   "status": "final",
-   "our_score": 2,
-   "opp_score": 0,
-   "result": "W",
-   "note": "",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/msoc/2026-27/boxscores/20260926_yiyb.xml"
-   }
-  },
   {
    "id": "saints-presto2026-09-27-0",
    "team": "saints",
@@ -231,6 +127,74 @@
    "links": {
     "boxscore": "https://www.saintsathletics.ca/sports/msoc/2026-27/boxscores/20261001_nfpd.xml"
    }
+  },
+  {
+   "id": "saints-presto2026-10-03-2",
+   "team": "saints",
+   "sport": "Baseball",
+   "start": "2026-10-03T13:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Humber",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/bsb/2026-27/boxscores/20261003_ab96.xml"
+   }
+  },
+  {
+   "id": "saints-presto2026-10-03-4",
+   "team": "saints",
+   "sport": "Baseball",
+   "start": "2026-10-03T15:30:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Humber",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/bsb/2026-27/boxscores/20261003_kmks.xml"
+   }
+  },
+  {
+   "id": "saints-presto2026-10-03-5",
+   "team": "saints",
+   "sport": "Women's Soccer",
+   "start": "2026-10-03T16:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Niagara",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {}
+  },
+  {
+   "id": "saints-presto2026-10-03-6",
+   "team": "saints",
+   "sport": "Men's Soccer",
+   "start": "2026-10-03T18:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Niagara",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {}
   }
  ]
 }
