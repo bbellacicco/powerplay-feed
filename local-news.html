@@ -52,6 +52,15 @@
   .thumb { width: 128px; height: 80px; margin: 10px 0; border-radius: 6px; object-fit: cover; background: var(--panel); display: block; }
   .body { padding: 10px 0; min-width: 0; }
   .thumbwrap { position: relative; }
+  .tile-team { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+    color: #fff; padding: 6px; background: linear-gradient(135deg, #1e3a6e, #0b1a33); }
+  .tt-spitfires { background: linear-gradient(135deg, #d4202a, #6e0d12); }
+  .tt-lancers { background: linear-gradient(135deg, #0b5cad, #062c55); }
+  .tt-saints { background: linear-gradient(135deg, #1f9d55, #0c4526); }
+  .tt-junior { background: linear-gradient(135deg, #0891b2, #064a5b); }
+  .tt-powerplay { background: linear-gradient(135deg, #e8b021, #7a5a07); }
+  .tt-kind { font-size: 9px; font-weight: 800; letter-spacing: .12em; opacity: .85; }
+  .tt-name { font-size: 15px; font-weight: 900; letter-spacing: .04em; line-height: 1.1; margin-top: 2px; word-break: break-word; }
   .play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 34px; height: 34px; border-radius: 50%;
     background: rgba(0,0,0,.65); color: #fff; font-size: 14px; display: flex; align-items: center; justify-content: center; padding-left: 3px;
     border: 2px solid #fff; pointer-events: none; }
@@ -399,6 +408,18 @@
     return a;
   }
 
+  // placeholder graphics some teams attach to every story (the Spitfires' red "1920x1080" and "Game Story")
+  var GENERIC_IMG = /(1920x1080-|game-story|placeholder)/i;
+  var TILE_NAME = { powerplay: 'POWERPLAY', spitfires: 'SPITFIRES', lancers: 'LANCERS', saints: 'SAINTS' };
+  function teamTile(s) {
+    var t = el('div', 'thumb tile-team tt-' + s.team);
+    var name = TILE_NAME[s.team] || (s.club || '').replace(/^(Windsor|St\. Clair)\s+/, '').toUpperCase();
+    var kind = /^game story/i.test(s.headline) ? 'GAME STORY' : /highlight/i.test(s.headline) ? 'HIGHLIGHTS' : 'NEWS';
+    t.appendChild(el('div', 'tt-kind', kind));
+    t.appendChild(el('div', 'tt-name', name));
+    return t;
+  }
+
   function card(s) {
     var a = el('a', 'story t-' + s.team);
     a.href = s.url; a.rel = 'noopener';
@@ -406,10 +427,12 @@
     a.target = s.team === 'powerplay' && !s.video ? '_top' : '_blank';
     a.appendChild(el('div', 'stripe'));
     var holder = el('div', 'thumbwrap');
-    var img = el('img', 'thumb'); img.alt = ''; img.loading = 'lazy'; img.referrerPolicy = 'no-referrer';
-    img.onerror = function () { img.style.visibility = 'hidden'; };
-    if (s.image) img.src = s.image; else img.style.visibility = 'hidden';
-    holder.appendChild(img);
+    if (s.image && !GENERIC_IMG.test(s.image)) {
+      var img = el('img', 'thumb'); img.alt = ''; img.loading = 'lazy'; img.referrerPolicy = 'no-referrer';
+      img.onerror = function () { holder.replaceChild(teamTile(s), img); };
+      img.src = s.image;
+      holder.appendChild(img);
+    } else holder.appendChild(teamTile(s));   // no real photo: a clean team-coloured tile instead
     if (s.video) holder.appendChild(el('div', 'play', '▶'));
     a.appendChild(holder);
     var body = el('div', 'body');
