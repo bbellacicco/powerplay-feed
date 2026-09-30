@@ -40,6 +40,15 @@
   .stripe { align-self: stretch; }
   .t-powerplay .stripe { background: var(--powerplay); } .t-spitfires .stripe { background: var(--spitfires); } .t-lancers .stripe { background: var(--lancers); }
   .t-saints .stripe { background: var(--saints); } .t-junior .stripe { background: var(--junior); }
+  .t-highschool .stripe { background: #8b5cf6; }
+  .score { align-items: center; }
+  .tile { width: 128px; height: 64px; margin: 8px 0; border-radius: 6px; background: var(--panel);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1.1; }
+  .tile .fin { font-size: 10px; font-weight: 800; letter-spacing: .06em; color: #111; background: #ffd400; border-radius: 3px; padding: 1px 5px; }
+  .tile .big { font-size: 20px; font-weight: 800; font-variant-numeric: tabular-nums; margin-top: 3px; }
+  .tile .res { font-size: 11px; font-weight: 700; color: var(--muted); }
+  .tile.w .res { color: #2fbf71; } .tile.l .res { color: #e5484d; }
+  .score .headline { font-size: 14px; }
   .thumb { width: 128px; height: 80px; margin: 10px 0; border-radius: 6px; object-fit: cover; background: var(--panel); display: block; }
   .body { padding: 10px 0; min-width: 0; }
   .headline { font-weight: 700; font-size: 15px; line-height: 1.3; }
@@ -71,6 +80,7 @@
   footer { margin-top: 14px; color: var(--muted); font-size: 11px; text-align: center; }
   @media (max-width: 520px) {
     .story { grid-template-columns: 4px 96px 1fr; gap: 10px; }
+    .tile { width: 96px; }
     .thumb { width: 96px; height: 64px; }
     .headline { font-size: 14px; }
     .summary { display: none; }
@@ -84,7 +94,7 @@
   <div class="bar" id="tabs" role="group" aria-label="Team"></div>
   <div class="bar"><select class="pill" id="sub" aria-label="Filter"></select></div>
   <div id="list"><div class="empty">Loading stories…</div></div>
-  <footer id="foot">Powerplay Windsor · Stories from Powerplay Windsor and the teams' own websites. Tap a story to read it there.</footer>
+  <footer id="foot">Powerplay Windsor · Stories and final scores from Powerplay Windsor and the teams' own websites. Tap a story or score for the full details.</footer>
 </div>
 <script>
 (function () {
@@ -92,7 +102,7 @@
   var URL = 'https://bbellacicco.github.io/powerplay-feed/data/local-news.json';
   var MAX_STORIES = 40;
   var TABS = [['all', 'All'], ['powerplay', 'Powerplay'], ['spitfires', 'Spitfires'], ['lancers', 'Lancers'], ['saints', 'Saints'], ['junior', 'Junior Hockey']];
-  var LABEL = { powerplay: 'Powerplay', spitfires: 'Spitfires', lancers: 'Lancers', saints: 'Saints', junior: 'Junior Hockey' };
+  var LABEL = { powerplay: 'Powerplay', spitfires: 'Spitfires', lancers: 'Lancers', saints: 'Saints', junior: 'Junior Hockey', highschool: 'High School' };
 
   var qs = new URLSearchParams(location.search);
   var state = { tab: LABEL[qs.get('tab')] ? qs.get('tab') : 'all', sub: 'all',
@@ -177,7 +187,7 @@
     });
     document.getElementById('foot').textContent = state.view === 'social'
       ? "Powerplay Windsor · Posts load from each team's official Facebook page and YouTube channel."
-      : "Powerplay Windsor · Stories from Powerplay Windsor and the teams' own websites. Tap a story to read it there.";
+      : "Powerplay Windsor · Stories and final scores from Powerplay Windsor and the teams' own websites. Tap a story or score for the full details.";
   }
 
   function heading(text, href, label) {
@@ -215,6 +225,7 @@
   }
 
   function renderSocial() {
+    if (state.tab === 'highschool') state.tab = 'all';
     tabs();
     if (state.tab === 'all') return socialWall();
     var list = SOCIAL[state.tab], sel = document.getElementById('sub');
@@ -256,16 +267,66 @@
     return new Intl.DateTimeFormat('en-CA', { timeZone: TZ, month: 'short', day: 'numeric' }).format(new Date(t));
   }
 
+  // ---- Final scores from the Local Hub's data, shown as cards between the stories.
+  // Tapping one opens the game sheet / box score.
+  var DATA = 'https://bbellacicco.github.io/powerplay-feed/data/';
+  var SCORE_DAYS = 3;          // finals stay in the feed this long
+  var scores = [];
+  function getJSON(name) { return fetch(DATA + name + '?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { if (!r.ok) throw r.status; return r.json(); }); }
+  function loadScores() {
+    return Promise.all([getJSON('local-games.json'), getJSON('highschool.json').catch(function () { return null; }),
+                        getJSON('saints.json').catch(function () { return null; })]).then(function (r) {
+      var j = r[0], hs = r[1], sc = r[2], teams = j.teams || {};
+      var games = j.games.filter(function (g) { return g.team !== 'highschool'; })
+        .concat(hs && hs.games ? hs.games : j.games.filter(function (g) { return g.team === 'highschool'; }));
+      if (sc && sc.games) games = games.filter(function (g) { return !(g.team === 'saints' && g.sport !== 'Football'); })
+        .concat(sc.games.filter(function (g) { return g.sport !== 'Football'; }));
+      var since = Date.now() - SCORE_DAYS * 864e5;
+      scores = games.filter(function (g) {
+        return pertinent(g) && g.status === 'final' && g.our_score != null && g.opp_score != null && new Date(g.start).getTime() >= since;
+      }).map(function (g) { return scoreItem(g, teams); });
+    }).catch(function () { scores = []; });
+  }
+// Which local games count as ticker / feed material (everything else stays in the Local Hub):
+  // all Spitfires and junior hockey, Lancers football + basketball, St. Clair football, softball and soccer.
+  function pertinent(g){
+    var s = (g.sport || '').toLowerCase();
+    if (g.team === 'spitfires' || g.team === 'junior') return true;
+    if (g.team === 'lancers') return /football|basketball/.test(s);
+    if (g.team === 'saints') return /football|softball|fastball|soccer/.test(s);   // St. Clair calls softball "Fastball"
+    return false;
+  }
+  function scoreItem(g, teams) {
+    var t = teams[g.team] || {}, a, b;
+    if (g.home && g.away) { a = { n: g.away, s: g.our_score }; b = { n: g.home, s: g.opp_score }; }   // high school: away / home
+    else { a = { n: g.club || t.short || g.team, s: g.our_score }; b = { n: g.opponent, s: g.opp_score }; }
+    var win = a.s >= b.s ? a : b, lose = win === a ? b : a;
+    var l = g.links || {};
+    return {
+      kind: 'score', team: g.team, club: g.club || '', opp: g.opponent || '', sport: g.sport || '',
+      headline: win.n + ' ' + win.s + ', ' + lose.n + ' ' + lose.s + (win.s === lose.s ? ' (tie)' : ''),
+      result: g.home && g.away ? '' : (g.result || (a.s > b.s ? 'W' : a.s < b.s ? 'L' : 'T')),
+      big: a.s + '–' + b.s, note: g.note || '',
+      // treat a game as "posted" a couple of hours after it started, so it sorts near the recaps
+      published: new Date(new Date(g.start).getTime() + 2.5 * 3600e3).toISOString(),
+      url: l.gamecentre || l.boxscore || l.recap || l.standings || '',
+      urlLabel: l.gamecentre ? 'Game sheet' : l.boxscore ? 'Box score' : l.recap ? 'Recap' : l.standings ? 'Standings' : ''
+    };
+  }
+
   function load() {
-    fetch(URL + '?t=' + Date.now(), { cache: 'no-store' })
-      .then(function (r) { if (!r.ok) throw r.status; return r.json(); })
-      .then(function (j) { stories = j.stories || []; if (state.view === 'stories') render(); })
+    Promise.all([
+      fetch(URL + '?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { if (!r.ok) throw r.status; return r.json(); }),
+      loadScores()
+    ])
+      .then(function (r) { stories = r[0].stories || []; if (state.view === 'stories') render(); })
       .catch(function () { if (!stories) { document.getElementById('list').innerHTML = '<div class="empty">Stories unavailable right now.</div>'; } });
   }
 
   function tabs() {
     var box = document.getElementById('tabs'); box.innerHTML = '';
     TABS.forEach(function (t) {
+      if (state.view === 'social' && t[0] === 'highschool') return;
       var b = el('button', 'pill', t[1]);
       b.setAttribute('aria-pressed', String(state.tab === t[0]));
       b.onclick = function () { state.tab = t[0]; state.sub = 'all'; state.club = 0; render(); };
@@ -278,7 +339,7 @@
   function subSelect(list) {
     var sel = document.getElementById('sub');
     var names = {};
-    if (state.tab === 'junior' || state.tab === 'lancers' || state.tab === 'saints')
+    if (state.tab === 'junior' || state.tab === 'lancers' || state.tab === 'saints' || state.tab === 'highschool')
       list.forEach(function (s) { var k = subKey(s); if (k) names[k] = 1; });
     var keys = Object.keys(names).sort();
     sel.innerHTML = '';
@@ -303,13 +364,35 @@
     if (state.view === 'social') return renderSocial();
     tabs();
     if (!stories) return;
-    var list = state.tab === 'all' ? featured(stories) : stories.filter(function (s) { return s.team === state.tab; });
+    // stories + final scores, newest first (high school scores only on their own tab: there are dozens a week)
+    var mixed = stories.concat(scores)
+      .sort(function (a, b) { return a.published < b.published ? 1 : a.published > b.published ? -1 : 0; });
+    var list = state.tab === 'all' ? mixed : mixed.filter(function (s) { return s.team === state.tab; });
     subSelect(list);
-    if (state.sub !== 'all') list = list.filter(function (s) { return subKey(s) === state.sub; });
+    if (state.sub !== 'all') list = list.filter(function (s) { return subKey(s) === state.sub || (state.tab === 'junior' && s.kind === 'score' && s.opp === state.sub); });
     list = list.slice(0, MAX_STORIES);
     var box = document.getElementById('list'); box.innerHTML = '';
     if (!list.length) { box.appendChild(el('div', 'empty', 'No recent stories.')); return; }
-    list.forEach(function (s) { box.appendChild(card(s)); });
+    list.forEach(function (s) { box.appendChild(s.kind === 'score' ? scoreCard(s) : card(s)); });
+  }
+
+  function scoreCard(s) {
+    var a = el(s.url ? 'a' : 'div', 'story score t-' + s.team);
+    if (s.url) { a.href = s.url; a.target = '_blank'; a.rel = 'noopener'; }
+    a.appendChild(el('div', 'stripe'));
+    var tile = el('div', 'tile' + (s.result === 'W' ? ' w' : s.result === 'L' || s.result === 'OTL' || s.result === 'SOL' ? ' l' : ''));
+    tile.appendChild(el('div', 'fin', 'FINAL'));
+    tile.appendChild(el('div', 'big', s.big));
+    if (s.result) tile.appendChild(el('div', 'res', s.result));
+    a.appendChild(tile);
+    var body = el('div', 'body');
+    body.appendChild(el('div', 'headline', s.headline));
+    var who = s.team === 'junior' ? s.club : s.team === 'highschool' ? 'High School' : LABEL[s.team];
+    var bits = [who, s.sport, s.note, ago(s.published)];
+    if (s.url) bits.push(s.urlLabel + ' ↗');
+    body.appendChild(el('div', 'meta', bits.filter(Boolean).join(' · ')));
+    a.appendChild(body);
+    return a;
   }
 
   function card(s) {
