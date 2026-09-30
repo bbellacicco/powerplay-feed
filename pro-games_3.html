@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pro Hub | Powerplay Windsor</title>
 <!--
-  Pro sports widget: a 7-day span (3 days before today, today, 3 days after).
+  Pro sports widget: yesterday, today and the next 3 days.
   NFL, NHL, NBA and MLB load live from ESPN each time the page opens, so scores are
   always current. CFL comes from data/local-games.json ("pro_games"), which the
   daily GitHub Action fills from cfl.ca (ESPN's CFL data is out of date).
@@ -104,7 +104,7 @@
 <script>
 (function () {
   var TZ = 'America/Toronto';
-  var DAYS_EACH_SIDE = 3;
+  var DAYS_BACK = 1, DAYS_AHEAD = 3;   // yesterday through three days from now
   var LEAGUES = {
     nfl: { label: 'NFL', path: 'football/nfl' },
     nhl: { label: 'NHL', path: 'hockey/nhl' },
@@ -140,7 +140,7 @@
   var now = new Date();
   var todayKey = dayKey(now);
   var dates = [];
-  for (var i = -DAYS_EACH_SIDE; i <= DAYS_EACH_SIDE; i++) dates.push(new Date(now.getTime() + i * 864e5));
+  for (var i = -DAYS_BACK; i <= DAYS_AHEAD; i++) dates.push(new Date(now.getTime() + i * 864e5));
   var loKey = dayKey(dates[0]), hiKey = dayKey(dates[dates.length - 1]);
 
   function isOurs(g) {
@@ -335,7 +335,7 @@
     });
 
     var box = document.getElementById('list'); box.innerHTML = '';
-    if (!list.length) { box.appendChild(el('div', 'empty', 'No games in this 7-day span.')); return; }
+    if (!list.length) { box.appendChild(el('div', 'empty', 'No games from yesterday through the next three days.')); return; }
     var groups = [], cur = null;
     list.forEach(function (g) {
       var k = dayKey(new Date(g.start));
