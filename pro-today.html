@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pro Hub Today | Powerplay Windsor</title>
 <!--
-  Compact homepage strip: today's games for "Our Teams", live from ESPN.
+  Compact homepage strip: today's games for "Our Teams" plus every playoff game
+  (MLB postseason now; NHL/NBA/NFL playoffs later), live from ESPN.
   If none of the teams play today, it shows their next games instead.
   Embed in Wix at about 170px tall (desktop) / 190px (mobile).
   ?link=<url>  where "Full schedule" goes (default: the Pro Sports page)
@@ -27,6 +28,8 @@
     scroll-snap-align: start; color: inherit; text-decoration: none; border-top: 3px solid var(--line); }
   .card.live { border-top-color: var(--loss); }
   .status { display: flex; justify-content: space-between; color: var(--muted); font-size: 11px; margin-bottom: 6px; }
+  .status .lg { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-right: 6px; }
+  .status > span:last-child { white-space: nowrap; }
   .status .live { color: #fff; background: var(--loss); border-radius: 3px; padding: 0 5px; font-weight: 700; }
   .team { display: flex; align-items: center; gap: 6px; margin: 3px 0; }
   .team img { width: 20px; height: 20px; object-fit: contain; }
@@ -66,16 +69,24 @@
       return fetch('https://site.api.espn.com/apis/site/v2/sports/' + PATHS[k] + '/scoreboard?dates=' + ymd(d))
         .then(function (r) { return r.ok ? r.json() : { events: [] }; })
         .then(function (j) {
+          // our teams' games, plus every playoff game in any league (MLB postseason right now)
           return (j.events || []).filter(function (e) {
-            return e.competitions[0].competitors.some(function (c) { return OUR[k].indexOf(c.team.abbreviation) >= 0; });
+            e._ours = e.competitions[0].competitors.some(function (c) { return OUR[k].indexOf(c.team.abbreviation) >= 0; });
+            e._playoff = !!(e.season && e.season.type === 3);
+            return e._ours || e._playoff;
           }).map(function (e) { e._league = k; return e; });
         }).catch(function () { return []; });
     })).then(function (r) {
-      return [].concat.apply([], r).sort(function (a, b) { return a.date < b.date ? -1 : 1; });
+      // games in progress first, then by start time
+      return [].concat.apply([], r).sort(function (a, b) {
+        var la = a.status.type.state === 'in' ? 0 : 1, lb = b.status.type.state === 'in' ? 0 : 1;
+        return la - lb || (a.date < b.date ? -1 : 1);
+      });
     });
   }
 
-  var MIN_CARDS = 5;   // fill the strip: if today has fewer games, add the next ones coming up
+  var MIN_CARDS = 5;
+  var MAX_CARDS = 12;  // busy playoff days can have a lot of games   // fill the strip: if today has fewer games, add the next ones coming up
   var timer;
   function load() {
     var now = new Date(), today = ymd(now), all = [], i = 0;
@@ -85,7 +96,7 @@
         all = all.concat(g);
         if (all.length >= MIN_CARDS || i >= 6) {
           var hasToday = all.some(function (e) { return ymd(new Date(e.date)) === today; });
-          return show(all, hasToday ? 'Today' : 'Next Up');
+          return show(all.slice(0, MAX_CARDS), hasToday ? 'Today' : 'Next Up');
         }
         i++; next();
       });
@@ -95,14 +106,17 @@
   function show(games, when) {
     document.getElementById('when').textContent = when;
     var box = document.getElementById('strip'); box.innerHTML = '';
-    if (!games.length) { box.appendChild(el('div', 'empty', 'No games for our teams this week.')); schedule(false); return; }
+    if (!games.length) { box.appendChild(el('div', 'empty', 'No games for our teams or the playoffs this week.')); schedule(false); return; }
     var live = false;
     games.forEach(function (e) {
       var comp = e.competitions[0], st = e.status.type, k = e._league;
       var a = el('a', 'card' + (st.state === 'in' ? ' live' : ''));
       a.href = (e.links && e.links[0] && e.links[0].href) || '#'; a.target = '_blank'; a.rel = 'noopener';
       var s = el('div', 'status');
-      s.appendChild(el('span', null, LABEL[k] + (e.season && e.season.type === 1 ? ' · Pre' : '')));
+      var round = e._playoff ? ((comp.notes && comp.notes[0] && comp.notes[0].headline) || 'Playoffs') : '';
+      round = round.replace(/^(American League|National League)\s*/i, '').replace(/Wild Card Series/i, 'Wild Card').replace(/Division Series/i, 'DS').replace(/Championship Series/i, 'CS');
+      var lbl = el('span', 'lg', LABEL[k] + (e.season && e.season.type === 1 ? ' · Pre' : '') + (round ? ' · ' + round : ''));
+      s.appendChild(lbl);
       if (st.state === 'in') { live = true; var l = el('span', 'live', 'LIVE ' + (st.shortDetail || '')); s.appendChild(l); }
       else if (st.state === 'post') s.appendChild(el('span', null, st.shortDetail || 'Final'));
       else s.appendChild(el('span', null, (ymd(new Date(e.date)) === ymd(new Date()) ? '' : fmt(new Date(e.date), { weekday: 'short' }) + ' ') + fmt(new Date(e.date), { hour: 'numeric', minute: '2-digit' }).replace(/\s?([ap])\.?m\.?/i, function (_, x) { return ' ' + x.toUpperCase() + 'M'; })));
