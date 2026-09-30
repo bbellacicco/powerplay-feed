@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-30T15:01:40-04:00",
+ "updated": "2026-09-30T18:01:34-04:00",
  "today": "2026-09-30",
  "range": [
   "2026-09-27",
@@ -64,6 +64,10 @@
   "cfl_news": {
    "ok": true,
    "count": 30
+  },
+  "cfl_standings": {
+   "ok": true,
+   "count": 9
   }
  },
  "games": [
@@ -1201,6 +1205,126 @@
    "teams": [],
    "url": "https://www.cfl.ca/article/the-story-behind-the-cfl-s-new-indigenous-themed-logo",
    "source": "CFL.ca"
+  }
+ ],
+ "cfl_standings": [
+  {
+   "group": "West Division",
+   "teams": [
+    {
+     "abbr": "EDM",
+     "name": "Edmonton Elks",
+     "gp": 15,
+     "w": 11,
+     "l": 4,
+     "t": 0,
+     "pts": 22,
+     "pf": 470,
+     "pa": 382,
+     "flags": "x"
+    },
+    {
+     "abbr": "BC",
+     "name": "BC Lions",
+     "gp": 14,
+     "w": 8,
+     "l": 6,
+     "t": 0,
+     "pts": 16,
+     "pf": 428,
+     "pa": 381,
+     "flags": ""
+    },
+    {
+     "abbr": "SSK",
+     "name": "Saskatchewan Roughriders",
+     "gp": 14,
+     "w": 8,
+     "l": 6,
+     "t": 0,
+     "pts": 16,
+     "pf": 399,
+     "pa": 371,
+     "flags": ""
+    },
+    {
+     "abbr": "WPG",
+     "name": "Winnipeg Blue Bombers",
+     "gp": 14,
+     "w": 7,
+     "l": 7,
+     "t": 0,
+     "pts": 14,
+     "pf": 373,
+     "pa": 382,
+     "flags": ""
+    },
+    {
+     "abbr": "CGY",
+     "name": "Calgary Stampeders",
+     "gp": 15,
+     "w": 7,
+     "l": 8,
+     "t": 0,
+     "pts": 14,
+     "pf": 535,
+     "pa": 510,
+     "flags": ""
+    }
+   ]
+  },
+  {
+   "group": "East Division",
+   "teams": [
+    {
+     "abbr": "MTL",
+     "name": "Montreal Alouettes",
+     "gp": 14,
+     "w": 11,
+     "l": 3,
+     "t": 0,
+     "pts": 22,
+     "pf": 498,
+     "pa": 410,
+     "flags": "x"
+    },
+    {
+     "abbr": "TOR",
+     "name": "Toronto Argonauts",
+     "gp": 15,
+     "w": 9,
+     "l": 6,
+     "t": 0,
+     "pts": 18,
+     "pf": 445,
+     "pa": 431,
+     "flags": "x"
+    },
+    {
+     "abbr": "HAM",
+     "name": "Hamilton Tiger-Cats",
+     "gp": 15,
+     "w": 4,
+     "l": 11,
+     "t": 0,
+     "pts": 8,
+     "pf": 362,
+     "pa": 458,
+     "flags": ""
+    },
+    {
+     "abbr": "OTT",
+     "name": "Ottawa Redblacks",
+     "gp": 14,
+     "w": 0,
+     "l": 14,
+     "t": 0,
+     "pts": 0,
+     "pf": 339,
+     "pa": 524,
+     "flags": ""
+    }
+   ]
   }
  ]
 }
