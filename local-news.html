@@ -89,6 +89,11 @@
   .igcap { font-size: 13px; color: #d4dcee; margin-top: 6px; }
   .igmeta { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); margin-top: 4px; }
   .igmeta a { color: var(--accent); text-decoration: none; }
+  .groupbox { display: flex; flex-direction: column; justify-content: center; gap: 10px; align-self: stretch; }
+  .gtext { font-size: 14px; color: #d4dcee; }
+  .gbtn { display: inline-block; align-self: flex-start; background: #1877f2; color: #fff; font-weight: 700; text-decoration: none;
+    padding: 10px 16px; border-radius: 8px; }
+  .gbtn:hover { background: #166fe0; }
   .note { color: var(--muted); font-size: 12px; margin-top: 6px; }
   footer { margin-top: 14px; color: var(--muted); font-size: 11px; text-align: center; }
   @media (max-width: 520px) {
@@ -220,6 +225,17 @@
       '&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false';
     return f;
   }
+  // Community Facebook group: Facebook doesn't let groups be shown on other sites, so this is a link card
+  var GROUP = { name: 'Windsor Essex Sports News', url: 'https://www.facebook.com/share/g/1SohbsmorC/' };
+  function groupBox() {
+    var b = el('div', 'box groupbox');
+    b.appendChild(heading(GROUP.name, null));
+    b.appendChild(el('div', 'gtext', "The community's own sports page on Facebook. Fans, parents and teams post scores, photos and news from around Windsor-Essex."));
+    var a = el('a', 'gbtn', 'See the latest posts ↗'); a.href = GROUP.url; a.target = '_blank'; a.rel = 'noopener';
+    b.appendChild(a);
+    b.appendChild(el('div', 'note', 'Facebook group · join on Facebook to post your own.'));
+    return b;
+  }
   function socialWall() {
     document.getElementById('sub').style.display = 'none';
     var box = document.getElementById('list'); box.innerHTML = '';
@@ -234,6 +250,7 @@
     var w = Math.max(180, Math.min(500, Math.floor(boxes[0].clientWidth - 20)));
     boxes.forEach(function (b, i) { b.appendChild(fbFrame(all[i], w, WALL_HEIGHT)); });
     if (INSTAGRAM_FEED) grid.insertBefore(igBox(1, 'Powerplay on Instagram'), boxes[1]);   // right after Powerplay's Facebook
+    grid.insertBefore(groupBox(), boxes[1]);
     box.appendChild(el('div', 'note', "Newest post from each team. Pick a team above for its full feed. Posts not showing? Some browsers' privacy settings block Facebook feeds."));
   }
 
