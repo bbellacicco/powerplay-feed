@@ -617,6 +617,30 @@ def _iso_date(val):
         return ""
 
 
+CFL_NAMES = {"BC": "BC Lions", "CGY": "Calgary Stampeders", "EDM": "Edmonton Elks", "SSK": "Saskatchewan Roughriders",
+             "WPG": "Winnipeg Blue Bombers", "HAM": "Hamilton Tiger-Cats", "TOR": "Toronto Argonauts",
+             "OTT": "Ottawa Redblacks", "MTL": "Montreal Alouettes"}
+
+
+def scrape_cfl_standings(today):
+    """CFL standings from the league's stats site (ESPN's CFL standings are empty)."""
+    j = json.loads(fetch(f"https://api.stats.cfl.ca/standings/{today.year}", "cfl_standings.json" if FIXTURES else None))
+    out = []
+    for key in ("west", "east"):
+        rows = (((j.get("data") or {}).get("divisions") or {}).get(key) or {}).get("standings") or []
+        teams = []
+        for r in sorted(rows, key=lambda r: r.get("place_override") or r.get("place") or 99):
+            ab = r.get("abbreviation", "")
+            teams.append({"abbr": ab, "name": CFL_NAMES.get(ab, ab), "gp": r.get("games_played"), "w": r.get("wins"),
+                          "l": r.get("losses"), "t": r.get("ties"), "pts": r.get("points"),
+                          "pf": r.get("points_for"), "pa": r.get("points_against"), "flags": r.get("flags") or ""})
+        if teams:
+            out.append({"group": key.title() + " Division", "teams": teams})
+    if not out:
+        raise RuntimeError("no CFL standings in response")
+    return out
+
+
 def scrape_cfl_news(limit=30):
     """Latest stories from the cfl.ca home page (headline, short summary, photo, link)."""
     html = fetch("https://www.cfl.ca/", "cfl_home.html" if FIXTURES else None)
@@ -778,6 +802,19 @@ def main():
         except (OSError, ValueError):
             pass
 
+    cfl_standings = []
+    try:
+        cfl_standings = scrape_cfl_standings(today)
+        sources["cfl_standings"] = {"ok": True, "count": sum(len(d["teams"]) for d in cfl_standings)}
+        print(f"cfl standings: {len(cfl_standings)} divisions")
+    except Exception as ex:
+        sources["cfl_standings"] = {"ok": False, "error": str(ex)[:200]}
+        print(f"cfl standings: FAILED - {ex}", file=sys.stderr)
+        try:
+            cfl_standings = json.load(open(OUT_FILE, encoding="utf-8")).get("cfl_standings", [])
+        except (OSError, ValueError):
+            pass
+
     payload = {
         "updated": now.isoformat(timespec="seconds"),
         "today": today.isoformat(),
@@ -788,6 +825,7 @@ def main():
         "games": games,
         "pro_games": pro_games,   # CFL, used by pro-games.html
         "pro_news": pro_news,     # CFL stories, used by news-feed.html
+        "cfl_standings": cfl_standings,   # used by the Standings view in pro-games.html
     }
     os.makedirs(os.path.dirname(OUT_FILE), exist_ok=True)
     new = json.dumps(payload, ensure_ascii=False, indent=1)
@@ -797,7 +835,7 @@ def main():
             old = json.load(open(OUT_FILE, encoding="utf-8"))
             if (old.get("games") == games and old.get("sources") == sources
                     and old.get("today") == payload["today"] and old.get("pro_games") == pro_games
-                    and old.get("pro_news") == pro_news):
+                    and old.get("pro_news") == pro_news and old.get("cfl_standings") == cfl_standings):
                 print("No changes.")
                 return
         except ValueError:
