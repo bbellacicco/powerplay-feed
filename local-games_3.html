@@ -147,9 +147,12 @@
       // high school comes from Buddy's PC (wecssaa.com blocks GitHub); optional
       getJSON('highschool.json').catch(function () { return null; }),
       // St. Clair (all sports but football) also comes from Buddy's PC; optional
-      getJSON('saints.json').catch(function () { return null; })
+      getJSON('saints.json').catch(function () { return null; }),
+      // PJHL standings also come from Buddy's PC (GameSheet blocks GitHub); optional
+      getJSON('pjhl-standings.json').catch(function () { return null; })
     ]).then(function (res) {
-      var j = res[0], hs = res[1], sc = res[2];
+      var j = res[0], hs = res[1], sc = res[2], pj = res[3];
+      if (pj && pj.groups && pj.groups.length) { j.standings = j.standings || {}; j.standings.pjhl = pj.groups; }
       if (sc && sc.games) {
         var lo2 = (j.range || [])[0] || '', hi2 = (j.range || [])[1] || '9999';
         j.games = j.games.filter(function (g) { return !(g.team === 'saints' && g.sport !== 'Football'); })
