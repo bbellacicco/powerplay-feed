@@ -61,6 +61,12 @@
   .yt iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
   .wall .box { flex: 1 1 260px; max-width: 100%; }
   @media (min-width: 700px) { .wall .box { flex: 0 1 calc(33.333% - 8px); } }
+  .iglist { display: flex; flex-direction: column; gap: 12px; max-height: 720px; overflow-y: auto; }
+  .wall .iglist { max-height: 560px; }
+  .ig video, .ig img { width: 100%; max-height: 520px; border-radius: 6px; background: #000; display: block; object-fit: contain; }
+  .igcap { font-size: 13px; color: #d4dcee; margin-top: 6px; }
+  .igmeta { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); margin-top: 4px; }
+  .igmeta a { color: var(--accent); text-decoration: none; }
   .note { color: var(--muted); font-size: 12px; margin-top: 6px; }
   footer { margin-top: 14px; color: var(--muted); font-size: 11px; text-align: center; }
   @media (max-width: 520px) {
@@ -111,6 +117,58 @@
   };
   var FB_HEIGHT = 720;
 
+  // ---- Powerplay's Instagram, through Behold (behold.so), which Buddy connected to his own account.
+  // Paste the Behold JSON feed address here. Empty = Instagram boxes stay hidden.
+  var INSTAGRAM_FEED = 'https://feeds.behold.so/Cf28WeZyTzbqqYv3y6Qa';
+  var INSTAGRAM_URL = 'https://www.instagram.com/powerplaysportswindsor/';
+  var igPosts = null;
+  function loadInstagram() {
+    if (!INSTAGRAM_FEED || igPosts) return Promise.resolve(igPosts || []);
+    return fetch(INSTAGRAM_FEED).then(function (r) { if (!r.ok) throw r.status; return r.json(); })
+      .then(function (j) {
+        var list = Array.isArray(j) ? j : (j.posts || []);
+        igPosts = list.map(function (p) {
+          var video = p.mediaType === 'VIDEO' || !!p.isReel;
+          var thumb = (p.sizes && p.sizes.medium && p.sizes.medium.mediaUrl) || p.thumbnailUrl || (!video && p.mediaUrl) || '';
+          return { video: video, media: p.mediaUrl || '', thumb: thumb, url: p.permalink || INSTAGRAM_URL,
+                   caption: p.prunedCaption || p.caption || '', time: p.timestamp || '' };
+        }).filter(function (p) { return p.thumb || p.media; });
+        return igPosts;
+      }).catch(function () { return []; });
+  }
+  // one Instagram post: videos play right here, photos open on Instagram
+  function igPlayer(p) {
+    var wrap = el('div', 'ig');
+    if (p.video && p.media) {
+      var v = document.createElement('video');
+      v.src = p.media; if (p.thumb) v.poster = p.thumb;
+      v.controls = true; v.playsInline = true; v.preload = 'none';
+      wrap.appendChild(v);
+    } else {
+      var a = el('a'); a.href = p.url; a.target = '_blank'; a.rel = 'noopener';
+      var img = document.createElement('img'); img.src = p.thumb || p.media; img.alt = ''; img.loading = 'lazy';
+      a.appendChild(img); wrap.appendChild(a);
+    }
+    if (p.caption) wrap.appendChild(el('div', 'igcap', p.caption.length > 140 ? p.caption.slice(0, 140).replace(/\s+\S*$/, '') + '…' : p.caption));
+    var meta = el('div', 'igmeta');
+    var link = el('a', null, 'View on Instagram ↗'); link.href = p.url; link.target = '_blank'; link.rel = 'noopener';
+    meta.appendChild(el('span', null, ago(p.time))); meta.appendChild(link);
+    wrap.appendChild(meta);
+    return wrap;
+  }
+  function igBox(count, title) {
+    var b = el('div', 'box igbox');
+    b.appendChild(heading(title, INSTAGRAM_URL, 'Instagram ↗'));
+    var inner = el('div', 'iglist', null); inner.appendChild(el('div', 'note', 'Loading…'));
+    b.appendChild(inner);
+    loadInstagram().then(function (posts) {
+      inner.innerHTML = '';
+      if (!posts.length) { b.remove(); return; }
+      posts.slice(0, count).forEach(function (p) { inner.appendChild(igPlayer(p)); });
+    });
+    return b;
+  }
+
   function views() {
     [['stories', 'v-stories'], ['social', 'v-social']].forEach(function (v) {
       var b = document.getElementById(v[1]);
@@ -152,6 +210,7 @@
     });
     var w = Math.max(180, Math.min(500, Math.floor(boxes[0].clientWidth - 20)));
     boxes.forEach(function (b, i) { b.appendChild(fbFrame(all[i], w, WALL_HEIGHT)); });
+    if (INSTAGRAM_FEED) grid.insertBefore(igBox(1, 'Powerplay on Instagram'), boxes[1]);   // right after Powerplay's Facebook
     box.appendChild(el('div', 'note', "Newest post from each team. Pick a team above for its full feed. Posts not showing? Some browsers' privacy settings block Facebook feeds."));
   }
 
@@ -177,6 +236,7 @@
       f.allow = 'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
       frame.appendChild(f); yt.appendChild(frame); grid.appendChild(yt);
     }
+    if (state.tab === 'powerplay' && INSTAGRAM_FEED) grid.appendChild(igBox(12, 'Powerplay on Instagram'));
     var fb = el('div', 'box');
     fb.appendChild(heading(team.name + ' on Facebook', team.facebook, 'Open ↗'));
     grid.appendChild(fb);
