@@ -23,6 +23,7 @@ import io
 import json
 import os
 import sys
+import time
 import re
 import urllib.error
 import urllib.request
@@ -698,29 +699,41 @@ def _hockeytech_standings(client, key):
 
 
 def _pjhl_standings(season):
-    """PJHL (GameSheet): only the divisions our Jr. C clubs play in."""
-    html = fetch(f"https://gamesheetstats.com/seasons/{season}/standings?configuration=45",
-                 "pjhl_standings.html" if FIXTURES else None)
-    ours = {cfg["team_id"] for _, _, src, cfg in JUNIOR_TEAMS if src == "gamesheet"}
-    divs, seen = {}, set()
-    for o in _next_payload_objects(html, marker='{"division":'):
-        if o.get("gameType") != "overall" or o.get("id") in seen or not isinstance(o.get("team"), dict):
-            continue
-        seen.add(o.get("id"))
-        st, tm = o.get("stats") or {}, o["team"]
-        d = divs.setdefault(o["division"].get("title", ""), {"ids": set(), "teams": []})
-        d["ids"].add(tm.get("id"))
-        d["teams"].append({"rank": o.get("rank") or 99, "name": tm.get("title", ""), "abbr": tm.get("abbreviation", ""),
-                           "gp": st.get("GP"), "w": st.get("W"), "l": st.get("L"),
-                           "otl": (st.get("OTL") or 0) + (st.get("SOL") or 0), "pts": st.get("PTS"),
-                           "gf": st.get("GF"), "ga": st.get("GA"), "strk": _streak(st.get("STK"))})
+    """PJHL (GameSheet): the division our Jr. C clubs play in (West - Stobbs).
+    The league-wide standings page is behind a bot check, but each team's own
+    standings page isn't. On a team's page that team's stats are a reference
+    instead of numbers, so two clubs' pages are read and merged."""
+    ours = [cfg["team_id"] for _, _, src, cfg in JUNIOR_TEAMS if src == "gamesheet"]
+    rows = {}
+    for n, tid in enumerate(ours[:2]):
+        if n:
+            time.sleep(2)
+        html = fetch(f"https://gamesheetstats.com/seasons/{season}/teams/{tid}/standings?configuration=45",
+                     "pjhl_team_standings.html" if FIXTURES else None)
+        for o in _next_payload_objects(html, marker='{"division":'):
+            if o.get("gameType") != "overall" or not isinstance(o.get("team"), dict):
+                continue
+            tm, st = o["team"], o.get("stats")
+            key = (o["division"].get("title", ""), tm.get("id"))
+            if not isinstance(st, dict):
+                rows.setdefault(key, None)
+                continue
+            rows[key] = {"rank": o.get("rank") or 99, "name": tm.get("title", ""), "abbr": tm.get("abbreviation", ""),
+                         "gp": st.get("GP"), "w": st.get("W"), "l": st.get("L"),
+                         "otl": (st.get("OTL") or 0) + (st.get("SOL") or 0), "pts": st.get("PTS"),
+                         "gf": st.get("GF"), "ga": st.get("GA"), "strk": _streak(st.get("STK"))}
+        if FIXTURES:
+            break
+    divs = {}
+    for (div, tid), r in rows.items():
+        if r:
+            divs.setdefault(div, []).append(r)
     out = []
-    for title, d in divs.items():
-        if d["ids"] & ours:
-            teams = sorted(d["teams"], key=lambda t: t["rank"])
-            for t in teams:
-                t.pop("rank", None)
-            out.append({"group": "PJHL " + title, "teams": teams})
+    for title, teams in divs.items():
+        teams.sort(key=lambda t: (t["rank"], -(t["pts"] or 0)))
+        for t in teams:
+            t.pop("rank", None)
+        out.append({"group": "PJHL " + title.replace(" - ", " "), "teams": teams})
     return out
 
 
@@ -731,7 +744,13 @@ def scrape_standings():
             out[name] = _hockeytech_standings(client, key)
         except Exception as ex:
             errors[name] = str(ex)[:200]
-    # PJHL (GameSheet) is behind a bot check that blocks automated requests, so it isn't requested.
+    try:
+        season = next(cfg["season"] for _, _, src, cfg in JUNIOR_TEAMS if src == "gamesheet")
+        out["pjhl"] = _pjhl_standings(season)
+        if not out["pjhl"]:
+            raise RuntimeError("no PJHL standings found on the team pages")
+    except Exception as ex:
+        errors["pjhl"] = str(ex)[:200]
     try:
         out["cjfl"] = _cjfl_standings()
     except Exception as ex:
@@ -993,7 +1012,7 @@ def main():
             pass
 
     standings, st_err = scrape_standings()
-    for k in ("ohl", "ojhl", "gohl", "pwhl", "cjfl"):
+    for k in ("ohl", "ojhl", "gohl", "pjhl", "pwhl", "cjfl"):
         if k in st_err:
             sources["standings_" + k] = {"ok": False, "error": st_err[k]}
             print(f"standings {k}: FAILED - {st_err[k]}", file=sys.stderr)
@@ -1053,7 +1072,7 @@ def main():
         "pro_games": pro_games,   # CFL, used by pro-games.html
         "pro_news": pro_news,     # CFL and PWHL stories, used by news-feed.html
         "cfl_standings": cfl_standings,   # used by the Standings view in pro-games.html
-        "standings": standings,           # OHL, OJHL, GOHL, CJFL (Local Hub) and PWHL (Pro Hub)
+        "standings": standings,           # OHL, OJHL, GOHL, PJHL, CJFL (Local Hub) and PWHL (Pro Hub)
     }
     os.makedirs(os.path.dirname(OUT_FILE), exist_ok=True)
     new = json.dumps(payload, ensure_ascii=False, indent=1)
