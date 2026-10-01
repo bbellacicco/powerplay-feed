@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-30T22:01:34-04:00",
+ "updated": "2026-09-30T22:07:35-04:00",
  "today": "2026-09-30",
  "range": [
   "2026-09-27",
@@ -76,6 +76,10 @@
   "standings_gohl": {
    "ok": true,
    "count": 24
+  },
+  "standings_pjhl": {
+   "ok": true,
+   "count": 8
   },
   "standings_pwhl": {
    "ok": true,
@@ -2669,6 +2673,109 @@
       "gf": 0,
       "ga": 0,
       "strk": ""
+     }
+    ]
+   }
+  ],
+  "pjhl": [
+   {
+    "group": "PJHL West Stobbs",
+    "teams": [
+     {
+      "name": "Lakeshore Canadiens",
+      "abbr": "LAK",
+      "gp": 9,
+      "w": 8,
+      "l": 0,
+      "otl": 1,
+      "pts": 17,
+      "gf": 39,
+      "ga": 16,
+      "strk": "L1"
+     },
+     {
+      "name": "Essex 73's",
+      "abbr": "ESS",
+      "gp": 8,
+      "w": 7,
+      "l": 1,
+      "otl": 0,
+      "pts": 14,
+      "gf": 33,
+      "ga": 13,
+      "strk": "W6"
+     },
+     {
+      "name": "Dresden Kings",
+      "abbr": "DRE",
+      "gp": 9,
+      "w": 5,
+      "l": 3,
+      "otl": 1,
+      "pts": 11,
+      "gf": 49,
+      "ga": 37,
+      "strk": "L2"
+     },
+     {
+      "name": "Blenheim Blades",
+      "abbr": "BLE",
+      "gp": 7,
+      "w": 5,
+      "l": 2,
+      "otl": 0,
+      "pts": 10,
+      "gf": 34,
+      "ga": 26,
+      "strk": "W1"
+     },
+     {
+      "name": "Wheatley Sharks",
+      "abbr": "WHE",
+      "gp": 11,
+      "w": 5,
+      "l": 6,
+      "otl": 0,
+      "pts": 10,
+      "gf": 33,
+      "ga": 34,
+      "strk": "W2"
+     },
+     {
+      "name": "Mooretown Flags",
+      "abbr": "MOO",
+      "gp": 10,
+      "w": 2,
+      "l": 5,
+      "otl": 3,
+      "pts": 7,
+      "gf": 31,
+      "ga": 35,
+      "strk": "L5"
+     },
+     {
+      "name": "Amherstburg Admirals",
+      "abbr": "AMH",
+      "gp": 9,
+      "w": 2,
+      "l": 7,
+      "otl": 0,
+      "pts": 4,
+      "gf": 22,
+      "ga": 35,
+      "strk": "L1"
+     },
+     {
+      "name": "Walpole Island Wild",
+      "abbr": "WAL",
+      "gp": 9,
+      "w": 0,
+      "l": 9,
+      "otl": 0,
+      "pts": 0,
+      "gf": 9,
+      "ga": 55,
+      "strk": "L9"
      }
     ]
    }
