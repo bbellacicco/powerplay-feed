@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-01T19:00:01-04:00",
+ "updated": "2026-10-01T19:15:01-04:00",
  "today": "2026-10-01",
  "games": [
   {
@@ -951,9 +951,9 @@
    "home_away": "N",
    "opponent": "Essex",
    "location": "Essex",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "final",
+   "our_score": 2,
+   "opp_score": 1,
    "result": null,
    "note": "Tier 2",
    "links": {
@@ -991,9 +991,9 @@
    "home_away": "N",
    "opponent": "Cardinal Carter",
    "location": "Cardinal Carter",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 0,
    "result": null,
    "note": "Tier 2",
    "links": {
@@ -1081,6 +1081,26 @@
    },
    "away": "Brennan",
    "home": "Tecumseh Vista Academy"
+  },
+  {
+   "id": "highschool-2026-10-01-71",
+   "team": "highschool",
+   "sport": "Senior Boys Football",
+   "start": "2026-10-01T00:00:00-04:00",
+   "time_tbd": true,
+   "home_away": "N",
+   "opponent": "Essex",
+   "location": "Essex",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Belle River",
+   "home": "Essex"
   },
   {
    "id": "highschool-2026-10-01-42",
@@ -1421,26 +1441,6 @@
    },
    "away": "Erie Migration",
    "home": "Kennedy"
-  },
-  {
-   "id": "highschool-2026-10-01-71",
-   "team": "highschool",
-   "sport": "Senior Boys Football",
-   "start": "2026-10-01T19:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Essex",
-   "location": "Essex",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Belle River",
-   "home": "Essex"
   },
   {
    "id": "highschool-2026-10-01-72",
