@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-30T21:46:32-04:00",
+ "updated": "2026-09-30T22:01:34-04:00",
  "today": "2026-09-30",
  "range": [
   "2026-09-27",
@@ -77,13 +77,13 @@
    "ok": true,
    "count": 24
   },
-  "standings_pjhl": {
-   "ok": false,
-   "error": "HTTP Error 403: Forbidden"
-  },
   "standings_pwhl": {
    "ok": true,
    "count": 12
+  },
+  "standings_cjfl": {
+   "ok": true,
+   "count": 6
   },
   "pwhl": {
    "ok": true,
@@ -2669,6 +2669,73 @@
       "gf": 0,
       "ga": 0,
       "strk": ""
+     }
+    ]
+   }
+  ],
+  "cjfl": [
+   {
+    "group": "CJFL Ontario Conference",
+    "cols": [
+     "W",
+     "L",
+     "T",
+     "PTS"
+    ],
+    "teams": [
+     {
+      "name": "Sault Ste. Marie Cougars",
+      "stats": [
+       "7",
+       "0",
+       "0",
+       "14"
+      ]
+     },
+     {
+      "name": "St. Clair Saints",
+      "stats": [
+       "6",
+       "1",
+       "0",
+       "12"
+      ]
+     },
+     {
+      "name": "London Beefeaters",
+      "stats": [
+       "3",
+       "4",
+       "0",
+       "6"
+      ]
+     },
+     {
+      "name": "Ottawa Sooners",
+      "stats": [
+       "3",
+       "4",
+       "0",
+       "6"
+      ]
+     },
+     {
+      "name": "Hamilton Hurricanes",
+      "stats": [
+       "2",
+       "5",
+       "0",
+       "4"
+      ]
+     },
+     {
+      "name": "Quinte Riptides",
+      "stats": [
+       "0",
+       "7",
+       "0",
+       "0"
+      ]
      }
     ]
    }
