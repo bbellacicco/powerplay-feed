@@ -1,97 +1,7 @@
 {
- "updated": "2026-09-30T00:18:02-04:00",
- "today": "2026-09-30",
+ "updated": "2026-10-01T00:00:01-04:00",
+ "today": "2026-10-01",
  "games": [
-  {
-   "id": "saints-presto2026-09-27-0",
-   "team": "saints",
-   "sport": "Baseball",
-   "start": "2026-09-27T12:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Sault",
-   "location": "",
-   "status": "final",
-   "our_score": 14,
-   "opp_score": 4,
-   "result": "W",
-   "note": "",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/bsb/2026-27/boxscores/20260927_0yp6.xml"
-   }
-  },
-  {
-   "id": "saints-presto2026-09-27-2",
-   "team": "saints",
-   "sport": "Fastball",
-   "start": "2026-09-27T13:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Conestoga",
-   "location": "Durham - Game 2",
-   "status": "final",
-   "our_score": 12,
-   "opp_score": 1,
-   "result": "W",
-   "note": "6 innings",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/fastball/2026-27/boxscores/20260927_fdef.xml"
-   }
-  },
-  {
-   "id": "saints-presto2026-09-27-1",
-   "team": "saints",
-   "sport": "Women's Soccer",
-   "start": "2026-09-27T13:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Mohawk",
-   "location": "",
-   "status": "final",
-   "our_score": 0,
-   "opp_score": 1,
-   "result": "L",
-   "note": "",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/wsoc/2026-27/boxscores/20260927_2ws4.xml"
-   }
-  },
-  {
-   "id": "saints-presto2026-09-27-3",
-   "team": "saints",
-   "sport": "Fastball",
-   "start": "2026-09-27T15:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Sheridan",
-   "location": "Durham - Game 3",
-   "status": "final",
-   "our_score": 13,
-   "opp_score": 2,
-   "result": "W",
-   "note": "5 innings",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/fastball/2026-27/boxscores/20260927_9n09.xml"
-   }
-  },
-  {
-   "id": "saints-presto2026-09-27-4",
-   "team": "saints",
-   "sport": "Men's Soccer",
-   "start": "2026-09-27T15:15:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Mohawk",
-   "location": "",
-   "status": "final",
-   "our_score": 2,
-   "opp_score": 0,
-   "result": "W",
-   "note": "",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/msoc/2026-27/boxscores/20260927_djks.xml"
-   }
-  },
   {
    "id": "saints-presto2026-10-01-0",
    "team": "saints",
@@ -195,6 +105,60 @@
    "result": null,
    "note": "",
    "links": {}
+  },
+  {
+   "id": "saints-presto2026-10-04-2",
+   "team": "saints",
+   "sport": "Baseball",
+   "start": "2026-10-04T13:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Sheridan",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/bsb/2026-27/boxscores/20261004_r1i8.xml"
+   }
+  },
+  {
+   "id": "saints-presto2026-10-04-1",
+   "team": "saints",
+   "sport": "Fastball",
+   "start": "2026-10-04T13:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Humber",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/fastball/2026-27/boxscores/20261004_ej3n.xml"
+   }
+  },
+  {
+   "id": "saints-presto2026-10-04-3",
+   "team": "saints",
+   "sport": "Fastball",
+   "start": "2026-10-04T15:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Humber",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/fastball/2026-27/boxscores/20261004_heay.xml"
+   }
   }
  ]
 }
