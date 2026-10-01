@@ -519,6 +519,33 @@ def _cjfl_rows(html, year, today):
     return out
 
 
+CJFL_STANDINGS = "https://www.cjfl.org/standings/show/9362372?subseason=958344"
+
+
+def _cjfl_standings():
+    """CJFL Ontario Conference standings (St. Clair's conference)."""
+    html = fetch(CJFL_STANDINGS, "cjfl_standings.html" if FIXTURES else None)
+    groups = []
+    for m in re.finditer(r'<table class="statTable">(.*?)</table>', html, re.S):
+        tbl = m.group(1)
+        before = html[max(0, m.start() - 4000):m.start()]
+        heads = re.findall(r"<h3[^>]*>(.*?)</h3>", before, re.S)
+        title = re.sub(r"\s*-\s*\d{4}.*$", "", _strip_tags(heads[-1])) if heads else ""
+        if "conference" not in title.lower():
+            title = "Ontario Conference"
+        cols = [_strip_tags(h) for h in re.findall(r"<th[^>]*>(.*?)</th>", tbl.split("</thead>")[0], re.S)]
+        cols = [c for c in cols if c and c != "Team"]
+        teams = []
+        for row in re.findall(r"<tr[^>]*>(.*?)</tr>", tbl.split("</thead>")[-1], re.S):
+            name = re.search(r'class="teamName"[^>]*>(.*?)</a>', row, re.S)
+            cells = [_strip_tags(c) for c in re.findall(r"<td(?![^>]*\bname\b)[^>]*>(.*?)</td>", row, re.S)]
+            if name and cells:
+                teams.append({"name": _strip_tags(name.group(1)), "stats": cells[:len(cols)]})
+        if teams:
+            groups.append({"group": "CJFL " + title, "cols": cols, "teams": teams})
+    return groups
+
+
 def scrape_cjfl_saints(today):
     first = fetch(CJFL_START, "cjfl.html" if FIXTURES else None)
     # season menu: <optgroup label="2026"> <option value="/schedule/...">...</option>
@@ -704,11 +731,11 @@ def scrape_standings():
             out[name] = _hockeytech_standings(client, key)
         except Exception as ex:
             errors[name] = str(ex)[:200]
+    # PJHL (GameSheet) is behind a bot check that blocks automated requests, so it isn't requested.
     try:
-        season = next(cfg["season"] for _, _, src, cfg in JUNIOR_TEAMS if src == "gamesheet")
-        out["pjhl"] = _pjhl_standings(season)
+        out["cjfl"] = _cjfl_standings()
     except Exception as ex:
-        errors["pjhl"] = str(ex)[:200]
+        errors["cjfl"] = str(ex)[:200]
     return out, errors
 
 
@@ -966,7 +993,7 @@ def main():
             pass
 
     standings, st_err = scrape_standings()
-    for k in ("ohl", "ojhl", "gohl", "pjhl", "pwhl"):
+    for k in ("ohl", "ojhl", "gohl", "pwhl", "cjfl"):
         if k in st_err:
             sources["standings_" + k] = {"ok": False, "error": st_err[k]}
             print(f"standings {k}: FAILED - {st_err[k]}", file=sys.stderr)
@@ -1026,7 +1053,7 @@ def main():
         "pro_games": pro_games,   # CFL, used by pro-games.html
         "pro_news": pro_news,     # CFL and PWHL stories, used by news-feed.html
         "cfl_standings": cfl_standings,   # used by the Standings view in pro-games.html
-        "standings": standings,           # OHL, OJHL, GOHL, PJHL (Local Hub) and PWHL (Pro Hub)
+        "standings": standings,           # OHL, OJHL, GOHL, CJFL (Local Hub) and PWHL (Pro Hub)
     }
     os.makedirs(os.path.dirname(OUT_FILE), exist_ok=True)
     new = json.dumps(payload, ensure_ascii=False, indent=1)
