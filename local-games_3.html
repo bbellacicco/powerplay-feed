@@ -149,10 +149,18 @@
       // St. Clair (all sports but football) also comes from Buddy's PC; optional
       getJSON('saints.json').catch(function () { return null; }),
       // PJHL standings also come from Buddy's PC (GameSheet blocks GitHub); optional
-      getJSON('pjhl-standings.json').catch(function () { return null; })
+      getJSON('pjhl-standings.json').catch(function () { return null; }),
+      // Lancers (OUA) and St. Clair soccer (OCAA) standings also come from Buddy's PC; optional
+      getJSON('college-standings.json').catch(function () { return null; })
     ]).then(function (res) {
-      var j = res[0], hs = res[1], sc = res[2], pj = res[3];
-      if (pj && pj.groups && pj.groups.length) { j.standings = j.standings || {}; j.standings.pjhl = pj.groups; }
+      var j = res[0], hs = res[1], sc = res[2], pj = res[3], cs = res[4];
+      j.standings = j.standings || {};
+      if (pj && pj.groups && pj.groups.length) j.standings.pjhl = pj.groups;
+      if (cs && cs.leagues) {
+        var L = cs.leagues, grp = function (k) { return L[k] && L[k].groups ? L[k].groups : []; };
+        if (grp('oua').length) j.standings.oua = grp('oua');
+        if (grp('ocaa_m').length || grp('ocaa_w').length) j.standings.ocaa = grp('ocaa_m').concat(grp('ocaa_w'));
+      }
       if (sc && sc.games) {
         var lo2 = (j.range || [])[0] || '', hi2 = (j.range || [])[1] || '9999';
         j.games = j.games.filter(function (g) { return !(g.team === 'saints' && g.sport !== 'Football'); })
@@ -255,9 +263,18 @@
   }
 
   // ---- Standings (collected every 15 minutes from the leagues' own stats sites)
-  var ST_LEAGUES = [['ohl', 'OHL'], ['ojhl', 'OJHL'], ['gohl', 'GOHL'], ['pjhl', 'PJHL']];
+  // Lancers / Saints: only the headline sports that are in season (fall: football + soccer)
+  var ST_LEAGUES = [['ohl', 'OHL'], ['ojhl', 'OJHL'], ['gohl', 'GOHL'], ['pjhl', 'PJHL'],
+    ['oua', 'Lancers Football'], ['cjfl', 'Saints Football'], ['ocaa', 'Saints Soccer']];
+  var HOCKEY = { ohl: 1, ojhl: 1, gohl: 1, pjhl: 1 };
+  var OFFICIAL = {
+    pjhl: ['PJHL', 'https://gamesheetstats.com/seasons/15133/standings?configuration=45'],
+    oua: ['OUA football', 'https://oua.ca/sports/fball/2026-27/standings'],
+    cjfl: ['CJFL', 'https://www.cjfl.org/standings/show/9362372?subseason=958344'],
+    ocaa: ['OCAA soccer', 'https://www.ocaa.com/sports/msoc/2026-27/standings']
+  };
   var ST_COLS = [['GP', 'gp'], ['W', 'w'], ['L', 'l'], ['OTL', 'otl'], ['PTS', 'pts'], ['GF', 'gf', 1], ['GA', 'ga', 1], ['STRK', 'strk', 1]];
-  var OUR_CLUBS = ['Windsor Spitfires', 'Leamington', 'LaSalle', 'Chatham', 'Lakeshore', 'Essex', 'Wheatley', 'Amherstburg'];
+  var OUR_CLUBS = ['Windsor', 'St. Clair', 'Leamington', 'LaSalle', 'Chatham', 'Lakeshore', 'Essex', 'Wheatley', 'Amherstburg'];
   function isOurClub(name) { return OUR_CLUBS.some(function (c) { return (name || '').indexOf(c) >= 0; }); }
 
   function views() {
@@ -266,6 +283,18 @@
       b.setAttribute('aria-pressed', String(view === v[0]));
       b.onclick = function () { if (view !== v[0]) { view = v[0]; render(); } };
     });
+  }
+
+  // college tables: short, consistent column names; drop columns that repeat the record
+  var COL_NAMES = { 'Streak': 'STRK', 'Aga.': 'GA', 'For': 'GF', 'Record': 'W-L-T', 'Win%': 'PCT' };
+  var COL_SKIP = { 'Last 10': 1, 'PCT': 1 };
+  function colsFor(g) {
+    var out = [];
+    g.cols.forEach(function (c, k) {
+      var n = COL_NAMES[c] || c;
+      if (!COL_SKIP[c] && !COL_SKIP[n]) out.push([n, k, /^(GF|GA|PF|PA|STRK)$/.test(n) ? 1 : 0, 1]);
+    });
+    return out;
   }
 
   function renderStandings() {
@@ -281,26 +310,41 @@
     document.getElementById('updated').textContent = '';
     var box = document.getElementById('list'); box.innerHTML = '';
     var groups = (data.standings || {})[standLeague] || [];
-    if (!groups.length) { box.appendChild(el('div', 'empty', 'Standings unavailable right now.')); return; }
+    if (!groups.length) {
+      var msg = el('div', 'empty', 'Standings unavailable right now.'), off = OFFICIAL[standLeague];
+      if (off) {
+        msg.textContent = 'Standings aren\u2019t in yet. ';
+        var a = el('a', null, 'See the official ' + off[0] + ' standings \u2197');
+        a.href = off[1]; a.target = '_blank'; a.rel = 'noopener'; a.style.color = 'var(--accent)';
+        msg.appendChild(a);
+      }
+      box.appendChild(msg); return;
+    }
     groups.forEach(function (g) {
       var sec = el('section', 'stand');
       sec.appendChild(el('h2', null, g.group));
       var tbl = el('table'), head = el('tr');
       head.appendChild(el('th', null, 'Team'));
-      ST_COLS.forEach(function (c) { head.appendChild(el('th', c[2] ? 'wide' : null, c[0])); });
+      // football / soccer tables carry their own columns (cols + stats)
+      var cols = g.cols ? colsFor(g) : ST_COLS;
+      cols.forEach(function (c) { head.appendChild(el('th', c[2] ? 'wide' : null, c[0])); });
       tbl.appendChild(head);
       g.teams.forEach(function (t, i) {
         var tr = el('tr', isOurClub(t.name) ? 'ours' : null), td = el('td');
         td.appendChild(el('span', 'rk', String(i + 1)));
         td.appendChild(document.createTextNode(t.name));
         tr.appendChild(td);
-        ST_COLS.forEach(function (c) { tr.appendChild(el('td', c[2] ? 'wide' : null, t[c[1]] == null ? '' : String(t[c[1]]))); });
+        cols.forEach(function (c) {
+          var v = c[3] ? (t.stats || [])[c[1]] : t[c[1]];
+          if (c[3] && /^strk$/i.test(c[0]) && v) v = String(v).replace(/^(Won|Lost|Tied)\s*(\d+)$/i, function (_, r, n) { return r[0].toUpperCase() + n; });
+          tr.appendChild(el('td', c[2] ? 'wide' : null, v == null ? '' : String(v)));
+        });
         tbl.appendChild(tr);
       });
       sec.appendChild(tbl);
       box.appendChild(sec);
     });
-    box.appendChild(el('div', 'snote', 'OTL includes overtime and shootout losses. Local teams are highlighted.'));
+    box.appendChild(el('div', 'snote', (HOCKEY[standLeague] ? 'OTL includes overtime and shootout losses. ' : '') + 'Local teams are highlighted.'));
   }
 
   function render() {
