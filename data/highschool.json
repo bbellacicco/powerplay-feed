@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-01T19:30:01-04:00",
+ "updated": "2026-10-01T19:45:01-04:00",
  "today": "2026-10-01",
  "games": [
   {
@@ -871,9 +871,9 @@
    "home_away": "N",
    "opponent": "St. Joseph's",
    "location": "St. Joseph's",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "final",
+   "our_score": 0,
+   "opp_score": 3,
    "result": null,
    "note": "Tier 1",
    "links": {
@@ -1101,6 +1101,26 @@
    },
    "away": "Belle River",
    "home": "Essex"
+  },
+  {
+   "id": "highschool-2026-10-01-72",
+   "team": "highschool",
+   "sport": "Senior Boys Football",
+   "start": "2026-10-01T00:00:00-04:00",
+   "time_tbd": true,
+   "home_away": "N",
+   "opponent": "Kennedy",
+   "location": "Tecumseh Vista Academy",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Massey",
+   "home": "Kennedy"
   },
   {
    "id": "highschool-2026-10-01-42",
@@ -1440,26 +1460,6 @@
     "standings": "https://wecssaa.com/viewScores.php"
    },
    "away": "Erie Migration",
-   "home": "Kennedy"
-  },
-  {
-   "id": "highschool-2026-10-01-72",
-   "team": "highschool",
-   "sport": "Senior Boys Football",
-   "start": "2026-10-01T19:30:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Kennedy",
-   "location": "Tecumseh Vista Academy",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Massey",
    "home": "Kennedy"
   },
   {
