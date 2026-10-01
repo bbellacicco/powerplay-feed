@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-01T08:15:02-04:00",
+ "updated": "2026-10-01T11:00:02-04:00",
  "today": "2026-10-01",
  "games": [
   {
@@ -909,8 +909,8 @@
    "start": "2026-10-01T16:00:00-04:00",
    "time_tbd": false,
    "home_away": "N",
-   "opponent": "Holy Names",
-   "location": "Holy Names",
+   "opponent": "Villanova",
+   "location": "Villanova",
    "status": "upcoming",
    "our_score": null,
    "opp_score": null,
@@ -919,8 +919,8 @@
    "links": {
     "standings": "https://wecssaa.com/viewScores.php"
    },
-   "away": "Kennedy",
-   "home": "Holy Names"
+   "away": "St. Anne",
+   "home": "Villanova"
   },
   {
    "id": "highschool-2026-10-01-50",
@@ -949,8 +949,8 @@
    "start": "2026-10-01T16:00:00-04:00",
    "time_tbd": false,
    "home_away": "N",
-   "opponent": "Villanova",
-   "location": "Villanova",
+   "opponent": "Holy Names",
+   "location": "Holy Names",
    "status": "upcoming",
    "our_score": null,
    "opp_score": null,
@@ -959,8 +959,8 @@
    "links": {
     "standings": "https://wecssaa.com/viewScores.php"
    },
-   "away": "St. Anne",
-   "home": "Villanova"
+   "away": "Kennedy",
+   "home": "Holy Names"
   },
   {
    "id": "highschool-2026-10-01-52",
@@ -1109,26 +1109,6 @@
    "start": "2026-10-01T16:00:00-04:00",
    "time_tbd": false,
    "home_away": "N",
-   "opponent": "Sandwich",
-   "location": "Sandwich",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Assumption",
-   "home": "Sandwich"
-  },
-  {
-   "id": "highschool-2026-10-01-46",
-   "team": "highschool",
-   "sport": "Senior Girls Basketball",
-   "start": "2026-10-01T16:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
    "opponent": "Massey",
    "location": "Massey",
    "status": "upcoming",
@@ -1141,6 +1121,26 @@
    },
    "away": "Brennan",
    "home": "Massey"
+  },
+  {
+   "id": "highschool-2026-10-01-46",
+   "team": "highschool",
+   "sport": "Senior Girls Basketball",
+   "start": "2026-10-01T16:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Sandwich",
+   "location": "Sandwich",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Tier 2",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Assumption",
+   "home": "Sandwich"
   },
   {
    "id": "highschool-2026-10-01-47",
@@ -1163,24 +1163,24 @@
    "home": "Catholic Central"
   },
   {
-   "id": "highschool-2026-10-01-58",
+   "id": "highschool-2026-10-01-59",
    "team": "highschool",
-   "sport": "Senior Girls Basketball",
-   "start": "2026-10-01T17:00:00-04:00",
+   "sport": "Junior Boys Volleyball",
+   "start": "2026-10-01T17:15:00-04:00",
    "time_tbd": false,
    "home_away": "N",
-   "opponent": "Essex",
-   "location": "Essex",
+   "opponent": "Villanova",
+   "location": "Villanova",
    "status": "upcoming",
    "our_score": null,
    "opp_score": null,
    "result": null,
-   "note": "Tier 2",
+   "note": "Tier 1",
    "links": {
     "standings": "https://wecssaa.com/viewScores.php"
    },
-   "away": "Herman",
-   "home": "Essex"
+   "away": "St. Anne",
+   "home": "Villanova"
   },
   {
    "id": "highschool-2026-10-01-60",
@@ -1209,26 +1209,6 @@
    "start": "2026-10-01T17:15:00-04:00",
    "time_tbd": false,
    "home_away": "N",
-   "opponent": "Villanova",
-   "location": "Villanova",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 1",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "St. Anne",
-   "home": "Villanova"
-  },
-  {
-   "id": "highschool-2026-10-01-62",
-   "team": "highschool",
-   "sport": "Junior Boys Volleyball",
-   "start": "2026-10-01T17:15:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
    "opponent": "Massey",
    "location": "Massey",
    "status": "upcoming",
@@ -1243,7 +1223,7 @@
    "home": "Massey"
   },
   {
-   "id": "highschool-2026-10-01-63",
+   "id": "highschool-2026-10-01-62",
    "team": "highschool",
    "sport": "Junior Boys Volleyball",
    "start": "2026-10-01T17:15:00-04:00",
@@ -1263,7 +1243,7 @@
    "home": "Holy Names"
   },
   {
-   "id": "highschool-2026-10-01-64",
+   "id": "highschool-2026-10-01-63",
    "team": "highschool",
    "sport": "Junior Boys Volleyball",
    "start": "2026-10-01T17:15:00-04:00",
@@ -1283,7 +1263,7 @@
    "home": "Riverside"
   },
   {
-   "id": "highschool-2026-10-01-65",
+   "id": "highschool-2026-10-01-64",
    "team": "highschool",
    "sport": "Junior Boys Volleyball",
    "start": "2026-10-01T17:15:00-04:00",
@@ -1303,7 +1283,7 @@
    "home": "Essex"
   },
   {
-   "id": "highschool-2026-10-01-66",
+   "id": "highschool-2026-10-01-65",
    "team": "highschool",
    "sport": "Junior Boys Volleyball",
    "start": "2026-10-01T17:15:00-04:00",
@@ -1323,7 +1303,7 @@
    "home": "Tecumseh Vista Academy"
   },
   {
-   "id": "highschool-2026-10-01-67",
+   "id": "highschool-2026-10-01-66",
    "team": "highschool",
    "sport": "Junior Boys Volleyball",
    "start": "2026-10-01T17:15:00-04:00",
@@ -1343,7 +1323,7 @@
    "home": "Cardinal Carter"
   },
   {
-   "id": "highschool-2026-10-01-59",
+   "id": "highschool-2026-10-01-58",
    "team": "highschool",
    "sport": "Senior Girls Basketball",
    "start": "2026-10-01T17:15:00-04:00",
@@ -1363,7 +1343,7 @@
    "home": "Westview Freedom Academy"
   },
   {
-   "id": "highschool-2026-10-01-68",
+   "id": "highschool-2026-10-01-67",
    "team": "highschool",
    "sport": "Junior Girls Basketball",
    "start": "2026-10-01T17:30:00-04:00",
@@ -1383,7 +1363,7 @@
    "home": "Sandwich"
   },
   {
-   "id": "highschool-2026-10-01-70",
+   "id": "highschool-2026-10-01-69",
    "team": "highschool",
    "sport": "Senior Boys Football",
    "start": "2026-10-01T17:30:00-04:00",
@@ -1403,7 +1383,7 @@
    "home": "Catholic Central"
   },
   {
-   "id": "highschool-2026-10-01-71",
+   "id": "highschool-2026-10-01-70",
    "team": "highschool",
    "sport": "Senior Boys Football",
    "start": "2026-10-01T17:30:00-04:00",
@@ -1423,7 +1403,7 @@
    "home": "Tecumseh Vista Academy"
   },
   {
-   "id": "highschool-2026-10-01-69",
+   "id": "highschool-2026-10-01-68",
    "team": "highschool",
    "sport": "Senior Girls Basketball",
    "start": "2026-10-01T17:30:00-04:00",
@@ -1443,7 +1423,7 @@
    "home": "Kennedy"
   },
   {
-   "id": "highschool-2026-10-01-72",
+   "id": "highschool-2026-10-01-71",
    "team": "highschool",
    "sport": "Senior Boys Football",
    "start": "2026-10-01T19:00:00-04:00",
@@ -1463,7 +1443,7 @@
    "home": "Essex"
   },
   {
-   "id": "highschool-2026-10-01-73",
+   "id": "highschool-2026-10-01-72",
    "team": "highschool",
    "sport": "Senior Boys Football",
    "start": "2026-10-01T19:30:00-04:00",
@@ -1483,7 +1463,7 @@
    "home": "Kennedy"
   },
   {
-   "id": "highschool-2026-10-02-74",
+   "id": "highschool-2026-10-02-73",
    "team": "highschool",
    "sport": "Senior Boys Football",
    "start": "2026-10-02T17:30:00-04:00",
@@ -1503,7 +1483,7 @@
    "home": "Holy Names"
   },
   {
-   "id": "highschool-2026-10-02-75",
+   "id": "highschool-2026-10-02-74",
    "team": "highschool",
    "sport": "Senior Boys Football",
    "start": "2026-10-02T17:30:00-04:00",
@@ -1523,7 +1503,7 @@
    "home": "Villanova"
   },
   {
-   "id": "highschool-2026-10-02-76",
+   "id": "highschool-2026-10-02-75",
    "team": "highschool",
    "sport": "Senior Boys Football",
    "start": "2026-10-02T17:30:00-04:00",
@@ -1543,7 +1523,7 @@
    "home": "North Star"
   },
   {
-   "id": "highschool-2026-10-02-77",
+   "id": "highschool-2026-10-02-76",
    "team": "highschool",
    "sport": "Senior Boys Football",
    "start": "2026-10-02T19:30:00-04:00",
