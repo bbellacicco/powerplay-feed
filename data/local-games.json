@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-01T22:01:35-04:00",
+ "updated": "2026-10-01T22:16:33-04:00",
  "today": "2026-10-01",
  "range": [
   "2026-09-28",
@@ -185,11 +185,11 @@
    "home_away": "H",
    "opponent": "North Bay Battalion",
    "location": "WFCU Centre, Windsor",
-   "status": "live",
+   "status": "final",
    "our_score": 3,
    "opp_score": 2,
-   "result": null,
-   "note": "00:00 3rd",
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29035/"
    }
@@ -1773,14 +1773,14 @@
      {
       "name": "North Bay Battalion",
       "abbr": "NB",
-      "gp": 4,
+      "gp": 5,
       "w": 2,
-      "l": 2,
+      "l": 3,
       "otl": 0,
       "pts": 4,
       "gf": 15,
       "ga": 18,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Barrie Colts",
@@ -1836,6 +1836,18 @@
       "strk": "W2"
      },
      {
+      "name": "Windsor Spitfires",
+      "abbr": "WSR",
+      "gp": 5,
+      "w": 2,
+      "l": 2,
+      "otl": 1,
+      "pts": 5,
+      "gf": 15,
+      "ga": 18,
+      "strk": "W2"
+     },
+     {
       "name": "Flint Firebirds",
       "abbr": "FLNT",
       "gp": 3,
@@ -1846,18 +1858,6 @@
       "gf": 11,
       "ga": 11,
       "strk": "L1"
-     },
-     {
-      "name": "Windsor Spitfires",
-      "abbr": "WSR",
-      "gp": 4,
-      "w": 1,
-      "l": 2,
-      "otl": 1,
-      "pts": 3,
-      "gf": 15,
-      "ga": 18,
-      "strk": "W1"
      },
      {
       "name": "Saginaw Spirit",
