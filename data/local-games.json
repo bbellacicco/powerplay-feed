@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-01T21:16:33-04:00",
+ "updated": "2026-10-01T21:31:41-04:00",
  "today": "2026-10-01",
  "range": [
   "2026-09-28",
@@ -187,9 +187,9 @@
    "location": "WFCU Centre, Windsor",
    "status": "live",
    "our_score": 3,
-   "opp_score": 1,
+   "opp_score": 2,
    "result": null,
-   "note": "15:07 3rd",
+   "note": "06:44 3rd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29035/"
    }
@@ -204,10 +204,10 @@
    "opponent": "Buffalo Jr. Sabres",
    "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
    "status": "live",
-   "our_score": 4,
+   "our_score": 5,
    "opp_score": 1,
    "result": null,
-   "note": "03:05 3rd",
+   "note": "Unofficial Final",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16544"
    },
@@ -1737,7 +1737,7 @@
       "l": 4,
       "otl": 0,
       "pts": 2,
-      "gf": 19,
+      "gf": 20,
       "ga": 23,
       "strk": "L2"
      }
@@ -1766,7 +1766,7 @@
       "l": 2,
       "otl": 0,
       "pts": 4,
-      "gf": 14,
+      "gf": 15,
       "ga": 12,
       "strk": "W1"
      },
@@ -1778,7 +1778,7 @@
       "l": 2,
       "otl": 0,
       "pts": 4,
-      "gf": 14,
+      "gf": 15,
       "ga": 18,
       "strk": "L1"
      },
@@ -1791,7 +1791,7 @@
       "otl": 0,
       "pts": 0,
       "gf": 6,
-      "ga": 18,
+      "ga": 19,
       "strk": "L4"
      },
      {
@@ -1856,7 +1856,7 @@
       "otl": 1,
       "pts": 3,
       "gf": 15,
-      "ga": 17,
+      "ga": 18,
       "strk": "W1"
      },
      {
@@ -1909,7 +1909,7 @@
       "otl": 1,
       "pts": 5,
       "gf": 12,
-      "ga": 11,
+      "ga": 12,
       "strk": "W2"
      },
      {
@@ -1999,7 +1999,7 @@
       "l": 1,
       "otl": 0,
       "pts": 8,
-      "gf": 28,
+      "gf": 29,
       "ga": 19,
       "strk": "W4"
      },
@@ -2105,6 +2105,18 @@
       "strk": "W2"
      },
      {
+      "name": "King Rebellion",
+      "abbr": "KNG",
+      "gp": 9,
+      "w": 7,
+      "l": 1,
+      "otl": 1,
+      "pts": 15,
+      "gf": 32,
+      "ga": 15,
+      "strk": "W3"
+     },
+     {
       "name": "Milton Menace",
       "abbr": "MIL",
       "gp": 9,
@@ -2117,18 +2129,6 @@
       "strk": "W1"
      },
      {
-      "name": "King Rebellion",
-      "abbr": "KNG",
-      "gp": 8,
-      "w": 7,
-      "l": 1,
-      "otl": 0,
-      "pts": 14,
-      "gf": 32,
-      "ga": 14,
-      "strk": "W3"
-     },
-     {
       "name": "Leamington Flyers",
       "abbr": "LEA",
       "gp": 7,
@@ -2136,7 +2136,7 @@
       "l": 1,
       "otl": 0,
       "pts": 12,
-      "gf": 34,
+      "gf": 35,
       "ga": 14,
       "strk": "L1"
      },
@@ -2177,6 +2177,18 @@
       "strk": "W1"
      },
      {
+      "name": "Oakville Blades",
+      "abbr": "OAK",
+      "gp": 9,
+      "w": 3,
+      "l": 5,
+      "otl": 1,
+      "pts": 7,
+      "gf": 28,
+      "ga": 42,
+      "strk": "W1"
+     },
+     {
       "name": "Mississauga Chargers",
       "abbr": "MIS",
       "gp": 9,
@@ -2185,7 +2197,7 @@
       "otl": 0,
       "pts": 6,
       "gf": 30,
-      "ga": 48,
+      "ga": 49,
       "strk": "W1"
      },
      {
@@ -2213,18 +2225,6 @@
       "strk": "L3"
      },
      {
-      "name": "Oakville Blades",
-      "abbr": "OAK",
-      "gp": 8,
-      "w": 2,
-      "l": 5,
-      "otl": 1,
-      "pts": 5,
-      "gf": 27,
-      "ga": 42,
-      "strk": "L2"
-     },
-     {
       "name": "Buffalo Jr. Sabres",
       "abbr": "BUF",
       "gp": 9,
@@ -2233,7 +2233,7 @@
       "otl": 0,
       "pts": 4,
       "gf": 19,
-      "ga": 41,
+      "ga": 42,
       "strk": "L2"
      }
     ]
@@ -2424,7 +2424,7 @@
       "l": 0,
       "otl": 0,
       "pts": 10,
-      "gf": 33,
+      "gf": 34,
       "ga": 19,
       "strk": "W5"
      },
@@ -2461,7 +2461,7 @@
       "otl": 0,
       "pts": 8,
       "gf": 24,
-      "ga": 19,
+      "ga": 20,
       "strk": "W4"
      },
      {
@@ -2489,6 +2489,18 @@
       "strk": "L1"
      },
      {
+      "name": "Stoney Creek Generals",
+      "abbr": "SCG",
+      "gp": 11,
+      "w": 2,
+      "l": 9,
+      "otl": 0,
+      "pts": 4,
+      "gf": 30,
+      "ga": 49,
+      "strk": "W1"
+     },
+     {
       "name": "Brantford Titans",
       "abbr": "BFD",
       "gp": 7,
@@ -2501,25 +2513,13 @@
       "strk": "L1"
      },
      {
-      "name": "Stoney Creek Generals",
-      "abbr": "SCG",
-      "gp": 10,
-      "w": 1,
-      "l": 9,
-      "otl": 0,
-      "pts": 2,
-      "gf": 30,
-      "ga": 49,
-      "strk": "L5"
-     },
-     {
       "name": "Hamilton Steel",
       "abbr": "HAM",
-      "gp": 7,
+      "gp": 8,
       "w": 0,
       "l": 6,
-      "otl": 1,
-      "pts": 1,
+      "otl": 2,
+      "pts": 2,
       "gf": 19,
       "ga": 36,
       "strk": "L6"
