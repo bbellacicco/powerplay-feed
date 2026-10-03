@@ -6,7 +6,7 @@
 <title>Local Hub | Powerplay Windsor</title>
 <!--
   Local schedules & results widget: a 7-day span (3 days before today, today,
-  3 days after; the All tab shows 2 either side). Data comes from data/local-games.json, refreshed every
+  3 days after; the All tab shows yesterday to 2 days ahead). Data comes from data/local-games.json, refreshed every
   morning by .github/workflows/local-games.yml.
 
   Embed in Wix (Embed Code > Embed a site):
@@ -61,6 +61,7 @@
   .bar { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; align-items: center; }
   .pill { border: 1px solid var(--line); background: var(--panel); color: var(--text);
     padding: 6px 12px; border-radius: 999px; font: inherit; font-size: 13px; cursor: pointer; }
+  .more { color: var(--muted); font-size: 12px; text-align: center; padding: 6px 0 2px; }
   .pill[aria-pressed="true"] { background: var(--accent); color: #111; border-color: var(--accent); font-weight: 600; }
   select.pill { padding-right: 8px; }
   .day { margin-top: 14px; }
@@ -135,7 +136,7 @@
 
   function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
   function fmt(d, opts) { return new Intl.DateTimeFormat('en-CA', Object.assign({ timeZone: TZ }, opts)).format(d); }
-  var ALL_DAYS_EACH_SIDE = 2;   // the All tab shows 2 days back to 2 days ahead; team tabs show the full week
+  var ALL_DAYS_BACK = 1, ALL_DAYS_AHEAD = 2;   // the All tab: yesterday to 2 days ahead; team tabs show the full week
   function dayKey(d) { return fmt(d, { year: 'numeric', month: '2-digit', day: '2-digit' }); }
 
   var BASE = 'https://bbellacicco.github.io/powerplay-feed/data/';
@@ -357,7 +358,7 @@
     var range = data.range || [todayKey, todayKey];
     if (state.team === 'all') {
       var now = Date.now();
-      range = [dayKey(new Date(now - ALL_DAYS_EACH_SIDE * 864e5)), dayKey(new Date(now + ALL_DAYS_EACH_SIDE * 864e5))];
+      range = [dayKey(new Date(now - ALL_DAYS_BACK * 864e5)), dayKey(new Date(now + ALL_DAYS_AHEAD * 864e5))];
     }
     function noon(k) { return new Date(k + 'T12:00:00'); }
     document.getElementById('updated').textContent =
@@ -402,6 +403,7 @@
       grp.games.forEach(function (g) { sec.appendChild(row(g)); });
       list.appendChild(sec);
     });
+    if (state.team === 'all') list.appendChild(el('div', 'more', 'For more games and results, tap a team above.'));
   }
 
   function row(g, showDay) {
