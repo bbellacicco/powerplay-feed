@@ -1,9 +1,9 @@
 {
- "updated": "2026-10-02T23:01:32-04:00",
- "today": "2026-10-02",
+ "updated": "2026-10-03T00:01:34-04:00",
+ "today": "2026-10-03",
  "range": [
-  "2026-09-29",
-  "2026-10-05"
+  "2026-09-30",
+  "2026-10-06"
  ],
  "teams": {
   "spitfires": {
@@ -95,7 +95,7 @@
   },
   "cfl_standings": {
    "ok": true,
-   "count": 8
+   "count": 9
   },
   "pwhl_news": {
    "ok": true,
@@ -103,25 +103,6 @@
   }
  },
  "games": [
-  {
-   "id": "junior-gs2960231",
-   "team": "junior",
-   "sport": "PJHL (Jr. C)",
-   "start": "2026-09-29T19:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Walpole Island Wild",
-   "location": "Essex Centre Complex",
-   "status": "final",
-   "our_score": 7,
-   "opp_score": 0,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960231?configuration=45"
-   },
-   "club": "Essex 73's"
-  },
   {
    "id": "junior-gojhl15526",
    "team": "junior",
@@ -393,10 +374,10 @@
    "home_away": "A",
    "opponent": "Guelph Gryphons",
    "location": "Guelph, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 2,
+   "opp_score": 3,
+   "result": "L",
    "note": "",
    "links": {}
   },
@@ -761,6 +742,44 @@
    "result": null,
    "note": "",
    "links": {}
+  },
+  {
+   "id": "junior-ojhl16445",
+   "team": "junior",
+   "sport": "OJHL (Jr. A)",
+   "start": "2026-10-06T17:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Wellington Dukes",
+   "location": "Gale Centre, Niagara Falls, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.ojhl.ca/stats/game-center/16445"
+   },
+   "club": "Leamington Flyers"
+  },
+  {
+   "id": "junior-gs2960292",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-10-06T19:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Dresden Kings",
+   "location": "Essex Centre Complex",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960292?configuration=45"
+   },
+   "club": "Essex 73's"
   }
  ],
  "pro_games": [
@@ -1575,6 +1594,18 @@
      "pf": 470,
      "pa": 382,
      "flags": "x"
+    },
+    {
+     "abbr": "BC",
+     "name": "BC Lions",
+     "gp": 14,
+     "w": 8,
+     "l": 6,
+     "t": 0,
+     "pts": 16,
+     "pf": 428,
+     "pa": 381,
+     "flags": ""
     },
     {
      "abbr": "SSK",
