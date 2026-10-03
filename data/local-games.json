@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-02T21:16:34-04:00",
+ "updated": "2026-10-02T21:31:57-04:00",
  "today": "2026-10-02",
  "range": [
   "2026-09-29",
@@ -258,7 +258,7 @@
    "our_score": 0,
    "opp_score": 3,
    "result": null,
-   "note": "08:03 3rd",
+   "note": "00:27 3rd",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16549"
    },
@@ -325,10 +325,10 @@
    "opponent": "Guelph Storm",
    "location": "Sleeman Centre, Guelph",
    "status": "live",
-   "our_score": 1,
-   "opp_score": 3,
+   "our_score": 2,
+   "opp_score": 4,
    "result": null,
-   "note": "05:27 3rd",
+   "note": "00:00 3rd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29037/"
    }
@@ -358,11 +358,11 @@
    "home_away": "A",
    "opponent": "Woodstock Navy Vets",
    "location": "Reeves C.C., Woodstock, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 4,
+   "opp_score": 2,
    "result": null,
-   "note": "",
+   "note": "11:32 3rd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15539"
    },
@@ -1685,7 +1685,7 @@
       "l": 0,
       "otl": 0,
       "pts": 10,
-      "gf": 32,
+      "gf": 33,
       "ga": 14,
       "strk": "W5"
      },
@@ -1698,7 +1698,7 @@
       "otl": 0,
       "pts": 6,
       "gf": 18,
-      "ga": 20,
+      "ga": 21,
       "strk": "L1"
      },
      {
@@ -1710,7 +1710,7 @@
       "otl": 0,
       "pts": 4,
       "gf": 24,
-      "ga": 28,
+      "ga": 29,
       "strk": "L3"
      },
      {
@@ -1721,7 +1721,7 @@
       "l": 4,
       "otl": 0,
       "pts": 4,
-      "gf": 22,
+      "gf": 23,
       "ga": 28,
       "strk": "W1"
      },
@@ -1733,7 +1733,7 @@
       "l": 1,
       "otl": 1,
       "pts": 3,
-      "gf": 14,
+      "gf": 15,
       "ga": 17,
       "strk": "L1"
      }
@@ -1750,7 +1750,7 @@
       "l": 0,
       "otl": 0,
       "pts": 8,
-      "gf": 20,
+      "gf": 22,
       "ga": 6,
       "strk": "W4"
      },
@@ -1763,7 +1763,7 @@
       "otl": 0,
       "pts": 6,
       "gf": 16,
-      "ga": 15,
+      "ga": 17,
       "strk": "W2"
      },
      {
@@ -1775,7 +1775,7 @@
       "otl": 0,
       "pts": 4,
       "gf": 16,
-      "ga": 21,
+      "ga": 22,
       "strk": "L2"
      },
      {
@@ -1799,7 +1799,7 @@
       "otl": 0,
       "pts": 0,
       "gf": 14,
-      "ga": 25,
+      "ga": 26,
       "strk": "L5"
      }
     ]
@@ -1839,8 +1839,8 @@
       "l": 2,
       "otl": 1,
       "pts": 5,
-      "gf": 16,
-      "ga": 21,
+      "gf": 17,
+      "ga": 22,
       "strk": "W2"
      },
      {
@@ -1864,7 +1864,7 @@
       "otl": 1,
       "pts": 3,
       "gf": 19,
-      "ga": 21,
+      "ga": 22,
       "strk": "L1"
      }
     ]
@@ -1880,7 +1880,7 @@
       "l": 0,
       "otl": 0,
       "pts": 6,
-      "gf": 19,
+      "gf": 20,
       "ga": 9,
       "strk": "W3"
      },
@@ -1892,7 +1892,7 @@
       "l": 2,
       "otl": 0,
       "pts": 6,
-      "gf": 19,
+      "gf": 20,
       "ga": 15,
       "strk": "W2"
      },
@@ -1916,8 +1916,8 @@
       "l": 2,
       "otl": 0,
       "pts": 4,
-      "gf": 15,
-      "ga": 13,
+      "gf": 16,
+      "ga": 14,
       "strk": "W2"
      },
      {
@@ -1952,6 +1952,18 @@
       "strk": "W11"
      },
      {
+      "name": "Cobourg Cougars",
+      "abbr": "COB",
+      "gp": 6,
+      "w": 5,
+      "l": 0,
+      "otl": 1,
+      "pts": 11,
+      "gf": 38,
+      "ga": 26,
+      "strk": "W5"
+     },
+     {
       "name": "Wellington Dukes",
       "abbr": "WEL",
       "gp": 8,
@@ -1964,18 +1976,6 @@
       "strk": "L1"
      },
      {
-      "name": "Cobourg Cougars",
-      "abbr": "COB",
-      "gp": 6,
-      "w": 5,
-      "l": 0,
-      "otl": 1,
-      "pts": 11,
-      "gf": 36,
-      "ga": 26,
-      "strk": "W5"
-     },
-     {
       "name": "Stouffville Spirit",
       "abbr": "STO",
       "gp": 6,
@@ -1984,7 +1984,7 @@
       "otl": 0,
       "pts": 10,
       "gf": 30,
-      "ga": 22,
+      "ga": 23,
       "strk": "W5"
      },
      {
@@ -2020,7 +2020,7 @@
       "otl": 1,
       "pts": 7,
       "gf": 20,
-      "ga": 23,
+      "ga": 25,
       "strk": "W3"
      },
      {
@@ -2031,7 +2031,7 @@
       "l": 6,
       "otl": 0,
       "pts": 6,
-      "gf": 31,
+      "gf": 32,
       "ga": 30,
       "strk": "L6"
      },
@@ -2056,7 +2056,7 @@
       "otl": 0,
       "pts": 4,
       "gf": 33,
-      "ga": 47,
+      "ga": 48,
       "strk": "L5"
      },
      {
@@ -2067,7 +2067,7 @@
       "l": 5,
       "otl": 0,
       "pts": 4,
-      "gf": 22,
+      "gf": 23,
       "ga": 32,
       "strk": "W2"
      },
@@ -2089,6 +2089,18 @@
     "group": "West Conference",
     "teams": [
      {
+      "name": "King Rebellion",
+      "abbr": "KNG",
+      "gp": 10,
+      "w": 8,
+      "l": 1,
+      "otl": 1,
+      "pts": 17,
+      "gf": 42,
+      "ga": 16,
+      "strk": "W4"
+     },
+     {
       "name": "Collingwood Blues",
       "abbr": "COL",
       "gp": 9,
@@ -2099,18 +2111,6 @@
       "gf": 55,
       "ga": 14,
       "strk": "W2"
-     },
-     {
-      "name": "King Rebellion",
-      "abbr": "KNG",
-      "gp": 9,
-      "w": 7,
-      "l": 1,
-      "otl": 1,
-      "pts": 15,
-      "gf": 42,
-      "ga": 16,
-      "strk": "W3"
      },
      {
       "name": "Leamington Flyers",
@@ -2144,7 +2144,7 @@
       "l": 3,
       "otl": 1,
       "pts": 11,
-      "gf": 40,
+      "gf": 41,
       "ga": 28,
       "strk": "W4"
      },
@@ -2157,7 +2157,7 @@
       "otl": 0,
       "pts": 10,
       "gf": 39,
-      "ga": 16,
+      "ga": 17,
       "strk": "L1"
      },
      {
@@ -2199,14 +2199,14 @@
      {
       "name": "Niagara Falls Canucks",
       "abbr": "NFC",
-      "gp": 11,
+      "gp": 12,
       "w": 2,
-      "l": 7,
+      "l": 8,
       "otl": 2,
       "pts": 6,
       "gf": 29,
       "ga": 50,
-      "strk": "L6"
+      "strk": "L7"
      },
      {
       "name": "Georgetown Raiders",
@@ -2247,7 +2247,7 @@
       "l": 1,
       "otl": 0,
       "pts": 10,
-      "gf": 36,
+      "gf": 38,
       "ga": 20,
       "strk": "W3"
      },
@@ -2272,7 +2272,7 @@
       "otl": 0,
       "pts": 10,
       "gf": 25,
-      "ga": 15,
+      "ga": 16,
       "strk": "L1"
      },
      {
@@ -2283,7 +2283,7 @@
       "l": 2,
       "otl": 0,
       "pts": 8,
-      "gf": 31,
+      "gf": 32,
       "ga": 27,
       "strk": "L1"
      },
@@ -2368,7 +2368,7 @@
       "otl": 1,
       "pts": 3,
       "gf": 21,
-      "ga": 30,
+      "ga": 32,
       "strk": "L4"
      },
      {
@@ -2408,8 +2408,8 @@
       "l": 0,
       "otl": 0,
       "pts": 12,
-      "gf": 49,
-      "ga": 18,
+      "gf": 51,
+      "ga": 19,
       "strk": "W6"
      },
      {
@@ -2444,8 +2444,8 @@
       "l": 1,
       "otl": 0,
       "pts": 10,
-      "gf": 32,
-      "ga": 27,
+      "gf": 33,
+      "ga": 29,
       "strk": "W2"
      },
      {
@@ -2469,7 +2469,7 @@
       "otl": 0,
       "pts": 6,
       "gf": 19,
-      "ga": 12,
+      "ga": 13,
       "strk": "W1"
      },
      {
@@ -2480,7 +2480,7 @@
       "l": 3,
       "otl": 0,
       "pts": 4,
-      "gf": 23,
+      "gf": 24,
       "ga": 31,
       "strk": "L1"
      },
