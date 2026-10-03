@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-02T21:01:33-04:00",
+ "updated": "2026-10-02T21:16:34-04:00",
  "today": "2026-10-02",
  "range": [
   "2026-09-29",
@@ -256,9 +256,9 @@
    "location": "Eddie Bush Memorial Arena, Collingwood, Ontario",
    "status": "live",
    "our_score": 0,
-   "opp_score": 2,
+   "opp_score": 3,
    "result": null,
-   "note": "18:14 3rd",
+   "note": "08:03 3rd",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16549"
    },
@@ -273,10 +273,10 @@
    "home_away": "H",
    "opponent": "Essex 73's",
    "location": "Atlas Tube Centre",
-   "status": "live",
+   "status": "final",
    "our_score": 0,
-   "opp_score": 0,
-   "result": null,
+   "opp_score": 1,
+   "result": "L",
    "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960244?configuration=45"
@@ -328,7 +328,7 @@
    "our_score": 1,
    "opp_score": 3,
    "result": null,
-   "note": "15:02 3rd",
+   "note": "05:27 3rd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29037/"
    }
@@ -358,11 +358,11 @@
    "home_away": "A",
    "opponent": "Woodstock Navy Vets",
    "location": "Reeves C.C., Woodstock, ON",
-   "status": "live",
-   "our_score": 4,
-   "opp_score": 2,
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
    "result": null,
-   "note": "04:22 2nd",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15539"
    },
@@ -1685,8 +1685,8 @@
       "l": 0,
       "otl": 0,
       "pts": 10,
-      "gf": 31,
-      "ga": 12,
+      "gf": 32,
+      "ga": 14,
       "strk": "W5"
      },
      {
@@ -1750,7 +1750,7 @@
       "l": 0,
       "otl": 0,
       "pts": 8,
-      "gf": 18,
+      "gf": 20,
       "ga": 6,
       "strk": "W4"
      },
@@ -1763,7 +1763,7 @@
       "otl": 0,
       "pts": 6,
       "gf": 16,
-      "ga": 13,
+      "ga": 15,
       "strk": "W2"
      },
      {
@@ -1798,8 +1798,8 @@
       "l": 5,
       "otl": 0,
       "pts": 0,
-      "gf": 12,
-      "ga": 24,
+      "gf": 14,
+      "ga": 25,
       "strk": "L5"
      }
     ]
@@ -1815,8 +1815,8 @@
       "l": 1,
       "otl": 0,
       "pts": 6,
-      "gf": 25,
-      "ga": 18,
+      "gf": 26,
+      "ga": 19,
       "strk": "W2"
      },
      {
@@ -1827,8 +1827,8 @@
       "l": 1,
       "otl": 0,
       "pts": 6,
-      "gf": 21,
-      "ga": 17,
+      "gf": 22,
+      "ga": 18,
       "strk": "W2"
      },
      {
@@ -1863,7 +1863,7 @@
       "l": 2,
       "otl": 1,
       "pts": 3,
-      "gf": 18,
+      "gf": 19,
       "ga": 21,
       "strk": "L1"
      }
@@ -1893,7 +1893,7 @@
       "otl": 0,
       "pts": 6,
       "gf": 19,
-      "ga": 14,
+      "ga": 15,
       "strk": "W2"
      },
      {
@@ -2096,7 +2096,7 @@
       "l": 1,
       "otl": 0,
       "pts": 16,
-      "gf": 54,
+      "gf": 55,
       "ga": 14,
       "strk": "W2"
      },
@@ -2108,7 +2108,7 @@
       "l": 1,
       "otl": 1,
       "pts": 15,
-      "gf": 41,
+      "gf": 42,
       "ga": 16,
       "strk": "W3"
      },
@@ -2121,7 +2121,7 @@
       "otl": 0,
       "pts": 14,
       "gf": 35,
-      "ga": 16,
+      "ga": 17,
       "strk": "W1"
      },
      {
@@ -2132,7 +2132,7 @@
       "l": 2,
       "otl": 0,
       "pts": 14,
-      "gf": 31,
+      "gf": 32,
       "ga": 19,
       "strk": "W1"
      },
@@ -2181,7 +2181,7 @@
       "otl": 1,
       "pts": 7,
       "gf": 32,
-      "ga": 44,
+      "ga": 45,
       "strk": "W1"
      },
      {
@@ -2205,7 +2205,7 @@
       "otl": 2,
       "pts": 6,
       "gf": 29,
-      "ga": 49,
+      "ga": 50,
       "strk": "L6"
      },
      {
@@ -2290,14 +2290,14 @@
      {
       "name": "Komoka Kings",
       "abbr": "KOM",
-      "gp": 8,
+      "gp": 9,
       "w": 4,
-      "l": 4,
+      "l": 5,
       "otl": 0,
       "pts": 8,
       "gf": 29,
       "ga": 33,
-      "strk": "W2"
+      "strk": "L1"
      },
      {
       "name": "London Nationals",
@@ -2391,14 +2391,14 @@
      {
       "name": "St. Catharines Falcons",
       "abbr": "SCF",
-      "gp": 8,
-      "w": 7,
+      "gp": 9,
+      "w": 8,
       "l": 1,
       "otl": 0,
-      "pts": 14,
+      "pts": 16,
       "gf": 46,
       "ga": 19,
-      "strk": "W4"
+      "strk": "W5"
      },
      {
       "name": "Cambridge Redhawks",
@@ -2408,7 +2408,7 @@
       "l": 0,
       "otl": 0,
       "pts": 12,
-      "gf": 47,
+      "gf": 49,
       "ga": 18,
       "strk": "W6"
      },
@@ -2425,6 +2425,18 @@
       "strk": "W6"
      },
      {
+      "name": "Ayr Centennials",
+      "abbr": "AYR",
+      "gp": 7,
+      "w": 5,
+      "l": 1,
+      "otl": 1,
+      "pts": 11,
+      "gf": 27,
+      "ga": 22,
+      "strk": "W5"
+     },
+     {
       "name": "Pelham Panthers",
       "abbr": "PEL",
       "gp": 6,
@@ -2433,7 +2445,7 @@
       "otl": 0,
       "pts": 10,
       "gf": 32,
-      "ga": 25,
+      "ga": 27,
       "strk": "W2"
      },
      {
@@ -2447,18 +2459,6 @@
       "gf": 21,
       "ga": 15,
       "strk": "W1"
-     },
-     {
-      "name": "Ayr Centennials",
-      "abbr": "AYR",
-      "gp": 6,
-      "w": 4,
-      "l": 1,
-      "otl": 1,
-      "pts": 9,
-      "gf": 27,
-      "ga": 22,
-      "strk": "W4"
      },
      {
       "name": "Waterloo Siskins",
@@ -2499,14 +2499,14 @@
      {
       "name": "Brantford Titans",
       "abbr": "BFD",
-      "gp": 7,
+      "gp": 8,
       "w": 1,
-      "l": 6,
+      "l": 7,
       "otl": 0,
       "pts": 2,
       "gf": 16,
       "ga": 35,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Hamilton Steel",
@@ -2693,26 +2693,26 @@
      {
       "name": "Lakeshore Canadiens",
       "abbr": "LAK",
-      "gp": 9,
+      "gp": 10,
       "w": 8,
       "l": 0,
-      "otl": 1,
-      "pts": 17,
+      "otl": 2,
+      "pts": 18,
       "gf": 39,
-      "ga": 16,
-      "strk": "L1"
+      "ga": 17,
+      "strk": "L2"
      },
      {
       "name": "Essex 73's",
       "abbr": "ESS",
-      "gp": 8,
-      "w": 7,
+      "gp": 9,
+      "w": 8,
       "l": 1,
       "otl": 0,
-      "pts": 14,
-      "gf": 33,
+      "pts": 16,
+      "gf": 34,
       "ga": 13,
-      "strk": "W6"
+      "strk": "W7"
      },
      {
       "name": "Dresden Kings",
