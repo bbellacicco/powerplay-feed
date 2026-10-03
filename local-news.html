@@ -123,6 +123,8 @@
   var TZ = 'America/Toronto';
   var URL = 'https://bbellacicco.github.io/powerplay-feed/data/local-news.json';
   var MAX_STORIES = 40;
+  var FEED_DAYS = 3;           // the feed shows the last 3 days of stories, videos and scores
+  var MIN_ITEMS = 3;
   var TABS = [['all', 'All'], ['powerplay', 'Powerplay'], ['spitfires', 'Spitfires'], ['lancers', 'Lancers'], ['saints', 'Saints'], ['junior', 'Junior Hockey']];
   var LABEL = { powerplay: 'Powerplay', spitfires: 'Spitfires', lancers: 'Lancers', saints: 'Saints', junior: 'Junior Hockey', highschool: 'High School' };
 
@@ -404,7 +406,10 @@
     var list = state.tab === 'all' ? mixed : mixed.filter(function (s) { return s.team === state.tab; });
     subSelect(list);
     if (state.sub !== 'all') list = list.filter(function (s) { return subKey(s) === state.sub || (state.tab === 'junior' && s.kind === 'score' && s.opp === state.sub); });
-    list = list.slice(0, MAX_STORIES);
+    // last FEED_DAYS days only; a quiet tab still shows its MIN_ITEMS newest so it's never empty
+    var cut = Date.now() - FEED_DAYS * 864e5;
+    var recent = list.filter(function (s) { return new Date(s.published).getTime() >= cut; });
+    list = (recent.length >= MIN_ITEMS ? recent : list.slice(0, MIN_ITEMS)).slice(0, MAX_STORIES);
     var box = document.getElementById('list'); box.innerHTML = '';
     if (!list.length) { box.appendChild(el('div', 'empty', 'No recent stories.')); return; }
     list.forEach(function (s) { box.appendChild(s.kind === 'score' ? scoreCard(s) : card(s)); });
