@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-02T21:46:30-04:00",
+ "updated": "2026-10-02T22:01:32-04:00",
  "today": "2026-10-02",
  "range": [
   "2026-09-29",
@@ -254,11 +254,11 @@
    "home_away": "A",
    "opponent": "Collingwood Blues",
    "location": "Eddie Bush Memorial Arena, Collingwood, Ontario",
-   "status": "live",
+   "status": "final",
    "our_score": 0,
    "opp_score": 3,
-   "result": null,
-   "note": "Unofficial Final",
+   "result": "L",
+   "note": "",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16549"
    },
@@ -324,11 +324,11 @@
    "home_away": "A",
    "opponent": "Guelph Storm",
    "location": "Sleeman Centre, Guelph",
-   "status": "live",
+   "status": "final",
    "our_score": 2,
    "opp_score": 4,
-   "result": null,
-   "note": "00:00 3rd",
+   "result": "L",
+   "note": "",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29037/"
    }
@@ -362,7 +362,7 @@
    "our_score": 4,
    "opp_score": 2,
    "result": null,
-   "note": "00:35 3rd",
+   "note": "Unofficial Final",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15539"
    },
@@ -765,50 +765,6 @@
  ],
  "pro_games": [
   {
-   "id": "cfl-cfl6656",
-   "team": "cfl",
-   "sport": "CFL",
-   "start": "2026-10-02T19:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Ottawa REDBLACKS",
-   "location": "TD Place Stadium",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.cfl.ca/schedule/"
-   },
-   "away": "Hamilton Tiger-Cats",
-   "home": "Ottawa REDBLACKS",
-   "away_abbr": "HAM",
-   "home_abbr": "OTT"
-  },
-  {
-   "id": "cfl-cfl6657",
-   "team": "cfl",
-   "sport": "CFL",
-   "start": "2026-10-02T21:30:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Saskatchewan Roughriders",
-   "location": "Mosaic Stadium",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.cfl.ca/schedule/"
-   },
-   "away": "Calgary Stampeders",
-   "home": "Saskatchewan Roughriders",
-   "away_abbr": "CGY",
-   "home_abbr": "SSK"
-  },
-  {
    "id": "cfl-cfl6658",
    "team": "cfl",
    "sport": "CFL",
@@ -851,6 +807,50 @@
    "home": "Montreal Alouettes",
    "away_abbr": "WPG",
    "home_abbr": "MTL"
+  },
+  {
+   "id": "cfl-cfl6656",
+   "team": "cfl",
+   "sport": "CFL",
+   "start": "2026-10-02T19:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Ottawa REDBLACKS",
+   "location": "TD Place Stadium",
+   "status": "final",
+   "our_score": 34,
+   "opp_score": 16,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.cfl.ca/schedule/"
+   },
+   "away": "Hamilton Tiger-Cats",
+   "home": "Ottawa REDBLACKS",
+   "away_abbr": "HAM",
+   "home_abbr": "OTT"
+  },
+  {
+   "id": "cfl-cfl6657",
+   "team": "cfl",
+   "sport": "CFL",
+   "start": "2026-10-02T21:30:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Saskatchewan Roughriders",
+   "location": "Mosaic Stadium",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.cfl.ca/schedule/"
+   },
+   "away": "Calgary Stampeders",
+   "home": "Saskatchewan Roughriders",
+   "away_abbr": "CGY",
+   "home_abbr": "SSK"
   }
  ],
  "pro_news": [
@@ -865,6 +865,19 @@
     "REDBLACKS"
    ],
    "url": "https://www.cfl.ca/article/flea-flicker-alert-ottawa-goes-deep-and-sets-up-six",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Kenny Lawler hauls in his 400th career catch in SPECTACULAR fashion",
+   "summary": "",
+   "published": "2026-10-02T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/3rRCdTXcNKT0kDokr5Yb2n/e74a37894dde332aa9fe708474670c15/highlight_2.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Tiger-Cats"
+   ],
+   "url": "https://www.cfl.ca/article/kenny-lawler-hauls-in-his-400th-career-catch-in-spectacular-fashion",
    "source": "CFL.ca"
   },
   {
@@ -1198,20 +1211,6 @@
    "video": true,
    "teams": [],
    "url": "https://www.cfl.ca/article/cfl-capital-power-bring-football-to-indigenous-youth-truth-and-reconciliation",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Recap: Edmonton 37, Hamilton 35",
-   "summary": "",
-   "published": "2026-09-27T00:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/6VmLUuw45If6Ho3RCaBYw8/af915a18e5a8a8438da7953ee02d35c1/recap.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Tiger-Cats",
-    "Elks"
-   ],
-   "url": "https://www.cfl.ca/article/recap-edmonton-37-hamilton-35",
    "source": "CFL.ca"
   },
   {
@@ -1685,56 +1684,56 @@
       "l": 0,
       "otl": 0,
       "pts": 10,
-      "gf": 33,
+      "gf": 34,
       "ga": 14,
       "strk": "W5"
      },
      {
       "name": "Oshawa Generals",
       "abbr": "OSH",
-      "gp": 5,
+      "gp": 6,
       "w": 3,
-      "l": 2,
+      "l": 3,
       "otl": 0,
       "pts": 6,
       "gf": 18,
       "ga": 21,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Kingston Frontenacs",
       "abbr": "KGN",
-      "gp": 5,
-      "w": 2,
+      "gp": 6,
+      "w": 3,
       "l": 3,
       "otl": 0,
-      "pts": 4,
+      "pts": 6,
       "gf": 24,
       "ga": 29,
-      "strk": "L3"
-     },
-     {
-      "name": "Peterborough Petes",
-      "abbr": "PBO",
-      "gp": 6,
-      "w": 2,
-      "l": 4,
-      "otl": 0,
-      "pts": 4,
-      "gf": 23,
-      "ga": 28,
       "strk": "W1"
      },
      {
       "name": "Ottawa 67's",
       "abbr": "OTT",
-      "gp": 3,
-      "w": 1,
+      "gp": 4,
+      "w": 2,
       "l": 1,
       "otl": 1,
-      "pts": 3,
+      "pts": 5,
       "gf": 15,
       "ga": 17,
+      "strk": "W1"
+     },
+     {
+      "name": "Peterborough Petes",
+      "abbr": "PBO",
+      "gp": 7,
+      "w": 2,
+      "l": 5,
+      "otl": 0,
+      "pts": 4,
+      "gf": 23,
+      "ga": 28,
       "strk": "L1"
      }
     ]
@@ -1750,7 +1749,7 @@
       "l": 0,
       "otl": 0,
       "pts": 8,
-      "gf": 22,
+      "gf": 24,
       "ga": 6,
       "strk": "W4"
      },
@@ -1763,7 +1762,7 @@
       "otl": 0,
       "pts": 6,
       "gf": 16,
-      "ga": 17,
+      "ga": 19,
       "strk": "W2"
      },
      {
@@ -1799,7 +1798,7 @@
       "otl": 0,
       "pts": 0,
       "gf": 14,
-      "ga": 26,
+      "ga": 27,
       "strk": "L5"
      }
     ]
@@ -1816,7 +1815,7 @@
       "otl": 0,
       "pts": 6,
       "gf": 26,
-      "ga": 19,
+      "ga": 20,
       "strk": "W2"
      },
      {
@@ -1827,21 +1826,21 @@
       "l": 1,
       "otl": 0,
       "pts": 6,
-      "gf": 22,
+      "gf": 23,
       "ga": 18,
       "strk": "W2"
      },
      {
       "name": "Windsor Spitfires",
       "abbr": "WSR",
-      "gp": 5,
+      "gp": 6,
       "w": 2,
-      "l": 2,
+      "l": 3,
       "otl": 1,
       "pts": 5,
       "gf": 17,
       "ga": 22,
-      "strk": "W2"
+      "strk": "L1"
      },
      {
       "name": "Flint Firebirds",
@@ -1858,11 +1857,11 @@
      {
       "name": "Saginaw Spirit",
       "abbr": "SAG",
-      "gp": 4,
+      "gp": 5,
       "w": 1,
       "l": 2,
-      "otl": 1,
-      "pts": 3,
+      "otl": 2,
+      "pts": 4,
       "gf": 19,
       "ga": 23,
       "strk": "L1"
@@ -1887,14 +1886,26 @@
      {
       "name": "Kitchener Rangers",
       "abbr": "KIT",
+      "gp": 6,
+      "w": 4,
+      "l": 2,
+      "otl": 0,
+      "pts": 8,
+      "gf": 21,
+      "ga": 15,
+      "strk": "W3"
+     },
+     {
+      "name": "Guelph Storm",
+      "abbr": "GUE",
       "gp": 5,
       "w": 3,
       "l": 2,
       "otl": 0,
       "pts": 6,
-      "gf": 21,
-      "ga": 15,
-      "strk": "W2"
+      "gf": 16,
+      "ga": 14,
+      "strk": "W3"
      },
      {
       "name": "Erie Otters",
@@ -1907,18 +1918,6 @@
       "gf": 12,
       "ga": 12,
       "strk": "L1"
-     },
-     {
-      "name": "Guelph Storm",
-      "abbr": "GUE",
-      "gp": 4,
-      "w": 2,
-      "l": 2,
-      "otl": 0,
-      "pts": 4,
-      "gf": 16,
-      "ga": 14,
-      "strk": "W2"
      },
      {
       "name": "Owen Sound Attack",
@@ -1978,14 +1977,14 @@
      {
       "name": "Stouffville Spirit",
       "abbr": "STO",
-      "gp": 6,
+      "gp": 7,
       "w": 5,
-      "l": 1,
+      "l": 2,
       "otl": 0,
       "pts": 10,
       "gf": 30,
       "ga": 23,
-      "strk": "W5"
+      "strk": "L1"
      },
      {
       "name": "St. Michaels Buzzers",
@@ -2020,7 +2019,7 @@
       "otl": 1,
       "pts": 7,
       "gf": 41,
-      "ga": 32,
+      "ga": 33,
       "strk": "W1"
      },
      {
@@ -2036,6 +2035,18 @@
       "strk": "W3"
      },
      {
+      "name": "Aurora Tigers",
+      "abbr": "AUR",
+      "gp": 8,
+      "w": 3,
+      "l": 5,
+      "otl": 0,
+      "pts": 6,
+      "gf": 23,
+      "ga": 32,
+      "strk": "W3"
+     },
+     {
       "name": "Toronto Warriors",
       "abbr": "TOW",
       "gp": 9,
@@ -2043,7 +2054,7 @@
       "l": 5,
       "otl": 2,
       "pts": 6,
-      "gf": 19,
+      "gf": 20,
       "ga": 56,
       "strk": "L2"
      },
@@ -2058,18 +2069,6 @@
       "gf": 33,
       "ga": 48,
       "strk": "L6"
-     },
-     {
-      "name": "Aurora Tigers",
-      "abbr": "AUR",
-      "gp": 7,
-      "w": 2,
-      "l": 5,
-      "otl": 0,
-      "pts": 4,
-      "gf": 23,
-      "ga": 32,
-      "strk": "W2"
      },
      {
       "name": "North York Rangers",
@@ -2089,6 +2088,18 @@
     "group": "West Conference",
     "teams": [
      {
+      "name": "Collingwood Blues",
+      "abbr": "COL",
+      "gp": 10,
+      "w": 9,
+      "l": 1,
+      "otl": 0,
+      "pts": 18,
+      "gf": 55,
+      "ga": 14,
+      "strk": "W3"
+     },
+     {
       "name": "King Rebellion",
       "abbr": "KNG",
       "gp": 10,
@@ -2101,28 +2112,16 @@
       "strk": "W4"
      },
      {
-      "name": "Collingwood Blues",
-      "abbr": "COL",
-      "gp": 9,
-      "w": 8,
-      "l": 1,
-      "otl": 0,
-      "pts": 16,
-      "gf": 55,
-      "ga": 14,
-      "strk": "W2"
-     },
-     {
       "name": "Leamington Flyers",
       "abbr": "LEA",
-      "gp": 8,
+      "gp": 9,
       "w": 7,
-      "l": 1,
+      "l": 2,
       "otl": 0,
       "pts": 14,
       "gf": 35,
       "ga": 17,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Milton Menace",
@@ -2242,14 +2241,26 @@
      {
       "name": "St. Marys Lincolns",
       "abbr": "SMY",
-      "gp": 6,
-      "w": 5,
+      "gp": 7,
+      "w": 6,
       "l": 1,
       "otl": 0,
-      "pts": 10,
+      "pts": 12,
       "gf": 39,
       "ga": 21,
-      "strk": "W3"
+      "strk": "W4"
+     },
+     {
+      "name": "St. Thomas Stars",
+      "abbr": "STT",
+      "gp": 7,
+      "w": 6,
+      "l": 1,
+      "otl": 0,
+      "pts": 12,
+      "gf": 27,
+      "ga": 16,
+      "strk": "W1"
      },
      {
       "name": "Chatham Maroons",
@@ -2264,28 +2275,28 @@
       "strk": "L1"
      },
      {
-      "name": "St. Thomas Stars",
-      "abbr": "STT",
+      "name": "Listowel Cyclones",
+      "abbr": "LIS",
       "gp": 6,
-      "w": 5,
+      "w": 3,
       "l": 1,
-      "otl": 0,
-      "pts": 10,
-      "gf": 27,
-      "ga": 16,
-      "strk": "L1"
+      "otl": 2,
+      "pts": 8,
+      "gf": 32,
+      "ga": 19,
+      "strk": "W3"
      },
      {
       "name": "Elmira Sugar Kings",
       "abbr": "ELM",
-      "gp": 6,
+      "gp": 7,
       "w": 4,
-      "l": 2,
+      "l": 3,
       "otl": 0,
       "pts": 8,
       "gf": 32,
       "ga": 29,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Komoka Kings",
@@ -2302,26 +2313,14 @@
      {
       "name": "London Nationals",
       "abbr": "LON",
-      "gp": 7,
+      "gp": 8,
       "w": 3,
-      "l": 3,
+      "l": 4,
       "otl": 1,
       "pts": 7,
       "gf": 29,
       "ga": 37,
-      "strk": "W3"
-     },
-     {
-      "name": "Listowel Cyclones",
-      "abbr": "LIS",
-      "gp": 5,
-      "w": 2,
-      "l": 1,
-      "otl": 2,
-      "pts": 6,
-      "gf": 32,
-      "ga": 19,
-      "strk": "W2"
+      "strk": "L1"
      },
      {
       "name": "Woodstock Navy Vets",
@@ -2362,14 +2361,14 @@
      {
       "name": "Strathroy Rockets",
       "abbr": "SRY",
-      "gp": 6,
+      "gp": 7,
       "w": 1,
-      "l": 4,
+      "l": 5,
       "otl": 1,
       "pts": 3,
       "gf": 22,
       "ga": 33,
-      "strk": "L4"
+      "strk": "L5"
      },
      {
       "name": "Sarnia Legionnaires",
@@ -2403,14 +2402,14 @@
      {
       "name": "Cambridge Redhawks",
       "abbr": "CAM",
-      "gp": 6,
-      "w": 6,
+      "gp": 7,
+      "w": 7,
       "l": 0,
       "otl": 0,
-      "pts": 12,
+      "pts": 14,
       "gf": 51,
       "ga": 19,
-      "strk": "W6"
+      "strk": "W7"
      },
      {
       "name": "Fort Erie Meteors",
@@ -2439,14 +2438,14 @@
      {
       "name": "Pelham Panthers",
       "abbr": "PEL",
-      "gp": 6,
+      "gp": 7,
       "w": 5,
-      "l": 1,
+      "l": 2,
       "otl": 0,
       "pts": 10,
       "gf": 33,
       "ga": 29,
-      "strk": "W2"
+      "strk": "L1"
      },
      {
       "name": "Caledonia Corvairs",
@@ -2469,7 +2468,7 @@
       "otl": 0,
       "pts": 6,
       "gf": 19,
-      "ga": 13,
+      "ga": 14,
       "strk": "W1"
      },
      {
@@ -2480,7 +2479,7 @@
       "l": 3,
       "otl": 0,
       "pts": 4,
-      "gf": 24,
+      "gf": 25,
       "ga": 31,
       "strk": "L1"
      },
