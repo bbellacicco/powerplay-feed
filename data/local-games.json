@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-02T22:16:35-04:00",
+ "updated": "2026-10-02T22:31:31-04:00",
  "today": "2026-10-02",
  "range": [
   "2026-09-29",
@@ -292,11 +292,11 @@
    "home_away": "H",
    "opponent": "Toronto Varsity Blues",
    "location": "Toldo Lancer Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 1,
+   "result": "W",
+   "note": "27-25, 25-21, 21-25, 25-19",
    "links": {}
   },
   {
@@ -342,10 +342,10 @@
    "home_away": "N",
    "opponent": "Lake Superior State Lakers",
    "location": "Vollmer Recreation Complex",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 2,
+   "result": "W",
    "note": "Exhibition",
    "links": {}
   },
@@ -377,10 +377,10 @@
    "home_away": "A",
    "opponent": "Mohawk Mountaineers",
    "location": "Hamilton, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 98,
+   "opp_score": 73,
+   "result": "W",
    "note": "",
    "links": {}
   },
@@ -1734,26 +1734,26 @@
      {
       "name": "Sudbury Wolves",
       "abbr": "SBY",
-      "gp": 4,
-      "w": 4,
+      "gp": 5,
+      "w": 5,
       "l": 0,
       "otl": 0,
-      "pts": 8,
+      "pts": 10,
       "gf": 24,
       "ga": 6,
-      "strk": "W4"
+      "strk": "W5"
      },
      {
       "name": "Niagara IceDogs",
       "abbr": "NIAG",
-      "gp": 5,
+      "gp": 6,
       "w": 3,
-      "l": 2,
+      "l": 3,
       "otl": 0,
       "pts": 6,
       "gf": 16,
       "ga": 19,
-      "strk": "W2"
+      "strk": "L1"
      },
      {
       "name": "North Bay Battalion",
@@ -1955,13 +1955,25 @@
      {
       "name": "Wellington Dukes",
       "abbr": "WEL",
-      "gp": 8,
-      "w": 5,
+      "gp": 9,
+      "w": 6,
       "l": 2,
       "otl": 1,
-      "pts": 11,
-      "gf": 36,
+      "pts": 13,
+      "gf": 37,
       "ga": 25,
+      "strk": "W1"
+     },
+     {
+      "name": "St. Michaels Buzzers",
+      "abbr": "STM",
+      "gp": 9,
+      "w": 5,
+      "l": 3,
+      "otl": 1,
+      "pts": 11,
+      "gf": 27,
+      "ga": 40,
       "strk": "L1"
      },
      {
@@ -1974,18 +1986,6 @@
       "pts": 10,
       "gf": 30,
       "ga": 23,
-      "strk": "L1"
-     },
-     {
-      "name": "St. Michaels Buzzers",
-      "abbr": "STM",
-      "gp": 8,
-      "w": 5,
-      "l": 3,
-      "otl": 0,
-      "pts": 10,
-      "gf": 27,
-      "ga": 39,
       "strk": "L1"
      },
      {
@@ -2121,33 +2121,33 @@
       "l": 2,
       "otl": 0,
       "pts": 14,
-      "gf": 33,
+      "gf": 34,
       "ga": 19,
       "strk": "W1"
      },
      {
       "name": "Burlington Cougars",
       "abbr": "BUR",
-      "gp": 9,
-      "w": 5,
+      "gp": 10,
+      "w": 6,
       "l": 3,
       "otl": 1,
-      "pts": 11,
+      "pts": 13,
       "gf": 43,
       "ga": 29,
-      "strk": "W4"
+      "strk": "W5"
      },
      {
       "name": "Toronto Patriots",
       "abbr": "PAT",
-      "gp": 7,
+      "gp": 8,
       "w": 5,
-      "l": 2,
+      "l": 3,
       "otl": 0,
       "pts": 10,
       "gf": 40,
       "ga": 19,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Caledon Admirals",
@@ -2170,7 +2170,7 @@
       "otl": 1,
       "pts": 7,
       "gf": 32,
-      "ga": 46,
+      "ga": 47,
       "strk": "W1"
      },
      {
