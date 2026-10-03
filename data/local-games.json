@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-03T00:01:34-04:00",
+ "updated": "2026-10-03T00:46:55-04:00",
  "today": "2026-10-03",
  "range": [
   "2026-09-30",
@@ -305,11 +305,11 @@
    "home_away": "A",
    "opponent": "Guelph Storm",
    "location": "Sleeman Centre, Guelph",
-   "status": "final",
+   "status": "live",
    "our_score": 2,
    "opp_score": 4,
-   "result": "L",
-   "note": "",
+   "result": null,
+   "note": "End of Game",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29037/"
    }
@@ -858,9 +858,9 @@
    "home_away": "N",
    "opponent": "Saskatchewan Roughriders",
    "location": "Mosaic Stadium",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "final",
+   "our_score": 37,
+   "opp_score": 31,
    "result": null,
    "note": "",
    "links": {
@@ -1610,13 +1610,25 @@
     {
      "abbr": "SSK",
      "name": "Saskatchewan Roughriders",
-     "gp": 14,
+     "gp": 15,
      "w": 8,
-     "l": 6,
+     "l": 7,
      "t": 0,
      "pts": 16,
-     "pf": 399,
-     "pa": 371,
+     "pf": 430,
+     "pa": 408,
+     "flags": ""
+    },
+    {
+     "abbr": "CGY",
+     "name": "Calgary Stampeders",
+     "gp": 16,
+     "w": 8,
+     "l": 8,
+     "t": 0,
+     "pts": 16,
+     "pf": 572,
+     "pa": 541,
      "flags": ""
     },
     {
@@ -1629,18 +1641,6 @@
      "pts": 14,
      "pf": 373,
      "pa": 382,
-     "flags": ""
-    },
-    {
-     "abbr": "CGY",
-     "name": "Calgary Stampeders",
-     "gp": 15,
-     "w": 7,
-     "l": 8,
-     "t": 0,
-     "pts": 14,
-     "pf": 535,
-     "pa": 510,
      "flags": ""
     }
    ]
