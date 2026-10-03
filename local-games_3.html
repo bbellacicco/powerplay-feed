@@ -6,7 +6,7 @@
 <title>Local Hub | Powerplay Windsor</title>
 <!--
   Local schedules & results widget: a 7-day span (3 days before today, today,
-  3 days after). Data comes from data/local-games.json, refreshed every
+  3 days after; the All tab shows 2 either side). Data comes from data/local-games.json, refreshed every
   morning by .github/workflows/local-games.yml.
 
   Embed in Wix (Embed Code > Embed a site):
@@ -135,6 +135,7 @@
 
   function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
   function fmt(d, opts) { return new Intl.DateTimeFormat('en-CA', Object.assign({ timeZone: TZ }, opts)).format(d); }
+  var ALL_DAYS_EACH_SIDE = 2;   // the All tab shows 2 days back to 2 days ahead; team tabs show the full week
   function dayKey(d) { return fmt(d, { year: 'numeric', month: '2-digit', day: '2-digit' }); }
 
   var BASE = 'https://bbellacicco.github.io/powerplay-feed/data/';
@@ -354,6 +355,10 @@
     // "today" is the day the data was collected (each morning)
     todayKey = data.today || dayKey(new Date(data.updated));
     var range = data.range || [todayKey, todayKey];
+    if (state.team === 'all') {
+      var now = Date.now();
+      range = [dayKey(new Date(now - ALL_DAYS_EACH_SIDE * 864e5)), dayKey(new Date(now + ALL_DAYS_EACH_SIDE * 864e5))];
+    }
     function noon(k) { return new Date(k + 'T12:00:00'); }
     document.getElementById('updated').textContent =
       fmt(noon(range[0]), { month: 'short', day: 'numeric' }) + ' – ' + fmt(noon(range[1]), { month: 'short', day: 'numeric' });
@@ -362,7 +367,10 @@
     var latest = state.team === 'latest';
     var inView = latest
       ? currentScores(6)
-      : data.games.filter(function (g) { return state.team === 'all' || g.team === state.team; });
+      : data.games.filter(function (g) {
+          if (state.team !== 'all') return g.team === state.team;
+          var k = dayKey(new Date(g.start)); return k >= range[0] && k <= range[1];
+        });
     schoolSelect(inView);
     if (state.school !== 'all') inView = inView.filter(function (g) { return g.home === state.school || g.away === state.school || g.club === state.school || (g.team === 'junior' && g.opponent === state.school); })
       .map(function (g) { return g.team === 'junior' && g.opponent === state.school ? flip(g) : g; });
@@ -371,7 +379,7 @@
 
     var list = document.getElementById('list');
     list.innerHTML = '';
-    if (!inView.length) { list.appendChild(el('div', 'empty', latest ? 'No scores yet this week.' : 'No games in this 7-day span.')); return; }
+    if (!inView.length) { list.appendChild(el('div', 'empty', latest ? 'No scores yet this week.' : 'No games in these days.')); return; }
 
     if (latest) {
       // priority order isn't by date, so no day headings; each row shows its day instead
