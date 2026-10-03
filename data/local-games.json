@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-02T21:31:57-04:00",
+ "updated": "2026-10-02T21:46:30-04:00",
  "today": "2026-10-02",
  "range": [
   "2026-09-29",
@@ -258,7 +258,7 @@
    "our_score": 0,
    "opp_score": 3,
    "result": null,
-   "note": "00:27 3rd",
+   "note": "Unofficial Final",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16549"
    },
@@ -308,10 +308,10 @@
    "home_away": "A",
    "opponent": "Guelph Gryphons",
    "location": "Guelph, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 7,
+   "opp_score": 0,
+   "result": "W",
    "note": "",
    "links": {}
   },
@@ -362,7 +362,7 @@
    "our_score": 4,
    "opp_score": 2,
    "result": null,
-   "note": "11:32 3rd",
+   "note": "00:35 3rd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15539"
    },
@@ -1769,14 +1769,14 @@
      {
       "name": "North Bay Battalion",
       "abbr": "NB",
-      "gp": 5,
+      "gp": 6,
       "w": 2,
-      "l": 3,
+      "l": 4,
       "otl": 0,
       "pts": 4,
       "gf": 16,
       "ga": 22,
-      "strk": "L2"
+      "strk": "L3"
      },
      {
       "name": "Barrie Colts",
@@ -1864,7 +1864,7 @@
       "otl": 1,
       "pts": 3,
       "gf": 19,
-      "ga": 22,
+      "ga": 23,
       "strk": "L1"
      }
     ]
@@ -1875,14 +1875,14 @@
      {
       "name": "London Knights",
       "abbr": "LDN",
-      "gp": 3,
-      "w": 3,
+      "gp": 4,
+      "w": 4,
       "l": 0,
       "otl": 0,
-      "pts": 6,
+      "pts": 8,
       "gf": 20,
       "ga": 9,
-      "strk": "W3"
+      "strk": "W4"
      },
      {
       "name": "Kitchener Rangers",
@@ -1892,7 +1892,7 @@
       "l": 2,
       "otl": 0,
       "pts": 6,
-      "gf": 20,
+      "gf": 21,
       "ga": 15,
       "strk": "W2"
      },
@@ -1959,7 +1959,7 @@
       "l": 0,
       "otl": 1,
       "pts": 11,
-      "gf": 38,
+      "gf": 39,
       "ga": 26,
       "strk": "W5"
      },
@@ -1972,7 +1972,7 @@
       "otl": 1,
       "pts": 11,
       "gf": 36,
-      "ga": 24,
+      "ga": 25,
       "strk": "L1"
      },
      {
@@ -1995,9 +1995,21 @@
       "l": 3,
       "otl": 0,
       "pts": 10,
-      "gf": 26,
+      "gf": 27,
       "ga": 39,
       "strk": "L1"
+     },
+     {
+      "name": "Newmarket Hurricanes",
+      "abbr": "NMH",
+      "gp": 10,
+      "w": 4,
+      "l": 6,
+      "otl": 0,
+      "pts": 8,
+      "gf": 32,
+      "ga": 30,
+      "strk": "W1"
      },
      {
       "name": "Trenton Golden Hawks",
@@ -2008,7 +2020,7 @@
       "otl": 1,
       "pts": 7,
       "gf": 41,
-      "ga": 31,
+      "ga": 32,
       "strk": "W1"
      },
      {
@@ -2020,20 +2032,8 @@
       "otl": 1,
       "pts": 7,
       "gf": 20,
-      "ga": 25,
+      "ga": 26,
       "strk": "W3"
-     },
-     {
-      "name": "Newmarket Hurricanes",
-      "abbr": "NMH",
-      "gp": 9,
-      "w": 3,
-      "l": 6,
-      "otl": 0,
-      "pts": 6,
-      "gf": 32,
-      "ga": 30,
-      "strk": "L6"
      },
      {
       "name": "Toronto Warriors",
@@ -2043,21 +2043,21 @@
       "l": 5,
       "otl": 2,
       "pts": 6,
-      "gf": 18,
+      "gf": 19,
       "ga": 56,
       "strk": "L2"
      },
      {
       "name": "Lindsay Muskies",
       "abbr": "LIN",
-      "gp": 8,
+      "gp": 9,
       "w": 2,
-      "l": 6,
+      "l": 7,
       "otl": 0,
       "pts": 4,
       "gf": 33,
       "ga": 48,
-      "strk": "L5"
+      "strk": "L6"
      },
      {
       "name": "Aurora Tigers",
@@ -2132,7 +2132,7 @@
       "l": 2,
       "otl": 0,
       "pts": 14,
-      "gf": 32,
+      "gf": 33,
       "ga": 19,
       "strk": "W1"
      },
@@ -2144,8 +2144,8 @@
       "l": 3,
       "otl": 1,
       "pts": 11,
-      "gf": 41,
-      "ga": 28,
+      "gf": 43,
+      "ga": 29,
       "strk": "W4"
      },
      {
@@ -2156,8 +2156,8 @@
       "l": 2,
       "otl": 0,
       "pts": 10,
-      "gf": 39,
-      "ga": 17,
+      "gf": 40,
+      "ga": 19,
       "strk": "L1"
      },
      {
@@ -2181,7 +2181,7 @@
       "otl": 1,
       "pts": 7,
       "gf": 32,
-      "ga": 45,
+      "ga": 46,
       "strk": "W1"
      },
      {
@@ -2247,8 +2247,8 @@
       "l": 1,
       "otl": 0,
       "pts": 10,
-      "gf": 38,
-      "ga": 20,
+      "gf": 39,
+      "ga": 21,
       "strk": "W3"
      },
      {
@@ -2271,7 +2271,7 @@
       "l": 1,
       "otl": 0,
       "pts": 10,
-      "gf": 25,
+      "gf": 27,
       "ga": 16,
       "strk": "L1"
      },
@@ -2284,7 +2284,7 @@
       "otl": 0,
       "pts": 8,
       "gf": 32,
-      "ga": 27,
+      "ga": 29,
       "strk": "L1"
      },
      {
@@ -2308,7 +2308,7 @@
       "otl": 1,
       "pts": 7,
       "gf": 29,
-      "ga": 33,
+      "ga": 37,
       "strk": "W3"
      },
      {
@@ -2319,7 +2319,7 @@
       "l": 1,
       "otl": 2,
       "pts": 6,
-      "gf": 28,
+      "gf": 32,
       "ga": 19,
       "strk": "W2"
      },
@@ -2367,8 +2367,8 @@
       "l": 4,
       "otl": 1,
       "pts": 3,
-      "gf": 21,
-      "ga": 32,
+      "gf": 22,
+      "ga": 33,
       "strk": "L4"
      },
      {
@@ -2717,14 +2717,14 @@
      {
       "name": "Dresden Kings",
       "abbr": "DRE",
-      "gp": 9,
+      "gp": 10,
       "w": 5,
-      "l": 3,
+      "l": 4,
       "otl": 1,
       "pts": 11,
-      "gf": 49,
-      "ga": 37,
-      "strk": "L2"
+      "gf": 53,
+      "ga": 42,
+      "strk": "L3"
      },
      {
       "name": "Blenheim Blades",
@@ -2753,14 +2753,14 @@
      {
       "name": "Mooretown Flags",
       "abbr": "MOO",
-      "gp": 10,
-      "w": 2,
+      "gp": 11,
+      "w": 3,
       "l": 5,
       "otl": 3,
-      "pts": 7,
-      "gf": 31,
-      "ga": 35,
-      "strk": "L5"
+      "pts": 9,
+      "gf": 36,
+      "ga": 39,
+      "strk": "W1"
      },
      {
       "name": "Amherstburg Admirals",
