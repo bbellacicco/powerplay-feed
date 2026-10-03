@@ -123,7 +123,8 @@
   var TZ = 'America/Toronto';
   var URL = 'https://bbellacicco.github.io/powerplay-feed/data/local-news.json';
   var MAX_STORIES = 40;
-  var FEED_DAYS = 3;           // the feed shows the last 3 days of stories, videos and scores
+  var FEED_DAYS = { all: 3 }; // All tab: last 3 days; team tabs: last 7 days
+  var TAB_DAYS = 7;
   var MIN_ITEMS = 3;
   var TABS = [['all', 'All'], ['powerplay', 'Powerplay'], ['spitfires', 'Spitfires'], ['lancers', 'Lancers'], ['saints', 'Saints'], ['junior', 'Junior Hockey']];
   var LABEL = { powerplay: 'Powerplay', spitfires: 'Spitfires', lancers: 'Lancers', saints: 'Saints', junior: 'Junior Hockey', highschool: 'High School' };
@@ -306,7 +307,7 @@
   // ---- Final scores from the Local Hub's data, shown as cards between the stories.
   // Tapping one opens the game sheet / box score.
   var DATA = 'https://bbellacicco.github.io/powerplay-feed/data/';
-  var SCORE_DAYS = 3;          // finals stay in the feed this long
+  var SCORE_DAYS = 7;          // finals stay in the feed this long (All tab trims to 3 days)
   var scores = [];
   function getJSON(name) { return fetch(DATA + name + '?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { if (!r.ok) throw r.status; return r.json(); }); }
   function loadScores() {
@@ -407,7 +408,7 @@
     subSelect(list);
     if (state.sub !== 'all') list = list.filter(function (s) { return subKey(s) === state.sub || (state.tab === 'junior' && s.kind === 'score' && s.opp === state.sub); });
     // last FEED_DAYS days only; a quiet tab still shows its MIN_ITEMS newest so it's never empty
-    var cut = Date.now() - FEED_DAYS * 864e5;
+    var cut = Date.now() - (FEED_DAYS[state.tab] || TAB_DAYS) * 864e5;
     var recent = list.filter(function (s) { return new Date(s.published).getTime() >= cut; });
     list = (recent.length >= MIN_ITEMS ? recent : list.slice(0, MIN_ITEMS)).slice(0, MAX_STORIES);
     var box = document.getElementById('list'); box.innerHTML = '';
