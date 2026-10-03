@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-03T17:39:08-04:00",
+ "updated": "2026-10-03T18:04:12-04:00",
  "today": "2026-10-03",
  "range": [
   "2026-09-30",
@@ -784,50 +784,6 @@
  ],
  "pro_games": [
   {
-   "id": "cfl-cfl6658",
-   "team": "cfl",
-   "sport": "CFL",
-   "start": "2026-10-03T15:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Toronto Argonauts",
-   "location": "BMO Field",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.cfl.ca/schedule/"
-   },
-   "away": "B.C. Lions",
-   "home": "Toronto Argonauts",
-   "away_abbr": "BC",
-   "home_abbr": "TOR"
-  },
-  {
-   "id": "cfl-cfl6659",
-   "team": "cfl",
-   "sport": "CFL",
-   "start": "2026-10-03T19:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Montreal Alouettes",
-   "location": "Percival Molson Memorial Stadium",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.cfl.ca/schedule/"
-   },
-   "away": "Winnipeg Blue Bombers",
-   "home": "Montreal Alouettes",
-   "away_abbr": "WPG",
-   "home_abbr": "MTL"
-  },
-  {
    "id": "cfl-cfl6656",
    "team": "cfl",
    "sport": "CFL",
@@ -870,9 +826,66 @@
    "home": "Saskatchewan Roughriders",
    "away_abbr": "CGY",
    "home_abbr": "SSK"
+  },
+  {
+   "id": "cfl-cfl6659",
+   "team": "cfl",
+   "sport": "CFL",
+   "start": "2026-10-03T19:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Montreal Alouettes",
+   "location": "Percival Molson Memorial Stadium",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.cfl.ca/schedule/"
+   },
+   "away": "Winnipeg Blue Bombers",
+   "home": "Montreal Alouettes",
+   "away_abbr": "WPG",
+   "home_abbr": "MTL"
+  },
+  {
+   "id": "cfl-cfl6658",
+   "team": "cfl",
+   "sport": "CFL",
+   "start": "2026-10-03T15:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Toronto Argonauts",
+   "location": "BMO Field",
+   "status": "final",
+   "our_score": 24,
+   "opp_score": 17,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.cfl.ca/schedule/"
+   },
+   "away": "B.C. Lions",
+   "home": "Toronto Argonauts",
+   "away_abbr": "BC",
+   "home_abbr": "TOR"
   }
  ],
  "pro_news": [
+  {
+   "league": "cfl",
+   "headline": "Deontai Williams makes an incredible defensive play for the INT!",
+   "summary": "",
+   "published": "2026-10-03T17:22:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/1u9pTAOA6HPzQguaIa0gT8/5a18cf60ccf0ba8e9f93d4b7d08bf6a1/int.png?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Lions"
+   ],
+   "url": "https://www.cfl.ca/article/deontai-williams-makes-an-incredible-defensive-play-for-the-int",
+   "source": "CFL.ca"
+  },
   {
    "league": "cfl",
    "headline": "Arbuckle finds Polk for the first major of the game!",
@@ -963,20 +976,6 @@
     "REDBLACKS"
    ],
    "url": "https://www.cfl.ca/article/flea-flicker-alert-ottawa-goes-deep-and-sets-up-six",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Recap: Hamilton 34, Ottawa 16",
-   "summary": "",
-   "published": "2026-10-02T00:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/m7FcxcIpKVMx7cD6O24BQ/be5ceaf5bd6a6fe8ddd981d0d82f5a5a/recap.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "REDBLACKS",
-    "Tiger-Cats"
-   ],
-   "url": "https://www.cfl.ca/article/recap-hamilton-34-ottawa-16",
    "source": "CFL.ca"
   },
   {
@@ -1593,13 +1592,13 @@
     {
      "abbr": "BC",
      "name": "BC Lions",
-     "gp": 14,
-     "w": 8,
+     "gp": 15,
+     "w": 9,
      "l": 6,
      "t": 0,
-     "pts": 16,
-     "pf": 428,
-     "pa": 381,
+     "pts": 18,
+     "pf": 452,
+     "pa": 398,
      "flags": ""
     },
     {
@@ -1658,13 +1657,13 @@
     {
      "abbr": "TOR",
      "name": "Toronto Argonauts",
-     "gp": 15,
+     "gp": 16,
      "w": 9,
-     "l": 6,
+     "l": 7,
      "t": 0,
      "pts": 18,
-     "pf": 445,
-     "pa": 431,
+     "pf": 462,
+     "pa": 455,
      "flags": "x"
     },
     {
@@ -1707,8 +1706,8 @@
       "l": 0,
       "otl": 0,
       "pts": 12,
-      "gf": 38,
-      "ga": 15,
+      "gf": 39,
+      "ga": 16,
       "strk": "W6"
      },
      {
@@ -1796,8 +1795,8 @@
       "l": 4,
       "otl": 0,
       "pts": 4,
-      "gf": 17,
-      "ga": 26,
+      "gf": 18,
+      "ga": 27,
       "strk": "L3"
      },
      {
@@ -2226,8 +2225,8 @@
       "l": 8,
       "otl": 2,
       "pts": 6,
-      "gf": 30,
-      "ga": 50,
+      "gf": 31,
+      "ga": 51,
       "strk": "L7"
      },
      {
@@ -2238,8 +2237,8 @@
       "l": 5,
       "otl": 2,
       "pts": 6,
-      "gf": 25,
-      "ga": 49,
+      "gf": 26,
+      "ga": 50,
       "strk": "L3"
      },
      {
