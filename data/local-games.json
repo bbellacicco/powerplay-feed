@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-03T10:16:32-04:00",
+ "updated": "2026-10-03T16:01:34-04:00",
  "today": "2026-10-03",
  "range": [
   "2026-09-30",
@@ -398,6 +398,24 @@
    "links": {}
   },
   {
+   "id": "saints-cjfl45659886",
+   "team": "saints",
+   "sport": "Football",
+   "start": "2026-10-03T00:00:00-04:00",
+   "time_tbd": true,
+   "home_away": "H",
+   "opponent": "Sault Ste. Marie Cougars",
+   "location": "Acumen Stadium, Windsor, ON, Canada",
+   "status": "final",
+   "our_score": 25,
+   "opp_score": 45,
+   "result": "L",
+   "note": "CJFL",
+   "links": {
+    "gamecentre": "https://www.cjfl.org/game/show/45659886"
+   }
+  },
+  {
    "id": "lancers-6406",
    "team": "lancers",
    "sport": "Baseball",
@@ -412,24 +430,6 @@
    "result": null,
    "note": "",
    "links": {}
-  },
-  {
-   "id": "saints-cjfl45659886",
-   "team": "saints",
-   "sport": "Football",
-   "start": "2026-10-03T13:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Sault Ste. Marie Cougars",
-   "location": "Acumen Stadium, Windsor, ON, Canada",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "CJFL",
-   "links": {
-    "gamecentre": "https://www.cjfl.org/game/show/45659886"
-   }
   },
   {
    "id": "lancers-6418",
@@ -2824,17 +2824,17 @@
      {
       "name": "Sault Ste. Marie Cougars",
       "stats": [
-       "7",
+       "8",
        "0",
        "0",
-       "14"
+       "16"
       ]
      },
      {
       "name": "St. Clair Saints",
       "stats": [
        "6",
-       "1",
+       "2",
        "0",
        "12"
       ]
