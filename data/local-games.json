@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-02T22:01:32-04:00",
+ "updated": "2026-10-02T22:16:35-04:00",
  "today": "2026-10-02",
  "range": [
   "2026-09-29",
@@ -95,7 +95,7 @@
   },
   "cfl_standings": {
    "ok": true,
-   "count": 9
+   "count": 8
   },
   "pwhl_news": {
    "ok": true,
@@ -358,11 +358,11 @@
    "home_away": "A",
    "opponent": "Woodstock Navy Vets",
    "location": "Reeves C.C., Woodstock, ON",
-   "status": "live",
+   "status": "final",
    "our_score": 4,
    "opp_score": 2,
-   "result": null,
-   "note": "Unofficial Final",
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15539"
    },
@@ -856,6 +856,19 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "Early fumble recovery leads to Clark Barnes TD",
+   "summary": "",
+   "published": "2026-10-02T22:06:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/4vAQhJqMsbloQdqBInkflA/af632d629ec65fcb0eaf25320297633e/CGY_1ST_TD.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Stampeders"
+   ],
+   "url": "https://www.cfl.ca/article/early-fumble-recovery-leads-to-clark-barnes-td",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "FLEA FLICKER ALERT! Ottawa goes deep and sets up six",
    "summary": "",
    "published": "2026-10-02T00:00:00-04:00",
@@ -1236,17 +1249,6 @@
    "source": "CFL.ca"
   },
   {
-   "league": "cfl",
-   "headline": "3 CFL Weekly Fantasy sleepers you need in your lineup in Week 17",
-   "summary": "",
-   "published": "2026-09-24T00:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/4etK053lwNoIvIwImo1lDK/c32e15224918f54035bd439d68a1361d/D-Sean_Mimbs_2026.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/4-cfl-weekly-fantasy-sleepers-you-need-in-your-lineup-in-week-17",
-   "source": "CFL.ca"
-  },
-  {
    "league": "pwhl",
    "headline": "PWHL Announces 2026-27 Regular Season Schedule",
    "summary": "",
@@ -1568,18 +1570,6 @@
      "flags": "x"
     },
     {
-     "abbr": "BC",
-     "name": "BC Lions",
-     "gp": 14,
-     "w": 8,
-     "l": 6,
-     "t": 0,
-     "pts": 16,
-     "pf": 428,
-     "pa": 381,
-     "flags": ""
-    },
-    {
      "abbr": "SSK",
      "name": "Saskatchewan Roughriders",
      "gp": 14,
@@ -1647,25 +1637,25 @@
     {
      "abbr": "HAM",
      "name": "Hamilton Tiger-Cats",
-     "gp": 15,
-     "w": 4,
+     "gp": 16,
+     "w": 5,
      "l": 11,
      "t": 0,
-     "pts": 8,
-     "pf": 362,
-     "pa": 458,
+     "pts": 10,
+     "pf": 396,
+     "pa": 474,
      "flags": ""
     },
     {
      "abbr": "OTT",
      "name": "Ottawa Redblacks",
-     "gp": 14,
+     "gp": 15,
      "w": 0,
-     "l": 14,
+     "l": 15,
      "t": 0,
      "pts": 0,
-     "pf": 339,
-     "pa": 524,
+     "pf": 355,
+     "pa": 558,
      "flags": ""
     }
    ]
@@ -1679,14 +1669,14 @@
      {
       "name": "Brantford Bulldogs",
       "abbr": "BFD",
-      "gp": 5,
-      "w": 5,
+      "gp": 6,
+      "w": 6,
       "l": 0,
       "otl": 0,
-      "pts": 10,
+      "pts": 12,
       "gf": 34,
       "ga": 14,
-      "strk": "W5"
+      "strk": "W6"
      },
      {
       "name": "Oshawa Generals",
@@ -1792,11 +1782,11 @@
      {
       "name": "Brampton Steelheads",
       "abbr": "BRAM",
-      "gp": 5,
+      "gp": 6,
       "w": 0,
       "l": 5,
-      "otl": 0,
-      "pts": 0,
+      "otl": 1,
+      "pts": 1,
       "gf": 14,
       "ga": 27,
       "strk": "L5"
@@ -1807,27 +1797,27 @@
     "group": "West Division",
     "teams": [
      {
-      "name": "Sarnia Sting",
-      "abbr": "SAR",
-      "gp": 4,
-      "w": 3,
-      "l": 1,
-      "otl": 0,
-      "pts": 6,
-      "gf": 26,
-      "ga": 20,
-      "strk": "W2"
-     },
-     {
       "name": "Soo Greyhounds",
       "abbr": "SOO",
-      "gp": 4,
-      "w": 3,
+      "gp": 5,
+      "w": 4,
       "l": 1,
       "otl": 0,
-      "pts": 6,
+      "pts": 8,
       "gf": 23,
       "ga": 18,
+      "strk": "W3"
+     },
+     {
+      "name": "Sarnia Sting",
+      "abbr": "SAR",
+      "gp": 5,
+      "w": 3,
+      "l": 1,
+      "otl": 1,
+      "pts": 7,
+      "gf": 26,
+      "ga": 20,
       "strk": "W2"
      },
      {
@@ -1953,14 +1943,14 @@
      {
       "name": "Cobourg Cougars",
       "abbr": "COB",
-      "gp": 6,
-      "w": 5,
+      "gp": 7,
+      "w": 6,
       "l": 0,
       "otl": 1,
-      "pts": 11,
+      "pts": 13,
       "gf": 39,
       "ga": 26,
-      "strk": "W5"
+      "strk": "W6"
      },
      {
       "name": "Wellington Dukes",
@@ -1999,6 +1989,18 @@
       "strk": "L1"
      },
      {
+      "name": "Trenton Golden Hawks",
+      "abbr": "TRN",
+      "gp": 8,
+      "w": 4,
+      "l": 3,
+      "otl": 1,
+      "pts": 9,
+      "gf": 41,
+      "ga": 33,
+      "strk": "W2"
+     },
+     {
       "name": "Newmarket Hurricanes",
       "abbr": "NMH",
       "gp": 10,
@@ -2011,28 +2013,16 @@
       "strk": "W1"
      },
      {
-      "name": "Trenton Golden Hawks",
-      "abbr": "TRN",
-      "gp": 7,
-      "w": 3,
-      "l": 3,
-      "otl": 1,
-      "pts": 7,
-      "gf": 41,
-      "ga": 33,
-      "strk": "W1"
-     },
-     {
       "name": "Pickering Panthers",
       "abbr": "PIC",
-      "gp": 8,
+      "gp": 9,
       "w": 3,
-      "l": 4,
+      "l": 5,
       "otl": 1,
       "pts": 7,
       "gf": 20,
       "ga": 26,
-      "strk": "W3"
+      "strk": "L1"
      },
      {
       "name": "Aurora Tigers",
@@ -2049,14 +2039,14 @@
      {
       "name": "Toronto Warriors",
       "abbr": "TOW",
-      "gp": 9,
+      "gp": 10,
       "w": 2,
-      "l": 5,
+      "l": 6,
       "otl": 2,
       "pts": 6,
       "gf": 20,
       "ga": 56,
-      "strk": "L2"
+      "strk": "L3"
      },
      {
       "name": "Lindsay Muskies",
@@ -2323,16 +2313,28 @@
       "strk": "L1"
      },
      {
-      "name": "Woodstock Navy Vets",
-      "abbr": "WNV",
+      "name": "LaSalle Vipers",
+      "abbr": "LAS",
       "gp": 6,
       "w": 3,
       "l": 3,
       "otl": 0,
       "pts": 6,
+      "gf": 20,
+      "ga": 25,
+      "strk": "W1"
+     },
+     {
+      "name": "Woodstock Navy Vets",
+      "abbr": "WNV",
+      "gp": 7,
+      "w": 3,
+      "l": 4,
+      "otl": 0,
+      "pts": 6,
       "gf": 23,
       "ga": 32,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Stratford Warriors",
@@ -2345,18 +2347,6 @@
       "gf": 18,
       "ga": 22,
       "strk": "W2"
-     },
-     {
-      "name": "LaSalle Vipers",
-      "abbr": "LAS",
-      "gp": 5,
-      "w": 2,
-      "l": 3,
-      "otl": 0,
-      "pts": 4,
-      "gf": 20,
-      "ga": 25,
-      "strk": "L1"
      },
      {
       "name": "Strathroy Rockets",
@@ -2462,11 +2452,11 @@
      {
       "name": "Waterloo Siskins",
       "abbr": "WAT",
-      "gp": 4,
+      "gp": 5,
       "w": 3,
       "l": 1,
-      "otl": 0,
-      "pts": 6,
+      "otl": 1,
+      "pts": 7,
       "gf": 19,
       "ga": 14,
       "strk": "W1"
@@ -2474,14 +2464,14 @@
      {
       "name": "Port Colborne Sailors",
       "abbr": "PCS",
-      "gp": 5,
-      "w": 2,
+      "gp": 6,
+      "w": 3,
       "l": 3,
       "otl": 0,
-      "pts": 4,
+      "pts": 6,
       "gf": 25,
       "ga": 31,
-      "strk": "L1"
+      "strk": "W1"
      },
      {
       "name": "Stoney Creek Generals",
