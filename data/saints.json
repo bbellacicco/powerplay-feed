@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-04T15:15:01-04:00",
+ "updated": "2026-10-04T15:30:01-04:00",
  "today": "2026-10-04",
  "games": [
   {
@@ -114,19 +114,17 @@
    "id": "saints-presto2026-10-04-2",
    "team": "saints",
    "sport": "Baseball",
-   "start": "2026-10-04T13:00:00-04:00",
-   "time_tbd": false,
+   "start": "2026-10-04T00:00:00-04:00",
+   "time_tbd": true,
    "home_away": "A",
    "opponent": "Sheridan",
    "location": "",
-   "status": "live",
-   "our_score": 0,
+   "status": "final",
+   "our_score": 15,
    "opp_score": 0,
-   "result": null,
-   "note": "",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/bsb/2026-27/boxscores/20261004_r1i8.xml"
-   }
+   "result": "W",
+   "note": "5 innings",
+   "links": {}
   },
   {
    "id": "saints-presto2026-10-04-1",
@@ -159,7 +157,7 @@
    "our_score": 0,
    "opp_score": 0,
    "result": null,
-   "note": "Bottom of 1st",
+   "note": "Bottom of 2nd",
    "links": {
     "boxscore": "https://www.saintsathletics.ca/sports/fastball/2026-27/boxscores/20261004_heay.xml"
    }
