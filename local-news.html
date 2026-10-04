@@ -323,7 +323,8 @@
       var since = Date.now() - SCORE_DAYS * 864e5;
       scores = games.filter(function (g) {
         return pertinent(g) && g.status === 'final' && g.our_score != null && g.opp_score != null && new Date(g.start).getTime() >= since;
-      }).map(function (g) { return scoreItem(g, teams); });
+      }).map(function (g) { return scoreItem(g, teams); })
+        .filter(function (s) { return s.url; });   // only scores that link to a game sheet, box score or recap
     }).catch(function () { scores = []; });
   }
 // Which local games count as ticker / feed material (everything else stays in the Local Hub):
