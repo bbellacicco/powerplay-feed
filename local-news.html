@@ -310,7 +310,7 @@
   // Tapping one opens the game sheet / box score.
   var DATA = 'https://bbellacicco.github.io/powerplay-feed/data/';
   var SCORE_DAYS = 7;          // finals stay in the feed this long (All tab trims to 3 days)
-  var scores = [];
+  var scores = [], finals = [];
   function getJSON(name) { return fetch(DATA + name + '?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { if (!r.ok) throw r.status; return r.json(); }); }
   function loadScores() {
     return Promise.all([getJSON('local-games.json'), getJSON('highschool.json').catch(function () { return null; }),
@@ -321,11 +321,11 @@
       if (sc && sc.games) games = games.filter(function (g) { return !(g.team === 'saints' && g.sport !== 'Football'); })
         .concat(sc.games.filter(function (g) { return g.sport !== 'Football'; }));
       var since = Date.now() - SCORE_DAYS * 864e5;
-      scores = games.filter(function (g) {
+      finals = games.filter(function (g) {
         return pertinent(g) && g.status === 'final' && g.our_score != null && g.opp_score != null && new Date(g.start).getTime() >= since;
-      }).map(function (g) { return scoreItem(g, teams); })
-        .filter(function (s) { return s.url; });   // only scores that link to a game sheet, box score or recap
-    }).catch(function () { scores = []; });
+      }).map(function (g) { return scoreItem(g, teams); });
+      scores = finals.filter(function (s) { return s.url; });   // only scores that link to a game sheet, box score or recap
+    }).catch(function () { scores = []; finals = []; });
   }
 // Which local games count as ticker / feed material (everything else stays in the Local Hub):
   // all Spitfires and junior hockey, Lancers football + basketball, St. Clair football, softball and soccer.
@@ -343,7 +343,7 @@
     var win = a.s >= b.s ? a : b, lose = win === a ? b : a;
     var l = g.links || {};
     return {
-      kind: 'score', start: g.start, team: g.team, club: g.club || '', opp: g.opponent || '', sport: g.sport || '',
+      kind: 'score', key: g.id || (g.team + g.start + g.opponent), a: g.our_score, b: g.opp_score, start: g.start, team: g.team, club: g.club || '', opp: g.opponent || '', sport: g.sport || '',
       headline: win.n + ' ' + win.s + ', ' + lose.n + ' ' + lose.s + (win.s === lose.s ? ' (tie)' : ''),
       result: g.home && g.away ? '' : (g.result || (a.s > b.s ? 'W' : a.s < b.s ? 'L' : 'T')),
       big: a.s + '–' + b.s, note: g.note || '',
@@ -424,27 +424,56 @@
     return when(b) - when(a);
   }
 
-  // A score is left out once a story covers that game (yours or the team's own recap):
-  // a story posted from the game's start to 3 days after that names the opponent and our team.
-  var GENERIC = /^(university|college|the|and|club|junior|hockey|team|varsity|saint|city|north|south|east|west|county)$/;
-  var SPORTS = ['football', 'basketball', 'hockey', 'soccer', 'softball', 'fastball', 'volleyball', 'baseball', 'rugby'];
-  var OURS = { lancers: ['lancers'], saints: ['saints', 'st. clair'], spitfires: ['spitfires'] };
-  function words(name) {
-    return (name || '').toLowerCase().replace(/[^a-z0-9' ]/g, ' ').split(/\s+/).filter(function (w) { return w.length >= 4 && !GENERIC.test(w); });
-  }
-  function covered(sc) {
-    var t0 = new Date(sc.start).getTime(), opp = words(sc.opp), sport = (sc.sport || '').toLowerCase();
-    if (!opp.length || !t0) return false;
-    var ours = sc.team === 'junior' ? words(sc.club) : OURS[sc.team] || [];
-    return stories.some(function (st) {
+  // ---- Which game is a story about? A story posted from a game's start to 3 days after that names
+  // the opponent and our team (and no other sport). If it quotes a score, the score must match;
+  // if it doesn't and several games fit (a doubleheader, a series), it isn't tied to any of them.
+  // A Powerplay story counts only if it quotes the score (so previews and features don't).
+  var M_GENERIC = /^(university|college|the|and|club|junior|hockey|team|varsity|saint|city|north|south|east|west|county)$/;
+  var M_SPORTS = ['football', 'basketball', 'hockey', 'soccer', 'softball', 'fastball', 'volleyball', 'baseball', 'rugby'];
+  var M_OURS = { lancers: ['lancers'], saints: ['saints', 'st. clair'], spitfires: ['spitfires'] };
+  function mWords(n) { return (n || '').toLowerCase().replace(/[^a-z0-9' ]/g, ' ').split(/\s+/).filter(function (w) { return w.length >= 4 && !M_GENERIC.test(w); }); }
+  // games: [{team, club, opp, sport, start, a, b}] (a/b = our/their score); stories: [{team, club, headline, summary, published, url}]
+  // returns [{game, story}]
+  function matchStories(games, stories) {
+    var out = [];
+    stories.forEach(function (st) {
       var t = new Date(st.published).getTime();
-      if (!(t >= t0 && t <= t0 + 3 * 864e5)) return false;
       var text = ((st.headline || '') + ' ' + (st.summary || '')).toLowerCase();
-      if (!opp.some(function (w) { return text.indexOf(w) >= 0; })) return false;
-      var named = SPORTS.filter(function (x) { return text.indexOf(x) >= 0; });
-      if (named.length && sport && !named.some(function (x) { return sport.indexOf(x) >= 0; })) return false;   // a story about another sport
-      if (st.team === sc.team && (sc.team !== 'junior' || st.club === sc.club)) return true;   // the team's own recap
-      return st.team === 'powerplay' && ours.some(function (w) { return text.indexOf(w) >= 0; });   // your story on the game
+      var named = M_SPORTS.filter(function (x) { return text.indexOf(x) >= 0; });
+      var quoted = (text.match(/\b\d{1,3}\s*[-–]\s*\d{1,3}\b/g) || []).map(function (q) { return q.replace(/\s/g, '').replace('–', '-'); });
+      var fits = games.filter(function (g) {
+        var t0 = new Date(g.start).getTime();
+        if (!(t >= t0 && t <= t0 + 3 * 864e5)) return false;
+        var sport = (g.sport || '').toLowerCase();
+        if (named.length && !named.some(function (x) { return sport.indexOf(x) >= 0; })) return false;
+        var opp = mWords(g.opp);
+        if (!opp.length || !opp.some(function (w) { return text.indexOf(w) >= 0; })) return false;
+        if (st.team === g.team) return g.team !== 'junior' || st.club === g.club;           // the team's own recap
+        var ours = g.team === 'junior' ? mWords(g.club) : M_OURS[g.team] || [];
+        return st.team === 'powerplay' && ours.some(function (w) { return text.indexOf(w) >= 0; });
+      });
+      if (st.team === 'powerplay' && !quoted.length) return;   // your previews and features don't quote a final score
+      if (quoted.length) fits = fits.filter(function (g) { return quoted.indexOf(g.a + '-' + g.b) >= 0 || quoted.indexOf(g.b + '-' + g.a) >= 0; });
+      if (fits.length === 1) out.push({ game: fits[0], story: st });
+    });
+    return out;
+  }
+
+  // A score is left out once a story covers that game (yours or the team's own recap); the team's
+  // own recap is left out when you've written about the same game, and your story shows on that team's tab.
+  var covered = {}, dup = {}, ppOnTab = {};
+  function matchAll() {
+    covered = {}; dup = {}; ppOnTab = {};
+    var games = finals.map(function (sc) { return { ref: sc, team: sc.team, club: sc.club, opp: sc.opp, sport: sc.sport, start: sc.start, a: sc.a, b: sc.b }; });
+    var pairs = matchStories(games, stories || []), byGame = {};
+    pairs.forEach(function (m) { covered[m.game.ref.key] = 1; (byGame[m.game.ref.key] = byGame[m.game.ref.key] || []).push(m); });
+    Object.keys(byGame).forEach(function (k) {
+      var ms = byGame[k];
+      if (!ms.some(function (m) { return m.story.team === 'powerplay'; })) return;
+      ms.forEach(function (m) {
+        if (m.story.team !== 'powerplay') dup[m.story.url] = 1;
+        else (ppOnTab[m.game.team] = ppOnTab[m.game.team] || {})[m.story.url] = 1;
+      });
     });
   }
 
@@ -454,9 +483,10 @@
     tabs();
     if (!stories) return;
     // stories + final scores, newest first (high school scores only on their own tab: there are dozens a week)
-    var mixed = stories.concat(scores.filter(function (sc) { return !covered(sc); }))
+    matchAll();
+    var mixed = stories.filter(function (st) { return !dup[st.url]; }).concat(scores.filter(function (sc) { return !covered[sc.key]; }))
       .sort(byNewest);
-    var list = state.tab === 'all' ? mixed : mixed.filter(function (s) { return s.team === state.tab; });
+    var list = state.tab === 'all' ? mixed : mixed.filter(function (s) { return s.team === state.tab || (s.team === 'powerplay' && (ppOnTab[state.tab] || {})[s.url]); });
     subSelect(list);
     if (state.sub !== 'all') list = list.filter(function (s) { return subKey(s) === state.sub || (state.tab === 'junior' && s.kind === 'score' && s.opp === state.sub); });
     // last FEED_DAYS days only; a quiet tab still shows its MIN_ITEMS newest so it's never empty
