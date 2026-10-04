@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-03T22:16:35-04:00",
+ "updated": "2026-10-03T22:31:33-04:00",
  "today": "2026-10-03",
  "range": [
   "2026-09-30",
@@ -424,12 +424,14 @@
    "home_away": "H",
    "opponent": "McMaster Marauders",
    "location": "Lacasse Park",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 7,
+   "opp_score": 3,
+   "result": "W",
    "note": "",
-   "links": {}
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6406"
+   }
   },
   {
    "id": "lancers-6418",
@@ -488,12 +490,14 @@
    "home_away": "H",
    "opponent": "McMaster Marauders",
    "location": "Lacasse Park",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 7,
+   "opp_score": 6,
+   "result": "W",
    "note": "",
-   "links": {}
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6407"
+   }
   },
   {
    "id": "lancers-6129",
@@ -536,14 +540,13 @@
    "home_away": "H",
    "opponent": "York Lions",
    "location": "Alumni Stadium",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 51,
+   "opp_score": 2,
+   "result": "W",
    "note": "",
    "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=169",
-    "watch": "https://oua.yaretv.com/"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6122"
    }
   },
   {
@@ -1800,6 +1803,18 @@
       "strk": "L4"
      },
      {
+      "name": "Barrie Colts",
+      "abbr": "BAR",
+      "gp": 6,
+      "w": 1,
+      "l": 4,
+      "otl": 1,
+      "pts": 3,
+      "gf": 11,
+      "ga": 22,
+      "strk": "W1"
+     },
+     {
       "name": "Brampton Steelheads",
       "abbr": "BRAM",
       "gp": 7,
@@ -1810,18 +1825,6 @@
       "gf": 16,
       "ga": 30,
       "strk": "L5"
-     },
-     {
-      "name": "Barrie Colts",
-      "abbr": "BAR",
-      "gp": 5,
-      "w": 0,
-      "l": 4,
-      "otl": 1,
-      "pts": 1,
-      "gf": 11,
-      "ga": 22,
-      "strk": "L4"
      }
     ]
    },
@@ -1843,14 +1846,14 @@
      {
       "name": "Sarnia Sting",
       "abbr": "SAR",
-      "gp": 5,
+      "gp": 6,
       "w": 3,
-      "l": 1,
+      "l": 2,
       "otl": 1,
       "pts": 7,
       "gf": 29,
       "ga": 25,
-      "strk": "W2"
+      "strk": "L1"
      },
      {
       "name": "Windsor Spitfires",
@@ -2841,26 +2844,26 @@
      {
       "name": "London Beefeaters",
       "stats": [
-       "3",
+       "4",
        "4",
        "0",
-       "6"
+       "8"
       ]
      },
      {
       "name": "Ottawa Sooners",
       "stats": [
-       "3",
+       "4",
        "4",
        "0",
-       "6"
+       "8"
       ]
      },
      {
       "name": "Hamilton Hurricanes",
       "stats": [
        "2",
-       "5",
+       "6",
        "0",
        "4"
       ]
@@ -2869,7 +2872,7 @@
       "name": "Quinte Riptides",
       "stats": [
        "0",
-       "7",
+       "8",
        "0",
        "0"
       ]
