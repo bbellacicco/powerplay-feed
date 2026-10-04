@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-03T21:31:37-04:00",
+ "updated": "2026-10-03T21:46:35-04:00",
  "today": "2026-10-03",
  "range": [
   "2026-09-30",
@@ -555,11 +555,11 @@
    "home_away": "A",
    "opponent": "Owen Sound Attack",
    "location": "Harry Lumley Bayshore Community Centre, Owen Sound",
-   "status": "live",
+   "status": "final",
    "our_score": 4,
    "opp_score": 1,
-   "result": null,
-   "note": "End of Game",
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29049/"
    }
@@ -1831,14 +1831,14 @@
      {
       "name": "Soo Greyhounds",
       "abbr": "SOO",
-      "gp": 5,
-      "w": 4,
+      "gp": 6,
+      "w": 5,
       "l": 1,
       "otl": 0,
-      "pts": 8,
+      "pts": 10,
       "gf": 26,
       "ga": 20,
-      "strk": "W3"
+      "strk": "W4"
      },
      {
       "name": "Sarnia Sting",
@@ -1853,6 +1853,18 @@
       "strk": "W2"
      },
      {
+      "name": "Windsor Spitfires",
+      "abbr": "WSR",
+      "gp": 7,
+      "w": 3,
+      "l": 3,
+      "otl": 1,
+      "pts": 7,
+      "gf": 21,
+      "ga": 23,
+      "strk": "W1"
+     },
+     {
       "name": "Saginaw Spirit",
       "abbr": "SAG",
       "gp": 6,
@@ -1865,28 +1877,16 @@
       "strk": "W1"
      },
      {
-      "name": "Windsor Spitfires",
-      "abbr": "WSR",
-      "gp": 6,
-      "w": 2,
-      "l": 3,
-      "otl": 1,
-      "pts": 5,
-      "gf": 21,
-      "ga": 23,
-      "strk": "L1"
-     },
-     {
       "name": "Flint Firebirds",
       "abbr": "FLNT",
-      "gp": 3,
+      "gp": 4,
       "w": 2,
-      "l": 1,
+      "l": 2,
       "otl": 0,
       "pts": 4,
       "gf": 13,
       "ga": 14,
-      "strk": "L1"
+      "strk": "L2"
      }
     ]
    },
@@ -1944,14 +1944,14 @@
      {
       "name": "Owen Sound Attack",
       "abbr": "OS",
-      "gp": 4,
+      "gp": 5,
       "w": 1,
-      "l": 3,
+      "l": 4,
       "otl": 0,
       "pts": 2,
       "gf": 8,
       "ga": 20,
-      "strk": "L3"
+      "strk": "L4"
      }
     ]
    }
@@ -2184,13 +2184,25 @@
      {
       "name": "Caledon Admirals",
       "abbr": "CAL",
-      "gp": 7,
+      "gp": 8,
       "w": 4,
-      "l": 2,
+      "l": 3,
       "otl": 1,
       "pts": 9,
       "gf": 24,
       "ga": 28,
+      "strk": "L1"
+     },
+     {
+      "name": "Mississauga Chargers",
+      "abbr": "MIS",
+      "gp": 11,
+      "w": 4,
+      "l": 7,
+      "otl": 0,
+      "pts": 8,
+      "gf": 35,
+      "ga": 51,
       "strk": "W1"
      },
      {
@@ -2216,18 +2228,6 @@
       "gf": 32,
       "ga": 51,
       "strk": "W1"
-     },
-     {
-      "name": "Mississauga Chargers",
-      "abbr": "MIS",
-      "gp": 10,
-      "w": 3,
-      "l": 7,
-      "otl": 0,
-      "pts": 6,
-      "gf": 35,
-      "ga": 51,
-      "strk": "L1"
      },
      {
       "name": "Niagara Falls Canucks",
@@ -2422,28 +2422,28 @@
       "strk": "W5"
      },
      {
-      "name": "Cambridge Redhawks",
-      "abbr": "CAM",
+      "name": "Fort Erie Meteors",
+      "abbr": "FEM",
       "gp": 7,
       "w": 7,
       "l": 0,
       "otl": 0,
       "pts": 14,
-      "gf": 55,
-      "ga": 26,
+      "gf": 41,
+      "ga": 23,
       "strk": "W7"
      },
      {
-      "name": "Fort Erie Meteors",
-      "abbr": "FEM",
-      "gp": 6,
-      "w": 6,
-      "l": 0,
+      "name": "Cambridge Redhawks",
+      "abbr": "CAM",
+      "gp": 8,
+      "w": 7,
+      "l": 1,
       "otl": 0,
-      "pts": 12,
-      "gf": 41,
-      "ga": 23,
-      "strk": "W6"
+      "pts": 14,
+      "gf": 55,
+      "ga": 26,
+      "strk": "L1"
      },
      {
       "name": "Ayr Centennials",
