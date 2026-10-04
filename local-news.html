@@ -12,7 +12,7 @@
 
   Embed in Wix (Embed Code > Embed a site):
     https://bbellacicco.github.io/powerplay-feed/local-news.html
-  Optional: ?view=scores | social   open on the Scores or Social view (default is Stories)
+  Optional: ?view=social   open on the Social view (default is Stories)
   Optional: ?tab=powerplay | spitfires | lancers | saints | junior   start on one team
 -->
 <style>
@@ -113,7 +113,7 @@
 <div class="wrap">
   <header><div><h1>Local <span>Hub</span></h1>
     <div class="sponsor">Brought to you by <b>St. Clair College Alumni</b></div></div>
-    <div class="views" role="group" aria-label="View"><button id="v-stories">Stories</button><button id="v-scores">Scores</button><button id="v-social">Social</button></div></header>
+    <div class="views" role="group" aria-label="View"><button id="v-stories">Stories</button><button id="v-social">Social</button></div></header>
   <div class="bar" id="tabs" role="group" aria-label="Team"></div>
   <div class="bar"><select class="pill" id="sub" aria-label="Filter"></select></div>
   <div id="list"><div class="empty">Loading…</div></div>
@@ -127,14 +127,13 @@
   var FEED_DAYS = { all: 3 }; // All tab: last 3 days; team tabs: last 7 days
   var TAB_DAYS = 7;
   var MIN_ITEMS = 3;
-  var STORIES_ALL = 6;         // Stories view, All tab: the newest six stories (scores live in their own Scores view now)
-  var SCORES_ALL = 8;          // Scores view, All tab: the newest finals (last 3 days)
+  var STORIES_ALL = 6;         // All tab: the newest six stories (scores live in the Local Scoreboard, not here)
   var TABS = [['all', 'All'], ['powerplay', 'Powerplay'], ['spitfires', 'Spitfires'], ['lancers', 'Lancers'], ['saints', 'Saints'], ['junior', 'Junior Hockey']];
   var LABEL = { powerplay: 'Powerplay', spitfires: 'Spitfires', lancers: 'Lancers', saints: 'Saints', junior: 'Junior Hockey', highschool: 'High School' };
 
   var qs = new URLSearchParams(location.search);
   var state = { tab: LABEL[qs.get('tab')] ? qs.get('tab') : 'all', sub: 'all',
-                view: qs.get('view') === 'social' ? 'social' : qs.get('view') === 'scores' ? 'scores' : 'stories', club: 0 };
+                view: qs.get('view') === 'social' ? 'social' : 'stories', club: 0 };
 
   // ---- Social view: each team's official Facebook page (Facebook's Page Plugin) and,
   // where they have one, their YouTube channel's latest uploads.
@@ -208,16 +207,14 @@
   }
 
   function views() {
-    [['stories', 'v-stories'], ['scores', 'v-scores'], ['social', 'v-social']].forEach(function (v) {
+    [['stories', 'v-stories'], ['social', 'v-social']].forEach(function (v) {
       var b = document.getElementById(v[1]);
       b.setAttribute('aria-pressed', String(state.view === v[0]));
       b.onclick = function () { if (state.view !== v[0]) { state.view = v[0]; state.sub = 'all'; state.club = 0; render(); } };
     });
     document.getElementById('foot').textContent = state.view === 'social'
       ? "Powerplay Windsor · Posts load from each team's official Facebook page and YouTube channel."
-      : state.view === 'scores'
-      ? "Powerplay Windsor · Final scores for the Spitfires, Lancers, Saints and junior hockey. Tap a score for the game sheet or box score. Every game and standing is in the Local Scoreboard."
-      : "Powerplay Windsor · Stories from Powerplay Windsor and the teams' own websites. Tap a story for the full details.";
+      : "Powerplay Windsor · Stories from Powerplay Windsor and the teams' own websites. Tap a story for the full details. Scores are in the Local Scoreboard.";
   }
 
   function heading(text, href, label) {
@@ -297,7 +294,7 @@
     fb.appendChild(fbFrame(team, w, FB_HEIGHT));
     fb.appendChild(el('div', 'note', "Posts not showing? Some browsers' privacy settings block Facebook feeds. Use Open ↗ to see them on Facebook."));
   }
-  var stories = null, storiesFailed = false, scoresReady = false;
+  var stories = null, storiesFailed = false;
 
   function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
   function ago(iso) {
@@ -358,19 +355,18 @@
   }
 
   function load() {
-    var s = fetch(URL + '?t=' + Date.now(), { cache: 'no-store' })
+    var st = fetch(URL + '?t=' + Date.now(), { cache: 'no-store' })
       .then(function (r) { if (!r.ok) throw r.status; return r.json(); })
       .then(function (j) { stories = j.stories || []; storiesFailed = false; })
       .catch(function () { storiesFailed = !stories; });
-    var c = loadScores().then(function () { scoresReady = true; });
-    Promise.all([s, c]).then(function () { if (state.view !== 'social') render(); });
+    // final scores are only used to spot when you've written up the same game a team recapped
+    Promise.all([st, loadScores()]).then(function () { if (state.view !== 'social') render(); });
   }
 
   function tabs() {
     var box = document.getElementById('tabs'); box.innerHTML = '';
     TABS.forEach(function (t) {
       if (state.view === 'social' && t[0] === 'highschool') return;
-      if (state.view === 'scores' && t[0] === 'powerplay') return;
       var b = el('button', 'pill', t[1]);
       b.setAttribute('aria-pressed', String(state.tab === t[0]));
       b.onclick = function () { state.tab = t[0]; state.sub = 'all'; state.club = 0; render(); };
@@ -474,10 +470,8 @@
   function render() {
     views();
     if (state.view === 'social') return renderSocial();
-    if (state.view === 'scores' && state.tab === 'powerplay') state.tab = 'all';
     tabs();
-    var box = document.getElementById('list');
-    return state.view === 'scores' ? renderScores(box) : renderStories(box);
+    renderStories(document.getElementById('list'));
   }
 
   function showMessage(box, text) {
@@ -492,7 +486,7 @@
     return recent.length >= MIN_ITEMS ? recent : list.slice(0, MIN_ITEMS);
   }
 
-  // Stories view: stories and videos only, so final scores can never push a story off the board.
+  // Stories and videos only, so final scores can never push a story off the board.
   // All tab = the newest STORIES_ALL from the last 3 days; team tabs = last 7 days.
   function renderStories(box) {
     if (!stories) return showMessage(box, storiesFailed ? 'Stories unavailable right now.' : 'Loading stories…');
@@ -507,40 +501,6 @@
     if (!list.length) { box.appendChild(el('div', 'empty', 'No recent stories.')); return; }
     list.forEach(function (s) { box.appendChild(card(s)); });
     if (state.tab === 'all') box.appendChild(el('div', 'more', 'More stories: tap a team above.'));
-  }
-
-  // Scores view: final scores only, newest first. All tab = last 3 days; team tabs = last 7 days.
-  function renderScores(box) {
-    if (!scoresReady) return showMessage(box, 'Loading scores…');
-    var list = finals.slice().sort(byNewest);
-    if (state.tab !== 'all') list = list.filter(function (s) { return s.team === state.tab; });
-    subSelect(list);
-    if (state.sub !== 'all') list = list.filter(function (s) { return subKey(s) === state.sub || (state.tab === 'junior' && s.opp === state.sub); });
-    list = recentOnly(list);
-    list = list.slice(0, state.tab === 'all' ? SCORES_ALL : MAX_STORIES);
-    box.innerHTML = '';
-    if (!list.length) { box.appendChild(el('div', 'empty', 'No recent scores.')); return; }
-    list.forEach(function (s) { box.appendChild(scoreCard(s)); });
-    if (state.tab === 'all') box.appendChild(el('div', 'more', 'More scores: tap a team above.'));
-  }
-
-  function scoreCard(s) {
-    var a = el(s.url ? 'a' : 'div', 'story score t-' + s.team);
-    if (s.url) { a.href = s.url; a.target = '_blank'; a.rel = 'noopener'; }
-    a.appendChild(el('div', 'stripe'));
-    var tile = el('div', 'tile' + (s.result === 'W' ? ' w' : s.result === 'L' || s.result === 'OTL' || s.result === 'SOL' ? ' l' : ''));
-    tile.appendChild(el('div', 'fin', 'FINAL'));
-    tile.appendChild(el('div', 'big', s.big));
-    if (s.result) tile.appendChild(el('div', 'res', s.result));
-    a.appendChild(tile);
-    var body = el('div', 'body');
-    body.appendChild(el('div', 'headline', s.headline));
-    var who = s.team === 'junior' ? s.club : s.team === 'highschool' ? 'High School' : LABEL[s.team];
-    var bits = [who, s.sport, s.note, ago(s.published)];
-    if (s.url) bits.push(s.urlLabel + ' ↗');
-    body.appendChild(el('div', 'meta', bits.filter(Boolean).join(' · ')));
-    a.appendChild(body);
-    return a;
   }
 
   // placeholder graphics some teams attach to every story (the Spitfires' red "1920x1080" and "Game Story")
