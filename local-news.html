@@ -413,10 +413,12 @@
   // A score's "posted" time is only a guess (game start + 2.5 h), so a story posted after the game
   // started always goes above that game's score.
   function when(x) { return new Date(x.published).getTime(); }
-  // Lancers football, St. Clair football and the Spitfires go above other scores from the same day or so.
+  // Lancers football, St. Clair football and the Spitfires go above other scores played the same day.
+  var dayFmt = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Toronto', year: 'numeric', month: '2-digit', day: '2-digit' });
+  function gameDay(x) { return dayFmt.format(new Date(x.start)); }
   function topScore(x) { return x.kind === 'score' && (x.team === 'spitfires' || ((x.team === 'lancers' || x.team === 'saints') && /football/i.test(x.sport))); }
   function byNewest(a, b) {
-    if (a.kind === 'score' && b.kind === 'score' && topScore(a) !== topScore(b) && Math.abs(when(a) - when(b)) < 36 * 3600e3) return topScore(a) ? -1 : 1;
+    if (a.kind === 'score' && b.kind === 'score' && topScore(a) !== topScore(b) && gameDay(a) === gameDay(b)) return topScore(a) ? -1 : 1;
     if (a.kind === 'score' && b.kind !== 'score' && when(b) >= new Date(a.start).getTime()) return 1;
     if (b.kind === 'score' && a.kind !== 'score' && when(a) >= new Date(b.start).getTime()) return -1;
     return when(b) - when(a);
