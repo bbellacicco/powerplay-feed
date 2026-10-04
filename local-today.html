@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Local Hub Today | Powerplay Windsor</title>
+<title>Local Scoreboard Today | Powerplay Windsor</title>
 <!--
   Compact strip of current local scores, same rules as "Current Scores" in the
-  Local Hub: games in progress, then finals from the last day (Lancers
+  Local Scoreboard: games in progress, then finals from the last day (Lancers
   football, St. Clair football, Spitfires, junior hockey, then everything else),
   then the next games coming up. Pairs with pro-today.html (e.g. in the footer).
   Embed in Wix at about 170px tall (desktop) / 190px (mobile).
@@ -43,12 +43,13 @@
   .team.lost { opacity: .6; }
   .empty { color: var(--muted); padding: 10px 12px; }
   @media (max-width: 420px) { .sponsor { white-space: normal; } }
+  @media (max-width: 340px) { .title { white-space: normal; } }   /* "Local Scoreboard Today" wraps instead of running into "Full schedule" on the smallest phones */
 </style>
 </head>
 <body>
   <div class="top">
     <div style="min-width:0">
-      <div class="title">Local Hub <span id="when">Today</span></div>
+      <div class="title">Local Scoreboard <span id="when">Today</span></div>
       <div class="sponsor">Brought to you by <b>Unifor Local 444</b></div>
     </div>
     <a class="more" id="more" target="_top" href="https://www.powerplaywindsor.com/">Full schedule &rarr;</a>
@@ -71,7 +72,7 @@
     return fetch(BASE + name + '?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { if (!r.ok) throw r.status; return r.json(); });
   }
 
-  // same team priority as the ticker and the Local Hub
+  // same team priority as the ticker and the Local Scoreboard
   function priority(g) {
     if (g.team === 'lancers' && g.sport === 'Football') return 1;
     if (g.team === 'saints' && g.sport === 'Football') return 2;
