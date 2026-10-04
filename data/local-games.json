@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-03T19:46:36-04:00",
+ "updated": "2026-10-03T20:01:36-04:00",
  "today": "2026-10-03",
  "range": [
   "2026-09-30",
@@ -556,10 +556,10 @@
    "opponent": "Owen Sound Attack",
    "location": "Harry Lumley Bayshore Community Centre, Owen Sound",
    "status": "live",
-   "our_score": 1,
+   "our_score": 2,
    "opp_score": 0,
    "result": null,
-   "note": "20:00 2nd",
+   "note": "17:36 2nd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29049/"
    }
@@ -874,6 +874,19 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "Ontaria Wilson goes DEEP for this touchdown!",
+   "summary": "",
+   "published": "2026-10-03T19:39:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/6boLSHELifkVsQ1d9I4yrr/854e8e7acef99b157c01f0288c3f9a95/Untitled-1.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Blue Bombers"
+   ],
+   "url": "https://www.cfl.ca/article/ontaria-wilson-goes-deep-for-this-touchdown",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Lions’ Defence Slams the Door Shut to Secure the Win!",
    "summary": "",
    "published": "2026-10-03T18:03:00-04:00",
@@ -962,19 +975,6 @@
     "Roughriders"
    ],
    "url": "https://www.cfl.ca/article/kian-schaffer-baker-makes-great-grab-for-six",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Early fumble recovery leads to Clark Barnes TD",
-   "summary": "",
-   "published": "2026-10-02T22:06:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/4vAQhJqMsbloQdqBInkflA/af632d629ec65fcb0eaf25320297633e/CGY_1ST_TD.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Stampeders"
-   ],
-   "url": "https://www.cfl.ca/article/early-fumble-recovery-leads-to-clark-barnes-td",
    "source": "CFL.ca"
   },
   {
@@ -1871,7 +1871,7 @@
       "l": 3,
       "otl": 1,
       "pts": 5,
-      "gf": 18,
+      "gf": 19,
       "ga": 22,
       "strk": "L1"
      },
@@ -1949,7 +1949,7 @@
       "otl": 0,
       "pts": 2,
       "gf": 7,
-      "ga": 17,
+      "ga": 18,
       "strk": "L3"
      }
     ]
@@ -2189,7 +2189,7 @@
       "otl": 1,
       "pts": 9,
       "gf": 23,
-      "ga": 23,
+      "ga": 24,
       "strk": "W1"
      },
      {
@@ -2205,6 +2205,18 @@
       "strk": "W1"
      },
      {
+      "name": "Georgetown Raiders",
+      "abbr": "GEO",
+      "gp": 10,
+      "w": 3,
+      "l": 5,
+      "otl": 2,
+      "pts": 8,
+      "gf": 32,
+      "ga": 51,
+      "strk": "W1"
+     },
+     {
       "name": "Mississauga Chargers",
       "abbr": "MIS",
       "gp": 10,
@@ -2212,33 +2224,21 @@
       "l": 7,
       "otl": 0,
       "pts": 6,
-      "gf": 30,
+      "gf": 31,
       "ga": 50,
       "strk": "L1"
      },
      {
-      "name": "Georgetown Raiders",
-      "abbr": "GEO",
-      "gp": 9,
-      "w": 2,
-      "l": 5,
-      "otl": 2,
-      "pts": 6,
-      "gf": 31,
-      "ga": 51,
-      "strk": "L3"
-     },
-     {
       "name": "Niagara Falls Canucks",
       "abbr": "NFC",
-      "gp": 12,
+      "gp": 13,
       "w": 2,
-      "l": 8,
+      "l": 9,
       "otl": 2,
       "pts": 6,
       "gf": 32,
-      "ga": 56,
-      "strk": "L7"
+      "ga": 57,
+      "strk": "L8"
      },
      {
       "name": "Buffalo Jr. Sabres",
@@ -2304,7 +2304,7 @@
       "otl": 2,
       "pts": 8,
       "gf": 32,
-      "ga": 19,
+      "ga": 20,
       "strk": "W3"
      },
      {
@@ -2363,7 +2363,7 @@
       "l": 4,
       "otl": 0,
       "pts": 6,
-      "gf": 23,
+      "gf": 24,
       "ga": 32,
       "strk": "L2"
      },
@@ -2428,8 +2428,8 @@
       "l": 0,
       "otl": 0,
       "pts": 14,
-      "gf": 53,
-      "ga": 20,
+      "gf": 54,
+      "ga": 21,
       "strk": "W7"
      },
      {
@@ -2440,8 +2440,8 @@
       "l": 0,
       "otl": 0,
       "pts": 12,
-      "gf": 35,
-      "ga": 21,
+      "gf": 36,
+      "ga": 22,
       "strk": "W6"
      },
      {
@@ -2489,7 +2489,7 @@
       "otl": 1,
       "pts": 7,
       "gf": 21,
-      "ga": 15,
+      "ga": 16,
       "strk": "W1"
      },
      {
@@ -2512,7 +2512,7 @@
       "l": 9,
       "otl": 0,
       "pts": 4,
-      "gf": 31,
+      "gf": 32,
       "ga": 51,
       "strk": "W1"
      },
