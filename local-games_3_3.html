@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Local Scoreboard | Powerplay Windsor</title>
+<!--
+  Local schedules & results widget: a 7-day span (3 days before today, today,
+  3 days after; the All tab shows yesterday to 2 days ahead). Data comes from data/local-games.json, refreshed every
+  morning by .github/workflows/local-games.yml.
+
+  Embed in Wix (Embed Code > Embed a site):
+    https://bbellacicco.github.io/powerplay-feed/local-games.html
+  Optional URL settings (combine with &):
+    ?team=spitfires | lancers | saints    start on one team (hides the team tabs)
+    ?view=standings | stats               open on Standings or Stats (the Stats tab only shows once data/stats.json exists)
+-->
+<style>
+  :root {
+    --bg: #0b1a33;
+    --panel: #10244a;
+    --row: #132b57;
+    --line: #1e3a6e;
+    --text: #f2f5fb;
+    --muted: #9fb0cf;
+    --accent: #e8b021;
+    --win: #2fbf71;
+    --loss: #e5484d;
+    --tie: #9fb0cf;
+    --spitfires: #d4202c;
+    --lancers: #0f6bd6;
+    --saints: #1f9d55;
+    --highschool: #8b5cf6;
+    --junior: #0ea5a4;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text);
+    font: 14px/1.35 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 12px; }
+  header { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+  h1 { font-size: 17px; margin: 0; letter-spacing: .02em; text-transform: uppercase; }
+  h1 span { color: var(--accent); }
+  .sponsor { color: var(--muted); font-size: 12px; margin-top: 2px; }
+  .sponsor b { color: var(--text); font-weight: 600; }
+  .updated { color: var(--muted); font-size: 12px; }
+  .right { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+  .views { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+  .views button { border: 0; background: var(--panel); color: var(--text); font: inherit; font-size: 13px; padding: 6px 14px; cursor: pointer; }
+  .views button[aria-pressed="true"] { background: var(--accent); color: #111; font-weight: 600; }
+  .stand { margin-top: 12px; }
+  .stand h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin: 0 0 6px; }
+  .stand table { width: 100%; border-collapse: collapse; background: var(--row); border-radius: 8px; overflow: hidden; font-variant-numeric: tabular-nums; }
+  .stand th, .stand td { padding: 6px 8px; text-align: right; white-space: nowrap; }
+  .stand th { font-size: 11px; color: var(--muted); font-weight: 600; background: var(--panel); }
+  .stand th:first-child, .stand td:first-child { text-align: left; width: 100%; white-space: normal; }
+  .stand tr + tr td { border-top: 1px solid var(--line); }
+  .stand td .rk { color: var(--muted); display: inline-block; width: 20px; }
+  .stand tr.ours td { background: rgba(232, 176, 33, .12); }
+  .stand tr.ours td:first-child { color: var(--accent); font-weight: 700; }
+  .snote { color: var(--muted); font-size: 11px; margin-top: 8px; }
+  .snote a { color: var(--accent); }
+  .stand th.key, .stand td.key { color: var(--accent); font-weight: 700; }
+  @media (max-width: 480px) { .stand .wide { display: none; } .right { align-items: flex-start; } }
+  .bar { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; align-items: center; }
+  .pill { border: 1px solid var(--line); background: var(--panel); color: var(--text);
+    padding: 6px 12px; border-radius: 999px; font: inherit; font-size: 13px; cursor: pointer; }
+  .more { color: var(--muted); font-size: 12px; text-align: center; padding: 6px 0 2px; }
+  .pill[aria-pressed="true"] { background: var(--accent); color: #111; border-color: var(--accent); font-weight: 600; }
+  select.pill { padding-right: 8px; }
+  .day { margin-top: 14px; }
+  .day.today h2 { color: #fff; }
+  .day.today h2::after { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); margin-left: 7px; vertical-align: middle; }
+  .day h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin: 0 0 6px; }
+  .game { display: grid; grid-template-columns: 4px 64px 1fr auto; gap: 10px; align-items: center;
+    background: var(--row); border-radius: 8px; padding: 8px 10px 8px 0; margin-bottom: 5px; overflow: hidden; }
+  .stripe { align-self: stretch; }
+  .t-spitfires .stripe { background: var(--spitfires); }
+  .t-lancers .stripe { background: var(--lancers); }
+  .t-saints .stripe { background: var(--saints); }
+  .t-highschool .stripe { background: var(--highschool); }
+  .t-junior .stripe { background: var(--junior); }
+  .time { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+  .main { min-width: 0; }
+  .who { font-weight: 600; }
+  .who .vs { color: var(--muted); font-weight: 400; }
+  .meta { color: var(--muted); font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .meta a { color: var(--muted); }
+  .score { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .score b { font-size: 16px; }
+  .badge { display: inline-block; min-width: 26px; text-align: center; font-size: 11px; font-weight: 700;
+    padding: 2px 5px; border-radius: 4px; margin-left: 6px; color: #fff; background: var(--tie); }
+  .badge.W { background: var(--win); } .badge.L, .badge.OTL, .badge.SOL { background: var(--loss); }
+  .badge.off { background: #6b7280; }
+  .badge.live { background: var(--loss); }
+  .tix { font-size: 12px; color: var(--accent); text-decoration: none; }
+  .empty { color: var(--muted); padding: 24px 0; text-align: center; }
+  footer { margin-top: 14px; color: var(--muted); font-size: 11px; text-align: center; }
+  footer a { color: var(--muted); }
+  @media (max-width: 480px) {
+    .game { grid-template-columns: 4px 52px 1fr auto; gap: 8px; }
+    .time { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Local <span>Scoreboard</span></h1>
+      <div class="sponsor">Brought to you by <b>Unifor Local 444</b></div>
+    </div>
+    <div class="right">
+      <div class="views" role="group" aria-label="View"><button id="v-games">Games</button><button id="v-standings">Standings</button><button id="v-stats" style="display:none">Stats</button></div>
+      <div class="updated" id="updated"></div>
+    </div>
+  </header>
+  <div class="bar" id="teams" role="group" aria-label="Team"></div>
+  <div class="bar">
+    <select class="pill" id="sport" aria-label="Sport"></select>
+    <select class="pill" id="school" aria-label="School"></select>
+  </div>
+  <div id="list"></div>
+  <footer>Powerplay Windsor · Schedules from chl.ca, golancers.ca, ojhl.ca, gohl.ca, thepjhl.ca, cjfl.org and wecssaa.com</footer>
+</div>
+<script>
+(function () {
+  var qs = new URLSearchParams(location.search);
+  var state = {
+    team: qs.get('team') || 'latest',   // opens on Latest Scores
+    sport: 'all',
+    school: 'all'
+  };
+  var lockTeam = !!qs.get('team');
+  var view = qs.get('view') === 'standings' ? 'standings' : qs.get('view') === 'stats' ? 'stats' : 'games';
+  var standLeague = 'ohl';
+  var statsData = null, statTeam = '', statClub = '';   // team leaders (data/stats.json); the Stats tab appears once it exists
+  var data = null;
+  var todayKey = '';
+  var TZ = 'America/Toronto';
+
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function fmt(d, opts) { return new Intl.DateTimeFormat('en-CA', Object.assign({ timeZone: TZ }, opts)).format(d); }
+  var ALL_DAYS_BACK = 1, ALL_DAYS_AHEAD = 2;   // the All tab: yesterday to 2 days ahead; team tabs show the full week
+  function dayKey(d) { return fmt(d, { year: 'numeric', month: '2-digit', day: '2-digit' }); }
+
+  var BASE = 'https://bbellacicco.github.io/powerplay-feed/data/';
+  function getJSON(name) {
+    return fetch(BASE + name + '?t=' + Date.now()).then(function (r) { if (!r.ok) throw r.status; return r.json(); });
+  }
+  function load() {
+    Promise.all([
+      getJSON('local-games.json'),
+      // high school comes from Buddy's PC (wecssaa.com blocks GitHub); optional
+      getJSON('highschool.json').catch(function () { return null; }),
+      // St. Clair (all sports but football) also comes from Buddy's PC; optional
+      getJSON('saints.json').catch(function () { return null; }),
+      // PJHL standings also come from Buddy's PC (GameSheet blocks GitHub); optional
+      getJSON('pjhl-standings.json').catch(function () { return null; }),
+      // Lancers (OUA) and St. Clair soccer (OCAA) standings also come from Buddy's PC; optional
+      getJSON('college-standings.json').catch(function () { return null; }),
+      // Powerplay's own stories: a game you've written up links to your story
+      getJSON('local-news.json').catch(function () { return null; }),
+      // team leaders (player stats), collected hourly by scrape_stats.py; optional
+      getJSON('stats.json').catch(function () { return null; })
+    ]).then(function (res) {
+      var j = res[0], hs = res[1], sc = res[2], pj = res[3], cs = res[4], news = res[5], st = res[6];
+      statsData = st && st.teams && st.teams.length ? st : null;
+      j.standings = j.standings || {};
+      if (pj && pj.groups && pj.groups.length) j.standings.pjhl = pj.groups;
+      if (cs && cs.leagues) {
+        var L = cs.leagues, grp = function (k) { return L[k] && L[k].groups ? L[k].groups : []; };
+        if (grp('oua').length) j.standings.oua = grp('oua');
+        if (grp('ocaa_m').length || grp('ocaa_w').length) j.standings.ocaa = grp('ocaa_m').concat(grp('ocaa_w'));
+      }
+      if (sc && sc.games) {
+        var lo2 = (j.range || [])[0] || '', hi2 = (j.range || [])[1] || '9999';
+        j.games = j.games.filter(function (g) { return !(g.team === 'saints' && g.sport !== 'Football'); })
+          .concat(sc.games.filter(function (g) { var d = g.start.slice(0, 10); return g.sport !== 'Football' && d >= lo2 && d <= hi2; }))
+          .sort(function (a, b) { return a.start < b.start ? -1 : a.start > b.start ? 1 : 0; });
+      }
+      if (hs && hs.games && hs.games.length) {
+        var lo = (j.range || [])[0] || '', hi = (j.range || [])[1] || '9999';
+        var extra = hs.games.filter(function (g) { var d = g.start.slice(0, 10); return d >= lo && d <= hi; });
+        j.games = j.games.filter(function (g) { return g.team !== 'highschool'; }).concat(extra)
+          .sort(function (a, b) { return a.start < b.start ? -1 : a.start > b.start ? 1 : 0; });
+        j.teams = j.teams || {};
+        if (!j.teams.highschool) j.teams.highschool = { name: 'High School (WECSSAA)', short: 'High School' };
+      }
+      if (news && news.stories) linkPowerplay(j.games, news.stories.filter(function (st) { return st.team === 'powerplay'; }));
+      data = j; render();
+    }).catch(function () { document.getElementById('list').innerHTML = '<div class="empty">Schedule unavailable right now.</div>'; });
+  }
+
+  function teamTabs() {
+    var box = document.getElementById('teams');
+    box.innerHTML = '';
+    if (lockTeam) { box.style.display = 'none'; return; }
+    var present = {};
+    data.games.forEach(function (g) { present[g.team] = true; });
+    var keys = ['latest', 'all'].concat(Object.keys(data.teams).filter(function (k) { return present[k]; }));
+    keys.forEach(function (k) {
+      var b = el('button', 'pill', k === 'all' ? 'All' : k === 'latest' ? 'Current Scores' : data.teams[k].short);
+      b.setAttribute('aria-pressed', String(state.team === k));
+      b.onclick = function () { state.team = k; state.sport = 'all'; state.school = 'all'; render(); };
+      box.appendChild(b);
+    });
+  }
+
+  // School picker on the High School tab, team picker on the Junior Hockey tab
+  function schoolSelect(games) {
+    var sel = document.getElementById('school');
+    if (state.team !== 'highschool' && state.team !== 'junior') { sel.style.display = 'none'; state.school = 'all'; return; }
+    var set = {};
+    games.forEach(function (g) { if (g.home) set[g.home] = 1; if (g.away) set[g.away] = 1; if (g.club) set[g.club] = 1; });
+    var schools = Object.keys(set).sort();
+    sel.style.display = '';
+    sel.innerHTML = '';
+    sel.appendChild(new Option(state.team === 'junior' ? 'All teams' : 'All schools', 'all'));
+    schools.forEach(function (x) { sel.appendChild(new Option(x, x)); });
+    if (schools.indexOf(state.school) < 0) state.school = 'all';
+    sel.value = state.school;
+    sel.onchange = function () { state.school = sel.value; state.sport = 'all'; render(); };
+  }
+
+  function sportSelect(games) {
+    var sel = document.getElementById('sport');
+    var sports = Array.from(new Set(games.map(function (g) { return g.sport; }))).sort();
+    sel.style.display = sports.length > 1 ? '' : 'none';
+    sel.innerHTML = '';
+    sel.appendChild(new Option('All sports', 'all'));
+    sports.forEach(function (s) { sel.appendChild(new Option(s, s)); });
+    if (sports.indexOf(state.sport) < 0) state.sport = 'all';
+    sel.value = state.sport;
+    sel.onchange = function () { state.sport = sel.value; render(); };
+  }
+
+  // A game still marked live 4+ hours after it started means the data is behind
+  function staleLive(g) { return g.status === 'live' && Date.now() - new Date(g.start).getTime() > 4 * 3600e3; }
+
+  // Same team priority as the scores ticker:
+  // Lancers football, St. Clair football, Spitfires, junior hockey, then everything else.
+  function priority(g) {
+    if (g.team === 'lancers' && g.sport === 'Football') return 1;
+    if (g.team === 'saints' && g.sport === 'Football') return 2;
+    if (g.team === 'spitfires') return 3;
+    if (g.team === 'junior') return 4;
+    return 5;
+  }
+  // 6 current scores: games in progress first, then finals from the last 3 days by
+  // team priority (newest first within a team group); older finals fill any gaps.
+  function currentScores(n) {
+    var scored = data.games.filter(function (g) { return (g.status === 'final' || g.status === 'live') && g.our_score != null && !staleLive(g); });
+    var newest = function (a, b) { return a.start < b.start ? 1 : a.start > b.start ? -1 : 0; };
+    var byPrio = function (a, b) { return priority(a) - priority(b) || newest(a, b); };
+    // a final counts as current for one day after the game started
+    var since = new Date(Date.now() - 864e5).toISOString();
+    var live = scored.filter(function (g) { return g.status === 'live'; }).sort(byPrio);
+    var recent = scored.filter(function (g) { return g.status === 'final' && new Date(g.start).toISOString() >= since; }).sort(byPrio);
+    // not enough current scores: fill with the next games coming up, soonest first
+    var nowIso = new Date().toISOString();
+    var next = data.games.filter(function (g) { return g.status === 'upcoming' && new Date(g.start).toISOString() >= nowIso; })
+      .sort(function (a, b) { return a.start < b.start ? -1 : a.start > b.start ? 1 : priority(a) - priority(b); });
+    return live.concat(recent, next).slice(0, n);
+  }
+
+  // Two of our junior clubs playing each other is stored once, from the home club's side.
+  // When a fan picks the other club, show it from that club's side (their score first, W/L swapped).
+  function flip(g) {
+    var f = Object.assign({}, g);
+    f.club = g.opponent; f.opponent = g.club;
+    f.home_away = g.home_away === 'H' ? 'A' : g.home_away === 'A' ? 'H' : g.home_away;
+    f.our_score = g.opp_score; f.opp_score = g.our_score;
+    f.result = { W: 'L', L: 'W', T: 'T', OTL: 'W', SOL: 'W' }[g.result] || g.result;
+    return f;
+  }
+
+  // ---- Standings (collected every 15 minutes from the leagues' own stats sites)
+  // Lancers / Saints: only the headline sports that are in season (fall: football + soccer)
+  var ST_LEAGUES = [['ohl', 'OHL'], ['ojhl', 'OJHL'], ['gohl', 'GOHL'], ['pjhl', 'PJHL'],
+    ['oua', 'Lancers Football'], ['cjfl', 'Saints Football'], ['ocaa', 'Saints Soccer']];
+  var HOCKEY = { ohl: 1, ojhl: 1, gohl: 1, pjhl: 1 };
+  var OFFICIAL = {
+    pjhl: ['PJHL', 'https://gamesheetstats.com/seasons/15133/standings?configuration=45'],
+    oua: ['OUA football', 'https://oua.ca/sports/fball/2026-27/standings'],
+    cjfl: ['CJFL', 'https://www.cjfl.org/standings/show/9362372?subseason=958344'],
+    ocaa: ['OCAA soccer', 'https://www.ocaa.com/sports/msoc/2026-27/standings']
+  };
+  var ST_COLS = [['GP', 'gp'], ['W', 'w'], ['L', 'l'], ['OTL', 'otl'], ['PTS', 'pts'], ['GF', 'gf', 1], ['GA', 'ga', 1], ['STRK', 'strk', 1]];
+  var OUR_CLUBS = ['Windsor', 'St. Clair', 'Leamington', 'LaSalle', 'Chatham', 'Lakeshore', 'Essex', 'Wheatley', 'Amherstburg'];
+  function isOurClub(name) { return OUR_CLUBS.some(function (c) { return (name || '').indexOf(c) >= 0; }); }
+
+  function views() {
+    if (view === 'stats' && !statsData) view = 'games';
+    document.getElementById('v-stats').style.display = statsData ? '' : 'none';
+    [['games', 'v-games'], ['standings', 'v-standings'], ['stats', 'v-stats']].forEach(function (v) {
+      var b = document.getElementById(v[1]);
+      b.setAttribute('aria-pressed', String(view === v[0]));
+      b.onclick = function () { if (view !== v[0]) { view = v[0]; render(); } };
+    });
+  }
+
+  // college tables: short, consistent column names; drop columns that repeat the record
+  var COL_NAMES = { 'Streak': 'STRK', 'Aga.': 'GA', 'For': 'GF', 'Record': 'W-L-T', 'Win%': 'PCT' };
+  var COL_SKIP = { 'Last 10': 1, 'PCT': 1 };
+  function colsFor(g) {
+    var out = [];
+    g.cols.forEach(function (c, k) {
+      var n = COL_NAMES[c] || c;
+      if (!COL_SKIP[c] && !COL_SKIP[n]) out.push([n, k, /^(GF|GA|PF|PA|STRK)$/.test(n) ? 1 : 0, 1]);
+    });
+    return out;
+  }
+
+  function renderStandings() {
+    var bar = document.getElementById('teams'); bar.innerHTML = ''; bar.style.display = '';
+    ST_LEAGUES.forEach(function (l) {
+      var b = el('button', 'pill', l[1]);
+      b.setAttribute('aria-pressed', String(standLeague === l[0]));
+      b.onclick = function () { standLeague = l[0]; render(); };
+      bar.appendChild(b);
+    });
+    document.getElementById('sport').style.display = 'none';
+    document.getElementById('school').style.display = 'none';
+    document.getElementById('updated').textContent = '';
+    var box = document.getElementById('list'); box.innerHTML = '';
+    var groups = (data.standings || {})[standLeague] || [];
+    if (!groups.length) {
+      var msg = el('div', 'empty', 'Standings unavailable right now.'), off = OFFICIAL[standLeague];
+      if (off) {
+        msg.textContent = 'Standings aren\u2019t in yet. ';
+        var a = el('a', null, 'See the official ' + off[0] + ' standings \u2197');
+        a.href = off[1]; a.target = '_blank'; a.rel = 'noopener'; a.style.color = 'var(--accent)';
+        msg.appendChild(a);
+      }
+      box.appendChild(msg); return;
+    }
+    groups.forEach(function (g) {
+      var sec = el('section', 'stand');
+      sec.appendChild(el('h2', null, g.group));
+      var tbl = el('table'), head = el('tr');
+      head.appendChild(el('th', null, 'Team'));
+      // football / soccer tables carry their own columns (cols + stats)
+      var cols = g.cols ? colsFor(g) : ST_COLS;
+      cols.forEach(function (c) { head.appendChild(el('th', c[2] ? 'wide' : null, c[0])); });
+      tbl.appendChild(head);
+      g.teams.forEach(function (t, i) {
+        var tr = el('tr', isOurClub(t.name) ? 'ours' : null), td = el('td');
+        td.appendChild(el('span', 'rk', String(i + 1)));
+        td.appendChild(document.createTextNode(t.name));
+        tr.appendChild(td);
+        cols.forEach(function (c) {
+          var v = c[3] ? (t.stats || [])[c[1]] : t[c[1]];
+          if (c[3] && /^strk$/i.test(c[0]) && v) v = String(v).replace(/^(Won|Lost|Tied)\s*(\d+)$/i, function (_, r, n) { return r[0].toUpperCase() + n; });
+          tr.appendChild(el('td', c[2] ? 'wide' : null, v == null ? '' : String(v)));
+        });
+        tbl.appendChild(tr);
+      });
+      sec.appendChild(tbl);
+      box.appendChild(sec);
+    });
+    box.appendChild(el('div', 'snote', (HOCKEY[standLeague] ? 'OTL includes overtime and shootout losses. ' : '') + 'Local teams are highlighted.'));
+  }
+
+  // ---- Stats: each club's team leaders (top scorers and goalies), collected hourly from the league's stats site
+  function renderStats() {
+    var order = ['spitfires', 'junior', 'lancers', 'saints'];
+    var keys = Array.from(new Set(statsData.teams.map(function (t) { return t.team; })))
+      .sort(function (a, b) { var x = order.indexOf(a), y = order.indexOf(b); return (x < 0 ? 99 : x) - (y < 0 ? 99 : y); });
+    if (keys.indexOf(statTeam) < 0) statTeam = keys[0];
+    var bar = document.getElementById('teams'); bar.innerHTML = ''; bar.style.display = '';
+    keys.forEach(function (k) {
+      var b = el('button', 'pill', (data.teams[k] || {}).short || k);
+      b.setAttribute('aria-pressed', String(statTeam === k));
+      b.onclick = function () { statTeam = k; statClub = ''; render(); };
+      bar.appendChild(b);
+    });
+    document.getElementById('sport').style.display = 'none';
+    var clubs = statsData.teams.filter(function (t) { return t.team === statTeam; });
+    var sel = document.getElementById('school');
+    if (clubs.length > 1) {
+      sel.style.display = ''; sel.innerHTML = '';
+      clubs.forEach(function (c) { sel.appendChild(new Option(c.club, c.club)); });
+      if (!clubs.some(function (c) { return c.club === statClub; })) statClub = clubs[0].club;
+      sel.value = statClub;
+      sel.onchange = function () { statClub = sel.value; render(); };
+    } else { sel.style.display = 'none'; statClub = clubs[0].club; }
+    var club = clubs.filter(function (c) { return c.club === statClub; })[0] || clubs[0];
+    var when = new Date(club.updated);
+    document.getElementById('updated').textContent = isNaN(when) ? '' : 'Updated ' + fmt(when, { month: 'short', day: 'numeric' });
+
+    var box = document.getElementById('list'); box.innerHTML = '';
+    var head = el('h2', null, club.club + ' \u00b7 ' + club.league);
+    head.style.cssText = 'font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin:12px 0 0';
+    box.appendChild(head);
+    club.groups.forEach(function (g) {
+      var sec = el('section', 'stand');
+      sec.appendChild(el('h2', null, g.title));
+      var tbl = el('table'), hr = el('tr');
+      hr.appendChild(el('th', null, 'Player'));
+      g.cols.forEach(function (c, i) { hr.appendChild(el('th', i === g.key ? 'key' : null, c)); });
+      tbl.appendChild(hr);
+      g.rows.forEach(function (r, i) {
+        var tr = el('tr'), td = el('td');
+        td.appendChild(el('span', 'rk', String(i + 1)));
+        td.appendChild(document.createTextNode(r.name));
+        tr.appendChild(td);
+        r.vals.forEach(function (v, k) { tr.appendChild(el('td', k === g.key ? 'key' : null, v == null ? '' : String(v))); });
+        tbl.appendChild(tr);
+      });
+      sec.appendChild(tbl);
+      box.appendChild(sec);
+    });
+    var note = el('div', 'snote', 'Team leaders from the league\u2019s own stats site, refreshed every hour. ');
+    if (club.link) { var a = el('a', null, 'Full league stats \u2197'); a.href = club.link; a.target = '_blank'; a.rel = 'noopener'; note.appendChild(a); }
+    box.appendChild(note);
+  }
+
+  function render() {
+    if (!data) return;
+    views();
+    if (view === 'standings') return renderStandings();
+    if (view === 'stats') return renderStats();
+    // "today" is the day the data was collected (each morning)
+    todayKey = data.today || dayKey(new Date(data.updated));
+    var range = data.range || [todayKey, todayKey];
+    if (state.team === 'all') {
+      var now = Date.now();
+      range = [dayKey(new Date(now - ALL_DAYS_BACK * 864e5)), dayKey(new Date(now + ALL_DAYS_AHEAD * 864e5))];
+    }
+    function noon(k) { return new Date(k + 'T12:00:00'); }
+    document.getElementById('updated').textContent =
+      fmt(noon(range[0]), { month: 'short', day: 'numeric' }) + ' – ' + fmt(noon(range[1]), { month: 'short', day: 'numeric' });
+    teamTabs();
+
+    var latest = state.team === 'latest';
+    var inView = latest
+      ? currentScores(6)
+      : data.games.filter(function (g) {
+          if (state.team !== 'all') return g.team === state.team;
+          var k = dayKey(new Date(g.start)); return k >= range[0] && k <= range[1];
+        });
+    schoolSelect(inView);
+    if (state.school !== 'all') inView = inView.filter(function (g) { return g.home === state.school || g.away === state.school || g.club === state.school || (g.team === 'junior' && g.opponent === state.school); })
+      .map(function (g) { return g.team === 'junior' && g.opponent === state.school ? flip(g) : g; });
+    if (latest) document.getElementById('sport').style.display = 'none'; else sportSelect(inView);
+    if (!latest && state.sport !== 'all') inView = inView.filter(function (g) { return g.sport === state.sport; });
+
+    var list = document.getElementById('list');
+    list.innerHTML = '';
+    if (!inView.length) { list.appendChild(el('div', 'empty', latest ? 'No scores yet this week.' : 'No games in these days.')); return; }
+
+    if (latest) {
+      // priority order isn't by date, so no day headings; each row shows its day instead
+      var sec0 = el('section', 'day');
+      inView.forEach(function (g) { sec0.appendChild(row(g, true)); });
+      list.appendChild(sec0);
+      return;
+    }
+    var groups = [], cur = null;
+    inView.forEach(function (g) {
+      var k = dayKey(new Date(g.start));
+      if (!cur || cur.k !== k) { cur = { k: k, d: new Date(g.start), games: [] }; groups.push(cur); }
+      cur.games.push(g);
+    });
+
+    groups.forEach(function (grp) {
+      var sec = el('section', 'day' + (grp.k === todayKey ? ' today' : ''));
+      var label = grp.k === todayKey ? 'Today · ' : '';
+      sec.appendChild(el('h2', null, label + fmt(grp.d, { weekday: 'long', month: 'short', day: 'numeric' })));
+      grp.games.forEach(function (g) { sec.appendChild(row(g)); });
+      list.appendChild(sec);
+    });
+    if (state.team === 'all') list.appendChild(el('div', 'more', 'For more games and results, tap a team above.'));
+  }
+
+  // ---- Which game is a story about? A story posted from a game's start to 3 days after that names
+  // the opponent and our team (and no other sport). If it quotes a score, the score must match;
+  // if it doesn't and several games fit (a doubleheader, a series), it isn't tied to any of them.
+  // A Powerplay story counts only if it quotes the score (so previews and features don't).
+  var M_GENERIC = /^(university|college|the|and|club|junior|hockey|team|varsity|saint|city|north|south|east|west|county)$/;
+  var M_SPORTS = ['football', 'basketball', 'hockey', 'soccer', 'softball', 'fastball', 'volleyball', 'baseball', 'rugby'];
+  var M_OURS = { lancers: ['lancers'], saints: ['saints', 'st. clair'], spitfires: ['spitfires'] };
+  function mWords(n) { return (n || '').toLowerCase().replace(/[^a-z0-9' ]/g, ' ').split(/\s+/).filter(function (w) { return w.length >= 4 && !M_GENERIC.test(w); }); }
+  // games: [{team, club, opp, sport, start, a, b}] (a/b = our/their score); stories: [{team, club, headline, summary, published, url}]
+  // returns [{game, story}]
+  function matchStories(games, stories) {
+    var out = [];
+    stories.forEach(function (st) {
+      var t = new Date(st.published).getTime();
+      var text = ((st.headline || '') + ' ' + (st.summary || '')).toLowerCase();
+      var named = M_SPORTS.filter(function (x) { return text.indexOf(x) >= 0; });
+      var quoted = (text.match(/\b\d{1,3}\s*[-–]\s*\d{1,3}\b/g) || []).map(function (q) { return q.replace(/\s/g, '').replace('–', '-'); });
+      var fits = games.filter(function (g) {
+        var t0 = new Date(g.start).getTime();
+        if (!(t >= t0 && t <= t0 + 3 * 864e5)) return false;
+        var sport = (g.sport || '').toLowerCase();
+        if (named.length && !named.some(function (x) { return sport.indexOf(x) >= 0; })) return false;
+        var opp = mWords(g.opp);
+        if (!opp.length || !opp.some(function (w) { return text.indexOf(w) >= 0; })) return false;
+        if (st.team === g.team) return g.team !== 'junior' || st.club === g.club;           // the team's own recap
+        var ours = g.team === 'junior' ? mWords(g.club) : M_OURS[g.team] || [];
+        return st.team === 'powerplay' && ours.some(function (w) { return text.indexOf(w) >= 0; });
+      });
+      if (st.team === 'powerplay' && !quoted.length) return;   // your previews and features don't quote a final score
+      if (quoted.length) fits = fits.filter(function (g) { return quoted.indexOf(g.a + '-' + g.b) >= 0 || quoted.indexOf(g.b + '-' + g.a) >= 0; });
+      if (fits.length === 1) out.push({ game: fits[0], story: st });
+    });
+    return out;
+  }
+  function linkPowerplay(games, stories) {
+    var finals = games.filter(function (g) { return g.status === 'final' && !g.home; })
+      .map(function (g) { return { ref: g, team: g.team, club: g.club, opp: g.opponent, sport: g.sport, start: g.start, a: g.our_score, b: g.opp_score }; });
+    matchStories(finals, stories).forEach(function (m) { m.game.ref.links = Object.assign({}, m.game.ref.links, { powerplay: m.story.url }); });
+  }
+
+  function row(g, showDay) {
+    var t = data.teams[g.team] || { short: g.team };
+    var r = el('div', 'game t-' + g.team);
+    r.appendChild(el('div', 'stripe'));
+    r.appendChild(el('div', 'time', g.time_tbd ? (g.status === 'final' ? 'Final' : 'TBA') : fmt(new Date(g.start), { hour: 'numeric', minute: '2-digit' }).replace(/\s?([ap])\.?m\.?/i, function (_, x) { return ' ' + x.toUpperCase() + 'M'; })));
+
+    var main = el('div', 'main');
+    var who = el('div', 'who');
+    if (g.home && g.away) {          // high school: neutral "Visitor @ Home"
+      who.appendChild(document.createTextNode(g.away + ' '));
+      who.appendChild(el('span', 'vs', '@ '));
+      who.appendChild(document.createTextNode(g.home));
+    } else {
+      who.appendChild(document.createTextNode((g.club || t.short) + ' '));
+      who.appendChild(el('span', 'vs', g.home_away === 'A' ? '@ ' : 'vs '));
+      who.appendChild(document.createTextNode(g.opponent));
+    }
+    main.appendChild(who);
+    var bits = [g.sport];
+    if (showDay) bits.unshift(dayKey(new Date(g.start)) === todayKey ? 'Today' : fmt(new Date(g.start), { weekday: 'short', month: 'short', day: 'numeric' }));
+    if (g.home_away === 'H') bits.push('Home'); else if (g.location && g.location !== g.home) bits.push('at ' + g.location);
+    if (g.note) bits.push(g.note);
+    var meta = el('div', 'meta', bits.join(' · '));
+    main.appendChild(meta);
+    r.appendChild(main);
+
+    var sc = el('div', 'score');
+    if (g.status === 'final' && g.our_score != null) {
+      sc.appendChild(el('b', null, g.our_score + '–' + g.opp_score));
+      if (g.result) sc.appendChild(el('span', 'badge ' + g.result, g.result));
+    } else if (g.status === 'final' && g.result) {
+      sc.appendChild(el('span', 'badge ' + g.result, g.result));
+    } else if (g.status === 'postponed' || g.status === 'cancelled') {
+      sc.appendChild(el('span', 'badge off', g.status === 'postponed' ? 'PPD' : 'CAN'));
+    } else if (staleLive(g)) {
+      sc.appendChild(el('span', 'badge off', 'PENDING'));
+    } else if (g.status === 'live') {
+      sc.appendChild(el('b', null, (g.our_score || 0) + '–' + (g.opp_score || 0)));
+      sc.appendChild(el('span', 'badge live', 'LIVE'));
+    } else if (dayKey(new Date(g.start)) >= todayKey && g.links && g.links.tickets) {
+      var a = el('a', 'tix', 'Tickets'); a.href = g.links.tickets; a.target = '_blank'; a.rel = 'noopener';
+      sc.appendChild(a);
+    }
+    var link = g.links && (g.links.powerplay || g.links.recap || g.links.boxscore || g.links.gamecentre || g.links.link);
+    if (link && g.status === 'final') {
+      r.style.cursor = 'pointer';
+      r.title = g.links.powerplay ? 'Read the Powerplay story' : 'Open game details';
+      r.onclick = function () { window.open(link, '_blank', 'noopener'); };
+    }
+    r.appendChild(sc);
+    return r;
+  }
+
+  load();
+  setInterval(load, 2 * 60 * 1000);   // pick up new scores while the page is open
+})();
+</script>
+</body>
+</html>
