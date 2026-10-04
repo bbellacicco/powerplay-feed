@@ -1,9 +1,9 @@
 {
- "updated": "2026-10-03T23:46:34-04:00",
- "today": "2026-10-03",
+ "updated": "2026-10-04T00:02:03-04:00",
+ "today": "2026-10-04",
  "range": [
-  "2026-09-30",
-  "2026-10-06"
+  "2026-10-01",
+  "2026-10-07"
  ],
  "teams": {
   "spitfires": {
@@ -39,7 +39,7 @@
   },
   "lancers": {
    "ok": true,
-   "count": 148
+   "count": 84
   },
   "junior": {
    "ok": true,
@@ -103,44 +103,6 @@
   }
  },
  "games": [
-  {
-   "id": "junior-gojhl15526",
-   "team": "junior",
-   "sport": "GOHL (Jr. B)",
-   "start": "2026-09-30T19:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Komoka Kings",
-   "location": "Vollmer Culture R.C., LaSalle, ON",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 6,
-   "result": "L",
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.gohl.ca/stats/game-center/15526"
-   },
-   "club": "LaSalle Vipers"
-  },
-  {
-   "id": "junior-gs2960234",
-   "team": "junior",
-   "sport": "PJHL (Jr. C)",
-   "start": "2026-09-30T19:30:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Lakeshore Canadiens",
-   "location": "Wheatley Area Arena",
-   "status": "final",
-   "our_score": 2,
-   "opp_score": 1,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960234?configuration=45"
-   },
-   "club": "Wheatley Sharks"
-  },
   {
    "id": "spitfires-ohl29035",
    "team": "spitfires",
@@ -782,6 +744,63 @@
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960292?configuration=45"
    },
    "club": "Essex 73's"
+  },
+  {
+   "id": "junior-ojhl16451",
+   "team": "junior",
+   "sport": "OJHL (Jr. A)",
+   "start": "2026-10-07T14:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Markham Royals",
+   "location": "Gale Centre, Niagara Falls, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.ojhl.ca/stats/game-center/16451"
+   },
+   "club": "Leamington Flyers"
+  },
+  {
+   "id": "junior-gojhl15552",
+   "team": "junior",
+   "sport": "GOHL (Jr. B)",
+   "start": "2026-10-07T19:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "St. Marys Lincolns",
+   "location": "Vollmer Culture R.C., LaSalle, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.gohl.ca/stats/game-center/15552"
+   },
+   "club": "LaSalle Vipers"
+  },
+  {
+   "id": "junior-gs2960295",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-10-07T19:30:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Walpole Island Wild",
+   "location": "Wheatley Area Arena",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960295?configuration=45"
+   },
+   "club": "Wheatley Sharks"
   }
  ],
  "pro_games": [
