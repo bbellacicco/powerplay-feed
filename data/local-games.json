@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-04T15:46:34-04:00",
+ "updated": "2026-10-04T16:01:34-04:00",
  "today": "2026-10-04",
  "range": [
   "2026-10-01",
@@ -602,10 +602,10 @@
    "home_away": "A",
    "opponent": "Brock Badgers",
    "location": "St. Catharines, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 2,
+   "opp_score": 3,
+   "result": "L",
    "note": "",
    "links": {}
   },
@@ -618,14 +618,13 @@
    "home_away": "H",
    "opponent": "Brock Badgers",
    "location": "Alumni Stadium",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 1,
+   "opp_score": 1,
+   "result": "T",
    "note": "",
    "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=170",
-    "watch": "https://oua.yaretv.com/"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6185"
    }
   },
   {
@@ -653,11 +652,11 @@
    "home_away": "H",
    "opponent": "Hamilton Steel",
    "location": "Vollmer Culture R.C., LaSalle, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 2,
+   "opp_score": 3,
    "result": null,
-   "note": "",
+   "note": "20:00 3rd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15548"
    },
@@ -1936,7 +1935,7 @@
       "l": 2,
       "otl": 0,
       "pts": 4,
-      "gf": 16,
+      "gf": 18,
       "ga": 15,
       "strk": "L2"
      }
@@ -1954,7 +1953,7 @@
       "otl": 0,
       "pts": 8,
       "gf": 21,
-      "ga": 12,
+      "ga": 14,
       "strk": "W4"
      },
      {
@@ -2332,7 +2331,7 @@
       "l": 1,
       "otl": 0,
       "pts": 12,
-      "gf": 30,
+      "gf": 31,
       "ga": 16,
       "strk": "W1"
      },
@@ -2357,7 +2356,7 @@
       "otl": 0,
       "pts": 8,
       "gf": 32,
-      "ga": 32,
+      "ga": 33,
       "strk": "L2"
      },
      {
@@ -2530,7 +2529,7 @@
       "otl": 0,
       "pts": 10,
       "gf": 34,
-      "ga": 31,
+      "ga": 32,
       "strk": "L1"
      },
      {
@@ -2565,7 +2564,7 @@
       "l": 10,
       "otl": 0,
       "pts": 4,
-      "gf": 35,
+      "gf": 36,
       "ga": 54,
       "strk": "L1"
      },
