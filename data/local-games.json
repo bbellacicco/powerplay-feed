@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-04T16:31:33-04:00",
+ "updated": "2026-10-04T16:46:34-04:00",
  "today": "2026-10-04",
  "range": [
   "2026-10-01",
@@ -652,11 +652,11 @@
    "home_away": "H",
    "opponent": "Hamilton Steel",
    "location": "Vollmer Culture R.C., LaSalle, ON",
-   "status": "live",
-   "our_score": 3,
+   "status": "final",
+   "our_score": 4,
    "opp_score": 3,
-   "result": null,
-   "note": "00:42 3rd",
+   "result": "W",
+   "note": "OT",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15548"
    },
@@ -1916,6 +1916,18 @@
       "strk": "W1"
      },
      {
+      "name": "Flint Firebirds",
+      "abbr": "FLNT",
+      "gp": 5,
+      "w": 3,
+      "l": 2,
+      "otl": 0,
+      "pts": 6,
+      "gf": 20,
+      "ga": 16,
+      "strk": "W1"
+     },
+     {
       "name": "Saginaw Spirit",
       "abbr": "SAG",
       "gp": 6,
@@ -1926,18 +1938,6 @@
       "gf": 22,
       "ga": 25,
       "strk": "W1"
-     },
-     {
-      "name": "Flint Firebirds",
-      "abbr": "FLNT",
-      "gp": 4,
-      "w": 2,
-      "l": 2,
-      "otl": 0,
-      "pts": 4,
-      "gf": 20,
-      "ga": 16,
-      "strk": "L2"
      }
     ]
    },
@@ -1947,14 +1947,14 @@
      {
       "name": "London Knights",
       "abbr": "LDN",
-      "gp": 4,
+      "gp": 5,
       "w": 4,
-      "l": 0,
+      "l": 1,
       "otl": 0,
       "pts": 8,
       "gf": 22,
       "ga": 16,
-      "strk": "W4"
+      "strk": "L1"
      },
      {
       "name": "Kitchener Rangers",
@@ -2348,6 +2348,18 @@
       "strk": "L1"
      },
      {
+      "name": "LaSalle Vipers",
+      "abbr": "LAS",
+      "gp": 7,
+      "w": 4,
+      "l": 3,
+      "otl": 0,
+      "pts": 8,
+      "gf": 24,
+      "ga": 28,
+      "strk": "W2"
+     },
+     {
       "name": "Listowel Cyclones",
       "abbr": "LIS",
       "gp": 7,
@@ -2406,18 +2418,6 @@
       "gf": 29,
       "ga": 37,
       "strk": "L1"
-     },
-     {
-      "name": "LaSalle Vipers",
-      "abbr": "LAS",
-      "gp": 6,
-      "w": 3,
-      "l": 3,
-      "otl": 0,
-      "pts": 6,
-      "gf": 22,
-      "ga": 28,
-      "strk": "W1"
      },
      {
       "name": "Stratford Warriors",
@@ -2528,7 +2528,7 @@
       "l": 2,
       "otl": 0,
       "pts": 10,
-      "gf": 35,
+      "gf": 36,
       "ga": 33,
       "strk": "L1"
      },
@@ -2565,8 +2565,20 @@
       "otl": 0,
       "pts": 4,
       "gf": 37,
-      "ga": 55,
+      "ga": 56,
       "strk": "L1"
+     },
+     {
+      "name": "Hamilton Steel",
+      "abbr": "HAM",
+      "gp": 9,
+      "w": 0,
+      "l": 6,
+      "otl": 3,
+      "pts": 3,
+      "gf": 22,
+      "ga": 40,
+      "strk": "L6"
      },
      {
       "name": "Brantford Titans",
@@ -2579,18 +2591,6 @@
       "gf": 16,
       "ga": 35,
       "strk": "L2"
-     },
-     {
-      "name": "Hamilton Steel",
-      "abbr": "HAM",
-      "gp": 8,
-      "w": 0,
-      "l": 6,
-      "otl": 2,
-      "pts": 2,
-      "gf": 22,
-      "ga": 38,
-      "strk": "L6"
      },
      {
       "name": "Welland Canadians",
