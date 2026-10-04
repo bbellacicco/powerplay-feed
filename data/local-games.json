@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-04T11:31:34-04:00",
+ "updated": "2026-10-04T12:46:35-04:00",
  "today": "2026-10-04",
  "range": [
   "2026-10-01",
@@ -582,12 +582,14 @@
    "home_away": "A",
    "opponent": "Brock Badgers",
    "location": "St. Catharines, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 10,
+   "result": "L",
    "note": "",
-   "links": {}
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6167"
+   }
   },
   {
    "id": "lancers-6168",
