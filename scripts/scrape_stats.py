@@ -1,811 +1,271 @@
 #!/usr/bin/env python3
 """
-Powerplay Windsor - local schedule & results scraper.
+Powerplay Windsor - team leaders (player stats) collector.
 
-Pulls upcoming games and recent results for Windsor-Essex teams and writes
-one combined file: data/local-games.json (read by local-games.html).
+Writes data/stats.json, which the Local Scoreboard's "Stats" tab reads.
+Separate from scrape_local.py on purpose: if this script ever breaks, the
+schedules and scores are not affected, and the Stats tab simply hides itself
+until a good stats.json exists.
 
-Sources
-  Windsor Spitfires   HockeyTech feed used by chl.ca (all OHL games: preseason,
-                      regular season, playoffs)
-  Windsor Lancers     golancers.ca composite calendar (every varsity sport)
-  St. Clair Saints    saintsathletics.ca blocks automated requests, so Saints
-                      games come from the MANUAL_SHEET_CSV below (optional)
+Sources (version 1: hockey)
+  Windsor Spitfires    HockeyTech feed used by chl.ca (OHL)
+  Leamington Flyers    HockeyTech feed used by ojhl.ca
+  LaSalle Vipers       HockeyTech feed used by gohl.ca
+  Chatham Maroons      HockeyTech feed used by gohl.ca
+Not included yet: PJHL clubs (GameSheet), Lancers, Saints, high school.
 
-Runs on GitHub Actions (see .github/workflows/local-games.yml). Standard
-library only - nothing to install.
+Standard library only. Runs on GitHub Actions (.github/workflows/stats.yml).
 
-Local test without internet:  python scripts/scrape_local.py --fixtures fixtures
+Offline test:  python scripts/scrape_stats.py --fixtures fixtures-stats
+  (reads <client>-skaters.json and <client>-goalies.json from that folder)
 """
 
-import csv
-import io
 import json
 import os
-import sys
 import re
-import urllib.error
+import sys
+import urllib.parse
 import urllib.request
-from html import unescape
-from html.parser import HTMLParser
-from datetime import datetime, timedelta, timezone
-from zoneinfo import ZoneInfo
+from datetime import datetime, timezone
 
-# ------------------------------------------------------------------ settings
-# Edit these in GitHub's web editor if anything needs to change.
-
-# Runs every morning. Keeps a 7-day span centred on the day it runs:
-# 3 days before, today, and 3 days after.
-DAYS_EACH_SIDE = 3
-DAYS_BACK = DAYS_EACH_SIDE + 1    # a little extra room in the HockeyTech request
-DAYS_AHEAD = DAYS_EACH_SIDE + 1
-
-# Spitfires (OHL). Key is the public key chl.ca itself uses. Team 17 = Windsor.
-OHL_KEY = "f1aa699db3d81487"
-SPITFIRES_TEAM_ID = "17"
-
-# Lancers sports to leave out (SIDEARM "shortname"). Cheer only appears as
-# sideline cheer at football games, so it would duplicate those rows.
-LANCERS_SKIP_SPORTS = {"cheer"}
-
-# Optional Google Sheet for anything that can't be scraped (St. Clair Saints,
-# high schools, etc.). In Google Sheets: File > Share > Publish to web >
-# pick the tab > "Comma-separated values (.csv)" > Publish, then paste the
-# link here. Columns (header row required):
-#   team, sport, date, time, home_away, opponent, location, our_score, opp_score, note, link
-# team is a key like "saints"; date is YYYY-MM-DD; time like 7:00 PM (blank = TBA);
-# home_away is H, A or N; leave scores blank for upcoming games.
-MANUAL_SHEET_CSV = os.environ.get("MANUAL_SHEET_CSV", "")
-
-TEAMS = {
-    "spitfires": {"name": "Windsor Spitfires", "short": "Spitfires", "league": "OHL"},
-    "lancers": {"name": "Windsor Lancers", "short": "Lancers", "league": "U SPORTS / OUA"},
-    "saints": {"name": "St. Clair Saints", "short": "Saints", "league": "OCAA"},
-    "junior": {"name": "Junior Hockey", "short": "Junior Hockey", "league": "OJHL / GOHL / PJHL"},
-    "highschool": {"name": "High School (WECSSAA)", "short": "High School", "league": "WECSSAA"},
-}
-
-OUT_FILE = os.path.join(os.path.dirname(__file__), "..", "data", "local-games.json")
-TZ = ZoneInfo("America/Toronto")
+OUT_FILE = os.path.join(os.path.dirname(__file__), "..", "data", "stats.json")
 UA = "Mozilla/5.0 (compatible; PowerplayWindsorFeed/1.0; +https://www.powerplaywindsor.com)"
 
+# ------------------------------------------------------------------ settings
+# Same public keys and team numbers as scrape_local.py.
+TEAMS = [
+    # key used by the widget, club name, league label, HockeyTech client, api key, team id, "league stats" link
+    ("spitfires", "Windsor Spitfires", "OHL", "ohl", "f1aa699db3d81487", 17,
+     "https://chl.ca/ohl-spitfires/"),
+    ("junior", "Leamington Flyers", "OJHL (Jr. A)", "ojhl", "77a0bd73d9d363d3", 19,
+     "https://www.ojhl.ca/stats"),
+    ("junior", "LaSalle Vipers", "GOHL (Jr. B)", "gojhl", "34b10d4d34d7b59a", 19,
+     "https://www.gohl.ca/stats"),
+    ("junior", "Chatham Maroons", "GOHL (Jr. B)", "gojhl", "34b10d4d34d7b59a", 20,
+     "https://www.gohl.ca/stats"),
+]
+SKATERS_SHOWN = 5
+GOALIES_SHOWN = 3
+REQUEST_LIMIT = 500     # ask for plenty; we keep only this team's players
+MAX_ROSTER_ROWS = 60    # a team-filtered list is about this size; anything bigger is league-wide
+
+FIXTURES = None
+
+
 # ------------------------------------------------------------------ helpers
-
-FIXTURES = None  # set by --fixtures for offline testing
-
-
-def fetch(url, fixture=None, allow_404=False):
+def fetch(url, fixture=None):
     if FIXTURES and fixture:
-        with open(os.path.join(FIXTURES, fixture), encoding="utf-8") as f:
+        path = os.path.join(FIXTURES, fixture)
+        if not os.path.exists(path):
+            raise FileNotFoundError(path)
+        with open(path, encoding="utf-8") as f:
             return f.read()
-    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/json,text/csv,*/*"})
-    try:
-        with urllib.request.urlopen(req, timeout=30) as r:
-            return r.read().decode("utf-8-sig", errors="replace")
-    except urllib.error.HTTPError as e:
-        # wecssaa.com serves its schedule pages with a 404 status even though
-        # the page is fine, so read the body anyway
-        if allow_404 and e.code == 404:
-            return e.read().decode("utf-8", errors="replace")
-        raise
+    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/json,*/*"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return r.read().decode("utf-8-sig", errors="replace")
 
 
-def to_int(v):
+def parse_json(text):
+    """HockeyTech sometimes wraps its JSON in parentheses or a callback; take the outermost {...} or [...]."""
+    text = text.strip()
     try:
-        return int(str(v).strip())
+        return json.loads(text)
+    except ValueError:
+        pass
+    m = re.search(r"[\{\[]", text)
+    if not m:
+        raise ValueError("no JSON found")
+    end = max(text.rfind("}"), text.rfind("]"))
+    return json.loads(text[m.start():end + 1])
+
+
+def records(payload):
+    """Find the list of player rows inside a modulekit response, whatever it's called."""
+    if isinstance(payload, list):
+        return [r for r in payload if isinstance(r, dict)]
+    kit = payload.get("SiteKit", payload) if isinstance(payload, dict) else {}
+    for key, val in kit.items():
+        if key.lower() == "parameters":
+            continue
+        if isinstance(val, list) and val and isinstance(val[0], dict):
+            return val
+    return []
+
+
+def pick(rec, *names):
+    """First non-empty value among several possible field names."""
+    for n in names:
+        v = rec.get(n)
+        if v not in (None, "", "-"):
+            return v
+    return None
+
+
+def num(v):
+    try:
+        return float(str(v).replace(",", ""))
     except (TypeError, ValueError):
         return None
 
 
-def game(team, sport, start, time_tbd, home_away, opponent, location="",
-         status="upcoming", our=None, opp=None, result=None, note="", links=None, gid=""):
-    return {
-        "id": f"{team}-{gid}",
-        "team": team,
-        "sport": sport,
-        "start": start.isoformat(),
-        "time_tbd": bool(time_tbd),
-        "home_away": home_away,          # H, A, N
-        "opponent": " ".join(str(opponent).split()),
-        "location": location or "",
-        "status": status,                # upcoming | live | final | postponed | cancelled
-        "our_score": our,
-        "opp_score": opp,
-        "result": result,                # W, L, T, OTL, SOL or None
-        "note": note or "",
-        "links": {k: v for k, v in (links or {}).items() if v},
+def whole(v):
+    f = num(v)
+    return None if f is None else int(f)
+
+
+def player_name(rec):
+    n = pick(rec, "name", "player_name", "full_name")
+    if not n:
+        n = " ".join(x for x in (pick(rec, "first_name"), pick(rec, "last_name")) if x)
+    return " ".join(str(n).split()) if n else ""
+
+
+def on_team(rec, team_id):
+    """True/False when the row says which team it belongs to; None when it doesn't say."""
+    for k in ("team_id", "teamId", "current_team_id"):
+        if k in rec and rec[k] not in (None, ""):
+            return str(rec[k]).strip() == str(team_id)
+    return None
+
+
+def team_rows(rows, team_id):
+    flags = [on_team(r, team_id) for r in rows]
+    if any(f is not None for f in flags):
+        return [r for r, f in zip(rows, flags) if f]
+    # Rows carry no team field. That is only safe when the feed already filtered to this team,
+    # which gives a roster-sized list. A league-wide list here would put another club's players
+    # under this club's name, so refuse it.
+    if len(rows) > MAX_ROSTER_ROWS:
+        raise RuntimeError(f"feed returned {len(rows)} rows with no team field, so they can't be matched to team {team_id}")
+    return rows
+
+
+def api_url(client, key, view_type, team_id):
+    q = {
+        "feed": "modulekit", "view": "statviewtype", "type": view_type,
+        "key": key, "fmt": "json", "client_code": client, "lang": "en",
+        "league_id": "", "season_id": "", "team_id": team_id,
+        "first": 0, "limit": REQUEST_LIMIT,
     }
+    return "https://lscluster.hockeytech.com/feed/?" + urllib.parse.urlencode(q)
 
-# ------------------------------------------------------------------ Spitfires
 
-
-def _hockeytech_games(client, key, team_id, team, sport, club="", gamecentre="", preseason=()):
-    """Games for one team from a HockeyTech league feed (OHL, OJHL, GOHL...)."""
-    url = ("https://lscluster.hockeytech.com/feed/?feed=modulekit&view=scorebar"
-           f"&key={key}&client_code={client}&team_id={team_id}"
-           f"&numberofdaysback={DAYS_BACK}&numberofdaysahead={DAYS_AHEAD}"
-           "&season_id=&limit=500&lang_code=en&fmt=json")
-    data = json.loads(fetch(url, "spitfires.json" if client == "ohl" else None))
+# ------------------------------------------------------------------ one club
+def skater_group(rows):
     out = []
-    for g in data["SiteKit"]["Scorebar"]:
-        home = g["HomeID"] == str(team_id)
-        start = datetime.fromisoformat(g["GameDateISO8601"]).astimezone(TZ)
-        hg, vg = to_int(g["HomeGoals"]), to_int(g["VisitorGoals"])
-        our, opp = (hg, vg) if home else (vg, hg)
-        code = g.get("GameStatus")
-        period = to_int(g.get("Period")) or 0
-        status, result, note = "upcoming", None, ""
-        if code == "4":
-            status = "final"
-            if period == 4:
-                note = "OT"
-            elif period >= 5:
-                note = "SO"
-            if our > opp:
-                result = "W"
-            else:
-                result = {"OT": "OTL", "SO": "SOL"}.get(note, "L")
-        elif code in ("2", "3"):
-            status = "live"
-            note = g.get("GameStatusString", "")
-        else:
-            our = opp = None
-        low = (g.get("GameStatusString") or "").lower()
-        if "postpon" in low:
-            status = "postponed"
-        elif "cancel" in low:
-            status = "cancelled"
-        season_note = "Preseason" if g.get("SeasonID") in preseason else ""
-        venue = ", ".join(x for x in [g.get("venue_name"), g.get("venue_location")] if x)
-        gm = game(
-            team, sport, start, g.get("TimeTbd") == "1",
-            "H" if home else "A",
-            g["VisitorLongName"] if home else g["HomeLongName"],
-            location=venue, status=status, our=our, opp=opp, result=result,
-            note=" · ".join(x for x in [note, season_note] if x),
-            links={
-                "tickets": g.get("TicketUrl") if status == "upcoming" else "",
-                "gamecentre": gamecentre.format(id=g["ID"]) if gamecentre else "",
-            },
-            gid=f"{client}{g['ID']}",
-        )
-        if club:
-            gm["club"] = club
-        out.append(gm)
-    return out
-
-
-def scrape_spitfires():
-    return _hockeytech_games("ohl", OHL_KEY, SPITFIRES_TEAM_ID, "spitfires", "Hockey",
-                             gamecentre="https://chl.ca/ohl-spitfires/gamecentre/{id}/",
-                             preseason=("87",))
-
-# ------------------------------------------------------------------ Junior hockey
-
-# Public keys are the ones each league's own website uses.
-JUNIOR_TEAMS = [
-    # (short name, league label, source, settings)
-    ("Leamington Flyers", "OJHL (Jr. A)", "hockeytech",
-     {"client": "ojhl", "key": "77a0bd73d9d363d3", "team_id": 19,
-      "gamecentre": "https://www.ojhl.ca/stats/game-center/{id}"}),
-    ("LaSalle Vipers", "GOHL (Jr. B)", "hockeytech",
-     {"client": "gojhl", "key": "34b10d4d34d7b59a", "team_id": 19,
-      "gamecentre": "https://www.gohl.ca/stats/game-center/{id}"}),
-    ("Chatham Maroons", "GOHL (Jr. B)", "hockeytech",
-     {"client": "gojhl", "key": "34b10d4d34d7b59a", "team_id": 20,
-      "gamecentre": "https://www.gohl.ca/stats/game-center/{id}"}),
-    # PJHL moved its stats to GameSheet. Season 15133 = 2026-27; update each fall
-    # (it's the number in the "Schedule" link on thepjhl.ca).
-    ("Lakeshore Canadiens", "PJHL (Jr. C)", "gamesheet", {"season": 15133, "team_id": 522354}),
-    ("Essex 73's", "PJHL (Jr. C)", "gamesheet", {"season": 15133, "team_id": 522353}),
-    ("Wheatley Sharks", "PJHL (Jr. C)", "gamesheet", {"season": 15133, "team_id": 522357}),
-    ("Amherstburg Admirals", "PJHL (Jr. C)", "gamesheet", {"season": 15133, "team_id": 522350}),
-]
-
-
-def _next_payload_objects(html, marker='{"gameId":'):
-    """GameSheet pages embed their data as Next.js 'self.__next_f.push' strings.
-    Join those strings back together and pull out every JSON object that
-    starts with `marker`."""
-    parts = re.findall(r'self\.__next_f\.push\(\[1,("(?:[^"\\]|\\.)*")\]\)', html)
-    blob = "".join(json.loads(p) for p in parts)
-    dec, out, i = json.JSONDecoder(), [], 0
-    while True:
-        i = blob.find(marker, i)
-        if i < 0:
-            return out
-        try:
-            obj, end = dec.raw_decode(blob, i)
-            out.append(obj)
-            i = end
-        except ValueError:
-            i += len(marker)
-
-
-def _gamesheet_games(season, team_id, club, sport, now):
-    url = f"https://gamesheetstats.com/seasons/{season}/teams/{team_id}/schedule?configuration=45"
-    html = fetch(url, f"pjhl_{team_id}.html" if FIXTURES else None)
-    out, seen = [], set()
-    for g in _next_payload_objects(html):
-        if g.get("gameId") in seen or not isinstance(g.get("home"), dict):
+    for r in rows:
+        pts, g, a, gp = whole(pick(r, "points")), whole(pick(r, "goals")), whole(pick(r, "assists")), whole(pick(r, "games_played", "gp"))
+        name = player_name(r)
+        if not name or pts is None:
             continue
-        seen.add(g["gameId"])
-        home = g["home"].get("id") == team_id
-        us, them = (g["home"], g["visitor"]) if home else (g["visitor"], g["home"])
-        try:
-            start = datetime.fromisoformat(g["timeStampZulu"].replace("Z", "+00:00")).astimezone(TZ)
-        except (KeyError, ValueError):
-            continue
-        st = g.get("status", "")
-        status, our, opp, result, note = "upcoming", None, None, None, ""
-        if st == "final":
-            status, our, opp = "final", to_int(us.get("goals")), to_int(them.get("goals"))
-            result = {"W": "W", "L": "L", "T": "T", "OTL": "OTL", "SOL": "SOL"}.get(us.get("result"))
-            if result is None and our is not None and opp is not None:
-                result = "W" if our > opp else "L" if our < opp else "T"
-        elif st == "in_progress":
-            if now - start > timedelta(hours=4):
-                note = "Score not posted yet"
-            else:
-                status, our, opp = "live", to_int(us.get("goals")), to_int(them.get("goals"))
-        elif "postpon" in st:
-            status = "postponed"
-        elif "cancel" in st:
-            status = "cancelled"
-        if g.get("gameType") == "exhibition":
-            note = " · ".join(x for x in [note, "Exhibition"] if x)
-        gm = game("junior", sport, start, False, "H" if home else "A",
-                  them.get("title", "TBA"), location=g.get("location", ""), status=status,
-                  our=our, opp=opp, result=result, note=note,
-                  links={"gamecentre": f"https://gamesheetstats.com/seasons/{season}/games/{g['gameId']}?configuration=45"},
-                  gid=f"gs{g['gameId']}")
-        gm["club"] = club
-        out.append(gm)
-    return out
+        out.append((name, [gp or 0, g or 0, a or 0, pts]))
+    out.sort(key=lambda x: (-x[1][3], -x[1][1], x[0]))
+    out = out[:SKATERS_SHOWN]
+    if not out:
+        return None
+    return {"title": "Scoring leaders", "cols": ["GP", "G", "A", "PTS"], "key": 3,
+            "rows": [{"name": n, "vals": v} for n, v in out]}
 
 
-def scrape_junior(now):
-    out, errors = [], []
-    for club, league, source, cfg in JUNIOR_TEAMS:
-        try:
-            if source == "hockeytech":
-                if FIXTURES:
-                    continue  # no offline sample for these leagues
-                out += _hockeytech_games(cfg["client"], cfg["key"], cfg["team_id"], "junior",
-                                         league, club=club, gamecentre=cfg.get("gamecentre", ""))
-            else:
-                if FIXTURES and cfg["team_id"] != 522350:
-                    continue
-                out += _gamesheet_games(cfg["season"], cfg["team_id"], club, league, now)
-        except Exception as ex:
-            errors.append(f"{club}: {ex}")
-            print(f"  junior: {club} FAILED - {ex}", file=sys.stderr)
-    if errors and not out:
-        raise RuntimeError("; ".join(errors)[:200])
-    # a game between two of our teams shows up twice; keep one copy
-    uniq = {}
-    for g in out:
-        k = (g["start"], frozenset([g["club"], g["opponent"]]))
-        if k not in uniq or g["home_away"] == "H":
-            uniq[k] = g
-    return list(uniq.values())
-
-# ------------------------------------------------------------------ Lancers
-
-
-def scrape_lancers(today):
-    base = "https://golancers.ca"
-    seen, out = set(), []
-    # month view covers a 6-week grid; ask for each month the window touches
-    months, d = [], (today - timedelta(days=DAYS_EACH_SIDE)).replace(day=1)
-    while d <= today + timedelta(days=DAYS_EACH_SIDE):
-        months.append(d)
-        d = (d.replace(day=28) + timedelta(days=4)).replace(day=1)
-    for i, m in enumerate(months):
-        url = f"{base}/services/responsive-calendar.ashx?type=month&sport=0&location=all&date={m.month}/1/{m.year}"
-        days = json.loads(fetch(url, "lancers_sep.json" if i == 0 else None) if not (FIXTURES and i) else "[]")
-        for day in days:
-            for e in day.get("events") or []:
-                if e["id"] in seen or e["sport"]["shortname"] in LANCERS_SKIP_SPORTS:
-                    continue
-                seen.add(e["id"])
-                start = datetime.fromisoformat(e["date"]).replace(tzinfo=TZ)
-                time_tbd = start.hour == 0 and start.minute == 0
-                r = e.get("result") or {}
-                noplay = (e.get("noplay_text") or "").lower()
-                status, result, our, opp = "upcoming", None, None, None
-                note_bits = []
-                if "postpon" in noplay:
-                    status = "postponed"
-                elif "cancel" in noplay:
-                    status = "cancelled"
-                elif e.get("status") == "O" or r.get("status"):
-                    status = "final"
-                    our, opp = to_int(r.get("team_score")), to_int(r.get("opponent_score"))
-                    result = r.get("status") if r.get("status") in ("W", "L", "T") else None
-                    if r.get("postscore_info"):
-                        note_bits.append(r["postscore_info"].strip("() "))
-                if e.get("type") == "S":
-                    note_bits.append("Exhibition")
-                if e.get("tournament"):
-                    note_bits.append(e["tournament"]["title"])
-                ha = {"H": "H", "A": "A"}.get(e.get("location_indicator"), "N")
-                loc = (e.get("facility") or {}).get("title") or e.get("location") or ""
-                links = {}
-                for k in ("boxscore", "recap"):
-                    u = (r.get(k) or {}).get("url")
-                    if u:
-                        links[k] = u if u.startswith("http") else base + u
-                media = e.get("media") or {}
-                if status == "upcoming":
-                    links["tickets"] = ((media.get("tickets") or {}).get("url")) or ""
-                    links["watch"] = ((media.get("video") or {}).get("url")) or ""
-                out.append(game(
-                    "lancers", e["sport"]["title"], start, time_tbd, ha,
-                    (e.get("opponent") or {}).get("title") or "TBA",
-                    location=loc, status=status, our=our, opp=opp, result=result,
-                    note=" · ".join(note_bits), links=links, gid=e["id"],
-                ))
-    return out
-
-# ------------------------------------------------------------------ High school (WECSSAA)
-
-
-class _WecssaaParser(HTMLParser):
-    """Turns wecssaa.com's weekly schedule table into a list of table rows,
-    each a list of (tag, text) cells, keeping <h3> dates and league headers."""
-
-    def __init__(self):
-        super().__init__()
-        self.rows, self.row, self.cell, self.tag = [], None, None, None
-
-    def handle_starttag(self, tag, attrs):
-        if tag == "tr":
-            self.row = []
-        elif tag in ("td", "th") and self.row is not None:
-            self.cell, self.tag = [], tag
-        elif tag == "h3" and self.cell is not None:
-            self.tag = "h3"
-
-    def handle_endtag(self, tag):
-        if tag in ("td", "th") and self.cell is not None and self.row is not None:
-            self.row.append((self.tag, " ".join("".join(self.cell).split())))
-            self.cell = None
-        elif tag == "tr" and self.row is not None:
-            if self.row:
-                self.rows.append(self.row)
-            self.row = None
-
-    def handle_data(self, data):
-        if self.cell is not None:
-            self.cell.append(data)
-
-    def handle_entityref(self, name):
-        self.handle_data(unescape(f"&{name};"))
-
-    def handle_charref(self, name):
-        self.handle_data(unescape(f"&#{name};"))
-
-
-def _hs_sport(league):
-    """'Junior Girls Basketball-Tier 1' -> ('Junior Girls Basketball', 'Tier 1')
-       '2A Senior Boys Football'        -> ('Senior Boys Football', '2A')"""
-    league = " ".join(league.split())
-    m = re.search(r"\b(Junior|Senior|Varsity)\s+(Boys|Girls|Co-Ed)\s+([A-Za-z]+)", league)
-    if not m:
-        return league, ""
-    extra = " ".join(x.strip(" -") for x in (league[:m.start()], league[m.end():]) if x.strip(" -"))
-    return m.group(0), extra
-
-
-def scrape_wecssaa(today):
-    """Every WECSSAA league, from the site's weekly (Sunday-Saturday) schedule."""
-    base = "https://wecssaa.com"
-    weeks = sorted({today - timedelta(days=DAYS_EACH_SIDE), today + timedelta(days=DAYS_EACH_SIDE)})
-    out, seen = [], set()
-    for i, day in enumerate(weeks):
-        url = f"{base}/weeklySchedule.php?schoolid=ALL&date={day.isoformat()}&leagueid=ALL&divisionid=ALL"
-        fixture = ["wecssaa_2026-09-25.html", "wecssaa_2026-09-29.html"][min(i, 1)]
-        p = _WecssaaParser()
-        p.feed(fetch(url, fixture, allow_404=True))
-        date = league = visitor = pending = None
-        for row in p.rows:
-            first_tag, first = row[0]
-            if first_tag == "h3" or re.match(r"^(Sun|Mon|Tues|Wednes|Thurs|Fri|Satur)day, \w+ \d+, \d{4}$", first):
-                try:
-                    date = datetime.strptime(first, "%A, %B %d, %Y").date()
-                except ValueError:
-                    pass
-                continue
-            if first_tag == "th" and len(row) == 1 and first:
-                league = first
-                continue
-            if first == "Visitor:" and len(row) >= 3:
-                visitor = row
-                continue
-            if first == "Home:" and visitor and len(row) >= 2:
-                visitor, pending = None, (visitor, row)
-                continue
-            if first.startswith("Location:") and date and league and pending:
-                v, h = pending
-                pending = None
-                notes = row[1][1][len("Notes:"):].strip() if len(row) > 1 and row[1][1].startswith("Notes:") else ""
-                location = first[len("Location:"):].replace("Map", "").strip()
-                v_name, h_name = v[1][1], h[1][1]
-                v_cell = v[2][1] if len(v) > 2 else ""
-                h_cell = h[2][1] if len(h) > 2 else ""
-                vs, hs = to_int(v_cell), to_int(h_cell)
-                start, tbd = datetime.combine(date, datetime.min.time()), True
-                for fmt in ("%I:%M %p", "%I:%M%p"):
-                    try:
-                        tt = datetime.strptime(v_cell.upper(), fmt)
-                        start, tbd = start.replace(hour=tt.hour, minute=tt.minute), False
-                        break
-                    except ValueError:
-                        pass
-                start = start.replace(tzinfo=TZ)
-                status = "final" if vs is not None and hs is not None else "upcoming"
-                low = notes.lower()
-                if "postpon" in low:
-                    status = "postponed"
-                elif "cancel" in low:
-                    status = "cancelled"
-                sport, level = _hs_sport(league)
-                key = (date, league, v_name, h_name, v_cell)
-                if key in seen:
-                    continue
-                seen.add(key)
-                g = game("highschool", sport, start, tbd, "N", h_name, location=location,
-                         status=status, our=vs if status == "final" else None,
-                         opp=hs if status == "final" else None,
-                         note=" · ".join(x for x in [level, notes.rstrip(".")] if x
-                                         and x.lower() != "regular season"),
-                         links={"standings": f"{base}/viewScores.php"},
-                         gid=f"{date.isoformat()}-{len(out)}")
-                g["away"], g["home"] = v_name, h_name   # neutral matchup, no "our" team
-                out.append(g)
-    return out
-
-# ------------------------------------------------------------------ St. Clair Saints football (CJFL)
-
-# St. Clair's own site blocks automated tools, but the CJFL site (cjfl.org)
-# carries the Saints football schedule. Any season's schedule page works as a
-# starting point: the script reads its season menu and follows the newest year.
-CJFL_START = "https://www.cjfl.org/schedule/team_instance/10466301?subseason=958344"
-
-
-def _strip_tags(html):
-    return " ".join(unescape(re.sub(r"<[^>]+>", " ", html)).split())
-
-
-def _cjfl_rows(html, year, today):
-    out = []
-    for gid, row in re.findall(r'<tr id="game_list_row_(\d+)"[^>]*>(.*?)</tr>', html, re.S):
-        cells = re.findall(r"<td[^>]*>(.*?)</td>", row, re.S)
-        if len(cells) < 5:
-            continue
-        date_txt, result_txt, opp_txt, loc_txt = (_strip_tags(c) for c in cells[:4])
-        status_html = cells[4]
-        try:
-            day = datetime.strptime(f"{date_txt} {year}", "%a %b %d %Y")
-        except ValueError:
-            continue
-        opp_txt = opp_txt.strip()
-        away = opp_txt.startswith("@")
-        opponent = opp_txt.lstrip("@ ").strip() or "TBA"
-        status_txt = _strip_tags(status_html)
-        alt = " ".join(re.findall(r'alt="([^"]*)"', status_html)).upper()
-        start, tbd = day, True
-        m = re.search(r"(\d{1,2}:\d{2}\s*[AP]M)", status_txt, re.I)
-        if m:
-            tt = datetime.strptime(m.group(1).upper().replace(" ", ""), "%I:%M%p")
-            start, tbd = day.replace(hour=tt.hour, minute=tt.minute), False
-        start = start.replace(tzinfo=TZ)
-        status, our, opp, result = "upcoming", None, None, None
-        sm = re.match(r"^([WLT])\s+(\d+)\s*-\s*(\d+)", result_txt)
-        if sm:
-            status, result = "final", sm.group(1)
-            our, opp = int(sm.group(2)), int(sm.group(3))
-        low = (status_txt + " " + alt).lower()
-        if "postpon" in low:
-            status = "postponed"
-        elif "cancel" in low:
-            status = "cancelled"
-        out.append(game("saints", "Football", start, tbd, "A" if away else "H", opponent,
-                        location=loc_txt, status=status, our=our, opp=opp, result=result,
-                        note="CJFL",
-                        links={"gamecentre": f"https://www.cjfl.org/game/show/{gid}"},
-                        gid=f"cjfl{gid}"))
-    return out
-
-
-def scrape_cjfl_saints(today):
-    first = fetch(CJFL_START, "cjfl.html" if FIXTURES else None)
-    # season menu: <optgroup label="2026"> <option value="/schedule/...">...</option>
-    groups = re.findall(r'<optgroup label="(\d{4})\*?">(.*?)</optgroup>', first, re.S)
-    pages = []
-    if groups:
-        year, body = max(groups, key=lambda g: int(g[0]))
-        pages = [(int(year), "https://www.cjfl.org" + unescape(v))
-                 for v in re.findall(r'<option value="([^"]+)"', body)]
-    if not pages:
-        pages = [(today.year, CJFL_START)]
-    out = []
-    for year, url in pages:
-        html = first if (FIXTURES or url == CJFL_START) else fetch(url)
-        out += _cjfl_rows(html, year, today)
-        if FIXTURES:
-            break
-    return out
-
-# ------------------------------------------------------------------ CFL (for the pro widget)
-
-# ESPN's CFL data is out of date, so CFL comes from cfl.ca's own schedule page.
-# The pro widget gets NFL / NHL / NBA live from ESPN in the browser.
-
-
-def _nuxt_value(arr, i, depth=0):
-    """Nuxt pages store data as one flat list where objects point to other
-    positions in the list. Follow the pointers for one value."""
-    if not isinstance(i, int) or isinstance(i, bool) or depth > 8 or i < 0 or i >= len(arr):
-        return i
-    v = arr[i]
-    if isinstance(v, list):
-        if v and isinstance(v[0], str) and v[0] in ("Reactive", "ShallowReactive", "Ref", "ShallowRef", "Date"):
-            return v[1] if v[0] == "Date" else _nuxt_value(arr, v[1], depth + 1)
-        return [_nuxt_value(arr, x, depth + 1) for x in v]
-    if isinstance(v, dict):
-        return {k: _nuxt_value(arr, x, depth + 1) for k, x in v.items()}
-    return v
-
-
-def scrape_cfl(today):
-    html = fetch("https://www.cfl.ca/schedule/", "cfl.html" if FIXTURES else None)
-    m = re.search(r'<script[^>]*id="__NUXT_DATA__"[^>]*>(.*?)</script>', html, re.S)
-    if not m:
-        raise RuntimeError("cfl.ca schedule data not found")
-    arr = json.loads(m.group(1))
-    teams, venues, games = {}, {}, []
-    for v in arr:
-        if not isinstance(v, dict) or "ID" not in v:
-            continue
-        if "abbreviation" in v and "region_label" in v:
-            t = {k: _nuxt_value(arr, v[k]) for k in ("ID", "abbreviation", "region_label", "name")}
-            region = str(t["region_label"]).title().replace("B.c.", "B.C.")
-            teams[t["ID"]] = {"abbr": t["abbreviation"], "name": f"{region} {t['name']}".strip()}
-        elif "capacity" in v and "name" in v:
-            venues[_nuxt_value(arr, v["ID"])] = _nuxt_value(arr, v["name"])
-        elif "home_team_id" in v:
-            games.append({k: _nuxt_value(arr, x) for k, x in v.items()
-                          if k not in ("contentfulMatch", "metadata", "genius")})
-    out = []
-    for g in games:
-        h, a = teams.get(g.get("home_team_id")), teams.get(g.get("away_team_id"))
-        if not h or not a or not g.get("start_at"):
-            continue
-        start = datetime.fromisoformat(str(g["start_at"])).astimezone(TZ)
-        hs, as_ = to_int(g.get("home_team_score")), to_int(g.get("away_team_score"))
-        st = str(g.get("game_status") or "").lower()
-        status = "upcoming"
-        if st in ("finished", "final", "complete", "completed") or (hs is not None and as_ is not None and start < datetime.now(TZ) - timedelta(hours=4)):
-            status = "final"
-        elif st in ("in progress", "live", "in_progress"):
-            status = "live"
-        elif "postpon" in st:
-            status = "postponed"
-        elif "cancel" in st:
-            status = "cancelled"
-        gm = game("cfl", "CFL", start, False, "N", h["name"], location=venues.get(g.get("venue_id"), ""),
-                  status=status,
-                  our=as_ if status in ("final", "live") else None,
-                  opp=hs if status in ("final", "live") else None,
-                  note="Preseason" if to_int(g.get("week")) is not None and to_int(g.get("week")) < 1 else "",
-                  links={"gamecentre": "https://www.cfl.ca/schedule/"},
-                  gid=f"cfl{g.get('ID')}")
-        gm["away"], gm["home"] = a["name"], h["name"]
-        gm["away_abbr"], gm["home_abbr"] = a["abbr"], h["abbr"]
-        out.append(gm)
-    return out
-
-def _iso_date(val):
-    """cfl.ca mixes date strings and millisecond timestamps; return ISO text."""
-    if isinstance(val, (int, float)) and not isinstance(val, bool):
-        return datetime.fromtimestamp(val / 1000, TZ).isoformat(timespec="seconds")
-    try:
-        return datetime.fromisoformat(str(val)).astimezone(TZ).isoformat(timespec="seconds")
-    except ValueError:
+def save_pct(v):
+    f = num(v)
+    if f is None:
         return ""
+    if f > 1:
+        f = f / 100.0
+    return ("%.3f" % f).lstrip("0")
 
 
-def scrape_cfl_news(limit=30):
-    """Latest stories from the cfl.ca home page (headline, short summary, photo, link)."""
-    html = fetch("https://www.cfl.ca/", "cfl_home.html" if FIXTURES else None)
-    m = re.search(r'<script[^>]*id="__NUXT_DATA__"[^>]*>(.*?)</script>', html, re.S)
-    if not m:
-        raise RuntimeError("cfl.ca story data not found")
-    arr = json.loads(m.group(1))
-    out, seen = [], set()
-    for v in arr:
-        if not (isinstance(v, dict) and "headline" in v and "slug" in v and "isVideo" in v):
-            continue
-        slug = _nuxt_value(arr, v["slug"])
-        if not slug or slug in seen:
-            continue
-        seen.add(slug)
-        img = ""
-        hero = _nuxt_value(arr, v.get("heroImage")) if "heroImage" in v else None
-        if isinstance(hero, dict):
-            url = ((hero.get("file") or {}).get("url") or "")
-            if url:
-                img = ("https:" + url if url.startswith("//") else url) + "?w=640&fm=jpg&q=70"
-        teams = _nuxt_value(arr, v["relatedTeams"]) if "relatedTeams" in v else []
-        summary = _nuxt_value(arr, v["summary"]) if "summary" in v else ""
-        out.append({
-            "league": "cfl",
-            "headline": str(_nuxt_value(arr, v["headline"]) or "").strip(),
-            "summary": str(summary or "").strip(),
-            "published": _iso_date(_nuxt_value(arr, v["publishedDate"]) if "publishedDate" in v else ""),
-            "image": img,
-            "video": bool(_nuxt_value(arr, v["isVideo"])),
-            "teams": [t.get("teamName") for t in teams if isinstance(t, dict)] if isinstance(teams, list) else [],
-            "url": f"https://www.cfl.ca/article/{slug}",
-            "source": "CFL.ca",
-        })
-    out.sort(key=lambda a: a["published"] or "", reverse=True)
-    return out[:limit]
-
-# ------------------------------------------------------------------ Manual sheet
-
-
-def scrape_manual_sheet():
-    if not MANUAL_SHEET_CSV:
-        return []
-    text = fetch(MANUAL_SHEET_CSV, "manual.csv")
+def goalie_group(rows):
     out = []
-    for n, row in enumerate(csv.DictReader(io.StringIO(text))):
-        row = {(k or "").strip().lower(): (v or "").strip() for k, v in row.items()}
-        team = row.get("team", "").lower()
-        if not team or not row.get("date"):
+    for r in rows:
+        gp = whole(pick(r, "games_played", "gp"))
+        name = player_name(r)
+        if not name or not gp:
             continue
-        t = row.get("time", "")
-        try:
-            day = datetime.strptime(row["date"], "%Y-%m-%d")
-        except ValueError:
-            print(f"  manual sheet row {n + 2}: bad date {row['date']!r} (use YYYY-MM-DD)", file=sys.stderr)
-            continue
-        start, tbd = day, True
-        for fmt in ("%I:%M %p", "%I:%M%p", "%H:%M", "%I %p"):
-            try:
-                tt = datetime.strptime(t.upper(), fmt)
-                start, tbd = day.replace(hour=tt.hour, minute=tt.minute), False
-                break
-            except ValueError:
-                pass
-        start = start.replace(tzinfo=TZ)
-        our, opp = to_int(row.get("our_score")), to_int(row.get("opp_score"))
-        note = row.get("note", "")
-        status, result = "upcoming", None
-        if "postpon" in note.lower():
-            status = "postponed"
-        elif "cancel" in note.lower():
-            status = "cancelled"
-        elif our is not None and opp is not None:
-            status = "final"
-            result = "W" if our > opp else "L" if our < opp else "T"
-        out.append(game(
-            team, row.get("sport", ""), start, tbd, (row.get("home_away") or "N").upper()[:1],
-            row.get("opponent", "TBA"), location=row.get("location", ""), status=status,
-            our=our, opp=opp, result=result, note=note,
-            links={"link": row.get("link", "")}, gid=f"sheet{n}",
-        ))
-    return out
+        w = whole(pick(r, "wins")) or 0
+        gaa = num(pick(r, "goals_against_average", "gaa"))
+        sv = pick(r, "save_percentage", "savepct", "sv_pct")
+        out.append((name, w, gp, [gp, w, "" if gaa is None else "%.2f" % gaa, save_pct(sv)]))
+    out.sort(key=lambda x: (-x[1], -x[2], x[0]))
+    out = out[:GOALIES_SHOWN]
+    if not out:
+        return None
+    return {"title": "Goalies", "cols": ["GP", "W", "GAA", "SV%"], "key": 1,
+            "rows": [{"name": n, "vals": v} for n, _, _, v in out]}
+
+
+def scrape_club(entry, now):
+    team, club, league, client, key, team_id, link = entry
+    groups = []
+    # skaters are required; goalies are a bonus
+    sk = parse_json(fetch(api_url(client, key, "topscorers", team_id), f"{client}-skaters.json"))
+    rows = team_rows(records(sk), team_id)
+    g = skater_group(rows)
+    if not g:
+        raise RuntimeError(f"no skater rows for team {team_id} (feed returned {len(records(sk))} rows; "
+                           f"first row keys: {sorted(records(sk)[0].keys()) if records(sk) else 'none'})")
+    groups.append(g)
+    try:
+        go = parse_json(fetch(api_url(client, key, "topgoalies", team_id), f"{client}-goalies.json"))
+        gg = goalie_group(team_rows(records(go), team_id))
+        if gg:
+            groups.append(gg)
+    except Exception as ex:      # goalies are optional
+        print(f"  {club}: goalies skipped - {ex}", file=sys.stderr)
+    return {"team": team, "club": club, "league": league, "link": link,
+            "updated": now.isoformat(), "groups": groups}
+
 
 # ------------------------------------------------------------------ main
+def load_previous_file():
+    try:
+        with open(OUT_FILE, encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
+def load_previous():
+    return {(t["team"], t["club"]): t for t in load_previous_file().get("teams", [])}
+
+
+def without_times(teams):
+    """The teams with their 'updated' stamps removed, so an unchanged table doesn't count as a change."""
+    return [{k: v for k, v in t.items() if k != "updated"} for t in teams]
 
 
 def main():
     global FIXTURES
     if "--fixtures" in sys.argv:
         FIXTURES = sys.argv[sys.argv.index("--fixtures") + 1]
-    now = datetime.now(TZ)
-    if FIXTURES:
-        now = datetime(2026, 9, 26, 12, 0, tzinfo=TZ)  # fixture date
-    today = now.date()
-
-    games, sources = [], {}
-    for key, fn in (("spitfires", scrape_spitfires),
-                    ("lancers", lambda: scrape_lancers(today)),
-                    ("junior", lambda: scrape_junior(now)),
-                    ("saints", lambda: scrape_cjfl_saints(today)),
-                    ("highschool", lambda: scrape_wecssaa(today)),
-                    ("sheet", scrape_manual_sheet)):
+    now = datetime.now(timezone.utc)
+    previous, teams, failed = load_previous(), [], []
+    for entry in TEAMS:
+        club = entry[1]
         try:
-            got = fn()
-            games += got
-            sources[key] = {"ok": True, "count": len(got)}
-            print(f"{key}: {len(got)} games")
-        except Exception as ex:  # one source failing shouldn't kill the rest
-            sources[key] = {"ok": False, "error": str(ex)[:200]}
-            print(f"{key}: FAILED - {ex}", file=sys.stderr)
-
-
-    # If every source failed, keep the previous file rather than blanking the widget
-    if not any(s["ok"] for s in sources.values()):
-        print("All sources failed - leaving existing data untouched", file=sys.stderr)
-        sys.exit(1)
-    if os.path.exists(OUT_FILE):
-        try:
-            prev = json.load(open(OUT_FILE, encoding="utf-8"))
-            for key, s in sources.items():
-                if not s["ok"]:  # carry forward the last good data for a failed source
-                    team_keys = {"spitfires": {"spitfires"}, "lancers": {"lancers"},
-                                 "highschool": {"highschool"}, "junior": {"junior"},
-                                 "saints": {"saints"}}.get(key)
-                    games += [g for g in prev.get("games", [])
-                              if (g["team"] in team_keys if team_keys else g["id"].split("-")[1].startswith("sheet"))]
-        except (ValueError, KeyError):
-            pass
-
-    lo = datetime.combine(today - timedelta(days=DAYS_EACH_SIDE), datetime.min.time(), TZ)
-    hi = datetime.combine(today + timedelta(days=DAYS_EACH_SIDE + 1), datetime.min.time(), TZ)
-    games = [g for g in games if lo <= datetime.fromisoformat(g["start"]) < hi]
-    games.sort(key=lambda g: (g["start"], g["team"], g["sport"]))
-
-    pro_games = []
-    try:
-        pro_games = [g for g in scrape_cfl(today)
-                     if lo <= datetime.fromisoformat(g["start"]) < hi]
-        sources["cfl"] = {"ok": True, "count": len(pro_games)}
-        print(f"cfl: {len(pro_games)} games")
-    except Exception as ex:
-        sources["cfl"] = {"ok": False, "error": str(ex)[:200]}
-        print(f"cfl: FAILED - {ex}", file=sys.stderr)
-        try:
-            pro_games = json.load(open(OUT_FILE, encoding="utf-8")).get("pro_games", [])
-        except (OSError, ValueError):
-            pass
-
-    pro_news = []
-    try:
-        pro_news = scrape_cfl_news()
-        sources["cfl_news"] = {"ok": True, "count": len(pro_news)}
-        print(f"cfl news: {len(pro_news)} stories")
-    except Exception as ex:
-        sources["cfl_news"] = {"ok": False, "error": str(ex)[:200]}
-        print(f"cfl news: FAILED - {ex}", file=sys.stderr)
-        try:
-            pro_news = json.load(open(OUT_FILE, encoding="utf-8")).get("pro_news", [])
-        except (OSError, ValueError):
-            pass
-
-    payload = {
-        "updated": now.isoformat(timespec="seconds"),
-        "today": today.isoformat(),
-        "range": [(today - timedelta(days=DAYS_EACH_SIDE)).isoformat(),
-                  (today + timedelta(days=DAYS_EACH_SIDE)).isoformat()],
-        "teams": TEAMS,
-        "sources": sources,
-        "games": games,
-        "pro_games": pro_games,   # CFL, used by pro-games.html
-        "pro_news": pro_news,     # CFL stories, used by news-feed.html
-    }
+            teams.append(scrape_club(entry, now))
+            print(f"  {club}: ok")
+        except Exception as ex:
+            failed.append(club)
+            print(f"::warning::Stats for {club} failed: {ex}")
+            old = previous.get((entry[0], club))
+            if old:                       # keep the last good numbers rather than dropping the club
+                teams.append(old)
+    if not teams:
+        print("::warning::No stats collected; leaving data/stats.json as it was.")
+        return 0
+    if without_times(teams) == without_times(load_previous_file().get("teams", [])):
+        print("Stats unchanged; not rewriting data/stats.json.")
+        return 0
+    out = {"updated": now.isoformat(), "teams": teams}
     os.makedirs(os.path.dirname(OUT_FILE), exist_ok=True)
-    new = json.dumps(payload, ensure_ascii=False, indent=1)
-    # Only rewrite when the games changed
-    if os.path.exists(OUT_FILE):
-        try:
-            old = json.load(open(OUT_FILE, encoding="utf-8"))
-            if (old.get("games") == games and old.get("sources") == sources
-                    and old.get("today") == payload["today"] and old.get("pro_games") == pro_games
-                    and old.get("pro_news") == pro_news):
-                print("No changes.")
-                return
-        except ValueError:
-            pass
     with open(OUT_FILE, "w", encoding="utf-8") as f:
-        f.write(new)
-    print(f"Wrote {len(games)} games to data/local-games.json")
+        json.dump(out, f, ensure_ascii=False, indent=1)
+        f.write("\n")
+    print(f"Wrote {len(teams)} clubs" + (f"; failed this run: {', '.join(failed)}" if failed else ""))
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
