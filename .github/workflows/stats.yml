@@ -1,0 +1,43 @@
+name: Player stats (team leaders)
+
+on:
+  schedule:
+    # every hour at :20 - the schedule workflow runs every 15 minutes, so this stays out of its way
+    - cron: "20 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: player-stats
+  cancel-in-progress: false
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Collect team leaders
+        run: python scripts/scrape_stats.py
+
+      - name: Commit if anything changed
+        run: |
+          git config user.name "powerplay-bot"
+          git config user.email "powerplay-bot@users.noreply.github.com"
+          git add data/stats.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Update player stats"
+            # the schedule workflow also pushes to main, so sync first and retry if we lose the race
+            for i in 1 2 3; do
+              git pull --rebase origin main && git push && break
+              sleep 5
+            done
+          fi
