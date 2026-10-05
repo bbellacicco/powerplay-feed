@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-05T00:46:50-04:00",
+ "updated": "2026-10-05T01:02:18-04:00",
  "today": "2026-10-05",
  "range": [
   "2026-10-02",
@@ -98,8 +98,8 @@
    "count": 9
   },
   "pwhl_news": {
-   "ok": true,
-   "count": 24
+   "ok": false,
+   "error": "<urlopen error timed out>"
   },
   "sportsnet": {
    "ok": true,
@@ -1948,32 +1948,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Nations League roundup: Portugal still perfect after beating Norway",
-   "summary": "",
-   "published": "2026-10-04T17:33-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/goncalo-ramos.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/soccer/article/nations-league-roundup-portugal-still-perfect-after-beating-norway/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Canada’s Kelly Olynyk signs with Italian club",
-   "summary": "",
-   "published": "2026-10-04T17:05-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/CP176102418.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/canadas-kelly-olynyk-signs-with-italian-club/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "mlb",
    "headline": "Miller’s uncharacteristic setback puts Padres on verge of elimination",
    "summary": "",
@@ -2027,6 +2001,19 @@
   },
   {
    "league": "other",
+   "headline": "Nations League roundup: Portugal still perfect after beating Norway",
+   "summary": "",
+   "published": "2026-10-04T17:33-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/goncalo-ramos.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/soccer/article/nations-league-roundup-portugal-still-perfect-after-beating-norway/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
    "headline": "Sabalenka knocked out of China Open in straight sets, Djokovic outlasts Zverev",
    "summary": "Second-ranked Aryna Sabalenka was bundled out in the third round of the China Open in straight sets by the Czech Republic’s Nikola Bartunkova on Sunday. In the men’s draw, Novak Djokovic maintained his perfect record at ",
    "published": "2026-10-04T12:43-04:00",
@@ -2049,6 +2036,19 @@
    "sn_team_count": 0,
    "sport": "Tennis",
    "url": "https://www.sportsnet.ca/atp/article/canadas-shapovalov-retires-from-japan-open-quarterfinal-due-to-injury/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Canada’s Kelly Olynyk signs with Italian club",
+   "summary": "",
+   "published": "2026-10-04T17:05-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/CP176102418.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/canadas-kelly-olynyk-signs-with-italian-club/",
    "source": "Sportsnet"
   },
   {
@@ -2484,7 +2484,7 @@
    "league": "mlb",
    "headline": "Watch Tigers prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-04T22:35-04:00",
+   "published": "2026-10-05T00:43-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/t3xdgt1mpuldwi6mkfrr",
    "video": false,
    "teams": [
