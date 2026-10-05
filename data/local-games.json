@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-05T14:16:35-04:00",
+ "updated": "2026-10-05T14:31:34-04:00",
  "today": "2026-10-05",
  "range": [
   "2026-10-02",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -1308,6 +1308,19 @@
   },
   {
    "league": "pwhl",
+   "headline": "PWHL Las Vegas Signs Fifth Overall Pick Lacey Eden",
+   "summary": "",
+   "published": "2026-10-05T18:30:00+00:00",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_337/q_auto/f_auto/Eden_Signing-PWHL_VGS-1200x800",
+   "video": false,
+   "teams": [
+    "Las Vegas"
+   ],
+   "url": "https://www.thepwhl.com/en/teams/las-vegas/news/2026/october/05/pwhl-las-vegas-signs-fifth-overall-pick-lacey-eden",
+   "source": "thepwhl.com"
+  },
+  {
+   "league": "pwhl",
    "headline": "PWHL Announces 2026-27 Regular-Season Schedule",
    "summary": "",
    "published": "2026-10-02T12:00:00+00:00",
@@ -1596,19 +1609,6 @@
    ],
    "url": "https://www.thepwhl.com/en/teams/boston-fleet/news/2026/july/15/fleet-re-sign-forward-abby-newhook",
    "source": "thepwhl.com"
-  },
-  {
-   "league": "pwhl",
-   "headline": "Vancouver Goldeneyes Sign Forward Laura Fuoco",
-   "summary": "",
-   "published": "2026-07-14T16:59:54+00:00",
-   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_337/q_auto/f_auto/Laura_Fuoco_Goldeneyes",
-   "video": false,
-   "teams": [
-    "Vancouver Goldeneyes"
-   ],
-   "url": "https://www.thepwhl.com/en/teams/vancouver-goldeneyes/news/2026/july/14/vancouver-goldeneyes-sign-forward-laura-fuoco",
-   "source": "thepwhl.com"
   }
  ],
  "more_news": [
@@ -1694,6 +1694,34 @@
   },
   {
    "league": "nhl",
+   "headline": "Flames place Connor Zary, Brayden Pachal on waivers",
+   "summary": "",
+   "published": "2026-10-05T14:24-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/03/CP174261531-copy.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/flames-place-connor-zary-brayden-pachal-on-waivers/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Raptors’ Kawhi Leonard has first full practice since rejoining team",
+   "summary": "",
+   "published": "2026-10-05T14:28-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/leonard_kawhi1280.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/raptors-kawhi-leonard-has-first-full-practice-since-joining-team/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Red Wings open to long-term deal with Simon Edvinsson",
    "summary": "",
    "published": "2026-10-05T11:19-04:00",
@@ -1749,32 +1777,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Canadiens forward Ivan Demidov misses practice",
-   "summary": "",
-   "published": "2026-10-05T10:50-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/07/demidov.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canadiens-forward-ivan-demidov-misses-practice/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Senators’ Jake Sanderson to miss next two games",
-   "summary": "",
-   "published": "2026-10-05T12:19-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/12/sanderson.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/senators-jake-sanderson-to-miss-next-two-games/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "other",
    "headline": "Daniil Medvedev disqualified from China Open semifinal after hitting fan with ball",
    "summary": "",
@@ -1798,6 +1800,19 @@
    "sn_team_count": 1,
    "sport": "Football Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/canucks-standards-on-the-rise-after-2-2-start-weve-still-got-better/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Canadiens forward Ivan Demidov misses practice",
+   "summary": "",
+   "published": "2026-10-05T10:50-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/07/demidov.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canadiens-forward-ivan-demidov-misses-practice/",
    "source": "Sportsnet"
   },
   {
@@ -1837,6 +1852,32 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/soccer/article/portugal-officials-say-door-is-open-for-cristiano-ronaldo-to-return/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Senators’ Jake Sanderson to miss next two games",
+   "summary": "",
+   "published": "2026-10-05T12:19-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/12/sanderson.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/senators-jake-sanderson-to-miss-next-two-games/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Mariners’ Cal Raleigh, Josh Naylor undergo off-season surgeries",
+   "summary": "The Mariners announced Monday that catcher Cal Raleigh and Canadian first baseman Josh Naylor have undergone surgeries but are expected to be ready for the start of spring training.",
+   "published": "2026-10-05T14:31-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/cal.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/mariners-cal-raleigh-josh-naylor-undergo-off-season-surgeries/",
    "source": "Sportsnet"
   },
   {
@@ -1986,19 +2027,6 @@
   },
   {
    "league": "nfl",
-   "headline": "NFL Week 4 roundup: Rams rally late to top Eagles",
-   "summary": "",
-   "published": "2026-10-04T16:57-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Kyren.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-4-roundup-rams-comeback-late-to-top-eagles/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
    "headline": "Broncos CBs Pat Surtain II, Riley Moss ruled out vs. 49ers with injuries",
    "summary": "",
    "published": "2026-10-04T18:07-04:00",
@@ -2021,19 +2049,6 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/eagles-rb-saquon-barkley-exits-vs-rams-with-apparent-hamstring-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Ravens’ Lamar Jackson day-to-day after ankle injury forces exit vs. Titans",
-   "summary": "Lamar Jackson has left the Baltimore Ravens’ game against Tennessee on Sunday with an ankle injury.",
-   "published": "2026-10-04T15:11-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/lamar.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/ravens-lamar-jackson-exits-vs-titans-with-ankle-injury/",
    "source": "Sportsnet"
   },
   {
@@ -3282,7 +3297,7 @@
       "otl": 2,
       "pts": 6,
       "gf": 20,
-      "ga": 61,
+      "ga": 62,
       "strk": "L4"
      },
      {
@@ -3334,7 +3349,7 @@
       "l": 1,
       "otl": 1,
       "pts": 17,
-      "gf": 43,
+      "gf": 44,
       "ga": 16,
       "strk": "W4"
      },
