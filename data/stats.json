@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-04T22:51:27.950324+00:00",
+ "updated": "2026-10-05T00:19:23.734224+00:00",
  "teams": [
   {
    "team": "spitfires",
@@ -294,7 +294,7 @@
    "club": "Chatham Maroons",
    "league": "GOHL (Jr. B)",
    "link": "https://www.gohl.ca/stats",
-   "updated": "2026-10-04T22:51:27.950324+00:00",
+   "updated": "2026-10-05T00:19:23.734224+00:00",
    "groups": [
     {
      "title": "Scoring leaders",
@@ -336,7 +336,7 @@
       {
        "name": "Parker Nyitray",
        "vals": [
-        6,
+        7,
         3,
         4,
         7
@@ -368,8 +368,8 @@
        "vals": [
         6,
         4,
-        "2.81",
-        ".906"
+        "2.64",
+        ".913"
        ]
       },
       {
@@ -379,6 +379,226 @@
         1,
         "3.00",
         ".889"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "team": "lancers",
+   "club": "Windsor Lancers",
+   "league": "OUA football",
+   "link": "https://golancers.ca/sports/football/stats",
+   "note": "Season totals added up from the 6 Lancers box scores on golancers.ca (Aug 29 to Oct 3). Refreshed every hour.",
+   "updated": "2026-10-05T00:19:23.734224+00:00",
+   "groups": [
+    {
+     "title": "Passing",
+     "cols": [
+      "C/A",
+      "YDS",
+      "TD",
+      "INT"
+     ],
+     "key": 1,
+     "rows": [
+      {
+       "name": "Kareame Cotton",
+       "vals": [
+        "127/187",
+        1836,
+        23,
+        2
+       ]
+      },
+      {
+       "name": "Josh Foulis",
+       "vals": [
+        "21/35",
+        264,
+        1,
+        1
+       ]
+      },
+      {
+       "name": "Ryan Begadon",
+       "vals": [
+        "3/4",
+        42,
+        0,
+        0
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Rushing",
+     "cols": [
+      "ATT",
+      "YDS",
+      "AVG",
+      "TD"
+     ],
+     "key": 1,
+     "rows": [
+      {
+       "name": "Tyson Noel Charles",
+       "vals": [
+        48,
+        470,
+        "9.8",
+        1
+       ]
+      },
+      {
+       "name": "Kareame Cotton",
+       "vals": [
+        40,
+        347,
+        "8.7",
+        3
+       ]
+      },
+      {
+       "name": "Weagbe Mombo",
+       "vals": [
+        17,
+        248,
+        "14.6",
+        2
+       ]
+      },
+      {
+       "name": "Brady Smith",
+       "vals": [
+        13,
+        95,
+        "7.3",
+        0
+       ]
+      },
+      {
+       "name": "Andrew Delaney",
+       "vals": [
+        16,
+        86,
+        "5.4",
+        0
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Receiving",
+     "cols": [
+      "REC",
+      "YDS",
+      "AVG",
+      "TD"
+     ],
+     "key": 1,
+     "rows": [
+      {
+       "name": "Colby Ginn",
+       "vals": [
+        24,
+        439,
+        "18.3",
+        7
+       ]
+      },
+      {
+       "name": "Matteo Trifon",
+       "vals": [
+        28,
+        383,
+        "13.7",
+        6
+       ]
+      },
+      {
+       "name": "Isaiah Vallderruten",
+       "vals": [
+        13,
+        213,
+        "16.4",
+        0
+       ]
+      },
+      {
+       "name": "Jalyn Witcher",
+       "vals": [
+        7,
+        190,
+        "27.1",
+        1
+       ]
+      },
+      {
+       "name": "Nathan Smith",
+       "vals": [
+        16,
+        182,
+        "11.4",
+        2
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Tackles",
+     "cols": [
+      "TKL",
+      "SOLO",
+      "AST",
+      "SACK"
+     ],
+     "key": 0,
+     "rows": [
+      {
+       "name": "Ahmad Taylor",
+       "vals": [
+        "31",
+        21,
+        10,
+        "7"
+       ]
+      },
+      {
+       "name": "Dylan Simpson",
+       "vals": [
+        "27",
+        17,
+        10,
+        "0"
+       ]
+      },
+      {
+       "name": "Derek Anderson",
+       "vals": [
+        "23",
+        15,
+        8,
+        "1"
+       ]
+      },
+      {
+       "name": "Marco Piccioni",
+       "vals": [
+        "17",
+        15,
+        2,
+        "0"
+       ]
+      },
+      {
+       "name": "Alijah Metz",
+       "vals": [
+        "15",
+        7,
+        8,
+        "2.5"
        ]
       }
      ]
