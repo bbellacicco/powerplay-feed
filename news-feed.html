@@ -135,7 +135,7 @@
   function cfl() {
     return fetch('https://bbellacicco.github.io/powerplay-feed/data/local-games.json?t=' + Date.now())
       .then(function (r) { return r.json(); })
-      .then(function (j) { return j.pro_news || []; })
+      .then(function (j) { return (j.pro_news || []).concat(j.more_news || []); })
       .catch(function () { return []; });
   }
   function clean(list) {
@@ -143,7 +143,7 @@
     return list.filter(function (s) {
       if (!s.url || !s.headline || seen[s.url] || !fresh(s)) return false;
       seen[s.url] = 1; return true;
-    }).sort(function (a, b) { return a.published < b.published ? 1 : a.published > b.published ? -1 : 0; })
+    }).sort(function (a, b) { return (new Date(b.published).getTime() || 0) - (new Date(a.published).getTime() || 0); })
       .slice(0, MAX_STORIES);
   }
 
@@ -159,10 +159,20 @@
       Promise.all(ours).then(function (r) { return [].concat.apply([], r); }),
       espn('nfl'), espn('nhl'), espn('nba'), espn('mlb'), cfl()
     ]).then(function (r) {
-      // CFL and PWHL stories both come from the collector (pro_news); split them by league
-      var cflList = r[5].filter(function (x) { return (x.league || 'cfl') === 'cfl'; });
-      var pwhlList = r[5].filter(function (x) { return x.league === 'pwhl'; });
-      stories = { ours: clean(r[0]), all: clean([].concat(r[1], r[2], r[3], r[4], r[5])), nfl: clean(r[1]), nhl: clean(r[2]), nba: clean(r[3]), mlb: clean(r[4]), cfl: clean(cflList), pwhl: clean(pwhlList) };
+      // the collector's stories: CFL.ca, thepwhl.com, Sportsnet and the clubs' own sites
+      var more = r[5];
+      function lg(k) { return more.filter(function (x) { return (x.league || 'cfl') === k; }); }
+      // Sportsnet / club stories about one of our teams (not league round-ups naming lots of teams)
+      var oursMore = more.filter(function (x) {
+        return x.teams && x.teams.length && (x.source !== 'Sportsnet' || (x.sn_team_count || 0) <= 3) &&
+          OUR_TEAMS.some(function (t) { return t.league === x.league && x.teams.indexOf(t.name) >= 0; });
+      }).map(function (x) { return Object.assign({}, x, { ourTeam: x.teams[0] }); });
+      stories = {
+        ours: clean(r[0].concat(oursMore)),
+        all: clean([].concat(r[1], r[2], r[3], r[4], more.filter(function (x) { return x.league !== 'other' || x.source === 'Sportsnet'; }))),
+        nfl: clean(r[1].concat(lg('nfl'))), nhl: clean(r[2].concat(lg('nhl'))), nba: clean(r[3].concat(lg('nba'))),
+        mlb: clean(r[4].concat(lg('mlb'))), cfl: clean(lg('cfl')), pwhl: clean(lg('pwhl'))
+      };
       render();
     });
   }
@@ -218,7 +228,8 @@
     h.appendChild(document.createTextNode(s.headline));
     body.appendChild(h);
     if (s.summary && s.summary !== s.headline) body.appendChild(el('div', 'summary', s.summary));
-    var bits = [LEAGUES[s.league].label, s.source, ago(s.published)];
+    var src = s.source === 'Team site' && state.tab !== 'ours' && s.teams && s.teams[0] ? s.teams[0] + ' (team site)' : s.source;
+    var bits = [(LEAGUES[s.league] || { label: s.sport || 'Sports' }).label, src, ago(s.published)];
     if (state.tab === 'ours' && s.ourTeam) bits.splice(1, 0, s.ourTeam);
     body.appendChild(el('div', 'meta', bits.filter(Boolean).join(' · ')));
     a.appendChild(body);
