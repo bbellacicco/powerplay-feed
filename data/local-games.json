@@ -1,9 +1,9 @@
 {
- "updated": "2026-10-04T23:47:11-04:00",
- "today": "2026-10-04",
+ "updated": "2026-10-05T00:01:51-04:00",
+ "today": "2026-10-05",
  "range": [
-  "2026-10-01",
-  "2026-10-07"
+  "2026-10-02",
+  "2026-10-08"
  ],
  "teams": {
   "spitfires": {
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -111,43 +111,6 @@
   }
  },
  "games": [
-  {
-   "id": "spitfires-ohl29035",
-   "team": "spitfires",
-   "sport": "Hockey",
-   "start": "2026-10-01T19:05:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "North Bay Battalion",
-   "location": "WFCU Centre, Windsor",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 2,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29035/"
-   }
-  },
-  {
-   "id": "junior-ojhl16544",
-   "team": "junior",
-   "sport": "OJHL (Jr. A)",
-   "start": "2026-10-01T19:10:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Buffalo Jr. Sabres",
-   "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
-   "status": "final",
-   "our_score": 5,
-   "opp_score": 1,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.ojhl.ca/stats/game-center/16544"
-   },
-   "club": "Leamington Flyers"
-  },
   {
    "id": "lancers-6385",
    "team": "lancers",
@@ -844,6 +807,41 @@
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960295?configuration=45"
    },
    "club": "Wheatley Sharks"
+  },
+  {
+   "id": "lancers-6371",
+   "team": "lancers",
+   "sport": "Women's Basketball",
+   "start": "2026-10-08T16:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "StFX X-Women",
+   "location": "Toronto, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Darcel Wright Memorial Tournament",
+   "links": {}
+  },
+  {
+   "id": "junior-gojhl15555",
+   "team": "junior",
+   "sport": "GOHL (Jr. B)",
+   "start": "2026-10-08T19:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Sarnia Legionnaires",
+   "location": "Chatham Memorial Arena, Chatham, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.gohl.ca/stats/game-center/15555"
+   },
+   "club": "Chatham Maroons"
   }
  ],
  "pro_games": [
@@ -1640,6 +1638,19 @@
   }
  ],
  "more_news": [
+  {
+   "league": "nhl",
+   "headline": "Canucks fall to Golden Knights as Marner scores first of season",
+   "summary": "",
+   "published": "2026-10-04T23:48-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Canucks.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canucks-fall-to-golden-knights-as-marner-scores-first-of-season/",
+   "source": "Sportsnet"
+  },
   {
    "league": "nhl",
    "headline": "Flames stay winless after loss to Kraken",
