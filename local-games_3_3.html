@@ -410,7 +410,7 @@
       sec.appendChild(tbl);
       box.appendChild(sec);
     });
-    var note = el('div', 'snote', 'Team leaders from the league\u2019s own stats site, refreshed every hour. ');
+    var note = el('div', 'snote', (club.note || 'Team leaders from the league\u2019s own stats site, refreshed every hour.') + ' ');
     if (club.link) { var a = el('a', null, 'Full league stats \u2197'); a.href = club.link; a.target = '_blank'; a.rel = 'noopener'; note.appendChild(a); }
     box.appendChild(note);
   }
