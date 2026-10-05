@@ -851,6 +851,110 @@ def scrape_cfl_news(limit=30):
     out.sort(key=lambda a: a["published"] or "", reverse=True)
     return out[:limit]
 
+
+# ------------------------------------------------------------------ Sportsnet + club sites (Pro Feed)
+
+# The Pro Feed's own teams: league, Sportsnet's abbreviation, full name
+OUR_PRO = [("nhl", "DET", "Detroit Red Wings"), ("nhl", "TOR", "Toronto Maple Leafs"), ("nhl", "MTL", "Montreal Canadiens"),
+           ("nba", "DET", "Detroit Pistons"), ("nba", "TOR", "Toronto Raptors"),
+           ("nfl", "DET", "Detroit Lions"), ("nfl", "BUF", "Buffalo Bills"),
+           ("mlb", "DET", "Detroit Tigers"), ("mlb", "TOR", "Toronto Blue Jays")]
+# club sites: (league, team, kind, url)
+CLUB_SITES = [
+    ("nhl", "Detroit Red Wings", "nhl", "https://www.nhl.com/redwings/news/"),
+    ("nhl", "Toronto Maple Leafs", "nhl", "https://www.nhl.com/mapleleafs/news/"),
+    ("nhl", "Montreal Canadiens", "nhl", "https://www.nhl.com/canadiens/news/"),
+    ("nfl", "Detroit Lions", "rss", "https://www.detroitlions.com/rss/news"),
+    ("nfl", "Buffalo Bills", "rss", "https://www.buffalobills.com/rss/news"),
+    ("mlb", "Detroit Tigers", "rss", "https://www.mlb.com/tigers/feeds/news/rss.xml"),
+    ("mlb", "Toronto Blue Jays", "rss", "https://www.mlb.com/bluejays/feeds/news/rss.xml"),
+]
+SN_LEAGUES = {"NHL": "nhl", "NFL": "nfl", "NBA": "nba", "MLB": "mlb", "CFL": "cfl", "PWHL": "pwhl"}
+
+
+def _rss_date(v):
+    from email.utils import parsedate_to_datetime
+    try:
+        return parsedate_to_datetime(v.strip()).astimezone(TZ).isoformat(timespec="minutes")
+    except (TypeError, ValueError, IndexError):
+        return ""
+
+
+def _tag(block, name):
+    m = re.search(rf"<{name}\b[^>]*>(.*?)</{name}>", block, re.S)
+    if not m:
+        return ""
+    v = m.group(1).strip()
+    v = re.sub(r"^<!\[CDATA\[(.*)\]\]>$", r"\1", v, flags=re.S)
+    return unescape(v).strip()
+
+
+def scrape_sportsnet(limit=40):
+    """Sportsnet's main feed: articles only (no game cards, videos or collections)."""
+    xml = fetch("https://www.sportsnet.ca/feed/", "sportsnet.xml" if FIXTURES else None)
+    out = []
+    for item in re.findall(r"<item\b.*?</item>", xml, re.S):
+        url = _tag(item, "link")
+        if "/article/" not in url:
+            continue
+        lg = SN_LEAGUES.get(_strip_tags(_tag(item, "leagues")).split(" ")[0] if _tag(item, "leagues") else "", "")
+        abbrs = re.findall(r"<team\b[^>]*>([A-Z]{2,4})</team>", item)
+        teams = [name for l, a, name in OUR_PRO if l == lg and a in abbrs]
+        img = re.search(r'<media:content\b[^>]*\burl="([^"]+)"', item)
+        out.append({"league": lg or "other", "headline": _strip_tags(_tag(item, "title")),
+                    "summary": _strip_tags(_tag(item, "description"))[:220],
+                    "published": _rss_date(_tag(item, "pubDate")), "image": img.group(1) if img else "",
+                    "video": False, "teams": teams, "sn_team_count": len(abbrs), "sport": _strip_tags(_tag(item, "sports")),
+                    "url": url, "source": "Sportsnet"})
+    return out[:limit]
+
+
+def _club_rss(league, team, url):
+    xml = fetch(url)
+    out = []
+    for item in re.findall(r"<item\b.*?</item>", xml, re.S)[:15]:
+        img = re.search(r'<media:(?:content|thumbnail)\b[^>]*\burl="([^"]+)"', item) or re.search(r'<image\b[^>]*\bhref="([^"]+)"', item)
+        out.append({"league": league, "headline": _strip_tags(_tag(item, "title")),
+                    "summary": _strip_tags(_tag(item, "description"))[:220],
+                    "published": _rss_date(_tag(item, "pubDate")), "image": img.group(1) if img else "",
+                    "video": False, "teams": [team], "url": _tag(item, "link"), "source": "Team site"})
+    return out
+
+
+def _club_nhl(league, team, url):
+    html = fetch(url)
+    out, seen = [], set()
+    for m in re.finditer(r'<a class="nhl-c-card-wrap -story" href="([^"]+)".*?</a>', html, re.S):
+        href, card = m.group(1), m.group(0)
+        if href in seen:
+            continue
+        seen.add(href)
+        title = re.search(r'<h3 class="fa-text__title">(.*?)</h3>', card, re.S)
+        when = re.search(r'<time datetime="([0-9T:\-]+)"', card)
+        img = re.search(r'<img[^>]*\bsrc="(https://media\.d3\.nhle\.com/[^"]+)"', card)
+        published = ""
+        if when:
+            published = datetime.fromisoformat(when.group(1)).replace(tzinfo=timezone.utc).astimezone(TZ).isoformat(timespec="minutes")
+        out.append({"league": league, "headline": _strip_tags(title.group(1)) if title else "", "summary": "",
+                    "published": published, "image": img.group(1) if img else "", "video": False,
+                    "teams": [team], "url": "https://www.nhl.com" + href if href.startswith("/") else href, "source": "Team site"})
+        if len(out) >= 15:
+            break
+    return out
+
+
+def scrape_club_news():
+    """Official team sites for the Pro Feed's Our Teams. One failing site doesn't stop the rest."""
+    out, errors = [], {}
+    for league, team, kind, url in CLUB_SITES:
+        try:
+            out += (_club_nhl if kind == "nhl" else _club_rss)(league, team, url)
+        except Exception as ex:
+            errors[team] = str(ex)[:120]
+        time.sleep(1)
+    return [s for s in out if s["headline"] and s["url"]], errors
+
+
 def _pwhl_title(t):
     t = unescape(t).strip()
     if t.isupper():                  # the PWHL writes headlines in capitals
@@ -1061,6 +1165,27 @@ def main():
         except (OSError, ValueError):
             pass
 
+    # Sportsnet and the clubs' own sites (Pro Feed); keep the last good copy if one fails
+    try:
+        old_extra = json.load(open(OUT_FILE, encoding="utf-8")).get("more_news", [])
+    except (OSError, ValueError):
+        old_extra = []
+    more_news = []
+    try:
+        sn = scrape_sportsnet()
+        sources["sportsnet"] = {"ok": True, "count": len(sn)}
+        print(f"sportsnet: {len(sn)} stories")
+    except Exception as ex:
+        sn = [n for n in old_extra if n.get("source") == "Sportsnet"]
+        sources["sportsnet"] = {"ok": False, "error": str(ex)[:200]}
+        print(f"sportsnet: FAILED - {ex}", file=sys.stderr)
+    clubs, club_err = scrape_club_news()
+    for team in club_err:
+        clubs += [n for n in old_extra if n.get("source") == "Team site" and team in (n.get("teams") or [])]
+    sources["club_news"] = {"ok": not club_err, "count": len(clubs), **({"errors": club_err} if club_err else {})}
+    print(f"club news: {len(clubs)} stories" + (f" (failed: {', '.join(club_err)})" if club_err else ""))
+    more_news = sn + clubs
+
     payload = {
         "updated": now.isoformat(timespec="seconds"),
         "today": today.isoformat(),
@@ -1071,6 +1196,7 @@ def main():
         "games": games,
         "pro_games": pro_games,   # CFL, used by pro-games.html
         "pro_news": pro_news,     # CFL and PWHL stories, used by news-feed.html
+        "more_news": more_news,   # Sportsnet + club-site stories, used by news-feed.html
         "cfl_standings": cfl_standings,   # used by the Standings view in pro-games.html
         "standings": standings,           # OHL, OJHL, GOHL, PJHL, CJFL (Local Hub) and PWHL (Pro Hub)
     }
@@ -1082,7 +1208,7 @@ def main():
             old = json.load(open(OUT_FILE, encoding="utf-8"))
             if (old.get("games") == games and old.get("sources") == sources
                     and old.get("today") == payload["today"] and old.get("pro_games") == pro_games
-                    and old.get("pro_news") == pro_news and old.get("cfl_standings") == cfl_standings
+                    and old.get("pro_news") == pro_news and old.get("more_news") == more_news and old.get("cfl_standings") == cfl_standings
                     and old.get("standings") == standings):
                 print("No changes.")
                 return
