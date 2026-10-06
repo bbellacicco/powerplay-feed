@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-06T19:30:01-04:00",
+ "updated": "2026-10-06T19:45:01-04:00",
  "today": "2026-10-06",
  "games": [
   {
@@ -31,6 +31,26 @@
    "home_away": "N",
    "opponent": "Cardinal Carter",
    "location": "Sandwich",
+   "status": "final",
+   "our_score": 28,
+   "opp_score": 30,
+   "result": null,
+   "note": "",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "St. Joseph's",
+   "home": "Cardinal Carter"
+  },
+  {
+   "id": "highschool-2026-10-06-114",
+   "team": "highschool",
+   "sport": "Junior Boys Football",
+   "start": "2026-10-06T00:00:00-04:00",
+   "time_tbd": true,
+   "home_away": "N",
+   "opponent": "Sandwich",
+   "location": "Sandwich",
    "status": "upcoming",
    "our_score": null,
    "opp_score": null,
@@ -39,8 +59,8 @@
    "links": {
     "standings": "https://wecssaa.com/viewScores.php"
    },
-   "away": "St. Joseph's",
-   "home": "Cardinal Carter"
+   "away": "Herman",
+   "home": "Sandwich"
   },
   {
    "id": "highschool-2026-10-06-86",
@@ -111,9 +131,9 @@
    "home_away": "N",
    "opponent": "St. Anne",
    "location": "St. Anne",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "final",
+   "our_score": 1,
+   "opp_score": 2,
    "result": null,
    "note": "Tier 1",
    "links": {
@@ -371,9 +391,9 @@
    "home_away": "N",
    "opponent": "St. Anne",
    "location": "St. Anne",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "final",
+   "our_score": 1,
+   "opp_score": 2,
    "result": null,
    "note": "Tier 1",
    "links": {
@@ -691,9 +711,9 @@
    "home_away": "N",
    "opponent": "Assumption",
    "location": "Assumption School",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "final",
+   "our_score": 55,
+   "opp_score": 19,
    "result": null,
    "note": "Tier 2",
    "links": {
@@ -711,9 +731,9 @@
    "home_away": "N",
    "opponent": "Erie Migration",
    "location": "Erie Migration",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "final",
+   "our_score": 21,
+   "opp_score": 31,
    "result": null,
    "note": "Tier 2",
    "links": {
@@ -731,9 +751,9 @@
    "home_away": "N",
    "opponent": "Brennan",
    "location": "Brennan",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "final",
+   "our_score": 31,
+   "opp_score": 32,
    "result": null,
    "note": "Tier 2",
    "links": {
@@ -761,26 +781,6 @@
    },
    "away": "Sandwich",
    "home": "Herman"
-  },
-  {
-   "id": "highschool-2026-10-06-114",
-   "team": "highschool",
-   "sport": "Junior Boys Football",
-   "start": "2026-10-06T19:30:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Sandwich",
-   "location": "Sandwich",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Herman",
-   "home": "Sandwich"
   },
   {
    "id": "highschool-2026-10-07-115",
