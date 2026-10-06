@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-06T18:16:57-04:00",
+ "updated": "2026-10-06T18:31:34-04:00",
  "today": "2026-10-06",
  "range": [
   "2026-10-03",
@@ -519,7 +519,7 @@
    "our_score": 1,
    "opp_score": 1,
    "result": null,
-   "note": "08:46 2nd",
+   "note": "00:00 2nd",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16445"
    },
@@ -534,9 +534,9 @@
    "home_away": "H",
    "opponent": "Dresden Kings",
    "location": "Essex Centre Complex",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
    "note": "",
    "links": {
@@ -1601,7 +1601,7 @@
   },
   {
    "league": "nhl",
-   "headline": "5 takeaways from the Winnipeg Jets’ opening week",
+   "headline": "Five takeaways from the Winnipeg Jets’ opening week",
    "summary": "The Winnipeg Jets are off to a near-perfect start through three games. Jeff Hamilton has five takeaways from the team’s opening week.",
    "published": "2026-10-06T17:52-04:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Skinner-Stevenson.jpg",
@@ -1971,6 +1971,19 @@
   },
   {
    "league": "nfl",
+   "headline": "AP source: Patrick Surtain II, Pat Bryant injuries less serious than feared",
+   "summary": "Patrick Surtain II and Pat Bryant’s injuries are less serious than first feared when the players each sprained an ankle during Denver’s 24-14 loss at San Francisco, a person with knowledge of the medical results told The",
+   "published": "2026-10-06T18:20-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/surtain.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/ap-source-patrick-surtain-ii-pat-bryant-injuries-less-serious-than-feared/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
    "headline": "Report: Seahawks not signing RB Joe Mixon to practice squad",
    "summary": "The Seattle Seahawks have opted not to sign the running back to the team’s practice squad after he underwent a physical, ESPN’s Adam Schefter reported Tuesday.",
    "published": "2026-10-06T13:54-04:00",
@@ -2006,19 +2019,6 @@
    "sn_team_count": 0,
    "sport": "Tennis",
    "url": "https://www.sportsnet.ca/atp/article/top-ranked-jannik-sinner-out-for-season-with-knee-inflammation/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Carlos Alcaraz repeats as Japan Open champion despite long layoff",
-   "summary": "",
-   "published": "2026-10-06T08:11-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/carlos-alcaraz.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Tennis",
-   "url": "https://www.sportsnet.ca/atp/article/carlos-alcaraz-repeats-as-japan-open-champion-despite-long-layoff/",
    "source": "Sportsnet"
   },
   {
@@ -3247,14 +3247,14 @@
      {
       "name": "Lindsay Muskies",
       "abbr": "LIN",
-      "gp": 9,
+      "gp": 10,
       "w": 2,
-      "l": 7,
+      "l": 8,
       "otl": 0,
       "pts": 4,
       "gf": 35,
       "ga": 54,
-      "strk": "L6"
+      "strk": "L7"
      },
      {
       "name": "North York Rangers",
@@ -3286,6 +3286,18 @@
       "strk": "W5"
      },
      {
+      "name": "Milton Menace",
+      "abbr": "MIL",
+      "gp": 12,
+      "w": 10,
+      "l": 2,
+      "otl": 0,
+      "pts": 20,
+      "gf": 44,
+      "ga": 22,
+      "strk": "W4"
+     },
+     {
       "name": "King Rebellion",
       "abbr": "KNG",
       "gp": 11,
@@ -3296,18 +3308,6 @@
       "gf": 53,
       "ga": 18,
       "strk": "W5"
-     },
-     {
-      "name": "Milton Menace",
-      "abbr": "MIL",
-      "gp": 11,
-      "w": 9,
-      "l": 2,
-      "otl": 0,
-      "pts": 18,
-      "gf": 44,
-      "ga": 22,
-      "strk": "W3"
      },
      {
       "name": "Toronto Patriots",
