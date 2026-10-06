@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-06T12:46:36-04:00",
+ "updated": "2026-10-06T13:01:34-04:00",
  "today": "2026-10-06",
  "range": [
   "2026-10-03",
@@ -99,7 +99,7 @@
   },
   "pwhl_news": {
    "ok": true,
-   "count": 23
+   "count": 24
   },
   "sportsnet": {
    "ok": true,
@@ -1297,6 +1297,19 @@
   },
   {
    "league": "pwhl",
+   "headline": "MontréAl Victoire Re-Sign Forward Skylar Irving",
+   "summary": "",
+   "published": "2026-10-06T13:54:55+00:00",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/SkylarIrvingExtension",
+   "video": false,
+   "teams": [
+    "Montreal Victoire"
+   ],
+   "url": "https://www.thepwhl.com/en/teams/montreal-victoire/news/2026/october/06/montreal-victoire-re-sign-forward-skylar-irving",
+   "source": "thepwhl.com"
+  },
+  {
+   "league": "pwhl",
    "headline": "PWHL Hamilton Sign First-Round Pick Nelli Laitinen to Three-Year Contract",
    "summary": "",
    "published": "2026-10-05T19:30:00+00:00",
@@ -1617,6 +1630,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "cfl",
+   "headline": "Lions release DB Josh Hagerty after suspension for punching incident",
+   "summary": "",
+   "published": "2026-10-06T12:25-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2021/11/elks.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/lions-release-db-josh-hagerty-after-suspension-for-punching-incident/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Red Wings’ Dylan Larkin ‘likely’ to make season debut against Senators",
    "summary": "The Detroit Red Wings forward “looks likely” to make his season debut on Tuesday against the Ottawa Senators, head coach Todd McLellan said after morning skate.",
@@ -1629,19 +1655,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/red-wings-dylan-larkin-likely-to-make-season-debut-against-senators/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Sharks’ Macklin Celebrini being evaluated for lower-body injury",
-   "summary": "",
-   "published": "2026-10-05T20:24-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-22.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/sharks-macklin-celebrini-ruled-out-vs-stars-with-lower-body-injury/",
    "source": "Sportsnet"
   },
   {
@@ -1671,16 +1684,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "cfl",
-   "headline": "Lions release DB Josh Hagerty after suspension for punching incident",
+   "league": "nhl",
+   "headline": "Sharks’ Macklin Celebrini being evaluated for lower-body injury",
    "summary": "",
-   "published": "2026-10-06T12:25-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2021/11/elks.jpg",
+   "published": "2026-10-05T20:24-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-22.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/lions-release-db-josh-hagerty-after-suspension-for-punching-incident/",
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/sharks-macklin-celebrini-ruled-out-vs-stars-with-lower-body-injury/",
    "source": "Sportsnet"
   },
   {
@@ -3059,7 +3072,7 @@
       "otl": 0,
       "pts": 24,
       "gf": 54,
-      "ga": 30,
+      "ga": 32,
       "strk": "W12"
      },
      {
@@ -3267,7 +3280,7 @@
       "l": 3,
       "otl": 0,
       "pts": 12,
-      "gf": 46,
+      "gf": 48,
       "ga": 22,
       "strk": "W1"
      },
