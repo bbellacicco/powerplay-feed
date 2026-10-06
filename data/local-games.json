@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-06T19:31:57-04:00",
+ "updated": "2026-10-06T19:46:34-04:00",
  "today": "2026-10-06",
  "range": [
   "2026-10-03",
@@ -515,11 +515,11 @@
    "home_away": "A",
    "opponent": "Wellington Dukes",
    "location": "Gale Centre, Niagara Falls, ON",
-   "status": "live",
+   "status": "final",
    "our_score": 1,
-   "opp_score": 1,
-   "result": null,
-   "note": "00:00 1st OT",
+   "opp_score": 2,
+   "result": "OTL",
+   "note": "OT",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16445"
    },
@@ -2361,7 +2361,7 @@
    "league": "mlb",
    "headline": "Watch Tigers prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-06T16:19-04:00",
+   "published": "2026-10-06T19:35-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -2595,7 +2595,7 @@
    "league": "mlb",
    "headline": "Watch Blue Jays prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-06T16:19-04:00",
+   "published": "2026-10-06T19:35-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -3109,6 +3109,18 @@
       "strk": "L1"
      },
      {
+      "name": "Wellington Dukes",
+      "abbr": "WEL",
+      "gp": 11,
+      "w": 7,
+      "l": 2,
+      "otl": 2,
+      "pts": 16,
+      "gf": 41,
+      "ga": 29,
+      "strk": "W2"
+     },
+     {
       "name": "Cobourg Cougars",
       "abbr": "COB",
       "gp": 9,
@@ -3118,18 +3130,6 @@
       "pts": 15,
       "gf": 45,
       "ga": 31,
-      "strk": "W1"
-     },
-     {
-      "name": "Wellington Dukes",
-      "abbr": "WEL",
-      "gp": 10,
-      "w": 6,
-      "l": 2,
-      "otl": 2,
-      "pts": 14,
-      "gf": 40,
-      "ga": 29,
       "strk": "W1"
      },
      {
@@ -3152,7 +3152,7 @@
       "l": 5,
       "otl": 1,
       "pts": 11,
-      "gf": 33,
+      "gf": 35,
       "ga": 30,
       "strk": "W2"
      },
@@ -3282,6 +3282,18 @@
       "strk": "W5"
      },
      {
+      "name": "Leamington Flyers",
+      "abbr": "LEA",
+      "gp": 10,
+      "w": 7,
+      "l": 2,
+      "otl": 1,
+      "pts": 15,
+      "gf": 36,
+      "ga": 19,
+      "strk": "L1"
+     },
+     {
       "name": "Toronto Patriots",
       "abbr": "PAT",
       "gp": 10,
@@ -3292,18 +3304,6 @@
       "gf": 50,
       "ga": 22,
       "strk": "W2"
-     },
-     {
-      "name": "Leamington Flyers",
-      "abbr": "LEA",
-      "gp": 9,
-      "w": 7,
-      "l": 2,
-      "otl": 0,
-      "pts": 14,
-      "gf": 36,
-      "ga": 18,
-      "strk": "L1"
      },
      {
       "name": "Burlington Cougars",
@@ -3338,7 +3338,7 @@
       "otl": 1,
       "pts": 11,
       "gf": 27,
-      "ga": 34,
+      "ga": 36,
       "strk": "W1"
      },
      {
