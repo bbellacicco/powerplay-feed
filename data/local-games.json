@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-06T13:01:34-04:00",
+ "updated": "2026-10-06T13:17:07-04:00",
  "today": "2026-10-06",
  "range": [
   "2026-10-03",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 29
+   "count": 30
   },
   "club_news": {
    "ok": true,
@@ -1577,6 +1577,21 @@
  "more_news": [
   {
    "league": "nhl",
+   "headline": "‘You hear about it’: Gavin McKenna talks early point slump in Toronto",
+   "summary": "Gavin McKenna admits he’s hearing plenty about the three-game point drought to begin his career: “maybe that’s my welcome to the NHL.” Sportsnet’s Luke Fox has more ahead of Game 4 against the Predators.",
+   "published": "2026-10-06T13:05-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/McKenna.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/you-hear-about-it-gavin-mckenna-talks-early-point-slump-in-toronto/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Canadiens’ Ivan Demidov out two to four weeks with lower-body injury",
    "summary": "",
    "published": "2026-10-06T10:40-04:00",
@@ -1684,6 +1699,32 @@
    "source": "Sportsnet"
   },
   {
+   "league": "pwhl",
+   "headline": "PWHL Hamilton signs Jade Iginla to one-year deal",
+   "summary": "PWHL Hamilton has signed Jade Iginla, daughter of Hockey Hall of Famer Jarome, to a one-year contract ahead of the team’s inaugural season, it was announced Tuesday.",
+   "published": "2026-10-06T13:04-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/Untitled-design-34-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/pwhl/article/pwhl-hamilton-signs-jade-iginla-to-one-year-deal/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "NFL Referees Association to challenge severity of suspensions of officials",
+   "summary": "",
+   "published": "2026-10-06T13:10-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/seeman.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-referees-association-to-challenge-severity-of-suspensions-of-officials/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Sharks’ Macklin Celebrini being evaluated for lower-body injury",
    "summary": "",
@@ -1694,32 +1735,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/sharks-macklin-celebrini-ruled-out-vs-stars-with-lower-body-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Bijan Robinson powers Falcons past Saints with 145 yards, two TDs",
-   "summary": "",
-   "published": "2026-10-05T23:47-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-25.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/bijan-robinson-powers-falcons-past-saints-with-145-yards-two-tds/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Report: Ravens’ Lamar Jackson likely out vs. Falcons, injury not considered long-term",
-   "summary": "While the Baltimore Ravens are unlikely to have Jackson on Sunday against the Atlanta Falcons after he suffered a sprained ankle, his injury is not considered long-term or surgical, NFL insider Ian Rapoport reported Tues",
-   "published": "2026-10-06T09:18-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/lamar-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/report-ravens-lamar-jackson-likely-out-vs-falcons-injury-not-considered-long-term/",
    "source": "Sportsnet"
   },
   {
@@ -1843,6 +1858,32 @@
   },
   {
    "league": "nfl",
+   "headline": "Report: Ravens’ Lamar Jackson likely out vs. Falcons, injury not considered long-term",
+   "summary": "While the Baltimore Ravens are unlikely to have Jackson on Sunday against the Atlanta Falcons after he suffered a sprained ankle, his injury is not considered long-term or surgical, NFL insider Ian Rapoport reported Tues",
+   "published": "2026-10-06T09:18-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/lamar-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/report-ravens-lamar-jackson-likely-out-vs-falcons-injury-not-considered-long-term/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Bijan Robinson powers Falcons past Saints with 145 yards, two TDs",
+   "summary": "",
+   "published": "2026-10-05T23:47-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-25.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/bijan-robinson-powers-falcons-past-saints-with-145-yards-two-tds/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
    "headline": "Commanders hope Daniels can return for Week 5 against Giants",
    "summary": "",
    "published": "2026-10-05T20:11-04:00",
@@ -1878,34 +1919,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/rematch-against-hurricanes-prompts-early-lineup-dilemma-for-canadiens/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "After a stumbling start, Red Wings are in a world of hurt",
-   "summary": "No franchise in NHL history has lived an all-or-nothing existence quite like the Detroit Red Wings, and the days are only getting darker. Ryan Dixon covers that and more.",
-   "published": "2026-10-05T11:27-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-6.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Red Wings"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/weekend-takeaways-no-question-red-wings-are-in-a-world-of-hurt/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Sidney Crosby talks Alex Ovechkin rivalry after retirement announcement",
-   "summary": "",
-   "published": "2026-10-05T12:26-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/cros.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/sidney-crosby-ponders-alex-ovechkin-rivalry-after-retirement-announcement/",
    "source": "Sportsnet"
   },
   {
@@ -3072,7 +3085,7 @@
       "otl": 0,
       "pts": 24,
       "gf": 54,
-      "ga": 32,
+      "ga": 34,
       "strk": "W12"
      },
      {
@@ -3095,7 +3108,7 @@
       "l": 1,
       "otl": 1,
       "pts": 13,
-      "gf": 39,
+      "gf": 40,
       "ga": 30,
       "strk": "L1"
      },
@@ -3280,7 +3293,7 @@
       "l": 3,
       "otl": 0,
       "pts": 12,
-      "gf": 48,
+      "gf": 50,
       "ga": 22,
       "strk": "W1"
      },
@@ -3353,7 +3366,7 @@
       "otl": 0,
       "pts": 4,
       "gf": 19,
-      "ga": 42,
+      "ga": 43,
       "strk": "L3"
      }
     ]
