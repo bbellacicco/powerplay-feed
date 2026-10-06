@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-06T10:47:00-04:00",
+ "updated": "2026-10-06T11:01:41-04:00",
  "today": "2026-10-06",
  "range": [
   "2026-10-03",
@@ -99,11 +99,11 @@
   },
   "pwhl_news": {
    "ok": true,
-   "count": 24
+   "count": 23
   },
   "sportsnet": {
    "ok": true,
-   "count": 29
+   "count": 28
   },
   "club_news": {
    "ok": true,
@@ -1273,6 +1273,19 @@
   },
   {
    "league": "pwhl",
+   "headline": "Sceptres Re-Sign Kiara Zanon to Two-Year Contract",
+   "summary": "",
+   "published": "2026-10-06T15:00:00+00:00",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_337/q_auto/f_auto/Re-signed_-_16x9_KZ",
+   "video": false,
+   "teams": [
+    "Toronto Sceptres"
+   ],
+   "url": "https://www.thepwhl.com/en/teams/toronto-sceptres/news/2026/october/06/sceptres-re-sign-kiara-zanon-to-two-year-contract",
+   "source": "thepwhl.com"
+  },
+  {
+   "league": "pwhl",
    "headline": "PWHL Hamilton Sign First-Round Pick Nelli Laitinen to Three-Year Contract",
    "summary": "",
    "published": "2026-10-05T19:30:00+00:00",
@@ -1319,19 +1332,6 @@
     "Vancouver Goldeneyes"
    ],
    "url": "https://www.thepwhl.com/en/teams/vancouver-goldeneyes/news/2026/october/01/vancouver-goldeneyes-name-delaney-collins-assistant-coach",
-   "source": "thepwhl.com"
-  },
-  {
-   "league": "pwhl",
-   "headline": "PWHL Las Vegas Names Ryan Smith, Jonathan Matsumoto, Brad Kirkwood, and Brendan Flanagan to Coaching Staff",
-   "summary": "",
-   "published": "2026-09-30T17:00:00+00:00",
-   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/2627-LV-Staff-WEB-Announcement-1200x800",
-   "video": false,
-   "teams": [
-    "Las Vegas"
-   ],
-   "url": "https://www.thepwhl.com/en/teams/las-vegas/news/2026/september/30/pwhl-las-vegas-names-ryan-smith-jonathan-matsumoto-brad-kirkwood-and-brendan-flanagan-to-coaching-staff",
    "source": "thepwhl.com"
   },
   {
@@ -1561,19 +1561,6 @@
    ],
    "url": "https://www.thepwhl.com/en/teams/detroit/news/2026/july/27/pwhl-detroit-signs-japanese-olympian-akane-shiga",
    "source": "thepwhl.com"
-  },
-  {
-   "league": "pwhl",
-   "headline": "New York Sirens Sign 2025 PWHL Draft Pick Makenna Webster to Three-Year Contract",
-   "summary": "",
-   "published": "2026-07-23T13:30:00+00:00",
-   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_337/q_auto/f_auto/Signed_Webster",
-   "video": false,
-   "teams": [
-    "New York Sirens"
-   ],
-   "url": "https://www.thepwhl.com/en/teams/new-york-sirens/news/2026/july/22/new-york-sirens-sign-2025-pwhl-draft-pick-makenna-webster-to-three-year-contract",
-   "source": "thepwhl.com"
   }
  ],
  "more_news": [
@@ -1601,19 +1588,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/whats-next-for-flames-connor-zary-after-being-placed-on-waivers/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Small-ball Rays beat sloppy Yankees for 2-0 ALDS lead",
-   "summary": "Richie Palacios hit a two-run single in a four-run fifth inning and the Tampa Bay Rays took advantage of New York’s sloppy defence, beating Cam Schlittler and the Yankees 5-2 on Monday night to take a 2-0 lead in their A",
-   "published": "2026-10-05T23:30-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Caminero.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/small-ball-rays-beat-sloppy-yankees-for-2-0-alds-lead/",
    "source": "Sportsnet"
   },
   {
@@ -1682,6 +1656,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "mlb",
+   "headline": "Small-ball Rays beat sloppy Yankees for 2-0 ALDS lead",
+   "summary": "Richie Palacios hit a two-run single in a four-run fifth inning and the Tampa Bay Rays took advantage of New York’s sloppy defence, beating Cam Schlittler and the Yankees 5-2 on Monday night to take a 2-0 lead in their A",
+   "published": "2026-10-05T23:30-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Caminero.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/small-ball-rays-beat-sloppy-yankees-for-2-0-alds-lead/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Sharks’ Macklin Celebrini being evaluated for lower-body injury",
    "summary": "",
@@ -1735,19 +1722,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Bettman no-trade comments an ‘attack’ on player rights, says NHLPA exec Hainsey",
-   "summary": "The National Hockey League Players’ Association isn’t happy with a recent comment made by commissioner Gary Bettman.",
-   "published": "2026-10-05T13:59-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/10/Ron-Hainsey-NHLPA-Assistant-Executive-Director-Marty-Walsh-NHLPA-Executive-Director-Gary-Bettman-NHL-Commissioner-and-Bill-Daly-NHL-Deputy-Commissioner.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/bettman-no-trade-comments-an-attack-on-player-rights-says-nhlpa-exec-hainsey/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "‘No reason to panic’: Maple Leafs patient despite McKenna line’s rough start",
    "summary": "Although no one is seriously questioning the high-IQ Gavin McKenna’s ability to adapt and excel at the highest level, his line is already under fire. Luke Fox tells us why and whether it’s reasonable or not.",
    "published": "2026-10-05T14:31-04:00",
@@ -1775,16 +1749,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "mlb",
-   "headline": "Padres dismiss Mason Miller pitch-tipping speculation",
-   "summary": "",
-   "published": "2026-10-05T19:20-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177032823.jpg",
+   "league": "nhl",
+   "headline": "Bettman no-trade comments an ‘attack’ on player rights, says NHLPA exec Hainsey",
+   "summary": "The National Hockey League Players’ Association isn’t happy with a recent comment made by commissioner Gary Bettman.",
+   "published": "2026-10-05T13:59-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/10/Ron-Hainsey-NHLPA-Assistant-Executive-Director-Marty-Walsh-NHLPA-Executive-Director-Gary-Bettman-NHL-Commissioner-and-Bill-Daly-NHL-Deputy-Commissioner.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/padres-dismiss-mason-miller-pitch-tipping-speculation/",
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/bettman-no-trade-comments-an-attack-on-player-rights-says-nhlpa-exec-hainsey/",
    "source": "Sportsnet"
   },
   {
@@ -3180,7 +3154,7 @@
       "otl": 2,
       "pts": 6,
       "gf": 24,
-      "ga": 71,
+      "ga": 72,
       "strk": "L5"
      },
      {
@@ -3304,7 +3278,7 @@
       "l": 7,
       "otl": 0,
       "pts": 10,
-      "gf": 39,
+      "gf": 40,
       "ga": 54,
       "strk": "W2"
      },
