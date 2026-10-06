@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-06T16:31:36-04:00",
+ "updated": "2026-10-06T16:43:50-04:00",
  "today": "2026-10-06",
  "range": [
   "2026-10-03",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 32
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -515,11 +515,11 @@
    "home_away": "A",
    "opponent": "Wellington Dukes",
    "location": "Gale Centre, Niagara Falls, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
-   "note": "",
+   "note": "20:00 1st",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16445"
    },
@@ -924,6 +924,26 @@
   },
   {
    "league": "cfl",
+   "headline": "Prediction Time: CFL.ca writers' Mobil Thanksgiving Weekend picks",
+   "summary": "",
+   "published": "2026-10-06T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/78op9QnV5ciTD4UhdoW5yC/259248f8844d2cf9f8c5b55ee152a61e/Cody_Fajardo-2026-2.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "REDBLACKS",
+    "Lions",
+    "Stampeders",
+    "Elks",
+    "Tiger-Cats",
+    "Alouettes",
+    "Roughriders",
+    "Blue Bombers"
+   ],
+   "url": "https://www.cfl.ca/article/prediction-time-cfl-ca-writers-mobil-thanksgiving-weekend-picks",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Weekly Predictor: Who wins on Mobil Thanksgiving Weekend?",
    "summary": "",
    "published": "2026-10-06T00:00:00-04:00",
@@ -1259,17 +1279,6 @@
    "source": "CFL.ca"
   },
   {
-   "league": "cfl",
-   "headline": "MMQB: Who is in the crossover hunt down The Final Stretch?",
-   "summary": "",
-   "published": "2026-09-28T00:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/5jOFK1O2z2adL8kvGdE1l0/2c8c4e93a9eb2670f4e06978d97d1ce5/Tevin_Jones-2026.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/mmqb-who-is-in-the-crossover-hunt-down-the-final-stretch",
-   "source": "CFL.ca"
-  },
-  {
    "league": "pwhl",
    "headline": "PWHL Hamilton Sign Second-Round Pick Jade Iginla",
    "summary": "",
@@ -1573,6 +1582,21 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/should-feel-a-little-uneasy-zary-demotion-sends-message-to-flames/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Why Kawhi Leonard is taking his time integrating into Toronto Raptors’ lineup",
+   "summary": "Kawhi Leonard is back with the Toronto Raptors, but how soon until he’s actually back on the floor? As the team continues its pre-season tune-up, Michael Grange checks in.",
+   "published": "2026-10-06T16:38-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-10.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/why-kawhi-leonard-is-taking-his-time-integrating-into-toronto-raptors-lineup/",
    "source": "Sportsnet"
   },
   {
