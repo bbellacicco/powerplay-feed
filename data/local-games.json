@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-06T17:02:00-04:00",
+ "updated": "2026-10-06T17:16:54-04:00",
  "today": "2026-10-06",
  "range": [
   "2026-10-03",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -517,9 +517,9 @@
    "location": "Gale Centre, Niagara Falls, ON",
    "status": "live",
    "our_score": 0,
-   "opp_score": 0,
+   "opp_score": 1,
    "result": null,
-   "note": "20:00 1st",
+   "note": "11:02 1st",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16445"
    },
@@ -1680,16 +1680,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Report: Ronaldo not retiring from international team amid disagreement with coach",
-   "summary": "The all-time Portuguese forward has decided that he won’t retire from the international team yet, despite an ongoing dispute with head coach Jorge Jesus, soccer insider Fabrizio Romano reported Tuesday.",
-   "published": "2026-10-06T15:04-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Cr7-1.jpg",
+   "league": "nhl",
+   "headline": "Senators’ Ullmark not dressed vs. Red Wings",
+   "summary": "",
+   "published": "2026-10-06T17:04-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/04/Untitled-design-54.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/fifa-world-cup/article/report-ronaldo-not-retiring-from-international-team-amid-disagreement-with-coach/",
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/senators-ullmark-not-dressed-vs-red-wings/",
    "source": "Sportsnet"
   },
   {
@@ -1761,19 +1761,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Senators recall goalie Jonas Johansson after Ullmark injury",
-   "summary": "",
-   "published": "2026-10-06T14:14-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/05/Jonas-Johansson.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/senators-recall-goalie-jonas-johansson-after-ullmark-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Islanders goalie Semyon Varlamov set for first start in nearly two years",
    "summary": "The New York Islanders goalie will start Tuesday against the New York Rangers, head coach Pete DeBoer told reporters.",
    "published": "2026-10-06T11:41-04:00",
@@ -1796,6 +1783,19 @@
    "sn_team_count": 0,
    "sport": "Olympics",
    "url": "https://www.sportsnet.ca/olympics/article/seven-countries-express-interest-in-hosting-2036-summer-olympics/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Report: Ronaldo not retiring from international team amid disagreement with coach",
+   "summary": "The all-time Portuguese forward has decided that he won’t retire from the international team yet, despite an ongoing dispute with head coach Jorge Jesus, soccer insider Fabrizio Romano reported Tuesday.",
+   "published": "2026-10-06T15:04-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Cr7-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/fifa-world-cup/article/report-ronaldo-not-retiring-from-international-team-amid-disagreement-with-coach/",
    "source": "Sportsnet"
   },
   {
@@ -1915,19 +1915,6 @@
    "sn_team_count": 0,
    "sport": "Auto Racing",
    "url": "https://www.sportsnet.ca/nascar-cup/article/charlotte-motor-speedway-to-host-celebration-of-life-for-kyle-busch/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Oilers’ search for perfect No. 2 defenceman still a work in progress",
-   "summary": "Finding the right defenceman to complement to Evan Bouchard is still a work in progress and should be project No. 1 for associate coach D.J. Smith. Mark Spector breaks down some of the choices.",
-   "published": "2026-10-05T18:57-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/bouchard.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/oilers-search-for-perfect-no-2-defenceman-still-a-work-in-progress/",
    "source": "Sportsnet"
   },
   {
@@ -3143,7 +3130,7 @@
       "l": 2,
       "otl": 2,
       "pts": 14,
-      "gf": 39,
+      "gf": 40,
       "ga": 28,
       "strk": "W1"
      },
@@ -3317,7 +3304,7 @@
       "otl": 0,
       "pts": 14,
       "gf": 35,
-      "ga": 17,
+      "ga": 18,
       "strk": "L1"
      },
      {
