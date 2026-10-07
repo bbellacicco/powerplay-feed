@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-07T18:46:39-04:00",
+ "updated": "2026-10-07T19:01:35-04:00",
  "today": "2026-10-07",
  "range": [
   "2026-10-04",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 32
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -344,11 +344,11 @@
    "home_away": "H",
    "opponent": "St. Marys Lincolns",
    "location": "Vollmer Culture R.C., LaSalle, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
-   "note": "",
+   "note": "20:00 1st",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15552"
    },
@@ -1803,6 +1803,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Women’s team discrimination complaint against Cycling Canada set for hearing",
+   "summary": "",
+   "published": "2026-10-07T18:53-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/05/Untitled-design-16-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Cycling",
+   "url": "https://www.sportsnet.ca/cycling/article/womens-team-discrimination-complaint-against-cycling-canada-set-for-hearing/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "NFL rescinds fine against 49ers’ Kyle Juszczyk for chug celebration",
    "summary": "San Francisco 49ers fullback Kyle Juszczyk won his appeal over the fines issued by the NFL for what it deemed an “offensive” celebration when he imitated drinking a beverage, which the league said looked like he was chug",
@@ -1817,7 +1830,7 @@
   },
   {
    "league": "nfl",
-   "headline": "Ravens QB Lamar Jackson (ankle) absent from start of practice",
+   "headline": "Ravens QB Lamar Jackson misses practice with ankle injury",
    "summary": "",
    "published": "2026-10-07T13:33-04:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2025/09/Ravens-1.jpg",
@@ -3103,7 +3116,7 @@
       "l": 4,
       "otl": 1,
       "pts": 11,
-      "gf": 29,
+      "gf": 30,
       "ga": 43,
       "strk": "L2"
      },
@@ -3116,7 +3129,7 @@
       "otl": 0,
       "pts": 10,
       "gf": 35,
-      "ga": 31,
+      "ga": 32,
       "strk": "L2"
      },
      {
@@ -3192,7 +3205,7 @@
       "l": 1,
       "otl": 0,
       "pts": 22,
-      "gf": 69,
+      "gf": 70,
       "ga": 19,
       "strk": "W5"
      },
@@ -3325,7 +3338,7 @@
       "otl": 0,
       "pts": 4,
       "gf": 20,
-      "ga": 48,
+      "ga": 49,
       "strk": "L4"
      }
     ]
