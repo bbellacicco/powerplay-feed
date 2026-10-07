@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-07T13:16:34-04:00",
+ "updated": "2026-10-07T13:31:34-04:00",
  "today": "2026-10-07",
  "range": [
   "2026-10-04",
@@ -848,7 +848,7 @@
    "headline": "6 players to watch on Mobil Thanksgiving Weekend",
    "summary": "",
    "published": "2026-10-07T00:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/1SxtfA2bsJybubvoGgIyPc/79bac76e0b4c5482b6fe54e19c261f1e/Kian_Schaffer-Baker_2026_2.jpg?w=640&fm=jpg&q=70",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/4UCdwKEoOLnc0Pr5RfETTd/0cf54d904054793ea19415e8c813c307/Trevor_Harris_2026_20.jpg?w=640&fm=jpg&q=70",
    "video": false,
    "teams": [],
    "url": "https://www.cfl.ca/article/6-players-to-watch-on-mobil-thanksgiving-weekend",
@@ -1527,6 +1527,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Oilers acquire F Filip Hallander from Penguins for D Spencer Stastney",
+   "summary": "",
+   "published": "2026-10-07T12:46-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/hallander.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/oilers-acquire-f-filip-hallander-from-penguins-for-d-spencer-stastney/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Are the Red Wings open to rebuilding the rebuild?",
    "summary": "The Red Wings got Dylan Larkin back in the lineup Tuesday, but Simon Edvinsson still hasn’t been signed. As trade talks continue on both players, Frank Seravalli writes that the game plan in Detroit might be changing. Pl",
    "published": "2026-10-07T12:03-04:00",
@@ -1549,19 +1562,6 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/nhl-unveils-canadiens-jets-heritage-classic-jerseys/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Oilers acquire F Filip Hallander from Penguins for D Spencer Stastney",
-   "summary": "",
-   "published": "2026-10-07T12:46-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/hallander.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/oilers-acquire-f-filip-hallander-from-penguins-for-d-spencer-stastney/",
    "source": "Sportsnet"
   },
   {
@@ -1764,6 +1764,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "EuroLeague teams reject NBA offer to merge into single Europe operation",
+   "summary": "EuroLeague basketball owners have rejected a formal offer from the NBA to merge into a single European operation following a meeting in Italy, Barcelona confirmed Wednesday.",
+   "published": "2026-10-07T13:17-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/ball.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/euroleague-teams-reject-nba-offer-to-merge-into-single-europe-operation/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "European soccer leaders meet aiming to shape strategy for ousting Infantino",
    "summary": "",
@@ -1856,19 +1869,6 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/nhls-romance-themed-audiobooks-disappear-after-opening-week-of-season/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Sharks’ Celebrini misses practice, considered day-to-day",
-   "summary": "",
-   "published": "2026-10-06T17:22-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/San-Jose-Sharks-center-Macklin-Celebrini.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/sharks-celebrini-misses-practice-considered-day-to-day/",
    "source": "Sportsnet"
   },
   {
@@ -3066,14 +3066,14 @@
      {
       "name": "Cobourg Cougars",
       "abbr": "COB",
-      "gp": 9,
+      "gp": 10,
       "w": 7,
-      "l": 1,
+      "l": 2,
       "otl": 1,
       "pts": 15,
       "gf": 46,
-      "ga": 38,
-      "strk": "W1"
+      "ga": 39,
+      "strk": "L1"
      },
      {
       "name": "Pickering Panthers",
@@ -3167,8 +3167,8 @@
       "l": 8,
       "otl": 0,
       "pts": 4,
-      "gf": 37,
-      "ga": 56,
+      "gf": 38,
+      "ga": 57,
       "strk": "L7"
      },
      {
@@ -3225,6 +3225,18 @@
       "strk": "W4"
      },
      {
+      "name": "Toronto Patriots",
+      "abbr": "PAT",
+      "gp": 11,
+      "w": 8,
+      "l": 3,
+      "otl": 0,
+      "pts": 16,
+      "gf": 58,
+      "ga": 23,
+      "strk": "W3"
+     },
+     {
       "name": "Leamington Flyers",
       "abbr": "LEA",
       "gp": 10,
@@ -3235,18 +3247,6 @@
       "gf": 36,
       "ga": 19,
       "strk": "L1"
-     },
-     {
-      "name": "Toronto Patriots",
-      "abbr": "PAT",
-      "gp": 10,
-      "w": 7,
-      "l": 3,
-      "otl": 0,
-      "pts": 14,
-      "gf": 57,
-      "ga": 23,
-      "strk": "W2"
      },
      {
       "name": "Burlington Cougars",
@@ -3316,8 +3316,8 @@
       "l": 9,
       "otl": 2,
       "pts": 8,
-      "gf": 37,
-      "ga": 61,
+      "gf": 38,
+      "ga": 62,
       "strk": "W1"
      },
      {
