@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-07T11:46:59-04:00",
+ "updated": "2026-10-07T12:01:36-04:00",
  "today": "2026-10-07",
  "range": [
   "2026-10-04",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -1513,21 +1513,6 @@
  ],
  "more_news": [
   {
-   "league": "nhl",
-   "headline": "McKenna finds breakthrough moment in Maple Leafs’ comeback thriller",
-   "summary": "Gavin McKenna lifted a weight off his shoulders with his first career goal on Tuesday. The bar-down beauty also helped his Maple Leafs claw back from the jaws of defeat, writes Sonny Sachdeva.",
-   "published": "2026-10-07T00:46-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/leafs1280.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/mckenna-matthews-share-first-big-moment-in-maple-leafs-comeback-win/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "mlb",
    "headline": "How potential lockout will impact MLB off-season calendar",
    "summary": "The upcoming MLB off-season will be anything but typical, with the collective bargaining agreement set to expire Dec. 1, and a lockout looming. Ben Nicholson-Smith provides a ranging view and timeline for the next few mo",
@@ -1540,6 +1525,21 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/how-potential-lockout-will-impact-mlb-off-season-calendar/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "McKenna finds breakthrough moment in Maple Leafs’ comeback thriller",
+   "summary": "Gavin McKenna lifted a weight off his shoulders with his first career goal on Tuesday. The bar-down beauty also helped his Maple Leafs claw back from the jaws of defeat, writes Sonny Sachdeva.",
+   "published": "2026-10-07T00:46-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/leafs1280.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/mckenna-matthews-share-first-big-moment-in-maple-leafs-comeback-win/",
    "source": "Sportsnet"
   },
   {
@@ -1582,19 +1582,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Former UFC security guard knocks out opponent on Dana White’s Contender Series",
-   "summary": "",
-   "published": "2026-10-06T20:52-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/06/UFC-gloves-generic.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/former-ufc-security-guard-knocks-out-opponent-on-dana-whites-contender-series/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "mlb",
    "headline": "Report: Baltimore Orioles mascot among staff layoffs",
    "summary": "",
@@ -1608,18 +1595,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Red Wings’ Larkin named first star in first game after trade request",
+   "league": "other",
+   "headline": "Former UFC security guard knocks out opponent on Dana White’s Contender Series",
    "summary": "",
-   "published": "2026-10-06T22:02-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Detroit-Red-Wings-center-Dylan-Larkin.jpg",
+   "published": "2026-10-06T20:52-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/06/UFC-gloves-generic.jpg",
    "video": false,
-   "teams": [
-    "Detroit Red Wings"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/red-wings-larkin-named-first-star-in-first-game-after-trade-request/",
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "MMA",
+   "url": "https://www.sportsnet.ca/ufc/article/former-ufc-security-guard-knocks-out-opponent-on-dana-whites-contender-series/",
    "source": "Sportsnet"
   },
   {
@@ -1649,19 +1634,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Panthers’ Brad Marchand injures leg vs. Kings",
-   "summary": "The Florida Panthers have lost another important forward to a possible serious injury.",
-   "published": "2026-10-07T00:23-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Florida-Panthers-left-wing-Brad-Marchand-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/panthers-brad-marchand-injures-knee-vs-kings/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "other",
    "headline": "George Russell to start at back of grid in Singapore after penalty",
    "summary": "",
@@ -1675,16 +1647,44 @@
    "source": "Sportsnet"
   },
   {
-   "league": "mlb",
-   "headline": "Yamamoto’s dominance propels Dodgers to 2-1 NLDS lead over Braves",
-   "summary": "Yoshinobu Yamamoto struck out 10 in seven innings, Kiké Hernández hit a two-run homer and the Los Angeles Dodgers beat the Atlanta Braves 3-1 on Tuesday night to take a 2-1 lead in their NL Division Series.",
-   "published": "2026-10-06T21:30-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/hernandez_kike1280.jpg",
+   "league": "nhl",
+   "headline": "Panthers’ Brad Marchand injures leg vs. Kings",
+   "summary": "The Florida Panthers have lost another important forward to a possible serious injury.",
+   "published": "2026-10-07T00:23-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Florida-Panthers-left-wing-Brad-Marchand-1.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 2,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/yamamotos-dominance-propels-dodgers-to-2-1-nlds-lead-over-braves/",
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/panthers-brad-marchand-injures-knee-vs-kings/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Red Wings’ Larkin named first star in first game after trade request",
+   "summary": "",
+   "published": "2026-10-06T22:02-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Detroit-Red-Wings-center-Dylan-Larkin.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Red Wings"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/red-wings-larkin-named-first-star-in-first-game-after-trade-request/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Brooklyn Courtnall added to roster ahead of matches vs. Denmark",
+   "summary": "",
+   "published": "2026-10-07T11:59-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-12.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/soccer/article/brooklyn-courtnall-added-to-roster-ahead-of-matches-vs-denmark/",
    "source": "Sportsnet"
   },
   {
@@ -1698,6 +1698,45 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/flames-recall-jonathan-castagna-aydar-suniev-from-wranglers/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "European soccer leaders meet aiming to shape strategy for ousting Infantino",
+   "summary": "",
+   "published": "2026-10-07T11:59-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2023/06/FIFA-President-Gianni-Infantino-.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/fifa-world-cup/article/european-soccer-leaders-meet-aiming-to-shape-strategy-for-ousting-infantino/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Four key takeaways from Canada’s latest international window",
+   "summary": "The Canadian men’s team returned to action and put in a trio of respectable performances. John Molinaro has four key takeaways from the latest international window.",
+   "published": "2026-10-06T23:44-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Shaffelburg-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/soccer/article/four-key-takeaways-from-canadas-latest-international-window/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Injured Ellis scores as U.S. blanks Canada in men’s soccer friendly",
+   "summary": "",
+   "published": "2026-10-06T22:28-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/ellis_justin1280.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/soccer/article/injured-ellis-scores-as-u-s-blanks-canada-in-mens-soccer-friendly/",
    "source": "Sportsnet"
   },
   {
@@ -1821,32 +1860,6 @@
   },
   {
    "league": "other",
-   "headline": "Four key takeaways from Canada’s latest international window",
-   "summary": "The Canadian men’s team returned to action and put in a trio of respectable performances. John Molinaro has four key takeaways from the latest international window.",
-   "published": "2026-10-06T23:44-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Shaffelburg-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/soccer/article/four-key-takeaways-from-canadas-latest-international-window/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Injured Ellis scores as U.S. blanks Canada in men’s soccer friendly",
-   "summary": "",
-   "published": "2026-10-06T22:28-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/ellis_justin1280.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/soccer/article/injured-ellis-scores-as-u-s-blanks-canada-in-mens-soccer-friendly/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
    "headline": "Argentina bids Messi farewell in final national team match, ending an era",
    "summary": "",
    "published": "2026-10-06T20:12-04:00",
@@ -1872,19 +1885,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "pwhl",
-   "headline": "PWHL Hamilton signs Jade Iginla to one-year deal",
-   "summary": "PWHL Hamilton has signed Jade Iginla, daughter of Hockey Hall of Famer Jarome, to a one-year contract ahead of the team’s inaugural season, it was announced Tuesday.",
-   "published": "2026-10-06T13:04-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-11.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/pwhl/article/pwhl-hamilton-signs-jade-iginla-to-one-year-deal/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "mlb",
    "headline": "Yankees face prospect of 17th straight season without World Series title",
    "summary": "",
@@ -1895,19 +1895,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/yankees-face-prospect-of-17th-straight-season-without-world-series-title/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "White Sox return home with chance to reach ALCS",
-   "summary": "Chicago leads Cleveland 2-0 in their best-of-five AL Division Series going into Game 3 on Wednesday at Rate Field. The White Sox are hoping to advance to the American League Championship Series for the first time since 2",
-   "published": "2026-10-06T20:51-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Chicago-White-Soxs-Braden-Montgomery.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/white-sox-return-home-with-chance-to-reach-alcs/",
    "source": "Sportsnet"
   },
   {
