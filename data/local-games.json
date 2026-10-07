@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-07T13:31:34-04:00",
+ "updated": "2026-10-07T13:46:34-04:00",
  "today": "2026-10-07",
  "range": [
   "2026-10-04",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 32
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -325,11 +325,11 @@
    "home_away": "H",
    "opponent": "Markham Royals",
    "location": "Gale Centre, Niagara Falls, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
-   "note": "",
+   "note": "20:00 1st",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16451"
    },
@@ -1540,6 +1540,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Canadiens goalie Samuel Montembeault suffers injury in practice",
+   "summary": "",
+   "published": "2026-10-07T13:08-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/12/montembeault-3.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canadiens-goalie-samuel-montembeault-suffers-injury-in-practice/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Are the Red Wings open to rebuilding the rebuild?",
    "summary": "The Red Wings got Dylan Larkin back in the lineup Tuesday, but Simon Edvinsson still hasn’t been signed. As trade talks continue on both players, Frank Seravalli writes that the game plan in Detroit might be changing. Pl",
    "published": "2026-10-07T12:03-04:00",
@@ -1549,19 +1562,6 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/are-the-red-wings-open-to-rebuilding-the-rebuild/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "NHL unveils Canadiens, Jets Heritage Classic jerseys",
-   "summary": "",
-   "published": "2026-10-07T10:02-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/jets-1-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/nhl-unveils-canadiens-jets-heritage-classic-jerseys/",
    "source": "Sportsnet"
   },
   {
@@ -1596,15 +1596,15 @@
   },
   {
    "league": "nhl",
-   "headline": "Canadiens goalie Samuel Montembeault suffers injury in practice",
+   "headline": "NHL unveils Canadiens, Jets Heritage Classic jerseys",
    "summary": "",
-   "published": "2026-10-07T13:08-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/12/montembeault-3.jpg",
+   "published": "2026-10-07T10:02-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/jets-1-1.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
+   "sn_team_count": 2,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canadiens-goalie-samuel-montembeault-suffers-injury-in-practice/",
+   "url": "https://www.sportsnet.ca/nhl/article/nhl-unveils-canadiens-jets-heritage-classic-jerseys/",
    "source": "Sportsnet"
   },
   {
@@ -1713,19 +1713,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Canadiens’ effort nowhere near good enough to beat Hurricanes",
-   "summary": "Tuesday’s game wasn’t the cathartic experience the Canadiens were hoping for. It was was more like trauma relived, with the Hurricanes once again frustrating the Canadiens at every turn.",
-   "published": "2026-10-07T00:24-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Habs-3.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canadiens-effort-nowhere-near-good-enough-to-beat-hurricanes/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Flames recall Jonathan Castagna, Aydar Suniev from Wranglers",
    "summary": "Castagna and fellow forward Aydar Suniev have been recalled from the AHL’s Calgary Wranglers, the Flames announced Wednesday.",
    "published": "2026-10-07T11:15-04:00",
@@ -1735,6 +1722,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/flames-recall-jonathan-castagna-aydar-suniev-from-wranglers/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Canadiens’ effort nowhere near good enough to beat Hurricanes",
+   "summary": "Tuesday’s game wasn’t the cathartic experience the Canadiens were hoping for. It was was more like trauma relived, with the Hurricanes once again frustrating the Canadiens at every turn.",
+   "published": "2026-10-07T00:24-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Habs-3.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canadiens-effort-nowhere-near-good-enough-to-beat-hurricanes/",
    "source": "Sportsnet"
   },
   {
@@ -1748,6 +1748,19 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/hockey/article/hockey-n-s-launches-pilot-program-to-teach-players-about-consent-hazing/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Ravens QB Lamar Jackson (ankle) absent from start of practice",
+   "summary": "",
+   "published": "2026-10-07T13:33-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/09/Ravens-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/ravens-qb-lamar-jackson-ankle-absent-from-start-of-practice/",
    "source": "Sportsnet"
   },
   {
