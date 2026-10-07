@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-07T16:01:35-04:00",
+ "updated": "2026-10-07T16:16:35-04:00",
  "today": "2026-10-07",
  "range": [
   "2026-10-04",
@@ -325,11 +325,11 @@
    "home_away": "H",
    "opponent": "Markham Royals",
    "location": "Gale Centre, Niagara Falls, ON",
-   "status": "live",
-   "our_score": 3,
+   "status": "final",
+   "our_score": 4,
    "opp_score": 1,
-   "result": null,
-   "note": "04:24 3rd",
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16451"
    },
@@ -1960,6 +1960,19 @@
   },
   {
    "league": "nfl",
+   "headline": "Detroit Lions launch \"One Pride Worldwide\" a new global fan membership platform",
+   "summary": "The Detroit Lions launched today One Pride Worldwide, a new fan membership hub, powered by LAVA, for Lions fans across the globe.",
+   "published": "2026-10-07T16:00-04:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/uxyrimxxcq2azo6pd3ai.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Lions"
+   ],
+   "url": "https://www.detroitlions.com/news/detroit-lions-launch-one-pride-worldwide-a-new-global-fan-membership-platform",
+   "source": "Team site"
+  },
+  {
+   "league": "nfl",
    "headline": "LIONS DAILY: Fired-up Dan Campbell knows defense must improve as he pushes offense for greatness",
    "summary": "",
    "published": "2026-10-07T10:30-04:00",
@@ -2138,19 +2151,6 @@
     "Detroit Lions"
    ],
    "url": "https://www.detroitlions.com/news/and-i-m-still-here-dorsey-returns-to-where-his-nfl-career-changed-for-the-better",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
-   "headline": "Lions at Panthers injury report: Oct. 2",
-   "summary": "Lions at Panthers injury report and game designations for Friday, October 2.",
-   "published": "2026-10-02T15:45-04:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/cfj7m1hw9ppgbsm2orbx.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Lions"
-   ],
-   "url": "https://www.detroitlions.com/news/lions-at-panthers-injury-report-oct-2-bartch-reed-wonnum",
    "source": "Team site"
   },
   {
@@ -3064,14 +3064,14 @@
      {
       "name": "Markham Royals",
       "abbr": "MAR",
-      "gp": 13,
+      "gp": 14,
       "w": 12,
-      "l": 1,
+      "l": 2,
       "otl": 0,
       "pts": 24,
       "gf": 55,
-      "ga": 37,
-      "strk": "L1"
+      "ga": 38,
+      "strk": "L2"
      },
      {
       "name": "Wellington Dukes",
@@ -3082,7 +3082,7 @@
       "otl": 2,
       "pts": 16,
       "gf": 41,
-      "ga": 29,
+      "ga": 30,
       "strk": "W2"
      },
      {
@@ -3247,6 +3247,18 @@
       "strk": "W4"
      },
      {
+      "name": "Leamington Flyers",
+      "abbr": "LEA",
+      "gp": 11,
+      "w": 8,
+      "l": 2,
+      "otl": 1,
+      "pts": 17,
+      "gf": 40,
+      "ga": 20,
+      "strk": "W1"
+     },
+     {
       "name": "Toronto Patriots",
       "abbr": "PAT",
       "gp": 11,
@@ -3259,18 +3271,6 @@
       "strk": "W3"
      },
      {
-      "name": "Leamington Flyers",
-      "abbr": "LEA",
-      "gp": 10,
-      "w": 7,
-      "l": 2,
-      "otl": 1,
-      "pts": 15,
-      "gf": 39,
-      "ga": 20,
-      "strk": "L1"
-     },
-     {
       "name": "Burlington Cougars",
       "abbr": "BUR",
       "gp": 12,
@@ -3278,7 +3278,7 @@
       "l": 4,
       "otl": 2,
       "pts": 14,
-      "gf": 46,
+      "gf": 47,
       "ga": 34,
       "strk": "L1"
      },
