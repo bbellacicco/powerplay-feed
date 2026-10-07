@@ -1,79 +1,7 @@
 {
- "updated": "2026-10-06T09:00:01-04:00",
- "today": "2026-10-06",
+ "updated": "2026-10-07T00:00:01-04:00",
+ "today": "2026-10-07",
  "games": [
-  {
-   "id": "saints-presto2026-10-03-2",
-   "team": "saints",
-   "sport": "Baseball",
-   "start": "2026-10-03T13:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Humber",
-   "location": "",
-   "status": "final",
-   "our_score": 6,
-   "opp_score": 0,
-   "result": "W",
-   "note": "",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/bsb/2026-27/boxscores/20261003_ab96.xml"
-   }
-  },
-  {
-   "id": "saints-presto2026-10-03-4",
-   "team": "saints",
-   "sport": "Baseball",
-   "start": "2026-10-03T15:30:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Humber",
-   "location": "",
-   "status": "final",
-   "our_score": 10,
-   "opp_score": 2,
-   "result": "W",
-   "note": "",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/bsb/2026-27/boxscores/20261003_kmks.xml"
-   }
-  },
-  {
-   "id": "saints-presto2026-10-03-5",
-   "team": "saints",
-   "sport": "Women's Soccer",
-   "start": "2026-10-03T16:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Niagara",
-   "location": "",
-   "status": "final",
-   "our_score": 4,
-   "opp_score": 0,
-   "result": "W",
-   "note": "",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/wsoc/2026-27/boxscores/20261003_w9ey.xml"
-   }
-  },
-  {
-   "id": "saints-presto2026-10-03-6",
-   "team": "saints",
-   "sport": "Men's Soccer",
-   "start": "2026-10-03T18:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Niagara",
-   "location": "",
-   "status": "final",
-   "our_score": 1,
-   "opp_score": 2,
-   "result": "L",
-   "note": "",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/msoc/2026-27/boxscores/20261003_bki9.xml"
-   }
-  },
   {
    "id": "saints-presto2026-10-04-2",
    "team": "saints",
@@ -265,6 +193,92 @@
    "links": {
     "boxscore": "https://www.saintsathletics.ca/sports/bsb/2026-27/boxscores/20261009_vliy.xml"
    }
+  },
+  {
+   "id": "saints-presto2026-10-10-0",
+   "team": "saints",
+   "sport": "Fastball",
+   "start": "2026-10-10T11:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Western Ontario",
+   "location": "Babcock Field (Oshawa)",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Exhibition · CCSA National Championship Hosted by Durham College",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/fastball/2026-27/boxscores/20261010_ccvb.xml"
+   }
+  },
+  {
+   "id": "saints-presto2026-10-10-1",
+   "team": "saints",
+   "sport": "Baseball",
+   "start": "2026-10-10T13:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Sheridan",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/bsb/2026-27/boxscores/20261010_30ys.xml"
+   }
+  },
+  {
+   "id": "saints-presto2026-10-10-2",
+   "team": "saints",
+   "sport": "Women's Soccer",
+   "start": "2026-10-10T14:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Humber",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {}
+  },
+  {
+   "id": "saints-presto2026-10-10-3",
+   "team": "saints",
+   "sport": "Baseball",
+   "start": "2026-10-10T15:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Sheridan",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/bsb/2026-27/boxscores/20261010_w1r5.xml"
+   }
+  },
+  {
+   "id": "saints-presto2026-10-10-4",
+   "team": "saints",
+   "sport": "Men's Soccer",
+   "start": "2026-10-10T16:30:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Humber",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {}
   }
  ]
 }
