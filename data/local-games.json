@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-07T12:16:33-04:00",
+ "updated": "2026-10-07T12:31:48-04:00",
  "today": "2026-10-07",
  "range": [
   "2026-10-04",
@@ -1540,6 +1540,19 @@
   },
   {
    "league": "nhl",
+   "headline": "NHL unveils Canadiens, Jets Heritage Classic jerseys",
+   "summary": "",
+   "published": "2026-10-07T10:02-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/jets-1-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/nhl-unveils-canadiens-jets-heritage-classic-jerseys/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "McKenna finds breakthrough moment in Maple Leafs’ comeback thriller",
    "summary": "Gavin McKenna lifted a weight off his shoulders with his first career goal on Tuesday. The bar-down beauty also helped his Maple Leafs claw back from the jaws of defeat, writes Sonny Sachdeva.",
    "published": "2026-10-07T00:46-04:00",
@@ -1551,19 +1564,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/mckenna-matthews-share-first-big-moment-in-maple-leafs-comeback-win/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "NHL unveils Canadiens, Jets Heritage Classic jerseys",
-   "summary": "",
-   "published": "2026-10-07T10:02-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/jets-1-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/nhl-unveils-canadiens-jets-heritage-classic-jerseys/",
    "source": "Sportsnet"
   },
   {
@@ -3070,7 +3070,7 @@
       "otl": 1,
       "pts": 15,
       "gf": 46,
-      "ga": 35,
+      "ga": 37,
       "strk": "W1"
      },
      {
@@ -3148,14 +3148,14 @@
      {
       "name": "Aurora Tigers",
       "abbr": "AUR",
-      "gp": 9,
+      "gp": 10,
       "w": 3,
-      "l": 6,
+      "l": 7,
       "otl": 0,
       "pts": 6,
       "gf": 27,
       "ga": 42,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Lindsay Muskies",
@@ -3199,6 +3199,18 @@
       "strk": "W5"
      },
      {
+      "name": "King Rebellion",
+      "abbr": "KNG",
+      "gp": 12,
+      "w": 10,
+      "l": 1,
+      "otl": 1,
+      "pts": 21,
+      "gf": 59,
+      "ga": 21,
+      "strk": "W6"
+     },
+     {
       "name": "Milton Menace",
       "abbr": "MIL",
       "gp": 12,
@@ -3209,18 +3221,6 @@
       "gf": 44,
       "ga": 22,
       "strk": "W4"
-     },
-     {
-      "name": "King Rebellion",
-      "abbr": "KNG",
-      "gp": 11,
-      "w": 9,
-      "l": 1,
-      "otl": 1,
-      "pts": 19,
-      "gf": 59,
-      "ga": 21,
-      "strk": "W5"
      },
      {
       "name": "Leamington Flyers",
@@ -3242,7 +3242,7 @@
       "l": 3,
       "otl": 0,
       "pts": 14,
-      "gf": 54,
+      "gf": 56,
       "ga": 23,
       "strk": "W2"
      },
