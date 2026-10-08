@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-08T13:31:35-04:00",
+ "updated": "2026-10-08T13:46:58-04:00",
  "today": "2026-10-08",
  "range": [
   "2026-10-05",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -1377,6 +1377,19 @@
  ],
  "more_news": [
   {
+   "league": "mlb",
+   "headline": "Major League Baseball proposes major schedule changes starting in 2029",
+   "summary": "",
+   "published": "2026-10-08T13:41-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/mlb.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/major-league-baseball-proposes-major-schedule-changes-starting-in-2029/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "NHL Power Rankings: One player from each team still waiting for a goal",
    "summary": "What happens when you go two, three or maybe even four games without finding the back of the net when that’s supposed to be your calling card? Ryan Dixon looks at one player from every NHL team still waiting for their fi",
@@ -1420,19 +1433,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Curling 2026-27 season preview: Whole new look to landscape",
-   "summary": "The Olympic quadrennial coming to a close last season marks the time in the curling cycle when we see the most change. Here’s a look at what to expect in a new-look 2026-27 season.",
-   "published": "2026-10-08T12:37-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/02/Brad-Jacobs.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Curling",
-   "url": "https://www.sportsnet.ca/curling/article/curling-2026-27-season-preview-whole-new-look-to-landscape/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nfl",
    "headline": "NFL Week 5 Pick ‘Em: Cowboys look to dominate Bucs in primetime",
    "summary": "We’re now one month into the NFL season, and teams are beginning to separate themselves from the pack. Evan Davidson runs down the Week 5 slate to help you make your picks.",
@@ -1472,6 +1472,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Haaland calls for unity in first comments on the Man City guilty verdict",
+   "summary": "",
+   "published": "2026-10-08T11:54-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177008964.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/premier-league/article/haaland-calls-for-unity-in-first-comments-on-the-man-city-guilty-verdict/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "pwhl",
    "headline": "PWHL reveals expansion team jerseys and colours",
    "summary": "",
@@ -1495,32 +1508,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/sharks-star-celebrini-a-game-time-decision-vs-blues/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Fan interference denies Yankees’ Volpe a tying homer in Game 3 of ALDS",
-   "summary": "",
-   "published": "2026-10-07T22:50-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177052374.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/fan-interference-denies-yankees-volpe-a-tying-homer-in-game-3-of-alds/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Haaland calls for unity in first comments on the Man City guilty verdict",
-   "summary": "",
-   "published": "2026-10-08T11:54-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177008964.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/premier-league/article/haaland-calls-for-unity-in-first-comments-on-the-man-city-guilty-verdict/",
    "source": "Sportsnet"
   },
   {
@@ -1563,6 +1550,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "mlb",
+   "headline": "Fan interference denies Yankees’ Volpe a tying homer in Game 3 of ALDS",
+   "summary": "",
+   "published": "2026-10-07T22:50-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177052374.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/fan-interference-denies-yankees-volpe-a-tying-homer-in-game-3-of-alds/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Linus Ullmark to start in Senators’ home opener vs. Flyers",
    "summary": "",
@@ -1576,16 +1576,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Oilers flip script on Ducks with dominant final 40: ‘We got competitive’",
-   "summary": "Trailing by two goals after the first period, the Oilers pushed back, and for one night at least, the Ducks did not have an answer. “When we got competitive, things turned our way.”",
-   "published": "2026-10-08T02:31-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-31.jpg",
+   "league": "other",
+   "headline": "Curling 2026-27 season preview: Whole new look to landscape",
+   "summary": "The Olympic quadrennial coming to a close last season marks the time in the curling cycle when we see the most change. Here’s a look at what to expect in a new-look 2026-27 season.",
+   "published": "2026-10-08T12:37-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/02/Brad-Jacobs.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/oilers-flip-script-on-ducks-with-dominant-final-40-we-got-competitive/",
+   "sn_team_count": 0,
+   "sport": "Curling",
+   "url": "https://www.sportsnet.ca/curling/article/curling-2026-27-season-preview-whole-new-look-to-landscape/",
    "source": "Sportsnet"
   },
   {
@@ -1625,6 +1625,19 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/soccer/article/everton-player-sherif-fined-for-involvement-in-61-bets/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Oilers flip script on Ducks with dominant final 40: ‘We got competitive’",
+   "summary": "Trailing by two goals after the first period, the Oilers pushed back, and for one night at least, the Ducks did not have an answer. “When we got competitive, things turned our way.”",
+   "published": "2026-10-08T02:31-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-31.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/oilers-flip-script-on-ducks-with-dominant-final-40-we-got-competitive/",
    "source": "Sportsnet"
   },
   {
