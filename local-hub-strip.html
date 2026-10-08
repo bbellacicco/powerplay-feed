@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Local Hub Latest | Powerplay Windsor</title>
+<!--
+  Slim, scrollable row of the newest Local Hub stories and videos (photo, team, headline),
+  from the same data as the Local Hub (data/local-news.json). Pairs with the Today strips.
+  Embed in Wix at about 300px tall.
+  ?link=<url>  where "All stories" goes (default: the homepage)
+  ?n=<number>  how many stories (default 10)
+-->
+<style>
+  :root { --bg: #0b1a33; --panel: #10244a; --row: #132b57; --line: #1e3a6e;
+    --text: #f2f5fb; --muted: #9fb0cf; --accent: #e8b021;
+    --powerplay: #e8b021; --spitfires: #d4202a; --lancers: #0b5cad; --saints: #1f9d55; --junior: #0891b2; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); overflow: hidden;
+    font: 13px/1.3 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  .top { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; padding: 8px 12px 6px; }
+  .title { font-weight: 800; text-transform: uppercase; letter-spacing: .03em; font-size: 14px; white-space: nowrap; }
+  .title span { color: var(--accent); }
+  .sponsor { color: var(--muted); font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .sponsor b { color: var(--text); font-weight: 600; }
+  .more { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 12px; white-space: nowrap; }
+  .strip { display: flex; gap: 10px; overflow-x: auto; padding: 0 12px 10px; scroll-snap-type: x mandatory; scroll-padding-left: 12px; scrollbar-width: thin; }
+  .card { flex: 0 0 auto; width: 220px; background: var(--row); border-radius: 8px; overflow: hidden;
+    scroll-snap-align: start; color: inherit; text-decoration: none; border-top: 3px solid var(--line); }
+  .card:hover .hl { text-decoration: underline; }
+  .card.t-powerplay { border-top-color: var(--powerplay); } .card.t-spitfires { border-top-color: var(--spitfires); }
+  .card.t-lancers { border-top-color: var(--lancers); } .card.t-saints { border-top-color: var(--saints); }
+  .card.t-junior { border-top-color: var(--junior); }
+  .thumb { position: relative; width: 100%; aspect-ratio: 16 / 9; background: var(--panel); overflow: hidden; }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .play { position: absolute; left: 50%; top: 50%; width: 38px; height: 38px; margin: -19px 0 0 -19px; border-radius: 50%;
+    background: rgba(0,0,0,.55); border: 2px solid #fff; }
+  .play::after { content: ""; position: absolute; left: 14px; top: 10px; border-left: 12px solid #fff;
+    border-top: 7px solid transparent; border-bottom: 7px solid transparent; }
+  .tile { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;
+    background: linear-gradient(135deg, #1e3a6e, #0b1a33); font-weight: 900; letter-spacing: .04em; }
+  .tile small { font-size: 10px; letter-spacing: .1em; color: rgba(255,255,255,.8); font-weight: 700; }
+  .tile.tt-powerplay { background: linear-gradient(135deg, #e8b021, #8a6200); }
+  .tile.tt-spitfires { background: linear-gradient(135deg, #d4202a, #6e0d12); }
+  .tile.tt-lancers { background: linear-gradient(135deg, #0b5cad, #062c55); }
+  .tile.tt-saints { background: linear-gradient(135deg, #1f9d55, #0c4526); }
+  .tile.tt-junior { background: linear-gradient(135deg, #0891b2, #064a5b); }
+  .body { padding: 7px 9px 9px; }
+  .meta { color: var(--muted); font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 3px; }
+  .meta b { color: var(--accent); font-weight: 700; }
+  .hl { font-weight: 700; font-size: 13px; line-height: 1.25;
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .empty { color: var(--muted); padding: 10px 12px; }
+  @media (max-width: 420px) { .card { width: 190px; } .sponsor { white-space: normal; } }
+</style>
+</head>
+<body>
+  <div class="top">
+    <div style="min-width:0">
+      <div class="title">Local Hub <span>Latest</span></div>
+      <div class="sponsor">Brought to you by <b>St. Clair College Alumni</b></div>
+    </div>
+    <a class="more" id="more" target="_top" href="https://www.powerplaywindsor.com/">All stories &rarr;</a>
+  </div>
+  <div class="strip" id="strip"><div class="empty">Loading…</div></div>
+<script>
+(function () {
+  var URL = 'https://bbellacicco.github.io/powerplay-feed/data/local-news.json';
+  var qs = new URLSearchParams(location.search);
+  var N = Math.max(3, Math.min(20, parseInt(qs.get('n'), 10) || 10));
+  if (qs.get('link')) document.getElementById('more').href = qs.get('link');
+
+  var LABEL = { powerplay: 'Powerplay', spitfires: 'Spitfires', lancers: 'Lancers', saints: 'Saints', junior: 'Junior Hockey' };
+  var TILE = { powerplay: 'POWERPLAY', spitfires: 'SPITFIRES', lancers: 'LANCERS', saints: 'SAINTS' };
+  var GENERIC_IMG = /(1920x1080-|game-story|placeholder)/i;   // same rule as the Local Hub
+
+  function el(t, c, x) { var e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; }
+  function ago(iso) {
+    var t = new Date(iso).getTime(); if (!t) return '';
+    var m = Math.round((Date.now() - t) / 60000);
+    if (m < 60) return Math.max(m, 1) + ' min ago';
+    var h = Math.round(m / 60); if (h < 24) return h + (h === 1 ? ' hour ago' : ' hours ago');
+    var d = Math.round(h / 24); if (d < 7) return d + (d === 1 ? ' day ago' : ' days ago');
+    return new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Toronto', month: 'short', day: 'numeric' }).format(new Date(t));
+  }
+  function tile(s) {
+    var t = el('div', 'tile tt-' + s.team);
+    t.appendChild(el('small', null, s.video ? 'VIDEO' : 'NEWS'));
+    var name = TILE[s.team] || (s.club || '').replace(/^(Windsor|St\. Clair)\s+/, '').toUpperCase();
+    var n = el('div', null, name); n.style.fontSize = name.length > 11 ? '13px' : '17px';
+    t.appendChild(n);
+    return t;
+  }
+
+  var timer;
+  function load() {
+    fetch(URL + '?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { if (!r.ok) throw r.status; return r.json(); })
+      .then(function (j) { show((j.stories || []).filter(function (s) { return s.url && s.headline && LABEL[s.team]; })); })
+      .catch(function () { var b = document.getElementById('strip'); b.innerHTML = ''; b.appendChild(el('div', 'empty', 'Stories unavailable right now.')); });
+    clearTimeout(timer); timer = setTimeout(load, 5 * 60000);
+  }
+
+  function show(list) {
+    list.sort(function (a, b) { return new Date(b.published).getTime() - new Date(a.published).getTime(); });
+    list = list.slice(0, N);
+    var box = document.getElementById('strip'); box.innerHTML = '';
+    if (!list.length) { box.appendChild(el('div', 'empty', 'No new stories yet.')); return; }
+    list.forEach(function (s) {
+      var a = el('a', 'card t-' + s.team); a.href = s.url; a.target = '_blank'; a.rel = 'noopener';
+      var th = el('div', 'thumb');
+      if (s.image && !GENERIC_IMG.test(s.image)) {
+        var img = new Image(); img.src = s.image; img.alt = ''; img.loading = 'lazy';
+        img.onerror = function () { th.replaceChild(tile(s), img); };
+        th.appendChild(img);
+      } else th.appendChild(tile(s));
+      if (s.video) th.appendChild(el('div', 'play'));
+      a.appendChild(th);
+      var body = el('div', 'body'), meta = el('div', 'meta');
+      var who = s.team === 'junior' || s.team === 'powerplay' ? s.club || LABEL[s.team] : LABEL[s.team];
+      meta.appendChild(el('b', null, who)); meta.appendChild(document.createTextNode(' · ' + ago(s.published)));
+      body.appendChild(meta);
+      body.appendChild(el('div', 'hl', s.headline));
+      a.appendChild(body);
+      box.appendChild(a);
+    });
+  }
+  load();
+})();
+</script>
+</body>
+</html>
