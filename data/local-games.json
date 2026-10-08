@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-07T21:16:55-04:00",
+ "updated": "2026-10-07T21:32:00-04:00",
  "today": "2026-10-07",
  "range": [
   "2026-10-04",
@@ -363,10 +363,10 @@
    "home_away": "H",
    "opponent": "Walpole Island Wild",
    "location": "Wheatley Area Arena",
-   "status": "live",
-   "our_score": 0,
-   "opp_score": 0,
-   "result": null,
+   "status": "final",
+   "our_score": 6,
+   "opp_score": 2,
+   "result": "W",
    "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960295?configuration=45"
@@ -2391,7 +2391,7 @@
    "league": "mlb",
    "headline": "Watch Tigers prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-07T00:29-04:00",
+   "published": "2026-10-07T21:21-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -2521,7 +2521,7 @@
    "league": "mlb",
    "headline": "Watch Blue Jays prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-07T00:29-04:00",
+   "published": "2026-10-07T21:21-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -2960,7 +2960,7 @@
       "l": 2,
       "otl": 0,
       "pts": 6,
-      "gf": 24,
+      "gf": 25,
       "ga": 18,
       "strk": "W1"
      },
@@ -3014,7 +3014,7 @@
       "otl": 0,
       "pts": 8,
       "gf": 23,
-      "ga": 25,
+      "ga": 26,
       "strk": "L1"
      },
      {
@@ -3188,7 +3188,7 @@
       "l": 8,
       "otl": 1,
       "pts": 3,
-      "gf": 22,
+      "gf": 23,
       "ga": 47,
       "strk": "L1"
      }
@@ -3326,7 +3326,7 @@
       "otl": 2,
       "pts": 8,
       "gf": 37,
-      "ga": 56,
+      "ga": 57,
       "strk": "L1"
      },
      {
@@ -3382,6 +3382,18 @@
       "pts": 12,
       "gf": 34,
       "ga": 20,
+      "strk": "W1"
+     },
+     {
+      "name": "London Nationals",
+      "abbr": "LON",
+      "gp": 9,
+      "w": 4,
+      "l": 4,
+      "otl": 1,
+      "pts": 9,
+      "gf": 33,
+      "ga": 38,
       "strk": "W1"
      },
      {
@@ -3443,18 +3455,6 @@
       "gf": 30,
       "ga": 40,
       "strk": "L2"
-     },
-     {
-      "name": "London Nationals",
-      "abbr": "LON",
-      "gp": 8,
-      "w": 3,
-      "l": 4,
-      "otl": 1,
-      "pts": 7,
-      "gf": 33,
-      "ga": 38,
-      "strk": "L1"
      },
      {
       "name": "Stratford Warriors",
@@ -3608,14 +3608,14 @@
      {
       "name": "Hamilton Steel",
       "abbr": "HAM",
-      "gp": 9,
+      "gp": 10,
       "w": 0,
-      "l": 6,
+      "l": 7,
       "otl": 3,
       "pts": 3,
       "gf": 23,
       "ga": 44,
-      "strk": "L6"
+      "strk": "L7"
      },
      {
       "name": "Brantford Titans",
@@ -3848,6 +3848,18 @@
       "strk": "W2"
      },
      {
+      "name": "Wheatley Sharks",
+      "abbr": "WHE",
+      "gp": 12,
+      "w": 6,
+      "l": 6,
+      "otl": 0,
+      "pts": 12,
+      "gf": 39,
+      "ga": 36,
+      "strk": "W3"
+     },
+     {
       "name": "Mooretown Flags",
       "abbr": "MOO",
       "gp": 12,
@@ -3857,18 +3869,6 @@
       "pts": 11,
       "gf": 41,
       "ga": 40,
-      "strk": "W2"
-     },
-     {
-      "name": "Wheatley Sharks",
-      "abbr": "WHE",
-      "gp": 11,
-      "w": 5,
-      "l": 6,
-      "otl": 0,
-      "pts": 10,
-      "gf": 33,
-      "ga": 34,
       "strk": "W2"
      },
      {
@@ -3886,14 +3886,14 @@
      {
       "name": "Walpole Island Wild",
       "abbr": "WAL",
-      "gp": 10,
+      "gp": 11,
       "w": 0,
-      "l": 10,
+      "l": 11,
       "otl": 0,
       "pts": 0,
-      "gf": 10,
-      "ga": 59,
-      "strk": "L10"
+      "gf": 12,
+      "ga": 65,
+      "strk": "L11"
      }
     ]
    }
