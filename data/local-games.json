@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-07T21:01:51-04:00",
+ "updated": "2026-10-07T21:16:55-04:00",
  "today": "2026-10-07",
  "range": [
   "2026-10-04",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 32
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -344,11 +344,11 @@
    "home_away": "H",
    "opponent": "St. Marys Lincolns",
    "location": "Vollmer Culture R.C., LaSalle, ON",
-   "status": "live",
+   "status": "final",
    "our_score": 0,
    "opp_score": 5,
-   "result": null,
-   "note": "05:50 3rd",
+   "result": "L",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15552"
    },
@@ -1508,6 +1508,19 @@
   }
  ],
  "more_news": [
+  {
+   "league": "mlb",
+   "headline": "Dodgers punch ticket back to NLCS with Game 4 win over Braves",
+   "summary": "",
+   "published": "2026-10-07T21:04-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177051629.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/dodgers-punch-ticket-back-to-nlcs-with-game-4-win-over-braves/",
+   "source": "Sportsnet"
+  },
   {
    "league": "nba",
    "headline": "Why Raptors acquired Kyle Anderson, and where he sees himself fitting in",
@@ -2947,8 +2960,8 @@
       "l": 2,
       "otl": 0,
       "pts": 6,
-      "gf": 22,
-      "ga": 17,
+      "gf": 24,
+      "ga": 18,
       "strk": "W1"
      },
      {
@@ -3000,8 +3013,8 @@
       "l": 3,
       "otl": 0,
       "pts": 8,
-      "gf": 22,
-      "ga": 23,
+      "gf": 23,
+      "ga": 25,
       "strk": "L1"
      },
      {
@@ -3098,14 +3111,14 @@
      {
       "name": "St. Michaels Buzzers",
       "abbr": "STM",
-      "gp": 10,
+      "gp": 11,
       "w": 5,
-      "l": 4,
+      "l": 5,
       "otl": 1,
       "pts": 11,
       "gf": 33,
-      "ga": 48,
-      "strk": "L2"
+      "ga": 49,
+      "strk": "L3"
      },
      {
       "name": "Stouffville Spirit",
@@ -3319,14 +3332,14 @@
      {
       "name": "Buffalo Jr. Sabres",
       "abbr": "BUF",
-      "gp": 11,
-      "w": 2,
+      "gp": 12,
+      "w": 3,
       "l": 9,
       "otl": 0,
-      "pts": 4,
-      "gf": 25,
+      "pts": 6,
+      "gf": 26,
       "ga": 52,
-      "strk": "L4"
+      "strk": "W1"
      }
     ]
    }
@@ -3338,14 +3351,14 @@
      {
       "name": "St. Marys Lincolns",
       "abbr": "SMY",
-      "gp": 8,
-      "w": 7,
+      "gp": 9,
+      "w": 8,
       "l": 1,
       "otl": 0,
-      "pts": 14,
+      "pts": 16,
       "gf": 51,
       "ga": 22,
-      "strk": "W5"
+      "strk": "W6"
      },
      {
       "name": "St. Thomas Stars",
@@ -3372,18 +3385,6 @@
       "strk": "W1"
      },
      {
-      "name": "LaSalle Vipers",
-      "abbr": "LAS",
-      "gp": 7,
-      "w": 4,
-      "l": 3,
-      "otl": 0,
-      "pts": 8,
-      "gf": 24,
-      "ga": 33,
-      "strk": "W2"
-     },
-     {
       "name": "Listowel Cyclones",
       "abbr": "LIS",
       "gp": 7,
@@ -3406,6 +3407,18 @@
       "gf": 32,
       "ga": 34,
       "strk": "L3"
+     },
+     {
+      "name": "LaSalle Vipers",
+      "abbr": "LAS",
+      "gp": 8,
+      "w": 4,
+      "l": 4,
+      "otl": 0,
+      "pts": 8,
+      "gf": 24,
+      "ga": 33,
+      "strk": "L1"
      },
      {
       "name": "Woodstock Navy Vets",
