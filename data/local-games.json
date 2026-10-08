@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-07T21:32:00-04:00",
+ "updated": "2026-10-07T21:47:45-04:00",
  "today": "2026-10-07",
  "range": [
   "2026-10-04",
@@ -1551,19 +1551,6 @@
   },
   {
    "league": "nhl",
-   "headline": "How newfound stability is helping Flames’ Wolf keep perspective",
-   "summary": "Dustin Wolf was supposed to take a step forward this season, but instead is off to an ugly start. He isn’t hiding from any of it, writes Eric Francis.",
-   "published": "2026-10-07T16:23-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Wolf.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/how-newfound-stability-is-helping-flames-wolf-keep-perspective/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "What’s working and what needs work? Early positives, concerns for Maple Leafs",
    "summary": "In the early going, there are clear signs the Toronto Maple Leafs have got far more to work with than they did last season. So, how’s it look? Justin Bourne breaks it all down.",
    "published": "2026-10-07T13:50-04:00",
@@ -1575,6 +1562,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/whats-working-and-what-needs-work-early-positives-concerns-for-maple-leafs/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Jets’ Josh Morrissey exits vs. Avalanche with upper-body injury",
+   "summary": "",
+   "published": "2026-10-07T21:38-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/12/CP175170664-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/jets-josh-morrissey-exits-vs-avalanche-with-upper-body-injury/",
    "source": "Sportsnet"
   },
   {
@@ -1640,19 +1640,6 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/soccer/article/brooklyn-courtnall-added-to-roster-ahead-of-matches-vs-denmark/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Padres’ Mason Miller returns from paternity list for Game 4",
-   "summary": "",
-   "published": "2026-10-07T17:21-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177032823.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/padres-mason-miller-expected-to-return-from-paternity-list-for-game-4/",
    "source": "Sportsnet"
   },
   {
@@ -1774,6 +1761,19 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/nhls-romance-themed-audiobooks-disappear-after-opening-week-of-season/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Padres’ Mason Miller returns from paternity list for Game 4",
+   "summary": "",
+   "published": "2026-10-07T17:21-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177032823.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/padres-mason-miller-expected-to-return-from-paternity-list-for-game-4/",
    "source": "Sportsnet"
   },
   {
@@ -2941,6 +2941,18 @@
       "strk": "W1"
      },
      {
+      "name": "Flint Firebirds",
+      "abbr": "FLNT",
+      "gp": 6,
+      "w": 4,
+      "l": 2,
+      "otl": 0,
+      "pts": 8,
+      "gf": 25,
+      "ga": 18,
+      "strk": "W2"
+     },
+     {
       "name": "Windsor Spitfires",
       "abbr": "WSR",
       "gp": 7,
@@ -2950,18 +2962,6 @@
       "pts": 7,
       "gf": 21,
       "ga": 23,
-      "strk": "W1"
-     },
-     {
-      "name": "Flint Firebirds",
-      "abbr": "FLNT",
-      "gp": 5,
-      "w": 3,
-      "l": 2,
-      "otl": 0,
-      "pts": 6,
-      "gf": 25,
-      "ga": 18,
       "strk": "W1"
      },
      {
@@ -3008,14 +3008,14 @@
      {
       "name": "Kitchener Rangers",
       "abbr": "KIT",
-      "gp": 7,
+      "gp": 8,
       "w": 4,
-      "l": 3,
+      "l": 4,
       "otl": 0,
       "pts": 8,
       "gf": 23,
       "ga": 26,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Erie Otters",
@@ -3188,7 +3188,7 @@
       "l": 8,
       "otl": 1,
       "pts": 3,
-      "gf": 23,
+      "gf": 25,
       "ga": 47,
       "strk": "L1"
      }
@@ -3326,7 +3326,7 @@
       "otl": 2,
       "pts": 8,
       "gf": 37,
-      "ga": 57,
+      "ga": 59,
       "strk": "L1"
      },
      {
@@ -3392,7 +3392,7 @@
       "l": 4,
       "otl": 1,
       "pts": 9,
-      "gf": 33,
+      "gf": 34,
       "ga": 38,
       "strk": "W1"
      },
@@ -3614,7 +3614,7 @@
       "otl": 3,
       "pts": 3,
       "gf": 23,
-      "ga": 44,
+      "ga": 45,
       "strk": "L7"
      },
      {
