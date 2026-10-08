@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-08T19:30:01-04:00",
+ "updated": "2026-10-08T19:45:01-04:00",
  "today": "2026-10-08",
  "games": [
   {
@@ -891,9 +891,9 @@
    "home_away": "N",
    "opponent": "Massey",
    "location": "Massey",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "final",
+   "our_score": 2,
+   "opp_score": 1,
    "result": null,
    "note": "Tier 1",
    "links": {
@@ -1131,9 +1131,9 @@
    "home_away": "N",
    "opponent": "Erie Migration",
    "location": "Erie Migration",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "final",
+   "our_score": 34,
+   "opp_score": 43,
    "result": null,
    "note": "Tier 2",
    "links": {
@@ -1191,6 +1191,26 @@
    "home_away": "N",
    "opponent": "L'Essor",
    "location": "Sandwich",
+   "status": "final",
+   "our_score": 21,
+   "opp_score": 6,
+   "result": null,
+   "note": "",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Belle River",
+   "home": "L'Essor"
+  },
+  {
+   "id": "highschool-2026-10-08-84",
+   "team": "highschool",
+   "sport": "Senior Boys Football",
+   "start": "2026-10-08T00:00:00-04:00",
+   "time_tbd": true,
+   "home_away": "N",
+   "opponent": "Sandwich",
+   "location": "Sandwich",
    "status": "upcoming",
    "our_score": null,
    "opp_score": null,
@@ -1199,8 +1219,8 @@
    "links": {
     "standings": "https://wecssaa.com/viewScores.php"
    },
-   "away": "Belle River",
-   "home": "L'Essor"
+   "away": "Herman",
+   "home": "Sandwich"
   },
   {
    "id": "highschool-2026-10-08-55",
@@ -1531,9 +1551,9 @@
    "home_away": "N",
    "opponent": "Belle River",
    "location": "Belle River",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "final",
+   "our_score": 50,
+   "opp_score": 47,
    "result": null,
    "note": "Tier 2",
    "links": {
@@ -1681,26 +1701,6 @@
    },
    "away": "Essex",
    "home": "Tecumseh Vista Academy"
-  },
-  {
-   "id": "highschool-2026-10-08-84",
-   "team": "highschool",
-   "sport": "Senior Boys Football",
-   "start": "2026-10-08T19:30:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Sandwich",
-   "location": "Sandwich",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Herman",
-   "home": "Sandwich"
   },
   {
    "id": "highschool-2026-10-09-85",
