@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-09T19:01:36-04:00",
+ "updated": "2026-10-09T19:17:03-04:00",
  "today": "2026-10-09",
  "range": [
   "2026-10-06",
@@ -317,11 +317,11 @@
    "home_away": "A",
    "opponent": "Cobourg Cougars",
    "location": "Cobourg Community Centre, Cobourg, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
-   "note": "",
+   "note": "11:28 1st",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16562"
    },
@@ -1421,19 +1421,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Five ways the early NHL season is altering pre-season predictions",
-   "summary": "Pre-season predictions help us set baseline expectations for teams and players around the NHL. But Justin Bourne writes how the first handful of games are changing his perception of these five things.",
-   "published": "2026-10-09T13:02-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/New-York-Rangers-defenseman-Sean-Durzi-center-celebrates-with-right-wing-Oliver-Bjorkstrand-28-and-right-wing-Eeli-Tolvanen-17.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/five-ways-the-early-nhl-season-is-altering-pre-season-predictions/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Injury to Canadiens’ Montembeault tough blow in quest for redemption",
    "summary": "Samuel Montembeault’s redemption tour has been postponed. As Eric Engels writes, after working so hard to earn this opportunity, now the goalie must dust off the pickaxes again just to grind his way back up to the surfac",
    "published": "2026-10-09T12:52-04:00",
@@ -1443,6 +1430,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/injury-to-canadiens-montembeault-tough-blow-in-quest-for-redemption/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Oilers Notebook: Healthy Hallander eager to make most of fresh start",
+   "summary": "Filip Hallander arrived at Oilers practice on Friday, looking forward to a new start in a new town with a new team.",
+   "published": "2026-10-09T18:56-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP175195760.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/oilers-notebook-healthy-hallander-eager-to-make-most-of-fresh-start/",
    "source": "Sportsnet"
   },
   {
@@ -1583,28 +1583,15 @@
   },
   {
    "league": "nhl",
-   "headline": "Jets’ Josh Morrissey day-to-day with upper-body injury",
-   "summary": "",
-   "published": "2026-10-09T12:29-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/02/CP216108862.jpg",
+   "headline": "Five ways the early NHL season is altering pre-season predictions",
+   "summary": "Pre-season predictions help us set baseline expectations for teams and players around the NHL. But Justin Bourne writes how the first handful of games are changing his perception of these five things.",
+   "published": "2026-10-09T13:02-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/New-York-Rangers-defenseman-Sean-Durzi-center-celebrates-with-right-wing-Oliver-Bjorkstrand-28-and-right-wing-Eeli-Tolvanen-17.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
+   "sn_team_count": 0,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/jets-josh-morrissey-day-to-day-with-upper-body-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Panthers’ Brad Marchand to miss six weeks with injury",
-   "summary": "",
-   "published": "2026-10-09T12:55-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/06/Florida-Panthers-Brad-Marchand.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/panthers-brad-marchand-to-miss-six-weeks-with-injury/",
+   "url": "https://www.sportsnet.ca/nhl/article/five-ways-the-early-nhl-season-is-altering-pre-season-predictions/",
    "source": "Sportsnet"
   },
   {
@@ -1631,6 +1618,32 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/tkachuk-less-senators-showcasing-many-promising-signs/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Jets’ Josh Morrissey day-to-day with upper-body injury",
+   "summary": "",
+   "published": "2026-10-09T12:29-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/02/CP216108862.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/jets-josh-morrissey-day-to-day-with-upper-body-injury/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Panthers’ Brad Marchand to miss six weeks with injury",
+   "summary": "",
+   "published": "2026-10-09T12:55-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/06/Florida-Panthers-Brad-Marchand.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/panthers-brad-marchand-to-miss-six-weeks-with-injury/",
    "source": "Sportsnet"
   },
   {
@@ -1878,19 +1891,6 @@
    "sn_team_count": 0,
    "sport": "Auto Racing",
    "url": "https://www.sportsnet.ca/formula-1/article/wolff-slams-brainless-claims-team-would-favour-antonelli-over-russell/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Mertens beats Swiatek to set up semifinal against Zheng Qinwen at China Open",
-   "summary": "",
-   "published": "2026-10-09T12:11-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/mertens.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Tennis",
-   "url": "https://www.sportsnet.ca/wta/article/mertens-beats-swiatek-to-set-up-semifinal-against-zheng-qinwen-at-china-open/",
    "source": "Sportsnet"
   },
   {
@@ -3052,7 +3052,7 @@
       "l": 7,
       "otl": 1,
       "pts": 11,
-      "gf": 38,
+      "gf": 39,
       "ga": 38,
       "strk": "W1"
      },
@@ -3065,7 +3065,7 @@
       "otl": 1,
       "pts": 11,
       "gf": 33,
-      "ga": 49,
+      "ga": 50,
       "strk": "L3"
      },
      {
@@ -3250,7 +3250,7 @@
       "otl": 0,
       "pts": 10,
       "gf": 40,
-      "ga": 56,
+      "ga": 58,
       "strk": "L1"
      },
      {
@@ -3261,7 +3261,7 @@
       "l": 9,
       "otl": 2,
       "pts": 10,
-      "gf": 41,
+      "gf": 43,
       "ga": 63,
       "strk": "W2"
      },
@@ -3465,7 +3465,7 @@
       "l": 1,
       "otl": 0,
       "pts": 16,
-      "gf": 46,
+      "gf": 47,
       "ga": 19,
       "strk": "W5"
      },
@@ -3526,7 +3526,7 @@
       "otl": 0,
       "pts": 10,
       "gf": 36,
-      "ga": 33,
+      "ga": 34,
       "strk": "L2"
      },
      {
