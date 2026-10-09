@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-08T20:46:37-04:00",
+ "updated": "2026-10-08T21:01:36-04:00",
  "today": "2026-10-08",
  "range": [
   "2026-10-05",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -249,11 +249,11 @@
    "home_away": "H",
    "opponent": "Sarnia Legionnaires",
    "location": "Chatham Memorial Arena, Chatham, ON",
-   "status": "live",
+   "status": "final",
    "our_score": 7,
    "opp_score": 0,
-   "result": null,
-   "note": "02:26 3rd",
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15555"
    },
@@ -1079,8 +1079,8 @@
    "league": "pwhl",
    "headline": "PWHL Expansion Teams Detroit, Hamilton, Las Vegas, & San Jose Unveil Inaugural Jerseys Ahead of 2026-27 Season",
    "summary": "",
-   "published": "2026-10-08T12:00:00+00:00",
-   "image": "https://res.cloudinary.com/pwhl-low/image/upload/c_auto,g_auto,h_800,w_1188/q_auto/f_auto/ExpansionJersey-PressReleaseHeadersLeague-PressReleaseHeader-1200x800-ENG",
+   "published": "2026-10-08T14:00:00+00:00",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/ExpansionJersey-PressReleaseHeadersLeague-PressReleaseHeader-1200x800-ENG",
    "video": false,
    "teams": [],
    "url": "https://www.thepwhl.com/en/news/2026/october/08/pwhl-expansion-teams-detroit-hamilton-las-vegas-san-jose-unveil-inaugural-jerseys-ahead-of-2026-27-season",
@@ -1803,21 +1803,6 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/pwhl/article/pwhl-reveals-expansion-team-jerseys-and-colours/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "What’s working and what needs work? Early positives, concerns for Maple Leafs",
-   "summary": "In the early going, there are clear signs the Toronto Maple Leafs have got far more to work with than they did last season. So, how’s it look? Justin Bourne breaks it all down.",
-   "published": "2026-10-07T13:50-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-14.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/whats-working-and-what-needs-work-early-positives-concerns-for-maple-leafs/",
    "source": "Sportsnet"
   },
   {
@@ -2681,7 +2666,7 @@
       "l": 1,
       "otl": 1,
       "pts": 7,
-      "gf": 21,
+      "gf": 22,
       "ga": 19,
       "strk": "W2"
      },
@@ -2734,7 +2719,7 @@
       "l": 0,
       "otl": 0,
       "pts": 10,
-      "gf": 25,
+      "gf": 27,
       "ga": 8,
       "strk": "W5"
      },
@@ -2747,7 +2732,7 @@
       "otl": 0,
       "pts": 6,
       "gf": 17,
-      "ga": 19,
+      "ga": 20,
       "strk": "L1"
      },
      {
@@ -2759,7 +2744,7 @@
       "otl": 0,
       "pts": 4,
       "gf": 21,
-      "ga": 29,
+      "ga": 31,
       "strk": "L4"
      },
      {
@@ -3236,6 +3221,18 @@
       "strk": "W6"
      },
      {
+      "name": "Chatham Maroons",
+      "abbr": "CHA",
+      "gp": 8,
+      "w": 7,
+      "l": 1,
+      "otl": 0,
+      "pts": 14,
+      "gf": 41,
+      "ga": 20,
+      "strk": "W2"
+     },
+     {
       "name": "St. Thomas Stars",
       "abbr": "STT",
       "gp": 8,
@@ -3246,18 +3243,6 @@
       "gf": 32,
       "ga": 16,
       "strk": "W2"
-     },
-     {
-      "name": "Chatham Maroons",
-      "abbr": "CHA",
-      "gp": 7,
-      "w": 6,
-      "l": 1,
-      "otl": 0,
-      "pts": 12,
-      "gf": 41,
-      "ga": 20,
-      "strk": "W1"
      },
      {
       "name": "London Nationals",
@@ -3358,14 +3343,14 @@
      {
       "name": "Sarnia Legionnaires",
       "abbr": "SAR",
-      "gp": 5,
+      "gp": 6,
       "w": 0,
-      "l": 5,
+      "l": 6,
       "otl": 0,
       "pts": 0,
       "gf": 12,
       "ga": 34,
-      "strk": "L5"
+      "strk": "L6"
      }
     ]
    },
@@ -3404,7 +3389,7 @@
       "l": 0,
       "otl": 0,
       "pts": 14,
-      "gf": 42,
+      "gf": 43,
       "ga": 24,
       "strk": "W7"
      },
@@ -3441,7 +3426,7 @@
       "otl": 1,
       "pts": 11,
       "gf": 28,
-      "ga": 23,
+      "ga": 24,
       "strk": "W5"
      },
      {
@@ -3464,7 +3449,7 @@
       "l": 3,
       "otl": 0,
       "pts": 6,
-      "gf": 28,
+      "gf": 30,
       "ga": 33,
       "strk": "W1"
      },
@@ -3489,7 +3474,7 @@
       "otl": 3,
       "pts": 3,
       "gf": 25,
-      "ga": 48,
+      "ga": 50,
       "strk": "L7"
      },
      {
