@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-08T21:01:36-04:00",
+ "updated": "2026-10-08T21:16:59-04:00",
  "today": "2026-10-08",
  "range": [
   "2026-10-05",
@@ -1079,8 +1079,8 @@
    "league": "pwhl",
    "headline": "PWHL Expansion Teams Detroit, Hamilton, Las Vegas, & San Jose Unveil Inaugural Jerseys Ahead of 2026-27 Season",
    "summary": "",
-   "published": "2026-10-08T14:00:00+00:00",
-   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/ExpansionJersey-PressReleaseHeadersLeague-PressReleaseHeader-1200x800-ENG",
+   "published": "2026-10-08T12:00:00+00:00",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/c_auto,g_auto,h_800,w_1188/q_auto/f_auto/ExpansionJersey-PressReleaseHeadersLeague-PressReleaseHeader-1200x800-ENG",
    "video": false,
    "teams": [],
    "url": "https://www.thepwhl.com/en/news/2026/october/08/pwhl-expansion-teams-detroit-hamilton-las-vegas-san-jose-unveil-inaugural-jerseys-ahead-of-2026-27-season",
@@ -1444,7 +1444,7 @@
    "headline": "LeBron James makes 76ers debut in pre-season game vs. Nets",
    "summary": "LeBron James is playing for the first time with the Philadelphia 76ers, getting started on the expected final stop in his NBA career.",
    "published": "2026-10-08T19:24-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/LeBron-James.jpg",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Lebron-James-1.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 1,
@@ -2171,6 +2171,19 @@
   },
   {
    "league": "mlb",
+   "headline": "Watch top prospects in Arizona Fall League action",
+   "summary": "",
+   "published": "2026-10-08T20:35-04:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
+   "video": false,
+   "teams": [
+    "Detroit Tigers"
+   ],
+   "url": "https://www.mlb.com/tigers/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
    "headline": "Here are each organization's Prospects of the Year",
    "summary": "",
    "published": "2026-10-07T22:21-04:00",
@@ -2180,19 +2193,6 @@
     "Detroit Tigers"
    ],
    "url": "https://www.mlb.com/tigers/news/each-team-s-prospects-of-the-year-2026",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
-   "headline": "McGonigle lands on Pipeline’s All-Rookie Team",
-   "summary": "",
-   "published": "2026-10-06T19:30-04:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/slv3prhwdvhfwoh6yviq",
-   "video": false,
-   "teams": [
-    "Detroit Tigers"
-   ],
-   "url": "https://www.mlb.com/tigers/news/2026-mlb-all-rookie-team",
    "source": "Team site"
   },
   {
@@ -2210,15 +2210,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Watch top prospects in Arizona Fall League action",
+   "headline": "McGonigle lands on Pipeline’s All-Rookie Team",
    "summary": "",
-   "published": "2026-10-08T20:35-04:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
+   "published": "2026-10-06T19:30-04:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/slv3prhwdvhfwoh6yviq",
    "video": false,
    "teams": [
     "Detroit Tigers"
    ],
-   "url": "https://www.mlb.com/tigers/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
+   "url": "https://www.mlb.com/tigers/news/2026-mlb-all-rookie-team",
    "source": "Team site"
   },
   {
@@ -2690,7 +2690,7 @@
       "l": 4,
       "otl": 0,
       "pts": 6,
-      "gf": 34,
+      "gf": 36,
       "ga": 41,
       "strk": "L1"
      },
@@ -2756,7 +2756,7 @@
       "otl": 1,
       "pts": 3,
       "gf": 15,
-      "ga": 26,
+      "ga": 28,
       "strk": "W1"
      },
      {
@@ -3358,6 +3358,18 @@
     "group": "Eastern Conference",
     "teams": [
      {
+      "name": "Fort Erie Meteors",
+      "abbr": "FEM",
+      "gp": 8,
+      "w": 8,
+      "l": 0,
+      "otl": 0,
+      "pts": 16,
+      "gf": 44,
+      "ga": 24,
+      "strk": "W8"
+     },
+     {
       "name": "St. Catharines Falcons",
       "abbr": "SCF",
       "gp": 9,
@@ -3380,18 +3392,6 @@
       "gf": 36,
       "ga": 21,
       "strk": "W4"
-     },
-     {
-      "name": "Fort Erie Meteors",
-      "abbr": "FEM",
-      "gp": 7,
-      "w": 7,
-      "l": 0,
-      "otl": 0,
-      "pts": 14,
-      "gf": 43,
-      "ga": 24,
-      "strk": "W7"
      },
      {
       "name": "Cambridge Redhawks",
@@ -3420,14 +3420,14 @@
      {
       "name": "Ayr Centennials",
       "abbr": "AYR",
-      "gp": 7,
+      "gp": 8,
       "w": 5,
-      "l": 1,
+      "l": 2,
       "otl": 1,
       "pts": 11,
       "gf": 28,
-      "ga": 24,
-      "strk": "W5"
+      "ga": 25,
+      "strk": "L1"
      },
      {
       "name": "Pelham Panthers",
@@ -3449,7 +3449,7 @@
       "l": 3,
       "otl": 0,
       "pts": 6,
-      "gf": 30,
+      "gf": 32,
       "ga": 33,
       "strk": "W1"
      },
@@ -3474,7 +3474,7 @@
       "otl": 3,
       "pts": 3,
       "gf": 25,
-      "ga": 50,
+      "ga": 52,
       "strk": "L7"
      },
      {
