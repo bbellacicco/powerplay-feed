@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-09T15:00:01-04:00",
+ "updated": "2026-10-09T15:15:01-04:00",
  "today": "2026-10-09",
  "games": [
   {
@@ -39,6 +39,22 @@
    }
   },
   {
+   "id": "saints-presto2026-10-09-1",
+   "team": "saints",
+   "sport": "Women's Volleyball",
+   "start": "2026-10-09T00:00:00-04:00",
+   "time_tbd": true,
+   "home_away": "H",
+   "opponent": "Trent University",
+   "location": "",
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 1,
+   "result": "W",
+   "note": "St. Clair/ University of Windsor Invitational",
+   "links": {}
+  },
+  {
    "id": "saints-presto2026-10-09-0",
    "team": "saints",
    "sport": "Fastball",
@@ -57,7 +73,7 @@
    }
   },
   {
-   "id": "saints-presto2026-10-09-1",
+   "id": "saints-presto2026-10-09-2",
    "team": "saints",
    "sport": "Women's Soccer",
    "start": "2026-10-09T13:00:00-04:00",
@@ -65,17 +81,17 @@
    "home_away": "A",
    "opponent": "Sheridan",
    "location": "",
-   "status": "live",
+   "status": "final",
    "our_score": 11,
    "opp_score": 0,
-   "result": null,
-   "note": "2nd half - 73:53",
+   "result": "W",
+   "note": "",
    "links": {
     "boxscore": "https://www.saintsathletics.ca/sports/wsoc/2026-27/boxscores/20261009_1zva.xml"
    }
   },
   {
-   "id": "saints-presto2026-10-09-2",
+   "id": "saints-presto2026-10-09-3",
    "team": "saints",
    "sport": "Men's Soccer",
    "start": "2026-10-09T15:15:00-04:00",
@@ -83,15 +99,17 @@
    "home_away": "A",
    "opponent": "Sheridan",
    "location": "",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
-   "note": "",
-   "links": {}
+   "note": "1st half - 00:00",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/msoc/2026-27/boxscores/20261009_2kr9.xml"
+   }
   },
   {
-   "id": "saints-presto2026-10-09-3",
+   "id": "saints-presto2026-10-09-4",
    "team": "saints",
    "sport": "Fastball",
    "start": "2026-10-09T17:00:00-04:00",
@@ -109,7 +127,7 @@
    }
   },
   {
-   "id": "saints-presto2026-10-09-4",
+   "id": "saints-presto2026-10-09-5",
    "team": "saints",
    "sport": "Women's Volleyball",
    "start": "2026-10-09T18:00:00-04:00",
@@ -121,11 +139,11 @@
    "our_score": null,
    "opp_score": null,
    "result": null,
-   "note": "Exhibition · University of Windsor",
+   "note": "Exhibition · St. Clair/ University of Windsor Invitational",
    "links": {}
   },
   {
-   "id": "saints-presto2026-10-09-5",
+   "id": "saints-presto2026-10-09-6",
    "team": "saints",
    "sport": "Baseball",
    "start": "2026-10-09T19:00:00-04:00",
@@ -161,6 +179,22 @@
   {
    "id": "saints-presto2026-10-10-1",
    "team": "saints",
+   "sport": "Women's Volleyball",
+   "start": "2026-10-10T11:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "University of Windsor",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "St. Clair/ University of Windsor Invitational",
+   "links": {}
+  },
+  {
+   "id": "saints-presto2026-10-10-2",
+   "team": "saints",
    "sport": "Baseball",
    "start": "2026-10-10T13:00:00-04:00",
    "time_tbd": false,
@@ -177,7 +211,7 @@
    }
   },
   {
-   "id": "saints-presto2026-10-10-2",
+   "id": "saints-presto2026-10-10-3",
    "team": "saints",
    "sport": "Women's Soccer",
    "start": "2026-10-10T14:00:00-04:00",
@@ -193,7 +227,7 @@
    "links": {}
   },
   {
-   "id": "saints-presto2026-10-10-3",
+   "id": "saints-presto2026-10-10-4",
    "team": "saints",
    "sport": "Baseball",
    "start": "2026-10-10T15:00:00-04:00",
@@ -211,7 +245,7 @@
    }
   },
   {
-   "id": "saints-presto2026-10-10-4",
+   "id": "saints-presto2026-10-10-5",
    "team": "saints",
    "sport": "Men's Soccer",
    "start": "2026-10-10T16:30:00-04:00",
