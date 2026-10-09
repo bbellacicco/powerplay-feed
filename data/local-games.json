@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-09T19:17:03-04:00",
+ "updated": "2026-10-09T19:31:36-04:00",
  "today": "2026-10-09",
  "range": [
   "2026-10-06",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 38
+   "count": 39
   },
   "club_news": {
    "ok": true,
@@ -318,10 +318,10 @@
    "opponent": "Cobourg Cougars",
    "location": "Cobourg Community Centre, Cobourg, ON",
    "status": "live",
-   "our_score": 0,
+   "our_score": 3,
    "opp_score": 0,
    "result": null,
-   "note": "11:28 1st",
+   "note": "02:20 1st",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16562"
    },
@@ -355,9 +355,9 @@
    "home_away": "A",
    "opponent": "Dresden Kings",
    "location": "Lambton-Kent Memorial Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
    "note": "",
    "links": {
@@ -1544,6 +1544,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Canadiens send Jayden Struble to Predators for second-round pick",
+   "summary": "",
+   "published": "2026-10-09T19:13-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/struble.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canadiens-send-jayden-struble-to-predators-for-second-round-pick/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Senators’ William Eklund out ‘extended’ period of time with ankle injury",
    "summary": "",
    "published": "2026-10-09T12:47-04:00",
@@ -1566,19 +1579,6 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/ravens-qb-lamar-jackson-out-vs-falcons/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Ismael Bonfim misses UFC Fight Night weight by 7.5 pounds",
-   "summary": "",
-   "published": "2026-10-09T14:55-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/bonfim_ismael1280.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/ismael-bonfim-misses-ufc-fight-night-weight-by-7-5-pounds/",
    "source": "Sportsnet"
   },
   {
@@ -1660,6 +1660,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "cfl",
+   "headline": "Around the CFL: Can Collaros get Blue Bombers back on track?",
+   "summary": "With the longest active playoff streak in the CFL in jeopardy, the Blue Bombers should get a big boost with the return of their most important player. Star QB Zach Collaros is back for a critical game against the visitin",
+   "published": "2026-10-09T10:33-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/10/collaros.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/around-the-cfl-can-collaros-get-blue-bombers-back-on-track/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "Tributes pour in for late Bears coach Mike Ditka: ‘Chicago won’t be the same’",
    "summary": "",
@@ -1686,16 +1699,29 @@
    "source": "Sportsnet"
   },
   {
-   "league": "cfl",
-   "headline": "Around the CFL: Can Collaros get Blue Bombers back on track?",
-   "summary": "With the longest active playoff streak in the CFL in jeopardy, the Blue Bombers should get a big boost with the return of their most important player. Star QB Zach Collaros is back for a critical game against the visitin",
-   "published": "2026-10-09T10:33-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/10/collaros.jpg",
+   "league": "mlb",
+   "headline": "MLB announces schedule for 2026 League Championship Series",
+   "summary": "",
+   "published": "2026-10-08T19:04-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/10/brewers-dodgers.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/around-the-cfl-can-collaros-get-blue-bombers-back-on-track/",
+   "sn_team_count": 5,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/mlb-announces-schedule-for-2026-league-championship-series/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Ohtani’s slumping bat not holding Dodgers back yet",
+   "summary": "Shohei Ohtani is scuffling at the plate, and so far the Los Angeles Dodgers superstar is coming up mostly empty in the post-season.",
+   "published": "2026-10-09T16:45-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Los-Angeles-Dodgers-two-way-player-Shohei-Ohtani.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/ohtanis-slumping-bat-not-holding-dodgers-back-yet/",
    "source": "Sportsnet"
   },
   {
@@ -1751,6 +1777,32 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Ismael Bonfim misses UFC Fight Night weight by 7.5 pounds",
+   "summary": "",
+   "published": "2026-10-09T14:55-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/bonfim_ismael1280.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "MMA",
+   "url": "https://www.sportsnet.ca/ufc/article/ismael-bonfim-misses-ufc-fight-night-weight-by-7-5-pounds/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "NFL Week 5 Pick ‘Em: Falcons look to stay hot against Ravens",
+   "summary": "We’re now one month into the NFL season, and teams are beginning to separate themselves from the pack. Evan Davidson runs down the Week 5 slate to help you make your picks.",
+   "published": "2026-10-08T11:33-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Falcons.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-5-pick-em-cowboys-look-to-dominate-bucs-in-primetime/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "Eagles stars Barkley and Smith ruled out of London game against Jaguars",
    "summary": "",
@@ -1761,32 +1813,6 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/eagles-stars-barkley-and-smith-ruled-out-of-london-game-against-jaguars/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Ohtani’s slumping bat not holding Dodgers back yet",
-   "summary": "Shohei Ohtani is scuffling at the plate, and so far the Los Angeles Dodgers superstar is coming up mostly empty in the post-season.",
-   "published": "2026-10-09T16:45-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Los-Angeles-Dodgers-two-way-player-Shohei-Ohtani.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/ohtanis-slumping-bat-not-holding-dodgers-back-yet/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "MLB announces schedule for 2026 League Championship Series",
-   "summary": "",
-   "published": "2026-10-08T19:04-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/10/brewers-dodgers.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 5,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/mlb-announces-schedule-for-2026-league-championship-series/",
    "source": "Sportsnet"
   },
   {
@@ -1813,19 +1839,6 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/jets-offence-will-be-without-breece-hall-adonai-mitchell-and-dylan-parham-vs-browns/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "NFL Week 5 Pick ‘Em: Falcons look to stay hot against Ravens",
-   "summary": "We’re now one month into the NFL season, and teams are beginning to separate themselves from the pack. Evan Davidson runs down the Week 5 slate to help you make your picks.",
-   "published": "2026-10-08T11:33-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Falcons.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-5-pick-em-cowboys-look-to-dominate-bucs-in-primetime/",
    "source": "Sportsnet"
   },
   {
@@ -2754,8 +2767,8 @@
       "l": 4,
       "otl": 0,
       "pts": 8,
-      "gf": 37,
-      "ga": 41,
+      "gf": 38,
+      "ga": 42,
       "strk": "W1"
      },
      {
@@ -2779,7 +2792,7 @@
       "otl": 0,
       "pts": 6,
       "gf": 18,
-      "ga": 24,
+      "ga": 25,
       "strk": "L3"
      },
      {
@@ -2791,7 +2804,7 @@
       "otl": 0,
       "pts": 4,
       "gf": 23,
-      "ga": 28,
+      "ga": 29,
       "strk": "L1"
      }
     ]
@@ -2807,7 +2820,7 @@
       "l": 0,
       "otl": 1,
       "pts": 11,
-      "gf": 27,
+      "gf": 28,
       "ga": 10,
       "strk": "W5"
      },
@@ -2855,8 +2868,8 @@
       "l": 5,
       "otl": 2,
       "pts": 2,
-      "gf": 16,
-      "ga": 30,
+      "gf": 17,
+      "ga": 31,
       "strk": "L5"
      }
     ]
@@ -2884,7 +2897,7 @@
       "l": 2,
       "otl": 1,
       "pts": 9,
-      "gf": 32,
+      "gf": 33,
       "ga": 25,
       "strk": "W1"
      },
@@ -2937,7 +2950,7 @@
       "l": 1,
       "otl": 0,
       "pts": 8,
-      "gf": 22,
+      "gf": 23,
       "ga": 16,
       "strk": "L1"
      },
@@ -2974,7 +2987,7 @@
       "otl": 1,
       "pts": 7,
       "gf": 21,
-      "ga": 24,
+      "ga": 25,
       "strk": "W1"
      },
      {
@@ -3004,7 +3017,7 @@
       "l": 2,
       "otl": 0,
       "pts": 24,
-      "gf": 55,
+      "gf": 56,
       "ga": 38,
       "strk": "L2"
      },
@@ -3029,7 +3042,7 @@
       "otl": 1,
       "pts": 15,
       "gf": 46,
-      "ga": 39,
+      "ga": 42,
       "strk": "L1"
      },
      {
@@ -3112,7 +3125,7 @@
       "l": 7,
       "otl": 0,
       "pts": 6,
-      "gf": 27,
+      "gf": 28,
       "ga": 42,
       "strk": "L2"
      },
@@ -3125,7 +3138,7 @@
       "otl": 1,
       "pts": 5,
       "gf": 26,
-      "ga": 48,
+      "ga": 49,
       "strk": "W1"
      },
      {
@@ -3137,7 +3150,7 @@
       "otl": 0,
       "pts": 4,
       "gf": 39,
-      "ga": 60,
+      "ga": 61,
       "strk": "L8"
      }
     ]
@@ -3189,7 +3202,7 @@
       "l": 2,
       "otl": 1,
       "pts": 17,
-      "gf": 40,
+      "gf": 43,
       "ga": 20,
       "strk": "W1"
      },
@@ -3250,7 +3263,7 @@
       "otl": 0,
       "pts": 10,
       "gf": 40,
-      "ga": 58,
+      "ga": 59,
       "strk": "L1"
      },
      {
@@ -3261,7 +3274,7 @@
       "l": 9,
       "otl": 2,
       "pts": 10,
-      "gf": 43,
+      "gf": 44,
       "ga": 63,
       "strk": "W2"
      },
@@ -3466,7 +3479,7 @@
       "otl": 0,
       "pts": 16,
       "gf": 47,
-      "ga": 19,
+      "ga": 20,
       "strk": "W5"
      },
      {
@@ -3525,7 +3538,7 @@
       "l": 3,
       "otl": 0,
       "pts": 10,
-      "gf": 36,
+      "gf": 37,
       "ga": 34,
       "strk": "L2"
      },
