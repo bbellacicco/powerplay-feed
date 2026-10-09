@@ -59,6 +59,7 @@
   .stand tr.ours td:first-child { color: var(--accent); font-weight: 700; }
   .snote { color: var(--muted); font-size: 11px; margin-top: 8px; }
   .snote a { color: var(--accent); }
+  .hsgo { margin: 8px 0 2px; font-size: 12px; }
   .stand th.key, .stand td.key { color: var(--accent); font-weight: 700; }
   @media (max-width: 480px) { .stand .wide { display: none; } .right { align-items: flex-start; } }
   .bar { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; align-items: center; }
@@ -161,9 +162,12 @@
       // Powerplay's own stories: a game you've written up links to your story
       getJSON('local-news.json').catch(function () { return null; }),
       // team leaders (player stats), collected hourly by scrape_stats.py; optional
-      getJSON('stats.json').catch(function () { return null; })
+      getJSON('stats.json').catch(function () { return null; }),
+      // high school standings (WECSSAA), collected by Buddy's PC every 3 hours; optional
+      getJSON('hs-standings.json').catch(function () { return null; })
     ]).then(function (res) {
       var j = res[0], hs = res[1], sc = res[2], pj = res[3], cs = res[4], news = res[5], st = res[6];
+      hsStand = res[7] && res[7].sports ? res[7].sports : null;
       statsData = st && st.teams && st.teams.length ? st : null;
       j.standings = j.standings || {};
       if (pj && pj.groups && pj.groups.length) j.standings.pjhl = pj.groups;
@@ -277,7 +281,10 @@
   // ---- Standings (collected every 15 minutes from the leagues' own stats sites)
   // Lancers / Saints: only the headline sports that are in season (fall: football + soccer)
   var ST_LEAGUES = [['ohl', 'OHL'], ['ojhl', 'OJHL'], ['gohl', 'GOHL'], ['pjhl', 'PJHL'],
-    ['oua', 'Lancers Football'], ['cjfl', 'Saints Football'], ['ocaa', 'Saints Soccer']];
+    ['oua', 'Lancers Football'], ['cjfl', 'Saints Football'], ['ocaa', 'Saints Soccer'], ['hs', 'High School']];
+  // high school: football, girls basketball, boys volleyball (WECSSAA regular season)
+  var hsStand = null, hsSport = 'football', hsLeague = 0;
+  var HS_SPORTS = [['football', 'Football'], ['gbb', 'Girls Basketball'], ['bvb', 'Boys Volleyball']];
   var HOCKEY = { ohl: 1, ojhl: 1, gohl: 1, pjhl: 1 };
   var OFFICIAL = {
     pjhl: ['PJHL', 'https://gamesheetstats.com/seasons/15133/standings?configuration=45'],
@@ -300,15 +307,36 @@
   }
 
   // college tables: short, consistent column names; drop columns that repeat the record
-  var COL_NAMES = { 'Streak': 'STRK', 'Aga.': 'GA', 'For': 'GF', 'Record': 'W-L-T', 'Win%': 'PCT' };
-  var COL_SKIP = { 'Last 10': 1, 'PCT': 1 };
+  var COL_NAMES = { 'Streak': 'STRK', 'STREAK': 'STRK', 'Aga.': 'GA', 'For': 'GF', 'Record': 'W-L-T', 'Win%': 'PCT', 'WIN %': 'PCT' };
+  var COL_SKIP = { 'Last 10': 1, 'PCT': 1, 'PW': 1, 'PL': 1 };
   function colsFor(g) {
     var out = [];
     g.cols.forEach(function (c, k) {
       var n = COL_NAMES[c] || c;
-      if (!COL_SKIP[c] && !COL_SKIP[n]) out.push([n, k, /^(GF|GA|PF|PA|STRK)$/.test(n) ? 1 : 0, 1]);
+      if (!COL_SKIP[c] && !COL_SKIP[n]) out.push([n, k, /^(GF|GA|PF|PA|STRK|SW|SL)$/.test(n) ? 1 : 0, 1]);
     });
     return out;
+  }
+
+  // High School standings: sport picker + league picker (Senior / Junior, tiers)
+  function hsGroups() {
+    var sportSel = document.getElementById('sport'), lgSel = document.getElementById('school');
+    if (!hsStand) return [];
+    var sports = HS_SPORTS.filter(function (x) { return hsStand[x[0]] && hsStand[x[0]].leagues.length; });
+    if (!sports.length) return [];
+    if (!sports.some(function (x) { return x[0] === hsSport; })) { hsSport = sports[0][0]; hsLeague = 0; }
+    sportSel.innerHTML = ''; sportSel.style.display = '';
+    sports.forEach(function (x) { sportSel.appendChild(new Option(x[1], x[0])); });
+    sportSel.value = hsSport;
+    sportSel.onchange = function () { hsSport = sportSel.value; hsLeague = 0; render(); };
+    var leagues = hsStand[hsSport].leagues;
+    if (hsLeague >= leagues.length) hsLeague = 0;
+    lgSel.innerHTML = ''; lgSel.style.display = leagues.length > 1 ? '' : 'none';
+    leagues.forEach(function (l, i) { lgSel.appendChild(new Option(l.league, String(i))); });
+    lgSel.value = String(hsLeague);
+    lgSel.onchange = function () { hsLeague = Number(lgSel.value); render(); };
+    var lg = leagues[hsLeague];
+    return lg.groups.map(function (g) { return Object.assign({}, g, { group: lg.league + (g.group ? ' \u00b7 ' + g.group : '') }); });
   }
 
   function renderStandings() {
@@ -323,7 +351,12 @@
     document.getElementById('school').style.display = 'none';
     document.getElementById('updated').textContent = '';
     var box = document.getElementById('list'); box.innerHTML = '';
-    var groups = (data.standings || {})[standLeague] || [];
+    var groups = standLeague === 'hs' ? hsGroups() : (data.standings || {})[standLeague] || [];
+    if (!groups.length && standLeague === 'hs') {
+      var m2 = el('div', 'empty', 'High school standings aren\u2019t in yet. ');
+      var a2 = el('a', null, 'See WECSSAA standings \u2197'); a2.href = 'https://www.wecssaa.com/'; a2.target = '_blank'; a2.rel = 'noopener'; a2.style.color = 'var(--accent)';
+      m2.appendChild(a2); box.appendChild(m2); return;
+    }
     if (!groups.length) {
       var msg = el('div', 'empty', 'Standings unavailable right now.'), off = OFFICIAL[standLeague];
       if (off) {
@@ -344,7 +377,7 @@
       cols.forEach(function (c) { head.appendChild(el('th', c[2] ? 'wide' : null, c[0])); });
       tbl.appendChild(head);
       g.teams.forEach(function (t, i) {
-        var tr = el('tr', isOurClub(t.name) ? 'ours' : null), td = el('td');
+        var tr = el('tr', standLeague !== 'hs' && isOurClub(t.name) ? 'ours' : null), td = el('td');
         td.appendChild(el('span', 'rk', String(i + 1)));
         td.appendChild(document.createTextNode(t.name));
         tr.appendChild(td);
@@ -358,7 +391,8 @@
       sec.appendChild(tbl);
       box.appendChild(sec);
     });
-    box.appendChild(el('div', 'snote', (HOCKEY[standLeague] ? 'OTL includes overtime and shootout losses. ' : '') + 'Local teams are highlighted.'));
+    box.appendChild(el('div', 'snote', standLeague === 'hs' ? 'From WECSSAA. (A), (AA), (AAA) are school size classes.'
+      : (HOCKEY[standLeague] ? 'OTL includes overtime and shootout losses. ' : '') + 'Local teams are highlighted.'));
   }
 
   // ---- Stats: each club's team leaders (top scorers and goalies), collected hourly from the league's stats site
@@ -447,6 +481,16 @@
 
     var list = document.getElementById('list');
     list.innerHTML = '';
+    if (state.team === 'highschool' && hsStand) {   // shortcut to the high school standings
+      var go = el('button', 'pill hsgo', 'High school standings \u2192');
+      go.onclick = function () {
+        view = 'standings'; standLeague = 'hs';
+        var m = { Football: 'football', Basketball: 'gbb', Volleyball: 'bvb' }, k = Object.keys(m).filter(function (x) { return (state.sport || '').indexOf(x) >= 0; })[0];
+        if (k) { hsSport = m[k]; hsLeague = 0; }
+        render();
+      };
+      list.appendChild(go);
+    }
     if (!inView.length) { list.appendChild(el('div', 'empty', latest ? 'No scores yet this week.' : 'No games in these days.')); return; }
 
     if (latest) {
