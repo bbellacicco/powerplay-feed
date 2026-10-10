@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10T17:46:38-04:00",
+ "updated": "2026-10-10T18:02:26-04:00",
  "today": "2026-10-10",
  "range": [
   "2026-10-07",
@@ -1390,12 +1390,14 @@
    "home_away": "H",
    "opponent": "Brock Badgers",
    "location": "Mic Mac Park #2",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 10,
+   "opp_score": 4,
+   "result": "W",
    "note": "",
-   "links": {}
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6169"
+   }
   },
   {
    "id": "lancers-6440",
@@ -1406,10 +1408,10 @@
    "home_away": "N",
    "opponent": "Saskatchewan Huskies",
    "location": "Toronto, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 63,
+   "opp_score": 76,
+   "result": "L",
    "note": "Darcel Wright Memorial Tournament",
    "links": {}
   },
@@ -1422,13 +1424,13 @@
    "home_away": "A",
    "opponent": "Queen's Gaels",
    "location": "Kingston, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 25,
+   "opp_score": 22,
+   "result": "W",
    "note": "",
    "links": {
-    "watch": "https://oua.yaretv.com/"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6123"
    }
   },
   {
@@ -1456,12 +1458,14 @@
    "home_away": "H",
    "opponent": "Brock Badgers",
    "location": "Mic Mac Park #2",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 7,
+   "opp_score": 0,
+   "result": "W",
    "note": "",
-   "links": {}
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6170"
+   }
   },
   {
    "id": "junior-gs2960329",
@@ -2415,17 +2419,17 @@
  "more_news": [
   {
    "league": "nhl",
-   "headline": "Quick Shifts: Is the real Auston Matthews back?",
-   "summary": "For the first time in a while, Auston Matthews appears genuinely pumped and wholly engaged. Is the Maple Leafs captain back? Sportsnet’s Luke Fox explores that and more in the latest Quick Shifts.",
-   "published": "2026-10-10T08:14-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/matthews.jpg",
+   "headline": "Why Maple Leafs are dressing 7 defencemen vs. Avalanche",
+   "summary": "If you thought Nick Blankenburg’s Maple Leafs debut would come at the expense of another roster defenceman, you thought wrong. Luke Fox explains why the Maple Leafs are going with seven defencemen against the Avalanche.",
+   "published": "2026-10-10T17:48-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Jim-Hiller.jpg",
    "video": false,
    "teams": [
     "Toronto Maple Leafs"
    ],
-   "sn_team_count": 2,
+   "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/quick-shifts-is-the-real-auston-matthews-back/",
+   "url": "https://www.sportsnet.ca/nhl/article/why-maple-leafs-are-dressing-7-defencemen-vs-avalanche/",
    "source": "Sportsnet"
   },
   {
@@ -2443,15 +2447,17 @@
   },
   {
    "league": "nhl",
-   "headline": "‘Heartbreak on the line’: Gabriel Landeskog talks comeback, sweep, Makar, Alfredsson",
-   "summary": "It was a long road back to the NHL for Gabriel Landeskog — only for the Avalanche to be swept in last season’s conference. The Colorado captain dove into all of that and more in a sitdown with Sportsnet’s Luke Fox.",
-   "published": "2026-10-10T11:58-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/05/Colorado-Avalanche-left-wing-Gabriel-Landeskog.jpg",
+   "headline": "Quick Shifts: Is the real Auston Matthews back?",
+   "summary": "For the first time in a while, Auston Matthews appears genuinely pumped and wholly engaged. Is the Maple Leafs captain back? Sportsnet’s Luke Fox explores that and more in the latest Quick Shifts.",
+   "published": "2026-10-10T08:14-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/matthews.jpg",
    "video": false,
-   "teams": [],
-   "sn_team_count": 1,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 2,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/heartbreak-on-the-line-gabriel-landeskog-talks-comeback-sweep-makar-alfredsson/",
+   "url": "https://www.sportsnet.ca/nhl/article/quick-shifts-is-the-real-auston-matthews-back/",
    "source": "Sportsnet"
   },
   {
@@ -2584,6 +2590,19 @@
    "sn_team_count": 2,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/nlcs-preview-can-brewers-flip-the-script-against-dodgers/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "‘Heartbreak on the line’: Gabriel Landeskog talks comeback, sweep, Makar, Alfredsson",
+   "summary": "It was a long road back to the NHL for Gabriel Landeskog — only for the Avalanche to be swept in last season’s conference. The Colorado captain dove into all of that and more in a sitdown with Sportsnet’s Luke Fox.",
+   "published": "2026-10-10T11:58-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/05/Colorado-Avalanche-left-wing-Gabriel-Landeskog.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/heartbreak-on-the-line-gabriel-landeskog-talks-comeback-sweep-makar-alfredsson/",
    "source": "Sportsnet"
   },
   {
@@ -2884,19 +2903,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/farm-review-what-blue-jays-have-in-mind-for-jojo-parker-and-other-top-prospects/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "NFL Week 5 Pick ‘Em: Falcons look to stay hot against Ravens",
-   "summary": "We’re now one month into the NFL season, and teams are beginning to separate themselves from the pack. Evan Davidson runs down the Week 5 slate to help you make your picks.",
-   "published": "2026-10-08T11:33-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Falcons.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-5-pick-em-cowboys-look-to-dominate-bucs-in-primetime/",
    "source": "Sportsnet"
   },
   {
@@ -3748,8 +3754,8 @@
       "l": 1,
       "otl": 0,
       "pts": 14,
-      "gf": 41,
-      "ga": 23,
+      "gf": 42,
+      "ga": 24,
       "strk": "L1"
      },
      {
@@ -3760,8 +3766,8 @@
       "l": 4,
       "otl": 0,
       "pts": 10,
-      "gf": 44,
-      "ga": 44,
+      "gf": 45,
+      "ga": 45,
       "strk": "W2"
      },
      {
@@ -4159,7 +4165,7 @@
       "l": 1,
       "otl": 0,
       "pts": 24,
-      "gf": 71,
+      "gf": 72,
       "ga": 19,
       "strk": "W6"
      },
@@ -4292,7 +4298,7 @@
       "otl": 2,
       "pts": 8,
       "gf": 38,
-      "ga": 61,
+      "ga": 62,
       "strk": "L2"
      }
     ]
