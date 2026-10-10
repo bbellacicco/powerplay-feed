@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10T00:01:55-04:00",
+ "updated": "2026-10-10T00:16:50-04:00",
  "today": "2026-10-10",
  "range": [
   "2026-10-07",
@@ -1297,11 +1297,11 @@
    "home_away": "H",
    "opponent": "Walpole Island Wild",
    "location": "Atlas Tube Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Score not posted yet",
+   "status": "final",
+   "our_score": 5,
+   "opp_score": 0,
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960303?configuration=45"
    },
@@ -2549,16 +2549,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Canadiens send Jayden Struble to Predators for second-round pick",
+   "league": "other",
+   "headline": "Valkyries sweep Aces, will play Dream in WNBA Finals",
    "summary": "",
-   "published": "2026-10-09T19:13-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/struble.jpg",
+   "published": "2026-10-10T00:08-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Golden-State-Valkyries-forward-Gabby-Williams.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canadiens-send-jayden-struble-to-predators-for-second-round-pick/",
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/wnba/article/valkyries-sweep-aces-will-play-dream-in-wnba-finals/",
    "source": "Sportsnet"
   },
   {
@@ -4767,6 +4767,18 @@
     "group": "PJHL West Stobbs",
     "teams": [
      {
+      "name": "Lakeshore Canadiens",
+      "abbr": "LAK",
+      "gp": 11,
+      "w": 9,
+      "l": 0,
+      "otl": 2,
+      "pts": 20,
+      "gf": 44,
+      "ga": 17,
+      "strk": "W1"
+     },
+     {
       "name": "Essex 73's",
       "abbr": "ESS",
       "gp": 10,
@@ -4777,18 +4789,6 @@
       "gf": 42,
       "ga": 14,
       "strk": "W8"
-     },
-     {
-      "name": "Lakeshore Canadiens",
-      "abbr": "LAK",
-      "gp": 10,
-      "w": 8,
-      "l": 0,
-      "otl": 2,
-      "pts": 18,
-      "gf": 39,
-      "ga": 17,
-      "strk": "L2"
      },
      {
       "name": "Dresden Kings",
@@ -4853,14 +4853,14 @@
      {
       "name": "Walpole Island Wild",
       "abbr": "WAL",
-      "gp": 11,
+      "gp": 12,
       "w": 0,
-      "l": 11,
+      "l": 12,
       "otl": 0,
       "pts": 0,
       "gf": 12,
-      "ga": 65,
-      "strk": "L11"
+      "ga": 70,
+      "strk": "L12"
      }
     ]
    }
