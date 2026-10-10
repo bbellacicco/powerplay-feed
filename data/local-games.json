@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-09T22:16:58-04:00",
+ "updated": "2026-10-09T22:32:01-04:00",
  "today": "2026-10-09",
  "range": [
   "2026-10-06",
@@ -3321,7 +3321,7 @@
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177062035.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
+   "sn_team_count": 2,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/wnba/article/reese-howard-help-the-dream-sweep-the-liberty-and-advance-to-wnba-finals/",
    "source": "Sportsnet"
@@ -4420,7 +4420,7 @@
      "pts": 24,
      "pf": 497,
      "pa": 394,
-     "flags": ""
+     "flags": "x"
     },
     {
      "abbr": "BC",
@@ -4485,7 +4485,7 @@
      "pts": 24,
      "pf": 535,
      "pa": 420,
-     "flags": ""
+     "flags": "y"
     },
     {
      "abbr": "TOR",
@@ -4497,7 +4497,7 @@
      "pts": 18,
      "pf": 462,
      "pa": 455,
-     "flags": ""
+     "flags": "x"
     },
     {
      "abbr": "HAM",
@@ -4955,6 +4955,18 @@
       "strk": "W6"
      },
      {
+      "name": "Milton Menace",
+      "abbr": "MIL",
+      "gp": 13,
+      "w": 11,
+      "l": 2,
+      "otl": 0,
+      "pts": 22,
+      "gf": 49,
+      "ga": 24,
+      "strk": "W5"
+     },
+     {
       "name": "King Rebellion",
       "abbr": "KNG",
       "gp": 12,
@@ -4965,18 +4977,6 @@
       "gf": 59,
       "ga": 21,
       "strk": "W6"
-     },
-     {
-      "name": "Milton Menace",
-      "abbr": "MIL",
-      "gp": 12,
-      "w": 10,
-      "l": 2,
-      "otl": 0,
-      "pts": 20,
-      "gf": 49,
-      "ga": 24,
-      "strk": "W4"
      },
      {
       "name": "Leamington Flyers",
@@ -5041,14 +5041,14 @@
      {
       "name": "Caledon Admirals",
       "abbr": "CAL",
-      "gp": 10,
+      "gp": 11,
       "w": 5,
-      "l": 4,
+      "l": 5,
       "otl": 1,
       "pts": 11,
       "gf": 32,
       "ga": 46,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Mississauga Chargers",
@@ -5180,14 +5180,14 @@
      {
       "name": "Woodstock Navy Vets",
       "abbr": "WNV",
-      "gp": 9,
+      "gp": 10,
       "w": 4,
-      "l": 5,
+      "l": 6,
       "otl": 0,
       "pts": 8,
       "gf": 34,
       "ga": 44,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Komoka Kings",
@@ -5216,14 +5216,14 @@
      {
       "name": "Strathroy Rockets",
       "abbr": "SRY",
-      "gp": 8,
-      "w": 1,
+      "gp": 9,
+      "w": 2,
       "l": 6,
       "otl": 1,
-      "pts": 3,
+      "pts": 5,
       "gf": 29,
       "ga": 41,
-      "strk": "L6"
+      "strk": "W1"
      },
      {
       "name": "Sarnia Legionnaires",
