@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-09T20:46:34-04:00",
+ "updated": "2026-10-09T21:01:58-04:00",
  "today": "2026-10-09",
  "range": [
   "2026-10-06",
@@ -50,8 +50,8 @@
    "count": 9
   },
   "highschool": {
-   "ok": true,
-   "count": 170
+   "ok": false,
+   "error": "HTTP Error 403: Forbidden"
   },
   "sheet": {
    "ok": true,
@@ -2098,10 +2098,10 @@
    "opponent": "Cobourg Cougars",
    "location": "Cobourg Community Centre, Cobourg, ON",
    "status": "live",
-   "our_score": 3,
-   "opp_score": 0,
+   "our_score": 5,
+   "opp_score": 1,
    "result": null,
-   "note": "13:55 3rd",
+   "note": "06:00 3rd",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16562"
    },
@@ -3287,6 +3287,32 @@
   },
   {
    "league": "nhl",
+   "headline": "Blackhawks’ Frank Nazar suspended two games for illegal check to head",
+   "summary": "",
+   "published": "2026-10-09T20:58-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/frank-nazar.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/blackhawks-frank-nazar-suspended-two-games-for-illegal-check-to-head/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Canadiens send Jayden Struble to Predators for second-round pick",
+   "summary": "",
+   "published": "2026-10-09T19:13-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/struble.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canadiens-send-jayden-struble-to-predators-for-second-round-pick/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Cam Talbot sets goaltending record by playing for ninth team",
    "summary": "Cam Talbot’s journeyman career is now one for the record books.",
    "published": "2026-10-09T19:56-04:00",
@@ -3322,32 +3348,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/dodgers-tab-skubal-yamamoto-to-start-first-two-games-of-nlcs/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Allisha Gray to miss Game 3 of Dream’s semifinal series vs. Liberty",
-   "summary": "",
-   "published": "2026-10-09T18:43-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/07/f9fc6f99dfdd051cc9c7f2ab781df1691f462d7a7ce328d8e854a76f765901b9.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/wnba/article/allisha-gray-to-miss-game-3-of-dreams-semifinal-series-vs-liberty/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Canadiens send Jayden Struble to Predators for second-round pick",
-   "summary": "",
-   "published": "2026-10-09T19:13-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/struble.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canadiens-send-jayden-struble-to-predators-for-second-round-pick/",
    "source": "Sportsnet"
   },
   {
@@ -4549,7 +4549,7 @@
       "l": 4,
       "otl": 0,
       "pts": 8,
-      "gf": 40,
+      "gf": 41,
       "ga": 43,
       "strk": "W1"
      },
@@ -4651,7 +4651,7 @@
       "otl": 2,
       "pts": 2,
       "gf": 18,
-      "ga": 33,
+      "ga": 34,
       "strk": "L5"
      }
     ]
@@ -4667,8 +4667,8 @@
       "l": 1,
       "otl": 0,
       "pts": 10,
-      "gf": 26,
-      "ga": 21,
+      "gf": 27,
+      "ga": 22,
       "strk": "W4"
      },
      {
@@ -4756,8 +4756,8 @@
       "l": 4,
       "otl": 0,
       "pts": 8,
-      "gf": 24,
-      "ga": 26,
+      "gf": 25,
+      "ga": 27,
       "strk": "L2"
      },
      {
@@ -4799,7 +4799,7 @@
       "l": 2,
       "otl": 0,
       "pts": 24,
-      "gf": 57,
+      "gf": 58,
       "ga": 39,
       "strk": "L2"
      },
@@ -4811,7 +4811,7 @@
       "l": 3,
       "otl": 2,
       "pts": 16,
-      "gf": 46,
+      "gf": 48,
       "ga": 35,
       "strk": "L1"
      },
@@ -4823,8 +4823,8 @@
       "l": 2,
       "otl": 1,
       "pts": 15,
-      "gf": 46,
-      "ga": 42,
+      "gf": 47,
+      "ga": 44,
       "strk": "L1"
      },
      {
@@ -4836,7 +4836,7 @@
       "otl": 1,
       "pts": 13,
       "gf": 41,
-      "ga": 36,
+      "ga": 38,
       "strk": "W3"
      },
      {
@@ -4847,7 +4847,7 @@
       "l": 7,
       "otl": 1,
       "pts": 11,
-      "gf": 40,
+      "gf": 41,
       "ga": 40,
       "strk": "W1"
      },
@@ -4860,7 +4860,7 @@
       "otl": 1,
       "pts": 11,
       "gf": 35,
-      "ga": 51,
+      "ga": 52,
       "strk": "L3"
      },
      {
@@ -4884,7 +4884,7 @@
       "otl": 1,
       "pts": 9,
       "gf": 46,
-      "ga": 45,
+      "ga": 47,
       "strk": "L2"
      },
      {
@@ -4907,7 +4907,7 @@
       "l": 7,
       "otl": 0,
       "pts": 6,
-      "gf": 31,
+      "gf": 32,
       "ga": 42,
       "strk": "L2"
      },
@@ -4920,7 +4920,7 @@
       "otl": 1,
       "pts": 5,
       "gf": 26,
-      "ga": 52,
+      "ga": 53,
       "strk": "W1"
      },
      {
@@ -4932,7 +4932,7 @@
       "otl": 0,
       "pts": 4,
       "gf": 40,
-      "ga": 62,
+      "ga": 63,
       "strk": "L8"
      }
     ]
@@ -4972,7 +4972,7 @@
       "l": 2,
       "otl": 0,
       "pts": 20,
-      "gf": 47,
+      "gf": 48,
       "ga": 22,
       "strk": "W4"
      },
@@ -4984,8 +4984,8 @@
       "l": 2,
       "otl": 1,
       "pts": 17,
-      "gf": 43,
-      "ga": 20,
+      "gf": 45,
+      "ga": 21,
       "strk": "W1"
      },
      {
@@ -5033,7 +5033,7 @@
       "otl": 1,
       "pts": 11,
       "gf": 30,
-      "ga": 44,
+      "ga": 45,
       "strk": "L1"
      },
      {
@@ -5080,7 +5080,7 @@
       "l": 9,
       "otl": 0,
       "pts": 6,
-      "gf": 27,
+      "gf": 29,
       "ga": 54,
       "strk": "W1"
      }
@@ -5099,7 +5099,7 @@
       "l": 1,
       "otl": 0,
       "pts": 16,
-      "gf": 53,
+      "gf": 54,
       "ga": 22,
       "strk": "W6"
      },
@@ -5123,7 +5123,7 @@
       "l": 1,
       "otl": 0,
       "pts": 14,
-      "gf": 35,
+      "gf": 36,
       "ga": 17,
       "strk": "W2"
      },
@@ -5136,7 +5136,7 @@
       "otl": 1,
       "pts": 9,
       "gf": 35,
-      "ga": 41,
+      "ga": 42,
       "strk": "W1"
      },
      {
@@ -5147,7 +5147,7 @@
       "l": 2,
       "otl": 2,
       "pts": 8,
-      "gf": 39,
+      "gf": 40,
       "ga": 26,
       "strk": "L1"
      },
@@ -5160,7 +5160,7 @@
       "otl": 0,
       "pts": 8,
       "gf": 32,
-      "ga": 36,
+      "ga": 37,
       "strk": "L3"
      },
      {
@@ -5183,8 +5183,8 @@
       "l": 5,
       "otl": 0,
       "pts": 8,
-      "gf": 33,
-      "ga": 40,
+      "gf": 34,
+      "ga": 41,
       "strk": "L1"
      },
      {
@@ -5219,8 +5219,8 @@
       "l": 6,
       "otl": 1,
       "pts": 3,
-      "gf": 25,
-      "ga": 40,
+      "gf": 26,
+      "ga": 41,
       "strk": "L6"
      },
      {
@@ -5260,7 +5260,7 @@
       "l": 1,
       "otl": 0,
       "pts": 16,
-      "gf": 50,
+      "gf": 52,
       "ga": 22,
       "strk": "W5"
      },
@@ -5321,7 +5321,7 @@
       "otl": 0,
       "pts": 10,
       "gf": 39,
-      "ga": 37,
+      "ga": 39,
       "strk": "L2"
      },
      {
@@ -5369,7 +5369,7 @@
       "otl": 0,
       "pts": 2,
       "gf": 22,
-      "ga": 45,
+      "ga": 46,
       "strk": "L3"
      },
      {
