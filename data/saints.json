@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10T14:15:02-04:00",
+ "updated": "2026-10-10T14:30:02-04:00",
  "today": "2026-10-10",
  "games": [
   {
@@ -155,6 +155,22 @@
    "links": {}
   },
   {
+   "id": "saints-presto2026-10-10-0",
+   "team": "saints",
+   "sport": "Fastball",
+   "start": "2026-10-10T00:00:00-04:00",
+   "time_tbd": true,
+   "home_away": "N",
+   "opponent": "Western Ontario",
+   "location": "Babcock Field (Oshawa)",
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 4,
+   "result": "L",
+   "note": "Exhibition · CCSA National Championship Hosted by Durham College",
+   "links": {}
+  },
+  {
    "id": "saints-presto2026-10-10-1",
    "team": "saints",
    "sport": "Women's Volleyball",
@@ -171,24 +187,6 @@
    "links": {}
   },
   {
-   "id": "saints-presto2026-10-10-0",
-   "team": "saints",
-   "sport": "Fastball",
-   "start": "2026-10-10T11:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Western Ontario",
-   "location": "Babcock Field (Oshawa)",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Exhibition · CCSA National Championship Hosted by Durham College",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/fastball/2026-27/boxscores/20261010_ccvb.xml"
-   }
-  },
-  {
    "id": "saints-presto2026-10-10-2",
    "team": "saints",
    "sport": "Baseball",
@@ -201,7 +199,7 @@
    "our_score": 9,
    "opp_score": 0,
    "result": null,
-   "note": "Bottom of 4th",
+   "note": "Top of 5th",
    "links": {
     "boxscore": "https://www.saintsathletics.ca/sports/bsb/2026-27/boxscores/20261010_30ys.xml"
    }
@@ -216,10 +214,10 @@
    "opponent": "Humber",
    "location": "",
    "status": "live",
-   "our_score": 0,
+   "our_score": 1,
    "opp_score": 0,
    "result": null,
-   "note": "1st half - 05:11",
+   "note": "1st half - 21:58",
    "links": {
     "boxscore": "https://www.saintsathletics.ca/sports/wsoc/2026-27/boxscores/20261010_jvwy.xml"
    }
@@ -272,6 +270,22 @@
    "opp_score": null,
    "result": null,
    "note": "",
+   "links": {}
+  },
+  {
+   "id": "saints-presto2026-10-11-0",
+   "team": "saints",
+   "sport": "Fastball",
+   "start": "2026-10-11T11:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "TBD",
+   "location": "Babcock Field (Oshawa)",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Exhibition · CCSA National Championship Hosted by Durham College",
    "links": {}
   },
   {
