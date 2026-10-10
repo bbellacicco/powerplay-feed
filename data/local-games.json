@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-09T23:01:51-04:00",
+ "updated": "2026-10-09T23:16:50-04:00",
  "today": "2026-10-09",
  "range": [
   "2026-10-06",
@@ -2062,14 +2062,13 @@
    "home_away": "H",
    "opponent": "Algoma Thunderbirds",
    "location": "Alumni Stadium",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 4,
+   "opp_score": 0,
+   "result": "W",
    "note": "",
    "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=170",
-    "watch": "https://oua.yaretv.com/"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6186"
    }
   },
   {
@@ -2154,14 +2153,13 @@
    "home_away": "H",
    "opponent": "Lakehead Thunderwolves",
    "location": "Adie Knox Arena",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 2,
+   "result": "W",
    "note": "",
    "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=173",
-    "watch": "https://oua.tv/?school=Windsor"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6338"
    }
   },
   {
@@ -2173,14 +2171,13 @@
    "home_away": "H",
    "opponent": "Algoma Thunderbirds",
    "location": "Alumni Stadium",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 2,
+   "result": "W",
    "note": "",
    "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=170",
-    "watch": "https://oua.yaretv.com/"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6198"
    }
   },
   {
@@ -2507,6 +2504,19 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "Adeboboye finds space and cruises into the end zone!",
+   "summary": "",
+   "published": "2026-10-09T23:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/72ptByF9OYYZCXobTVJWLX/d3eda3beacf49f23c285bfce334d64fc/ott.png?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "REDBLACKS"
+   ],
+   "url": "https://www.cfl.ca/article/adeboboye-finds-space-and-cruises-into-the-end-zone",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Zach Collaros to start for Bombers vs. Stampeders",
    "summary": "",
    "published": "2026-10-09T00:00:00-04:00",
@@ -2619,6 +2629,20 @@
     "Elks"
    ],
    "url": "https://www.cfl.ca/article/cody-fajardo-goes-to-work-in-the-fourth-quarter",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Recap: Edmonton 27, Hamilton 12",
+   "summary": "",
+   "published": "2026-10-09T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/3Gebg9sBrrvMpiDOYJzPmO/609f053208afc580177903019c5811ee/RECAP.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Elks",
+    "Tiger-Cats"
+   ],
+   "url": "https://www.cfl.ca/article/recap-edmonton-27-hamilton-12",
    "source": "CFL.ca"
   },
   {
@@ -2854,28 +2878,6 @@
     "Lions"
    ],
    "url": "https://www.cfl.ca/article/lions-release-defensive-back-josh-hagerty",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "CFL Plays of the Week - Week 18, 2026",
-   "summary": "",
-   "published": "2026-10-05T03:11:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/5FtqGGYIxqfvxX1tSZnN3Q/b2b815bd05dbf98f451d248ffa2e875b/Week_18_Thumb_v4.png?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/cfl-plays-of-the-week-week-18-2026",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Lions sign defensive back Cristophe Beaulieu to one-year extension",
-   "summary": "",
-   "published": "2026-10-05T00:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/7pNbW6jfqUzuTkm8KXz8mo/61c02268cedfa0b888202cb3c1bf3daa/Cristophe_Beaulieu_2026.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/lions-sign-defensive-back-cristophe-beaulieu-to-one-year-extension",
    "source": "CFL.ca"
   },
   {
@@ -3444,6 +3446,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "cfl",
+   "headline": "Mathis, Fajardo, Powell score fourth-quarter TDs as Elks tame Ticats",
+   "summary": "",
+   "published": "2026-10-09T23:09-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177062280.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/mathis-fajardo-powell-score-fourth-quarter-tds-as-elks-tame-ticats/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "Tributes pour in for late Bears coach Mike Ditka: ‘Chicago won’t be the same’",
    "summary": "",
@@ -3467,6 +3482,32 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/soccer/article/smith-scores-late-equalizer-as-canada-salvages-draw-with-denmark/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "UFC Vegas 122 storylines: Allen, Duncan eyeing middleweight elite status",
+   "summary": "The octagon returns to Meta APEX for UFC Vegas 122, headlined by a key fight at 185 pounds. Adam Martin dives into the storylines heading into the 12-bout Fight Night card.",
+   "published": "2026-10-08T17:56-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/02/Brendan-Allen.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "MMA",
+   "url": "https://www.sportsnet.ca/ufc/article/ufc-vegas-122-storylines-allen-duncan-eyeing-middleweight-elite-status/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Ismael Bonfim misses UFC Fight Night weight by 7.5 pounds",
+   "summary": "",
+   "published": "2026-10-09T14:55-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/bonfim_ismael1280.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "MMA",
+   "url": "https://www.sportsnet.ca/ufc/article/ismael-bonfim-misses-ufc-fight-night-weight-by-7-5-pounds/",
    "source": "Sportsnet"
   },
   {
@@ -3532,6 +3573,19 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/matt-dumba-announces-retirement-from-nhl/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "NFL Week 5 Pick ‘Em: Falcons look to stay hot against Ravens",
+   "summary": "We’re now one month into the NFL season, and teams are beginning to separate themselves from the pack. Evan Davidson runs down the Week 5 slate to help you make your picks.",
+   "published": "2026-10-08T11:33-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Falcons.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-5-pick-em-cowboys-look-to-dominate-bucs-in-primetime/",
    "source": "Sportsnet"
   },
   {
@@ -3623,58 +3677,6 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/wnba/article/breanna-stewart-liberty-moving-on-after-confusion-over-timeout-in-game-2-ot-loss/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "UFC Vegas 122 storylines: Allen, Duncan eyeing middleweight elite status",
-   "summary": "The octagon returns to Meta APEX for UFC Vegas 122, headlined by a key fight at 185 pounds. Adam Martin dives into the storylines heading into the 12-bout Fight Night card.",
-   "published": "2026-10-08T17:56-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/02/Brendan-Allen.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/ufc-vegas-122-storylines-allen-duncan-eyeing-middleweight-elite-status/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Ismael Bonfim misses UFC Fight Night weight by 7.5 pounds",
-   "summary": "",
-   "published": "2026-10-09T14:55-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/bonfim_ismael1280.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/ismael-bonfim-misses-ufc-fight-night-weight-by-7-5-pounds/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "NFL Week 5 Pick ‘Em: Falcons look to stay hot against Ravens",
-   "summary": "We’re now one month into the NFL season, and teams are beginning to separate themselves from the pack. Evan Davidson runs down the Week 5 slate to help you make your picks.",
-   "published": "2026-10-08T11:33-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Falcons.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-5-pick-em-cowboys-look-to-dominate-bucs-in-primetime/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Eagles stars Barkley and Smith ruled out of London game against Jaguars",
-   "summary": "",
-   "published": "2026-10-09T16:46-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Barkley.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/eagles-stars-barkley-and-smith-ruled-out-of-london-game-against-jaguars/",
    "source": "Sportsnet"
   },
   {
