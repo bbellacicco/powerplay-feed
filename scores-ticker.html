@@ -76,6 +76,7 @@ function priority(g){
   if (g.team === 'lancers' && g.sport === 'Football') return 1;   // Lancers football
   if (g.team === 'saints' && g.sport === 'Football') return 2;    // St. Clair football
   if (g.team === 'spitfires') return 3;                           // Spitfires
+  if (g.team === 'lancers' && /^men's hockey$/i.test(g.sport || '')) return 3;   // Lancers men's hockey, alongside the Spitfires
   if (g.team === 'junior') return 4;                              // junior hockey
   return 5;                                                       // everything else
 }
@@ -92,7 +93,7 @@ function byPrio(newestFirst){
 function pertinent(g){
   var s = (g.sport || '').toLowerCase();
   if (g.team === 'spitfires' || g.team === 'junior') return true;
-  if (g.team === 'lancers') return /football|basketball/.test(s);
+  if (g.team === 'lancers') return /football|basketball|\bmen's hockey/.test(s);   // men's hockey only (not women's)
   if (g.team === 'saints') return /football|softball|fastball|soccer/.test(s);   // St. Clair calls softball "Fastball"
   return false;
 }
