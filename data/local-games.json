@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10T18:46:38-04:00",
+ "updated": "2026-10-10T19:01:47-04:00",
  "today": "2026-10-10",
  "range": [
   "2026-10-07",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 36
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -1476,9 +1476,9 @@
    "home_away": "H",
    "opponent": "Dresden Kings",
    "location": "Libro Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
    "note": "",
    "links": {
@@ -1551,9 +1551,9 @@
    "home_away": "A",
    "opponent": "Mooretown Flags",
    "location": "Mooretown Sports Complex",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
    "note": "",
    "links": {
@@ -2419,17 +2419,15 @@
  "more_news": [
   {
    "league": "nhl",
-   "headline": "Why Maple Leafs are dressing 7 defencemen vs. Avalanche",
-   "summary": "If you thought Nick Blankenburg’s Maple Leafs debut would come at the expense of another roster defenceman, you thought wrong. Luke Fox explains why the Maple Leafs are going with seven defencemen against the Avalanche.",
-   "published": "2026-10-10T17:48-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Jim-Hiller.jpg",
+   "headline": "McDavid, Oilers down Sharks for fourth straight win",
+   "summary": "",
+   "published": "2026-10-10T18:58-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/a8e269dc00ef866e3603632360847846472d60fe433da2d1cd51e2818a623415.jpg",
    "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
+   "teams": [],
+   "sn_team_count": 2,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/why-maple-leafs-are-dressing-7-defencemen-vs-avalanche/",
+   "url": "https://www.sportsnet.ca/nhl/article/mcdavid-oilers-down-sharks-for-fourth-straight-win/",
    "source": "Sportsnet"
   },
   {
@@ -2460,17 +2458,17 @@
   },
   {
    "league": "nhl",
-   "headline": "Quick Shifts: Is the real Auston Matthews back?",
-   "summary": "For the first time in a while, Auston Matthews appears genuinely pumped and wholly engaged. Is the Maple Leafs captain back? Sportsnet’s Luke Fox explores that and more in the latest Quick Shifts.",
-   "published": "2026-10-10T08:14-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/matthews.jpg",
+   "headline": "Why Maple Leafs are dressing 7 defencemen vs. Avalanche",
+   "summary": "If you thought Nick Blankenburg’s Maple Leafs debut would come at the expense of another roster defenceman, you thought wrong. Luke Fox explains why the Maple Leafs are going with seven defencemen against the Avalanche.",
+   "published": "2026-10-10T17:48-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Jim-Hiller.jpg",
    "video": false,
    "teams": [
     "Toronto Maple Leafs"
    ],
-   "sn_team_count": 2,
+   "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/quick-shifts-is-the-real-auston-matthews-back/",
+   "url": "https://www.sportsnet.ca/nhl/article/why-maple-leafs-are-dressing-7-defencemen-vs-avalanche/",
    "source": "Sportsnet"
   },
   {
@@ -2594,6 +2592,19 @@
   },
   {
    "league": "mlb",
+   "headline": "Six players to watch in National League Championship Series",
+   "summary": "Quiet to the point of being forgotten in the second half of the season, Freddie Freeman re-emerged for the Dodgers in their NLDS victory. The first baseman is just one of Jeff Blair’s players to watch in the Dodgers’ NLC",
+   "published": "2026-10-10T18:47-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177033461.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/six-players-to-watch-in-national-league-championship-series-3/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
    "headline": "NLCS preview: Can Brewers flip the script against Dodgers?",
    "summary": "After being swept out of the 2025 post-season by the Dodgers, this year’s Brewers squad enters the NLCS looking to reverse its fortunes in the rematch. Zach Worden tees up the series before first pitch flies on Sunday.",
    "published": "2026-10-10T12:19-04:00",
@@ -2603,6 +2614,21 @@
    "sn_team_count": 2,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/nlcs-preview-can-brewers-flip-the-script-against-dodgers/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Quick Shifts: Is the real Auston Matthews back?",
+   "summary": "For the first time in a while, Auston Matthews appears genuinely pumped and wholly engaged. Is the Maple Leafs captain back? Sportsnet’s Luke Fox explores that and more in the latest Quick Shifts.",
+   "published": "2026-10-10T08:14-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/matthews.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/quick-shifts-is-the-real-auston-matthews-back/",
    "source": "Sportsnet"
   },
   {
@@ -2711,6 +2737,19 @@
    "sn_team_count": 7,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/nfl-week-5-preview-49ers-purdy-look-to-solve-seahawks-defence/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "NFL Week 5 Pick ‘Em: Falcons look to stay hot against Ravens",
+   "summary": "We’re now one month into the NFL season, and teams are beginning to separate themselves from the pack. Evan Davidson runs down the Week 5 slate to help you make your picks.",
+   "published": "2026-10-08T11:33-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Falcons.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-5-pick-em-cowboys-look-to-dominate-bucs-in-primetime/",
    "source": "Sportsnet"
   },
   {
@@ -2847,60 +2886,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/how-maple-leafs-marchenko-is-making-presence-felt/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Blues’ Dillon Dube sidelined eight weeks with neck injury",
-   "summary": "",
-   "published": "2026-10-10T11:38-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/dillon-dube.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/blues-dillon-dube-sidelined-eight-weeks-with-neck-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Five ways the early NHL season is altering pre-season predictions",
-   "summary": "Pre-season predictions help us set baseline expectations for teams and players around the NHL. But Justin Bourne writes how the first handful of games are changing his perception of these five things.",
-   "published": "2026-10-09T13:02-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/New-York-Rangers-defenseman-Sean-Durzi-center-celebrates-with-right-wing-Oliver-Bjorkstrand-28-and-right-wing-Eeli-Tolvanen-17.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/five-ways-the-early-nhl-season-is-altering-pre-season-predictions/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Farm Review: What Blue Jays have in mind for JoJo Parker and other top prospects",
-   "summary": "It was a year to remember for Toronto Blue Jays prospects. Along with a few pitching updates, Shi Davidi takes a look at how the club’s top position-player prospects fared in 2026.",
-   "published": "2026-10-09T14:47-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/07/Untitled-design-70.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/farm-review-what-blue-jays-have-in-mind-for-jojo-parker-and-other-top-prospects/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "NFL Week 5 Pick ‘Em: Falcons look to stay hot against Ravens",
-   "summary": "We’re now one month into the NFL season, and teams are beginning to separate themselves from the pack. Evan Davidson runs down the Week 5 slate to help you make your picks.",
-   "published": "2026-10-08T11:33-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Falcons.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-5-pick-em-cowboys-look-to-dominate-bucs-in-primetime/",
    "source": "Sportsnet"
   },
   {
@@ -4163,8 +4148,8 @@
       "l": 1,
       "otl": 0,
       "pts": 24,
-      "gf": 75,
-      "ga": 21,
+      "gf": 77,
+      "ga": 22,
       "strk": "W6"
      },
      {
@@ -4295,8 +4280,8 @@
       "l": 7,
       "otl": 2,
       "pts": 8,
-      "gf": 40,
-      "ga": 65,
+      "gf": 41,
+      "ga": 67,
       "strk": "L2"
      }
     ]
