@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10T16:00:02-04:00",
+ "updated": "2026-10-10T16:15:02-04:00",
  "today": "2026-10-10",
  "games": [
   {
@@ -213,11 +213,11 @@
    "home_away": "A",
    "opponent": "Humber",
    "location": "",
-   "status": "live",
+   "status": "final",
    "our_score": 1,
    "opp_score": 1,
-   "result": null,
-   "note": "2nd half - 90:00",
+   "result": "T",
+   "note": "",
    "links": {
     "boxscore": "https://www.saintsathletics.ca/sports/wsoc/2026-27/boxscores/20261010_jvwy.xml"
    }
@@ -235,7 +235,7 @@
    "our_score": 1,
    "opp_score": 0,
    "result": null,
-   "note": "Bottom of 1st",
+   "note": "Top of 2nd",
    "links": {
     "boxscore": "https://www.saintsathletics.ca/sports/bsb/2026-27/boxscores/20261010_w1r5.xml"
    }
@@ -270,7 +270,9 @@
    "opp_score": null,
    "result": null,
    "note": "",
-   "links": {}
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/msoc/2026-27/boxscores/20261010_i4we.xml"
+   }
   },
   {
    "id": "saints-presto2026-10-11-0",
