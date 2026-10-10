@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10T00:00:01-04:00",
+ "updated": "2026-10-10T09:30:02-04:00",
  "today": "2026-10-10",
  "games": [
   {
@@ -39,6 +39,38 @@
    }
   },
   {
+   "id": "saints-presto2026-10-09-0",
+   "team": "saints",
+   "sport": "Fastball",
+   "start": "2026-10-09T00:00:00-04:00",
+   "time_tbd": true,
+   "home_away": "N",
+   "opponent": "UBCO",
+   "location": "Vaso’s Field (Oshawa)",
+   "status": "final",
+   "our_score": 10,
+   "opp_score": 4,
+   "result": "W",
+   "note": "Exhibition · CCSA National Championship Hosted by Durham College",
+   "links": {}
+  },
+  {
+   "id": "saints-presto2026-10-09-4",
+   "team": "saints",
+   "sport": "Fastball",
+   "start": "2026-10-09T00:00:00-04:00",
+   "time_tbd": true,
+   "home_away": "N",
+   "opponent": "Saskatchewan",
+   "location": "Vaso’s Field (Oshawa)",
+   "status": "final",
+   "our_score": 14,
+   "opp_score": 3,
+   "result": "W",
+   "note": "Exhibition · CCSA National Championship Hosted by Durham College",
+   "links": {}
+  },
+  {
    "id": "saints-presto2026-10-09-1",
    "team": "saints",
    "sport": "Women's Volleyball",
@@ -55,22 +87,20 @@
    "links": {}
   },
   {
-   "id": "saints-presto2026-10-09-0",
+   "id": "saints-presto2026-10-09-5",
    "team": "saints",
-   "sport": "Fastball",
-   "start": "2026-10-09T10:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "UBCO",
-   "location": "Vaso’s Field (Oshawa)",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Exhibition · CCSA National Championship Hosted by Durham College",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/fastball/2026-27/boxscores/20261009_cwyz.xml"
-   }
+   "sport": "Women's Volleyball",
+   "start": "2026-10-09T00:00:00-04:00",
+   "time_tbd": true,
+   "home_away": "H",
+   "opponent": "Seneca",
+   "location": "",
+   "status": "final",
+   "our_score": 1,
+   "opp_score": 3,
+   "result": "L",
+   "note": "Exhibition · St. Clair/ University of Windsor Invitational",
+   "links": {}
   },
   {
    "id": "saints-presto2026-10-09-2",
@@ -107,40 +137,6 @@
    "links": {
     "boxscore": "https://www.saintsathletics.ca/sports/msoc/2026-27/boxscores/20261009_2kr9.xml"
    }
-  },
-  {
-   "id": "saints-presto2026-10-09-4",
-   "team": "saints",
-   "sport": "Fastball",
-   "start": "2026-10-09T17:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Saskatchewan",
-   "location": "Vaso’s Field (Oshawa)",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Exhibition · CCSA National Championship Hosted by Durham College",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/fastball/2026-27/boxscores/20261009_gsta.xml"
-   }
-  },
-  {
-   "id": "saints-presto2026-10-09-5",
-   "team": "saints",
-   "sport": "Women's Volleyball",
-   "start": "2026-10-09T18:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Seneca",
-   "location": "",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Exhibition · St. Clair/ University of Windsor Invitational",
-   "links": {}
   },
   {
    "id": "saints-presto2026-10-09-6",
