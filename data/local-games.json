@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-11T10:01:34-04:00",
+ "updated": "2026-10-11T10:17:22-04:00",
  "today": "2026-10-11",
  "range": [
   "2026-10-08",
@@ -1275,10 +1275,10 @@
    "home_away": "H",
    "opponent": "St. Clair Saints",
    "location": "Toldo Lancer Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 1,
+   "result": "W",
    "note": "",
    "links": {}
   },
@@ -1343,12 +1343,12 @@
    "start": "2026-10-10T15:00:00-04:00",
    "time_tbd": false,
    "home_away": "H",
-   "opponent": "TBA",
+   "opponent": "Seneca College",
    "location": "Toldo Lancer Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 0,
+   "result": "W",
    "note": "",
    "links": {}
   },
@@ -3309,6 +3309,19 @@
   },
   {
    "league": "other",
+   "headline": "Max Verstappen wins Singapore Grand Prix as Kimi Antonelli closes in on F1 title",
+   "summary": "Max Verstappen raced hard into the first corner then cruised to back-to-back Formula 1 wins at the Singapore Grand Prix on Sunday.",
+   "published": "2026-10-11T10:12-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/verstappen-singapore.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Auto Racing",
+   "url": "https://www.sportsnet.ca/formula-1/article/max-verstappen-wins-singapore-grand-prix-as-kimi-antonelli-closes-in-on-f1-title/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
    "headline": "Toronto FC roars back with pair of stoppage-time goals to shock CF Montreal",
    "summary": "",
    "published": "2026-10-10T15:35-04:00",
@@ -3360,31 +3373,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "cfl",
-   "headline": "Blue Bombers help playoff fortunes with win over Stampeders",
-   "summary": "The Winnipeg Blue Bombers have saved their season.",
-   "published": "2026-10-10T22:36-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177067225.jpg",
+   "league": "nhl",
+   "headline": "Suniev’s first goal a reminder of what Flames’ rebuilding season is about",
+   "summary": "In a rebuilding season in which the best moments will almost certainly revolve around youngsters finding their footing, Aydar Suniev set the tone as a reminder of what this season is all about.",
+   "published": "2026-10-11T02:19-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/flames-7.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/blue-bombers-help-playoff-fortunes-with-win-over-stampeders/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Sunday Overreactions: Time for Maple Leafs to shift Tavares to wing",
-   "summary": "Normally a strong starter, John Tavares has looked a step behind this season. Could it be time for the Maple Leafs to ask the veteran to move to the wing? Michael Amato dives into that and more in his Sunday Overreaction",
-   "published": "2026-10-11T08:13-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177011953.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 5,
+   "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/sunday-overreactions-time-for-maple-leafs-to-shift-tavares-to-wing/",
+   "url": "https://www.sportsnet.ca/nhl/article/sunievs-first-goal-a-reminder-of-what-flames-rebuilding-season-is-about/",
    "source": "Sportsnet"
   },
   {
@@ -3403,16 +3401,18 @@
    "source": "Sportsnet"
   },
   {
-   "league": "mlb",
-   "headline": "Dodgers-Brewers NLCS rematch presents more even battle",
-   "summary": "When the Dodgers faced and ultimately swept the Brewers in the NLCS last year, it felt lopsided right from the start. Sportsnet’s Ben Nicholson-Smith explains why that won’t be the case this time around.",
-   "published": "2026-10-11T09:27-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Dodgers-Brewers.jpg",
+   "league": "nba",
+   "headline": "Raptors handle Clippers in ‘bittersweet’ matchup against Gradey Dick",
+   "summary": "Seeing Gradey Dick on the opposite side of the court and in another uniform is not what any Raptors expected a year ago. Michael Grange has the latest on the youngster’s “bittersweet” departure and more takeaways from Sa",
+   "published": "2026-10-10T23:10-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177067362.jpg",
    "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/dodgers-brewers-nlcs-rematch-presents-more-even-battle/",
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 2,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/raptors-handle-clippers-in-bittersweet-matchup-against-gradey-dick/",
    "source": "Sportsnet"
   },
   {
@@ -3426,6 +3426,19 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/premier-league/article/dark-cloud-looms-over-premier-league-manchester-city-as-action-resumes/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "NFL Week 5 Pick ‘Em: Falcons look to stay hot against Ravens",
+   "summary": "We’re now one month into the NFL season, and teams are beginning to separate themselves from the pack. Evan Davidson runs down the Week 5 slate to help you make your picks.",
+   "published": "2026-10-08T11:33-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Falcons.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-5-pick-em-cowboys-look-to-dominate-bucs-in-primetime/",
    "source": "Sportsnet"
   },
   {
@@ -3508,6 +3521,19 @@
   },
   {
    "league": "other",
+   "headline": "Olympic champ Zheng beats Andreeva in China Open final for first title win in two years",
+   "summary": "Olympic champion Zheng Qinwen won her first title in two years by beating French Open champion Mirra Andreeva 7-5, 6-4 in the China Open final Sunday.",
+   "published": "2026-10-11T10:12-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-2026-10-11T101137.576.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Tennis",
+   "url": "https://www.sportsnet.ca/wta/article/olympic-champ-zheng-beats-andreeva-in-china-open-final-for-first-title-win-in-two-years/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
    "headline": "Michael Brennan wins Baycurrent Classic for third PGA Tour title",
    "summary": "",
    "published": "2026-10-11T08:26-04:00",
@@ -3517,6 +3543,19 @@
    "sn_team_count": 0,
    "sport": "Golf",
    "url": "https://www.sportsnet.ca/pga/article/michael-brennan-wins-baycurrent-classic-for-third-pga-tour-title/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "cfl",
+   "headline": "Blue Bombers help playoff fortunes with win over Stampeders",
+   "summary": "The Winnipeg Blue Bombers have saved their season.",
+   "published": "2026-10-10T22:36-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177067225.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/blue-bombers-help-playoff-fortunes-with-win-over-stampeders/",
    "source": "Sportsnet"
   },
   {
@@ -3572,31 +3611,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "NFL Week 5 preview: 49ers, Purdy look to solve Seahawks defence",
-   "summary": "The 49ers and Brock Purdy have looked nearly unstoppable this season, but now they face the ultimate test against the vaunted Seahawks defence. Kellen Forrest previews the big NFC West clash and much more in his Week 5 p",
-   "published": "2026-10-10T13:54-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Purdy-1.jpg",
-   "video": false,
-   "teams": [
-    "Buffalo Bills"
-   ],
-   "sn_team_count": 7,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-5-preview-49ers-purdy-look-to-solve-seahawks-defence/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "NFL Week 5 Pick ‘Em: Falcons look to stay hot against Ravens",
-   "summary": "We’re now one month into the NFL season, and teams are beginning to separate themselves from the pack. Evan Davidson runs down the Week 5 slate to help you make your picks.",
-   "published": "2026-10-08T11:33-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Falcons.jpg",
+   "league": "nhl",
+   "headline": "Rangers goalie Igor Shesterkin out for season",
+   "summary": "",
+   "published": "2026-10-10T12:35-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-2026-10-10T125817.446.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-5-pick-em-cowboys-look-to-dominate-bucs-in-primetime/",
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/rangers-goalie-igor-shesterkin-out-for-season/",
    "source": "Sportsnet"
   },
   {
@@ -3610,34 +3634,6 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/report-cardinals-working-on-trade-involving-wr-marvin-harrison-jr/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Who’s playing with whom? New curling teams to watch this season",
-   "summary": "Any curling fan that watched last season but missed the off-season news is in for a surprise when you turn on the television next week. Many big names have changed teams ahead of the first Grand Slam of Curling event of ",
-   "published": "2026-10-10T08:32-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP175926002-copy.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Curling",
-   "url": "https://www.sportsnet.ca/curling/article/whos-playing-with-who-new-curling-teams-to-watch-this-season/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Quick Shifts: Is the real Auston Matthews back?",
-   "summary": "For the first time in a while, Auston Matthews appears genuinely pumped and wholly engaged. Is the Maple Leafs captain back? Sportsnet’s Luke Fox explores that and more in the latest Quick Shifts.",
-   "published": "2026-10-10T08:14-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/matthews.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/quick-shifts-is-the-real-auston-matthews-back/",
    "source": "Sportsnet"
   },
   {
