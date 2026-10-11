@@ -10,7 +10,7 @@
   Tapping an athlete opens the Spotlights page with that profile already open.
   Embed in Wix at about 250px tall, full width.
   ?link=<url>   the page with the full Athlete Profiles (default https://www.powerplaywindsor.com/sports)
-  ?n=<number>   how many to show (default 15)
+  ?n=<number>   how many to show before the "More" tile (default 4)
 -->
 <style>
   :root { --bg: #0b1a33; --panel: #10244a; --row: #132b57; --line: #1e3a6e; --text: #f2f5fb; --muted: #9fb0cf; --accent: #e8b021; }
@@ -30,6 +30,12 @@
   .card img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
   .card::after { content: "View profile"; position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 8px 6px; font-size: 11px; font-weight: 800; color: #fff;
     background: linear-gradient(transparent, rgba(11,26,51,.92)); text-align: left; }
+  .tile { flex: 0 0 auto; width: 140px; aspect-ratio: 3 / 4; border-radius: 8px; border: 2px dashed var(--line); background: var(--panel); color: var(--accent);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-decoration: none; font-weight: 800; text-align: center;
+    scroll-snap-align: start; padding: 10px; transition: border-color .15s; }
+  .tile:hover { border-color: var(--accent); }
+  .tile .big { font-size: 30px; line-height: 1; }
+  .tile small { color: var(--muted); font-weight: 600; font-size: 11px; }
   .empty { color: var(--muted); padding: 10px 12px; }
 </style>
 </head>
@@ -47,7 +53,7 @@
   var REPO = 'https://bbellacicco.github.io/powerplay-feed/';
   var qs = new URLSearchParams(location.search);
   var LINK = qs.get('link') || 'https://www.powerplaywindsor.com/sports';
-  var N = Math.max(3, Math.min(40, parseInt(qs.get('n'), 10) || 15));
+  var N = Math.max(3, Math.min(40, parseInt(qs.get('n'), 10) || 4));
   document.getElementById('more').href = LINK;
 
   function full(src) { return /^https?:/.test(src) ? src : REPO + src; }
@@ -55,7 +61,7 @@
 
   fetch(REPO + 'data/profiles.json?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; })
     .then(function (j) {
-      var list = (j && j.profiles || []).filter(function (p) { return p && p.img; }).slice(0, N);
+      var all = (j && j.profiles || []).filter(function (p) { return p && p.img; }), list = all.slice(0, N);
       var box = document.getElementById('strip'); box.innerHTML = '';
       if (!list.length) { var e = document.createElement('div'); e.className = 'empty'; e.textContent = 'Profiles are on the way.'; box.appendChild(e); return; }
       list.forEach(function (p, i) {
@@ -70,6 +76,13 @@
         };
         box.appendChild(c);
       });
+      // the "More" tile: the rest are on the Athlete Profiles page
+      if (all.length > list.length) {
+        var t = document.createElement('a'); t.className = 'tile'; t.href = LINK; t.target = '_top';
+        t.innerHTML = '<span class="big">&rarr;</span><span>More athletes</span>';
+        var sm = document.createElement('small'); sm.textContent = all.length + ' profiles'; t.appendChild(sm);
+        box.appendChild(t);
+      }
     });
 })();
 </script>
