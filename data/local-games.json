@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-11T19:22:06-04:00",
+ "updated": "2026-10-11T19:37:20-04:00",
  "today": "2026-10-11",
  "range": [
   "2026-10-08",
@@ -1455,11 +1455,11 @@
    "home_away": "H",
    "opponent": "LaSalle Vipers",
    "location": "Chatham Memorial Arena, Chatham, ON",
-   "status": "live",
-   "our_score": 3,
-   "opp_score": 0,
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
    "result": null,
-   "note": "08:31 1st",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15572"
    },
@@ -3255,7 +3255,7 @@
   },
   {
    "league": "nfl",
-   "headline": "Jayden Daniels, Commanders settle for tie with Giants after botching final play of OT",
+   "headline": "Commanders’ Quinn takes blame for OT clock blunder in tie with Giants",
    "summary": "",
    "published": "2026-10-11T17:12-04:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-2026-10-11T171120.339.jpg",
@@ -3454,6 +3454,19 @@
   },
   {
    "league": "nfl",
+   "headline": "49ers WR Deebo Samuel leaves vs. Seahawks with hamstring injury",
+   "summary": "",
+   "published": "2026-10-11T19:29-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/193e7a974975500f5b115081af0f533797528571b8a34433d0577cfb7d422f86.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/49ers-wr-deebo-samuel-leaves-vs-seahawks-with-hamstring-injury/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
    "headline": "NFL Week 5 Pick ‘Em: Falcons look to stay hot against Ravens",
    "summary": "We’re now one month into the NFL season, and teams are beginning to separate themselves from the pack. Evan Davidson runs down the Week 5 slate to help you make your picks.",
    "published": "2026-10-08T11:33-04:00",
@@ -3556,19 +3569,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/oilers-play-to-babcocks-vision-in-meat-grinder-win-over-sharks/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Abysmal penalty killing continues to sink Canucks: ‘Not sustainable’",
-   "summary": "Penalty killing is one factor that could keep the Canucks in games. But in Saturday’s 4-1 loss to the Devils, it sunk them like a torpedo.",
-   "published": "2026-10-10T21:00-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/nucks-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/abysmal-penalty-killing-continues-to-sink-canucks-not-sustainable/",
    "source": "Sportsnet"
   },
   {
@@ -5058,7 +5058,7 @@
       "l": 2,
       "otl": 0,
       "pts": 14,
-      "gf": 44,
+      "gf": 45,
       "ga": 26,
       "strk": "L1"
      },
@@ -5095,7 +5095,7 @@
       "otl": 0,
       "pts": 8,
       "gf": 24,
-      "ga": 35,
+      "ga": 36,
       "strk": "L1"
      },
      {
@@ -5219,8 +5219,8 @@
       "l": 1,
       "otl": 1,
       "pts": 17,
-      "gf": 42,
-      "ga": 22,
+      "gf": 43,
+      "ga": 23,
       "strk": "W5"
      },
      {
@@ -5243,8 +5243,8 @@
       "l": 1,
       "otl": 1,
       "pts": 11,
-      "gf": 28,
-      "ga": 20,
+      "gf": 29,
+      "ga": 21,
       "strk": "W3"
      },
      {
