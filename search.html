@@ -7,7 +7,8 @@
 <!--
   Site search for Powerplay Windsor. Searches the same live data as the widgets:
   Local Hub stories, Local Scoreboard games (Spitfires, Lancers, Saints, junior, high school),
-  Pro Hub stories, Pro Scoreboard games (CFL, NHL, NFL, NBA, MLB) and every standings table.
+  Pro Hub stories, Pro Scoreboard games (CFL, NHL, NFL, NBA, MLB), every standings table,
+  and the archive: every Powerplay blog post plus the YouTube and Vimeo videos (data/search-archive.json).
 
   Two ways to embed it in Wix:
     search.html?mode=bar   just the search bar (about 64px tall). Searching opens the results page.
@@ -115,7 +116,9 @@
     'standings standing stand sit sitting rank ranked ranking place record table league ' +
     'news story stories article articles video videos highlight highlights recap recaps update updates info information please ' +
     'and or with from going go goes team teams doing like look looking so far up now new happen happened happening ' +
-    'first top bottom leading leader leaders lead best worst second third last-place').split(' ');
+    'first top bottom leading leader leaders lead best worst second third last-place ' +
+    'lately season year years far yet still been doing look looks looking looked going hows wheres whens score? ' +
+    'can could would should will think anything everything something much many more most good bad big').split(' ');
   var FILL = {}; FILLER.forEach(function (w) { FILL[w] = 1; });
   function intent(q) {
     var n = ' ' + norm(q).replace(/[^a-z0-9' ]+/g, ' ') + ' ';
@@ -138,7 +141,11 @@
     if (!kept.length) kept = ws;                                 // a search made only of filler words: use them as typed
     return kept.map(function (w) { return norm(ALIAS[w] || w); });
   }
-  function hit(hay, ws) { for (var i = 0; i < ws.length; i++) if (hay.indexOf(ws[i]) < 0) return false; return true; }
+  var RX = {};
+  function rx(w) {    // the word has to start a word ("lions" won't match "Stallions"); an apostrophe is optional ("73s" = "73's")
+    return RX[w] || (RX[w] = new RegExp('(^|[^a-z0-9])' + w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/'/g, "'?").replace(/\s+/g, '\\s+')));
+  }
+  function hit(hay, ws) { for (var i = 0; i < ws.length; i++) if (!rx(ws[i]).test(hay)) return false; return true; }
   function apos(w) { return w.replace(/'/g, "['’]?"); }
   function hiText(node, text, ws) {     // text with the matched words highlighted
     var parts = ws.filter(function (w) { return w.length > 1; }).map(function (w) { return w.split(' ').map(function (p) { return apos(p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')); }).join('\\s+'); });
@@ -201,7 +208,7 @@
     var days = [-1, 0, 1].map(function (n) { return new Date(Date.now() + n * 864e5); });
     var espn = [];
     Object.keys(ESPN).forEach(function (k) { days.forEach(function (d) { espn.push(espnDay(k, d)); }); });
-    loading = Promise.all([getJSON('local-news.json'), getJSON('local-games.json'), getJSON('college-standings.json'), getJSON('hs-standings.json'), Promise.all(espn)])
+    loading = Promise.all([getJSON('local-news.json'), getJSON('local-games.json'), getJSON('college-standings.json'), getJSON('hs-standings.json'), Promise.all(espn), getJSON('search-archive.json')])
       .then(function (r) {
         var news = r[0] || {}, lg = r[1] || {}, col = r[2] || {}, hs = r[3] || {}, pro = [].concat.apply([], r[4] || []);
         var items = [];
@@ -212,6 +219,14 @@
           items.push({ kind: 'story', group: s.team, who: who, headline: s.headline, summary: s.summary || '', url: s.url, image: s.image,
             video: s.video, published: s.published, hub: 'Local Hub',
             hay: norm([who, s.club, TEAMS[s.team], s.headline, s.summary, s.sport, s.team === 'junior' ? 'junior hockey' : '', s.team === 'powerplay' ? 'powerplay' : ''].join(' ')) });
+        });
+        // The archive: every Powerplay blog post plus the YouTube and Vimeo videos (built by Buddy's PC)
+        var have = {}; items.forEach(function (it) { have[it.url] = 1; });
+        ((r[5] || {}).items || []).forEach(function (a) {
+          if (!a.u || !a.t || have[a.u]) return; have[a.u] = 1;
+          items.push({ kind: 'story', group: 'powerplay', who: 'Powerplay Windsor', headline: a.t, summary: a.d || '', url: a.u, image: a.i,
+            video: a.s !== 'Blog', published: a.p ? a.p + 'T12:00:00' : '', hub: a.s === 'Blog' ? 'Blog' : a.s,
+            hh: norm(a.t), hay: norm(['powerplay', a.s, a.t, a.d, a.c].join(' ')) });
         });
         // Pro Hub stories (ESPN / CFL / Sportsnet / team sites)
         (lg.pro_news || []).concat(lg.more_news || []).forEach(function (s) {
@@ -316,7 +331,7 @@
   }
   var GENERIC_IMG = /(1920x1080-|game-story|placeholder)/i;
   function storyRow(s, ws) {
-    var a = el('a', 'item t-' + (s.group in TEAMS || s.group === 'junior' ? s.group : 'pro')); a.href = s.url; a.target = '_blank'; a.rel = 'noopener';
+    var a = el('a', 'item t-' + (s.group in TEAMS || s.group === 'junior' ? s.group : 'pro')); a.href = s.url; if (s.url.indexOf(SITE) === 0) a.target = '_top'; else { a.target = '_blank'; a.rel = 'noopener'; }
     if (s.image && !GENERIC_IMG.test(s.image)) { var im = new Image(); im.className = 'thumb'; im.src = s.image; im.alt = ''; im.loading = 'lazy'; im.onerror = function () { im.remove(); }; a.appendChild(im); }
     var main = el('div', 'main'), meta = el('div', 'meta');
     meta.appendChild(el('b', null, s.who)); meta.appendChild(document.createTextNode(' · ' + (s.video ? 'Video · ' : '') + ago(s.published) + ' · ' + s.hub));
@@ -365,11 +380,7 @@
       out.innerHTML = '';
       var now = Date.now();
       var res = items.filter(function (it) { return hit(it.hay, ws); });
-      if (!res.length && ws.length > 1) {
-        // a sentence can carry words that appear nowhere ("how are the spits looking lately"): drop those and try again
-        var known = ws.filter(function (w) { return items.some(function (it) { return it.hay.indexOf(w) >= 0; }); });
-        if (known.length && known.length < ws.length) { ws = known; res = items.filter(function (it) { return hit(it.hay, ws); }); }
-      }
+      // every word must match: "Windsor Selects" never widens to everything "Windsor"
       var want = intent(q);
       var games = res.filter(function (x) { return x.kind === 'game'; }).sort(function (a, b) {
         // live first; "how did they do" puts the latest finals first, "when do they play" the next games;
@@ -381,15 +392,17 @@
         if (want.future && fa !== fb) return fa ? 1 : -1;
         return Math.abs(ta - now) - Math.abs(tb - now);
       });
-      var stories = res.filter(function (x) { return x.kind === 'story'; }).sort(function (a, b) {
-        var pa = a.group === 'powerplay' ? 1 : 0, pb = b.group === 'powerplay' ? 1 : 0;
-        var ta = new Date(a.published).getTime() || 0, tb = new Date(b.published).getTime() || 0;
-        return (tb + pb * 6 * 3600e3) - (ta + pa * 6 * 3600e3);    // Powerplay stories get a small boost
-      });
+      var stories = res.filter(function (x) { return x.kind === 'story'; }).map(function (x) {
+        // newest first, with a small boost for Powerplay's own stories and a bigger one when the
+        // headline itself has the words (so an old story *about* the team beats a passing mention)
+        var t = new Date(x.published).getTime() || 0;
+        x.rank = t + (x.group === 'powerplay' ? 6 * 3600e3 : 0) + (hit(x.hh || norm(x.headline), ws) ? 180 * 864e5 : 0);
+        return x;
+      }).sort(function (a, b) { return b.rank - a.rank; });
       var seenH = {}; stories = stories.filter(function (s) { var k = norm(s.headline); if (seenH[k]) return false; seenH[k] = 1; return true; });
       var tables = res.filter(function (x) { return x.kind === 'table'; });
       if (!games.length && !stories.length && !tables.length) {
-        out.appendChild(el('div', 'status', 'Nothing found for “' + q.trim() + '”. Try a team, a school or a sport.'));
+        out.appendChild(el('div', 'status', 'Nothing on “' + q.trim() + '” right now. Search covers every Powerplay story and video, plus the Spitfires, Lancers, Saints, junior hockey, high school and the pro teams in the Pro Hub.'));
         chips(); return;
       }
       if (ws.join(' ') !== norm(q).trim()) out.appendChild(el('div', 'status', 'Showing results for: ' + ws.join(' ')));
