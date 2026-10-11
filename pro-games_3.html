@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
 
-<title>Pro Hub | Powerplay Windsor</title>
+<title>Pro Scoreboard | Powerplay Windsor</title>
 <!--
   Pro sports widget: yesterday, today and the next 3 days.
   NFL, NHL, NBA and MLB load live from ESPN each time the page opens, so scores are
@@ -28,9 +28,11 @@
     font: 14px/1.35 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
   .wrap { max-width: 900px; margin: 0 auto; padding: 12px; }
   header { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
-  h1 { font-family: 'Graduate', 'Rockwell', Georgia, serif; font-weight: 400; font-size: 22px; -webkit-text-stroke: .9px currentColor; paint-order: stroke fill; line-height: 1.1; margin: 0; letter-spacing: .03em; text-transform: uppercase; }
+  h1 { font-family: 'Graduate', 'Rockwell', Georgia, serif; font-weight: 400; font-size: 17px; -webkit-text-stroke: .7px currentColor; paint-order: stroke fill; line-height: 1.1; margin: 0; letter-spacing: .03em; text-transform: uppercase; }
   h1 span { color: var(--accent); }
   .sponsor { color: var(--muted); font-size: 12px; margin-top: 2px; }
+  .sponsor { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .sponsor .slogo { height: 26px; width: auto; max-width: 90px; object-fit: contain; border-radius: 3px; }
   .sponsor b { color: var(--text); font-weight: 600; }
   .updated { color: var(--muted); font-size: 12px; }
   .bar { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; align-items: center; }
@@ -88,8 +90,8 @@
 <div class="wrap">
   <header>
     <div>
-      <h1>Pro <span>Hub</span></h1>
-      <div class="sponsor">Brought to you by <b>Unifor Local 2458</b></div>
+      <h1>Pro <span>Scoreboard</span></h1>
+      <div class="sponsor"><img class="slogo" src="logos/mlp-pro-wrestling.png" alt="" onerror="this.remove()"><span>Powered by <b>MLP Pro Wrestling</b></span></div>
     </div>
     <div class="right">
       <div class="views" role="group" aria-label="View"><button id="v-games">Games</button><button id="v-standings">Standings</button></div>
