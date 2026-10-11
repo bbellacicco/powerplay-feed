@@ -1,9 +1,9 @@
 {
- "updated": "2026-10-10T23:46:47-04:00",
- "today": "2026-10-10",
+ "updated": "2026-10-11T00:01:52-04:00",
+ "today": "2026-10-11",
  "range": [
-  "2026-10-07",
-  "2026-10-13"
+  "2026-10-08",
+  "2026-10-14"
  ],
  "teams": {
   "spitfires": {
@@ -111,123 +111,6 @@
   }
  },
  "games": [
-  {
-   "id": "highschool-2026-10-07-41",
-   "team": "highschool",
-   "sport": "Junior Boys Football",
-   "start": "2026-10-07T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "L'Essor",
-   "location": "Tecumseh Vista Academy",
-   "status": "final",
-   "our_score": 12,
-   "opp_score": 27,
-   "result": null,
-   "note": "",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "St. Anne",
-   "home": "L'Essor"
-  },
-  {
-   "id": "highschool-2026-10-07-39",
-   "team": "highschool",
-   "sport": "Junior Boys Volleyball",
-   "start": "2026-10-07T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Assumption",
-   "location": "Assumption School",
-   "status": "final",
-   "our_score": 1,
-   "opp_score": 2,
-   "result": null,
-   "note": "Tier 1 · date and time change",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Lajeunesse",
-   "home": "Assumption"
-  },
-  {
-   "id": "highschool-2026-10-07-40",
-   "team": "highschool",
-   "sport": "Senior Boys Volleyball",
-   "start": "2026-10-07T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Assumption",
-   "location": "Assumption School",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 0,
-   "result": null,
-   "note": "Tier 1 · following the junior",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Lajeunesse",
-   "home": "Assumption"
-  },
-  {
-   "id": "junior-ojhl16451",
-   "team": "junior",
-   "sport": "OJHL (Jr. A)",
-   "start": "2026-10-07T14:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Markham Royals",
-   "location": "Gale Centre, Niagara Falls, ON",
-   "status": "final",
-   "our_score": 4,
-   "opp_score": 1,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.ojhl.ca/stats/game-center/16451"
-   },
-   "club": "Leamington Flyers"
-  },
-  {
-   "id": "junior-gojhl15552",
-   "team": "junior",
-   "sport": "GOHL (Jr. B)",
-   "start": "2026-10-07T19:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "St. Marys Lincolns",
-   "location": "Vollmer Culture R.C., LaSalle, ON",
-   "status": "final",
-   "our_score": 0,
-   "opp_score": 5,
-   "result": "L",
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.gohl.ca/stats/game-center/15552"
-   },
-   "club": "LaSalle Vipers"
-  },
-  {
-   "id": "junior-gs2960295",
-   "team": "junior",
-   "sport": "PJHL (Jr. C)",
-   "start": "2026-10-07T19:30:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Walpole Island Wild",
-   "location": "Wheatley Area Arena",
-   "status": "final",
-   "our_score": 6,
-   "opp_score": 2,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960295?configuration=45"
-   },
-   "club": "Wheatley Sharks"
-  },
   {
    "id": "highschool-2026-10-08-54",
    "team": "highschool",
@@ -1651,6 +1534,44 @@
    "result": null,
    "note": "",
    "links": {}
+  },
+  {
+   "id": "junior-gojhl15577",
+   "team": "junior",
+   "sport": "GOHL (Jr. B)",
+   "start": "2026-10-14T19:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Listowel Cyclones",
+   "location": "Vollmer Culture R.C., LaSalle, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.gohl.ca/stats/game-center/15577"
+   },
+   "club": "LaSalle Vipers"
+  },
+  {
+   "id": "junior-gs2960354",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-10-14T19:30:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Mooretown Flags",
+   "location": "Wheatley Area Arena",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960354?configuration=45"
+   },
+   "club": "Wheatley Sharks"
   }
  ],
  "pro_games": [
@@ -1744,6 +1665,20 @@
   }
  ],
  "pro_news": [
+  {
+   "league": "cfl",
+   "headline": "Recap: Winnipeg 33, Calgary 28",
+   "summary": "",
+   "published": "2026-10-10T23:31:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/1uISjWXecJEI1H1Zk6lAir/660daf0bd6eb89aee1dc17d98489e255/WEEK_19_-_CGY_VS_WPG_THUMBNAIL.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Stampeders",
+    "Blue Bombers"
+   ],
+   "url": "https://www.cfl.ca/article/recap-winnipeg-33-calgary-28",
+   "source": "CFL.ca"
+  },
   {
    "league": "cfl",
    "headline": "Deonta McMahon goes BACK TO BACK",
@@ -2110,17 +2045,6 @@
    "video": false,
    "teams": [],
    "url": "https://www.cfl.ca/article/lions-sign-defensive-back-cristophe-beaulieu-to-one-year-extension",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Top CFL Fantasy plays at every position for Week 18",
-   "summary": "",
-   "published": "2026-10-02T00:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/3IMYxb0igS856cWZ5av5ye/949445fd56f0f26f3d7b067e98c11379/Tyson_Philpot_2026_3.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/top-cfl-fantasy-plays-at-every-position-for-week-18",
    "source": "CFL.ca"
   },
   {
