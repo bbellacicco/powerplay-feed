@@ -10,7 +10,7 @@
   Tapping an athlete opens the Spotlights page with that profile already open.
   Embed in Wix at about 250px tall, full width.
   ?link=<url>   the page with the full Athlete Profiles (default https://www.powerplaywindsor.com/sports)
-  ?n=<number>   how many to show before the "More" tile (default 4; phones show 2)
+  ?n=<number>   how many to show before the "More" tile (default 4)
 -->
 <style>
   :root { --bg: #0b1a33; --panel: #10244a; --row: #132b57; --line: #1e3a6e; --text: #f2f5fb; --muted: #9fb0cf; --accent: #e8b021; }
@@ -37,12 +37,6 @@
   .tile .big { font-size: 30px; line-height: 1; }
   .tile small { color: var(--muted); font-weight: 600; font-size: 11px; }
   .empty { color: var(--muted); padding: 10px 12px; }
-  /* phones: two profiles and the More tile, filling the width, no swiping */
-  @media (max-width: 600px) {
-    .strip { overflow: hidden; }
-    .card:nth-of-type(n+3) { display: none; }
-    .card, .tile { flex: 1 1 0; width: auto; min-width: 0; }
-  }
 </style>
 </head>
 <body>
