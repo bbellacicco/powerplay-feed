@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10T21:47:09-04:00",
+ "updated": "2026-10-10T22:01:49-04:00",
  "today": "2026-10-10",
  "range": [
   "2026-10-07",
@@ -1655,28 +1655,6 @@
  ],
  "pro_games": [
   {
-   "id": "cfl-cfl6662",
-   "team": "cfl",
-   "sport": "CFL",
-   "start": "2026-10-10T19:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Winnipeg Blue Bombers",
-   "location": "Princess Auto Stadium",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.cfl.ca/schedule/"
-   },
-   "away": "Calgary Stampeders",
-   "home": "Winnipeg Blue Bombers",
-   "away_abbr": "CGY",
-   "home_abbr": "WPG"
-  },
-  {
    "id": "cfl-cfl6663",
    "team": "cfl",
    "sport": "CFL",
@@ -1741,6 +1719,28 @@
    "home": "B.C. Lions",
    "away_abbr": "OTT",
    "home_abbr": "BC"
+  },
+  {
+   "id": "cfl-cfl6662",
+   "team": "cfl",
+   "sport": "CFL",
+   "start": "2026-10-10T19:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Winnipeg Blue Bombers",
+   "location": "Princess Auto Stadium",
+   "status": "final",
+   "our_score": 28,
+   "opp_score": 33,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.cfl.ca/schedule/"
+   },
+   "away": "Calgary Stampeders",
+   "home": "Winnipeg Blue Bombers",
+   "away_abbr": "CGY",
+   "home_abbr": "WPG"
   }
  ],
  "pro_news": [
@@ -4252,14 +4252,14 @@
      {
       "name": "Chatham Maroons",
       "abbr": "CHA",
-      "gp": 8,
+      "gp": 9,
       "w": 7,
-      "l": 1,
+      "l": 2,
       "otl": 0,
       "pts": 14,
       "gf": 42,
       "ga": 26,
-      "strk": "W2"
+      "strk": "L1"
      },
      {
       "name": "Listowel Cyclones",
@@ -4387,6 +4387,18 @@
       "strk": "W6"
      },
      {
+      "name": "Caledonia Corvairs",
+      "abbr": "CAL",
+      "gp": 10,
+      "w": 8,
+      "l": 1,
+      "otl": 1,
+      "pts": 17,
+      "gf": 42,
+      "ga": 22,
+      "strk": "W5"
+     },
+     {
       "name": "Fort Erie Meteors",
       "abbr": "FEM",
       "gp": 8,
@@ -4409,18 +4421,6 @@
       "gf": 60,
       "ga": 28,
       "strk": "W1"
-     },
-     {
-      "name": "Caledonia Corvairs",
-      "abbr": "CAL",
-      "gp": 9,
-      "w": 7,
-      "l": 1,
-      "otl": 1,
-      "pts": 15,
-      "gf": 42,
-      "ga": 22,
-      "strk": "W4"
      },
      {
       "name": "Waterloo Siskins",
