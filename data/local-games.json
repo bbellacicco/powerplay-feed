@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-11T17:21:31-04:00",
+ "updated": "2026-10-11T17:36:48-04:00",
  "today": "2026-10-11",
  "range": [
   "2026-10-08",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -1455,11 +1455,11 @@
    "home_away": "H",
    "opponent": "LaSalle Vipers",
    "location": "Chatham Memorial Arena, Chatham, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
-   "note": "",
+   "note": "20:00 1st",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15572"
    },
@@ -3227,19 +3227,6 @@
   },
   {
    "league": "nfl",
-   "headline": "Jayden Daniels, Commanders settle for tie with Giants after botching final play of OT",
-   "summary": "",
-   "published": "2026-10-11T17:12-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-2026-10-11T171120.339.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/jayden-daniels-commanders-settle-for-tie-with-giants-after-botching-final-play-of-ot/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
    "headline": "NFL Week 5 roundup: Packers blow out injured Bears",
    "summary": "Christian Watson caught two long touchdown passes from Jordan Love, MarShawn Lloyd also scored twice and the Green Bay Packers exacted a measure of revenge against the Chicago Bears by trouncing them 31-7 on Sunday.",
    "published": "2026-10-11T16:43-04:00",
@@ -3277,6 +3264,19 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/blue-jays-vladimir-guerrero-jr-undergoes-laser-eye-surgery/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Jayden Daniels, Commanders settle for tie with Giants after botching final play of OT",
+   "summary": "",
+   "published": "2026-10-11T17:12-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-2026-10-11T171120.339.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/jayden-daniels-commanders-settle-for-tie-with-giants-after-botching-final-play-of-ot/",
    "source": "Sportsnet"
   },
   {
@@ -3355,19 +3355,6 @@
    "sn_team_count": 0,
    "sport": "Auto Racing",
    "url": "https://www.sportsnet.ca/formula-1/article/max-verstappen-wins-singapore-grand-prix-as-kimi-antonelli-closes-in-on-f1-title/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Senators recall defenceman Jorian Donovan, place Cam Crotty on IR",
-   "summary": "",
-   "published": "2026-10-11T12:05-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/01/Untitled.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/senators-recall-defenceman-jorian-donovan-place-cam-crotty-on-ir/",
    "source": "Sportsnet"
   },
   {
@@ -4925,6 +4912,18 @@
       "strk": "W6"
      },
      {
+      "name": "Burlington Cougars",
+      "abbr": "BUR",
+      "gp": 15,
+      "w": 9,
+      "l": 4,
+      "otl": 2,
+      "pts": 20,
+      "gf": 69,
+      "ga": 40,
+      "strk": "W3"
+     },
+     {
       "name": "Leamington Flyers",
       "abbr": "LEA",
       "gp": 12,
@@ -4934,18 +4933,6 @@
       "pts": 19,
       "gf": 45,
       "ga": 22,
-      "strk": "W2"
-     },
-     {
-      "name": "Burlington Cougars",
-      "abbr": "BUR",
-      "gp": 14,
-      "w": 8,
-      "l": 4,
-      "otl": 2,
-      "pts": 18,
-      "gf": 68,
-      "ga": 40,
       "strk": "W2"
      },
      {
@@ -4987,14 +4974,14 @@
      {
       "name": "Caledon Admirals",
       "abbr": "CAL",
-      "gp": 11,
+      "gp": 12,
       "w": 5,
-      "l": 5,
+      "l": 6,
       "otl": 1,
       "pts": 11,
       "gf": 35,
-      "ga": 55,
-      "strk": "L2"
+      "ga": 56,
+      "strk": "L3"
      },
      {
       "name": "Mississauga Chargers",
@@ -5143,8 +5130,8 @@
       "l": 7,
       "otl": 0,
       "pts": 8,
-      "gf": 35,
-      "ga": 46,
+      "gf": 36,
+      "ga": 47,
       "strk": "L3"
      },
      {
@@ -5232,8 +5219,8 @@
       "l": 1,
       "otl": 0,
       "pts": 16,
-      "gf": 60,
-      "ga": 28,
+      "gf": 61,
+      "ga": 29,
       "strk": "W1"
      },
      {
