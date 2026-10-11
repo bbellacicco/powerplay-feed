@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Search | Powerplay Windsor</title>
+<!--
+  Site search for Powerplay Windsor. Searches the same live data as the widgets:
+  Local Hub stories, Local Scoreboard games (Spitfires, Lancers, Saints, junior, high school),
+  Pro Hub stories, Pro Scoreboard games (CFL, NHL, NFL, NBA, MLB) and every standings table.
+
+  Two ways to embed it in Wix:
+    search.html?mode=bar   just the search bar (about 64px tall). Searching opens the results page.
+    search.html            bar + results (the results page; about 1100px tall)
+  ?page=<url>  where the bar sends people (default https://www.powerplaywindsor.com/search)
+  The bar passes the search words to the results page through browser storage on this site.
+-->
+<style>
+  :root { --bg: #0b1a33; --panel: #10244a; --row: #132b57; --line: #1e3a6e;
+    --text: #f2f5fb; --muted: #9fb0cf; --accent: #e8b021; --win: #34c37a; --loss: #ff7a7a;
+    --powerplay: #e8b021; --spitfires: #d4202a; --lancers: #0b5cad; --saints: #1f9d55; --junior: #0891b2; --highschool: #8b5cf6; --pro: #64748b; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text);
+    font: 14px/1.35 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  body.bar { overflow: hidden; }
+  .wrap { padding: 10px 12px; }
+  form { display: flex; align-items: center; gap: 8px; background: var(--panel); border: 1.5px solid var(--line);
+    border-radius: 999px; padding: 4px 4px 4px 14px; transition: border-color .15s, box-shadow .15s; }
+  form:focus-within { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(232,176,33,.18); }
+  form svg { flex: none; width: 18px; height: 18px; color: var(--muted); }
+  input { flex: 1; min-width: 0; background: transparent; border: 0; outline: 0; color: var(--text);
+    font: inherit; font-size: 16px; padding: 8px 2px; }
+  input::placeholder { color: var(--muted); }
+  input::-webkit-search-cancel-button { display: none; }
+  .clear { flex: none; background: none; border: 0; color: var(--muted); font-size: 20px; line-height: 1; padding: 4px 6px; cursor: pointer; display: none; }
+  .clear.on { display: block; }
+  .go { flex: none; background: var(--accent); color: #0b1a33; border: 0; border-radius: 999px; font: inherit;
+    font-weight: 800; padding: 8px 16px; cursor: pointer; }
+  .chips { display: flex; gap: 6px; flex-wrap: wrap; margin: 10px 2px 0; }
+  .chip { background: var(--row); border: 1px solid var(--line); color: var(--text); border-radius: 999px;
+    padding: 5px 11px; font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; }
+  .chip:hover { border-color: var(--accent); }
+  .status { color: var(--muted); font-size: 13px; margin: 12px 2px 0; }
+  section { margin-top: 16px; }
+  h2 { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin: 0 2px 6px; font-weight: 800; }
+  .list { display: flex; flex-direction: column; gap: 6px; }
+  .item { display: flex; gap: 10px; align-items: center; background: var(--row); border-radius: 8px; padding: 9px 11px;
+    color: inherit; text-decoration: none; border-left: 3px solid var(--line); }
+  a.item:hover .hl { text-decoration: underline; }
+  .item .main { flex: 1; min-width: 0; }
+  .meta { color: var(--muted); font-size: 11.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .meta b { color: var(--accent); font-weight: 700; }
+  .hl { font-weight: 700; line-height: 1.3; }
+  .sum { color: var(--muted); font-size: 12.5px; margin-top: 2px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .score { flex: none; text-align: right; font-weight: 800; font-size: 15px; white-space: nowrap; }
+  .score small { display: block; font-size: 10.5px; font-weight: 700; color: var(--muted); letter-spacing: .05em; }
+  .W { color: var(--win); } .L { color: var(--loss); }
+  .thumb { flex: none; width: 72px; height: 44px; border-radius: 5px; object-fit: cover; background: var(--panel); }
+  mark { background: rgba(232,176,33,.28); color: inherit; border-radius: 2px; }
+  .more { background: none; border: 1px dashed var(--line); color: var(--accent); border-radius: 8px; padding: 7px; font: inherit;
+    font-size: 12.5px; font-weight: 700; cursor: pointer; margin-top: 2px; }
+  .t-powerplay { border-left-color: var(--powerplay); } .t-spitfires { border-left-color: var(--spitfires); }
+  .t-lancers { border-left-color: var(--lancers); } .t-saints { border-left-color: var(--saints); }
+  .t-junior { border-left-color: var(--junior); } .t-highschool { border-left-color: var(--highschool); }
+  .t-pro { border-left-color: var(--pro); }
+  table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  .stand { background: var(--row); border-radius: 8px; padding: 8px 10px; border-left: 3px solid var(--line); }
+  .stand .meta { margin-bottom: 4px; }
+  th { color: var(--muted); font-weight: 600; text-align: right; padding: 2px 4px; font-size: 11px; }
+  td { text-align: right; padding: 3px 4px; font-variant-numeric: tabular-nums; }
+  th:first-child, td:first-child { text-align: left; }
+  td:first-child { font-weight: 700; }
+  @media (max-width: 420px) { .go { padding: 8px 12px; } .thumb { width: 60px; height: 38px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <form id="f" role="search" autocomplete="off">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
+    <input id="q" type="search" enterkeyhint="search" placeholder="Teams, scores, stories" aria-label="Search Powerplay Windsor">
+    <button type="button" class="clear" id="clear" aria-label="Clear">&times;</button>
+    <button class="go" type="submit">Search</button>
+  </form>
+  <div id="out"></div>
+</div>
+<script>
+(function () {
+  var BASE = 'https://bbellacicco.github.io/powerplay-feed/data/';
+  var qs = new URLSearchParams(location.search);
+  var BAR = qs.get('mode') === 'bar';
+  var PAGE = qs.get('page') || 'https://www.powerplaywindsor.com/search';
+  var KEY = 'pp-search';
+  var SITE = 'https://www.powerplaywindsor.com/';
+  var LINK_LOCAL = SITE + '#comp-muiib4ix', LINK_HUB = SITE + '#comp-mulrhl3q';
+  if (BAR) document.body.className = 'bar';
+
+  var input = document.getElementById('q'), out = document.getElementById('out'), clr = document.getElementById('clear');
+  function el(t, c, x) { var e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; }
+  function store(v) { try { localStorage.setItem(KEY, JSON.stringify({ q: v, t: Date.now() })); } catch (e) {} }
+  function stored() { try { var s = JSON.parse(localStorage.getItem(KEY) || 'null'); if (s && Date.now() - s.t < 120000) return s.q; } catch (e) {} return ''; }
+
+  // ---- words: lower case, no accents, curly quotes straightened, nicknames expanded
+  var ALIAS = { spits: 'spitfires', spitties: 'spitfires', uwindsor: 'lancers', stclair: 'saints', 'st.clair': 'saints',
+    leafs: 'maple leafs', wings: 'red wings', habs: 'canadiens', jays: 'blue jays', tigercats: 'tiger-cats', ticats: 'tiger-cats',
+    hs: 'high school', bball: 'basketball', vball: 'volleyball', '73s': "73's" };
+  function norm(s) { return String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[‘’ʼ]/g, "'").replace(/[“”]/g, '"'); }
+  function words(q) {
+    return norm(q).split(/\s+/).filter(Boolean).map(function (w) { return norm(ALIAS[w] || w); });
+  }
+  function hit(hay, ws) { for (var i = 0; i < ws.length; i++) if (hay.indexOf(ws[i]) < 0) return false; return true; }
+  function apos(w) { return w.replace(/'/g, "['’]?"); }
+  function hiText(node, text, ws) {     // text with the matched words highlighted
+    var parts = ws.filter(function (w) { return w.length > 1; }).map(function (w) { return w.split(' ').map(function (p) { return apos(p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')); }).join('\\s+'); });
+    if (!parts.length) { node.textContent = text; return node; }
+    var re = new RegExp('(' + parts.join('|') + ')', 'ig'), last = 0, m, plain = norm(text);
+    // match on the accent-free copy (same length for ordinary text), slice the original
+    if (plain.length !== text.length) { node.textContent = text; return node; }
+    while ((m = re.exec(plain))) {
+      if (m.index > last) node.appendChild(document.createTextNode(text.slice(last, m.index)));
+      node.appendChild(el('mark', null, text.slice(m.index, m.index + m[0].length)));
+      last = m.index + m[0].length; if (!m[0].length) re.lastIndex++;
+    }
+    if (last < text.length) node.appendChild(document.createTextNode(text.slice(last)));
+    return node;
+  }
+
+  // ---- dates
+  var TZ = 'America/Toronto';
+  function dayKey(d) { return new Intl.DateTimeFormat('en-CA', { timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit' }).format(d); }
+  function when(iso, tbd) {
+    var d = new Date(iso); if (isNaN(d)) return '';
+    var k = dayKey(d), t = dayKey(new Date()), y = dayKey(new Date(Date.now() - 864e5)), n = dayKey(new Date(Date.now() + 864e5));
+    var day = k === t ? 'Today' : k === y ? 'Yesterday' : k === n ? 'Tomorrow' : new Intl.DateTimeFormat('en-CA', { timeZone: TZ, weekday: 'short', month: 'short', day: 'numeric' }).format(d);
+    if (tbd) return day;
+    return day + ', ' + new Intl.DateTimeFormat('en-CA', { timeZone: TZ, hour: 'numeric', minute: '2-digit' }).format(d).replace('a.m.', 'a.m.').replace('p.m.', 'p.m.');
+  }
+  function ago(iso) {
+    var t = new Date(iso).getTime(); if (!t) return '';
+    var m = Math.round((Date.now() - t) / 60000);
+    if (m < 60) return Math.max(m, 1) + ' min ago';
+    var h = Math.round(m / 60); if (h < 24) return h + (h === 1 ? ' hour ago' : ' hours ago');
+    var d = Math.round(h / 24); if (d < 7) return d + (d === 1 ? ' day ago' : ' days ago');
+    return new Intl.DateTimeFormat('en-CA', { timeZone: TZ, month: 'short', day: 'numeric', year: 'numeric' }).format(new Date(t));
+  }
+
+  // ---- the search index (built once, the first time someone searches)
+  var TEAMS = { spitfires: 'Windsor Spitfires', lancers: 'Windsor Lancers', saints: 'St. Clair Saints', powerplay: 'Powerplay Windsor' };
+  var LEAGUE = { nhl: 'NHL', nfl: 'NFL', nba: 'NBA', mlb: 'MLB', cfl: 'CFL', pwhl: 'PWHL', mls: 'MLS', wnba: 'WNBA' };
+  var ESPN = { nfl: 'football/nfl', nhl: 'hockey/nhl', nba: 'basketball/nba', mlb: 'baseball/mlb' };
+  var index = null, loading = null;
+  function getJSON(name) { return fetch(BASE + name + '?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }); }
+  function ymd(d) { return dayKey(d).replace(/-/g, ''); }
+  function espnDay(k, d) {
+    return fetch('https://site.api.espn.com/apis/site/v2/sports/' + ESPN[k] + '/scoreboard?dates=' + ymd(d))
+      .then(function (r) { return r.ok ? r.json() : { events: [] }; }).then(function (j) {
+        return (j.events || []).map(function (e) {
+          var c = e.competitions[0], st = e.status.type;
+          var side = function (h) { var x = c.competitors.filter(function (t) { return t.homeAway === h; })[0]; return { name: x.team.displayName, score: x.score !== undefined && x.score !== '' ? Number(x.score) : null }; };
+          var hm = side('home'), aw = side('away');
+          return { kind: 'game', group: 'pro', league: k, start: e.date, tbd: e.timeValid === false,
+            status: st.state === 'post' ? 'final' : st.state === 'in' ? 'live' : 'upcoming', detail: st.shortDetail || '',
+            left: aw.name, right: hm.name, ls: aw.score, rs: hm.score, sep: '@', url: (e.links && e.links[0] && e.links[0].href) || SITE,
+            where: c.venue ? c.venue.fullName : '' };
+        });
+      }).catch(function () { return []; });
+  }
+
+  function build() {
+    if (loading) return loading;
+    var days = [-1, 0, 1].map(function (n) { return new Date(Date.now() + n * 864e5); });
+    var espn = [];
+    Object.keys(ESPN).forEach(function (k) { days.forEach(function (d) { espn.push(espnDay(k, d)); }); });
+    loading = Promise.all([getJSON('local-news.json'), getJSON('local-games.json'), getJSON('college-standings.json'), getJSON('hs-standings.json'), Promise.all(espn)])
+      .then(function (r) {
+        var news = r[0] || {}, lg = r[1] || {}, col = r[2] || {}, hs = r[3] || {}, pro = [].concat.apply([], r[4] || []);
+        var items = [];
+        // Local Hub stories
+        (news.stories || []).forEach(function (s) {
+          if (!s.url || !s.headline) return;
+          var who = s.team === 'junior' || s.team === 'powerplay' ? s.club || TEAMS[s.team] : TEAMS[s.team] || s.club || '';
+          items.push({ kind: 'story', group: s.team, who: who, headline: s.headline, summary: s.summary || '', url: s.url, image: s.image,
+            video: s.video, published: s.published, hub: 'Local Hub',
+            hay: norm([who, s.club, TEAMS[s.team], s.headline, s.summary, s.sport, s.team === 'junior' ? 'junior hockey' : '', s.team === 'powerplay' ? 'powerplay' : ''].join(' ')) });
+        });
+        // Pro Hub stories (ESPN / CFL / Sportsnet / team sites)
+        (lg.pro_news || []).concat(lg.more_news || []).forEach(function (s) {
+          if (!s.url || !s.headline) return;
+          var lab = LEAGUE[s.league] || (s.league || '').toUpperCase();
+          items.push({ kind: 'story', group: 'pro', who: lab + (s.source ? ' · ' + s.source : ''), headline: s.headline, summary: s.summary || '', url: s.url,
+            image: s.image, video: s.video, published: s.published, hub: 'Pro Hub',
+            hay: norm([lab, s.headline, s.summary, (s.teams || []).join(' '), s.source].join(' ')) });
+        });
+        // Local Scoreboard games
+        var lteams = lg.teams || {};
+        var seen = {};
+        (lg.games || []).forEach(function (g) {
+          if (seen[g.id]) return; seen[g.id] = 1;
+          var it = { kind: 'game', group: g.team, start: g.start, tbd: g.time_tbd, status: g.status, sport: g.sport, note: g.note || '',
+            where: g.location || '', url: (g.links && (g.links.gamecentre || g.links.boxscore || g.links.recap || g.links.standings)) || LINK_LOCAL };
+          if (g.home && g.away) { it.left = g.away; it.right = g.home; it.ls = g.our_score; it.rs = g.opp_score; it.sep = '@'; }
+          else {
+            var us = g.club || (lteams[g.team] && lteams[g.team].name) || TEAMS[g.team] || '';
+            it.left = us; it.right = g.opponent; it.ls = g.our_score; it.rs = g.opp_score; it.sep = g.home_away === 'A' ? '@' : 'vs'; it.result = g.result;
+          }
+          it.hay = norm([it.left, it.right, g.sport, g.note, g.location, lteams[g.team] && lteams[g.team].name, lteams[g.team] && lteams[g.team].league,
+            g.team === 'highschool' ? 'high school wecssaa' : '', g.team === 'junior' ? 'junior hockey' : ''].join(' '));
+          items.push(it);
+        });
+        // Pro Scoreboard games (CFL from the collector, the rest live from ESPN)
+        (lg.pro_games || []).forEach(function (g) {
+          items.push({ kind: 'game', group: 'pro', league: 'cfl', start: g.start, tbd: g.time_tbd, status: g.status, left: g.away, right: g.home,
+            ls: g.our_score, rs: g.opp_score, sep: '@', where: g.location, url: (g.links && g.links.gamecentre) || 'https://www.cfl.ca/schedule/' });
+        });
+        pro.forEach(function (g) { items.push(g); });
+        items.forEach(function (it) {
+          if (it.kind === 'game' && it.group === 'pro') { it.sport = LEAGUE[it.league]; it.hay = norm([it.left, it.right, it.sport, it.where].join(' ')); }
+        });
+        // Standings: one entry per table, matched by team names
+        function addTable(label, grp, cols, rows, url, group) {
+          rows.forEach(function (t) {     // college tables list "Windsor" / "St. Clair" without the nickname
+            t.alias = group === 'lancers' && /^windsor$/i.test(t.name) ? 'windsor lancers' : group === 'saints' && /^st\.? clair$/i.test(t.name) ? 'st. clair saints' : '';
+          });
+          var names = rows.map(function (t) { return t.name + ' ' + t.alias; });
+          items.push({ kind: 'table', group: group, label: label + (grp && grp !== label ? ' · ' + grp : ''), cols: cols, rows: rows, url: url || LINK_LOCAL,
+            hay: norm(names.join(' | ') + ' ' + label + ' ' + (grp || '')) });
+        }
+        var SL = { ohl: ['OHL', 'spitfires'], ojhl: ['OJHL', 'junior'], gohl: ['GOHL', 'junior'], pjhl: ['PJHL', 'junior'], pwhl: ['PWHL', 'pro'], cjfl: ['CJFL', 'saints'] };
+        Object.keys(lg.standings || {}).forEach(function (k) {
+          (lg.standings[k] || []).forEach(function (g) {
+            if (!g.teams || !g.teams.length) return;
+            var hasOtl = g.teams[0].otl != null;
+            var cols = hasOtl ? ['GP', 'W', 'L', 'OTL', 'PTS'] : ['GP', 'W', 'L', 'PTS'];
+            addTable((SL[k] || [k.toUpperCase()])[0] + ' standings', g.group, cols, g.teams.map(function (t) {
+              return { name: t.name, stats: hasOtl ? [t.gp, t.w, t.l, t.otl, t.pts] : [t.gp, t.w, t.l, t.pts != null ? t.pts : t.t] };
+            }), LINK_LOCAL, (SL[k] || [0, 'pro'])[1]);
+          });
+        });
+        (lg.cfl_standings || []).forEach(function (g) {
+          addTable('CFL standings', g.group, ['GP', 'W', 'L', 'PTS'], g.teams.map(function (t) { return { name: t.name, stats: [t.gp, t.w, t.l, t.pts] }; }), SITE, 'pro');
+        });
+        function presto(lgObj, group) {
+          if (!lgObj) return;
+          (lgObj.groups || []).forEach(function (g) {
+            var keep = []; (g.cols || []).forEach(function (c, i) { if (['GP', 'W', 'L', 'T', 'PTS', 'OTL', 'RECORD'].indexOf(String(c).toUpperCase()) >= 0) keep.push(i); });
+            if (!keep.length) keep = (g.cols || []).map(function (c, i) { return i; }).slice(0, 4);
+            addTable(lgObj.label || lgObj.sport || 'Standings', g.group, keep.map(function (i) { return String(g.cols[i]).toUpperCase(); }),
+              (g.teams || []).map(function (t) { return { name: t.name, stats: keep.map(function (i) { return t.stats[i]; }) }; }), lgObj.url || LINK_LOCAL, group);
+          });
+        }
+        var cl = col.leagues || {};
+        if (cl.oua) presto(cl.oua, 'lancers');
+        ['ocaa_m', 'ocaa_w'].forEach(function (k) {
+          var v = cl[k]; if (!v) return;
+          (Array.isArray(v) ? v : v.sports || [v]).forEach(function (x) { presto(x, 'saints'); });
+        });
+        Object.keys(hs.sports || {}).forEach(function (k) {
+          var sp = hs.sports[k];
+          (sp.leagues || []).forEach(function (l) { presto({ label: 'High school ' + sp.sport.toLowerCase() + ' · ' + l.league, groups: l.groups, url: l.url }, 'highschool'); });
+        });
+        index = items;
+        return items;
+      });
+    return loading;
+  }
+
+  // ---- results
+  var LIMIT = { game: 6, story: 8, table: 3 };
+  function gameRow(g, ws) {
+    var a = el('a', 'item t-' + (g.group || 'pro')); a.href = g.url; a.target = g.url.indexOf(SITE) === 0 ? '_top' : '_blank'; a.rel = 'noopener';
+    var main = el('div', 'main'), meta = el('div', 'meta');
+    meta.appendChild(el('b', null, g.sport || ''));
+    meta.appendChild(document.createTextNode(' · ' + when(g.start, g.tbd) + (g.note ? ' · ' + g.note : '')));
+    var hl = el('div', 'hl');
+    hiText(hl, g.left + ' ' + g.sep + ' ' + g.right, ws);
+    main.appendChild(meta); main.appendChild(hl); a.appendChild(main);
+    var sc = el('div', 'score');
+    if ((g.status === 'final' || g.status === 'live') && g.ls != null) {
+      var cls = g.result === 'W' ? 'W' : g.result === 'L' ? 'L' : '';
+      sc.appendChild(el('span', cls, g.ls + '–' + g.rs));
+      sc.appendChild(el('small', null, g.status === 'live' ? 'LIVE' : 'FINAL'));
+    } else if (g.status === 'postponed' || g.status === 'cancelled') sc.appendChild(el('small', null, g.status.toUpperCase()));
+    else sc.appendChild(el('small', null, 'UPCOMING'));
+    a.appendChild(sc);
+    return a;
+  }
+  var GENERIC_IMG = /(1920x1080-|game-story|placeholder)/i;
+  function storyRow(s, ws) {
+    var a = el('a', 'item t-' + (s.group in TEAMS || s.group === 'junior' ? s.group : 'pro')); a.href = s.url; a.target = '_blank'; a.rel = 'noopener';
+    if (s.image && !GENERIC_IMG.test(s.image)) { var im = new Image(); im.className = 'thumb'; im.src = s.image; im.alt = ''; im.loading = 'lazy'; im.onerror = function () { im.remove(); }; a.appendChild(im); }
+    var main = el('div', 'main'), meta = el('div', 'meta');
+    meta.appendChild(el('b', null, s.who)); meta.appendChild(document.createTextNode(' · ' + (s.video ? 'Video · ' : '') + ago(s.published) + ' · ' + s.hub));
+    main.appendChild(meta);
+    main.appendChild(hiText(el('div', 'hl'), s.headline, ws));
+    if (s.summary) main.appendChild(hiText(el('div', 'sum'), s.summary, ws));
+    a.appendChild(main);
+    return a;
+  }
+  function tableRow(t, ws) {
+    var box = el('div', 'stand t-' + (t.group || 'pro'));
+    var meta = el('div', 'meta'); meta.appendChild(el('b', null, t.label)); box.appendChild(meta);
+    var tb = el('table'), hr = el('tr');
+    hr.appendChild(el('th', null, 'Team')); t.cols.forEach(function (c) { hr.appendChild(el('th', null, c)); }); tb.appendChild(hr);
+    t.rows.forEach(function (r, i) {
+      var tr = el('tr'), nm = norm(r.name + ' ' + (r.alias || '')), match = ws.some(function (w) { return nm.indexOf(w) >= 0; });
+      var td = el('td'); hiText(td, (i + 1) + '. ' + r.name, ws); tr.appendChild(td);
+      r.stats.forEach(function (v) { tr.appendChild(el('td', null, v == null ? '' : String(v))); });
+      if (match) tr.style.background = 'rgba(232,176,33,.10)';
+      tb.appendChild(tr);
+    });
+    box.appendChild(tb);
+    return box;
+  }
+
+  function section(title, list, maker, ws, limit) {
+    if (!list.length) return null;
+    var sec = el('section'); sec.appendChild(el('h2', null, title + ' (' + list.length + ')'));
+    var box = el('div', 'list'); sec.appendChild(box);
+    var shown = 0;
+    function more() {
+      list.slice(shown, shown + limit).forEach(function (x) { box.insertBefore(maker(x, ws), btn); });
+      shown += limit; if (shown >= list.length) btn.remove(); else btn.textContent = 'Show more ' + title.toLowerCase();
+    }
+    var btn = el('button', 'more'); btn.type = 'button'; btn.onclick = more; box.appendChild(btn); more();
+    return sec;
+  }
+
+  function render(q) {
+    out.innerHTML = '';
+    var ws = words(q);
+    if (!ws.length) { chips(); return; }
+    out.appendChild(el('div', 'status', 'Searching…'));
+    build().then(function (items) {
+      if (norm(input.value).trim() !== norm(q).trim()) return;     // a newer search is running
+      out.innerHTML = '';
+      var now = Date.now();
+      var res = items.filter(function (it) { return hit(it.hay, ws); });
+      var games = res.filter(function (x) { return x.kind === 'game'; }).sort(function (a, b) {
+        // live first, then nearest to now (recent finals and the next games)
+        var la = a.status === 'live' ? 0 : 1, lb = b.status === 'live' ? 0 : 1; if (la !== lb) return la - lb;
+        return Math.abs(new Date(a.start) - now) - Math.abs(new Date(b.start) - now);
+      });
+      var stories = res.filter(function (x) { return x.kind === 'story'; }).sort(function (a, b) {
+        var pa = a.group === 'powerplay' ? 1 : 0, pb = b.group === 'powerplay' ? 1 : 0;
+        var ta = new Date(a.published).getTime() || 0, tb = new Date(b.published).getTime() || 0;
+        return (tb + pb * 6 * 3600e3) - (ta + pa * 6 * 3600e3);    // Powerplay stories get a small boost
+      });
+      var seenH = {}; stories = stories.filter(function (s) { var k = norm(s.headline); if (seenH[k]) return false; seenH[k] = 1; return true; });
+      var tables = res.filter(function (x) { return x.kind === 'table'; });
+      if (!games.length && !stories.length && !tables.length) {
+        out.appendChild(el('div', 'status', 'Nothing found for “' + q.trim() + '”. Try a team, a school or a sport.'));
+        chips(); return;
+      }
+      [section('Scores', games, gameRow, ws, LIMIT.game), section('Stories', stories, storyRow, ws, LIMIT.story), section('Standings', tables, tableRow, ws, LIMIT.table)]
+        .forEach(function (s) { if (s) out.appendChild(s); });
+    });
+  }
+
+  function chips() {
+    if (BAR) return;
+    var c = el('div', 'chips');
+    ['Spitfires', 'Lancers', 'Saints', 'High school football', 'Essex 73\'s', 'Lions', 'Red Wings', 'Maple Leafs'].forEach(function (n) {
+      var b = el('button', 'chip', n); b.type = 'button'; b.onclick = function () { input.value = n; update(); render(n); }; c.appendChild(b);
+    });
+    out.appendChild(c);
+  }
+
+  function update() { clr.className = 'clear' + (input.value ? ' on' : ''); }
+  var t;
+  input.addEventListener('input', function () {
+    update();
+    if (BAR) return;
+    clearTimeout(t); t = setTimeout(function () { render(input.value); }, 220);
+  });
+  clr.onclick = function () { input.value = ''; update(); input.focus(); if (!BAR) render(''); };
+  document.getElementById('f').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var v = input.value.trim(); if (!v) { input.focus(); return; }
+    if (BAR) { store(v); try { window.top.location.href = PAGE; } catch (er) { window.open(PAGE, '_top'); } return; }
+    input.blur(); render(v);
+  });
+
+  if (!BAR) {
+    var start = qs.get('q') || stored();
+    if (start) { input.value = start; store(''); }
+    update(); render(start);
+    build();      // warm up the index so the first search is quick
+  }
+})();
+</script>
+</body>
+</html>
