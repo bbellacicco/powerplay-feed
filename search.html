@@ -105,8 +105,38 @@
     leafs: 'maple leafs', wings: 'red wings', habs: 'canadiens', jays: 'blue jays', tigercats: 'tiger-cats', ticats: 'tiger-cats',
     hs: 'high school', bball: 'basketball', vball: 'volleyball', '73s': "73's" };
   function norm(s) { return String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[‘’ʼ]/g, "'").replace(/[“”]/g, '"'); }
+  // Sentences work too ("how did the spits do last night?"): question and filler words are dropped,
+  // and a few words steer what comes first (scores, standings, stories; last game or next game).
+  var FILLER = ('how what whats when where who whos which why is are was were be been do does did done doing have has had ' +
+    'the a an of on in at to for vs v versus against about any some me us my our your i you we they it its there here ' +
+    'tell show give find get see know any latest recent recently current currently last next this coming upcoming tonight today ' +
+    'tonights todays tomorrow yesterday night weekend week morning afternoon game games match matches play played playing plays ' +
+    'score scores scored result results final finals won win wins winning lose lost loses losing beat beaten tie tied ' +
+    'standings standing stand sit sitting rank ranked ranking place record table league ' +
+    'news story stories article articles video videos highlight highlights recap recaps update updates info information please ' +
+    'and or with from going go goes team teams doing like look looking so far up now new happen happened happening ' +
+    'first top bottom leading leader leaders lead best worst second third last-place').split(' ');
+  var FILL = {}; FILLER.forEach(function (w) { FILL[w] = 1; });
+  function intent(q) {
+    var n = ' ' + norm(q).replace(/[^a-z0-9' ]+/g, ' ') + ' ';
+    var has = function (re) { return re.test(n); };
+    var fut = has(/ (next|when|tonight|tonights|today|todays|tomorrow|upcoming|coming|weekend|schedule|play) /) && !has(/ (did|won|lost|last|yesterday|happened) /);
+    return {
+      future: fut,
+      past: !fut && has(/ (did|do|does|won|win|lose|lost|beat|score|scores|scored|result|results|final|last|yesterday|happened|recap) /),
+      standings: has(/ (standings|standing|sit|sitting|rank|ranked|ranking|place|record|table|first|top|bottom) /),
+      news: has(/ (news|story|stories|article|articles|video|videos|highlight|highlights|update|updates) /)
+    };
+  }
   function words(q) {
-    return norm(q).split(/\s+/).filter(Boolean).map(function (w) { return norm(ALIAS[w] || w); });
+    var raw = norm(q).replace(/[?!,;:()"]+/g, ' ').replace(/\.(\s|$)/g, ' ').split(/\s+/).filter(Boolean);
+    var ws = raw.map(function (w) {
+      if (!/^\d+'s$/.test(w)) w = w.replace(/'s$|'$/, '');      // spits' / Leafs's -> spits / leafs
+      return w;
+    });
+    var kept = ws.filter(function (w) { return !FILL[w]; });
+    if (!kept.length) kept = ws;                                 // a search made only of filler words: use them as typed
+    return kept.map(function (w) { return norm(ALIAS[w] || w); });
   }
   function hit(hay, ws) { for (var i = 0; i < ws.length; i++) if (hay.indexOf(ws[i]) < 0) return false; return true; }
   function apos(w) { return w.replace(/'/g, "['’]?"); }
@@ -335,10 +365,21 @@
       out.innerHTML = '';
       var now = Date.now();
       var res = items.filter(function (it) { return hit(it.hay, ws); });
+      if (!res.length && ws.length > 1) {
+        // a sentence can carry words that appear nowhere ("how are the spits looking lately"): drop those and try again
+        var known = ws.filter(function (w) { return items.some(function (it) { return it.hay.indexOf(w) >= 0; }); });
+        if (known.length && known.length < ws.length) { ws = known; res = items.filter(function (it) { return hit(it.hay, ws); }); }
+      }
+      var want = intent(q);
       var games = res.filter(function (x) { return x.kind === 'game'; }).sort(function (a, b) {
-        // live first, then nearest to now (recent finals and the next games)
+        // live first; "how did they do" puts the latest finals first, "when do they play" the next games;
+        // otherwise nearest to now (recent finals and the next games)
         var la = a.status === 'live' ? 0 : 1, lb = b.status === 'live' ? 0 : 1; if (la !== lb) return la - lb;
-        return Math.abs(new Date(a.start) - now) - Math.abs(new Date(b.start) - now);
+        var ta = new Date(a.start).getTime(), tb = new Date(b.start).getTime();
+        var fa = a.status === 'final', fb = b.status === 'final';
+        if (want.past && fa !== fb) return fa ? -1 : 1;
+        if (want.future && fa !== fb) return fa ? 1 : -1;
+        return Math.abs(ta - now) - Math.abs(tb - now);
       });
       var stories = res.filter(function (x) { return x.kind === 'story'; }).sort(function (a, b) {
         var pa = a.group === 'powerplay' ? 1 : 0, pb = b.group === 'powerplay' ? 1 : 0;
@@ -351,8 +392,10 @@
         out.appendChild(el('div', 'status', 'Nothing found for “' + q.trim() + '”. Try a team, a school or a sport.'));
         chips(); return;
       }
-      [section('Scores', games, gameRow, ws, LIMIT.game), section('Stories', stories, storyRow, ws, LIMIT.story), section('Standings', tables, tableRow, ws, LIMIT.table)]
-        .forEach(function (s) { if (s) out.appendChild(s); });
+      if (ws.join(' ') !== norm(q).trim()) out.appendChild(el('div', 'status', 'Showing results for: ' + ws.join(' ')));
+      var secs = { g: section('Scores', games, gameRow, ws, LIMIT.game), s: section('Stories', stories, storyRow, ws, LIMIT.story), t: section('Standings', tables, tableRow, ws, LIMIT.table) };
+      var order = want.standings && !want.past ? 'tgs' : want.news ? 'sgt' : 'gst';
+      order.split('').forEach(function (k) { if (secs[k]) out.appendChild(secs[k]); });
     });
   }
 
