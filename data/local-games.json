@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10T23:16:31-04:00",
+ "updated": "2026-10-10T23:31:47-04:00",
  "today": "2026-10-10",
  "range": [
   "2026-10-07",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 31
   },
   "club_news": {
    "ok": true,
@@ -2556,6 +2556,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Ducks’ Cutter Gauthier exits vs. Flames with upper-body injury",
+   "summary": "",
+   "published": "2026-10-10T23:23-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/gauthier.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/ducks-cutter-gauthier-exits-vs-flames-with-upper-body-injury/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Rangers goalie Igor Shesterkin out for season",
    "summary": "",
    "published": "2026-10-10T12:35-04:00",
@@ -2595,7 +2608,7 @@
   },
   {
    "league": "nhl",
-   "headline": "Kaprizov has hat trick, Wild top Panthers to spoil Florida’s home opener",
+   "headline": "NHL Roundup: Kaprizov, Wild top Panthers to spoil Florida’s home opener",
    "summary": "",
    "published": "2026-10-10T21:23-04:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Kirill.jpg",
@@ -2617,21 +2630,6 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/flyers-season-opening-skid-hits-six-in-blowout-loss-to-bruins/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Quick Shifts: Is the real Auston Matthews back?",
-   "summary": "For the first time in a while, Auston Matthews appears genuinely pumped and wholly engaged. Is the Maple Leafs captain back? Sportsnet’s Luke Fox explores that and more in the latest Quick Shifts.",
-   "published": "2026-10-10T08:14-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/matthews.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/quick-shifts-is-the-real-auston-matthews-back/",
    "source": "Sportsnet"
   },
   {
@@ -2715,19 +2713,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "Report: Steelers WR Pittman placed on short-term IR with foot injury",
-   "summary": "",
-   "published": "2026-10-10T15:27-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-2026-10-10T151802.467.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/report-steelers-wr-pittman-placed-on-short-term-ir-with-foot-injury/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "other",
    "headline": "Who’s playing with whom? New curling teams to watch this season",
    "summary": "Any curling fan that watched last season but missed the off-season news is in for a surprise when you turn on the television next week. Many big names have changed teams ahead of the first Grand Slam of Curling event of ",
@@ -2741,16 +2726,18 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Sarah Nurse unable to attend national-team training camp, Hockey Canada clarifies",
-   "summary": "",
-   "published": "2026-10-10T13:40-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2022/11/Sarah-Nurse.jpg",
+   "league": "nhl",
+   "headline": "Quick Shifts: Is the real Auston Matthews back?",
+   "summary": "For the first time in a while, Auston Matthews appears genuinely pumped and wholly engaged. Is the Maple Leafs captain back? Sportsnet’s Luke Fox explores that and more in the latest Quick Shifts.",
+   "published": "2026-10-10T08:14-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/matthews.jpg",
    "video": false,
-   "teams": [],
-   "sn_team_count": 0,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 2,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/hockey/article/sarah-nurse-unable-to-attend-national-team-training-camp-hockey-canada-clarifies/",
+   "url": "https://www.sportsnet.ca/nhl/article/quick-shifts-is-the-real-auston-matthews-back/",
    "source": "Sportsnet"
   },
   {
@@ -2767,6 +2754,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Sarah Nurse unable to attend national-team training camp, Hockey Canada clarifies",
+   "summary": "",
+   "published": "2026-10-10T13:40-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2022/11/Sarah-Nurse.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/hockey/article/sarah-nurse-unable-to-attend-national-team-training-camp-hockey-canada-clarifies/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nba",
    "headline": "How rookie Allen Graves fits in as Raptors’ contention window opens",
    "summary": "There is more that goes into building a team that wins than handing the ball to Kawhi Leonard. Which is where rookie Allen Graves fits into the picture.",
@@ -2779,21 +2779,6 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/how-rookie-allen-graves-fits-in-as-raptors-contention-window-opens/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Raptors’ Kawhi Leonard won’t play in Vancouver vs. Clippers",
-   "summary": "",
-   "published": "2026-10-09T17:31-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/leonard_kawhi1280.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-kawhi-leonard-wont-play-in-vancouver-vs-clippers/",
    "source": "Sportsnet"
   },
   {
@@ -2833,19 +2818,6 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/fifa-world-cup/article/ronaldo-suspended-by-portuguese-federation-after-leaving-training-camp/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Real Madrid’s Vinicius red-carded for pulling hair of Canadian Nathan Saliba",
-   "summary": "",
-   "published": "2026-10-10T17:12-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/03/CP175909463-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/la-liga/article/real-madrids-vinicius-red-carded-for-pulling-hair-of-villarreal-player/",
    "source": "Sportsnet"
   },
   {
@@ -3869,6 +3841,18 @@
       "strk": "W3"
      },
      {
+      "name": "Saginaw Spirit",
+      "abbr": "SAG",
+      "gp": 7,
+      "w": 3,
+      "l": 2,
+      "otl": 2,
+      "pts": 8,
+      "gf": 26,
+      "ga": 27,
+      "strk": "W2"
+     },
+     {
       "name": "Windsor Spitfires",
       "abbr": "WSR",
       "gp": 8,
@@ -3879,18 +3863,6 @@
       "gf": 22,
       "ga": 28,
       "strk": "L1"
-     },
-     {
-      "name": "Saginaw Spirit",
-      "abbr": "SAG",
-      "gp": 6,
-      "w": 2,
-      "l": 2,
-      "otl": 2,
-      "pts": 6,
-      "gf": 26,
-      "ga": 27,
-      "strk": "W1"
      }
     ]
    },
@@ -3924,14 +3896,14 @@
      {
       "name": "Kitchener Rangers",
       "abbr": "KIT",
-      "gp": 9,
+      "gp": 10,
       "w": 4,
-      "l": 4,
+      "l": 5,
       "otl": 1,
       "pts": 9,
       "gf": 27,
       "ga": 33,
-      "strk": "L2"
+      "strk": "L3"
      },
      {
       "name": "Erie Otters",
