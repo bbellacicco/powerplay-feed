@@ -157,7 +157,18 @@
   });
 
   fetch(REPO + 'data/profiles.json?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; })
-    .then(function (j) { list = (j && j.profiles || []).filter(function (p) { return p && p.img; }); grid(); });
+    .then(function (j) {
+      list = (j && j.profiles || []).filter(function (p) { return p && p.img; }); grid();
+      // tapped on the homepage strip (athletes-strip.html): open that athlete's profile straight away
+      var want = null;
+      try { var h = JSON.parse(localStorage.getItem('pp-athlete') || 'null'); localStorage.removeItem('pp-athlete'); if (h && Date.now() - h.t < 120000) want = h.img; } catch (e) {}
+      var n = want ? list.map(function (p) { return p.img; }).indexOf(want) : -1;
+      if (n >= 0) {
+        page = Math.floor(n / PER); grid();
+        var cardEl = document.querySelectorAll('.card')[n % PER];
+        if (cardEl) open(n, cardEl);
+      }
+    });
 })();
 </script>
 </body>
