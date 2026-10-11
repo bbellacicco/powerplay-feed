@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10T21:17:12-04:00",
+ "updated": "2026-10-10T21:31:48-04:00",
  "today": "2026-10-10",
  "range": [
   "2026-10-07",
@@ -46,8 +46,8 @@
    "count": 159
   },
   "saints": {
-   "ok": true,
-   "count": 9
+   "ok": false,
+   "error": "The read operation timed out"
   },
   "highschool": {
    "ok": false,
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 32
+   "count": 29
   },
   "club_news": {
    "ok": true,
@@ -1520,7 +1520,7 @@
    "our_score": 1,
    "opp_score": 5,
    "result": null,
-   "note": "01:39 3rd",
+   "note": "End of Game",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29072/"
    }
@@ -1536,9 +1536,9 @@
    "location": "Haldimand C.C.C., Caledonia, ON",
    "status": "live",
    "our_score": 1,
-   "opp_score": 4,
+   "opp_score": 5,
    "result": null,
-   "note": "10:58 3rd",
+   "note": "03:02 3rd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15568"
    },
@@ -2446,19 +2446,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Toronto FC roars back with pair of stoppage-time goals to shock CF Montreal",
-   "summary": "",
-   "published": "2026-10-10T15:35-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/djordje-mihailovic.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/toronto-fc-roars-back-with-pair-of-stoppage-time-goals-to-shock-cf-montreal/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "Maple Leafs’ Chris Tanev exits vs. Avalanche with upper-body injury",
    "summary": "",
@@ -2488,6 +2475,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Could Alexander Nikishin return to Hurricanes?",
+   "summary": "",
+   "published": "2026-10-10T21:22-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/nikishin.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 3,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/could-alexander-nikishin-return-to-hurricanes/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Blankenburg makes Maple Leafs debut vs. Avalanche, Bobrovsky starts",
    "summary": "",
    "published": "2026-10-10T17:12-04:00",
@@ -2499,19 +2499,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/nick-blankenburg-to-make-maple-leafs-debut-vs-avalanche/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Flyers’ season-opening skid hits six in blowout loss to Bruins",
-   "summary": "",
-   "published": "2026-10-10T16:11-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/denver-barkey.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/flyers-season-opening-skid-hits-six-in-blowout-loss-to-bruins/",
    "source": "Sportsnet"
   },
   {
@@ -2554,6 +2541,47 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Flyers’ season-opening skid hits six in blowout loss to Bruins",
+   "summary": "",
+   "published": "2026-10-10T16:11-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/denver-barkey.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/flyers-season-opening-skid-hits-six-in-blowout-loss-to-bruins/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Kaprizov has hat trick, Wild top Panthers to spoil Florida’s home opener",
+   "summary": "",
+   "published": "2026-10-10T21:23-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Kirill.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/kaprizov-has-hat-trick-wild-top-panthers-to-spoil-floridas-home-opener/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Quick Shifts: Is the real Auston Matthews back?",
+   "summary": "For the first time in a while, Auston Matthews appears genuinely pumped and wholly engaged. Is the Maple Leafs captain back? Sportsnet’s Luke Fox explores that and more in the latest Quick Shifts.",
+   "published": "2026-10-10T08:14-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/matthews.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/quick-shifts-is-the-real-auston-matthews-back/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "mlb",
    "headline": "Six players to watch in National League Championship Series",
    "summary": "Quiet to the point of being forgotten in the second half of the season, Freddie Freeman re-emerged for the Dodgers in their NLDS victory. The first baseman is just one of Jeff Blair’s players to watch in the Dodgers’ NLC",
@@ -2580,19 +2608,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "mlb",
-   "headline": "Guardians’ Gavin Williams to start Game 5 after closing Game 4",
-   "summary": "The Cleveland Guardians will start the ace right-hander in Game 5 of the ALDS against the Chicago White Sox despite using him to close out the win in Game 4.",
-   "published": "2026-10-09T16:29-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Cleveland-Guardians-starting-pitcher-Gavin-Williams.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/guardians-gavin-williams-to-start-game-5-after-closing-game-4/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "Why Maple Leafs are dressing 7 defencemen vs. Avalanche",
    "summary": "If you thought Nick Blankenburg’s Maple Leafs debut would come at the expense of another roster defenceman, you thought wrong. Luke Fox explains why the Maple Leafs are going with seven defencemen against the Avalanche.",
@@ -2605,21 +2620,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/why-maple-leafs-are-dressing-7-defencemen-vs-avalanche/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Quick Shifts: Is the real Auston Matthews back?",
-   "summary": "For the first time in a while, Auston Matthews appears genuinely pumped and wholly engaged. Is the Maple Leafs captain back? Sportsnet’s Luke Fox explores that and more in the latest Quick Shifts.",
-   "published": "2026-10-10T08:14-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/matthews.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/quick-shifts-is-the-real-auston-matthews-back/",
    "source": "Sportsnet"
   },
   {
@@ -2646,47 +2646,6 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/hockey/article/sarah-nurse-unable-to-attend-national-team-training-camp-hockey-canada-clarifies/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Senators activate Andre Burakovsky for season debut against Predators",
-   "summary": "",
-   "published": "2026-10-10T11:55-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/10/andre-burakovsky.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/senators-activate-andre-burakovsky-for-season-debut-against-predators/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Maple Leafs’ John Tavares to miss game vs. Avalanche after birth of son",
-   "summary": "",
-   "published": "2026-10-09T16:38-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/04/john-tavares.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-john-tavares-to-miss-game-vs-avalanche-after-birth-of-son/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Sharks’ Macklin Celebrini returns to lineup against Oilers",
-   "summary": "",
-   "published": "2026-10-10T16:08-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-22.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/sharks-macklin-celebrini-returns-to-lineup-against-oilers/",
    "source": "Sportsnet"
   },
   {
@@ -3731,26 +3690,26 @@
      {
       "name": "Oshawa Generals",
       "abbr": "OSH",
-      "gp": 8,
-      "w": 3,
+      "gp": 9,
+      "w": 4,
       "l": 5,
       "otl": 0,
-      "pts": 6,
+      "pts": 8,
       "gf": 23,
       "ga": 29,
-      "strk": "L4"
+      "strk": "W1"
      },
      {
       "name": "Peterborough Petes",
       "abbr": "PBO",
-      "gp": 8,
-      "w": 2,
+      "gp": 9,
+      "w": 3,
       "l": 6,
       "otl": 0,
-      "pts": 4,
-      "gf": 27,
+      "pts": 6,
+      "gf": 28,
       "ga": 36,
-      "strk": "L2"
+      "strk": "W1"
      }
     ]
    },
@@ -3777,7 +3736,7 @@
       "l": 3,
       "otl": 0,
       "pts": 8,
-      "gf": 21,
+      "gf": 22,
       "ga": 22,
       "strk": "W1"
      },
@@ -3802,7 +3761,7 @@
       "otl": 1,
       "pts": 3,
       "gf": 17,
-      "ga": 32,
+      "ga": 33,
       "strk": "L1"
      },
      {
@@ -3825,13 +3784,13 @@
      {
       "name": "Soo Greyhounds",
       "abbr": "SOO",
-      "gp": 7,
+      "gp": 8,
       "w": 6,
       "l": 1,
-      "otl": 0,
-      "pts": 12,
+      "otl": 1,
+      "pts": 13,
       "gf": 30,
-      "ga": 23,
+      "ga": 24,
       "strk": "W5"
      },
      {
@@ -3842,8 +3801,8 @@
       "l": 2,
       "otl": 1,
       "pts": 11,
-      "gf": 39,
-      "ga": 30,
+      "gf": 40,
+      "ga": 31,
       "strk": "W2"
      },
      {
@@ -3854,21 +3813,21 @@
       "l": 2,
       "otl": 0,
       "pts": 8,
-      "gf": 30,
-      "ga": 21,
+      "gf": 31,
+      "ga": 22,
       "strk": "W2"
      },
      {
       "name": "Windsor Spitfires",
       "abbr": "WSR",
-      "gp": 7,
+      "gp": 8,
       "w": 3,
-      "l": 3,
+      "l": 4,
       "otl": 1,
       "pts": 7,
       "gf": 22,
       "ga": 28,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Saginaw Spirit",
@@ -3878,7 +3837,7 @@
       "l": 2,
       "otl": 2,
       "pts": 6,
-      "gf": 25,
+      "gf": 26,
       "ga": 27,
       "strk": "W1"
      }
@@ -3895,7 +3854,7 @@
       "l": 2,
       "otl": 0,
       "pts": 10,
-      "gf": 34,
+      "gf": 35,
       "ga": 21,
       "strk": "W5"
      },
@@ -3920,7 +3879,7 @@
       "otl": 1,
       "pts": 9,
       "gf": 27,
-      "ga": 32,
+      "ga": 33,
       "strk": "L2"
      },
      {
@@ -3944,7 +3903,7 @@
       "otl": 0,
       "pts": 4,
       "gf": 18,
-      "ga": 32,
+      "ga": 33,
       "strk": "L1"
      }
     ]
@@ -4015,6 +3974,18 @@
       "strk": "W2"
      },
      {
+      "name": "Stouffville Spirit",
+      "abbr": "STO",
+      "gp": 10,
+      "w": 6,
+      "l": 4,
+      "otl": 0,
+      "pts": 12,
+      "gf": 39,
+      "ga": 33,
+      "strk": "W1"
+     },
+     {
       "name": "St. Michaels Buzzers",
       "abbr": "STM",
       "gp": 12,
@@ -4025,18 +3996,6 @@
       "gf": 35,
       "ga": 52,
       "strk": "L4"
-     },
-     {
-      "name": "Stouffville Spirit",
-      "abbr": "STO",
-      "gp": 9,
-      "w": 5,
-      "l": 4,
-      "otl": 0,
-      "pts": 10,
-      "gf": 39,
-      "ga": 33,
-      "strk": "L3"
      },
      {
       "name": "Trenton Golden Hawks",
@@ -4152,6 +4111,18 @@
       "strk": "W2"
      },
      {
+      "name": "Burlington Cougars",
+      "abbr": "BUR",
+      "gp": 14,
+      "w": 8,
+      "l": 4,
+      "otl": 2,
+      "pts": 18,
+      "gf": 59,
+      "ga": 37,
+      "strk": "W2"
+     },
+     {
       "name": "Toronto Patriots",
       "abbr": "PAT",
       "gp": 11,
@@ -4162,18 +4133,6 @@
       "gf": 58,
       "ga": 23,
       "strk": "W3"
-     },
-     {
-      "name": "Burlington Cougars",
-      "abbr": "BUR",
-      "gp": 13,
-      "w": 7,
-      "l": 4,
-      "otl": 2,
-      "pts": 16,
-      "gf": 59,
-      "ga": 37,
-      "strk": "W1"
      },
      {
       "name": "Niagara Falls Canucks",
@@ -4190,14 +4149,14 @@
      {
       "name": "Oakville Blades",
       "abbr": "OAK",
-      "gp": 12,
+      "gp": 13,
       "w": 5,
-      "l": 5,
+      "l": 6,
       "otl": 2,
       "pts": 12,
       "gf": 46,
       "ga": 56,
-      "strk": "W3"
+      "strk": "L1"
      },
      {
       "name": "Caledon Admirals",
@@ -4214,14 +4173,14 @@
      {
       "name": "Mississauga Chargers",
       "abbr": "MIS",
-      "gp": 14,
+      "gp": 15,
       "w": 5,
-      "l": 9,
+      "l": 10,
       "otl": 0,
       "pts": 10,
       "gf": 46,
       "ga": 71,
-      "strk": "L2"
+      "strk": "L3"
      },
      {
       "name": "Buffalo Jr. Sabres",
@@ -4287,7 +4246,7 @@
       "otl": 0,
       "pts": 14,
       "gf": 42,
-      "ga": 24,
+      "ga": 25,
       "strk": "W2"
      },
      {
@@ -4329,26 +4288,26 @@
      {
       "name": "Elmira Sugar Kings",
       "abbr": "ELM",
-      "gp": 9,
-      "w": 4,
-      "l": 5,
-      "otl": 0,
-      "pts": 8,
-      "gf": 35,
-      "ga": 43,
-      "strk": "L4"
-     },
-     {
-      "name": "Woodstock Navy Vets",
-      "abbr": "WNV",
       "gp": 10,
       "w": 4,
       "l": 6,
       "otl": 0,
       "pts": 8,
+      "gf": 35,
+      "ga": 43,
+      "strk": "L5"
+     },
+     {
+      "name": "Woodstock Navy Vets",
+      "abbr": "WNV",
+      "gp": 11,
+      "w": 4,
+      "l": 7,
+      "otl": 0,
+      "pts": 8,
       "gf": 36,
       "ga": 49,
-      "strk": "L2"
+      "strk": "L3"
      },
      {
       "name": "Komoka Kings",
@@ -4358,7 +4317,7 @@
       "l": 6,
       "otl": 0,
       "pts": 8,
-      "gf": 33,
+      "gf": 35,
       "ga": 46,
       "strk": "L2"
      },
@@ -4383,7 +4342,7 @@
       "otl": 1,
       "pts": 5,
       "gf": 35,
-      "ga": 44,
+      "ga": 46,
       "strk": "W1"
      },
      {
@@ -4435,21 +4394,21 @@
       "l": 1,
       "otl": 1,
       "pts": 15,
-      "gf": 40,
+      "gf": 41,
       "ga": 22,
       "strk": "W4"
      },
      {
       "name": "Cambridge Redhawks",
       "abbr": "CAM",
-      "gp": 8,
-      "w": 7,
+      "gp": 9,
+      "w": 8,
       "l": 1,
       "otl": 0,
-      "pts": 14,
+      "pts": 16,
       "gf": 60,
       "ga": 28,
-      "strk": "L1"
+      "strk": "W1"
      },
      {
       "name": "Waterloo Siskins",
@@ -4502,14 +4461,14 @@
      {
       "name": "Stoney Creek Generals",
       "abbr": "SCG",
-      "gp": 14,
-      "w": 3,
+      "gp": 15,
+      "w": 4,
       "l": 11,
       "otl": 0,
-      "pts": 6,
+      "pts": 8,
       "gf": 45,
       "ga": 63,
-      "strk": "L1"
+      "strk": "W1"
      },
      {
       "name": "Hamilton Steel",
@@ -4524,28 +4483,28 @@
       "strk": "L8"
      },
      {
-      "name": "Brantford Titans",
-      "abbr": "BFD",
+      "name": "Welland Canadians",
+      "abbr": "WEL",
       "gp": 10,
       "w": 1,
       "l": 9,
       "otl": 0,
       "pts": 2,
-      "gf": 24,
-      "ga": 52,
-      "strk": "L4"
-     },
-     {
-      "name": "Welland Canadians",
-      "abbr": "WEL",
-      "gp": 9,
-      "w": 0,
-      "l": 9,
-      "otl": 0,
-      "pts": 0,
       "gf": 22,
       "ga": 57,
-      "strk": "L9"
+      "strk": "W1"
+     },
+     {
+      "name": "Brantford Titans",
+      "abbr": "BFD",
+      "gp": 11,
+      "w": 1,
+      "l": 10,
+      "otl": 0,
+      "pts": 2,
+      "gf": 24,
+      "ga": 52,
+      "strk": "L5"
      }
     ]
    }
