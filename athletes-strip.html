@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+<title>Athlete Profiles Strip | Powerplay Windsor</title>
+<!--
+  Slim, scrollable row of the athlete profiles for the homepage (same list as athletes.html: data/profiles.json).
+  Tapping an athlete opens the Spotlights page with that profile already open.
+  Embed in Wix at about 250px tall, full width.
+  ?link=<url>   the page with the full Athlete Profiles (default https://www.powerplaywindsor.com/sports)
+  ?n=<number>   how many to show (default 15)
+-->
+<style>
+  :root { --bg: #0b1a33; --panel: #10244a; --row: #132b57; --line: #1e3a6e; --text: #f2f5fb; --muted: #9fb0cf; --accent: #e8b021; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); overflow: hidden; font: 13px/1.3 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  .top { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 12px 6px; }
+  .title { font-family: 'Graduate', 'Rockwell', Georgia, serif; font-weight: 400; text-transform: uppercase; letter-spacing: .02em; font-size: 14px;
+    -webkit-text-stroke: .5px currentColor; line-height: 1.15; white-space: nowrap; }
+  .title span { color: var(--accent); }
+  .sub { color: var(--muted); font-size: 11px; margin-top: 2px; }
+  .more { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 12px; white-space: nowrap; }
+  .strip { display: flex; gap: 10px; overflow-x: auto; padding: 0 12px 10px; scroll-snap-type: x mandatory; scroll-padding-left: 12px; scrollbar-width: thin; }
+  .card { position: relative; flex: 0 0 auto; width: 140px; aspect-ratio: 3 / 4; border: 0; padding: 0; background: var(--row); border-radius: 8px; overflow: hidden;
+    cursor: pointer; scroll-snap-align: start; border-top: 3px solid var(--accent); transition: transform .15s; }
+  .card:hover { transform: translateY(-2px); }
+  .card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .card img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+  .card::after { content: "View profile"; position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 8px 6px; font-size: 11px; font-weight: 800; color: #fff;
+    background: linear-gradient(transparent, rgba(11,26,51,.92)); text-align: left; }
+  .empty { color: var(--muted); padding: 10px 12px; }
+</style>
+</head>
+<body>
+  <div class="top">
+    <div style="min-width:0">
+      <div class="title">Athlete <span>Profiles</span></div>
+      <div class="sub">Get to know the athletes of Windsor-Essex</div>
+    </div>
+    <a class="more" id="more" target="_top" href="https://www.powerplaywindsor.com/sports">All athletes &rarr;</a>
+  </div>
+  <div class="strip" id="strip"><div class="empty">Loading…</div></div>
+<script>
+(function () {
+  var REPO = 'https://bbellacicco.github.io/powerplay-feed/';
+  var qs = new URLSearchParams(location.search);
+  var LINK = qs.get('link') || 'https://www.powerplaywindsor.com/sports';
+  var N = Math.max(3, Math.min(40, parseInt(qs.get('n'), 10) || 15));
+  document.getElementById('more').href = LINK;
+
+  function full(src) { return /^https?:/.test(src) ? src : REPO + src; }
+  function thumb(src) { return /static\.wixstatic\.com\/media\/[^/]+$/.test(src) ? src + '/v1/fill/w_300,h_400,al_t,q_80/profile.png' : full(src); }
+
+  fetch(REPO + 'data/profiles.json?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; })
+    .then(function (j) {
+      var list = (j && j.profiles || []).filter(function (p) { return p && p.img; }).slice(0, N);
+      var box = document.getElementById('strip'); box.innerHTML = '';
+      if (!list.length) { var e = document.createElement('div'); e.className = 'empty'; e.textContent = 'Profiles are on the way.'; box.appendChild(e); return; }
+      list.forEach(function (p, i) {
+        var c = document.createElement('button'); c.className = 'card'; c.type = 'button'; c.setAttribute('aria-label', 'View athlete profile ' + (i + 1));
+        var img = new Image(); img.src = thumb(p.img); img.alt = ''; img.loading = 'lazy';
+        img.onerror = function () { if (img.src !== full(p.img)) img.src = full(p.img); };
+        c.appendChild(img);
+        c.onclick = function () {
+          // the Athlete Profiles page opens this one when it loads
+          try { localStorage.setItem('pp-athlete', JSON.stringify({ img: p.img, t: Date.now() })); } catch (e) {}
+          try { window.top.location.href = LINK; } catch (e) { window.open(LINK, '_top'); }
+        };
+        box.appendChild(c);
+      });
+    });
+})();
+</script>
+</body>
+</html>
