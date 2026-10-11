@@ -84,14 +84,17 @@
     .game { grid-template-columns: 4px 52px 1fr auto; gap: 8px; }
     .time { font-size: 12px; }
   }
+  .brand { display: flex; align-items: center; gap: 9px; min-width: 0; }
+  .brand .btext { min-width: 0; }
+  .blogo { height: 38px; width: auto; max-width: 76px; object-fit: contain; flex: none; border-radius: 4px; }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
     <div>
-      <h1>Pro <span>Scoreboard</span></h1>
-      <div class="sponsor"><img class="slogo" src="logos/unifor-2458.png" alt="" onerror="this.remove()"><span>Powered by <b>Unifor Local 2458</b></span></div>
+      <div class="brand"><img class="blogo" src="logos/unifor-2458.png" alt="" onerror="this.remove()"><div class="btext"><h1>Pro <span>Scoreboard</span></h1>
+      <div class="sponsor"><span>Powered by <b>Unifor Local 2458</b></span></div></div></div>
     </div>
     <div class="right">
       <div class="views" role="group" aria-label="View"><button id="v-games">Games</button><button id="v-standings">Standings</button></div>
