@@ -7,9 +7,9 @@
 <title>Athlete Profiles | Powerplay Windsor</title>
 <!--
   Athlete Profiles: a grid of Buddy's profile graphics (the top of each shows the athlete's name and team).
-  Tap one to see the whole profile, with arrows (or swipe) to the next. 12 per page, so the page keeps its height.
+  Tap one to see the whole profile, with arrows (or swipe) to the next. 10 per page (two rows of five; five rows of two on phones), so the page keeps its height.
   The list is data/profiles.json, made by publish.bat from profiles.txt and the "profiles" folder.
-  Embed in Wix full width: about 1,150px tall on desktop, 1,600px on mobile.
+  Embed in Wix full width: about 700px tall on desktop, 1,400px on mobile.
   ?title=<text>   heading (default "Athlete Profiles")
 -->
 <style>
@@ -23,7 +23,8 @@
   h1 span { color: var(--accent); }
   .tag { color: var(--muted); font-size: 12.5px; margin-top: 4px; }
   .count { color: var(--muted); font-size: 12.5px; white-space: nowrap; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+  .grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+  @media (max-width: 760px) { .grid { grid-template-columns: repeat(2, 1fr); } }
   .card { position: relative; border: 0; padding: 0; background: var(--row); border-radius: 8px; overflow: hidden; cursor: pointer; aspect-ratio: 3 / 4;
     border-top: 3px solid var(--accent); box-shadow: 0 2px 10px rgba(0,0,0,.25); transition: transform .15s; }
   .card:hover { transform: translateY(-2px); }
@@ -48,7 +49,9 @@
   .view .prev { left: 4px; } .view .next { right: 4px; }
   .view .bar { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 8px; color: var(--muted); font-size: 12.5px; }
   .view .bar button { background: var(--row); color: #fff; border: 1px solid rgba(255,255,255,.3); border-radius: 999px; font: inherit; font-size: 12px; font-weight: 700; padding: 6px 12px; cursor: pointer; }
-  .view .bar button:hover { border-color: var(--accent); color: var(--accent); }
+  .view .bar button:hover, .view .bar a:hover { border-color: var(--accent); color: var(--accent); }
+  .view .bar .acts { display: flex; gap: 6px; }
+  .view .bar a { background: var(--row); color: #fff; border: 1px solid rgba(255,255,255,.3); border-radius: 999px; font-size: 12px; font-weight: 700; padding: 6px 12px; text-decoration: none; }
   @media (max-width: 560px) {
     .grid { grid-template-columns: 1fr 1fr; gap: 8px; } h1 { font-size: 19px; }
     .view { left: 6px; right: 6px; padding: 6px; } .view .nav { width: 40px; height: 40px; margin-top: -20px; font-size: 18px; }
@@ -67,7 +70,7 @@
   <div class="grid" id="grid"><div class="empty">Loading…</div></div>
   <div class="pager" id="pager"></div>
   <div class="view" id="view" role="dialog" aria-label="Athlete profile">
-    <div class="bar"><span id="pos"></span><button type="button" id="close">&#10005; Close</button></div>
+    <div class="bar"><span id="pos"></span><span class="acts"><a id="fullsize" target="_blank" rel="noopener" href="#">Open full size &#8599;</a><button type="button" id="close">&#10005; Close</button></span></div>
     <div class="stage">
       <img id="big" alt="Athlete profile">
       <button class="nav prev" type="button" id="prev" aria-label="Previous profile">&#8249;</button>
@@ -78,7 +81,7 @@
 <script>
 (function () {
   var REPO = 'https://bbellacicco.github.io/powerplay-feed/';
-  var PER = 12;
+  var PER = 10;   // two rows of five
   var qs = new URLSearchParams(location.search);
   if (qs.get('title')) document.getElementById('title').textContent = qs.get('title');
   var list = [], page = 0, cur = -1;
@@ -118,6 +121,7 @@
   function show(n) {
     cur = (n + list.length) % list.length;
     big.src = large(list[cur].img);
+    document.getElementById('fullsize').href = large(list[cur].img);
     big.onerror = function () { if (big.src !== full(list[cur].img)) big.src = full(list[cur].img); };
     document.getElementById('pos').textContent = 'Profile ' + (cur + 1) + ' of ' + list.length;
     // keep the grid page in step, so closing lands near this athlete
@@ -127,6 +131,8 @@
     show(n);
     view.classList.add('on');
     var wrap = document.getElementById('wrap');
+    // the profile fits inside the box (the Wix box is only as tall as two rows of cards)
+    big.style.maxHeight = Math.max(320, wrap.offsetHeight - 80) + 'px';
     var place = function () {
       var y = cardEl.offsetTop, maxY = Math.max(0, wrap.offsetHeight - view.offsetHeight - 6);
       view.style.top = Math.min(y, maxY) + 'px';
