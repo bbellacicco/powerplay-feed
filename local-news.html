@@ -371,10 +371,16 @@
     };
   }
 
+  var SHOW_VIDEOS = new URLSearchParams(location.search).get('videos') === '1';
   function load() {
     var st = fetch(URL + '?t=' + Date.now(), { cache: 'no-store' })
       .then(function (r) { if (!r.ok) throw r.status; return r.json(); })
-      .then(function (j) { stories = j.stories || []; storiesFailed = false; })
+      .then(function (j) {
+        // YouTube and Vimeo videos live in the Powerplay Sports Network strip now, so they're left out here
+        // (?videos=1 brings them back)
+        stories = (j.stories || []).filter(function (s) { return SHOW_VIDEOS || (s.source !== 'YouTube' && s.source !== 'Vimeo'); });
+        storiesFailed = false;
+      })
       .catch(function () { storiesFailed = !stories; });
     // final scores are only used to spot when you've written up the same game a team recapped
     Promise.all([st, loadScores()]).then(function () { if (state.view !== 'social') render(); });
