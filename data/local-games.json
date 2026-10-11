@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10T19:49:13-04:00",
+ "updated": "2026-10-10T20:01:58-04:00",
  "today": "2026-10-10",
  "range": [
   "2026-10-07",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 30
+   "count": 31
   },
   "club_news": {
    "ok": true,
@@ -1396,7 +1396,8 @@
    "result": "W",
    "note": "",
    "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6169"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6169",
+    "recap": "https://golancers.ca/news/2026/10/10/softball-earns-playoff-berth-on-seniors-day.aspx"
    }
   },
   {
@@ -1464,7 +1465,8 @@
    "result": "W",
    "note": "",
    "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6170"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6170",
+    "recap": "https://golancers.ca/news/2026/10/10/softball-earns-playoff-berth-on-seniors-day.aspx"
    }
   },
   {
@@ -1517,7 +1519,7 @@
    "our_score": 0,
    "opp_score": 2,
    "result": null,
-   "note": "00:23 1st",
+   "note": "18:16 2nd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29072/"
    }
@@ -1535,7 +1537,7 @@
    "our_score": 1,
    "opp_score": 0,
    "result": null,
-   "note": "11:58 1st",
+   "note": "02:04 1st",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15568"
    },
@@ -1743,6 +1745,19 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "BIG TIME catch from Dorian Singer leads to Ontaria Wilson TD",
+   "summary": "",
+   "published": "2026-10-10T19:50:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/7CZ1svMA89HqtUgmBu6oDF/a09611a96ba163f6c13de681747540ad/WPG_1ST_TD_THUMBNAIL.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Blue Bombers"
+   ],
+   "url": "https://www.cfl.ca/article/big-time-catch-from-dorian-singer-leads-to-ontaria-wilson-td",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Recap: BC 41, Ottawa 20",
    "summary": "",
    "published": "2026-10-10T01:49:00-04:00",
@@ -1912,19 +1927,6 @@
     "Tiger-Cats"
    ],
    "url": "https://www.cfl.ca/article/recap-edmonton-27-hamilton-12",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "88 YARD PUNT RETURN TD!",
-   "summary": "",
-   "published": "2026-10-09T00:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/165D1nyg0vnRMXCkH3vY4E/96b7e5eeb0e2f2b66534e4ddece5f8b3/highlight_4.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Tiger-Cats"
-   ],
-   "url": "https://www.cfl.ca/article/88-yard-punt-return-td",
    "source": "CFL.ca"
   },
   {
@@ -2457,21 +2459,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Why Maple Leafs are dressing 7 defencemen vs. Avalanche",
-   "summary": "If you thought Nick Blankenburg’s Maple Leafs debut would come at the expense of another roster defenceman, you thought wrong. Luke Fox explains why the Maple Leafs are going with seven defencemen against the Avalanche.",
-   "published": "2026-10-10T17:48-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Jim-Hiller.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/why-maple-leafs-are-dressing-7-defencemen-vs-avalanche/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Rangers goalie Igor Shesterkin out for season",
    "summary": "",
    "published": "2026-10-10T12:35-04:00",
@@ -2525,6 +2512,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "No. 1 Texas stunned by Oklahoma in Red River rivalry for first loss of season",
+   "summary": "Tate Sandell kicked a 47-yard field goal on the final play and Oklahoma overcame its continued offensive ineptness with touchdowns on special teams and defense in a 27-24 win over No. 1 Texas in the Red River rivalry gam",
+   "published": "2026-10-10T19:56-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Oklahoma-and-Texas.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/ncaa-mens-football/article/no-1-texas-stunned-by-oklahoma-in-red-river-rivalry-for-first-loss-of-season/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "Report: Cardinals working on trade involving WR Marvin Harrison Jr.",
    "summary": "",
@@ -2548,32 +2548,6 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/fifa-world-cup/article/ronaldo-suspended-by-portuguese-federation-after-leaving-training-camp/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Sarah Nurse unable to attend national-team training camp, Hockey Canada clarifies",
-   "summary": "",
-   "published": "2026-10-10T13:40-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2022/11/Sarah-Nurse.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/hockey/article/sarah-nurse-unable-to-attend-national-team-training-camp-hockey-canada-clarifies/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Guardians’ Gavin Williams to start Game 5 after closing Game 4",
-   "summary": "The Cleveland Guardians will start the ace right-hander in Game 5 of the ALDS against the Chicago White Sox despite using him to close out the win in Game 4.",
-   "published": "2026-10-09T16:29-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Cleveland-Guardians-starting-pitcher-Gavin-Williams.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/guardians-gavin-williams-to-start-game-5-after-closing-game-4/",
    "source": "Sportsnet"
   },
   {
@@ -2603,6 +2577,34 @@
    "source": "Sportsnet"
   },
   {
+   "league": "mlb",
+   "headline": "Guardians’ Gavin Williams to start Game 5 after closing Game 4",
+   "summary": "The Cleveland Guardians will start the ace right-hander in Game 5 of the ALDS against the Chicago White Sox despite using him to close out the win in Game 4.",
+   "published": "2026-10-09T16:29-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Cleveland-Guardians-starting-pitcher-Gavin-Williams.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/guardians-gavin-williams-to-start-game-5-after-closing-game-4/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Why Maple Leafs are dressing 7 defencemen vs. Avalanche",
+   "summary": "If you thought Nick Blankenburg’s Maple Leafs debut would come at the expense of another roster defenceman, you thought wrong. Luke Fox explains why the Maple Leafs are going with seven defencemen against the Avalanche.",
+   "published": "2026-10-10T17:48-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Jim-Hiller.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/why-maple-leafs-are-dressing-7-defencemen-vs-avalanche/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Quick Shifts: Is the real Auston Matthews back?",
    "summary": "For the first time in a while, Auston Matthews appears genuinely pumped and wholly engaged. Is the Maple Leafs captain back? Sportsnet’s Luke Fox explores that and more in the latest Quick Shifts.",
@@ -2628,6 +2630,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/heartbreak-on-the-line-gabriel-landeskog-talks-comeback-sweep-makar-alfredsson/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Sarah Nurse unable to attend national-team training camp, Hockey Canada clarifies",
+   "summary": "",
+   "published": "2026-10-10T13:40-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2022/11/Sarah-Nurse.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/hockey/article/sarah-nurse-unable-to-attend-national-team-training-camp-hockey-canada-clarifies/",
    "source": "Sportsnet"
   },
   {
@@ -3693,7 +3708,7 @@
       "l": 1,
       "otl": 2,
       "pts": 8,
-      "gf": 23,
+      "gf": 24,
       "ga": 20,
       "strk": "W2"
      },
@@ -3901,7 +3916,7 @@
       "otl": 1,
       "pts": 9,
       "gf": 25,
-      "ga": 28,
+      "ga": 29,
       "strk": "W2"
      },
      {
@@ -3944,7 +3959,7 @@
       "otl": 2,
       "pts": 18,
       "gf": 49,
-      "ga": 38,
+      "ga": 40,
       "strk": "W1"
      },
      {
@@ -4003,7 +4018,7 @@
       "l": 4,
       "otl": 0,
       "pts": 10,
-      "gf": 35,
+      "gf": 37,
       "ga": 32,
       "strk": "L3"
      },
@@ -4027,7 +4042,7 @@
       "l": 7,
       "otl": 0,
       "pts": 8,
-      "gf": 33,
+      "gf": 35,
       "ga": 42,
       "strk": "W1"
      },
@@ -4075,14 +4090,14 @@
      {
       "name": "Collingwood Blues",
       "abbr": "COL",
-      "gp": 13,
-      "w": 12,
+      "gp": 14,
+      "w": 13,
       "l": 1,
       "otl": 0,
-      "pts": 24,
+      "pts": 26,
       "gf": 78,
       "ga": 22,
-      "strk": "W6"
+      "strk": "W7"
      },
      {
       "name": "Milton Menace",
@@ -4140,7 +4155,7 @@
       "l": 4,
       "otl": 2,
       "pts": 16,
-      "gf": 54,
+      "gf": 55,
       "ga": 36,
       "strk": "W1"
      },
@@ -4165,7 +4180,7 @@
       "otl": 2,
       "pts": 12,
       "gf": 45,
-      "ga": 52,
+      "ga": 54,
       "strk": "W3"
      },
      {
@@ -4189,7 +4204,7 @@
       "otl": 0,
       "pts": 10,
       "gf": 45,
-      "ga": 66,
+      "ga": 67,
       "strk": "L2"
      },
      {
@@ -4207,14 +4222,14 @@
      {
       "name": "Georgetown Raiders",
       "abbr": "GEO",
-      "gp": 12,
+      "gp": 13,
       "w": 3,
-      "l": 7,
+      "l": 8,
       "otl": 2,
       "pts": 8,
       "gf": 41,
       "ga": 68,
-      "strk": "L2"
+      "strk": "L3"
      }
     ]
    }
@@ -4316,7 +4331,7 @@
       "otl": 0,
       "pts": 8,
       "gf": 34,
-      "ga": 45,
+      "ga": 46,
       "strk": "L2"
      },
      {
@@ -4327,8 +4342,8 @@
       "l": 6,
       "otl": 0,
       "pts": 8,
-      "gf": 30,
-      "ga": 41,
+      "gf": 31,
+      "ga": 42,
       "strk": "L2"
      },
      {
@@ -4351,8 +4366,8 @@
       "l": 6,
       "otl": 1,
       "pts": 5,
-      "gf": 30,
-      "ga": 41,
+      "gf": 31,
+      "ga": 42,
       "strk": "W1"
      },
      {
@@ -4416,7 +4431,7 @@
       "l": 1,
       "otl": 0,
       "pts": 14,
-      "gf": 56,
+      "gf": 57,
       "ga": 26,
       "strk": "L1"
      },
