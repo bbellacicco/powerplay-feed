@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10T22:46:50-04:00",
+ "updated": "2026-10-10T23:02:12-04:00",
  "today": "2026-10-10",
  "range": [
   "2026-10-07",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 32
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -1366,6 +1366,24 @@
    }
   },
   {
+   "id": "saints-cjfl45932111",
+   "team": "saints",
+   "sport": "Football",
+   "start": "2026-10-10T00:00:00-04:00",
+   "time_tbd": true,
+   "home_away": "H",
+   "opponent": "London Beefeaters",
+   "location": "Acumen Stadium, Windsor, ON, Canada",
+   "status": "final",
+   "our_score": 19,
+   "opp_score": 26,
+   "result": "L",
+   "note": "CJFL",
+   "links": {
+    "gamecentre": "https://www.cjfl.org/game/show/45932111"
+   }
+  },
+  {
    "id": "lancers-6466",
    "team": "lancers",
    "sport": "Women's Volleyball",
@@ -1488,24 +1506,6 @@
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960329?configuration=45"
    },
    "club": "Amherstburg Admirals"
-  },
-  {
-   "id": "saints-cjfl45932111",
-   "team": "saints",
-   "sport": "Football",
-   "start": "2026-10-10T19:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "London Beefeaters",
-   "location": "Acumen Stadium, Windsor, ON, Canada",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "CJFL",
-   "links": {
-    "gamecentre": "https://www.cjfl.org/game/show/45932111"
-   }
   },
   {
    "id": "spitfires-ohl29072",
@@ -1866,6 +1866,20 @@
   },
   {
    "league": "cfl",
+   "headline": "3 stats that defined Winnipeg's Mobil Thanksgiving Weekend win over Calgary",
+   "summary": "",
+   "published": "2026-10-10T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/1p5gNy0oLpMEZNGKTNZf0r/0cff1d5d053eea1fd773cbd5a79b4475/CP177067227.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Stampeders",
+    "Blue Bombers"
+   ],
+   "url": "https://www.cfl.ca/article/3-stats-that-defined-winnipeg-s-mobil-thanksgiving-weekend-win-over-calgary",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "BC Lions clinch postseason berth with win on Mobil Thanksgiving Weekend",
    "summary": "",
    "published": "2026-10-10T00:00:00-04:00",
@@ -1902,20 +1916,6 @@
     "Blue Bombers"
    ],
    "url": "https://www.cfl.ca/article/zach-collaros-to-start-for-bombers-vs-stampeders",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Elks kick off Mobil Thanksgiving Weekend with road win over Ticats",
-   "summary": "",
-   "published": "2026-10-09T00:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/1ze7uRR66HgDOEYgK7a51E/b6263a1ab846a7f9e9e68d155a2d0250/Cody_Fajardo_2026_4.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Elks",
-    "Tiger-Cats"
-   ],
-   "url": "https://www.cfl.ca/article/elks-kick-off-mobil-thanksgiving-weekend-with-road-win-over-ticats",
    "source": "CFL.ca"
   },
   {
@@ -2434,6 +2434,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "mlb",
+   "headline": "Guardians advance to ALCS with Game 5 win over White Sox",
+   "summary": "",
+   "published": "2026-10-10T22:45-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177067312.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/guardians-advance-to-alcs-with-game-5-win-over-white-sox/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Oilers play to Babcock’s vision in meat-grinder win over Sharks",
    "summary": "For the first time Saturday, we saw what head coach Mike Babcock and these Oilers are trying to accomplish in Edmonton. Mark Spector has more on the Oilers’ 60-minute defensive effort in San Jose",
@@ -2444,6 +2457,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/oilers-play-to-babcocks-vision-in-meat-grinder-win-over-sharks/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Fowler flawless for Canadiens as Bolduc nets shootout winner against Red Wings",
+   "summary": "",
+   "published": "2026-10-10T22:46-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/canadiens-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/fowler-flawless-for-canadiens-as-bolduc-nets-shootout-winner-against-red-wings/",
    "source": "Sportsnet"
   },
   {
@@ -2620,44 +2646,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Why Maple Leafs are dressing 7 defencemen vs. Avalanche",
-   "summary": "If you thought Nick Blankenburg’s Maple Leafs debut would come at the expense of another roster defenceman, you thought wrong. Luke Fox explains why the Maple Leafs are going with seven defencemen against the Avalanche.",
-   "published": "2026-10-10T17:48-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Jim-Hiller.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/why-maple-leafs-are-dressing-7-defencemen-vs-avalanche/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "‘Heartbreak on the line’: Gabriel Landeskog talks comeback, sweep, Makar, Alfredsson",
-   "summary": "It was a long road back to the NHL for Gabriel Landeskog — only for the Avalanche to be swept in last season’s conference. The Colorado captain dove into all of that and more in a sitdown with Sportsnet’s Luke Fox.",
-   "published": "2026-10-10T11:58-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/05/Colorado-Avalanche-left-wing-Gabriel-Landeskog.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/heartbreak-on-the-line-gabriel-landeskog-talks-comeback-sweep-makar-alfredsson/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "other",
-   "headline": "Sarah Nurse unable to attend national-team training camp, Hockey Canada clarifies",
-   "summary": "",
-   "published": "2026-10-10T13:40-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2022/11/Sarah-Nurse.jpg",
+   "headline": "No. 1 Texas stunned by Oklahoma in Red River rivalry for first loss of season",
+   "summary": "Tate Sandell kicked a 47-yard field goal on the final play and Oklahoma overcame its continued offensive ineptness with touchdowns on special teams and defense in a 27-24 win over No. 1 Texas in the Red River rivalry gam",
+   "published": "2026-10-10T19:56-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Oklahoma-and-Texas.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/hockey/article/sarah-nurse-unable-to-attend-national-team-training-camp-hockey-canada-clarifies/",
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/ncaa-mens-football/article/no-1-texas-stunned-by-oklahoma-in-red-river-rivalry-for-first-loss-of-season/",
    "source": "Sportsnet"
   },
   {
@@ -2686,19 +2684,6 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/nfl-week-5-pick-em-cowboys-look-to-dominate-bucs-in-primetime/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "No. 1 Texas stunned by Oklahoma in Red River rivalry for first loss of season",
-   "summary": "Tate Sandell kicked a 47-yard field goal on the final play and Oklahoma overcame its continued offensive ineptness with touchdowns on special teams and defense in a 27-24 win over No. 1 Texas in the Red River rivalry gam",
-   "published": "2026-10-10T19:56-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Oklahoma-and-Texas.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/ncaa-mens-football/article/no-1-texas-stunned-by-oklahoma-in-red-river-rivalry-for-first-loss-of-season/",
    "source": "Sportsnet"
   },
   {
@@ -2738,6 +2723,32 @@
    "sn_team_count": 0,
    "sport": "Curling",
    "url": "https://www.sportsnet.ca/curling/article/whos-playing-with-who-new-curling-teams-to-watch-this-season/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Sarah Nurse unable to attend national-team training camp, Hockey Canada clarifies",
+   "summary": "",
+   "published": "2026-10-10T13:40-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2022/11/Sarah-Nurse.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/hockey/article/sarah-nurse-unable-to-attend-national-team-training-camp-hockey-canada-clarifies/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "‘Heartbreak on the line’: Gabriel Landeskog talks comeback, sweep, Makar, Alfredsson",
+   "summary": "It was a long road back to the NHL for Gabriel Landeskog — only for the Avalanche to be swept in last season’s conference. The Colorado captain dove into all of that and more in a sitdown with Sportsnet’s Luke Fox.",
+   "published": "2026-10-10T11:58-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/05/Colorado-Avalanche-left-wing-Gabriel-Landeskog.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/heartbreak-on-the-line-gabriel-landeskog-talks-comeback-sweep-makar-alfredsson/",
    "source": "Sportsnet"
   },
   {
