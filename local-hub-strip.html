@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+
 <title>Local Hub Latest | Powerplay Windsor</title>
 <!--
   Slim, scrollable row of the newest Local Hub stories and videos (photo, team, headline),
@@ -19,7 +21,7 @@
   html, body { margin: 0; background: var(--bg); color: var(--text); overflow: hidden;
     font: 13px/1.3 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
   .top { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; padding: 8px 12px 6px; }
-  .title { font-weight: 800; text-transform: uppercase; letter-spacing: .03em; font-size: 14px; white-space: nowrap; }
+  .title { font-family: 'Oswald', 'Arial Narrow', system-ui, sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; font-size: 18px; line-height: 1.15; white-space: nowrap; }
   .title span { color: var(--accent); }
   .sponsor { color: var(--muted); font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .sponsor b { color: var(--text); font-weight: 600; }
@@ -39,6 +41,9 @@
     border-top: 7px solid transparent; border-bottom: 7px solid transparent; }
   .tile { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;
     background: linear-gradient(135deg, #1e3a6e, #0b1a33); font-weight: 900; letter-spacing: .04em; }
+  .tile.logo { background: #fff; border-bottom: 3px solid #d4202a; gap: 4px; }
+  .tile.logo img { height: 62%; width: auto; object-fit: contain; }
+  .tile.logo small { color: #0b1a33; font-weight: 900; }
   .tile small { font-size: 10px; letter-spacing: .1em; color: rgba(255,255,255,.8); font-weight: 700; }
   .tile.tt-powerplay { background: linear-gradient(135deg, #e8b021, #8a6200); }
   .tile.tt-spitfires { background: linear-gradient(135deg, #d4202a, #6e0d12); }
@@ -83,7 +88,15 @@
     var d = Math.round(h / 24); if (d < 7) return d + (d === 1 ? ' day ago' : ' days ago');
     return new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Toronto', month: 'short', day: 'numeric' }).format(new Date(t));
   }
+  var TEAM_LOGO = { spitfires: 'https://assets.leaguestat.com/ohl/logos/17.png' };   // same as the Local Hub
   function tile(s) {
+    if (TEAM_LOGO[s.team]) {
+      var lt = el('div', 'tile logo');
+      var li = new Image(); li.src = TEAM_LOGO[s.team]; li.alt = '';
+      lt.appendChild(li);
+      lt.appendChild(el('small', null, /^game story/i.test(s.headline) ? 'GAME STORY' : s.video ? 'VIDEO' : 'NEWS'));
+      return lt;
+    }
     var t = el('div', 'tile tt-' + s.team);
     t.appendChild(el('small', null, s.video ? 'VIDEO' : 'NEWS'));
     var name = TILE[s.team] || (s.club || '').replace(/^(Windsor|St\. Clair)\s+/, '').toUpperCase();
