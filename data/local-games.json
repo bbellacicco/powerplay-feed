@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10T21:31:48-04:00",
+ "updated": "2026-10-10T21:47:09-04:00",
  "today": "2026-10-10",
  "range": [
   "2026-10-07",
@@ -46,8 +46,8 @@
    "count": 159
   },
   "saints": {
-   "ok": false,
-   "error": "The read operation timed out"
+   "ok": true,
+   "count": 9
   },
   "highschool": {
    "ok": false,
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 29
+   "count": 30
   },
   "club_news": {
    "ok": true,
@@ -1516,11 +1516,11 @@
    "home_away": "H",
    "opponent": "Oshawa Generals",
    "location": "WFCU Centre, Windsor",
-   "status": "live",
+   "status": "final",
    "our_score": 1,
    "opp_score": 5,
-   "result": null,
-   "note": "End of Game",
+   "result": "L",
+   "note": "",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29072/"
    }
@@ -1534,11 +1534,11 @@
    "home_away": "A",
    "opponent": "Caledonia Corvairs",
    "location": "Haldimand C.C.C., Caledonia, ON",
-   "status": "live",
+   "status": "final",
    "our_score": 1,
-   "opp_score": 5,
-   "result": null,
-   "note": "03:02 3rd",
+   "opp_score": 6,
+   "result": "L",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15568"
    },
@@ -1553,10 +1553,10 @@
    "home_away": "A",
    "opponent": "Mooretown Flags",
    "location": "Mooretown Sports Complex",
-   "status": "live",
-   "our_score": 0,
-   "opp_score": 0,
-   "result": null,
+   "status": "final",
+   "our_score": 4,
+   "opp_score": 1,
+   "result": "W",
    "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960342?configuration=45"
@@ -1746,6 +1746,45 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "Deonta McMahon fights for TD!!",
+   "summary": "",
+   "published": "2026-10-10T21:16:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/1ACAx9JLWKdjNYG8qvivIn/8d55201f743a2ce425d467e85c7d7ea3/CGY_1ST_TD.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Stampeders"
+   ],
+   "url": "https://www.cfl.ca/article/deonta-mcmahon-fights-for-td",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "TREY VAVAL 88 YARD KICK RETURN TD TO START THE HALF",
+   "summary": "",
+   "published": "2026-10-10T20:55:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/6gr0COG3dFT92T9BtlNcvG/b312a1f285e83fe5c3ae5f9f2d700aba/WPG_3RD_TD.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Blue Bombers"
+   ],
+   "url": "https://www.cfl.ca/article/trey-vaval-88-yard-kick-return-td-to-start-the-half",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Zach Collaros scrambles to find Nic Demski for SIX",
+   "summary": "",
+   "published": "2026-10-10T20:26:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/4ULp3x2i9XMFURqeLQ6ewW/83918e17f7a265b6afdc18ee14f49d1f/WPG_2ND_TD_THUMBNAIL.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Blue Bombers"
+   ],
+   "url": "https://www.cfl.ca/article/zach-collaros-scrambles-to-find-nic-demski-for-six",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "BIG TIME catch from Dorian Singer leads to Ontaria Wilson TD",
    "summary": "",
    "published": "2026-10-10T19:50:00-04:00",
@@ -1888,46 +1927,6 @@
     "Elks"
    ],
    "url": "https://www.cfl.ca/article/malik-carney-brings-the-heat-with-three-sacks-in-the-first-half",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "PICK SIX for Zach Mathis",
-   "summary": "",
-   "published": "2026-10-09T00:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/1lH66LeBtM4NPM4Xjju1YA/13afda1474181a4fce134eab50f54b8a/highligh_3.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Elks"
-   ],
-   "url": "https://www.cfl.ca/article/pick-six-for-zach-mathis",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Cody Fajardo GOES TO WORK in the fourth quarter",
-   "summary": "",
-   "published": "2026-10-09T00:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/1roXdNCIslnKFUEhiy63OU/f4f3ecaacf8803f80c08ec93044441c1/highlight_2.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Elks"
-   ],
-   "url": "https://www.cfl.ca/article/cody-fajardo-goes-to-work-in-the-fourth-quarter",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Recap: Edmonton 27, Hamilton 12",
-   "summary": "",
-   "published": "2026-10-09T00:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/3Gebg9sBrrvMpiDOYJzPmO/609f053208afc580177903019c5811ee/RECAP.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Elks",
-    "Tiger-Cats"
-   ],
-   "url": "https://www.cfl.ca/article/recap-edmonton-27-hamilton-12",
    "source": "CFL.ca"
   },
   {
@@ -2446,6 +2445,32 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Toronto FC roars back with pair of stoppage-time goals to shock CF Montreal",
+   "summary": "",
+   "published": "2026-10-10T15:35-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/djordje-mihailovic.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/toronto-fc-roars-back-with-pair-of-stoppage-time-goals-to-shock-cf-montreal/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Canucks among teams looking at Flames’ Connor Zary",
+   "summary": "",
+   "published": "2026-10-10T21:32-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/zary.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canucks-among-teams-looking-at-flames-connor-zary/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Maple Leafs’ Chris Tanev exits vs. Avalanche with upper-body injury",
    "summary": "",
@@ -2474,6 +2499,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "Gradey Dick calls facing Raptors after blockbuster trade ‘bittersweet’",
+   "summary": "",
+   "published": "2026-10-10T21:35-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177067362.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 2,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/gradey-dick-says-facing-raptors-for-first-since-blockbuster-trade-is-bittersweet/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Could Alexander Nikishin return to Hurricanes?",
    "summary": "",
@@ -2484,34 +2524,6 @@
    "sn_team_count": 3,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/could-alexander-nikishin-return-to-hurricanes/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Blankenburg makes Maple Leafs debut vs. Avalanche, Bobrovsky starts",
-   "summary": "",
-   "published": "2026-10-10T17:12-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/Nick-Blankenburg.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/nick-blankenburg-to-make-maple-leafs-debut-vs-avalanche/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Oilers expect Zach Hyman to return Tuesday vs. Kings, Babcock says",
-   "summary": "",
-   "published": "2026-10-10T19:18-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/hyman.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/oilers-expect-zach-hyman-to-return-tuesday-vs-kings-babcock-says/",
    "source": "Sportsnet"
   },
   {
@@ -2528,16 +2540,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Ronaldo suspended by Portuguese federation after leaving training camp",
+   "league": "nhl",
+   "headline": "Kaprizov has hat trick, Wild top Panthers to spoil Florida’s home opener",
    "summary": "",
-   "published": "2026-10-10T09:55-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/Untitled-design-copy-2-3.jpg",
+   "published": "2026-10-10T21:23-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Kirill.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/fifa-world-cup/article/ronaldo-suspended-by-portuguese-federation-after-leaving-training-camp/",
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/kaprizov-has-hat-trick-wild-top-panthers-to-spoil-floridas-home-opener/",
    "source": "Sportsnet"
   },
   {
@@ -2551,19 +2563,6 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/flyers-season-opening-skid-hits-six-in-blowout-loss-to-bruins/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Kaprizov has hat trick, Wild top Panthers to spoil Florida’s home opener",
-   "summary": "",
-   "published": "2026-10-10T21:23-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Kirill.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/kaprizov-has-hat-trick-wild-top-panthers-to-spoil-floridas-home-opener/",
    "source": "Sportsnet"
   },
   {
@@ -2769,6 +2768,19 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/premier-league/article/dark-cloud-looms-over-premier-league-manchester-city-as-action-resumes/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Ronaldo suspended by Portuguese federation after leaving training camp",
+   "summary": "",
+   "published": "2026-10-10T09:55-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/Untitled-design-copy-2-3.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/fifa-world-cup/article/ronaldo-suspended-by-portuguese-federation-after-leaving-training-camp/",
    "source": "Sportsnet"
   },
   {
@@ -3731,14 +3743,14 @@
      {
       "name": "Niagara IceDogs",
       "abbr": "NIAG",
-      "gp": 7,
-      "w": 4,
+      "gp": 8,
+      "w": 5,
       "l": 3,
       "otl": 0,
-      "pts": 8,
+      "pts": 10,
       "gf": 22,
       "ga": 22,
-      "strk": "W1"
+      "strk": "W2"
      },
      {
       "name": "North Bay Battalion",
@@ -3755,14 +3767,14 @@
      {
       "name": "Barrie Colts",
       "abbr": "BAR",
-      "gp": 7,
+      "gp": 8,
       "w": 1,
-      "l": 5,
+      "l": 6,
       "otl": 1,
       "pts": 3,
       "gf": 17,
       "ga": 33,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Brampton Steelheads",
@@ -3928,14 +3940,14 @@
      {
       "name": "Wellington Dukes",
       "abbr": "WEL",
-      "gp": 13,
+      "gp": 14,
       "w": 8,
-      "l": 3,
+      "l": 4,
       "otl": 2,
       "pts": 18,
       "gf": 51,
       "ga": 41,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Cobourg Cougars",
@@ -3998,6 +4010,18 @@
       "strk": "L4"
      },
      {
+      "name": "Aurora Tigers",
+      "abbr": "AUR",
+      "gp": 12,
+      "w": 5,
+      "l": 7,
+      "otl": 0,
+      "pts": 10,
+      "gf": 36,
+      "ga": 44,
+      "strk": "W2"
+     },
+     {
       "name": "Trenton Golden Hawks",
       "abbr": "TRN",
       "gp": 11,
@@ -4008,18 +4032,6 @@
       "gf": 47,
       "ga": 49,
       "strk": "L3"
-     },
-     {
-      "name": "Aurora Tigers",
-      "abbr": "AUR",
-      "gp": 11,
-      "w": 4,
-      "l": 7,
-      "otl": 0,
-      "pts": 8,
-      "gf": 36,
-      "ga": 44,
-      "strk": "W1"
      },
      {
       "name": "Toronto Warriors",
@@ -4246,7 +4258,7 @@
       "otl": 0,
       "pts": 14,
       "gf": 42,
-      "ga": 25,
+      "ga": 26,
       "strk": "W2"
      },
      {
@@ -4298,18 +4310,6 @@
       "strk": "L5"
      },
      {
-      "name": "Woodstock Navy Vets",
-      "abbr": "WNV",
-      "gp": 11,
-      "w": 4,
-      "l": 7,
-      "otl": 0,
-      "pts": 8,
-      "gf": 36,
-      "ga": 49,
-      "strk": "L3"
-     },
-     {
       "name": "Komoka Kings",
       "abbr": "KOM",
       "gp": 10,
@@ -4320,6 +4320,18 @@
       "gf": 35,
       "ga": 46,
       "strk": "L2"
+     },
+     {
+      "name": "Woodstock Navy Vets",
+      "abbr": "WNV",
+      "gp": 11,
+      "w": 4,
+      "l": 7,
+      "otl": 0,
+      "pts": 8,
+      "gf": 36,
+      "ga": 49,
+      "strk": "L3"
      },
      {
       "name": "Stratford Warriors",
@@ -4387,18 +4399,6 @@
       "strk": "W8"
      },
      {
-      "name": "Caledonia Corvairs",
-      "abbr": "CAL",
-      "gp": 9,
-      "w": 7,
-      "l": 1,
-      "otl": 1,
-      "pts": 15,
-      "gf": 41,
-      "ga": 22,
-      "strk": "W4"
-     },
-     {
       "name": "Cambridge Redhawks",
       "abbr": "CAM",
       "gp": 9,
@@ -4409,6 +4409,18 @@
       "gf": 60,
       "ga": 28,
       "strk": "W1"
+     },
+     {
+      "name": "Caledonia Corvairs",
+      "abbr": "CAL",
+      "gp": 9,
+      "w": 7,
+      "l": 1,
+      "otl": 1,
+      "pts": 15,
+      "gf": 42,
+      "ga": 22,
+      "strk": "W4"
      },
      {
       "name": "Waterloo Siskins",
@@ -4665,6 +4677,18 @@
     "group": "PJHL West Stobbs",
     "teams": [
      {
+      "name": "Essex 73's",
+      "abbr": "ESS",
+      "gp": 11,
+      "w": 10,
+      "l": 1,
+      "otl": 0,
+      "pts": 20,
+      "gf": 46,
+      "ga": 15,
+      "strk": "W9"
+     },
+     {
       "name": "Lakeshore Canadiens",
       "abbr": "LAK",
       "gp": 11,
@@ -4675,18 +4699,6 @@
       "gf": 44,
       "ga": 17,
       "strk": "W1"
-     },
-     {
-      "name": "Essex 73's",
-      "abbr": "ESS",
-      "gp": 10,
-      "w": 9,
-      "l": 1,
-      "otl": 0,
-      "pts": 18,
-      "gf": 42,
-      "ga": 14,
-      "strk": "W8"
      },
      {
       "name": "Dresden Kings",
@@ -4727,14 +4739,14 @@
      {
       "name": "Mooretown Flags",
       "abbr": "MOO",
-      "gp": 13,
+      "gp": 14,
       "w": 4,
-      "l": 6,
+      "l": 7,
       "otl": 3,
       "pts": 11,
-      "gf": 42,
-      "ga": 44,
-      "strk": "L1"
+      "gf": 43,
+      "ga": 48,
+      "strk": "L2"
      },
      {
       "name": "Amherstburg Admirals",
