@@ -59,13 +59,17 @@
     display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
   .empty { color: var(--muted); padding: 10px 12px; }
   @media (max-width: 420px) { .card { width: 190px; } .sponsor { white-space: normal; } }
+  .brand { display: flex; align-items: center; gap: 9px; min-width: 0; }
+  .brand .btext { min-width: 0; }
+  .blogo { height: 30px; width: auto; max-width: 60px; object-fit: contain; flex: none; border-radius: 4px; }
+  .sponsor b { white-space: nowrap; }
 </style>
 </head>
 <body>
   <div class="top">
     <div style="min-width:0">
-      <div class="title">Local Hub <span>Latest</span></div>
-      <div class="sponsor"><img class="slogo" src="logos/st-clair-alumni.png" alt="" onerror="this.remove()"><span>Brought to you by <b>St. Clair College Alumni</b></span></div>
+      <div class="brand"><img class="blogo" src="logos/st-clair-alumni.png" alt="" onerror="this.remove()"><div class="btext"><div class="title">Local Hub <span>Latest</span></div>
+      <div class="sponsor"><span>Brought to you by <b>St. Clair College Alumni</b></span></div></div></div>
     </div>
     <a class="more" id="more" target="_top" href="https://www.powerplaywindsor.com/">All stories &rarr;</a>
   </div>
