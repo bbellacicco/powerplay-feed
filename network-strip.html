@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+<title>Powerplay Sports Network | Powerplay Windsor</title>
+<!--
+  Slim, scrollable row of Powerplay's newest videos from YouTube and Vimeo, newest first.
+  Same data as the Local Hub (data/local-news.json, refreshed every 15 minutes by Buddy's PC).
+  Tapping a video plays it right in the strip (the player fills the strip; X closes it).
+  Embed in Wix at about 260px tall, full width.
+  ?n=<number>   how many videos (default 15)
+  ?link=<url>   where "All videos" goes (default the YouTube channel)
+-->
+<style>
+  :root { --bg: #0b1a33; --panel: #10244a; --row: #132b57; --line: #1e3a6e;
+    --text: #f2f5fb; --muted: #9fb0cf; --accent: #e8b021; --yt: #ff3d3d; --vimeo: #1ab7ea; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text); overflow: hidden;
+    font: 13px/1.3 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  .top { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 12px 6px; }
+  .title { font-family: 'Graduate', 'Rockwell', Georgia, serif; font-weight: 400; text-transform: uppercase; letter-spacing: .02em;
+    font-size: 14px; -webkit-text-stroke: .5px currentColor; line-height: 1.15; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .title span { color: var(--accent); }
+  .sub { color: var(--muted); font-size: 11px; margin-top: 2px; }
+  .sub b { color: var(--text); font-weight: 600; }
+  .more { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 12px; white-space: nowrap; }
+  .strip { display: flex; gap: 10px; overflow-x: auto; padding: 0 12px 10px; scroll-snap-type: x mandatory; scroll-padding-left: 12px; scrollbar-width: thin; }
+  .card { flex: 0 0 auto; width: 230px; background: var(--row); border-radius: 8px; overflow: hidden; scroll-snap-align: start;
+    color: inherit; text-decoration: none; border: 0; padding: 0; text-align: left; font: inherit; cursor: pointer; border-top: 3px solid var(--accent);
+    display: flex; flex-direction: column; justify-content: flex-start; align-items: stretch; }
+  .card:hover .hl, .card:focus-visible .hl { text-decoration: underline; }
+  .card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .thumb { position: relative; width: 100%; aspect-ratio: 16 / 9; background: var(--panel); overflow: hidden; }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .play { position: absolute; left: 50%; top: 50%; width: 42px; height: 42px; margin: -21px 0 0 -21px; border-radius: 50%;
+    background: rgba(0,0,0,.6); border: 2px solid #fff; transition: transform .15s; }
+  .card:hover .play { transform: scale(1.08); background: rgba(232,176,33,.9); }
+  .play::after { content: ""; position: absolute; left: 15px; top: 11px; border-left: 13px solid #fff; border-top: 8px solid transparent; border-bottom: 8px solid transparent; }
+  .new { position: absolute; left: 6px; top: 6px; background: var(--accent); color: #0b1a33; font-size: 10px; font-weight: 900; letter-spacing: .08em; padding: 2px 6px; border-radius: 3px; }
+  .body { padding: 7px 9px 9px; }
+  .meta { color: var(--muted); font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 3px; }
+  .meta b { font-weight: 800; } .meta b.YouTube { color: var(--yt); } .meta b.Vimeo { color: var(--vimeo); }
+  .hl { font-weight: 700; font-size: 13px; line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .empty { color: var(--muted); padding: 10px 12px; }
+  /* the player: fills the whole strip, video as big as fits */
+  .player { position: fixed; inset: 0; background: #000; display: none; align-items: center; justify-content: center; gap: 12px; z-index: 5; }
+  .player.on { display: flex; }
+  .player .frame { position: relative; height: 100%; max-width: 100%; aspect-ratio: 16 / 9; }
+  .player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .player .side { position: absolute; top: 8px; right: 8px; display: flex; gap: 6px; z-index: 6; }
+  .player button, .player a { background: rgba(11,26,51,.9); color: #fff; border: 1px solid rgba(255,255,255,.35); border-radius: 999px;
+    font: inherit; font-size: 12px; font-weight: 700; padding: 6px 11px; cursor: pointer; text-decoration: none; }
+  .player button:hover, .player a:hover { border-color: var(--accent); color: var(--accent); }
+  @media (max-width: 420px) { .card { width: 200px; } }
+</style>
+</head>
+<body>
+  <div class="top">
+    <div style="min-width:0">
+      <div class="title">Powerplay Sports <span>Network</span></div>
+      <div class="sub">Latest highlights on <b>YouTube</b> &amp; <b>Vimeo</b></div>
+    </div>
+    <a class="more" id="more" target="_blank" rel="noopener" href="https://www.youtube.com/channel/UC0ZFyMf1Zo_vR5h2oWSwDlw">All videos &rarr;</a>
+  </div>
+  <div class="strip" id="strip"><div class="empty">Loading…</div></div>
+  <div class="player" id="player" role="dialog" aria-label="Video player">
+    <div class="frame" id="frame"></div>
+    <div class="side"><a id="ext" target="_blank" rel="noopener" href="#">Watch on YouTube &#8599;</a><button type="button" id="close" aria-label="Close video">&#10005; Close</button></div>
+  </div>
+<script>
+(function () {
+  var URL = 'https://bbellacicco.github.io/powerplay-feed/data/local-news.json';
+  var qs = new URLSearchParams(location.search);
+  var N = Math.max(3, Math.min(25, parseInt(qs.get('n'), 10) || 15));
+  if (qs.get('link')) document.getElementById('more').href = qs.get('link');
+
+  function el(t, c, x) { var e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; }
+  function ago(iso) {
+    var t = new Date(iso).getTime(); if (!t) return '';
+    var m = Math.round((Date.now() - t) / 60000);
+    if (m < 60) return Math.max(m, 1) + ' min ago';
+    var h = Math.round(m / 60); if (h < 24) return h + (h === 1 ? ' hour ago' : ' hours ago');
+    var d = Math.round(h / 24); if (d < 7) return d + (d === 1 ? ' day ago' : ' days ago');
+    var MON = ['Jan.', 'Feb.', 'March', 'April', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'];
+    var p = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Toronto', month: 'numeric', day: 'numeric' }).formatToParts(new Date(t));
+    var mo = +p.filter(function (x) { return x.type === 'month'; })[0].value, dd = p.filter(function (x) { return x.type === 'day'; })[0].value;
+    return MON[mo - 1] + ' ' + (+dd);      // CP style: Oct. 4
+  }
+  // the video's own player address
+  function embed(v) {
+    var m = v.url.match(/[?&]v=([\w-]{11})/) || v.url.match(/youtu\.be\/([\w-]{11})/) || v.url.match(/\/shorts\/([\w-]{11})/);
+    if (m) return 'https://www.youtube-nocookie.com/embed/' + m[1] + '?autoplay=1&rel=0&playsinline=1&modestbranding=1';
+    m = v.url.match(/vimeo\.com\/(?:video\/)?(\d+)/);
+    if (m) return 'https://player.vimeo.com/video/' + m[1] + '?autoplay=1&title=0&byline=0&portrait=0';
+    return '';
+  }
+
+  var player = document.getElementById('player'), frame = document.getElementById('frame'), ext = document.getElementById('ext');
+  function play(v) {
+    var src = embed(v);
+    if (!src) { window.open(v.url, '_blank', 'noopener'); return; }
+    frame.innerHTML = '';
+    var f = document.createElement('iframe');
+    f.src = src; f.title = v.headline;
+    f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; f.allowFullscreen = true;
+    frame.appendChild(f);
+    ext.href = v.url; ext.textContent = 'Watch on ' + v.source + ' ↗';
+    player.classList.add('on');
+    document.getElementById('close').focus();
+  }
+  function stop() { player.classList.remove('on'); frame.innerHTML = ''; }
+  document.getElementById('close').onclick = stop;
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') stop(); });
+
+  var timer;
+  function load() {
+    fetch(URL + '?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { if (!r.ok) throw r.status; return r.json(); })
+      .then(function (j) {
+        show((j.stories || []).filter(function (s) { return s.url && s.headline && (s.source === 'YouTube' || s.source === 'Vimeo'); }));
+      })
+      .catch(function () { var b = document.getElementById('strip'); if (!b.querySelector('.card')) { b.innerHTML = ''; b.appendChild(el('div', 'empty', 'Videos unavailable right now.')); } });
+    clearTimeout(timer); timer = setTimeout(load, 5 * 60000);
+  }
+
+  function show(list) {
+    if (player.classList.contains('on')) return;            // don't redraw under a playing video
+    list.sort(function (a, b) { return new Date(b.published).getTime() - new Date(a.published).getTime(); });
+    // the same video posted to both YouTube and Vimeo shows once (the newer post)
+    var seen = {};
+    list = list.filter(function (v) { var k = v.headline.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(); if (seen[k]) return false; seen[k] = 1; return true; }).slice(0, N);
+    var box = document.getElementById('strip'); box.innerHTML = '';
+    if (!list.length) { box.appendChild(el('div', 'empty', 'No new videos yet.')); return; }
+    list.forEach(function (v) {
+      var c = el('button', 'card'); c.type = 'button'; c.setAttribute('aria-label', 'Play: ' + v.headline);
+      var th = el('div', 'thumb');
+      if (v.image) { var img = new Image(); img.src = v.image; img.alt = ''; img.loading = 'lazy'; img.onerror = function () { img.remove(); }; th.appendChild(img); }
+      th.appendChild(el('div', 'play'));
+      if (Date.now() - new Date(v.published).getTime() < 36 * 3600e3) th.appendChild(el('div', 'new', 'NEW'));
+      c.appendChild(th);
+      var body = el('div', 'body'), meta = el('div', 'meta');
+      meta.appendChild(el('b', v.source, v.source)); meta.appendChild(document.createTextNode(' · ' + ago(v.published)));
+      body.appendChild(meta); body.appendChild(el('div', 'hl', v.headline));
+      c.appendChild(body);
+      c.onclick = function () { play(v); };
+      box.appendChild(c);
+    });
+  }
+  load();
+})();
+</script>
+</body>
+</html>
