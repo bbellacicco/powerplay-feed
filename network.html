@@ -8,7 +8,8 @@
 <!--
   The Powerplay Network page.
     Local Network: every Powerplay video on YouTube and Vimeo, with team/sport filters and a search box.
-    Pro Network:   the newest videos from Sportsnet, TSN, CBC Sports, ESPN, the leagues and the Pro Hub's teams.
+    Pro Network:   the newest videos from the leagues, the Pro Hub's teams and Sportsnet/TSN/CBC/ESPN, filtered
+                   by league (NHL, NFL, MLB, NBA, CFL, PWHL, OHL) with a drop-down of each league's teams.
   Data: data/network.json (Buddy's PC, every 15 minutes; pro channels hourly).
   Videos play right on the page. 12 per page with Next/Back, so the page keeps the same height.
   Embed on its own Wix page, full width: about 1,250px tall on desktop, 1,700px on mobile.
@@ -38,6 +39,9 @@
   .chip { border: 1px solid var(--line); background: var(--panel); color: var(--text); border-radius: 999px; padding: 5px 11px; font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer; }
   .chip:hover { border-color: var(--accent); }
   .chip.on { background: #fff; color: #0b1a33; border-color: #fff; }
+  .teamsel { flex: 1 1 100%; max-width: 360px; margin-top: 4px; background: var(--row); color: var(--text); border: 1px solid var(--accent); border-radius: 999px;
+    padding: 7px 12px; font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; }
+  .teamsel option { background: #10244a; color: #f2f5fb; }
   .count { color: var(--muted); font-size: 12.5px; margin: 0 2px 8px; }
   .gridwrap { position: relative; }
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
@@ -113,7 +117,7 @@
   var BASE = 'https://bbellacicco.github.io/powerplay-feed/data/';
   var PER = 12;
   var qs = new URLSearchParams(location.search);
-  var state = { tab: qs.get('tab') === 'pro' ? 'pro' : 'local', chip: 'all', q: '', page: 0 };
+  var state = { tab: qs.get('tab') === 'pro' ? 'pro' : 'local', chip: 'all', team: '', q: '', page: 0 };
   var data = { local: [], pro: [] };
 
   // Local Network filters: matched against the video's title and description
@@ -129,9 +133,87 @@
     ['basketball', 'Basketball', /basketball|three[- ]pointer|buzzer|dunk|\bhoops?\b/],
     ['more', 'More sports', /volleyball|soccer|baseball|softball|golf|curling|wrestling|track|rugby|lacrosse|tennis|swim|boxing|cross[- ]country|fastball/]
   ];
-  var PRO_CHIPS = [['all', 'All'], ['team', 'Our teams'], ['Sportsnet', 'Sportsnet'], ['TSN', 'TSN'], ['CBC Sports', 'CBC'], ['ESPN', 'ESPN'],
-    ['NHL', 'NHL'], ['NFL', 'NFL'], ['MLB', 'MLB'], ['NBA', 'NBA'], ['CFL', 'CFL'], ['PWHL', 'PWHL'], ['OHL', 'OHL']];
-  var TAGLINE = { local: 'Every Powerplay highlight and interview, in one place', pro: 'The latest from Sportsnet, TSN, CBC, ESPN, the leagues and our pro teams' };
+  // ---------- Pro Network: leagues and their teams ----------
+  // each team: "Label|strong words|weak words". Strong words name the team clearly (full name, unique nickname);
+  // weak words are nicknames other leagues share (Kings, Rangers, Jets...). A video from a league's own channel
+  // matches on either; a video from Sportsnet/TSN/CBC/ESPN needs a strong word, or the league's name plus a weak one.
+  var LEAGUES = [
+    ['NHL', ['Anaheim Ducks|ducks|', 'Boston Bruins|bruins|', 'Buffalo Sabres|sabres|', 'Calgary Flames|flames|', 'Carolina Hurricanes|hurricanes,canes|',
+      'Chicago Blackhawks|blackhawks|', 'Colorado Avalanche|avalanche,avs|', 'Columbus Blue Jackets|blue jackets|', 'Dallas Stars|dallas stars|stars',
+      'Detroit Red Wings|red wings|wings', 'Edmonton Oilers|oilers|', 'Florida Panthers|florida panthers|panthers', 'Los Angeles Kings|los angeles kings,la kings|kings',
+      'Minnesota Wild|minnesota wild|wild', 'Montreal Canadiens|canadiens,habs|', 'Nashville Predators|predators,preds|', 'New Jersey Devils|devils|',
+      'New York Islanders|islanders|', 'New York Rangers|new york rangers,ny rangers|rangers', 'Ottawa Senators|senators,sens|', 'Philadelphia Flyers|philadelphia flyers|flyers',
+      'Pittsburgh Penguins|penguins,pens|', 'San Jose Sharks|san jose sharks|sharks', 'Seattle Kraken|kraken|', 'St. Louis Blues|st. louis blues,st louis blues|blues',
+      'Tampa Bay Lightning|lightning,bolts|', 'Toronto Maple Leafs|maple leafs,leafs|', 'Utah Mammoth|mammoth|', 'Vancouver Canucks|canucks|',
+      'Vegas Golden Knights|golden knights|', 'Washington Capitals|capitals,caps|', 'Winnipeg Jets|winnipeg jets|jets']],
+    ['NFL', ['Arizona Cardinals|arizona cardinals|cardinals', 'Atlanta Falcons|falcons|', 'Baltimore Ravens|ravens|', 'Buffalo Bills|bills|', 'Carolina Panthers|carolina panthers|panthers',
+      'Chicago Bears|bears|', 'Cincinnati Bengals|bengals|', 'Cleveland Browns|browns|', 'Dallas Cowboys|cowboys|', 'Denver Broncos|broncos|', 'Detroit Lions|detroit lions|lions',
+      'Green Bay Packers|packers|', 'Houston Texans|texans|', 'Indianapolis Colts|indianapolis colts|colts', 'Jacksonville Jaguars|jaguars|', 'Kansas City Chiefs|chiefs|',
+      'Las Vegas Raiders|raiders|', 'Los Angeles Chargers|chargers|', 'Los Angeles Rams|rams|', 'Miami Dolphins|dolphins|', 'Minnesota Vikings|vikings|',
+      'New England Patriots|patriots|', 'New Orleans Saints|new orleans saints|saints', 'New York Giants|new york giants,ny giants|giants', 'New York Jets|new york jets,ny jets|jets',
+      'Philadelphia Eagles|philadelphia eagles|eagles', 'Pittsburgh Steelers|steelers|', 'San Francisco 49ers|49ers,niners|', 'Seattle Seahawks|seahawks|',
+      'Tampa Bay Buccaneers|buccaneers,bucs|', 'Tennessee Titans|titans|', 'Washington Commanders|commanders|']],
+    ['MLB', ['Arizona Diamondbacks|diamondbacks,d-backs|', 'Athletics|athletics|a\'s', 'Atlanta Braves|braves|', 'Baltimore Orioles|orioles|', 'Boston Red Sox|red sox|',
+      'Chicago Cubs|cubs|', 'Chicago White Sox|white sox|', 'Cincinnati Reds|cincinnati reds|reds', 'Cleveland Guardians|guardians|', 'Colorado Rockies|rockies|',
+      'Detroit Tigers|detroit tigers|tigers', 'Houston Astros|astros|', 'Kansas City Royals|kansas city royals|royals', 'Los Angeles Angels|los angeles angels|angels',
+      'Los Angeles Dodgers|dodgers|', 'Miami Marlins|marlins|', 'Milwaukee Brewers|brewers|', 'Minnesota Twins|minnesota twins|twins', 'New York Mets|mets|',
+      'New York Yankees|yankees|', 'Philadelphia Phillies|phillies|', 'Pittsburgh Pirates|pittsburgh pirates|pirates', 'San Diego Padres|padres|',
+      'San Francisco Giants|san francisco giants,sf giants|giants', 'Seattle Mariners|mariners|', 'St. Louis Cardinals|st. louis cardinals,st louis cardinals|cardinals',
+      'Tampa Bay Rays|tampa bay rays|rays', 'Texas Rangers|texas rangers|rangers', 'Toronto Blue Jays|blue jays,jays|', 'Washington Nationals|nationals|']],
+    ['NBA', ['Atlanta Hawks|atlanta hawks|hawks', 'Boston Celtics|celtics|', 'Brooklyn Nets|brooklyn nets|nets', 'Charlotte Hornets|hornets|', 'Chicago Bulls|bulls|',
+      'Cleveland Cavaliers|cavaliers,cavs|', 'Dallas Mavericks|mavericks,mavs|', 'Denver Nuggets|nuggets|', 'Detroit Pistons|pistons|', 'Golden State Warriors|warriors|',
+      'Houston Rockets|rockets|', 'Indiana Pacers|pacers|', 'LA Clippers|clippers|', 'Los Angeles Lakers|lakers|', 'Memphis Grizzlies|grizzlies|', 'Miami Heat|miami heat|heat',
+      'Milwaukee Bucks|bucks|', 'Minnesota Timberwolves|timberwolves,wolves|', 'New Orleans Pelicans|pelicans|', 'New York Knicks|knicks|', 'Oklahoma City Thunder|okc thunder,oklahoma city thunder|thunder',
+      'Orlando Magic|orlando magic|magic', 'Philadelphia 76ers|76ers,sixers|', 'Phoenix Suns|phoenix suns|suns', 'Portland Trail Blazers|trail blazers,blazers|',
+      'Sacramento Kings|sacramento kings|kings', 'San Antonio Spurs|spurs|', 'Toronto Raptors|raptors|', 'Utah Jazz|utah jazz|jazz', 'Washington Wizards|wizards|']],
+    ['CFL', ['BC Lions|bc lions,b.c. lions|lions', 'Calgary Stampeders|stampeders,stamps|', 'Edmonton Elks|elks|', 'Hamilton Tiger-Cats|tiger-cats,tiger cats,ticats|',
+      'Montreal Alouettes|alouettes,als|', 'Ottawa Redblacks|redblacks|', 'Saskatchewan Roughriders|roughriders|riders', 'Toronto Argonauts|argonauts,argos|',
+      'Winnipeg Blue Bombers|blue bombers|bombers']],
+    ['PWHL', ['Boston Fleet|boston fleet|fleet', 'Minnesota Frost|minnesota frost|frost', 'Montreal Victoire|victoire|', 'New York Sirens|sirens|',
+      'Ottawa Charge|ottawa charge|charge', 'Seattle Torrent|seattle torrent|torrent', 'Toronto Sceptres|sceptres|', 'Vancouver Goldeneyes|goldeneyes|']],
+    ['OHL', ['Barrie Colts|barrie colts|colts', 'Brampton Steelheads|steelheads|', 'Brantford Bulldogs|brantford bulldogs|bulldogs', 'Erie Otters|otters|',
+      'Flint Firebirds|firebirds|', 'Guelph Storm|guelph storm|storm', 'Kingston Frontenacs|frontenacs|', 'Kitchener Rangers|kitchener rangers|rangers',
+      'London Knights|london knights|knights', 'Niagara IceDogs|icedogs|', 'North Bay Battalion|battalion|', 'Oshawa Generals|oshawa generals|generals',
+      "Ottawa 67's|67's,67s|", 'Owen Sound Attack|owen sound attack|attack', 'Peterborough Petes|petes|', 'Saginaw Spirit|saginaw spirit|spirit',
+      'Sarnia Sting|sarnia sting|sting', 'Soo Greyhounds|greyhounds|', 'Sudbury Wolves|sudbury wolves|wolves', 'Windsor Spitfires|spitfires|']]
+  ].map(function (L) {
+    return { key: L[0], teams: L[1].map(function (t) {
+      var p = t.split('|');
+      return { label: p[0], strong: words(p[1]), weak: words(p[2]) };
+    }), rx: new RegExp('(^|[^a-z0-9])' + L[0].toLowerCase() + '([^a-z0-9]|$)') };
+  });
+  function words(list) {
+    var w = (list || '').split(',').map(function (x) { return x.trim(); }).filter(Boolean);
+    if (!w.length) return null;
+    return new RegExp('(^|[^a-z0-9])(' + w.map(function (x) { return x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }).join('|') + ')([^a-z0-9]|$)');
+  }
+  var LEAGUE_OF = {}; LEAGUES.forEach(function (L) { LEAGUE_OF[L.key] = L; });
+  // the Pro Hub teams' own channels: every video there is that team's (and that league's)
+  var TEAM_CH = { 'Red Wings': ['NHL', 'Detroit Red Wings'], 'Maple Leafs': ['NHL', 'Toronto Maple Leafs'], 'Lions': ['NFL', 'Detroit Lions'],
+    'Tigers': ['MLB', 'Detroit Tigers'], 'Blue Jays': ['MLB', 'Toronto Blue Jays'], 'Pistons': ['NBA', 'Detroit Pistons'], 'Raptors': ['NBA', 'Toronto Raptors'] };
+  // which leagues and teams a pro video is about (worked out once per video)
+  function classify(v) {
+    if (v._lg) return;
+    v._lg = {}; v._tm = {};
+    var hay = ' ' + norm(v.t + ' ' + (v.d || '')) + ' ';
+    var own = TEAM_CH[v.ch] ? TEAM_CH[v.ch][0] : (LEAGUE_OF[v.ch] ? v.ch : null);
+    if (TEAM_CH[v.ch]) v._tm[TEAM_CH[v.ch][1]] = 1;
+    LEAGUES.forEach(function (L) {
+      var mine = own === L.key, strong = [], weak = [];
+      L.teams.forEach(function (t) {
+        if (t.strong && t.strong.test(hay)) strong.push(t.label);
+        else if (t.weak && t.weak.test(hay)) weak.push(t.label);
+      });
+      // in this league if it's the league's (or its team's) own channel, the league is named, or (from a network)
+      // a team is clearly named or two of its teams' nicknames appear ("Riders ... Bombers")
+      var inL = mine || L.rx.test(hay) || (!own && (strong.length || weak.length >= 2));
+      if (!inL) return;
+      v._lg[L.key] = 1;
+      strong.concat(weak).forEach(function (t) { v._tm[t] = 1; });
+    });
+  }
+  var PRO_CHIPS = [['all', 'All'], ['team', 'Our teams']].concat(LEAGUES.map(function (L) { return [L.key, L.key]; }));
+  var TAGLINE = { local: 'Every Powerplay highlight and interview, in one place', pro: 'The latest from the NHL, NFL, MLB, NBA, CFL, PWHL and OHL. Pick a league, then your team' };
 
   function el(t, c, x) { var e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; }
   function norm(s) { return String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[‘’]/g, "'"); }
@@ -166,7 +248,12 @@
         if (!rx.test(hay)) return false;
       }
       if (state.tab === 'pro' && state.chip !== 'all') {
-        if (state.chip === 'team' ? v.g !== 'team' : v.ch !== state.chip) return false;
+        if (state.chip === 'team') { if (v.g !== 'team') return false; }
+        else {
+          classify(v);
+          if (!v._lg[state.chip]) return false;
+          if (state.team && !v._tm[state.team]) return false;
+        }
       }
       for (var i = 0; i < words.length; i++) if (hay.indexOf(words[i]) < 0) return false;
       return true;
@@ -178,9 +265,25 @@
     var box = document.getElementById('chips'); box.innerHTML = '';
     (state.tab === 'local' ? LOCAL_CHIPS : PRO_CHIPS).forEach(function (c) {
       var b = el('button', 'chip' + (state.chip === c[0] ? ' on' : ''), c[1]); b.type = 'button';
-      b.onclick = function () { state.chip = c[0]; state.page = 0; stop(); chips(); grid(); };
+      b.onclick = function () { state.chip = c[0]; state.team = ''; state.page = 0; stop(); chips(); grid(); };
       box.appendChild(b);
     });
+    // a league is picked: a drop-down of its teams (with how many videos each has right now)
+    var L = state.tab === 'pro' && LEAGUE_OF[state.chip];
+    if (L) {
+      var counts = {}, inLeague = 0;
+      data.pro.forEach(function (v) { classify(v); if (!v._lg[L.key]) return; inLeague++; Object.keys(v._tm).forEach(function (t) { counts[t] = (counts[t] || 0) + 1; }); });
+      var sel = el('select', 'teamsel'); sel.setAttribute('aria-label', L.key + ' team');
+      sel.appendChild(new Option('All ' + L.key + ' teams (' + inLeague + ')', ''));
+      L.teams.slice().sort(function (a, b) { return a.label < b.label ? -1 : 1; }).forEach(function (t) {
+        var o = new Option(t.label + (counts[t.label] ? ' (' + counts[t.label] + ')' : ''), t.label);
+        if (!counts[t.label]) o.style.color = '#7d8db0';
+        sel.appendChild(o);
+      });
+      sel.value = state.team;
+      sel.onchange = function () { state.team = sel.value; state.page = 0; stop(); grid(); };
+      box.appendChild(sel);
+    }
   }
   function card(v) {
     var c = el('button', 'card' + (state.tab === 'pro' ? ' pro' : '')); c.type = 'button'; c.setAttribute('aria-label', 'Play: ' + v.t);
@@ -249,7 +352,7 @@
 
   // ---------- tabs and search ----------
   function setTab(t) {
-    state.tab = t; state.chip = 'all'; state.page = 0; stop();
+    state.tab = t; state.chip = 'all'; state.team = ''; state.page = 0; stop();
     [].forEach.call(document.querySelectorAll('.tab'), function (b) { b.classList.toggle('on', b.getAttribute('data-tab') === t); b.setAttribute('aria-selected', b.getAttribute('data-tab') === t); });
     document.getElementById('tagline').textContent = TAGLINE[t];
     document.getElementById('q').placeholder = t === 'pro' ? 'Search pro videos…' : 'Search Powerplay videos…';
