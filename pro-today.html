@@ -43,13 +43,17 @@
   .team.lost { opacity: .6; }
   .empty { color: var(--muted); padding: 10px 12px; }
   @media (max-width: 420px) { .sponsor { white-space: normal; } }
+  .brand { display: flex; align-items: center; gap: 9px; min-width: 0; }
+  .brand .btext { min-width: 0; }
+  .blogo { height: 30px; width: auto; max-width: 60px; object-fit: contain; flex: none; border-radius: 4px; }
+  .sponsor b { white-space: nowrap; }
 </style>
 </head>
 <body>
   <div class="top">
     <div style="min-width:0">
-      <div class="title">Pro Scoreboard <span id="when">Today</span></div>
-      <div class="sponsor"><img class="slogo" src="logos/unifor-2458.png" alt="" onerror="this.remove()"><span>Powered by <b>Unifor Local 2458</b></span></div>
+      <div class="brand"><img class="blogo" src="logos/unifor-2458.png" alt="" onerror="this.remove()"><div class="btext"><div class="title">Pro Scoreboard <span id="when">Today</span></div>
+      <div class="sponsor"><span>Powered by <b>Unifor Local 2458</b></span></div></div></div>
     </div>
     <a class="more" id="more" target="_top" href="https://www.powerplaywindsor.com/pro-sports">Full schedule &rarr;</a>
   </div>
