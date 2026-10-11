@@ -78,6 +78,7 @@
 (function () {
   var URL = 'https://bbellacicco.github.io/powerplay-feed/data/local-news.json';
   var qs = new URLSearchParams(location.search);
+  var SHOW_VIDEOS = qs.get('videos') === '1';   // videos are in the Powerplay Sports Network strip; ?videos=1 brings them back
   var N = Math.max(3, Math.min(20, parseInt(qs.get('n'), 10) || 10));
   if (qs.get('link')) document.getElementById('more').href = qs.get('link');
 
@@ -114,7 +115,7 @@
   var timer;
   function load() {
     fetch(URL + '?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { if (!r.ok) throw r.status; return r.json(); })
-      .then(function (j) { show((j.stories || []).filter(function (s) { return s.url && s.headline && LABEL[s.team]; })); })
+      .then(function (j) { show((j.stories || []).filter(function (s) { return s.url && s.headline && LABEL[s.team] && (SHOW_VIDEOS || (s.source !== 'YouTube' && s.source !== 'Vimeo')); })); })
       .catch(function () { var b = document.getElementById('strip'); b.innerHTML = ''; b.appendChild(el('div', 'empty', 'Stories unavailable right now.')); });
     clearTimeout(timer); timer = setTimeout(load, 5 * 60000);
   }
