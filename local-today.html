@@ -48,13 +48,17 @@
   .empty { color: var(--muted); padding: 10px 12px; }
   @media (max-width: 420px) { .sponsor { white-space: normal; } }
   @media (max-width: 340px) { .title { white-space: normal; } }   /* "Local Scoreboard Today" wraps instead of running into "Full schedule" on the smallest phones */
+  .brand { display: flex; align-items: center; gap: 9px; min-width: 0; }
+  .brand .btext { min-width: 0; }
+  .blogo { height: 30px; width: auto; max-width: 60px; object-fit: contain; flex: none; border-radius: 4px; }
+  .sponsor b { white-space: nowrap; }
 </style>
 </head>
 <body>
   <div class="top">
     <div style="min-width:0">
-      <div class="title">Local Scoreboard <span id="when">Today</span></div>
-      <div class="sponsor"><img class="slogo" src="logos/unifor-444.png" alt="" onerror="this.remove()"><span>Brought to you by <b>Unifor Local 444</b></span></div>
+      <div class="brand"><img class="blogo" src="logos/unifor-444.png" alt="" onerror="this.remove()"><div class="btext"><div class="title">Local Scoreboard <span id="when">Today</span></div>
+      <div class="sponsor"><span>Brought to you by <b>Unifor Local 444</b></span></div></div></div>
     </div>
     <a class="more" id="more" target="_top" href="https://www.powerplaywindsor.com/">Full schedule &rarr;</a>
   </div>
