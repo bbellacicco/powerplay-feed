@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10T20:46:48-04:00",
+ "updated": "2026-10-10T21:01:47-04:00",
  "today": "2026-10-10",
  "range": [
   "2026-10-07",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -1517,10 +1517,10 @@
    "opponent": "Oshawa Generals",
    "location": "WFCU Centre, Windsor",
    "status": "live",
-   "our_score": 0,
+   "our_score": 1,
    "opp_score": 4,
    "result": null,
-   "note": "20:00 3rd",
+   "note": "12:08 3rd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29072/"
    }
@@ -1534,11 +1534,11 @@
    "home_away": "A",
    "opponent": "Caledonia Corvairs",
    "location": "Haldimand C.C.C., Caledonia, ON",
-   "status": "live",
-   "our_score": 1,
-   "opp_score": 3,
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
    "result": null,
-   "note": "03:03 2nd",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15568"
    },
@@ -2460,6 +2460,21 @@
   },
   {
    "league": "nhl",
+   "headline": "Maple Leafs’ Chris Tanev exits vs. Avalanche with upper-body injury",
+   "summary": "",
+   "published": "2026-10-10T20:26-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/05/Tanev.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-chris-tanev-exits-vs-avalanche-with-upper-body-injury/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Rangers goalie Igor Shesterkin out for season",
    "summary": "",
    "published": "2026-10-10T12:35-04:00",
@@ -2523,19 +2538,6 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/ncaa-mens-football/article/no-1-texas-stunned-by-oklahoma-in-red-river-rivalry-for-first-loss-of-season/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Report: Cardinals working on trade involving WR Marvin Harrison Jr.",
-   "summary": "",
-   "published": "2026-10-10T11:32-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/10/harrison_marvin1280.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/report-cardinals-working-on-trade-involving-wr-marvin-harrison-jr/",
    "source": "Sportsnet"
   },
   {
@@ -2713,6 +2715,19 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/nfl-week-5-pick-em-cowboys-look-to-dominate-bucs-in-primetime/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Report: Cardinals working on trade involving WR Marvin Harrison Jr.",
+   "summary": "",
+   "published": "2026-10-10T11:32-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/10/harrison_marvin1280.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/report-cardinals-working-on-trade-involving-wr-marvin-harrison-jr/",
    "source": "Sportsnet"
   },
   {
@@ -3387,7 +3402,7 @@
    "headline": "This Blue Jays prospect has some of the best raw tools in the Fall League",
    "summary": "",
    "published": "2026-10-09T21:25-04:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/ngqsgoehcot4ajwp2m0e",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/v1791671782/mlb/ngqsgoehcot4ajwp2m0e",
    "video": false,
    "teams": [
     "Toronto Blue Jays"
@@ -3722,7 +3737,7 @@
       "otl": 0,
       "pts": 6,
       "gf": 22,
-      "ga": 28,
+      "ga": 29,
       "strk": "L4"
      },
      {
@@ -3733,7 +3748,7 @@
       "l": 6,
       "otl": 0,
       "pts": 4,
-      "gf": 26,
+      "gf": 27,
       "ga": 36,
       "strk": "L2"
      }
@@ -3763,7 +3778,7 @@
       "otl": 0,
       "pts": 8,
       "gf": 20,
-      "ga": 21,
+      "ga": 22,
       "strk": "W1"
      },
      {
@@ -3786,7 +3801,7 @@
       "l": 5,
       "otl": 1,
       "pts": 3,
-      "gf": 16,
+      "gf": 17,
       "ga": 31,
       "strk": "L1"
      },
@@ -3816,7 +3831,7 @@
       "otl": 0,
       "pts": 12,
       "gf": 30,
-      "ga": 22,
+      "ga": 23,
       "strk": "W5"
      },
      {
@@ -3851,7 +3866,7 @@
       "l": 3,
       "otl": 1,
       "pts": 7,
-      "gf": 21,
+      "gf": 22,
       "ga": 27,
       "strk": "W1"
      },
@@ -3880,7 +3895,7 @@
       "l": 2,
       "otl": 0,
       "pts": 10,
-      "gf": 32,
+      "gf": 34,
       "ga": 21,
       "strk": "W5"
      },
@@ -3929,7 +3944,7 @@
       "otl": 0,
       "pts": 4,
       "gf": 18,
-      "ga": 30,
+      "ga": 32,
       "strk": "L1"
      }
     ]
@@ -3960,7 +3975,7 @@
       "otl": 2,
       "pts": 18,
       "gf": 50,
-      "ga": 40,
+      "ga": 41,
       "strk": "W1"
      },
      {
@@ -4043,7 +4058,7 @@
       "l": 7,
       "otl": 0,
       "pts": 8,
-      "gf": 35,
+      "gf": 36,
       "ga": 43,
       "strk": "W1"
      },
@@ -4156,8 +4171,8 @@
       "l": 4,
       "otl": 2,
       "pts": 16,
-      "gf": 58,
-      "ga": 36,
+      "gf": 59,
+      "ga": 37,
       "strk": "W1"
      },
      {
@@ -4204,8 +4219,8 @@
       "l": 9,
       "otl": 0,
       "pts": 10,
-      "gf": 45,
-      "ga": 70,
+      "gf": 46,
+      "ga": 71,
       "strk": "L2"
      },
      {
@@ -4343,8 +4358,8 @@
       "l": 6,
       "otl": 0,
       "pts": 8,
-      "gf": 31,
-      "ga": 44,
+      "gf": 33,
+      "ga": 46,
       "strk": "L2"
      },
      {
@@ -4367,8 +4382,8 @@
       "l": 6,
       "otl": 1,
       "pts": 5,
-      "gf": 33,
-      "ga": 42,
+      "gf": 35,
+      "ga": 44,
       "strk": "W1"
      },
      {
@@ -4396,7 +4411,7 @@
       "l": 1,
       "otl": 0,
       "pts": 18,
-      "gf": 54,
+      "gf": 55,
       "ga": 25,
       "strk": "W6"
      },
@@ -4409,7 +4424,7 @@
       "otl": 0,
       "pts": 16,
       "gf": 47,
-      "ga": 26,
+      "ga": 27,
       "strk": "W8"
      },
      {
