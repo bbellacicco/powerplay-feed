@@ -12,7 +12,7 @@
   Two ways to embed it in Wix:
     search.html?mode=bar   just the search bar (about 64px tall). Searching opens the results page.
     search.html            bar + results (the results page; about 1100px tall)
-  ?page=<url>  where the bar sends people (default https://www.powerplaywindsor.com/find)
+  ?page=<url>  where the bar sends people (default https://www.powerplaywindsor.com/search-1)
   (Not /search: Wix keeps that address for its own built-in search page.)
   The bar passes the search words to the results page through browser storage on this site.
 -->
@@ -89,7 +89,7 @@
   var BASE = 'https://bbellacicco.github.io/powerplay-feed/data/';
   var qs = new URLSearchParams(location.search);
   var BAR = qs.get('mode') === 'bar';
-  var PAGE = qs.get('page') || 'https://www.powerplaywindsor.com/find';
+  var PAGE = qs.get('page') || 'https://www.powerplaywindsor.com/search-1';
   var KEY = 'pp-search';
   var SITE = 'https://www.powerplaywindsor.com/';
   var LINK_LOCAL = SITE + '#comp-muiib4ix', LINK_HUB = SITE + '#comp-mulrhl3q';
