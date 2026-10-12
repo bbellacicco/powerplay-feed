@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12T15:16:35-04:00",
+ "updated": "2026-10-12T15:34:00-04:00",
  "today": "2026-10-12",
  "range": [
   "2026-10-09",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -583,7 +583,7 @@
    "our_score": 0,
    "opp_score": 1,
    "result": null,
-   "note": "12:34 2nd",
+   "note": "04:02 2nd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29076/"
    }
@@ -2655,19 +2655,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "mlb",
-   "headline": "Brewers lean on strengths to topple Dodgers after Misiorowski’s uneven start",
-   "summary": "All things considered, Jacob Misiorowski’s start in Game 1 of the NLCS was an unusual combination of effective and disappointing. But the Brewers leaned into their strengths on Sunday, beating the Dodgers to take a 1-0 s",
-   "published": "2026-10-11T23:29-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177073459.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/brewers-lean-on-strengths-to-topple-dodgers-after-misiorowskis-uneven-start/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nfl",
    "headline": "NFL Week 5 Takeaways: Commanders settle for tie after costly mistake",
    "summary": "It was a wild Week 5 in the NFL, filled with clock blunders, comebacks and ejections. Zac Phillips breaks down the biggest takeaways.",
@@ -2682,15 +2669,15 @@
   },
   {
    "league": "nfl",
-   "headline": "NFL Week 5 roundup: Packers blow out injured Bears",
-   "summary": "Christian Watson caught two long touchdown passes from Jordan Love, MarShawn Lloyd also scored twice and the Green Bay Packers exacted a measure of revenge against the Chicago Bears by trouncing them 31-7 on Sunday.",
-   "published": "2026-10-11T16:43-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Watson.jpg",
+   "headline": "Report: Falcons QB Michael Penix Jr.’s rib injury not considered serious",
+   "summary": "",
+   "published": "2026-10-12T15:30-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/2a7f17d9ef33fc9b4a600957b3586626e3d7cdeb74c5cf14a0c1073f7f9e5036.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
+   "sn_team_count": 1,
    "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-5-roundup-packers-blow-out-injured-bears/",
+   "url": "https://www.sportsnet.ca/nfl/article/report-falcons-qb-michael-penix-jr-s-rib-injury-not-considered-serious/",
    "source": "Sportsnet"
   },
   {
@@ -3978,6 +3965,18 @@
       "strk": "L2"
      },
      {
+      "name": "St. Michaels Buzzers",
+      "abbr": "STM",
+      "gp": 13,
+      "w": 6,
+      "l": 6,
+      "otl": 1,
+      "pts": 13,
+      "gf": 41,
+      "ga": 55,
+      "strk": "W1"
+     },
+     {
       "name": "Pickering Panthers",
       "abbr": "PIC",
       "gp": 14,
@@ -4014,18 +4013,6 @@
       "strk": "W1"
      },
      {
-      "name": "St. Michaels Buzzers",
-      "abbr": "STM",
-      "gp": 12,
-      "w": 5,
-      "l": 6,
-      "otl": 1,
-      "pts": 11,
-      "gf": 41,
-      "ga": 55,
-      "strk": "L4"
-     },
-     {
       "name": "Aurora Tigers",
       "abbr": "AUR",
       "gp": 12,
@@ -4052,14 +4039,14 @@
      {
       "name": "Toronto Warriors",
       "abbr": "TOW",
-      "gp": 13,
+      "gp": 14,
       "w": 3,
-      "l": 8,
+      "l": 9,
       "otl": 2,
       "pts": 8,
       "gf": 29,
       "ga": 78,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Lindsay Muskies",
@@ -4153,14 +4140,14 @@
      {
       "name": "Toronto Patriots",
       "abbr": "PAT",
-      "gp": 11,
-      "w": 8,
+      "gp": 12,
+      "w": 9,
       "l": 3,
       "otl": 0,
-      "pts": 16,
+      "pts": 18,
       "gf": 65,
       "ga": 23,
-      "strk": "W3"
+      "strk": "W4"
      },
      {
       "name": "Mississauga Chargers",
@@ -4225,14 +4212,14 @@
      {
       "name": "Georgetown Raiders",
       "abbr": "GEO",
-      "gp": 13,
+      "gp": 14,
       "w": 3,
-      "l": 8,
+      "l": 9,
       "otl": 2,
       "pts": 8,
       "gf": 41,
       "ga": 75,
-      "strk": "L3"
+      "strk": "L4"
      }
     ]
    }
@@ -4290,16 +4277,16 @@
       "strk": "W1"
      },
      {
-      "name": "London Nationals",
-      "abbr": "LON",
-      "gp": 10,
-      "w": 4,
-      "l": 5,
-      "otl": 1,
-      "pts": 9,
-      "gf": 38,
-      "ga": 48,
-      "strk": "L1"
+      "name": "Stratford Warriors",
+      "abbr": "SFD",
+      "gp": 8,
+      "w": 5,
+      "l": 3,
+      "otl": 0,
+      "pts": 10,
+      "gf": 30,
+      "ga": 30,
+      "strk": "W5"
      },
      {
       "name": "Elmira Sugar Kings",
@@ -4314,16 +4301,16 @@
       "strk": "L5"
      },
      {
-      "name": "Stratford Warriors",
-      "abbr": "SFD",
-      "gp": 7,
+      "name": "London Nationals",
+      "abbr": "LON",
+      "gp": 11,
       "w": 4,
-      "l": 3,
-      "otl": 0,
-      "pts": 8,
-      "gf": 30,
-      "ga": 30,
-      "strk": "W4"
+      "l": 6,
+      "otl": 1,
+      "pts": 9,
+      "gf": 38,
+      "ga": 48,
+      "strk": "L2"
      },
      {
       "name": "LaSalle Vipers",
