@@ -139,6 +139,17 @@
   #teams .k-junior { --tc: #0891b2; } #teams .k-highschool { --tc: #8b5cf6; } #teams .k-all, #teams .k-latest { --tc: #ffffff; }
   select.pill { border-radius: 4px; }
   @media (max-width: 560px) { #teams { grid-template-columns: repeat(4, 1fr); gap: 5px; } #teams .pill { font-size: 10px; letter-spacing: .02em; padding: 8px 2px 7px; white-space: normal; line-height: 1.15; } }
+
+  /* ---- Home-page look: wide margins, plain bold titles, roomy spacing ---- */
+  .wrap { max-width: 1240px; padding: 26px 40px 30px; }
+  h1 { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; font-weight: 800; font-size: 24px; -webkit-text-stroke: 0; letter-spacing: .005em; text-transform: none; }
+  h1 span { color: inherit; }
+  header { margin-bottom: 18px; }
+  .brand { gap: 12px; }
+  .blogo { height: 34px; }
+  .sponsor { margin-top: 3px; }
+  footer { margin-top: 26px; opacity: .8; }
+  @media (max-width: 700px) { .wrap { padding: 20px 16px 24px; } h1 { font-size: 21px; } }
 </style>
 </head>
 <body>
@@ -146,7 +157,7 @@
   <header>
     <div>
       <div class="brand"><img class="blogo" src="logos/unifor-444.png" alt="" onerror="this.remove()"><div class="btext"><h1>Local <span>Scoreboard</span></h1>
-      <div class="sponsor"><span>Brought to you by <b>Unifor Local 444</b></span></div></div></div>
+      <div class="sponsor"><span>Presented by <b>Unifor Local 444</b></span></div></div></div>
       <a class="xlink" id="xlink" target="_top" href="https://www.powerplaywindsor.com/#comp-mulrhl3q">Stories &amp; video &rarr;</a>
     </div>
     <div class="right">
