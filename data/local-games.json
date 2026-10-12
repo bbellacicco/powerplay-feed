@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12T16:47:20-04:00",
+ "updated": "2026-10-12T17:03:45-04:00",
  "today": "2026-10-12",
  "range": [
   "2026-10-09",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -579,11 +579,11 @@
    "home_away": "H",
    "opponent": "Saginaw Spirit",
    "location": "WFCU Centre, Windsor",
-   "status": "live",
+   "status": "final",
    "our_score": 2,
-   "opp_score": 2,
-   "result": null,
-   "note": "00:28 OT",
+   "opp_score": 3,
+   "result": "OTL",
+   "note": "OT",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29076/"
    }
@@ -1782,6 +1782,20 @@
   },
   {
    "league": "cfl",
+   "headline": "3 stats that defined Montreal's Mobil Thanksgiving Weekend victory over Saskatchewan",
+   "summary": "",
+   "published": "2026-10-12T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/4iT1x5sSHRDv2Ios77kzpU/17aa434e4e8132436134e3d918a238dd/Tyler_snead_2026_03.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Alouettes",
+    "Roughriders"
+   ],
+   "url": "https://www.cfl.ca/article/3-stats-that-defined-montreal-s-mobil-thanksgiving-weekend-victory-over-saskatchewan",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Recap: Winnipeg 33, Calgary 28",
    "summary": "",
    "published": "2026-10-10T23:31:00-04:00",
@@ -1901,19 +1915,6 @@
     "Lions"
    ],
    "url": "https://www.cfl.ca/article/bc-lions-clinch-postseason-berth-with-win-on-mobil-thanksgiving-weekend",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Adeboboye finds space and cruises into the end zone!",
-   "summary": "",
-   "published": "2026-10-09T23:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/72ptByF9OYYZCXobTVJWLX/d3eda3beacf49f23c285bfce334d64fc/ott.png?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "REDBLACKS"
-   ],
-   "url": "https://www.cfl.ca/article/adeboboye-finds-space-and-cruises-into-the-end-zone",
    "source": "CFL.ca"
   },
   {
@@ -2546,6 +2547,32 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Canadiens’ St. Louis, Hughes stoking internal competition",
+   "summary": "Competition is a driving force, and it’s heating up all over the Canadiens’ lineup. Eric Engels has more on how Martin St. Louis and Kent Hughes are keeping players on notice.",
+   "published": "2026-10-12T10:05-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/10/Martin-St.-Louis.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canadiens-st-louis-hughes-stoking-internal-competition/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Flyers struggle again, Tocchet has no answers in franchise-record seventh straight loss to open season",
+   "summary": "",
+   "published": "2026-10-12T16:27-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/rick-tocchet.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/flyers-struggle-again-tocchet-has-no-answers-in-franchise-record-seventh-straight-loss-to-open-season/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "mlb",
    "headline": "Six players to watch in American League Championship Series",
    "summary": "Canadian catcher Liam Hicks will be front and centre in the ALCS. Jeff Blair has more on Hicks as well as six other players to watch in the Rays-Guardians clash.",
@@ -2600,32 +2627,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Canadiens’ St. Louis, Hughes stoking internal competition",
-   "summary": "Competition is a driving force, and it’s heating up all over the Canadiens’ lineup. Eric Engels has more on how Martin St. Louis and Kent Hughes are keeping players on notice.",
-   "published": "2026-10-12T10:05-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/10/Martin-St.-Louis.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canadiens-st-louis-hughes-stoking-internal-competition/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Flyers struggle again, Tocchet has no answers in franchise-record seventh straight loss to open season",
-   "summary": "",
-   "published": "2026-10-12T16:27-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/rick-tocchet.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/flyers-struggle-again-tocchet-has-no-answers-in-franchise-record-seventh-straight-loss-to-open-season/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "cfl",
    "headline": "Alouettes’ Alexander throws five TDs, reaches 5,000 yards in win over Riders",
    "summary": "",
@@ -2636,6 +2637,19 @@
    "sn_team_count": 2,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/cfl/article/alouettes-alexander-throws-five-tds-reaches-5000-yards-in-win-over-riders/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Connor Bedard closing in on return to Blackhawks",
+   "summary": "",
+   "published": "2026-10-12T13:26-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/12/CP175202894.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/connor-bedard-closing-in-on-return-to-blackhawks/",
    "source": "Sportsnet"
   },
   {
@@ -2681,19 +2695,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Connor Bedard closing in on return to Blackhawks",
-   "summary": "",
-   "published": "2026-10-12T13:26-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/12/CP175202894.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/connor-bedard-closing-in-on-return-to-blackhawks/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "‘Blanky’s the man!’: Blankenburg earns Maple Leafs’ respect the hard way",
    "summary": "Nick Blankenburg waited five games for his opportunity with the Maple Leafs, then made an immediate impact with a goal 38 seconds into his first shift against his former team in Colorado. The undersized, undrafted defenc",
    "published": "2026-10-11T16:15-04:00",
@@ -2718,6 +2719,19 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/nfl-week-5-takeaways-commanders-settle-for-tie-after-costly-mistake/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Commanders’ Quinn takes blame for OT clock blunder in wild tie with Giants",
+   "summary": "",
+   "published": "2026-10-11T17:12-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-2026-10-11T171120.339.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/jayden-daniels-commanders-settle-for-tie-with-giants-after-botching-final-play-of-ot/",
    "source": "Sportsnet"
   },
   {
@@ -2760,45 +2774,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "Falcons’ Penix Jr. suffers rib injury late, Tagovailoa finishes OT loss to Ravens",
-   "summary": "Falcons quarterback Michael Penix Jr. suffered a rib injury when he was sacked by Ravens linebacker Tavius Robinson late in the fourth quarter of Atlanta’s 30-23 overtime loss to Baltimore on Sunday night.",
-   "published": "2026-10-12T00:22-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/2a7f17d9ef33fc9b4a600957b3586626e3d7cdeb74c5cf14a0c1073f7f9e5036.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/falcons-penix-jr-suffers-rib-injury-late-tagovailoa-finishes-ot-loss-to-ravens/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Commanders’ Quinn takes blame for OT clock blunder in wild tie with Giants",
-   "summary": "",
-   "published": "2026-10-11T17:12-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-2026-10-11T171120.339.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/jayden-daniels-commanders-settle-for-tie-with-giants-after-botching-final-play-of-ot/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "49ers’ Greenlaw ejected for head-butting Seahawks’ Jones",
-   "summary": "",
-   "published": "2026-10-11T17:53-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Greenlaw.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/49ers-greenlaw-ejected-for-head-butting-seahawks-jones/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "other",
    "headline": "Auger-Aliassime beats Carreno Busta to reach Round of 16 at Shanghai Masters",
    "summary": "",
@@ -2835,6 +2810,21 @@
    "sn_team_count": 0,
    "sport": "Tennis",
    "url": "https://www.sportsnet.ca/atp/article/carlos-alcaraz-stunned-by-zizou-bergs-at-shanghai-masters/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Blue Jays’ Vladimir Guerrero Jr. undergoes laser eye surgery",
+   "summary": "",
+   "published": "2026-10-11T12:50-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/Sad-Vlad.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/blue-jays-vladimir-guerrero-jr-undergoes-laser-eye-surgery/",
    "source": "Sportsnet"
   },
   {
@@ -3034,6 +3024,19 @@
   },
   {
    "league": "nfl",
+   "headline": "Bills make two roster moves plus two elevations for Week 5 vs. Rams",
+   "summary": "Buffalo signed CB Anthony Kendall from the practice squad, among other moves",
+   "published": "2026-10-12T16:50-04:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/bills/khj0y07yrnsaasynp8su.jpg",
+   "video": false,
+   "teams": [
+    "Buffalo Bills"
+   ],
+   "url": "https://www.buffalobills.com/news/bills-make-two-roster-moves-plus-two-elevations-for-week-5-vs-rams",
+   "source": "Team site"
+  },
+  {
+   "league": "nfl",
    "headline": "Buffalo Bills at Los Angeles Rams | Where to watch, stream and listen | MNF Week 5",
    "summary": "TV Channel, Streaming and Radio for Bills at Rams",
    "published": "2026-10-12T12:30-04:00",
@@ -3147,19 +3150,6 @@
     "Buffalo Bills"
    ],
    "url": "https://www.buffalobills.com/news/bills-sign-cb-a-j-woods-to-the-practice-squad",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
-   "headline": "Maxwell Hairston apologizes, Joe Brady wants Dalton Kincaid more involved and Jim Leonhard on Cole Bishop's alignment",
-   "summary": "The Buffalo Bills coaching staff met with the media Monday.",
-   "published": "2026-10-05T17:35-04:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/bills/ws0hdpa2uahbdrozwdkd.png",
-   "video": false,
-   "teams": [
-    "Buffalo Bills"
-   ],
-   "url": "https://www.buffalobills.com/news/maxwell-hairston-apologizes-joe-brady-wants-dalton-kincaid-more-involved-and-jim-leonhard-on-cole-bishop-s-alignment",
    "source": "Team site"
   },
   {
@@ -3476,7 +3466,7 @@
   },
   {
    "league": "mlb",
-   "headline": "Watch LIVE: Blue Jays prospects in Arizona Fall League",
+   "headline": "Watch Blue Jays prospects in Arizona Fall League action",
    "summary": "",
    "published": "2026-10-12T16:20-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
@@ -3847,25 +3837,25 @@
      {
       "name": "Saginaw Spirit",
       "abbr": "SAG",
-      "gp": 7,
-      "w": 3,
+      "gp": 8,
+      "w": 4,
       "l": 2,
       "otl": 2,
-      "pts": 8,
-      "gf": 28,
+      "pts": 10,
+      "gf": 29,
       "ga": 29,
-      "strk": "W2"
+      "strk": "W3"
      },
      {
       "name": "Windsor Spitfires",
       "abbr": "WSR",
-      "gp": 8,
+      "gp": 9,
       "w": 3,
       "l": 4,
-      "otl": 1,
-      "pts": 7,
+      "otl": 2,
+      "pts": 8,
       "gf": 24,
-      "ga": 30,
+      "ga": 31,
       "strk": "L1"
      }
     ]
