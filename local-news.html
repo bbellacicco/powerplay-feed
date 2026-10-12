@@ -194,7 +194,7 @@
 </div>
 <script>
   // cross-link to the other local widget (?other=<url> to point it somewhere else)
-  (function () { var o = new URLSearchParams(location.search).get('other'); if (o) document.getElementById('xlink').href = o; })();
+  (function () { var o = new URLSearchParams(location.search).get('other'); if (o === 'none') document.getElementById('xlink').style.display = 'none'; else if (o) document.getElementById('xlink').href = o; })();
 (function () {
   var TZ = 'America/Toronto';
   var URL = 'https://bbellacicco.github.io/powerplay-feed/data/local-news.json';
