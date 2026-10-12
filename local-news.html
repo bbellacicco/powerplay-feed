@@ -118,6 +118,35 @@
     .headline { font-size: 14px; }
     .summary { display: none; }
   }
+  /* team tabs: square tiles, each with its team colour, so they don't look like the Stories/Social switch */
+  .teamtabs { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; margin: 2px 0 10px; }
+  .ttab { position: relative; border: 1px solid var(--line); background: #0e2044; color: var(--muted); border-radius: 4px;
+    padding: 9px 6px 8px; font: inherit; font-size: 11.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+    cursor: pointer; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .ttab::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: var(--tc, var(--accent)); opacity: .55; }
+  .ttab:hover { color: var(--text); border-color: var(--tc, var(--accent)); }
+  .ttab[aria-pressed="true"] { background: #fff; color: #0b1a33; border-color: #fff; }
+  .ttab[aria-pressed="true"]::before { opacity: 1; height: 4px; }
+  .ttab.k-all { --tc: #ffffff; } .ttab.k-powerplay { --tc: var(--powerplay); } .ttab.k-spitfires { --tc: var(--spitfires); }
+  .ttab.k-lancers { --tc: #3b8ee8; } .ttab.k-saints { --tc: var(--saints); } .ttab.k-junior { --tc: var(--junior); }
+  .ttab[aria-pressed="true"].k-all::before { background: var(--accent); }
+  select.pill#sub { border-radius: 4px; }
+  @media (max-width: 560px) { .teamtabs { grid-template-columns: repeat(3, 1fr); } .ttab { font-size: 10.5px; letter-spacing: .02em; padding: 9px 3px 8px; } }
+  /* stories: one swipeable row, like the other strips */
+  .sstrip { display: flex; gap: 10px; overflow-x: auto; padding: 0 0 10px; scroll-snap-type: x mandatory; scrollbar-width: thin; }
+  .scard { flex: 0 0 auto; width: 230px; background: var(--row); border-radius: 8px; overflow: hidden; scroll-snap-align: start;
+    color: inherit; text-decoration: none; border-top: 3px solid var(--line); display: flex; flex-direction: column; }
+  .scard:hover .headline { text-decoration: underline; }
+  .scard.t-powerplay { border-top-color: var(--powerplay); } .scard.t-spitfires { border-top-color: var(--spitfires); }
+  .scard.t-lancers { border-top-color: var(--lancers); } .scard.t-saints { border-top-color: var(--saints); }
+  .scard.t-junior { border-top-color: var(--junior); } .scard.t-highschool { border-top-color: #8b5cf6; }
+  .scard .thumbwrap { width: 100%; aspect-ratio: 16 / 9; background: var(--panel); overflow: hidden; }
+  .scard .thumb { width: 100%; height: 100%; margin: 0; border-radius: 0; }
+  .scard .body { padding: 7px 9px 10px; }
+  .scard .meta { margin: 0 0 3px; font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .scard .headline { font-size: 13.5px; line-height: 1.28; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .scard .summary { display: none; }
+  @media (max-width: 420px) { .scard { width: 205px; } }
   .brand { display: flex; align-items: center; gap: 9px; min-width: 0; }
   .brand .btext { min-width: 0; }
   .blogo { height: 38px; width: auto; max-width: 76px; object-fit: contain; flex: none; border-radius: 4px; }
@@ -129,7 +158,7 @@
     <div class="sponsor"><span>Brought to you by <b>St. Clair College Alumni</b></span></div></div></div>
     <a class="xlink" id="xlink" target="_top" href="https://www.powerplaywindsor.com/#comp-muiib4ix">Scores &amp; standings &rarr;</a></div>
     <div class="views" role="group" aria-label="View"><button id="v-stories">Stories</button><button id="v-social">Social</button></div></header>
-  <div class="bar" id="tabs" role="group" aria-label="Team"></div>
+  <div class="teamtabs" id="tabs" role="group" aria-label="Team"></div>
   <div class="bar"><select class="pill" id="sub" aria-label="Filter"></select></div>
   <div id="list"><div class="empty">Loading…</div></div>
   <footer id="foot"></footer>
@@ -390,7 +419,7 @@
     var box = document.getElementById('tabs'); box.innerHTML = '';
     TABS.forEach(function (t) {
       if (state.view === 'social' && t[0] === 'highschool') return;
-      var b = el('button', 'pill', t[1]);
+      var b = el('button', 'ttab k-' + t[0], t[1]); b.type = 'button';
       b.setAttribute('aria-pressed', String(state.tab === t[0]));
       b.onclick = function () { state.tab = t[0]; state.sub = 'all'; state.club = 0; render(); };
       box.appendChild(b);
@@ -522,8 +551,10 @@
     list = list.slice(0, state.tab === 'all' ? STORIES_ALL : MAX_STORIES);
     box.innerHTML = '';
     if (!list.length) { box.appendChild(el('div', 'empty', 'No recent stories.')); return; }
-    list.forEach(function (s) { box.appendChild(card(s)); });
-    if (state.tab === 'all') box.appendChild(el('div', 'more', 'More stories: tap a team above.'));
+    var strip = el('div', 'sstrip');
+    list.forEach(function (s) { strip.appendChild(card(s)); });
+    box.appendChild(strip);
+    box.appendChild(el('div', 'more', state.tab === 'all' ? 'Swipe for more · more stories: tap a team above' : 'Swipe for more'));
   }
 
   // placeholder graphics some teams attach to every story (the Spitfires' red "1920x1080" and "Game Story")
@@ -551,11 +582,10 @@
   }
 
   function card(s) {
-    var a = el('a', 'story t-' + s.team);
+    var a = el('a', 'scard t-' + s.team);
     a.href = s.url; a.rel = 'noopener';
     // your own stories open right on your site; videos and team stories in a new tab
     a.target = s.team === 'powerplay' && !s.video ? '_top' : '_blank';
-    a.appendChild(el('div', 'stripe'));
     var holder = el('div', 'thumbwrap');
     if (s.image && !GENERIC_IMG.test(s.image)) {
       var img = el('img', 'thumb'); img.alt = ''; img.loading = 'lazy'; img.referrerPolicy = 'no-referrer';
@@ -566,10 +596,9 @@
     if (s.video) holder.appendChild(el('div', 'play', '▶'));
     a.appendChild(holder);
     var body = el('div', 'body');
-    body.appendChild(el('div', 'headline', s.headline));
-    if (s.summary && s.summary !== s.headline) body.appendChild(el('div', 'summary', s.summary));
     var who = s.team === 'junior' || s.team === 'powerplay' ? s.club : LABEL[s.team] + (s.sport ? ' · ' + s.sport : '');
-    body.appendChild(el('div', 'meta', [who, s.video ? '▶ Video on ' + (s.source || 'YouTube') : '', ago(s.published)].filter(Boolean).join(' · ')));
+    body.appendChild(el('div', 'meta', [who, s.video ? '▶ Video' : '', ago(s.published)].filter(Boolean).join(' · ')));
+    body.appendChild(el('div', 'headline', s.headline));
     a.appendChild(body);
     return a;
   }
