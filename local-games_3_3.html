@@ -84,7 +84,7 @@
     cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -1px; }
   .sporttab[aria-pressed="true"] { color: var(--text); border-bottom-color: var(--accent); }
   .chips { display: flex; gap: 6px; flex-wrap: wrap; }
-  .chip { background: transparent; border: 1px solid var(--line); color: var(--text); border-radius: 6px; font: inherit; font-size: 12px;
+  .chip { background: transparent; border: 1px solid var(--line); color: var(--text); border-radius: 4px; font: inherit; font-size: 12px;
     padding: 4px 9px; cursor: pointer; }
   .chip[aria-pressed="true"] { background: #fff; color: #0b1a33; border-color: #fff; font-weight: 700; }
   .hshead { font-size: 18px; font-weight: 800; text-transform: uppercase; letter-spacing: .03em; margin: 4px 0 2px; }
@@ -125,6 +125,20 @@
   .brand { display: flex; align-items: center; gap: 9px; min-width: 0; }
   .brand .btext { min-width: 0; }
   .blogo { height: 38px; width: auto; max-width: 76px; object-fit: contain; flex: none; border-radius: 4px; }
+
+  /* filter tabs: square tiles (set apart from the Games/Standings switch above) */
+  #teams { display: grid; grid-template-columns: repeat(auto-fit, minmax(92px, 1fr)); gap: 6px; margin: 2px 0 10px; align-items: stretch; }
+  #teams .pill { position: relative; border: 1px solid var(--line); background: #0e2044; color: var(--muted); border-radius: 4px; padding: 9px 6px 8px;
+    font-size: 11.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #teams .pill::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: var(--tc, var(--accent)); opacity: .55; }
+  #teams .pill:hover { color: var(--text); border-color: var(--tc, var(--accent)); }
+  #teams .pill[aria-pressed="true"] { background: #fff; color: #0b1a33; border-color: #fff; font-weight: 800; }
+  #teams .pill[aria-pressed="true"]::before { opacity: 1; height: 4px; }
+  #teams .pill { white-space: normal; line-height: 1.15; display: flex; align-items: center; justify-content: center; min-height: 36px; }
+  #teams .k-spitfires { --tc: #d4202a; } #teams .k-lancers { --tc: #3b8ee8; } #teams .k-saints { --tc: #1f9d55; }
+  #teams .k-junior { --tc: #0891b2; } #teams .k-highschool { --tc: #8b5cf6; } #teams .k-all, #teams .k-latest { --tc: #ffffff; }
+  select.pill { border-radius: 4px; }
+  @media (max-width: 560px) { #teams { grid-template-columns: repeat(4, 1fr); gap: 5px; } #teams .pill { font-size: 10px; letter-spacing: .02em; padding: 8px 2px 7px; white-space: normal; line-height: 1.15; } }
 </style>
 </head>
 <body>
@@ -231,7 +245,7 @@
     data.games.forEach(function (g) { present[g.team] = true; });
     var keys = ['latest', 'all'].concat(Object.keys(data.teams).filter(function (k) { return present[k]; }));
     keys.forEach(function (k) {
-      var b = el('button', 'pill', k === 'all' ? 'All' : k === 'latest' ? 'Current Scores' : data.teams[k].short);
+      var b = el('button', 'pill k-' + k, k === 'all' ? 'All' : k === 'latest' ? 'Current Scores' : data.teams[k].short); b.type = 'button';
       b.setAttribute('aria-pressed', String(state.team === k));
       b.onclick = function () { state.team = k; state.sport = 'all'; state.school = 'all'; render(); };
       box.appendChild(b);
