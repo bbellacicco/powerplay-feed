@@ -7,11 +7,11 @@
 <title>Home | Powerplay Windsor</title>
 <!--
   The homepage in one clean, spaced-out embed (streaming-app style):
-    a rotating banner of Powerplay's newest stories and videos, a search bar, then rows:
+    Powerplay's three newest stories (one big, two beside it, like the News page), a search bar, then rows:
     Local scores · Latest stories · Powerplay Network · Pro scores · Pro headlines · Athlete profiles.
   Each row: title, "Presented by" sponsor, "See all ›" to the full page. Rows swipe sideways (arrows on desktop).
   Same data as the other widgets; refreshes itself every few minutes.
-  Embed full width in Wix: about 2,960px tall on desktop, 3,250px on mobile (includes testimonials and About).
+  Embed full width in Wix: about 2,980px tall on desktop, 3,420px on mobile (includes testimonials and About).
   Links (optional): ?local=<Local Sports page> ?pro=<Pro Sports page> ?network=<Network page> ?athletes=<Spotlights page> ?search=<search page>
 -->
 <style>
@@ -22,30 +22,22 @@
   a { color: inherit; }
   .page { position: relative; max-width: 1240px; margin: 0 auto; padding: 0 0 28px; }
 
-  /* ---------- banner ---------- */
-  .hero { position: relative; height: 430px; overflow: hidden; background: var(--bg2); }
-  .slide { position: absolute; inset: 0; opacity: 0; transition: opacity .7s ease; pointer-events: none; }
-  .slide.on { opacity: 1; pointer-events: auto; }
-  .slide .bg { position: absolute; inset: 0; background-size: cover; background-position: center 30%; }
-  .slide::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(8,20,40,.96) 0%, rgba(8,20,40,.82) 34%, rgba(8,20,40,.15) 70%, rgba(8,20,40,0) 100%),
-    linear-gradient(0deg, rgba(11,26,51,1) 0%, rgba(11,26,51,0) 28%); }
-  .slide .txt { position: absolute; z-index: 2; left: 40px; bottom: 54px; width: min(520px, 52%); }
-  .kicker { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
-  .kicker .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
-  .slide h1 { font-family: 'Graduate', 'Rockwell', Georgia, serif; font-weight: 400; font-size: 30px; line-height: 1.15; margin: 0 0 12px; -webkit-text-stroke: .6px currentColor;
+  /* ---------- top stories: one big feature + two beside it (same as the News page) ---------- */
+  .feat { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; padding: 22px 40px 0; height: 442px; }
+  .big, .small { position: relative; border-radius: 10px; overflow: hidden; background: linear-gradient(135deg, #1e3a6e, #0b1a33); display: block; text-decoration: none; color: var(--text); }
+  .big img, .small img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+  .big:hover img, .small:hover img { transform: scale(1.03); }
+  .big::after, .small::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(8,20,40,.95) 0%, rgba(8,20,40,.55) 40%, rgba(8,20,40,0) 70%); }
+  .ov { position: absolute; z-index: 2; left: 0; right: 0; bottom: 0; padding: 22px 24px; }
+  .kick { font-size: 11.5px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+  .big h2 { font-family: 'Graduate', 'Rockwell', Georgia, serif; font-weight: 400; font-size: 28px; line-height: 1.15; margin: 0 0 8px; -webkit-text-stroke: .5px currentColor;
     display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-  .slide p { margin: 0 0 18px; color: #cfd8ea; font-size: 14px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .big p { margin: 0; color: #d4dcee; font-size: 14px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .fside { display: grid; grid-template-rows: 1fr 1fr; gap: 16px; }
+  .small .ov { padding: 14px 16px; }
+  .small h3 { margin: 0; font-size: 16px; line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
   .btn { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: #0b1a33; border: 0; border-radius: 6px; padding: 10px 18px; font: inherit; font-weight: 800; font-size: 14px; cursor: pointer; text-decoration: none; }
   .btn:hover { background: var(--accent); }
-  .hero .player { position: absolute; inset: 0; z-index: 5; background: #000; display: none; }
-  .hero .player.on { display: block; }
-  .hero .player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-  .hero .player button { position: absolute; top: 10px; right: 10px; z-index: 6; }
-  .dots { position: absolute; z-index: 3; left: 0; right: 0; bottom: 18px; display: flex; justify-content: center; gap: 7px; }
-  .dots button { width: 8px; height: 8px; border-radius: 99px; border: 0; padding: 0; background: rgba(255,255,255,.35); cursor: pointer; transition: width .25s, background .25s; }
-  .dots button.on { width: 22px; background: #fff; }
-  .harrow { position: absolute; z-index: 3; top: 50%; margin-top: -22px; width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(0,0,0,.35); color: #fff; font-size: 24px; cursor: pointer; opacity: 0; transition: opacity .2s; }
-  .hero:hover .harrow { opacity: 1; } .harrow.l { left: 12px; } .harrow.r { right: 12px; }
 
   /* ---------- search ---------- */
   .search { display: flex; gap: 10px; align-items: center; margin: 22px 40px 0; }
@@ -130,14 +122,11 @@
   .fsv .nav.p { left: 10px; } .fsv .nav.n { right: 10px; }
 
   @media (max-width: 700px) {
-    .hero { height: 330px; }
-    .slide::after { background: linear-gradient(0deg, rgba(11,26,51,1) 0%, rgba(11,26,51,.88) 38%, rgba(11,26,51,.2) 75%, rgba(11,26,51,.05) 100%); }
-    .slide .txt { left: 16px; right: 16px; bottom: 40px; width: auto; }
-    .slide h1 { font-size: 21px; -webkit-line-clamp: 3; }
-    .slide p { display: none; }
-    .kicker { font-size: 11px; margin-bottom: 7px; }
+    .feat { grid-template-columns: 1fr; height: auto; padding: 16px 16px 0; gap: 10px; }
+    .big { height: 300px; } .big h2 { font-size: 20px; } .big p { display: none; } .big .ov { padding: 16px; }
+    .fside { grid-template-rows: none; grid-template-columns: 1fr 1fr; gap: 10px; height: 170px; }
+    .small h3 { font-size: 13.5px; } .small .ov { padding: 10px 11px; } .small .kick { font-size: 10px; margin-bottom: 4px; }
     .btn { padding: 9px 15px; font-size: 13px; }
-    .harrow { display: none; }
     .search { margin: 18px 16px 0; } .search .btn { display: none; }
     section { margin-top: 30px; }
     .rhead { padding: 0 16px; flex-wrap: wrap; } .rhead h2 { font-size: 18px; } .rhead .by { margin-left: 0; display: flex; width: 100%; order: 3; margin-top: 3px; }
@@ -175,13 +164,7 @@
 </head>
 <body>
 <div class="page" id="page">
-  <div class="hero" id="hero">
-    <div id="slides"></div>
-    <button class="harrow l" type="button" id="hprev" aria-label="Previous">&#8249;</button>
-    <button class="harrow r" type="button" id="hnext" aria-label="Next">&#8250;</button>
-    <div class="dots" id="dots"></div>
-    <div class="player" id="hplayer"><button class="ghost" type="button" id="hclose">&#10005; Close</button></div>
-  </div>
+  <div class="feat" id="feat"></div>
 
   <form class="search" id="sform" role="search">
     <label class="field">
@@ -336,48 +319,31 @@
     return c;
   }
 
-  // ---------- banner ----------
-  var slides = [], cur = 0, timer = null;
-  function buildHero(items) {
-    var box = document.getElementById('slides'), dots = document.getElementById('dots');
-    box.innerHTML = ''; dots.innerHTML = '';
-    slides = items.map(function (s, i) {
-      var sl = el('div', 'slide');
-      var bg = el('div', 'bg'); bg.style.backgroundImage = 'url("' + s.image.replace(/"/g, '%22') + '")'; sl.appendChild(bg);
-      var t = el('div', 'txt');
-      var k = el('div', 'kicker'); k.appendChild(el('span', 'dot'));
-      k.appendChild(document.createTextNode((isVid(s) ? 'Video' : 'Powerplay story') + ' · ' + ago(s.published)));
-      t.appendChild(k);
-      t.appendChild(el('h1', null, s.headline));
-      if (s.summary && s.summary !== s.headline && !isVid(s)) t.appendChild(el('p', null, s.summary));
-      var b = el(isVid(s) ? 'button' : 'a', 'btn', isVid(s) ? '▶  Watch now' : 'Read the story');
-      if (isVid(s)) { b.type = 'button'; b.onclick = function () { playHero(s); }; } else { b.href = s.url; b.target = s.url.indexOf(SITE) === 0 ? '_top' : '_blank'; }
-      t.appendChild(b); sl.appendChild(t); box.appendChild(sl);
-      var d = el('button'); d.type = 'button'; d.setAttribute('aria-label', 'Slide ' + (i + 1)); d.onclick = function () { go(i); restart(); }; dots.appendChild(d);
-      return sl;
+  // ---------- top stories: one big feature + two beside it ----------
+  function wix(u, w, h) { var m = String(u || '').match(/^(https:\/\/static\.wixstatic\.com\/media\/[^/]+)/); return m ? m[1] + '/v1/fill/w_' + w + ',h_' + h + ',al_c,q_80/photo.jpg' : u; }
+  function featImg(a, s, w, h) {
+    var im = new Image(); im.alt = ''; im.referrerPolicy = 'no-referrer'; im.src = wix(s.image, w, h);
+    im.onerror = function () { if (im.src !== s.image) im.src = s.image; else im.remove(); };
+    a.appendChild(im);
+  }
+  var featKey = '';
+  function buildFeat(items) {
+    var key = items.map(function (s) { return s.url; }).join('|'); if (key === featKey) return; featKey = key;
+    var box = document.getElementById('feat'); box.innerHTML = '';
+    var f = items[0], big = el('a', 'big'); big.href = f.url; big.target = '_top';
+    featImg(big, f, 1100, 620);
+    var ov = el('div', 'ov'); ov.appendChild(el('div', 'kick', 'Latest · ' + ago(f.published)));
+    ov.appendChild(el('h2', null, f.headline));
+    if (f.summary && f.summary !== f.headline) ov.appendChild(el('p', null, f.summary));
+    big.appendChild(ov); box.appendChild(big);
+    var side = el('div', 'fside');
+    items.slice(1, 3).forEach(function (s) {
+      var a = el('a', 'small'); a.href = s.url; a.target = '_top'; featImg(a, s, 560, 320);
+      var o = el('div', 'ov'); o.appendChild(el('div', 'kick', ago(s.published))); o.appendChild(el('h3', null, s.headline)); a.appendChild(o);
+      side.appendChild(a);
     });
-    go(0); restart();
+    box.appendChild(side);
   }
-  function go(i) {
-    if (!slides.length) return;
-    cur = (i + slides.length) % slides.length;
-    slides.forEach(function (s, k) { s.classList.toggle('on', k === cur); });
-    [].forEach.call(document.getElementById('dots').children, function (d, k) { d.classList.toggle('on', k === cur); });
-  }
-  function restart() { clearInterval(timer); timer = setInterval(function () { if (!document.getElementById('hplayer').classList.contains('on')) go(cur + 1); }, 7000); }
-  document.getElementById('hprev').onclick = function () { go(cur - 1); restart(); };
-  document.getElementById('hnext').onclick = function () { go(cur + 1); restart(); };
-  var hero = document.getElementById('hero'), hx = null;
-  hero.addEventListener('mouseenter', function () { clearInterval(timer); }); hero.addEventListener('mouseleave', restart);
-  hero.addEventListener('touchstart', function (e) { hx = e.touches[0].clientX; }, { passive: true });
-  hero.addEventListener('touchend', function (e) { if (hx == null) return; var dx = e.changedTouches[0].clientX - hx; hx = null; if (Math.abs(dx) > 50) { go(cur + (dx < 0 ? 1 : -1)); restart(); } });
-  function playHero(s) {
-    var src = vidEmbed(s.url); if (!src) return openUrl(s.url);
-    var p = document.getElementById('hplayer'); [].forEach.call(p.querySelectorAll('iframe'), function (f) { f.remove(); });
-    var f = document.createElement('iframe'); f.src = src; f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; f.allowFullscreen = true; f.title = s.headline;
-    p.appendChild(f); p.classList.add('on');
-  }
-  document.getElementById('hclose').onclick = function () { var p = document.getElementById('hplayer'); p.classList.remove('on'); [].forEach.call(p.querySelectorAll('iframe'), function (f) { f.remove(); }); };
 
   // ---------- Network row player ----------
   var vp = document.getElementById('vplayer');
@@ -523,23 +489,21 @@
 
   // ---------- load everything ----------
   var OUR_PRO = /(red wings|maple leafs|leafs|canadiens|lions|bills|tigers|blue jays|jays|pistons|raptors|argonauts|argos|tiger-cats|ticats|sceptres|spitfires)/i;
-  var heroBuilt = false;
   function load() {
     Promise.all([getJSON('local-news.json'), getJSON('local-games.json'), getJSON('highschool.json'), getJSON('saints.json'), getJSON('network.json'), getJSON('profiles.json')]).then(function (r) {
       var news = r[0] || {}, lg = r[1] || {}, hs = r[2], sc = r[3], net = r[4] || {}, pf = r[5] || {};
       var stories = (news.stories || []).filter(function (s) { return s.url && s.headline; })
         .sort(function (a, b) { return new Date(b.published) - new Date(a.published); });
-      // banner: Powerplay's newest stories and videos that have a real photo
-      if (!heroBuilt || !document.getElementById('hplayer').classList.contains('on')) {
-        var heroItems = stories.filter(function (s) { return s.team === 'powerplay' && s.image && !GENERIC_IMG.test(s.image); });
-        var seenH = {}; heroItems = heroItems.filter(function (s) { var k = s.headline.toLowerCase().replace(/[^a-z0-9]+/g, ''); if (seenH[k]) return false; seenH[k] = 1; return true; }).slice(0, 5);
-        if (heroItems.length) { var keep = cur; buildHero(heroItems); if (heroBuilt) go(keep); heroBuilt = true; }
-      }
+      // top stories: Powerplay's three newest written stories with a real photo
+      var seenH = {}, featItems = stories.filter(function (s) { return s.team === 'powerplay' && !isVid(s) && s.image && !GENERIC_IMG.test(s.image) && /powerplaywindsor\.com/.test(s.url); })
+        .filter(function (s) { var k = s.headline.toLowerCase().replace(/[^a-z0-9]+/g, ''); if (seenH[k]) return false; seenH[k] = 1; return true; }).slice(0, 3);
+      if (featItems.length) buildFeat(featItems);
+      var featUrls = {}; featItems.forEach(function (s) { featUrls[s.url] = 1; });
       // local scores
       var teams = lg.teams || {};
       fill('local', localGames(lg, hs, sc).map(function (g) { return localCard(g, teams); }), 'No local games right now.');
       // latest stories (written stories; videos have their own row)
-      fill('stories', stories.filter(function (s) { return !isVid(s); }).slice(0, 15).map(function (s) {
+      fill('stories', stories.filter(function (s) { return !isVid(s) && !featUrls[s.url]; }).slice(0, 15).map(function (s) {
         var who = s.team === 'junior' || s.team === 'powerplay' ? s.club || TEAM[s.team] : TEAM[s.team] + (s.sport ? ' · ' + s.sport : '');
         return storyCard(s, { tag: TEAM[s.team] === 'Powerplay' ? 'Powerplay' : (s.team === 'junior' ? (s.club || 'Junior') : TEAM[s.team]), sub: who + ' · ' + ago(s.published), tile: s.team === 'junior' ? (s.club || '').replace(/^(Windsor|St\. Clair)\s+/, '') : null });
       }), 'Stories are on the way.');
