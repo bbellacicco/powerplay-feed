@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-11T20:45:01-04:00",
+ "updated": "2026-10-11T21:00:02-04:00",
  "today": "2026-10-11",
  "games": [
   {
@@ -98,10 +98,10 @@
    "opponent": "Saskatchewan",
    "location": "Vaso’s Field (Oshawa)",
    "status": "final",
-   "our_score": 0,
-   "opp_score": 0,
-   "result": "T",
-   "note": "1 inning · Exhibition · CCSA National Championship Hosted by Durham College",
+   "our_score": 14,
+   "opp_score": 3,
+   "result": "W",
+   "note": "Exhibition · CCSA National Championship Hosted by Durham College",
    "links": {
     "boxscore": "https://www.saintsathletics.ca/sports/fastball/2026-27/boxscores/20261009_gsta.xml"
    }
@@ -123,22 +123,6 @@
    "links": {
     "boxscore": "https://www.saintsathletics.ca/sports/bsb/2026-27/boxscores/20261009_vliy.xml"
    }
-  },
-  {
-   "id": "saints-presto2026-10-10-0",
-   "team": "saints",
-   "sport": "Fastball",
-   "start": "2026-10-10T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Western Ontario",
-   "location": "Babcock Field (Oshawa)",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 4,
-   "result": "L",
-   "note": "Exhibition · CCSA National Championship Hosted by Durham College",
-   "links": {}
   },
   {
    "id": "saints-presto2026-10-10-1",
@@ -171,6 +155,24 @@
    "result": "L",
    "note": "Exhibition",
    "links": {}
+  },
+  {
+   "id": "saints-presto2026-10-10-0",
+   "team": "saints",
+   "sport": "Fastball",
+   "start": "2026-10-10T11:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Western Ontario",
+   "location": "Babcock Field (Oshawa)",
+   "status": "final",
+   "our_score": 0,
+   "opp_score": 0,
+   "result": "T",
+   "note": "1 inning · Exhibition · CCSA National Championship Hosted by Durham College",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/fastball/2026-27/boxscores/20261010_ccvb.xml"
+   }
   },
   {
    "id": "saints-presto2026-10-10-2",
