@@ -1,23 +1,7 @@
 {
- "updated": "2026-10-11T19:00:01-04:00",
+ "updated": "2026-10-11T20:30:01-04:00",
  "today": "2026-10-11",
  "games": [
-  {
-   "id": "saints-presto2026-10-09-0",
-   "team": "saints",
-   "sport": "Fastball",
-   "start": "2026-10-09T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "UBCO",
-   "location": "Vaso’s Field (Oshawa)",
-   "status": "final",
-   "our_score": 10,
-   "opp_score": 4,
-   "result": "W",
-   "note": "Exhibition · CCSA National Championship Hosted by Durham College",
-   "links": {}
-  },
   {
    "id": "saints-presto2026-10-09-4",
    "team": "saints",
@@ -65,6 +49,24 @@
    "result": "L",
    "note": "Exhibition · St. Clair/ University of Windsor Invitational",
    "links": {}
+  },
+  {
+   "id": "saints-presto2026-10-09-0",
+   "team": "saints",
+   "sport": "Fastball",
+   "start": "2026-10-09T10:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "UBCO",
+   "location": "Vaso’s Field (Oshawa)",
+   "status": "final",
+   "our_score": 0,
+   "opp_score": 0,
+   "result": "T",
+   "note": "1 inning · Exhibition · CCSA National Championship Hosted by Durham College",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/fastball/2026-27/boxscores/20261009_cwyz.xml"
+   }
   },
   {
    "id": "saints-presto2026-10-09-2",
