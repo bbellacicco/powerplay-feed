@@ -95,13 +95,42 @@
   .scard .headline { font-size: 13.5px; line-height: 1.28; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
   .swipe { color: var(--muted); font-size: 12px; text-align: center; padding: 2px 0 4px; }
   @media (max-width: 420px) { .scard { width: 205px; } }
+
+  /* ---- Home-page look: wide margins, plain bold titles, roomy spacing ---- */
+  .wrap { max-width: 1240px; padding: 26px 40px 30px; }
+  h1 { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; font-weight: 800; font-size: 24px; -webkit-text-stroke: 0; letter-spacing: .005em; text-transform: none; }
+  h1 span { color: inherit; }
+  header { margin-bottom: 18px; }
+  .brand { gap: 12px; }
+  .blogo { height: 34px; }
+  .sponsor { margin-top: 3px; }
+  footer { margin-top: 26px; opacity: .8; }
+  @media (max-width: 700px) { .wrap { padding: 20px 16px 24px; } h1 { font-size: 21px; } }
+
+  /* story cards like the Home page: rounded photo, headline underneath, no panel */
+  .sstrip { gap: 14px; padding-bottom: 12px; scrollbar-width: none; }
+  .sstrip::-webkit-scrollbar { display: none; }
+  .scard { width: 260px; background: none; border-top: 0; border-radius: 0; overflow: visible; }
+  .scard .thumbwrap, .scard .pic { border-radius: 8px; overflow: hidden; transition: transform .2s, box-shadow .2s; position: relative; }
+  .scard:hover .thumbwrap, .scard:hover .pic { transform: scale(1.03); box-shadow: 0 10px 26px rgba(0,0,0,.45); }
+  .scard:hover .headline { text-decoration: none; }
+  .scard .body { padding: 9px 0 0; }
+  .scard .headline { font-size: 14.5px; -webkit-line-clamp: 2; min-height: 2.6em; }
+  .scard .meta { order: 2; margin: 3px 0 0; font-size: 12px; }
+  .scard .body { display: flex; flex-direction: column; }
+  .scard .headline { order: 1; }
+  .scard .thumbwrap::after, .scard .pic::after { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: var(--tc, transparent); }
+  .scard.t-powerplay { --tc: var(--powerplay); } .scard.t-spitfires { --tc: var(--spitfires); } .scard.t-lancers { --tc: var(--lancers); }
+  .scard.t-saints { --tc: var(--saints); } .scard.t-junior { --tc: var(--junior); } .scard.t-highschool { --tc: #8b5cf6; }
+  .scard.l-nfl { --tc: var(--nfl); } .scard.l-nhl { --tc: var(--nhl); } .scard.l-nba { --tc: var(--nba); } .scard.l-mlb { --tc: var(--mlb); } .scard.l-cfl { --tc: var(--cfl); } .scard.l-pwhl { --tc: var(--pwhl); }
+  @media (max-width: 700px) { .scard { width: 220px; } }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
     <div class="brand"><img class="blogo" src="logos/damore-group.png" alt="" onerror="this.remove()"><div class="btext"><h1>Pro <span>Hub</span></h1>
-    <div class="sponsor"><span>Powered by <b>The D’Amore Group</b></span></div></div></div>
+    <div class="sponsor"><span>Presented by <b>The D’Amore Group</b></span></div></div></div>
   </header>
   <div class="bar" id="tabs" role="group" aria-label="League"></div>
   <div class="bar"><select class="pill" id="team" aria-label="Team"></select></div>
