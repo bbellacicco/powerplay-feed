@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-11T20:51:53-04:00",
+ "updated": "2026-10-11T21:07:20-04:00",
  "today": "2026-10-11",
  "range": [
   "2026-10-08",
@@ -1455,11 +1455,11 @@
    "home_away": "H",
    "opponent": "LaSalle Vipers",
    "location": "Chatham Memorial Arena, Chatham, ON",
-   "status": "live",
-   "our_score": 6,
+   "status": "final",
+   "our_score": 7,
    "opp_score": 0,
-   "result": null,
-   "note": "05:02 3rd",
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15572"
    },
@@ -2891,8 +2891,8 @@
    "league": "pwhl",
    "headline": "PWHL Expansion Teams Detroit, Hamilton, Las Vegas, & San Jose Unveil Inaugural Jerseys Ahead of 2026-27 Season",
    "summary": "",
-   "published": "2026-10-08T14:00:00+00:00",
-   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/ExpansionJersey-PressReleaseHeadersLeague-PressReleaseHeader-1200x800-ENG",
+   "published": "2026-10-08T12:00:00+00:00",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/c_auto,g_auto,h_800,w_1188/q_auto/f_auto/ExpansionJersey-PressReleaseHeadersLeague-PressReleaseHeader-1200x800-ENG",
    "video": false,
    "teams": [],
    "url": "https://www.thepwhl.com/en/news/2026/october/08/pwhl-expansion-teams-detroit-hamilton-las-vegas-san-jose-unveil-inaugural-jerseys-ahead-of-2026-27-season",
@@ -5027,14 +5027,14 @@
      {
       "name": "Chatham Maroons",
       "abbr": "CHA",
-      "gp": 9,
-      "w": 7,
+      "gp": 10,
+      "w": 8,
       "l": 2,
       "otl": 0,
-      "pts": 14,
-      "gf": 48,
+      "pts": 16,
+      "gf": 49,
       "ga": 26,
-      "strk": "L1"
+      "strk": "W1"
      },
      {
       "name": "Listowel Cyclones",
@@ -5063,14 +5063,14 @@
      {
       "name": "LaSalle Vipers",
       "abbr": "LAS",
-      "gp": 8,
+      "gp": 9,
       "w": 4,
-      "l": 4,
+      "l": 5,
       "otl": 0,
       "pts": 8,
       "gf": 24,
-      "ga": 39,
-      "strk": "L1"
+      "ga": 40,
+      "strk": "L2"
      },
      {
       "name": "Elmira Sugar Kings",
@@ -5260,25 +5260,13 @@
      {
       "name": "Hamilton Steel",
       "abbr": "HAM",
-      "gp": 11,
-      "w": 0,
+      "gp": 12,
+      "w": 1,
       "l": 8,
       "otl": 3,
-      "pts": 3,
+      "pts": 5,
       "gf": 29,
-      "ga": 53,
-      "strk": "L8"
-     },
-     {
-      "name": "Welland Canadians",
-      "abbr": "WEL",
-      "gp": 10,
-      "w": 1,
-      "l": 9,
-      "otl": 0,
-      "pts": 2,
-      "gf": 23,
-      "ga": 61,
+      "ga": 54,
       "strk": "W1"
      },
      {
@@ -5292,6 +5280,18 @@
       "gf": 24,
       "ga": 52,
       "strk": "L5"
+     },
+     {
+      "name": "Welland Canadians",
+      "abbr": "WEL",
+      "gp": 11,
+      "w": 1,
+      "l": 10,
+      "otl": 0,
+      "pts": 2,
+      "gf": 24,
+      "ga": 61,
+      "strk": "L1"
      }
     ]
    }
