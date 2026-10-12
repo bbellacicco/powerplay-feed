@@ -7,9 +7,9 @@
 <title>Athlete Profiles | Powerplay Windsor</title>
 <!--
   Athlete Profiles: a grid of Buddy's profile graphics (the top of each shows the athlete's name and team).
-  Tap one and it fills the screen (full screen; on iPhone the full-screen viewer page profile.html), with arrows (or swipe) to the next. 10 per page (two rows of five; five rows of two on phones), so the page keeps its height.
+  Tap one and it fills the screen (full screen; on iPhone the full-screen viewer page profile.html), with arrows (or swipe) to the next. one swipeable row with every profile.
   The list is data/profiles.json, made by publish.bat from profiles.txt and the "profiles" folder.
-  Embed in Wix full width: about 700px tall on desktop, 1,400px on mobile.
+  Embed in Wix full width: about 380px tall on desktop, 340px on mobile.
   ?title=<text>   heading (default "Athlete Profiles")
 -->
 <style>
@@ -23,8 +23,9 @@
   h1 span { color: var(--accent); }
   .tag { color: var(--muted); font-size: 12.5px; margin-top: 4px; }
   .count { color: var(--muted); font-size: 12.5px; white-space: nowrap; }
-  .grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
-  @media (max-width: 760px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+  .grid { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 10px; scroll-snap-type: x mandatory; scrollbar-width: thin; }
+  .grid .card { flex: 0 0 200px; scroll-snap-align: start; }
+  .swipe { color: var(--muted); font-size: 12px; text-align: center; padding: 2px 0; }
   .card { position: relative; border: 0; padding: 0; background: var(--row); border-radius: 8px; overflow: hidden; cursor: pointer; aspect-ratio: 3 / 4;
     border-top: 3px solid var(--accent); box-shadow: 0 2px 10px rgba(0,0,0,.25); transition: transform .15s; }
   .card:hover { transform: translateY(-2px); }
@@ -59,7 +60,7 @@
   .view .bar .acts { display: flex; gap: 6px; }
   .view .bar a { background: var(--row); color: #fff; border: 1px solid rgba(255,255,255,.3); border-radius: 999px; font-size: 12px; font-weight: 700; padding: 6px 12px; text-decoration: none; }
   @media (max-width: 560px) {
-    .grid { grid-template-columns: 1fr 1fr; gap: 8px; } h1 { font-size: 19px; }
+    .grid { gap: 8px; } .grid .card { flex-basis: 165px; } h1 { font-size: 19px; }
     .view { left: 6px; right: 6px; padding: 6px; } .view .nav { width: 40px; height: 40px; margin-top: -20px; font-size: 18px; }
   }
 </style>
@@ -87,7 +88,7 @@
 <script>
 (function () {
   var REPO = 'https://bbellacicco.github.io/powerplay-feed/';
-  var PER = 10;   // two rows of five
+  var PER = 1000;   // one swipeable row with every profile (no pages)
   var qs = new URLSearchParams(location.search);
   if (qs.get('title')) document.getElementById('title').textContent = qs.get('title');
   var list = [], page = 0, cur = -1;
@@ -114,6 +115,7 @@
       box.appendChild(c);
     });
     var pg = document.getElementById('pager'); pg.innerHTML = '';
+    if (list.length > 2) pg.appendChild(el('div', 'swipe', 'Swipe for more \u00b7 tap a profile to enlarge it'));
     if (pages > 1) {
       var back = el('button', null, '← Back'); back.type = 'button'; back.disabled = page === 0;
       var next = el('button', null, 'More →'); next.type = 'button'; next.disabled = page >= pages - 1;
@@ -153,13 +155,13 @@
     var req = view.requestFullscreen || view.webkitRequestFullscreen;
     if (req && (document.fullscreenEnabled || document.webkitFullscreenEnabled)) {
       show(n); view.classList.add('on', 'fs'); big.style.maxHeight = '';
-      try { var pr = req.call(view); if (pr && pr.catch) pr.catch(function () { view.classList.remove('fs'); open(n, cardEl); }); }
-      catch (e) { view.classList.remove('fs'); open(n, cardEl); }
+      try { var pr = req.call(view); if (pr && pr.catch) pr.catch(function () { view.classList.remove('on', 'fs'); toPage(n); }); }
+      catch (e) { view.classList.remove('on', 'fs'); toPage(n); }
       return;
     }
-    var url = REPO + 'profile.html?i=' + n;
-    try { window.top.location.href = url; } catch (e) { window.open(url, '_top'); }
+    toPage(n);
   }
+  function toPage(n) { var url = REPO + 'profile.html?i=' + n; try { window.top.location.href = url; } catch (e) { window.open(url, '_top'); } }
   function onFs() { if (!fsEl() && view.classList.contains('fs')) { view.classList.remove('fs'); close(); } }
   document.addEventListener('fullscreenchange', onFs); document.addEventListener('webkitfullscreenchange', onFs);
   function close() {
