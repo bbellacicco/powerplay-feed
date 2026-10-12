@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12T15:48:49-04:00",
+ "updated": "2026-10-12T16:03:51-04:00",
  "today": "2026-10-12",
  "range": [
   "2026-10-09",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -583,7 +583,7 @@
    "our_score": 1,
    "opp_score": 1,
    "result": null,
-   "note": "00:00 2nd",
+   "note": "18:37 3rd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29076/"
    }
@@ -1612,28 +1612,6 @@
  ],
  "pro_games": [
   {
-   "id": "cfl-cfl6663",
-   "team": "cfl",
-   "sport": "CFL",
-   "start": "2026-10-12T13:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Montreal Alouettes",
-   "location": "Percival Molson Memorial Stadium",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.cfl.ca/schedule/"
-   },
-   "away": "Saskatchewan Roughriders",
-   "home": "Montreal Alouettes",
-   "away_abbr": "SSK",
-   "home_abbr": "MTL"
-  },
-  {
    "id": "cfl-cfl6660",
    "team": "cfl",
    "sport": "CFL",
@@ -1698,9 +1676,44 @@
    "home": "Winnipeg Blue Bombers",
    "away_abbr": "CGY",
    "home_abbr": "WPG"
+  },
+  {
+   "id": "cfl-cfl6663",
+   "team": "cfl",
+   "sport": "CFL",
+   "start": "2026-10-12T13:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Montreal Alouettes",
+   "location": "Percival Molson Memorial Stadium",
+   "status": "final",
+   "our_score": 24,
+   "opp_score": 44,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.cfl.ca/schedule/"
+   },
+   "away": "Saskatchewan Roughriders",
+   "home": "Montreal Alouettes",
+   "away_abbr": "SSK",
+   "home_abbr": "MTL"
   }
  ],
  "pro_news": [
+  {
+   "league": "cfl",
+   "headline": "Davis Alexander is on FIRE!",
+   "summary": "",
+   "published": "2026-10-12T15:13:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/67XOKshySPSsxD3eF6hnSw/6f6d63f11f4d79f55f0ae6352529d866/Untitled-1.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Alouettes"
+   ],
+   "url": "https://www.cfl.ca/article/davis-alexander-is-on-fire",
+   "source": "CFL.ca"
+  },
   {
    "league": "cfl",
    "headline": "TYSON PHILPOT DOES IT AGAIN!",
@@ -1755,6 +1768,20 @@
   },
   {
    "league": "cfl",
+   "headline": "Alexander helps Als cap perfect home season with win over Riders",
+   "summary": "",
+   "published": "2026-10-12T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/6HQld4LwVVtbZmk00ENT0l/9516fed2ec26ccb1393fe34d0bae1486/Davis_Alexander_2026_09.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Roughriders",
+    "Alouettes"
+   ],
+   "url": "https://www.cfl.ca/article/alexander-helps-als-cap-perfect-home-season-with-win-over-riders",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Recap: Winnipeg 33, Calgary 28",
    "summary": "",
    "published": "2026-10-10T23:31:00-04:00",
@@ -1791,19 +1818,6 @@
     "Stampeders"
    ],
    "url": "https://www.cfl.ca/article/deonta-mcmahon-fights-for-td",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "TREY VAVAL 88 YARD KICK RETURN TD TO START THE HALF",
-   "summary": "",
-   "published": "2026-10-10T20:55:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/6gr0COG3dFT92T9BtlNcvG/b312a1f285e83fe5c3ae5f9f2d700aba/WPG_3RD_TD.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Blue Bombers"
-   ],
-   "url": "https://www.cfl.ca/article/trey-vaval-88-yard-kick-return-td-to-start-the-half",
    "source": "CFL.ca"
   },
   {
@@ -1900,19 +1914,6 @@
     "REDBLACKS"
    ],
    "url": "https://www.cfl.ca/article/adeboboye-finds-space-and-cruises-into-the-end-zone",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Zach Collaros to start for Bombers vs. Stampeders",
-   "summary": "",
-   "published": "2026-10-09T00:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/7JK6rf7nWJR7tDkfHDtgyl/125aee36871d6b438ca13fed3f680572/Zach_Collaros_2026_11.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Blue Bombers"
-   ],
-   "url": "https://www.cfl.ca/article/zach-collaros-to-start-for-bombers-vs-stampeders",
    "source": "CFL.ca"
   },
   {
@@ -2493,6 +2494,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Austin Lemieux, son of NHL legend Mario, qualifies for first PGA Tour event",
+   "summary": "",
+   "published": "2026-10-12T16:02-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2014/10/GOLF.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Golf",
+   "url": "https://www.sportsnet.ca/pga/article/austin-lemieux-son-of-nhl-legend-mario-qualifies-for-first-pga-tour-event/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Stars’ Matt Duchene out three months after core surgery",
    "summary": "",
@@ -2516,21 +2530,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/hockey/article/arizona-state-close-to-hiring-avalanche-assistant-dave-hakstol-as-head-coach/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Raptors bring seven-foot-five centre Jamarion Sharp into camp",
-   "summary": "",
-   "published": "2026-10-12T11:55-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/07/Jamarion-Sharp.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-bring-seven-foot-five-centre-jamarion-sharp-into-camp/",
    "source": "Sportsnet"
   },
   {
@@ -2823,6 +2822,21 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/karl-anthony-towns-very-disappointed-in-knicks-decision-to-table-talks/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Raptors bring seven-foot-five centre Jamarion Sharp into camp",
+   "summary": "",
+   "published": "2026-10-12T11:55-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/07/Jamarion-Sharp.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/raptors-bring-seven-foot-five-centre-jamarion-sharp-into-camp/",
    "source": "Sportsnet"
   },
   {
@@ -3572,13 +3586,13 @@
     {
      "abbr": "SSK",
      "name": "Saskatchewan Roughriders",
-     "gp": 15,
+     "gp": 16,
      "w": 8,
-     "l": 7,
+     "l": 8,
      "t": 0,
      "pts": 16,
-     "pf": 430,
-     "pa": 408,
+     "pf": 454,
+     "pa": 452,
      "flags": ""
     },
     {
@@ -3613,13 +3627,13 @@
     {
      "abbr": "MTL",
      "name": "Montreal Alouettes",
-     "gp": 15,
-     "w": 12,
+     "gp": 16,
+     "w": 13,
      "l": 3,
      "t": 0,
-     "pts": 24,
-     "pf": 535,
-     "pa": 420,
+     "pts": 26,
+     "pf": 579,
+     "pa": 444,
      "flags": "y"
     },
     {
