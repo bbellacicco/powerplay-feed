@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+<title>News | Powerplay Windsor</title>
+<!--
+  The landing spot for Powerplay's stories (the Wix Blog), in the same clean style as the Home page:
+    a featured story (plus two more beside it), rows by team (Spitfires, Lancers, Saints, High school,
+    Junior hockey, Around Windsor-Essex), then "Every story": search, team filter and pages of the whole archive.
+  Write in Wix Blog as usual; new posts show up here (and everywhere else) within about 15 minutes.
+  Data: data/search-archive.json (every post since 2019) + data/local-news.json (the newest posts).
+  Stories open on powerplaywindsor.com. Embed on the Wix News page, full width: about 3,650px tall on desktop, 4,000px on mobile.
+-->
+<style>
+  :root { --bg: #0b1a33; --bg2: #081428; --card: #132b57; --text: #f2f5fb; --muted: #9fb0cf; --accent: #e8b021; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.35 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  a { color: inherit; text-decoration: none; }
+  .page { max-width: 1240px; margin: 0 auto; padding: 26px 0 30px; }
+  .ptitle { padding: 0 40px; margin-bottom: 18px; display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+  .ptitle h1 { margin: 0; font-family: 'Graduate', 'Rockwell', Georgia, serif; font-weight: 400; font-size: 26px; -webkit-text-stroke: .7px currentColor; text-transform: uppercase; letter-spacing: .03em; }
+  .ptitle h1 span { color: var(--accent); }
+  .ptitle .n { color: var(--muted); font-size: 13px; }
+
+  /* featured */
+  .feat { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; padding: 0 40px; height: 420px; }
+  .big, .small { position: relative; border-radius: 10px; overflow: hidden; background: linear-gradient(135deg, #1e3a6e, #0b1a33); display: block; }
+  .big img, .small img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+  .big:hover img, .small:hover img { transform: scale(1.03); }
+  .big::after, .small::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(8,20,40,.95) 0%, rgba(8,20,40,.55) 40%, rgba(8,20,40,0) 70%); }
+  .ov { position: absolute; z-index: 2; left: 0; right: 0; bottom: 0; padding: 22px 24px; }
+  .kick { font-size: 11.5px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+  .big h2 { font-family: 'Graduate', 'Rockwell', Georgia, serif; font-weight: 400; font-size: 28px; line-height: 1.15; margin: 0 0 8px; -webkit-text-stroke: .5px currentColor;
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .big p { margin: 0; color: #d4dcee; font-size: 14px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .side { display: grid; grid-template-rows: 1fr 1fr; gap: 16px; }
+  .small .ov { padding: 14px 16px; }
+  .small h3 { margin: 0; font-size: 16px; line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+  /* rows (same as Home) */
+  section { position: relative; margin-top: 38px; }
+  .rhead { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 0 40px; margin-bottom: 12px; }
+  .rhead h2 { margin: 0; font-size: 20px; font-weight: 800; }
+  .rhead .all { color: var(--muted); font-size: 13px; font-weight: 700; white-space: nowrap; cursor: pointer; background: none; border: 0; font-family: inherit; padding: 0; }
+  .rhead .all:hover { color: var(--accent); }
+  .rowwrap { position: relative; }
+  .row { display: flex; gap: 14px; overflow-x: auto; padding: 4px 40px 6px; scroll-snap-type: x mandatory; scroll-padding-left: 40px; scrollbar-width: none; }
+  .row::-webkit-scrollbar { display: none; }
+  .row > * { flex: 0 0 auto; scroll-snap-align: start; }
+  .rarrow { position: absolute; top: 0; bottom: 6px; width: 40px; border: 0; color: #fff; font-size: 30px; cursor: pointer; opacity: 0; transition: opacity .2s; z-index: 2; }
+  .rarrow.l { left: 0; background: linear-gradient(90deg, rgba(11,26,51,.9), rgba(11,26,51,0)); }
+  .rarrow.r { right: 0; background: linear-gradient(270deg, rgba(11,26,51,.9), rgba(11,26,51,0)); }
+  .rowwrap:hover .rarrow { opacity: 1; }
+  .card { width: 260px; display: block; }
+  .pic { position: relative; aspect-ratio: 16 / 9; border-radius: 8px; overflow: hidden; background: linear-gradient(135deg, #1e3a6e, #0b1a33); display: flex; align-items: center; justify-content: center; transition: transform .2s, box-shadow .2s; }
+  .card:hover .pic { transform: scale(1.03); box-shadow: 0 10px 26px rgba(0,0,0,.45); }
+  .pic img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .pic .tn { font-weight: 900; letter-spacing: .1em; color: rgba(255,255,255,.85); }
+  .pic .tag { position: absolute; left: 8px; top: 8px; background: rgba(8,20,40,.82); font-size: 10.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; padding: 3px 7px; border-radius: 4px; }
+  .pic .tag i { display: inline-block; width: 7px; height: 7px; border-radius: 2px; margin-right: 5px; background: var(--tc, var(--accent)); }
+  .card .hl { margin-top: 9px; font-weight: 700; font-size: 14.5px; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 2.6em; }
+  .card .sm { margin-top: 3px; font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .empty { color: var(--muted); padding: 30px 40px; }
+
+  /* every story */
+  .browse { padding: 0 40px; }
+  .tools { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-bottom: 12px; }
+  .field { flex: 1 1 280px; display: flex; align-items: center; gap: 10px; height: 44px; padding: 0 14px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 8px; }
+  .field:focus-within { border-color: var(--accent); }
+  .field svg { width: 17px; height: 17px; stroke: var(--muted); flex: none; }
+  .field input { flex: 1; min-width: 0; background: transparent; border: 0; outline: 0; color: var(--text); font: inherit; font-size: 16px; }
+  .field input::placeholder { color: var(--muted); }
+  .chips { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+  .chip { position: relative; border: 1px solid #1e3a6e; background: #0e2044; color: var(--muted); border-radius: 4px; padding: 8px 12px 7px; font: inherit; font-size: 11.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; cursor: pointer; }
+  .chip::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: var(--tc, var(--accent)); opacity: .55; }
+  .chip:hover { color: var(--text); }
+  .chip.on { background: #fff; color: #0b1a33; border-color: #fff; }
+  .chip.on::before { opacity: 1; }
+  .cnt { color: var(--muted); font-size: 12.5px; margin-bottom: 10px; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px 16px; min-height: 760px; align-content: start; }
+  .grid .card { width: auto; }
+  .pager { display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 18px; }
+  .pager button { border: 1px solid #1e3a6e; background: #10244a; color: var(--text); border-radius: 999px; padding: 8px 16px; font: inherit; font-weight: 700; cursor: pointer; }
+  .pager button:disabled { opacity: .35; cursor: default; }
+  .pager span { color: var(--muted); font-size: 13px; }
+
+  @media (max-width: 760px) {
+    .page { padding-top: 18px; }
+    .ptitle { padding: 0 16px; } .ptitle h1 { font-size: 21px; }
+    .feat { grid-template-columns: 1fr; height: auto; padding: 0 16px; }
+    .big { height: 300px; } .big h2 { font-size: 20px; } .big p { display: none; }
+    .side { grid-template-rows: none; grid-template-columns: 1fr 1fr; gap: 10px; height: 170px; }
+    .small h3 { font-size: 13.5px; } .small .ov { padding: 10px 11px; }
+    section { margin-top: 30px; }
+    .rhead { padding: 0 16px; } .rhead h2 { font-size: 18px; }
+    .row { padding: 4px 16px 6px; scroll-padding-left: 16px; gap: 10px; } .rarrow { display: none; }
+    .card { width: 220px; }
+    .browse { padding: 0 16px; }
+    .grid { grid-template-columns: 1fr 1fr; gap: 16px 10px; min-height: 1180px; }
+    .grid .hl { font-size: 13.5px; }
+  }
+</style>
+</head>
+<body>
+<div class="page" id="page">
+  <div class="ptitle"><h1>Powerplay <span>News</span></h1><div class="n" id="total"></div></div>
+  <div class="feat" id="feat"></div>
+  <div id="rows"></div>
+  <section id="every">
+    <div class="rhead"><h2>Every story</h2></div>
+    <div class="browse">
+      <div class="tools">
+        <label class="field">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
+          <input id="q" type="search" placeholder="Search every Powerplay story since 2019…" autocomplete="off" enterkeyhint="search" aria-label="Search stories">
+        </label>
+      </div>
+      <div class="chips" id="chips"></div>
+      <div class="cnt" id="cnt"></div>
+      <div class="grid" id="grid"></div>
+      <div class="pager" id="pager"></div>
+    </div>
+  </section>
+</div>
+<script>
+(function () {
+  var DATA = 'https://bbellacicco.github.io/powerplay-feed/data/';
+  var TZ = 'America/Toronto', PER = 12;
+  var MON = ['Jan.', 'Feb.', 'March', 'April', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'];
+  // teams: blog categories first, then words in the headline/summary
+  var TEAMS = [
+    ['spitfires', 'Spitfires', '#d4202a', null, /spitfire|spits\b|\bohl\b/],
+    ['lancers', 'Lancers', '#3b8ee8', /university of windsor/i, /lancer|uwindsor|university of windsor/],
+    ['saints', 'Saints', '#1f9d55', /st\.? clair/i, /saints\b|st\.? clair/],
+    ['highschool', 'High school', '#8b5cf6', /high school/i, /high school|wecssaa|secondary|holy names|villanova|st\.? joseph|assumption|brennan|kennedy|massey|walkerville|riverside|herman|forster|tecumseh vista|belle river|essex dist|kingsville|leamington dist|cardinal carter|st\.? anne|l'essor|sandwich|harrow|general amherst|north star|ste\.? cecile|lajeunesse|catholic central|lasalle .*high/],
+    ['junior', 'Junior hockey', '#0891b2', /junior hockey/i, /\b(ojhl|gohl|pjhl|goj?hl)\b|junior [abc]\b|jr\.? [abc]\b|lakeshore canadiens|leamington flyers|lasalle vipers|essex 73|amherstburg admirals|wheatley sharks|blenheim|mooretown|tecumseh chiefs|belle river canadiens|kingsville kings/],
+    ['more', 'Around Windsor-Essex', '#e8b021', null, null]
+  ];
+  var TCOL = {}; TEAMS.forEach(function (t) { TCOL[t[0]] = t[2]; });
+  var TLAB = {}; TEAMS.forEach(function (t) { TLAB[t[0]] = t[1]; });
+  var all = [], state = { team: 'all', q: '', page: 0 };
+
+  function el(t, c, x) { var e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; }
+  function norm(s) { return String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[‘’]/g, "'"); }
+  function getJSON(n) { return fetch(DATA + n + '?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }); }
+  function when(iso) {
+    var t = new Date(iso.length === 10 ? iso + 'T12:00:00' : iso).getTime(); if (!t) return '';
+    var m = Math.round((Date.now() - t) / 60000);
+    if (iso.length > 10) { if (m < 60) return Math.max(m, 1) + ' min ago'; var h = Math.round(m / 60); if (h < 24) return h + (h === 1 ? ' hour ago' : ' hours ago'); }
+    var d = Math.round(m / 1440); if (d < 1) return 'Today'; if (d < 7) return d + (d === 1 ? ' day ago' : ' days ago');
+    var p = {}; new Intl.DateTimeFormat('en-CA', { timeZone: TZ, year: 'numeric', month: 'numeric', day: 'numeric' }).formatToParts(new Date(t)).forEach(function (x) { p[x.type] = x.value; });
+    return MON[+p.month - 1] + ' ' + (+p.day) + (+p.year === new Date().getFullYear() ? '' : ', ' + p.year);
+  }
+  function img(u, w, h) {   // a right-sized copy of a Wix photo
+    if (!u) return '';
+    var m = u.match(/^(https:\/\/static\.wixstatic\.com\/media\/[^/]+)/);
+    return m ? m[1] + '/v1/fill/w_' + w + ',h_' + h + ',al_c,q_80/photo.jpg' : u;
+  }
+  function team(s) {
+    var cats = s.c || '', hay = ' ' + norm(s.t + ' ' + s.d) + ' ';
+    for (var i = 0; i < TEAMS.length - 1; i++) { var t = TEAMS[i]; if ((t[3] && t[3].test(cats)) || (t[4] && t[4].test(hay))) return t[0]; }
+    return 'more';
+  }
+  function open(u) { try { top.location.href = u; } catch (e) { location.href = u; } }
+
+  function card(s, opts) {
+    var a = el('a', 'card'); a.href = s.u; a.target = '_top';
+    var pic = el('div', 'pic');
+    var src = img(s.i, 520, 293);
+    if (src) { var im = new Image(); im.src = src; im.alt = ''; im.loading = 'lazy'; im.onerror = function () { im.remove(); pic.insertBefore(el('div', 'tn', TLAB[s.team].toUpperCase()), pic.firstChild); }; pic.appendChild(im); }
+    else pic.appendChild(el('div', 'tn', TLAB[s.team].toUpperCase()));
+    if (!opts || opts.tag !== false) { var tg = el('span', 'tag'); var i = el('i'); i.style.setProperty('--tc', TCOL[s.team]); tg.appendChild(i); tg.appendChild(document.createTextNode(TLAB[s.team])); pic.appendChild(tg); }
+    a.appendChild(pic);
+    a.appendChild(el('div', 'hl', s.t));
+    a.appendChild(el('div', 'sm', when(s.p)));
+    return a;
+  }
+
+  function featured(list) {
+    var box = document.getElementById('feat'); box.innerHTML = '';
+    var withPic = list.filter(function (s) { return s.i; });
+    var f = withPic.slice(0, 3); if (!f.length) return;
+    var big = el('a', 'big'); big.href = f[0].u; big.target = '_top';
+    var bi = new Image(); bi.src = img(f[0].i, 1100, 620); bi.alt = ''; big.appendChild(bi);
+    var ov = el('div', 'ov'); ov.appendChild(el('div', 'kick', 'Latest · ' + TLAB[f[0].team] + ' · ' + when(f[0].p)));
+    ov.appendChild(el('h2', null, f[0].t)); if (f[0].d) ov.appendChild(el('p', null, f[0].d)); big.appendChild(ov); box.appendChild(big);
+    var side = el('div', 'side');
+    f.slice(1).forEach(function (s) {
+      var a = el('a', 'small'); a.href = s.u; a.target = '_top';
+      var im = new Image(); im.src = img(s.i, 560, 320); im.alt = ''; a.appendChild(im);
+      var o = el('div', 'ov'); o.appendChild(el('div', 'kick', TLAB[s.team] + ' · ' + when(s.p))); o.appendChild(el('h3', null, s.t)); a.appendChild(o);
+      side.appendChild(a);
+    });
+    box.appendChild(side);
+  }
+
+  function rows(list) {
+    var box = document.getElementById('rows'); box.innerHTML = '';
+    var defs = [['latest', 'Latest stories', null]].concat(TEAMS.map(function (t) { return [t[0], t[1], t[0]]; }));
+    defs.forEach(function (d) {
+      var items = d[2] ? list.filter(function (s) { return s.team === d[2]; }) : list.slice(3);
+      items = items.slice(0, 15);
+      var sec = el('section'), head = el('div', 'rhead');
+      head.appendChild(el('h2', null, d[1]));
+      var all = el('button', 'all', 'See all ›'); all.type = 'button';
+      all.onclick = function () { state.team = d[2] || 'all'; state.q = ''; document.getElementById('q').value = ''; state.page = 0; chips(); grid(); try { document.getElementById('every').scrollIntoView({ behavior: 'smooth' }); } catch (e) {} };
+      head.appendChild(all); sec.appendChild(head);
+      var wrap = el('div', 'rowwrap'), row = el('div', 'row');
+      if (!items.length) row.appendChild(el('div', 'empty', 'Stories coming soon.'));
+      items.forEach(function (s) { row.appendChild(card(s, { tag: !d[2] })); });
+      var l = el('button', 'rarrow l', '‹'), r = el('button', 'rarrow r', '›'); l.type = r.type = 'button';
+      l.onclick = function () { row.scrollBy({ left: -row.clientWidth * .8, behavior: 'smooth' }); };
+      r.onclick = function () { row.scrollBy({ left: row.clientWidth * .8, behavior: 'smooth' }); };
+      wrap.appendChild(l); wrap.appendChild(row); wrap.appendChild(r); sec.appendChild(wrap); box.appendChild(sec);
+    });
+  }
+
+  function chips() {
+    var box = document.getElementById('chips'); box.innerHTML = '';
+    [['all', 'All', '#ffffff']].concat(TEAMS).forEach(function (t) {
+      var b = el('button', 'chip' + (state.team === t[0] ? ' on' : ''), t[1]); b.type = 'button'; b.style.setProperty('--tc', t[2]);
+      b.onclick = function () { state.team = t[0]; state.page = 0; chips(); grid(); };
+      box.appendChild(b);
+    });
+  }
+  function filtered() {
+    var words = norm(state.q).trim().split(/\s+/).filter(Boolean);
+    return all.filter(function (s) {
+      if (state.team !== 'all' && s.team !== state.team) return false;
+      for (var i = 0; i < words.length; i++) if (s._h.indexOf(words[i]) < 0) return false;
+      return true;
+    });
+  }
+  function grid() {
+    var list = filtered(), pages = Math.max(1, Math.ceil(list.length / PER));
+    if (state.page >= pages) state.page = pages - 1;
+    document.getElementById('cnt').textContent = list.length.toLocaleString('en-CA') + (list.length === 1 ? ' story' : ' stories');
+    var g = document.getElementById('grid'); g.innerHTML = '';
+    if (!list.length) g.appendChild(el('div', 'empty', 'No stories match. Try another word or tap All.'));
+    list.slice(state.page * PER, state.page * PER + PER).forEach(function (s) { g.appendChild(card(s)); });
+    var pg = document.getElementById('pager'); pg.innerHTML = '';
+    if (pages > 1) {
+      var b = el('button', null, '← Newer'), n = el('button', null, 'Older →'); b.type = n.type = 'button';
+      b.disabled = state.page === 0; n.disabled = state.page >= pages - 1;
+      b.onclick = function () { state.page--; grid(); };
+      n.onclick = function () { state.page++; grid(); };
+      pg.appendChild(b); pg.appendChild(el('span', null, 'Page ' + (state.page + 1) + ' of ' + pages)); pg.appendChild(n);
+    }
+  }
+  var tmr;
+  document.getElementById('q').addEventListener('input', function (e) { clearTimeout(tmr); tmr = setTimeout(function () { state.q = e.target.value; state.page = 0; grid(); }, 200); });
+
+  function load() {
+    Promise.all([getJSON('search-archive.json'), getJSON('local-news.json')]).then(function (r) {
+      var arch = (r[0] && r[0].items) || [], news = (r[1] && r[1].stories) || [];
+      var seen = {}, list = [];
+      // the newest posts from the Local Hub feed first (they arrive a little sooner), then the full archive
+      news.forEach(function (s) {
+        if (s.team !== 'powerplay' || s.source === 'YouTube' || s.source === 'Vimeo' || !/powerplaywindsor\.com\/post\//.test(s.url || '')) return;
+        seen[s.url] = 1; list.push({ t: s.headline, d: s.summary || '', u: s.url, i: s.image, p: s.published, c: '' });
+      });
+      arch.forEach(function (a) { if (a.s === 'Blog' && !seen[a.u]) { seen[a.u] = 1; list.push(a); } });
+      list.forEach(function (s) { s.team = team(s); s._h = ' ' + norm(s.t + ' ' + s.d + ' ' + (s.c || '')) + ' '; s._ts = new Date(s.p.length === 10 ? s.p + 'T12:00:00' : s.p).getTime() || 0; });
+      list.sort(function (a, b) { return b._ts - a._ts; });
+      all = list;
+      document.getElementById('total').textContent = list.length.toLocaleString('en-CA') + ' stories since 2019';
+      featured(list); rows(list); chips(); grid();
+    });
+  }
+  load();
+  setInterval(load, 10 * 60000);
+})();
+</script>
+</body>
+</html>
