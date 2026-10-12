@@ -76,6 +76,25 @@
   #tabs .pill[aria-pressed="true"]::before { opacity: 1; height: 4px; }
   select.pill { border-radius: 4px; }
   @media (max-width: 560px) { #tabs { grid-template-columns: repeat(4, 1fr); gap: 5px; } #tabs .pill { font-size: 10px; letter-spacing: .02em; padding: 8px 2px 7px; white-space: normal; line-height: 1.15; } }
+  /* stories: one swipeable row, like the other strips */
+  .sstrip { display: flex; gap: 10px; overflow-x: auto; padding: 0 0 10px; scroll-snap-type: x mandatory; scrollbar-width: thin; }
+  .scard { flex: 0 0 auto; width: 230px; background: var(--row); border-radius: 8px; overflow: hidden; scroll-snap-align: start;
+    color: inherit; text-decoration: none; border-top: 3px solid var(--line); display: flex; flex-direction: column; }
+  .scard:hover .headline { text-decoration: underline; }
+  .scard.l-nfl { border-top-color: var(--nfl); } .scard.l-nhl { border-top-color: var(--nhl); } .scard.l-nba { border-top-color: var(--nba); }
+  .scard.l-mlb { border-top-color: var(--mlb); } .scard.l-cfl { border-top-color: var(--cfl); } .scard.l-pwhl { border-top-color: var(--pwhl); }
+  .scard .pic { position: relative; width: 100%; aspect-ratio: 16 / 9; background: linear-gradient(135deg, #1e3a6e, #0b1a33); overflow: hidden;
+    display: flex; align-items: center; justify-content: center; }
+  .scard .pic img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .scard .pic .lg { font-weight: 900; font-size: 22px; letter-spacing: .08em; color: rgba(255,255,255,.85); }
+  .scard .pic .play { position: absolute; left: 50%; top: 50%; width: 36px; height: 36px; margin: -18px 0 0 -18px; border-radius: 50%;
+    background: rgba(0,0,0,.6); border: 2px solid #fff; }
+  .scard .pic .play::after { content: ""; position: absolute; left: 13px; top: 9px; border-left: 11px solid #fff; border-top: 7px solid transparent; border-bottom: 7px solid transparent; }
+  .scard .body { padding: 7px 9px 10px; }
+  .scard .meta { margin: 0 0 3px; font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .scard .headline { font-size: 13.5px; line-height: 1.28; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .swipe { color: var(--muted); font-size: 12px; text-align: center; padding: 2px 0 4px; }
+  @media (max-width: 420px) { .scard { width: 205px; } }
 </style>
 </head>
 <body>
@@ -229,30 +248,34 @@
     });
     var box = document.getElementById('list'); box.innerHTML = '';
     if (!list.length) { box.appendChild(el('div', 'empty', 'No recent stories.')); return; }
-    list.forEach(function (s) { box.appendChild(card(s)); });
+    var strip = el('div', 'sstrip');
+    list.slice(0, 40).forEach(function (s) { strip.appendChild(card(s)); });
+    box.appendChild(strip);
+    if (list.length > 1) box.appendChild(el('div', 'swipe', 'Swipe for more'));
   }
 
   function card(s) {
-    var a = el('a', 'story l-' + s.league);
+    var a = el('a', 'scard l-' + s.league);
     a.href = s.url; a.target = '_blank'; a.rel = 'noopener';
-    a.appendChild(el('div', 'stripe'));
-    var img = el('img', 'thumb'); img.alt = ''; img.loading = 'lazy';
-    img.onerror = function () { img.style.visibility = 'hidden'; };
-    if (s.image) img.src = s.image; else img.style.visibility = 'hidden';
-    a.appendChild(img);
+    var pic = el('div', 'pic');
+    var lgLabel = (LEAGUES[s.league] || { label: s.sport || '' }).label;
+    function noPic() { pic.innerHTML = ''; pic.appendChild(el('div', 'lg', (lgLabel || 'NEWS').toUpperCase())); if (s.video) pic.appendChild(el('div', 'play')); }
+    if (s.image) {
+      var img = el('img'); img.alt = ''; img.loading = 'lazy'; img.referrerPolicy = 'no-referrer';
+      img.onerror = noPic; img.src = s.image; pic.appendChild(img);
+      if (s.video) pic.appendChild(el('div', 'play'));
+    } else noPic();
+    a.appendChild(pic);
     var body = el('div', 'body');
-    var h = el('div', 'headline');
-    if (s.video) h.appendChild(el('span', 'tag', 'Video'));
-    h.appendChild(document.createTextNode(s.headline));
-    body.appendChild(h);
-    if (s.summary && s.summary !== s.headline) body.appendChild(el('div', 'summary', s.summary));
     var src = s.source === 'Team site' && state.tab !== 'ours' && s.teams && s.teams[0] ? s.teams[0] + ' (team site)' : s.source;
-    var bits = [(LEAGUES[s.league] || { label: s.sport || 'Sports' }).label, src, ago(s.published)];
+    var bits = [lgLabel || 'Sports', src, ago(s.published)];
     if (state.tab === 'ours' && s.ourTeam) bits.splice(1, 0, s.ourTeam);
     body.appendChild(el('div', 'meta', bits.filter(Boolean).join(' · ')));
+    body.appendChild(el('div', 'headline', s.headline));
     a.appendChild(body);
     return a;
   }
+
 
   render();
   load();
