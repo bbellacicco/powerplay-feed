@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+<title>Takedown Kit | Powerplay Windsor</title>
+<!--
+  Buddy's takedown kit: when someone copies a Powerplay story or photo, pick the story, paste the link to the copy,
+  and it writes the notice (with the story's proof of ownership filled in) and opens the right report form.
+  Not linked from the website; open it directly (bookmark it on your phone):
+    https://bbellacicco.github.io/powerplay-feed/takedown.html
+  Your name and email are remembered on your own device only; nothing you type is sent anywhere.
+  Data: data/proof-log.json (fingerprints and dates) + data/search-archive.json (every story).
+-->
+<style>
+  :root { --bg: #0b1a33; --panel: #10244a; --card: #132b57; --line: #1e3a6e; --text: #f2f5fb; --muted: #9fb0cf; --accent: #e8b021; --ok: #3ccf7a; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  a { color: var(--accent); }
+  .page { max-width: 860px; margin: 0 auto; padding: 26px 16px 50px; }
+  h1 { margin: 0; font-family: 'Graduate', 'Rockwell', Georgia, serif; font-weight: 400; font-size: 26px; text-transform: uppercase; -webkit-text-stroke: .6px currentColor; }
+  h1 span { color: var(--accent); }
+  .lede { color: var(--muted); margin: 6px 0 22px; }
+  .step { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 18px; margin-bottom: 16px; }
+  .step h2 { margin: 0 0 12px; font-size: 17px; display: flex; gap: 10px; align-items: center; }
+  .step h2 b { display: inline-flex; width: 26px; height: 26px; border-radius: 4px; background: var(--accent); color: #0b1a33; align-items: center; justify-content: center; font-size: 14px; }
+  label { display: block; font-size: 12.5px; font-weight: 700; color: var(--muted); margin: 10px 0 4px; text-transform: uppercase; letter-spacing: .05em; }
+  input[type=text], input[type=search], input[type=email], input[type=url], select, textarea {
+    width: 100%; background: #0b1a33; color: var(--text); border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px; font: inherit; font-size: 16px; }
+  input:focus, select:focus, textarea:focus { outline: 0; border-color: var(--accent); }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 12px; }
+  .results { margin-top: 8px; display: grid; gap: 6px; }
+  .res { text-align: left; background: var(--card); border: 1px solid var(--line); color: var(--text); border-radius: 6px; padding: 9px 12px; font: inherit; cursor: pointer; }
+  .res:hover { border-color: var(--accent); }
+  .res small { color: var(--muted); display: block; font-size: 12px; }
+  .story { display: none; margin-top: 12px; background: var(--card); border-left: 4px solid var(--accent); border-radius: 6px; padding: 12px 14px; }
+  .story.on { display: grid; grid-template-columns: 120px 1fr; gap: 14px; }
+  .story img { width: 120px; height: 68px; object-fit: cover; border-radius: 4px; background: #0b1a33; }
+  .story .tt { font-weight: 800; }
+  .story dl { margin: 6px 0 0; display: grid; grid-template-columns: auto 1fr; gap: 2px 10px; font-size: 13px; }
+  .story dt { color: var(--muted); } .story dd { margin: 0; word-break: break-all; }
+  .chk { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 4px; }
+  .chk label { display: flex; gap: 6px; align-items: center; text-transform: none; letter-spacing: 0; font-size: 15px; color: var(--text); margin: 6px 0 0; font-weight: 600; }
+  .tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+  .tab { border: 1px solid var(--line); background: #0e2044; color: var(--muted); border-radius: 4px; padding: 8px 12px; font: inherit; font-size: 12.5px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; cursor: pointer; }
+  .tab.on { background: #fff; color: #0b1a33; border-color: #fff; }
+  textarea.out { min-height: 340px; font-size: 14px; line-height: 1.5; }
+  .btns { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+  .btn { border: 0; border-radius: 6px; padding: 11px 16px; font: inherit; font-weight: 800; cursor: pointer; text-decoration: none; display: inline-block; }
+  .btn.pri { background: var(--accent); color: #0b1a33; }
+  .btn.sec { background: transparent; color: var(--text); border: 1px solid var(--line); }
+  .how { color: var(--muted); font-size: 14px; margin: 12px 0 0; padding-left: 20px; }
+  .how li { margin: 4px 0; }
+  .note { color: var(--muted); font-size: 13px; margin-top: 18px; }
+  .copied { color: var(--ok); font-weight: 700; align-self: center; display: none; }
+  @media (max-width: 600px) { .two { grid-template-columns: 1fr; } .story.on { grid-template-columns: 1fr; } .story img { width: 100%; height: auto; aspect-ratio: 16/9; } }
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>Takedown <span>Kit</span></h1>
+  <p class="lede">Someone copied a Powerplay story or photo? Fill in the three steps. The kit writes the notice with your proof of ownership already in it, and opens the right report form.</p>
+
+  <div class="step">
+    <h2><b>1</b> Which story was copied?</h2>
+    <input id="q" type="search" placeholder="Type a few words from the headline…" autocomplete="off">
+    <div class="results" id="results"></div>
+    <div class="story" id="story"></div>
+  </div>
+
+  <div class="step">
+    <h2><b>2</b> Where is the copy?</h2>
+    <label for="copy">Link to the copy</label>
+    <input id="copy" type="url" placeholder="https://www.facebook.com/…" autocomplete="off">
+    <div class="two">
+      <div><label for="where">Where it's posted</label>
+        <select id="where">
+          <option value="facebook">Facebook</option><option value="instagram">Instagram</option><option value="x">X (Twitter)</option>
+          <option value="tiktok">TikTok</option><option value="web">A website or blog</option>
+        </select></div>
+      <div><label for="who">Who posted it (optional)</label><input id="who" type="text" placeholder="Page or account name"></div>
+    </div>
+    <label>What did they copy?</label>
+    <div class="chk"><label><input type="checkbox" id="cText" checked> The story text</label><label><input type="checkbox" id="cPhoto"> Photo(s)</label><label><input type="checkbox" id="cCredit"> They left out my name or link</label></div>
+  </div>
+
+  <div class="step">
+    <h2><b>3</b> Your details</h2>
+    <div class="two">
+      <div><label for="name">Your name</label><input id="name" type="text" value="Bob Bellacicco"></div>
+      <div><label for="org">Organization</label><input id="org" type="text" value="Powerplay Windsor"></div>
+      <div><label for="email">Email</label><input id="email" type="email" placeholder="you@example.com"></div>
+      <div><label for="phone">Phone (optional)</label><input id="phone" type="text"></div>
+    </div>
+    <label for="addr">Mailing address (optional; some forms ask for it)</label>
+    <input id="addr" type="text" placeholder="Street, city, province, postal code">
+    <p class="note" style="margin-top:8px">Remembered on this device only. Nothing here is sent anywhere.</p>
+  </div>
+
+  <div class="step">
+    <h2><b>&#10003;</b> Your notice</h2>
+    <div class="tabs" id="tabs">
+      <button class="tab on" data-k="report" type="button">Copyright report</button>
+      <button class="tab" data-k="friendly" type="button">Friendly first message</button>
+      <button class="tab" data-k="host" type="button">Web host notice</button>
+    </div>
+    <textarea class="out" id="out" readonly></textarea>
+    <div class="btns">
+      <button class="btn pri" id="copyBtn" type="button">Copy the text</button>
+      <a class="btn sec" id="formBtn" target="_blank" rel="noopener" href="#">Open the report form &#8599;</a>
+      <span class="copied" id="copied">Copied</span>
+    </div>
+    <ol class="how" id="how"></ol>
+  </div>
+
+  <p class="note">This kit gives you templates, not legal advice. For anything serious (a business repeatedly selling your work, threats, or a refusal to remove it), talk to a lawyer. Canadian web hosts are required to forward copyright notices to their customers under the Copyright Act's notice-and-notice rules; most US-based platforms and hosts act on DMCA-style notices like the one below.</p>
+</div>
+<script>
+(function () {
+  var DATA = 'https://bbellacicco.github.io/powerplay-feed/data/';
+  var FORMS = {
+    facebook: ['Facebook', 'https://www.facebook.com/help/contact/634636770043106'],
+    instagram: ['Instagram', 'https://help.instagram.com/contact/552695131608132'],
+    x: ['X', 'https://help.twitter.com/forms/dmca'],
+    tiktok: ['TikTok', 'https://www.tiktok.com/legal/report/Copyright'],
+    web: ['the website’s host', 'https://lookup.icann.org/']
+  };
+  var HOW = {
+    facebook: ['Copy the text above.', 'Open the report form. Choose "Copyright", then "I am the rights owner".', 'Paste the link to the copy, and paste the text into the description box. Your story link goes in the "original work" box.', 'Facebook usually emails a decision within a few days.'],
+    instagram: ['Copy the text above.', 'Open the report form. Choose "I found content that I believe infringes my copyright" and continue as the rights owner.', 'Paste the link to the copy and the text. Your story link goes in the "original work" box.'],
+    x: ['Copy the text above.', 'Open the report form and choose the copyright option for your situation (text or photo).', 'Paste the link to the post and the text, then sign with your full name.'],
+    tiktok: ['Copy the text above.', 'Open the report form and choose "I am the copyright owner".', 'Paste the link to the video or post and the text.'],
+    web: ['Try the "Friendly first message" first; many sites remove or credit it right away.', 'If they don’t: open the lookup, type the website’s address, and look for "Registrar" and an "abuse" email. Searching "who hosts [website]" also finds the web host.', 'Send the "Web host notice" to that abuse email.']
+  };
+  var MON = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  var list = [], proof = {}, story = null, tab = 'report';
+  function $(id) { return document.getElementById(id); }
+  function norm(s) { return String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[‘’]/g, "'"); }
+  function longDate(iso) {
+    if (!iso) return ''; var d = new Date(iso.length === 10 ? iso + 'T12:00:00' : iso); if (isNaN(d)) return iso;
+    var p = {}; new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Toronto', year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true }).formatToParts(d).forEach(function (x) { p[x.type] = x.value; });
+    return MON[+p.month - 1] + ' ' + (+p.day) + ', ' + p.year + (iso.length > 10 ? ' at ' + p.hour + ':' + p.minute + ' ' + String(p.dayPeriod || '').replace(/\./g, '').toLowerCase() + ' ET' : '');
+  }
+  function getJSON(n) { return fetch(DATA + n + '?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }); }
+
+  // remembered details (this device only)
+  var FIELDS = ['name', 'org', 'email', 'phone', 'addr'];
+  try { var saved = JSON.parse(localStorage.getItem('pp-takedown') || '{}'); FIELDS.forEach(function (f) { if (saved[f]) $(f).value = saved[f]; }); } catch (e) {}
+  function remember() { try { var o = {}; FIELDS.forEach(function (f) { o[f] = $(f).value; }); localStorage.setItem('pp-takedown', JSON.stringify(o)); } catch (e) {} }
+
+  // step 1: find the story
+  function search() {
+    var words = norm($('q').value).split(/\s+/).filter(Boolean), box = $('results'); box.innerHTML = '';
+    if (!words.length) return;
+    var hits = list.filter(function (s) { var h = norm(s.t + ' ' + s.u); return words.every(function (w) { return h.indexOf(w) >= 0; }); }).slice(0, 8);
+    if (!hits.length) { var n = document.createElement('div'); n.className = 'note'; n.textContent = 'No story matches. Try fewer words.'; box.appendChild(n); return; }
+    hits.forEach(function (s) {
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'res'; b.textContent = s.t;
+      var sm = document.createElement('small'); sm.textContent = longDate(s.p.slice(0, 10)); b.appendChild(sm);
+      b.onclick = function () { pick(s); };
+      box.appendChild(b);
+    });
+  }
+  function pick(s) {
+    story = s; $('results').innerHTML = ''; $('q').value = s.t;
+    var pr = proof[s.u], box = $('story'); box.innerHTML = ''; box.classList.add('on');
+    var im = new Image(); im.alt = ''; if (s.i) im.src = s.i; box.appendChild(im);
+    var r = document.createElement('div'), tt = document.createElement('div'); tt.className = 'tt'; tt.textContent = s.t; r.appendChild(tt);
+    var dl = document.createElement('dl');
+    function row(k, v, href) { var dt = document.createElement('dt'); dt.textContent = k; var dd = document.createElement('dd'); if (href) { var a = document.createElement('a'); a.href = href; a.target = '_blank'; a.rel = 'noopener'; a.textContent = v; dd.appendChild(a); } else dd.textContent = v; dl.appendChild(dt); dl.appendChild(dd); }
+    row('Published', longDate((pr && pr.p) || s.p));
+    row('Story', s.u, s.u);
+    if (pr) { row('First recorded', longDate(pr.seen)); row('Fingerprint', pr.h.slice(0, 16) + '…'); if (pr.wb) row('Archive copy', 'Wayback Machine', pr.wb); }
+    else row('Proof', 'Not fingerprinted yet (it will be within a few hours)');
+    r.appendChild(dl); box.appendChild(r);
+    build();
+  }
+
+  // step 2: guess where the copy is from its link
+  $('copy').addEventListener('input', function () {
+    var u = $('copy').value.toLowerCase(), w = /facebook\.com|fb\.watch|fb\.com/.test(u) ? 'facebook' : /instagram\.com/.test(u) ? 'instagram' : /(twitter|x)\.com/.test(u) ? 'x' : /tiktok\.com/.test(u) ? 'tiktok' : u.length > 8 ? 'web' : null;
+    if (w) $('where').value = w;
+    build();
+  });
+
+  function what() {
+    var t = $('cText').checked, p = $('cPhoto').checked;
+    return t && p ? 'the text of my news story and my photograph(s) from it' : p ? 'my photograph(s) from my news story' : 'the text of my news story';
+  }
+  function proofLines() {
+    if (!story) return '[Pick your story in step 1]';
+    var pr = proof[story.u], L = [];
+    L.push('Title: ‘' + story.t + '’');
+    L.push('Original: ' + story.u);
+    L.push('Published on powerplaywindsor.com: ' + longDate((pr && pr.p) || story.p));
+    if (pr) {
+      L.push('First recorded in my publishing records: ' + longDate(pr.seen));
+      L.push('SHA-256 fingerprint of the original text: ' + pr.h);
+      L.push('Public, dated record: https://github.com/bbellacicco/powerplay-feed/commits/main/data/proof-log.json');
+      if (pr.wb) L.push('Independent archived copy (Internet Archive): ' + pr.wb);
+    }
+    if ($('cPhoto').checked && story.i) L.push('Original photo: ' + story.i);
+    return L.join('\n');
+  }
+  function contact() {
+    var L = [$('name').value.trim() || '[Your name]', $('org').value.trim()];
+    if ($('email').value.trim()) L.push($('email').value.trim()); else L.push('[Your email]');
+    if ($('phone').value.trim()) L.push($('phone').value.trim());
+    if ($('addr').value.trim()) L.push($('addr').value.trim());
+    return L.filter(Boolean).join('\n');
+  }
+  function build() {
+    var name = $('name').value.trim() || '[Your name]', org = $('org').value.trim() || 'Powerplay Windsor';
+    var copy = $('copy').value.trim() || '[Link to the copy]', who = $('who').value.trim();
+    var where = $('where').value, today = longDate(new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Toronto' }).format(new Date()));
+    var credit = $('cCredit').checked ? ' It was posted without credit or a link to the original.' : '';
+    var t;
+    if (tab === 'report' || tab === 'host') {
+      t = (tab === 'host' ? 'Subject: Copyright infringement notice: ' + copy + '\n\nTo the abuse / copyright team,\n\n' : '') +
+        'I am ' + name + ' of ' + org + ', and I own the copyright in the work described below. ' +
+        (who ? who + ' has' : 'The account or site below has') + ' copied and published ' + what() + ' without my permission.' + credit + '\n\n' +
+        'MY ORIGINAL WORK\n' + proofLines() + '\n\n' +
+        'THE COPY (please remove it)\n' + copy + '\n\n' +
+        'I have a good faith belief that this use of the material is not authorized by me, my agent, or the law.\n\n' +
+        'The information in this notice is accurate, and under penalty of perjury, I am the owner of the copyright that is allegedly infringed.\n\n' +
+        (tab === 'host' ? 'Under Canada’s Copyright Act (sections 41.25 and 41.26, notice and notice), please forward this notice to your customer, and please remove or disable access to the material.\n\n' : '') +
+        'Signed: ' + name + '\nDate: ' + today + '\n\n' + contact();
+    } else {
+      t = 'Hi' + (who ? ' ' + who : '') + ',\n\n' +
+        'I’m ' + name + ' with ' + org + '. You recently posted ' + what() + ' here:\n' + copy + '\n\n' +
+        'That work is mine, originally published at ' + (story ? story.u : '[your story link]') + (story ? ' on ' + longDate(story.p.slice(0, 10)) : '') + '.\n\n' +
+        'I’m glad you found it worth sharing. Please share the link to the original instead of copying it. ' +
+        'Please remove your copy within 48 hours. If it stays up, I’ll report it to ' + FORMS[where][0] + ' as a copyright violation.\n\n' +
+        'Thanks,\n' + name + '\n' + org;
+    }
+    $('out').value = t;
+    $('formBtn').href = FORMS[where][1];
+    $('formBtn').innerHTML = (where === 'web' ? 'Find the web host' : 'Open the ' + FORMS[where][0] + ' report form') + ' &#8599;';
+    var how = $('how'); how.innerHTML = '';
+    (tab === 'friendly' ? ['Copy the text above.', 'Send it as a message or comment to the person or page that posted the copy.', 'If it’s still up after 48 hours, use the "Copyright report" tab.'] : HOW[where]).forEach(function (h) { var li = document.createElement('li'); li.textContent = h; how.appendChild(li); });
+  }
+
+  [].forEach.call(document.querySelectorAll('.tab'), function (b) { b.onclick = function () { tab = b.getAttribute('data-k'); [].forEach.call(document.querySelectorAll('.tab'), function (x) { x.classList.toggle('on', x === b); }); build(); }; });
+  ['who', 'name', 'org', 'email', 'phone', 'addr'].forEach(function (f) { $(f).addEventListener('input', function () { remember(); build(); }); });
+  ['where', 'cText', 'cPhoto', 'cCredit'].forEach(function (f) { $(f).addEventListener('change', build); });
+  var tmr; $('q').addEventListener('input', function () { clearTimeout(tmr); tmr = setTimeout(search, 150); });
+  $('copyBtn').onclick = function () {
+    var done = function () { $('copied').style.display = 'inline'; setTimeout(function () { $('copied').style.display = 'none'; }, 1800); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText($('out').value).then(done, function () { $('out').select(); document.execCommand('copy'); done(); });
+    else { $('out').select(); document.execCommand('copy'); done(); }
+  };
+
+  build();
+  Promise.all([getJSON('proof-log.json'), getJSON('search-archive.json')]).then(function (r) {
+    ((r[0] && r[0].stories) || []).forEach(function (e) { proof[e.u] = e; });
+    var seen = {};
+    ((r[1] && r[1].items) || []).forEach(function (a) { if (a.s === 'Blog' && !seen[a.u]) { seen[a.u] = 1; list.push(a); } });
+    Object.keys(proof).forEach(function (u) { if (!seen[u]) { var e = proof[u]; list.push({ t: e.t, u: e.u, p: e.p, i: e.i }); } });
+    list.sort(function (a, b) { return a.p < b.p ? 1 : -1; });
+    $('q').placeholder = 'Type a few words from the headline (' + list.length.toLocaleString('en-CA') + ' stories)…';
+  });
+})();
+</script>
+</body>
+</html>
