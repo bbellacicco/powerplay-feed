@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Local Sports | Powerplay Windsor</title>
+<!--
+  One page for everything below the homepage, with a switch at the top:
+    Local      Local Hub + Local Scoreboard
+    Pro        Pro Hub + Pro Scoreboard
+    Network    the Powerplay Network (Local + Pro videos)
+    Spotlight  The Local Sports Spotlight + Athlete Profiles
+  Each part loads the first time it's opened and keeps its place after that.
+  Links elsewhere ("See all", "All videos"...) open this page on the right switch.
+  ?tab=local|pro|network|spotlight   open on that switch (when the page is opened directly)
+  Embed on the Wix "Local Sports" page, full width: about 1,760px tall on desktop, 1,660px on mobile.
+-->
+<style>
+  :root { --bg: #0b1a33; --line: #1e3a6e; --text: #f2f5fb; --muted: #9fb0cf; --accent: #e8b021; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.35 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  .top { display: flex; justify-content: center; padding: 22px 16px 6px; }
+  .switch { display: inline-flex; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 999px; padding: 4px; gap: 2px; }
+  .switch button { border: 0; background: transparent; color: #cfd8ea; font: inherit; font-size: 15px; font-weight: 800; letter-spacing: .01em; padding: 10px 22px; border-radius: 999px; cursor: pointer; }
+  .switch button:hover { color: #fff; }
+  .switch button[aria-selected="true"] { background: #fff; color: #0b1a33; }
+  .pane { display: none; }
+  .pane.on { display: block; }
+  .pane iframe { display: block; width: 100%; border: 0; background: var(--bg); }
+  @media (max-width: 560px) {
+    .top { padding: 16px 10px 4px; }
+    .switch { width: 100%; justify-content: space-between; }
+    .switch button { flex: 1; padding: 10px 4px; font-size: 13.5px; }
+  }
+</style>
+</head>
+<body>
+  <div class="top">
+    <div class="switch" role="tablist" aria-label="Section">
+      <button type="button" role="tab" data-tab="local">Local</button>
+      <button type="button" role="tab" data-tab="pro">Pro</button>
+      <button type="button" role="tab" data-tab="network">Network</button>
+      <button type="button" role="tab" data-tab="spotlight">Spotlight</button>
+    </div>
+  </div>
+  <div id="panes"></div>
+<script>
+(function () {
+  var REPO = 'https://bbellacicco.github.io/powerplay-feed/';
+  var V = '?v=' + Math.floor(Date.now() / 3600e3);   // a fresh copy of each widget every hour
+  var phone = window.innerWidth < 700;
+  // each part: the widgets in it and their heights (desktop, phone)
+  var PARTS = {
+    local:     [['local-news.html', 470, 570, '&other=none'], ['local-games_3_3.html', 760, 900, '&other=none']],
+    pro:       [['news-feed.html', 470, 540, ''], ['pro-games_3.html', 760, 900, '']],
+    network:   [['network.html', 1300, 1520, '']],
+    spotlight: [['spotlight.html', 1250, 1180, ''], ['athletes.html', 420, 380, '']]
+  };
+  var built = {}, box = document.getElementById('panes');
+  function show(tab) {
+    if (!PARTS[tab]) tab = 'local';
+    if (!built[tab]) {
+      var pane = document.createElement('div'); pane.className = 'pane'; pane.id = 'pane-' + tab;
+      PARTS[tab].forEach(function (w) {
+        var f = document.createElement('iframe');
+        f.src = REPO + w[0] + V + w[3]; f.title = w[0].replace(/[_.].*$/, '');
+        f.style.height = (phone ? w[2] : w[1]) + 'px';
+        f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; f.allowFullscreen = true;
+        f.loading = 'eager';
+        pane.appendChild(f);
+      });
+      box.appendChild(pane); built[tab] = pane;
+    }
+    Object.keys(built).forEach(function (k) { built[k].classList.toggle('on', k === tab); });
+    [].forEach.call(document.querySelectorAll('.switch button'), function (b) { b.setAttribute('aria-selected', String(b.getAttribute('data-tab') === tab)); });
+    try { history.replaceState(null, '', '?tab=' + tab); } catch (e) {}
+  }
+  [].forEach.call(document.querySelectorAll('.switch button'), function (b) { b.onclick = function () { show(b.getAttribute('data-tab')); }; });
+
+  // which switch to open: ?tab= when opened directly, or the hand-off from a "See all" link elsewhere (good for 2 minutes)
+  var start = new URLSearchParams(location.search).get('tab');
+  try { var h = JSON.parse(localStorage.getItem('pp-tab') || 'null'); localStorage.removeItem('pp-tab'); if (!start && h && Date.now() - h.t < 120000) start = h.tab; } catch (e) {}
+  show(start || 'local');
+})();
+</script>
+</body>
+</html>
