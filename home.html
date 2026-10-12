@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+<title>Home | Powerplay Windsor</title>
+<!--
+  The homepage in one clean, spaced-out embed (streaming-app style):
+    a rotating banner of Powerplay's newest stories and videos, a search bar, then rows:
+    Local scores · Latest stories · Powerplay Network · Pro scores · Pro headlines · Athlete profiles.
+  Each row: title, "Presented by" sponsor, "See all ›" to the full page. Rows swipe sideways (arrows on desktop).
+  Same data as the other widgets; refreshes itself every few minutes.
+  Embed full width in Wix: about 2,960px tall on desktop, 3,250px on mobile (includes testimonials and About).
+  Links (optional): ?local=<Local Sports page> ?pro=<Pro Sports page> ?network=<Network page> ?athletes=<Spotlights page> ?search=<search page>
+-->
+<style>
+  :root { --bg: #0b1a33; --bg2: #081428; --card: #132b57; --line: #1e3a6e; --text: #f2f5fb; --muted: #9fb0cf; --accent: #e8b021;
+    --spitfires: #d4202a; --lancers: #0b5cad; --saints: #1f9d55; --junior: #0891b2; --highschool: #7c4ddb; --powerplay: #e8b021; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.35 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  a { color: inherit; }
+  .page { position: relative; max-width: 1240px; margin: 0 auto; padding: 0 0 28px; }
+
+  /* ---------- banner ---------- */
+  .hero { position: relative; height: 430px; overflow: hidden; background: var(--bg2); }
+  .slide { position: absolute; inset: 0; opacity: 0; transition: opacity .7s ease; pointer-events: none; }
+  .slide.on { opacity: 1; pointer-events: auto; }
+  .slide .bg { position: absolute; inset: 0; background-size: cover; background-position: center 30%; }
+  .slide::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(8,20,40,.96) 0%, rgba(8,20,40,.82) 34%, rgba(8,20,40,.15) 70%, rgba(8,20,40,0) 100%),
+    linear-gradient(0deg, rgba(11,26,51,1) 0%, rgba(11,26,51,0) 28%); }
+  .slide .txt { position: absolute; z-index: 2; left: 40px; bottom: 54px; width: min(520px, 52%); }
+  .kicker { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+  .kicker .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+  .slide h1 { font-family: 'Graduate', 'Rockwell', Georgia, serif; font-weight: 400; font-size: 30px; line-height: 1.15; margin: 0 0 12px; -webkit-text-stroke: .6px currentColor;
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .slide p { margin: 0 0 18px; color: #cfd8ea; font-size: 14px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: #0b1a33; border: 0; border-radius: 6px; padding: 10px 18px; font: inherit; font-weight: 800; font-size: 14px; cursor: pointer; text-decoration: none; }
+  .btn:hover { background: var(--accent); }
+  .hero .player { position: absolute; inset: 0; z-index: 5; background: #000; display: none; }
+  .hero .player.on { display: block; }
+  .hero .player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .hero .player button { position: absolute; top: 10px; right: 10px; z-index: 6; }
+  .dots { position: absolute; z-index: 3; left: 0; right: 0; bottom: 18px; display: flex; justify-content: center; gap: 7px; }
+  .dots button { width: 8px; height: 8px; border-radius: 99px; border: 0; padding: 0; background: rgba(255,255,255,.35); cursor: pointer; transition: width .25s, background .25s; }
+  .dots button.on { width: 22px; background: #fff; }
+  .harrow { position: absolute; z-index: 3; top: 50%; margin-top: -22px; width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(0,0,0,.35); color: #fff; font-size: 24px; cursor: pointer; opacity: 0; transition: opacity .2s; }
+  .hero:hover .harrow { opacity: 1; } .harrow.l { left: 12px; } .harrow.r { right: 12px; }
+
+  /* ---------- search ---------- */
+  .search { display: flex; gap: 10px; align-items: center; margin: 22px 40px 0; }
+  .field { flex: 1; display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 16px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 8px; }
+  .field:focus-within { border-color: var(--accent); }
+  .field svg { width: 18px; height: 18px; stroke: var(--muted); flex: none; }
+  .field input { flex: 1; min-width: 0; background: transparent; border: 0; outline: 0; color: var(--text); font: inherit; font-size: 16px; }
+  .field input::placeholder { color: var(--muted); }
+  .search .btn { height: 48px; }
+
+  /* ---------- rows ---------- */
+  section { position: relative; margin-top: 38px; }
+  .rhead { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 0 40px; margin-bottom: 12px; }
+  .rhead h2 { margin: 0; font-size: 20px; font-weight: 800; letter-spacing: .005em; }
+  .rhead .by { display: inline-flex; align-items: center; gap: 6px; margin-left: 12px; font-size: 12px; color: var(--muted); font-weight: 500; vertical-align: 2px; }
+  .rhead .by img { height: 20px; width: auto; max-width: 60px; object-fit: contain; border-radius: 3px; }
+  .rhead .by b { color: #d4dcee; font-weight: 600; }
+  .rhead a.all { color: var(--muted); font-size: 13px; font-weight: 700; text-decoration: none; white-space: nowrap; }
+  .rhead a.all:hover { color: var(--accent); }
+  .rowwrap { position: relative; }
+  .row { display: flex; gap: 14px; overflow-x: auto; padding: 4px 40px 6px; scroll-snap-type: x mandatory; scroll-padding-left: 40px; scrollbar-width: none; }
+  .row::-webkit-scrollbar { display: none; }
+  .row > * { scroll-snap-align: start; flex: 0 0 auto; }
+  .rarrow { position: absolute; top: 0; bottom: 6px; width: 40px; border: 0; background: linear-gradient(90deg, rgba(11,26,51,.9), rgba(11,26,51,0)); color: #fff; font-size: 30px; cursor: pointer; opacity: 0; transition: opacity .2s; z-index: 2; }
+  .rarrow.r { right: 0; background: linear-gradient(270deg, rgba(11,26,51,.9), rgba(11,26,51,0)); }
+  .rarrow.l { left: 0; }
+  .rowwrap:hover .rarrow { opacity: 1; }
+  .empty { color: var(--muted); padding: 30px 40px; height: 150px; }
+
+  /* story / video cards */
+  .scard { width: 260px; text-decoration: none; color: inherit; cursor: pointer; background: none; border: 0; padding: 0; text-align: left; font: inherit; }
+  .scard .pic { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 8px; overflow: hidden; background: linear-gradient(135deg, #1e3a6e, #0b1a33);
+    display: flex; align-items: center; justify-content: center; transition: transform .2s, box-shadow .2s; }
+  .scard:hover .pic, .scard:focus-visible .pic { transform: scale(1.03); box-shadow: 0 10px 26px rgba(0,0,0,.45); }
+  .scard:focus-visible { outline: none; }
+  .scard .pic img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .scard .pic .tname { font-weight: 900; letter-spacing: .1em; font-size: 18px; color: rgba(255,255,255,.9); text-align: center; padding: 0 10px; }
+  .scard .tag { position: absolute; left: 8px; top: 8px; background: rgba(8,20,40,.82); color: #fff; font-size: 10.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; padding: 3px 7px; border-radius: 4px; }
+  .scard .tag i { display: inline-block; width: 7px; height: 7px; border-radius: 2px; margin-right: 5px; vertical-align: 0; background: var(--tc, var(--accent)); }
+  .scard .play { position: absolute; left: 50%; top: 50%; width: 44px; height: 44px; margin: -22px 0 0 -22px; border-radius: 50%; background: rgba(0,0,0,.55); border: 2px solid #fff; }
+  .scard .play::after { content: ""; position: absolute; left: 16px; top: 12px; border-left: 13px solid #fff; border-top: 8px solid transparent; border-bottom: 8px solid transparent; }
+  .scard .hl { margin-top: 9px; font-weight: 700; font-size: 14.5px; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 2.6em; }
+  .scard .sm { margin-top: 3px; font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+  /* score cards: two-colour split like a broadcast graphic */
+  .game { width: 260px; text-decoration: none; color: inherit; }
+  .game .box { position: relative; height: 146px; border-radius: 8px; overflow: hidden; background: var(--a, #1b335f); transition: transform .2s, box-shadow .2s; }
+  .game:hover .box { transform: scale(1.03); box-shadow: 0 10px 26px rgba(0,0,0,.45); }
+  .game .box::before { content: ""; position: absolute; inset: 0; background: var(--h, #23407a); clip-path: polygon(58% 0, 100% 0, 100% 100%, 42% 100%); }
+  .game .box::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(0,0,0,.35), rgba(0,0,0,0) 60%); }
+  .game .lg { position: absolute; z-index: 2; left: 9px; top: 8px; font-size: 10.5px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; background: rgba(8,20,40,.75); padding: 3px 7px; border-radius: 4px; }
+  .game .st { position: absolute; z-index: 2; right: 9px; top: 8px; font-size: 10.5px; font-weight: 800; letter-spacing: .06em; background: #fff; color: #0b1a33; padding: 3px 7px; border-radius: 4px; }
+  .game .st.live { background: #e5484d; color: #fff; }
+  .game .side { position: absolute; z-index: 2; top: 36px; bottom: 10px; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-align: center; padding: 0 8px; }
+  .game .side.a { left: 0; } .game .side.h { right: 0; }
+  .game .side img { height: 44px; width: 44px; object-fit: contain; filter: drop-shadow(0 2px 4px rgba(0,0,0,.4)); }
+  .game .side .nm { font-weight: 800; font-size: 13px; line-height: 1.15; text-shadow: 0 1px 3px rgba(0,0,0,.6); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .game .side .sc { font-size: 26px; font-weight: 900; line-height: 1; text-shadow: 0 2px 6px rgba(0,0,0,.5); font-variant-numeric: tabular-nums; }
+  .game .side.lost { opacity: .6; }
+  .game .cap { margin-top: 8px; font-weight: 700; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .game .sm { margin-top: 2px; font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+  /* athlete cards */
+  .ath { position: relative; width: 168px; aspect-ratio: 3 / 4; border-radius: 8px; overflow: hidden; border: 0; padding: 0; cursor: pointer; background: var(--card); transition: transform .2s, box-shadow .2s; }
+  .ath:hover { transform: scale(1.03); box-shadow: 0 10px 26px rgba(0,0,0,.45); }
+  .ath img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+
+  /* video player (Network row) and full-screen profile viewer */
+  .vplayer { position: absolute; left: 40px; right: 40px; z-index: 8; background: #000; border-radius: 10px; overflow: hidden; box-shadow: 0 14px 44px rgba(0,0,0,.65); display: none; }
+  .vplayer.on { display: block; }
+  .vplayer .fr { position: relative; aspect-ratio: 16 / 9; max-height: 70vh; margin: 0 auto; }
+  .vplayer iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .vplayer .cap { display: flex; align-items: center; gap: 10px; padding: 9px 12px; background: #10244a; }
+  .vplayer .cap .t { flex: 1; min-width: 0; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .ghost { background: rgba(11,26,51,.9); color: #fff; border: 1px solid rgba(255,255,255,.3); border-radius: 999px; font: inherit; font-size: 12px; font-weight: 700; padding: 6px 12px; cursor: pointer; text-decoration: none; }
+  .ghost:hover { border-color: var(--accent); color: var(--accent); }
+  .fsv { display: none; position: fixed; inset: 0; background: #000; z-index: 20; align-items: center; justify-content: center; }
+  .fsv.on { display: flex; }
+  .fsv img { max-width: 100vw; max-height: 100vh; object-fit: contain; }
+  .fsv .bar { position: absolute; top: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: center; padding: 10px; color: #cfd8ea; background: linear-gradient(rgba(0,0,0,.7), transparent); }
+  .fsv .nav { position: absolute; top: 50%; margin-top: -24px; width: 48px; height: 48px; border-radius: 50%; padding: 0; font-size: 22px; }
+  .fsv .nav.p { left: 10px; } .fsv .nav.n { right: 10px; }
+
+  @media (max-width: 700px) {
+    .hero { height: 330px; }
+    .slide::after { background: linear-gradient(0deg, rgba(11,26,51,1) 0%, rgba(11,26,51,.88) 38%, rgba(11,26,51,.2) 75%, rgba(11,26,51,.05) 100%); }
+    .slide .txt { left: 16px; right: 16px; bottom: 40px; width: auto; }
+    .slide h1 { font-size: 21px; -webkit-line-clamp: 3; }
+    .slide p { display: none; }
+    .kicker { font-size: 11px; margin-bottom: 7px; }
+    .btn { padding: 9px 15px; font-size: 13px; }
+    .harrow { display: none; }
+    .search { margin: 18px 16px 0; } .search .btn { display: none; }
+    section { margin-top: 30px; }
+    .rhead { padding: 0 16px; flex-wrap: wrap; } .rhead h2 { font-size: 18px; } .rhead .by { margin-left: 0; display: flex; width: 100%; order: 3; margin-top: 3px; }
+    .row { padding: 4px 16px 6px; scroll-padding-left: 16px; gap: 10px; }
+    .rarrow { display: none; }
+    .scard, .game { width: 220px; } .game .box { height: 128px; } .game .side img { height: 36px; width: 36px; } .game .side .sc { font-size: 22px; }
+    .ath { width: 140px; }
+    .vplayer { left: 8px; right: 8px; }
+    .empty { padding: 24px 16px; }
+  }
+
+  /* ---------- testimonials + about ---------- */
+  .quotes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 0 40px; }
+  .quote { position: relative; background: rgba(255,255,255,.04); border-radius: 10px; padding: 26px 24px 20px 24px; }
+  .quote::before { content: "\201C"; position: absolute; left: 18px; top: -6px; font-family: Georgia, serif; font-size: 64px; line-height: 1; color: var(--accent); }
+  .quote p { margin: 10px 0 14px; font-size: 16px; line-height: 1.5; color: #e6ecf7; font-style: italic; }
+  .quote .who { font-size: 13px; font-weight: 800; color: var(--text); }
+  .quote .who span { display: block; font-weight: 500; color: var(--muted); margin-top: 1px; }
+  .about { display: grid; grid-template-columns: 340px 1fr; gap: 32px; align-items: center; padding: 0 40px; }
+  .about .ph { aspect-ratio: 4 / 4.4; border-radius: 10px; overflow: hidden; background: linear-gradient(135deg, #1e3a6e, #0b1a33); }
+  .about .ph img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .about h3 { font-family: 'Graduate', 'Rockwell', Georgia, serif; font-weight: 400; font-size: 22px; -webkit-text-stroke: .5px currentColor; text-transform: uppercase; letter-spacing: .03em; margin: 0 0 12px; }
+  .about h3 span { color: var(--accent); }
+  .about p { margin: 0 0 12px; color: #d4dcee; font-size: 15px; line-height: 1.6; }
+  .about .sig { margin-top: 16px; font-weight: 800; }
+  .about .sig span { display: block; color: var(--muted); font-weight: 500; font-size: 13px; }
+  @media (max-width: 700px) {
+    .quotes { grid-template-columns: 1fr; padding: 0 16px; gap: 12px; }
+    .quote p { font-size: 15px; }
+    .about { grid-template-columns: 1fr; gap: 18px; padding: 0 16px; }
+    .about .ph { max-width: 260px; aspect-ratio: 1 / 1; }
+    .about p { font-size: 14.5px; }
+  }
+</style>
+</head>
+<body>
+<div class="page" id="page">
+  <div class="hero" id="hero">
+    <div id="slides"></div>
+    <button class="harrow l" type="button" id="hprev" aria-label="Previous">&#8249;</button>
+    <button class="harrow r" type="button" id="hnext" aria-label="Next">&#8250;</button>
+    <div class="dots" id="dots"></div>
+    <div class="player" id="hplayer"><button class="ghost" type="button" id="hclose">&#10005; Close</button></div>
+  </div>
+
+  <form class="search" id="sform" role="search">
+    <label class="field">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
+      <input id="q" type="search" placeholder="Search teams, scores, stories… or ask ‘how did the Spits do?’" autocomplete="off" enterkeyhint="search" aria-label="Search Powerplay Windsor">
+    </label>
+    <button class="btn" type="submit">Search</button>
+  </form>
+
+  <div id="rows"></div>
+
+  <section>
+    <div class="rhead"><div><h2>What people are saying</h2></div></div>
+    <div class="quotes">
+      <div class="quote"><p>We celebrate all of the athletes within Windsor-Essex and their achievements reflected on Powerplay Windsor.</p>
+        <div class="who">John Fairley<span>St. Clair College</span></div></div>
+      <div class="quote"><p>Another great resource for local sports produced by a person that has been invested in local sports for decades.</p>
+        <div class="who">Frank Graziano</div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="about">
+      <div class="ph"><img src="https://static.wixstatic.com/media/0be2db_64c03b4773904c2a8045c6cb3c434e7a~mv2.jpg/v1/fill/w_680,h_748,al_c,q_85/about.jpg" alt="Bob Bellacicco" loading="lazy" onerror="this.remove()"></div>
+      <div>
+        <h3>About <span>Powerplay Windsor</span></h3>
+        <p>Powerplay Windsor was born during a trip to Italy in the summer of 2018. Walking through a charming pedestrian underpass sparked a memory: being in the tunnel at the University of Michigan early in my career. That brought me to the upcoming season that was going to be overlooked due to cuts to legacy media.</p>
+        <p>I launched Powerplay Windsor as a passion project and to continue showcasing local athletes and our vibrant sports community.</p>
+        <p>Our video channel brings you highlights, interviews and behind-the-scenes access. We are courtside, rinkside and on the field capturing moments that matter.</p>
+        <div class="sig">Bob Bellacicco<span>Founder</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="vplayer" id="vplayer" role="dialog" aria-label="Video player">
+    <div class="fr" id="vframe"></div>
+    <div class="cap"><div class="t" id="vtitle"></div><a class="ghost" id="vext" target="_blank" rel="noopener" href="#">Watch on YouTube &#8599;</a><button class="ghost" type="button" id="vclose">&#10005; Close</button></div>
+  </div>
+  <div class="fsv" id="fsv" role="dialog" aria-label="Athlete profile">
+    <div class="bar"><span id="fspos"></span><button class="ghost" type="button" id="fsclose">&#10005; Close</button></div>
+    <img id="fsimg" alt="Athlete profile">
+    <button class="ghost nav p" type="button" id="fsprev" aria-label="Previous profile">&#8249;</button>
+    <button class="ghost nav n" type="button" id="fsnext" aria-label="Next profile">&#8250;</button>
+  </div>
+</div>
+<script>
+(function () {
+  var REPO = 'https://bbellacicco.github.io/powerplay-feed/', DATA = REPO + 'data/';
+  var SITE = 'https://www.powerplaywindsor.com/';
+  var qs = new URLSearchParams(location.search);
+  var LINK = {
+    local: qs.get('local') || SITE + 'local-sports',
+    pro: qs.get('pro') || SITE + 'pro-sports',
+    network: qs.get('network') || SITE + 'powerplay-network',
+    athletes: qs.get('athletes') || SITE + 'sports',
+    search: qs.get('search') || SITE + 'search-1'
+  };
+  var TZ = 'America/Toronto';
+  var TEAM = { powerplay: 'Powerplay', spitfires: 'Spitfires', lancers: 'Lancers', saints: 'Saints', junior: 'Junior hockey', highschool: 'High school' };
+  var TCOL = { powerplay: '#e8b021', spitfires: '#d4202a', lancers: '#0b5cad', saints: '#1f9d55', junior: '#0891b2', highschool: '#7c4ddb' };
+  var GENERIC_IMG = /(1920x1080-|game-story|placeholder)/i;
+  var MON = ['Jan.', 'Feb.', 'March', 'April', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'];
+
+  function el(t, c, x) { var e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; }
+  function getJSON(n) { return fetch(DATA + n + '?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }); }
+  function parts(d) { var p = {}; new Intl.DateTimeFormat('en-CA', { timeZone: TZ, year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: '2-digit', hourCycle: 'h23', weekday: 'short' }).formatToParts(d).forEach(function (x) { p[x.type] = x.value; }); return p; }
+  function dayKey(d) { var p = parts(d); return p.year + '-' + p.month + '-' + p.day; }
+  function cpTime(d) { var p = parts(d), h = +p.hour; return (h % 12 || 12) + (p.minute === '00' ? '' : ':' + p.minute) + (h < 12 ? ' a.m.' : ' p.m.'); }
+  function cpDate(d) { var p = parts(d); return MON[+p.month - 1] + ' ' + (+p.day); }
+  function ago(iso) {
+    var t = new Date(iso).getTime(); if (!t) return '';
+    var m = Math.round((Date.now() - t) / 60000);
+    if (m < 60) return Math.max(m, 1) + ' min ago';
+    var h = Math.round(m / 60); if (h < 24) return h + (h === 1 ? ' hour ago' : ' hours ago');
+    var d = Math.round(h / 24); if (d < 7) return d + (d === 1 ? ' day ago' : ' days ago');
+    return cpDate(new Date(t));
+  }
+  function when(g) {   // card status: LIVE / FINAL / 7 p.m. / Sat 7 p.m.
+    var d = new Date(g.start), today = dayKey(new Date()) === dayKey(d);
+    if (g.status === 'live') return ['LIVE', 'live'];
+    if (g.status === 'final') return ['FINAL' + (today ? '' : ' · ' + parts(d).weekday.replace('.', '').toUpperCase()), ''];
+    if (g.status === 'postponed') return ['PPD', ''];
+    return [(today ? '' : parts(d).weekday.replace('.', '') + ' ') + (g.time_tbd ? 'TBA' : cpTime(d)), ''];
+  }
+  function vidEmbed(u) {
+    var m = u.match(/[?&]v=([\w-]{11})/) || u.match(/youtu\.be\/([\w-]{11})/) || u.match(/\/shorts\/([\w-]{11})/);
+    if (m) return 'https://www.youtube-nocookie.com/embed/' + m[1] + '?autoplay=1&rel=0&playsinline=1&modestbranding=1';
+    m = u.match(/vimeo\.com\/(?:video\/)?(\d+)/);
+    if (m) return 'https://player.vimeo.com/video/' + m[1] + '?autoplay=1&title=0&byline=0&portrait=0';
+    return '';
+  }
+  function isVid(s) { return s.source === 'YouTube' || s.source === 'Vimeo'; }
+  function openUrl(u) { if (u.indexOf(SITE) === 0) { try { top.location.href = u; } catch (e) { location.href = u; } } else window.open(u, '_blank', 'noopener'); }
+
+  // ---------- rows ----------
+  var ROWS = [
+    { key: 'local', title: 'Local scores', by: ['Unifor Local 444', 'logos/unifor-444.png'], all: LINK.local },
+    { key: 'stories', title: 'Latest stories', by: ['St. Clair College Alumni', 'logos/st-clair-alumni.png'], all: LINK.local },
+    { key: 'network', title: 'Powerplay Network', by: null, all: LINK.network },
+    { key: 'pro', title: 'Pro scores', by: ['Unifor Local 2458', 'logos/unifor-2458.png'], all: LINK.pro },
+    { key: 'prohead', title: 'Pro headlines', by: ['The D’Amore Group', 'logos/damore-group.png'], all: LINK.pro },
+    { key: 'athletes', title: 'Athlete profiles', by: null, all: LINK.athletes }
+  ];
+  var rowEl = {};
+  ROWS.forEach(function (r) {
+    var sec = el('section'); sec.id = 'row-' + r.key;
+    var head = el('div', 'rhead'), left = el('div');
+    left.appendChild(el('h2', null, r.title));
+    if (r.by) {
+      var by = el('span', 'by'); var im = new Image(); im.src = r.by[1]; im.alt = ''; im.onerror = function () { im.remove(); };
+      by.appendChild(im); by.appendChild(document.createTextNode('Presented by ')); by.appendChild(el('b', null, r.by[0]));
+      left.querySelector('h2').appendChild(by);
+    }
+    head.appendChild(left);
+    var a = el('a', 'all', 'See all ›'); a.href = r.all; a.target = '_top'; head.appendChild(a);
+    sec.appendChild(head);
+    var wrap = el('div', 'rowwrap'), row = el('div', 'row');
+    row.appendChild(el('div', 'empty', 'Loading…'));
+    var l = el('button', 'rarrow l', '‹'), rr = el('button', 'rarrow r', '›'); l.type = rr.type = 'button';
+    l.setAttribute('aria-label', 'Scroll left'); rr.setAttribute('aria-label', 'Scroll right');
+    l.onclick = function () { row.scrollBy({ left: -row.clientWidth * 0.8, behavior: 'smooth' }); };
+    rr.onclick = function () { row.scrollBy({ left: row.clientWidth * 0.8, behavior: 'smooth' }); };
+    wrap.appendChild(l); wrap.appendChild(row); wrap.appendChild(rr); sec.appendChild(wrap);
+    document.getElementById('rows').appendChild(sec);
+    rowEl[r.key] = row;
+  });
+  function fill(key, nodes, emptyText) {
+    var row = rowEl[key]; row.innerHTML = '';
+    if (!nodes.length) { row.appendChild(el('div', 'empty', emptyText)); return; }
+    nodes.forEach(function (n) { row.appendChild(n); });
+  }
+
+  // story / video card
+  function storyCard(s, opts) {
+    var vid = isVid(s) || s.video;
+    var c = el(vid && opts && opts.play ? 'button' : 'a', 'scard');
+    if (c.tagName === 'A') { c.href = s.url; if (s.url.indexOf(SITE) === 0) c.target = '_top'; else { c.target = '_blank'; c.rel = 'noopener'; } }
+    else { c.type = 'button'; c.onclick = function () { playRow(s, c); }; }
+    var pic = el('div', 'pic');
+    function tile() { pic.innerHTML = ''; pic.appendChild(el('div', 'tname', (opts && opts.tile || TEAM[s.team] || s.club || 'Powerplay').toUpperCase())); addOver(); }
+    function addOver() {
+      if (opts && opts.tag) { var t = el('span', 'tag'); var i = el('i'); i.style.setProperty('--tc', TCOL[s.team] || '#e8b021'); t.appendChild(i); t.appendChild(document.createTextNode(opts.tag)); pic.appendChild(t); }
+      if (vid) pic.appendChild(el('div', 'play'));
+    }
+    if (s.image && !GENERIC_IMG.test(s.image)) { var im = new Image(); im.src = s.image; im.alt = ''; im.loading = 'lazy'; im.referrerPolicy = 'no-referrer'; im.onerror = tile; pic.appendChild(im); addOver(); }
+    else tile();
+    c.appendChild(pic);
+    c.appendChild(el('div', 'hl', s.headline));
+    c.appendChild(el('div', 'sm', (opts && opts.sub) || ago(s.published)));
+    return c;
+  }
+
+  // ---------- banner ----------
+  var slides = [], cur = 0, timer = null;
+  function buildHero(items) {
+    var box = document.getElementById('slides'), dots = document.getElementById('dots');
+    box.innerHTML = ''; dots.innerHTML = '';
+    slides = items.map(function (s, i) {
+      var sl = el('div', 'slide');
+      var bg = el('div', 'bg'); bg.style.backgroundImage = 'url("' + s.image.replace(/"/g, '%22') + '")'; sl.appendChild(bg);
+      var t = el('div', 'txt');
+      var k = el('div', 'kicker'); k.appendChild(el('span', 'dot'));
+      k.appendChild(document.createTextNode((isVid(s) ? 'Video' : 'Powerplay story') + ' · ' + ago(s.published)));
+      t.appendChild(k);
+      t.appendChild(el('h1', null, s.headline));
+      if (s.summary && s.summary !== s.headline && !isVid(s)) t.appendChild(el('p', null, s.summary));
+      var b = el(isVid(s) ? 'button' : 'a', 'btn', isVid(s) ? '▶  Watch now' : 'Read the story');
+      if (isVid(s)) { b.type = 'button'; b.onclick = function () { playHero(s); }; } else { b.href = s.url; b.target = s.url.indexOf(SITE) === 0 ? '_top' : '_blank'; }
+      t.appendChild(b); sl.appendChild(t); box.appendChild(sl);
+      var d = el('button'); d.type = 'button'; d.setAttribute('aria-label', 'Slide ' + (i + 1)); d.onclick = function () { go(i); restart(); }; dots.appendChild(d);
+      return sl;
+    });
+    go(0); restart();
+  }
+  function go(i) {
+    if (!slides.length) return;
+    cur = (i + slides.length) % slides.length;
+    slides.forEach(function (s, k) { s.classList.toggle('on', k === cur); });
+    [].forEach.call(document.getElementById('dots').children, function (d, k) { d.classList.toggle('on', k === cur); });
+  }
+  function restart() { clearInterval(timer); timer = setInterval(function () { if (!document.getElementById('hplayer').classList.contains('on')) go(cur + 1); }, 7000); }
+  document.getElementById('hprev').onclick = function () { go(cur - 1); restart(); };
+  document.getElementById('hnext').onclick = function () { go(cur + 1); restart(); };
+  var hero = document.getElementById('hero'), hx = null;
+  hero.addEventListener('mouseenter', function () { clearInterval(timer); }); hero.addEventListener('mouseleave', restart);
+  hero.addEventListener('touchstart', function (e) { hx = e.touches[0].clientX; }, { passive: true });
+  hero.addEventListener('touchend', function (e) { if (hx == null) return; var dx = e.changedTouches[0].clientX - hx; hx = null; if (Math.abs(dx) > 50) { go(cur + (dx < 0 ? 1 : -1)); restart(); } });
+  function playHero(s) {
+    var src = vidEmbed(s.url); if (!src) return openUrl(s.url);
+    var p = document.getElementById('hplayer'); [].forEach.call(p.querySelectorAll('iframe'), function (f) { f.remove(); });
+    var f = document.createElement('iframe'); f.src = src; f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; f.allowFullscreen = true; f.title = s.headline;
+    p.appendChild(f); p.classList.add('on');
+  }
+  document.getElementById('hclose').onclick = function () { var p = document.getElementById('hplayer'); p.classList.remove('on'); [].forEach.call(p.querySelectorAll('iframe'), function (f) { f.remove(); }); };
+
+  // ---------- Network row player ----------
+  var vp = document.getElementById('vplayer');
+  function playRow(s, cardEl) {
+    var src = vidEmbed(s.url); if (!src) return openUrl(s.url);
+    var fr = document.getElementById('vframe'); fr.innerHTML = '';
+    var f = document.createElement('iframe'); f.src = src; f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; f.allowFullscreen = true; f.title = s.headline; fr.appendChild(f);
+    document.getElementById('vtitle').textContent = s.headline;
+    var ext = document.getElementById('vext'); ext.href = s.url; ext.textContent = 'Watch on ' + (s.source || (/vimeo/.test(s.url) ? 'Vimeo' : 'YouTube')) + ' ↗';
+    vp.classList.add('on');
+    var sec = document.getElementById('row-network'), page = document.getElementById('page');
+    vp.style.top = Math.max(0, Math.min(sec.offsetTop - 10, page.offsetHeight - vp.offsetHeight - 10)) + 'px';
+  }
+  document.getElementById('vclose').onclick = function () { vp.classList.remove('on'); document.getElementById('vframe').innerHTML = ''; };
+
+  // ---------- search ----------
+  if (window.innerWidth < 700) document.getElementById('q').placeholder = 'Search teams, scores, stories\u2026';
+  document.getElementById('sform').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var v = document.getElementById('q').value.trim(); if (!v) { document.getElementById('q').focus(); return; }
+    try { localStorage.setItem('pp-search', JSON.stringify({ q: v, t: Date.now() })); } catch (er) {}
+    try { top.location.href = LINK.search; } catch (er) { window.open(LINK.search, '_top'); }
+  });
+
+  // ---------- athlete profiles (tap = full screen; iPhone opens the full-screen profile page) ----------
+  var fsv = document.getElementById('fsv'), fsimg = document.getElementById('fsimg'), profs = [], pcur = 0;
+  function pfull(src) { return /^https?:/.test(src) ? src : REPO + src; }
+  function pthumb(src) { return /static\.wixstatic\.com\/media\/[^/]+$/.test(src) ? src + '/v1/fill/w_340,h_453,al_t,q_80/p.png' : pfull(src); }
+  function plarge(src) { return /static\.wixstatic\.com\/media\/[^/]+$/.test(src) ? src + '/v1/fit/w_1400,h_2000,q_88/p.png' : pfull(src); }
+  function pshow(n) { pcur = (n + profs.length) % profs.length; fsimg.src = plarge(profs[pcur].img); document.getElementById('fspos').textContent = (pcur + 1) + ' of ' + profs.length; }
+  function fsEl() { return document.fullscreenElement || document.webkitFullscreenElement; }
+  function enlarge(n) {
+    var req = fsv.requestFullscreen || fsv.webkitRequestFullscreen;
+    if (req && (document.fullscreenEnabled || document.webkitFullscreenEnabled)) {
+      pshow(n); fsv.classList.add('on');
+      try { var pr = req.call(fsv); if (pr && pr.catch) pr.catch(function () { fsv.classList.remove('on'); toProfile(n); }); } catch (e) { fsv.classList.remove('on'); toProfile(n); }
+    } else toProfile(n);
+  }
+  function toProfile(n) { var u = REPO + 'profile.html?i=' + n; try { top.location.href = u; } catch (e) { window.open(u, '_top'); } }
+  function onFs() { if (!fsEl()) fsv.classList.remove('on'); }
+  document.addEventListener('fullscreenchange', onFs); document.addEventListener('webkitfullscreenchange', onFs);
+  document.getElementById('fsclose').onclick = function () { if (fsEl()) (document.exitFullscreen || document.webkitExitFullscreen).call(document); fsv.classList.remove('on'); };
+  document.getElementById('fsprev').onclick = function () { pshow(pcur - 1); };
+  document.getElementById('fsnext').onclick = function () { pshow(pcur + 1); };
+  document.addEventListener('keydown', function (e) {
+    if (fsv.classList.contains('on')) { if (e.key === 'ArrowLeft') pshow(pcur - 1); else if (e.key === 'ArrowRight') pshow(pcur + 1); }
+    else if (e.key === 'Escape') { document.getElementById('vclose').click(); document.getElementById('hclose').click(); }
+  });
+
+  // ---------- local scores ----------
+  function priority(g) {
+    if (g.team === 'lancers' && g.sport === 'Football') return 1;
+    if (g.team === 'saints' && g.sport === 'Football') return 2;
+    if (g.team === 'spitfires') return 3;
+    if (g.team === 'junior') return 4;
+    return 5;
+  }
+  function localGames(lg, hs, sc) {
+    var games = (lg.games || []).filter(function (g) { return g.team !== 'highschool'; })
+      .concat(hs && hs.games ? hs.games : (lg.games || []).filter(function (g) { return g.team === 'highschool'; }));
+    if (sc && sc.games) games = games.filter(function (g) { return !(g.team === 'saints' && g.sport !== 'Football'); }).concat(sc.games.filter(function (g) { return g.sport !== 'Football'; }));
+    var now = Date.now(), since = now - 864e5;
+    var stale = function (g) { return g.status === 'live' && now - new Date(g.start).getTime() > 4 * 3600e3; };
+    var byP = function (a, b) { return priority(a) - priority(b) || (a.start < b.start ? 1 : -1); };
+    var live = games.filter(function (g) { return g.status === 'live' && !stale(g); }).sort(byP);
+    var recent = games.filter(function (g) { return g.status === 'final' && g.our_score != null && new Date(g.start).getTime() >= since; }).sort(byP);
+    var next = games.filter(function (g) { return g.status === 'upcoming' && new Date(g.start).getTime() >= now - 3 * 3600e3; })
+      .sort(function (a, b) { return a.start < b.start ? -1 : a.start > b.start ? 1 : priority(a) - priority(b); });
+    return live.concat(recent, next).slice(0, 14);
+  }
+  function localCard(g, teams) {
+    var t = teams[g.team] || {}, c = el('a', 'game');
+    c.href = (g.links && (g.links.powerplay || g.links.gamecentre || g.links.boxscore || g.links.recap || g.links.standings)) || LINK.local;
+    if (c.href.indexOf(SITE) === 0) c.target = '_top'; else { c.target = '_blank'; c.rel = 'noopener'; }
+    var away, home, col = TCOL[g.team] || '#23407a', grey = '#1b2f55';
+    if (g.home && g.away) { away = { n: g.away, s: g.our_score, c: grey }; home = { n: g.home, s: g.opp_score, c: col }; }
+    else {
+      var us = { n: g.club || t.short || TEAM[g.team] || '', s: g.our_score, c: col }, them = { n: g.opponent, s: g.opp_score, c: grey };
+      if (g.home_away === 'H') { away = them; home = us; } else { away = us; home = them; }
+    }
+    var box = el('div', 'box'); box.style.setProperty('--a', away.c); box.style.setProperty('--h', home.c);
+    var lgl = g.team === 'spitfires' ? 'OHL' : g.team === 'saints' && g.sport === 'Football' ? 'CJFL' : g.team === 'highschool' ? 'High school' : g.team === 'junior' ? (g.sport || 'Junior').replace(/\s*\(.*\)/, '') : (t.short || TEAM[g.team] || '');
+    box.appendChild(el('span', 'lg', lgl));
+    var w = when(g); box.appendChild(el('span', 'st' + (w[1] ? ' ' + w[1] : ''), w[0]));
+    var scored = g.status !== 'upcoming' && away.s != null && home.s != null;
+    [[away, 'a', home], [home, 'h', away]].forEach(function (x) {
+      var side = el('div', 'side ' + x[1] + (g.status === 'final' && scored && x[0].s < x[2].s ? ' lost' : ''));
+      if (scored) side.appendChild(el('div', 'sc', String(x[0].s)));
+      side.appendChild(el('div', 'nm', x[0].n));
+      box.appendChild(side);
+    });
+    c.appendChild(box);
+    c.appendChild(el('div', 'cap', away.n + ' at ' + home.n));
+    var d = new Date(g.start);
+    c.appendChild(el('div', 'sm', [g.team === 'highschool' || g.team === 'junior' ? g.sport : (t.short ? t.short + ' ' + (g.sport || '').toLowerCase() : g.sport), dayKey(d) === dayKey(new Date()) ? 'Today' : parts(d).weekday.replace('.', '') + ', ' + cpDate(d)].filter(Boolean).join(' · ')));
+    return c;
+  }
+
+  // ---------- pro scores (ESPN, our teams + playoffs; CFL from the collector) ----------
+  var PATHS = { nfl: 'football/nfl', nhl: 'hockey/nhl', nba: 'basketball/nba', mlb: 'baseball/mlb' };
+  var OUR = { nfl: ['DET', 'BUF'], nhl: ['DET', 'TOR', 'MTL'], nba: ['DET', 'TOR'], mlb: ['DET', 'TOR'] };
+  function ymd(d) { var p = parts(d); return p.year + ('0' + p.month).slice(-2) + ('0' + p.day).slice(-2); }
+  function espnDay(d) {
+    return Promise.all(Object.keys(PATHS).map(function (k) {
+      return fetch('https://site.api.espn.com/apis/site/v2/sports/' + PATHS[k] + '/scoreboard?dates=' + ymd(d)).then(function (r) { return r.ok ? r.json() : { events: [] }; })
+        .then(function (j) { return (j.events || []).filter(function (e) {
+          return e.competitions[0].competitors.some(function (c) { return OUR[k].indexOf(c.team.abbreviation) >= 0; }) || (e.season && e.season.type === 3);
+        }).map(function (e) { e._lg = k; return e; }); }).catch(function () { return []; });
+    })).then(function (r) { return [].concat.apply([], r); });
+  }
+  function proGames() {
+    var now = Date.now();
+    return Promise.all([-1, 0, 1, 2].map(function (o) { return espnDay(new Date(now + o * 864e5)); })).then(function (r) {
+      var all = [].concat.apply([], r), seen = {};
+      all = all.filter(function (e) { if (seen[e.id]) return false; seen[e.id] = 1; return true; });
+      var rank = function (e) { var s = e.status.type.state; return s === 'in' ? 0 : s === 'post' ? 1 : 2; };
+      return all.filter(function (e) { return e.status.type.state !== 'post' || now - new Date(e.date).getTime() < 36 * 3600e3; })
+        .sort(function (a, b) { return rank(a) - rank(b) || (rank(a) === 1 ? (a.date < b.date ? 1 : -1) : (a.date < b.date ? -1 : 1)); }).slice(0, 14);
+    });
+  }
+  function proCard(e) {
+    var comp = e.competitions[0], st = e.status.type, c = el('a', 'game');
+    c.href = (e.links && e.links[0] && e.links[0].href) || LINK.pro; c.target = '_blank'; c.rel = 'noopener';
+    var sides = ['away', 'home'].map(function (h) { return comp.competitors.filter(function (x) { return x.homeAway === h; })[0]; });
+    var box = el('div', 'box');
+    box.style.setProperty('--a', '#' + (sides[0].team.color || '1b335f')); box.style.setProperty('--h', '#' + (sides[1].team.color || '23407a'));
+    box.appendChild(el('span', 'lg', e._lg.toUpperCase() + (e.season && e.season.type === 3 ? ' · Playoffs' : '')));
+    var d = new Date(e.date), today = dayKey(d) === dayKey(new Date());
+    var stTxt = st.state === 'in' ? 'LIVE' : st.state === 'post' ? 'FINAL' + (today ? '' : ' · ' + parts(d).weekday.replace('.', '').toUpperCase()) : (today ? '' : parts(d).weekday.replace('.', '') + ' ') + cpTime(d);
+    box.appendChild(el('span', 'st' + (st.state === 'in' ? ' live' : ''), stTxt));
+    sides.forEach(function (x, i) {
+      var other = sides[1 - i], side = el('div', 'side ' + (i ? 'h' : 'a') + (st.state === 'post' && x.winner === false && other.winner ? ' lost' : ''));
+      var im = new Image(); im.alt = ''; im.src = x.team.logo || ''; im.onerror = function () { im.remove(); }; side.appendChild(im);
+      if (st.state !== 'pre') side.appendChild(el('div', 'sc', x.score));
+      side.appendChild(el('div', 'nm', x.team.abbreviation || ''));
+      box.appendChild(side);
+    });
+    c.appendChild(box);
+    c.appendChild(el('div', 'cap', sides[0].team.shortDisplayName + ' at ' + sides[1].team.shortDisplayName));
+    c.appendChild(el('div', 'sm', st.state === 'in' ? (st.shortDetail || 'In progress') : today ? 'Today' : parts(d).weekday.replace('.', '') + ', ' + cpDate(d)));
+    return c;
+  }
+
+  // ---------- load everything ----------
+  var OUR_PRO = /(red wings|maple leafs|leafs|canadiens|lions|bills|tigers|blue jays|jays|pistons|raptors|argonauts|argos|tiger-cats|ticats|sceptres|spitfires)/i;
+  var heroBuilt = false;
+  function load() {
+    Promise.all([getJSON('local-news.json'), getJSON('local-games.json'), getJSON('highschool.json'), getJSON('saints.json'), getJSON('network.json'), getJSON('profiles.json')]).then(function (r) {
+      var news = r[0] || {}, lg = r[1] || {}, hs = r[2], sc = r[3], net = r[4] || {}, pf = r[5] || {};
+      var stories = (news.stories || []).filter(function (s) { return s.url && s.headline; })
+        .sort(function (a, b) { return new Date(b.published) - new Date(a.published); });
+      // banner: Powerplay's newest stories and videos that have a real photo
+      if (!heroBuilt || !document.getElementById('hplayer').classList.contains('on')) {
+        var heroItems = stories.filter(function (s) { return s.team === 'powerplay' && s.image && !GENERIC_IMG.test(s.image); });
+        var seenH = {}; heroItems = heroItems.filter(function (s) { var k = s.headline.toLowerCase().replace(/[^a-z0-9]+/g, ''); if (seenH[k]) return false; seenH[k] = 1; return true; }).slice(0, 5);
+        if (heroItems.length) { var keep = cur; buildHero(heroItems); if (heroBuilt) go(keep); heroBuilt = true; }
+      }
+      // local scores
+      var teams = lg.teams || {};
+      fill('local', localGames(lg, hs, sc).map(function (g) { return localCard(g, teams); }), 'No local games right now.');
+      // latest stories (written stories; videos have their own row)
+      fill('stories', stories.filter(function (s) { return !isVid(s); }).slice(0, 15).map(function (s) {
+        var who = s.team === 'junior' || s.team === 'powerplay' ? s.club || TEAM[s.team] : TEAM[s.team] + (s.sport ? ' · ' + s.sport : '');
+        return storyCard(s, { tag: TEAM[s.team] === 'Powerplay' ? 'Powerplay' : (s.team === 'junior' ? (s.club || 'Junior') : TEAM[s.team]), sub: who + ' · ' + ago(s.published), tile: s.team === 'junior' ? (s.club || '').replace(/^(Windsor|St\. Clair)\s+/, '') : null });
+      }), 'Stories are on the way.');
+      // Powerplay Network: newest YouTube/Vimeo videos
+      var vids = stories.filter(isVid), seenV = {};
+      (net.local || []).forEach(function (v) { vids.push({ headline: v.t, url: v.u, image: v.i, published: v.p.length === 10 ? v.p + 'T12:00:00' : v.p, source: v.s, video: true }); });
+      vids = vids.filter(function (v) { var k = v.headline.toLowerCase().replace(/[^a-z0-9]+/g, ''); if (seenV[k] || seenV[v.url]) return false; seenV[k] = seenV[v.url] = 1; return true; })
+        .sort(function (a, b) { return new Date(b.published) - new Date(a.published); }).slice(0, 15);
+      fill('network', vids.map(function (v) { return storyCard(v, { play: true, sub: (v.source || 'Video') + ' · ' + ago(v.published), tile: 'Powerplay' }); }), 'Videos are on the way.');
+      // pro headlines: our teams first
+      var pro = (lg.pro_news || []).concat(lg.more_news || []).filter(function (s) { return s.url && s.headline; });
+      var seenP = {}; pro = pro.filter(function (s) { if (seenP[s.url]) return false; seenP[s.url] = 1; return true; });
+      pro.forEach(function (s) { s._ours = OUR_PRO.test(s.headline + ' ' + (s.teams || []).join(' ')); });
+      pro.sort(function (a, b) { return (b._ours - a._ours) || (new Date(b.published) - new Date(a.published)); });
+      fill('prohead', pro.slice(0, 15).map(function (s) {
+        var L = (s.league || '').toUpperCase();
+        return storyCard(s, { tag: L || 'Pro', tile: L || 'Pro', sub: [L, s.source, ago(s.published)].filter(Boolean).join(' · ') });
+      }), 'Pro headlines are on the way.');
+      // athlete profiles
+      profs = (pf.profiles || []).filter(function (p) { return p && p.img; });
+      fill('athletes', profs.slice(0, 15).map(function (p, i) {
+        var b = el('button', 'ath'); b.type = 'button'; b.setAttribute('aria-label', 'View athlete profile ' + (i + 1));
+        var im = new Image(); im.src = pthumb(p.img); im.alt = ''; im.loading = 'lazy'; im.onerror = function () { if (im.src !== pfull(p.img)) im.src = pfull(p.img); };
+        b.appendChild(im); b.onclick = function () { enlarge(i); }; return b;
+      }), 'Profiles are on the way.');
+    });
+    proGames().then(function (g) { fill('pro', g.map(proCard), 'No games for our pro teams in the next few days.'); });
+  }
+  load();
+  setInterval(function () { if (!vp.classList.contains('on')) load(); }, 3 * 60000);
+})();
+</script>
+</body>
+</html>
