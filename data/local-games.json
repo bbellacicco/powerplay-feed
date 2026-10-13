@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-13T19:01:50-04:00",
+ "updated": "2026-10-13T19:32:44-04:00",
  "today": "2026-10-13",
  "range": [
   "2026-10-10",
@@ -2260,6 +2260,19 @@
  ],
  "more_news": [
   {
+   "league": "mlb",
+   "headline": "Report: Dodgers considering benching Shohei Ohtani for Game 3 of NLCS",
+   "summary": "",
+   "published": "2026-10-12T22:56-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Dodgers-Brewers.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/report-dodgers-considering-benching-shohei-ohtani-for-game-3-of-nlcs/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "It’s early but … a look at each NHL team’s start",
    "summary": "With all 32 teams in action on Tuesday in the return of the Frozen Frenzy, Rory Boylen provides a thought on each club’s start to the season.",
@@ -2285,34 +2298,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/oilers-notebook-mcdavid-set-for-game-no-800-as-light-road-trip-wraps-up/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Report: Dodgers considering benching Shohei Ohtani for Game 3 of NLCS",
-   "summary": "",
-   "published": "2026-10-12T22:56-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Dodgers-Brewers.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/report-dodgers-considering-benching-shohei-ohtani-for-game-3-of-nlcs/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Senators blasting out of gates despite rash of early-season injuries",
-   "summary": "The Ottawa Senators started late, played a lot and sustained injuries to multiple key players. Yet they’ve now won five of six to piece together one of the best starts in the league. Sportsnet’s Ryan Dixon explores that ",
-   "published": "2026-10-13T12:04-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/tim-stutzle.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 9,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/senators-blasting-out-of-gates-despite-rash-of-early-season-injuries/",
    "source": "Sportsnet"
   },
   {
@@ -2417,6 +2402,21 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/cfl/article/argos-qb-chad-kelly-full-participant-in-practice-after-injury/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Senators blasting out of gates despite rash of early-season injuries",
+   "summary": "The Ottawa Senators started late, played a lot and sustained injuries to multiple key players. Yet they’ve now won five of six to piece together one of the best starts in the league. Sportsnet’s Ryan Dixon explores that ",
+   "published": "2026-10-13T12:04-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/tim-stutzle.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 9,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/senators-blasting-out-of-gates-despite-rash-of-early-season-injuries/",
    "source": "Sportsnet"
   },
   {
@@ -2646,19 +2646,6 @@
   },
   {
    "league": "other",
-   "headline": "Toronto FC calls up homegrown midfielder Antone Bossenberry Romero",
-   "summary": "",
-   "published": "2026-10-13T11:19-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2023/10/hernandez_jason1280.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/toronto-fc-calls-up-homegrown-midfielder-antone-bossenberry-romero/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
    "headline": "Toronto FC reaches into reservoir of resilience to renew playoff hopes",
    "summary": "Toronto FC has been short many qualities throughout this difficult season — but it does seem to have a boundless reservoir of resilience. Sportsnet’s John Molinaro has more in his MLS weekend review.",
    "published": "2026-10-12T10:07-04:00",
@@ -2668,6 +2655,19 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/mls/article/toronto-fc-reaches-into-reservoir-of-resilience-to-renew-playoff-hopes/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Toronto FC calls up homegrown midfielder Antone Bossenberry Romero",
+   "summary": "",
+   "published": "2026-10-13T11:19-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2023/10/hernandez_jason1280.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/toronto-fc-calls-up-homegrown-midfielder-antone-bossenberry-romero/",
    "source": "Sportsnet"
   },
   {
@@ -3064,7 +3064,7 @@
    "league": "mlb",
    "headline": "Watch Tigers prospects In Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-13T16:26-04:00",
+   "published": "2026-10-13T19:16-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -3337,7 +3337,7 @@
    "league": "mlb",
    "headline": "Watch Blue Jays prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-13T16:26-04:00",
+   "published": "2026-10-13T19:16-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -3751,7 +3751,7 @@
       "l": 1,
       "otl": 1,
       "pts": 9,
-      "gf": 25,
+      "gf": 26,
       "ga": 20,
       "strk": "L1"
      },
@@ -3764,7 +3764,7 @@
       "otl": 1,
       "pts": 9,
       "gf": 27,
-      "ga": 33,
+      "ga": 34,
       "strk": "L3"
      },
      {
