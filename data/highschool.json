@@ -1,7 +1,47 @@
 {
- "updated": "2026-10-13T17:30:01-04:00",
+ "updated": "2026-10-13T17:45:01-04:00",
  "today": "2026-10-13",
  "games": [
+  {
+   "id": "highschool-2026-10-13-119",
+   "team": "highschool",
+   "sport": "Junior Boys Football",
+   "start": "2026-10-13T00:00:00-04:00",
+   "time_tbd": true,
+   "home_away": "N",
+   "opponent": "Essex",
+   "location": "Essex",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Cardinal Carter",
+   "home": "Essex"
+  },
+  {
+   "id": "highschool-2026-10-13-120",
+   "team": "highschool",
+   "sport": "Junior Boys Football",
+   "start": "2026-10-13T00:00:00-04:00",
+   "time_tbd": true,
+   "home_away": "N",
+   "opponent": "Villanova",
+   "location": "Sandwich",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "St. Anne",
+   "home": "Villanova"
+  },
   {
    "id": "highschool-2026-10-13-98",
    "team": "highschool",
@@ -211,9 +251,9 @@
    "home_away": "N",
    "opponent": "Sandwich",
    "location": "Sandwich",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "final",
+   "our_score": 27,
+   "opp_score": 38,
    "result": null,
    "note": "Tier 2",
    "links": {
@@ -241,6 +281,26 @@
    },
    "away": "Walkerville",
    "home": "Essex"
+  },
+  {
+   "id": "highschool-2026-10-13-114",
+   "team": "highschool",
+   "sport": "Junior Girls Basketball",
+   "start": "2026-10-13T00:00:00-04:00",
+   "time_tbd": true,
+   "home_away": "N",
+   "opponent": "St. Anne",
+   "location": "St. Anne",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Tier 1",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "L'Essor",
+   "home": "St. Anne"
   },
   {
    "id": "highschool-2026-10-13-90",
@@ -503,71 +563,11 @@
    "home": "Lamothe-Cadillac"
   },
   {
-   "id": "highschool-2026-10-13-119",
-   "team": "highschool",
-   "sport": "Junior Boys Football",
-   "start": "2026-10-13T17:30:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Essex",
-   "location": "Essex",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Cardinal Carter",
-   "home": "Essex"
-  },
-  {
-   "id": "highschool-2026-10-13-120",
-   "team": "highschool",
-   "sport": "Junior Boys Football",
-   "start": "2026-10-13T17:30:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Villanova",
-   "location": "Sandwich",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "St. Anne",
-   "home": "Villanova"
-  },
-  {
-   "id": "highschool-2026-10-13-114",
-   "team": "highschool",
-   "sport": "Junior Girls Basketball",
-   "start": "2026-10-13T17:30:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "St. Anne",
-   "location": "St. Anne",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 1",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "L'Essor",
-   "home": "St. Anne"
-  },
-  {
    "id": "highschool-2026-10-13-115",
    "team": "highschool",
    "sport": "Senior Girls Basketball",
-   "start": "2026-10-13T17:30:00-04:00",
-   "time_tbd": false,
+   "start": "2026-10-13T00:00:00-04:00",
+   "time_tbd": true,
    "home_away": "N",
    "opponent": "Villanova",
    "location": "Villanova",
@@ -586,8 +586,8 @@
    "id": "highschool-2026-10-13-116",
    "team": "highschool",
    "sport": "Senior Girls Basketball",
-   "start": "2026-10-13T17:30:00-04:00",
-   "time_tbd": false,
+   "start": "2026-10-13T00:00:00-04:00",
+   "time_tbd": true,
    "home_away": "N",
    "opponent": "St. Joseph's",
    "location": "St. Joseph's",
@@ -606,8 +606,8 @@
    "id": "highschool-2026-10-13-117",
    "team": "highschool",
    "sport": "Senior Girls Basketball",
-   "start": "2026-10-13T17:30:00-04:00",
-   "time_tbd": false,
+   "start": "2026-10-13T00:00:00-04:00",
+   "time_tbd": true,
    "home_away": "N",
    "opponent": "Herman",
    "location": "Herman",
@@ -626,8 +626,8 @@
    "id": "highschool-2026-10-13-118",
    "team": "highschool",
    "sport": "Senior Girls Basketball",
-   "start": "2026-10-13T17:30:00-04:00",
-   "time_tbd": false,
+   "start": "2026-10-13T00:00:00-04:00",
+   "time_tbd": true,
    "home_away": "N",
    "opponent": "Sandwich",
    "location": "Sandwich",
