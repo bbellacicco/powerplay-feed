@@ -65,6 +65,7 @@
     background: #fff; border-bottom: 3px solid #d4202a; }
   .tile-logo img { height: 62%; max-width: 80%; object-fit: contain; }
   .tl-kind { font-size: 9px; font-weight: 900; letter-spacing: .12em; color: #0b1a33; }
+  .tile-logo.dark { background: linear-gradient(135deg, #132b57, #081428); } .tile-logo.dark .tl-kind { color: #e8b021; }
   .tt-kind { font-size: 9px; font-weight: 800; letter-spacing: .12em; opacity: .85; }
   .tt-name { font-size: 15px; font-weight: 900; letter-spacing: .04em; line-height: 1.1; margin-top: 2px; word-break: break-word; }
   .play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 34px; height: 34px; border-radius: 50%;
@@ -590,11 +591,15 @@
   var GENERIC_IMG = /(1920x1080-|game-story|placeholder)/i;
   var TILE_NAME = { powerplay: 'POWERPLAY', spitfires: 'SPITFIRES', lancers: 'LANCERS', saints: 'SAINTS' };
   // Spitfires stories without a real photo: the team's logo with the story type underneath
-  var TEAM_LOGO = { spitfires: 'https://assets.leaguestat.com/ohl/logos/17.png' };
+  var TEAM_LOGO = { spitfires: 'https://assets.leaguestat.com/ohl/logos/17.png',
+    lancers: 'https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/golancers.ca/images/responsive_2025/logo_main.png',
+    powerplay: 'https://static.wixstatic.com/media/0be2db_52fe3a2d7e6746078e34d9a518cd6739~mv2.png/v1/fit/w_400,h_220,q_90/powerplay.png' };
+  var LOGO_LINE = { spitfires: '#d4202a', lancers: '#0b5cad', powerplay: '#e8b021' };
   function teamTile(s) {
     var kind0 = /^game story/i.test(s.headline) ? 'GAME STORY' : /highlight/i.test(s.headline) ? 'HIGHLIGHTS' : 'NEWS';
     if (TEAM_LOGO[s.team]) {
-      var lt = el('div', 'thumb tile-logo');
+      var lt = el('div', 'thumb tile-logo' + (s.team === 'powerplay' ? ' dark' : ''));
+      lt.style.borderBottomColor = LOGO_LINE[s.team];
       var li = new Image(); li.src = TEAM_LOGO[s.team]; li.alt = ''; li.loading = 'lazy';
       lt.appendChild(li);
       lt.appendChild(el('div', 'tl-kind', kind0));
