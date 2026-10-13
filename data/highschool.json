@@ -1,87 +1,7 @@
 {
- "updated": "2026-10-12T00:00:01-04:00",
- "today": "2026-10-12",
+ "updated": "2026-10-13T00:00:01-04:00",
+ "today": "2026-10-13",
  "games": [
-  {
-   "id": "highschool-2026-10-09-85",
-   "team": "highschool",
-   "sport": "Senior Boys Football",
-   "start": "2026-10-09T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Riverside",
-   "location": "Riverside",
-   "status": "final",
-   "our_score": 42,
-   "opp_score": 7,
-   "result": null,
-   "note": "",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Kennedy",
-   "home": "Riverside"
-  },
-  {
-   "id": "highschool-2026-10-09-86",
-   "team": "highschool",
-   "sport": "Senior Boys Football",
-   "start": "2026-10-09T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Tecumseh Vista Academy",
-   "location": "Tecumseh Vista Academy",
-   "status": "final",
-   "our_score": 14,
-   "opp_score": 9,
-   "result": null,
-   "note": "",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Cardinal Carter",
-   "home": "Tecumseh Vista Academy"
-  },
-  {
-   "id": "highschool-2026-10-09-87",
-   "team": "highschool",
-   "sport": "Senior Boys Football",
-   "start": "2026-10-09T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "North Star",
-   "location": "Libro Credit Union Centre",
-   "status": "final",
-   "our_score": 35,
-   "opp_score": 0,
-   "result": null,
-   "note": "",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "St. Joseph's",
-   "home": "North Star"
-  },
-  {
-   "id": "highschool-2026-10-09-88",
-   "team": "highschool",
-   "sport": "Senior Boys Football",
-   "start": "2026-10-09T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Essex",
-   "location": "Essex",
-   "status": "final",
-   "our_score": 14,
-   "opp_score": 21,
-   "result": null,
-   "note": "",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "St. Anne",
-   "home": "Essex"
-  },
   {
    "id": "highschool-2026-10-13-89",
    "team": "highschool",
@@ -1581,6 +1501,126 @@
    },
    "away": "L'Essor",
    "home": "Villanova"
+  },
+  {
+   "id": "highschool-2026-10-16-164",
+   "team": "highschool",
+   "sport": "Junior Girls Basketball",
+   "start": "2026-10-16T15:30:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Brennan",
+   "location": "Brennan",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Tier 2",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Essex",
+   "home": "Brennan"
+  },
+  {
+   "id": "highschool-2026-10-16-165",
+   "team": "highschool",
+   "sport": "Senior Boys Football",
+   "start": "2026-10-16T17:30:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Herman",
+   "location": "Sandwich",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "St. Joseph's",
+   "home": "Herman"
+  },
+  {
+   "id": "highschool-2026-10-16-166",
+   "team": "highschool",
+   "sport": "Senior Boys Football",
+   "start": "2026-10-16T17:30:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Tecumseh Vista Academy",
+   "location": "Tecumseh Vista Academy",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Massey",
+   "home": "Tecumseh Vista Academy"
+  },
+  {
+   "id": "highschool-2026-10-16-167",
+   "team": "highschool",
+   "sport": "Senior Boys Football",
+   "start": "2026-10-16T19:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Essex",
+   "location": "Essex",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "North Star",
+   "home": "Essex"
+  },
+  {
+   "id": "highschool-2026-10-16-168",
+   "team": "highschool",
+   "sport": "Senior Boys Football",
+   "start": "2026-10-16T19:30:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Sandwich",
+   "location": "Sandwich",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Belle River",
+   "home": "Sandwich"
+  },
+  {
+   "id": "highschool-2026-10-16-169",
+   "team": "highschool",
+   "sport": "Senior Boys Football",
+   "start": "2026-10-16T19:30:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Kennedy",
+   "location": "Tecumseh Vista Academy",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Brennan",
+   "home": "Kennedy"
   }
  ]
 }
