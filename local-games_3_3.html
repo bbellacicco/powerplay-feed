@@ -228,6 +228,8 @@
         var L = cs.leagues, grp = function (k) { return L[k] && L[k].groups ? L[k].groups : []; };
         if (grp('oua').length) j.standings.oua = grp('oua');
         if (grp('ocaa_m').length || grp('ocaa_w').length) j.standings.ocaa = grp('ocaa_m').concat(grp('ocaa_w'));
+        if (grp('ocaa_b').length) j.standings.ocaa_b = grp('ocaa_b');
+        if (grp('ocaa_s').length) j.standings.ocaa_s = grp('ocaa_s');
       }
       if (sc && sc.games) {
         var lo2 = (j.range || [])[0] || '', hi2 = (j.range || [])[1] || '9999';
@@ -332,9 +334,9 @@
   }
 
   // ---- Standings (collected every 15 minutes from the leagues' own stats sites)
-  // Lancers / Saints: only the headline sports that are in season (fall: football + soccer)
+  // Lancers / Saints: only the headline sports that are in season (fall: Lancers football; Saints baseball, softball, soccer)
   var ST_LEAGUES = [['ohl', 'OHL'], ['ojhl', 'OJHL'], ['gohl', 'GOHL'], ['pjhl', 'PJHL'],
-    ['oua', 'Lancers Football'], ['cjfl', 'Saints Football'], ['ocaa', 'Saints Soccer'], ['hs', 'High School']];
+    ['oua', 'Lancers Football'], ['ocaa_b', 'Saints Baseball'], ['ocaa_s', 'Saints Softball'], ['ocaa', 'Saints Soccer'], ['hs', 'High School']];
   // high school: football, girls basketball, boys volleyball (WECSSAA regular season)
   var hsStand = null, hsSport = 'football', hsLeague = 0;
   var HS_SPORTS = [['football', 'Football'], ['gbb', 'Girls Basketball'], ['bvb', 'Boys Volleyball']];
@@ -343,7 +345,9 @@
     pjhl: ['PJHL', 'https://gamesheetstats.com/seasons/15133/standings?configuration=45'],
     oua: ['OUA football', 'https://oua.ca/sports/fball/2026-27/standings'],
     cjfl: ['CJFL', 'https://www.cjfl.org/standings/show/9362372?subseason=958344'],
-    ocaa: ['OCAA soccer', 'https://www.ocaa.com/sports/msoc/2026-27/standings']
+    ocaa: ['OCAA soccer', 'https://www.ocaa.com/sports/msoc/2026-27/standings'],
+    ocaa_b: ['OCAA baseball', 'https://www.ocaa.com/sports/bsb/2026-27/standings'],
+    ocaa_s: ['OCAA softball', 'https://www.ocaa.com/sports/sball/2026-27/standings']
   };
   var ST_COLS = [['GP', 'gp'], ['W', 'w'], ['L', 'l'], ['OTL', 'otl'], ['PTS', 'pts'], ['GF', 'gf', 1], ['GA', 'ga', 1], ['STRK', 'strk', 1]];
   var OUR_CLUBS = ['Windsor', 'St. Clair', 'Leamington', 'LaSalle', 'Chatham', 'Lakeshore', 'Essex', 'Wheatley', 'Amherstburg'];
