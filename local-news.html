@@ -403,12 +403,12 @@
     }).catch(function () { scores = []; finals = []; });
   }
 // Which local games count as ticker / feed material (everything else stays in the Local Scoreboard):
-  // all Spitfires and junior hockey, Lancers football + basketball, St. Clair football, softball and soccer.
+  // all Spitfires and junior hockey, Lancers football + basketball, St. Clair football, baseball, softball and soccer.
   function pertinent(g){
     var s = (g.sport || '').toLowerCase();
     if (g.team === 'spitfires' || g.team === 'junior') return true;
     if (g.team === 'lancers') return /football|basketball/.test(s);
-    if (g.team === 'saints') return /football|softball|fastball|soccer/.test(s);   // St. Clair calls softball "Fastball"
+    if (g.team === 'saints') return /football|baseball|softball|fastball|soccer/.test(s);   // St. Clair calls softball "Fastball"
     return false;
   }
   function scoreItem(g, teams) {
