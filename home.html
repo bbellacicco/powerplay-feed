@@ -8,7 +8,7 @@
 <!--
   The homepage in one clean, spaced-out embed (streaming-app style):
     Powerplay's three newest stories (one big, two beside it, like the News page), a search bar, then rows:
-    Local scores · Latest stories · Powerplay Network · Pro scores · Pro headlines · Athlete profiles.
+    Powerplay Network · Local scores · Latest stories · Pro scores · Pro headlines · Athlete profiles.
   Each row: title, "Presented by" sponsor, "See all ›" to the full page. Rows swipe sideways (arrows on desktop).
   Same data as the other widgets; refreshes itself every few minutes.
   Embed full width in Wix: about 2,980px tall on desktop, 3,420px on mobile (includes testimonials and About).
@@ -74,6 +74,11 @@
   .scard:hover .pic, .scard:focus-visible .pic { transform: scale(1.03); box-shadow: 0 10px 26px rgba(0,0,0,.45); }
   .scard:focus-visible { outline: none; }
   .scard .pic img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .scard .pic.logo { background: #fff; border-bottom: 3px solid var(--tc, #e8b021); flex-direction: column; gap: 4px; }
+  .scard .pic.logo.dark { background: linear-gradient(135deg, #132b57, #081428); }
+  .scard .pic.logo img { width: auto; height: 58%; max-width: 72%; object-fit: contain; }
+  .scard .pic.logo .lk { font-size: 10px; font-weight: 900; letter-spacing: .12em; color: #0b1a33; }
+  .scard .pic.logo.dark .lk { color: var(--accent); }
   .scard .pic .tname { font-weight: 900; letter-spacing: .1em; font-size: 18px; color: rgba(255,255,255,.9); text-align: center; padding: 0 10px; }
   .scard .tag { position: absolute; left: 8px; top: 8px; background: rgba(8,20,40,.82); color: #fff; font-size: 10.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; padding: 3px 7px; border-radius: 4px; }
   .scard .tag i { display: inline-block; width: 7px; height: 7px; border-radius: 2px; margin-right: 5px; vertical-align: 0; background: var(--tc, var(--accent)); }
@@ -261,9 +266,9 @@
 
   // ---------- rows ----------
   var ROWS = [
+    { key: 'network', title: 'Powerplay Network', by: null, all: LINK.network, tab: 'network' },
     { key: 'local', title: 'Local scores', by: ['Unifor Local 444', 'logos/unifor-444.png'], all: LINK.local, tab: 'local' },
     { key: 'stories', title: 'Latest stories', by: ['St. Clair College Alumni', 'logos/st-clair-alumni.png'], all: LINK.local, tab: 'local' },
-    { key: 'network', title: 'Powerplay Network', by: null, all: LINK.network, tab: 'network' },
     { key: 'pro', title: 'Pro scores', by: ['Unifor Local 2458', 'logos/unifor-2458.png'], all: LINK.pro, tab: 'pro' },
     { key: 'prohead', title: 'Pro headlines', by: ['The D’Amore Group', 'logos/damore-group.png'], all: LINK.pro, tab: 'pro' },
     { key: 'athletes', title: 'Athlete profiles', by: null, all: LINK.athletes, tab: 'spotlight' }
@@ -299,6 +304,24 @@
     nodes.forEach(function (n) { row.appendChild(n); });
   }
 
+  // ---------- logos for stories and videos without a photo ----------
+  // [image, dark background?, accent colour]. Add a club here to give it a logo tile.
+  var PP_LOGO = 'https://static.wixstatic.com/media/0be2db_52fe3a2d7e6746078e34d9a518cd6739~mv2.png/v1/fit/w_400,h_220,q_90/powerplay.png';
+  var LOGOS = {
+    powerplay: [PP_LOGO, 1, '#e8b021'],
+    spitfires: ['https://assets.leaguestat.com/ohl/logos/17.png', 0, '#d4202a'],
+    lancers: ['https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/golancers.ca/images/responsive_2025/logo_main.png', 0, '#0b5cad']
+  };
+  var CLUB_LOGOS = {      // junior clubs, by name as it appears in the Local Hub
+  };
+  var LEAGUE_LOGOS = { NHL: 'nhl', NFL: 'nfl', MLB: 'mlb', NBA: 'nba', WNBA: 'wnba', MLS: 'mls' };
+  function logoFor(s, opts) {
+    if (opts && opts.league) { var k = LEAGUE_LOGOS[String(opts.league).toUpperCase()]; return k ? ['https://a.espncdn.com/i/teamlogos/leagues/500/' + k + '.png', 0, '#e8b021'] : null; }
+    if (opts && opts.tile === 'Powerplay') return LOGOS.powerplay;
+    if (s.club && CLUB_LOGOS[s.club]) return CLUB_LOGOS[s.club];
+    return LOGOS[s.team] || null;
+  }
+
   // story / video card
   function storyCard(s, opts) {
     var vid = isVid(s) || s.video;
@@ -306,7 +329,19 @@
     if (c.tagName === 'A') { c.href = s.url; if (s.url.indexOf(SITE) === 0) c.target = '_top'; else { c.target = '_blank'; c.rel = 'noopener'; } }
     else { c.type = 'button'; c.onclick = function () { playRow(s, c); }; }
     var pic = el('div', 'pic');
-    function tile() { pic.innerHTML = ''; pic.appendChild(el('div', 'tname', (opts && opts.tile || TEAM[s.team] || s.club || 'Powerplay').toUpperCase())); addOver(); }
+    function tile() {
+      pic.innerHTML = ''; pic.className = 'pic';
+      var lg = logoFor(s, opts);
+      if (lg) {
+        pic.className = 'pic logo' + (lg[1] ? ' dark' : ''); pic.style.setProperty('--tc', lg[2] || TCOL[s.team] || '#e8b021');
+        var li = new Image(); li.alt = ''; li.src = lg[0]; li.referrerPolicy = 'no-referrer';
+        li.onerror = function () { pic.className = 'pic'; pic.innerHTML = ''; pic.appendChild(el('div', 'tname', tileName())); addOver(); };
+        pic.appendChild(li);
+        pic.appendChild(el('div', 'lk', vid ? 'VIDEO' : /^game story/i.test(s.headline) ? 'GAME STORY' : /highlight/i.test(s.headline) ? 'HIGHLIGHTS' : 'NEWS'));
+      } else pic.appendChild(el('div', 'tname', tileName()));
+      addOver();
+    }
+    function tileName() { return (opts && opts.tile || TEAM[s.team] || s.club || 'Powerplay').toUpperCase(); }
     function addOver() {
       if (opts && opts.tag) { var t = el('span', 'tag'); var i = el('i'); i.style.setProperty('--tc', TCOL[s.team] || '#e8b021'); t.appendChild(i); t.appendChild(document.createTextNode(opts.tag)); pic.appendChild(t); }
       if (vid) pic.appendChild(el('div', 'play'));
@@ -520,7 +555,7 @@
       pro.sort(function (a, b) { return (b._ours - a._ours) || (new Date(b.published) - new Date(a.published)); });
       fill('prohead', pro.slice(0, 15).map(function (s) {
         var L = (s.league || '').toUpperCase();
-        return storyCard(s, { tag: L || 'Pro', tile: L || 'Pro', sub: [L, s.source, ago(s.published)].filter(Boolean).join(' · ') });
+        return storyCard(s, { tag: L || 'Pro', tile: L || 'Pro', league: L, sub: [L, s.source, ago(s.published)].filter(Boolean).join(' · ') });
       }), 'Pro headlines are on the way.');
       // athlete profiles
       profs = (pf.profiles || []).filter(function (p) { return p && p.img; });
