@@ -1,129 +1,7 @@
 {
- "updated": "2026-10-12T00:00:01-04:00",
- "today": "2026-10-12",
+ "updated": "2026-10-13T00:00:01-04:00",
+ "today": "2026-10-13",
  "games": [
-  {
-   "id": "saints-presto2026-10-09-1",
-   "team": "saints",
-   "sport": "Women's Volleyball",
-   "start": "2026-10-09T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "H",
-   "opponent": "Trent University",
-   "location": "",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 1,
-   "result": "W",
-   "note": "St. Clair/ University of Windsor Invitational",
-   "links": {}
-  },
-  {
-   "id": "saints-presto2026-10-09-5",
-   "team": "saints",
-   "sport": "Women's Volleyball",
-   "start": "2026-10-09T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "H",
-   "opponent": "Seneca",
-   "location": "",
-   "status": "final",
-   "our_score": 1,
-   "opp_score": 3,
-   "result": "L",
-   "note": "Exhibition · St. Clair/ University of Windsor Invitational",
-   "links": {}
-  },
-  {
-   "id": "saints-presto2026-10-09-0",
-   "team": "saints",
-   "sport": "Fastball",
-   "start": "2026-10-09T10:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "UBCO",
-   "location": "Vaso’s Field (Oshawa)",
-   "status": "final",
-   "our_score": 10,
-   "opp_score": 4,
-   "result": "W",
-   "note": "Exhibition · CCSA National Championship Hosted by Durham College",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/fastball/2026-27/boxscores/20261009_cwyz.xml"
-   }
-  },
-  {
-   "id": "saints-presto2026-10-09-2",
-   "team": "saints",
-   "sport": "Women's Soccer",
-   "start": "2026-10-09T13:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Sheridan",
-   "location": "",
-   "status": "final",
-   "our_score": 11,
-   "opp_score": 0,
-   "result": "W",
-   "note": "",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/wsoc/2026-27/boxscores/20261009_1zva.xml"
-   }
-  },
-  {
-   "id": "saints-presto2026-10-09-3",
-   "team": "saints",
-   "sport": "Men's Soccer",
-   "start": "2026-10-09T15:15:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Sheridan",
-   "location": "",
-   "status": "final",
-   "our_score": 4,
-   "opp_score": 5,
-   "result": "L",
-   "note": "",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/msoc/2026-27/boxscores/20261009_2kr9.xml"
-   }
-  },
-  {
-   "id": "saints-presto2026-10-09-4",
-   "team": "saints",
-   "sport": "Fastball",
-   "start": "2026-10-09T17:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Saskatchewan",
-   "location": "Vaso’s Field (Oshawa)",
-   "status": "final",
-   "our_score": 14,
-   "opp_score": 3,
-   "result": "W",
-   "note": "Exhibition · CCSA National Championship Hosted by Durham College",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/fastball/2026-27/boxscores/20261009_gsta.xml"
-   }
-  },
-  {
-   "id": "saints-presto2026-10-09-6",
-   "team": "saints",
-   "sport": "Baseball",
-   "start": "2026-10-09T19:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Humber",
-   "location": "",
-   "status": "final",
-   "our_score": 7,
-   "opp_score": 0,
-   "result": "W",
-   "note": "Default Visitor",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/bsb/2026-27/boxscores/20261009_vliy.xml"
-   }
-  },
   {
    "id": "saints-presto2026-10-10-1",
    "team": "saints",
@@ -315,6 +193,42 @@
    "result": null,
    "note": "Exhibition · St. Clair Sportsplex",
    "links": {}
+  },
+  {
+   "id": "saints-presto2026-10-16-2",
+   "team": "saints",
+   "sport": "Women's Basketball",
+   "start": "2026-10-16T18:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Seneca",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Exhibition · OCAA Exhibition, St. Clair SportsPlex (Windsor)",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/wbkb/2026-27/boxscores/20261016_p6wi.xml"
+   }
+  },
+  {
+   "id": "saints-presto2026-10-16-3",
+   "team": "saints",
+   "sport": "Men's Basketball",
+   "start": "2026-10-16T20:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Durham",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Exhibition · OCAA Exhibition, Oshawa",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/mbkb/2026-27/boxscores/20261016_j7d7.xml"
+   }
   }
  ]
 }
