@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-13T19:30:01-04:00",
+ "updated": "2026-10-13T19:45:01-04:00",
  "today": "2026-10-13",
  "games": [
   {
@@ -41,6 +41,26 @@
    },
    "away": "St. Anne",
    "home": "Villanova"
+  },
+  {
+   "id": "highschool-2026-10-13-121",
+   "team": "highschool",
+   "sport": "Junior Boys Football",
+   "start": "2026-10-13T00:00:00-04:00",
+   "time_tbd": true,
+   "home_away": "N",
+   "opponent": "Sandwich",
+   "location": "Sandwich",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "St. Joseph's",
+   "home": "Sandwich"
   },
   {
    "id": "highschool-2026-10-13-98",
@@ -511,9 +531,9 @@
    "home_away": "N",
    "opponent": "St. Anne",
    "location": "St. Anne",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "final",
+   "our_score": 20,
+   "opp_score": 60,
    "result": null,
    "note": "Tier 1",
    "links": {
@@ -640,26 +660,6 @@
     "standings": "https://wecssaa.com/viewScores.php"
    },
    "away": "Brennan",
-   "home": "Sandwich"
-  },
-  {
-   "id": "highschool-2026-10-13-121",
-   "team": "highschool",
-   "sport": "Junior Boys Football",
-   "start": "2026-10-13T19:30:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Sandwich",
-   "location": "Sandwich",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "St. Joseph's",
    "home": "Sandwich"
   },
   {
