@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-13T20:48:20-04:00",
+ "updated": "2026-10-13T21:01:49-04:00",
  "today": "2026-10-13",
  "range": [
   "2026-10-10",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 30
   },
   "club_news": {
    "ok": true,
@@ -2273,16 +2273,18 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Oilers notebook: McDavid set for game No. 800 as light road trip wraps up",
-   "summary": "The theme for the Oilers Tuesday, other than trying to sweep this light three-game California road trip, is that it is career game No. 800 for their captain, Connor McDavid. Mark Spector has more in his pre-game notebook",
-   "published": "2026-10-13T15:58-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/mcdavid.jpg",
+   "league": "nba",
+   "headline": "Raptors’ Kawhi Leonard looks sharp in pre-season debut vs. Knicks",
+   "summary": "",
+   "published": "2026-10-13T20:52-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Kawhi-Leonard.jpg",
    "video": false,
-   "teams": [],
+   "teams": [
+    "Toronto Raptors"
+   ],
    "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/oilers-notebook-mcdavid-set-for-game-no-800-as-light-road-trip-wraps-up/",
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/raptors-kawhi-leonard-looks-sharp-in-pre-season-debut-vs-knicks/",
    "source": "Sportsnet"
   },
   {
@@ -2406,6 +2408,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Oilers notebook: McDavid set for game No. 800 as light road trip wraps up",
+   "summary": "The theme for the Oilers Tuesday, other than trying to sweep this light three-game California road trip, is that it is career game No. 800 for their captain, Connor McDavid. Mark Spector has more in his pre-game notebook",
+   "published": "2026-10-13T15:58-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/mcdavid.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/oilers-notebook-mcdavid-set-for-game-no-800-as-light-road-trip-wraps-up/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Senators blasting out of gates despite rash of early-season injuries",
    "summary": "The Ottawa Senators started late, played a lot and sustained injuries to multiple key players. Yet they’ve now won five of six to piece together one of the best starts in the league. Sportsnet’s Ryan Dixon explores that ",
    "published": "2026-10-13T12:04-04:00",
@@ -2421,30 +2436,15 @@
   },
   {
    "league": "nhl",
-   "headline": "Maple Leafs Notebook: Chris Tanev injury leaves questions",
+   "headline": "Hurricanes’ Taylor Hall exits vs. Capitals with upper-body injury",
    "summary": "",
-   "published": "2026-10-12T18:59-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Toronto-Maple-Leafs-defenseman-Chris-Tanev.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-notebook-chris-tanev-injury-leaves-questions/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Blackhawks’ Bedard set for season debut vs. Penguins",
-   "summary": "",
-   "published": "2026-10-13T11:59-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/02/Chicago-Blackhawks-center-Connor-Bedard.jpg",
+   "published": "2026-10-13T20:23-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/04/taylor-hall.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/blackhawks-bedard-expected-to-make-season-debut-vs-penguins/",
+   "url": "https://www.sportsnet.ca/nhl/article/hurricanes-taylor-hall-exits-vs-capitals/",
    "source": "Sportsnet"
   },
   {
@@ -2471,6 +2471,21 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/ducks-call-up-roger-mcqueen-for-possible-nhl-debut/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Maple Leafs Notebook: Chris Tanev injury leaves questions",
+   "summary": "",
+   "published": "2026-10-12T18:59-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Toronto-Maple-Leafs-defenseman-Chris-Tanev.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-notebook-chris-tanev-injury-leaves-questions/",
    "source": "Sportsnet"
   },
   {
@@ -2525,32 +2540,6 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/report-celtics-sign-payton-pritchard-to-two-year-44-2m-extension/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Sabres’ Rasmus Dahlin exits game against Panthers with upper-body injury",
-   "summary": "",
-   "published": "2026-10-12T14:33-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/05/Buffalo-Sabres-defenseman-Rasmus-Dahlin.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/sabres-rasmus-dahlin-exits-game-against-panthers-with-upper-body-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Goaltender Leevi Merilainen getting chance to showcase skills with Canucks",
-   "summary": "With Thatcher Demko still sidelined, and Kevin Lankinen struggling, Leevi Merilainen is getting the opportunity to showcase his skills.",
-   "published": "2026-10-12T13:15-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-41.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/goaltender-leevi-merilainen-getting-chance-to-showcase-skills-with-canucks/",
    "source": "Sportsnet"
   },
   {
