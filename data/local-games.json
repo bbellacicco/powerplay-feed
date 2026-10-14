@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14T09:17:53-04:00",
+ "updated": "2026-10-14T09:47:27-04:00",
  "today": "2026-10-14",
  "range": [
   "2026-10-11",
@@ -39,7 +39,7 @@
   },
   "lancers": {
    "ok": true,
-   "count": 87
+   "count": 88
   },
   "junior": {
    "ok": true,
@@ -797,12 +797,14 @@
    "home_away": "H",
    "opponent": "Western Mustangs",
    "location": "Chatham, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 1,
+   "result": "W",
    "note": "",
-   "links": {}
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6484"
+   }
   },
   {
    "id": "junior-gs2960351",
@@ -852,12 +854,14 @@
    "home_away": "H",
    "opponent": "Western Mustangs",
    "location": "Chatham, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 2,
+   "opp_score": 4,
+   "result": "L",
    "note": "",
-   "links": {}
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6485"
+   }
   },
   {
    "id": "highschool-2026-10-14-122",
@@ -1290,6 +1294,22 @@
     "tickets": "https://wfcucentre.evenue.net/event/S27/G07",
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29090/"
    }
+  },
+  {
+   "id": "lancers-6489",
+   "team": "lancers",
+   "sport": "Softball",
+   "start": "2026-10-17T09:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Toronto Varsity Blues",
+   "location": "Ottawa, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "OUS Championships",
+   "links": {}
   },
   {
    "id": "lancers-6457",
