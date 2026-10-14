@@ -13,12 +13,15 @@
   Each part loads the first time it's opened and keeps its place after that.
   Links elsewhere ("See all", "All videos"...) open this page on the right switch.
   ?tab=local|pro|network|spotlight   open on that switch (when the page is opened directly)
-  Embed on the Wix "Local Sports" page, full width: about 1,760px tall on desktop, 1,660px on mobile.
+  Each widget sizes itself to fit (nothing scrolls inside the page, which traps the finger on iPhones).
+  Embed on the Wix "Local Sports" page, full width: about 1,900px tall on desktop and on mobile.
 -->
 <style>
   :root { --bg: #0b1a33; --line: #1e3a6e; --text: #f2f5fb; --muted: #9fb0cf; --accent: #e8b021; }
   * { box-sizing: border-box; }
   html, body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.35 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  /* nothing on this page scrolls by itself: on iPhones a scrolling box inside the page traps the finger */
+  html, body { overflow: hidden; }
   .top { display: flex; justify-content: center; padding: 22px 16px 6px; }
   .switch { display: inline-flex; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 999px; padding: 4px; gap: 2px; }
   .switch button { border: 0; background: transparent; color: #cfd8ea; font: inherit; font-size: 15px; font-weight: 800; letter-spacing: .01em; padding: 10px 22px; border-radius: 999px; cursor: pointer; }
@@ -63,7 +66,8 @@
       var pane = document.createElement('div'); pane.className = 'pane'; pane.id = 'pane-' + tab;
       PARTS[tab].forEach(function (w) {
         var f = document.createElement('iframe');
-        f.src = REPO + w[0] + V + w[3]; f.title = w[0].replace(/[_.].*$/, '');
+        f.src = REPO + w[0] + V + w[3] + '&in=sports'; f.title = w[0].replace(/[_.].*$/, '');
+        f.scrolling = 'no';
         f.style.height = (phone ? w[2] : w[1]) + 'px';
         f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; f.allowFullscreen = true;
         f.loading = 'eager';
@@ -75,6 +79,13 @@
     [].forEach.call(document.querySelectorAll('.switch button'), function (b) { b.setAttribute('aria-selected', String(b.getAttribute('data-tab') === tab)); });
     try { history.replaceState(null, '', '?tab=' + tab); } catch (e) {}
   }
+  // each widget reports its height; its frame matches it exactly, so nothing scrolls inside the page
+  window.addEventListener('message', function (e) {
+    if (!e.data || e.data.pp !== 'height' || !(e.data.h > 50)) return;
+    [].forEach.call(document.querySelectorAll('.pane iframe'), function (f) {
+      if (f.contentWindow === e.source) f.style.height = Math.min(e.data.h, 4000) + 'px';
+    });
+  });
   [].forEach.call(document.querySelectorAll('.switch button'), function (b) { b.onclick = function () { show(b.getAttribute('data-tab')); }; });
 
   // which switch to open: ?tab= when opened directly, or the hand-off from a "See all" link elsewhere (good for 2 minutes)
