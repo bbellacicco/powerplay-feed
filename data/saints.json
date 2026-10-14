@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14T10:30:02-04:00",
+ "updated": "2026-10-14T10:45:02-04:00",
  "today": "2026-10-14",
  "games": [
   {
@@ -48,10 +48,10 @@
    "opponent": "Lambton",
    "location": "",
    "status": "final",
-   "our_score": 0,
-   "opp_score": 0,
-   "result": "T",
-   "note": "1 inning",
+   "our_score": 3,
+   "opp_score": 1,
+   "result": "W",
+   "note": "",
    "links": {
     "boxscore": "https://www.saintsathletics.ca/sports/fastball/2026-27/boxscores/20261013_rmda.xml"
    }
@@ -75,6 +75,24 @@
   {
    "id": "saints-presto2026-10-16-2",
    "team": "saints",
+   "sport": "Baseball",
+   "start": "2026-10-16T15:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Fanshawe",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Exhibition · OCAA Championship Semi-Final #1 - Game 1",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/bsb/2026-27/boxscores/20261016_b9re.xml"
+   }
+  },
+  {
+   "id": "saints-presto2026-10-16-3",
+   "team": "saints",
    "sport": "Women's Basketball",
    "start": "2026-10-16T18:00:00-04:00",
    "time_tbd": false,
@@ -91,7 +109,7 @@
    }
   },
   {
-   "id": "saints-presto2026-10-16-3",
+   "id": "saints-presto2026-10-16-4",
    "team": "saints",
    "sport": "Men's Basketball",
    "start": "2026-10-16T20:00:00-04:00",
@@ -111,6 +129,24 @@
   {
    "id": "saints-presto2026-10-17-0",
    "team": "saints",
+   "sport": "Baseball",
+   "start": "2026-10-17T12:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Fanshawe",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Exhibition · OCAA Championship Semi-Final #1 - Game 2",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/bsb/2026-27/boxscores/20261017_jukr.xml"
+   }
+  },
+  {
+   "id": "saints-presto2026-10-17-1",
+   "team": "saints",
    "sport": "Men's Basketball",
    "start": "2026-10-17T13:00:00-04:00",
    "time_tbd": false,
@@ -127,7 +163,7 @@
    }
   },
   {
-   "id": "saints-presto2026-10-17-1",
+   "id": "saints-presto2026-10-17-2",
    "team": "saints",
    "sport": "Fastball",
    "start": "2026-10-17T14:00:00-04:00",
@@ -145,7 +181,25 @@
    }
   },
   {
-   "id": "saints-presto2026-10-17-2",
+   "id": "saints-presto2026-10-17-3",
+   "team": "saints",
+   "sport": "Baseball",
+   "start": "2026-10-17T14:30:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Fanshawe",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Exhibition · OCAA Championship Semi-Final #1 - Game 3 (if necessary)",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/bsb/2026-27/boxscores/20261017_nrpy.xml"
+   }
+  },
+  {
+   "id": "saints-presto2026-10-17-4",
    "team": "saints",
    "sport": "Fastball",
    "start": "2026-10-17T16:00:00-04:00",
