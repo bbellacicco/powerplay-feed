@@ -7,8 +7,8 @@
 <title>Home | Powerplay Windsor</title>
 <!--
   The homepage in one clean, spaced-out embed (streaming-app style):
-    Powerplay's three newest stories (one big, two beside it, like the News page), a search bar, then rows:
-    Powerplay Network · Local scores · Latest stories · Pro scores · Pro headlines · Athlete profiles.
+    Powerplay's three newest stories (one big, two beside it, like the News page), the Powerplay Network, a search bar, then rows:
+    Local scores · Latest stories · Pro scores · Pro headlines · Athlete profiles.
   Each row: title, "Presented by" sponsor, "See all ›" to the full page. Rows swipe sideways (arrows on desktop).
   Same data as the other widgets; refreshes itself every few minutes.
   Embed full width in Wix: about 2,980px tall on desktop, 3,420px on mobile (includes testimonials and About).
@@ -298,6 +298,11 @@
     document.getElementById('rows').appendChild(sec);
     rowEl[r.key] = row;
   });
+  // the Powerplay Network sits right under the top stories, above the search bar
+  (function () {
+    var net = document.getElementById('row-network'), f = document.getElementById('sform');
+    if (net && f) { f.parentNode.insertBefore(net, f); net.style.marginTop = '30px'; }
+  })();
   function fill(key, nodes, emptyText) {
     var row = rowEl[key]; row.innerHTML = '';
     if (!nodes.length) { row.appendChild(el('div', 'empty', emptyText)); return; }
