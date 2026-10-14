@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-13T21:01:49-04:00",
+ "updated": "2026-10-13T21:21:50-04:00",
  "today": "2026-10-13",
  "range": [
   "2026-10-10",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 30
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -1011,10 +1011,10 @@
    "home_away": "H",
    "opponent": "Blenheim Blades",
    "location": "Essex Centre Complex",
-   "status": "live",
-   "our_score": 0,
-   "opp_score": 0,
-   "result": null,
+   "status": "final",
+   "our_score": 2,
+   "opp_score": 1,
+   "result": "W",
    "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960351?configuration=45"
@@ -2289,6 +2289,21 @@
   },
   {
    "league": "nhl",
+   "headline": "Red Wings closing in on seven-year extension with Alex DeBrincat",
+   "summary": "",
+   "published": "2026-10-13T21:00-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/Detroit-Red-Wings-Alex-DeBrincat.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Red Wings"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/red-wings-closing-in-on-seven-year-extension-with-alex-debrincat/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Blue Jackets’ Mathieu Olivier given game misconduct for slashing",
    "summary": "",
    "published": "2026-10-13T20:13-04:00",
@@ -2657,6 +2672,19 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/mls/article/toronto-fc-calls-up-homegrown-midfielder-antone-bossenberry-romero/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "WNBA Finals Games 3 and 4 move to State Farm Arena in Atlanta to accommodate more fans",
+   "summary": "",
+   "published": "2026-10-13T12:49-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/dram.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/wnba/article/wnba-adjusts-finals-schedule-to-allow-for-dream-home-games-at-hawks-arena/",
    "source": "Sportsnet"
   },
   {
@@ -3728,7 +3756,7 @@
       "otl": 1,
       "pts": 9,
       "gf": 28,
-      "ga": 22,
+      "ga": 23,
       "strk": "L1"
      },
      {
@@ -3739,7 +3767,7 @@
       "l": 5,
       "otl": 1,
       "pts": 9,
-      "gf": 29,
+      "gf": 30,
       "ga": 36,
       "strk": "L3"
      },
@@ -4516,14 +4544,14 @@
      {
       "name": "Essex 73's",
       "abbr": "ESS",
-      "gp": 11,
-      "w": 10,
+      "gp": 12,
+      "w": 11,
       "l": 1,
       "otl": 0,
-      "pts": 20,
-      "gf": 46,
-      "ga": 15,
-      "strk": "W9"
+      "pts": 22,
+      "gf": 48,
+      "ga": 16,
+      "strk": "W10"
      },
      {
       "name": "Lakeshore Canadiens",
@@ -4552,14 +4580,14 @@
      {
       "name": "Blenheim Blades",
       "abbr": "BLE",
-      "gp": 9,
+      "gp": 10,
       "w": 7,
-      "l": 2,
+      "l": 3,
       "otl": 0,
       "pts": 14,
-      "gf": 43,
-      "ga": 29,
-      "strk": "W3"
+      "gf": 44,
+      "ga": 31,
+      "strk": "L1"
      },
      {
       "name": "Wheatley Sharks",
