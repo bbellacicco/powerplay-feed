@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14T12:46:40-04:00",
+ "updated": "2026-10-14T13:03:19-04:00",
  "today": "2026-10-14",
  "range": [
   "2026-10-11",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 28
   },
   "club_news": {
    "ok": true,
@@ -1938,8 +1938,8 @@
    "league": "pwhl",
    "headline": "PWHL Expansion Teams Detroit, Hamilton, Las Vegas, & San Jose Unveil Inaugural Jerseys Ahead of 2026-27 Season",
    "summary": "",
-   "published": "2026-10-08T14:00:00+00:00",
-   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/ExpansionJersey-PressReleaseHeadersLeague-PressReleaseHeader-1200x800-ENG",
+   "published": "2026-10-08T12:00:00+00:00",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/c_auto,g_auto,h_800,w_1188/q_auto/f_auto/ExpansionJersey-PressReleaseHeadersLeague-PressReleaseHeader-1200x800-ENG",
    "video": false,
    "teams": [],
    "url": "https://www.thepwhl.com/en/news/2026/october/08/pwhl-expansion-teams-detroit-hamilton-las-vegas-san-jose-unveil-inaugural-jerseys-ahead-of-2026-27-season",
@@ -2248,15 +2248,17 @@
   },
   {
    "league": "nhl",
-   "headline": "Oilers learning to win the hard way with newfound defensive prowess",
-   "summary": "Connor McDavid torched the Kings for the umpteenth time in his career. We’ve seen this before. What we haven’t seen is an Oilers team with this kind of defensive backbone at this stage of the season.",
-   "published": "2026-10-14T03:22-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177085238.jpg",
+   "headline": "Red Wings interim GM Shawn Horcoff: ‘Zero interest in trading’ Edvinsson",
+   "summary": "",
+   "published": "2026-10-14T12:45-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/12/edvinsson.jpg",
    "video": false,
-   "teams": [],
+   "teams": [
+    "Detroit Red Wings"
+   ],
    "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/oilers-learning-to-win-the-hard-way-with-newfound-defensive-prowess/",
+   "url": "https://www.sportsnet.ca/nhl/article/red-wings-interim-gm-shawn-horcoff-zero-interest-in-trading-edvinsson/",
    "source": "Sportsnet"
   },
   {
@@ -2327,16 +2329,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "mlb",
-   "headline": "Rays’ deadline additions deliver to even ALCS against Guardians",
-   "summary": "Freddy Peralta threw six shutout innings and Canadian Liam Hicks delivered a two-run single as the Rays’ trade-deadline additions stepped up in Tuesday’s ALCS-tying win over the Guardians.",
-   "published": "2026-10-13T23:11-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177084400.jpg",
+   "league": "other",
+   "headline": "Tempo’s Kiki Rice named to 2026 WNBA All-Rookie Team",
+   "summary": "",
+   "published": "2026-10-14T12:53-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/Kiki-Rice.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 2,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/rays-deadline-additions-deliver-to-even-alcs-against-guardians/",
+   "sn_team_count": 0,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/wnba/article/tempos-kiki-rice-named-to-2026-wnba-all-rookie-team/",
    "source": "Sportsnet"
   },
   {
@@ -2379,62 +2381,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nba",
-   "headline": "Raptors’ Kawhi Leonard makes worthwhile pre-season debut",
-   "summary": "Kawhi Leonard was finally back on the court as part of the Raptors. And the wait was worth it. Michael Grange breaks down the star’s reintroduction in Toronto’s pre-season win.",
-   "published": "2026-10-13T23:46-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Toronto-Raptors-forward-Kawhi-Leonard.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 2,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-kawhi-leonard-makes-worthwhile-pre-season-debut/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Stolarz, Maple Leafs too leaky in high-scoring loss to Mammoth",
-   "summary": "Yes, the Maple Leafs rallied and pressed late in Tuesday’s loss to a dangerous Mammoth squad. But no, it wasn’t enough to earn a point. Nor please the bench.",
-   "published": "2026-10-14T01:59-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/maple-leafs.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/stolarz-maple-leafs-too-leaky-in-high-scoring-loss-to-mammoth/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Buium’s struggles continue for Canucks as losses pile up",
-   "summary": "With virtually no margin for error, when so much must go right for the rebuilding Canucks to win games at this stage, it’s impossible to overlook the struggles of Zeev Buium.",
-   "published": "2026-10-14T00:51-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/zeev.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/buiums-struggles-continue-for-canucks-as-losses-pile-up/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "‘Winning is fun’: Flames use strong finish to secure first victory",
-   "summary": "Tuesday’s game against the Ducks gave the Flames every opportunity to lose. Instead, they found a way to pick up their first win and gave themselves something positive to build on.",
-   "published": "2026-10-14T02:22-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177085816.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/winning-is-fun-flames-use-strong-finish-to-secure-first-victory/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "Healthy Guhle proving worth to Canadiens: ‘He’s a beast’",
    "summary": "Injuries have plagued Kaiden Guhle’s young career. But now, finally healthy, he’s able to prove just how valuable he is to the Canadiens.",
@@ -2458,19 +2404,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/tkachuk-brothers-lead-panthers-in-drubbing-of-blue-jackets/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Blackhawks beat Penguins in Connor Bedard’s season debut",
-   "summary": "",
-   "published": "2026-10-13T23:03-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/bedard.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/blackhawks-beat-penguins-in-connor-bedards-season-debut/",
    "source": "Sportsnet"
   },
   {
@@ -2500,19 +2433,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Q and A: Chovancek on chasing UFC dream and representing Canada",
-   "summary": "After more than a decade of setbacks, sacrifices and hard work, Canadian MMA prospect Cody Chovancek is finally set to make his long-awaited UFC debut. The Petrolia, Ont., native opens up about how fishing shaped his app",
-   "published": "2026-10-14T10:40-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/09/Cody-Chovancek-Unified-MMA.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/q-and-a-chovancek-on-chasing-ufc-dream-and-representing-canada/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "It’s early but … a look at each NHL team’s start",
    "summary": "With all 32 teams in action on Tuesday in the return of the Frozen Frenzy, Rory Boylen provides a thought on each club’s start to the season.",
@@ -2529,28 +2449,69 @@
   },
   {
    "league": "nhl",
-   "headline": "Wild place Nico Sturm on IR, call up Kirkland",
-   "summary": "",
-   "published": "2026-10-13T12:41-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Minnesota-Wild-center-Nico-Sturm.jpg",
+   "headline": "Stolarz, Maple Leafs too leaky in high-scoring loss to Mammoth",
+   "summary": "Yes, the Maple Leafs rallied and pressed late in Tuesday’s loss to a dangerous Mammoth squad. But no, it wasn’t enough to earn a point. Nor please the bench.",
+   "published": "2026-10-14T01:59-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/maple-leafs.jpg",
    "video": false,
-   "teams": [],
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
    "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/wild-place-nico-sturm-on-ir-call-up-kirkland/",
+   "url": "https://www.sportsnet.ca/nhl/article/stolarz-maple-leafs-too-leaky-in-high-scoring-loss-to-mammoth/",
    "source": "Sportsnet"
   },
   {
    "league": "nhl",
-   "headline": "Hurricanes’ Staal out 1-2 months with partially torn calf, Brind’Amour says",
-   "summary": "",
-   "published": "2026-10-13T11:29-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177036313.jpg",
+   "headline": "Oilers learning to win the hard way with newfound defensive prowess",
+   "summary": "Connor McDavid torched the Kings for the umpteenth time in his career. We’ve seen this before. What we haven’t seen is an Oilers team with this kind of defensive backbone at this stage of the season.",
+   "published": "2026-10-14T03:22-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177085238.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/hurricanes-staal-out-1-2-months-with-partially-torn-calf-brindamour-says/",
+   "url": "https://www.sportsnet.ca/nhl/article/oilers-learning-to-win-the-hard-way-with-newfound-defensive-prowess/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Buium’s struggles continue for Canucks as losses pile up",
+   "summary": "With virtually no margin for error, when so much must go right for the rebuilding Canucks to win games at this stage, it’s impossible to overlook the struggles of Zeev Buium.",
+   "published": "2026-10-14T00:51-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/zeev.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/buiums-struggles-continue-for-canucks-as-losses-pile-up/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Q and A: Chovancek on chasing UFC dream and representing Canada",
+   "summary": "After more than a decade of setbacks, sacrifices and hard work, Canadian MMA prospect Cody Chovancek is finally set to make his long-awaited UFC debut. The Petrolia, Ont., native opens up about how fishing shaped his app",
+   "published": "2026-10-14T10:40-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/09/Cody-Chovancek-Unified-MMA.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "MMA",
+   "url": "https://www.sportsnet.ca/ufc/article/q-and-a-chovancek-on-chasing-ufc-dream-and-representing-canada/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Toronto FC’s Walker Zimmerman, Jonathan Osorio out against Orlando",
+   "summary": "",
+   "published": "2026-10-13T13:11-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/Toronto-FC-defender-Walker-Zimmerman.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/toronto-fcs-walker-zimmerman-jonathan-osorio-out-against-orlando/",
    "source": "Sportsnet"
   },
   {
@@ -2567,6 +2528,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "Raptors’ Kawhi Leonard makes worthwhile pre-season debut",
+   "summary": "Kawhi Leonard was finally back on the court as part of the Raptors. And the wait was worth it. Michael Grange breaks down the star’s reintroduction in Toronto’s pre-season win.",
+   "published": "2026-10-13T23:46-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Toronto-Raptors-forward-Kawhi-Leonard.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 2,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/raptors-kawhi-leonard-makes-worthwhile-pre-season-debut/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "Jury finds Tyreek Hill liable for two battery counts in civil trial",
    "summary": "A Miami jury on Tuesday found Tyreek Hill liable for two counts of battery but not liable for the eight remaining claims made by Lakeeta Vaccaro — ending the high-profile civil trial involving the NFL wide receiver and h",
@@ -2577,32 +2553,6 @@
    "sn_team_count": 2,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/jury-finds-tyreek-hill-liable-for-two-battery-counts-in-civil-trial/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Champions League Roundup: More misery for Manchester United in loss to Atletico",
-   "summary": "",
-   "published": "2026-10-13T17:19-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Manchester-United.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/champions-league/article/champions-league-roundup-more-misery-for-manchester-united-in-loss-to-atletico/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Toronto FC’s Walker Zimmerman, Jonathan Osorio out against Orlando",
-   "summary": "",
-   "published": "2026-10-13T13:11-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/Toronto-FC-defender-Walker-Zimmerman.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/toronto-fcs-walker-zimmerman-jonathan-osorio-out-against-orlando/",
    "source": "Sportsnet"
   },
   {
@@ -2631,6 +2581,19 @@
    "sn_team_count": 2,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/report-rams-jackson-expected-to-be-suspended-two-games-for-punching-bills-chubb/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Bears’ Montez Sweat suspended two games under PED policy",
+   "summary": "The Chicago Bears have lost their best pass rusher for the next two games.",
+   "published": "2026-10-13T16:20-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Chicago-Bears-defensive-end-Montez-Sweat.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/bears-montez-sweat-suspended-two-games-under-ped-policy/",
    "source": "Sportsnet"
   },
   {
@@ -2960,6 +2923,19 @@
   },
   {
    "league": "mlb",
+   "headline": "Dingler seeks 2nd straight Gold Glove at catcher; McKinstry nominated at utility",
+   "summary": "",
+   "published": "2026-10-14T12:51-04:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/wfbuwgporg32wfwjttw8",
+   "video": false,
+   "teams": [
+    "Detroit Tigers"
+   ],
+   "url": "https://www.mlb.com/tigers/news/2026-gold-glove-award-finalists",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
    "headline": "Who's next? A look at Detroit's new wave of top prospects",
    "summary": "",
    "published": "2026-10-12T10:27-04:00",
@@ -2969,19 +2945,6 @@
     "Detroit Tigers"
    ],
    "url": "https://www.mlb.com/tigers/news/tigers-top-prospects-that-could-reach-majors-in-2027",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
-   "headline": "How Tigers can help Valdez regain All-Star form in 2027",
-   "summary": "",
-   "published": "2026-10-08T07:55-04:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/qyl1rsgtwytwk9dmryut",
-   "video": false,
-   "teams": [
-    "Detroit Tigers"
-   ],
-   "url": "https://www.mlb.com/tigers/news/evaluating-framber-valdez-s-first-season-with-tigers",
    "source": "Team site"
   },
   {
@@ -2999,6 +2962,19 @@
   },
   {
    "league": "mlb",
+   "headline": "How Tigers can help Valdez regain All-Star form in 2027",
+   "summary": "",
+   "published": "2026-10-08T07:55-04:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/qyl1rsgtwytwk9dmryut",
+   "video": false,
+   "teams": [
+    "Detroit Tigers"
+   ],
+   "url": "https://www.mlb.com/tigers/news/evaluating-framber-valdez-s-first-season-with-tigers",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
    "headline": "Five burning questions facing Tigers in their quest to return to postseason",
    "summary": "",
    "published": "2026-10-05T09:41-04:00",
@@ -3008,19 +2984,6 @@
     "Detroit Tigers"
    ],
    "url": "https://www.mlb.com/tigers/news/questions-facing-tigers-in-2026-offseason",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
-   "headline": "Watch Tigers prospects in Arizona Fall League action",
-   "summary": "",
-   "published": "2026-10-14T00:34-04:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
-   "video": false,
-   "teams": [
-    "Detroit Tigers"
-   ],
-   "url": "https://www.mlb.com/tigers/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
    "source": "Team site"
   },
   {
@@ -3038,15 +3001,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Here are each organization's Prospects of the Year",
+   "headline": "Watch Tigers prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-07T22:21-04:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/ifgmxamghoh4f7uslruu",
+   "published": "2026-10-14T00:34-04:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
     "Detroit Tigers"
    ],
-   "url": "https://www.mlb.com/tigers/news/each-team-s-prospects-of-the-year-2026",
+   "url": "https://www.mlb.com/tigers/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
    "source": "Team site"
   },
   {
@@ -3073,6 +3036,19 @@
     "Detroit Tigers"
    ],
    "url": "https://www.mlb.com/milb/prospects/2026/tigers/",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
+   "headline": "Here are each organization's Prospects of the Year",
+   "summary": "",
+   "published": "2026-10-07T22:21-04:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/ifgmxamghoh4f7uslruu",
+   "video": false,
+   "teams": [
+    "Detroit Tigers"
+   ],
+   "url": "https://www.mlb.com/tigers/news/each-team-s-prospects-of-the-year-2026",
    "source": "Team site"
   },
   {
@@ -3142,15 +3118,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Four takeaways from Tigers' end-of-season press conference",
+   "headline": "Blue Jays lead AL with 5 Gold Glove nominees",
    "summary": "",
-   "published": "2026-09-28T15:09-04:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/c61ps7xvxaurn3ht9upo",
+   "published": "2026-10-14T12:51-04:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/wfbuwgporg32wfwjttw8",
    "video": false,
    "teams": [
-    "Detroit Tigers"
+    "Toronto Blue Jays"
    ],
-   "url": "https://www.mlb.com/tigers/news/scott-harris-aj-hinch-hold-tigers-end-of-season-press-conference",
+   "url": "https://www.mlb.com/bluejays/news/2026-gold-glove-award-finalists",
    "source": "Team site"
   },
   {
@@ -3207,19 +3183,6 @@
   },
   {
    "league": "mlb",
-   "headline": "This Blue Jays prospect has some of the best raw tools in the Fall League",
-   "summary": "",
-   "published": "2026-10-09T21:25-04:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/v1791671782/mlb/ngqsgoehcot4ajwp2m0e",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "url": "https://www.mlb.com/bluejays/news/blue-jays-prospect-jake-cook-showcasing-elite-raw-tools-in-arizona-fall-league",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
    "headline": "Solve today's Blue Jays trivia puzzle",
    "summary": "",
    "published": "2026-02-03T10:22-05:00",
@@ -3233,15 +3196,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Jays outfield prospect Casey blazing his own trail in Arizona Fall League",
+   "headline": "This Blue Jays prospect has some of the best raw tools in the Fall League",
    "summary": "",
-   "published": "2026-10-07T01:39-04:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/adzyzaqewzvw22zc8s8a",
+   "published": "2026-10-09T21:25-04:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/v1791671782/mlb/ngqsgoehcot4ajwp2m0e",
    "video": false,
    "teams": [
     "Toronto Blue Jays"
    ],
-   "url": "https://www.mlb.com/bluejays/news/blue-jays-prospect-jake-casey-blazing-own-trail-in-arizona-fall-league",
+   "url": "https://www.mlb.com/bluejays/news/blue-jays-prospect-jake-cook-showcasing-elite-raw-tools-in-arizona-fall-league",
    "source": "Team site"
   },
   {
@@ -3268,6 +3231,19 @@
     "Toronto Blue Jays"
    ],
    "url": "https://www.mlb.com/milb/prospects/bluejays/",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
+   "headline": "Jays outfield prospect Casey blazing his own trail in Arizona Fall League",
+   "summary": "",
+   "published": "2026-10-07T01:39-04:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/adzyzaqewzvw22zc8s8a",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "url": "https://www.mlb.com/bluejays/news/blue-jays-prospect-jake-casey-blazing-own-trail-in-arizona-fall-league",
    "source": "Team site"
   },
   {
@@ -3333,19 +3309,6 @@
     "Toronto Blue Jays"
    ],
    "url": "https://www.mlb.com/bluejays/news/ross-atkins-mark-shapiro-address-blue-jays-offseason",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
-   "headline": "Here is each club's Arizona Fall League sleeper prospect",
-   "summary": "",
-   "published": "2026-10-05T10:17-04:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/jwknftodzu4qt8rucxpd",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "url": "https://www.mlb.com/bluejays/news/each-team-s-arizona-fall-league-sleeper-prospect-2026",
    "source": "Team site"
   }
  ],
