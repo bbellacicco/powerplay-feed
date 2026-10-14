@@ -165,6 +165,7 @@
     .about .ph { max-width: 260px; aspect-ratio: 1 / 1; }
     .about p { font-size: 14.5px; }
   }
+  .game .side .rc { font-size: 11px; font-weight: 700; color: rgba(255,255,255,.85); font-variant-numeric: tabular-nums; }
 </style>
 </head>
 <body>
@@ -534,6 +535,10 @@
       var im = new Image(); im.alt = ''; im.src = x.team.logo || ''; im.onerror = function () { im.remove(); }; side.appendChild(im);
       if (st.state !== 'pre') side.appendChild(el('div', 'sc', x.score));
       side.appendChild(el('div', 'nm', x.team.abbreviation || ''));
+      if (st.state === 'pre') {   // record on games that haven't started yet
+        var rc = ((x.records || []).filter(function (r) { return r.type === 'total' || r.type === 'ytd'; })[0] || {}).summary;
+        if (rc) side.appendChild(el('div', 'rc', rc));
+      }
       box.appendChild(side);
     });
     c.appendChild(box);
