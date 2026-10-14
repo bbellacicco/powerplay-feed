@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14T15:01:37-04:00",
+ "updated": "2026-10-14T15:32:54-04:00",
  "today": "2026-10-14",
  "range": [
   "2026-10-11",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -1534,6 +1534,17 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "EVERY CFL Touchdown from Week 19!",
+   "summary": "",
+   "published": "2026-10-14T03:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/3sQpLiSj9tbSJbuj811ODD/1a0225220460181c1225da6c1bb02b3c/CFL_Touchdown_Week_19_1920x1080_EN.png?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/every-cfl-touchdown-from-week-19",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "5 things we learned from Mobil Thanksgiving Weekend",
    "summary": "",
    "published": "2026-10-14T00:00:00-04:00",
@@ -1757,20 +1768,6 @@
     "Roughriders"
    ],
    "url": "https://www.cfl.ca/article/3-stats-that-defined-montreal-s-mobil-thanksgiving-weekend-victory-over-saskatchewan",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Recap: Winnipeg 33, Calgary 28",
-   "summary": "",
-   "published": "2026-10-10T23:31:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/1uISjWXecJEI1H1Zk6lAir/660daf0bd6eb89aee1dc17d98489e255/WEEK_19_-_CGY_VS_WPG_THUMBNAIL.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Stampeders",
-    "Blue Bombers"
-   ],
-   "url": "https://www.cfl.ca/article/recap-winnipeg-33-calgary-28",
    "source": "CFL.ca"
   },
   {
@@ -2244,16 +2241,29 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "All-rookie Kiki Rice a bright spot in tough Tempo season",
-   "summary": "While the Tempo had a tough season in the standings, they found a bright spot in rookie Kiki Rice. Sarah Maat has more on the Rice’s first season after the guard was named to the All-Rookie team on Wednesday.",
-   "published": "2026-10-14T14:11-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/CP176278118-1-1.jpg",
+   "league": "nhl",
+   "headline": "Oilers face new reality as Alberta’s time change brings challenges",
+   "summary": "Alberta’s decision to stop changing the clocks will bring a new set of challenges for the Edmonton Oilers. With more afternoon matinees also on the schedule, the team is preparing for a season in which the clock will cha",
+   "published": "2026-10-14T15:25-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/oilers-2.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/wnba/article/all-rookie-kiki-rice-a-bright-spot-in-tough-tempo-season/",
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/oilers-face-new-reality-as-albertas-time-change-brings-challenges/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Flames’ Klapka just might be NHL’s nicest tough guy. He’s learning to be mean",
+   "summary": "The world-class smile stretching across Adam Klapka’s face looks like that of a man who has just been told the team bus is stopping for ice cream. You’d never know the role he plays on the ice for the Flames.",
+   "published": "2026-10-14T15:26-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/flames-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/flames-klapka-just-might-be-nhls-nicest-tough-guy-hes-learning-to-be-mean/",
    "source": "Sportsnet"
   },
   {
@@ -2353,7 +2363,7 @@
   },
   {
    "league": "mlb",
-   "headline": "ALCS Game 3 to be played in afternoon because of weather",
+   "headline": "MLB announces time changes for NLCS, ALCS on Thursday",
    "summary": "",
    "published": "2026-10-14T12:19-04:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/brayan-rocchio.jpg",
@@ -2362,6 +2372,19 @@
    "sn_team_count": 2,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/alcs-game-3-to-be-played-in-afternoon-because-of-weather/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "All-rookie Kiki Rice a bright spot in tough Tempo season",
+   "summary": "While the Tempo had a tough season in the standings, they found a bright spot in rookie Kiki Rice. Sarah Maat has more on the Rice’s first season after the guard was named to the All-Rookie team on Wednesday.",
+   "published": "2026-10-14T14:11-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/CP176278118-1-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/wnba/article/all-rookie-kiki-rice-a-bright-spot-in-tough-tempo-season/",
    "source": "Sportsnet"
   },
   {
@@ -2394,17 +2417,15 @@
   },
   {
    "league": "nhl",
-   "headline": "It’s early but … a look at each NHL team’s start",
-   "summary": "With all 32 teams in action on Tuesday in the return of the Frozen Frenzy, Rory Boylen provides a thought on each club’s start to the season.",
-   "published": "2026-10-13T12:42-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/bouchard.jpg",
+   "headline": "‘Surreal’: Emergency backup goalies getting second crack at NHL dream",
+   "summary": "",
+   "published": "2026-10-14T15:28-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177088399.jpg",
    "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 7,
+   "teams": [],
+   "sn_team_count": 0,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/its-early-but-a-look-at-each-nhl-teams-start/",
+   "url": "https://www.sportsnet.ca/nhl/article/surreal-emergency-backup-goalies-getting-second-crack-at-nhl-dream/",
    "source": "Sportsnet"
   },
   {
@@ -2459,6 +2480,19 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/mls/article/toronto-fcs-walker-zimmerman-jonathan-osorio-out-against-orlando/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Champions League roundup: Liverpool routs LASK, Feyenoord fights back",
+   "summary": "",
+   "published": "2026-10-14T15:04-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Bradley-Barcola.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/champions-league/article/champions-league-roundup-liverpool-routs-lask-feyenoord-fights-back/",
    "source": "Sportsnet"
   },
   {
