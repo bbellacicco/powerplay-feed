@@ -1,129 +1,7 @@
 {
- "updated": "2026-10-13T20:30:01-04:00",
- "today": "2026-10-13",
+ "updated": "2026-10-14T00:00:01-04:00",
+ "today": "2026-10-14",
  "games": [
-  {
-   "id": "saints-presto2026-10-10-1",
-   "team": "saints",
-   "sport": "Women's Volleyball",
-   "start": "2026-10-10T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "A",
-   "opponent": "University of Windsor",
-   "location": "",
-   "status": "final",
-   "our_score": 1,
-   "opp_score": 3,
-   "result": "L",
-   "note": "St. Clair/ University of Windsor Invitational",
-   "links": {}
-  },
-  {
-   "id": "saints-presto2026-10-10-5",
-   "team": "saints",
-   "sport": "Women's Volleyball",
-   "start": "2026-10-10T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "H",
-   "opponent": "Trent University",
-   "location": "",
-   "status": "final",
-   "our_score": 2,
-   "opp_score": 3,
-   "result": "L",
-   "note": "Exhibition",
-   "links": {}
-  },
-  {
-   "id": "saints-presto2026-10-10-0",
-   "team": "saints",
-   "sport": "Fastball",
-   "start": "2026-10-10T11:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Western Ontario",
-   "location": "Babcock Field (Oshawa)",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 4,
-   "result": "L",
-   "note": "Exhibition · CCSA National Championship Hosted by Durham College",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/fastball/2026-27/boxscores/20261010_ccvb.xml"
-   }
-  },
-  {
-   "id": "saints-presto2026-10-10-2",
-   "team": "saints",
-   "sport": "Baseball",
-   "start": "2026-10-10T13:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Sheridan",
-   "location": "",
-   "status": "final",
-   "our_score": 10,
-   "opp_score": 1,
-   "result": "W",
-   "note": "",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/bsb/2026-27/boxscores/20261010_30ys.xml"
-   }
-  },
-  {
-   "id": "saints-presto2026-10-10-3",
-   "team": "saints",
-   "sport": "Women's Soccer",
-   "start": "2026-10-10T14:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Humber",
-   "location": "",
-   "status": "final",
-   "our_score": 1,
-   "opp_score": 1,
-   "result": "T",
-   "note": "",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/wsoc/2026-27/boxscores/20261010_jvwy.xml"
-   }
-  },
-  {
-   "id": "saints-presto2026-10-10-4",
-   "team": "saints",
-   "sport": "Baseball",
-   "start": "2026-10-10T15:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Sheridan",
-   "location": "",
-   "status": "final",
-   "our_score": 10,
-   "opp_score": 0,
-   "result": "W",
-   "note": "6 innings",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/bsb/2026-27/boxscores/20261010_w1r5.xml"
-   }
-  },
-  {
-   "id": "saints-presto2026-10-10-6",
-   "team": "saints",
-   "sport": "Men's Soccer",
-   "start": "2026-10-10T16:30:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Humber",
-   "location": "",
-   "status": "final",
-   "our_score": 1,
-   "opp_score": 4,
-   "result": "L",
-   "note": "",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/msoc/2026-27/boxscores/20261010_i4we.xml"
-   }
-  },
   {
    "id": "saints-presto2026-10-11-0",
    "team": "saints",
@@ -226,6 +104,60 @@
    "note": "Exhibition · OCAA Exhibition, Oshawa",
    "links": {
     "boxscore": "https://www.saintsathletics.ca/sports/mbkb/2026-27/boxscores/20261016_j7d7.xml"
+   }
+  },
+  {
+   "id": "saints-presto2026-10-17-0",
+   "team": "saints",
+   "sport": "Men's Basketball",
+   "start": "2026-10-17T13:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Centennial",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Exhibition · OCAA Exhibition, Scarborough",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/mbkb/2026-27/boxscores/20261017_ybsa.xml"
+   }
+  },
+  {
+   "id": "saints-presto2026-10-17-1",
+   "team": "saints",
+   "sport": "Fastball",
+   "start": "2026-10-17T14:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Conestoga",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/fastball/2026-27/boxscores/20261017_81jc.xml"
+   }
+  },
+  {
+   "id": "saints-presto2026-10-17-2",
+   "team": "saints",
+   "sport": "Fastball",
+   "start": "2026-10-17T16:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Conestoga",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/fastball/2026-27/boxscores/20261017_vvyt.xml"
    }
   }
  ]
