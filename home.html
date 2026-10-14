@@ -504,13 +504,28 @@
         .sort(function (a, b) { return rank(a) - rank(b) || (rank(a) === 1 ? (a.date < b.date ? 1 : -1) : (a.date < b.date ? -1 : 1)); }).slice(0, 14);
     });
   }
+
+  // playoff series: "MIL leads series 2-0" -> "Brewers lead series 2-0"; "ALCS - Game 3" -> "ALCS · Game 3"
+  function seriesInfo(c) {
+    var s = c.series, note = (c.notes || []).map(function (n) { return n.headline || ''; }).filter(Boolean)[0] || '';
+    var round = note.replace(/\s+-\s+/g, ' · ');
+    if (!s || s.type !== 'playoff' || !s.summary) return { round: round, series: '' };
+    var txt = s.summary;
+    (c.competitors || []).forEach(function (x) {
+      var ab = x.team && x.team.abbreviation, nm = x.team && (x.team.shortDisplayName || x.team.name);
+      if (ab && nm) txt = txt.replace(new RegExp('^' + ab + ' (lead|win)s ', ''), nm + ' $1 ');
+    });
+    return { round: round, series: txt };
+  }
+
   function proCard(e) {
     var comp = e.competitions[0], st = e.status.type, c = el('a', 'game');
     c.href = (e.links && e.links[0] && e.links[0].href) || LINK.pro; c.target = '_blank'; c.rel = 'noopener';
     var sides = ['away', 'home'].map(function (h) { return comp.competitors.filter(function (x) { return x.homeAway === h; })[0]; });
     var box = el('div', 'box');
     box.style.setProperty('--a', '#' + (sides[0].team.color || '1b335f')); box.style.setProperty('--h', '#' + (sides[1].team.color || '23407a'));
-    box.appendChild(el('span', 'lg', e._lg.toUpperCase() + (e.season && e.season.type === 3 ? ' · Playoffs' : '')));
+    var ser = e.season && e.season.type === 3 ? seriesInfo(comp) : null;
+    box.appendChild(el('span', 'lg', e._lg.toUpperCase() + (ser ? ' · ' + (ser.round.replace(' \u00b7 Game ', ' Gm ') || 'Playoffs') : '')));
     var d = new Date(e.date), today = dayKey(d) === dayKey(new Date());
     var stTxt = st.state === 'in' ? 'LIVE' : st.state === 'post' ? 'FINAL' + (today ? '' : ' · ' + parts(d).weekday.replace('.', '').toUpperCase()) : (today ? '' : parts(d).weekday.replace('.', '') + ' ') + cpTime(d);
     box.appendChild(el('span', 'st' + (st.state === 'in' ? ' live' : ''), stTxt));
@@ -523,7 +538,7 @@
     });
     c.appendChild(box);
     c.appendChild(el('div', 'cap', sides[0].team.shortDisplayName + ' at ' + sides[1].team.shortDisplayName));
-    c.appendChild(el('div', 'sm', st.state === 'in' ? (st.shortDetail || 'In progress') : today ? 'Today' : parts(d).weekday.replace('.', '') + ', ' + cpDate(d)));
+    c.appendChild(el('div', 'sm', (st.state === 'in' ? (st.shortDetail || 'In progress') : today ? 'Today' : parts(d).weekday.replace('.', '') + ', ' + cpDate(d)) + (ser && ser.series ? ' \u00b7 ' + ser.series.replace(' series ', ' ') : '')));
     return c;
   }
 
