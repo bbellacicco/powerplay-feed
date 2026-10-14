@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14T00:16:50-04:00",
+ "updated": "2026-10-14T00:32:56-04:00",
  "today": "2026-10-14",
  "range": [
   "2026-10-11",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 30
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -2191,6 +2191,21 @@
  ],
  "more_news": [
   {
+   "league": "nhl",
+   "headline": "Maple Leafs’ comeback effort falls short in loss to Mammoth",
+   "summary": "",
+   "published": "2026-10-14T00:12-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177084714.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-comeback-effort-falls-short-in-loss-to-mammoth/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nba",
    "headline": "Raptors’ Kawhi Leonard makes worthwhile pre-season debut",
    "summary": "Kawhi Leonard was finally back on the court as part of the Raptors. And the wait was worth it. Michael Grange breaks down the star’s reintroduction in Toronto’s pre-season win.",
@@ -2591,6 +2606,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "mlb",
+   "headline": "Guardians grind down Rays to steal ALCS opener at hostile Trop",
+   "summary": "After falling behind early on Monday, the Guardians shook off the chaos and settled into their game. They suffocated the Rays while grinding until they scored in each of the final four innings.",
+   "published": "2026-10-12T23:30-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177077881.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/guardians-grind-down-rays-to-steal-alcs-opener-at-hostile-trop/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "Josh Lindeman of Manchester High School Named the Detroit Lions High School Football Coach of the Week - Week 7",
    "summary": "The Detroit Lions have named Josh Lindeman of Manchester High School the 2026 Detroit Lions High School Football Coach of the Week for Week 7, presented by Carhartt.",
@@ -2969,7 +2997,7 @@
   },
   {
    "league": "mlb",
-   "headline": "LIVE: Watch No. 2 prospect Rainer in Arizona Fall League action",
+   "headline": "Watch Tigers prospects in Arizona Fall League action",
    "summary": "",
    "published": "2026-10-13T23:17-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
