@@ -440,5 +440,22 @@
   load();
 })();
 </script>
+<script>
+/* Inside the Local Sports page (sports.html): tell it how tall this widget is, so it never scrolls on its own
+   (a widget that scrolls inside the page traps the finger on iPhones). */
+(function () {
+  if (window.parent === window || !/[?&]in=sports\b/.test(location.search)) return;
+  var css = document.createElement('style'); css.textContent = 'html,body{overflow:hidden!important;height:auto!important}';
+  document.head.appendChild(css);
+  var last = 0;
+  function send() {
+    var h = Math.ceil(document.body.getBoundingClientRect().height);
+    if (h && Math.abs(h - last) > 2) { last = h; try { parent.postMessage({ pp: 'height', h: h }, '*'); } catch (e) {} }
+  }
+  window.addEventListener('load', send); window.addEventListener('resize', send);
+  if (window.ResizeObserver) new ResizeObserver(send).observe(document.body);
+  setInterval(send, 1500); send();
+})();
+</script>
 </body>
 </html>
