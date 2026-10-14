@@ -54,6 +54,7 @@
   .who { font-weight: 600; }
   .who .vs { color: var(--muted); font-weight: 400; }
   .meta { color: var(--muted); font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .rec { color: var(--muted); font-weight: 500; font-size: 12px; }
   .series { color: var(--accent); font-size: 12px; font-weight: 700; margin-top: 1px; }
   .score { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
   .score b { font-size: 16px; }
@@ -203,7 +204,8 @@
         var side = function (h) {
           var x = c.competitors.filter(function (t) { return t.homeAway === h; })[0];
           return { abbr: x.team.abbreviation, name: x.team.displayName, short: x.team.shortDisplayName || x.team.name,
-                   score: x.score !== undefined && x.score !== '' ? Number(x.score) : null, winner: x.winner };
+                   score: x.score !== undefined && x.score !== '' ? Number(x.score) : null, winner: x.winner,
+                   rec: ((x.records || []).filter(function (r) { return r.type === 'total' || r.type === 'ytd'; })[0] || {}).summary || '' };
         };
         var status = st.state === 'post' ? (st.name === 'STATUS_POSTPONED' ? 'postponed' : st.name === 'STATUS_CANCELED' ? 'cancelled' : 'final')
                    : st.state === 'in' ? 'live' : (st.name === 'STATUS_POSTPONED' ? 'postponed' : 'upcoming');
@@ -407,18 +409,20 @@
     r.appendChild(el('div', 'stripe'));
     r.appendChild(el('div', 'time', timeText(g)));
     var main = el('div', 'main'), who = el('div', 'who');
+    // each team's record on games that haven't started yet: "Brewers (97-65)"
+    function rec(t) { if (g.status === 'upcoming' && t.rec) who.appendChild(el('span', 'rec', ' (' + t.rec + ')')); }
     var mine = state.tab === 'ours' ? ourTeam(g) : null;
     var us = null, them = null;
     if (mine) {                        // from our team's side: "Lions vs Jets"
       var home = g.home.abbr === mine.abbr;
       us = home ? g.home : g.away; them = home ? g.away : g.home;
-      who.appendChild(document.createTextNode(us.short + ' '));
-      who.appendChild(el('span', 'vs', home ? 'vs ' : '@ '));
-      who.appendChild(document.createTextNode(them.name));
+      who.appendChild(document.createTextNode(us.short)); rec(us);
+      who.appendChild(el('span', 'vs', home ? ' vs ' : ' @ '));
+      who.appendChild(document.createTextNode(them.name)); rec(them);
     } else {                           // neutral: "Chargers @ Bills"
-      who.appendChild(document.createTextNode(g.away.name + ' '));
-      who.appendChild(el('span', 'vs', '@ '));
-      who.appendChild(document.createTextNode(g.home.name));
+      who.appendChild(document.createTextNode(g.away.name)); rec(g.away);
+      who.appendChild(el('span', 'vs', ' @ '));
+      who.appendChild(document.createTextNode(g.home.name)); rec(g.home);
     }
     main.appendChild(who);
     var bits = [LEAGUES[g.league].label];
