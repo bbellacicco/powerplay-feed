@@ -54,6 +54,7 @@
   .who { font-weight: 600; }
   .who .vs { color: var(--muted); font-weight: 400; }
   .meta { color: var(--muted); font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .series { color: var(--accent); font-size: 12px; font-weight: 700; margin-top: 1px; }
   .score { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
   .score b { font-size: 16px; }
   .badge { display: inline-block; min-width: 26px; text-align: center; font-size: 11px; font-weight: 700;
@@ -180,6 +181,20 @@
   }
 
   // ---- ESPN (NFL / NHL / NBA / MLB), one request per league per day
+
+  // playoff series: "MIL leads series 2-0" -> "Brewers lead series 2-0"; "ALCS - Game 3" -> "ALCS · Game 3"
+  function seriesInfo(c) {
+    var s = c.series, note = (c.notes || []).map(function (n) { return n.headline || ''; }).filter(Boolean)[0] || '';
+    var round = note.replace(/\s+-\s+/g, ' · ');
+    if (!s || s.type !== 'playoff' || !s.summary) return { round: round, series: '' };
+    var txt = s.summary;
+    (c.competitors || []).forEach(function (x) {
+      var ab = x.team && x.team.abbreviation, nm = x.team && (x.team.shortDisplayName || x.team.name);
+      if (ab && nm) txt = txt.replace(new RegExp('^' + ab + ' (lead|win)s ', ''), nm + ' $1 ');
+    });
+    return { round: round, series: txt };
+  }
+
   function espnDay(key, d) {
     var url = 'https://site.api.espn.com/apis/site/v2/sports/' + LEAGUES[key].path + '/scoreboard?dates=' + ymd(d);
     return fetch(url).then(function (r) { return r.ok ? r.json() : { events: [] }; }).then(function (j) {
@@ -197,7 +212,8 @@
           league: key, start: e.date, status: status, detail: st.shortDetail || '',
           home: side('home'), away: side('away'),
           venue: c.venue ? c.venue.fullName : '',
-          note: season === 1 ? 'Preseason' : season === 3 ? 'Playoffs' : '',
+          note: season === 1 ? 'Preseason' : season === 3 ? (seriesInfo(c).round || 'Playoffs') : '',
+          series: season === 3 ? seriesInfo(c).series : '',
           tbd: e.timeValid === false,
           link: (e.links && e.links[0] && e.links[0].href) || ''
         };
@@ -409,6 +425,7 @@
     if (g.venue) bits.push(g.venue);
     if (g.note) bits.push(g.note);
     main.appendChild(el('div', 'meta', bits.join(' · ')));
+    if (g.series) main.appendChild(el('div', 'series', g.series));
     r.appendChild(main);
 
     var sc = el('div', 'score');
