@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Local Sports | Powerplay Windsor</title>
+<script src="share.js"></script>
 <!--
   One page for everything below the homepage, with a switch at the top:
     Local      Local Hub + Local Scoreboard
@@ -27,6 +28,8 @@
   .switch button { border: 0; background: transparent; color: #cfd8ea; font: inherit; font-size: 15px; font-weight: 800; letter-spacing: .01em; padding: 10px 22px; border-radius: 999px; cursor: pointer; }
   .switch button:hover { color: #fff; }
   .switch button[aria-selected="true"] { background: #fff; color: #0b1a33; }
+  .top { position: relative; align-items: center; gap: 10px; }
+  .sharebtn { position: absolute; right: 16px; top: 50%; transform: translateY(-20%); }
   .pane { display: none; }
   .pane.on { display: block; }
   .pane iframe { display: block; width: 100%; border: 0; background: var(--bg); }
@@ -34,11 +37,12 @@
     .top { padding: 16px 10px 4px; }
     .switch { width: 100%; justify-content: space-between; }
     .switch button { flex: 1; padding: 10px 4px; font-size: 13.5px; }
+    .top { flex-direction: column; } .sharebtn { position: static; transform: none; align-self: flex-end; }
   }
 </style>
 </head>
 <body>
-  <div class="top">
+  <div class="top" id="top">
     <div class="switch" role="tablist" aria-label="Section">
       <button type="button" role="tab" data-tab="local">Local</button>
       <button type="button" role="tab" data-tab="pro">Pro</button>
@@ -76,6 +80,7 @@
       box.appendChild(pane); built[tab] = pane;
     }
     Object.keys(built).forEach(function (k) { built[k].classList.toggle('on', k === tab); });
+    current = tab;
     [].forEach.call(document.querySelectorAll('.switch button'), function (b) { b.setAttribute('aria-selected', String(b.getAttribute('data-tab') === tab)); });
     try { history.replaceState(null, '', '?tab=' + tab); } catch (e) {}
   }
@@ -86,6 +91,13 @@
       if (f.contentWindow === e.source) f.style.height = Math.min(e.data.h, 4000) + 'px';
     });
   });
+  // share button: shares whichever section is showing (its own link opens the page on that section)
+  var NAMES = { local: 'Local Sports', pro: 'Pro Sports', network: 'the Powerplay Network', spotlight: 'The Local Sports Spotlight' };
+  var current = 'local';
+  if (window.PPShare) {
+    var sb = PPShare.button(function () { return { title: NAMES[current].replace(/^the /, 'The '), url: PPShare.link(current), text: 'Check out ' + NAMES[current] + ' on Powerplay Windsor' }; });
+    sb.classList.add('sharebtn'); document.getElementById('top').appendChild(sb);
+  }
   [].forEach.call(document.querySelectorAll('.switch button'), function (b) { b.onclick = function () { show(b.getAttribute('data-tab')); }; });
 
   // which switch to open: ?tab= when opened directly, or the hand-off from a "See all" link elsewhere (good for 2 minutes)
