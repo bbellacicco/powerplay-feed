@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14T21:16:49-04:00",
+ "updated": "2026-10-14T21:31:50-04:00",
  "today": "2026-10-14",
  "range": [
   "2026-10-11",
@@ -1052,11 +1052,11 @@
    "home_away": "H",
    "opponent": "Listowel Cyclones",
    "location": "Vollmer Culture R.C., LaSalle, ON",
-   "status": "live",
+   "status": "final",
    "our_score": 3,
    "opp_score": 4,
-   "result": null,
-   "note": "00:00 3rd",
+   "result": "L",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15577"
    },
@@ -3653,7 +3653,7 @@
       "l": 3,
       "otl": 1,
       "pts": 11,
-      "gf": 41,
+      "gf": 42,
       "ga": 35,
       "strk": "L1"
      },
@@ -3707,7 +3707,7 @@
       "otl": 0,
       "pts": 12,
       "gf": 39,
-      "ga": 22,
+      "ga": 23,
       "strk": "W6"
      },
      {
@@ -4104,13 +4104,25 @@
      {
       "name": "Listowel Cyclones",
       "abbr": "LIS",
-      "gp": 9,
-      "w": 4,
+      "gp": 10,
+      "w": 5,
       "l": 2,
       "otl": 3,
-      "pts": 11,
+      "pts": 13,
       "gf": 46,
       "ga": 33,
+      "strk": "W2"
+     },
+     {
+      "name": "London Nationals",
+      "abbr": "LON",
+      "gp": 12,
+      "w": 5,
+      "l": 6,
+      "otl": 1,
+      "pts": 11,
+      "gf": 44,
+      "ga": 52,
       "strk": "W1"
      },
      {
@@ -4138,28 +4150,16 @@
       "strk": "L5"
      },
      {
-      "name": "London Nationals",
-      "abbr": "LON",
-      "gp": 11,
-      "w": 4,
-      "l": 6,
-      "otl": 1,
-      "pts": 9,
-      "gf": 44,
-      "ga": 52,
-      "strk": "L2"
-     },
-     {
       "name": "LaSalle Vipers",
       "abbr": "LAS",
-      "gp": 9,
+      "gp": 10,
       "w": 4,
-      "l": 5,
+      "l": 6,
       "otl": 0,
       "pts": 8,
       "gf": 27,
       "ga": 44,
-      "strk": "L2"
+      "strk": "L3"
      },
      {
       "name": "Woodstock Navy Vets",
@@ -4188,14 +4188,14 @@
      {
       "name": "Strathroy Rockets",
       "abbr": "SRY",
-      "gp": 10,
+      "gp": 11,
       "w": 3,
-      "l": 6,
+      "l": 7,
       "otl": 1,
       "pts": 7,
       "gf": 39,
       "ga": 52,
-      "strk": "W2"
+      "strk": "L1"
      },
      {
       "name": "Sarnia Legionnaires",
@@ -4234,7 +4234,7 @@
       "l": 0,
       "otl": 0,
       "pts": 18,
-      "gf": 52,
+      "gf": 55,
       "ga": 34,
       "strk": "W9"
      },
@@ -4307,7 +4307,7 @@
       "otl": 0,
       "pts": 10,
       "gf": 45,
-      "ga": 40,
+      "ga": 43,
       "strk": "W3"
      },
      {
