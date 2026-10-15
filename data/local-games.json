@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15T14:46:37-04:00",
+ "updated": "2026-10-15T14:58:25-04:00",
  "today": "2026-10-15",
  "range": [
   "2026-10-12",
@@ -39,7 +39,7 @@
   },
   "lancers": {
    "ok": true,
-   "count": 88
+   "count": 89
   },
   "junior": {
    "ok": true,
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 36
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -1042,6 +1042,22 @@
     "gamecentre": "https://www.gohl.ca/stats/game-center/15577"
    },
    "club": "LaSalle Vipers"
+  },
+  {
+   "id": "lancers-6490",
+   "team": "lancers",
+   "sport": "Women's Volleyball",
+   "start": "2026-10-14T19:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "St. Clair Saints",
+   "location": "St. Clair College",
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 1,
+   "result": "W",
+   "note": "23-25, 25-16, 25-14, 25-15",
+   "links": {}
   },
   {
    "id": "junior-gs2960354",
@@ -2313,19 +2329,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Scout’s Analysis: Why Landon DuPont is ranked No. 1 for 2027 NHL Draft",
-   "summary": "Coming into the season, Michigan defenceman Landon DuPont was the top-ranked prospect for the NHL Draft. Jason Bukala recently watched the player in action and in his scouting report, writes why DuPont has a firm hold on",
-   "published": "2026-10-15T11:23-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-23.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/scouts-analysis-why-landon-dupont-is-ranked-no-1-for-2027-nhl-draft/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "NHL Power Rankings: Captain check for all 32 teams",
    "summary": "When Connor Bedard made his season debut this week, he became the eighth player to serve as a new full-time captain for his club. Ryan Dixon uses this week’s Power Rankings as a captain check for all 32 squads.",
    "published": "2026-10-15T12:23-04:00",
@@ -2355,16 +2358,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "cfl",
-   "headline": "Historically bad Redblacks bring back painful memories for Ottawa football fans",
-   "summary": "No CFL team has ever posted a record of 0-18. The Ottawa Redblacks have done most of the heavy lifting to accomplish what was thought to be impossible.",
-   "published": "2026-10-15T13:30-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/redblacks-3.jpg",
+   "league": "nhl",
+   "headline": "Scout’s Analysis: Why Landon DuPont is ranked No. 1 for 2027 NHL Draft",
+   "summary": "Coming into the season, Michigan defenceman Landon DuPont was the top-ranked prospect for the NHL Draft. Jason Bukala recently watched the player in action and in his scouting report, writes why DuPont has a firm hold on",
+   "published": "2026-10-15T11:23-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-23.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/historically-bad-redblacks-bring-back-painful-memories-for-ottawa-football-fans/",
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/scouts-analysis-why-landon-dupont-is-ranked-no-1-for-2027-nhl-draft/",
    "source": "Sportsnet"
   },
   {
@@ -2488,19 +2491,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Oilers face new reality as Alberta’s time change brings challenges",
-   "summary": "Alberta’s decision to stop changing the clocks will bring a new set of challenges for the Edmonton Oilers. With more afternoon matinees also on the schedule, the team is preparing for a season in which the clock will cha",
-   "published": "2026-10-14T15:25-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/oilers-2.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/oilers-face-new-reality-as-albertas-time-change-brings-challenges/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Arizona State hires Dave Hakstol as head coach, Powers announces resignation",
    "summary": "",
    "published": "2026-10-15T10:10-04:00",
@@ -2510,6 +2500,19 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/arizona-state-hires-dave-hakstol-as-head-coach/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "GSOC Invitational: Dunstone vs. Casper",
+   "summary": "",
+   "published": "2026-10-15T14:57-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/03/CP175894367-copy.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Curling",
+   "url": "https://www.sportsnet.ca/curling/article/gsoc-invitational-dunstone-vs-casper/",
    "source": "Sportsnet"
   },
   {
@@ -2523,6 +2526,32 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/canadiens-dobes-fighting-for-starters-crease-after-another-frustrating-loss/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Oilers face new reality as Alberta’s time change brings challenges",
+   "summary": "Alberta’s decision to stop changing the clocks will bring a new set of challenges for the Edmonton Oilers. With more afternoon matinees also on the schedule, the team is preparing for a season in which the clock will cha",
+   "published": "2026-10-14T15:25-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/oilers-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/oilers-face-new-reality-as-albertas-time-change-brings-challenges/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "cfl",
+   "headline": "Historically bad Redblacks bring back painful memories for Ottawa football fans",
+   "summary": "No CFL team has ever posted a record of 0-18. The Ottawa Redblacks have done most of the heavy lifting to accomplish what was thought to be impossible.",
+   "published": "2026-10-15T13:30-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/redblacks-3.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/historically-bad-redblacks-bring-back-painful-memories-for-ottawa-football-fans/",
    "source": "Sportsnet"
   },
   {
@@ -2746,34 +2775,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/how-early-season-goalie-market-impacts-potential-hellebuyck-trade/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Red Wings interim GM Shawn Horcoff: ‘Zero interest in trading’ Edvinsson",
-   "summary": "",
-   "published": "2026-10-14T12:45-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/12/edvinsson.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Red Wings"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/red-wings-interim-gm-shawn-horcoff-zero-interest-in-trading-edvinsson/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Canadian women’s rugby team looks to topple England at BMO Field",
-   "summary": "",
-   "published": "2026-10-15T08:29-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/rugby.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "More Sports",
-   "url": "https://www.sportsnet.ca/more/article/canadian-womens-rugby-team-looks-to-topple-england-at-bmo-field/",
    "source": "Sportsnet"
   },
   {
