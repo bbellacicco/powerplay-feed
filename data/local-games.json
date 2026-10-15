@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14T21:48:01-04:00",
+ "updated": "2026-10-14T22:01:54-04:00",
  "today": "2026-10-14",
  "range": [
   "2026-10-11",
@@ -1071,10 +1071,10 @@
    "home_away": "H",
    "opponent": "Mooretown Flags",
    "location": "Wheatley Area Arena",
-   "status": "live",
-   "our_score": 0,
-   "opp_score": 0,
-   "result": null,
+   "status": "final",
+   "our_score": 5,
+   "opp_score": 2,
+   "result": "W",
    "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960354?configuration=45"
@@ -2319,19 +2319,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "Broncos’ Pat Surtain II ruled out vs. Seahawks",
-   "summary": "",
-   "published": "2026-10-14T18:29-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/surtain.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/broncos-pat-surtain-ii-ruled-out-vs-seahawks/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "Canucks place Aatu Raty on waivers",
    "summary": "",
@@ -2342,6 +2329,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/canucks-place-aatu-raty-on-waivers/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "CF Montreal nears elimination from playoff contention after loss to Atlanta",
+   "summary": "",
+   "published": "2026-10-14T21:56-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-48.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/cf-montreal-nears-elimination-from-playoff-contention-after-loss-to-atlanta/",
    "source": "Sportsnet"
   },
   {
@@ -2506,6 +2506,19 @@
   },
   {
    "league": "nfl",
+   "headline": "Broncos’ Pat Surtain II ruled out vs. Seahawks",
+   "summary": "",
+   "published": "2026-10-14T18:29-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/surtain.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/broncos-pat-surtain-ii-ruled-out-vs-seahawks/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
    "headline": "Rams’ Jackson has suspension reduced to one game for punching Bills’ Chubb",
    "summary": "",
    "published": "2026-10-14T21:44-04:00",
@@ -2582,19 +2595,6 @@
    "sn_team_count": 0,
    "sport": "MMA",
    "url": "https://www.sportsnet.ca/ufc/article/charles-oliveira-diego-lopes-to-headline-ufc-335-in-las-vegas/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Toronto FC’s Walker Zimmerman, Jonathan Osorio out against Orlando",
-   "summary": "",
-   "published": "2026-10-13T13:11-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/Toronto-FC-defender-Walker-Zimmerman.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/toronto-fcs-walker-zimmerman-jonathan-osorio-out-against-orlando/",
    "source": "Sportsnet"
   },
   {
@@ -3648,14 +3648,14 @@
      {
       "name": "Sarnia Sting",
       "abbr": "SAR",
-      "gp": 9,
+      "gp": 10,
       "w": 5,
-      "l": 3,
+      "l": 4,
       "otl": 1,
       "pts": 11,
       "gf": 42,
       "ga": 36,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Flint Firebirds",
@@ -3701,14 +3701,14 @@
      {
       "name": "Guelph Storm",
       "abbr": "GUE",
-      "gp": 8,
-      "w": 6,
+      "gp": 9,
+      "w": 7,
       "l": 2,
       "otl": 0,
-      "pts": 12,
+      "pts": 14,
       "gf": 40,
       "ga": 23,
-      "strk": "W6"
+      "strk": "W7"
      },
      {
       "name": "London Knights",
@@ -4215,6 +4215,18 @@
     "group": "Eastern Conference",
     "teams": [
      {
+      "name": "Fort Erie Meteors",
+      "abbr": "FEM",
+      "gp": 10,
+      "w": 10,
+      "l": 0,
+      "otl": 0,
+      "pts": 20,
+      "gf": 56,
+      "ga": 34,
+      "strk": "W10"
+     },
+     {
       "name": "Caledonia Corvairs",
       "abbr": "CAL",
       "gp": 11,
@@ -4225,18 +4237,6 @@
       "gf": 45,
       "ga": 24,
       "strk": "W6"
-     },
-     {
-      "name": "Fort Erie Meteors",
-      "abbr": "FEM",
-      "gp": 9,
-      "w": 9,
-      "l": 0,
-      "otl": 0,
-      "pts": 18,
-      "gf": 56,
-      "ga": 34,
-      "strk": "W9"
      },
      {
       "name": "Cambridge Redhawks",
@@ -4301,14 +4301,14 @@
      {
       "name": "Port Colborne Sailors",
       "abbr": "PCS",
-      "gp": 8,
+      "gp": 9,
       "w": 5,
-      "l": 3,
+      "l": 4,
       "otl": 0,
       "pts": 10,
       "gf": 45,
       "ga": 44,
-      "strk": "W3"
+      "strk": "L1"
      },
      {
       "name": "Stoney Creek Generals",
@@ -4567,26 +4567,26 @@
      {
       "name": "Wheatley Sharks",
       "abbr": "WHE",
-      "gp": 13,
-      "w": 6,
+      "gp": 14,
+      "w": 7,
       "l": 7,
       "otl": 0,
-      "pts": 12,
-      "gf": 39,
-      "ga": 42,
-      "strk": "L1"
+      "pts": 14,
+      "gf": 44,
+      "ga": 44,
+      "strk": "W1"
      },
      {
       "name": "Mooretown Flags",
       "abbr": "MOO",
-      "gp": 14,
+      "gp": 15,
       "w": 4,
-      "l": 7,
+      "l": 8,
       "otl": 3,
       "pts": 11,
-      "gf": 43,
-      "ga": 48,
-      "strk": "L2"
+      "gf": 45,
+      "ga": 53,
+      "strk": "L3"
      },
      {
       "name": "Amherstburg Admirals",
