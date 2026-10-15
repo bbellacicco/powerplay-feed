@@ -5,13 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
 <title>Home | Powerplay Windsor</title>
+<script src="share.js"></script>
 <!--
   The homepage in one clean, spaced-out embed (streaming-app style):
     Powerplay's three newest stories (one big, two beside it, like the News page), the Powerplay Network, a search bar, then rows:
     Local scores · Latest stories · Pro scores · Pro headlines · Athlete profiles.
   Each row: title, "Presented by" sponsor, "See all ›" to the full page. Rows swipe sideways (arrows on desktop).
   Same data as the other widgets; refreshes itself every few minutes.
-  Embed full width in Wix: about 2,980px tall on desktop, 3,420px on mobile (includes testimonials and About).
+  Embed full width in Wix: about 3,030px tall on desktop, 3,500px on mobile (includes testimonials and About).
   Links (optional): ?local=<Local Sports page> ?pro=<Pro Sports page> ?network=<Network page> ?athletes=<Spotlights page> ?search=<search page>
 -->
 <style>
@@ -57,6 +58,8 @@
   .rhead .by b { color: #d4dcee; font-weight: 600; }
   .rhead a.all { color: var(--muted); font-size: 13px; font-weight: 700; text-decoration: none; white-space: nowrap; }
   .rhead a.all:hover { color: var(--accent); }
+  .rhead .rright { display: flex; align-items: center; gap: 12px; }
+  .rfollow { padding: 0 40px; margin: -4px 0 12px; }
   .rowwrap { position: relative; }
   .row { display: flex; gap: 14px; overflow-x: auto; padding: 4px 40px 6px; scroll-snap-type: x mandatory; scroll-padding-left: 40px; scrollbar-width: none; }
   .row::-webkit-scrollbar { display: none; }
@@ -134,6 +137,7 @@
     .btn { padding: 9px 15px; font-size: 13px; }
     .search { margin: 18px 16px 0; } .search .btn { display: none; }
     section { margin-top: 30px; }
+    .rfollow { padding: 0 16px; } .rfollow .lbl { width: 100%; }
     .rhead { padding: 0 16px; flex-wrap: wrap; } .rhead h2 { font-size: 18px; } .rhead .by { margin-left: 0; display: flex; width: 100%; order: 3; margin-top: 3px; }
     .row { padding: 4px 16px 6px; scroll-padding-left: 16px; gap: 10px; }
     .rarrow { display: none; }
@@ -274,6 +278,8 @@
     { key: 'prohead', title: 'Pro headlines', by: ['The D’Amore Group', 'logos/damore-group.png'], all: LINK.pro, tab: 'pro' },
     { key: 'athletes', title: 'Athlete profiles', by: null, all: LINK.athletes, tab: 'spotlight' }
   ];
+  var SHARE_TEXT = { network: 'Watch the latest local highlights and interviews', local: 'Local scores', stories: 'The latest Windsor-Essex sports stories',
+    pro: 'Pro scores for our teams', prohead: 'Pro headlines', athletes: 'Athlete profiles' };
   var rowEl = {};
   ROWS.forEach(function (r) {
     var sec = el('section'); sec.id = 'row-' + r.key;
@@ -287,8 +293,12 @@
     head.appendChild(left);
     var a = el('a', 'all', 'See all ›'); a.href = r.all; a.target = '_top';
     a.onclick = function () { try { localStorage.setItem('pp-tab', JSON.stringify({ tab: r.tab, t: Date.now() })); } catch (er) {} };   // the Local Sports page opens on this switch
-    head.appendChild(a);
+    var right = el('div', 'rright');
+    if (window.PPShare) right.appendChild(PPShare.button({ title: r.title, url: PPShare.link(r.tab), text: (SHARE_TEXT[r.key] || r.title) + ' on Powerplay Windsor' }));
+    right.appendChild(a);
+    head.appendChild(right);
     sec.appendChild(head);
+    if (r.key === 'network' && window.PPShare) { var fb = PPShare.follow(); fb.className += ' rfollow'; sec.appendChild(fb); }
     var wrap = el('div', 'rowwrap'), row = el('div', 'row');
     row.appendChild(el('div', 'empty', 'Loading…'));
     var l = el('button', 'rarrow l', '‹'), rr = el('button', 'rarrow r', '›'); l.type = rr.type = 'button';
