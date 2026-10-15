@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+<script src="share.js"></script>
 <title>Powerplay Network | Powerplay Windsor</title>
 <!--
   The Powerplay Network page.
@@ -97,6 +98,7 @@
       <button class="tab" type="button" role="tab" data-tab="pro">Pro Network</button>
     </div>
   </header>
+  <div id="follow" style="margin:-2px 0 12px"></div>
   <div class="bar">
     <label class="find">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
@@ -408,5 +410,6 @@
   setInterval(send, 1500); send();
 })();
 </script>
+<script>if (window.PPShare) document.getElementById('follow').appendChild(PPShare.follow('Never miss a video:'));</script>
 </body>
 </html>
