@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15T12:16:39-04:00",
+ "updated": "2026-10-15T12:31:39-04:00",
  "today": "2026-10-15",
  "range": [
   "2026-10-12",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 36
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -2031,8 +2031,8 @@
    "league": "pwhl",
    "headline": "PWHL Expansion Teams Detroit, Hamilton, Las Vegas, & San Jose Unveil Inaugural Jerseys Ahead of 2026-27 Season",
    "summary": "",
-   "published": "2026-10-08T14:00:00+00:00",
-   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/ExpansionJersey-PressReleaseHeadersLeague-PressReleaseHeader-1200x800-ENG",
+   "published": "2026-10-08T12:00:00+00:00",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/c_auto,g_auto,h_800,w_1188/q_auto/f_auto/ExpansionJersey-PressReleaseHeadersLeague-PressReleaseHeader-1200x800-ENG",
    "video": false,
    "teams": [],
    "url": "https://www.thepwhl.com/en/news/2026/october/08/pwhl-expansion-teams-detroit-hamilton-las-vegas-san-jose-unveil-inaugural-jerseys-ahead-of-2026-27-season",
@@ -2297,19 +2297,6 @@
  ],
  "more_news": [
   {
-   "league": "mlb",
-   "headline": "Canadians Smith, Sabrowski bond in a bullpen driving Guardians’ ALCS run",
-   "summary": "A pair of Canadian relievers, Cade Smith and Erik Sabrowski, have been instrumental to the Guardians’ post-season success. Shi Davidi has the story on the duo’s bond from Cleveland.",
-   "published": "2026-10-14T20:49-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Sabrowski-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/canadians-smith-sabrowski-bond-in-a-bullpen-driving-guardians-alcs-run/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "Kings among teams kicking tires on Connor Hellebuyck trade",
    "summary": "In his Thursday notebook, Frank Seravalli writes about how the Kings are considering Connor Hellebuyck, how much Jesper Wallstedt could get on his next contract, and more.",
@@ -2336,16 +2323,18 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "TFC keeps playoff hopes alive with dramatic draw vs. Orlando",
-   "summary": "",
-   "published": "2026-10-14T22:01-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-49.jpg",
+   "league": "nhl",
+   "headline": "NHL Power Rankings: Captain check for all 32 teams",
+   "summary": "When Connor Bedard made his season debut this week, he became the eighth player to serve as a new full-time captain for his club. Ryan Dixon uses this week’s Power Rankings as a captain check for all 32 squads.",
+   "published": "2026-10-15T12:23-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Mcdavid-1.jpg",
    "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/pereiras-90th-minute-goal-earns-tfc-a-point-in-draw-against-orlando-city-sc/",
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 7,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/nhl-power-rankings-captain-check-for-all-32-teams/",
    "source": "Sportsnet"
   },
   {
@@ -2362,16 +2351,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "mlb",
-   "headline": "Brewers’ big swings have Dodgers on the brink in NLCS",
-   "summary": "After a third consecutive win, the Brewers are one away from putting an end to MLB’s two-time defending champions. Champagne and celebratory t-shirts will be on hand at Dodger Stadium Thursday in case the visitors clinch",
-   "published": "2026-10-14T23:35-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-51.jpg",
+   "league": "other",
+   "headline": "TFC keeps playoff hopes alive with dramatic draw vs. Orlando",
+   "summary": "",
+   "published": "2026-10-14T22:01-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-49.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 2,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/brewers-big-swings-have-dodgers-on-the-brink-in-nlcs/",
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/pereiras-90th-minute-goal-earns-tfc-a-point-in-draw-against-orlando-city-sc/",
    "source": "Sportsnet"
   },
   {
@@ -2508,6 +2497,32 @@
   },
   {
    "league": "mlb",
+   "headline": "Brewers’ big swings have Dodgers on the brink in NLCS",
+   "summary": "After a third consecutive win, the Brewers are one away from putting an end to MLB’s two-time defending champions. Champagne and celebratory t-shirts will be on hand at Dodger Stadium Thursday in case the visitors clinch",
+   "published": "2026-10-14T23:35-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-51.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/brewers-big-swings-have-dodgers-on-the-brink-in-nlcs/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Canadians Smith, Sabrowski bond in a bullpen driving Guardians’ ALCS run",
+   "summary": "A pair of Canadian relievers, Cade Smith and Erik Sabrowski, have been instrumental to the Guardians’ post-season success. Shi Davidi has the story on the duo’s bond from Cleveland.",
+   "published": "2026-10-14T20:49-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Sabrowski-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/canadians-smith-sabrowski-bond-in-a-bullpen-driving-guardians-alcs-run/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
    "headline": "MLB announces time changes for NLCS, ALCS on Thursday",
    "summary": "",
    "published": "2026-10-14T12:19-04:00",
@@ -2627,19 +2642,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Canucks place Aatu Raty on waivers",
-   "summary": "",
-   "published": "2026-10-14T14:24-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/09/raty.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canucks-place-aatu-raty-on-waivers/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Red Wings interim GM Shawn Horcoff: ‘Zero interest in trading’ Edvinsson",
    "summary": "",
    "published": "2026-10-14T12:45-04:00",
@@ -2666,19 +2668,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/in-wake-of-chris-tanev-injury-leafs-cant-wait-to-add-defenceman/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "All-rookie Kiki Rice a bright spot in tough Tempo season",
-   "summary": "While the Tempo had a tough season in the standings, they found a bright spot in rookie Kiki Rice. Sarah Maat has more on the Rice’s first season after the guard was named to the All-Rookie team on Wednesday.",
-   "published": "2026-10-14T14:11-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/CP176278118-1-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/wnba/article/all-rookie-kiki-rice-a-bright-spot-in-tough-tempo-season/",
    "source": "Sportsnet"
   },
   {
@@ -2751,19 +2740,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nba",
-   "headline": "Warriors, Kristaps Porzingis address ongoing ‘health-related matter’",
-   "summary": "",
-   "published": "2026-10-14T17:40-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/03/porzingis_kristaps1280.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/warriors-kristaps-porzingis-address-ongoing-health-related-matter/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "Blue Jackets’ Olivier fined $5,000 for slashing Panthers’ Balinskis",
    "summary": "",
@@ -2774,6 +2750,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/blue-jackets-olivier-fined-5000-for-slashing-panthers-balinskis/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Warriors, Kristaps Porzingis address ongoing ‘health-related matter’",
+   "summary": "",
+   "published": "2026-10-14T17:40-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/03/porzingis_kristaps1280.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/warriors-kristaps-porzingis-address-ongoing-health-related-matter/",
    "source": "Sportsnet"
   },
   {
