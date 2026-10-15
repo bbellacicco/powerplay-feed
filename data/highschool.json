@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15T19:15:02-04:00",
+ "updated": "2026-10-15T19:45:02-04:00",
  "today": "2026-10-15",
  "games": [
   {
@@ -1051,9 +1051,9 @@
    "home_away": "N",
    "opponent": "Riverside",
    "location": "Riverside",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "final",
+   "our_score": 19,
+   "opp_score": 17,
    "result": null,
    "note": "Tier 2",
    "links": {
@@ -1121,6 +1121,26 @@
    },
    "away": "St. Anne",
    "home": "Holy Names"
+  },
+  {
+   "id": "highschool-2026-10-15-74",
+   "team": "highschool",
+   "sport": "Senior Boys Football",
+   "start": "2026-10-15T00:00:00-04:00",
+   "time_tbd": true,
+   "home_away": "N",
+   "opponent": "Villanova",
+   "location": "Holy Names",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "L'Essor",
+   "home": "Villanova"
   },
   {
    "id": "highschool-2026-10-15-45",
@@ -1481,26 +1501,6 @@
    },
    "away": "UMEI",
    "home": "Catholic Central"
-  },
-  {
-   "id": "highschool-2026-10-15-74",
-   "team": "highschool",
-   "sport": "Senior Boys Football",
-   "start": "2026-10-15T19:30:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Villanova",
-   "location": "Holy Names",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "L'Essor",
-   "home": "Villanova"
   },
   {
    "id": "highschool-2026-10-16-75",
