@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15T18:31:37-04:00",
+ "updated": "2026-10-15T19:02:55-04:00",
  "today": "2026-10-15",
  "range": [
   "2026-10-12",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 36
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -1141,11 +1141,11 @@
    "home_away": "H",
    "opponent": "Caledon Admirals",
    "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
-   "note": "",
+   "note": "20:00 1st",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16577"
    },
@@ -2356,21 +2356,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Healthy and engaged: Analyzing Auston Matthews’ best start in years",
-   "summary": "Auston Matthews is tied for fifth in NHL scoring, was last week’s first star, and has 12 point sin his past five games. What’s behind this production? Adam Vingan takes a look at the numbers to see how Matthews has perfo",
-   "published": "2026-10-15T13:10-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/auston-matthews.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/healthy-and-engaged-analyzing-auston-matthews-best-start-in-years/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "mlb",
    "headline": "Dodgers move Ohtani back to leadoff spot for must-win Game 4",
    "summary": "",
@@ -2396,6 +2381,19 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-acquire-forward-aatu-raty-in-trade-with-canucks/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Canucks activate forward Filip Chytil from IR",
+   "summary": "",
+   "published": "2026-10-15T18:46-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/02/canucks-kings.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canucks-activate-forward-filip-chytil-from-ir/",
    "source": "Sportsnet"
   },
   {
@@ -2425,21 +2423,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Maple Leafs’ Chris Tanev week-to-week with upper-body injury",
-   "summary": "",
-   "published": "2026-10-15T10:55-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Toronto-Maple-Leafs-defenseman-Chris-Tanev.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-chris-tanev-week-to-week-with-upper-body-injury/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "cfl",
    "headline": "Argonauts quarterback Chad Kelly returns to start vs. Redblacks",
    "summary": "",
@@ -2453,16 +2436,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Jets’ Morrissey week-to-week with upper-body injury",
+   "league": "nfl",
+   "headline": "Bears QB Caleb Williams feels ready to test injured hamstring vs. Falcons",
    "summary": "",
-   "published": "2026-10-15T13:17-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/12/CP175170664-1.jpg",
+   "published": "2026-10-15T17:44-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/12/SN-TEMPLATE-3-1.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/jets-morrissey-week-to-week-with-upper-body-injury/",
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/bears-qb-caleb-williams-feels-ready-to-test-injured-hamstring-vs-falcons/",
    "source": "Sportsnet"
   },
   {
@@ -2476,6 +2459,21 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/ncaa-mens-football/article/report-college-football-playoff-nearing-deal-to-expand-to-24-teams/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Healthy and engaged: Analyzing Auston Matthews’ best start in years",
+   "summary": "Auston Matthews is tied for fifth in NHL scoring, was last week’s first star, and has 12 point sin his past five games. What’s behind this production? Adam Vingan takes a look at the numbers to see how Matthews has perfo",
+   "published": "2026-10-15T13:10-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/auston-matthews.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/healthy-and-engaged-analyzing-auston-matthews-best-start-in-years/",
    "source": "Sportsnet"
   },
   {
@@ -2505,6 +2503,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Toronto FC expected to be missing key defenders vs. Red Bulls",
+   "summary": "",
+   "published": "2026-10-15T14:37-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/05/Richie.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/toronto-fc-expected-to-be-missing-key-defenders-vs-red-bulls/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Ullmark leading Senators with dream-like start to season",
    "summary": "Linus Ullmark is flashing the form that won him a Vezina four years ago. And the Senators squad in front of him is thankful for that.",
@@ -2531,16 +2542,18 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Toronto FC expected to be missing key defenders vs. Red Bulls",
+   "league": "nhl",
+   "headline": "Maple Leafs’ Chris Tanev week-to-week with upper-body injury",
    "summary": "",
-   "published": "2026-10-15T14:37-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/05/Richie.jpg",
+   "published": "2026-10-15T10:55-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Toronto-Maple-Leafs-defenseman-Chris-Tanev.jpg",
    "video": false,
-   "teams": [],
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
    "sn_team_count": 1,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/toronto-fc-expected-to-be-missing-key-defenders-vs-red-bulls/",
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-chris-tanev-week-to-week-with-upper-body-injury/",
    "source": "Sportsnet"
   },
   {
@@ -2751,45 +2764,6 @@
    "sn_team_count": 0,
    "sport": "Tennis",
    "url": "https://www.sportsnet.ca/wta/article/leylah-fernandez-falls-to-ostapenko-in-round-of-16-at-wuhan-open/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "cfl",
-   "headline": "Stampeders not in control of CFL playoff destiny",
-   "summary": "",
-   "published": "2026-10-15T14:35-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177067225.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 3,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/stampeders-not-in-control-of-cfl-playoff-destiny/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Packers’ Jacobs sues to have evidence in his battery case permanently sealed",
-   "summary": "",
-   "published": "2026-10-15T14:05-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/kacob.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/packers-jacobs-sues-to-have-evidence-in-his-battery-case-permanently-sealed/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Canadian women’s rugby team looks to topple England at BMO Field",
-   "summary": "",
-   "published": "2026-10-15T08:29-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/rugby.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "More Sports",
-   "url": "https://www.sportsnet.ca/more/article/canadian-womens-rugby-team-looks-to-topple-england-at-bmo-field/",
    "source": "Sportsnet"
   },
   {
