@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15T16:45:02-04:00",
+ "updated": "2026-10-15T17:00:02-04:00",
  "today": "2026-10-15",
  "games": [
   {
@@ -843,6 +843,26 @@
    "home": "St. Anne"
   },
   {
+   "id": "highschool-2026-10-15-61",
+   "team": "highschool",
+   "sport": "Junior Boys Volleyball",
+   "start": "2026-10-15T00:00:00-04:00",
+   "time_tbd": true,
+   "home_away": "N",
+   "opponent": "Lajeunesse",
+   "location": "Lajeunesse",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Tier 1 · early start time",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Sandwich",
+   "home": "Lajeunesse"
+  },
+  {
    "id": "highschool-2026-10-15-43",
    "team": "highschool",
    "sport": "Junior Girls Basketball",
@@ -1111,9 +1131,9 @@
    "home_away": "N",
    "opponent": "Ste. Cecile",
    "location": "Ste. Cecile",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "final",
+   "our_score": 0,
+   "opp_score": 3,
    "result": null,
    "note": "Group 3",
    "links": {
@@ -1131,9 +1151,9 @@
    "home_away": "N",
    "opponent": "Essex",
    "location": "Essex",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "final",
+   "our_score": 51,
+   "opp_score": 31,
    "result": null,
    "note": "Tier 2",
    "links": {
@@ -1221,26 +1241,6 @@
    },
    "away": "UMEI",
    "home": "Catholic Central"
-  },
-  {
-   "id": "highschool-2026-10-15-61",
-   "team": "highschool",
-   "sport": "Junior Boys Volleyball",
-   "start": "2026-10-15T16:45:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Lajeunesse",
-   "location": "Lajeunesse",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 1 · early start time",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Sandwich",
-   "home": "Lajeunesse"
   },
   {
    "id": "highschool-2026-10-15-62",
