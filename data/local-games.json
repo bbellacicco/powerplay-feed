@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T08:48:11-04:00",
+ "updated": "2026-10-16T09:01:39-04:00",
  "today": "2026-10-16",
  "range": [
   "2026-10-13",
@@ -39,7 +39,7 @@
   },
   "lancers": {
    "ok": true,
-   "count": 89
+   "count": 90
   },
   "junior": {
    "ok": true,
@@ -1724,15 +1724,15 @@
    "id": "lancers-6374",
    "team": "lancers",
    "sport": "Men's Basketball",
-   "start": "2026-10-15T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "A",
-   "opponent": "Waterloo Tournament",
+   "start": "2026-10-15T16:30:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "UBC Thunderbirds",
    "location": "Waterloo, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 94,
+   "opp_score": 96,
+   "result": "L",
    "note": "Naismith Classic",
    "links": {}
   },
@@ -1841,6 +1841,22 @@
    "opp_score": null,
    "result": null,
    "note": "",
+   "links": {}
+  },
+  {
+   "id": "lancers-6491",
+   "team": "lancers",
+   "sport": "Men's Basketball",
+   "start": "2026-10-16T14:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Victoria Vikes",
+   "location": "Waterloo, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Naismith Classic",
    "links": {}
   },
   {
@@ -3163,16 +3179,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "mlb",
-   "headline": "Gavin Williams shoves again as Guardians take ALCS lead over Rays",
-   "summary": "Extra rest has helped Gavin Williams dominate in the post-season for the Guardians. Thanks to his latest start and Petey Halpin’s homer, Cleveland leads the ALCS, writes Shi Davidi.",
-   "published": "2026-10-15T15:58-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/williams-2.jpg",
+   "league": "nhl",
+   "headline": "Friday Four: Sidney Crosby, Nathan MacKinnon and other early-season oddities",
+   "summary": "It’s officially small-sample-size season. To that end, Sportsnet’s Michael Amato digs into stats surrounding Sidney Crosby, Nathan MacKinnon and others to determine their sustainability in the latest Friday Four.",
+   "published": "2026-10-16T08:54-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/sidney-crosby.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 2,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/gavin-williams-shoves-again-as-guardians-take-alcs-lead-over-rays/",
+   "sn_team_count": 6,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/friday-four-sidney-crosby-nathan-mackinnon-and-other-early-season-oddities/",
    "source": "Sportsnet"
   },
   {
@@ -3232,6 +3248,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "mlb",
+   "headline": "Gavin Williams shoves again as Guardians take ALCS lead over Rays",
+   "summary": "Extra rest has helped Gavin Williams dominate in the post-season for the Guardians. Thanks to his latest start and Petey Halpin’s homer, Cleveland leads the ALCS, writes Shi Davidi.",
+   "published": "2026-10-15T15:58-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/williams-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/gavin-williams-shoves-again-as-guardians-take-alcs-lead-over-rays/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "Co-op Invitational Day 3 Takeaways: Team Hoesli punches ticket to playoffs with dream start",
    "summary": "",
@@ -3268,19 +3297,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/dodgers-shohei-ohtani-plans-to-pitch-in-2027/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Savannah Bananas coming to Canada, Mexico in 2027",
-   "summary": "The Savannah Bananas are going to need passports with Banana Ball going international for the first time in 2027.",
-   "published": "2026-10-15T20:25-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/The-Savannah-Bananas.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/savannah-bannas-coming-to-canada-mexico-in-2027/",
    "source": "Sportsnet"
   },
   {
@@ -3450,6 +3466,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "mlb",
+   "headline": "Savannah Bananas coming to Canada, Mexico in 2027",
+   "summary": "The Savannah Bananas are going to need passports with Banana Ball going international for the first time in 2027.",
+   "published": "2026-10-15T20:25-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/The-Savannah-Bananas.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/savannah-bannas-coming-to-canada-mexico-in-2027/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "cfl",
    "headline": "Around the CFL: Elks, Roughriders going in opposite directions",
    "summary": "First to worst, and worst to first? That’s a real possibility in the wild West with just two weeks remaining in the CFL regular season.",
@@ -3564,19 +3593,6 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/ncaa-mens-football/article/report-college-football-playoff-nearing-deal-to-expand-to-24-teams/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Ullmark leading Senators with dream-like start to season",
-   "summary": "Linus Ullmark is flashing the form that won him a Vezina four years ago. And the Senators squad in front of him is thankful for that.",
-   "published": "2026-10-15T10:07-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/ullmark-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "",
-   "url": "https://www.sportsnet.ca/nhl/article/ullmark-leading-senators-with-dream-like-start-to-season/",
    "source": "Sportsnet"
   },
   {
