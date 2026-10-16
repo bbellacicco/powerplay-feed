@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T19:16:47-04:00",
+ "updated": "2026-10-16T19:31:44-04:00",
  "today": "2026-10-16",
  "range": [
   "2026-10-13",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 36
   },
   "club_news": {
    "ok": true,
@@ -2023,7 +2023,7 @@
    "our_score": 2,
    "opp_score": 0,
    "result": null,
-   "note": "15:15 1st",
+   "note": "05:22 1st",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29090/"
    }
@@ -3106,6 +3106,19 @@
  ],
  "more_news": [
   {
+   "league": "mlb",
+   "headline": "Game 4 of ALCS between Rays, Guardians to begin in rain delay",
+   "summary": "",
+   "published": "2026-10-16T19:25-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177100650.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/game-4-of-alcs-between-rays-guardians-to-begin-in-rain-delay/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "A detailed look at Gavin McKenna’s game before he was benched",
    "summary": "So Gavin McKenna was benched on Thursday and played less than seven minutes against the Sabres. Justin Bourne takes a detailed look at what the 18-year-old did with his ice time to try and make sense of the benching.",
@@ -3147,16 +3160,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "mlb",
-   "headline": "Rays hitting coach Chad Mottola a symbol of stability at turbulent position",
-   "summary": "As a player, Chad Mottola became well versed in the MLB roller-coaster. Now, he’s the longest-tenured hitting coach in the league with the Tampa Bay Rays and still thriving one decade in, writes Sportsnet’s Shi Davidi.",
-   "published": "2026-10-16T14:39-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/chad-mottola.jpg",
+   "league": "nhl",
+   "headline": "Ducks’ rebuild provides blueprint for Flames to follow",
+   "summary": "As the Flames embark on their own rebuild, the Ducks are beginning to look an awful lot like the blueprint GM Craig Conroy would love to follow, writes Eric Francis.",
+   "published": "2026-10-16T14:29-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/03/Flames-vs-Ducks.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/rays-hitting-coach-chad-mottola-a-symbol-of-stability-at-turbulent-position/",
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/ducks-rebuild-provides-blueprint-for-flames-to-follow/",
    "source": "Sportsnet"
   },
   {
@@ -3279,6 +3292,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "mlb",
+   "headline": "Rays hitting coach Chad Mottola a symbol of stability at turbulent position",
+   "summary": "As a player, Chad Mottola became well versed in the MLB roller-coaster. Now, he’s the longest-tenured hitting coach in the league with the Tampa Bay Rays and still thriving one decade in, writes Sportsnet’s Shi Davidi.",
+   "published": "2026-10-16T14:39-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/chad-mottola.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/rays-hitting-coach-chad-mottola-a-symbol-of-stability-at-turbulent-position/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "MLS weekend preview: Toronto FC entering must-win territory vs. Red Bulls",
    "summary": "It’s now or never for Toronto FC. Without a victory over the New York Red Bulls on Saturday, it’s difficult to envision TFC qualifying for the playoffs for the first time since 2020, writes John Molinaro.",
@@ -3328,19 +3354,6 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/wnba/article/wnba-finals-preview-valkyries-and-dream-chase-first-championships/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Ducks’ rebuild provides blueprint for Flames to follow",
-   "summary": "As the Flames embark on their own rebuild, the Ducks are beginning to look an awful lot like the blueprint GM Craig Conroy would love to follow, writes Eric Francis.",
-   "published": "2026-10-16T14:29-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/03/Flames-vs-Ducks.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/ducks-rebuild-provides-blueprint-for-flames-to-follow/",
    "source": "Sportsnet"
   },
   {
@@ -4443,8 +4456,8 @@
       "l": 1,
       "otl": 2,
       "pts": 12,
-      "gf": 29,
-      "ga": 23,
+      "gf": 30,
+      "ga": 25,
       "strk": "W4"
      },
      {
@@ -4532,8 +4545,8 @@
       "l": 6,
       "otl": 2,
       "pts": 2,
-      "gf": 18,
-      "ga": 34,
+      "gf": 20,
+      "ga": 35,
       "strk": "L6"
      }
     ]
@@ -4562,7 +4575,7 @@
       "otl": 1,
       "pts": 11,
       "gf": 42,
-      "ga": 36,
+      "ga": 38,
       "strk": "L2"
      },
      {
@@ -4573,7 +4586,7 @@
       "l": 2,
       "otl": 0,
       "pts": 10,
-      "gf": 31,
+      "gf": 32,
       "ga": 22,
       "strk": "W3"
      },
@@ -4585,7 +4598,7 @@
       "l": 2,
       "otl": 2,
       "pts": 10,
-      "gf": 29,
+      "gf": 31,
       "ga": 29,
       "strk": "W3"
      },
@@ -4615,7 +4628,7 @@
       "otl": 0,
       "pts": 14,
       "gf": 40,
-      "ga": 23,
+      "ga": 24,
       "strk": "W7"
      },
      {
@@ -4694,7 +4707,7 @@
       "otl": 2,
       "pts": 18,
       "gf": 52,
-      "ga": 41,
+      "ga": 42,
       "strk": "L1"
      },
      {
@@ -4718,7 +4731,7 @@
       "otl": 1,
       "pts": 13,
       "gf": 41,
-      "ga": 55,
+      "ga": 56,
       "strk": "W1"
      },
      {
@@ -4801,7 +4814,7 @@
       "l": 10,
       "otl": 0,
       "pts": 6,
-      "gf": 46,
+      "gf": 47,
       "ga": 71,
       "strk": "W1"
      },
@@ -4830,8 +4843,8 @@
       "l": 1,
       "otl": 0,
       "pts": 28,
-      "gf": 87,
-      "ga": 23,
+      "gf": 90,
+      "ga": 24,
       "strk": "W8"
      },
      {
@@ -4914,8 +4927,8 @@
       "l": 10,
       "otl": 0,
       "pts": 12,
-      "gf": 49,
-      "ga": 75,
+      "gf": 50,
+      "ga": 78,
       "strk": "W1"
      },
      {
@@ -4926,7 +4939,7 @@
       "l": 10,
       "otl": 2,
       "pts": 12,
-      "gf": 49,
+      "gf": 50,
       "ga": 75,
       "strk": "L1"
      },
@@ -5166,8 +5179,8 @@
       "l": 2,
       "otl": 0,
       "pts": 18,
-      "gf": 57,
-      "ga": 26,
+      "gf": 59,
+      "ga": 27,
       "strk": "L1"
      },
      {
@@ -5202,7 +5215,7 @@
       "l": 3,
       "otl": 1,
       "pts": 11,
-      "gf": 32,
+      "gf": 34,
       "ga": 31,
       "strk": "L2"
      },
@@ -5238,8 +5251,8 @@
       "l": 8,
       "otl": 3,
       "pts": 5,
-      "gf": 29,
-      "ga": 56,
+      "gf": 30,
+      "ga": 58,
       "strk": "W1"
      },
      {
@@ -5251,7 +5264,7 @@
       "otl": 0,
       "pts": 2,
       "gf": 24,
-      "ga": 53,
+      "ga": 55,
       "strk": "L5"
      },
      {
