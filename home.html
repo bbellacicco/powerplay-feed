@@ -473,6 +473,9 @@
     firebirds: 13, knights: 14, sting: 15, greyhounds: 16, spitfires: 17, steelheads: 18, battalion: 19, icedogs: 20, spirit: 34 };
   var GOHL_LOGOS = { lasalle: 19, chatham: 20, sarnia: 23, strathroy: 24, 'london': 17, listowel: 9, ayr: 4, brantford: 2, hamilton: 13,
     'st. catharines': 12, 'st catharines': 12, elmira: 5, pelham: 15, welland: 25, 'st. marys': 22, 'st marys': 22, stratford: 26, cambridge: 7, waterloo: 6, caledonia: 10 };
+  var PJHL_LOGOS = {"hagersville": "c1e96bd4-1912-4b97-f349-e7829a75d200", "glanbrook": "3b62b2a3-2361-4c0f-c69c-23feff961300", "muskoka": "e583e012-cc18-42ef-a3fc-ec11d9c1e800", "stayner": "a1c31f53-25b9-4dc1-3b8e-e553b5443c00", "lucan": "a14aeb0e-99a6-4c06-0d98-92bb5a78e100", "petrolia": "6decc886-d29f-4049-2b97-d802f5724900", "amherstburg": "cff8047d-808d-4925-36de-4f3a0f83f100", "walpole": "2db781b0-ba84-4a20-e763-753327aaac00", "wheatley": "9a13d52f-6120-4c7c-b14c-32e488f0f000", "lakeshore": "463ba5c9-0f2d-4d2c-d205-56d34ab32100", "clarington": "087cf0b0-cff2-4c83-a6da-fa6d74bba700", "georgina": "f24de293-0298-44cf-a90b-a3b1bd15d100", "streetsville": "1276aad6-4ae6-4211-6c59-964109253800", "dunnville": "ae304179-2b03-4d73-2cf8-93227a15ad00", "dundas": "716f712a-3174-4c04-9add-e70030f1cc00", "grimsby": "97ed3f50-5320-441b-766a-f3d765c27a00", "wellesley": "ec13bbe2-5b3d-4531-9d7d-6fc48f8dcb00", "new hamburg": "74e58165-dfcf-4832-56bd-0821ce55e500", "hespeler": "9767aac8-9972-4e93-e973-61659ae8b900", "tavistock": "b2a7d130-e036-49a7-3bd7-384f40cf7400", "port hope": "f32a5773-cbc9-47ad-cdca-47705bfd4300", "napanee": "91777f9a-ece0-4ae2-5ce8-26e7bcd75300", "wingham": "393a6be5-29cb-4601-7a2f-ff19fca09900", "mount forest": "bde93cc2-32a3-41fc-74e0-0e02ce152500", "innisfil": "91607638-2704-409a-306d-83508dee7f00", "alliston": "53b927c7-479b-4e9e-e60a-ccde9cd16d00", "midland": "4f5d0943-c013-4986-eeca-1936853e9e00", "penetang": "1d6b35bc-2812-45ce-04e8-d9127e0f0100", "huntsville": "a1a8b702-e194-4d14-a857-69f814042500", "port stanley": "84a4fb26-ad74-45df-cae9-8056331bf700", "thamesford": "c6466411-9ac2-4787-38a4-8cd49952eb00", "scarborough": "560dbf03-8838-402e-1d54-b9be1770ed00", "uxbridge": "8f0fdcd5-0188-456a-9562-4723a3783000"};   // GameSheet (PJHL)
+  var OJHL_LOGOS = {"buffalo": 8, "aurora": 10, "caledon": 11, "king": 12, "burlington": 13, "cobourg": 14, "collingwood": 15, "georgetown": 16, "toronto warriors": 17, "lindsay": 18, "leamington": 19, "markham": 20, "milton": 21, "mississauga": 22, "north york": 23, "oakville": 24, "pickering": 25, "st. michael": 26, "stouffville": 27, "newmarket": 28, "toronto patriots": 29, "trenton": 30, "wellington": 31, "niagara falls": 39};
+  var TEAM_LOGOS = {};   // OUA / OCAA teams, copied by Buddy's PC (data/team-logos.json)
   var LANCERS_LOGO = 'https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/golancers.ca/images/responsive_2025/logo_main.png';
   function teamLogo(name, g, ours) {
     var n = String(name || '').toLowerCase().replace(/['’]s\b/, 's');
@@ -482,6 +485,21 @@
     }
     if (/gohl/i.test(g.sport || '')) {
       for (var j in GOHL_LOGOS) if (n.indexOf(j) >= 0) return LS + 'gojhl/logos/' + GOHL_LOGOS[j] + '.png';
+    }
+    if (/ojhl/i.test(g.sport || '')) {
+      for (var o in OJHL_LOGOS) if (n.indexOf(o) >= 0) return LS + 'ojhl/logos/' + OJHL_LOGOS[o] + '.png';
+    }
+    if (/pjhl/i.test(g.sport || '')) {
+      for (var q in PJHL_LOGOS) if (n.indexOf(q) >= 0) return 'https://imagedelivery.net/ErrQpIaCOWR-Tz51PhN1zA/' + PJHL_LOGOS[q] + '/256';
+    }
+    if (g.team === 'lancers' || g.team === 'saints') {          // university / college opponents (and St. Clair itself)
+      var want = ours && g.team === 'saints' ? 'st. clair' : n.replace(/^(the )?(university of |universite )/, '');
+      var best = '';
+      Object.keys(TEAM_LOGOS).forEach(function (k) {
+        var kk = k.toLowerCase();
+        if (!best && want && (kk === want || kk.indexOf(want) === 0 || want.indexOf(kk) === 0)) best = TEAM_LOGOS[k];
+      });
+      return best;
     }
     return '';
   }
@@ -582,7 +600,8 @@
   // ---------- load everything ----------
   var OUR_PRO = /(red wings|maple leafs|leafs|canadiens|lions|bills|tigers|blue jays|jays|pistons|raptors|argonauts|argos|tiger-cats|ticats|sceptres|spitfires)/i;
   function load() {
-    Promise.all([getJSON('local-news.json'), getJSON('local-games.json'), getJSON('highschool.json'), getJSON('saints.json'), getJSON('network.json'), getJSON('profiles.json')]).then(function (r) {
+    Promise.all([getJSON('local-news.json'), getJSON('local-games.json'), getJSON('highschool.json'), getJSON('saints.json'), getJSON('network.json'), getJSON('profiles.json'), getJSON('team-logos.json')]).then(function (r) {
+      if (r[6] && r[6].logos) TEAM_LOGOS = r[6].logos;
       var news = r[0] || {}, lg = r[1] || {}, hs = r[2], sc = r[3], net = r[4] || {}, pf = r[5] || {};
       var stories = (news.stories || []).filter(function (s) { return s.url && s.headline; })
         .sort(function (a, b) { return new Date(b.published) - new Date(a.published); });
