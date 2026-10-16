@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15T21:37:00-04:00",
+ "updated": "2026-10-15T21:46:49-04:00",
  "today": "2026-10-15",
  "range": [
   "2026-10-12",
@@ -1140,11 +1140,11 @@
    "home_away": "H",
    "opponent": "Caledon Admirals",
    "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
-   "status": "live",
+   "status": "final",
    "our_score": 5,
    "opp_score": 1,
-   "result": null,
-   "note": "Unofficial Final",
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16577"
    },
@@ -3596,14 +3596,14 @@
      {
       "name": "Peterborough Petes",
       "abbr": "PBO",
-      "gp": 10,
-      "w": 3,
+      "gp": 11,
+      "w": 4,
       "l": 7,
       "otl": 0,
-      "pts": 6,
+      "pts": 8,
       "gf": 33,
       "ga": 41,
-      "strk": "L1"
+      "strk": "W1"
      }
     ]
    },
@@ -3637,14 +3637,14 @@
      {
       "name": "North Bay Battalion",
       "abbr": "NB",
-      "gp": 9,
+      "gp": 10,
       "w": 4,
-      "l": 5,
+      "l": 6,
       "otl": 0,
       "pts": 8,
       "gf": 28,
       "ga": 36,
-      "strk": "W2"
+      "strk": "L1"
      },
      {
       "name": "Barrie Colts",
@@ -3993,6 +3993,18 @@
       "strk": "W6"
      },
      {
+      "name": "Leamington Flyers",
+      "abbr": "LEA",
+      "gp": 13,
+      "w": 10,
+      "l": 2,
+      "otl": 1,
+      "pts": 21,
+      "gf": 50,
+      "ga": 23,
+      "strk": "W3"
+     },
+     {
       "name": "Burlington Cougars",
       "abbr": "BUR",
       "gp": 15,
@@ -4003,18 +4015,6 @@
       "gf": 69,
       "ga": 40,
       "strk": "W3"
-     },
-     {
-      "name": "Leamington Flyers",
-      "abbr": "LEA",
-      "gp": 12,
-      "w": 9,
-      "l": 2,
-      "otl": 1,
-      "pts": 19,
-      "gf": 50,
-      "ga": 23,
-      "strk": "W2"
      },
      {
       "name": "Toronto Patriots",
@@ -4067,14 +4067,14 @@
      {
       "name": "Caledon Admirals",
       "abbr": "CAL",
-      "gp": 12,
+      "gp": 13,
       "w": 5,
-      "l": 6,
+      "l": 7,
       "otl": 1,
       "pts": 11,
       "gf": 36,
       "ga": 61,
-      "strk": "L3"
+      "strk": "L4"
      },
      {
       "name": "Buffalo Jr. Sabres",
