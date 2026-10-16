@@ -147,7 +147,7 @@
 <script>
 (function () {
   var TZ = 'America/Toronto';
-  var DAYS_BACK = 1, DAYS_AHEAD = 3;   // yesterday through three days from now
+  var DAYS_BACK = 2, DAYS_AHEAD = 1;   // two days before today through tomorrow
   var LEAGUES = {
     nfl: { label: 'NFL', path: 'football/nfl' },
     nhl: { label: 'NHL', path: 'hockey/nhl' },
@@ -394,7 +394,7 @@
     });
 
     var box = document.getElementById('list'); box.innerHTML = '';
-    if (!list.length) { box.appendChild(el('div', 'empty', 'No games from yesterday through the next three days.')); return; }
+    if (!list.length) { box.appendChild(el('div', 'empty', 'No games from two days ago through tomorrow.')); return; }
     var groups = [], cur = null;
     list.forEach(function (g) {
       var k = dayKey(new Date(g.start));
