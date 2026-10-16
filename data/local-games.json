@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15T19:46:54-04:00",
+ "updated": "2026-10-15T20:01:43-04:00",
  "today": "2026-10-15",
  "range": [
   "2026-10-12",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -1103,11 +1103,11 @@
    "home_away": "A",
    "opponent": "Sarnia Legionnaires",
    "location": "Pat Stapleton Arena, Sarnia, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 3,
+   "opp_score": 1,
    "result": null,
-   "note": "",
+   "note": "16:32 2nd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15579"
    },
@@ -1126,7 +1126,7 @@
    "our_score": 0,
    "opp_score": 2,
    "result": null,
-   "note": "00:39 1st",
+   "note": "17:15 2nd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29081/"
    }
@@ -1144,7 +1144,7 @@
    "our_score": 2,
    "opp_score": 0,
    "result": null,
-   "note": "00:00 1st",
+   "note": "20:00 2nd",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16577"
    },
@@ -2340,21 +2340,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "NHL Power Rankings: Captain check for all 32 teams",
-   "summary": "When Connor Bedard made his season debut this week, he became the eighth player to serve as a new full-time captain for his club. Ryan Dixon uses this week’s Power Rankings as a captain check for all 32 squads.",
-   "published": "2026-10-15T12:23-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Mcdavid-1.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 7,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/nhl-power-rankings-captain-check-for-all-32-teams/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "mlb",
    "headline": "Dodgers move Ohtani back to leadoff spot for must-win Game 4",
    "summary": "",
@@ -2458,6 +2443,21 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/ncaa-mens-football/article/report-college-football-playoff-nearing-deal-to-expand-to-24-teams/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "NHL Power Rankings: Captain check for all 32 teams",
+   "summary": "When Connor Bedard made his season debut this week, he became the eighth player to serve as a new full-time captain for his club. Ryan Dixon uses this week’s Power Rankings as a captain check for all 32 squads.",
+   "published": "2026-10-15T12:23-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Mcdavid-1.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 7,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/nhl-power-rankings-captain-check-for-all-32-teams/",
    "source": "Sportsnet"
   },
   {
@@ -2737,19 +2737,6 @@
    "sn_team_count": 0,
    "sport": "Curling",
    "url": "https://www.sportsnet.ca/curling/article/co-op-invitational-day-2-takeaways-jacobs-outshines-bottcher-in-battle-of-canadian-giants/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Jon Rahm will be free to leave LIV under separation agreement",
-   "summary": "",
-   "published": "2026-10-15T12:43-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/07/Jon-Rahm.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Golf",
-   "url": "https://www.sportsnet.ca/golf/article/jon-rahm-will-be-free-to-leave-liv-under-separation-agreement/",
    "source": "Sportsnet"
   },
   {
@@ -3678,7 +3665,7 @@
       "l": 3,
       "otl": 0,
       "pts": 10,
-      "gf": 23,
+      "gf": 24,
       "ga": 25,
       "strk": "W2"
      },
@@ -3732,7 +3719,7 @@
       "otl": 1,
       "pts": 13,
       "gf": 33,
-      "ga": 25,
+      "ga": 26,
       "strk": "W5"
      },
      {
@@ -4108,7 +4095,7 @@
       "l": 6,
       "otl": 2,
       "pts": 12,
-      "gf": 46,
+      "gf": 47,
       "ga": 57,
       "strk": "L1"
      },
@@ -4145,7 +4132,7 @@
       "otl": 2,
       "pts": 8,
       "gf": 42,
-      "ga": 75,
+      "ga": 76,
       "strk": "L4"
      }
     ]
@@ -4187,8 +4174,8 @@
       "l": 2,
       "otl": 0,
       "pts": 16,
-      "gf": 51,
-      "ga": 26,
+      "gf": 52,
+      "ga": 27,
       "strk": "W1"
      },
      {
@@ -4295,8 +4282,8 @@
       "l": 7,
       "otl": 0,
       "pts": 0,
-      "gf": 15,
-      "ga": 41,
+      "gf": 16,
+      "ga": 42,
       "strk": "L7"
      }
     ]
