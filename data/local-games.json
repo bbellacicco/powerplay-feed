@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T13:48:21-04:00",
+ "updated": "2026-10-16T14:01:40-04:00",
  "today": "2026-10-16",
  "range": [
   "2026-10-13",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 40
+   "count": 39
   },
   "club_news": {
    "ok": true,
@@ -3113,8 +3113,10 @@
    "published": "2026-10-16T12:52-04:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/mckenna-1.jpg",
    "video": false,
-   "teams": [],
-   "sn_team_count": 0,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/a-detailed-look-at-gavin-mckennas-game-before-he-was-benched/",
    "source": "Sportsnet"
@@ -3213,6 +3215,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Report: World Curling plans to host women’s worlds in United Arab Emirates",
+   "summary": "",
+   "published": "2026-10-16T13:51-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/03/einarson-5.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "",
+   "url": "https://www.sportsnet.ca/curling/article/report-world-curling-plans-to-host-womens-worlds-in-united-arab-emirates/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "‘Should all be very angry’: Cooler heads not prevailing for Blue Jackets’ Bowness",
    "summary": "",
@@ -3226,6 +3241,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nfl",
+   "headline": "Ravens QB Lamar Jackson out vs. Browns",
+   "summary": "",
+   "published": "2026-10-16T13:53-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/lamar-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/ravens-qb-lamar-jackson-out-vs-browns/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "mlb",
    "headline": "Guardians to open with Shawn Armstrong in Game 4 of ALCS",
    "summary": "",
@@ -3236,19 +3264,6 @@
    "sn_team_count": 2,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/guardians-to-open-with-shawn-armstrong-in-game-4-of-alcs/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Canada’s Taylor Ruck swims to 200 backstroke gold at World Cup event",
-   "summary": "",
-   "published": "2026-10-16T11:13-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/07/ruck-3.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Olympics",
-   "url": "https://www.sportsnet.ca/olympics/article/canadas-taylor-ruck-swims-to-200-backstroke-gold-at-world-cup-event/",
    "source": "Sportsnet"
   },
   {
@@ -3275,21 +3290,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/hurricanes-rule-taylor-hall-out-week-to-week-seth-jarvis-nearing-return/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Maple Leafs’ John Tavares exits vs. Sabres after collision",
-   "summary": "",
-   "published": "2026-10-15T21:23-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-57.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-john-tavares-exits-vs-sabres-after-collision/",
    "source": "Sportsnet"
   },
   {
@@ -3482,6 +3482,19 @@
   },
   {
    "league": "other",
+   "headline": "Canada’s Taylor Ruck swims to 200 backstroke gold at World Cup event",
+   "summary": "",
+   "published": "2026-10-16T11:13-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/07/ruck-3.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Olympics",
+   "url": "https://www.sportsnet.ca/olympics/article/canadas-taylor-ruck-swims-to-200-backstroke-gold-at-world-cup-event/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
    "headline": "Saudi-hosted BMX cycling Olympic qualifier canceled after Riyadh airport bombing",
    "summary": "",
    "published": "2026-10-16T09:31-04:00",
@@ -3618,32 +3631,6 @@
    "sn_team_count": 0,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/savannah-bannas-coming-to-canada-mexico-in-2027/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "UFC Edmonton preview: Record 12 Canadians to compete on card",
-   "summary": "UFC Edmonton features 12 Canadian fighters — the most to appear on a card in UFC history. Adam Martin looks at the record-breaking event’s top storylines.",
-   "published": "2026-10-15T09:32-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/malott.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/ufc-edmonton-preview-record-12-canadians-to-compete-on-card/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Q and A: Chovancek on chasing UFC dream and representing Canada",
-   "summary": "After more than a decade of setbacks, sacrifices and hard work, Canadian MMA prospect Cody Chovancek is finally set to make his long-awaited UFC debut. The Petrolia, Ont., native opens up about how fishing shaped his app",
-   "published": "2026-10-14T10:40-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/09/Cody-Chovancek-Unified-MMA.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/q-and-a-chovancek-on-chasing-ufc-dream-and-representing-canada/",
    "source": "Sportsnet"
   },
   {
