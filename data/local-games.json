@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15T21:16:51-04:00",
+ "updated": "2026-10-15T21:37:00-04:00",
  "today": "2026-10-15",
  "range": [
   "2026-10-12",
@@ -1103,11 +1103,11 @@
    "home_away": "A",
    "opponent": "Sarnia Legionnaires",
    "location": "Pat Stapleton Arena, Sarnia, ON",
-   "status": "live",
+   "status": "final",
    "our_score": 6,
    "opp_score": 3,
-   "result": null,
-   "note": "01:16 3rd",
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15579"
    },
@@ -1123,10 +1123,10 @@
    "opponent": "Sudbury Wolves",
    "location": "WFCU Centre, Windsor",
    "status": "live",
-   "our_score": 1,
-   "opp_score": 4,
+   "our_score": 2,
+   "opp_score": 6,
    "result": null,
-   "note": "05:46 3rd",
+   "note": "End of Game",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29081/"
    }
@@ -1141,10 +1141,10 @@
    "opponent": "Caledon Admirals",
    "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
    "status": "live",
-   "our_score": 3,
+   "our_score": 5,
    "opp_score": 1,
    "result": null,
-   "note": "03:18 3rd",
+   "note": "Unofficial Final",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16577"
    },
@@ -1159,10 +1159,10 @@
    "home_away": "A",
    "opponent": "Walpole Island Wild",
    "location": "Walpole Island Complex",
-   "status": "live",
-   "our_score": 0,
+   "status": "final",
+   "our_score": 7,
    "opp_score": 0,
-   "result": null,
+   "result": "W",
    "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960361?configuration=45"
@@ -2315,6 +2315,21 @@
  "more_news": [
   {
    "league": "nhl",
+   "headline": "Maple Leafs’ John Tavares exits vs. Sabres after collision",
+   "summary": "",
+   "published": "2026-10-15T21:23-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-57.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-john-tavares-exits-vs-sabres-after-collision/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Maple Leafs acquire forward Aatu Raty in trade with Canucks",
    "summary": "",
    "published": "2026-10-15T18:16-04:00",
@@ -2687,19 +2702,6 @@
    "sn_team_count": 0,
    "sport": "MMA",
    "url": "https://www.sportsnet.ca/ufc/article/q-and-a-chovancek-on-chasing-ufc-dream-and-representing-canada/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "pwhl",
-   "headline": "Brendan Shanahan joins Kilmer Sports Ventures as PWHL adviser",
-   "summary": "",
-   "published": "2026-10-15T08:38-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/01/CP166981191-2.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/pwhl/article/brendan-shanahan-joins-kilmer-sports-ventures-as-pwhl-adviser/",
    "source": "Sportsnet"
   },
   {
@@ -3174,7 +3176,7 @@
    "league": "mlb",
    "headline": "Watch Tigers prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-15T19:42-04:00",
+   "published": "2026-10-15T21:23-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -3276,15 +3278,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Reinvigorated and revamped Bloss headlines Blue Jays' Fall League contingent",
+   "headline": "LIVE: Watch Blue Jays prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-13T10:06-04:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/brno3lrecf0mllmfwcoi",
+   "published": "2026-10-15T21:23-04:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
     "Toronto Blue Jays"
    ],
-   "url": "https://www.mlb.com/bluejays/news/blue-jays-arizona-fall-league-overview-2026",
+   "url": "https://www.mlb.com/bluejays/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
    "source": "Team site"
   },
   {
@@ -3302,15 +3304,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Here are each organization's Prospects of the Year",
+   "headline": "Reinvigorated and revamped Bloss headlines Blue Jays' Fall League contingent",
    "summary": "",
-   "published": "2026-10-07T22:21-04:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/ifgmxamghoh4f7uslruu",
+   "published": "2026-10-13T10:06-04:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/brno3lrecf0mllmfwcoi",
    "video": false,
    "teams": [
     "Toronto Blue Jays"
    ],
-   "url": "https://www.mlb.com/bluejays/news/each-team-s-prospects-of-the-year-2026",
+   "url": "https://www.mlb.com/bluejays/news/blue-jays-arizona-fall-league-overview-2026",
    "source": "Team site"
   },
   {
@@ -3337,6 +3339,19 @@
     "Toronto Blue Jays"
    ],
    "url": "https://www.mlb.com/milb/prospects/bluejays/",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
+   "headline": "Here are each organization's Prospects of the Year",
+   "summary": "",
+   "published": "2026-10-07T22:21-04:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/ifgmxamghoh4f7uslruu",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "url": "https://www.mlb.com/bluejays/news/each-team-s-prospects-of-the-year-2026",
    "source": "Team site"
   },
   {
@@ -3389,19 +3404,6 @@
     "Toronto Blue Jays"
    ],
    "url": "https://www.mlb.com/bluejays/news/blue-jays-internal-roster-questions-entering-offseason",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
-   "headline": "Watch Blue Jays prospects in Arizona Fall League action",
-   "summary": "",
-   "published": "2026-10-15T19:42-04:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "url": "https://www.mlb.com/bluejays/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
    "source": "Team site"
   },
   {
@@ -3599,8 +3601,8 @@
       "l": 7,
       "otl": 0,
       "pts": 6,
-      "gf": 31,
-      "ga": 40,
+      "gf": 33,
+      "ga": 41,
       "strk": "L1"
      }
     ]
@@ -3616,20 +3618,20 @@
       "l": 0,
       "otl": 1,
       "pts": 13,
-      "gf": 38,
-      "ga": 14,
+      "gf": 40,
+      "ga": 15,
       "strk": "W6"
      },
      {
       "name": "Niagara IceDogs",
       "abbr": "NIAG",
-      "gp": 8,
+      "gp": 9,
       "w": 5,
       "l": 3,
-      "otl": 0,
-      "pts": 10,
+      "otl": 1,
+      "pts": 11,
       "gf": 26,
-      "ga": 26,
+      "ga": 27,
       "strk": "W2"
      },
      {
@@ -3640,8 +3642,8 @@
       "l": 5,
       "otl": 0,
       "pts": 8,
-      "gf": 27,
-      "ga": 34,
+      "gf": 28,
+      "ga": 36,
       "strk": "W2"
      },
      {
@@ -3676,14 +3678,14 @@
      {
       "name": "Soo Greyhounds",
       "abbr": "SOO",
-      "gp": 8,
-      "w": 6,
+      "gp": 9,
+      "w": 7,
       "l": 1,
       "otl": 1,
-      "pts": 13,
-      "gf": 34,
+      "pts": 15,
+      "gf": 35,
       "ga": 28,
-      "strk": "W5"
+      "strk": "W6"
      },
      {
       "name": "Sarnia Sting",
@@ -3729,8 +3731,8 @@
       "l": 4,
       "otl": 2,
       "pts": 8,
-      "gf": 25,
-      "ga": 35,
+      "gf": 26,
+      "ga": 37,
       "strk": "L1"
      }
     ]
@@ -4010,7 +4012,7 @@
       "l": 2,
       "otl": 1,
       "pts": 19,
-      "gf": 48,
+      "gf": 50,
       "ga": 23,
       "strk": "W2"
      },
@@ -4025,6 +4027,18 @@
       "gf": 65,
       "ga": 23,
       "strk": "W4"
+     },
+     {
+      "name": "Oakville Blades",
+      "abbr": "OAK",
+      "gp": 14,
+      "w": 6,
+      "l": 6,
+      "otl": 2,
+      "pts": 14,
+      "gf": 50,
+      "ga": 58,
+      "strk": "W1"
      },
      {
       "name": "Mississauga Chargers",
@@ -4051,18 +4065,6 @@
       "strk": "L1"
      },
      {
-      "name": "Oakville Blades",
-      "abbr": "OAK",
-      "gp": 13,
-      "w": 5,
-      "l": 6,
-      "otl": 2,
-      "pts": 12,
-      "gf": 50,
-      "ga": 58,
-      "strk": "L1"
-     },
-     {
       "name": "Caledon Admirals",
       "abbr": "CAL",
       "gp": 12,
@@ -4071,7 +4073,7 @@
       "otl": 1,
       "pts": 11,
       "gf": 36,
-      "ga": 59,
+      "ga": 61,
       "strk": "L3"
      },
      {
@@ -4089,14 +4091,14 @@
      {
       "name": "Georgetown Raiders",
       "abbr": "GEO",
-      "gp": 14,
+      "gp": 15,
       "w": 3,
-      "l": 9,
+      "l": 10,
       "otl": 2,
       "pts": 8,
       "gf": 43,
       "ga": 79,
-      "strk": "L4"
+      "strk": "L5"
      }
     ]
    }
@@ -4118,6 +4120,18 @@
       "strk": "W7"
      },
      {
+      "name": "Chatham Maroons",
+      "abbr": "CHA",
+      "gp": 11,
+      "w": 9,
+      "l": 2,
+      "otl": 0,
+      "pts": 18,
+      "gf": 55,
+      "ga": 29,
+      "strk": "W2"
+     },
+     {
       "name": "St. Thomas Stars",
       "abbr": "STT",
       "gp": 9,
@@ -4128,18 +4142,6 @@
       "gf": 38,
       "ga": 17,
       "strk": "W3"
-     },
-     {
-      "name": "Chatham Maroons",
-      "abbr": "CHA",
-      "gp": 10,
-      "w": 8,
-      "l": 2,
-      "otl": 0,
-      "pts": 16,
-      "gf": 55,
-      "ga": 29,
-      "strk": "W1"
      },
      {
       "name": "Listowel Cyclones",
@@ -4240,14 +4242,14 @@
      {
       "name": "Sarnia Legionnaires",
       "abbr": "SAR",
-      "gp": 7,
+      "gp": 8,
       "w": 0,
-      "l": 7,
+      "l": 8,
       "otl": 0,
       "pts": 0,
       "gf": 18,
       "ga": 45,
-      "strk": "L7"
+      "strk": "L8"
      }
     ]
    },
@@ -4631,26 +4633,26 @@
      {
       "name": "Amherstburg Admirals",
       "abbr": "AMH",
-      "gp": 12,
-      "w": 3,
+      "gp": 13,
+      "w": 4,
       "l": 9,
       "otl": 0,
-      "pts": 6,
-      "gf": 30,
+      "pts": 8,
+      "gf": 37,
       "ga": 47,
-      "strk": "W1"
+      "strk": "W2"
      },
      {
       "name": "Walpole Island Wild",
       "abbr": "WAL",
-      "gp": 12,
+      "gp": 13,
       "w": 0,
-      "l": 12,
+      "l": 13,
       "otl": 0,
       "pts": 0,
       "gf": 12,
-      "ga": 70,
-      "strk": "L12"
+      "ga": 77,
+      "strk": "L13"
      }
     ]
    }
