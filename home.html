@@ -105,6 +105,7 @@
   .game .side .nm { font-weight: 800; font-size: 13px; line-height: 1.15; text-shadow: 0 1px 3px rgba(0,0,0,.6); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
   .game .side .sc { font-size: 26px; font-weight: 900; line-height: 1; text-shadow: 0 2px 6px rgba(0,0,0,.5); font-variant-numeric: tabular-nums; }
   .game .side.lost { opacity: .6; }
+  .game .side.withlogo { gap: 4px; } .game .side.withlogo img { height: 36px; width: 36px; } .game .side.withlogo .nm { -webkit-line-clamp: 1; }
   .game .cap { margin-top: 8px; font-weight: 700; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .game .sm { margin-top: 2px; font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
@@ -465,6 +466,25 @@
       .sort(function (a, b) { return a.start < b.start ? -1 : a.start > b.start ? 1 : priority(a) - priority(b); });
     return live.concat(recent, next).slice(0, 14);
   }
+
+  // ---------- team logos on local score cards (where we have them) ----------
+  var LS = 'https://assets.leaguestat.com/';
+  var OHL_LOGOS = { bulldogs: 1, frontenacs: 2, generals: 4, '67': 5, petes: 6, colts: 7, otters: 8, storm: 9, rangers: 10, attack: 11, wolves: 12,
+    firebirds: 13, knights: 14, sting: 15, greyhounds: 16, spitfires: 17, steelheads: 18, battalion: 19, icedogs: 20, spirit: 34 };
+  var GOHL_LOGOS = { lasalle: 19, chatham: 20, sarnia: 23, strathroy: 24, 'london': 17, listowel: 9, ayr: 4, brantford: 2, hamilton: 13,
+    'st. catharines': 12, 'st catharines': 12, elmira: 5, pelham: 15, welland: 25, 'st. marys': 22, 'st marys': 22, stratford: 26, cambridge: 7, waterloo: 6, caledonia: 10 };
+  var LANCERS_LOGO = 'https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/golancers.ca/images/responsive_2025/logo_main.png';
+  function teamLogo(name, g, ours) {
+    var n = String(name || '').toLowerCase().replace(/['’]s\b/, 's');
+    if (ours && g.team === 'lancers') return LANCERS_LOGO;
+    if (g.team === 'spitfires' || /\bohl\b/i.test(g.sport || '')) {
+      for (var k in OHL_LOGOS) if (n.indexOf(k) >= 0) return LS + 'ohl/logos/' + OHL_LOGOS[k] + '.png';
+    }
+    if (/gohl/i.test(g.sport || '')) {
+      for (var j in GOHL_LOGOS) if (n.indexOf(j) >= 0) return LS + 'gojhl/logos/' + GOHL_LOGOS[j] + '.png';
+    }
+    return '';
+  }
   function localCard(g, teams) {
     var t = teams[g.team] || {}, c = el('a', 'game');
     c.href = (g.links && (g.links.powerplay || g.links.gamecentre || g.links.boxscore || g.links.recap || g.links.standings)) || LINK.local;
@@ -472,7 +492,8 @@
     var away, home, col = TCOL[g.team] || '#23407a', grey = '#1b2f55';
     if (g.home && g.away) { away = { n: g.away, s: g.our_score, c: grey }; home = { n: g.home, s: g.opp_score, c: col }; }
     else {
-      var us = { n: g.club || t.short || TEAM[g.team] || '', s: g.our_score, c: col }, them = { n: g.opponent, s: g.opp_score, c: grey };
+      var us = { n: g.club || t.short || TEAM[g.team] || '', s: g.our_score, c: col, logo: teamLogo(g.club || t.name || TEAM[g.team], g, true) },
+        them = { n: g.opponent, s: g.opp_score, c: grey, logo: teamLogo(g.opponent, g, false) };
       if (g.home_away === 'H') { away = them; home = us; } else { away = us; home = them; }
     }
     var box = el('div', 'box'); box.style.setProperty('--a', away.c); box.style.setProperty('--h', home.c);
@@ -481,7 +502,8 @@
     var w = when(g); box.appendChild(el('span', 'st' + (w[1] ? ' ' + w[1] : ''), w[0]));
     var scored = g.status !== 'upcoming' && away.s != null && home.s != null;
     [[away, 'a', home], [home, 'h', away]].forEach(function (x) {
-      var side = el('div', 'side ' + x[1] + (g.status === 'final' && scored && x[0].s < x[2].s ? ' lost' : ''));
+      var side = el('div', 'side ' + x[1] + (g.status === 'final' && scored && x[0].s < x[2].s ? ' lost' : '') + (x[0].logo ? ' withlogo' : ''));
+      if (x[0].logo) { var li = new Image(); li.alt = ''; li.src = x[0].logo; li.onerror = function () { li.remove(); side.classList.remove('withlogo'); }; side.appendChild(li); }
       if (scored) side.appendChild(el('div', 'sc', String(x[0].s)));
       side.appendChild(el('div', 'nm', x[0].n));
       box.appendChild(side);
