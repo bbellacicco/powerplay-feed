@@ -6,6 +6,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
 
 <title>Local Scoreboard | Powerplay Windsor</title>
+<script src="arrows.js"></script>
 <!--
   Local schedules & results widget: a 7-day span (3 days before today, today,
   3 days after; the All tab shows yesterday to 2 days ahead). Data comes from data/local-games.json, refreshed every
@@ -122,6 +123,17 @@
     .game { grid-template-columns: 4px 52px 1fr auto; gap: 8px; }
     .time { font-size: 12px; }
   }
+
+  /* each day's games: one sideways row of cards (swipe on phones, arrows on computers) */
+  .dstrip { display: flex; gap: 10px; overflow-x: auto; padding: 2px 0 8px; scroll-snap-type: x mandatory; scrollbar-width: thin; }
+  .dstrip .game { position: relative; flex: 0 0 236px; scroll-snap-align: start; display: flex; flex-direction: column; align-items: stretch; gap: 4px;
+    min-height: 118px; margin: 0; padding: 10px 12px 10px 16px; }
+  .dstrip .stripe { position: absolute; left: 0; top: 0; bottom: 0; width: 5px; }
+  .dstrip .time { font-size: 12px; font-weight: 700; color: var(--accent); }
+  .dstrip .who { white-space: normal; line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .dstrip .score { text-align: left; margin-top: auto; }
+  .day h2 .n { color: var(--muted); font-weight: 600; letter-spacing: .04em; }
+  @media (max-width: 480px) { .dstrip .game { flex-basis: 78%; } }
   .brand { display: flex; align-items: center; gap: 9px; min-width: 0; }
   .brand .btext { min-width: 0; }
   .blogo { height: 38px; width: auto; max-width: 76px; object-fit: contain; flex: none; border-radius: 4px; }
@@ -574,8 +586,9 @@
 
     if (latest) {
       // priority order isn't by date, so no day headings; each row shows its day instead
-      var sec0 = el('section', 'day');
-      inView.forEach(function (g) { sec0.appendChild(row(g, true)); });
+      var sec0 = el('section', 'day'), st0 = el('div', 'dstrip');
+      inView.forEach(function (g) { st0.appendChild(row(g, true)); });
+      sec0.appendChild(st0);
       list.appendChild(sec0);
       return;
     }
@@ -589,8 +602,12 @@
     groups.forEach(function (grp) {
       var sec = el('section', 'day' + (grp.k === todayKey ? ' today' : ''));
       var label = grp.k === todayKey ? 'Today · ' : '';
-      sec.appendChild(el('h2', null, label + fmt(grp.d, { weekday: 'long', month: 'short', day: 'numeric' })));
-      grp.games.forEach(function (g) { sec.appendChild(row(g)); });
+      var h2 = el('h2', null, label + fmt(grp.d, { weekday: 'long', month: 'short', day: 'numeric' }));
+      h2.appendChild(el('span', 'n', ' · ' + grp.games.length + (grp.games.length === 1 ? ' game' : ' games')));
+      sec.appendChild(h2);
+      var strip = el('div', 'dstrip');
+      grp.games.forEach(function (g) { strip.appendChild(row(g)); });
+      sec.appendChild(strip);
       list.appendChild(sec);
     });
     if (state.team === 'all') list.appendChild(el('div', 'more', 'For more games and results, tap a team above.'));
