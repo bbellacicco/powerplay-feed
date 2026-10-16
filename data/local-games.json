@@ -1,9 +1,9 @@
 {
- "updated": "2026-10-15T23:46:52-04:00",
- "today": "2026-10-15",
+ "updated": "2026-10-16T00:08:52-04:00",
+ "today": "2026-10-16",
  "range": [
-  "2026-10-12",
-  "2026-10-18"
+  "2026-10-13",
+  "2026-10-19"
  ],
  "teams": {
   "spitfires": {
@@ -59,7 +59,7 @@
   },
   "cfl": {
    "ok": true,
-   "count": 5
+   "count": 4
   },
   "cfl_news": {
    "ok": true,
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 36
   },
   "club_news": {
    "ok": true,
@@ -111,24 +111,6 @@
   }
  },
  "games": [
-  {
-   "id": "spitfires-ohl29076",
-   "team": "spitfires",
-   "sport": "Hockey",
-   "start": "2026-10-12T14:05:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Saginaw Spirit",
-   "location": "WFCU Centre, Windsor",
-   "status": "final",
-   "our_score": 2,
-   "opp_score": 3,
-   "result": "OTL",
-   "note": "OT",
-   "links": {
-    "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29076/"
-   }
-  },
   {
    "id": "highschool-2026-10-13-89",
    "team": "highschool",
@@ -1610,28 +1592,6 @@
    "home": "Calgary Stampeders",
    "away_abbr": "BC",
    "home_abbr": "CGY"
-  },
-  {
-   "id": "cfl-cfl6663",
-   "team": "cfl",
-   "sport": "CFL",
-   "start": "2026-10-12T13:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Montreal Alouettes",
-   "location": "Percival Molson Memorial Stadium",
-   "status": "final",
-   "our_score": 24,
-   "opp_score": 44,
-   "result": null,
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.cfl.ca/schedule/"
-   },
-   "away": "Saskatchewan Roughriders",
-   "home": "Montreal Alouettes",
-   "away_abbr": "SSK",
-   "home_abbr": "MTL"
   }
  ],
  "pro_news": [
@@ -2358,6 +2318,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Oilers lose for first time in regulation to Mammoth",
+   "summary": "",
+   "published": "2026-10-15T23:52-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/mcdavid-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/oilers-lose-for-first-time-in-regulation-to-mammoth/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Brady Tkachuk completes second straight natural hat trick in OT as Panthers stun Canucks",
    "summary": "",
    "published": "2026-10-15T22:10-04:00",
@@ -2442,7 +2415,7 @@
   },
   {
    "league": "nhl",
-   "headline": "Levshunov scores in OT as Blackhawks beat Jets",
+   "headline": "NHL Roundup: Levshunov scores in OT as Blackhawks beat Jets",
    "summary": "",
    "published": "2026-10-15T23:13-04:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-62.jpg",
@@ -2451,6 +2424,19 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/levshunov-scores-in-ot-as-blackhawks-beat-jets/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Broncos beat Seahawks in OT on Ja’Quan McMillian’s pick, Wil Lutz’s 53-yarder",
+   "summary": "",
+   "published": "2026-10-15T23:51-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/allen_zach1280.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/broncos-beat-seahawks-in-ot-on-jaquan-mcmillians-pick-wil-lutzs-53-yarder/",
    "source": "Sportsnet"
   },
   {
@@ -2479,19 +2465,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/red-wings-owner-ilitch-i-understand-fan-frustration/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Eagles QB Jalen Hurts out vs. Panthers due to superficial blood clot",
-   "summary": "",
-   "published": "2026-10-15T13:11-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/11/Untitled-design-2025-11-28T153505.838.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/eagles-qb-jalen-hurts-out-vs-panthers-due-to-superficial-blood-clot/",
    "source": "Sportsnet"
   },
   {
@@ -2641,6 +2614,19 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/nfl-week-6-pick-em-seahawks-look-to-bounce-back-vs-broncos/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Eagles QB Jalen Hurts out vs. Panthers due to superficial blood clot",
+   "summary": "",
+   "published": "2026-10-15T13:11-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/11/Untitled-design-2025-11-28T153505.838.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/eagles-qb-jalen-hurts-out-vs-panthers-due-to-superficial-blood-clot/",
    "source": "Sportsnet"
   },
   {
