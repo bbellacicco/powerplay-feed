@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T18:01:39-04:00",
+ "updated": "2026-10-16T18:31:56-04:00",
  "today": "2026-10-16",
  "range": [
   "2026-10-13",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 39
+   "count": 37
   },
   "club_news": {
    "ok": true,
@@ -1964,9 +1964,9 @@
    "home_away": "H",
    "opponent": "Wheatley Sharks",
    "location": "Atlas Tube Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
    "note": "",
    "links": {
@@ -3241,16 +3241,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Report: World Curling plans to host women’s worlds in United Arab Emirates",
+   "league": "mlb",
+   "headline": "Ohtani’s health, possible lockout loom over uncertain off-season for Dodgers",
    "summary": "",
-   "published": "2026-10-16T13:51-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/03/einarson-5.jpg",
+   "published": "2026-10-16T18:13-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/05/Los-Angeles-Dodgers-Shohei-Ohtani-1.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
-   "sport": "",
-   "url": "https://www.sportsnet.ca/curling/article/report-world-curling-plans-to-host-womens-worlds-in-united-arab-emirates/",
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/ohtanis-health-possible-lockout-loom-over-uncertain-off-season-for-dodgers/",
    "source": "Sportsnet"
   },
   {
@@ -3293,16 +3293,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "cfl",
-   "headline": "Around the CFL: Elks, Roughriders going in opposite directions",
-   "summary": "First to worst, and worst to first? That’s a real possibility in the wild West with just two weeks remaining in the CFL regular season.",
-   "published": "2026-10-16T08:15-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/anderson.jpg",
+   "league": "other",
+   "headline": "Report: World Curling plans to host women’s worlds in United Arab Emirates",
+   "summary": "",
+   "published": "2026-10-16T13:51-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/03/einarson-5.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/around-the-cfl-elks-roughriders-going-in-opposite-directions/",
+   "sport": "",
+   "url": "https://www.sportsnet.ca/curling/article/report-world-curling-plans-to-host-womens-worlds-in-united-arab-emirates/",
    "source": "Sportsnet"
   },
   {
@@ -3316,6 +3316,19 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/cfl/article/historically-bad-redblacks-bring-back-painful-memories-for-ottawa-football-fans/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "cfl",
+   "headline": "Around the CFL: Elks, Roughriders going in opposite directions",
+   "summary": "First to worst, and worst to first? That’s a real possibility in the wild West with just two weeks remaining in the CFL regular season.",
+   "published": "2026-10-16T08:15-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/anderson.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/around-the-cfl-elks-roughriders-going-in-opposite-directions/",
    "source": "Sportsnet"
   },
   {
@@ -3584,47 +3597,6 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/scouts-analysis-what-maple-leafs-get-in-raty-canucks-in-quillan/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "NHL Power Rankings: Captain check for all 32 teams",
-   "summary": "When Connor Bedard made his season debut this week, he became the eighth player to serve as a new full-time captain for his club. Ryan Dixon uses this week’s Power Rankings as a captain check for all 32 squads.",
-   "published": "2026-10-15T12:23-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Mcdavid-1.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 7,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/nhl-power-rankings-captain-check-for-all-32-teams/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "UFC Edmonton preview: Record 12 Canadians to compete on card",
-   "summary": "UFC Edmonton features 12 Canadian fighters — the most to appear on a card in UFC history. Adam Martin looks at the record-breaking event’s top storylines.",
-   "published": "2026-10-15T09:32-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/malott.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/ufc-edmonton-preview-record-12-canadians-to-compete-on-card/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Q and A: Chovancek on chasing UFC dream and representing Canada",
-   "summary": "After more than a decade of setbacks, sacrifices and hard work, Canadian MMA prospect Cody Chovancek is finally set to make his long-awaited UFC debut. The Petrolia, Ont., native opens up about how fishing shaped his app",
-   "published": "2026-10-14T10:40-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/09/Cody-Chovancek-Unified-MMA.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/q-and-a-chovancek-on-chasing-ufc-dream-and-representing-canada/",
    "source": "Sportsnet"
   },
   {
