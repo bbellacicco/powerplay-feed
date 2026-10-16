@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15T21:46:49-04:00",
+ "updated": "2026-10-15T22:01:55-04:00",
  "today": "2026-10-15",
  "range": [
   "2026-10-12",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 29
+   "count": 30
   },
   "club_news": {
    "ok": true,
@@ -1122,11 +1122,11 @@
    "home_away": "H",
    "opponent": "Sudbury Wolves",
    "location": "WFCU Centre, Windsor",
-   "status": "live",
+   "status": "final",
    "our_score": 2,
    "opp_score": 6,
-   "result": null,
-   "note": "End of Game",
+   "result": "L",
+   "note": "",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29081/"
    }
@@ -2705,6 +2705,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "pwhl",
+   "headline": "Brendan Shanahan joins Kilmer Sports Ventures as PWHL adviser",
+   "summary": "",
+   "published": "2026-10-15T08:38-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/01/CP166981191-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/pwhl/article/brendan-shanahan-joins-kilmer-sports-ventures-as-pwhl-adviser/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "TWENTYMAN: 5 players who impressed through first five weeks",
    "summary": "Tim Twentyman takes a look at five Detroit Lions players who have stood out so far through five weeks of the 2026 NFL season.",
@@ -3613,14 +3626,14 @@
      {
       "name": "Sudbury Wolves",
       "abbr": "SBY",
-      "gp": 7,
-      "w": 6,
+      "gp": 8,
+      "w": 7,
       "l": 0,
       "otl": 1,
-      "pts": 13,
+      "pts": 15,
       "gf": 40,
       "ga": 15,
-      "strk": "W6"
+      "strk": "W7"
      },
      {
       "name": "Niagara IceDogs",
@@ -3726,14 +3739,14 @@
      {
       "name": "Windsor Spitfires",
       "abbr": "WSR",
-      "gp": 9,
+      "gp": 10,
       "w": 3,
-      "l": 4,
+      "l": 5,
       "otl": 2,
       "pts": 8,
       "gf": 26,
       "ga": 37,
-      "strk": "L1"
+      "strk": "L2"
      }
     ]
    },
