@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T17:16:43-04:00",
+ "updated": "2026-10-16T17:33:15-04:00",
  "today": "2026-10-16",
  "range": [
   "2026-10-13",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 39
+   "count": 40
   },
   "club_news": {
    "ok": true,
@@ -1852,10 +1852,10 @@
    "home_away": "N",
    "opponent": "Victoria Vikes",
    "location": "Waterloo, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 72,
+   "opp_score": 81,
+   "result": "L",
    "note": "Naismith Classic",
    "links": {}
   },
@@ -3214,7 +3214,7 @@
   },
   {
    "league": "nfl",
-   "headline": "Report: Packers’ Jacobs, Broncos’ Cooper coming off commissioner’s exempt list",
+   "headline": "Packers’ Jacobs, Broncos’ Cooper coming off commissioner’s exempt list",
    "summary": "",
    "published": "2026-10-16T16:13-04:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/05/Green-Bay-Packers-running-back-Josh-Jacobs.jpg",
@@ -3469,19 +3469,6 @@
   },
   {
    "league": "nfl",
-   "headline": "Cardinals’ rookie RB Jeremiyah Love ruled out vs. Rams with ankle injury",
-   "summary": "Rookie running back Jeremiyah Love won’t play for the Arizona Cardinals on Sunday against the Los Angeles Rams because of a lingering left ankle injury.",
-   "published": "2026-10-16T17:08-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/jeremiyah-love.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/cardinals-rookie-rb-jeremiyah-love-ruled-out-vs-rams-with-ankle-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
    "headline": "Ravens QB Lamar Jackson out vs. Browns",
    "summary": "",
    "published": "2026-10-16T13:53-04:00",
@@ -3491,6 +3478,32 @@
    "sn_team_count": 2,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/ravens-qb-lamar-jackson-out-vs-browns/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Texans forced to switch planes ahead of London game vs. Jaguars",
+   "summary": "Call it a false start. The Houston Texans’ departure for London to face the Jacksonville Jaguars was delayed when the team had to switch planes before embarking on their overnight flight, coach DeMeco Ryans said Friday.",
+   "published": "2026-10-16T17:25-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-64.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/texans-forced-to-switch-planes-ahead-of-london-game-vs-jaguars/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Cardinals’ rookie RB Jeremiyah Love ruled out vs. Rams with ankle injury",
+   "summary": "Rookie running back Jeremiyah Love won’t play for the Arizona Cardinals on Sunday against the Los Angeles Rams because of a lingering left ankle injury.",
+   "published": "2026-10-16T17:08-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/jeremiyah-love.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/cardinals-rookie-rb-jeremiyah-love-ruled-out-vs-rams-with-ankle-injury/",
    "source": "Sportsnet"
   },
   {
