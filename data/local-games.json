@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T22:02:01-04:00",
+ "updated": "2026-10-16T22:16:59-04:00",
  "today": "2026-10-16",
  "range": [
   "2026-10-13",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -2357,50 +2357,6 @@
  ],
  "pro_games": [
   {
-   "id": "cfl-cfl6664",
-   "team": "cfl",
-   "sport": "CFL",
-   "start": "2026-10-16T19:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Ottawa REDBLACKS",
-   "location": "TD Place Stadium",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.cfl.ca/schedule/"
-   },
-   "away": "Toronto Argonauts",
-   "home": "Ottawa REDBLACKS",
-   "away_abbr": "TOR",
-   "home_abbr": "OTT"
-  },
-  {
-   "id": "cfl-cfl6665",
-   "team": "cfl",
-   "sport": "CFL",
-   "start": "2026-10-16T21:30:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Edmonton Elks",
-   "location": "Play Alberta Field at Commonwealth Stadium",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.cfl.ca/schedule/"
-   },
-   "away": "Winnipeg Blue Bombers",
-   "home": "Edmonton Elks",
-   "away_abbr": "WPG",
-   "home_abbr": "EDM"
-  },
-  {
    "id": "cfl-cfl6666",
    "team": "cfl",
    "sport": "CFL",
@@ -2443,6 +2399,50 @@
    "home": "Calgary Stampeders",
    "away_abbr": "BC",
    "home_abbr": "CGY"
+  },
+  {
+   "id": "cfl-cfl6664",
+   "team": "cfl",
+   "sport": "CFL",
+   "start": "2026-10-16T19:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Ottawa REDBLACKS",
+   "location": "TD Place Stadium",
+   "status": "final",
+   "our_score": 39,
+   "opp_score": 40,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.cfl.ca/schedule/"
+   },
+   "away": "Toronto Argonauts",
+   "home": "Ottawa REDBLACKS",
+   "away_abbr": "TOR",
+   "home_abbr": "OTT"
+  },
+  {
+   "id": "cfl-cfl6665",
+   "team": "cfl",
+   "sport": "CFL",
+   "start": "2026-10-16T21:30:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Edmonton Elks",
+   "location": "Play Alberta Field at Commonwealth Stadium",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.cfl.ca/schedule/"
+   },
+   "away": "Winnipeg Blue Bombers",
+   "home": "Edmonton Elks",
+   "away_abbr": "WPG",
+   "home_abbr": "EDM"
   }
  ],
  "pro_news": [
@@ -3159,6 +3159,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "Raptors depth suffers narrow loss to Pistons starters in pre-season finale",
+   "summary": "",
+   "published": "2026-10-16T22:15-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177101043.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/raptors-depth-suffers-narrow-loss-to-pistons-starters-in-pre-season-finale/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "mlb",
    "headline": "How Brewers slayed Dodgers in NLCS sweep — and why it was no surprise",
    "summary": "That the Brewers swept the Dodgers in the NLCS was a surprising outcome. But no one should be shocked that Milwaukee is headed to the World Series instead of the two-time defending champions, writes Sportsnet’s Nick Ashb",
@@ -3182,6 +3197,19 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/cfl/article/argonauts-chad-kelly-exits-vs-redblacks-with-apparent-injury/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Penguins’ Crosby moves into seventh on NHL’s all-time assists list",
+   "summary": "Sidney Crosby continues to climb the all-time NHL leaderboards.",
+   "published": "2026-10-16T22:10-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-71.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/penguins-crosby-moves-into-seventh-on-nhls-all-time-assists-list/",
    "source": "Sportsnet"
   },
   {
@@ -3266,6 +3294,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Ducks’ rebuild provides blueprint for Flames to follow",
+   "summary": "As the Flames embark on their own rebuild, the Ducks are beginning to look an awful lot like the blueprint GM Craig Conroy would love to follow, writes Eric Francis.",
+   "published": "2026-10-16T14:29-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/03/Flames-vs-Ducks.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/ducks-rebuild-provides-blueprint-for-flames-to-follow/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Hurricanes rule Taylor Hall out week-to-week, Seth Jarvis nearing return",
    "summary": "",
    "published": "2026-10-16T12:24-04:00",
@@ -3301,6 +3342,19 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/rays-hitting-coach-chad-mottola-a-symbol-of-stability-at-turbulent-position/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "UFC Edmonton preview: Record 12 Canadians to compete on card",
+   "summary": "UFC Edmonton features 12 Canadian fighters — the most to appear on a card in UFC history. Adam Martin looks at the record-breaking event’s top storylines.",
+   "published": "2026-10-15T09:32-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/malott.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "MMA",
+   "url": "https://www.sportsnet.ca/ufc/article/ufc-edmonton-preview-record-12-canadians-to-compete-on-card/",
    "source": "Sportsnet"
   },
   {
@@ -3366,19 +3420,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/jets-vlad-namestnikov-out-week-to-week/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Ducks’ rebuild provides blueprint for Flames to follow",
-   "summary": "As the Flames embark on their own rebuild, the Ducks are beginning to look an awful lot like the blueprint GM Craig Conroy would love to follow, writes Eric Francis.",
-   "published": "2026-10-16T14:29-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/03/Flames-vs-Ducks.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/ducks-rebuild-provides-blueprint-for-flames-to-follow/",
    "source": "Sportsnet"
   },
   {
@@ -3526,32 +3567,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/takeaways-canucks-can-find-positives-despite-sixth-straight-loss/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Flames alum Rasmus Andersson preaches patience amid rebuild",
-   "summary": "When Rasmus Andersson sees his former team struggling through the earliest stages of a rebuild, he understands the frustration. He also knows there’s a bigger picture at play.",
-   "published": "2026-10-16T01:20-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/andersson.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/flames-alum-rasmus-andersson-preaches-patience-amid-rebuild/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Scout’s Analysis: Why Landon DuPont is ranked No. 1 for 2027 NHL Draft",
-   "summary": "Coming into the season, Michigan defenceman Landon DuPont was the top-ranked prospect for the NHL Draft. Jason Bukala recently watched the player in action and in his scouting report, writes why DuPont has a firm hold on",
-   "published": "2026-10-15T11:23-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-23.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/scouts-analysis-why-landon-dupont-is-ranked-no-1-for-2027-nhl-draft/",
    "source": "Sportsnet"
   },
   {
@@ -4354,13 +4369,13 @@
     {
      "abbr": "TOR",
      "name": "Toronto Argonauts",
-     "gp": 16,
+     "gp": 17,
      "w": 9,
-     "l": 7,
+     "l": 8,
      "t": 0,
      "pts": 18,
-     "pf": 462,
-     "pa": 455,
+     "pf": 501,
+     "pa": 495,
      "flags": "x"
     },
     {
@@ -4378,13 +4393,13 @@
     {
      "abbr": "OTT",
      "name": "Ottawa Redblacks",
-     "gp": 16,
-     "w": 0,
+     "gp": 17,
+     "w": 1,
      "l": 16,
      "t": 0,
-     "pts": 0,
-     "pf": 375,
-     "pa": 599,
+     "pts": 2,
+     "pf": 415,
+     "pa": 638,
      "flags": ""
     }
    ]
@@ -4422,14 +4437,14 @@
      {
       "name": "Ottawa 67's",
       "abbr": "OTT",
-      "gp": 8,
-      "w": 5,
+      "gp": 9,
+      "w": 6,
       "l": 1,
       "otl": 2,
-      "pts": 12,
+      "pts": 14,
       "gf": 35,
       "ga": 25,
-      "strk": "W4"
+      "strk": "W5"
      },
      {
       "name": "Oshawa Generals",
@@ -4511,14 +4526,14 @@
      {
       "name": "Brampton Steelheads",
       "abbr": "BRAM",
-      "gp": 8,
+      "gp": 9,
       "w": 0,
-      "l": 6,
+      "l": 7,
       "otl": 2,
       "pts": 2,
       "gf": 20,
       "ga": 40,
-      "strk": "L6"
+      "strk": "L7"
      }
     ]
    },
@@ -4756,14 +4771,14 @@
      {
       "name": "Trenton Golden Hawks",
       "abbr": "TRN",
-      "gp": 11,
+      "gp": 12,
       "w": 4,
-      "l": 6,
+      "l": 7,
       "otl": 1,
       "pts": 9,
       "gf": 49,
       "ga": 55,
-      "strk": "L3"
+      "strk": "L4"
      },
      {
       "name": "Toronto Warriors",
@@ -4821,14 +4836,14 @@
      {
       "name": "Milton Menace",
       "abbr": "MIL",
-      "gp": 14,
-      "w": 12,
+      "gp": 15,
+      "w": 13,
       "l": 2,
       "otl": 0,
-      "pts": 24,
+      "pts": 26,
       "gf": 59,
       "ga": 27,
-      "strk": "W6"
+      "strk": "W7"
      },
      {
       "name": "King Rebellion",
@@ -4927,28 +4942,28 @@
       "strk": "L4"
      },
      {
-      "name": "Buffalo Jr. Sabres",
-      "abbr": "BUF",
-      "gp": 14,
+      "name": "Georgetown Raiders",
+      "abbr": "GEO",
+      "gp": 16,
       "w": 4,
       "l": 10,
+      "otl": 2,
+      "pts": 10,
+      "gf": 49,
+      "ga": 81,
+      "strk": "W1"
+     },
+     {
+      "name": "Buffalo Jr. Sabres",
+      "abbr": "BUF",
+      "gp": 15,
+      "w": 4,
+      "l": 11,
       "otl": 0,
       "pts": 8,
       "gf": 34,
       "ga": 62,
-      "strk": "L1"
-     },
-     {
-      "name": "Georgetown Raiders",
-      "abbr": "GEO",
-      "gp": 15,
-      "w": 3,
-      "l": 10,
-      "otl": 2,
-      "pts": 8,
-      "gf": 49,
-      "ga": 81,
-      "strk": "L5"
+      "strk": "L2"
      }
     ]
    }
