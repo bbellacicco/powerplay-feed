@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T00:02:03-04:00",
+ "updated": "2026-10-17T00:16:53-04:00",
  "today": "2026-10-17",
  "range": [
   "2026-10-14",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 30
+   "count": 31
   },
   "club_news": {
    "ok": true,
@@ -1771,6 +1771,19 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "Powell finishes the job after the interception!",
+   "summary": "",
+   "published": "2026-10-16T22:50:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/UqXq9YIzqYbiq8ehMl9ih/0fbf9d7445908e5247f1b0bc96eb16a8/powell.png?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Elks"
+   ],
+   "url": "https://www.cfl.ca/article/powell-finishes-the-job-after-the-interception",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Collaros Drops a Perfect Pass to Demski for the Touchdown!",
    "summary": "",
    "published": "2026-10-16T22:14:00-04:00",
@@ -1836,6 +1849,20 @@
   },
   {
    "league": "cfl",
+   "headline": "Recap: Ottawa 40, Toronto 39",
+   "summary": "",
+   "published": "2026-10-16T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/3Z3O8aLxDUkXHmMHeWZYsB/b2ef3941fb1508d2770ba0ea72e75a78/RECAP.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "REDBLACKS",
+    "Argonauts"
+   ],
+   "url": "https://www.cfl.ca/article/recap-ottawa-40-toronto-39",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Nick Arbuckle with an OUT OF THIS WORLD DIME to Kevin Mital",
    "summary": "",
    "published": "2026-10-16T00:00:00-04:00",
@@ -1856,32 +1883,6 @@
    "video": false,
    "teams": [],
    "url": "https://www.cfl.ca/article/top-cfl-fantasy-plays-at-every-position-for-week-20",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Geoffrey Cantin-Arku receives Jake Gaudaur Veterans' Award",
-   "summary": "",
-   "published": "2026-10-15T13:05:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/WGtqwFEeBWgGM7fiAfO31/2deb72cfb2013497000637329fa6eefe/image.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Alouettes"
-   ],
-   "url": "https://www.cfl.ca/article/geoffrey-cantin-arku-receives-jake-gaudaur-veterans-award",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "9-0! The Alouettes' Perfect Record in Montreal",
-   "summary": "",
-   "published": "2026-10-15T13:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/6LcFpi67yoawDGOeYsIQDW/93b01edbf4bdfdc5098aeeb091b0c88a/UndefeatedAtHome-Thumbnail-v2.png?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Alouettes"
-   ],
-   "url": "https://www.cfl.ca/article/9-0-the-alouettes-perfect-record-in-montreal",
    "source": "CFL.ca"
   },
   {
@@ -2446,28 +2447,30 @@
   },
   {
    "league": "cfl",
-   "headline": "Redblacks stun Argonauts to avoid winless season",
-   "summary": "",
-   "published": "2026-10-16T22:00-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177101113.jpg",
+   "headline": "Redblacks stun Argos, snap record skid in Bryson Barnes’ sensational starting debut",
+   "summary": "In one of the most stunning performances in recent memory on a CFL field, unheralded QB Bryson Barnes made sure the Ottawa Redblacks wouldn’t make dubious history, leading the team to an elusive win in his first professi",
+   "published": "2026-10-17T00:03-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/barnes-2.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 2,
+   "sn_team_count": 0,
    "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/redblacks-stun-argonauts-to-avoid-winless-season/",
+   "url": "https://www.sportsnet.ca/cfl/article/redblacks-stun-argos-snap-record-skid-in-bryson-barnes-sensational-starting-debut/",
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Ducks’ rebuild provides blueprint for Flames to follow",
-   "summary": "As the Flames embark on their own rebuild, the Ducks are beginning to look an awful lot like the blueprint GM Craig Conroy would love to follow, writes Eric Francis.",
-   "published": "2026-10-16T14:29-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/03/Flames-vs-Ducks.jpg",
+   "league": "nba",
+   "headline": "Raptors Takeaways: Depth shows out in final audition vs. Pistons",
+   "summary": "Friday night’s pre-season finale offered a quality chance for the back half of the Raptors’ training-camp roster to audition for a move up the pecking order.",
+   "published": "2026-10-17T00:10-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Graves.jpg",
    "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/ducks-rebuild-provides-blueprint-for-flames-to-follow/",
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/raptors-takeaways-roster-hopefuls-have-strong-final-audition-vs-pistons/",
    "source": "Sportsnet"
   },
   {
@@ -2604,6 +2607,19 @@
    "sn_team_count": 2,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/how-brewers-slayed-dodgers-in-nlcs-sweep-and-why-it-was-no-surprise/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Ducks’ rebuild provides blueprint for Flames to follow",
+   "summary": "As the Flames embark on their own rebuild, the Ducks are beginning to look an awful lot like the blueprint GM Craig Conroy would love to follow, writes Eric Francis.",
+   "published": "2026-10-16T14:29-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/03/Flames-vs-Ducks.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/ducks-rebuild-provides-blueprint-for-flames-to-follow/",
    "source": "Sportsnet"
   },
   {
@@ -3210,7 +3226,7 @@
    "league": "mlb",
    "headline": "Watch LIVE: Tigers prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-16T21:32-04:00",
+   "published": "2026-10-17T00:12-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -3405,7 +3421,7 @@
    "league": "mlb",
    "headline": "Watch Blue Jays prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-16T21:32-04:00",
+   "published": "2026-10-17T00:12-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
