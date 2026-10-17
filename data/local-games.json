@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T17:46:42-04:00",
+ "updated": "2026-10-17T18:01:37-04:00",
  "today": "2026-10-17",
  "range": [
   "2026-10-14",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -2504,50 +2504,6 @@
  ],
  "pro_games": [
   {
-   "id": "cfl-cfl6666",
-   "team": "cfl",
-   "sport": "CFL",
-   "start": "2026-10-17T15:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Saskatchewan Roughriders",
-   "location": "Mosaic Stadium",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.cfl.ca/schedule/"
-   },
-   "away": "Montreal Alouettes",
-   "home": "Saskatchewan Roughriders",
-   "away_abbr": "MTL",
-   "home_abbr": "SSK"
-  },
-  {
-   "id": "cfl-cfl6667",
-   "team": "cfl",
-   "sport": "CFL",
-   "start": "2026-10-17T19:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Calgary Stampeders",
-   "location": "McMahon Stadium",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.cfl.ca/schedule/"
-   },
-   "away": "B.C. Lions",
-   "home": "Calgary Stampeders",
-   "away_abbr": "BC",
-   "home_abbr": "CGY"
-  },
-  {
    "id": "cfl-cfl6664",
    "team": "cfl",
    "sport": "CFL",
@@ -2590,6 +2546,50 @@
    "home": "Edmonton Elks",
    "away_abbr": "WPG",
    "home_abbr": "EDM"
+  },
+  {
+   "id": "cfl-cfl6666",
+   "team": "cfl",
+   "sport": "CFL",
+   "start": "2026-10-17T15:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Saskatchewan Roughriders",
+   "location": "Mosaic Stadium",
+   "status": "final",
+   "our_score": 12,
+   "opp_score": 16,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.cfl.ca/schedule/"
+   },
+   "away": "Montreal Alouettes",
+   "home": "Saskatchewan Roughriders",
+   "away_abbr": "MTL",
+   "home_abbr": "SSK"
+  },
+  {
+   "id": "cfl-cfl6667",
+   "team": "cfl",
+   "sport": "CFL",
+   "start": "2026-10-17T19:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Calgary Stampeders",
+   "location": "McMahon Stadium",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.cfl.ca/schedule/"
+   },
+   "away": "B.C. Lions",
+   "home": "Calgary Stampeders",
+   "away_abbr": "BC",
+   "home_abbr": "CGY"
   }
  ],
  "pro_news": [
@@ -3401,19 +3401,6 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/ncaa-mens-football/article/ohio-state-capitalizes-on-indiana-miscue-to-hold-on/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "UFC Edmonton preview: Record 12 Canadians to compete on card",
-   "summary": "UFC Edmonton features 12 Canadian fighters — the most to appear on a card in UFC history. Adam Martin looks at the record-breaking event’s top storylines.",
-   "published": "2026-10-15T09:32-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/malott.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/ufc-edmonton-preview-record-12-canadians-to-compete-on-card/",
    "source": "Sportsnet"
   },
   {
@@ -4449,13 +4436,13 @@
     {
      "abbr": "SSK",
      "name": "Saskatchewan Roughriders",
-     "gp": 16,
-     "w": 8,
+     "gp": 17,
+     "w": 9,
      "l": 8,
      "t": 0,
-     "pts": 16,
-     "pf": 454,
-     "pa": 452,
+     "pts": 18,
+     "pf": 470,
+     "pa": 464,
      "flags": ""
     },
     {
@@ -4490,13 +4477,13 @@
     {
      "abbr": "MTL",
      "name": "Montreal Alouettes",
-     "gp": 16,
+     "gp": 17,
      "w": 13,
-     "l": 3,
+     "l": 4,
      "t": 0,
      "pts": 26,
-     "pf": 579,
-     "pa": 444,
+     "pf": 591,
+     "pa": 460,
      "flags": "y"
     },
     {
@@ -4849,8 +4836,8 @@
       "l": 7,
       "otl": 1,
       "pts": 15,
-      "gf": 47,
-      "ga": 42,
+      "gf": 48,
+      "ga": 43,
       "strk": "W3"
      },
      {
@@ -4909,8 +4896,8 @@
       "l": 7,
       "otl": 1,
       "pts": 9,
-      "gf": 50,
-      "ga": 59,
+      "gf": 51,
+      "ga": 60,
       "strk": "L4"
      },
      {
