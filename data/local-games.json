@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T18:16:38-04:00",
+ "updated": "2026-10-17T18:33:11-04:00",
  "today": "2026-10-17",
  "range": [
   "2026-10-14",
@@ -1430,9 +1430,9 @@
    "home_away": "H",
    "opponent": "Blenheim Blades",
    "location": "Libro Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
    "note": "",
    "links": {
@@ -2595,6 +2595,19 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "ENTIRE PLAYOFF CLINCHING DRIVE FOR THE ROUGHRIDERS",
+   "summary": "",
+   "published": "2026-10-17T18:25:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/1X4tLyoRq37QYh2wDrbvmV/20289fbb747fd760fe97951235161801/SSK_1ST_TD.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Roughriders"
+   ],
+   "url": "https://www.cfl.ca/article/entire-playoff-clinching-drive-for-the-roughriders",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Dustin Crum has his first TD for the Alouettes!",
    "summary": "",
    "published": "2026-10-17T15:22:00-04:00",
@@ -2683,19 +2696,6 @@
     "REDBLACKS"
    ],
    "url": "https://www.cfl.ca/article/ottawa-s-entire-game-winning-drive",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Blocked, scooped & SCORED! The Argos get on the board early.",
-   "summary": "",
-   "published": "2026-10-16T00:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/5BFqRIYaxQVobwGUCGZtGf/ebfa52e254508ddec70ea83ff2728855/highlight_1.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Argonauts"
-   ],
-   "url": "https://www.cfl.ca/article/blocked-scooped-scored-the-argos-get-on-the-board-early",
    "source": "CFL.ca"
   },
   {
@@ -3366,7 +3366,7 @@
   },
   {
    "league": "cfl",
-   "headline": "Johnson scores touchdown in final minute to lift Roughriders over Alouettes",
+   "headline": "Roughriders beat Alouettes to clinch playoff spot",
    "summary": "A late touchdown by KeeSean Johnson lifted the Saskatchewan Roughriders into the CFL playoffs Saturday with a 16-12 victory over the Montreal Alouettes.",
    "published": "2026-10-17T18:10-04:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/607e4c932f6ef795c971fa21bfa3b2ba755ea02d48f7b94e463840e3ac0116de.jpg",
@@ -4472,18 +4472,6 @@
      "flags": ""
     },
     {
-     "abbr": "CGY",
-     "name": "Calgary Stampeders",
-     "gp": 17,
-     "w": 8,
-     "l": 9,
-     "t": 0,
-     "pts": 16,
-     "pf": 600,
-     "pa": 574,
-     "flags": ""
-    },
-    {
      "abbr": "WPG",
      "name": "Winnipeg Blue Bombers",
      "gp": 17,
@@ -4494,6 +4482,18 @@
      "pf": 443,
      "pa": 482,
      "flags": ""
+    },
+    {
+     "abbr": "CGY",
+     "name": "Calgary Stampeders",
+     "gp": 17,
+     "w": 8,
+     "l": 9,
+     "t": 0,
+     "pts": 16,
+     "pf": 600,
+     "pa": 574,
+     "flags": "x"
     }
    ]
   },
@@ -4771,7 +4771,7 @@
       "l": 1,
       "otl": 1,
       "pts": 13,
-      "gf": 33,
+      "gf": 34,
       "ga": 24,
       "strk": "W2"
      },
@@ -4796,7 +4796,7 @@
       "otl": 1,
       "pts": 11,
       "gf": 29,
-      "ga": 35,
+      "ga": 36,
       "strk": "L1"
      },
      {
