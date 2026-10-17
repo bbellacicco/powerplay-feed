@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T02:31:54-04:00",
+ "updated": "2026-10-17T02:47:20-04:00",
  "today": "2026-10-17",
  "range": [
   "2026-10-14",
@@ -50,8 +50,8 @@
    "count": 9
   },
   "highschool": {
-   "ok": true,
-   "count": 174
+   "ok": false,
+   "error": "HTTP Error 403: Forbidden"
   },
   "sheet": {
    "ok": true,
@@ -2591,6 +2591,20 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "Recap: Edmonton 35, Winnipeg 27",
+   "summary": "",
+   "published": "2026-10-17T01:40:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/2fPmwM5oXp6qdt5q6BKV78/897cde4031bd41ae024e42960c02540f/recap.png?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Elks",
+    "Blue Bombers"
+   ],
+   "url": "https://www.cfl.ca/article/recap-edmonton-35-winnipeg-27",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Powell finishes the job after the interception!",
    "summary": "",
    "published": "2026-10-16T22:50:00-04:00",
@@ -2679,19 +2693,6 @@
     "Argonauts"
    ],
    "url": "https://www.cfl.ca/article/recap-ottawa-40-toronto-39",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Nick Arbuckle with an OUT OF THIS WORLD DIME to Kevin Mital",
-   "summary": "",
-   "published": "2026-10-16T00:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/6I0ffZNWCquqnDCZxNe9MZ/307424d0554723b44ef5494778ce845f/highlight_4.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Argonauts"
-   ],
-   "url": "https://www.cfl.ca/article/nick-arbuckle-with-an-out-of-this-world-dime-to-kevin-mital",
    "source": "CFL.ca"
   },
   {
@@ -3624,19 +3625,6 @@
   },
   {
    "league": "mlb",
-   "headline": "Guardians to open with Shawn Armstrong in Game 4 of ALCS",
-   "summary": "",
-   "published": "2026-10-16T12:17-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Shawn-Armstrong.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/guardians-to-open-with-shawn-armstrong-in-game-4-of-alcs/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
    "headline": "Dodgers’ Shohei Ohtani plans to pitch in 2027",
    "summary": "",
    "published": "2026-10-16T02:05-04:00",
@@ -3659,6 +3647,19 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/texans-forced-to-switch-planes-ahead-of-london-game-vs-jaguars/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Ravens QB Lamar Jackson out vs. Browns",
+   "summary": "",
+   "published": "2026-10-16T13:53-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/lamar-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/ravens-qb-lamar-jackson-out-vs-browns/",
    "source": "Sportsnet"
   },
   {
