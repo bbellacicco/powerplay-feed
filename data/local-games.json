@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T21:31:46-04:00",
+ "updated": "2026-10-16T21:46:58-04:00",
  "today": "2026-10-16",
  "range": [
   "2026-10-13",
@@ -1983,13 +1983,13 @@
    "home_away": "A",
    "opponent": "Western Mustangs",
    "location": "London, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 4,
+   "opp_score": 3,
+   "result": "W",
    "note": "",
    "links": {
-    "watch": "https://oua.tv/?school=Windsor"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6339"
    }
   },
   {
@@ -2001,13 +2001,13 @@
    "home_away": "A",
    "opponent": "Nipissing Lakers",
    "location": "North Bay, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 5,
+   "opp_score": 2,
+   "result": "W",
    "note": "",
    "links": {
-    "watch": "https://oua.tv/?school=Windsor"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6284"
    }
   },
   {
@@ -2023,7 +2023,7 @@
    "our_score": 11,
    "opp_score": 3,
    "result": null,
-   "note": "00:55 3rd",
+   "note": "End of Game",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29090/"
    }
@@ -2461,6 +2461,19 @@
   },
   {
    "league": "cfl",
+   "headline": "TD PLACE ERUPTS after the REDBLACKS’ FOURTH-QUARTER TD",
+   "summary": "",
+   "published": "2026-10-16T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/4JjcLPBat0qS4lxudZkpm5/7c486a50571ee5528de0a1efc4586ec5/highlight_3.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "REDBLACKS"
+   ],
+   "url": "https://www.cfl.ca/article/td-place-erupts-after-the-redblacks-fourth-quarter-td",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Blocked, scooped & SCORED! The Argos get on the board early.",
    "summary": "",
    "published": "2026-10-16T00:00:00-04:00",
@@ -2699,19 +2712,6 @@
     "Roughriders"
    ],
    "url": "https://www.cfl.ca/article/recap-montreal-44-saskatchewan-24",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Davis Alexander is on FIRE!",
-   "summary": "",
-   "published": "2026-10-12T15:13:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/67XOKshySPSsxD3eF6hnSw/6f6d63f11f4d79f55f0ae6352529d866/Untitled-1.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Alouettes"
-   ],
-   "url": "https://www.cfl.ca/article/davis-alexander-is-on-fire",
    "source": "CFL.ca"
   },
   {
@@ -3947,15 +3947,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Dingler seeks 2nd straight Gold Glove at catcher; McKinstry nominated at utility",
+   "headline": "Watch LIVE: Tigers prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-14T13:07-04:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/wfbuwgporg32wfwjttw8",
+   "published": "2026-10-16T21:32-04:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
     "Detroit Tigers"
    ],
-   "url": "https://www.mlb.com/tigers/news/2026-gold-glove-award-finalists",
+   "url": "https://www.mlb.com/tigers/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
    "source": "Team site"
   },
   {
@@ -3973,15 +3973,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Who's next? A look at Detroit's new wave of top prospects",
+   "headline": "Dingler seeks 2nd straight Gold Glove at catcher; McKinstry nominated at utility",
    "summary": "",
-   "published": "2026-10-12T10:27-04:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/j7wivd4kiem5gh5hxl6t",
+   "published": "2026-10-14T13:07-04:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/wfbuwgporg32wfwjttw8",
    "video": false,
    "teams": [
     "Detroit Tigers"
    ],
-   "url": "https://www.mlb.com/tigers/news/tigers-top-prospects-that-could-reach-majors-in-2027",
+   "url": "https://www.mlb.com/tigers/news/2026-gold-glove-award-finalists",
    "source": "Team site"
   },
   {
@@ -4008,6 +4008,19 @@
     "Detroit Tigers"
    ],
    "url": "https://www.mlb.com/milb/prospects/2026/tigers/",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
+   "headline": "Who's next? A look at Detroit's new wave of top prospects",
+   "summary": "",
+   "published": "2026-10-12T10:27-04:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/j7wivd4kiem5gh5hxl6t",
+   "video": false,
+   "teams": [
+    "Detroit Tigers"
+   ],
+   "url": "https://www.mlb.com/tigers/news/tigers-top-prospects-that-could-reach-majors-in-2027",
    "source": "Team site"
   },
   {
@@ -4047,19 +4060,6 @@
     "Detroit Tigers"
    ],
    "url": "https://www.mlb.com/tigers/news/questions-facing-tigers-in-2026-offseason",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
-   "headline": "Watch Tigers prospects in Arizona Fall League action",
-   "summary": "",
-   "published": "2026-10-16T19:52-04:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
-   "video": false,
-   "teams": [
-    "Detroit Tigers"
-   ],
-   "url": "https://www.mlb.com/tigers/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
    "source": "Team site"
   },
   {
@@ -4144,7 +4144,7 @@
    "league": "mlb",
    "headline": "Watch Blue Jays prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-16T19:52-04:00",
+   "published": "2026-10-16T21:32-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -4412,14 +4412,14 @@
      {
       "name": "Brantford Bulldogs",
       "abbr": "BFD",
-      "gp": 10,
-      "w": 7,
+      "gp": 11,
+      "w": 8,
       "l": 2,
       "otl": 1,
-      "pts": 15,
+      "pts": 17,
       "gf": 46,
       "ga": 28,
-      "strk": "L2"
+      "strk": "W1"
      },
      {
       "name": "Kingston Frontenacs",
@@ -4477,26 +4477,26 @@
      {
       "name": "Sudbury Wolves",
       "abbr": "SBY",
-      "gp": 8,
+      "gp": 9,
       "w": 7,
-      "l": 0,
+      "l": 1,
       "otl": 1,
       "pts": 15,
       "gf": 41,
       "ga": 19,
-      "strk": "W7"
+      "strk": "L1"
      },
      {
       "name": "Niagara IceDogs",
       "abbr": "NIAG",
-      "gp": 9,
+      "gp": 10,
       "w": 5,
-      "l": 3,
+      "l": 4,
       "otl": 1,
       "pts": 11,
       "gf": 28,
       "ga": 32,
-      "strk": "W2"
+      "strk": "L1"
      },
      {
       "name": "North Bay Battalion",
@@ -4513,14 +4513,14 @@
      {
       "name": "Barrie Colts",
       "abbr": "BAR",
-      "gp": 9,
+      "gp": 10,
       "w": 1,
-      "l": 7,
+      "l": 8,
       "otl": 1,
       "pts": 3,
       "gf": 19,
       "ga": 37,
-      "strk": "L3"
+      "strk": "L4"
      },
      {
       "name": "Brampton Steelheads",
@@ -4619,13 +4619,25 @@
      {
       "name": "London Knights",
       "abbr": "LDN",
-      "gp": 7,
-      "w": 5,
+      "gp": 8,
+      "w": 6,
       "l": 1,
       "otl": 1,
-      "pts": 11,
+      "pts": 13,
       "gf": 33,
       "ga": 24,
+      "strk": "W2"
+     },
+     {
+      "name": "Kitchener Rangers",
+      "abbr": "KIT",
+      "gp": 12,
+      "w": 5,
+      "l": 5,
+      "otl": 2,
+      "pts": 12,
+      "gf": 35,
+      "ga": 39,
       "strk": "W1"
      },
      {
@@ -4639,18 +4651,6 @@
       "gf": 29,
       "ga": 35,
       "strk": "L1"
-     },
-     {
-      "name": "Kitchener Rangers",
-      "abbr": "KIT",
-      "gp": 11,
-      "w": 4,
-      "l": 5,
-      "otl": 2,
-      "pts": 10,
-      "gf": 35,
-      "ga": 39,
-      "strk": "L3"
      },
      {
       "name": "Owen Sound Attack",
@@ -4674,14 +4674,14 @@
      {
       "name": "Markham Royals",
       "abbr": "MAR",
-      "gp": 15,
-      "w": 13,
+      "gp": 16,
+      "w": 14,
       "l": 2,
       "otl": 0,
-      "pts": 26,
+      "pts": 28,
       "gf": 65,
       "ga": 40,
-      "strk": "W1"
+      "strk": "W2"
      },
      {
       "name": "Wellington Dukes",
@@ -4758,14 +4758,14 @@
      {
       "name": "Aurora Tigers",
       "abbr": "AUR",
-      "gp": 12,
+      "gp": 13,
       "w": 5,
-      "l": 7,
+      "l": 8,
       "otl": 0,
       "pts": 10,
       "gf": 36,
       "ga": 48,
-      "strk": "W2"
+      "strk": "L1"
      },
      {
       "name": "Trenton Golden Hawks",
@@ -4776,7 +4776,7 @@
       "otl": 1,
       "pts": 9,
       "gf": 48,
-      "ga": 53,
+      "ga": 54,
       "strk": "L3"
      },
      {
@@ -4840,7 +4840,7 @@
       "l": 2,
       "otl": 0,
       "pts": 24,
-      "gf": 58,
+      "gf": 59,
       "ga": 27,
       "strk": "W6"
      },
@@ -4876,7 +4876,7 @@
       "l": 4,
       "otl": 2,
       "pts": 20,
-      "gf": 72,
+      "gf": 73,
       "ga": 44,
       "strk": "W3"
      },
@@ -4913,7 +4913,7 @@
       "otl": 2,
       "pts": 14,
       "gf": 54,
-      "ga": 61,
+      "ga": 62,
       "strk": "W1"
      },
      {
@@ -4949,7 +4949,7 @@
       "otl": 0,
       "pts": 8,
       "gf": 34,
-      "ga": 61,
+      "ga": 62,
       "strk": "L1"
      },
      {
@@ -4960,7 +4960,7 @@
       "l": 10,
       "otl": 2,
       "pts": 8,
-      "gf": 47,
+      "gf": 48,
       "ga": 80,
       "strk": "L5"
      }
@@ -4979,8 +4979,8 @@
       "l": 1,
       "otl": 0,
       "pts": 18,
-      "gf": 68,
-      "ga": 24,
+      "gf": 69,
+      "ga": 25,
       "strk": "W7"
      },
      {
@@ -4998,14 +4998,14 @@
      {
       "name": "St. Thomas Stars",
       "abbr": "STT",
-      "gp": 9,
+      "gp": 10,
       "w": 8,
-      "l": 1,
+      "l": 2,
       "otl": 0,
       "pts": 16,
       "gf": 39,
       "ga": 21,
-      "strk": "W3"
+      "strk": "L1"
      },
      {
       "name": "Listowel Cyclones",
@@ -5020,6 +5020,18 @@
       "strk": "W2"
      },
      {
+      "name": "Stratford Warriors",
+      "abbr": "SFD",
+      "gp": 9,
+      "w": 6,
+      "l": 3,
+      "otl": 0,
+      "pts": 12,
+      "gf": 34,
+      "ga": 31,
+      "strk": "W6"
+     },
+     {
       "name": "London Nationals",
       "abbr": "LON",
       "gp": 12,
@@ -5028,20 +5040,8 @@
       "otl": 1,
       "pts": 11,
       "gf": 44,
-      "ga": 54,
+      "ga": 55,
       "strk": "W1"
-     },
-     {
-      "name": "Stratford Warriors",
-      "abbr": "SFD",
-      "gp": 8,
-      "w": 5,
-      "l": 3,
-      "otl": 0,
-      "pts": 10,
-      "gf": 34,
-      "ga": 31,
-      "strk": "W5"
      },
      {
       "name": "Elmira Sugar Kings",
@@ -5075,7 +5075,7 @@
       "l": 7,
       "otl": 0,
       "pts": 8,
-      "gf": 38,
+      "gf": 39,
       "ga": 49,
       "strk": "L3"
      },
@@ -5200,7 +5200,7 @@
       "l": 4,
       "otl": 0,
       "pts": 12,
-      "gf": 48,
+      "gf": 49,
       "ga": 46,
       "strk": "W1"
      },
@@ -5213,7 +5213,7 @@
       "otl": 0,
       "pts": 10,
       "gf": 50,
-      "ga": 50,
+      "ga": 51,
       "strk": "L1"
      },
      {
@@ -5248,8 +5248,8 @@
       "l": 10,
       "otl": 0,
       "pts": 2,
-      "gf": 24,
-      "ga": 72,
+      "gf": 25,
+      "ga": 73,
       "strk": "L1"
      },
      {
