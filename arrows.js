@@ -2,7 +2,7 @@
    (Phones and tablets swipe, so they don't get arrows.) An arrow hides when there's nothing more that way. */
 (function () {
   if (!window.matchMedia || !matchMedia('(hover: hover) and (pointer: fine)').matches) return;
-  var SEL = '.sstrip, .strip, .grid, .row, .scroller, .dstrip';
+  var SEL = '.sstrip, .strip, .grid, .row, .scroller, .dstrip, .iglist';
   var css = document.createElement('style');
   css.textContent =
     '.ppa-wrap{position:relative}' +
