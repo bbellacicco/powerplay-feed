@@ -13,13 +13,15 @@
     Local scores · Latest stories · Pro scores · Pro headlines · Athlete profiles.
   Each row: title, "Presented by" sponsor, "See all ›" to the full page. Rows swipe sideways (arrows on desktop).
   Same data as the other widgets; refreshes itself every few minutes.
-  Embed full width in Wix: about 3,030px tall on desktop, 3,500px on mobile (includes testimonials and About).
+  Embed full width in Wix: about 3,030px tall on desktop, 3,800px on mobile (includes testimonials and About).
   Links (optional): ?local=<Local Sports page> ?pro=<Pro Sports page> ?network=<Network page> ?athletes=<Spotlights page> ?search=<search page>
 -->
 <style>
   :root { --bg: #0b1a33; --bg2: #081428; --card: #132b57; --line: #1e3a6e; --text: #f2f5fb; --muted: #9fb0cf; --accent: #e8b021;
     --spitfires: #d4202a; --lancers: #0b5cad; --saints: #1f9d55; --junior: #0891b2; --highschool: #7c4ddb; --powerplay: #e8b021; }
   * { box-sizing: border-box; }
+  /* inside the Wix page the embed never scrolls on its own (on an iPhone that traps your finger); the Wix box height shows it all */
+  html.inwix, html.inwix body { overflow: hidden; overscroll-behavior: none; }
   html, body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.35 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
   a { color: inherit; }
   .page { position: relative; max-width: 1240px; margin: 0 auto; padding: 0 0 28px; }
@@ -184,6 +186,7 @@
   }
   .game .side .rc { font-size: 11px; font-weight: 700; color: rgba(255,255,255,.85); font-variant-numeric: tabular-nums; }
 </style>
+<script>try{if(window.top!==window.self)document.documentElement.className+=' inwix';}catch(e){document.documentElement.className+=' inwix';}</script>
 </head>
 <body>
 <div class="page" id="page">
