@@ -98,10 +98,14 @@
   .fb { width: 100%; border: 0; border-radius: 6px; background: #fff; display: block; }
   .yt { position: relative; width: 100%; padding-top: 56.25%; border-radius: 6px; overflow: hidden; background: #000; }
   .yt iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-  .wall .box { flex: 1 1 260px; max-width: 100%; }
-  @media (min-width: 700px) { .wall .box { flex: 0 1 calc(33.333% - 8px); } }
-  .iglist { display: flex; flex-direction: column; gap: 12px; max-height: 720px; overflow-y: auto; }
-  .wall .iglist { max-height: 560px; }
+  /* Social "All": one sideways strip (no inner scrolling box, nothing cut off) */
+  .grid.wall { flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding-bottom: 6px; align-items: stretch; }
+  .wall .box { flex: 0 0 320px; max-width: none; scroll-snap-align: start; }
+  @media (max-width: 520px) { .wall .box { flex-basis: 84%; } }
+  /* Instagram posts: swipe sideways instead of a scroll box inside the page */
+  .iglist { display: flex; flex-direction: row; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding-bottom: 6px; }
+  .iglist .ig { flex: 0 0 260px; scroll-snap-align: start; }
+  .wall .iglist .ig { flex-basis: 100%; }
   .ig video, .ig img { width: 100%; max-height: 520px; border-radius: 6px; background: #000; display: block; object-fit: contain; }
   .igcap { font-size: 13px; color: #d4dcee; margin-top: 6px; }
   .igmeta { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); margin-top: 4px; }
