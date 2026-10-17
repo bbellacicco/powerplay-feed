@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T21:21:37-04:00",
+ "updated": "2026-10-16T21:31:46-04:00",
  "today": "2026-10-16",
  "range": [
   "2026-10-13",
@@ -2020,10 +2020,10 @@
    "opponent": "Owen Sound Attack",
    "location": "WFCU Centre, Windsor",
    "status": "live",
-   "our_score": 10,
-   "opp_score": 1,
+   "our_score": 11,
+   "opp_score": 3,
    "result": null,
-   "note": "05:14 3rd",
+   "note": "00:55 3rd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29090/"
    }
@@ -2448,6 +2448,19 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "Nick Arbuckle delivers a BOMB to Kevin Mital, who finishes with an INSANE catch",
+   "summary": "",
+   "published": "2026-10-16T00:00:00-04:00",
+   "image": "",
+   "video": true,
+   "teams": [
+    "Argonauts"
+   ],
+   "url": "https://www.cfl.ca/article/nick-arbuckle-delivers-a-bomb-to-kevin-mital-who-finishes-with-an-insane-catch",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Blocked, scooped & SCORED! The Argos get on the board early.",
    "summary": "",
    "published": "2026-10-16T00:00:00-04:00",
@@ -2699,19 +2712,6 @@
     "Alouettes"
    ],
    "url": "https://www.cfl.ca/article/davis-alexander-is-on-fire",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "TYSON PHILPOT DOES IT AGAIN!",
-   "summary": "",
-   "published": "2026-10-12T14:56:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/6zlyudYBbdnH0PJ8YQVW1q/a7d42eecd767f95ff8f2de58bd879f23/Untitled-1.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Alouettes"
-   ],
-   "url": "https://www.cfl.ca/article/tyson-philpot-does-it-again",
    "source": "CFL.ca"
   },
   {
@@ -4429,7 +4429,7 @@
       "l": 4,
       "otl": 0,
       "pts": 12,
-      "gf": 49,
+      "gf": 50,
       "ga": 49,
       "strk": "W3"
      },
@@ -4454,7 +4454,7 @@
       "otl": 0,
       "pts": 8,
       "gf": 27,
-      "ga": 33,
+      "ga": 34,
       "strk": "W1"
      },
      {
@@ -4572,7 +4572,7 @@
       "otl": 0,
       "pts": 10,
       "gf": 33,
-      "ga": 24,
+      "ga": 25,
       "strk": "W3"
      },
      {
@@ -4595,8 +4595,8 @@
       "l": 5,
       "otl": 2,
       "pts": 8,
-      "gf": 36,
-      "ga": 38,
+      "gf": 37,
+      "ga": 40,
       "strk": "L2"
      }
     ]
@@ -4612,7 +4612,7 @@
       "l": 2,
       "otl": 0,
       "pts": 14,
-      "gf": 42,
+      "gf": 43,
       "ga": 25,
       "strk": "W7"
      },
@@ -4660,8 +4660,8 @@
       "l": 6,
       "otl": 0,
       "pts": 4,
-      "gf": 19,
-      "ga": 43,
+      "gf": 21,
+      "ga": 44,
       "strk": "L2"
      }
     ]
@@ -4686,14 +4686,14 @@
      {
       "name": "Wellington Dukes",
       "abbr": "WEL",
-      "gp": 14,
-      "w": 8,
+      "gp": 15,
+      "w": 9,
       "l": 4,
       "otl": 2,
-      "pts": 18,
+      "pts": 20,
       "gf": 57,
       "ga": 43,
-      "strk": "L1"
+      "strk": "W1"
      },
      {
       "name": "Cobourg Cougars",
@@ -4706,6 +4706,18 @@
       "gf": 52,
       "ga": 47,
       "strk": "W1"
+     },
+     {
+      "name": "Newmarket Hurricanes",
+      "abbr": "NMH",
+      "gp": 14,
+      "w": 6,
+      "l": 7,
+      "otl": 1,
+      "pts": 13,
+      "gf": 42,
+      "ga": 41,
+      "strk": "W2"
      },
      {
       "name": "St. Michaels Buzzers",
@@ -4728,20 +4740,8 @@
       "otl": 1,
       "pts": 13,
       "gf": 49,
-      "ga": 44,
+      "ga": 45,
       "strk": "L2"
-     },
-     {
-      "name": "Newmarket Hurricanes",
-      "abbr": "NMH",
-      "gp": 14,
-      "w": 6,
-      "l": 7,
-      "otl": 1,
-      "pts": 13,
-      "gf": 41,
-      "ga": 41,
-      "strk": "W2"
      },
      {
       "name": "Stouffville Spirit",
@@ -4752,7 +4752,7 @@
       "otl": 0,
       "pts": 12,
       "gf": 44,
-      "ga": 40,
+      "ga": 41,
       "strk": "L1"
      },
      {
@@ -4776,7 +4776,7 @@
       "otl": 1,
       "pts": 9,
       "gf": 48,
-      "ga": 52,
+      "ga": 53,
       "strk": "L3"
      },
      {
@@ -4794,14 +4794,14 @@
      {
       "name": "Lindsay Muskies",
       "abbr": "LIN",
-      "gp": 13,
+      "gp": 14,
       "w": 3,
-      "l": 10,
+      "l": 11,
       "otl": 0,
       "pts": 6,
       "gf": 48,
       "ga": 76,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "North York Rangers",
@@ -4840,7 +4840,7 @@
       "l": 2,
       "otl": 0,
       "pts": 24,
-      "gf": 57,
+      "gf": 58,
       "ga": 27,
       "strk": "W6"
      },
@@ -4852,7 +4852,7 @@
       "l": 1,
       "otl": 1,
       "pts": 21,
-      "gf": 62,
+      "gf": 63,
       "ga": 23,
       "strk": "W6"
      },
@@ -4876,7 +4876,7 @@
       "l": 4,
       "otl": 2,
       "pts": 20,
-      "gf": 71,
+      "gf": 72,
       "ga": 44,
       "strk": "W3"
      },
@@ -4893,6 +4893,18 @@
       "strk": "W4"
      },
      {
+      "name": "Niagara Falls Canucks",
+      "abbr": "NFC",
+      "gp": 18,
+      "w": 6,
+      "l": 10,
+      "otl": 2,
+      "pts": 14,
+      "gf": 56,
+      "ga": 77,
+      "strk": "W1"
+     },
+     {
       "name": "Oakville Blades",
       "abbr": "OAK",
       "gp": 14,
@@ -4901,7 +4913,7 @@
       "otl": 2,
       "pts": 14,
       "gf": 54,
-      "ga": 60,
+      "ga": 61,
       "strk": "W1"
      },
      {
@@ -4914,18 +4926,6 @@
       "pts": 12,
       "gf": 50,
       "ga": 84,
-      "strk": "W1"
-     },
-     {
-      "name": "Niagara Falls Canucks",
-      "abbr": "NFC",
-      "gp": 18,
-      "w": 6,
-      "l": 10,
-      "otl": 2,
-      "pts": 14,
-      "gf": 56,
-      "ga": 77,
       "strk": "W1"
      },
      {
@@ -4949,7 +4949,7 @@
       "otl": 0,
       "pts": 8,
       "gf": 34,
-      "ga": 60,
+      "ga": 61,
       "strk": "L1"
      },
      {
@@ -4960,7 +4960,7 @@
       "l": 10,
       "otl": 2,
       "pts": 8,
-      "gf": 46,
+      "gf": 47,
       "ga": 80,
       "strk": "L5"
      }
@@ -5169,6 +5169,18 @@
       "strk": "W2"
      },
      {
+      "name": "Ayr Centennials",
+      "abbr": "AYR",
+      "gp": 10,
+      "w": 6,
+      "l": 3,
+      "otl": 1,
+      "pts": 13,
+      "gf": 40,
+      "ga": 35,
+      "strk": "W1"
+     },
+     {
       "name": "Waterloo Siskins",
       "abbr": "WAT",
       "gp": 8,
@@ -5188,21 +5200,9 @@
       "l": 4,
       "otl": 0,
       "pts": 12,
-      "gf": 47,
+      "gf": 48,
       "ga": 46,
       "strk": "W1"
-     },
-     {
-      "name": "Ayr Centennials",
-      "abbr": "AYR",
-      "gp": 9,
-      "w": 5,
-      "l": 3,
-      "otl": 1,
-      "pts": 11,
-      "gf": 40,
-      "ga": 35,
-      "strk": "L2"
      },
      {
       "name": "Port Colborne Sailors",
@@ -5213,7 +5213,7 @@
       "otl": 0,
       "pts": 10,
       "gf": 50,
-      "ga": 49,
+      "ga": 50,
       "strk": "L1"
      },
      {
@@ -5241,18 +5241,6 @@
       "strk": "L1"
      },
      {
-      "name": "Brantford Titans",
-      "abbr": "BFD",
-      "gp": 11,
-      "w": 1,
-      "l": 10,
-      "otl": 0,
-      "pts": 2,
-      "gf": 28,
-      "ga": 61,
-      "strk": "L5"
-     },
-     {
       "name": "Welland Canadians",
       "abbr": "WEL",
       "gp": 11,
@@ -5263,6 +5251,18 @@
       "gf": 24,
       "ga": 72,
       "strk": "L1"
+     },
+     {
+      "name": "Brantford Titans",
+      "abbr": "BFD",
+      "gp": 12,
+      "w": 1,
+      "l": 11,
+      "otl": 0,
+      "pts": 2,
+      "gf": 28,
+      "ga": 61,
+      "strk": "L6"
      }
     ]
    }
