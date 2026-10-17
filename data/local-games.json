@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T00:32:00-04:00",
+ "updated": "2026-10-17T00:46:55-04:00",
  "today": "2026-10-17",
  "range": [
   "2026-10-14",
@@ -1754,9 +1754,9 @@
    "home_away": "N",
    "opponent": "Edmonton Elks",
    "location": "Play Alberta Field at Commonwealth Stadium",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "final",
+   "our_score": 27,
+   "opp_score": 35,
    "result": null,
    "note": "",
    "links": {
@@ -3566,14 +3566,14 @@
     {
      "abbr": "EDM",
      "name": "Edmonton Elks",
-     "gp": 16,
-     "w": 12,
+     "gp": 17,
+     "w": 13,
      "l": 4,
      "t": 0,
-     "pts": 24,
-     "pf": 497,
-     "pa": 394,
-     "flags": "x"
+     "pts": 26,
+     "pf": 532,
+     "pa": 421,
+     "flags": "y"
     },
     {
      "abbr": "BC",
@@ -3600,18 +3600,6 @@
      "flags": ""
     },
     {
-     "abbr": "WPG",
-     "name": "Winnipeg Blue Bombers",
-     "gp": 16,
-     "w": 8,
-     "l": 8,
-     "t": 0,
-     "pts": 16,
-     "pf": 416,
-     "pa": 447,
-     "flags": ""
-    },
-    {
      "abbr": "CGY",
      "name": "Calgary Stampeders",
      "gp": 17,
@@ -3621,6 +3609,18 @@
      "pts": 16,
      "pf": 600,
      "pa": 574,
+     "flags": ""
+    },
+    {
+     "abbr": "WPG",
+     "name": "Winnipeg Blue Bombers",
+     "gp": 17,
+     "w": 8,
+     "l": 9,
+     "t": 0,
+     "pts": 16,
+     "pf": 443,
+     "pa": 482,
      "flags": ""
     }
    ]
