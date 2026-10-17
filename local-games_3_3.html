@@ -133,6 +133,12 @@
   .dstrip .score { text-align: left; margin-top: auto; }
   .day h2 .n { color: var(--muted); font-weight: 600; letter-spacing: .04em; }
   @media (max-width: 480px) { .dstrip .game { flex-basis: 78%; } }
+
+  /* standings: one division at a time (keeps the page short enough to show in full) */
+  .gpick { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 4px; }
+  .gpick button { border: 1px solid var(--line); background: var(--panel); color: var(--text); border-radius: 4px; font: inherit; font-size: 12px; font-weight: 700;
+    padding: 6px 10px; cursor: pointer; }
+  .gpick button[aria-pressed="true"] { background: #fff; color: #0b1a33; border-color: #fff; }
   .brand { display: flex; align-items: center; gap: 9px; min-width: 0; }
   .brand .btext { min-width: 0; }
   .blogo { height: 38px; width: auto; max-width: 76px; object-fit: contain; flex: none; border-radius: 4px; }
@@ -422,6 +428,27 @@
   }
   var hsTitle = null;
 
+
+  // standings with several divisions: show one at a time, starting with the one our team is in
+  var GROUP = {};
+  function pickGroup(key, groups, isOurs, box, redraw) {
+    if (!groups || groups.length < 2) return groups;
+    if (GROUP[key] == null || GROUP[key] >= groups.length) {
+      var i = -1;
+      groups.some(function (g, n) { if (g.teams.some(isOurs)) { i = n; return true; } return false; });
+      GROUP[key] = i < 0 ? 0 : i;
+    }
+    var bar = document.createElement('div'); bar.className = 'gpick';
+    groups.forEach(function (g, n) {
+      var b = document.createElement('button'); b.type = 'button';
+      b.textContent = String(g.group || ('Group ' + (n + 1))).replace(/^.*\u00b7\s*/, '');
+      b.setAttribute('aria-pressed', String(n === GROUP[key]));
+      b.onclick = function () { GROUP[key] = n; redraw(); };
+      bar.appendChild(b);
+    });
+    box.appendChild(bar);
+    return [groups[GROUP[key]]];
+  }
   function renderStandings() {
     var bar = document.getElementById('teams'); bar.innerHTML = ''; bar.style.display = '';
     ST_LEAGUES.forEach(function (l) {
@@ -456,6 +483,8 @@
       }
       box.appendChild(msg); return;
     }
+    groups = pickGroup(standLeague + (standLeague === 'hs' ? hsSport + hsLeague : ''), groups,
+      function (t) { return standLeague !== 'hs' && isOurClub(t.name); }, box, render);
     groups.forEach(function (g) {
       var sec = el('section', 'stand');
       sec.appendChild(el('h2', null, g.group));
