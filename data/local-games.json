@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T01:07:31-04:00",
+ "updated": "2026-10-17T01:16:59-04:00",
  "today": "2026-10-17",
  "range": [
   "2026-10-14",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 32
+   "count": 31
   },
   "club_news": {
    "ok": true,
@@ -2489,6 +2489,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "cfl",
+   "headline": "Elks clinch home field for West playoffs with win over Blue Bombers",
+   "summary": "The Edmonton Elks will officially host this year’s CFL West final.",
+   "published": "2026-10-17T01:10-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/eeb98ab6f07b9c6d6f7a83801974e7335f4b41fc47b163624ff7ebde42e32467.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/elks-clinch-home-field-for-west-playoffs-with-win-over-blue-bombers/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "MacKinnon has four points, Lehkonen scores twice as Avalanche win",
    "summary": "Nathan MacKinnon had three assists and a power-play goal, Artturi Lehkonen scored twice and the Colorado Avalanche rallied to beat the Pittsburgh Penguins 5-2 on Friday night.",
@@ -2512,6 +2525,19 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/cfl/article/argonauts-chad-kelly-exits-vs-redblacks-with-apparent-injury/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Lindholm sparks streaking Bruins’ comeback win over Ducks",
+   "summary": "",
+   "published": "2026-10-17T00:57-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/bruins-ducks.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/lindholm-sparks-streaking-bruins-comeback-win-over-ducks/",
    "source": "Sportsnet"
   },
   {
@@ -2554,34 +2580,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "Packers’ Jacobs, Broncos’ Cooper coming off commissioner’s exempt list",
-   "summary": "",
-   "published": "2026-10-16T16:13-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/05/Green-Bay-Packers-running-back-Josh-Jacobs.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/report-packers-jacobs-broncos-cooper-coming-off-commissioners-exempt-list/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Raptors sign Canadian guard Jalen Celestine",
-   "summary": "",
-   "published": "2026-10-16T11:35-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/Jalen-Celestine.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-sign-canadian-guard-jalen-celestine/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "mlb",
    "headline": "Ohtani’s health, possible lockout loom over uncertain off-season for Dodgers",
    "summary": "",
@@ -2592,19 +2590,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/ohtanis-health-possible-lockout-loom-over-uncertain-off-season-for-dodgers/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Lindholm sparks streaking Bruins’ comeback win over Ducks",
-   "summary": "",
-   "published": "2026-10-17T00:57-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/bruins-ducks.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/lindholm-sparks-streaking-bruins-comeback-win-over-ducks/",
    "source": "Sportsnet"
   },
   {
@@ -2660,6 +2645,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "Raptors sign Canadian guard Jalen Celestine",
+   "summary": "",
+   "published": "2026-10-16T11:35-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/Jalen-Celestine.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/raptors-sign-canadian-guard-jalen-celestine/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "mlb",
    "headline": "Rays hitting coach Chad Mottola a symbol of stability at turbulent position",
    "summary": "As a player, Chad Mottola became well versed in the MLB roller-coaster. Now, he’s the longest-tenured hitting coach in the league with the Tampa Bay Rays and still thriving one decade in, writes Sportsnet’s Shi Davidi.",
@@ -2683,6 +2683,19 @@
    "sn_team_count": 0,
    "sport": "",
    "url": "https://www.sportsnet.ca/curling/article/report-world-curling-plans-to-host-womens-worlds-in-united-arab-emirates/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Packers’ Jacobs, Broncos’ Cooper coming off commissioner’s exempt list",
+   "summary": "",
+   "published": "2026-10-16T16:13-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/05/Green-Bay-Packers-running-back-Josh-Jacobs.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/report-packers-jacobs-broncos-cooper-coming-off-commissioners-exempt-list/",
    "source": "Sportsnet"
   },
   {
@@ -2826,34 +2839,6 @@
    "sn_team_count": 2,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/ravens-qb-lamar-jackson-out-vs-browns/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Brewers end Dodgers’ reign with dominant NLCS sweep",
-   "summary": "The Dodgers are a great team, but not the best team in baseball anymore, or even the best in the National League. That honour now goes to the Brewers.",
-   "published": "2026-10-15T23:08-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/mitchell_garrett1280.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/brewers-sweep-dodgers-in-nlcs-to-book-ticket-to-world-series/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "‘My decision’: Why Gavin McKenna was benched in Maple Leafs’ loss to Sabres",
-   "summary": "",
-   "published": "2026-10-15T22:36-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Toronto-Maple-Leafs-Gavin-McKenna.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-gavin-mckenna-benched-in-ot-loss-vs-sabres/",
    "source": "Sportsnet"
   },
   {
