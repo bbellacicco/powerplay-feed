@@ -113,6 +113,10 @@
     .grid { grid-template-columns: 1fr 1fr; gap: 16px 10px; min-height: 1180px; }
     .grid .hl { font-size: 13.5px; }
   }
+  /* Local Sports Hub version */
+  .hubchips { padding: 0 40px; margin: 26px 0 -14px; }
+  .hub .grid { min-height: 0 !important; }
+  @media (max-width: 700px) { .hubchips { padding: 0 16px; margin-top: 22px; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; } .hubchips .chip { flex: none; } }
 </style>
 </head>
 <body>
@@ -139,7 +143,9 @@
 <script>
 (function () {
   var DATA = 'https://bbellacicco.github.io/powerplay-feed/data/';
-  var TZ = 'America/Toronto', PER = 12;
+  // inside the Local Sports Hub (?in=sports): one story row with team chips and 8 stories a page, so it fits the hub
+  var HUB = window.parent !== window && /[?&]in=sports\b/.test(location.search);
+  var TZ = 'America/Toronto', PER = HUB ? 8 : 12, rowTeam = 'latest';
   var MON = ['Jan.', 'Feb.', 'March', 'April', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'];
   // teams: blog categories first, then words in the headline/summary
   var TEAMS = [
@@ -218,6 +224,18 @@
   function rows(list) {
     var box = document.getElementById('rows'); box.innerHTML = '';
     var defs = [['latest', 'Latest stories', null]].concat(TEAMS.map(function (t) { return [t[0], t[1], t[0]]; }));
+    if (HUB) {
+      var pick = defs.filter(function (d) { return d[0] === rowTeam; })[0] || defs[0];
+      var cb = el('div', 'chips hubchips');
+      defs.forEach(function (d) {
+        var b = el('button', 'chip' + (d === pick ? ' on' : ''), d[0] === 'latest' ? 'Latest' : d[1]); b.type = 'button';
+        b.style.setProperty('--tc', TCOL[d[0]] || '#ffffff');
+        b.onclick = function () { rowTeam = d[0]; rows(list); };
+        cb.appendChild(b);
+      });
+      box.appendChild(cb);
+      defs = [pick];
+    }
     defs.forEach(function (d) {
       var items = d[2] ? list.filter(function (s) { return s.team === d[2]; }) : list.slice(3);
       items = items.slice(0, 15);
@@ -290,6 +308,24 @@
   }
   load();
   setInterval(load, 10 * 60000);
+})();
+</script>
+<script>
+/* inside the Local Sports Hub: no scrolling of its own, and it tells the hub how tall it is
+   (a widget that scrolls inside the page traps the finger on iPhones). */
+(function () {
+  if (window.parent === window || !/[?&]in=sports\b/.test(location.search)) return;
+  document.documentElement.classList.add('hub');
+  var css = document.createElement('style'); css.textContent = 'html,body{overflow:hidden!important;height:auto!important}';
+  document.head.appendChild(css);
+  var last = 0;
+  function send() {
+    var h = Math.ceil(document.body.getBoundingClientRect().height);
+    if (h && Math.abs(h - last) > 2) { last = h; try { parent.postMessage({ pp: 'height', h: h }, '*'); } catch (e) {} }
+  }
+  window.addEventListener('load', send); window.addEventListener('resize', send);
+  if (window.ResizeObserver) new ResizeObserver(send).observe(document.body);
+  setInterval(send, 1500); send();
 })();
 </script>
 </body>
