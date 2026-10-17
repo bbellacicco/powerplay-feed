@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T18:54:46-04:00",
+ "updated": "2026-10-17T19:02:06-04:00",
  "today": "2026-10-17",
  "range": [
   "2026-10-14",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 31
   },
   "club_news": {
    "ok": true,
@@ -1366,12 +1366,14 @@
    "home_away": "N",
    "opponent": "Toronto Varsity Blues",
    "location": "Ottawa, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 5,
+   "opp_score": 0,
+   "result": "W",
    "note": "OUS Championships",
-   "links": {}
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6489"
+   }
   },
   {
    "id": "lancers-6457",
@@ -3312,15 +3314,15 @@
   },
   {
    "league": "nhl",
-   "headline": "Canadiens’ Reinbacher, Kapanen to make season debuts against Sabres",
+   "headline": "Jets sunk by Ehlers’ winner in loss to Hurricanes",
    "summary": "",
-   "published": "2026-10-17T11:24-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-Design-2026-10-17T110724.481.jpg",
+   "published": "2026-10-17T18:40-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/jets-4.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
+   "sn_team_count": 2,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canadiens-reinbacher-kapanen-to-make-season-debuts-against-sabres/",
+   "url": "https://www.sportsnet.ca/nhl/article/jets-sunk-by-ehlers-winner-in-loss-to-hurricanes/",
    "source": "Sportsnet"
   },
   {
@@ -3389,19 +3391,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Q and A: Canada’s Croden on balancing UFC goals with life on the front lines",
-   "summary": "Ahead of UFC Edmonton, Dan Fernandes spoke with Calgary’s Melissa Croden to discuss how she balances the demands of life as a front-line healthcare worker with the pursuit of success inside the octagon.",
-   "published": "2026-10-17T10:47-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/04/6393334562112.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/q-and-a-canadas-croden-on-balancing-ufc-goals-with-life-on-the-front-lines/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "Quick Shifts: Where should Maple Leafs look for defence trade?",
    "summary": "Through eight games, the Maple Leafs’ biggest need has become clear: defence. Sportsnet’s Luke Fox digs through potential solutions and much more in the latest Quick Shifts.",
@@ -3415,6 +3404,21 @@
    "sn_team_count": 6,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/quick-shifts-where-should-maple-leafs-look-for-defence-trade/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Maple Leafs’ Gavin McKenna talks benching, Tavares injury",
+   "summary": "It’s been a while, but Gavin McKenna is trying to focus on his next shift. Luke Fox has more on how the 18-year-old is handling his benching in Thursday’s loss to the Sabres.",
+   "published": "2026-10-17T12:55-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Toronto-Maple-Leafs-Gavin-McKenna.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-gavin-mckenna-talks-benching-tavares-injury/",
    "source": "Sportsnet"
   },
   {
@@ -3672,32 +3676,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/a-detailed-look-at-gavin-mckennas-game-before-he-was-benched/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Dave Hakstol wins first game as Arizona State men’s hockey head coach",
-   "summary": "",
-   "published": "2026-10-17T09:52-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2023/02/Hakstol.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/hockey/article/dave-hakstol-wins-first-game-as-arizona-state-mens-hockey-head-coach/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Ducks’ rebuild provides blueprint for Flames to follow",
-   "summary": "As the Flames embark on their own rebuild, the Ducks are beginning to look an awful lot like the blueprint GM Craig Conroy would love to follow, writes Eric Francis.",
-   "published": "2026-10-16T14:29-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/03/Flames-vs-Ducks.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/ducks-rebuild-provides-blueprint-for-flames-to-follow/",
    "source": "Sportsnet"
   },
   {
@@ -4756,7 +4734,7 @@
       "l": 1,
       "otl": 1,
       "pts": 13,
-      "gf": 34,
+      "gf": 35,
       "ga": 24,
       "strk": "W2"
      },
@@ -4781,7 +4759,7 @@
       "otl": 1,
       "pts": 11,
       "gf": 29,
-      "ga": 36,
+      "ga": 37,
       "strk": "L1"
      },
      {
@@ -4842,14 +4820,14 @@
      {
       "name": "Newmarket Hurricanes",
       "abbr": "NMH",
-      "gp": 15,
-      "w": 7,
+      "gp": 16,
+      "w": 8,
       "l": 7,
       "otl": 1,
-      "pts": 15,
+      "pts": 17,
       "gf": 50,
       "ga": 44,
-      "strk": "W3"
+      "strk": "W4"
      },
      {
       "name": "Pickering Panthers",
@@ -4902,14 +4880,14 @@
      {
       "name": "Trenton Golden Hawks",
       "abbr": "TRN",
-      "gp": 12,
+      "gp": 13,
       "w": 4,
-      "l": 7,
+      "l": 8,
       "otl": 1,
       "pts": 9,
       "gf": 52,
       "ga": 62,
-      "strk": "L4"
+      "strk": "L5"
      },
      {
       "name": "Toronto Warriors",
