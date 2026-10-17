@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T21:46:58-04:00",
+ "updated": "2026-10-16T22:02:01-04:00",
  "today": "2026-10-16",
  "range": [
   "2026-10-13",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -1820,11 +1820,11 @@
    "home_away": "A",
    "opponent": "McMaster Invitational",
    "location": "Hamilton, ON",
-   "status": "upcoming",
+   "status": "final",
    "our_score": null,
    "opp_score": null,
    "result": null,
-   "note": "",
+   "note": "W - 3rd, M - 5th",
    "links": {}
   },
   {
@@ -2019,11 +2019,11 @@
    "home_away": "H",
    "opponent": "Owen Sound Attack",
    "location": "WFCU Centre, Windsor",
-   "status": "live",
+   "status": "final",
    "our_score": 11,
    "opp_score": 3,
-   "result": null,
-   "note": "End of Game",
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29090/"
    }
@@ -2487,6 +2487,19 @@
   },
   {
    "league": "cfl",
+   "headline": "Nick Arbuckle with an OUT OF THIS WORLD DIME to Kevin Mital",
+   "summary": "",
+   "published": "2026-10-16T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/6I0ffZNWCquqnDCZxNe9MZ/307424d0554723b44ef5494778ce845f/highlight_4.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Argonauts"
+   ],
+   "url": "https://www.cfl.ca/article/nick-arbuckle-with-an-out-of-this-world-dime-to-kevin-mital",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Top CFL Weekly Fantasy plays at every position for Week 20",
    "summary": "",
    "published": "2026-10-16T00:00:00-04:00",
@@ -2698,20 +2711,6 @@
     "Lions"
    ],
    "url": "https://www.cfl.ca/article/lions-add-veteran-american-offensive-lineman-lorenzo-thompson-to-the-practice-roster",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Recap: Montreal 44, Saskatchewan 24",
-   "summary": "",
-   "published": "2026-10-12T16:51:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/2DEu0QesEvN9f3nLBJz2UG/fdfbd4b7391ce93142b2f02f576e3bde/MTL_VS_SSK_ENG_THMB.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Alouettes",
-    "Roughriders"
-   ],
-   "url": "https://www.cfl.ca/article/recap-montreal-44-saskatchewan-24",
    "source": "CFL.ca"
   },
   {
@@ -3134,6 +3133,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "cfl",
+   "headline": "Redblacks stun Argonauts to avoid winless season",
+   "summary": "",
+   "published": "2026-10-16T22:00-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177101113.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/redblacks-stun-argonauts-to-avoid-winless-season/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Friday Four: Sidney Crosby, Nathan MacKinnon and other early-season oddities",
    "summary": "It’s officially small-sample-size season. To that end, Sportsnet’s Michael Amato digs into stats surrounding Sidney Crosby, Nathan MacKinnon and others to determine their sustainability in the latest Friday Four.",
@@ -3144,19 +3156,6 @@
    "sn_team_count": 6,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/friday-four-sidney-crosby-nathan-mackinnon-and-other-early-season-oddities/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "cfl",
-   "headline": "Live Updates: Argos vs. Redblacks",
-   "summary": "",
-   "published": "2026-10-16T20:26-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/cfl.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/live-updates-argos-16-redblacks-23/",
    "source": "Sportsnet"
   },
   {
@@ -3341,19 +3340,6 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/cfl/article/around-the-cfl-elks-roughriders-going-in-opposite-directions/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "UFC Edmonton preview: Record 12 Canadians to compete on card",
-   "summary": "UFC Edmonton features 12 Canadian fighters — the most to appear on a card in UFC history. Adam Martin looks at the record-breaking event’s top storylines.",
-   "published": "2026-10-15T09:32-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/malott.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/ufc-edmonton-preview-record-12-canadians-to-compete-on-card/",
    "source": "Sportsnet"
   },
   {
@@ -4424,14 +4410,14 @@
      {
       "name": "Kingston Frontenacs",
       "abbr": "KGN",
-      "gp": 10,
-      "w": 6,
+      "gp": 11,
+      "w": 7,
       "l": 4,
       "otl": 0,
-      "pts": 12,
+      "pts": 14,
       "gf": 50,
       "ga": 49,
-      "strk": "W3"
+      "strk": "W4"
      },
      {
       "name": "Ottawa 67's",
@@ -4448,11 +4434,11 @@
      {
       "name": "Oshawa Generals",
       "abbr": "OSH",
-      "gp": 9,
+      "gp": 10,
       "w": 4,
       "l": 5,
-      "otl": 0,
-      "pts": 8,
+      "otl": 1,
+      "pts": 9,
       "gf": 27,
       "ga": 34,
       "strk": "W1"
@@ -4552,52 +4538,52 @@
       "strk": "W7"
      },
      {
-      "name": "Sarnia Sting",
-      "abbr": "SAR",
-      "gp": 10,
+      "name": "Saginaw Spirit",
+      "abbr": "SAG",
+      "gp": 9,
       "w": 5,
-      "l": 4,
-      "otl": 1,
-      "pts": 11,
-      "gf": 44,
-      "ga": 45,
-      "strk": "L2"
+      "l": 2,
+      "otl": 2,
+      "pts": 12,
+      "gf": 38,
+      "ga": 31,
+      "strk": "W4"
      },
      {
       "name": "Flint Firebirds",
       "abbr": "FLNT",
-      "gp": 7,
+      "gp": 8,
       "w": 5,
       "l": 2,
-      "otl": 0,
-      "pts": 10,
+      "otl": 1,
+      "pts": 11,
       "gf": 33,
       "ga": 25,
       "strk": "W3"
      },
      {
-      "name": "Saginaw Spirit",
-      "abbr": "SAG",
-      "gp": 8,
-      "w": 4,
-      "l": 2,
-      "otl": 2,
-      "pts": 10,
-      "gf": 38,
-      "ga": 31,
-      "strk": "W3"
+      "name": "Sarnia Sting",
+      "abbr": "SAR",
+      "gp": 11,
+      "w": 5,
+      "l": 5,
+      "otl": 1,
+      "pts": 11,
+      "gf": 44,
+      "ga": 45,
+      "strk": "L3"
      },
      {
       "name": "Windsor Spitfires",
       "abbr": "WSR",
-      "gp": 10,
-      "w": 3,
+      "gp": 11,
+      "w": 4,
       "l": 5,
       "otl": 2,
-      "pts": 8,
+      "pts": 10,
       "gf": 37,
       "ga": 40,
-      "strk": "L2"
+      "strk": "W1"
      }
     ]
    },
@@ -4607,14 +4593,14 @@
      {
       "name": "Guelph Storm",
       "abbr": "GUE",
-      "gp": 9,
-      "w": 7,
+      "gp": 10,
+      "w": 8,
       "l": 2,
       "otl": 0,
-      "pts": 14,
+      "pts": 16,
       "gf": 43,
       "ga": 25,
-      "strk": "W7"
+      "strk": "W8"
      },
      {
       "name": "London Knights",
@@ -4655,14 +4641,14 @@
      {
       "name": "Owen Sound Attack",
       "abbr": "OS",
-      "gp": 8,
+      "gp": 9,
       "w": 2,
-      "l": 6,
+      "l": 7,
       "otl": 0,
       "pts": 4,
       "gf": 21,
       "ga": 44,
-      "strk": "L2"
+      "strk": "L3"
      }
     ]
    }
@@ -4710,14 +4696,26 @@
      {
       "name": "Newmarket Hurricanes",
       "abbr": "NMH",
-      "gp": 14,
-      "w": 6,
+      "gp": 15,
+      "w": 7,
       "l": 7,
       "otl": 1,
-      "pts": 13,
-      "gf": 42,
+      "pts": 15,
+      "gf": 43,
       "ga": 41,
-      "strk": "W2"
+      "strk": "W3"
+     },
+     {
+      "name": "Pickering Panthers",
+      "abbr": "PIC",
+      "gp": 15,
+      "w": 6,
+      "l": 7,
+      "otl": 2,
+      "pts": 14,
+      "gf": 49,
+      "ga": 46,
+      "strk": "L2"
      },
      {
       "name": "St. Michaels Buzzers",
@@ -4732,28 +4730,16 @@
       "strk": "L1"
      },
      {
-      "name": "Pickering Panthers",
-      "abbr": "PIC",
-      "gp": 14,
-      "w": 6,
-      "l": 7,
-      "otl": 1,
-      "pts": 13,
-      "gf": 49,
-      "ga": 45,
-      "strk": "L2"
-     },
-     {
       "name": "Stouffville Spirit",
       "abbr": "STO",
-      "gp": 11,
+      "gp": 12,
       "w": 6,
-      "l": 5,
+      "l": 6,
       "otl": 0,
       "pts": 12,
       "gf": 44,
       "ga": 41,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Aurora Tigers",
@@ -4775,8 +4761,8 @@
       "l": 6,
       "otl": 1,
       "pts": 9,
-      "gf": 48,
-      "ga": 54,
+      "gf": 49,
+      "ga": 55,
       "strk": "L3"
      },
      {
@@ -4823,14 +4809,14 @@
      {
       "name": "Collingwood Blues",
       "abbr": "COL",
-      "gp": 15,
-      "w": 14,
+      "gp": 16,
+      "w": 15,
       "l": 1,
       "otl": 0,
-      "pts": 28,
+      "pts": 30,
       "gf": 96,
       "ga": 24,
-      "strk": "W8"
+      "strk": "W9"
      },
      {
       "name": "Milton Menace",
@@ -4847,14 +4833,26 @@
      {
       "name": "King Rebellion",
       "abbr": "KNG",
-      "gp": 12,
-      "w": 10,
+      "gp": 13,
+      "w": 11,
       "l": 1,
       "otl": 1,
-      "pts": 21,
+      "pts": 23,
       "gf": 63,
       "ga": 23,
-      "strk": "W6"
+      "strk": "W7"
+     },
+     {
+      "name": "Burlington Cougars",
+      "abbr": "BUR",
+      "gp": 16,
+      "w": 10,
+      "l": 4,
+      "otl": 2,
+      "pts": 22,
+      "gf": 74,
+      "ga": 44,
+      "strk": "W4"
      },
      {
       "name": "Leamington Flyers",
@@ -4866,18 +4864,6 @@
       "pts": 21,
       "gf": 50,
       "ga": 23,
-      "strk": "W3"
-     },
-     {
-      "name": "Burlington Cougars",
-      "abbr": "BUR",
-      "gp": 15,
-      "w": 9,
-      "l": 4,
-      "otl": 2,
-      "pts": 20,
-      "gf": 73,
-      "ga": 44,
       "strk": "W3"
      },
      {
@@ -4893,6 +4879,18 @@
       "strk": "W4"
      },
      {
+      "name": "Oakville Blades",
+      "abbr": "OAK",
+      "gp": 15,
+      "w": 6,
+      "l": 6,
+      "otl": 3,
+      "pts": 15,
+      "gf": 54,
+      "ga": 63,
+      "strk": "W1"
+     },
+     {
       "name": "Niagara Falls Canucks",
       "abbr": "NFC",
       "gp": 18,
@@ -4905,28 +4903,16 @@
       "strk": "W1"
      },
      {
-      "name": "Oakville Blades",
-      "abbr": "OAK",
-      "gp": 14,
-      "w": 6,
-      "l": 6,
-      "otl": 2,
-      "pts": 14,
-      "gf": 54,
-      "ga": 62,
-      "strk": "W1"
-     },
-     {
       "name": "Mississauga Chargers",
       "abbr": "MIS",
-      "gp": 16,
+      "gp": 17,
       "w": 6,
-      "l": 10,
+      "l": 11,
       "otl": 0,
       "pts": 12,
       "gf": 50,
       "ga": 84,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Caledon Admirals",
@@ -4960,8 +4946,8 @@
       "l": 10,
       "otl": 2,
       "pts": 8,
-      "gf": 48,
-      "ga": 80,
+      "gf": 49,
+      "ga": 81,
       "strk": "L5"
      }
     ]
@@ -4974,14 +4960,14 @@
      {
       "name": "St. Marys Lincolns",
       "abbr": "SMY",
-      "gp": 10,
-      "w": 9,
+      "gp": 11,
+      "w": 10,
       "l": 1,
       "otl": 0,
-      "pts": 18,
-      "gf": 69,
+      "pts": 20,
+      "gf": 70,
       "ga": 25,
-      "strk": "W7"
+      "strk": "W8"
      },
      {
       "name": "Chatham Maroons",
@@ -5010,14 +4996,14 @@
      {
       "name": "Listowel Cyclones",
       "abbr": "LIS",
-      "gp": 10,
-      "w": 5,
+      "gp": 11,
+      "w": 6,
       "l": 2,
       "otl": 3,
-      "pts": 13,
+      "pts": 15,
       "gf": 50,
       "ga": 34,
-      "strk": "W2"
+      "strk": "W3"
      },
      {
       "name": "Stratford Warriors",
@@ -5039,21 +5025,21 @@
       "l": 6,
       "otl": 1,
       "pts": 11,
-      "gf": 44,
+      "gf": 45,
       "ga": 55,
       "strk": "W1"
      },
      {
       "name": "Elmira Sugar Kings",
       "abbr": "ELM",
-      "gp": 11,
+      "gp": 12,
       "w": 4,
-      "l": 6,
+      "l": 7,
       "otl": 1,
       "pts": 9,
       "gf": 38,
       "ga": 50,
-      "strk": "L5"
+      "strk": "L6"
      },
      {
       "name": "LaSalle Vipers",
@@ -5076,7 +5062,7 @@
       "otl": 0,
       "pts": 8,
       "gf": 39,
-      "ga": 49,
+      "ga": 50,
       "strk": "L3"
      },
      {
@@ -5169,6 +5155,18 @@
       "strk": "W2"
      },
      {
+      "name": "Pelham Panthers",
+      "abbr": "PEL",
+      "gp": 11,
+      "w": 7,
+      "l": 4,
+      "otl": 0,
+      "pts": 14,
+      "gf": 49,
+      "ga": 46,
+      "strk": "W2"
+     },
+     {
       "name": "Ayr Centennials",
       "abbr": "AYR",
       "gp": 10,
@@ -5193,28 +5191,16 @@
       "strk": "W3"
      },
      {
-      "name": "Pelham Panthers",
-      "abbr": "PEL",
-      "gp": 10,
-      "w": 6,
-      "l": 4,
-      "otl": 0,
-      "pts": 12,
-      "gf": 49,
-      "ga": 46,
-      "strk": "W1"
-     },
-     {
       "name": "Port Colborne Sailors",
       "abbr": "PCS",
-      "gp": 9,
+      "gp": 10,
       "w": 5,
-      "l": 4,
+      "l": 5,
       "otl": 0,
       "pts": 10,
       "gf": 50,
       "ga": 51,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Stoney Creek Generals",
@@ -5241,18 +5227,6 @@
       "strk": "L1"
      },
      {
-      "name": "Welland Canadians",
-      "abbr": "WEL",
-      "gp": 11,
-      "w": 1,
-      "l": 10,
-      "otl": 0,
-      "pts": 2,
-      "gf": 25,
-      "ga": 73,
-      "strk": "L1"
-     },
-     {
       "name": "Brantford Titans",
       "abbr": "BFD",
       "gp": 12,
@@ -5263,6 +5237,18 @@
       "gf": 28,
       "ga": 61,
       "strk": "L6"
+     },
+     {
+      "name": "Welland Canadians",
+      "abbr": "WEL",
+      "gp": 12,
+      "w": 1,
+      "l": 11,
+      "otl": 0,
+      "pts": 2,
+      "gf": 25,
+      "ga": 74,
+      "strk": "L2"
      }
     ]
    }
