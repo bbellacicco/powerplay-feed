@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T20:07:02-04:00",
+ "updated": "2026-10-16T20:17:23-04:00",
  "today": "2026-10-16",
  "range": [
   "2026-10-13",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 36
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -2020,10 +2020,10 @@
    "opponent": "Owen Sound Attack",
    "location": "WFCU Centre, Windsor",
    "status": "live",
-   "our_score": 2,
+   "our_score": 4,
    "opp_score": 0,
    "result": null,
-   "note": "16:16 2nd",
+   "note": "09:26 2nd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29090/"
    }
@@ -3161,7 +3161,7 @@
   },
   {
    "league": "cfl",
-   "headline": "CFL: Argos 16, Redblacks 13",
+   "headline": "CFL: Argos 16, Redblacks 20",
    "summary": "",
    "published": "2026-10-16T11:03-04:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/chad-kelleyt.jpg",
@@ -3170,6 +3170,19 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/cfl/article/redbalcks-look-for-first-win-vs-argonauts/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "cfl",
+   "headline": "Argonauts’ Chad Kelly exits vs. Redblacks with apparent injury",
+   "summary": "",
+   "published": "2026-10-16T20:10-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177100921.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/argonauts-chad-kelly-exits-vs-redblacks-with-apparent-injury/",
    "source": "Sportsnet"
   },
   {
@@ -3237,19 +3250,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/ohtanis-health-possible-lockout-loom-over-uncertain-off-season-for-dodgers/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Jets’ Vladislav Namestnikov out week-to-week",
-   "summary": "",
-   "published": "2026-10-16T14:29-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/02/namestnikov.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/jets-vlad-namestnikov-out-week-to-week/",
    "source": "Sportsnet"
   },
   {
@@ -3354,6 +3354,19 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/wnba/article/wnba-finals-preview-valkyries-and-dream-chase-first-championships/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Jets’ Vladislav Namestnikov out week-to-week",
+   "summary": "",
+   "published": "2026-10-16T14:29-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/02/namestnikov.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/jets-vlad-namestnikov-out-week-to-week/",
    "source": "Sportsnet"
   },
   {
@@ -3553,32 +3566,6 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/kings-among-teams-kicking-tires-on-connor-hellebuyck-trade/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "UFC Edmonton preview: Record 12 Canadians to compete on card",
-   "summary": "UFC Edmonton features 12 Canadian fighters — the most to appear on a card in UFC history. Adam Martin looks at the record-breaking event’s top storylines.",
-   "published": "2026-10-15T09:32-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/malott.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/ufc-edmonton-preview-record-12-canadians-to-compete-on-card/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Q and A: Chovancek on chasing UFC dream and representing Canada",
-   "summary": "After more than a decade of setbacks, sacrifices and hard work, Canadian MMA prospect Cody Chovancek is finally set to make his long-awaited UFC debut. The Petrolia, Ont., native opens up about how fishing shaped his app",
-   "published": "2026-10-14T10:40-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/09/Cody-Chovancek-Unified-MMA.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/q-and-a-chovancek-on-chasing-ufc-dream-and-representing-canada/",
    "source": "Sportsnet"
   },
   {
@@ -4442,7 +4429,7 @@
       "l": 4,
       "otl": 0,
       "pts": 12,
-      "gf": 46,
+      "gf": 47,
       "ga": 48,
       "strk": "W3"
      },
@@ -4467,7 +4454,7 @@
       "otl": 0,
       "pts": 8,
       "gf": 26,
-      "ga": 30,
+      "ga": 31,
       "strk": "W1"
      },
      {
@@ -4508,7 +4495,7 @@
       "otl": 1,
       "pts": 11,
       "gf": 27,
-      "ga": 27,
+      "ga": 28,
       "strk": "W2"
      },
      {
@@ -4561,7 +4548,7 @@
       "otl": 1,
       "pts": 15,
       "gf": 35,
-      "ga": 28,
+      "ga": 29,
       "strk": "W6"
      },
      {
@@ -4573,7 +4560,7 @@
       "otl": 1,
       "pts": 11,
       "gf": 43,
-      "ga": 38,
+      "ga": 39,
       "strk": "L2"
      },
      {
@@ -4596,7 +4583,7 @@
       "l": 2,
       "otl": 2,
       "pts": 10,
-      "gf": 31,
+      "gf": 32,
       "ga": 30,
       "strk": "W3"
      },
@@ -4608,7 +4595,7 @@
       "l": 5,
       "otl": 2,
       "pts": 8,
-      "gf": 28,
+      "gf": 30,
       "ga": 37,
       "strk": "L2"
      }
@@ -4649,7 +4636,7 @@
       "l": 3,
       "otl": 1,
       "pts": 11,
-      "gf": 28,
+      "gf": 29,
       "ga": 32,
       "strk": "W1"
      },
@@ -4661,7 +4648,7 @@
       "l": 5,
       "otl": 2,
       "pts": 10,
-      "gf": 30,
+      "gf": 31,
       "ga": 38,
       "strk": "L3"
      },
@@ -4674,7 +4661,7 @@
       "otl": 0,
       "pts": 4,
       "gf": 18,
-      "ga": 35,
+      "ga": 37,
       "strk": "L2"
      }
     ]
@@ -4704,7 +4691,7 @@
       "l": 4,
       "otl": 2,
       "pts": 18,
-      "gf": 52,
+      "gf": 53,
       "ga": 42,
       "strk": "L1"
      },
@@ -4728,7 +4715,7 @@
       "l": 6,
       "otl": 1,
       "pts": 13,
-      "gf": 41,
+      "gf": 42,
       "ga": 57,
       "strk": "W1"
      },
@@ -4789,7 +4776,7 @@
       "otl": 1,
       "pts": 9,
       "gf": 47,
-      "ga": 51,
+      "ga": 52,
       "strk": "L3"
      },
      {
@@ -4813,7 +4800,7 @@
       "otl": 0,
       "pts": 6,
       "gf": 47,
-      "ga": 71,
+      "ga": 72,
       "strk": "W1"
      },
      {
@@ -4841,7 +4828,7 @@
       "l": 1,
       "otl": 0,
       "pts": 28,
-      "gf": 92,
+      "gf": 93,
       "ga": 24,
       "strk": "W8"
      },
@@ -4926,7 +4913,7 @@
       "otl": 0,
       "pts": 12,
       "gf": 50,
-      "ga": 80,
+      "ga": 81,
       "strk": "W1"
      },
      {
@@ -4938,7 +4925,7 @@
       "otl": 2,
       "pts": 12,
       "gf": 51,
-      "ga": 75,
+      "ga": 76,
       "strk": "L1"
      },
      {
@@ -4973,7 +4960,7 @@
       "l": 10,
       "otl": 2,
       "pts": 8,
-      "gf": 45,
+      "gf": 46,
       "ga": 79,
       "strk": "L5"
      }
@@ -5041,7 +5028,7 @@
       "otl": 1,
       "pts": 11,
       "gf": 44,
-      "ga": 53,
+      "ga": 54,
       "strk": "W1"
      },
      {
@@ -5088,7 +5075,7 @@
       "l": 7,
       "otl": 0,
       "pts": 8,
-      "gf": 37,
+      "gf": 38,
       "ga": 49,
       "strk": "L3"
      },
@@ -5177,7 +5164,7 @@
       "l": 2,
       "otl": 0,
       "pts": 18,
-      "gf": 60,
+      "gf": 61,
       "ga": 28,
       "strk": "L1"
      },
@@ -5213,7 +5200,7 @@
       "l": 3,
       "otl": 1,
       "pts": 11,
-      "gf": 35,
+      "gf": 36,
       "ga": 32,
       "strk": "L2"
      },
@@ -5250,7 +5237,7 @@
       "otl": 3,
       "pts": 5,
       "gf": 31,
-      "ga": 59,
+      "ga": 60,
       "strk": "W1"
      },
      {
@@ -5262,7 +5249,7 @@
       "otl": 0,
       "pts": 2,
       "gf": 25,
-      "ga": 56,
+      "ga": 57,
       "strk": "L5"
      },
      {
