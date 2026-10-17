@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T14:16:42-04:00",
+ "updated": "2026-10-17T14:31:43-04:00",
  "today": "2026-10-17",
  "range": [
   "2026-10-14",
@@ -43,7 +43,7 @@
   },
   "junior": {
    "ok": true,
-   "count": 134
+   "count": 159
   },
   "saints": {
    "ok": true,
@@ -325,6 +325,25 @@
    "result": "W",
    "note": "23-25, 25-16, 25-14, 25-15",
    "links": {}
+  },
+  {
+   "id": "junior-gs2960354",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-10-14T19:30:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Mooretown Flags",
+   "location": "Wheatley Area Arena",
+   "status": "final",
+   "our_score": 5,
+   "opp_score": 2,
+   "result": "W",
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960354?configuration=45"
+   },
+   "club": "Wheatley Sharks"
   },
   {
    "id": "highschool-2026-10-15-61",
@@ -1272,11 +1291,11 @@
    "home_away": "H",
    "opponent": "Wheatley Sharks",
    "location": "Atlas Tube Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Score not posted yet",
+   "status": "final",
+   "our_score": 6,
+   "opp_score": 2,
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960362?configuration=45"
    },
@@ -1508,6 +1527,25 @@
    "result": null,
    "note": "",
    "links": {}
+  },
+  {
+   "id": "junior-gs2960403",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-10-18T15:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Dresden Kings",
+   "location": "Lambton-Kent Memorial Centre",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960403?configuration=45"
+   },
+   "club": "Wheatley Sharks"
   },
   {
    "id": "lancers-6199",
@@ -5571,14 +5609,14 @@
      {
       "name": "Lakeshore Canadiens",
       "abbr": "LAK",
-      "gp": 11,
-      "w": 9,
+      "gp": 12,
+      "w": 10,
       "l": 0,
       "otl": 2,
-      "pts": 20,
-      "gf": 44,
-      "ga": 17,
-      "strk": "W1"
+      "pts": 22,
+      "gf": 50,
+      "ga": 19,
+      "strk": "W2"
      },
      {
       "name": "Dresden Kings",
@@ -5607,14 +5645,14 @@
      {
       "name": "Wheatley Sharks",
       "abbr": "WHE",
-      "gp": 14,
+      "gp": 15,
       "w": 7,
-      "l": 7,
+      "l": 8,
       "otl": 0,
       "pts": 14,
-      "gf": 44,
-      "ga": 44,
-      "strk": "W1"
+      "gf": 46,
+      "ga": 50,
+      "strk": "L1"
      },
      {
       "name": "Mooretown Flags",
