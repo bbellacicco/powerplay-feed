@@ -243,6 +243,7 @@
   var qs = new URLSearchParams(location.search);
   var LINK = {
     local: qs.get('local') || SITE + 'local-sports',
+    scores: qs.get('scores') || SITE + 'local-scores',
     pro: qs.get('pro') || SITE + 'local-sports',
     network: qs.get('network') || SITE + 'local-sports',
     athletes: qs.get('athletes') || SITE + 'local-sports',
@@ -288,7 +289,7 @@
   // ---------- rows ----------
   var ROWS = [
     { key: 'network', title: 'Powerplay Network', by: null, all: LINK.network, tab: 'network' },
-    { key: 'local', title: 'Local scores', by: ['Unifor Local 444', 'logos/unifor-444.png'], all: LINK.local, tab: 'local' },
+    { key: 'local', title: 'Local scores', by: ['Unifor Local 444', 'logos/unifor-444.png'], all: LINK.scores, tab: 'local', share: LINK.scores },
     { key: 'stories', title: 'Latest stories', by: ['St. Clair College Alumni', 'logos/st-clair-alumni.png'], all: LINK.local, tab: 'local' },
     { key: 'pro', title: 'Pro scores', by: ['Unifor Local 2458', 'logos/unifor-2458.png'], all: LINK.pro, tab: 'pro' },
     { key: 'prohead', title: 'Pro headlines', by: ['The D’Amore Group', 'logos/damore-group.png'], all: LINK.pro, tab: 'pro' },
@@ -310,7 +311,7 @@
     var a = el('a', 'all', 'See all ›'); a.href = r.all; a.target = '_top';
     a.onclick = function () { try { localStorage.setItem('pp-tab', JSON.stringify({ tab: r.tab, t: Date.now() })); } catch (er) {} };   // the Local Sports page opens on this switch
     var right = el('div', 'rright');
-    if (window.PPShare) right.appendChild(PPShare.button({ title: r.title, url: PPShare.link(r.tab) + '&row=' + r.key, text: (SHARE_TEXT[r.key] || r.title) + ' on Powerplay Windsor' }));
+    if (window.PPShare) right.appendChild(PPShare.button({ title: r.title, url: r.share || (PPShare.link(r.tab) + '&row=' + r.key), text: (SHARE_TEXT[r.key] || r.title) + ' on Powerplay Windsor' }));
     right.appendChild(a);
     head.appendChild(right);
     sec.appendChild(head);
@@ -523,7 +524,7 @@
   }
   function localCard(g, teams) {
     var t = teams[g.team] || {}, c = el('a', 'game');
-    c.href = (g.links && (g.links.powerplay || g.links.gamecentre || g.links.boxscore || g.links.recap || g.links.standings)) || LINK.local;
+    c.href = (g.links && (g.links.powerplay || g.links.gamecentre || g.links.boxscore || g.links.recap || g.links.standings)) || LINK.scores;
     if (c.href.indexOf(SITE) === 0) c.target = '_top'; else { c.target = '_blank'; c.rel = 'noopener'; }
     var away, home, col = TCOL[g.team] || '#23407a', grey = '#1b2f55';
     if (g.home && g.away) { away = { n: g.away, s: g.our_score, c: grey }; home = { n: g.home, s: g.opp_score, c: col }; }
