@@ -7,6 +7,7 @@
 <script src="share.js"></script>
 <!--
   One page for everything below the homepage, with a switch at the top:
+    News       Powerplay News (featured stories, team rows, every story)
     Local      Local Hub (stories + social); scores have their own page, scores.html
     Pro        Pro Hub + Pro Scoreboard
     Network    the Powerplay Network (Local + Pro videos)
@@ -15,7 +16,7 @@
   Links elsewhere ("See all", "All videos"...) open this page on the right switch.
   ?tab=local|pro|network|spotlight   open on that switch (when the page is opened directly)
   Each widget sizes itself to fit (nothing scrolls inside the page, which traps the finger on iPhones).
-  Embed on the Wix "Local Sports" page, full width: about 1,900px tall on desktop and on mobile.
+  Embed on the Wix "Local Sports" page, full width: about 2,100px tall on desktop and on mobile.
 -->
 <style>
   :root { --bg: #0b1a33; --line: #1e3a6e; --text: #f2f5fb; --muted: #9fb0cf; --accent: #e8b021; }
@@ -33,6 +34,7 @@
   .pane { display: none; }
   .pane.on { display: block; }
   .pane iframe { display: block; width: 100%; border: 0; background: var(--bg); }
+  @media (max-width: 400px) { .switch button { font-size: 12.5px; padding: 10px 2px; } }
   @media (max-width: 560px) {
     .top { padding: 16px 10px 4px; }
     .switch { width: 100%; justify-content: space-between; }
@@ -44,6 +46,7 @@
 <body>
   <div class="top" id="top">
     <div class="switch" role="tablist" aria-label="Section">
+      <button type="button" role="tab" data-tab="news">News</button>
       <button type="button" role="tab" data-tab="local">Local</button>
       <button type="button" role="tab" data-tab="pro">Pro</button>
       <button type="button" role="tab" data-tab="network">Network</button>
@@ -58,6 +61,7 @@
   var phone = window.innerWidth < 700;
   // each part: the widgets in it and their heights (desktop, phone)
   var PARTS = {
+    news:      [['news.html', 1700, 1950, '']],
     local:     [['local-news.html', 470, 570, '&other=' + encodeURIComponent('https://www.powerplaywindsor.com/local-scores')]],
     pro:       [['news-feed.html', 470, 540, ''], ['pro-games_3.html', 760, 900, '']],
     network:   [['network.html', 1300, 1520, '']],
@@ -65,7 +69,7 @@
   };
   var built = {}, box = document.getElementById('panes');
   function show(tab) {
-    if (!PARTS[tab]) tab = 'local';
+    if (!PARTS[tab]) tab = 'news';
     if (!built[tab]) {
       var pane = document.createElement('div'); pane.className = 'pane'; pane.id = 'pane-' + tab;
       PARTS[tab].forEach(function (w) {
@@ -92,8 +96,8 @@
     });
   });
   // share button: shares whichever section is showing (its own link opens the page on that section)
-  var NAMES = { local: 'the Local Sports Hub', pro: 'Pro Sports', network: 'the Powerplay Network', spotlight: 'The Local Sports Spotlight' };
-  var current = 'local';
+  var NAMES = { news: 'Powerplay News', local: 'Local Sports', pro: 'Pro Sports', network: 'the Powerplay Network', spotlight: 'The Local Sports Spotlight' };
+  var current = 'news';
   if (window.PPShare) {
     var sb = PPShare.button(function () { return { title: NAMES[current].replace(/^the /, 'The '), url: PPShare.link(current), text: 'Check out ' + NAMES[current] + ' on Powerplay Windsor' }; });
     sb.classList.add('sharebtn'); document.getElementById('top').appendChild(sb);
@@ -103,7 +107,7 @@
   // which switch to open: ?tab= when opened directly, or the hand-off from a "See all" link elsewhere (good for 2 minutes)
   var start = new URLSearchParams(location.search).get('tab');
   try { var h = JSON.parse(localStorage.getItem('pp-tab') || 'null'); localStorage.removeItem('pp-tab'); if (!start && h && Date.now() - h.t < 120000) start = h.tab; } catch (e) {}
-  show(start || 'local');
+  show(start || 'news');
 })();
 </script>
 </body>
