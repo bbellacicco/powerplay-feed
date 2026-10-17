@@ -57,6 +57,12 @@
   .meta { color: var(--muted); font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .rec { color: var(--muted); font-weight: 500; font-size: 12px; }
   .series { color: var(--accent); font-size: 12px; font-weight: 700; margin-top: 1px; }
+  /* standings: one division at a time (keeps the page short enough to show in full) */
+  .gpick { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 4px; }
+  .gpick button { border: 1px solid var(--line); background: var(--panel); color: var(--text); border-radius: 4px; font: inherit; font-size: 12px; font-weight: 700;
+    padding: 6px 10px; cursor: pointer; }
+  .gpick button[aria-pressed="true"] { background: #fff; color: #0b1a33; border-color: #fff; }
+
   /* each day's games: one sideways row of cards (swipe on phones, arrows on computers) */
   .dstrip { display: flex; gap: 10px; overflow-x: auto; padding: 2px 0 8px; scroll-snap-type: x mandatory; scrollbar-width: thin; }
   .dstrip .game { position: relative; flex: 0 0 236px; scroll-snap-align: start; display: flex; flex-direction: column; align-items: stretch; gap: 4px;
@@ -340,6 +346,27 @@
       .then(function (r) { return r.json(); })
       .then(function (j) { return k === 'cfl' ? (j.cfl_standings || []) : ((j.standings || {})[k] || []); });
   }
+
+  // standings with several divisions: show one at a time, starting with the one our team is in
+  var GROUP = {};
+  function pickGroup(key, groups, isOurs, box, redraw) {
+    if (!groups || groups.length < 2) return groups;
+    if (GROUP[key] == null || GROUP[key] >= groups.length) {
+      var i = -1;
+      groups.some(function (g, n) { if (g.teams.some(isOurs)) { i = n; return true; } return false; });
+      GROUP[key] = i < 0 ? 0 : i;
+    }
+    var bar = document.createElement('div'); bar.className = 'gpick';
+    groups.forEach(function (g, n) {
+      var b = document.createElement('button'); b.type = 'button';
+      b.textContent = String(g.group || ('Group ' + (n + 1))).replace(/^.*\u00b7\s*/, '');
+      b.setAttribute('aria-pressed', String(n === GROUP[key]));
+      b.onclick = function () { GROUP[key] = n; redraw(); };
+      bar.appendChild(b);
+    });
+    box.appendChild(bar);
+    return [groups[GROUP[key]]];
+  }
   function renderStandings() {
     if (!LEAGUES[state.tab] || NO_STANDINGS.indexOf(state.tab) >= 0) state.tab = 'nhl';
     tabs();
@@ -355,6 +382,7 @@
       box.innerHTML = '';
       if (!groups || !groups.length) { box.appendChild(el('div', 'empty', 'Standings unavailable right now.')); return; }
       var ours = OUR_TEAMS.filter(function (t) { return t.league === k; }).map(function (t) { return t.abbr; });
+      groups = pickGroup(k, groups, function (t) { return ours.indexOf(t.abbr) >= 0; }, box, renderStandings);
       groups.forEach(function (g) {
         var sec = el('section', 'stand');
         sec.appendChild(el('h2', null, g.group));
