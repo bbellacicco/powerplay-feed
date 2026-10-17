@@ -30,6 +30,7 @@
   .big, .small { position: relative; border-radius: 10px; overflow: hidden; background: linear-gradient(135deg, #1e3a6e, #0b1a33); display: block; }
   .big img, .small img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
   .big:hover img, .small:hover img { transform: scale(1.03); }
+  .fimg { position: absolute; inset: 0; } .fimg .fbg { display: none; }
   .big::after, .small::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(8,20,40,.95) 0%, rgba(8,20,40,.55) 40%, rgba(8,20,40,0) 70%); }
   .ov { position: absolute; z-index: 2; left: 0; right: 0; bottom: 0; padding: 22px 24px; }
   .kick { font-size: 11.5px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
@@ -92,8 +93,18 @@
     .ptitle { padding: 0 16px; } .ptitle h1 { font-size: 21px; }
     .feat { grid-template-columns: 1fr; height: auto; padding: 0 16px; }
     .big { height: 300px; } .big h2 { font-size: 20px; } .big p { display: none; }
-    .side { grid-template-rows: none; grid-template-columns: 1fr 1fr; gap: 10px; height: 170px; }
+    .side { grid-template-rows: none; grid-template-columns: 1fr 1fr; gap: 12px; height: auto; }
     .small h3 { font-size: 13.5px; } .small .ov { padding: 10px 11px; }
+    /* phones: the whole picture (no cropping), headline underneath */
+    .big, .small { background: none; overflow: visible; height: auto !important; }
+    .big::after, .small::after { display: none; }
+    .fimg { position: relative !important; inset: auto !important; aspect-ratio: 16 / 9; border-radius: 10px; overflow: hidden; background: #081428; }
+    .fimg img { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .fimg .fbg { display: block !important; object-fit: cover; filter: blur(16px) brightness(.55); transform: scale(1.15); }
+    .fimg .fmain { object-fit: contain; }
+    .big .ov, .small .ov { position: static; padding: 8px 2px 0; }
+    .big h2 { -webkit-line-clamp: 3; margin-bottom: 0; }
+
     section { margin-top: 30px; }
     .rhead { padding: 0 16px; } .rhead h2 { font-size: 18px; }
     .row { padding: 4px 16px 6px; scroll-padding-left: 16px; gap: 10px; } .rarrow { display: none; }
@@ -179,18 +190,25 @@
     return a;
   }
 
+  // the photo uncropped (phones show all of it, over a blurred copy); computers fill the box
+  function featBox(a, u, w) {
+    var m = String(u || '').match(/^(https:\/\/static\.wixstatic\.com\/media\/[^/]+)/), src = m ? m[1] + '/v1/fit/w_' + w + ',h_' + w + ',q_80/photo.jpg' : u;
+    var box = el('div', 'fimg'), bg = new Image(), im = new Image();
+    bg.className = 'fbg'; im.className = 'fmain'; bg.alt = im.alt = ''; bg.src = im.src = src;
+    box.appendChild(bg); box.appendChild(im); a.appendChild(box);
+  }
   function featured(list) {
     var box = document.getElementById('feat'); box.innerHTML = '';
     var withPic = list.filter(function (s) { return s.i; });
     var f = withPic.slice(0, 3); if (!f.length) return;
     var big = el('a', 'big'); big.href = f[0].u; big.target = '_top';
-    var bi = new Image(); bi.src = img(f[0].i, 1100, 620); bi.alt = ''; big.appendChild(bi);
+    featBox(big, f[0].i, 1100);
     var ov = el('div', 'ov'); ov.appendChild(el('div', 'kick', 'Latest · ' + TLAB[f[0].team] + ' · ' + when(f[0].p)));
     ov.appendChild(el('h2', null, f[0].t)); if (f[0].d) ov.appendChild(el('p', null, f[0].d)); big.appendChild(ov); box.appendChild(big);
     var side = el('div', 'side');
     f.slice(1).forEach(function (s) {
       var a = el('a', 'small'); a.href = s.u; a.target = '_top';
-      var im = new Image(); im.src = img(s.i, 560, 320); im.alt = ''; a.appendChild(im);
+      featBox(a, s.i, 600);
       var o = el('div', 'ov'); o.appendChild(el('div', 'kick', TLAB[s.team] + ' · ' + when(s.p))); o.appendChild(el('h3', null, s.t)); a.appendChild(o);
       side.appendChild(a);
     });
