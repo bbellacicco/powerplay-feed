@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T22:46:44-04:00",
+ "updated": "2026-10-16T23:01:59-04:00",
  "today": "2026-10-16",
  "range": [
   "2026-10-13",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 32
+   "count": 31
   },
   "club_news": {
    "ok": true,
@@ -1964,11 +1964,11 @@
    "home_away": "H",
    "opponent": "Wheatley Sharks",
    "location": "Atlas Tube Centre",
-   "status": "live",
-   "our_score": 0,
-   "opp_score": 0,
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
    "result": null,
-   "note": "",
+   "note": "Score not posted yet",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960362?configuration=45"
    },
@@ -3122,21 +3122,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "A detailed look at Gavin McKenna’s game before he was benched",
-   "summary": "So Gavin McKenna was benched on Thursday and played less than seven minutes against the Sabres. Justin Bourne takes a detailed look at what the 18-year-old did with his ice time to try and make sense of the benching.",
-   "published": "2026-10-16T12:52-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/mckenna-1.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/a-detailed-look-at-gavin-mckennas-game-before-he-was-benched/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "cfl",
    "headline": "Redblacks stun Argonauts to avoid winless season",
    "summary": "",
@@ -3151,28 +3136,17 @@
   },
   {
    "league": "nhl",
-   "headline": "Friday Four: Sidney Crosby, Nathan MacKinnon and other early-season oddities",
-   "summary": "It’s officially small-sample-size season. To that end, Sportsnet’s Michael Amato digs into stats surrounding Sidney Crosby, Nathan MacKinnon and others to determine their sustainability in the latest Friday Four.",
-   "published": "2026-10-16T08:54-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/sidney-crosby.jpg",
+   "headline": "A detailed look at Gavin McKenna’s game before he was benched",
+   "summary": "So Gavin McKenna was benched on Thursday and played less than seven minutes against the Sabres. Justin Bourne takes a detailed look at what the 18-year-old did with his ice time to try and make sense of the benching.",
+   "published": "2026-10-16T12:52-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/mckenna-1.jpg",
    "video": false,
-   "teams": [],
-   "sn_team_count": 6,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/friday-four-sidney-crosby-nathan-mackinnon-and-other-early-season-oddities/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "How Brewers slayed Dodgers in NLCS sweep — and why it was no surprise",
-   "summary": "That the Brewers swept the Dodgers in the NLCS was a surprising outcome. But no one should be shocked that Milwaukee is headed to the World Series instead of the two-time defending champions, writes Sportsnet’s Nick Ashb",
-   "published": "2026-10-16T12:18-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/jojo-romero.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/how-brewers-slayed-dodgers-in-nlcs-sweep-and-why-it-was-no-surprise/",
+   "url": "https://www.sportsnet.ca/nhl/article/a-detailed-look-at-gavin-mckennas-game-before-he-was-benched/",
    "source": "Sportsnet"
   },
   {
@@ -3307,6 +3281,32 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/hurricanes-rule-taylor-hall-out-week-to-week-seth-jarvis-nearing-return/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Friday Four: Sidney Crosby, Nathan MacKinnon and other early-season oddities",
+   "summary": "It’s officially small-sample-size season. To that end, Sportsnet’s Michael Amato digs into stats surrounding Sidney Crosby, Nathan MacKinnon and others to determine their sustainability in the latest Friday Four.",
+   "published": "2026-10-16T08:54-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/sidney-crosby.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 6,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/friday-four-sidney-crosby-nathan-mackinnon-and-other-early-season-oddities/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "How Brewers slayed Dodgers in NLCS sweep — and why it was no surprise",
+   "summary": "That the Brewers swept the Dodgers in the NLCS was a surprising outcome. But no one should be shocked that Milwaukee is headed to the World Series instead of the two-time defending champions, writes Sportsnet’s Nick Ashb",
+   "published": "2026-10-16T12:18-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/jojo-romero.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/how-brewers-slayed-dodgers-in-nlcs-sweep-and-why-it-was-no-surprise/",
    "source": "Sportsnet"
   },
   {
@@ -3519,19 +3519,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/marchenko-breaks-out-tavares-leaves-injured-in-roller-coaster-maple-leafs-loss/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Oilers’ Babcock caught leaning on stars: ‘I played them too much’",
-   "summary": "",
-   "published": "2026-10-16T01:47-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/mcdavid-2.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/oilers-babcock-caught-leaning-on-stars-i-played-them-too-much/",
    "source": "Sportsnet"
   },
   {
