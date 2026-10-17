@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T14:31:43-04:00",
+ "updated": "2026-10-17T14:39:59-04:00",
  "today": "2026-10-17",
  "range": [
   "2026-10-14",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 36
+   "count": 37
   },
   "club_news": {
    "ok": true,
@@ -1398,10 +1398,10 @@
    "home_away": "N",
    "opponent": "Dalhousie Tigers",
    "location": "Waterloo, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 72,
+   "opp_score": 81,
+   "result": "L",
    "note": "Naismith Classic",
    "links": {}
   },
@@ -3382,6 +3382,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Red Wings waive defenceman Jacob Bernard-Docker",
+   "summary": "",
+   "published": "2026-10-17T14:31-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/03/Detroit-Red-Wings-defenseman-Jacob-Bernard-Docker.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Red Wings"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/red-wings-waive-defenceman-jacob-bernard-docker/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nba",
    "headline": "Raptors convert centre Nate Bittle to two-way contract, waive five",
    "summary": "",
@@ -3407,19 +3422,6 @@
    "sn_team_count": 0,
    "sport": "Tennis",
    "url": "https://www.sportsnet.ca/wta/article/canadas-dabrowski-and-brazils-stefani-win-doubles-semifinal-at-wuhan-open/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "cfl",
-   "headline": "Redblacks stun Argos, snap record skid in Bryson Barnes’ sensational starting debut",
-   "summary": "In one of the most stunning performances in recent memory on a CFL field, unheralded QB Bryson Barnes made sure the Ottawa Redblacks wouldn’t make dubious history, leading the team to an elusive win in his first professi",
-   "published": "2026-10-17T00:03-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/barnes-2.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/redblacks-stun-argos-snap-record-skid-in-bryson-barnes-sensational-starting-debut/",
    "source": "Sportsnet"
   },
   {
@@ -3660,6 +3662,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/should-all-be-very-angry-cooler-heads-not-prevailing-for-blue-jackets-bowness/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "cfl",
+   "headline": "Redblacks stun Argos, snap record skid in Bryson Barnes’ sensational starting debut",
+   "summary": "In one of the most stunning performances in recent memory on a CFL field, unheralded QB Bryson Barnes made sure the Ottawa Redblacks wouldn’t make dubious history, leading the team to an elusive win in his first professi",
+   "published": "2026-10-17T00:03-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/barnes-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/redblacks-stun-argos-snap-record-skid-in-bryson-barnes-sensational-starting-debut/",
    "source": "Sportsnet"
   },
   {
