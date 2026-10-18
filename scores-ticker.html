@@ -49,7 +49,7 @@ a.ticker-item:hover .team{color:#FFE600}
 #more .s{display:none}
 @media (max-width:480px){ #more{padding:0 6px} #more span{padding:6px 7px;font-size:10px} #more .l{display:none} #more .s{display:inline} }
 #morebar{display:none}
-/* phones: a slimmer 30px bar plus a 20px 'click here for scores' line under it (set the Wix mobile embed to 50px tall) */
+/* phones: a slimmer 30px bar plus a 20px 'click here for scores' line under it (set the Wix mobile embed to 46px tall) */
 @media (max-width:480px){
   html,body,#wrap,#brand,#ticker-viewport,#ticker-stage,.ticker-item,#more{height:30px}
   .sep{height:30px;line-height:30px;font-size:11px}
@@ -58,10 +58,10 @@ a.ticker-item:hover .team{color:#FFE600}
   .badge{font-size:8px;padding:1px 4px}
   .meta{font-size:9.5px}
   #more{display:none}
-  html,body{height:50px}
-  /* thin gold link line under the ticker */
-  #morebar{display:flex;align-items:center;justify-content:center;gap:6px;height:20px;background:#FFE600;color:#000;text-decoration:none;
-    font:800 10.5px/1 Arial,sans-serif;letter-spacing:.8px;text-transform:uppercase}
+  html,body{height:46px}
+  /* thin, centred gold link under the ticker */
+  #morebar{display:block;width:max-content;margin:1px auto 0;height:14px;line-height:14px;padding:0 12px;border-radius:7px;
+    background:#FFE600;color:#000;text-decoration:none;font:800 8.5px/14px Arial,sans-serif;letter-spacing:.8px;text-transform:uppercase}
 }
 </style>
 </head>
@@ -72,7 +72,7 @@ a.ticker-item:hover .team{color:#FFE600}
   <div id="ticker-viewport"><div id="ticker-stage"></div></div>
   <a id="more" href="https://www.powerplaywindsor.com/scores-standings" target="_top" aria-label="All local scores and standings"><span class="l">All scores &rsaquo;</span><span class="s">Scores &rsaquo;</span></a>
 </div>
-<a id="morebar" href="https://www.powerplaywindsor.com/scores-standings" target="_top">Click here for scores &amp; standings &rsaquo;</a>
+<a id="morebar" href="https://www.powerplaywindsor.com/scores-standings" target="_top">Click here for scores &rsaquo;</a>
 <script>
 var SPEED = 50;                 // pixels per second
 var MAX_ITEMS = 5;              // total items on the ticker
