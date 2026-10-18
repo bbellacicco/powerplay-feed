@@ -122,6 +122,8 @@
   var PER = 12;
   var qs = new URLSearchParams(location.search);
   var state = { tab: qs.get('tab') === 'pro' ? 'pro' : 'local', chip: 'all', team: '', q: '', page: 0 };
+  var ONLY = qs.get('only') === 'pro' ? 'pro' : qs.get('only') === 'local' ? 'local' : '';
+  if (ONLY) { state.tab = ONLY; var tb = document.querySelector('.tabs'); if (tb) tb.style.display = 'none'; }   // the hubs show one side each
   var data = { local: [], pro: [] };
 
   // Local Network filters: matched against the video's title and description
