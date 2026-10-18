@@ -8,14 +8,14 @@
 <!--
   The Local Hub (Wix page "Local Scores", address /scores-standings), with a switch at the top:
     Scores     the Local Scoreboard (games, standings)
-    Stories    local stories from the teams and Powerplay
+    Stories    every Powerplay blog story (top stories, team rows, search back to 2019), plus team news
     Spotlight  The Local Sports Spotlight
     Athletes   Athlete Profiles
     Network    the Powerplay Network videos
     Social     each team's Facebook / Instagram
   ?tab=scores|stories|spotlight|athletes|network|social   open on that switch
   Each widget sizes itself to fit (nothing scrolls inside the page, which traps the finger on iPhones).
-  Embed on the Wix "Local Scores" page, full width: about 1,800px tall on desktop, 2,000px on mobile.
+  Embed on the Wix "Local Scores" page, full width: about 1,900px tall on desktop, 2,150px on mobile.
 -->
 <style>
   :root { --bg: #0b1a33; --line: #1e3a6e; --text: #f2f5fb; --muted: #9fb0cf; --accent: #e8b021; }
@@ -42,6 +42,12 @@
     .switch button { padding: 11px 4px; font-size: 12px; letter-spacing: .06em; }
     .top { flex-direction: column; } .sharebtn { position: static; transform: none; align-self: flex-end; }
   }
+  .subswitch { display: flex; justify-content: center; gap: 0; margin: 12px auto 0; width: max-content; max-width: calc(100% - 32px);
+    border: 1px solid rgba(255,255,255,.16); border-radius: 3px; overflow: hidden; }
+  .subswitch button { border: 0; border-radius: 0; background: transparent; color: #9fb0cf; font: inherit; font-size: 12px; font-weight: 800; letter-spacing: .08em;
+    text-transform: uppercase; padding: 8px 16px; cursor: pointer; }
+  .subswitch button + button { border-left: 1px solid rgba(255,255,255,.16); }
+  .subswitch button[aria-pressed="true"] { background: #e8b021; color: #0b1a33; }
 </style>
 </head>
 <body>
@@ -65,7 +71,7 @@
   var HUB = encodeURIComponent('https://www.powerplaywindsor.com/scores-standings');
   var PARTS = {
     scores:    [['local-games_3_3.html', 760, 900, '&other=none']],
-    stories:   [['local-news.html', 470, 570, '&other=none&lock=1']],
+    stories:   [['news.html', 1700, 1950, '', 'Powerplay stories'], ['local-news.html', 470, 570, '&other=none&lock=1', 'Team news']],
     spotlight: [['spotlight.html', 1250, 1180, '']],
     athletes:  [['athletes.html', 420, 380, '']],
     network:   [['network.html', 1300, 1520, '']],
@@ -85,6 +91,20 @@
         f.loading = 'eager';
         pane.appendChild(f);
       });
+      // a section with two parts (Stories: Powerplay's own stories / team news) shows one at a time
+      var subs = PARTS[tab].filter(function (w) { return w[4]; });
+      if (subs.length > 1) {
+        var frames = pane.querySelectorAll('iframe'), bar = document.createElement('div'); bar.className = 'subswitch';
+        var pick = function (n) {
+          [].forEach.call(frames, function (f, i) { f.style.display = i === n ? '' : 'none'; });
+          [].forEach.call(bar.children, function (b, i) { b.setAttribute('aria-pressed', String(i === n)); });
+        };
+        PARTS[tab].forEach(function (w, n) {
+          var b = document.createElement('button'); b.type = 'button'; b.textContent = w[4];
+          b.onclick = function () { pick(n); }; bar.appendChild(b);
+        });
+        pane.insertBefore(bar, pane.firstChild); pick(0);
+      }
       box.appendChild(pane); built[tab] = pane;
     }
     Object.keys(built).forEach(function (k) { built[k].classList.toggle('on', k === tab); });
