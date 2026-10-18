@@ -111,10 +111,10 @@
 
   // captions.txt:  title: ...  /  credit: ...  /  photo.jpg | Headline | Write-up | (optional) credit for this photo
   function parse(txt) {
-    var meta = { title: '', credit: 'Powerplay Windsor' }, out = [];
+    var meta = { title: '', credit: 'Powerplay Windsor', date: '' }, out = [];
     txt.split(/\r?\n/).forEach(function (line) {
       line = line.trim(); if (!line || line[0] === '#') return;
-      var m = line.match(/^(title|credit)\s*:\s*(.*)$/i);
+      var m = line.match(/^(title|credit|date)\s*:\s*(.*)$/i);
       if (m) { meta[m[1].toLowerCase()] = m[2].trim(); return; }
       var p = line.split('|').map(function (x) { return x.trim(); });
       if (!/\.(jpe?g|png|webp)$/i.test(p[0])) return;
@@ -164,6 +164,13 @@
       // "Game Day Snaps: Saints vs. Fanshawe": the heading stays GAME DAY SNAPS, who's playing goes under the photo
       var game = meta.title.indexOf(':') > 0 ? meta.title.slice(meta.title.indexOf(':') + 1).trim() : meta.title;
       $('matchup').textContent = game;
+      // the game day after the matchup: from captions.txt (date: 2026-10-18), or the slideshow list
+      var MON = ['Jan.', 'Feb.', 'March', 'April', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'];
+      var putDate = function (iso) { var p = String(iso || '').match(/^(\d{4})-(\d{2})-(\d{2})/); if (p) $('matchup').textContent = game + ' \u00b7 ' + MON[+p[2] - 1] + ' ' + (+p[3]); };
+      if (meta.date) putDate(meta.date);
+      else fetch(REPO + 'data/slideshows.json?t=' + Date.now()).then(function (r) { return r.json(); }).then(function (j) {
+        var x = (j.slideshows || []).filter(function (y) { return y.key === show; })[0]; if (x) putDate(x.date);
+      }).catch(function () {});
       document.title = meta.title + ' | Powerplay Windsor';
     }
     slides.forEach(function (s, i) {
