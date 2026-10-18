@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pic and Roll | Powerplay Windsor</title>
+<title>Game Day Snaps | Powerplay Windsor</title>
 <script src="share.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <!--
-  Pic and Roll, Powerplay's game reports in pictures (a photo slideshow): big photo, arrows (swipe on phones), "3 / 5" counter, play, full screen,
+  Game Day Snaps, Powerplay's game reports in pictures (a photo slideshow): big photo, arrows (swipe on phones), "3 / 5" counter, play, full screen,
   thumbnail row, and a headline + credit + write-up under each photo.
 
   To make one:
@@ -49,6 +49,9 @@
   .tools span { border-left: 1px solid rgba(255,255,255,.2); border-right: 1px solid rgba(255,255,255,.2); font-variant-numeric: tabular-nums; }
   .bar { position: absolute; left: 0; bottom: 0; height: 3px; background: var(--accent); width: 0; z-index: 3; }
 
+  .matchup { margin: 10px 0 0; text-align: center; font-family: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif; font-size: 26px; letter-spacing: .04em;
+    text-transform: uppercase; color: var(--accent); line-height: 1.1; }
+  .matchup:empty { display: none; }
   .thumbs { display: flex; gap: 8px; overflow-x: auto; padding: 10px 2px 4px; scrollbar-width: none; justify-content: center; }
   .thumbs::-webkit-scrollbar { display: none; }
   .thumbs button { flex: 0 0 auto; width: 92px; aspect-ratio: 16 / 10; border: 2px solid transparent; border-radius: 6px; padding: 0; overflow: hidden; cursor: pointer;
@@ -81,7 +84,7 @@
 </head>
 <body>
 <div class="wrap" id="wrap">
-  <div class="top"><h1 id="title">Pic and <em>Roll</em></h1><div class="topr" id="topr"><div class="sub">Powerplay Windsor</div></div></div>
+  <div class="top"><h1 id="title">Game Day <em>Snaps</em></h1><div class="topr" id="topr"><div class="sub">Powerplay Windsor</div></div></div>
   <div class="stage" id="stage">
     <div class="bg" id="bg"></div>
     <img class="main" id="img" alt="">
@@ -94,6 +97,7 @@
     </div>
     <div class="bar" id="bar"></div>
   </div>
+  <div class="matchup" id="matchup"></div>
   <div class="thumbs" id="thumbs"></div>
   <div class="cap" id="cap"><h2 id="head"></h2><div class="credit" id="credit"></div><p id="desc"></p></div>
 </div>
@@ -157,10 +161,9 @@
     var d = parse(txt); meta = d.meta; slides = d.slides;
     if (!slides.length) throw 'empty';
     if (meta.title) {
-      // "Pic and Roll: Saints vs. Fanshawe" -> series name in white, the game in gold
-      var cut = meta.title.indexOf(':') > 0 ? meta.title.indexOf(':') + 1 : meta.title.indexOf(' ') + 1, h = $('title');
-      h.textContent = meta.title.slice(0, cut) + ' ';
-      var em = document.createElement('em'); em.textContent = meta.title.slice(cut).trim(); h.appendChild(em);
+      // "Game Day Snaps: Saints vs. Fanshawe": the heading stays GAME DAY SNAPS, who's playing goes under the photo
+      var game = meta.title.indexOf(':') > 0 ? meta.title.slice(meta.title.indexOf(':') + 1).trim() : meta.title;
+      $('matchup').textContent = game;
       document.title = meta.title + ' | Powerplay Windsor';
     }
     slides.forEach(function (s, i) {
@@ -171,8 +174,8 @@
     });
     go(0);
     // share: the slideshow's own page (its link preview shows the title and first photo)
-    if (window.PPShare) $('topr').appendChild(PPShare.button({ title: meta.title || 'Pic and Roll',
-      url: REPO + 'slideshows/' + show + '/', text: (meta.title || 'Pic and Roll') + ' on Powerplay Windsor' }));
+    if (window.PPShare) $('topr').appendChild(PPShare.button({ title: meta.title || 'Game Day Snaps',
+      url: REPO + 'slideshows/' + show + '/', text: (meta.title || 'Game Day Snaps') + ' on Powerplay Windsor' }));
   }).catch(function () {
     $('stage').innerHTML = '<div class="msg">This slideshow isn’t up yet.</div>'; $('cap').style.display = 'none';
   });
