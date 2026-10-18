@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-18T17:07:02-04:00",
+ "updated": "2026-10-18T17:16:34-04:00",
  "today": "2026-10-18",
  "range": [
   "2026-10-15",
@@ -1347,10 +1347,10 @@
    "home_away": "A",
    "opponent": "Dresden Kings",
    "location": "Lambton-Kent Memorial Centre",
-   "status": "live",
+   "status": "final",
    "our_score": 0,
-   "opp_score": 0,
-   "result": null,
+   "opp_score": 6,
+   "result": "L",
    "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960403?configuration=45"
@@ -4800,7 +4800,7 @@
       "otl": 1,
       "pts": 23,
       "gf": 63,
-      "ga": 23,
+      "ga": 24,
       "strk": "W7"
      },
      {
@@ -4835,7 +4835,7 @@
       "l": 3,
       "otl": 0,
       "pts": 20,
-      "gf": 76,
+      "gf": 77,
       "ga": 24,
       "strk": "W5"
      },
@@ -5394,6 +5394,18 @@
       "strk": "W10"
      },
      {
+      "name": "Dresden Kings",
+      "abbr": "DRE",
+      "gp": 15,
+      "w": 8,
+      "l": 6,
+      "otl": 1,
+      "pts": 17,
+      "gf": 72,
+      "ga": 56,
+      "strk": "W1"
+     },
+     {
       "name": "Blenheim Blades",
       "abbr": "BLE",
       "gp": 11,
@@ -5406,28 +5418,16 @@
       "strk": "W1"
      },
      {
-      "name": "Dresden Kings",
-      "abbr": "DRE",
-      "gp": 14,
-      "w": 7,
-      "l": 6,
-      "otl": 1,
-      "pts": 15,
-      "gf": 66,
-      "ga": 56,
-      "strk": "L1"
-     },
-     {
       "name": "Wheatley Sharks",
       "abbr": "WHE",
-      "gp": 15,
+      "gp": 16,
       "w": 7,
-      "l": 8,
+      "l": 9,
       "otl": 0,
       "pts": 14,
       "gf": 46,
-      "ga": 50,
-      "strk": "L1"
+      "ga": 56,
+      "strk": "L2"
      },
      {
       "name": "Mooretown Flags",
