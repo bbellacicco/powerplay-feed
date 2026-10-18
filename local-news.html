@@ -102,6 +102,7 @@
   .grid.wall { flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding-bottom: 6px; align-items: stretch; }
   .wall .box { flex: 0 0 320px; max-width: none; scroll-snap-align: start; }
   @media (max-width: 520px) { .wall .box { flex-basis: 84%; } }
+  @media (min-width: 700px) { .grid.wall { flex-wrap: wrap; overflow: visible; } .wall .box { flex: 0 1 calc(33.333% - 8px); } }
   /* Instagram posts: swipe sideways instead of a scroll box inside the page */
   .iglist { display: flex; flex-direction: row; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding-bottom: 6px; }
   .iglist .ig { flex: 0 0 260px; scroll-snap-align: start; }
@@ -110,6 +111,16 @@
   .igcap { font-size: 13px; color: #d4dcee; margin-top: 6px; }
   .igmeta { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); margin-top: 4px; }
   .igmeta a { color: var(--accent); text-decoration: none; }
+  .box.igbox.full { max-width: none; margin-bottom: 12px; }
+  .teambox { display: flex; flex-direction: column; }
+  .fbcard { display: flex; align-items: center; gap: 12px; flex: 1; }
+  .fblogo { flex: 0 0 56px; width: 56px; height: 56px; border-radius: 8px; background: #0e2044; border: 1px solid var(--line); display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 18px; color: var(--accent); overflow: hidden; }
+  .fblogo img { max-width: 46px; max-height: 46px; object-fit: contain; }
+  .fbbtns { display: flex; flex-wrap: wrap; gap: 6px; }
+  .fbbtn { display: inline-block; text-decoration: none; font-weight: 800; font-size: 12px; padding: 7px 11px; border-radius: 4px; color: #fff; }
+  .fbbtn.fb { background: #1877f2; } .fbbtn.yt { background: #e62117; } .fbbtn.ig { background: #c13584; }
+  .fbbtn:hover { filter: brightness(1.12); }
   .groupbox { display: flex; flex-direction: column; justify-content: center; gap: 10px; align-self: stretch; }
   .gtext { font-size: 14px; color: #d4dcee; }
   .gbtn { display: inline-block; align-self: flex-start; background: #1877f2; color: #fff; font-weight: 700; text-decoration: none;
@@ -238,7 +249,7 @@
 
   // ---- Powerplay's Instagram, through Behold (behold.so), which Buddy connected to his own account.
   // Paste the Behold JSON feed address here. Empty = Instagram boxes stay hidden.
-  var INSTAGRAM_FEED = '';   // off: the same videos come in as YouTube Shorts. To turn back on: 'https://feeds.behold.so/Cf28WeZyTzbqqYv3y6Qa'
+  var INSTAGRAM_FEED = 'https://feeds.behold.so/Cf28WeZyTzbqqYv3y6Qa';   // Powerplay's newest Instagram posts (Social view)
   var INSTAGRAM_URL = 'https://www.instagram.com/powerplaysportswindsor/';
   var igPosts = null;
   function loadInstagram() {
@@ -295,7 +306,7 @@
       b.onclick = function () { if (state.view !== v[0]) { state.view = v[0]; state.sub = 'all'; state.club = 0; render(); } };
     });
     document.getElementById('foot').textContent = state.view === 'social'
-      ? "Powerplay Windsor · Posts load from each team's official Facebook page and YouTube channel."
+      ? "Powerplay Windsor · Instagram posts from Powerplay; buttons open each team's own pages."
       : "Powerplay Windsor · Stories from Powerplay Windsor and the teams' own websites. Tap a story for the full details. Scores are in the Local Scoreboard.";
   }
 
@@ -316,6 +327,23 @@
       '&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false';
     return f;
   }
+  // Facebook stopped showing a page's posts on other websites (its box now shows only the page name),
+  // so each team gets a card with buttons to its own pages instead of an empty Facebook box
+  function fbCard(team) {
+    var key = Object.keys(SOCIAL).filter(function (k) { return SOCIAL[k].indexOf(team) >= 0; })[0];
+    var c = el('div', 'fbcard'), lg = el('div', 'fblogo');
+    var src = key !== 'junior' && TEAM_LOGO[key];
+    if (src) { var im = new Image(); im.src = src; im.alt = ''; im.onerror = function () { im.remove(); lg.textContent = team.name.replace(/^(Windsor|St\. Clair)\s+/, '').slice(0, 2).toUpperCase(); }; lg.appendChild(im); }
+    else lg.textContent = team.name.replace(/^(Windsor|St\. Clair)\s+/, '').slice(0, 2).toUpperCase();
+    c.appendChild(lg);
+    var btns = el('div', 'fbbtns');
+    var add = function (label, href, cls) { var a = el('a', 'fbbtn ' + cls, label); a.href = href; a.target = '_blank'; a.rel = 'noopener'; btns.appendChild(a); };
+    if (team.facebook) add('Facebook \u2197', team.facebook, 'fb');
+    if (team.instagram) add('Instagram \u2197', team.instagram, 'ig');
+    if (team.youtube) add('YouTube \u2197', 'https://www.youtube.com/channel/' + team.youtube + '/videos', 'yt');
+    c.appendChild(btns);
+    return c;
+  }
   // Community Facebook group: Facebook doesn't let groups be shown on other sites, so this is a link card
   var GROUP = { name: 'Windsor Essex Sports News', url: 'https://www.facebook.com/share/g/1SohbsmorC/' };
   function groupBox() {
@@ -330,19 +358,17 @@
   function socialWall() {
     document.getElementById('sub').style.display = 'none';
     var box = document.getElementById('list'); box.innerHTML = '';
+    if (INSTAGRAM_FEED) { var ig = igBox(8, 'Powerplay on Instagram'); ig.classList.add('full'); box.appendChild(ig); }
     var grid = el('div', 'grid wall'); box.appendChild(grid);
+    grid.appendChild(groupBox());
     var all = [].concat(SOCIAL.powerplay, SOCIAL.spitfires, SOCIAL.lancers, SOCIAL.saints, SOCIAL.junior);
-    var boxes = all.map(function (team) {
-      var b = el('div', 'box');
-      b.appendChild(heading(team.name, team.facebook, 'Open ↗'));
+    all.forEach(function (team) {
+      var b = el('div', 'box teambox');
+      b.appendChild(heading(team.name, null));
+      b.appendChild(fbCard(team));
       grid.appendChild(b);
-      return b;
     });
-    var w = Math.max(180, Math.min(500, Math.floor(boxes[0].clientWidth - 20)));
-    boxes.forEach(function (b, i) { b.appendChild(fbFrame(all[i], w, WALL_HEIGHT)); });
-    if (INSTAGRAM_FEED) grid.insertBefore(igBox(1, 'Powerplay on Instagram'), boxes[1]);   // right after Powerplay's Facebook
-    grid.insertBefore(groupBox(), boxes[1]);
-    box.appendChild(el('div', 'note', "Newest post from each team. Pick a team above for its full feed. Posts not showing? Some browsers' privacy settings block Facebook feeds."));
+    box.appendChild(el('div', 'note', 'Instagram posts play right here. Team buttons open their pages on Facebook and YouTube.'));
   }
 
   function renderSocial() {
@@ -369,12 +395,10 @@
       frame.appendChild(f); yt.appendChild(frame); grid.appendChild(yt);
     }
     if (state.tab === 'powerplay' && INSTAGRAM_FEED) grid.appendChild(igBox(12, 'Powerplay on Instagram'));
-    var fb = el('div', 'box');
-    fb.appendChild(heading(team.name + ' on Facebook', team.facebook, 'Open ↗'));
+    var fb = el('div', 'box teambox');
+    fb.appendChild(heading('Follow ' + team.name, null));
+    fb.appendChild(fbCard(team));
     grid.appendChild(fb);
-    var w = Math.max(180, Math.min(500, Math.floor(fb.clientWidth - 20)));   // Page Plugin wants 180–500px
-    fb.appendChild(fbFrame(team, w, FB_HEIGHT));
-    fb.appendChild(el('div', 'note', "Posts not showing? Some browsers' privacy settings block Facebook feeds. Use Open ↗ to see them on Facebook."));
   }
   var stories = null, storiesFailed = false;
 
