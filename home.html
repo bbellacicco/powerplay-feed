@@ -754,12 +754,17 @@
       var teams = lg.teams || {};
       fill('local', localGames(lg, hs, sc).map(function (g) { return localCard(g, teams); }), 'No local games right now.');
       // latest stories (written stories; videos have their own row)
-      fill('stories', stories.filter(function (s) { return !isVid(s) && !featUrls[s.url]; }).slice(0, 15).map(function (s) {
+      // the story that just left the big box leads Latest Stories, so it stays up front a while longer
+      var lastTop = featItems[1] && !featUrls[featItems[1].url] ? featItems[1] : null;
+      var rowStories = stories.filter(function (s) { return !isVid(s) && !featUrls[s.url] && (!lastTop || s.url !== lastTop.url); });
+      if (lastTop) rowStories.unshift(lastTop);
+      fill('stories', rowStories.slice(0, 15).map(function (s) {
         var who = s.team === 'junior' || s.team === 'powerplay' ? s.club || TEAM[s.team] : TEAM[s.team] + (s.sport ? ' · ' + s.sport : '');
         return storyCard(s, { tag: TEAM[s.team] === 'Powerplay' ? 'Powerplay' : (s.team === 'junior' ? (s.club || 'Junior') : TEAM[s.team]), sub: who + ' · ' + ago(s.published), tile: s.team === 'junior' ? (s.club || '').replace(/^(Windsor|St\. Clair)\s+/, '') : null });
       }), 'Stories are on the way.');
       // Powerplay Network: newest YouTube/Vimeo videos
       var vids = stories.filter(isVid), seenV = {};
+      if (topVid) { seenV[topVid.url] = 1; seenV[topVid.headline.toLowerCase().replace(/[^a-z0-9]+/g, '')] = 1; }   // already featured at the top
       (net.local || []).forEach(function (v) { vids.push({ headline: v.t, url: v.u, image: v.i, published: v.p.length === 10 ? v.p + 'T12:00:00' : v.p, source: v.s, video: true }); });
       vids = vids.filter(function (v) { var k = v.headline.toLowerCase().replace(/[^a-z0-9]+/g, ''); if (seenV[k] || seenV[v.url]) return false; seenV[k] = seenV[v.url] = 1; return true; })
         .sort(function (a, b) { return new Date(b.published) - new Date(a.published); }).slice(0, 15);
