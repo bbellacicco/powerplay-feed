@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T23:16:58-04:00",
+ "updated": "2026-10-17T23:39:41-04:00",
  "today": "2026-10-17",
  "range": [
   "2026-10-14",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -2633,6 +2633,20 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "Recap: Calgary 32, BC 13",
+   "summary": "",
+   "published": "2026-10-17T22:44:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/7rav99ClgzzRLiVxuR04uy/a8be212b8878837e940c8d36eae5ad77/BC_VS_CGY_THMB_ENG.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Stampeders",
+    "Lions"
+   ],
+   "url": "https://www.cfl.ca/article/recap-calgary-32-bc-13",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "WHAT A CATCH BY JUSTIN MCINNIS!",
    "summary": "",
    "published": "2026-10-17T19:32:00-04:00",
@@ -2722,19 +2736,6 @@
     "Blue Bombers"
    ],
    "url": "https://www.cfl.ca/article/collaros-drops-a-perfect-pass-to-demski-for-the-touchdown",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Nick Arbuckle delivers a BOMB to Kevin Mital, who finishes with an INSANE catch",
-   "summary": "",
-   "published": "2026-10-16T00:00:00-04:00",
-   "image": "",
-   "video": true,
-   "teams": [
-    "Argonauts"
-   ],
-   "url": "https://www.cfl.ca/article/nick-arbuckle-delivers-a-bomb-to-kevin-mital-who-finishes-with-an-insane-catch",
    "source": "CFL.ca"
   },
   {
@@ -3722,19 +3723,6 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/mls/article/st-louis-city-has-19-match-unbeaten-streak-snapped-by-minnesota-united/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "European Roundup: Yamal takes centre stage for ruthless Barcelona",
-   "summary": "",
-   "published": "2026-10-17T11:59-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-Design-2026-10-17T152951.109.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/soccer/article/european-roundup-napoli-stunned-by-venezia-atletico-claims-late-victory/",
    "source": "Sportsnet"
   },
   {
