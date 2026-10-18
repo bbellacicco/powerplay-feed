@@ -55,7 +55,7 @@ a.ticker-item:hover .team{color:#FFE600}
   <!-- sponsor logo, fixed at the start of the ticker -->
   <div id="brand"><img src="https://bbellacicco.github.io/powerplay-feed/0d683d_ee52021b769747ab96f919a4a7aa1732~mv2.jpg" alt="Scarehouse Windsor" onerror="this.parentNode.style.display='none'"></div>
   <div id="ticker-viewport"><div id="ticker-stage"></div></div>
-  <a id="more" href="https://www.powerplaywindsor.com/local-scores" target="_top" aria-label="All local scores and standings"><span class="l">All scores &rsaquo;</span><span class="s">Scores &rsaquo;</span></a>
+  <a id="more" href="https://www.powerplaywindsor.com/scores-standings" target="_top" aria-label="All local scores and standings"><span class="l">All scores &rsaquo;</span><span class="s">Scores &rsaquo;</span></a>
 </div>
 <script>
 var SPEED = 50;                 // pixels per second
@@ -197,7 +197,7 @@ function order(items){
 
 // ---------- drawing (same seamless loop as ticker.html)
 // tapping a score: local games open the Local Scores page, pro games the Pro tab of the Local Sports Hub
-var LINK_LOCAL = 'https://www.powerplaywindsor.com/local-scores', LINK_PRO = 'https://www.powerplaywindsor.com/local-sports?tab=pro';
+var LINK_LOCAL = 'https://www.powerplaywindsor.com/scores-standings', LINK_PRO = 'https://www.powerplaywindsor.com/local-sports?tab=pro';
 function node(it){
   var w = document.createElement('a'); w.className = 'ticker-item'; w.target = '_top';
   w.href = it.pro ? LINK_PRO : LINK_LOCAL;
