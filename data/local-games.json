@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-18T14:46:40-04:00",
+ "updated": "2026-10-18T15:01:36-04:00",
  "today": "2026-10-18",
  "range": [
   "2026-10-15",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -1345,9 +1345,9 @@
    "home_away": "A",
    "opponent": "Dresden Kings",
    "location": "Lambton-Kent Memorial Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
    "note": "",
    "links": {
@@ -3160,6 +3160,19 @@
   },
   {
    "league": "nfl",
+   "headline": "Jaguars’ Hunter becomes first player since 2002 with TD catch, interception",
+   "summary": "",
+   "published": "2026-10-18T14:48-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-Design-2026-10-18T143825.091.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/jaguars-hunter-becomes-first-player-since-2002-with-td-catch-interception/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
    "headline": "Fairbairn’s last-second FG gives Texans win over Jaguars at Wembley Stadium",
    "summary": "",
    "published": "2026-10-18T13:23-04:00",
@@ -3249,19 +3262,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-would-deal-prime-asset-for-difference-maker-on-blue-line/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "WNBA Finals Takeaways: Valkyries punch first, overwhelm Dream late in Game 1",
-   "summary": "Both the Dream and Valkyries proved why they were two of the WNBA’s top defences in Saturday’s grind-it-out affair. But Golden State landed the first punch to take a 1-0 series lead.",
-   "published": "2026-10-17T20:13-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Dream-and-Valkyries.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/wnba/article/wnba-finals-takeaways-valkyries-punch-first-overwhelm-dream-late-in-game-1/",
    "source": "Sportsnet"
   },
   {
@@ -3394,6 +3394,19 @@
    "sn_team_count": 3,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/colts-te-tyler-warren-inactive-vs-titans/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "WNBA Finals Takeaways: Valkyries punch first, overwhelm Dream late in Game 1",
+   "summary": "Both the Dream and Valkyries proved why they were two of the WNBA’s top defences in Saturday’s grind-it-out affair. But Golden State landed the first punch to take a 1-0 series lead.",
+   "published": "2026-10-17T20:13-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Dream-and-Valkyries.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/wnba/article/wnba-finals-takeaways-valkyries-punch-first-overwhelm-dream-late-in-game-1/",
    "source": "Sportsnet"
   },
   {
@@ -3739,6 +3752,32 @@
   },
   {
    "league": "nfl",
+   "headline": "DJ Moore, Ed Oliver among Buffalo Bills inactives at Raiders",
+   "summary": "The Buffalo Bills are listing five players as inactive for today's game against the Las Vegas Raiders.",
+   "published": "2026-10-18T14:54-04:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/bills/wedosywuamlt1jc587of.png",
+   "video": false,
+   "teams": [
+    "Buffalo Bills"
+   ],
+   "url": "https://www.buffalobills.com/news/dj-moore-ed-oliver-among-buffalo-bills-inactives-at-raiders",
+   "source": "Team site"
+  },
+  {
+   "league": "nfl",
+   "headline": "Buffalo Bills at Las Vegas Raiders | Where to watch, stream and listen | Week 6",
+   "summary": "TV Channel, Streaming and Radio for Bills at Raiders",
+   "published": "2026-10-18T10:00-04:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/bills/ci6pxbtdlg3i33rxcfei.png",
+   "video": false,
+   "teams": [
+    "Buffalo Bills"
+   ],
+   "url": "https://www.buffalobills.com/news/buffalo-bills-at-las-vegas-raiders-where-to-watch-stream-and-listen-week-6",
+   "source": "Team site"
+  },
+  {
+   "league": "nfl",
    "headline": "Buffalo Bills injury report vs. Raiders | Week 6",
    "summary": "Five players will be questionable for Sunday's matchup against the Raiders.",
    "published": "2026-10-16T17:46-04:00",
@@ -3748,19 +3787,6 @@
     "Buffalo Bills"
    ],
    "url": "https://www.buffalobills.com/news/buffalo-bills-injury-report-vs-raiders-week-6",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
-   "headline": "Buffalo Bills at Las Vegas Raiders | Where to watch, stream and listen | Week 6",
-   "summary": "TV Channel, Streaming and Radio for Bills at Raiders",
-   "published": "2026-10-16T10:00-04:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/bills/ci6pxbtdlg3i33rxcfei.png",
-   "video": false,
-   "teams": [
-    "Buffalo Bills"
-   ],
-   "url": "https://www.buffalobills.com/news/buffalo-bills-at-las-vegas-raiders-where-to-watch-stream-and-listen-week-6",
    "source": "Team site"
   },
   {
@@ -3852,19 +3878,6 @@
     "Buffalo Bills"
    ],
    "url": "https://www.buffalobills.com/news/what-they-re-saying-the-nfl-world-reacts-to-buffalo-s-instant-classic-overtime-victory-over-the-l-a-rams",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
-   "headline": "Bills HC Joe Brady looks back on OT game-management against Rams",
-   "summary": "Bills head coach Joe Brady dove into the timing of his OT field goal decision and why the Bills are staying out West this week.",
-   "published": "2026-10-13T17:45-04:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/bills/r3gnddlrpkx4xt70buu9.png",
-   "video": false,
-   "teams": [
-    "Buffalo Bills"
-   ],
-   "url": "https://www.buffalobills.com/news/bills-hc-joe-brady-looks-back-on-ot-game-management-against-rams",
    "source": "Team site"
   },
   {
@@ -4874,8 +4887,8 @@
       "l": 6,
       "otl": 3,
       "pts": 15,
-      "gf": 54,
-      "ga": 63,
+      "gf": 55,
+      "ga": 64,
       "strk": "W1"
      },
      {
@@ -4910,8 +4923,8 @@
       "l": 8,
       "otl": 1,
       "pts": 11,
-      "gf": 37,
-      "ga": 72,
+      "gf": 38,
+      "ga": 73,
       "strk": "L5"
      },
      {
@@ -5127,7 +5140,7 @@
       "otl": 0,
       "pts": 20,
       "gf": 62,
-      "ga": 28,
+      "ga": 29,
       "strk": "W1"
      },
      {
@@ -5162,7 +5175,7 @@
       "l": 4,
       "otl": 0,
       "pts": 14,
-      "gf": 49,
+      "gf": 50,
       "ga": 46,
       "strk": "W2"
      },
