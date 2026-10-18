@@ -57,6 +57,12 @@
   $('sms').href = 'sms:?&body=' + e(title + ' ' + url);
   $('back').href = url;
   if (!navigator.share) { $('native').style.display = 'none'; $('note').textContent = ''; }
+  else {
+    // on iPhones Facebook's own share link opens the app and closes right away; the phone's share list
+    // hands the link to the Facebook app properly, so that's the only Facebook route here
+    $('fb').style.display = 'none';
+    $('native').lastChild.textContent = 'Share to Facebook, Messages & more';
+  }
   $('native').onclick = function () {
     navigator.share({ title: title, text: title, url: url }).catch(function () {});
   };
