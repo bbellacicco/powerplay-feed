@@ -50,6 +50,7 @@
   .stripe { align-self: stretch; }
   .l-nfl .stripe { background: var(--nfl); } .l-mlb .stripe { background: var(--mlb); } .l-nhl .stripe { background: var(--nhl); }
   .l-nba .stripe { background: var(--nba); } .l-cfl .stripe { background: var(--cfl); } .l-pwhl .stripe { background: var(--pwhl); }
+  .next { margin-top: 4px; font-size: 12px; font-weight: 700; color: var(--accent); }
   .time { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
   .main { min-width: 0; }
   .who { font-weight: 600; }
@@ -521,6 +522,20 @@
     if (g.note) bits.push(g.note);
     main.appendChild(el('div', 'meta', bits.join(' · ')));
     if (g.series) main.appendChild(el('div', 'series', g.series));
+    // after one of our teams' games: when they play next
+    var ot = g.status === 'final' ? ourTeam(g) : null;
+    if (ot && LEAGUES[ot.league] && LEAGUES[ot.league].path) {
+      var nx = el('div', 'next'); main.appendChild(nx);
+      teamSchedule(ot).then(function (gs) {
+        var n = gs.filter(function (x) { return (x.status === 'upcoming' || x.status === 'live') && new Date(x.start) > new Date(g.start); })[0];
+        if (!n) return;
+        var home = n.home.abbr === ot.abbr, opp = home ? n.away : n.home;
+        var name = OUR_TEAMS.length && (g.home.abbr === ot.abbr ? g.home : g.away).short;
+        nx.textContent = 'Next: ' + (name ? name + ' ' : '') + (home ? 'vs. ' : 'at ') + (opp.short || opp.name) + ' \u00b7 ' +
+          (n.status === 'live' ? 'live now' : cpDay(new Date(n.start)) + (n.tbd ? '' : ' \u00b7 ' + fmt(new Date(n.start), { hour: 'numeric', minute: '2-digit' })
+            .replace(/\s?([ap])\.?m\.?/i, function (_, x) { return ' ' + x.toUpperCase() + 'M'; })));
+      });
+    }
     r.appendChild(main);
 
     var sc = el('div', 'score');
