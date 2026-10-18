@@ -21,7 +21,7 @@
     --spitfires: #d4202a; --lancers: #0b5cad; --saints: #1f9d55; --junior: #0891b2; --highschool: #7c4ddb; --powerplay: #e8b021; }
   * { box-sizing: border-box; }
   /* inside the Wix page the embed never scrolls on its own (on an iPhone that traps your finger); the Wix box height shows it all */
-  html.inwix, html.inwix body { overflow: hidden; overscroll-behavior: none; }
+  html.inwix, html.inwix body { overflow: hidden; }
   html, body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.35 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
   a { color: inherit; }
   .page { position: relative; max-width: 1240px; margin: 0 auto; padding: 0 0 28px; }
@@ -45,11 +45,12 @@
   .heads { background: #0e2044; border: 1px solid #1e3a6e; border-radius: 10px; padding: 12px 14px 6px; display: flex; flex-direction: column; min-height: 0; }
   .heads .kick { margin-bottom: 4px; }
   .fside.hasheads { grid-template-rows: minmax(0, 1fr) auto; }
-  .heads a { display: block; text-decoration: none; color: var(--text); padding: 6px 0; border-top: 1px solid rgba(255,255,255,.08); flex: none; }
+  .heads a { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); padding: 8px 0; border-top: 1px solid rgba(255,255,255,.12); flex: none; }
   .heads a:first-of-type { border-top: 0; }
-  .heads .tg { display: block; font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
-  .heads .tg i { display: inline-block; width: 7px; height: 7px; border-radius: 2px; margin-right: 5px; background: var(--tc, var(--accent)); }
-  .heads .t { font-weight: 700; font-size: 13.5px; line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .heads .lg { flex: 0 0 34px; width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; }
+  .heads .lg img { max-width: 34px; max-height: 34px; object-fit: contain; }
+  .heads .lg b { font-size: 9.5px; font-weight: 900; letter-spacing: .04em; color: var(--tc, var(--accent)); text-align: center; line-height: 1.05; }
+  .heads .t { font-weight: 800; font-size: 14.5px; line-height: 1.2; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
   .heads a:hover .t { color: var(--accent); }
   .btn { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: #0b1a33; border: 0; border-radius: 6px; padding: 10px 18px; font: inherit; font-weight: 800; font-size: 14px; cursor: pointer; text-decoration: none; }
   .btn:hover { background: var(--accent); }
@@ -149,7 +150,7 @@
     .big { height: 300px; } .big h2 { font-size: 20px; } .big p { display: none; } .big .ov { padding: 16px; }
     .fside { grid-template-rows: none; grid-template-columns: 1fr 1fr; gap: 12px; height: auto; }
     .small h3 { font-size: 13.5px; } .small .ov { padding: 10px 11px; } .small .kick { font-size: 10px; margin-bottom: 4px; }
-    .fside .small, .fside .heads { grid-column: 1 / -1; } .fside.hasheads { grid-template-rows: none; } .heads { padding: 10px 12px 4px; } .heads .t { font-size: 14px; }
+    .fside .small, .fside .heads { grid-column: 1 / -1; } .fside.hasheads { grid-template-rows: none; } .heads { padding: 10px 12px 4px; } .heads .t { font-size: 15px; }
     /* phones: the whole picture (no cropping), headline underneath */
     .big, .small { background: none; overflow: visible; height: auto !important; }
     .big::after, .small::after { display: none; }
@@ -440,6 +441,19 @@
     if (x.league === 'nfl' && (x.teams || []).some(function (n) { return /^lions$/i.test(n); })) return 'Lions';
     return '';
   }
+  var ESPN_TEAM = { 'Red Wings': 'nhl/500/det', 'Maple Leafs': 'nhl/500/tor', 'Canadiens': 'nhl/500/mtl', 'Lions': 'nfl/500/det',
+    'Tigers': 'mlb/500/det', 'Blue Jays': 'mlb/500/tor', 'Pistons': 'nba/500/det', 'Raptors': 'nba/500/tor' };
+  function headLogo(team, club) {
+    if (team === 'powerplay') return PP_LOGO;
+    if (team === 'spitfires') return LS + 'ohl/logos/17.png';
+    if (team === 'lancers') return LANCERS_LOGO;
+    if (team === 'saints') { var sc = ''; Object.keys(TEAM_LOGOS).some(function (k) { if (/st\.? clair/i.test(k)) { sc = TEAM_LOGOS[k]; return true; } return false; }); return sc; }
+    var n = String(club || '').toLowerCase(), k;
+    for (k in GOHL_LOGOS) if (n.indexOf(k) >= 0) return LS + GOHL_LOGOS[k];
+    for (k in OJHL_LOGOS) if (n.indexOf(k) >= 0) return LS + OJHL_LOGOS[k];
+    for (k in PJHL_LOGOS) if (n.indexOf(k) >= 0) return 'https://imagedelivery.net/ErrQpIaCOWR-Tz51PhN1zA/' + PJHL_LOGOS[k] + '/256';
+    return '';
+  }
   function pickHeads(stories, lg, used) {
     var out = [], seenTeam = {}, recent = Date.now() - 4 * 86400e3;
     // local: newest written stories, two different teams
@@ -449,7 +463,7 @@
       seenTeam[key] = 1;
       var tag = s.team === 'powerplay' ? [storyCat(s, 'Local'), 'Powerplay', '#e8b021'] : (LOCAL_TAG[s.team] || ['Local', s.club || '', '#e8b021']);
       if (s.team === 'junior') tag = ['Junior', (s.club || '').replace(/^(Windsor|St\. Clair)\s+/, ''), tag[2]];
-      out.push({ url: s.url, headline: s.headline, tag: tag[0] + (tag[1] ? ' \u00b7 ' + tag[1] : ''), col: tag[2], local: true });
+      out.push({ url: s.url, headline: s.headline, tag: tag[0] + (tag[1] ? ' \u00b7 ' + tag[1] : ''), col: tag[2], local: true, logo: headLogo(s.team, s.club), abbr: tag[1] || tag[0] });
       return out.length >= 2;
     });
     // pro: our teams first (newest, two different teams), then the biggest league news
@@ -457,8 +471,8 @@
       return x.headline && x.url && !x.video && /^(nhl|nfl|mlb|nba|pwhl)$/.test(x.league) && new Date(x.published).getTime() > recent;
     }).sort(function (a, b) { return new Date(b.published) - new Date(a.published); });
     var got = 0, teamSeen = {};
-    pro.forEach(function (x) { if (got < 2) { var t = fanTeam(x); if (t && !teamSeen[t]) { teamSeen[t] = 1; got++; out.push({ url: x.url, headline: x.headline, tag: x.league.toUpperCase() + ' \u00b7 ' + t, col: LEAGUE_COL[x.league] }); } } });
-    pro.forEach(function (x) { if (got < 2 && /^(nhl|nfl|mlb|nba)$/.test(x.league) && !out.some(function (o) { return o.url === x.url; })) { got++; out.push({ url: x.url, headline: x.headline, tag: x.league.toUpperCase(), col: LEAGUE_COL[x.league] }); } });
+    pro.forEach(function (x) { if (got < 2) { var t = fanTeam(x); if (t && !teamSeen[t]) { teamSeen[t] = 1; got++; out.push({ url: x.url, headline: x.headline, tag: x.league.toUpperCase() + ' \u00b7 ' + t, col: LEAGUE_COL[x.league], logo: ESPN_TEAM[t] ? 'https://a.espncdn.com/i/teamlogos/' + ESPN_TEAM[t] + '.png' : '', abbr: t }); } } });
+    pro.forEach(function (x) { if (got < 2 && /^(nhl|nfl|mlb|nba)$/.test(x.league) && !out.some(function (o) { return o.url === x.url; })) { got++; out.push({ url: x.url, headline: x.headline, tag: x.league.toUpperCase(), col: LEAGUE_COL[x.league], logo: 'https://a.espncdn.com/i/teamlogos/leagues/500/' + x.league + '.png', abbr: x.league.toUpperCase() }); } });
     return out;
   }
 
@@ -481,12 +495,15 @@
     });
     if (heads.length >= 3) {
       side.classList.add('hasheads');
-      var hb = el('div', 'heads'); hb.appendChild(el('div', 'kick', 'Top headlines'));
+      var hb = el('div', 'heads'); hb.appendChild(el('div', 'kick', 'Headlines'));
       heads.forEach(function (h) {
         var a = el('a'); a.href = h.url;
         if (h.url.indexOf(SITE) === 0) a.target = '_top'; else { a.target = '_blank'; a.rel = 'noopener'; }
-        var tg = el('span', 'tg'), dot = el('i'); dot.style.setProperty('--tc', h.col || '#e8b021'); tg.appendChild(dot); tg.appendChild(document.createTextNode(h.tag));
-        a.appendChild(tg); a.appendChild(el('span', 't', h.headline));
+        a.title = h.tag;
+        var lgBox = el('span', 'lg'); lgBox.style.setProperty('--tc', h.col || '#e8b021');
+        var word = function () { lgBox.innerHTML = ''; lgBox.appendChild(el('b', null, h.abbr || '')); };
+        if (h.logo) { var li = new Image(); li.alt = ''; li.referrerPolicy = 'no-referrer'; li.src = h.logo; li.onerror = word; lgBox.appendChild(li); } else word();
+        a.appendChild(lgBox); a.appendChild(el('span', 't', h.headline));
         hb.appendChild(a);
       });
       side.appendChild(hb);
