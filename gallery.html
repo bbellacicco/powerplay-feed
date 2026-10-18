@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Game Day Snaps | Powerplay Windsor</title>
-<script src="share.js?v=3"></script>
+<script src="share.js?v=4"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <!--
   Game Day Snaps, Powerplay's game reports in pictures (a photo slideshow): big photo, arrows (swipe on phones), "3 / 5" counter, play, full screen,
@@ -182,7 +182,7 @@
     go(0);
     // share: the slideshow's own page (its link preview shows the title and first photo)
     if (window.PPShare) $('topr').appendChild(PPShare.button({ title: meta.title || 'Game Day Snaps',
-      url: 'https://www.powerplaywindsor.com/game-day-snaps?show=' + show, text: (meta.title || 'Game Day Snaps') + ' on Powerplay Windsor' }));
+      url: 'https://www.powerplaywindsor.com/game-day-snaps?show=' + show, image: slides[0] ? base + encodeURIComponent(slides[0].file) : '', text: (meta.title || 'Game Day Snaps') + ' on Powerplay Windsor' }));
   }).catch(function () {
     $('stage').innerHTML = '<div class="msg">This slideshow isn’t up yet.</div>'; $('cap').style.display = 'none';
   });
