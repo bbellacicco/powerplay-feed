@@ -44,6 +44,7 @@
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
 
   function copy(text) {
+    if (navigator.clipboard && window.isSecureContext) { navigator.clipboard.writeText(text).catch(function () {}); }
     var ta = document.createElement('textarea'); ta.value = text; ta.setAttribute('readonly', '');
     ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0'; document.body.appendChild(ta); ta.select();
     var ok = false; try { ok = document.execCommand('copy'); } catch (e) {}
@@ -65,9 +66,29 @@
     items.forEach(function (it) {
       var a = document.createElement('a'); a.href = it[1]; a.textContent = it[0];
       a.target = /^(sms|mailto):/.test(it[1]) ? '_top' : '_blank'; a.rel = 'noopener';
-      a.onclick = function () { setTimeout(close, 50); };
+      a.onclick = function (ev) {
+        if (/^https?:/.test(it[1])) {   // a new tab for Facebook / X; if the phone blocks it, go there directly
+          ev.preventDefault();
+          var w = window.open(it[1], '_blank', 'noopener');
+          if (!w) { try { window.top.location.href = it[1]; } catch (er) { location.href = it[1]; } }
+        } else {   // text message / email: hand the link to the phone's own app
+          ev.preventDefault();
+          try { window.top.location.href = it[1]; } catch (er) { location.href = it[1]; }
+        }
+        setTimeout(close, 50);
+      };
       m.appendChild(a);
     });
+    if (navigator.share && /iPhone|iPad|Android/i.test(navigator.userAgent)) {   // the phone's own share sheet (Messages, WhatsApp, Instagram...)
+      var ns = document.createElement('button'); ns.type = 'button'; ns.textContent = 'More apps\u2026';
+      ns.onclick = function () {
+        navigator.share({ title: o.title, text: text, url: url }).then(close).catch(function (err) {
+          if (err && err.name === 'AbortError') return;
+          ns.textContent = 'Not available here: use Copy link'; ns.disabled = true;
+        });
+      };
+      m.appendChild(ns);
+    }
     var c = document.createElement('button'); c.type = 'button'; c.textContent = 'Copy link';
     c.onclick = function () { if (copy(url)) { c.textContent = 'Link copied ✓'; c.className = 'ok'; setTimeout(close, 1200); } else { prompt('Copy this link:', url); } };
     m.appendChild(c);
@@ -92,12 +113,9 @@
       b.onclick = function (ev) {
         ev.stopPropagation();
         var data = typeof o === 'function' ? o() : o;
-        // the phone's own share sheet when the page is allowed to use it; otherwise our menu
-        if (navigator.share && /iPhone|iPad|Android/i.test(navigator.userAgent)) {
-          navigator.share({ title: data.title, text: data.text || data.title, url: data.url }).catch(function (err) {
-            if (!err || err.name !== 'AbortError') menu(b, data);
-          });
-        } else menu(b, data);
+        // inside the Wix page (an embedded frame) phones usually block their own share sheet, and the tap
+        // then did nothing; so the menu opens right away, with the phone's share sheet as one option in it
+        menu(b, data);
       };
       return b;
     },
