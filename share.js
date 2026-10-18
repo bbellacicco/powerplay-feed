@@ -81,7 +81,7 @@
   window.PPShare = {
     link: function (tab) {
       if (tab === 'pro') return SITE + 'local-sports?tab=pro';
-      var map = { local: 'scores', athletes: 'spotlight' }; tab = map[tab] || tab || 'scores';
+      var map = { local: 'scores' }; tab = map[tab] || tab || 'scores';
       return SITE + 'scores-standings?tab=' + tab;
     },
     button: function (o) {
