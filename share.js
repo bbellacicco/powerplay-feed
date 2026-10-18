@@ -2,7 +2,8 @@
    PPShare.button({ title, url, text })  -> a small "Share" button; tapping it opens a menu right under it:
                                              Facebook · X · Text message · Email · Copy link (or the phone's own share sheet)
    PPShare.follow()                      -> a row of follow links: YouTube (subscribe) · Instagram · Facebook · X
-   PPShare.link(tab)                     -> the public address of a Local Sports section, e.g. ...local-sports?tab=network */
+   PPShare.link(tab)                     -> the public address of a hub section: pro -> the Pro Hub (/local-sports),
+                                            anything else -> the Local Hub (/scores-standings?tab=...) */
 (function () {
   var SITE = 'https://www.powerplaywindsor.com/';
   var SOCIAL = [
@@ -78,7 +79,11 @@
   }
 
   window.PPShare = {
-    link: function (tab) { return SITE + 'local-sports' + (tab ? '?tab=' + tab : ''); },
+    link: function (tab) {
+      if (tab === 'pro') return SITE + 'local-sports?tab=pro';
+      var map = { local: 'scores', athletes: 'spotlight' }; tab = map[tab] || tab || 'scores';
+      return SITE + 'scores-standings?tab=' + tab;
+    },
     button: function (o) {
       var b = document.createElement('button'); b.type = 'button'; b.className = 'pps-btn';
       b.setAttribute('aria-label', 'Share ' + o.title);
