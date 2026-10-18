@@ -411,7 +411,7 @@
     var side = el('div', 'fside');
     items.slice(1, 3).forEach(function (s) {
       var a = el('a', 'small'); a.href = s.url; a.target = '_top'; featImg(a, s, 560, 320);
-      var o = el('div', 'ov'); o.appendChild(el('h3', null, s.headline)); a.appendChild(o);
+      var o = el('div', 'ov'); o.appendChild(el('div', 'kick', 'Recent')); o.appendChild(el('h3', null, s.headline)); a.appendChild(o);
       side.appendChild(a);
     });
     box.appendChild(side);
