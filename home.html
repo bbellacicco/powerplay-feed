@@ -317,13 +317,13 @@
     { key: 'network', title: 'Powerplay Network', by: null, all: LINK.network, tab: 'network' },
     { key: 'local', title: 'Local scores', by: ['Unifor Local 444', 'logos/unifor-444.png'], all: LINK.scores, tab: 'scores' },
     { key: 'stories', title: 'Latest stories', by: ['St. Clair College Alumni', 'logos/st-clair-alumni.png'], all: LINK.local, tab: 'stories' },
-    { key: 'photos', title: 'Pic and Roll', gold: 'Roll', by: null, all: null, tab: null },
+    { key: 'photos', title: 'Game Day Snaps', gold: 'Snaps', by: null, all: null, tab: null },
     { key: 'pro', title: 'Pro scores', by: ['Unifor Local 2458', 'logos/unifor-2458.png'], all: LINK.pro, tab: 'pro' },
     { key: 'prohead', title: 'Pro headlines', by: ['The D’Amore Group', 'logos/damore-group.png'], all: LINK.pro, tab: 'pro-updates' },
     { key: 'athletes', title: 'Athlete profiles', by: null, all: LINK.athletes, tab: 'athletes' }
   ];
   var SHARE_TEXT = { network: 'Watch the latest local highlights and interviews', local: 'Local scores', stories: 'The latest Windsor-Essex sports stories',
-    pro: 'Pro scores for our teams', prohead: 'Pro headlines', athletes: 'Athlete profiles', photos: 'Pic and Roll: game reports in pictures' };
+    pro: 'Pro scores for our teams', prohead: 'Pro headlines', athletes: 'Athlete profiles', photos: 'Game Day Snaps: game reports in pictures' };
   var rowEl = {};
   ROWS.forEach(function (r) {
     var sec = el('section'); sec.id = 'row-' + r.key;
@@ -556,7 +556,7 @@
     var sec = document.getElementById('row-network'), page = document.getElementById('page');
     vp.style.top = Math.max(0, Math.min(sec.offsetTop - 10, page.offsetHeight - vp.offsetHeight - 10)) + 'px';
   }
-  // Pic and Roll slideshows play in the same pop-up, below the strip heading
+  // Game Day Snaps slideshows play in the same pop-up, below the strip heading
   function playShow(sh) {
     var fr = document.getElementById('vframe'); fr.innerHTML = ''; fr.classList.add('gal');
     var f = document.createElement('iframe'); f.src = REPO + 'gallery.html?show=' + encodeURIComponent(sh.key); f.allow = 'fullscreen'; f.allowFullscreen = true; f.title = sh.title; fr.appendChild(f);
@@ -789,11 +789,12 @@
         var who = s.team === 'junior' || s.team === 'powerplay' ? s.club || TEAM[s.team] : TEAM[s.team] + (s.sport ? ' · ' + s.sport : '');
         return storyCard(s, { tag: TEAM[s.team] === 'Powerplay' ? 'Powerplay' : (s.team === 'junior' ? (s.club || 'Junior') : TEAM[s.team]), sub: who + ' · ' + ago(s.published), tile: s.team === 'junior' ? (s.club || '').replace(/^(Windsor|St\. Clair)\s+/, '') : null });
       }), 'Stories are on the way.');
-      // Pic and Roll (game reports in pictures): newest first; tap one and it plays right here
+      // Game Day Snaps (game reports in pictures): newest first; tap one and it plays right here
       var shows = (r[7] && r[7].slideshows) || [];
-      fill('photos', shows.slice(0, 12).map(function (sh) {
-        var c = storyCard({ headline: sh.title.replace(/^pic and roll:\s*/i, ''), url: sh.url, image: sh.cover, published: sh.date + 'T12:00:00', team: 'powerplay' },
-          { tag: 'Pic and Roll', sub: sh.count + ' photos \u00b7 ' + ago(sh.date + 'T12:00:00') });
+      fill("photos", shows.slice(0, 12).map(function (sh) {
+        var c = storyCard({ headline: sh.title.replace(/^game day snaps:\s*/i, ''), url: sh.url, image: sh.cover, published: sh.date + 'T12:00:00', team: 'powerplay' },
+          {});
+        var sm = c.querySelector('.sm'); if (sm) sm.remove();   // just who's playing under the picture
         c.onclick = function (e) { e.preventDefault(); playShow(sh); };
         return c;
       }), 'Game reports in pictures are on the way.');
