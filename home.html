@@ -57,6 +57,7 @@
   .small.vid .play::after { content: ""; position: absolute; left: 21px; top: 15px; border-style: solid; border-width: 11px 0 11px 17px; border-color: transparent transparent transparent #fff; }
   .small.vid:hover .play { background: var(--accent); border-color: var(--accent); }
   .small.playing::after, .small.playing .ov, .small.playing .play { display: none; }
+  .small.vid .fmain { object-fit: cover !important; }
   .small .vframe { position: absolute; inset: 0; z-index: 4; width: 100%; height: 100%; border: 0; background: #000; }
   .btn { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: #0b1a33; border: 0; border-radius: 6px; padding: 10px 18px; font: inherit; font-weight: 800; font-size: 14px; cursor: pointer; text-decoration: none; }
   .btn:hover { background: var(--accent); }
@@ -413,7 +414,8 @@
     var box = el('div', 'fimg'), src = wixFit(s.image, w);
     var bg = new Image(); bg.alt = ''; bg.className = 'fbg'; bg.referrerPolicy = 'no-referrer'; bg.src = src;
     var im = new Image(); im.alt = ''; im.className = 'fmain'; im.referrerPolicy = 'no-referrer'; im.src = src;
-    im.onerror = function () { if (im.src !== s.image) { im.src = s.image; bg.src = s.image; } else box.remove(); };
+    var tries = [s.alt, s.image].filter(Boolean);
+    im.onerror = function () { var n = tries.shift(); while (n && n === im.src) n = tries.shift(); if (n) { im.src = n; bg.src = n; } else box.remove(); };
     box.appendChild(bg); box.appendChild(im); a.appendChild(box);
   }
   // the label over a Powerplay story: the blog category it's posted in (High School, OUA, OCAA...)
@@ -746,6 +748,11 @@
       var ppVids = stories.filter(function (s) { return isVid(s) && s.team === 'powerplay'; }).map(function (s) { return { headline: s.headline, url: s.url, image: s.image, published: s.published }; });
       (net.local || []).forEach(function (v) { if (v.u && v.t) ppVids.push({ headline: v.t, url: v.u, image: v.i, published: v.p.length === 10 ? v.p + 'T12:00:00' : v.p }); });
       var topVid = ppVids.filter(function (v) { return v.image; }).sort(function (a, b) { return new Date(b.published) - new Date(a.published); })[0] || null;
+      // YouTube's standard thumbnail is 4:3 with black bars; use the widescreen one so the picture fills the box
+      if (topVid) {
+        var yid = (topVid.url.match(/[?&]v=([\w-]{11})/) || topVid.url.match(/youtu\.be\/([\w-]{11})/) || topVid.url.match(/\/shorts\/([\w-]{11})/) || [])[1];
+        if (yid) topVid = Object.assign({}, topVid, { image: 'https://i.ytimg.com/vi/' + yid + '/hq720.jpg', alt: 'https://i.ytimg.com/vi/' + yid + '/mqdefault.jpg' });
+      }
       var usedTop = {}; featItems.slice(0, topVid ? 1 : 2).forEach(function (s) { usedTop[s.url] = 1; });
       var heads = pickHeads(stories, lg, usedTop);
       if (featItems.length) buildFeat(featItems, heads, topVid);
