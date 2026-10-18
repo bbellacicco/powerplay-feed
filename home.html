@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Graduate&display=swap" rel="stylesheet">
 <title>Home | Powerplay Windsor</title>
 <script src="arrows.js"></script>
 <script src="share.js"></script>
@@ -13,7 +13,7 @@
     Local scores · Latest stories · Pro scores · Pro headlines · Athlete profiles.
   Each row: title, "Presented by" sponsor, "See all ›" to the full page. Rows swipe sideways (arrows on desktop).
   Same data as the other widgets; refreshes itself every few minutes.
-  Embed full width in Wix: about 3,080px tall on desktop, 4,200px on mobile (includes testimonials and About).
+  Embed full width in Wix: about 3,230px tall on desktop, 4,400px on mobile (includes testimonials and About).
   Links (optional): ?local=<Local Sports page> ?pro=<Pro Sports page> ?network=<Network page> ?athletes=<Spotlights page> ?search=<search page>
 -->
 <style>
@@ -73,14 +73,20 @@
 
   /* ---------- rows ---------- */
   section { position: relative; margin-top: 38px; }
-  .rhead { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 0 40px; margin-bottom: 12px; }
-  .rhead h2 { margin: 0; font-size: 20px; font-weight: 800; letter-spacing: .005em; }
-  .rhead .by { display: inline-flex; align-items: center; gap: 6px; margin-left: 12px; font-size: 12px; color: var(--muted); font-weight: 500; vertical-align: 2px; }
-  .rhead .by img { height: 20px; width: auto; max-width: 60px; object-fit: contain; border-radius: 3px; }
-  .rhead .by b { color: #d4dcee; font-weight: 600; }
-  .rhead a.all { color: var(--muted); font-size: 13px; font-weight: 700; text-decoration: none; white-space: nowrap; }
-  .rhead a.all:hover { color: var(--accent); }
-  .rhead .rright { display: flex; align-items: center; gap: 12px; }
+  /* strip headings: each in its own framed plate so it stands apart from the page */
+  .rhead { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 0 40px 12px; padding: 9px 14px 9px 16px;
+    background: linear-gradient(90deg, #17336a, #10244a); border-left: 4px solid var(--accent); border-radius: 4px; box-shadow: 0 6px 18px rgba(0,0,0,.35); }
+  .rhead > div:first-child { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 14px; min-width: 0; }
+  .rhead h2 { margin: 0; font-family: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif; font-weight: 400; font-size: 30px; line-height: 1; letter-spacing: .03em; text-transform: uppercase; color: #fff; }
+  .rhead h2 em { font-style: normal; color: var(--accent); }
+  .rhead .by { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; color: var(--muted); font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+  .rhead .by .chip { display: inline-flex; align-items: center; background: #fff; border-radius: 4px; padding: 3px 7px; height: 28px; }
+  .rhead .by img { height: 22px; width: auto; max-width: 78px; object-fit: contain; display: block; }
+  .rhead .by b { color: #d4dcee; font-weight: 700; text-transform: none; letter-spacing: 0; font-size: 12px; }
+  .rhead a.all { color: var(--accent); font-size: 12px; font-weight: 800; text-decoration: none; white-space: nowrap; letter-spacing: .04em; text-transform: uppercase;
+    border: 1px solid var(--accent); border-radius: 4px; padding: 6px 10px; }
+  .rhead a.all:hover { background: var(--accent); color: #0b1a33; }
+  .rhead .rright { display: flex; align-items: center; gap: 10px; flex: none; }
   .rfollow { padding: 0 40px; margin: -4px 0 12px; }
   .rowwrap { position: relative; }
   .row { display: flex; gap: 14px; overflow-x: auto; padding: 4px 40px 6px; scroll-snap-type: x mandatory; scroll-padding-left: 40px; scrollbar-width: none; }
@@ -172,7 +178,7 @@
     .search { margin: 18px 16px 0; } .search .btn { display: none; }
     section { margin-top: 30px; }
     .rfollow { padding: 0 16px; } .rfollow .lbl { width: 100%; }
-    .rhead { padding: 0 16px; flex-wrap: wrap; } .rhead h2 { font-size: 18px; } .rhead .by { margin-left: 0; display: flex; width: 100%; order: 3; margin-top: 3px; }
+    .rhead { margin: 0 16px 10px; padding: 8px 10px 8px 12px; flex-wrap: wrap; row-gap: 6px; } .rhead > div:first-child { display: contents; } .rhead h2 { font-size: 25px; order: 1; } .rhead .rright { order: 2; margin-left: auto; gap: 6px; } .rhead .by { order: 3; width: 100%; font-size: 10px; } .rhead .by .chip { height: 24px; padding: 2px 6px; } .rhead .by img { height: 19px; } .rhead a.all { padding: 5px 8px; font-size: 11px; } .rhead .pps-btn span { display: none; } .rhead .pps-btn { padding: 6px 8px; }
     .row { padding: 4px 16px 6px; scroll-padding-left: 16px; gap: 10px; }
     .rarrow { display: none; }
     .scard, .game { width: 220px; } .game .box { height: 128px; } .game .side img { height: 36px; width: 36px; } .game .side .sc { font-size: 22px; }
@@ -320,11 +326,13 @@
   ROWS.forEach(function (r) {
     var sec = el('section'); sec.id = 'row-' + r.key;
     var head = el('div', 'rhead'), left = el('div');
-    left.appendChild(el('h2', null, r.title));
+    var h2 = el('h2'), words = r.title.split(' ');
+    h2.appendChild(document.createTextNode(words[0] + ' ')); h2.appendChild(el('em', null, words.slice(1).join(' ')));   // second word in gold
+    left.appendChild(h2);
     if (r.by) {
-      var by = el('span', 'by'); var im = new Image(); im.src = r.by[1]; im.alt = ''; im.onerror = function () { im.remove(); };
-      by.appendChild(im); by.appendChild(document.createTextNode('Presented by ')); by.appendChild(el('b', null, r.by[0]));
-      left.querySelector('h2').appendChild(by);
+      var by = el('span', 'by'), chip = el('span', 'chip'); var im = new Image(); im.src = r.by[1]; im.alt = r.by[0]; im.onerror = function () { chip.remove(); };
+      chip.appendChild(im); by.appendChild(document.createTextNode('Presented by ')); by.appendChild(chip); by.appendChild(el('b', null, r.by[0]));
+      left.appendChild(by);
     }
     head.appendChild(left);
     var a = el('a', 'all', 'See all ›'); a.href = r.all; a.target = '_top';
