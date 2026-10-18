@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T19:45:01-04:00",
+ "updated": "2026-10-17T21:00:01-04:00",
  "today": "2026-10-17",
  "leagues": {
   "oua": {
@@ -142,268 +142,182 @@
     }
    ]
   },
-  "ocaa_m": {
-   "label": "OCAA Men's Soccer",
-   "url": "https://www.ocaa.com/sports/msoc/2026-27/standings",
+  "oua_mbkb": {
+   "label": "OUA Men's Basketball",
+   "url": "https://oua.ca/sports/mbkb/2026-27/standings",
    "groups": [
     {
-     "group": "OCAA Men's Soccer · WEST",
+     "group": "OUA Men's Basketball · West",
      "cols": [
       "GP",
-      "Record",
-      "Win%",
-      "For",
-      "Aga.",
-      "Last 10",
-      "Streak"
+      "OVERALL",
+      "PCT.",
+      "PF",
+      "PA",
+      "STREAK"
      ],
      "teams": [
       {
-       "name": "Fanshawe",
+       "name": "Algoma",
        "stats": [
-        "9",
-        "8-0-1",
-        "0.944",
-        "38",
-        "3",
-        "8-0-1",
-        "Won 2"
-       ]
-      },
-      {
-       "name": "Humber",
-       "stats": [
-        "9",
-        "8-1",
-        "0.889",
-        "59",
-        "5",
-        "8-1",
-        "Won 3"
-       ]
-      },
-      {
-       "name": "Niagara",
-       "stats": [
-        "9",
-        "5-0-4",
-        "0.778",
-        "28",
-        "6",
-        "5-0-4",
-        "Tied 2"
-       ]
-      },
-      {
-       "name": "Mohawk",
-       "stats": [
-        "10",
-        "4-4-2",
-        "0.500",
-        "15",
-        "16",
-        "4-4-2",
-        "Won 1"
-       ]
-      },
-      {
-       "name": "St. Clair",
-       "stats": [
-        "9",
-        "4-4-1",
-        "0.500",
-        "32",
-        "16",
-        "4-4-1",
-        "Lost 3"
-       ]
-      },
-      {
-       "name": "Sheridan",
-       "stats": [
-        "10",
-        "4-6",
-        "0.400",
-        "20",
-        "24",
-        "4-6",
-        "Won 1"
-       ]
-      },
-      {
-       "name": "Conestoga",
-       "stats": [
-        "10",
-        "2-6-2",
-        "0.300",
-        "10",
-        "19",
-        "2-6-2",
-        "Lost 1"
-       ]
-      },
-      {
-       "name": "Redeemer",
-       "stats": [
-        "10",
-        "2-6-2",
-        "0.300",
-        "11",
-        "33",
-        "2-6-2",
-        "Lost 1"
-       ]
-      },
-      {
-       "name": "Lambton",
-       "stats": [
-        "10",
-        "0-10",
-        "0.000",
-        "3",
-        "94",
-        "0-10",
-        "Lost 10"
-       ]
-      }
-     ]
-    }
-   ]
-  },
-  "ocaa_w": {
-   "label": "OCAA Women's Soccer",
-   "url": "https://www.ocaa.com/sports/wsoc/2026-27/standings",
-   "groups": [
-    {
-     "group": "OCAA Women's Soccer · WEST",
-     "cols": [
-      "GP",
-      "Record",
-      "Win%",
-      "For",
-      "Aga.",
-      "Last 10",
-      "Streak"
-     ],
-     "teams": [
-      {
-       "name": "Mohawk",
-       "stats": [
-        "10",
-        "8-0-2",
-        "0.900",
-        "28",
-        "5",
-        "8-0-2",
-        "Won 1"
-       ]
-      },
-      {
-       "name": "St. Clair",
-       "stats": [
-        "9",
-        "7-1-1",
-        "0.833",
-        "44",
-        "3",
-        "7-1-1",
-        "Tied 1"
-       ]
-      },
-      {
-       "name": "Humber",
-       "stats": [
-        "9",
-        "7-1-1",
-        "0.833",
-        "38",
-        "6",
-        "7-1-1",
-        "Won 1"
-       ]
-      },
-      {
-       "name": "Redeemer",
-       "stats": [
-        "10",
-        "4-4-2",
-        "0.500",
-        "16",
-        "14",
-        "4-4-2",
-        "Won 1"
-       ]
-      },
-      {
-       "name": "Fanshawe",
-       "stats": [
-        "9",
-        "3-2-4",
-        "0.556",
-        "20",
-        "12",
-        "3-2-4",
-        "Won 1"
-       ]
-      },
-      {
-       "name": "Niagara",
-       "stats": [
-        "9",
-        "2-3-4",
-        "0.444",
-        "21",
-        "16",
-        "2-3-4",
-        "Tied 2"
-       ]
-      },
-      {
-       "name": "Conestoga",
-       "stats": [
-        "10",
-        "2-5-3",
-        "0.350",
-        "12",
-        "29",
-        "2-5-3",
-        "Lost 1"
-       ]
-      },
-      {
-       "name": "Sheridan",
-       "stats": [
-        "10",
-        "1-8-1",
-        "0.150",
-        "11",
-        "43",
-        "1-8-1",
-        "Lost 2"
-       ]
-      },
-      {
-       "name": "Lambton",
-       "stats": [
-        "10",
-        "0-10",
+        "0",
+        "0-0",
         "0.000",
         "0",
-        "62",
-        "0-10",
-        "Lost 10"
+        "0",
+        "-"
+       ]
+      },
+      {
+       "name": "Windsor",
+       "stats": [
+        "0",
+        "0-0",
+        "0.000",
+        "0",
+        "0",
+        "-"
+       ]
+      },
+      {
+       "name": "Guelph",
+       "stats": [
+        "0",
+        "0-0",
+        "0.000",
+        "0",
+        "0",
+        "-"
+       ]
+      },
+      {
+       "name": "Laurier",
+       "stats": [
+        "0",
+        "0-0",
+        "0.000",
+        "0",
+        "0",
+        "-"
+       ]
+      },
+      {
+       "name": "Waterloo",
+       "stats": [
+        "0",
+        "0-0",
+        "0.000",
+        "0",
+        "0",
+        "-"
+       ]
+      },
+      {
+       "name": "Western",
+       "stats": [
+        "0",
+        "0-0",
+        "0.000",
+        "0",
+        "0",
+        "-"
        ]
       }
      ]
     }
    ]
   },
-  "ocaa_b": {
-   "label": "OCAA Baseball",
-   "url": "https://www.ocaa.com/sports/bsb/2026-27/standings",
+  "oua_wbkb": {
+   "label": "OUA Women's Basketball",
+   "url": "https://oua.ca/sports/wbkb/2026-27/standings",
    "groups": [
     {
-     "group": "OCAA Baseball",
+     "group": "OUA Women's Basketball · West",
+     "cols": [
+      "GP",
+      "OVERALL",
+      "PCT.",
+      "PF",
+      "PA",
+      "STREAK"
+     ],
+     "teams": [
+      {
+       "name": "Algoma",
+       "stats": [
+        "0",
+        "0-0",
+        "0.000",
+        "0",
+        "0",
+        "-"
+       ]
+      },
+      {
+       "name": "Guelph",
+       "stats": [
+        "0",
+        "0-0",
+        "0.000",
+        "0",
+        "0",
+        "-"
+       ]
+      },
+      {
+       "name": "Laurier",
+       "stats": [
+        "0",
+        "0-0",
+        "0.000",
+        "0",
+        "0",
+        "-"
+       ]
+      },
+      {
+       "name": "Waterloo",
+       "stats": [
+        "0",
+        "0-0",
+        "0.000",
+        "0",
+        "0",
+        "-"
+       ]
+      },
+      {
+       "name": "Western",
+       "stats": [
+        "0",
+        "0-0",
+        "0.000",
+        "0",
+        "0",
+        "-"
+       ]
+      },
+      {
+       "name": "Windsor",
+       "stats": [
+        "0",
+        "0-0",
+        "0.000",
+        "0",
+        "0",
+        "-"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "ocaa_mvb": {
+   "label": "OCAA Men's Volleyball",
+   "url": "https://www.ocaa.com/sports/mvball/2026-27/standings",
+   "groups": [
+    {
+     "group": "OCAA Men's Volleyball · WEST",
      "cols": [
       "GP",
       "Record",
@@ -415,87 +329,275 @@
      ],
      "teams": [
       {
-       "name": "Fanshawe",
-       "stats": [
-        "20",
-        "19-1",
-        "0.950",
-        "136",
-        "50",
-        "8-0",
-        "Won 15"
-       ]
-      },
-      {
-       "name": "Durham",
-       "stats": [
-        "20",
-        "13-7",
-        "0.650",
-        "145",
-        "75",
-        "5-3",
-        "Lost 4"
-       ]
-      },
-      {
-       "name": "Lambton",
-       "stats": [
-        "20",
-        "14-6",
-        "0.700",
-        "159",
-        "97",
-        "5-3",
-        "Won 6"
-       ]
-      },
-      {
-       "name": "St. Clair",
-       "stats": [
-        "20",
-        "12-8",
-        "0.600",
-        "135",
-        "67",
-        "6-2",
-        "Lost 2"
-       ]
-      },
-      {
        "name": "Humber",
        "stats": [
-        "18",
-        "6-12",
-        "0.333",
-        "83",
-        "127",
-        "3-7",
-        "Won 1"
+        "0",
+        "0-0",
+        "0.000",
+        "0",
+        "0",
+        "0-0",
+        "-"
+       ]
+      },
+      {
+       "name": "Cambrian",
+       "stats": [
+        "0",
+        "0-0",
+        "0.000",
+        "0",
+        "0",
+        "0-0",
+        "-"
        ]
       },
       {
        "name": "Sheridan",
        "stats": [
-        "18",
-        "3-15",
-        "0.167",
-        "54",
-        "184",
-        "0-10",
-        "Lost 13"
+        "0",
+        "0-0",
+        "0.000",
+        "0",
+        "0",
+        "0-0",
+        "-"
+       ]
+      },
+      {
+       "name": "St. Clair",
+       "stats": [
+        "0",
+        "0-0",
+        "0.000",
+        "0",
+        "0",
+        "0-0",
+        "-"
+       ]
+      },
+      {
+       "name": "Redeemer",
+       "stats": [
+        "0",
+        "0-0",
+        "0.000",
+        "0",
+        "0",
+        "0-0",
+        "-"
+       ]
+      },
+      {
+       "name": "Conestoga",
+       "stats": [
+        "0",
+        "0-0",
+        "0.000",
+        "0",
+        "0",
+        "0-0",
+        "-"
+       ]
+      },
+      {
+       "name": "Boreal",
+       "stats": [
+        "0",
+        "0-0",
+        "0.000",
+        "0",
+        "0",
+        "0-0",
+        "-"
+       ]
+      },
+      {
+       "name": "Fanshawe",
+       "stats": [
+        "0",
+        "0-0",
+        "0.000",
+        "0",
+        "0",
+        "0-0",
+        "-"
+       ]
+      },
+      {
+       "name": "Mohawk",
+       "stats": [
+        "0",
+        "0-0",
+        "0.000",
+        "0",
+        "0",
+        "0-0",
+        "-"
+       ]
+      },
+      {
+       "name": "Niagara",
+       "stats": [
+        "0",
+        "0-0",
+        "0.000",
+        "0",
+        "0",
+        "0-0",
+        "-"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "ocaa_wvb": {
+   "label": "OCAA Women's Volleyball",
+   "url": "https://www.ocaa.com/sports/wvball/2026-27/standings",
+   "groups": [
+    {
+     "group": "OCAA Women's Volleyball · WEST",
+     "cols": [
+      "GP",
+      "Record",
+      "Win%",
+      "For",
+      "Aga.",
+      "Last 10",
+      "Streak"
+     ],
+     "teams": [
+      {
+       "name": "Mohawk",
+       "stats": [
+        "0",
+        "0-0",
+        "0.000",
+        "0",
+        "0",
+        "0-0",
+        "-"
+       ]
+      },
+      {
+       "name": "Conestoga",
+       "stats": [
+        "0",
+        "0-0",
+        "0.000",
+        "0",
+        "0",
+        "0-0",
+        "-"
+       ]
+      },
+      {
+       "name": "Humber",
+       "stats": [
+        "0",
+        "0-0",
+        "0.000",
+        "0",
+        "0",
+        "0-0",
+        "-"
+       ]
+      },
+      {
+       "name": "Cambrian",
+       "stats": [
+        "0",
+        "0-0",
+        "0.000",
+        "0",
+        "0",
+        "0-0",
+        "-"
        ]
       },
       {
        "name": "Sault",
        "stats": [
-        "18",
-        "0-18",
+        "0",
+        "0-0",
         "0.000",
-        "65",
-        "177",
-        "0-10",
-        "Lost 18"
+        "0",
+        "0",
+        "0-0",
+        "-"
+       ]
+      },
+      {
+       "name": "Boreal",
+       "stats": [
+        "0",
+        "0-0",
+        "0.000",
+        "0",
+        "0",
+        "0-0",
+        "-"
+       ]
+      },
+      {
+       "name": "Fanshawe",
+       "stats": [
+        "0",
+        "0-0",
+        "0.000",
+        "0",
+        "0",
+        "0-0",
+        "-"
+       ]
+      },
+      {
+       "name": "St. Clair",
+       "stats": [
+        "0",
+        "0-0",
+        "0.000",
+        "0",
+        "0",
+        "0-0",
+        "-"
+       ]
+      },
+      {
+       "name": "Niagara",
+       "stats": [
+        "0",
+        "0-0",
+        "0.000",
+        "0",
+        "0",
+        "0-0",
+        "-"
+       ]
+      },
+      {
+       "name": "Redeemer",
+       "stats": [
+        "0",
+        "0-0",
+        "0.000",
+        "0",
+        "0",
+        "0-0",
+        "-"
+       ]
+      },
+      {
+       "name": "Sheridan",
+       "stats": [
+        "0",
+        "0-0",
+        "0.000",
+        "0",
+        "0",
+        "0-0",
+        "-"
        ]
       }
      ]
