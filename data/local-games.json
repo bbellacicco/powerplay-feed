@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T20:46:53-04:00",
+ "updated": "2026-10-17T21:09:19-04:00",
  "today": "2026-10-17",
  "range": [
   "2026-10-14",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -1468,10 +1468,10 @@
    "home_away": "H",
    "opponent": "Blenheim Blades",
    "location": "Libro Centre",
-   "status": "live",
-   "our_score": 0,
-   "opp_score": 0,
-   "result": null,
+   "status": "final",
+   "our_score": 1,
+   "opp_score": 3,
+   "result": "L",
    "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960383?configuration=45"
@@ -3403,15 +3403,15 @@
   },
   {
    "league": "other",
-   "headline": "Valkyries rally late to take Game 1 of WNBA Finals over Dream",
-   "summary": "Golden State Valkyries win Game 1 of the WNBA Finals with 68-64 victory over the Atlanta Dream.",
-   "published": "2026-10-17T18:01-04:00",
+   "headline": "WNBA Finals Takeaways: Valkyries punch first, overwhelm Dream late in Game 1",
+   "summary": "Both the Dream and Valkyries proved why they were two of the WNBA’s top defences in Saturday’s grind-it-out affair. But Golden State landed the first punch to take a 1-0 series lead.",
+   "published": "2026-10-17T20:13-04:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Dream-and-Valkyries.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
    "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/wnba/article/valkyries-rally-late-to-take-game-1-of-wnba-finals-over-dream/",
+   "url": "https://www.sportsnet.ca/wnba/article/wnba-finals-takeaways-valkyries-punch-first-overwhelm-dream-late-in-game-1/",
    "source": "Sportsnet"
   },
   {
@@ -3724,19 +3724,6 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/mls/article/st-louis-city-has-19-match-unbeaten-streak-snapped-by-minnesota-united/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Chelsea’s Emi Martinez taken off on stretcher after injury against Liverpool",
-   "summary": "",
-   "published": "2026-10-17T09:28-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/09/Emi-Martinez.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/premier-league/article/chelseas-emi-martinez-taken-off-on-stretcher-after-injury-against-liverpool/",
    "source": "Sportsnet"
   },
   {
@@ -4601,7 +4588,7 @@
       "otl": 0,
       "pts": 14,
       "gf": 51,
-      "ga": 51,
+      "ga": 53,
       "strk": "W4"
      },
      {
@@ -4636,7 +4623,7 @@
       "l": 7,
       "otl": 0,
       "pts": 8,
-      "gf": 37,
+      "gf": 38,
       "ga": 41,
       "strk": "W1"
      }
@@ -4690,7 +4677,7 @@
       "otl": 1,
       "pts": 3,
       "gf": 19,
-      "ga": 41,
+      "ga": 42,
       "strk": "L4"
      },
      {
@@ -4701,7 +4688,7 @@
       "l": 7,
       "otl": 2,
       "pts": 2,
-      "gf": 22,
+      "gf": 24,
       "ga": 41,
       "strk": "L7"
      }
@@ -4742,7 +4729,7 @@
       "l": 2,
       "otl": 1,
       "pts": 11,
-      "gf": 34,
+      "gf": 35,
       "ga": 27,
       "strk": "W3"
      },
@@ -4790,14 +4777,14 @@
      {
       "name": "London Knights",
       "abbr": "LDN",
-      "gp": 8,
-      "w": 6,
+      "gp": 9,
+      "w": 7,
       "l": 1,
       "otl": 1,
-      "pts": 13,
+      "pts": 15,
       "gf": 40,
       "ga": 25,
-      "strk": "W2"
+      "strk": "W3"
      },
      {
       "name": "Kitchener Rangers",
@@ -4814,14 +4801,14 @@
      {
       "name": "Erie Otters",
       "abbr": "ER",
-      "gp": 10,
+      "gp": 11,
       "w": 5,
-      "l": 4,
+      "l": 5,
       "otl": 1,
       "pts": 11,
       "gf": 30,
       "ga": 42,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Owen Sound Attack",
@@ -4832,7 +4819,7 @@
       "otl": 0,
       "pts": 4,
       "gf": 23,
-      "ga": 45,
+      "ga": 46,
       "strk": "L3"
      }
     ]
@@ -4922,7 +4909,7 @@
       "l": 6,
       "otl": 0,
       "pts": 12,
-      "gf": 46,
+      "gf": 48,
       "ga": 41,
       "strk": "L2"
      },
@@ -4959,7 +4946,7 @@
       "otl": 2,
       "pts": 8,
       "gf": 29,
-      "ga": 82,
+      "ga": 84,
       "strk": "L1"
      },
      {
@@ -4983,7 +4970,7 @@
       "otl": 1,
       "pts": 5,
       "gf": 28,
-      "ga": 62,
+      "ga": 64,
       "strk": "L2"
      }
     ]
@@ -4999,7 +4986,7 @@
       "l": 1,
       "otl": 0,
       "pts": 30,
-      "gf": 100,
+      "gf": 102,
       "ga": 24,
       "strk": "W9"
      },
@@ -5011,8 +4998,8 @@
       "l": 2,
       "otl": 0,
       "pts": 26,
-      "gf": 61,
-      "ga": 28,
+      "gf": 62,
+      "ga": 30,
       "strk": "W7"
      },
      {
@@ -5059,7 +5046,7 @@
       "l": 3,
       "otl": 0,
       "pts": 18,
-      "gf": 71,
+      "gf": 72,
       "ga": 23,
       "strk": "W4"
      },
@@ -5095,8 +5082,8 @@
       "l": 11,
       "otl": 0,
       "pts": 12,
-      "gf": 51,
-      "ga": 86,
+      "gf": 53,
+      "ga": 87,
       "strk": "L1"
      },
      {
@@ -5108,7 +5095,7 @@
       "otl": 1,
       "pts": 11,
       "gf": 36,
-      "ga": 67,
+      "ga": 68,
       "strk": "L4"
      },
      {
@@ -5270,7 +5257,7 @@
       "l": 7,
       "otl": 1,
       "pts": 7,
-      "gf": 48,
+      "gf": 49,
       "ga": 53,
       "strk": "L1"
      },
@@ -5283,7 +5270,7 @@
       "otl": 0,
       "pts": 0,
       "gf": 19,
-      "ga": 54,
+      "ga": 55,
       "strk": "L8"
      }
     ]
@@ -5335,7 +5322,7 @@
       "l": 1,
       "otl": 0,
       "pts": 18,
-      "gf": 69,
+      "gf": 70,
       "ga": 31,
       "strk": "W2"
      },
@@ -5396,7 +5383,7 @@
       "otl": 0,
       "pts": 8,
       "gf": 47,
-      "ga": 69,
+      "ga": 70,
       "strk": "W1"
      },
      {
@@ -5618,6 +5605,18 @@
       "strk": "W2"
      },
      {
+      "name": "Blenheim Blades",
+      "abbr": "BLE",
+      "gp": 11,
+      "w": 8,
+      "l": 3,
+      "otl": 0,
+      "pts": 16,
+      "gf": 47,
+      "ga": 32,
+      "strk": "W1"
+     },
+     {
       "name": "Dresden Kings",
       "abbr": "DRE",
       "gp": 14,
@@ -5627,18 +5626,6 @@
       "pts": 15,
       "gf": 66,
       "ga": 56,
-      "strk": "L1"
-     },
-     {
-      "name": "Blenheim Blades",
-      "abbr": "BLE",
-      "gp": 10,
-      "w": 7,
-      "l": 3,
-      "otl": 0,
-      "pts": 14,
-      "gf": 44,
-      "ga": 31,
       "strk": "L1"
      },
      {
@@ -5668,14 +5655,14 @@
      {
       "name": "Amherstburg Admirals",
       "abbr": "AMH",
-      "gp": 13,
+      "gp": 14,
       "w": 4,
-      "l": 9,
+      "l": 10,
       "otl": 0,
       "pts": 8,
-      "gf": 37,
-      "ga": 47,
-      "strk": "W2"
+      "gf": 38,
+      "ga": 50,
+      "strk": "L1"
      },
      {
       "name": "Walpole Island Wild",
