@@ -79,6 +79,18 @@
   .rhead > div:first-child { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 14px; min-width: 0; }
   .rhead h2 { margin: 0; font-family: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif; font-weight: 400; font-size: 30px; line-height: 1; letter-spacing: .03em; text-transform: uppercase; color: #fff; }
   .rhead h2 em { font-style: normal; color: var(--accent); }
+  /* "NEW" badge: gold pill with a light sweep and a soft pulse */
+  .newbadge { position: relative; display: inline-flex; align-items: center; gap: 5px; overflow: hidden; vertical-align: 5px; margin-left: 10px;
+    background: linear-gradient(135deg, #ffd84d, #e8b021 55%, #c98d00); color: #0b1a33; font: 900 12px/1 system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    letter-spacing: .14em; padding: 5px 9px 5px 8px; border-radius: 4px; box-shadow: 0 0 0 1px rgba(255,255,255,.35) inset, 0 0 14px rgba(232,176,33,.55);
+    animation: nbpulse 2.4s ease-in-out infinite; }
+  .newbadge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #0b1a33; box-shadow: 0 0 0 2px rgba(11,26,51,.25); }
+  .newbadge::after { content: ''; position: absolute; top: 0; bottom: 0; width: 40%; left: -60%;
+    background: linear-gradient(100deg, transparent, rgba(255,255,255,.75), transparent); transform: skewX(-20deg); animation: nbshine 3.2s ease-in-out infinite; }
+  @keyframes nbshine { 0%, 55% { left: -60%; } 85%, 100% { left: 130%; } }
+  @keyframes nbpulse { 0%, 100% { box-shadow: 0 0 0 1px rgba(255,255,255,.35) inset, 0 0 10px rgba(232,176,33,.45); } 50% { box-shadow: 0 0 0 1px rgba(255,255,255,.35) inset, 0 0 22px rgba(232,176,33,.9); } }
+  .scard .pic .newbadge { position: absolute; top: 8px; right: 8px; margin: 0; z-index: 3; font-size: 10.5px; padding: 4px 7px 4px 6px; }
+  @media (prefers-reduced-motion: reduce) { .newbadge, .newbadge::after { animation: none; } }
   .rhead .by { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; color: var(--muted); font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
   .rhead .by .chip { display: inline-flex; align-items: center; background: #fff; border-radius: 4px; padding: 3px 7px; height: 28px; }
   .rhead .by img { height: 22px; width: auto; max-width: 78px; object-fit: contain; display: block; }
@@ -792,12 +804,16 @@
       // Game Day Snaps (game reports in pictures): newest first; tap one and it plays right here
       var shows = (r[7] && r[7].slideshows) || [];
       fill("photos", shows.slice(0, 12).map(function (sh) {
-        var c = storyCard({ headline: sh.title.replace(/^game day snaps:\s*/i, ''), url: sh.url, image: sh.cover, published: sh.date + 'T12:00:00', team: 'powerplay' },
+        var c = storyCard({ headline: sh.title.replace(/^game day snaps:\s*/i, '') + ' \u00b7\u00a0' + cpDate(new Date(sh.date + 'T12:00:00')).replace(' ', '\u00a0'), url: sh.url, image: sh.cover, published: sh.date + 'T12:00:00', team: 'powerplay' },
           {});
         var sm = c.querySelector('.sm'); if (sm) sm.remove();   // just who's playing under the picture
+        if (Date.now() - new Date(sh.date + 'T12:00:00').getTime() < 3 * 864e5) { var pc = c.querySelector('.pic'); if (pc) pc.appendChild(el('span', 'newbadge', 'NEW')); }
         c.onclick = function (e) { e.preventDefault(); playShow(sh); };
         return c;
       }), 'Game reports in pictures are on the way.');
+      // "NEW" beside the strip title
+      var h2p = document.querySelector('#row-photos h2');
+      if (h2p && !h2p.querySelector('.newbadge')) h2p.appendChild(el('span', 'newbadge', 'NEW'));
       if (shows.length && window.PPShare && !document.querySelector('#row-photos .pps-btn')) {
         var rr2 = document.querySelector('#row-photos .rright');
         rr2.insertBefore(PPShare.button({ title: shows[0].title, url: shows[0].url, text: shows[0].title + ' on Powerplay Windsor' }), rr2.firstChild);
