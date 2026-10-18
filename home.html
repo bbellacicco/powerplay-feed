@@ -261,11 +261,11 @@
   var SITE = 'https://www.powerplaywindsor.com/';
   var qs = new URLSearchParams(location.search);
   var LINK = {
-    local: qs.get('local') || SITE + 'local-sports',
+    local: qs.get('local') || SITE + 'scores-standings',
     scores: qs.get('scores') || SITE + 'scores-standings',
     pro: qs.get('pro') || SITE + 'local-sports',
-    network: qs.get('network') || SITE + 'local-sports',
-    athletes: qs.get('athletes') || SITE + 'local-sports',
+    network: qs.get('network') || SITE + 'scores-standings',
+    athletes: qs.get('athletes') || SITE + 'scores-standings',
     search: qs.get('search') || SITE + 'search-1'
   };
   var TZ = 'America/Toronto';
@@ -308,8 +308,8 @@
   // ---------- rows ----------
   var ROWS = [
     { key: 'network', title: 'Powerplay Network', by: null, all: LINK.network, tab: 'network' },
-    { key: 'local', title: 'Local scores', by: ['Unifor Local 444', 'logos/unifor-444.png'], all: LINK.scores, tab: 'local', share: LINK.scores },
-    { key: 'stories', title: 'Latest stories', by: ['St. Clair College Alumni', 'logos/st-clair-alumni.png'], all: LINK.local, tab: 'news' },
+    { key: 'local', title: 'Local scores', by: ['Unifor Local 444', 'logos/unifor-444.png'], all: LINK.scores, tab: 'scores' },
+    { key: 'stories', title: 'Latest stories', by: ['St. Clair College Alumni', 'logos/st-clair-alumni.png'], all: LINK.local, tab: 'stories' },
     { key: 'pro', title: 'Pro scores', by: ['Unifor Local 2458', 'logos/unifor-2458.png'], all: LINK.pro, tab: 'pro' },
     { key: 'prohead', title: 'Pro headlines', by: ['The D’Amore Group', 'logos/damore-group.png'], all: LINK.pro, tab: 'pro' },
     { key: 'athletes', title: 'Athlete profiles', by: null, all: LINK.athletes, tab: 'spotlight' }
