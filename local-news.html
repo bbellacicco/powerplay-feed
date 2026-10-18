@@ -215,6 +215,7 @@
   var qs = new URLSearchParams(location.search);
   var state = { tab: LABEL[qs.get('tab')] ? qs.get('tab') : 'all', sub: 'all',
                 view: qs.get('view') === 'social' ? 'social' : 'stories', club: 0 };
+  if (qs.get('lock') === '1') { var vw = document.querySelector('.views'); if (vw) vw.style.display = 'none'; }   // the Local Hub's own buttons pick Stories / Social
 
   // ---- Social view: each team's official Facebook page (Facebook's Page Plugin) and,
   // where they have one, their YouTube channel's latest uploads.
