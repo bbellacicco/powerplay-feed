@@ -40,6 +40,14 @@ html,body{width:100%;height:44px;background:#000;overflow:hidden}
 .at{color:#6b7280;font-weight:400}
 .meta{color:#ff6b6b;font-weight:700;font-size:11px;letter-spacing:.3px;margin-left:4px;text-transform:uppercase}
 .sep{color:rgba(255,45,45,0.45);font-size:14px;font-family:Arial;padding:0 2px;display:inline-block;height:44px;line-height:44px}
+a.ticker-item{text-decoration:none;cursor:pointer}
+a.ticker-item:hover .team{color:#FFE600}
+/* "All scores" button, fixed at the right end */
+#more{flex:0 0 auto;height:44px;display:flex;align-items:center;padding:0 12px;background:#000;position:relative;z-index:2;box-shadow:-8px 0 10px -4px #000;text-decoration:none}
+#more span{background:#FFE600;color:#000;font:800 11px/1 Arial,sans-serif;letter-spacing:.8px;text-transform:uppercase;padding:7px 10px;border-radius:3px;white-space:nowrap}
+#more:hover span{background:#fff}
+#more .s{display:none}
+@media (max-width:480px){ #more{padding:0 6px} #more span{padding:6px 7px;font-size:10px} #more .l{display:none} #more .s{display:inline} }
 </style>
 </head>
 <body>
@@ -47,6 +55,7 @@ html,body{width:100%;height:44px;background:#000;overflow:hidden}
   <!-- sponsor logo, fixed at the start of the ticker -->
   <div id="brand"><img src="https://bbellacicco.github.io/powerplay-feed/0d683d_ee52021b769747ab96f919a4a7aa1732~mv2.jpg" alt="Scarehouse Windsor" onerror="this.parentNode.style.display='none'"></div>
   <div id="ticker-viewport"><div id="ticker-stage"></div></div>
+  <a id="more" href="https://www.powerplaywindsor.com/local-scores" target="_top" aria-label="All local scores and standings"><span class="l">All scores &rsaquo;</span><span class="s">Scores &rsaquo;</span></a>
 </div>
 <script>
 var SPEED = 50;                 // pixels per second
@@ -151,7 +160,7 @@ function proItems(){
           var a = c.filter(function(t){ return t.homeAway === 'away'; })[0], h = c.filter(function(t){ return t.homeAway === 'home'; })[0];
           var kind = st.state === 'in' ? 'live' : st.state === 'post' ? 'final' : (dayKey(new Date(e.date)) === dayKey(now) ? 'upcoming' : null);
           if (!kind) return null;
-          return {kind: kind, start: e.date, left: a.team.shortDisplayName, right: h.team.shortDisplayName,
+          return {pro: true, kind: kind, start: e.date, left: a.team.shortDisplayName, right: h.team.shortDisplayName,
                   ls: kind === 'upcoming' ? null : Number(a.score), rs: kind === 'upcoming' ? null : Number(h.score),
                   meta: [PRO[k][2], kind === 'live' ? st.shortDetail : kind === 'upcoming' ? clock(new Date(e.date)) : (st.shortDetail !== 'Final' ? st.shortDetail.replace('Final/', '') : '')].filter(Boolean).join(' · ')};
         }).filter(Boolean);
@@ -187,8 +196,11 @@ function order(items){
 }
 
 // ---------- drawing (same seamless loop as ticker.html)
+// tapping a score: local games open the Local Scores page, pro games the Pro tab of the Local Sports Hub
+var LINK_LOCAL = 'https://www.powerplaywindsor.com/local-scores', LINK_PRO = 'https://www.powerplaywindsor.com/local-sports?tab=pro';
 function node(it){
-  var w = document.createElement('div'); w.className = 'ticker-item';
+  var w = document.createElement('a'); w.className = 'ticker-item'; w.target = '_top';
+  w.href = it.pro ? LINK_PRO : LINK_LOCAL;
   var b = document.createElement('span');
   b.className = 'badge badge-' + it.kind;
   b.textContent = it.kind === 'live' ? 'Live' : it.kind === 'final' ? 'Final' : (it.today ? 'Today' : 'Next');
