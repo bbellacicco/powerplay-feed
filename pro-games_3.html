@@ -217,12 +217,17 @@
   function espnDay(key, d) {
     var url = 'https://site.api.espn.com/apis/site/v2/sports/' + LEAGUES[key].path + '/scoreboard?dates=' + ymd(d);
     return fetch(url).then(function (r) { return r.ok ? r.json() : { events: [] }; }).then(function (j) {
-      return (j.events || []).map(function (e) {
+      return (j.events || []).map(function (e) { return parseEvent(key, e); });
+    }).catch(function () { return []; });
+  }
+  // one ESPN event (scoreboard or team schedule) -> a game
+  function parseEvent(key, e) {
+        e.status = e.status || (e.competitions[0] && e.competitions[0].status) || { type: {} };
         var c = e.competitions[0], st = e.status.type;
         var side = function (h) {
           var x = c.competitors.filter(function (t) { return t.homeAway === h; })[0];
           return { abbr: x.team.abbreviation, name: x.team.displayName, short: x.team.shortDisplayName || x.team.name,
-                   score: x.score !== undefined && x.score !== '' ? Number(x.score) : null, winner: x.winner,
+                   score: x.score == null || x.score === '' ? null : typeof x.score === 'object' ? (x.score.value != null ? Number(x.score.value) : null) : Number(x.score), winner: x.winner,
                    rec: ((x.records || []).filter(function (r) { return r.type === 'total' || r.type === 'ytd'; })[0] || {}).summary || '' };
         };
         var status = st.state === 'post' ? (st.name === 'STATUS_POSTPONED' ? 'postponed' : st.name === 'STATUS_CANCELED' ? 'cancelled' : 'final')
@@ -237,8 +242,20 @@
           tbd: e.timeValid === false,
           link: (e.links && e.links[0] && e.links[0].href) || ''
         };
-      });
-    }).catch(function () { return []; });
+  }
+  // a team's last result and next game, when it has nothing in the two-days-back-to-tomorrow window
+  var schedCache = {};
+  function teamSchedule(t) {
+    var k = t.league + ':' + t.abbr;
+    if (!schedCache[k]) schedCache[k] = fetch('https://site.api.espn.com/apis/site/v2/sports/' + LEAGUES[t.league].path + '/teams/' + t.abbr.toLowerCase() + '/schedule')
+      .then(function (r) { return r.ok ? r.json() : { events: [] }; })
+      .then(function (j) {
+        var all = (j.events || []).map(function (e) { try { return parseEvent(t.league, e); } catch (er) { return null; } }).filter(Boolean)
+          .sort(function (a, b) { return new Date(a.start) - new Date(b.start); });
+        var past = all.filter(function (g) { return g.status === 'final'; }), next = all.filter(function (g) { return g.status === 'upcoming' || g.status === 'live'; });
+        return past.slice(-1).concat(next.slice(0, 1));
+      }).catch(function () { return []; });
+    return schedCache[k];
   }
 
   // ---- CFL from the daily collector
@@ -290,7 +307,10 @@
     var sel = document.getElementById('team');
     var names = {};
     if (state.tab === 'ours') OUR_TEAMS.forEach(function (t) { names[t.name] = 1; });
-    else if (state.tab !== 'all') list.forEach(function (g) { names[g.home.name] = 1; names[g.away.name] = 1; });   // All: every league, too many teams for a list
+    else if (state.tab !== 'all') {   // All: every league, too many teams for a list
+      list.forEach(function (g) { names[g.home.name] = 1; names[g.away.name] = 1; });
+      OUR_TEAMS.forEach(function (t) { if (t.league === state.tab) names[t.name] = 1; });   // our teams are always on the list
+    }
     var keys = Object.keys(names).sort();
     sel.innerHTML = '';
     sel.appendChild(new Option('All teams', 'all'));
@@ -422,6 +442,24 @@
     });
 
     var box = document.getElementById('list'); box.innerHTML = '';
+    if (!list.length && state.team !== 'all') {
+      var our = OUR_TEAMS.filter(function (t) { return t.name === state.team && (state.tab === 'ours' || t.league === state.tab); })[0];
+      if (our && LEAGUES[our.league] && LEAGUES[our.league].path) {
+        box.appendChild(el('div', 'empty', 'Loading ' + our.name + '\u2019s last and next games\u2026'));
+        var want = state.team;
+        teamSchedule(our).then(function (gs) {
+          if (state.team !== want || view !== 'games') return;
+          box.innerHTML = '';
+          if (!gs.length) { box.appendChild(el('div', 'empty', 'No ' + our.name + ' games scheduled right now.')); return; }
+          var sec = el('section', 'day'), h2 = el('h2', null, our.name);
+          h2.appendChild(el('span', 'n', ' \u00b7 last result and next game'));
+          sec.appendChild(h2);
+          var strip = el('div', 'dstrip'); gs.forEach(function (g) { strip.appendChild(row(g)); }); sec.appendChild(strip);
+          box.appendChild(sec);
+        });
+        return;
+      }
+    }
     if (!list.length) { box.appendChild(el('div', 'empty', 'No games from two days ago through tomorrow.')); return; }
     var groups = [], cur = null;
     list.forEach(function (g) {
