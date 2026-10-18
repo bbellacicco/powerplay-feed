@@ -53,7 +53,7 @@
       <div class="title">Athlete <span>Profiles</span></div>
       <div class="sub">Get to know the athletes of Windsor-Essex</div>
     </div>
-    <a class="more" id="more" target="_top" href="https://www.powerplaywindsor.com/local-sports">All athletes &rarr;</a>
+    <a class="more" id="more" target="_top" href="https://www.powerplaywindsor.com/scores-standings?tab=spotlight">All athletes &rarr;</a>
   </div>
   <div class="strip" id="strip"><div class="empty">Loading…</div></div>
   <div class="fs" id="fs" role="dialog" aria-label="Athlete profile">
@@ -66,7 +66,7 @@
 (function () {
   var REPO = 'https://bbellacicco.github.io/powerplay-feed/';
   var qs = new URLSearchParams(location.search);
-  var LINK = qs.get('link') || 'https://www.powerplaywindsor.com/local-sports';
+  var LINK = qs.get('link') || 'https://www.powerplaywindsor.com/scores-standings?tab=spotlight';
   var N = Math.max(3, Math.min(40, parseInt(qs.get('n'), 10) || 4));
   document.getElementById('more').href = LINK;
   function handoff() { try { localStorage.setItem('pp-tab', JSON.stringify({ tab: 'spotlight', t: Date.now() })); } catch (e) {} }
