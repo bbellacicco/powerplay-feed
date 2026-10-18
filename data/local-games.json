@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-18T18:46:38-04:00",
+ "updated": "2026-10-18T19:01:43-04:00",
  "today": "2026-10-18",
  "range": [
   "2026-10-15",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 30
   },
   "club_news": {
    "ok": true,
@@ -1384,11 +1384,11 @@
    "home_away": "A",
    "opponent": "St. Thomas Stars",
    "location": "Joe Thornton C.C., St. Thomas, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 1,
+   "opp_score": 2,
    "result": null,
-   "note": "",
+   "note": "19:01 2nd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15597"
    },
@@ -3107,31 +3107,42 @@
  ],
  "more_news": [
   {
-   "league": "mlb",
-   "headline": "Rays’ Aranda leaning on advice from Blue Jays’ Kirk during post-season",
-   "summary": "After going hitless in his first 10 at-bats of the ALCS, Tampa Bay Rays first baseman Jonathan Aranda broke out in Game 4 after taking advice from Toronto Blue Jays catcher and childhood friend Alejandro Kirk.",
-   "published": "2026-10-18T15:24-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Jonathan-Aranda.jpg",
+   "league": "nfl",
+   "headline": "NFL Week 6 Roundup: Browns claim top spot in AFC North with rally vs. Ravens",
+   "summary": "",
+   "published": "2026-10-18T16:55-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Browns.jpg",
    "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "sn_team_count": 2,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/rays-aranda-leaning-on-advice-from-blue-jays-kirk-during-post-season/",
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-6-roundup-browns-claim-top-spot-in-afc-north-with-rally-vs-ravens/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Sunday Overreactions: Hellebuyck would make Mammoth a Cup contender",
+   "summary": "Could acquiring an elite goaltender like Connor Hellebuyck put the Mammoth into the championship conversation? Michael Amato looks at that and more in this week’s Sunday Overreactions.",
+   "published": "2026-10-18T08:36-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/10/CP175100238-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/sunday-overreactions-hellebuyck-would-make-mammoth-a-cup-contender/",
    "source": "Sportsnet"
   },
   {
    "league": "nba",
-   "headline": "NBA tiers: From title-or-bust all the way down to the relegation zone",
-   "summary": "The NBA pre-season is behind us, and the real thing tips off Tuesday. But before the ball flies, Sportsnet’s Steven Loung sorts all 30 teams into contention tiers.",
-   "published": "2026-10-18T08:40-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/05/Shai-Wemby.jpg",
+   "headline": "Kings guard Ben Simmons suffers torn Achilles tendon",
+   "summary": "",
+   "published": "2026-10-18T18:45-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Sacramento-Kings-guard-Ben-Simmons.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
+   "sn_team_count": 1,
    "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/nba-tiers-from-title-or-bust-all-the-way-down-to-the-relegation-zone/",
+   "url": "https://www.sportsnet.ca/nba/article/report-kings-guard-ben-simmons-has-suspected-achilles-tendon-tear/",
    "source": "Sportsnet"
   },
   {
@@ -3145,6 +3156,19 @@
    "sn_team_count": 0,
    "sport": "",
    "url": "https://www.sportsnet.ca/curling/article/new-look-team-einarson-wins-gsoc-co-op-invitational-title/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "‘I got punished’: Giants’ Skattebo on getting no rushes against Saints",
+   "summary": "",
+   "published": "2026-10-18T18:53-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-76.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/i-got-punished-giants-skattebo-on-getting-no-rushes-against-saints/",
    "source": "Sportsnet"
   },
   {
@@ -3189,19 +3213,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "J.J. McCarthy replaces Jameis Winston as Giants’ QB late against Saints",
-   "summary": "",
-   "published": "2026-10-18T16:08-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-2026-10-18T160408.331.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/j-j-mccarthy-replaces-jameis-winston-as-giants-qb-late-against-saints/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "Sources: Connor Hellebuyck suspension ends Friday",
    "summary": "Connor Hellebuyck’s suspension will come to an end on Friday. Elliotte Friedman has the story.",
@@ -3228,16 +3239,31 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "New Rams kicker Blake Grupe injured in debut",
-   "summary": "",
-   "published": "2026-10-18T16:51-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-Design-2026-10-18T164200.062.jpg",
+   "league": "mlb",
+   "headline": "Rays’ Aranda leaning on advice from Blue Jays’ Kirk during post-season",
+   "summary": "After going hitless in his first 10 at-bats of the ALCS, Tampa Bay Rays first baseman Jonathan Aranda broke out in Game 4 after taking advice from Toronto Blue Jays catcher and childhood friend Alejandro Kirk.",
+   "published": "2026-10-18T15:24-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Jonathan-Aranda.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "sn_team_count": 2,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/rays-aranda-leaning-on-advice-from-blue-jays-kirk-during-post-season/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "NBA tiers: From title-or-bust all the way down to the relegation zone",
+   "summary": "The NBA pre-season is behind us, and the real thing tips off Tuesday. But before the ball flies, Sportsnet’s Steven Loung sorts all 30 teams into contention tiers.",
+   "published": "2026-10-18T08:40-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/05/Shai-Wemby.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/new-rams-kicker-blake-grupe-injured-in-debut/",
+   "sn_team_count": 0,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/nba-tiers-from-title-or-bust-all-the-way-down-to-the-relegation-zone/",
    "source": "Sportsnet"
   },
   {
@@ -3342,6 +3368,19 @@
    "sn_team_count": 2,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/fairbairns-last-second-fg-gives-texans-win-over-jaguars-at-wembley-stadium/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "New Rams kicker Blake Grupe injured in debut",
+   "summary": "",
+   "published": "2026-10-18T16:51-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-Design-2026-10-18T164200.062.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/new-rams-kicker-blake-grupe-injured-in-debut/",
    "source": "Sportsnet"
   },
   {
@@ -3461,60 +3500,6 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/jets-sunk-by-ehlers-winner-in-loss-to-hurricanes/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Maple Leafs would deal prime asset for difference-maker on blue line",
-   "summary": "",
-   "published": "2026-10-17T21:28-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/05/Chayka-1.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-would-deal-prime-asset-for-difference-maker-on-blue-line/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Jets loan defenceman Elias Salomonsson to AHL",
-   "summary": "",
-   "published": "2026-10-18T11:42-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/04/Elias.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/jets-loan-defenceman-elias-salomonsson-to-ahl/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Rockets’ Kevin Durant, Suns owner Mat Ishbia spar on social media",
-   "summary": "",
-   "published": "2026-10-17T18:06-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/durant.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/rockets-kevin-durant-suns-owner-mat-ishbia-spar-on-social-media/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "WNBA Finals Takeaways: Valkyries punch first, overwhelm Dream late in Game 1",
-   "summary": "Both the Dream and Valkyries proved why they were two of the WNBA’s top defences in Saturday’s grind-it-out affair. But Golden State landed the first punch to take a 1-0 series lead.",
-   "published": "2026-10-17T20:13-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Dream-and-Valkyries.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/wnba/article/wnba-finals-takeaways-valkyries-punch-first-overwhelm-dream-late-in-game-1/",
    "source": "Sportsnet"
   },
   {
@@ -3714,6 +3699,19 @@
   },
   {
    "league": "nfl",
+   "headline": "Bills issue injury update on TE Dalton Kincaid",
+   "summary": "Kincaid left the game in the second half and went into the blue medical tent",
+   "published": "2026-10-18T18:56-04:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/bills/ole03hkv8cfcheosviw0.jpg",
+   "video": false,
+   "teams": [
+    "Buffalo Bills"
+   ],
+   "url": "https://www.buffalobills.com/news/bills-issue-injury-update-on-te-dalton-kincaid",
+   "source": "Team site"
+  },
+  {
+   "league": "nfl",
    "headline": "Bills issue injury update on OLB Bradley Chubb",
    "summary": "Chubb has a rib injury and was hurt during the first half of the game",
    "published": "2026-10-18T17:14-04:00",
@@ -3827,19 +3825,6 @@
     "Buffalo Bills"
    ],
    "url": "https://www.buffalobills.com/news/greg-rousseau-wins-afc-special-teams-player-of-the-week-for-blocked-ot-field-goal",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
-   "headline": "Buffalo Bills recognize these WNY high school football coaches | Week 6 2026",
-   "summary": "As part of the program, each winning coach’s program will receive $1,000 from the Buffalo Bills and Visa",
-   "published": "2026-10-14T10:00-04:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/bills/ynlmokioultozhoca4zi.jpg",
-   "video": false,
-   "teams": [
-    "Buffalo Bills"
-   ],
-   "url": "https://www.buffalobills.com/news/buffalo-bills-recognize-these-wny-high-school-football-coaches-week-6-2026",
    "source": "Team site"
   },
   {
