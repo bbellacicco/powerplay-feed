@@ -243,10 +243,7 @@
       if (pj && pj.groups && pj.groups.length) j.standings.pjhl = pj.groups;
       if (cs && cs.leagues) {
         var L = cs.leagues, grp = function (k) { return L[k] && L[k].groups ? L[k].groups : []; };
-        if (grp('oua').length) j.standings.oua = grp('oua');
-        if (grp('ocaa_m').length || grp('ocaa_w').length) j.standings.ocaa = grp('ocaa_m').concat(grp('ocaa_w'));
-        if (grp('ocaa_b').length) j.standings.ocaa_b = grp('ocaa_b');
-        if (grp('ocaa_s').length) j.standings.ocaa_s = grp('ocaa_s');
+        Object.keys(L).forEach(function (k) { if (grp(k).length) j.standings[k] = grp(k); });
       }
       if (sc && sc.games) {
         var lo2 = (j.range || [])[0] || '', hi2 = (j.range || [])[1] || '9999';
@@ -351,20 +348,50 @@
   }
 
   // ---- Standings (collected every 15 minutes from the leagues' own stats sites)
-  // Lancers / Saints: only the headline sports that are in season (fall: Lancers football; Saints baseball, softball, soccer)
+  // Lancers and St. Clair: one tab each, with a sport picker (men's and women's tables share a sport)
   var ST_LEAGUES = [['ohl', 'OHL'], ['ojhl', 'OJHL'], ['gohl', 'GOHL'], ['pjhl', 'PJHL'],
-    ['oua', 'Lancers Football'], ['ocaa_b', 'Saints Baseball'], ['ocaa_s', 'Saints Softball'], ['ocaa', 'Saints Soccer'], ['hs', 'High School']];
+    ['lancers', 'Lancers'], ['saints', 'St. Clair'], ['hs', 'High School']];
+  var COLLEGE = {
+    lancers: { org: 'OUA', site: 'https://oua.ca', sports: [
+      ['fball', 'Football', ['oua'], 'fball'], ['bsb', 'Baseball', ['oua_bsb'], 'bsb'], ['sball', 'Softball', ['oua_sball'], 'sball'],
+      ['bkb', 'Basketball', ['oua_mbkb', 'oua_wbkb'], 'mbkb'], ['vb', 'Volleyball', ['oua_mvb', 'oua_wvb'], 'mvball']] },
+    saints: { org: 'OCAA', site: 'https://www.ocaa.com', sports: [
+      ['sball', 'Softball', ['ocaa_s'], 'fastball'], ['bkb', 'Basketball', ['ocaa_mbkb', 'ocaa_wbkb'], 'mbkb'], ['vb', 'Volleyball', ['ocaa_mvb', 'ocaa_wvb'], 'mvball']] }
+  };
+  var colSport = { lancers: 'fball', saints: 'sball' }, colOff = null;
+  function collegeGroups(club) {
+    var c = COLLEGE[club], bar = document.getElementById('hsbar'), st = data.standings || {};
+    if (!c.sports.some(function (x) { return x[0] === colSport[club]; })) colSport[club] = c.sports[0][0];
+    var sp = c.sports.filter(function (x) { return x[0] === colSport[club]; })[0];
+    bar.innerHTML = ''; bar.style.display = '';
+    bar.appendChild(el('div', 'lbl', 'Sport'));
+    var tabs = el('div', 'sporttabs');
+    c.sports.forEach(function (x) {
+      var b = el('button', 'sporttab', x[1]);
+      b.setAttribute('aria-pressed', String(x[0] === sp[0]));
+      b.onclick = function () { if (colSport[club] !== x[0]) { colSport[club] = x[0]; render(); } };
+      tabs.appendChild(b);
+    });
+    bar.appendChild(tabs);
+    var yy = new Date().getFullYear(), season = new Date().getMonth() >= 6 ? yy + '-' + String(yy + 1).slice(2) : (yy - 1) + '-' + String(yy).slice(2);
+    colOff = [c.org + ' ' + sp[1].toLowerCase(), c.site + '/sports/' + sp[3] + '/' + season + '/standings'];
+    var out = [];
+    sp[2].forEach(function (k) {
+      (st[k] || []).forEach(function (g) {
+        var sex = /women/i.test(g.group) ? "Women's" : /\bmen/i.test(g.group) ? "Men's" : '';
+        var div = String(g.group || '').indexOf('\u00b7') >= 0 ? String(g.group).replace(/^.*\u00b7\s*/, '') : '';
+        out.push(Object.assign({}, g, { chip: [sex, div].filter(Boolean).join(' ') || null }));
+      });
+    });
+    return out;
+  }
   // high school: football, girls basketball, boys volleyball (WECSSAA regular season)
   var hsStand = null, hsSport = 'football', hsLeague = 0;
   var HS_SPORTS = [['football', 'Football'], ['gbb', 'Girls Basketball'], ['bvb', 'Boys Volleyball']];
   var HOCKEY = { ohl: 1, ojhl: 1, gohl: 1, pjhl: 1 };
   var OFFICIAL = {
     pjhl: ['PJHL', 'https://gamesheetstats.com/seasons/15133/standings?configuration=45'],
-    oua: ['OUA football', 'https://oua.ca/sports/fball/2026-27/standings'],
-    cjfl: ['CJFL', 'https://www.cjfl.org/standings/show/9362372?subseason=958344'],
-    ocaa: ['OCAA soccer', 'https://www.ocaa.com/sports/msoc/2026-27/standings'],
-    ocaa_b: ['OCAA baseball', 'https://www.ocaa.com/sports/bsb/2026-27/standings'],
-    ocaa_s: ['OCAA softball', 'https://www.ocaa.com/sports/sball/2026-27/standings']
+    cjfl: ['CJFL', 'https://www.cjfl.org/standings/show/9362372?subseason=958344']
   };
   var ST_COLS = [['GP', 'gp'], ['W', 'w'], ['L', 'l'], ['OTL', 'otl'], ['PTS', 'pts'], ['GF', 'gf', 1], ['GA', 'ga', 1], ['STRK', 'strk', 1]];
   var OUR_CLUBS = ['Windsor', 'St. Clair', 'Leamington', 'LaSalle', 'Chatham', 'Lakeshore', 'Essex', 'Wheatley', 'Amherstburg'];
@@ -441,7 +468,7 @@
     var bar = document.createElement('div'); bar.className = 'gpick';
     groups.forEach(function (g, n) {
       var b = document.createElement('button'); b.type = 'button';
-      b.textContent = String(g.group || ('Group ' + (n + 1))).replace(/^.*\u00b7\s*/, '');
+      b.textContent = g.chip || String(g.group || ('Group ' + (n + 1))).replace(/^.*\u00b7\s*/, '');
       b.setAttribute('aria-pressed', String(n === GROUP[key]));
       b.onclick = function () { GROUP[key] = n; redraw(); };
       bar.appendChild(b);
@@ -462,7 +489,8 @@
     document.getElementById('updated').textContent = '';
     var box = document.getElementById('list'); box.innerHTML = '';
     document.getElementById('hsbar').style.display = 'none';
-    var groups = standLeague === 'hs' ? hsGroups() : (data.standings || {})[standLeague] || [];
+    colOff = null;
+    var groups = standLeague === 'hs' ? hsGroups() : COLLEGE[standLeague] ? collegeGroups(standLeague) : (data.standings || {})[standLeague] || [];
     if (standLeague === 'hs' && groups.length && hsTitle) {
       var hh = el('div', 'hshead', hsTitle[0] + ' ');
       hh.appendChild(el('span', null, '\u00b7 ' + hsTitle[1]));
@@ -474,7 +502,7 @@
       m2.appendChild(a2); box.appendChild(m2); return;
     }
     if (!groups.length) {
-      var msg = el('div', 'empty', 'Standings unavailable right now.'), off = OFFICIAL[standLeague];
+      var msg = el('div', 'empty', 'Standings unavailable right now.'), off = colOff || OFFICIAL[standLeague];
       if (off) {
         msg.textContent = 'Standings aren\u2019t in yet. ';
         var a = el('a', null, 'See the official ' + off[0] + ' standings \u2197');
@@ -483,7 +511,7 @@
       }
       box.appendChild(msg); return;
     }
-    groups = pickGroup(standLeague + (standLeague === 'hs' ? hsSport + hsLeague : ''), groups,
+    groups = pickGroup(standLeague + (standLeague === 'hs' ? hsSport + hsLeague : COLLEGE[standLeague] ? colSport[standLeague] : ''), groups,
       function (t) { return standLeague !== 'hs' && isOurClub(t.name); }, box, render);
     groups.forEach(function (g) {
       var sec = el('section', 'stand');
@@ -608,6 +636,16 @@
         render();
       };
       list.appendChild(go);
+    }
+    if (COLLEGE[state.team]) {   // shortcut to the Lancers / St. Clair standings
+      var go2 = el('button', 'pill hsgo', (state.team === 'saints' ? 'St. Clair' : 'Lancers') + ' standings \u2192');
+      go2.onclick = function () {
+        view = 'standings'; standLeague = state.team;
+        var sp = (state.sport || '').toLowerCase(), hit = COLLEGE[state.team].sports.filter(function (x) { return sp.indexOf(x[1].toLowerCase()) >= 0; })[0];
+        if (hit) colSport[state.team] = hit[0];
+        render();
+      };
+      list.appendChild(go2);
     }
     if (!inView.length) { list.appendChild(el('div', 'empty', latest ? 'No scores yet this week.' : 'No games in these days.')); return; }
 
