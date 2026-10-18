@@ -113,8 +113,15 @@
       b.onclick = function (ev) {
         ev.stopPropagation();
         var data = typeof o === 'function' ? o() : o;
-        // inside the Wix page (an embedded frame) phones usually block their own share sheet, and the tap
-        // then did nothing; so the menu opens right away, with the phone's share sheet as one option in it
+        // phones: inside the Wix box the phone's share sheet is blocked and the Facebook app just flashes,
+        // so the share opens on its own page (share.html) where the phone's own share list works
+        if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+          var page = 'https://bbellacicco.github.io/powerplay-feed/share.html?u=' + encodeURIComponent(data.url) +
+            '&t=' + encodeURIComponent(data.title || 'Powerplay Windsor') + (data.image ? '&i=' + encodeURIComponent(data.image) : '');
+          var w = null; try { w = window.open(page, '_blank'); } catch (er) {}
+          if (!w) { try { window.top.location.href = page; } catch (er) { location.href = page; } }
+          return;
+        }
         menu(b, data);
       };
       return b;
