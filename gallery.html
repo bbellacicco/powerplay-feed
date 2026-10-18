@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Photo Dump | Powerplay Windsor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<!--
+  Powerplay photo slideshow: big photo, arrows (swipe on phones), "3 / 5" counter, play, full screen,
+  thumbnail row, and a headline + credit + write-up under each photo.
+
+  To make one:
+    1. In the PowerplayFeed folder, make a folder inside "slideshows", e.g.  slideshows\villanova-holy-names
+    2. Put the photos in it (straight off the phone is fine: publish.bat sends a lighter copy).
+    3. Add captions.txt in the same folder (see slideshows\example\captions.txt), one photo per line:
+         photo1.jpg | Headline | What's happening in the photo
+    4. Run publish.bat.
+  Embed in the blog post (or any Wix page) with this address, full width, about 780px tall
+  (about 640px on phones):
+    https://bbellacicco.github.io/powerplay-feed/gallery.html?show=villanova-holy-names
+-->
+<style>
+  :root { --bg: #0b1a33; --panel: #10244a; --line: #1e3a6e; --text: #f2f5fb; --muted: #9fb0cf; --accent: #e8b021; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 14px 14px 18px; }
+  .top { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 10px;
+    background: linear-gradient(90deg, #17336a, #10244a); border-left: 4px solid var(--accent); border-radius: 4px; padding: 9px 14px; }
+  .top h1 { margin: 0; font-family: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif; font-weight: 400; font-size: 30px; line-height: 1; letter-spacing: .03em; text-transform: uppercase; }
+  .top h1 em { font-style: normal; color: var(--accent); }
+  .top .sub { color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
+
+  /* the stage: the whole photo, over a blurred copy so there are no plain bars */
+  .stage { position: relative; aspect-ratio: 16 / 10; border-radius: 10px; overflow: hidden; background: #050d1c; user-select: none; touch-action: pan-y; }
+  .stage .bg { position: absolute; inset: -30px; background-size: cover; background-position: center; filter: blur(22px) brightness(.5); transform: scale(1.05); transition: background-image .3s; }
+  .stage img.main { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity .35s; }
+  .stage img.main.on { opacity: 1; }
+  .nav { position: absolute; top: 50%; transform: translateY(-50%); z-index: 3; width: 44px; height: 88px; border: 0; border-radius: 6px; background: rgba(255,255,255,.88);
+    color: #0b1a33; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 14px rgba(0,0,0,.35); }
+  .nav:hover { background: #fff; }
+  .nav svg { width: 18px; height: 18px; fill: currentColor; }
+  .nav.prev { left: 12px; } .nav.next { right: 12px; }
+  .tools { position: absolute; top: 12px; right: 12px; z-index: 3; display: flex; border-radius: 6px; overflow: hidden; background: rgba(0,0,0,.6); }
+  .tools button, .tools span { border: 0; background: transparent; color: #fff; font: 800 14px/1 system-ui, sans-serif; padding: 9px 11px; display: flex; align-items: center; }
+  .tools button { cursor: pointer; } .tools button:hover { background: rgba(255,255,255,.18); }
+  .tools svg { width: 14px; height: 14px; fill: #fff; }
+  .tools span { border-left: 1px solid rgba(255,255,255,.2); border-right: 1px solid rgba(255,255,255,.2); font-variant-numeric: tabular-nums; }
+  .bar { position: absolute; left: 0; bottom: 0; height: 3px; background: var(--accent); width: 0; z-index: 3; }
+
+  .thumbs { display: flex; gap: 8px; overflow-x: auto; padding: 10px 2px 4px; scrollbar-width: none; justify-content: center; }
+  .thumbs::-webkit-scrollbar { display: none; }
+  .thumbs button { flex: 0 0 auto; width: 92px; aspect-ratio: 16 / 10; border: 2px solid transparent; border-radius: 6px; padding: 0; overflow: hidden; cursor: pointer;
+    background: var(--panel); opacity: .55; transition: opacity .2s, border-color .2s; }
+  .thumbs button:hover { opacity: .85; }
+  .thumbs button.on { opacity: 1; border-color: var(--accent); }
+  .thumbs img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+  .cap { padding: 10px 2px 0; min-height: 120px; }
+  .cap h2 { margin: 0 0 2px; font-size: 21px; line-height: 1.25; font-weight: 800; }
+  .cap .credit { color: var(--muted); font-size: 12px; margin-bottom: 8px; }
+  .cap p { margin: 0; color: #d4dcee; font-size: 15.5px; line-height: 1.55; }
+  .msg { padding: 60px 20px; text-align: center; color: var(--muted); }
+
+  /* full screen: photo fills the screen, caption stays readable */
+  .wrap:fullscreen { max-width: none; height: 100vh; display: flex; flex-direction: column; background: #000; padding: 10px 16px; }
+  .wrap:fullscreen .top { display: none; }
+  .wrap:fullscreen .stage { flex: 1; aspect-ratio: auto; }
+  .wrap:fullscreen .cap { min-height: 0; }
+
+  @media (max-width: 600px) {
+    .wrap { padding: 10px 10px 14px; }
+    .top h1 { font-size: 24px; } .top .sub { display: none; }
+    .stage { aspect-ratio: 4 / 3; border-radius: 8px; }
+    .nav { width: 34px; height: 64px; } .nav.prev { left: 6px; } .nav.next { right: 6px; }
+    .thumbs { justify-content: flex-start; } .thumbs button { width: 70px; }
+    .cap h2 { font-size: 18px; } .cap p { font-size: 15px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap" id="wrap">
+  <div class="top"><h1 id="title">Photo <em>Dump</em></h1><div class="sub">Powerplay Windsor</div></div>
+  <div class="stage" id="stage">
+    <div class="bg" id="bg"></div>
+    <img class="main" id="img" alt="">
+    <button class="nav prev" id="prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24"><path d="M16 4 6 12l10 8z"/></svg></button>
+    <button class="nav next" id="next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24"><path d="m8 4 10 8-10 8z"/></svg></button>
+    <div class="tools">
+      <button type="button" id="play" aria-label="Play slideshow"><svg viewBox="0 0 24 24" id="playicon"><path d="M7 4v16l13-8z"/></svg></button>
+      <span id="count">1 / 1</span>
+      <button type="button" id="full" aria-label="Full screen"><svg viewBox="0 0 24 24"><path d="M3 3h7v2H5v5H3zm11 0h7v7h-2V5h-5zM3 14h2v5h5v2H3zm16 0h2v7h-7v-2h5z"/></svg></button>
+    </div>
+    <div class="bar" id="bar"></div>
+  </div>
+  <div class="thumbs" id="thumbs"></div>
+  <div class="cap" id="cap"><h2 id="head"></h2><div class="credit" id="credit"></div><p id="desc"></p></div>
+</div>
+<script>
+(function () {
+  var REPO = 'https://bbellacicco.github.io/powerplay-feed/';
+  var q = new URLSearchParams(location.search), show = (q.get('show') || 'example').replace(/[^\w-]/g, '');
+  var base = REPO + 'slideshows/' + show + '/';
+  var slides = [], at = 0, timer = null, SECONDS = 5;
+  var $ = function (id) { return document.getElementById(id); };
+
+  // captions.txt:  title: ...  /  credit: ...  /  photo.jpg | Headline | Write-up | (optional) credit for this photo
+  function parse(txt) {
+    var meta = { title: '', credit: 'Powerplay Windsor' }, out = [];
+    txt.split(/\r?\n/).forEach(function (line) {
+      line = line.trim(); if (!line || line[0] === '#') return;
+      var m = line.match(/^(title|credit)\s*:\s*(.*)$/i);
+      if (m) { meta[m[1].toLowerCase()] = m[2].trim(); return; }
+      var p = line.split('|').map(function (x) { return x.trim(); });
+      if (!/\.(jpe?g|png|webp)$/i.test(p[0])) return;
+      out.push({ file: p[0], head: p[1] || '', desc: p[2] || '', credit: p[3] || '' });
+    });
+    return { meta: meta, slides: out };
+  }
+
+  function go(n, keepTimer) {
+    if (!slides.length) return;
+    at = (n + slides.length) % slides.length;
+    var s = slides[at], img = $('img');
+    img.classList.remove('on');
+    var pre = new Image();
+    pre.onload = function () { img.src = pre.src; img.alt = s.head; img.classList.add('on'); $('bg').style.backgroundImage = 'url("' + pre.src + '")'; };
+    pre.src = base + encodeURIComponent(s.file);
+    $('count').textContent = (at + 1) + ' / ' + slides.length;
+    $('head').textContent = s.head;
+    $('credit').textContent = '©' + (s.credit || meta.credit);
+    $('desc').textContent = s.desc;
+    [].forEach.call($('thumbs').children, function (b, i) { b.classList.toggle('on', i === at); });
+    var t = $('thumbs').children[at]; if (t && t.scrollIntoView) t.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+    new Image().src = base + encodeURIComponent(slides[(at + 1) % slides.length].file);   // the next photo is ready when it's tapped
+    if (!keepTimer) stop();
+    else restartBar();
+  }
+  function restartBar() {
+    var b = $('bar'); b.style.transition = 'none'; b.style.width = '0';
+    void b.offsetWidth; b.style.transition = 'width ' + SECONDS + 's linear'; b.style.width = '100%';
+  }
+  function play() {
+    stop(); restartBar();
+    timer = setInterval(function () { go(at + 1, true); }, SECONDS * 1000);
+    $('playicon').innerHTML = '<path d="M6 4h4v16H6zm8 0h4v16h-4z"/>'; $('play').setAttribute('aria-label', 'Pause slideshow');
+  }
+  function stop() {
+    if (timer) clearInterval(timer); timer = null;
+    var b = $('bar'); b.style.transition = 'none'; b.style.width = '0';
+    $('playicon').innerHTML = '<path d="M7 4v16l13-8z"/>'; $('play').setAttribute('aria-label', 'Play slideshow');
+  }
+
+  var meta = {};
+  fetch(base + 'captions.txt?t=' + Date.now()).then(function (r) { if (!r.ok) throw r.status; return r.text(); }).then(function (txt) {
+    var d = parse(txt); meta = d.meta; slides = d.slides;
+    if (!slides.length) throw 'empty';
+    if (meta.title) {
+      var w = meta.title.split(' '), h = $('title'); h.textContent = w[0] + ' ';
+      var em = document.createElement('em'); em.textContent = w.slice(1).join(' '); h.appendChild(em);
+      document.title = meta.title + ' | Powerplay Windsor';
+    }
+    slides.forEach(function (s, i) {
+      var b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', 'Photo ' + (i + 1));
+      var im = new Image(); im.loading = 'lazy'; im.alt = ''; im.src = base + encodeURIComponent(s.file); b.appendChild(im);
+      b.onclick = function () { go(i); };
+      $('thumbs').appendChild(b);
+    });
+    go(0);
+  }).catch(function () {
+    $('stage').innerHTML = '<div class="msg">This slideshow isn’t up yet.</div>'; $('cap').style.display = 'none';
+  });
+
+  $('prev').onclick = function () { go(at - 1); };
+  $('next').onclick = function () { go(at + 1); };
+  $('play').onclick = function () { timer ? stop() : play(); };
+  $('full').onclick = function () {
+    var w = $('wrap');
+    if (document.fullscreenElement) document.exitFullscreen();
+    else if (w.requestFullscreen) w.requestFullscreen().catch(function () { window.open(location.href, '_blank'); });
+    else window.open(location.href, '_blank');   // iPhone: open the slideshow on its own, full width
+  };
+  document.addEventListener('keydown', function (e) { if (e.key === 'ArrowLeft') go(at - 1); if (e.key === 'ArrowRight') go(at + 1); });
+  // swipe on phones
+  var x0 = null;
+  $('stage').addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+  $('stage').addEventListener('touchend', function (e) {
+    if (x0 == null) return; var dx = e.changedTouches[0].clientX - x0; x0 = null;
+    if (Math.abs(dx) > 40) go(at + (dx < 0 ? 1 : -1));
+  }, { passive: true });
+})();
+</script>
+</body>
+</html>
