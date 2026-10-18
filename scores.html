@@ -9,10 +9,11 @@
   The Local Hub (Wix page "Local Scores", address /scores-standings), with a switch at the top:
     Scores     the Local Scoreboard (games, standings)
     Stories    local stories from the teams and Powerplay
-    Spotlight  The Local Sports Spotlight + Athlete Profiles
+    Spotlight  The Local Sports Spotlight
+    Athletes   Athlete Profiles
     Network    the Powerplay Network videos
     Social     each team's Facebook / Instagram
-  ?tab=scores|stories|spotlight|network|social   open on that switch
+  ?tab=scores|stories|spotlight|athletes|network|social   open on that switch
   Each widget sizes itself to fit (nothing scrolls inside the page, which traps the finger on iPhones).
   Embed on the Wix "Local Scores" page, full width: about 1,800px tall on desktop, 2,000px on mobile.
 -->
@@ -32,13 +33,13 @@
   .pane { display: none; }
   .pane.on { display: block; }
   .pane iframe { display: block; width: 100%; border: 0; background: var(--bg); }
-  @media (max-width: 400px) { .switch button { font-size: 12.5px; padding: 10px 2px; } }
   @media (max-width: 560px) {
     .top { padding: 16px 10px 4px; }
     .switch { width: 100%; justify-content: space-between; }
     .switch button { flex: 1; padding: 10px 4px; font-size: 13.5px; }
     .top { flex-direction: column; } .sharebtn { position: static; transform: none; align-self: flex-end; }
   }
+  @media (max-width: 420px) { .switch { padding: 3px; } .switch button { font-size: 11px; padding: 9px 0; letter-spacing: 0; } }
 </style>
 </head>
 <body>
@@ -47,6 +48,7 @@
       <button type="button" role="tab" data-tab="scores">Scores</button>
       <button type="button" role="tab" data-tab="stories">Stories</button>
       <button type="button" role="tab" data-tab="spotlight">Spotlight</button>
+      <button type="button" role="tab" data-tab="athletes">Athletes</button>
       <button type="button" role="tab" data-tab="network">Network</button>
       <button type="button" role="tab" data-tab="social">Social</button>
     </div>
@@ -62,7 +64,8 @@
   var PARTS = {
     scores:    [['local-games_3_3.html', 760, 900, '&other=none']],
     stories:   [['local-news.html', 470, 570, '&other=none&lock=1']],
-    spotlight: [['spotlight.html', 1250, 1180, ''], ['athletes.html', 420, 380, '']],
+    spotlight: [['spotlight.html', 1250, 1180, '']],
+    athletes:  [['athletes.html', 420, 380, '']],
     network:   [['network.html', 1300, 1520, '']],
     social:    [['local-news.html', 900, 1000, '&other=none&lock=1&view=social']]
   };
@@ -95,7 +98,7 @@
     });
   });
   // share button: shares whichever section is showing (its own link opens the page on that section)
-  var NAMES = { scores: 'Local Scores', stories: 'Local Stories', spotlight: 'The Local Sports Spotlight', network: 'the Powerplay Network', social: 'Local Social' };
+  var NAMES = { scores: 'Local Scores', stories: 'Local Stories', spotlight: 'The Local Sports Spotlight', athletes: 'Athlete Profiles', network: 'the Powerplay Network', social: 'Local Social' };
   var current = 'scores';
   if (window.PPShare) {
     var sb = PPShare.button(function () { return { title: NAMES[current].replace(/^the /, 'The '), url: PPShare.link(current), text: 'Check out ' + NAMES[current] + ' on Powerplay Windsor' }; });
