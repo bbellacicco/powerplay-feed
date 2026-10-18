@@ -6,7 +6,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Graduate&display=swap" rel="stylesheet">
 <title>Home | Powerplay Windsor</title>
 <script src="arrows.js"></script>
-<script src="share.js?v=3"></script>
+<script src="share.js?v=4"></script>
 <!--
   The homepage in one clean, spaced-out embed (streaming-app style):
     Powerplay's three newest stories (one big, two beside it, like the News page), the Powerplay Network, a search bar, then rows:
@@ -816,7 +816,7 @@
       if (h2p && !h2p.querySelector('.newbadge')) h2p.appendChild(el('span', 'newbadge', 'NEW'));
       if (shows.length && window.PPShare && !document.querySelector('#row-photos .pps-btn')) {
         var rr2 = document.querySelector('#row-photos .rright');
-        rr2.insertBefore(PPShare.button({ title: shows[0].title, url: shows[0].url, text: shows[0].title + ' on Powerplay Windsor' }), rr2.firstChild);
+        rr2.insertBefore(PPShare.button({ title: shows[0].title, url: shows[0].url, image: shows[0].cover, text: shows[0].title + ' on Powerplay Windsor' }), rr2.firstChild);
       }
       // Powerplay Network: newest YouTube/Vimeo videos
       var vids = stories.filter(isVid), seenV = {};
