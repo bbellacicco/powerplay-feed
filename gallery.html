@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Photo Dump | Powerplay Windsor</title>
+<title>Pic and Roll | Powerplay Windsor</title>
 <script src="share.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <!--
-  Powerplay photo slideshow: big photo, arrows (swipe on phones), "3 / 5" counter, play, full screen,
+  Pic and Roll, Powerplay's game reports in pictures (a photo slideshow): big photo, arrows (swipe on phones), "3 / 5" counter, play, full screen,
   thumbnail row, and a headline + credit + write-up under each photo.
 
   To make one:
@@ -81,7 +81,7 @@
 </head>
 <body>
 <div class="wrap" id="wrap">
-  <div class="top"><h1 id="title">Photo <em>Dump</em></h1><div class="topr" id="topr"><div class="sub">Powerplay Windsor</div></div></div>
+  <div class="top"><h1 id="title">Pic and <em>Roll</em></h1><div class="topr" id="topr"><div class="sub">Powerplay Windsor</div></div></div>
   <div class="stage" id="stage">
     <div class="bg" id="bg"></div>
     <img class="main" id="img" alt="">
@@ -157,8 +157,10 @@
     var d = parse(txt); meta = d.meta; slides = d.slides;
     if (!slides.length) throw 'empty';
     if (meta.title) {
-      var w = meta.title.split(' '), h = $('title'); h.textContent = w[0] + ' ';
-      var em = document.createElement('em'); em.textContent = w.slice(1).join(' '); h.appendChild(em);
+      // "Pic and Roll: Saints vs. Fanshawe" -> series name in white, the game in gold
+      var cut = meta.title.indexOf(':') > 0 ? meta.title.indexOf(':') + 1 : meta.title.indexOf(' ') + 1, h = $('title');
+      h.textContent = meta.title.slice(0, cut) + ' ';
+      var em = document.createElement('em'); em.textContent = meta.title.slice(cut).trim(); h.appendChild(em);
       document.title = meta.title + ' | Powerplay Windsor';
     }
     slides.forEach(function (s, i) {
@@ -169,8 +171,8 @@
     });
     go(0);
     // share: the slideshow's own page (its link preview shows the title and first photo)
-    if (window.PPShare) $('topr').appendChild(PPShare.button({ title: meta.title || 'Powerplay Photo Dump',
-      url: REPO + 'slideshows/' + show + '/', text: (meta.title || 'Photo Dump') + ' on Powerplay Windsor' }));
+    if (window.PPShare) $('topr').appendChild(PPShare.button({ title: meta.title || 'Pic and Roll',
+      url: REPO + 'slideshows/' + show + '/', text: (meta.title || 'Pic and Roll') + ' on Powerplay Windsor' }));
   }).catch(function () {
     $('stage').innerHTML = '<div class="msg">This slideshow isn’t up yet.</div>'; $('cap').style.display = 'none';
   });
