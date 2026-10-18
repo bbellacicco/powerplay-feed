@@ -13,7 +13,7 @@
     Local scores · Latest stories · Pro scores · Pro headlines · Athlete profiles.
   Each row: title, "Presented by" sponsor, "See all ›" to the full page. Rows swipe sideways (arrows on desktop).
   Same data as the other widgets; refreshes itself every few minutes.
-  Embed full width in Wix: about 3,030px tall on desktop, 4,200px on mobile (includes testimonials and About).
+  Embed full width in Wix: about 3,080px tall on desktop, 4,200px on mobile (includes testimonials and About).
   Links (optional): ?local=<Local Sports page> ?pro=<Pro Sports page> ?network=<Network page> ?athletes=<Spotlights page> ?search=<search page>
 -->
 <style>
@@ -27,7 +27,7 @@
   .page { position: relative; max-width: 1240px; margin: 0 auto; padding: 0 0 28px; }
 
   /* ---------- top stories: one big feature + two beside it (same as the News page) ---------- */
-  .feat { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; padding: 22px 40px 0; height: 442px; }
+  .feat { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; padding: 22px 40px 0; height: 478px; }
   .big, .small { position: relative; border-radius: 10px; overflow: hidden; background: linear-gradient(135deg, #1e3a6e, #0b1a33); display: block; text-decoration: none; color: var(--text); }
   .big img, .small img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
   .big:hover img, .small:hover img { transform: scale(1.03); }
@@ -42,10 +42,10 @@
   .small .ov { padding: 14px 16px; }
   .small h3 { margin: 0; font-size: 16px; line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
   /* top headlines box (beside the big story) */
-  .heads { background: #0e2044; border: 1px solid #1e3a6e; border-radius: 10px; padding: 12px 14px 6px; display: flex; flex-direction: column; min-height: 0; }
+  .heads { background: #0e2044; border: 1px solid #1e3a6e; border-radius: 10px; padding: 10px 14px 4px; display: flex; flex-direction: column; min-height: 0; }
   .heads .kick { margin-bottom: 4px; }
   .fside.hasheads { grid-template-rows: minmax(0, 1fr) auto; }
-  .heads a { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); padding: 8px 0; border-top: 1px solid rgba(255,255,255,.12); flex: none; }
+  .heads a { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); padding: 6px 0; border-top: 1px solid rgba(255,255,255,.12); flex: none; }
   .heads a:first-of-type { border-top: 0; }
   .heads .lg { flex: 0 0 34px; width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; }
   .heads .lg img { max-width: 34px; max-height: 34px; object-fit: contain; }
