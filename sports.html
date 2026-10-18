@@ -6,9 +6,13 @@
 <title>Pro Hub | Powerplay Windsor</title>
 <script src="share.js"></script>
 <!--
-  The Pro Hub (Wix page "Sports Hub", address /local-sports): the Pro Scoreboard, then the latest pro updates.
+  The Pro Hub (Wix page "Pro Hub", address /local-sports), with a switch at the top:
+    Scores    the Pro Scoreboard (games, standings)
+    Updates   the latest pro headlines for our teams
+    Network   the Pro Network videos
+  ?tab=scores|updates|network   open on that switch (old links with ?tab=pro open Scores)
   Each widget sizes itself to fit (nothing scrolls inside the page, which traps the finger on iPhones).
-  Embed on the Wix "Sports Hub" page, full width: about 2,100px tall on desktop and on mobile.
+  Embed on the Wix "Pro Hub" page, full width: about 1,700px tall on desktop and on mobile.
 -->
 <style>
   :root { --bg: #0b1a33; --line: #1e3a6e; --text: #f2f5fb; --muted: #9fb0cf; --accent: #e8b021; }
@@ -17,30 +21,38 @@
   /* nothing on this page scrolls by itself: on iPhones a scrolling box inside the page traps the finger */
   html, body { overflow: hidden; }
   .top { display: flex; justify-content: center; padding: 22px 16px 6px; }
-  .switch { display: inline-flex; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 999px; padding: 4px; gap: 2px; }
-  .switch button { border: 0; background: transparent; color: #cfd8ea; font: inherit; font-size: 15px; font-weight: 800; letter-spacing: .01em; padding: 10px 22px; border-radius: 999px; cursor: pointer; }
-  .switch button:hover { color: #fff; }
-  .switch button[aria-selected="true"] { background: #fff; color: #0b1a33; }
+  /* three sections: a squared-off bar */
+  .switch { display: grid; grid-template-columns: repeat(3, 1fr); width: 100%; max-width: 480px; gap: 1px; background: rgba(255,255,255,.16);
+    border: 1px solid rgba(255,255,255,.16); border-radius: 3px; overflow: hidden; }
+  .switch button { border: 0; border-radius: 0; background: #0e2044; color: #cfd8ea; font: inherit; font-size: 13px; font-weight: 800; letter-spacing: .08em;
+    text-transform: uppercase; padding: 12px 6px; cursor: pointer; white-space: nowrap; }
+  .switch button:hover { color: #fff; background: #15305e; }
+  .switch button[aria-selected="true"] { background: #fff; color: #0b1a33; box-shadow: inset 0 -3px 0 #e8b021; }
   .top { position: relative; align-items: center; gap: 10px; }
   .sharebtn { position: absolute; right: 16px; top: 50%; transform: translateY(-20%); }
   .pane { display: none; }
   .pane.on { display: block; }
   .pane iframe { display: block; width: 100%; border: 0; background: var(--bg); }
-  @media (max-width: 400px) { .switch button { font-size: 12.5px; padding: 10px 2px; } }
   @media (max-width: 560px) {
     .top { padding: 16px 10px 4px; }
-    .switch { width: 100%; justify-content: space-between; }
-    .switch button { flex: 1; padding: 10px 4px; font-size: 13.5px; }
+    .switch { max-width: none; }
+    .switch button { padding: 11px 4px; font-size: 12px; letter-spacing: .06em; }
     .top { flex-direction: column; } .sharebtn { position: static; transform: none; align-self: flex-end; }
   }
-  .switch { display: none; }
-  .top { justify-content: flex-end; padding-top: 12px; } .sharebtn { position: static; transform: none; }
+  .subswitch { display: flex; justify-content: center; gap: 0; margin: 12px auto 0; width: max-content; max-width: calc(100% - 32px);
+    border: 1px solid rgba(255,255,255,.16); border-radius: 3px; overflow: hidden; }
+  .subswitch button { border: 0; border-radius: 0; background: transparent; color: #9fb0cf; font: inherit; font-size: 12px; font-weight: 800; letter-spacing: .08em;
+    text-transform: uppercase; padding: 8px 16px; cursor: pointer; }
+  .subswitch button + button { border-left: 1px solid rgba(255,255,255,.16); }
+  .subswitch button[aria-pressed="true"] { background: #e8b021; color: #0b1a33; }
 </style>
 </head>
 <body>
   <div class="top" id="top">
     <div class="switch" role="tablist" aria-label="Section">
-      <button type="button" role="tab" data-tab="pro">Pro Hub</button>
+      <button type="button" role="tab" data-tab="scores">Scores</button>
+      <button type="button" role="tab" data-tab="updates">Updates</button>
+      <button type="button" role="tab" data-tab="network">Network</button>
     </div>
   </div>
   <div id="panes"></div>
@@ -51,11 +63,13 @@
   var phone = window.innerWidth < 700;
   // each part: the widgets in it and their heights (desktop, phone)
   var PARTS = {
-    pro: [['pro-games_3.html', 760, 900, ''], ['news-feed.html', 470, 540, '']]
+    scores:  [['pro-games_3.html', 760, 900, '']],
+    updates: [['news-feed.html', 470, 540, '']],
+    network: [['network.html', 1300, 1520, '&only=pro']]
   };
   var built = {}, box = document.getElementById('panes');
   function show(tab) {
-    if (!PARTS[tab]) tab = 'pro';
+    if (!PARTS[tab]) tab = 'scores';
     if (!built[tab]) {
       var pane = document.createElement('div'); pane.className = 'pane'; pane.id = 'pane-' + tab;
       PARTS[tab].forEach(function (w) {
@@ -67,6 +81,20 @@
         f.loading = 'eager';
         pane.appendChild(f);
       });
+      // a section with two parts (Stories: Powerplay's own stories / team news) shows one at a time
+      var subs = PARTS[tab].filter(function (w) { return w[4]; });
+      if (subs.length > 1) {
+        var frames = pane.querySelectorAll('iframe'), bar = document.createElement('div'); bar.className = 'subswitch';
+        var pick = function (n) {
+          [].forEach.call(frames, function (f, i) { f.style.display = i === n ? '' : 'none'; });
+          [].forEach.call(bar.children, function (b, i) { b.setAttribute('aria-pressed', String(i === n)); });
+        };
+        PARTS[tab].forEach(function (w, n) {
+          var b = document.createElement('button'); b.type = 'button'; b.textContent = w[4];
+          b.onclick = function () { pick(n); }; bar.appendChild(b);
+        });
+        pane.insertBefore(bar, pane.firstChild); pick(0);
+      }
       box.appendChild(pane); built[tab] = pane;
     }
     Object.keys(built).forEach(function (k) { built[k].classList.toggle('on', k === tab); });
@@ -82,18 +110,19 @@
     });
   });
   // share button: shares whichever section is showing (its own link opens the page on that section)
-  var NAMES = { pro: 'the Pro Hub' };
-  var current = 'pro';
+  var NAMES = { scores: 'Pro Scores', updates: 'Pro Updates', network: 'the Pro Network' };
+  var current = 'scores';
   if (window.PPShare) {
-    var sb = PPShare.button(function () { return { title: NAMES[current].replace(/^the /, 'The '), url: PPShare.link(current), text: 'Check out ' + NAMES[current] + ' on Powerplay Windsor' }; });
+    var sb = PPShare.button(function () { return { title: NAMES[current].replace(/^the /, 'The '), url: PPShare.link(current === 'scores' ? 'pro' : 'pro-' + current), text: 'Check out ' + NAMES[current] + ' on Powerplay Windsor' }; });
     sb.classList.add('sharebtn'); document.getElementById('top').appendChild(sb);
   }
   [].forEach.call(document.querySelectorAll('.switch button'), function (b) { b.onclick = function () { show(b.getAttribute('data-tab')); }; });
 
   // which switch to open: ?tab= when opened directly, or the hand-off from a "See all" link elsewhere (good for 2 minutes)
   var start = new URLSearchParams(location.search).get('tab');
-  try { var h = JSON.parse(localStorage.getItem('pp-tab') || 'null'); localStorage.removeItem('pp-tab'); if (!start && h && Date.now() - h.t < 120000) start = h.tab; } catch (e) {}
-  show('pro');
+  if (start === 'pro') start = 'scores';
+  try { var h = JSON.parse(localStorage.getItem('pp-tab') || 'null'); if (h && /^pro/.test(h.tab)) { localStorage.removeItem('pp-tab'); if (!start && Date.now() - h.t < 120000) start = h.tab.replace(/^pro-?/, '') || 'scores'; } } catch (e) {}
+  show(start || 'scores');
 })();
 </script>
 </body>
