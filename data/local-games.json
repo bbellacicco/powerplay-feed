@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-18T19:35:18-04:00",
+ "updated": "2026-10-18T19:46:43-04:00",
  "today": "2026-10-18",
  "range": [
   "2026-10-15",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 30
+   "count": 29
   },
   "club_news": {
    "ok": true,
@@ -1384,11 +1384,11 @@
    "home_away": "A",
    "opponent": "St. Thomas Stars",
    "location": "Joe Thornton C.C., St. Thomas, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 2,
+   "opp_score": 3,
    "result": null,
-   "note": "",
+   "note": "20:00 3rd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15597"
    },
@@ -1407,7 +1407,7 @@
    "our_score": 1,
    "opp_score": 0,
    "result": null,
-   "note": "03:44 1st",
+   "note": "20:00 2nd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15594"
    },
@@ -3268,6 +3268,45 @@
   },
   {
    "league": "nfl",
+   "headline": "Chiefs move to 5-0 as Kenneth Walker runs for two TDs in win over Chargers",
+   "summary": "",
+   "published": "2026-10-18T19:43-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-78.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/chiefs-move-to-5-0-as-kenneth-walker-runs-for-two-tds-in-win-over-chargers/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Cardinals beat Rams on Chad Ryland’s field goal as time expires",
+   "summary": "",
+   "published": "2026-10-18T19:26-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-77.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/cardinals-beat-rams-on-chad-rylands-field-goal-as-time-expires/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Jets discuss Hellebuyck’s potential return",
+   "summary": "",
+   "published": "2026-10-17T21:58-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-3.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/jets-discuss-hellebuycks-potential-return/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
    "headline": "Williams completes first 12 passes in return after missing three games, Bears top Falcons",
    "summary": "Caleb Williams completed his first 12 passes in his return from a hamstring injury, D’Andre Swift ran for two touchdowns and the Chicago Bears beat the Atlanta Falcons 31-23 on Sunday.",
    "published": "2026-10-18T16:40-04:00",
@@ -3303,19 +3342,6 @@
    "sn_team_count": 2,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/drake-mayes-three-td-passes-help-patriots-stave-off-late-push-by-jets/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Jets discuss Hellebuyck’s potential return",
-   "summary": "",
-   "published": "2026-10-17T21:58-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-3.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/jets-discuss-hellebuycks-potential-return/",
    "source": "Sportsnet"
   },
   {
@@ -3461,45 +3487,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-fall-into-last-in-atlantic-with-loss-to-islanders/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Dominant showing in win over Sabres a welcome development for Canadiens’ Suzuki line",
-   "summary": "This was a vintage performance from the line of Nick Suzuki, Juraj Slafkovsky and Cole Caufield. The kind the Canadiens have been longing for since they were reunited five games ago.",
-   "published": "2026-10-18T00:12-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/cd263ca3a4b3efc50b0ccf828ab470cf49513549e9a62704aefc408015e63425.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/dominant-showing-in-win-over-sabres-a-welcome-development-for-canadiens-suzuki-line/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Canucks’ disheartening, winless road trip still features silver linings",
-   "summary": "This six-game road trip was awfully disheartening for the Canucks, but certainly not a waste of time for a team trying to find its way.",
-   "published": "2026-10-17T21:17-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/canucks1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canucks-disheartening-winless-road-trip-still-features-silver-linings/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Jets sunk by Ehlers’ winner in loss to Hurricanes",
-   "summary": "",
-   "published": "2026-10-17T18:40-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/jets-4.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/jets-sunk-by-ehlers-winner-in-loss-to-hurricanes/",
    "source": "Sportsnet"
   },
   {
@@ -4613,7 +4600,7 @@
       "l": 2,
       "otl": 0,
       "pts": 28,
-      "gf": 65,
+      "gf": 66,
       "ga": 41,
       "strk": "W2"
      },
@@ -4626,7 +4613,7 @@
       "otl": 2,
       "pts": 20,
       "gf": 58,
-      "ga": 43,
+      "ga": 44,
       "strk": "W1"
      },
      {
@@ -4721,8 +4708,8 @@
       "l": 10,
       "otl": 2,
       "pts": 8,
-      "gf": 30,
-      "ga": 86,
+      "gf": 31,
+      "ga": 88,
       "strk": "L2"
      },
      {
@@ -4882,8 +4869,8 @@
       "l": 10,
       "otl": 2,
       "pts": 10,
-      "gf": 50,
-      "ga": 81,
+      "gf": 52,
+      "ga": 82,
       "strk": "W1"
      },
      {
