@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-18T15:16:42-04:00",
+ "updated": "2026-10-18T15:31:42-04:00",
  "today": "2026-10-18",
  "range": [
   "2026-10-15",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -3146,6 +3146,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "mlb",
+   "headline": "Rays’ Aranda leaning on advice from Blue Jays’ Kirk during post-season",
+   "summary": "After going hitless in his first 10 at-bats of the ALCS, Tampa Bay Rays first baseman Jonathan Aranda broke out in Game 4 after taking advice from Toronto Blue Jays catcher and childhood friend Alejandro Kirk.",
+   "published": "2026-10-18T15:24-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Jonathan-Aranda.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "sn_team_count": 2,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/rays-aranda-leaning-on-advice-from-blue-jays-kirk-during-post-season/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nba",
    "headline": "NBA tiers: From title-or-bust all the way down to the relegation zone",
    "summary": "The NBA pre-season is behind us, and the real thing tips off Tuesday. But before the ball flies, Sportsnet’s Steven Loung sorts all 30 teams into contention tiers.",
@@ -3224,16 +3239,18 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Toronto FC tied for final playoff spot after huge win over Red Bulls",
+   "league": "nfl",
+   "headline": "Bills receiver DJ Moore misses second straight game vs. Raiders",
    "summary": "",
-   "published": "2026-10-17T22:02-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/tfc-3.jpg",
+   "published": "2026-10-18T15:14-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-2026-10-18T150455.938.jpg",
    "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/toronto-fc-tied-for-final-playoff-spot-after-huge-win-over-red-bulls/",
+   "teams": [
+    "Buffalo Bills"
+   ],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/bills-receiver-dj-moore-misses-second-straight-game-vs-raiders/",
    "source": "Sportsnet"
   },
   {
@@ -3291,6 +3308,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Toronto FC tied for final playoff spot after huge win over Red Bulls",
+   "summary": "",
+   "published": "2026-10-17T22:02-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/tfc-3.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/toronto-fc-tied-for-final-playoff-spot-after-huge-win-over-red-bulls/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Maple Leafs fall into last in Atlantic with loss to Islanders",
    "summary": "What the Maple Leafs can do now is summon urgency as they enter Week 4 of 2026-27 in the same spot they finished 2025-26: last place in the Atlantic Division.",
@@ -3342,19 +3372,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/panthers-become-first-nhl-team-to-have-three-straight-natural-hat-tricks/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Senators’ Thomas Chabot exits vs. Flyers with upper-body injury",
-   "summary": "",
-   "published": "2026-10-17T21:50-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177083202.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/senators-thomas-chabot-exits-vs-flyers-with-apparent-injury/",
    "source": "Sportsnet"
   },
   {
@@ -4470,7 +4487,7 @@
       "otl": 1,
       "pts": 15,
       "gf": 43,
-      "ga": 19,
+      "ga": 20,
       "strk": "L1"
      },
      {
@@ -4481,7 +4498,7 @@
       "l": 4,
       "otl": 1,
       "pts": 11,
-      "gf": 30,
+      "gf": 32,
       "ga": 34,
       "strk": "L1"
      },
@@ -4494,7 +4511,7 @@
       "otl": 0,
       "pts": 8,
       "gf": 30,
-      "ga": 38,
+      "ga": 40,
       "strk": "L1"
      },
      {
@@ -4599,7 +4616,7 @@
       "l": 2,
       "otl": 0,
       "pts": 16,
-      "gf": 43,
+      "gf": 44,
       "ga": 27,
       "strk": "W8"
      },
@@ -4815,7 +4832,7 @@
       "l": 1,
       "otl": 0,
       "pts": 32,
-      "gf": 105,
+      "gf": 106,
       "ga": 27,
       "strk": "W10"
      },
@@ -4852,7 +4869,7 @@
       "otl": 2,
       "pts": 22,
       "gf": 76,
-      "ga": 46,
+      "ga": 47,
       "strk": "W4"
      },
      {
@@ -4888,7 +4905,7 @@
       "otl": 3,
       "pts": 15,
       "gf": 55,
-      "ga": 64,
+      "ga": 65,
       "strk": "W1"
      },
      {
@@ -4923,7 +4940,7 @@
       "l": 8,
       "otl": 1,
       "pts": 11,
-      "gf": 38,
+      "gf": 39,
       "ga": 73,
       "strk": "L5"
      },
