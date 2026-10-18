@@ -175,7 +175,7 @@
     go(0);
     // share: the slideshow's own page (its link preview shows the title and first photo)
     if (window.PPShare) $('topr').appendChild(PPShare.button({ title: meta.title || 'Game Day Snaps',
-      url: REPO + 'slideshows/' + show + '/', text: (meta.title || 'Game Day Snaps') + ' on Powerplay Windsor' }));
+      url: 'https://www.powerplaywindsor.com/game-day-snaps?show=' + show, text: (meta.title || 'Game Day Snaps') + ' on Powerplay Windsor' }));
   }).catch(function () {
     $('stage').innerHTML = '<div class="msg">This slideshow isn’t up yet.</div>'; $('cap').style.display = 'none';
   });
