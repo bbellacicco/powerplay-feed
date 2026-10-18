@@ -80,7 +80,8 @@
 
   window.PPShare = {
     link: function (tab) {
-      if (tab === 'pro') return SITE + 'local-sports?tab=pro';
+      if (tab === 'pro') return SITE + 'local-sports?tab=scores';
+      if (/^pro-/.test(tab)) return SITE + 'local-sports?tab=' + tab.slice(4);
       var map = { local: 'scores' }; tab = map[tab] || tab || 'scores';
       return SITE + 'scores-standings?tab=' + tab;
     },
