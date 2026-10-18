@@ -479,10 +479,19 @@
     });
   }
 
+  // games not on today's date carry their date, so "4:25 PM" is never mistaken for today
+  var WDAY = ['Sun.', 'Mon.', 'Tue.', 'Wed.', 'Thu.', 'Fri.', 'Sat.'];
+  var CPMON = ['Jan.', 'Feb.', 'March', 'April', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'];
+  function cpDay(d) {
+    var y = +fmt(d, { year: 'numeric' }), m = +fmt(d, { month: 'numeric' }), day = +fmt(d, { day: 'numeric' });
+    var wd = new Date(Date.UTC(y, m - 1, day)).getUTCDay();
+    return WDAY[wd] + ', ' + CPMON[m - 1] + ' ' + day;
+  }
   function timeText(g) {
-    if (g.status === 'final') return 'Final';
-    if (g.tbd) return 'TBA';
-    return fmt(new Date(g.start), { hour: 'numeric', minute: '2-digit' })
+    var d = new Date(g.start), other = dayKey(d) !== todayKey, date = other ? cpDay(d) + ' \u00b7 ' : '';
+    if (g.status === 'final') return other ? 'Final \u00b7 ' + cpDay(d) : 'Final';
+    if (g.tbd) return date + 'TBA';
+    return date + fmt(d, { hour: 'numeric', minute: '2-digit' })
       .replace(/\s?([ap])\.?m\.?/i, function (_, x) { return ' ' + x.toUpperCase() + 'M'; });
   }
 
