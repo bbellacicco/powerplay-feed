@@ -35,7 +35,7 @@
 (function () {
   var REPO = 'https://bbellacicco.github.io/powerplay-feed/';
   var qs = new URLSearchParams(location.search);
-  var BACK = qs.get('back') || 'https://www.powerplaywindsor.com/scores-standings?tab=spotlight';
+  var BACK = qs.get('back') || 'https://www.powerplaywindsor.com/scores-standings?tab=athletes';
   var list = [], cur = Math.max(0, parseInt(qs.get('i'), 10) || 0);
   var big = document.getElementById('big');
   function full(src) { return /^https?:/.test(src) ? src : REPO + src; }
