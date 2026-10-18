@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T21:31:40-04:00",
+ "updated": "2026-10-17T21:46:59-04:00",
  "today": "2026-10-17",
  "range": [
   "2026-10-14",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -1505,10 +1505,10 @@
    "home_away": "A",
    "opponent": "Mooretown Flags",
    "location": "Mooretown Sports Complex",
-   "status": "live",
-   "our_score": 0,
-   "opp_score": 0,
-   "result": null,
+   "status": "final",
+   "our_score": 6,
+   "opp_score": 2,
+   "result": "W",
    "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960395?configuration=45"
@@ -3309,16 +3309,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Canucks’ disheartening, winless road trip still features silver linings",
-   "summary": "This six-game road trip was awfully disheartening for the Canucks, but certainly not a waste of time for a team trying to find its way.",
-   "published": "2026-10-17T21:17-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/canucks1.jpg",
+   "league": "other",
+   "headline": "Toronto to host UFC 336 in January",
+   "summary": "",
+   "published": "2026-10-17T21:43-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/01/MMA-generic.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canucks-disheartening-winless-road-trip-still-features-silver-linings/",
+   "sn_team_count": 0,
+   "sport": "MMA",
+   "url": "https://www.sportsnet.ca/ufc/article/toronto-to-host-ufc-336-in-january/",
    "source": "Sportsnet"
   },
   {
@@ -3711,6 +3711,19 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/premier-league/article/chelseas-emi-martinez-taken-off-on-stretcher-after-injury-against-liverpool/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "European Roundup: Yamal takes centre stage for ruthless Barcelona",
+   "summary": "",
+   "published": "2026-10-17T11:59-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-Design-2026-10-17T152951.109.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/soccer/article/european-roundup-napoli-stunned-by-venezia-atletico-claims-late-victory/",
    "source": "Sportsnet"
   },
   {
@@ -4569,14 +4582,14 @@
      {
       "name": "Kingston Frontenacs",
       "abbr": "KGN",
-      "gp": 11,
+      "gp": 12,
       "w": 7,
-      "l": 4,
+      "l": 5,
       "otl": 0,
       "pts": 14,
       "gf": 52,
       "ga": 54,
-      "strk": "W4"
+      "strk": "L1"
      },
      {
       "name": "Ottawa 67's",
@@ -4586,7 +4599,7 @@
       "l": 1,
       "otl": 2,
       "pts": 14,
-      "gf": 37,
+      "gf": 38,
       "ga": 27,
       "strk": "W5"
      },
@@ -4599,7 +4612,7 @@
       "otl": 1,
       "pts": 9,
       "gf": 29,
-      "ga": 36,
+      "ga": 37,
       "strk": "W1"
      },
      {
@@ -4610,7 +4623,7 @@
       "l": 7,
       "otl": 0,
       "pts": 8,
-      "gf": 38,
+      "gf": 39,
       "ga": 41,
       "strk": "W1"
      }
@@ -4656,6 +4669,18 @@
       "strk": "L1"
      },
      {
+      "name": "Brampton Steelheads",
+      "abbr": "BRAM",
+      "gp": 10,
+      "w": 1,
+      "l": 7,
+      "otl": 2,
+      "pts": 4,
+      "gf": 25,
+      "ga": 42,
+      "strk": "W1"
+     },
+     {
       "name": "Barrie Colts",
       "abbr": "BAR",
       "gp": 10,
@@ -4664,20 +4689,8 @@
       "otl": 1,
       "pts": 3,
       "gf": 19,
-      "ga": 42,
+      "ga": 43,
       "strk": "L4"
-     },
-     {
-      "name": "Brampton Steelheads",
-      "abbr": "BRAM",
-      "gp": 9,
-      "w": 0,
-      "l": 7,
-      "otl": 2,
-      "pts": 2,
-      "gf": 25,
-      "ga": 42,
-      "strk": "L7"
      }
     ]
    },
@@ -4697,6 +4710,18 @@
       "strk": "W7"
      },
      {
+      "name": "Flint Firebirds",
+      "abbr": "FLNT",
+      "gp": 9,
+      "w": 6,
+      "l": 2,
+      "otl": 1,
+      "pts": 13,
+      "gf": 36,
+      "ga": 27,
+      "strk": "W4"
+     },
+     {
       "name": "Saginaw Spirit",
       "abbr": "SAG",
       "gp": 9,
@@ -4704,21 +4729,9 @@
       "l": 2,
       "otl": 2,
       "pts": 12,
-      "gf": 42,
+      "gf": 45,
       "ga": 35,
       "strk": "W4"
-     },
-     {
-      "name": "Flint Firebirds",
-      "abbr": "FLNT",
-      "gp": 8,
-      "w": 5,
-      "l": 2,
-      "otl": 1,
-      "pts": 11,
-      "gf": 36,
-      "ga": 27,
-      "strk": "W3"
      },
      {
       "name": "Sarnia Sting",
@@ -4729,7 +4742,7 @@
       "otl": 1,
       "pts": 11,
       "gf": 48,
-      "ga": 49,
+      "ga": 52,
       "strk": "L3"
      },
      {
@@ -4800,14 +4813,14 @@
      {
       "name": "Owen Sound Attack",
       "abbr": "OS",
-      "gp": 9,
+      "gp": 10,
       "w": 2,
-      "l": 7,
+      "l": 8,
       "otl": 0,
       "pts": 4,
       "gf": 23,
       "ga": 47,
-      "strk": "L3"
+      "strk": "L4"
      }
     ]
    }
@@ -4897,7 +4910,7 @@
       "otl": 0,
       "pts": 12,
       "gf": 50,
-      "ga": 41,
+      "ga": 42,
       "strk": "L2"
      },
      {
@@ -4933,7 +4946,7 @@
       "otl": 2,
       "pts": 8,
       "gf": 30,
-      "ga": 84,
+      "ga": 85,
       "strk": "L1"
      },
      {
@@ -4956,7 +4969,7 @@
       "l": 10,
       "otl": 1,
       "pts": 5,
-      "gf": 28,
+      "gf": 29,
       "ga": 66,
       "strk": "L2"
      }
@@ -4973,7 +4986,7 @@
       "l": 1,
       "otl": 0,
       "pts": 30,
-      "gf": 102,
+      "gf": 103,
       "ga": 25,
       "strk": "W9"
      },
@@ -5028,14 +5041,14 @@
      {
       "name": "Toronto Patriots",
       "abbr": "PAT",
-      "gp": 12,
-      "w": 9,
+      "gp": 13,
+      "w": 10,
       "l": 3,
       "otl": 0,
-      "pts": 18,
+      "pts": 20,
       "gf": 76,
       "ga": 24,
-      "strk": "W4"
+      "strk": "W5"
      },
      {
       "name": "Oakville Blades",
@@ -5076,14 +5089,14 @@
      {
       "name": "Caledon Admirals",
       "abbr": "CAL",
-      "gp": 13,
+      "gp": 14,
       "w": 5,
-      "l": 7,
+      "l": 8,
       "otl": 1,
       "pts": 11,
       "gf": 37,
       "ga": 72,
-      "strk": "L4"
+      "strk": "L5"
      },
      {
       "name": "Georgetown Raiders",
@@ -5119,14 +5132,14 @@
      {
       "name": "St. Marys Lincolns",
       "abbr": "SMY",
-      "gp": 11,
-      "w": 10,
+      "gp": 12,
+      "w": 11,
       "l": 1,
       "otl": 0,
-      "pts": 20,
+      "pts": 22,
       "gf": 79,
       "ga": 28,
-      "strk": "W8"
+      "strk": "W9"
      },
      {
       "name": "Chatham Maroons",
@@ -5227,14 +5240,14 @@
      {
       "name": "Komoka Kings",
       "abbr": "KOM",
-      "gp": 12,
+      "gp": 13,
       "w": 4,
-      "l": 8,
+      "l": 9,
       "otl": 0,
       "pts": 8,
       "gf": 39,
       "ga": 58,
-      "strk": "L4"
+      "strk": "L5"
      },
      {
       "name": "Strathroy Rockets",
@@ -5244,7 +5257,7 @@
       "l": 7,
       "otl": 1,
       "pts": 7,
-      "gf": 49,
+      "gf": 53,
       "ga": 53,
       "strk": "L1"
      },
@@ -5257,7 +5270,7 @@
       "otl": 0,
       "pts": 0,
       "gf": 19,
-      "ga": 55,
+      "ga": 59,
       "strk": "L8"
      }
     ]
@@ -5268,14 +5281,26 @@
      {
       "name": "Fort Erie Meteors",
       "abbr": "FEM",
-      "gp": 10,
-      "w": 10,
+      "gp": 11,
+      "w": 11,
       "l": 0,
       "otl": 0,
-      "pts": 20,
+      "pts": 22,
       "gf": 61,
       "ga": 34,
-      "strk": "W10"
+      "strk": "W11"
+     },
+     {
+      "name": "Cambridge Redhawks",
+      "abbr": "CAM",
+      "gp": 11,
+      "w": 10,
+      "l": 1,
+      "otl": 0,
+      "pts": 20,
+      "gf": 70,
+      "ga": 32,
+      "strk": "W3"
      },
      {
       "name": "St. Catharines Falcons",
@@ -5300,18 +5325,6 @@
       "gf": 45,
       "ga": 27,
       "strk": "W6"
-     },
-     {
-      "name": "Cambridge Redhawks",
-      "abbr": "CAM",
-      "gp": 10,
-      "w": 9,
-      "l": 1,
-      "otl": 0,
-      "pts": 18,
-      "gf": 70,
-      "ga": 32,
-      "strk": "W2"
      },
      {
       "name": "Pelham Panthers",
@@ -5364,26 +5377,26 @@
      {
       "name": "Stoney Creek Generals",
       "abbr": "SCG",
-      "gp": 15,
+      "gp": 16,
       "w": 4,
-      "l": 11,
+      "l": 12,
       "otl": 0,
       "pts": 8,
       "gf": 48,
       "ga": 70,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Hamilton Steel",
       "abbr": "HAM",
-      "gp": 13,
+      "gp": 14,
       "w": 1,
-      "l": 9,
+      "l": 10,
       "otl": 3,
       "pts": 5,
       "gf": 31,
       "ga": 66,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Brantford Titans",
@@ -5568,6 +5581,18 @@
     "group": "PJHL West Stobbs",
     "teams": [
      {
+      "name": "Lakeshore Canadiens",
+      "abbr": "LAK",
+      "gp": 13,
+      "w": 11,
+      "l": 0,
+      "otl": 2,
+      "pts": 24,
+      "gf": 56,
+      "ga": 21,
+      "strk": "W3"
+     },
+     {
       "name": "Essex 73's",
       "abbr": "ESS",
       "gp": 12,
@@ -5578,18 +5603,6 @@
       "gf": 48,
       "ga": 16,
       "strk": "W10"
-     },
-     {
-      "name": "Lakeshore Canadiens",
-      "abbr": "LAK",
-      "gp": 12,
-      "w": 10,
-      "l": 0,
-      "otl": 2,
-      "pts": 22,
-      "gf": 50,
-      "ga": 19,
-      "strk": "W2"
      },
      {
       "name": "Blenheim Blades",
@@ -5630,14 +5643,14 @@
      {
       "name": "Mooretown Flags",
       "abbr": "MOO",
-      "gp": 15,
+      "gp": 16,
       "w": 4,
-      "l": 8,
+      "l": 9,
       "otl": 3,
       "pts": 11,
-      "gf": 45,
-      "ga": 53,
-      "strk": "L3"
+      "gf": 47,
+      "ga": 59,
+      "strk": "L4"
      },
      {
       "name": "Amherstburg Admirals",
