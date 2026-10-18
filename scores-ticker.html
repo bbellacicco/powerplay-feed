@@ -5,32 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Scores Ticker | Powerplay Windsor</title>
 <!--
-  Scrolling scores bar, styled like ticker.html (44px, black, gold).
+  Scrolling scores bar (56px on computers; on phones a 40px bar with a gold scores button under it, 70px in all).
   Shows live games first, then today's upcoming games and the latest finals:
     - local teams from data/local-games.json + data/highschool.json + data/saints.json
     - your pro teams (Red Wings, Pistons, Lions, Leafs, Canadiens, Raptors, Bills) live from ESPN
-  Embed in Wix at full width, 44px tall:
+  Embed in Wix at full width, 56px tall (70px in the Wix mobile editor):
     https://bbellacicco.github.io/powerplay-feed/scores-ticker.html
   Options: ?mix=local  or  ?mix=pro   (default shows both)
 -->
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{width:100%;height:44px;background:#000;overflow:hidden}
-#wrap{display:flex;width:100%;height:44px}
-#brand{flex:0 0 auto;height:44px;display:flex;align-items:center;padding:0 12px 0 10px;background:#000;position:relative;z-index:2;box-shadow:8px 0 10px -4px #000}
-#brand img{height:34px;width:auto;display:block}
-@media (max-width:480px){                      /* phones: smaller logo, tighter spacing */
-  #brand{padding:0 6px 0 6px}
-  #brand img{height:20px}
-  .ticker-item{padding:0 16px}
-}
-#ticker-viewport{flex:1;min-width:0;height:44px;overflow:hidden;position:relative;background:#000}
-#ticker-stage{position:absolute;top:0;left:0;height:44px;display:flex;align-items:center;white-space:nowrap;will-change:transform}
-.ticker-item{display:inline-flex;align-items:center;gap:7px;padding:0 26px;font-family:Arial,sans-serif;font-size:13px;font-weight:600;color:#fff;height:44px}
+/* desktop: a 56px bar (Wix embed 56px tall). Phones: a 40px bar plus a gold scores button under it (Wix mobile embed 70px tall) */
+html,body{width:100%;height:56px;background:#000;overflow:hidden}
+#wrap{display:flex;width:100%;height:56px}
+#brand{flex:0 0 auto;height:56px;display:flex;align-items:center;padding:0 14px 0 12px;background:#000;position:relative;z-index:2;box-shadow:8px 0 10px -4px #000}
+#brand img{height:44px;width:auto;display:block}
+#ticker-viewport{flex:1;min-width:0;height:56px;overflow:hidden;position:relative;background:#000}
+#ticker-stage{position:absolute;top:0;left:0;height:56px;display:flex;align-items:center;white-space:nowrap;will-change:transform}
+.ticker-item{display:inline-flex;align-items:center;gap:9px;padding:0 30px;font-family:Arial,sans-serif;font-size:17px;font-weight:600;color:#fff;height:56px}
 /* LIVE red, FINAL/upcoming bright yellow, sport label red, teams and scores white; grey only for the @ */
-.badge{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 6px;border-radius:3px;flex-shrink:0;margin-right:2px;display:inline-flex;align-items:center;gap:4px}
+.badge{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 7px;border-radius:3px;flex-shrink:0;margin-right:2px;display:inline-flex;align-items:center;gap:5px}
 .badge-live{background:#ff2d2d;color:#fff}
-.badge-live::before{content:"";width:6px;height:6px;border-radius:50%;background:#fff;animation:pulse 1.2s infinite}
+.badge-live::before{content:"";width:7px;height:7px;border-radius:50%;background:#fff;animation:pulse 1.2s infinite}
 @keyframes pulse{50%{opacity:.25}}
 .badge-final{background:#FFE600;color:#000}
 .badge-upcoming{background:transparent;color:#FFE600;box-shadow:inset 0 0 0 1.5px #FFE600}
@@ -38,30 +34,31 @@ html,body{width:100%;height:44px;background:#000;overflow:hidden}
 .score{color:#fff;font-weight:800;font-variant-numeric:tabular-nums}
 .lose{color:#fff}
 .at{color:#6b7280;font-weight:400}
-.meta{color:#ff6b6b;font-weight:700;font-size:11px;letter-spacing:.3px;margin-left:4px;text-transform:uppercase}
-.sep{color:rgba(255,45,45,0.45);font-size:14px;font-family:Arial;padding:0 2px;display:inline-block;height:44px;line-height:44px}
+.meta{color:#ff6b6b;font-weight:700;font-size:13px;letter-spacing:.3px;margin-left:4px;text-transform:uppercase}
+.sep{color:rgba(255,45,45,0.5);font-size:16px;font-family:Arial;padding:0 2px;display:inline-block;height:56px;line-height:56px}
 a.ticker-item{text-decoration:none;cursor:pointer}
 a.ticker-item:hover .team{color:#FFE600}
-/* "All scores" button, fixed at the right end */
-#more{flex:0 0 auto;height:44px;display:flex;align-items:center;padding:0 12px;background:#000;position:relative;z-index:2;box-shadow:-8px 0 10px -4px #000;text-decoration:none}
-#more span{background:#FFE600;color:#000;font:800 11px/1 Arial,sans-serif;letter-spacing:.8px;text-transform:uppercase;padding:7px 10px;border-radius:3px;white-space:nowrap}
-#more:hover span{background:#fff}
+/* "All scores" button, fixed at the right end: big gold button with a soft glow */
+#more{flex:0 0 auto;height:56px;display:flex;align-items:center;padding:0 14px;background:#000;position:relative;z-index:2;box-shadow:-10px 0 12px -4px #000;text-decoration:none}
+#more span{background:#FFE600;color:#000;font:900 14px/1 Arial,sans-serif;letter-spacing:.8px;text-transform:uppercase;padding:11px 16px;border-radius:4px;white-space:nowrap;
+  box-shadow:0 0 14px rgba(255,230,0,.45)}
+#more:hover span{background:#fff;box-shadow:0 0 16px rgba(255,255,255,.5)}
 #more .s{display:none}
-@media (max-width:480px){ #more{padding:0 6px} #more span{padding:6px 7px;font-size:10px} #more .l{display:none} #more .s{display:inline} }
 #morebar{display:none}
-/* phones: a slimmer 30px bar plus a 20px 'click here for scores' line under it (set the Wix mobile embed to 46px tall) */
 @media (max-width:480px){
-  html,body,#wrap,#brand,#ticker-viewport,#ticker-stage,.ticker-item,#more{height:30px}
-  .sep{height:30px;line-height:30px;font-size:11px}
-  #brand img{height:18px}
-  .ticker-item{font-size:11.5px;gap:5px;padding:0 12px}
-  .badge{font-size:8px;padding:1px 4px}
-  .meta{font-size:9.5px}
+  html,body{height:70px}
+  #wrap,#brand,#ticker-viewport,#ticker-stage,.ticker-item{height:40px}
+  #brand{padding:0 8px 0 6px}
+  #brand img{height:28px}
+  .sep{height:40px;line-height:40px;font-size:13px}
+  .ticker-item{font-size:15px;gap:6px;padding:0 16px}
+  .badge{font-size:9.5px;padding:2px 5px}
+  .meta{font-size:11px}
   #more{display:none}
-  html,body{height:46px}
-  /* thin, centred gold link under the ticker */
-  #morebar{display:block;width:max-content;margin:1px auto 0;height:14px;line-height:14px;padding:0 12px;border-radius:7px;
-    background:#FFE600;color:#000;text-decoration:none;font:800 8.5px/14px Arial,sans-serif;letter-spacing:.8px;text-transform:uppercase}
+  /* full-size gold scores button under the ticker */
+  #morebar{display:block;width:max-content;margin:2px auto 0;height:26px;line-height:26px;padding:0 18px;border-radius:13px;
+    background:#FFE600;color:#000;text-decoration:none;font:900 12px/26px Arial,sans-serif;letter-spacing:.8px;text-transform:uppercase;
+    box-shadow:0 0 12px rgba(255,230,0,.5)}
 }
 </style>
 </head>
