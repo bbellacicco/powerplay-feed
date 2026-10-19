@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19T09:31:37-04:00",
+ "updated": "2026-10-19T09:46:42-04:00",
  "today": "2026-10-19",
  "range": [
   "2026-10-16",
@@ -615,13 +615,13 @@
    "home_away": "A",
    "opponent": "Waterloo Warriors",
    "location": "Waterloo, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 0,
+   "opp_score": 0,
+   "result": "T",
    "note": "",
    "links": {
-    "watch": "https://oua.yaretv.com/"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6199"
    }
   },
   {
@@ -2498,29 +2498,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "Jordan Love leads Packers over Cowboys with two touchdowns",
+   "league": "other",
+   "headline": "Boston Common acquire Shane Lowry from Bay Golf in first-ever TGL trade",
    "summary": "",
-   "published": "2026-10-19T00:11-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-81.jpg",
+   "published": "2026-10-19T09:23-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/02/CP173805875-1.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/jordan-love-leads-packers-over-cowboys-with-two-touchdowns/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Kings guard Ben Simmons suffers torn Achilles tendon",
-   "summary": "",
-   "published": "2026-10-18T18:45-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Sacramento-Kings-guard-Ben-Simmons.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/report-kings-guard-ben-simmons-has-suspected-achilles-tendon-tear/",
+   "sn_team_count": 0,
+   "sport": "Golf",
+   "url": "https://www.sportsnet.ca/tgl/article/boston-common-acquire-shane-lowry-from-bay-golf-in-first-ever-tgl-trade/",
    "source": "Sportsnet"
   },
   {
@@ -2537,16 +2524,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Boston Common acquire Shane Lowry from Bay Golf in first-ever TGL trade",
+   "league": "nba",
+   "headline": "Kings guard Ben Simmons suffers torn Achilles tendon",
    "summary": "",
-   "published": "2026-10-19T09:23-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/02/CP173805875-1.jpg",
+   "published": "2026-10-18T18:45-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Sacramento-Kings-guard-Ben-Simmons.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
-   "sport": "Golf",
-   "url": "https://www.sportsnet.ca/tgl/article/boston-common-acquire-shane-lowry-from-bay-golf-in-first-ever-tgl-trade/",
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/report-kings-guard-ben-simmons-has-suspected-achilles-tendon-tear/",
    "source": "Sportsnet"
   },
   {
@@ -2573,6 +2560,19 @@
    "sn_team_count": 2,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/nfl-says-steelers-saints-game-in-paris-still-on-despite-civil-unrest/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Jordan Love leads Packers over Cowboys with two touchdowns",
+   "summary": "",
+   "published": "2026-10-19T00:11-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-81.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/jordan-love-leads-packers-over-cowboys-with-two-touchdowns/",
    "source": "Sportsnet"
   },
   {
@@ -2672,7 +2672,7 @@
   },
   {
    "league": "mlb",
-   "headline": "Report: Orioles hire Cubs’ Jared Banner as general manager",
+   "headline": "Orioles hire Cubs’ Jared Banner as general manager",
    "summary": "",
    "published": "2026-10-19T09:07-04:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2022/07/Orioles-1.jpg",
