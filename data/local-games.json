@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-18T21:16:46-04:00",
+ "updated": "2026-10-18T21:31:54-04:00",
  "today": "2026-10-18",
  "range": [
   "2026-10-15",
@@ -1403,11 +1403,11 @@
    "home_away": "H",
    "opponent": "Strathroy Rockets",
    "location": "Chatham Memorial Arena, Chatham, ON",
-   "status": "live",
-   "our_score": 2,
+   "status": "final",
+   "our_score": 3,
    "opp_score": 2,
-   "result": null,
-   "note": "06:52 1st OT",
+   "result": "W",
+   "note": "OT",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15594"
    },
@@ -4636,26 +4636,26 @@
      {
       "name": "Markham Royals",
       "abbr": "MAR",
-      "gp": 16,
+      "gp": 17,
       "w": 14,
-      "l": 2,
+      "l": 3,
       "otl": 0,
       "pts": 28,
       "gf": 69,
       "ga": 45,
-      "strk": "W2"
+      "strk": "L1"
      },
      {
       "name": "Wellington Dukes",
       "abbr": "WEL",
-      "gp": 15,
-      "w": 9,
+      "gp": 16,
+      "w": 10,
       "l": 4,
       "otl": 2,
-      "pts": 20,
+      "pts": 22,
       "gf": 62,
       "ga": 47,
-      "strk": "W1"
+      "strk": "W2"
      },
      {
       "name": "Cobourg Cougars",
@@ -4744,14 +4744,14 @@
      {
       "name": "Toronto Warriors",
       "abbr": "TOW",
-      "gp": 15,
+      "gp": 16,
       "w": 3,
-      "l": 10,
+      "l": 11,
       "otl": 2,
       "pts": 8,
       "gf": 35,
-      "ga": 91,
-      "strk": "L2"
+      "ga": 92,
+      "strk": "L3"
      },
      {
       "name": "North York Rangers",
@@ -4891,6 +4891,18 @@
       "strk": "L1"
      },
      {
+      "name": "Georgetown Raiders",
+      "abbr": "GEO",
+      "gp": 17,
+      "w": 5,
+      "l": 10,
+      "otl": 2,
+      "pts": 12,
+      "gf": 56,
+      "ga": 86,
+      "strk": "W2"
+     },
+     {
       "name": "Caledon Admirals",
       "abbr": "CAL",
       "gp": 15,
@@ -4912,18 +4924,6 @@
       "pts": 10,
       "gf": 39,
       "ga": 62,
-      "strk": "W1"
-     },
-     {
-      "name": "Georgetown Raiders",
-      "abbr": "GEO",
-      "gp": 16,
-      "w": 4,
-      "l": 10,
-      "otl": 2,
-      "pts": 10,
-      "gf": 55,
-      "ga": 86,
       "strk": "W1"
      }
     ]
@@ -4948,14 +4948,14 @@
      {
       "name": "Chatham Maroons",
       "abbr": "CHA",
-      "gp": 11,
-      "w": 9,
+      "gp": 12,
+      "w": 10,
       "l": 2,
       "otl": 0,
-      "pts": 18,
-      "gf": 57,
+      "pts": 20,
+      "gf": 58,
       "ga": 31,
-      "strk": "W2"
+      "strk": "W3"
      },
      {
       "name": "St. Thomas Stars",
@@ -5018,6 +5018,18 @@
       "strk": "W1"
      },
      {
+      "name": "Strathroy Rockets",
+      "abbr": "SRY",
+      "gp": 13,
+      "w": 4,
+      "l": 7,
+      "otl": 2,
+      "pts": 10,
+      "gf": 56,
+      "ga": 56,
+      "strk": "W1"
+     },
+     {
       "name": "Elmira Sugar Kings",
       "abbr": "ELM",
       "gp": 12,
@@ -5028,18 +5040,6 @@
       "gf": 43,
       "ga": 54,
       "strk": "L6"
-     },
-     {
-      "name": "Strathroy Rockets",
-      "abbr": "SRY",
-      "gp": 12,
-      "w": 4,
-      "l": 7,
-      "otl": 1,
-      "pts": 9,
-      "gf": 56,
-      "ga": 55,
-      "strk": "W1"
      },
      {
       "name": "LaSalle Vipers",
@@ -5409,6 +5409,18 @@
       "strk": "W10"
      },
      {
+      "name": "Blenheim Blades",
+      "abbr": "BLE",
+      "gp": 12,
+      "w": 9,
+      "l": 3,
+      "otl": 0,
+      "pts": 18,
+      "gf": 54,
+      "ga": 33,
+      "strk": "W2"
+     },
+     {
       "name": "Dresden Kings",
       "abbr": "DRE",
       "gp": 15,
@@ -5418,18 +5430,6 @@
       "pts": 17,
       "gf": 72,
       "ga": 56,
-      "strk": "W1"
-     },
-     {
-      "name": "Blenheim Blades",
-      "abbr": "BLE",
-      "gp": 11,
-      "w": 8,
-      "l": 3,
-      "otl": 0,
-      "pts": 16,
-      "gf": 47,
-      "ga": 32,
       "strk": "W1"
      },
      {
@@ -5471,14 +5471,14 @@
      {
       "name": "Walpole Island Wild",
       "abbr": "WAL",
-      "gp": 13,
+      "gp": 14,
       "w": 0,
-      "l": 13,
+      "l": 14,
       "otl": 0,
       "pts": 0,
-      "gf": 12,
-      "ga": 77,
-      "strk": "L13"
+      "gf": 13,
+      "ga": 84,
+      "strk": "L14"
      }
     ]
    }
