@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19T19:21:01-04:00",
+ "updated": "2026-10-19T19:31:41-04:00",
  "today": "2026-10-19",
  "range": [
   "2026-10-16",
@@ -50,8 +50,8 @@
    "count": 9
   },
   "highschool": {
-   "ok": true,
-   "count": 174
+   "ok": false,
+   "error": "HTTP Error 403: Forbidden"
   },
   "sheet": {
    "ok": true,
@@ -86,8 +86,8 @@
    "count": 12
   },
   "standings_cjfl": {
-   "ok": true,
-   "count": 6
+   "ok": false,
+   "error": "The read operation timed out"
   },
   "pwhl": {
    "ok": true,
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 37
+   "count": 36
   },
   "club_news": {
    "ok": true,
@@ -3324,21 +3324,6 @@
  "more_news": [
   {
    "league": "nhl",
-   "headline": "Maple Leafs notebook: McKenna ‘excited’ for Stenberg showdown",
-   "summary": "Monday marks the first meeting between the top two picks in the 2026 NHL Draft. The Toronto Maple Leafs’ Gavin McKenna is “excited” for his showdown with San Jose Sharks forward Ivar Stenberg, Luke Fox writes.",
-   "published": "2026-10-19T13:37-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-88.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-notebook-mckenna-excited-for-stenberg-showdown/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Scout’s Analysis: How Ivar Stenberg has started with the Sharks",
    "summary": "The top two picks from the 2026 draft clash on Monday. And while Gavin McKenna has received a lot of attention in the big Toronto market so far, how has Ivar Stenberg’s career started? Scout Jason Bukala looks closer at ",
    "published": "2026-10-19T13:03-04:00",
@@ -4936,8 +4921,8 @@
       "l": 4,
       "otl": 2,
       "pts": 22,
-      "gf": 63,
-      "ga": 48,
+      "gf": 64,
+      "ga": 49,
       "strk": "W2"
      },
      {
@@ -4948,8 +4933,8 @@
       "l": 3,
       "otl": 1,
       "pts": 19,
-      "gf": 61,
-      "ga": 50,
+      "gf": 62,
+      "ga": 51,
       "strk": "W2"
      },
      {
