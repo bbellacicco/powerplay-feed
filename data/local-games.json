@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-18T19:46:43-04:00",
+ "updated": "2026-10-18T20:01:38-04:00",
  "today": "2026-10-18",
  "range": [
   "2026-10-15",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 29
+   "count": 30
   },
   "club_news": {
    "ok": true,
@@ -1386,9 +1386,9 @@
    "location": "Joe Thornton C.C., St. Thomas, ON",
    "status": "live",
    "our_score": 2,
-   "opp_score": 3,
+   "opp_score": 5,
    "result": null,
-   "note": "20:00 3rd",
+   "note": "07:41 3rd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15597"
    },
@@ -1407,7 +1407,7 @@
    "our_score": 1,
    "opp_score": 0,
    "result": null,
-   "note": "20:00 2nd",
+   "note": "14:08 2nd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15594"
    },
@@ -3108,6 +3108,21 @@
  "more_news": [
   {
    "league": "nfl",
+   "headline": "Josh Allen ties Jim Kelly’s Bills TD pass record as Buffalo holds off Raiders",
+   "summary": "",
+   "published": "2026-10-18T19:59-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-80.jpg",
+   "video": false,
+   "teams": [
+    "Buffalo Bills"
+   ],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/josh-allen-ties-jim-kellys-bills-td-pass-record-as-buffalo-holds-off-raiders/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
    "headline": "NFL Week 6 Roundup: Browns claim top spot in AFC North with rally vs. Ravens",
    "summary": "",
    "published": "2026-10-18T16:55-04:00",
@@ -4387,7 +4402,7 @@
       "otl": 2,
       "pts": 10,
       "gf": 29,
-      "ga": 38,
+      "ga": 39,
       "strk": "W1"
      }
     ]
@@ -4475,14 +4490,14 @@
      {
       "name": "Saginaw Spirit",
       "abbr": "SAG",
-      "gp": 10,
+      "gp": 11,
       "w": 6,
-      "l": 2,
+      "l": 3,
       "otl": 2,
       "pts": 14,
       "gf": 46,
       "ga": 37,
-      "strk": "W5"
+      "strk": "L1"
      },
      {
       "name": "Flint Firebirds",
@@ -4557,7 +4572,7 @@
       "l": 5,
       "otl": 2,
       "pts": 12,
-      "gf": 36,
+      "gf": 37,
       "ga": 39,
       "strk": "W1"
      },
@@ -4576,14 +4591,14 @@
      {
       "name": "Owen Sound Attack",
       "abbr": "OS",
-      "gp": 10,
-      "w": 2,
+      "gp": 11,
+      "w": 3,
       "l": 8,
       "otl": 0,
-      "pts": 4,
+      "pts": 6,
       "gf": 25,
       "ga": 48,
-      "strk": "L4"
+      "strk": "W1"
      }
     ]
    }
@@ -4660,8 +4675,8 @@
       "l": 7,
       "otl": 2,
       "pts": 14,
-      "gf": 49,
-      "ga": 46,
+      "gf": 50,
+      "ga": 47,
       "strk": "L2"
      },
      {
@@ -4672,8 +4687,8 @@
       "l": 7,
       "otl": 1,
       "pts": 13,
-      "gf": 43,
-      "ga": 62,
+      "gf": 44,
+      "ga": 63,
       "strk": "L1"
      },
      {
@@ -4840,14 +4855,14 @@
      {
       "name": "Niagara Falls Canucks",
       "abbr": "NFC",
-      "gp": 18,
+      "gp": 19,
       "w": 6,
-      "l": 10,
+      "l": 11,
       "otl": 2,
       "pts": 14,
       "gf": 56,
       "ga": 82,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Caledon Admirals",
@@ -4862,6 +4877,18 @@
       "strk": "L5"
      },
      {
+      "name": "Buffalo Jr. Sabres",
+      "abbr": "BUF",
+      "gp": 16,
+      "w": 5,
+      "l": 11,
+      "otl": 0,
+      "pts": 10,
+      "gf": 39,
+      "ga": 62,
+      "strk": "W1"
+     },
+     {
       "name": "Georgetown Raiders",
       "abbr": "GEO",
       "gp": 16,
@@ -4872,18 +4899,6 @@
       "gf": 52,
       "ga": 82,
       "strk": "W1"
-     },
-     {
-      "name": "Buffalo Jr. Sabres",
-      "abbr": "BUF",
-      "gp": 15,
-      "w": 4,
-      "l": 11,
-      "otl": 0,
-      "pts": 8,
-      "gf": 39,
-      "ga": 62,
-      "strk": "L2"
      }
     ]
    }
@@ -4924,7 +4939,7 @@
       "l": 2,
       "otl": 0,
       "pts": 16,
-      "gf": 42,
+      "gf": 44,
       "ga": 23,
       "strk": "L1"
      },
@@ -4984,8 +4999,8 @@
       "l": 7,
       "otl": 1,
       "pts": 9,
-      "gf": 38,
-      "ga": 51,
+      "gf": 39,
+      "ga": 52,
       "strk": "L6"
      },
      {
@@ -5009,7 +5024,7 @@
       "otl": 0,
       "pts": 8,
       "gf": 29,
-      "ga": 47,
+      "ga": 49,
       "strk": "L3"
      },
      {
@@ -5073,7 +5088,7 @@
       "l": 1,
       "otl": 0,
       "pts": 20,
-      "gf": 72,
+      "gf": 73,
       "ga": 32,
       "strk": "W3"
      },
@@ -5097,8 +5112,8 @@
       "l": 1,
       "otl": 2,
       "pts": 14,
-      "gf": 34,
-      "ga": 23,
+      "gf": 35,
+      "ga": 24,
       "strk": "W4"
      },
      {
@@ -5182,7 +5197,7 @@
       "otl": 0,
       "pts": 2,
       "gf": 25,
-      "ga": 76,
+      "ga": 77,
       "strk": "L2"
      }
     ]
