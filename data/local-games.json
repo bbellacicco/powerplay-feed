@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-18T20:16:43-04:00",
+ "updated": "2026-10-18T20:31:41-04:00",
  "today": "2026-10-18",
  "range": [
   "2026-10-15",
@@ -1384,11 +1384,11 @@
    "home_away": "A",
    "opponent": "St. Thomas Stars",
    "location": "Joe Thornton C.C., St. Thomas, ON",
-   "status": "live",
+   "status": "final",
    "our_score": 2,
    "opp_score": 6,
-   "result": null,
-   "note": "00:00 3rd",
+   "result": "L",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15597"
    },
@@ -1404,10 +1404,10 @@
    "opponent": "Strathroy Rockets",
    "location": "Chatham Memorial Arena, Chatham, ON",
    "status": "live",
-   "our_score": 1,
+   "our_score": 2,
    "opp_score": 1,
    "result": null,
-   "note": "03:57 2nd",
+   "note": "20:00 3rd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15594"
    },
@@ -4414,7 +4414,7 @@
       "l": 5,
       "otl": 2,
       "pts": 10,
-      "gf": 29,
+      "gf": 30,
       "ga": 39,
       "strk": "W1"
      }
@@ -4586,7 +4586,7 @@
       "otl": 2,
       "pts": 12,
       "gf": 37,
-      "ga": 39,
+      "ga": 40,
       "strk": "W1"
      },
      {
@@ -4628,7 +4628,7 @@
       "l": 2,
       "otl": 0,
       "pts": 28,
-      "gf": 67,
+      "gf": 69,
       "ga": 43,
       "strk": "W2"
      },
@@ -4641,7 +4641,7 @@
       "otl": 2,
       "pts": 20,
       "gf": 60,
-      "ga": 45,
+      "ga": 47,
       "strk": "W1"
      },
      {
@@ -4737,7 +4737,7 @@
       "otl": 2,
       "pts": 8,
       "gf": 32,
-      "ga": 89,
+      "ga": 90,
       "strk": "L2"
      },
      {
@@ -4909,7 +4909,7 @@
       "l": 10,
       "otl": 2,
       "pts": 10,
-      "gf": 53,
+      "gf": 54,
       "ga": 83,
       "strk": "W1"
      }
@@ -4940,21 +4940,21 @@
       "l": 2,
       "otl": 0,
       "pts": 18,
-      "gf": 56,
+      "gf": 57,
       "ga": 30,
       "strk": "W2"
      },
      {
       "name": "St. Thomas Stars",
       "abbr": "STT",
-      "gp": 10,
-      "w": 8,
+      "gp": 11,
+      "w": 9,
       "l": 2,
       "otl": 0,
-      "pts": 16,
+      "pts": 18,
       "gf": 45,
       "ga": 23,
-      "strk": "L1"
+      "strk": "W1"
      },
      {
       "name": "Listowel Cyclones",
@@ -5013,7 +5013,7 @@
       "otl": 1,
       "pts": 9,
       "gf": 40,
-      "ga": 53,
+      "ga": 54,
       "strk": "L6"
      },
      {
@@ -5025,20 +5025,20 @@
       "otl": 1,
       "pts": 9,
       "gf": 55,
-      "ga": 54,
+      "ga": 55,
       "strk": "W1"
      },
      {
       "name": "LaSalle Vipers",
       "abbr": "LAS",
-      "gp": 10,
+      "gp": 11,
       "w": 4,
-      "l": 6,
+      "l": 7,
       "otl": 0,
       "pts": 8,
       "gf": 29,
       "ga": 50,
-      "strk": "L3"
+      "strk": "L4"
      },
      {
       "name": "Komoka Kings",
@@ -5125,7 +5125,7 @@
       "l": 1,
       "otl": 2,
       "pts": 14,
-      "gf": 36,
+      "gf": 37,
       "ga": 25,
       "strk": "W4"
      },
