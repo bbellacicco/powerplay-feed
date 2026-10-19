@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19T09:16:42-04:00",
+ "updated": "2026-10-19T09:31:37-04:00",
  "today": "2026-10-19",
  "range": [
   "2026-10-16",
@@ -39,7 +39,7 @@
   },
   "lancers": {
    "ok": true,
-   "count": 93
+   "count": 94
   },
   "junior": {
    "ok": true,
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 32
+   "count": 31
   },
   "club_news": {
    "ok": true,
@@ -1580,6 +1580,24 @@
    "club": "LaSalle Vipers"
   },
   {
+   "id": "lancers-6495",
+   "team": "lancers",
+   "sport": "Women's Soccer",
+   "start": "2026-10-21T19:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Brock Badgers",
+   "location": "St. Catharines, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "OUA Playoffs - Round 1",
+   "links": {
+    "watch": "https://oua.tv/?school=windsor"
+   }
+  },
+  {
    "id": "junior-gs2960414",
    "team": "junior",
    "sport": "PJHL (Jr. C)",
@@ -2520,6 +2538,19 @@
   },
   {
    "league": "other",
+   "headline": "Boston Common acquire Shane Lowry from Bay Golf in first-ever TGL trade",
+   "summary": "",
+   "published": "2026-10-19T09:23-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/02/CP173805875-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Golf",
+   "url": "https://www.sportsnet.ca/tgl/article/boston-common-acquire-shane-lowry-from-bay-golf-in-first-ever-tgl-trade/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
    "headline": "PSG-Barcelona match to go ahead amid shock over France’s violent unrest",
    "summary": "The showpiece Champions League match between Paris Saint-Germain and Barcelona will go ahead as planned on Tuesday in the French capital city, the French Interior minister confirmed, despite a weekend of protests marred ",
    "published": "2026-10-19T09:12-04:00",
@@ -2529,19 +2560,6 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/champions-league/article/psg-barcelona-match-to-go-ahead-amid-shock-over-frances-violent-unrest/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Takeaways: Schwaller’s rink shows why they’re ranked No. 1 at GSOC Invitational",
-   "summary": "",
-   "published": "2026-10-18T20:56-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Yannick-Schwaller-with-trophy.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "",
-   "url": "https://www.sportsnet.ca/curling/article/schwaller-dominates-ramsfjell-to-earn-gsoc-co-op-invitational-title/",
    "source": "Sportsnet"
   },
   {
@@ -2583,6 +2601,19 @@
    "sn_team_count": 2,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/josh-allen-ties-jim-kellys-bills-td-pass-record-as-buffalo-holds-off-raiders/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Takeaways: Schwaller’s rink shows why they’re ranked No. 1 at GSOC Invitational",
+   "summary": "",
+   "published": "2026-10-18T20:56-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Yannick-Schwaller-with-trophy.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "",
+   "url": "https://www.sportsnet.ca/curling/article/schwaller-dominates-ramsfjell-to-earn-gsoc-co-op-invitational-title/",
    "source": "Sportsnet"
   },
   {
@@ -2760,19 +2791,6 @@
   },
   {
    "league": "nfl",
-   "headline": "Harbaugh vows to evaluate everything as Chargers drop to 0-6",
-   "summary": "Chargers coach Jim Harbaugh vowed to look at every aspect of his operation — including new offensive coordinator Mike McDaniel — after a 22-6 loss to the Kansas City Chiefs on Sunday that sent Los Angeles winless into it",
-   "published": "2026-10-18T22:01-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Los-Angeles-Chargers-quarterback-Justin-Herbert-10-is-sacked-by-Kansas-City-Chiefs-defensive-end-Ashton-Gillotte.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/harbaugh-vows-to-evaluate-everything-as-chargers-drop-to-0-6/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
    "headline": "Watson leads drive for winning field goal and Browns rally for divisional win over Ravens",
    "summary": "",
    "published": "2026-10-18T16:28-04:00",
@@ -2795,19 +2813,6 @@
    "sn_team_count": 2,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/falcons-kendal-daniels-carted-off-on-stretcher-after-third-quarter-tackle/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Toronto FC tied for final playoff spot after huge win over Red Bulls",
-   "summary": "",
-   "published": "2026-10-17T22:02-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/tfc-3.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/toronto-fc-tied-for-final-playoff-spot-after-huge-win-over-red-bulls/",
    "source": "Sportsnet"
   },
   {
@@ -3332,6 +3337,19 @@
   },
   {
    "league": "mlb",
+   "headline": "Is a reunion in store for Bieber and Blue Jays this offseason?",
+   "summary": "",
+   "published": "2026-10-19T09:17-04:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/fz5rymldqyl5z17bj1g2",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "url": "https://www.mlb.com/bluejays/news/shane-bieber-blue-jays-free-agency-2026-2027-offseason",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
    "headline": "Which Blue Jays prospects showed out in '26, could make impact in '27?",
    "summary": "",
    "published": "2026-10-15T10:36-04:00",
@@ -3384,19 +3402,6 @@
   },
   {
    "league": "mlb",
-   "headline": "Watch Blue Jays prospects in Arizona Fall League action",
-   "summary": "",
-   "published": "2026-10-18T15:09-04:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "url": "https://www.mlb.com/bluejays/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
    "headline": "Solve today's Blue Jays trivia puzzle",
    "summary": "",
    "published": "2026-02-03T10:22-05:00",
@@ -3410,15 +3415,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Reinvigorated and revamped Bloss headlines Blue Jays' Fall League contingent",
+   "headline": "Watch Blue Jays prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-13T10:06-04:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/brno3lrecf0mllmfwcoi",
+   "published": "2026-10-18T15:09-04:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
     "Toronto Blue Jays"
    ],
-   "url": "https://www.mlb.com/bluejays/news/blue-jays-arizona-fall-league-overview-2026",
+   "url": "https://www.mlb.com/bluejays/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
    "source": "Team site"
   },
   {
@@ -3445,6 +3450,19 @@
     "Toronto Blue Jays"
    ],
    "url": "https://www.mlb.com/milb/prospects/bluejays/",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
+   "headline": "Reinvigorated and revamped Bloss headlines Blue Jays' Fall League contingent",
+   "summary": "",
+   "published": "2026-10-13T10:06-04:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/brno3lrecf0mllmfwcoi",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "url": "https://www.mlb.com/bluejays/news/blue-jays-arizona-fall-league-overview-2026",
    "source": "Team site"
   },
   {
@@ -3510,19 +3528,6 @@
     "Toronto Blue Jays"
    ],
    "url": "https://www.mlb.com/bluejays/news/blue-jays-internal-roster-questions-entering-offseason",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
-   "headline": "Crackling bats and 400-foot blasts: Sights and sounds from the Canadian Futures Showcase",
-   "summary": "",
-   "published": "2026-10-02T14:00-04:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/v1790961885/mlb/rllbzr3kbqdjcnmsszac",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "url": "https://www.mlb.com/bluejays/news/top-high-school-prospects-take-on-canadian-futures-showcase",
    "source": "Team site"
   }
  ],
