@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Discover | Powerplay Windsor</title>
+<!--
+  "Discover" strips for the bottom of every blog post (one Wix embed under the post).
+  Two panels, Local and Pro. Each has a running scores ribbon, a featured story, a video that plays
+  right in the box, the latest headlines, and buttons into the hubs.
+  The featured story and video change from visit to visit (picked from the newest few), so a reader
+  rarely gets the story they just finished.
+  discover.html            both panels
+  discover.html?only=local one panel (only=pro for the other)
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #0b1a33; --bg2: #081428; --card: #132b57; --line: #1e3a6e; --text: #f2f5fb; --muted: #9fb0cf; --accent: #e8b021; --pro: #4f8dff; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.35 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { padding: 14px 14px 16px; max-width: 1240px; margin: 0 auto; }
+
+  /* opening band */
+  .intro { display: flex; align-items: center; gap: 12px; margin: 0 0 14px; }
+  .intro img { height: 40px; width: auto; flex: none; }
+  .intro .w { flex: 1; min-width: 0; }
+  .intro .k { font-size: 11px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  .intro h1 { margin: 2px 0 0; font: 400 30px/1 'Bebas Neue', Impact, 'Arial Narrow', sans-serif; letter-spacing: .03em; text-transform: uppercase; }
+  .intro h1 em { font-style: normal; color: var(--accent); }
+  .intro .home { flex: none; border: 1px solid rgba(232,176,33,.6); color: var(--accent); font-weight: 800; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; padding: 9px 12px; border-radius: 6px; white-space: nowrap; }
+  .intro .home:hover { background: var(--accent); color: var(--bg); }
+
+  /* a panel (Local / Pro) */
+  .panel { position: relative; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin-bottom: 14px;
+    background: radial-gradient(120% 140% at 0% 0%, rgba(232,176,33,.10), transparent 55%), linear-gradient(180deg, #10244a, #0b1a33); --pc: var(--accent); }
+  .panel.pro { background: radial-gradient(120% 140% at 0% 0%, rgba(79,141,255,.14), transparent 55%), linear-gradient(180deg, #10244a, #0b1a33); --pc: var(--pro); }
+  .panel::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--pc); }
+  .phead { display: flex; align-items: center; gap: 10px; padding: 12px 14px 10px 18px; }
+  .phead h2 { margin: 0; font: 400 26px/1 'Bebas Neue', Impact, 'Arial Narrow', sans-serif; letter-spacing: .03em; text-transform: uppercase; }
+  .phead h2 em { font-style: normal; color: var(--pc); }
+  .phead .sub { color: var(--muted); font-size: 12px; flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .phead .all { flex: none; color: var(--pc); font-weight: 800; font-size: 12px; letter-spacing: .05em; text-transform: uppercase; white-space: nowrap; }
+  .phead .all:hover { text-decoration: underline; }
+
+  /* running scores ribbon */
+  .ribbon { position: relative; height: 34px; overflow: hidden; background: rgba(0,0,0,.28); border-top: 1px solid rgba(255,255,255,.06); border-bottom: 1px solid rgba(255,255,255,.06);
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 40px, #000 calc(100% - 40px), transparent); mask-image: linear-gradient(90deg, transparent, #000 40px, #000 calc(100% - 40px), transparent); }
+  .ribbon .track { position: absolute; left: 0; top: 0; height: 100%; display: flex; align-items: center; white-space: nowrap; animation: run var(--dur, 60s) linear infinite; will-change: transform; }
+  .ribbon:hover .track { animation-play-state: paused; }
+  @keyframes run { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .sc { display: inline-flex; align-items: center; gap: 7px; padding: 0 16px; height: 100%; font-size: 12.5px; border-right: 1px solid rgba(255,255,255,.08); cursor: pointer; }
+  .sc:hover { background: rgba(255,255,255,.06); }
+  .sc .lg { font-size: 9.5px; font-weight: 900; letter-spacing: .08em; color: var(--pc); }
+  .sc img { height: 18px; width: 18px; object-fit: contain; }
+  .sc img.w { background: #fff; border-radius: 3px; }
+  .sc b { font-weight: 800; font-variant-numeric: tabular-nums; }
+  .sc .l { opacity: .55; }
+  .sc .st { font-size: 10px; font-weight: 800; letter-spacing: .06em; color: var(--muted); }
+  .sc .st.live { color: #ff4d4d; }
+  .sc .st.live::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #ff4d4d; margin-right: 4px; vertical-align: 1px; animation: pulse 1.2s infinite; }
+  @keyframes pulse { 50% { opacity: .25; } }
+
+  /* the three boxes */
+  .grid { display: grid; grid-template-columns: 1.55fr 1fr; grid-template-rows: auto auto; gap: 12px; padding: 12px 14px 4px 18px; }
+  .story { grid-row: span 2; position: relative; border-radius: 10px; overflow: hidden; min-height: 300px; background: #0b1a33; display: block; }
+  .story img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+  .story:hover img { transform: scale(1.05); }
+  .story::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(8,20,40,0) 35%, rgba(8,20,40,.92) 88%); }
+  .story .txt { position: absolute; left: 0; right: 0; bottom: 0; padding: 16px; z-index: 1; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; background: var(--pc); color: #0b1a33; font-size: 10.5px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; padding: 4px 8px; border-radius: 4px; }
+  .story h3 { margin: 8px 0 6px; font-size: 21px; line-height: 1.2; font-weight: 800; text-shadow: 0 2px 10px rgba(0,0,0,.5); }
+  .story .go { font-size: 12px; font-weight: 800; color: var(--pc); letter-spacing: .04em; text-transform: uppercase; }
+  .story:hover .go { text-decoration: underline; }
+
+  .vid { position: relative; border-radius: 10px; overflow: hidden; aspect-ratio: 16 / 9; background: #000; cursor: pointer; border: 0; padding: 0; width: 100%; display: block; color: var(--text); font: inherit; text-align: left; }
+  .vid img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+  .vid:hover img { transform: scale(1.06); }
+  .vid::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,.85)); }
+  .vid .pl { position: absolute; left: 50%; top: 42%; width: 56px; height: 56px; margin: -28px 0 0 -28px; border-radius: 50%; background: rgba(0,0,0,.55); border: 2px solid #fff; z-index: 1; transition: transform .2s, background .2s; }
+  .vid .pl::after { content: ''; position: absolute; left: 22px; top: 16px; border-left: 18px solid #fff; border-top: 11px solid transparent; border-bottom: 11px solid transparent; }
+  .vid:hover .pl { transform: scale(1.12); background: var(--pc); border-color: var(--pc); }
+  .vid .vt { position: absolute; left: 0; right: 0; bottom: 0; padding: 8px 10px; z-index: 1; font-weight: 700; font-size: 13px; line-height: 1.25; }
+  .vid .vt .chip { margin-bottom: 4px; }
+  .vid .vt span.t { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .vid iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; z-index: 2; }
+
+  .heads { background: rgba(0,0,0,.22); border: 1px solid rgba(255,255,255,.08); border-radius: 10px; padding: 8px 12px; }
+  .heads .hh { font-size: 10.5px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; color: var(--pc); margin: 2px 0 2px; }
+  .heads a { display: flex; align-items: center; gap: 10px; padding: 7px 0; border-top: 1px solid rgba(255,255,255,.1); }
+  .heads a:first-of-type { border-top: 0; }
+  .heads .lo { width: 30px; height: 30px; flex: none; display: flex; align-items: center; justify-content: center; }
+  .heads .lo img { max-width: 30px; max-height: 30px; object-fit: contain; }
+  .heads .lo b { font-size: 8.5px; font-weight: 900; letter-spacing: .03em; color: var(--pc); text-align: center; line-height: 1.05; }
+  .heads .t { font-weight: 700; font-size: 13px; line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .heads a:hover .t { color: var(--pc); }
+
+  /* doors into the rest of the site */
+  .doors { display: flex; flex-wrap: wrap; gap: 8px; padding: 12px 14px 14px 18px; }
+  .door { display: inline-flex; align-items: center; gap: 7px; padding: 9px 13px; border-radius: 999px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); font-weight: 700; font-size: 12.5px; transition: background .2s, border-color .2s, transform .2s; }
+  .door svg { width: 15px; height: 15px; fill: var(--pc); flex: none; }
+  .door:hover { background: var(--pc); border-color: var(--pc); color: #0b1a33; transform: translateY(-1px); }
+  .door:hover svg { fill: #0b1a33; }
+  .door.new::after { content: 'NEW'; font-size: 9px; font-weight: 900; letter-spacing: .06em; background: #ff3b3b; color: #fff; padding: 2px 5px; border-radius: 3px; }
+
+  .empty { color: var(--muted); padding: 30px 0; text-align: center; }
+
+  /* phones: the story on top, then the video and headlines side by side as swipe cards */
+  @media (max-width: 640px) {
+    .wrap { padding: 10px 10px 12px; }
+    .intro img { height: 32px; } .intro h1 { font-size: 24px; } .intro .home { display: none; }
+    .phead { padding: 10px 12px 8px 14px; } .phead h2 { font-size: 22px; } .phead .sub { display: none; } .phead { justify-content: space-between; }
+    .grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 10px; padding: 10px 12px 4px 14px; scrollbar-width: none; }
+    .grid::-webkit-scrollbar { display: none; }
+    .grid > * { flex: 0 0 84%; scroll-snap-align: start; }
+    .story { min-height: 0; height: 250px; } .story h3 { font-size: 18px; }
+    .vid { aspect-ratio: auto; height: 250px; }
+    .heads { height: 250px; overflow: hidden; }
+    .doors { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding: 10px 12px 12px 14px; }
+    .doors::-webkit-scrollbar { display: none; }
+    .door { flex: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { .ribbon .track { animation: none; } .story img, .vid img { transition: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="intro">
+    <img src="https://bbellacicco.github.io/powerplay-feed/logos/pp-icon.png" alt="Powerplay Windsor">
+    <div class="w"><div class="k">Keep the game going</div><h1>More from <em>Powerplay Windsor</em></h1></div>
+    <a class="home" id="home" target="_top">Visit the home page ›</a>
+  </div>
+  <div id="panels"></div>
+</div>
+<script>
+(function () {
+  var REPO = 'https://bbellacicco.github.io/powerplay-feed/', DATA = REPO + 'data/';
+  var SITE = 'https://www.powerplaywindsor.com/';
+  var qs = new URLSearchParams(location.search);
+  var PAGE = {
+    home: SITE,
+    localHub: qs.get('local') || SITE + 'scores-standings',
+    proHub: qs.get('pro') || SITE + 'local-sports',
+    snaps: SITE + 'game-day-snaps',
+    search: SITE + 'search-1'
+  };
+  var TZ = 'America/Toronto';
+  var MON = ['Jan.', 'Feb.', 'March', 'April', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'];
+  var PP_LOGO = REPO + 'logos/pp-icon.png';
+  var LS = 'https://assets.leaguestat.com/';
+  var LANCERS_LOGO = 'https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/golancers.ca/images/responsive_2025/logo_main.png';
+  var GENERIC_IMG = /(1920x1080-|game-story|placeholder)/i;
+  var HS_LOGOS = {"assumption": "acchs", "belle river": "brdhs", "brennan": "fjbhs", "cardinal carter": "ccss", "catholic central": "cchs", "erie migration": "em", "essex": "edhs", "herman": "hss", "holy names": "hnchs", "kennedy": "kci", "l'essor": "lss", "lajeunesse": "ejles", "lamothe-cadillac": "eslc", "leamington": "ldss", "maranatha": "mca", "massey": "vmss", "north star": "nshs", "riverside": "rss", "sandwich": "sss", "st. anne": "sachs", "st. joseph's": "sjchs", "ste. cecile": "ascis", "tecumseh vista academy": "tva", "umei": "umei", "villanova": "vcss", "walkerville": "wci", "westview freedom academy": "wfa", "windsor islamic": "wihs"};
+  var OHL = { bulldogs: 1, frontenacs: 2, generals: 4, '67': 5, petes: 6, colts: 7, otters: 8, storm: 9, rangers: 10, attack: 11, wolves: 12,
+    firebirds: 13, knights: 14, sting: 15, greyhounds: 16, spitfires: 17, steelheads: 18, battalion: 19, icedogs: 20, spirit: 34 };
+  var TEAM_LOGOS = {};
+
+  // small helpers
+  function el(t, c, x) { var e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; }
+  function getJSON(n) { return fetch(DATA + n + '?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }); }
+  function parts(d) { var p = {}; new Intl.DateTimeFormat('en-CA', { timeZone: TZ, year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: '2-digit', hourCycle: 'h23', weekday: 'short' }).formatToParts(d).forEach(function (x) { p[x.type] = x.value; }); return p; }
+  function dayKey(d) { var p = parts(d); return p.year + '-' + p.month + '-' + p.day; }
+  function cpTime(d) { var p = parts(d), h = +p.hour; return (h % 12 || 12) + (p.minute === '00' ? '' : ':' + p.minute) + (h < 12 ? ' a.m.' : ' p.m.'); }
+  function wkday(d) { return parts(d).weekday.replace('.', ''); }
+  function isVid(s) { return s.source === 'YouTube' || s.source === 'Vimeo' || /youtube\.com|youtu\.be|vimeo\.com/.test(s.url || ''); }
+  function ytId(u) { var m = String(u || '').match(/(?:[?&]v=|youtu\.be\/|\/shorts\/)([\w-]{11})/); return m ? m[1] : ''; }
+  function vidEmbed(u) {
+    var id = ytId(u); if (id) return 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&playsinline=1&modestbranding=1';
+    var m = String(u).match(/vimeo\.com\/(?:video\/)?(\d+)/); return m ? 'https://player.vimeo.com/video/' + m[1] + '?autoplay=1&title=0&byline=0&portrait=0' : '';
+  }
+  function bigThumb(v) { var id = ytId(v.url); return id ? 'https://i.ytimg.com/vi/' + id + '/hq720.jpg' : v.image; }
+  function wixFill(u, w, h) { var m = String(u || '').match(/^(https:\/\/static\.wixstatic\.com\/media\/[^/]+)/); return m ? m[1] + '/v1/fill/w_' + w + ',h_' + h + ',al_c,q_80/photo.jpg' : u; }
+  function pickOne(list, n) { list = list.slice(0, n); return list.length ? list[Math.floor(Math.random() * list.length)] : null; }   // a different one most visits
+  function setTab(tab) { try { localStorage.setItem('pp-tab', JSON.stringify({ tab: tab, t: Date.now() })); } catch (e) {} }
+  function link(a, url, tab) {
+    a.href = url;
+    if (url.indexOf(SITE) === 0) { a.target = '_top'; if (tab) a.addEventListener('click', function () { setTab(tab); }); }
+    else { a.target = '_blank'; a.rel = 'noopener'; }
+    return a;
+  }
+  function openUrl(url, tab) { if (tab) setTab(tab); if (url.indexOf(SITE) === 0) { try { top.location.href = url; } catch (e) { location.href = url; } } else window.open(url, '_blank', 'noopener'); }
+  document.getElementById('home').href = PAGE.home;
+
+  // icons for the door buttons
+  var ICON = {
+    score: 'M3 5h18v14H3zm2 2v10h6V7zm8 0v10h6V7z',
+    table: 'M3 4h18v16H3zm2 2v3h14V6zm0 5v3h6v-3zm8 0v3h6v-3zm-8 5v2h6v-2zm8 0v2h6v-2z',
+    camera: 'M9 4 7.2 6H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1h-3.2L15 4zm3 4.5A4.5 4.5 0 1 1 7.5 13 4.5 4.5 0 0 1 12 8.5z',
+    person: 'M12 12a4.5 4.5 0 1 0-4.5-4.5A4.5 4.5 0 0 0 12 12zm0 2c-4 0-8 2-8 5v2h16v-2c0-3-4-5-8-5z',
+    play: 'M4 4h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm6 4v8l6-4z',
+    news: 'M4 4h13v15a1 1 0 0 0 1 1H5a1 1 0 0 1-1-1zm2 2v4h9V6zm0 6v1.5h9V12zm0 3v1.5h9V15zM19 8h2v11a1 1 0 0 1-2 0z',
+    search: 'M10 3a7 7 0 1 0 4.2 12.6l5.1 5.1 1.4-1.4-5.1-5.1A7 7 0 0 0 10 3zm0 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10z',
+    star: 'M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z'
+  };
+  function door(label, url, tab, icon, isNew) {
+    var a = link(el('a', 'door' + (isNew ? ' new' : '')), url, tab);
+    var s = document.createElementNS('http://www.w3.org/2000/svg', 'svg'); s.setAttribute('viewBox', '0 0 24 24');
+    var p = document.createElementNS('http://www.w3.org/2000/svg', 'path'); p.setAttribute('d', ICON[icon]); s.appendChild(p);
+    a.appendChild(s); a.appendChild(document.createTextNode(label));
+    return a;
+  }
+
+  // ---------- building blocks ----------
+  function panel(kind, title, gold, sub, allUrl, allTab) {
+    var p = el('section', 'panel ' + kind), h = el('div', 'phead'), h2 = el('h2');
+    h2.appendChild(document.createTextNode(title + ' ')); h2.appendChild(el('em', null, gold));
+    h.appendChild(h2); h.appendChild(el('div', 'sub', sub));
+    h.appendChild(link(el('a', 'all', 'Open the hub ›'), allUrl, allTab));
+    p.appendChild(h);
+    var rib = el('div', 'ribbon'); rib.style.display = 'none'; p.appendChild(rib);
+    var g = el('div', 'grid'); g.appendChild(el('div', 'empty', 'Loading…')); p.appendChild(g);
+    var d = el('div', 'doors'); p.appendChild(d);
+    document.getElementById('panels').appendChild(p);
+    return { root: p, ribbon: rib, grid: g, doors: d };
+  }
+  function ribbon(box, items) {
+    if (!items.length) return;
+    var tr = el('div', 'track');
+    for (var copy = 0; copy < 2; copy++) items.forEach(function (it) { tr.appendChild(it()); });   // two copies so it loops seamlessly
+    box.innerHTML = ''; box.appendChild(tr); box.style.display = '';
+    requestAnimationFrame(function () { tr.style.setProperty('--dur', Math.max(25, tr.scrollWidth / 2 / 55) + 's'); });
+  }
+  function scoreChip(o) {
+    return function () {
+      var s = el('span', 'sc'); s.title = o.title || '';
+      s.onclick = function () { openUrl(o.url, o.tab); };
+      s.appendChild(el('span', 'lg', o.lg));
+      [o.a, o.h].forEach(function (t, i) {
+        if (i) s.appendChild(el('span', 'st', o.final || o.live ? '' : '@'));
+        if (t.logo) { var im = new Image(); im.alt = ''; im.src = t.logo; if (t.white) im.className = 'w'; im.onerror = function () { im.remove(); }; s.appendChild(im); }
+        var nm = el('span', t.lost ? 'l' : null, t.n); s.appendChild(nm);
+        if (t.s != null && t.s !== '') s.appendChild(el('b', t.lost ? 'l' : null, String(t.s)));
+      });
+      s.appendChild(el('span', 'st' + (o.live ? ' live' : ''), o.status));
+      return s;
+    };
+  }
+  function storyBox(s, chipTxt, goTxt) {
+    var a = link(el('a', 'story'), s.url);
+    var im = new Image(); im.alt = ''; im.referrerPolicy = 'no-referrer'; im.src = wixFill(s.image, 900, 560);
+    im.onerror = function () { if (im.src !== s.image) im.src = s.image; else im.remove(); };
+    a.appendChild(im);
+    var t = el('div', 'txt'); t.appendChild(el('span', 'chip', chipTxt)); t.appendChild(el('h3', null, s.headline)); t.appendChild(el('div', 'go', goTxt));
+    a.appendChild(t);
+    return a;
+  }
+  function videoBox(v, chipTxt) {
+    var b = el('button', 'vid'); b.type = 'button'; b.setAttribute('aria-label', 'Play video: ' + v.headline);
+    var im = new Image(); im.alt = ''; im.referrerPolicy = 'no-referrer'; im.src = bigThumb(v);
+    im.onerror = function () { if (v.image && im.src !== v.image) im.src = v.image; };
+    b.appendChild(im); b.appendChild(el('span', 'pl'));
+    var vt = el('span', 'vt'); vt.appendChild(el('span', 'chip', chipTxt)); vt.appendChild(document.createElement('br')); vt.appendChild(el('span', 't', v.headline)); b.appendChild(vt);
+    b.onclick = function () {
+      var src = vidEmbed(v.url); if (!src) { openUrl(v.url); return; }
+      if (b.querySelector('iframe')) return;
+      var f = document.createElement('iframe'); f.src = src; f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen'; f.allowFullscreen = true; f.title = v.headline;
+      b.appendChild(f);
+    };
+    return b;
+  }
+  function headsBox(title, list) {
+    var box = el('div', 'heads'); box.appendChild(el('div', 'hh', title));
+    list.forEach(function (h) {
+      var a = link(el('a'), h.url, h.tab), lo = el('span', 'lo');
+      if (h.logo) { var im = new Image(); im.alt = ''; im.src = h.logo; im.referrerPolicy = 'no-referrer'; im.onerror = function () { im.remove(); lo.appendChild(el('b', null, h.abbr || '')); }; lo.appendChild(im); }
+      else lo.appendChild(el('b', null, h.abbr || ''));
+      a.appendChild(lo); a.appendChild(el('span', 't', h.headline)); box.appendChild(a);
+    });
+    return box;
+  }
+  function fillGrid(g, nodes) { g.innerHTML = ''; nodes.filter(Boolean).forEach(function (n) { g.appendChild(n); }); if (!g.children.length) g.appendChild(el('div', 'empty', 'More coming soon.')); }
+
+  // ---------- LOCAL ----------
+  var CAT = [[/lancer|uwindsor|university of windsor/i, 'OUA'], [/st\.? clair|saints\b/i, 'OCAA'], [/spitfire|\bohl\b/i, 'OHL'],
+    [/\bofsaa\b|wecssaa|high school|secondary school/i, 'High School'], [/\b(ojhl|gohl|pjhl)\b|junior/i, 'Junior Hockey']];
+  function cat(s) { var c = String(s.cats || '').split(/\s*,\s*/).filter(function (x) { return x && !/^(powerplay today|all posts|uncategori[sz]ed|news|blog)$/i.test(x); })[0]; if (c) return c;
+    var hay = s.headline + ' ' + (s.summary || ''); for (var i = 0; i < CAT.length; i++) if (CAT[i][0].test(hay)) return CAT[i][1]; return 'Powerplay'; }
+  var LTAG = { spitfires: ['Spitfires', LS + 'ohl/logos/17.png'], lancers: ['Lancers', LANCERS_LOGO], saints: ['Saints', ''], powerplay: ['Powerplay', PP_LOGO], junior: ['Junior', ''], highschool: ['High school', ''] };
+  function saintsLogo() { var u = ''; Object.keys(TEAM_LOGOS).some(function (k) { if (/st\.? clair/i.test(k)) { u = TEAM_LOGOS[k]; return true; } return false; }); return u; }
+  function hsLogo(n) { var f = HS_LOGOS[String(n || '').toLowerCase().replace(/’/g, "'").trim()]; return f ? REPO + 'logos/hs/' + f + '.png' : ''; }
+  function localLogo(name, g, ours) {
+    var n = String(name || '').toLowerCase();
+    if (g.team === 'highschool') return hsLogo(name);
+    if (ours && g.team === 'lancers') return LANCERS_LOGO;
+    if (ours && g.team === 'saints') return saintsLogo();
+    if (g.team === 'spitfires') { for (var k in OHL) if (n.indexOf(k) >= 0) return LS + 'ohl/logos/' + OHL[k] + '.png'; }
+    if (g.team === 'lancers' || g.team === 'saints') {
+      var want = n.replace(/^(the )?(university of |universite )/, ''), best = '';
+      Object.keys(TEAM_LOGOS).forEach(function (k) { var kk = k.toLowerCase(); if (!best && want && (kk === want || kk.indexOf(want) === 0 || want.indexOf(kk) === 0)) best = TEAM_LOGOS[k]; });
+      return best;
+    }
+    return '';
+  }
+  var SHORT = { spitfires: 'Spitfires', lancers: 'Lancers', saints: 'Saints' };
+  function localScores(games, teams) {
+    var now = Date.now(), today = dayKey(new Date());
+    var rank = function (g) { return g.team === 'spitfires' ? 0 : g.team === 'lancers' || g.team === 'saints' ? 1 : g.team === 'junior' ? 2 : 3; };
+    var pick = games.filter(function (g) {
+      var t = new Date(g.start).getTime();
+      return (g.status === 'final' && g.our_score != null && now - t < 3 * 864e5) || g.status === 'live' || (g.status === 'upcoming' && dayKey(new Date(g.start)) === today);
+    }).sort(function (a, b) {
+      var la = a.status === 'live' ? 0 : 1, lb = b.status === 'live' ? 0 : 1;
+      return la - lb || rank(a) - rank(b) || new Date(b.start) - new Date(a.start);
+    }).slice(0, 18);
+    return pick.map(function (g) {
+      var t = teams[g.team] || {}, a, h;
+      if (g.home && g.away) { a = { n: g.away, s: g.our_score, logo: hsLogo(g.away), white: 1 }; h = { n: g.home, s: g.opp_score, logo: hsLogo(g.home), white: 1 }; }
+      else {
+        var us = { n: g.club || SHORT[g.team] || t.short || '', s: g.our_score, logo: localLogo(g.club || t.name, g, true) },
+          them = { n: g.opponent, s: g.opp_score, logo: localLogo(g.opponent, g, false) };
+        if (g.home_away === 'H') { a = them; h = us; } else { a = us; h = them; }
+      }
+      var fin = g.status === 'final', d = new Date(g.start);
+      if (fin && a.s != null && h.s != null) { a.lost = a.s < h.s; h.lost = h.s < a.s; }
+      if (g.status === 'upcoming') { a.s = h.s = null; }
+      var lg = g.team === 'spitfires' ? 'OHL' : g.team === 'lancers' ? 'OUA' : g.team === 'saints' ? 'OCAA' : g.team === 'highschool' ? 'HS' : (g.sport || 'JR').replace(/\s*\(.*\)/, '');
+      return scoreChip({ lg: lg, a: a, h: h, final: fin, live: g.status === 'live', title: g.sport || '',
+        status: g.status === 'live' ? 'LIVE' : fin ? 'FINAL' + (dayKey(d) === today ? '' : ' · ' + wkday(d).toUpperCase()) : (g.time_tbd ? 'TODAY' : cpTime(d)),
+        url: PAGE.localHub, tab: 'scores' });
+    });
+  }
+  function buildLocal(P, news, lg, hs, net) {
+    var stories = (news && news.stories || []).filter(function (s) { return s.url && s.headline; }).sort(function (a, b) { return new Date(b.published) - new Date(a.published); });
+    var ppStories = stories.filter(function (s) { return s.team === 'powerplay' && !isVid(s) && s.image && !GENERIC_IMG.test(s.image) && /powerplaywindsor\.com\/post\//.test(s.url); });
+    var story = pickOne(ppStories, 4);
+    // newest Powerplay videos (news feed has exact times; the Network list fills in)
+    var vids = stories.filter(function (s) { return s.team === 'powerplay' && isVid(s); }).map(function (s) { return { headline: s.headline, url: s.url, image: s.image, published: s.published }; });
+    var have = {}; vids.forEach(function (v) { have[ytId(v.url) || v.url] = 1; });
+    (net && net.local || []).forEach(function (v) { if (v.u && v.t && v.i && !have[ytId(v.u) || v.u]) vids.push({ headline: v.t, url: v.u, image: v.i, published: String(v.p || '').length === 10 ? v.p + 'T00:00:00' : v.p }); });
+    vids.sort(function (a, b) { return new Date(b.published) - new Date(a.published); });
+    if (!vids.length) vids = (net && net.local || []).filter(function (v) { return v.u && v.t && v.i; }).slice(0, 3).map(function (v) { return { headline: v.t, url: v.u, image: v.i, published: v.p }; });
+    var video = pickOne(vids, 3);
+    // headlines: newest local stories, one per team, not the featured one
+    var seen = {}, heads = [];
+    stories.forEach(function (s) {
+      if (heads.length >= 4 || isVid(s) || (story && s.url === story.url)) return;
+      var key = s.team === 'junior' ? s.club : s.team; if (seen[key]) return; seen[key] = 1;
+      var tg = LTAG[s.team] || ['Local', ''];
+      var logo = s.team === 'saints' ? saintsLogo() : tg[1];
+      heads.push({ url: s.url, headline: s.headline, logo: logo, abbr: s.team === 'junior' ? (s.club || 'Junior').replace(/^(Windsor|St\. Clair)\s+/, '') : tg[0] });
+    });
+    fillGrid(P.grid, [story && storyBox(story, cat(story), 'Read the story ›'), video && videoBox(video, 'Powerplay video'), heads.length && headsBox('Latest headlines', heads)]);
+    var games = (lg && lg.games || []).filter(function (g) { return g.team !== 'highschool'; }).concat(hs && hs.games || []);
+    ribbon(P.ribbon, localScores(games, lg && lg.teams || {}));
+  }
+
+  // ---------- PRO ----------
+  var FAN = [['Red Wings', /red wings/i, 'nhl', 'nhl/500/det'], ['Maple Leafs', /maple leafs|\bleafs\b/i, 'nhl', 'nhl/500/tor'], ['Lions', /detroit lions|^lions$/i, 'nfl', 'nfl/500/det'],
+    ['Tigers', /\btigers\b/i, 'mlb', 'mlb/500/det'], ['Blue Jays', /blue jays|\bjays\b/i, 'mlb', 'mlb/500/tor'], ['Pistons', /pistons/i, 'nba', 'nba/500/det'],
+    ['Raptors', /raptors/i, 'nba', 'nba/500/tor'], ['Canadiens', /canadiens|\bhabs\b/i, 'nhl', 'nhl/500/mtl']];
+  function fanOf(x) {
+    var hay = (x.headline || '') + ' | ' + (x.teams || []).join(' | ');
+    for (var i = 0; i < FAN.length; i++) if ((!FAN[i][2] || FAN[i][2] === x.league) && (FAN[i][1].test(hay) || (x.teams || []).some(function (n) { return FAN[i][1].test(n); }))) return FAN[i];
+    return null;
+  }
+  function fanChannel(ch) { for (var i = 0; i < FAN.length; i++) if (FAN[i][1].test(ch || '') || (ch || '').toLowerCase() === FAN[i][0].toLowerCase()) return FAN[i]; return null; }
+  var PATHS = { nfl: 'football/nfl', nhl: 'hockey/nhl', nba: 'basketball/nba', mlb: 'baseball/mlb' };
+  var OUR = { nfl: ['DET', 'BUF'], nhl: ['DET', 'TOR', 'MTL'], nba: ['DET', 'TOR'], mlb: ['DET', 'TOR'] };
+  function ymd(d) { var p = parts(d); return p.year + ('0' + p.month).slice(-2) + ('0' + p.day).slice(-2); }
+  function espnDay(d) {
+    return Promise.all(Object.keys(PATHS).map(function (k) {
+      return fetch('https://site.api.espn.com/apis/site/v2/sports/' + PATHS[k] + '/scoreboard?dates=' + ymd(d)).then(function (r) { return r.ok ? r.json() : { events: [] }; })
+        .then(function (j) { return (j.events || []).filter(function (e) {
+          return e.competitions[0].competitors.some(function (c) { return OUR[k].indexOf(c.team.abbreviation) >= 0; }) || (e.season && e.season.type === 3);
+        }).map(function (e) { e._lg = k; return e; }); }).catch(function () { return []; });
+    })).then(function (r) { return [].concat.apply([], r); });
+  }
+  function proScores() {
+    var now = Date.now();
+    return Promise.all([-1, 0, 1].map(function (o) { return espnDay(new Date(now + o * 864e5)); })).then(function (r) {
+      var all = [].concat.apply([], r), seen = {};
+      all = all.filter(function (e) { if (seen[e.id]) return false; seen[e.id] = 1; return true; })
+        .filter(function (e) { return e.status.type.state !== 'post' || now - new Date(e.date).getTime() < 36 * 3600e3; });
+      var rank = function (e) { var s = e.status.type.state; return s === 'in' ? 0 : s === 'post' ? 1 : 2; };
+      all.sort(function (a, b) { return rank(a) - rank(b) || (rank(a) === 1 ? (a.date < b.date ? 1 : -1) : (a.date < b.date ? -1 : 1)); });
+      var today = dayKey(new Date());
+      return all.slice(0, 16).map(function (e) {
+        var comp = e.competitions[0], st = e.status.type, d = new Date(e.date);
+        var side = function (h) { var x = comp.competitors.filter(function (c) { return c.homeAway === h; })[0] || {}; return x; };
+        var A = side('away'), H = side('home');
+        var mk = function (x, o) { return { n: (x.team || {}).abbreviation || '', s: st.state === 'pre' ? null : x.score, logo: (x.team || {}).logo || '', lost: st.state === 'post' && x.winner === false && o.winner }; };
+        return scoreChip({ lg: e._lg.toUpperCase(), a: mk(A, H), h: mk(H, A), final: st.state === 'post', live: st.state === 'in',
+          status: st.state === 'in' ? (st.shortDetail || 'LIVE') : st.state === 'post' ? 'FINAL' + (dayKey(d) === today ? '' : ' · ' + wkday(d).toUpperCase()) : (dayKey(d) === today ? '' : wkday(d) + ' ') + cpTime(d),
+          url: PAGE.proHub, tab: 'pro' });
+      });
+    }).catch(function () { return []; });
+  }
+  function buildPro(P, lg, net) {
+    var recent = Date.now() - 4 * 864e5;
+    var pro = (lg && (lg.pro_news || []).concat(lg.more_news || []) || []).filter(function (x) { return x.headline && x.url && new Date(x.published).getTime() > recent; })
+      .sort(function (a, b) { return new Date(b.published) - new Date(a.published); });
+    var seenU = {}; pro = pro.filter(function (x) { if (seenU[x.url]) return false; seenU[x.url] = 1; return true; });
+    var ours = pro.filter(function (x) { return fanOf(x) && !x.video && x.image; });
+    var big = pro.filter(function (x) { return /^(nhl|nfl|mlb|nba)$/.test(x.league) && !x.video && x.image; });
+    var story = pickOne(ours.length ? ours : big, 3);
+    // video: newest from our teams' own channels (Pro Network), else any pro video
+    var pv = (net && net.pro || []).filter(function (v) { return v.u && v.t && v.i; }).sort(function (a, b) { return new Date(b.p) - new Date(a.p); });
+    var mine = pv.filter(function (v) { return fanChannel(v.ch); });
+    var vv = pickOne(mine.length ? mine : pv, 3), video = vv && { headline: vv.t, url: vv.u, image: vv.i, ch: vv.ch };
+    var heads = [], usedU = {}; if (story) usedU[story.url] = 1;
+    var add = function (x) {
+      if (heads.length >= 4 || usedU[x.url]) return; usedU[x.url] = 1;
+      var f = fanOf(x);
+      heads.push({ url: x.url, headline: x.headline, logo: f ? 'https://a.espncdn.com/i/teamlogos/' + f[3] + '.png' : /^(nhl|nfl|mlb|nba|wnba|mls)$/.test(x.league) ? 'https://a.espncdn.com/i/teamlogos/leagues/500/' + x.league + '.png' : '', abbr: (f ? f[0] : (x.league || 'Pro')).toUpperCase() });
+    };
+    ours.concat(pro.filter(function (x) { return fanOf(x); })).slice(0, 2).forEach(add);
+    pro.filter(function (x) { return /^(nhl|nfl|mlb|nba)$/.test(x.league); }).forEach(add);
+    pro.forEach(add);
+    var sf = story && fanOf(story);
+    fillGrid(P.grid, [story && storyBox(story, sf ? sf[0] : (story.league || 'Pro').toUpperCase(), (story.source ? story.source + ' · ' : '') + 'Read it ›'),
+      video && videoBox(video, video.ch || 'Pro video'), heads.length && headsBox('Pro headlines', heads)]);
+    proScores().then(function (items) { ribbon(P.ribbon, items); });
+  }
+
+  // ---------- go ----------
+  var only = qs.get('only');
+  var L = only === 'pro' ? null : panel('local', 'Around', 'Windsor-Essex', 'Local stories, video and scores', PAGE.localHub, 'scores');
+  var R = only === 'local' ? null : panel('pro', 'Around the', 'Pros', 'Our teams: Wings, Leafs, Lions, Tigers, Jays, Pistons, Raptors', PAGE.proHub, 'pro');
+  if (L) [['Local Scoreboard', PAGE.localHub, 'scores', 'score'], ['Standings', PAGE.localHub, 'scores', 'table'], ['Game Day Snaps', PAGE.snaps, null, 'camera', true],
+          ['Athlete Profiles', PAGE.localHub, 'athletes', 'person'], ['Powerplay Network', PAGE.localHub, 'network', 'play'], ['Spotlight', PAGE.localHub, 'spotlight', 'star']]
+    .forEach(function (d) { L.doors.appendChild(door(d[0], d[1], d[2], d[3], d[4])); });
+  if (R) [['Pro Scoreboard', PAGE.proHub, 'pro', 'score'], ['Pro Updates', PAGE.proHub, 'pro-updates', 'news'], ['Pro Network', PAGE.proHub, 'pro-network', 'play'], ['Search the site', PAGE.search, null, 'search']]
+    .forEach(function (d) { R.doors.appendChild(door(d[0], d[1], d[2], d[3])); });
+
+  Promise.all([getJSON('local-news.json'), getJSON('local-games.json'), getJSON('highschool.json'), getJSON('network.json'), getJSON('team-logos.json')]).then(function (r) {
+    if (r[4] && r[4].logos) TEAM_LOGOS = r[4].logos;
+    if (L) buildLocal(L, r[0], r[1], r[2], r[3]);
+    if (R) buildPro(R, r[1], r[3]);
+  });
+})();
+</script>
+</body>
+</html>
