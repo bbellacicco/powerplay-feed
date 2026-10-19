@@ -486,8 +486,15 @@
   }
   function pickHeads(stories, lg, used) {
     var out = [], seenTeam = {}, recent = Date.now() - 4 * 86400e3;
-    // local: newest written stories, two different teams
-    stories.filter(function (s) { return !used[s.url] && !isVid(s) && s.team !== 'highschool'; }).some(function (s) {
+    // local: newest written stories, two different teams.
+    // Lancers: men's hockey comes first when there's a men's hockey story from the last two days
+    var cand = stories.filter(function (s) { return !used[s.url] && !isVid(s) && s.team !== 'highschool'; });
+    var isMensHockey = function (s) { var t = (s.sport || '') + ' ' + s.headline; return /hockey/i.test(t) && !/women/i.test(t); };
+    var lanMen = cand.filter(function (s) { return s.team === 'lancers' && isMensHockey(s) && Date.now() - new Date(s.published).getTime() < 2 * 86400e3; })[0];
+    if (lanMen) cand = cand.map(function (s) { return s.team === 'lancers' && s !== lanMen && !seenTeam.lanSwap ? (seenTeam.lanSwap = 1, lanMen) : s; })
+      .filter(function (s, i, a) { return a.indexOf(s) === i; });
+    delete seenTeam.lanSwap;
+    cand.some(function (s) {
       var key = s.team === 'junior' ? s.club : s.team;
       if (seenTeam[key]) return false;
       seenTeam[key] = 1;
@@ -500,9 +507,18 @@
     var pro = (lg.pro_news || []).concat(lg.more_news || []).filter(function (x) {
       return x.headline && x.url && !x.video && /^(nhl|nfl|mlb|nba|pwhl)$/.test(x.league) && new Date(x.published).getTime() > recent;
     }).sort(function (a, b) { return new Date(b.published) - new Date(a.published); });
-    var got = 0, teamSeen = {};
-    pro.forEach(function (x) { if (got < 2) { var t = fanTeam(x); if (t && !teamSeen[t]) { teamSeen[t] = 1; got++; out.push({ url: x.url, headline: x.headline, tag: x.league.toUpperCase() + ' \u00b7 ' + t, col: LEAGUE_COL[x.league], logo: ESPN_TEAM[t] ? 'https://a.espncdn.com/i/teamlogos/' + ESPN_TEAM[t] + '.png' : '', abbr: t }); } } });
-    pro.forEach(function (x) { if (got < 2 && /^(nhl|nfl|mlb|nba)$/.test(x.league) && !out.some(function (o) { return o.url === x.url; })) { got++; out.push({ url: x.url, headline: x.headline, tag: x.league.toUpperCase(), col: LEAGUE_COL[x.league], logo: 'https://a.espncdn.com/i/teamlogos/leagues/500/' + x.league + '.png', abbr: x.league.toUpperCase() }); } });
+    // slot 1: the newest story about one of our teams (last day and a half);
+    // slot 2: the newest big-league story (NHL, NFL, MLB, NBA) — it changes through the day as news breaks
+    var fresh = Date.now() - 36 * 3600e3, got = 0;
+    var proItem = function (x, t) {
+      return t ? { url: x.url, headline: x.headline, tag: x.league.toUpperCase() + ' \u00b7 ' + t, col: LEAGUE_COL[x.league], logo: ESPN_TEAM[t] ? 'https://a.espncdn.com/i/teamlogos/' + ESPN_TEAM[t] + '.png' : '', abbr: t }
+               : { url: x.url, headline: x.headline, tag: x.league.toUpperCase(), col: LEAGUE_COL[x.league], logo: 'https://a.espncdn.com/i/teamlogos/leagues/500/' + x.league + '.png', abbr: x.league.toUpperCase() };
+    };
+    var ours = pro.filter(function (x) { return fanTeam(x) && new Date(x.published).getTime() > fresh; })[0];
+    if (ours) { out.push(proItem(ours, fanTeam(ours))); got++; }
+    pro.forEach(function (x) {
+      if (got < 2 && /^(nhl|nfl|mlb|nba)$/.test(x.league) && !out.some(function (o) { return o.url === x.url; })) { var t = fanTeam(x); out.push(proItem(x, t)); got++; }
+    });
     return out;
   }
 
@@ -768,17 +784,30 @@
   // ---------- load everything ----------
   var OUR_PRO = /(red wings|maple leafs|leafs|canadiens|lions|bills|tigers|blue jays|jays|pistons|raptors|argonauts|argos|tiger-cats|ticats|sceptres|spitfires)/i;
   function load() {
-    Promise.all([getJSON('local-news.json'), getJSON('local-games.json'), getJSON('highschool.json'), getJSON('saints.json'), getJSON('network.json'), getJSON('profiles.json'), getJSON('team-logos.json'), getJSON('slideshows.json')]).then(function (r) {
+    Promise.all([getJSON('local-news.json'), getJSON('local-games.json'), getJSON('highschool.json'), getJSON('saints.json'), getJSON('network.json'), getJSON('profiles.json'), getJSON('team-logos.json'), getJSON('slideshows.json'), getJSON('featured.json')]).then(function (r) {
       if (r[6] && r[6].logos) TEAM_LOGOS = r[6].logos;
       var news = r[0] || {}, lg = r[1] || {}, hs = r[2], sc = r[3], net = r[4] || {}, pf = r[5] || {};
       var stories = (news.stories || []).filter(function (s) { return s.url && s.headline; })
         .sort(function (a, b) { return new Date(b.published) - new Date(a.published); });
       // top stories: Powerplay's three newest written stories with a real photo
       var seenH = {}, featItems = stories.filter(function (s) { return s.team === 'powerplay' && !isVid(s) && s.image && !GENERIC_IMG.test(s.image) && /powerplaywindsor\.com/.test(s.url); })
-        .filter(function (s) { var k = s.headline.toLowerCase().replace(/[^a-z0-9]+/g, ''); if (seenH[k]) return false; seenH[k] = 1; return true; }).slice(0, 3);
+        .filter(function (s) { var k = s.headline.toLowerCase().replace(/[^a-z0-9]+/g, ''); if (seenH[k]) return false; seenH[k] = 1; return true; });
+      // scheduled top story (featured.txt): from its time, an older story takes the big box until a newer story is posted
+      var sched = ((r[8] && r[8].featured) || []).filter(function (f) { return f.url && new Date(f.from).getTime() <= Date.now(); })
+        .sort(function (a, b) { return new Date(b.from) - new Date(a.from); })[0];
+      if (sched) {
+        var key = function (u) { return String(u || '').toLowerCase().replace(/[?#].*$/, '').replace(/\/$/, ''); };
+        var pick = stories.filter(function (s) { return key(s.url) === key(sched.url) && s.image; })[0];
+        var newer = featItems.some(function (s) { return new Date(s.published) > new Date(sched.from) && key(s.url) !== key(sched.url); });
+        if (pick && !newer) featItems = [pick].concat(featItems.filter(function (s) { return key(s.url) !== key(sched.url); }));
+      }
+      featItems = featItems.slice(0, 3);
       // top video: Powerplay's newest YouTube / Vimeo video
       var ppVids = stories.filter(function (s) { return isVid(s) && s.team === 'powerplay'; }).map(function (s) { return { headline: s.headline, url: s.url, image: s.image, published: s.published }; });
-      (net.local || []).forEach(function (v) { if (v.u && v.t) ppVids.push({ headline: v.t, url: v.u, image: v.i, published: v.p.length === 10 ? v.p + 'T12:00:00' : v.p }); });
+      // the Network list only has the day a video went up; the news feed has the exact time, so it wins when both have the video
+      var vidId = function (u) { var m = String(u || '').match(/(?:[?&]v=|youtu\.be\/|\/shorts\/|vimeo\.com\/(?:video\/)?)([\w-]{6,})/); return m ? m[1] : u; };
+      var haveVid = {}; ppVids.forEach(function (v) { haveVid[vidId(v.url)] = 1; });
+      (net.local || []).forEach(function (v) { if (v.u && v.t && !haveVid[vidId(v.u)]) ppVids.push({ headline: v.t, url: v.u, image: v.i, published: v.p.length === 10 ? v.p + 'T00:00:00' : v.p }); });
       var topVid = ppVids.filter(function (v) { return v.image; }).sort(function (a, b) { return new Date(b.published) - new Date(a.published); })[0] || null;
       // YouTube's standard thumbnail is 4:3 with black bars; use the widescreen one so the picture fills the box
       if (topVid) {
@@ -820,10 +849,11 @@
       }
       // Powerplay Network: newest YouTube/Vimeo videos
       var vids = stories.filter(isVid), seenV = {};
-      if (topVid) { seenV[topVid.url] = 1; seenV[topVid.headline.toLowerCase().replace(/[^a-z0-9]+/g, '')] = 1; }   // already featured at the top
-      (net.local || []).forEach(function (v) { vids.push({ headline: v.t, url: v.u, image: v.i, published: v.p.length === 10 ? v.p + 'T12:00:00' : v.p, source: v.s, video: true }); });
-      vids = vids.filter(function (v) { var k = v.headline.toLowerCase().replace(/[^a-z0-9]+/g, ''); if (seenV[k] || seenV[v.url]) return false; seenV[k] = seenV[v.url] = 1; return true; })
-        .sort(function (a, b) { return new Date(b.published) - new Date(a.published); }).slice(0, 15);
+      if (topVid) { seenV[vidId(topVid.url)] = 1; seenV[topVid.headline.toLowerCase().replace(/[^a-z0-9]+/g, '')] = 1; }   // already featured at the top
+      var haveV2 = {}; vids.forEach(function (v) { haveV2[vidId(v.url)] = 1; });
+      (net.local || []).forEach(function (v) { if (!haveV2[vidId(v.u)]) vids.push({ headline: v.t, url: v.u, image: v.i, published: v.p.length === 10 ? v.p + 'T00:00:00' : v.p, source: v.s, video: true }); });
+      vids = vids.sort(function (a, b) { return new Date(b.published) - new Date(a.published); })
+        .filter(function (v) { var k = v.headline.toLowerCase().replace(/[^a-z0-9]+/g, ''), id = vidId(v.url); if (seenV[k] || seenV[id]) return false; seenV[k] = seenV[id] = 1; return true; }).slice(0, 15);
       fill('network', vids.map(function (v) { return storyCard(v, { play: true, sub: (v.source || 'Video') + ' · ' + ago(v.published), tile: 'Powerplay' }); }), 'Videos are on the way.');
       // pro headlines: our teams first
       var pro = (lg.pro_news || []).concat(lg.more_news || []).filter(function (s) { return s.url && s.headline; });
