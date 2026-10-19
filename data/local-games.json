@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19T19:31:41-04:00",
+ "updated": "2026-10-19T19:46:38-04:00",
  "today": "2026-10-19",
  "range": [
   "2026-10-16",
@@ -86,8 +86,8 @@
    "count": 12
   },
   "standings_cjfl": {
-   "ok": false,
-   "error": "The read operation timed out"
+   "ok": true,
+   "count": 6
   },
   "pwhl": {
    "ok": true,
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 36
+   "count": 37
   },
   "club_news": {
    "ok": true,
@@ -3391,6 +3391,21 @@
   },
   {
    "league": "nhl",
+   "headline": "Maple Leafs’ William Nylander in lineup vs. Sharks",
+   "summary": "The Toronto Maple Leafs’ hot-handed winger will be available for Monday night’s showdown against the San Jose Sharks (Sportsnet+, 7:30 p.m. ET / 10:30 p.m. PT) after previously being deemed a game-time decision due to an",
+   "published": "2026-10-19T19:34-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Nylander.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-william-nylander-in-lineup-vs-sharks/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "NHL unveils rendering for Heritage Classic in Winnipeg",
    "summary": "The 2026 Heritage Classic will be a sight to see.",
    "published": "2026-10-19T16:52-04:00",
@@ -4205,7 +4220,7 @@
    "league": "mlb",
    "headline": "Watch Tigers prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-19T19:00-04:00",
+   "published": "2026-10-19T19:33-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -4372,9 +4387,9 @@
   },
   {
    "league": "mlb",
-   "headline": "Watch LIVE: Blue Jays prospects in Arizona Fall League action",
+   "headline": "Watch Blue Jays prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-19T19:00-04:00",
+   "published": "2026-10-19T19:33-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
