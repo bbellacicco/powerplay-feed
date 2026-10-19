@@ -50,6 +50,7 @@
   @media (max-width: 340px) { .title { white-space: normal; } }   /* "Local Scoreboard Today" wraps instead of running into "Full schedule" on the smallest phones */
   .brand { display: flex; align-items: center; gap: 9px; min-width: 0; }
   .brand .btext { min-width: 0; }
+  .team .crest { height: 16px; width: 16px; object-fit: contain; flex: none; border-radius: 2px; background: #fff; }
   .blogo { height: 30px; width: auto; max-width: 60px; object-fit: contain; flex: none; border-radius: 4px; }
   .sponsor b { white-space: nowrap; }
 </style>
@@ -65,6 +66,9 @@
   <div class="strip" id="strip"><div class="empty">Loading…</div></div>
 <script>
 (function () {
+  // high school crests (from wecssaa.com, saved in logos/hs/)
+  var HS_LOGOS = {"assumption": "acchs", "belle river": "brdhs", "brennan": "fjbhs", "cardinal carter": "ccss", "catholic central": "cchs", "erie migration": "em", "essex": "edhs", "herman": "hss", "holy names": "hnchs", "kennedy": "kci", "l'essor": "lss", "lajeunesse": "ejles", "lamothe-cadillac": "eslc", "leamington": "ldss", "maranatha": "mca", "massey": "vmss", "north star": "nshs", "riverside": "rss", "sandwich": "sss", "st. anne": "sachs", "st. joseph's": "sjchs", "ste. cecile": "ascis", "tecumseh vista academy": "tva", "umei": "umei", "villanova": "vcss", "walkerville": "wci", "westview freedom academy": "wfa", "windsor islamic": "wihs"};
+  function hsLogo(name) { var f = HS_LOGOS[String(name || '').toLowerCase().replace(/’/g, "'").trim()]; return f ? 'https://bbellacicco.github.io/powerplay-feed/logos/hs/' + f + '.png' : ''; }
   var TZ = 'America/Toronto';
   var MAX_CARDS = 8;
   var BASE = 'https://bbellacicco.github.io/powerplay-feed/data/';
@@ -146,7 +150,7 @@
       // away on top, home underneath
       var away, home;
       if (g.home && g.away) {                                   // high school: neutral listing
-        away = { n: g.away, s: g.our_score, ours: false }; home = { n: g.home, s: g.opp_score, ours: false };
+        away = { n: g.away, s: g.our_score, ours: false, logo: hsLogo(g.away) }; home = { n: g.home, s: g.opp_score, ours: false, logo: hsLogo(g.home) };
       } else {
         var us = { n: g.club || t.short || g.team, s: g.our_score, ours: true };
         var them = { n: g.opponent, s: g.opp_score, ours: false };
@@ -156,6 +160,7 @@
         var other = i ? away : home;
         var lost = g.status === 'final' && x.s != null && other.s != null && x.s < other.s;
         var row = el('div', 'team' + (x.ours ? ' ours' : '') + (lost ? ' lost' : ''));
+        if (x.logo) { var ci = new Image(); ci.className = 'crest'; ci.alt = ''; ci.src = x.logo; ci.onerror = function () { this.remove(); }; row.appendChild(ci); }
         row.appendChild(el('span', 'n', x.n));
         if (g.status !== 'upcoming' && x.s != null) row.appendChild(el('span', 's', String(x.s)));
         a.appendChild(row);
