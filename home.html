@@ -500,25 +500,44 @@
       seenTeam[key] = 1;
       var tag = s.team === 'powerplay' ? [storyCat(s, 'Local'), 'Powerplay', '#e8b021'] : (LOCAL_TAG[s.team] || ['Local', s.club || '', '#e8b021']);
       if (s.team === 'junior') tag = ['Junior', (s.club || '').replace(/^(Windsor|St\. Clair)\s+/, ''), tag[2]];
-      out.push({ url: s.url, headline: s.headline, tag: tag[0] + (tag[1] ? ' \u00b7 ' + tag[1] : ''), col: tag[2], local: true, logo: headLogo(s.team, s.club), abbr: tag[1] || tag[0] });
+      out.push({ url: s.url, headline: s.headline, tag: tag[0] + (tag[1] ? ' \u00b7 ' + tag[1] : ''), col: tag[2], local: true, logo: headLogo(s.team, s.club), abbr: tag[1] || tag[0], published: s.published });
       return out.length >= 2;
     });
+    // the top local headline stays until a newer story replaces it. The second slot shows a new local story
+    // while it's under 3 hours old; otherwise it rotates every 3 hours among Powerplay's last three stories
+    if (out.length > 1 && Date.now() - new Date(out[1].published).getTime() > 3 * 3600e3) {
+      out.splice(1);
+      var ppPool = stories.filter(function (s) {
+        return s.team === 'powerplay' && !isVid(s) && /powerplaywindsor\.com\/post\//.test(s.url) && !used[s.url] && s.url !== out[0].url;
+      }).slice(0, 3);
+      if (ppPool.length) {
+        var pp = ppPool[Math.floor(Date.now() / (3 * 3600e3)) % ppPool.length];
+        out.push({ url: pp.url, headline: pp.headline, tag: storyCat(pp, 'Local') + ' \u00b7 Powerplay', col: '#e8b021', local: true, logo: headLogo('powerplay'), abbr: 'Powerplay', published: pp.published });
+      }
+    }
     // pro: our teams first (newest, two different teams), then the biggest league news
     var pro = (lg.pro_news || []).concat(lg.more_news || []).filter(function (x) {
       return x.headline && x.url && !x.video && /^(nhl|nfl|mlb|nba|pwhl)$/.test(x.league) && new Date(x.published).getTime() > recent;
     }).sort(function (a, b) { return new Date(b.published) - new Date(a.published); });
     // slot 1: the newest story about one of our teams (last day and a half);
     // slot 2: the newest big-league story (NHL, NFL, MLB, NBA) — it changes through the day as news breaks
-    var fresh = Date.now() - 36 * 3600e3, got = 0;
+    var fresh = Date.now() - 36 * 3600e3, got = 0, need = 4 - out.length;
     var proItem = function (x, t) {
       return t ? { url: x.url, headline: x.headline, tag: x.league.toUpperCase() + ' \u00b7 ' + t, col: LEAGUE_COL[x.league], logo: ESPN_TEAM[t] ? 'https://a.espncdn.com/i/teamlogos/' + ESPN_TEAM[t] + '.png' : '', abbr: t }
                : { url: x.url, headline: x.headline, tag: x.league.toUpperCase(), col: LEAGUE_COL[x.league], logo: 'https://a.espncdn.com/i/teamlogos/leagues/500/' + x.league + '.png', abbr: x.league.toUpperCase() };
     };
-    var ours = pro.filter(function (x) { return fanTeam(x) && new Date(x.published).getTime() > fresh; })[0];
-    if (ours) { out.push(proItem(ours, fanTeam(ours))); got++; }
-    pro.forEach(function (x) {
-      if (got < 2 && /^(nhl|nfl|mlb|nba)$/.test(x.league) && !out.some(function (o) { return o.url === x.url; })) { var t = fanTeam(x); out.push(proItem(x, t)); got++; }
-    });
+    // the national headlines rotate every 30 minutes through the latest stories, so they never sit for hours
+    var turn = Math.floor(Date.now() / (30 * 60000));
+    var oursPool = pro.filter(function (x) { return fanTeam(x) && new Date(x.published).getTime() > fresh; }).slice(0, 6);
+    if (oursPool.length) { var ours = oursPool[turn % oursPool.length]; out.push(proItem(ours, fanTeam(ours))); got++; }
+    var bigPool = pro.filter(function (x) {
+      return /^(nhl|nfl|mlb|nba)$/.test(x.league) && new Date(x.published).getTime() > Date.now() - 24 * 3600e3 && !(oursPool.length && oursPool.indexOf(x) >= 0);
+    }).slice(0, 8);
+    if (!bigPool.length) bigPool = pro.filter(function (x) { return /^(nhl|nfl|mlb|nba)$/.test(x.league) && !out.some(function (o) { return o.url === x.url; }); }).slice(0, 4);
+    for (var k = 0; got < need && k < bigPool.length; k++) {
+      var x = bigPool[(turn + k) % bigPool.length];
+      if (!out.some(function (o) { return o.url === x.url; })) { out.push(proItem(x, fanTeam(x))); got++; }
+    }
     return out;
   }
 
