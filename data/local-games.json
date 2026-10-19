@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19T09:01:49-04:00",
+ "updated": "2026-10-19T09:16:42-04:00",
  "today": "2026-10-19",
  "range": [
   "2026-10-16",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -1730,6 +1730,17 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "MMQB: 20 thoughts from Week 20",
+   "summary": "",
+   "published": "2026-10-19T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/21YihQxQDeQnQrCv2u6vZK/656fac681ce5e10ae0df4682c8ab2eea/Trevor_Harris_2026_4.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/mmqb-20-thoughts-from-week-20",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Recap: Calgary 32, BC 13",
    "summary": "",
    "published": "2026-10-17T22:44:00-04:00",
@@ -1956,26 +1967,6 @@
    "video": false,
    "teams": [],
    "url": "https://www.cfl.ca/article/6-defensive-players-that-could-be-named-all-cfl",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Prediction Time: CFL.ca writers' Week 20 picks",
-   "summary": "",
-   "published": "2026-10-14T00:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/2LL85DQC3gAQnoliBui7Kl/ba50632bdb726beb8bb8589ab2dde1a2/Cody_Fajardo_2026_6.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "REDBLACKS",
-    "Lions",
-    "Stampeders",
-    "Elks",
-    "Alouettes",
-    "Roughriders",
-    "Argonauts",
-    "Blue Bombers"
-   ],
-   "url": "https://www.cfl.ca/article/prediction-time-cfl-ca-writers-week-20-picks",
    "source": "CFL.ca"
   },
   {
@@ -2462,6 +2453,34 @@
   },
   {
    "league": "nfl",
+   "headline": "‘I got punished’: Giants’ Skattebo on getting no rushes against Saints",
+   "summary": "",
+   "published": "2026-10-18T18:53-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-76.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/i-got-punished-giants-skattebo-on-getting-no-rushes-against-saints/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Report: Maple Leafs call up forward Vinni Lettieri from AHL",
+   "summary": "",
+   "published": "2026-10-19T08:52-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/Vinni-Lettieri.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/report-maple-leafs-call-up-forward-vinni-lettieri-from-ahl/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
    "headline": "Jordan Love leads Packers over Cowboys with two touchdowns",
    "summary": "",
    "published": "2026-10-19T00:11-04:00",
@@ -2487,34 +2506,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Report: Maple Leafs call up forward Vinni Lettieri from AHL",
-   "summary": "",
-   "published": "2026-10-19T08:52-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/Vinni-Lettieri.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/report-maple-leafs-call-up-forward-vinni-lettieri-from-ahl/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "‘I got punished’: Giants’ Skattebo on getting no rushes against Saints",
-   "summary": "",
-   "published": "2026-10-18T18:53-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-76.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/i-got-punished-giants-skattebo-on-getting-no-rushes-against-saints/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "other",
    "headline": "Takeaways: New-look Team Einarson wins GSOC Co-op Invitational title",
    "summary": "",
@@ -2525,6 +2516,19 @@
    "sn_team_count": 0,
    "sport": "",
    "url": "https://www.sportsnet.ca/curling/article/new-look-team-einarson-wins-gsoc-co-op-invitational-title/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "PSG-Barcelona match to go ahead amid shock over France’s violent unrest",
+   "summary": "The showpiece Champions League match between Paris Saint-Germain and Barcelona will go ahead as planned on Tuesday in the French capital city, the French Interior minister confirmed, despite a weekend of protests marred ",
+   "published": "2026-10-19T09:12-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/10/CP175099697.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/champions-league/article/psg-barcelona-match-to-go-ahead-amid-shock-over-frances-violent-unrest/",
    "source": "Sportsnet"
   },
   {
@@ -2551,19 +2555,6 @@
    "sn_team_count": 2,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/nfl-says-steelers-saints-game-in-paris-still-on-despite-civil-unrest/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Jaguars’ Hunter becomes first player since 2002 with TD catch, interception",
-   "summary": "",
-   "published": "2026-10-18T14:48-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-Design-2026-10-18T143825.091.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/jaguars-hunter-becomes-first-player-since-2002-with-td-catch-interception/",
    "source": "Sportsnet"
   },
   {
@@ -2649,16 +2640,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Jets discuss Hellebuyck’s potential return",
+   "league": "mlb",
+   "headline": "Report: Orioles hire Cubs’ Jared Banner as general manager",
    "summary": "",
-   "published": "2026-10-17T21:58-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-3.jpg",
+   "published": "2026-10-19T09:07-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2022/07/Orioles-1.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/jets-discuss-hellebuycks-potential-return/",
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/report-orioles-hire-cubs-jared-banner-as-general-manager/",
    "source": "Sportsnet"
   },
   {
@@ -2700,6 +2691,19 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/surprise-mvp-and-dpoy-shoo-in-predicting-nba-award-winners/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Jaguars’ Hunter becomes first player since 2002 with TD catch, interception",
+   "summary": "",
+   "published": "2026-10-18T14:48-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-Design-2026-10-18T143825.091.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/jaguars-hunter-becomes-first-player-since-2002-with-td-catch-interception/",
    "source": "Sportsnet"
   },
   {
