@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19T11:01:42-04:00",
+ "updated": "2026-10-19T11:31:45-04:00",
  "today": "2026-10-19",
  "range": [
   "2026-10-16",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -621,7 +621,8 @@
    "result": "T",
    "note": "",
    "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6199"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6199",
+    "recap": "https://golancers.ca/news/2026/10/19/mens-soccer-lancers-end-season-with-scoreless-draw-against-waterloo.aspx"
    }
   },
   {
@@ -2403,6 +2404,45 @@
  ],
  "more_news": [
   {
+   "league": "nhl",
+   "headline": "Connor McDavid enters rarified air with early-season points pace",
+   "summary": "At this point, we must carve out a minute simply to appreciate the magic of Oilers superstar Connor McDavid. Ryan Dixon explains why.",
+   "published": "2026-10-19T11:20-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-16.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/connor-mcdavid-enters-rarified-air-with-early-season-points-pace/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Toronto FC inching closer to playoff berth after positive weekend",
+   "summary": "It looks as though the MLS Playoff race will go down to the wire with Toronto FC in the mix. John Molinaro recaps a positive couple of days for TFC and more in his MLS weekend review.",
+   "published": "2026-10-19T10:53-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Toronto-FC-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/toronto-fc-inching-closer-to-playoff-berth-after-positive-weekend/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "NBA 2026-27 season preview: Burning questions in the Eastern Conference",
+   "summary": "After a drastic makeover in the off-season, the Eastern Conference enters the 2026-27 campaign with several legitimate contenders. Zulfi Sheikh has one burning question for each team in the East.",
+   "published": "2026-10-19T07:46-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Raptors-and-Knicks.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/nba-2026-27-season-preview-burning-questions-in-the-eastern-conference/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "NFL Week 6 takeaways: Rams in trouble after latest self-inflicted loss",
    "summary": "For a team that was labelled a “super team” coming into the season, the Rams have looked more like a super disappointment through six weeks. Kellen Forrest dives into another painful loss for L.A. and more in his Week 6 ",
@@ -2431,45 +2471,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Toronto FC inching closer to playoff berth after positive weekend",
-   "summary": "It looks as though the MLS Playoff race will go down to the wire with Toronto FC in the mix. John Molinaro recaps a positive couple of days for TFC and more in his MLS weekend review.",
-   "published": "2026-10-19T10:53-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Toronto-FC-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/toronto-fc-inching-closer-to-playoff-berth-after-positive-weekend/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Sunday Overreactions: Hellebuyck would make Mammoth a Cup contender",
-   "summary": "Could acquiring an elite goaltender like Connor Hellebuyck put the Mammoth into the championship conversation? Michael Amato looks at that and more in this week’s Sunday Overreactions.",
-   "published": "2026-10-18T08:36-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/10/CP175100238-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/sunday-overreactions-hellebuyck-would-make-mammoth-a-cup-contender/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "NBA 2026-27 season preview: Burning questions in the Eastern Conference",
-   "summary": "After a drastic makeover in the off-season, the Eastern Conference enters the 2026-27 campaign with several legitimate contenders. Zulfi Sheikh has one burning question for each team in the East.",
-   "published": "2026-10-19T07:46-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Raptors-and-Knicks.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/nba-2026-27-season-preview-burning-questions-in-the-eastern-conference/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "Senators sign head coach Travis Green to multi-year contract extension",
    "summary": "",
@@ -2484,7 +2485,7 @@
   },
   {
    "league": "nfl",
-   "headline": "Report: Eagles QB Jalen Hurts out for season with blood clots in lungs",
+   "headline": "AP source: Eagles QB Jalen Hurts out for season with blood clots in lungs",
    "summary": "",
    "published": "2026-10-19T10:34-04:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2025/11/Untitled-design-2025-11-28T153505.838.jpg",
@@ -2525,6 +2526,19 @@
   },
   {
    "league": "mlb",
+   "headline": "Report: Guardians’ Shawn Armstrong to open Game 6 of ALCS",
+   "summary": "",
+   "published": "2026-10-19T11:28-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Shawn-Armstrong.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/report-guardians-shawn-armstrong-to-open-game-6-of-alcs/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
    "headline": "Rays on verge of World Series as Rasmussen stifles Guardians in Game 5",
    "summary": "Another gem from ace Drew Rasmussen and just enough offence from their high-pressure lineup paced the Rays to a win over the Guardians on Sunday.",
    "published": "2026-10-18T20:01-04:00",
@@ -2560,19 +2574,6 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/colts-fire-general-manager-chris-ballard/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "‘I got punished’: Giants’ Skattebo on getting no rushes against Saints",
-   "summary": "",
-   "published": "2026-10-18T18:53-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-76.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/i-got-punished-giants-skattebo-on-getting-no-rushes-against-saints/",
    "source": "Sportsnet"
   },
   {
@@ -2642,6 +2643,19 @@
    "sn_team_count": 2,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/josh-allen-ties-jim-kellys-bills-td-pass-record-as-buffalo-holds-off-raiders/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "‘I got punished’: Giants’ Skattebo on getting no rushes against Saints",
+   "summary": "",
+   "published": "2026-10-18T18:53-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-76.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/i-got-punished-giants-skattebo-on-getting-no-rushes-against-saints/",
    "source": "Sportsnet"
   },
   {
@@ -2749,6 +2763,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Sunday Overreactions: Hellebuyck would make Mammoth a Cup contender",
+   "summary": "Could acquiring an elite goaltender like Connor Hellebuyck put the Mammoth into the championship conversation? Michael Amato looks at that and more in this week’s Sunday Overreactions.",
+   "published": "2026-10-18T08:36-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/10/CP175100238-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/sunday-overreactions-hellebuyck-would-make-mammoth-a-cup-contender/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "mlb",
    "headline": "Rays’ Aranda leaning on advice from Blue Jays’ Kirk during post-season",
    "summary": "After going hitless in his first 10 at-bats of the ALCS, Tampa Bay Rays first baseman Jonathan Aranda broke out in Game 4 after taking advice from Toronto Blue Jays catcher and childhood friend Alejandro Kirk.",
@@ -2800,19 +2827,6 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/surprise-mvp-and-dpoy-shoo-in-predicting-nba-award-winners/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Jaguars’ Hunter becomes first player since 2002 with TD catch, interception",
-   "summary": "",
-   "published": "2026-10-18T14:48-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-Design-2026-10-18T143825.091.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/jaguars-hunter-becomes-first-player-since-2002-with-td-catch-interception/",
    "source": "Sportsnet"
   },
   {
