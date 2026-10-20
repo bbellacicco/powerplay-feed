@@ -203,7 +203,7 @@
   <header><div><div class="brand"><img class="blogo" src="logos/st-clair-alumni.png" alt="" onerror="this.remove()"><div class="btext"><h1>Local <span>Hub</span></h1>
     <div class="sponsor"><span>Presented by <b>St. Clair College Alumni</b></span></div></div></div>
     <a class="xlink" id="xlink" target="_top" href="https://www.powerplaywindsor.com/#comp-muiib4ix">Scores &amp; standings &rarr;</a></div>
-    <div class="views" role="group" aria-label="View"><button id="v-stories">Stories</button><button id="v-social">Social</button></div></header>
+    <div class="views" role="group" aria-label="View" style="display:none"><button id="v-stories">Stories</button><button id="v-social">Social</button></div></header>
   <div class="teamtabs" id="tabs" role="group" aria-label="Team"></div>
   <div class="bar"><select class="pill" id="sub" aria-label="Filter"></select></div>
   <div id="list"><div class="empty">Loading…</div></div>
@@ -225,7 +225,7 @@
 
   var qs = new URLSearchParams(location.search);
   var state = { tab: LABEL[qs.get('tab')] ? qs.get('tab') : 'all', sub: 'all',
-                view: qs.get('view') === 'social' ? 'social' : 'stories', club: 0 };
+                view: 'stories', club: 0 };   // the Social view is retired (its posts only linked out); Stories only
   if (qs.get('lock') === '1') { var vw = document.querySelector('.views'); if (vw) vw.style.display = 'none'; }   // the Local Hub's own buttons pick Stories / Social
 
   // ---- Social view: each team's official Facebook page (Facebook's Page Plugin) and,
