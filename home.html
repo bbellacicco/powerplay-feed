@@ -439,7 +439,7 @@
     else tile();
     // a team's story (not a Powerplay post, not a video): share it through powerplaywindsor.com
     if (window.PPShare && !vid && c.tagName === 'A' && s.team && s.team !== 'powerplay' && TEAM[s.team]) {
-      var sb = PPShare.button({ title: s.headline, url: SITE + 'scores-standings?tab=stories&s=' + skey(s.url),
+      var sb = PPShare.button({ title: s.headline, url: SITE + 'scores-standings?tab=stories&s=' + skey(s.url) + '&team=' + encodeURIComponent(s.team),
         text: s.headline + ' | ' + (s.club || TEAM[s.team]) + ' on Powerplay Windsor', image: s.image && !GENERIC_IMG.test(s.image) ? s.image : '' });
       sb.classList.add('mini'); sb.addEventListener('click', function (e) { e.preventDefault(); });
       c.appendChild(sb);
