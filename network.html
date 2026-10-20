@@ -77,6 +77,14 @@
   .player .cap .t { flex: 1; min-width: 0; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .player .cap a, .player .cap button { flex: none; background: var(--row); color: #fff; border: 1px solid rgba(255,255,255,.3); border-radius: 999px; font: inherit; font-size: 12px; font-weight: 700; padding: 6px 11px; cursor: pointer; text-decoration: none; }
   .player .cap a:hover, .player .cap button:hover { border-color: var(--accent); color: var(--accent); }
+  .player .cap #pshare:empty { display: none; }
+  .player .cap #pshare .pps-btn { background: var(--accent); color: #0b1a33; border-color: var(--accent); }
+  /* the video's own write-up (its YouTube / Vimeo description) under the player */
+  .player .desc { background: var(--panel); border-top: 1px solid rgba(255,255,255,.08); padding: 10px 12px 12px; font-size: 13.5px; line-height: 1.45; color: #dbe3f2; }
+  .player .desc .txt { white-space: pre-line; overflow-wrap: anywhere; }
+  .player .desc.clip .txt { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  .player .desc a { color: var(--accent); }
+  .player .desc .more { margin-top: 6px; background: none; border: 0; padding: 0; color: var(--accent); font: inherit; font-size: 12.5px; font-weight: 800; cursor: pointer; }
   @media (max-width: 560px) {
     .grid { grid-template-columns: 1fr 1fr; gap: 8px; }
     .body { padding: 6px 7px 8px; } .hl { font-size: 12.5px; } .meta { font-size: 10.5px; }
@@ -111,7 +119,8 @@
     <div class="grid" id="grid"><div class="empty">Loading videos…</div></div>
     <div class="player" id="player" role="dialog" aria-label="Video player">
       <div class="frame" id="frame"></div>
-      <div class="cap"><div class="t" id="ptitle"></div><a id="ext" target="_blank" rel="noopener" href="#">Watch on YouTube &#8599;</a><button type="button" id="close">&#10005; Close</button></div>
+      <div class="cap"><div class="t" id="ptitle"></div><span id="pshare"></span><button type="button" id="close">&#10005; Close</button></div>
+      <div class="desc" id="pdesc" hidden><div class="txt" id="pdtxt"></div><button type="button" class="more" id="pdmore">Show more</button></div>
     </div>
   </div>
   <div class="pager" id="pager"></div>
@@ -344,15 +353,55 @@
     f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; f.allowFullscreen = true;
     frame.appendChild(f);
     document.getElementById('ptitle').textContent = v.t;
-    var ext = document.getElementById('ext'); ext.href = v.u; ext.textContent = 'Watch on ' + source(v) + ' ↗';
+    cur = v;
+    showDesc(v);
     player.classList.add('on');
     // line the player up with the row that was tapped, without running past the bottom of the grid
     var wrap = document.getElementById('gridwrap');
     var y = cardEl.offsetTop, maxY = Math.max(0, wrap.offsetHeight - player.offsetHeight);
     player.style.top = Math.min(y, maxY) + 'px';
+    fitWrap();
     document.getElementById('close').focus({ preventScroll: true });
   }
-  function stop() { player.classList.remove('on'); frame.innerHTML = ''; }
+  // ---------- sharing: the link opens powerplaywindsor.com (Local Hub, Network) with this video playing;
+  // the Wix page gives the link preview the video's own picture and title
+  var SITE = 'https://www.powerplaywindsor.com/', cur = null;
+  function shareKey(v) { var k = vkey(v.u); return k.replace(':', '-'); }        // YouTube id, or vimeo-123
+  function shareData() {
+    var v = cur || {}, k = shareKey(v), yt = /^[\w-]{11}$/.test(k);
+    return { title: v.t || 'Powerplay Network', url: SITE + 'scores-standings?tab=network&v=' + encodeURIComponent(k),
+             text: (v.t || 'A Powerplay video') + ' | Powerplay Network', image: yt ? 'https://i.ytimg.com/vi/' + k + '/hqdefault.jpg' : (v.i || '') };
+  }
+  if (window.PPShare) document.getElementById('pshare').appendChild(PPShare.button(shareData));
+  function stop() { player.classList.remove('on'); frame.innerHTML = ''; document.getElementById('gridwrap').style.minHeight = ''; }
+  // the write-up can make the player taller than the grid under it: stretch the grid area so nothing is cut off
+  function fitWrap() {
+    var wrap = document.getElementById('gridwrap');
+    wrap.style.minHeight = '';
+    if (player.classList.contains('on')) wrap.style.minHeight = (player.offsetTop + player.offsetHeight) + 'px';
+  }
+  // description: plain text with its links made clickable; long ones open with "Show more"
+  // full write-ups (data/video-text.json) load the first time someone plays a video
+  var vtext = null, vtextP = null;
+  function vkey(u) { var m = String(u || '').match(/(?:[?&]v=|youtu\.be\/|\/shorts\/)([\w-]{11})/); if (m) return m[1]; m = String(u || '').match(/vimeo\.com\/(?:video\/)?(\d+)/); return m ? 'vimeo:' + m[1] : ''; }
+  function showDesc(v) {
+    if (!vtext) {
+      if (!vtextP) vtextP = getJSON('video-text.json').then(function (j) { vtext = (j && j.text) || {}; });
+      vtextP.then(function () { if (player.classList.contains('on') && document.getElementById('ptitle').textContent === v.t) showDesc(v); });
+    }
+    var box = document.getElementById('pdesc'), txt = document.getElementById('pdtxt'), more = document.getElementById('pdmore');
+    var d = String((vtext && vtext[vkey(v.u)]) || v.d || '').replace(/\r/g, '').replace(/\n{3,}/g, '\n\n').trim();
+    // drop a description that's only the title again
+    if (!d || d.toLowerCase() === String(v.t || '').toLowerCase()) { box.hidden = true; txt.textContent = ''; fitWrap(); return; }
+    txt.innerHTML = '';
+    d.split(/(https?:\/\/[^\s<]+)/).forEach(function (part, i) {
+      if (i % 2) { var a = document.createElement('a'); a.href = part.replace(/[).,]+$/, ''); a.textContent = part; a.target = '_blank'; a.rel = 'noopener'; txt.appendChild(a); }
+      else txt.appendChild(document.createTextNode(part));
+    });
+    box.hidden = false; box.classList.add('clip'); more.textContent = 'Show more';
+    requestAnimationFrame(function () { more.style.display = txt.scrollHeight > txt.clientHeight + 2 ? '' : 'none'; fitWrap(); });
+    more.onclick = function () { var c = box.classList.toggle('clip'); more.textContent = c ? 'Show more' : 'Show less'; fitWrap(); };
+  }
   document.getElementById('close').onclick = stop;
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') stop(); });
 
@@ -388,6 +437,22 @@
       data.local = local.filter(function (v) { var k = norm(v.t).replace(/[^a-z0-9]+/g, ' ').trim(); if (titles[k]) return false; titles[k] = 1; return true; });
       data.pro = (net.pro || []).slice().sort(function (a, b) { return ts(b) - ts(a); });
       if (!player.classList.contains('on')) grid();
+      if (WANT) openWanted();
+    });
+  }
+  // ?play=<YouTube id or vimeo-123>: a shared link opens with that video playing
+  var WANT = (qs.get('play') || '').replace(/[^\w-]/g, '');
+  function openWanted() {
+    var k = WANT; WANT = '';
+    ['local', 'pro'].some(function (tab) {
+      var i = -1;
+      data[tab].some(function (v, n) { if (shareKey(v) === k) { i = n; return true; } return false; });
+      if (i < 0) return false;
+      if (state.tab !== tab) setTab(tab);
+      state.chip = 'all'; state.team = ''; state.q = ''; state.page = Math.floor(i / PER); chips(); grid();
+      var cardEl = document.querySelectorAll('#grid .card')[i % PER];
+      if (cardEl) play(data[tab][i], cardEl);
+      return true;
     });
   }
   setTab(state.tab);
