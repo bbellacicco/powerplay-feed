@@ -7,6 +7,7 @@
 
 <title>Local Hub | Powerplay Windsor</title>
 <script src="arrows.js"></script>
+<script src="share.js?v=4"></script>
 <!--
   Local Hub: stories, final scores and team social. Stories are headlines, a short summary and a photo from Powerplay Windsor and the teams' own
   websites (Spitfires, Lancers, St. Clair Saints and the junior clubs), each
@@ -158,6 +159,18 @@
   .scard.t-lancers { border-top-color: var(--lancers); } .scard.t-saints { border-top-color: var(--saints); }
   .scard.t-junior { border-top-color: var(--junior); } .scard.t-highschool { border-top-color: #8b5cf6; }
   .scard .thumbwrap { width: 100%; aspect-ratio: 16 / 9; background: var(--panel); overflow: hidden; }
+  /* share a team's story: the link opens powerplaywindsor.com first, with the team's picture in the preview */
+  .scard .pps-btn.mini { position: absolute; right: 6px; top: 6px; z-index: 2; padding: 5px 8px; font-size: 11px; background: rgba(11,26,51,.82); border-color: rgba(255,255,255,.35); }
+  .shared { display: grid; grid-template-columns: 1.1fr 1fr; gap: 0; background: var(--row); border-radius: 10px; overflow: hidden; margin: 4px 0 14px; border-top: 4px solid var(--accent); }
+  .shared .pic { position: relative; min-height: 200px; background: var(--panel); }
+  .shared .pic img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .shared .tx { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 8px; }
+  .shared .k { font-size: 11px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
+  .shared h2 { margin: 0; font-size: 20px; line-height: 1.2; }
+  .shared p { margin: 0; color: #cfd8ea; font-size: 13.5px; line-height: 1.45; }
+  .shared .go { align-self: flex-start; margin-top: auto; background: var(--accent); color: #0b1a33; font-weight: 800; font-size: 13px; padding: 9px 14px; border-radius: 999px; text-decoration: none; }
+  .shared .go:hover { filter: brightness(1.08); }
+  @media (max-width: 560px) { .shared { grid-template-columns: 1fr; } .shared .pic { min-height: 0; aspect-ratio: 16 / 9; } .shared h2 { font-size: 18px; } }
   .scard .thumb { width: 100%; height: 100%; margin: 0; border-radius: 0; }
   .scard .body { padding: 7px 9px 10px; }
   .scard .meta { margin: 0 0 3px; font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -400,7 +413,7 @@
     fb.appendChild(fbCard(team));
     grid.appendChild(fb);
   }
-  var stories = null, storiesFailed = false;
+  var stories = null, storiesFailed = false, wantTabSet = false;
 
   function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
   function ago(iso) {
@@ -469,6 +482,11 @@
         // (?videos=1 brings them back)
         stories = (j.stories || []).filter(function (s) { return SHOW_VIDEOS || (s.source !== 'YouTube' && s.source !== 'Vimeo'); });
         storiesFailed = false;
+        if (WANT_STORY && !wantTabSet) {   // a shared story: open on that team, so more of its news sits underneath
+          wantTabSet = true;
+          var hit = stories.filter(function (st) { return skey(st.url) === WANT_STORY; })[0];
+          if (hit && LABEL[hit.team] && hit.team !== 'highschool') state.tab = hit.team;
+        }
       })
       .catch(function () { storiesFailed = !stories; });
     // final scores are only used to spot when you've written up the same game a team recapped
@@ -610,6 +628,10 @@
     list = recentOnly(list);
     list = list.slice(0, state.tab === 'all' ? STORIES_ALL : MAX_STORIES);
     box.innerHTML = '';
+    if (WANT_STORY) {
+      var hit = stories.filter(function (st) { return skey(st.url) === WANT_STORY; })[0];
+      if (hit) box.appendChild(sharedBox(hit));
+    }
     if (!list.length) { box.appendChild(el('div', 'empty', 'No recent stories.')); return; }
     var strip = el('div', 'sstrip');
     list.forEach(function (s) { strip.appendChild(card(s)); });
@@ -645,6 +667,40 @@
     return t;
   }
 
+  // short, stable id for a story link (the Wix page works it out the same way)
+  function skey(u) {
+    var t = String(u || '').trim().toLowerCase().replace(/[?#].*$/, '').replace(/\/$/, ''), h = 0x811c9dc5;
+    for (var i = 0; i < t.length; i++) { h ^= t.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; }
+    return ('0000000' + h.toString(16)).slice(-8);
+  }
+  var SITE = 'https://www.powerplaywindsor.com/';
+  function shareBtn(s) {
+    if (!window.PPShare || s.team === 'powerplay') return null;   // your own posts already have their own page
+    var b = PPShare.button({ title: s.headline, url: SITE + 'scores-standings?tab=stories&s=' + skey(s.url),
+      text: s.headline + ' | ' + (s.club || LABEL[s.team] || 'Local') + ' on Powerplay Windsor', image: s.image && !GENERIC_IMG.test(s.image) ? s.image : '' });
+    b.classList.add('mini');
+    b.addEventListener('click', function (e) { e.preventDefault(); });   // the button sits on the card's link
+    return b;
+  }
+  // ?story=<id>: someone opened a shared link; that story leads, with a button through to the team's site
+  var WANT_STORY = (qs.get('story') || '').replace(/[^0-9a-f]/g, '');
+  function sharedBox(s) {
+    var box = el('div', 'shared');
+    var pic = el('div', 'pic');
+    if (s.image && !GENERIC_IMG.test(s.image)) { var im = new Image(); im.alt = ''; im.referrerPolicy = 'no-referrer'; im.src = s.image; im.onerror = function () { pic.innerHTML = ''; pic.appendChild(teamTile(s)); }; pic.appendChild(im); }
+    else pic.appendChild(teamTile(s));
+    box.appendChild(pic);
+    var tx = el('div', 'tx'), who = s.club || LABEL[s.team] || 'Local';
+    tx.appendChild(el('div', 'k', who + (s.sport ? ' \u00b7 ' + s.sport : '')));
+    tx.appendChild(el('h2', null, s.headline));
+    if (s.summary && s.summary !== s.headline) tx.appendChild(el('p', null, s.summary));
+    var host = (String(s.url).match(/^https?:\/\/(?:www\.)?([^\/?#]+)/i) || [])[1] || '';
+    var go = el('a', 'go', 'Read the full story' + (host ? ' on ' + host : '') + ' \u2197'); go.href = s.url; go.target = '_blank'; go.rel = 'noopener';
+    tx.appendChild(go);
+    box.appendChild(tx);
+    return box;
+  }
+
   function card(s) {
     var a = el('a', 'scard t-' + s.team);
     a.href = s.url; a.rel = 'noopener';
@@ -658,6 +714,7 @@
       holder.appendChild(img);
     } else holder.appendChild(teamTile(s));   // no real photo: a clean team-coloured tile instead
     if (s.video) holder.appendChild(el('div', 'play', '▶'));
+    var sb = shareBtn(s); if (sb) holder.appendChild(sb);
     a.appendChild(holder);
     var body = el('div', 'body');
     var who = s.team === 'junior' || s.team === 'powerplay' ? s.club : LABEL[s.team] + (s.sport ? ' · ' + s.sport : '');
