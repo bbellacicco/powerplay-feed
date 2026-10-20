@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-20T08:45:02-04:00",
+ "updated": "2026-10-20T15:30:01-04:00",
  "today": "2026-10-20",
  "games": [
   {
@@ -183,6 +183,24 @@
   {
    "id": "saints-presto2026-10-22-0",
    "team": "saints",
+   "sport": "Fastball",
+   "start": "2026-10-22T13:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Fanshawe",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Exhibition · OCAA Championship Game 1 - 6th Place vs 3rd Place",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/fastball/2026-27/boxscores/20261022_7ehj.xml"
+   }
+  },
+  {
+   "id": "saints-presto2026-10-22-1",
+   "team": "saints",
    "sport": "Women's Basketball",
    "start": "2026-10-22T18:00:00-04:00",
    "time_tbd": false,
@@ -199,7 +217,7 @@
    }
   },
   {
-   "id": "saints-presto2026-10-22-1",
+   "id": "saints-presto2026-10-22-2",
    "team": "saints",
    "sport": "Men's Basketball",
    "start": "2026-10-22T20:00:00-04:00",
@@ -214,6 +232,40 @@
    "note": "Exhibition · NJCAA Exhibition, Warren (MI)",
    "links": {
     "boxscore": "https://www.saintsathletics.ca/sports/mbkb/2026-27/boxscores/20261022_t0rd.xml"
+   }
+  },
+  {
+   "id": "saints-presto2026-10-23-0",
+   "team": "saints",
+   "sport": "Fastball",
+   "start": "2026-10-23T16:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "TBD",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Exhibition · OCAA Championship Game 5 - Loser Game 3 vs Loser Game 4",
+   "links": {}
+  },
+  {
+   "id": "saints-presto2026-10-23-1",
+   "team": "saints",
+   "sport": "Fastball",
+   "start": "2026-10-23T18:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "TBD",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Exhibition · OCAA Championship Game 6 - Winner Game 3 vs Winner Game 4",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/fastball/2026-27/boxscores/20261023_hob8.xml"
    }
   }
  ]
