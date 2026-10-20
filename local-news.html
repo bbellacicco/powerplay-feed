@@ -677,7 +677,7 @@
   function fullPic(u) { return String(u || '').replace(/-\d{2,4}x\d{2,4}(\.(?:jpe?g|png|webp))$/i, '$1'); }   // the team site's full-size copy
   function shareBtn(s) {
     if (!window.PPShare || s.team === 'powerplay') return null;   // your own posts already have their own page
-    var b = PPShare.button({ title: s.headline, url: SITE + 'scores-standings?tab=stories&s=' + skey(s.url),
+    var b = PPShare.button({ title: s.headline, url: SITE + 'scores-standings?tab=stories&s=' + skey(s.url) + '&team=' + encodeURIComponent(s.team),
       text: s.headline + ' | ' + (s.club || LABEL[s.team] || 'Local') + ' on Powerplay Windsor', image: s.image && !GENERIC_IMG.test(s.image) ? fullPic(s.image) : '' });
     b.classList.add('mini');
     b.addEventListener('click', function (e) { e.preventDefault(); });   // the button sits on the card's link
