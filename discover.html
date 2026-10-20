@@ -52,7 +52,7 @@
   @keyframes run { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   .sc { display: inline-flex; align-items: center; gap: 7px; padding: 0 16px; height: 100%; font-size: 12.5px; border-right: 1px solid rgba(255,255,255,.08); cursor: pointer; }
   .sc:hover { background: rgba(255,255,255,.06); }
-  .sc .lg { font-size: 9.5px; font-weight: 900; letter-spacing: .08em; color: var(--pc); }
+  .sc .lg { font-size: 9.5px; font-weight: 900; letter-spacing: .08em; color: var(--pc); text-transform: uppercase; }
   .sc img { height: 18px; width: 18px; object-fit: contain; }
   .sc img.w { background: #fff; border-radius: 3px; }
   .sc b { font-weight: 800; font-variant-numeric: tabular-nums; }
@@ -314,7 +314,10 @@
       var fin = g.status === 'final', d = new Date(g.start);
       if (fin && a.s != null && h.s != null) { a.lost = a.s < h.s; h.lost = h.s < a.s; }
       if (g.status === 'upcoming') { a.s = h.s = null; }
-      var lg = g.team === 'spitfires' ? 'OHL' : g.team === 'lancers' ? 'OUA' : g.team === 'saints' ? 'OCAA' : g.team === 'highschool' ? 'HS' : (g.sport || 'JR').replace(/\s*\(.*\)/, '');
+      // league plus the sport, so "Lancers 3" reads as men's hockey, women's soccer...
+      var sp = String(g.sport || '').replace(/^Senior /, 'Sr. ').replace(/^Junior /, 'Jr. ');
+      var lg = g.team === 'spitfires' ? 'OHL' : g.team === 'lancers' ? 'OUA · ' + sp : g.team === 'saints' ? 'OCAA · ' + sp : g.team === 'highschool' ? 'HS · ' + sp : (g.sport || 'JR').replace(/\s*\(.*\)/, '');
+      lg = lg.replace(/ · $/, '');
       return scoreChip({ lg: lg, a: a, h: h, final: fin, live: g.status === 'live', title: g.sport || '',
         status: g.status === 'live' ? 'LIVE' : fin ? 'FINAL' + (dayKey(d) === today ? '' : ' · ' + wkday(d).toUpperCase()) : (g.time_tbd ? 'TODAY' : cpTime(d)),
         url: PAGE.localHub, tab: 'scores' });
