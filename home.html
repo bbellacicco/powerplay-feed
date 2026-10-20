@@ -166,6 +166,7 @@
   .ghost { background: rgba(11,26,51,.9); color: #fff; border: 1px solid rgba(255,255,255,.3); border-radius: 999px; font: inherit; font-size: 12px; font-weight: 700; padding: 6px 12px; cursor: pointer; text-decoration: none; }
   .ghost:hover { border-color: var(--accent); color: var(--accent); }
   .vplayer .cap #vshare:empty { display: none; }
+  .scard { position: relative; } .scard > .pps-btn.mini { position: absolute; right: 6px; top: 6px; z-index: 4; padding: 5px 8px; font-size: 11px; background: rgba(11,26,51,.82); border-color: rgba(255,255,255,.35); }
   .vplayer .cap #vshare .pps-btn { background: var(--accent); color: #0b1a33; border-color: var(--accent); }
   .vplayer .desc { background: #10244a; border-top: 1px solid rgba(255,255,255,.08); padding: 10px 12px 12px; font-size: 13.5px; line-height: 1.45; color: #dbe3f2; }
   .vplayer .desc .txt { white-space: pre-line; overflow-wrap: anywhere; }
@@ -405,6 +406,11 @@
     return LOGOS[s.team] || null;
   }
 
+  function skey(u) {   // short id for a story link (the Local Hub's Wix page makes the same one)
+    var t = String(u || '').trim().toLowerCase().replace(/[?#].*$/, '').replace(/\/$/, ''), h = 0x811c9dc5;
+    for (var i = 0; i < t.length; i++) { h ^= t.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; }
+    return ('0000000' + h.toString(16)).slice(-8);
+  }
   // story / video card
   function storyCard(s, opts) {
     var vid = isVid(s) || s.video;
@@ -431,6 +437,13 @@
     }
     if (s.image && !GENERIC_IMG.test(s.image)) { var im = new Image(); im.src = s.image; im.alt = ''; im.loading = 'lazy'; im.referrerPolicy = 'no-referrer'; im.onerror = tile; pic.appendChild(im); addOver(); }
     else tile();
+    // a team's story (not a Powerplay post, not a video): share it through powerplaywindsor.com
+    if (window.PPShare && !vid && c.tagName === 'A' && s.team && s.team !== 'powerplay' && TEAM[s.team]) {
+      var sb = PPShare.button({ title: s.headline, url: SITE + 'scores-standings?tab=stories&s=' + skey(s.url),
+        text: s.headline + ' | ' + (s.club || TEAM[s.team]) + ' on Powerplay Windsor', image: s.image && !GENERIC_IMG.test(s.image) ? s.image : '' });
+      sb.classList.add('mini'); sb.addEventListener('click', function (e) { e.preventDefault(); });
+      c.appendChild(sb);
+    }
     c.appendChild(pic);
     c.appendChild(el('div', 'hl', s.headline));
     c.appendChild(el('div', 'sm', (opts && opts.sub) || ago(s.published)));
