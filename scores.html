@@ -75,6 +75,8 @@
     athletes:  [['athletes.html', 420, 380, '']],
     network:   [['network.html', 1300, 1520, '&only=local']]
   };
+  // a shared video link (powerplaywindsor.com/scores-standings?tab=network&v=...) opens the Network with it playing
+  var PLAY = (new URLSearchParams(location.search).get('play') || '').replace(/[^\w-]/g, '');
   var built = {}, box = document.getElementById('panes');
   function show(tab) {
     if (!PARTS[tab]) tab = 'scores';
@@ -82,7 +84,7 @@
       var pane = document.createElement('div'); pane.className = 'pane'; pane.id = 'pane-' + tab;
       PARTS[tab].forEach(function (w) {
         var f = document.createElement('iframe');
-        f.src = REPO + w[0] + V + w[3] + '&in=sports'; f.title = w[0].replace(/[_.].*$/, '');
+        f.src = REPO + w[0] + V + w[3] + (tab === 'network' && PLAY ? '&play=' + encodeURIComponent(PLAY) : '') + '&in=sports'; f.title = w[0].replace(/[_.].*$/, '');
         f.scrolling = 'no';
         f.style.height = (phone ? w[2] : w[1]) + 'px';
         f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; f.allowFullscreen = true;
@@ -108,7 +110,7 @@
     Object.keys(built).forEach(function (k) { built[k].classList.toggle('on', k === tab); });
     current = tab;
     [].forEach.call(document.querySelectorAll('.switch button'), function (b) { b.setAttribute('aria-selected', String(b.getAttribute('data-tab') === tab)); });
-    try { history.replaceState(null, '', '?tab=' + tab); } catch (e) {}
+    try { history.replaceState(null, '', '?tab=' + tab + (tab === 'network' && PLAY ? '&play=' + PLAY : '')); } catch (e) {}
   }
   // each widget reports its height; its frame matches it exactly, so nothing scrolls inside the page
   window.addEventListener('message', function (e) {
@@ -129,7 +131,7 @@
   // which switch to open: ?tab= when opened directly, or the hand-off from a "See all" link elsewhere (good for 2 minutes)
   var start = new URLSearchParams(location.search).get('tab');
   try { var h = JSON.parse(localStorage.getItem('pp-tab') || 'null'); localStorage.removeItem('pp-tab'); if (!start && h && Date.now() - h.t < 120000) start = h.tab; } catch (e) {}
-  show(start || 'scores');
+  show(PLAY ? 'network' : (start || 'scores'));
 })();
 </script>
 </body>
