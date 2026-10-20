@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-20T19:16:45-04:00",
+ "updated": "2026-10-20T19:31:47-04:00",
  "today": "2026-10-20",
  "range": [
   "2026-10-17",
@@ -1291,11 +1291,11 @@
    "home_away": "A",
    "opponent": "Trenton Golden Hawks",
    "location": "Duncan Memorial Gardens, Trenton, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
-   "note": "",
+   "note": "20:00 1st",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16601"
    },
@@ -3236,32 +3236,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Why Brady Tkachuk’s return to Ottawa promises to be emotionally charged",
-   "summary": "",
-   "published": "2026-10-20T17:43-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/04/Brady.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/why-brady-tkachuks-return-to-ottawa-promises-to-be-emotionally-charged/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Q and A with Devin Cooley: Flames goaltender talks latest viral moment",
-   "summary": "Two sleeps after going viral with his post-game theory on the merits of shutting off his brain, Devin Cooley has had to shut off his phone as well.",
-   "published": "2026-10-20T17:03-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177111679.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/q-and-a-with-devin-cooley-flames-goaltender-talks-latest-viral-moment/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Penguins’ Ben Kindel stable after medical episode on plane",
    "summary": "",
    "published": "2026-10-20T16:48-04:00",
@@ -3366,6 +3340,32 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/commanders-receiver-terry-mclaurin-out-for-season-with-knee-injury/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Why Brady Tkachuk’s return to Ottawa promises to be emotionally charged",
+   "summary": "",
+   "published": "2026-10-20T17:43-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/04/Brady.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/why-brady-tkachuks-return-to-ottawa-promises-to-be-emotionally-charged/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Q and A with Devin Cooley: Flames goaltender talks latest viral moment",
+   "summary": "Two sleeps after going viral with his post-game theory on the merits of shutting off his brain, Devin Cooley has had to shut off his phone as well.",
+   "published": "2026-10-20T17:03-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177111679.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/q-and-a-with-devin-cooley-flames-goaltender-talks-latest-viral-moment/",
    "source": "Sportsnet"
   },
   {
@@ -4313,7 +4313,7 @@
    "league": "mlb",
    "headline": "Watch Blue Jays prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-20T16:26-04:00",
+   "published": "2026-10-20T19:28-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
