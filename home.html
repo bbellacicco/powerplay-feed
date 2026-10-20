@@ -485,7 +485,7 @@
     for (k in PJHL_LOGOS) if (n.indexOf(k) >= 0) return 'https://imagedelivery.net/ErrQpIaCOWR-Tz51PhN1zA/' + PJHL_LOGOS[k] + '/256';
     return '';
   }
-  function pickHeads(stories, lg, used) {
+  function pickHeads(stories, lg, used, drop) {
     var out = [], seenTeam = {}, recent = Date.now() - 4 * 86400e3;
     // local: newest written stories, two different teams.
     // Lancers: men's hockey comes first when there's a men's hockey story from the last two days
@@ -504,16 +504,21 @@
       out.push({ url: s.url, headline: s.headline, tag: tag[0] + (tag[1] ? ' \u00b7 ' + tag[1] : ''), col: tag[2], local: true, logo: headLogo(s.team, s.club), abbr: tag[1] || tag[0], published: s.published });
       return out.length >= 2;
     });
+    // the story that just dropped out of the big box falls into Headlines (second slot) for its first 3 hours there
+    var ppHead = function (pp) { return { url: pp.url, headline: pp.headline, tag: storyCat(pp, 'Local') + ' \u00b7 Powerplay', col: '#e8b021', local: true, logo: headLogo('powerplay'), abbr: 'Powerplay', published: pp.published }; };
+    var dropped = drop && Date.now() - drop.at < 3 * 3600e3 && !used[drop.story.url] ? drop.story : null;
+    if (dropped && out.some(function (o) { return o.url === dropped.url; })) dropped = null;   // already up there
+    if (dropped && out.length) { out.splice(1); out.push(ppHead(dropped)); }
     // the top local headline stays until a newer story replaces it. The second slot shows a new local story
     // while it's under 3 hours old; otherwise it rotates every 3 hours among Powerplay's last three stories
-    if (out.length > 1 && Date.now() - new Date(out[1].published).getTime() > 3 * 3600e3) {
+    else if (out.length > 1 && Date.now() - new Date(out[1].published).getTime() > 3 * 3600e3) {
       out.splice(1);
       var ppPool = stories.filter(function (s) {
         return s.team === 'powerplay' && !isVid(s) && /powerplaywindsor\.com\/post\//.test(s.url) && !used[s.url] && s.url !== out[0].url;
       }).slice(0, 3);
       if (ppPool.length) {
         var pp = ppPool[Math.floor(Date.now() / (3 * 3600e3)) % ppPool.length];
-        out.push({ url: pp.url, headline: pp.headline, tag: storyCat(pp, 'Local') + ' \u00b7 Powerplay', col: '#e8b021', local: true, logo: headLogo('powerplay'), abbr: 'Powerplay', published: pp.published });
+        out.push(ppHead(pp));
       }
     }
     // pro: our teams first (newest, two different teams), then the biggest league news
@@ -818,12 +823,23 @@
       // scheduled top story (featured.txt): from its time, an older story takes the big box until a newer story is posted
       var sched = ((r[8] && r[8].featured) || []).filter(function (f) { return f.url && new Date(f.from).getTime() <= Date.now(); })
         .sort(function (a, b) { return new Date(b.from) - new Date(a.from); })[0];
+      var key = function (u) { return String(u || '').toLowerCase().replace(/[?#].*$/, '').replace(/\/$/, ''); };
+      var allFeat = featItems.slice(), drop = null;   // newest first, before any scheduled story is moved up
       if (sched) {
-        var key = function (u) { return String(u || '').toLowerCase().replace(/[?#].*$/, '').replace(/\/$/, ''); };
         var pick = stories.filter(function (s) { return key(s.url) === key(sched.url) && s.image; })[0];
         var newer = featItems.some(function (s) { return new Date(s.published) > new Date(sched.from) && key(s.url) !== key(sched.url); });
-        if (pick && !newer) featItems = [pick].concat(featItems.filter(function (s) { return key(s.url) !== key(sched.url); }));
+        if (pick && !newer) {
+          featItems = [pick].concat(featItems.filter(function (s) { return key(s.url) !== key(sched.url); }));
+          // it bumped whatever was in the big box at its start time
+          var before = allFeat.filter(function (s) { return key(s.url) !== key(sched.url) && new Date(s.published) <= new Date(sched.from); })[0];
+          if (before) drop = { story: before, at: new Date(sched.from).getTime() };
+        } else if (pick && newer) {
+          // a newer story took the box from the scheduled one
+          var nb = allFeat.filter(function (s) { return new Date(s.published) > new Date(sched.from); }).pop();
+          if (nb && allFeat[0] === nb) drop = { story: pick, at: new Date(nb.published).getTime() };
+        }
       }
+      if (!drop && featItems.length > 1) drop = { story: featItems[1], at: new Date(featItems[0].published).getTime() };
       featItems = featItems.slice(0, 3);
       // top video: Powerplay's newest YouTube / Vimeo video
       var ppVids = stories.filter(function (s) { return isVid(s) && s.team === 'powerplay'; }).map(function (s) { return { headline: s.headline, url: s.url, image: s.image, published: s.published }; });
@@ -838,7 +854,7 @@
         if (yid) topVid = Object.assign({}, topVid, { image: 'https://i.ytimg.com/vi/' + yid + '/hq720.jpg', alt: 'https://i.ytimg.com/vi/' + yid + '/mqdefault.jpg' });
       }
       var usedTop = {}; featItems.slice(0, topVid ? 1 : 2).forEach(function (s) { usedTop[s.url] = 1; });
-      var heads = pickHeads(stories, lg, usedTop);
+      var heads = pickHeads(stories, lg, usedTop, drop);
       if (featItems.length) buildFeat(featItems, heads, topVid);
       var featUrls = {}; featItems.slice(0, topVid ? 1 : heads.length >= 3 ? 2 : 3).forEach(function (s) { featUrls[s.url] = 1; });
       // local scores
