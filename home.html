@@ -572,13 +572,11 @@
       featImg(va, video, 560, 320);
       (va.querySelector('.fimg') || va).appendChild(el('span', 'play'));
       var vo = el('div', 'ov'); vo.appendChild(el('div', 'kick', 'Video')); vo.appendChild(el('h3', null, video.headline)); va.appendChild(vo);
+      // plays in the big player over the top stories, with the story behind the video underneath and a Share button
       va.onclick = function (e) {
-        var src = vidEmbed(video.url); if (!src) return;   // not YouTube / Vimeo: open it in a new tab
-        e.preventDefault(); if (va.classList.contains('playing')) return;
-        var host = va.querySelector('.fimg') || va;
-        var f = document.createElement('iframe'); f.className = 'vframe'; f.src = src; f.title = video.headline;
-        f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; f.allowFullscreen = true;
-        host.appendChild(f); va.classList.add('playing');
+        if (!vidEmbed(video.url)) return;   // not YouTube / Vimeo: open it in a new tab
+        e.preventDefault();
+        playRow(video, va, document.getElementById('feat'));
       };
       side.appendChild(va);
     }
@@ -607,7 +605,7 @@
 
   // ---------- Network row player ----------
   var vp = document.getElementById('vplayer');
-  function playRow(s, cardEl) {
+  function playRow(s, cardEl, at) {
     var src = vidEmbed(s.url); if (!src) return openUrl(s.url);
     var fr = document.getElementById('vframe'); fr.innerHTML = ''; fr.classList.remove('gal');
     var f = document.createElement('iframe'); f.src = src; f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; f.allowFullscreen = true; f.title = s.headline; fr.appendChild(f);
@@ -616,8 +614,8 @@
     vcur = s; document.getElementById('vshare').style.display = '';
     vDesc(s);
     vp.classList.add('on');
-    var sec = document.getElementById('row-network'), page = document.getElementById('page');
-    vp.style.top = Math.max(0, Math.min(sec.offsetTop - 10, page.offsetHeight - vp.offsetHeight - 10)) + 'px';
+    var sec = at || document.getElementById('row-network'), page = document.getElementById('page');
+    vp.style.top = Math.max(0, Math.min(sec.offsetTop - (at ? 0 : 10), page.offsetHeight - vp.offsetHeight - 10)) + 'px';
   }
   // the video's own write-up under the player (full text from data/video-text.json, loaded the first time)
   var vtext = null, vtextP = null, vcur = null;
