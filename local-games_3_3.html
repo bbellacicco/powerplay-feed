@@ -132,6 +132,15 @@
   .dstrip .who { white-space: normal; line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
   .dstrip .score { text-align: left; margin-top: auto; }
   .day h2 .n { color: var(--muted); font-weight: 600; letter-spacing: .04em; }
+  /* WAVL volleyball: one card per gym (three teams play each other) */
+  .t-wavl .stripe { background: #f97316; }
+  .wteam { display: flex; align-items: baseline; gap: 6px; font-weight: 600; line-height: 1.3; }
+  .wteam .rk { color: var(--muted); font-size: 11px; font-weight: 700; min-width: 18px; }
+  .wteam .h { color: #f97316; font-size: 10px; font-weight: 800; letter-spacing: .05em; }
+  .wgym { color: var(--muted); font-size: 12px; margin-top: auto; }
+  .wgym b { color: var(--text); font-weight: 700; }
+  .wgym a { color: var(--accent); text-decoration: none; font-weight: 700; }
+  .wsrc { color: var(--muted); font-size: 12px; margin-top: 8px; } .wsrc a { color: var(--accent); }
   @media (max-width: 480px) { .dstrip .game { flex-basis: 78%; } }
 
   /* standings: one division at a time (keeps the page short enough to show in full) */
@@ -154,7 +163,7 @@
   #teams .pill[aria-pressed="true"]::before { opacity: 1; height: 4px; }
   #teams .pill { white-space: normal; line-height: 1.15; display: flex; align-items: center; justify-content: center; min-height: 36px; }
   #teams .k-spitfires { --tc: #d4202a; } #teams .k-lancers { --tc: #3b8ee8; } #teams .k-saints { --tc: #1f9d55; }
-  #teams .k-junior { --tc: #0891b2; } #teams .k-highschool { --tc: #8b5cf6; } #teams .k-all, #teams .k-latest { --tc: #ffffff; }
+  #teams .k-junior { --tc: #0891b2; } #teams .k-highschool { --tc: #8b5cf6; } #teams .k-wavl { --tc: #f97316; } #teams .k-all, #teams .k-latest { --tc: #ffffff; }
   select.pill { border-radius: 4px; }
   @media (max-width: 560px) { #teams { grid-template-columns: repeat(4, 1fr); gap: 5px; } #teams .pill { font-size: 10px; letter-spacing: .02em; padding: 8px 2px 7px; white-space: normal; line-height: 1.15; } }
 
@@ -190,7 +199,7 @@
     <select class="pill" id="school" aria-label="School"></select>
   </div>
   <div id="list"></div>
-  <footer>Powerplay Windsor · Schedules from chl.ca, golancers.ca, ojhl.ca, gohl.ca, thepjhl.ca, cjfl.org and wecssaa.com</footer>
+  <footer>Powerplay Windsor · Schedules from chl.ca, golancers.ca, ojhl.ca, gohl.ca, thepjhl.ca, cjfl.org, wecssaa.com and wavl.net</footer>
 </div>
 <script>
   // cross-link to the other local widget (?other=<url> to point it somewhere else)
@@ -235,10 +244,13 @@
       // team leaders (player stats), collected hourly by scrape_stats.py; optional
       getJSON('stats.json').catch(function () { return null; }),
       // high school standings (WECSSAA), collected by Buddy's PC every 3 hours; optional
-      getJSON('hs-standings.json').catch(function () { return null; })
+      getJSON('hs-standings.json').catch(function () { return null; }),
+      // WAVL adult volleyball (wavl.net): gym schedule and tier standings, from Buddy's PC; optional
+      getJSON('wavl.json').catch(function () { return null; })
     ]).then(function (res) {
       var j = res[0], hs = res[1], sc = res[2], pj = res[3], cs = res[4], news = res[5], st = res[6];
       hsStand = res[7] && res[7].sports ? res[7].sports : null;
+      wavl = res[8] && res[8].leagues && res[8].leagues.length ? res[8] : null;
       statsData = st && st.teams && st.teams.length ? st : null;
       j.standings = j.standings || {};
       if (pj && pj.groups && pj.groups.length) j.standings.pjhl = pj.groups;
@@ -272,8 +284,9 @@
     var present = {};
     data.games.forEach(function (g) { present[g.team] = true; });
     var keys = ['latest', 'all'].concat(Object.keys(data.teams).filter(function (k) { return present[k]; }));
+    if (wavl) keys.push('wavl');
     keys.forEach(function (k) {
-      var b = el('button', 'pill k-' + k, k === 'all' ? 'All' : k === 'latest' ? 'Current Scores' : data.teams[k].short); b.type = 'button';
+      var b = el('button', 'pill k-' + k, k === 'all' ? 'All' : k === 'latest' ? 'Current Scores' : k === 'wavl' ? 'WAVL Volleyball' : data.teams[k].short); b.type = 'button';
       b.setAttribute('aria-pressed', String(state.team === k));
       b.onclick = function () { state.team = k; state.sport = 'all'; state.school = 'all'; render(); };
       box.appendChild(b);
@@ -351,7 +364,7 @@
   // ---- Standings (collected every 15 minutes from the leagues' own stats sites)
   // Lancers and St. Clair: one tab each, with a sport picker (men's and women's tables share a sport)
   var ST_LEAGUES = [['ohl', 'OHL'], ['ojhl', 'OJHL'], ['gohl', 'GOHL'], ['pjhl', 'PJHL'],
-    ['lancers', 'Lancers'], ['saints', 'St. Clair'], ['hs', 'High School']];
+    ['lancers', 'Lancers'], ['saints', 'St. Clair'], ['hs', 'High School'], ['wavl', 'WAVL']];
   var COLLEGE = {
     lancers: { org: 'OUA', site: 'https://oua.ca', sports: [
       ['fball', 'Football', ['oua'], 'fball'], ['bsb', 'Baseball', ['oua_bsb'], 'bsb'], ['sball', 'Softball', ['oua_sball'], 'sball'],
@@ -456,6 +469,88 @@
   }
   var hsTitle = null;
 
+  // ---- WAVL (Windsor Adult Volleyball League): Tuesday and Wednesday nights, tiers of nine teams
+  var wavl = null, wavlLeague = '';
+  function wavlLeagues(needNights) {
+    var ls = (wavl && wavl.leagues || []).filter(function (l) { return needNights ? l.nights && l.nights.length : l.tiers && l.tiers.length; });
+    if (!ls.some(function (l) { return l.code === wavlLeague; })) {
+      // the night that's coming up next
+      var soon = ls.slice().sort(function (a, b) { return ((a.nights[0] || {}).date || 'z') < ((b.nights[0] || {}).date || 'z') ? -1 : 1; })[0];
+      wavlLeague = soon ? soon.code : '';
+    }
+    var bar = document.getElementById('hsbar');
+    if (ls.length > 1) {
+      bar.innerHTML = ''; bar.style.display = '';
+      bar.appendChild(el('div', 'lbl', 'League'));
+      var tabs = el('div', 'sporttabs');
+      ls.forEach(function (l) {
+        var b = el('button', 'sporttab', l.name);
+        b.setAttribute('aria-pressed', String(l.code === wavlLeague));
+        b.onclick = function () { if (wavlLeague !== l.code) { wavlLeague = l.code; render(); } };
+        tabs.appendChild(b);
+      });
+      bar.appendChild(tabs);
+    }
+    return ls.filter(function (l) { return l.code === wavlLeague; })[0] || null;
+  }
+  function wavlGroups() {
+    var l = wavlLeagues(false);
+    if (!l) return [];
+    hsTitle = ['WAVL', l.name + (l.season ? ' \u00b7 ' + l.season : '')];
+    return l.tiers.map(function (t) {
+      return { group: 'Tier ' + t.tier, cols: ['G', 'W', 'L', 'PTS', 'DIF'], teams: t.teams };
+    });
+  }
+  function wavlTime(t) { return /[ap]\.?m/i.test(t) ? t : t + ' p.m.'; }
+  function renderWavl(list) {
+    ['sport', 'school'].forEach(function (id) { document.getElementById(id).style.display = 'none'; });
+    var l = wavlLeagues(true);
+    var go = el('button', 'pill hsgo', 'WAVL standings \u2192');
+    go.onclick = function () { view = 'standings'; standLeague = 'wavl'; render(); };
+    list.appendChild(go);
+    var night = l && l.nights[0];
+    if (!night || !night.gyms.length) { list.appendChild(el('div', 'empty', 'The next WAVL schedule isn\u2019t posted yet.')); return; }
+    var d = new Date(night.date + 'T12:00:00');
+    document.getElementById('updated').textContent = '';
+    var tiers = [], cur = null;
+    night.gyms.forEach(function (g) { if (!cur || cur.tier !== g.tier) { cur = { tier: g.tier, gyms: [] }; tiers.push(cur); } cur.gyms.push(g); });
+    var head = el('section', 'day' + (night.date === todayKey ? ' today' : ''));
+    var h2 = el('h2', null, (night.date === todayKey ? 'Tonight \u00b7 ' : '') + fmt(d, { weekday: 'long', month: 'short', day: 'numeric' }));
+    var wk = (night.week.match(/Week\s*\d+/) || [''])[0];
+    h2.appendChild(el('span', 'n', ' \u00b7 ' + l.name + (wk ? ' \u00b7 ' + wk : '')));
+    head.appendChild(h2); list.appendChild(head);
+    tiers.forEach(function (t) {
+      var sec = el('section', 'day');
+      var th = el('h2', null, 'Tier ' + t.tier);
+      th.appendChild(el('span', 'n', ' \u00b7 ' + t.gyms.length + (t.gyms.length === 1 ? ' gym' : ' gyms')));
+      sec.appendChild(th);
+      var strip = el('div', 'dstrip');
+      t.gyms.forEach(function (g) {
+        var c = el('div', 'game t-wavl');
+        c.appendChild(el('div', 'stripe'));
+        c.appendChild(el('div', 'time', wavlTime(g.time || '')));
+        g.teams.forEach(function (tm) {
+          var r = el('div', 'wteam');
+          r.appendChild(el('span', 'rk', tm.rank ? '#' + tm.rank : ''));
+          r.appendChild(el('span', null, tm.name));
+          if (tm.home) r.appendChild(el('span', 'h', 'HOME'));
+          c.appendChild(r);
+        });
+        var gy = el('div', 'wgym'); gy.appendChild(el('b', null, g.gym)); gy.appendChild(document.createElement('br'));
+        if (g.addr) {
+          var a = el('a', null, g.addr + ' \u2197'); a.href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(g.gym + ' ' + g.addr + ' Windsor ON');
+          a.target = '_blank'; a.rel = 'noopener'; gy.appendChild(a);
+        }
+        c.appendChild(gy);
+        strip.appendChild(c);
+      });
+      sec.appendChild(strip); list.appendChild(sec);
+    });
+    var src = el('div', 'wsrc', 'Rank is the team\u2019s place in its tier. Three teams share each gym. ');
+    var sa = el('a', null, 'wavl.net \u2197'); sa.href = 'https://wavl.net/schedule'; sa.target = '_blank'; sa.rel = 'noopener'; src.appendChild(sa);
+    list.appendChild(src);
+  }
+
 
   // standings with several divisions: show one at a time, starting with the one our team is in
   var GROUP = {};
@@ -491,11 +586,16 @@
     var box = document.getElementById('list'); box.innerHTML = '';
     document.getElementById('hsbar').style.display = 'none';
     colOff = null;
-    var groups = standLeague === 'hs' ? hsGroups() : COLLEGE[standLeague] ? collegeGroups(standLeague) : (data.standings || {})[standLeague] || [];
-    if (standLeague === 'hs' && groups.length && hsTitle) {
+    var groups = standLeague === 'hs' ? hsGroups() : standLeague === 'wavl' ? wavlGroups() : COLLEGE[standLeague] ? collegeGroups(standLeague) : (data.standings || {})[standLeague] || [];
+    if ((standLeague === 'hs' || standLeague === 'wavl') && groups.length && hsTitle) {
       var hh = el('div', 'hshead', hsTitle[0] + ' ');
       hh.appendChild(el('span', null, '\u00b7 ' + hsTitle[1]));
       box.appendChild(hh);
+    }
+    if (!groups.length && standLeague === 'wavl') {
+      var m3 = el('div', 'empty', 'WAVL standings aren\u2019t in yet. ');
+      var a3 = el('a', null, 'See wavl.net \u2197'); a3.href = 'https://wavl.net/standings'; a3.target = '_blank'; a3.rel = 'noopener'; a3.style.color = 'var(--accent)';
+      m3.appendChild(a3); box.appendChild(m3); return;
     }
     if (!groups.length && standLeague === 'hs') {
       var m2 = el('div', 'empty', 'High school standings aren\u2019t in yet. ');
@@ -512,8 +612,9 @@
       }
       box.appendChild(msg); return;
     }
-    groups = pickGroup(standLeague + (standLeague === 'hs' ? hsSport + hsLeague : COLLEGE[standLeague] ? colSport[standLeague] : ''), groups,
-      function (t) { return standLeague !== 'hs' && isOurClub(t.name); }, box, render);
+    var plain = standLeague === 'hs' || standLeague === 'wavl';   // no "local team" highlighting
+    groups = pickGroup(standLeague + (standLeague === 'hs' ? hsSport + hsLeague : standLeague === 'wavl' ? wavlLeague : COLLEGE[standLeague] ? colSport[standLeague] : ''), groups,
+      function (t) { return !plain && isOurClub(t.name); }, box, render);
     groups.forEach(function (g) {
       var sec = el('section', 'stand');
       sec.appendChild(el('h2', null, g.group));
@@ -524,7 +625,7 @@
       cols.forEach(function (c) { head.appendChild(el('th', c[2] ? 'wide' : null, c[0])); });
       tbl.appendChild(head);
       g.teams.forEach(function (t, i) {
-        var tr = el('tr', standLeague !== 'hs' && isOurClub(t.name) ? 'ours' : null), td = el('td');
+        var tr = el('tr', !plain && isOurClub(t.name) ? 'ours' : null), td = el('td');
         td.appendChild(el('span', 'rk', String(i + 1)));
         td.appendChild(document.createTextNode(t.name));
         tr.appendChild(td);
@@ -538,7 +639,8 @@
       sec.appendChild(tbl);
       box.appendChild(sec);
     });
-    box.appendChild(el('div', 'snote', standLeague === 'hs' ? 'From WECSSAA. (A), (AA), (AAA) are school size classes.'
+    box.appendChild(el('div', 'snote', standLeague === 'wavl' ? 'From wavl.net. G is games played, PTS total points scored, DIF point differential. Standings update the morning after each game night.'
+      : standLeague === 'hs' ? 'From WECSSAA. (A), (AA), (AAA) are school size classes.'
       : (HOCKEY[standLeague] ? 'OTL includes overtime and shootout losses. ' : '') + 'Local teams are highlighted.'));
   }
 
@@ -628,6 +730,7 @@
 
     var list = document.getElementById('list');
     list.innerHTML = '';
+    if (state.team === 'wavl') return renderWavl(list);
     if (state.team === 'highschool' && hsStand) {   // shortcut to the high school standings
       var go = el('button', 'pill hsgo', 'High school standings \u2192');
       go.onclick = function () {
