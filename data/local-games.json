@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-20T13:01:37-04:00",
+ "updated": "2026-10-20T13:41:39-04:00",
  "today": "2026-10-20",
  "range": [
   "2026-10-17",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 36
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -3255,15 +3255,17 @@
   },
   {
    "league": "nhl",
-   "headline": "Ducks coach Joel Quenneville: ‘Our top guys weren’t very good’ vs. Rangers",
+   "headline": "Blue Jackets’ Fantilli says playing with disgruntled teammate would be ‘nightmare’",
    "summary": "",
-   "published": "2026-10-19T23:38-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/05/Quenne.jpg",
+   "published": "2026-10-20T13:39-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/01/Adam-Fantilli.jpg",
    "video": false,
-   "teams": [],
-   "sn_team_count": 1,
+   "teams": [
+    "Detroit Red Wings"
+   ],
+   "sn_team_count": 3,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/ducks-coach-joel-quenneville-our-top-guys-werent-very-good-vs-rangers/",
+   "url": "https://www.sportsnet.ca/nhl/article/blue-jackets-fantilli-says-playing-with-disgruntled-teammate-would-be-nightmare/",
    "source": "Sportsnet"
   },
   {
@@ -3468,16 +3470,31 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "WNBA Finals Takeaways: Dream make franchise history to even series",
-   "summary": "Before you can take home your franchise’s first championship, you need to win your first Finals game. And that’s exactly what the Dream did on Monday, bouncing back to beat the Valkyries.",
-   "published": "2026-10-20T00:06-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Atlanta-Dream.jpg",
+   "league": "nhl",
+   "headline": "‘Big-time player’ McKenna helps Maple Leafs snap skid",
+   "summary": "Gavin McKenna is learning what it takes to be a pro, and with that comes the confidence to do things like score game-winners and come through when your team needs it. Luke Fox has the story after the Maple Leafs snapped ",
+   "published": "2026-10-20T00:29-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/mck.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/big-time-player-mckenna-helps-maple-leafs-snap-skid/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Ducks coach Joel Quenneville: ‘Our top guys weren’t very good’ vs. Rangers",
+   "summary": "",
+   "published": "2026-10-19T23:38-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/05/Quenne.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/wnba/article/wnba-finals-takeaways-dream-make-franchise-history-to-even-series/",
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/ducks-coach-joel-quenneville-our-top-guys-werent-very-good-vs-rangers/",
    "source": "Sportsnet"
   },
   {
@@ -3491,21 +3508,6 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/nhl-unveils-rendering-for-heritage-classic-in-winnipeg/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "‘Big-time player’ McKenna helps Maple Leafs snap skid",
-   "summary": "Gavin McKenna is learning what it takes to be a pro, and with that comes the confidence to do things like score game-winners and come through when your team needs it. Luke Fox has the story after the Maple Leafs snapped ",
-   "published": "2026-10-20T00:29-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/mck.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/big-time-player-mckenna-helps-maple-leafs-snap-skid/",
    "source": "Sportsnet"
   },
   {
@@ -3536,6 +3538,19 @@
   },
   {
    "league": "mlb",
+   "headline": "Small-ball Rays, their low payroll are four wins from first World Series title",
+   "summary": "The Rays and their low payroll and small-ball style are heading to the World Series seeking the first championship in franchise history.",
+   "published": "2026-10-20T13:31-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Rays-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/small-ball-rays-their-low-payroll-are-four-wins-from-first-world-series-title/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
    "headline": "Brewers, Rays clash in World Series both looking for first title",
    "summary": "The Milwaukee Brewers and Tampa Bay Rays will play a Suds vs. Sun World Series that will produce a first-time champion and likely baseball’s first all-indoor championship.",
    "published": "2026-10-19T23:49-04:00",
@@ -3558,6 +3573,19 @@
    "sn_team_count": 2,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/rays-freddy-peralta-named-alcs-mvp/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "WNBA Finals Takeaways: Dream make franchise history to even series",
+   "summary": "Before you can take home your franchise’s first championship, you need to win your first Finals game. And that’s exactly what the Dream did on Monday, bouncing back to beat the Valkyries.",
+   "published": "2026-10-20T00:06-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Atlanta-Dream.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/wnba/article/wnba-finals-takeaways-dream-make-franchise-history-to-even-series/",
    "source": "Sportsnet"
   },
   {
@@ -3649,47 +3677,6 @@
    "sn_team_count": 0,
    "sport": "Tennis",
    "url": "https://www.sportsnet.ca/wta/article/iga-swiatek-withdraws-from-ningbo-open-with-injury-risks-missing-finals/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Travis Green rewarded as Senators’ contention window opens",
-   "summary": "The Ottawa Senators rewarded head coach Travis Green with a multi-year extension on Monday. The new contract provides Green with the opportunity to lead the Senators into contention, Adam Stanley writes.",
-   "published": "2026-10-19T16:16-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-91.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/travis-green-rewarded-as-senators-contention-window-opens/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Canucks’ Manny Malholtra says no concern Thatcher Demko misses season",
-   "summary": "The Vancouver Canucks provided an update on their injured goaltender.",
-   "published": "2026-10-19T17:56-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/10/demko.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canucks-manny-malholtra-says-no-concern-thatcher-demko-misses-season/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "NFL suspends Bills’ Gardner-Johnson for spitting on Raiders’ Bowers",
-   "summary": "",
-   "published": "2026-10-19T15:14-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/cj-gardner-johnson.jpg",
-   "video": false,
-   "teams": [
-    "Buffalo Bills"
-   ],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-suspends-bills-gardner-johnson-for-spitting-on-raiders-bowers/",
    "source": "Sportsnet"
   },
   {
