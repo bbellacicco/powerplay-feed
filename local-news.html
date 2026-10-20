@@ -674,10 +674,11 @@
     return ('0000000' + h.toString(16)).slice(-8);
   }
   var SITE = 'https://www.powerplaywindsor.com/';
+  function fullPic(u) { return String(u || '').replace(/-\d{2,4}x\d{2,4}(\.(?:jpe?g|png|webp))$/i, '$1'); }   // the team site's full-size copy
   function shareBtn(s) {
     if (!window.PPShare || s.team === 'powerplay') return null;   // your own posts already have their own page
     var b = PPShare.button({ title: s.headline, url: SITE + 'scores-standings?tab=stories&s=' + skey(s.url),
-      text: s.headline + ' | ' + (s.club || LABEL[s.team] || 'Local') + ' on Powerplay Windsor', image: s.image && !GENERIC_IMG.test(s.image) ? s.image : '' });
+      text: s.headline + ' | ' + (s.club || LABEL[s.team] || 'Local') + ' on Powerplay Windsor', image: s.image && !GENERIC_IMG.test(s.image) ? fullPic(s.image) : '' });
     b.classList.add('mini');
     b.addEventListener('click', function (e) { e.preventDefault(); });   // the button sits on the card's link
     return b;
@@ -687,7 +688,10 @@
   function sharedBox(s) {
     var box = el('div', 'shared');
     var pic = el('div', 'pic');
-    if (s.image && !GENERIC_IMG.test(s.image)) { var im = new Image(); im.alt = ''; im.referrerPolicy = 'no-referrer'; im.src = s.image; im.onerror = function () { pic.innerHTML = ''; pic.appendChild(teamTile(s)); }; pic.appendChild(im); }
+    if (s.image && !GENERIC_IMG.test(s.image)) {
+      var im = new Image(); im.alt = ''; im.referrerPolicy = 'no-referrer'; im.src = fullPic(s.image);
+      im.onerror = function () { if (im.src !== s.image) im.src = s.image; else { pic.innerHTML = ''; pic.appendChild(teamTile(s)); } }; pic.appendChild(im);
+    }
     else pic.appendChild(teamTile(s));
     box.appendChild(pic);
     var tx = el('div', 'tx'), who = s.club || LABEL[s.team] || 'Local';
