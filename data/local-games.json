@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-20T15:31:39-04:00",
+ "updated": "2026-10-20T15:46:47-04:00",
  "today": "2026-10-20",
  "range": [
   "2026-10-17",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 36
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -2583,6 +2583,17 @@
   },
   {
    "league": "cfl",
+   "headline": "Prediction Time: CFL.ca writers' Week 21 picks",
+   "summary": "",
+   "published": "2026-10-19T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/18ehskvYPXIRAgHxItO85D/1143b273c7720b88cbc18978e5e3037d/Kian_Schaffer-Baker_2026_6.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/prediction-time-cfl-ca-writers-week-21-picks",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "5 things we learned from Week 20",
    "summary": "",
    "published": "2026-10-19T00:00:00-04:00",
@@ -2806,17 +2817,6 @@
    "video": false,
    "teams": [],
    "url": "https://www.cfl.ca/article/4-storylines-to-watch-in-week-20",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "8 Canadians who need to be named All-CFL",
-   "summary": "",
-   "published": "2026-10-15T00:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/FnnsZqX5AuAqANrP8052u/af00f78ad1048ab6e97555106980b5ff/Brady_Oliveira_2026_6.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/8-canadians-who-should-be-named-all-cfl",
    "source": "CFL.ca"
   },
   {
@@ -3221,7 +3221,7 @@
  "more_news": [
   {
    "league": "nhl",
-   "headline": "Knies, Marchenko brace for emotional reunions as Maple Leafs visit Blue Jackets",
+   "headline": "‘Got to turn the page’: Knies still navigating shock of Maple Leafs trade",
    "summary": "While the Blue Jackets’ side of the trade brought an end to a prolonged dispute that seemed all but certain to end in a move for Kirill Marchenko, for Matthew Knies, the news hit like a crosscheck to the gut.",
    "published": "2026-10-20T15:20-04:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/knies-2.jpg",
@@ -3404,6 +3404,64 @@
   },
   {
    "league": "nba",
+   "headline": "Raptors reveal opening-night roster",
+   "summary": "",
+   "published": "2026-10-19T17:45-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/raps.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/raptors-reveal-opening-night-roster-for-2026-27-season/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Six-pack of new-look NBA teams tip off season with triple-header",
+   "summary": "",
+   "published": "2026-10-20T10:13-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/lebron-james-1-1.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Pistons"
+   ],
+   "sn_team_count": 6,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/six-pack-of-new-look-nba-teams-tip-off-season-with-triple-header/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Five breakout candidates to watch this NBA season",
+   "summary": "Several budding talents are uniquely positioned to leap from role player to star this NBA season. Ian Finlayson looks at five who are especially poised for breakouts.",
+   "published": "2026-10-19T08:13-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Harper-Wallace.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 5,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/five-breakout-candidates-to-watch-this-nba-season-2/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Canada no longer claims second-most players in NBA behind U.S.",
+   "summary": "",
+   "published": "2026-10-20T08:11-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/05/Shai-Wemby.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/canada-no-longer-claims-second-most-players-in-nba-behind-u-s/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
    "headline": "NBA tiers: From title-or-bust all the way down to the relegation zone",
    "summary": "The NBA pre-season is behind us, and the real thing tips off Tuesday. But before the ball flies, Sportsnet’s Steven Loung sorts all 30 teams into contention tiers.",
    "published": "2026-10-18T08:40-04:00",
@@ -3456,51 +3514,6 @@
   },
   {
    "league": "nba",
-   "headline": "Six-pack of new-look NBA teams tip off season with triple-header",
-   "summary": "",
-   "published": "2026-10-20T10:13-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/lebron-james-1-1.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Pistons"
-   ],
-   "sn_team_count": 6,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/six-pack-of-new-look-nba-teams-tip-off-season-with-triple-header/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Five breakout candidates to watch this NBA season",
-   "summary": "Several budding talents are uniquely positioned to leap from role player to star this NBA season. Ian Finlayson looks at five who are especially poised for breakouts.",
-   "published": "2026-10-19T08:13-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Harper-Wallace.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 5,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/five-breakout-candidates-to-watch-this-nba-season-2/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Raptors reveal opening-night roster",
-   "summary": "",
-   "published": "2026-10-19T17:45-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/raps.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-reveal-opening-night-roster-for-2026-27-season/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
    "headline": "Hall of Famer Steve Nash says Raptors could be dangerous",
    "summary": "",
    "published": "2026-10-20T13:57-04:00",
@@ -3512,19 +3525,6 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/hall-of-famer-steve-nash-says-raptors-could-be-dangerous/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Canada no longer claims second-most players in NBA behind U.S.",
-   "summary": "",
-   "published": "2026-10-20T08:11-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/05/Shai-Wemby.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/canada-no-longer-claims-second-most-players-in-nba-behind-u-s/",
    "source": "Sportsnet"
   },
   {
@@ -3621,6 +3621,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "mlb",
+   "headline": "Small-ball Rays, their low payroll are four wins from first World Series title",
+   "summary": "The Rays and their low payroll and small-ball style are heading to the World Series seeking the first championship in franchise history.",
+   "published": "2026-10-20T13:31-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Rays-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/small-ball-rays-their-low-payroll-are-four-wins-from-first-world-series-title/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "Fox, Brennan among new TGLers as full five-man rosters unveiled",
    "summary": "A reigning major champion is among a slew of new faces set to step into the SoFi Centre.",
@@ -3661,19 +3674,6 @@
   },
   {
    "league": "mlb",
-   "headline": "Small-ball Rays, their low payroll are four wins from first World Series title",
-   "summary": "The Rays and their low payroll and small-ball style are heading to the World Series seeking the first championship in franchise history.",
-   "published": "2026-10-20T13:31-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Rays-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/small-ball-rays-their-low-payroll-are-four-wins-from-first-world-series-title/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
    "headline": "Brewers, Rays clash in World Series both looking for first title",
    "summary": "The Milwaukee Brewers and Tampa Bay Rays will play a Suds vs. Sun World Series that will produce a first-time champion and likely baseball’s first all-indoor championship.",
    "published": "2026-10-19T23:49-04:00",
@@ -3696,19 +3696,6 @@
    "sn_team_count": 2,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/rays-freddy-peralta-named-alcs-mvp/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "WNBA Finals Takeaways: Dream make franchise history to even series",
-   "summary": "Before you can take home your franchise’s first championship, you need to win your first Finals game. And that’s exactly what the Dream did on Monday, bouncing back to beat the Valkyries.",
-   "published": "2026-10-20T00:06-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Atlanta-Dream.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/wnba/article/wnba-finals-takeaways-dream-make-franchise-history-to-even-series/",
    "source": "Sportsnet"
   },
   {
