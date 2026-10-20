@@ -77,6 +77,8 @@
   };
   // a shared video link (powerplaywindsor.com/scores-standings?tab=network&v=...) opens the Network with it playing
   var PLAY = (new URLSearchParams(location.search).get('play') || '').replace(/[^\w-]/g, '');
+  // a shared team story (powerplaywindsor.com/scores-standings?tab=stories&s=...) opens Stories > Team news with it on top
+  var STORY = (new URLSearchParams(location.search).get('story') || '').replace(/[^0-9a-f]/g, '');
   var built = {}, box = document.getElementById('panes');
   function show(tab) {
     if (!PARTS[tab]) tab = 'scores';
@@ -84,7 +86,7 @@
       var pane = document.createElement('div'); pane.className = 'pane'; pane.id = 'pane-' + tab;
       PARTS[tab].forEach(function (w) {
         var f = document.createElement('iframe');
-        f.src = REPO + w[0] + V + w[3] + (tab === 'network' && PLAY ? '&play=' + encodeURIComponent(PLAY) : '') + '&in=sports'; f.title = w[0].replace(/[_.].*$/, '');
+        f.src = REPO + w[0] + V + w[3] + (tab === 'network' && PLAY ? '&play=' + encodeURIComponent(PLAY) : '') + (tab === 'stories' && STORY && w[0] === 'local-news.html' ? '&story=' + STORY : '') + '&in=sports'; f.title = w[0].replace(/[_.].*$/, '');
         f.scrolling = 'no';
         f.style.height = (phone ? w[2] : w[1]) + 'px';
         f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; f.allowFullscreen = true;
@@ -103,14 +105,14 @@
           var b = document.createElement('button'); b.type = 'button'; b.textContent = w[4];
           b.onclick = function () { pick(n); }; bar.appendChild(b);
         });
-        pane.insertBefore(bar, pane.firstChild); pick(0);
+        pane.insertBefore(bar, pane.firstChild); pick(tab === 'stories' && STORY ? 1 : 0);
       }
       box.appendChild(pane); built[tab] = pane;
     }
     Object.keys(built).forEach(function (k) { built[k].classList.toggle('on', k === tab); });
     current = tab;
     [].forEach.call(document.querySelectorAll('.switch button'), function (b) { b.setAttribute('aria-selected', String(b.getAttribute('data-tab') === tab)); });
-    try { history.replaceState(null, '', '?tab=' + tab + (tab === 'network' && PLAY ? '&play=' + PLAY : '')); } catch (e) {}
+    try { history.replaceState(null, '', '?tab=' + tab + (tab === 'network' && PLAY ? '&play=' + PLAY : '') + (tab === 'stories' && STORY ? '&story=' + STORY : '')); } catch (e) {}
   }
   // each widget reports its height; its frame matches it exactly, so nothing scrolls inside the page
   window.addEventListener('message', function (e) {
@@ -131,7 +133,7 @@
   // which switch to open: ?tab= when opened directly, or the hand-off from a "See all" link elsewhere (good for 2 minutes)
   var start = new URLSearchParams(location.search).get('tab');
   try { var h = JSON.parse(localStorage.getItem('pp-tab') || 'null'); localStorage.removeItem('pp-tab'); if (!start && h && Date.now() - h.t < 120000) start = h.tab; } catch (e) {}
-  show(PLAY ? 'network' : (start || 'scores'));
+  show(PLAY ? 'network' : STORY ? 'stories' : (start || 'scores'));
 })();
 </script>
 </body>
