@@ -79,6 +79,7 @@
   var PLAY = (new URLSearchParams(location.search).get('play') || '').replace(/[^\w-]/g, '');
   // a shared team story (powerplaywindsor.com/scores-standings?tab=stories&s=...) opens Stories > Team news with it on top
   var STORY = (new URLSearchParams(location.search).get('story') || '').replace(/[^0-9a-f]/g, '');
+  var TEAM = (new URLSearchParams(location.search).get('team') || '').replace(/[^a-z]/g, '');   // the shared story's team
   var built = {}, box = document.getElementById('panes');
   function show(tab) {
     if (!PARTS[tab]) tab = 'scores';
@@ -86,7 +87,7 @@
       var pane = document.createElement('div'); pane.className = 'pane'; pane.id = 'pane-' + tab;
       PARTS[tab].forEach(function (w) {
         var f = document.createElement('iframe');
-        f.src = REPO + w[0] + V + w[3] + (tab === 'network' && PLAY ? '&play=' + encodeURIComponent(PLAY) : '') + (tab === 'stories' && STORY && w[0] === 'local-news.html' ? '&story=' + STORY : '') + '&in=sports'; f.title = w[0].replace(/[_.].*$/, '');
+        f.src = REPO + w[0] + V + w[3] + (tab === 'network' && PLAY ? '&play=' + encodeURIComponent(PLAY) : '') + (tab === 'stories' && STORY && w[0] === 'local-news.html' ? '&story=' + STORY + (TEAM ? '&tab=' + TEAM : '') : '') + '&in=sports'; f.title = w[0].replace(/[_.].*$/, '');
         f.scrolling = 'no';
         f.style.height = (phone ? w[2] : w[1]) + 'px';
         f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; f.allowFullscreen = true;
