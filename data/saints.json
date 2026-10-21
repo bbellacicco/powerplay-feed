@@ -1,95 +1,7 @@
 {
- "updated": "2026-10-20T19:00:01-04:00",
- "today": "2026-10-20",
+ "updated": "2026-10-21T00:00:01-04:00",
+ "today": "2026-10-21",
  "games": [
-  {
-   "id": "saints-presto2026-10-17-1",
-   "team": "saints",
-   "sport": "Men's Basketball",
-   "start": "2026-10-17T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "A",
-   "opponent": "Centennial",
-   "location": "",
-   "status": "final",
-   "our_score": 100,
-   "opp_score": 76,
-   "result": "W",
-   "note": "Exhibition · OCAA Exhibition, Scarborough",
-   "links": {}
-  },
-  {
-   "id": "saints-presto2026-10-17-0",
-   "team": "saints",
-   "sport": "Baseball",
-   "start": "2026-10-17T12:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Fanshawe",
-   "location": "",
-   "status": "final",
-   "our_score": 0,
-   "opp_score": 5,
-   "result": "L",
-   "note": "Exhibition · OCAA Championship Semi-Final #1 - Game 1",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/bsb/2026-27/boxscores/20261017_b9re.xml"
-   }
-  },
-  {
-   "id": "saints-presto2026-10-17-2",
-   "team": "saints",
-   "sport": "Fastball",
-   "start": "2026-10-17T14:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Conestoga",
-   "location": "",
-   "status": "final",
-   "our_score": 15,
-   "opp_score": 0,
-   "result": "W",
-   "note": "4 innings",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/fastball/2026-27/boxscores/20261017_81jc.xml"
-   }
-  },
-  {
-   "id": "saints-presto2026-10-17-3",
-   "team": "saints",
-   "sport": "Baseball",
-   "start": "2026-10-17T14:30:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Fanshawe",
-   "location": "",
-   "status": "final",
-   "our_score": 7,
-   "opp_score": 10,
-   "result": "L",
-   "note": "Exhibition · OCAA Championship Semi-Final #1 - Game 2",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/bsb/2026-27/boxscores/20261017_jukr.xml"
-   }
-  },
-  {
-   "id": "saints-presto2026-10-17-4",
-   "team": "saints",
-   "sport": "Fastball",
-   "start": "2026-10-17T16:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Conestoga",
-   "location": "",
-   "status": "final",
-   "our_score": 16,
-   "opp_score": 3,
-   "result": "W",
-   "note": "5 innings",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/fastball/2026-27/boxscores/20261017_vvyt.xml"
-   }
-  },
   {
    "id": "saints-presto2026-10-18-0",
    "team": "saints",
@@ -266,6 +178,112 @@
    "note": "Exhibition · OCAA Championship Game 6 - Winner Game 3 vs Winner Game 4",
    "links": {
     "boxscore": "https://www.saintsathletics.ca/sports/fastball/2026-27/boxscores/20261023_hob8.xml"
+   }
+  },
+  {
+   "id": "saints-presto2026-10-24-0",
+   "team": "saints",
+   "sport": "Fastball",
+   "start": "2026-10-24T10:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "TBD",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Exhibition · OCAA Championship Bronze Medal Game - Winner Game 5 vs Loser Game 6",
+   "links": {}
+  },
+  {
+   "id": "saints-presto2026-10-24-1",
+   "team": "saints",
+   "sport": "Baseball",
+   "start": "2026-10-24T13:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Durham",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Exhibition · OCAA Championship Bronze Medal Game",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/bsb/2026-27/boxscores/20261024_6etm.xml"
+   }
+  },
+  {
+   "id": "saints-presto2026-10-24-2",
+   "team": "saints",
+   "sport": "Fastball",
+   "start": "2026-10-24T13:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "TBD",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Exhibition · OCAA Championship Gold Medal Game 1 - Winner Game 6 vs Winner Game 7",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/fastball/2026-27/boxscores/20261024_w98i.xml"
+   }
+  },
+  {
+   "id": "saints-presto2026-10-24-3",
+   "team": "saints",
+   "sport": "Women's Volleyball",
+   "start": "2026-10-24T13:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Cambrian",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/wvball/2026-27/boxscores/20261024_0g1n.xml"
+   }
+  },
+  {
+   "id": "saints-presto2026-10-24-4",
+   "team": "saints",
+   "sport": "Fastball",
+   "start": "2026-10-24T15:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "TBD",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Exhibition · OCAA Championship Gold Medal Game 2 - Winner Game 6 vs Winner Game 7",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/fastball/2026-27/boxscores/20261024_h0rs.xml"
+   }
+  },
+  {
+   "id": "saints-presto2026-10-24-5",
+   "team": "saints",
+   "sport": "Men's Volleyball",
+   "start": "2026-10-24T15:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Cambrian",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/mvball/2026-27/boxscores/20261024_iakr.xml"
    }
   }
  ]
