@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-20T20:01:38-04:00",
+ "updated": "2026-10-20T20:16:37-04:00",
  "today": "2026-10-20",
  "range": [
   "2026-10-17",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 39
+   "count": 37
   },
   "club_news": {
    "ok": true,
@@ -1292,10 +1292,10 @@
    "opponent": "Trenton Golden Hawks",
    "location": "Duncan Memorial Gardens, Trenton, ON",
    "status": "live",
-   "our_score": 0,
+   "our_score": 1,
    "opp_score": 0,
    "result": null,
-   "note": "06:02 1st",
+   "note": "00:00 1st",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16601"
    },
@@ -3248,6 +3248,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Report: Red Wings’ Dylan Larkin expands trade list to 10 teams",
+   "summary": "Dylan Larkin has reportedly opened up his trade request to include more teams.",
+   "published": "2026-10-20T20:06-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177065117.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Red Wings"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/report-red-wings-dylan-larkin-expands-trade-list-to-10-teams/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nba",
    "headline": "Knicks raise banner, receive rings to celebrate championship",
    "summary": "",
@@ -3258,6 +3273,21 @@
    "sn_team_count": 2,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/champion-knicks-celebrate-two-titles-on-banner-night-in-madison-square-garden/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Kawhi Leonard pens tribute video to Toronto ahead of Raptors return",
+   "summary": "Ahead of the Toronto Raptors’ regular-season opener against the Chicago Bulls on Wednesday night (Sportsnet and Sportsnet+, 7:30 p.m. ET / 4:30 p.m. PT), Leonard put together a tribute video to properly reintroduce himse",
+   "published": "2026-10-20T19:17-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/kawhi-1.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/kawhi-leonard-pens-tribute-video-to-toronto-ahead-of-raptors-return/",
    "source": "Sportsnet"
   },
   {
@@ -3317,45 +3347,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "cfl",
-   "headline": "Argonauts rule out QB Chad Kelly for season finale, mull playing time ahead of playoffs",
-   "summary": "",
-   "published": "2026-10-20T14:54-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/08/chad-kelly-roughriders.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/argonauts-rule-out-qb-chad-kelly-for-season-finale-mull-playing-time-ahead-of-playoffs/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Champions League roundup: PSG beats Barcelona in thriller",
-   "summary": "Paris Saint-Germain was too powerful for even Lamine Yamal’s magic as it ended Barcelona’s 11-game winning run to top the Champions League table on Tuesday.",
-   "published": "2026-10-20T17:17-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/psg-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/champions-league/article/champions-league-roundup-psg-beats-barcelona-in-thriller/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Commanders receiver Terry McLaurin out for season with knee injury",
-   "summary": "",
-   "published": "2026-10-20T15:19-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/terry-mclaurin.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/commanders-receiver-terry-mclaurin-out-for-season-with-knee-injury/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "Why Brady Tkachuk’s return to Ottawa promises to be emotionally charged",
    "summary": "",
@@ -3379,6 +3370,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/q-and-a-with-devin-cooley-flames-goaltender-talks-latest-viral-moment/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "cfl",
+   "headline": "Argonauts rule out QB Chad Kelly for season finale, mull playing time ahead of playoffs",
+   "summary": "",
+   "published": "2026-10-20T14:54-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/08/chad-kelly-roughriders.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/argonauts-rule-out-qb-chad-kelly-for-season-finale-mull-playing-time-ahead-of-playoffs/",
    "source": "Sportsnet"
   },
   {
@@ -3428,17 +3432,69 @@
   },
   {
    "league": "nba",
-   "headline": "Raptors reveal opening-night roster",
+   "headline": "Paul George scores 38 points in losing debut with Celtics",
    "summary": "",
-   "published": "2026-10-19T17:45-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/raps.jpg",
+   "published": "2026-10-20T19:52-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/george.jpg",
    "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
+   "teams": [],
    "sn_team_count": 1,
    "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-reveal-opening-night-roster-for-2026-27-season/",
+   "url": "https://www.sportsnet.ca/nba/article/paul-george-scores-38-points-in-losing-debut-with-celtics/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Champions League roundup: PSG beats Barcelona in thriller",
+   "summary": "Paris Saint-Germain was too powerful for even Lamine Yamal’s magic as it ended Barcelona’s 11-game winning run to top the Champions League table on Tuesday.",
+   "published": "2026-10-20T17:17-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/psg-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/champions-league/article/champions-league-roundup-psg-beats-barcelona-in-thriller/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "How World Series-bound Rays found ‘a source of inspiration’ in 2025 Blue Jays",
+   "summary": "A year ago, a World Series berth seemed so far away for the Rays. But instead of seeing a trying road ahead, Tampa Bay saw opportunity — in the 2025 Blue Jays. Shi Davidi explains how last year’s AL champs were a source ",
+   "published": "2026-10-20T08:11-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177118575.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "sn_team_count": 2,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/how-world-series-bound-rays-found-a-source-of-inspiration-in-2025-blue-jays/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Brewers ace Jacob Misiorowski to start Game 1 of World Series",
+   "summary": "",
+   "published": "2026-10-20T20:09-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/ba89036c3b2ff5c9f7577a121f497486ab1832f161104173c9930e1d5ef07185.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/brewers-ace-jacob-misiorowski-to-start-game-1-of-world-series/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Brewers, Rays clash in World Series both looking for first title",
+   "summary": "The Milwaukee Brewers and Tampa Bay Rays will play a Suds vs. Sun World Series that will produce a first-time champion and likely baseball’s first all-indoor championship.",
+   "published": "2026-10-19T23:49-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Tampa-Bay-Rays-pitcher-Cam-Booser.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/brewers-rays-clash-in-world-series-both-looking-for-first-title/",
    "source": "Sportsnet"
   },
   {
@@ -3498,47 +3554,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "mlb",
-   "headline": "How World Series-bound Rays found ‘a source of inspiration’ in 2025 Blue Jays",
-   "summary": "A year ago, a World Series berth seemed so far away for the Rays. But instead of seeing a trying road ahead, Tampa Bay saw opportunity — in the 2025 Blue Jays. Shi Davidi explains how last year’s AL champs were a source ",
-   "published": "2026-10-20T08:11-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177118575.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "sn_team_count": 2,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/how-world-series-bound-rays-found-a-source-of-inspiration-in-2025-blue-jays/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Brewers, Rays clash in World Series both looking for first title",
-   "summary": "The Milwaukee Brewers and Tampa Bay Rays will play a Suds vs. Sun World Series that will produce a first-time champion and likely baseball’s first all-indoor championship.",
-   "published": "2026-10-19T23:49-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Tampa-Bay-Rays-pitcher-Cam-Booser.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/brewers-rays-clash-in-world-series-both-looking-for-first-title/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "How series of shrewd moves led Brewers to World Series",
-   "summary": "",
-   "published": "2026-10-17T13:04-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/03/Yelich.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/how-series-of-shrewd-moves-led-brewers-to-world-series/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nba",
    "headline": "Hall of Famer Steve Nash says Raptors could be dangerous",
    "summary": "",
@@ -3551,19 +3566,6 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/hall-of-famer-steve-nash-says-raptors-could-be-dangerous/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "LeBron James set to open 24th season in New York when 76ers visit Knicks",
-   "summary": "There was a plausible scenario where LeBron James would open his record 24th NBA season at Madison Square Garden — only in a New York Knicks uniform.",
-   "published": "2026-10-20T11:25-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-copy-3.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/lebron-james-set-to-open-24th-season-in-new-york-when-76ers-visit-knicks/",
    "source": "Sportsnet"
   },
   {
@@ -3629,6 +3631,19 @@
    "sn_team_count": 0,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/nba-2026-27-season-preview-burning-questions-in-the-eastern-conference/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Commanders receiver Terry McLaurin out for season with knee injury",
+   "summary": "",
+   "published": "2026-10-20T15:19-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/terry-mclaurin.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/commanders-receiver-terry-mclaurin-out-for-season-with-knee-injury/",
    "source": "Sportsnet"
   },
   {
@@ -3709,45 +3724,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/small-ball-rays-their-low-payroll-are-four-wins-from-first-world-series-title/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "PSG forward Ousmane Dembele injured in Champions League match vs. Barcelona",
-   "summary": "",
-   "published": "2026-10-20T15:51-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/ousmane-dembele.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/champions-league/article/psg-forward-ousmane-dembele-injured-in-champions-league-match-vs-barcelona/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Fox, Brennan among new TGLers as full five-man rosters unveiled",
-   "summary": "A reigning major champion is among a slew of new faces set to step into the SoFi Centre.",
-   "published": "2026-10-20T11:31-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/06/fox-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Golf",
-   "url": "https://www.sportsnet.ca/tgl/article/fox-brennan-among-new-tglers-as-full-five-man-rosters-unveiled/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Giants releasing running back Najee Harris",
-   "summary": "",
-   "published": "2026-10-20T11:46-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/najee-harris.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/ap-source-giants-releasing-running-back-najee-harris/",
    "source": "Sportsnet"
   },
   {
@@ -4958,7 +4934,7 @@
       "otl": 1,
       "pts": 9,
       "gf": 52,
-      "ga": 62,
+      "ga": 63,
       "strk": "L5"
      },
      {
@@ -5070,7 +5046,7 @@
       "l": 2,
       "otl": 1,
       "pts": 21,
-      "gf": 50,
+      "gf": 51,
       "ga": 23,
       "strk": "W3"
      },
