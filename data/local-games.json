@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T14:49:39-04:00",
+ "updated": "2026-10-21T15:01:38-04:00",
  "today": "2026-10-21",
  "range": [
   "2026-10-18",
@@ -99,11 +99,11 @@
   },
   "pwhl_news": {
    "ok": true,
-   "count": 24
+   "count": 25
   },
   "sportsnet": {
    "ok": true,
-   "count": 32
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -2808,6 +2808,19 @@
   },
   {
    "league": "pwhl",
+   "headline": "Vancouver Goldeneyes Unveil First Jerseys Featuring Team Logo",
+   "summary": "",
+   "published": "2026-10-21T18:45:00+00:00",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/VAN-Jersey-PressRelease-16x9-NoText",
+   "video": false,
+   "teams": [
+    "Vancouver Goldeneyes"
+   ],
+   "url": "https://www.thepwhl.com/en/teams/vancouver-goldeneyes/news/2026/october/21/vancouver-goldeneyes-unveil-first-jerseys-featuring-team-logo",
+   "source": "thepwhl.com"
+  },
+  {
+   "league": "pwhl",
    "headline": "Seattle Torrent Sign Second-Round Draft Pick Sydney Morrow",
    "summary": "",
    "published": "2026-10-21T18:10:24+00:00",
@@ -3210,6 +3223,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "mlb",
+   "headline": "Angels fire manager Kurt Suzuki after losing 100 games in only season",
+   "summary": "",
+   "published": "2026-10-21T15:00-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-Design-2026-10-21T145917.833.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/angels-fire-manager-kurt-suzuki-after-losing-100-games-in-only-season/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "AC Milan backs fan boycott over ‘excessive’ away ticket prices",
    "summary": "AC Milan came out firmly in support of its fans protesting against excessive away ticket prices, threatening to retaliate against clubs it believes are unfairly charging Rossoneri supporters.",
@@ -3233,21 +3259,6 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/article/goodell-nfl-welcomes-review-of-how-eagles-handled-hurts-blood-clots/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Report: Red Wings’ Dylan Larkin expands trade list to 10 teams",
-   "summary": "Dylan Larkin has reportedly opened up his trade request to include more teams.",
-   "published": "2026-10-20T20:06-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177065117.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Red Wings"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/report-red-wings-dylan-larkin-expands-trade-list-to-10-teams/",
    "source": "Sportsnet"
   },
   {
@@ -3306,15 +3317,17 @@
   },
   {
    "league": "nhl",
-   "headline": "Another third-period letdown sends Canucks to eighth straight loss",
-   "summary": "It’s becoming a disturbing trend for the Canucks. Vancouver has been outscored 11-0 in the final periods of the past five games, including Tuesday’s setback to Carolina. It’s simply not a recipe to win games.",
-   "published": "2026-10-21T02:27-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/petey.jpg",
+   "headline": "Report: Red Wings’ Dylan Larkin expands trade list to 10 teams",
+   "summary": "Dylan Larkin has reportedly opened up his trade request to include more teams.",
+   "published": "2026-10-20T20:06-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177065117.jpg",
    "video": false,
-   "teams": [],
+   "teams": [
+    "Detroit Red Wings"
+   ],
    "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/another-third-period-letdown-sends-canucks-to-eighth-straight-loss/",
+   "url": "https://www.sportsnet.ca/nhl/article/report-red-wings-dylan-larkin-expands-trade-list-to-10-teams/",
    "source": "Sportsnet"
   },
   {
@@ -3372,6 +3385,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "Report: Warriors exploring Porzingis trade routes amid health uncertainty",
+   "summary": "",
+   "published": "2026-10-21T14:53-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/03/porzingis_kristaps1280.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/report-warriors-exploring-porzingis-trade-routes-amid-health-uncertainty/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Jets give up late goal to Broberg in loss to Blues",
    "summary": "Philip Broberg scored on a power play at 8:47 of the third period to break a tie in the St. Louis Blues’ 2-1 victory over the Winnipeg Jets on Tuesday night.",
@@ -3382,6 +3408,19 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/jets-give-up-late-goal-to-broberg-in-loss-to-blues/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Another third-period letdown sends Canucks to eighth straight loss",
+   "summary": "It’s becoming a disturbing trend for the Canucks. Vancouver has been outscored 11-0 in the final periods of the past five games, including Tuesday’s setback to Carolina. It’s simply not a recipe to win games.",
+   "published": "2026-10-21T02:27-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/petey.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/another-third-period-letdown-sends-canucks-to-eighth-straight-loss/",
    "source": "Sportsnet"
   },
   {
