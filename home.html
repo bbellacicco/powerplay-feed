@@ -919,11 +919,12 @@
       }), 'Stories are on the way.');
       // Game Day Snaps (game reports in pictures): newest first; tap one and it plays right here
       var shows = (r[7] && r[7].slideshows) || [];
-      fill("photos", shows.slice(0, 12).map(function (sh) {
+      fill("photos", shows.slice(0, 12).map(function (sh, n) {
         var c = storyCard({ headline: sh.title.replace(/^game day snaps:\s*/i, '') + ' \u00b7\u00a0' + cpDate(new Date(sh.date + 'T12:00:00')).replace(' ', '\u00a0'), url: sh.url, image: sh.cover, published: sh.date + 'T12:00:00', team: 'powerplay' },
           {});
         var sm = c.querySelector('.sm'); if (sm) sm.remove();   // just who's playing under the picture
-        if (Date.now() - new Date(sh.date + 'T12:00:00').getTime() < 3 * 864e5) { var pc = c.querySelector('.pic'); if (pc) pc.appendChild(el('span', 'newbadge', 'NEW')); }
+        // NEW only on the newest one
+        if (n === 0 && Date.now() - new Date(sh.date + 'T12:00:00').getTime() < 3 * 864e5) { var pc = c.querySelector('.pic'); if (pc) pc.appendChild(el('span', 'newbadge', 'NEW')); }
         c.onclick = function (e) { e.preventDefault(); playShow(sh); };
         return c;
       }), 'Game reports in pictures are on the way.');
