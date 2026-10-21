@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T15:01:38-04:00",
+ "updated": "2026-10-21T15:16:45-04:00",
  "today": "2026-10-21",
  "range": [
   "2026-10-18",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -2432,7 +2432,18 @@
  "pro_news": [
   {
    "league": "cfl",
-   "headline": "4 CFL Weekly Fantasy sleepers you need in your lineup in Week 21",
+   "headline": "Which CFL Running Backs Deserve ALL-CFL Recognition?",
+   "summary": "",
+   "published": "2026-10-21T15:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/3elK1x3bVxkRyXrOUVnOW4/6ac6e9ee35819f4cab247375e2672405/MakingTheCase_ALLCFL_RBs_Thumbnail.png?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/which-cfl-running-backs-deserve-all-cfl-recognition",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "3 CFL Weekly Fantasy sleepers you need in your lineup in Week 21",
    "summary": "",
    "published": "2026-10-21T00:00:00-04:00",
    "image": "https://images.ctfassets.net/yfsr4emgn242/4RMwoWS53pPKcsFTeUOJnD/42596518cecedef897c11b98401fc561/Alexander_Hollins_2026.jpg?w=640&fm=jpg&q=70",
@@ -2701,19 +2712,6 @@
     "Blue Bombers"
    ],
    "url": "https://www.cfl.ca/article/recap-edmonton-35-winnipeg-27",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Powell finishes the job after the interception!",
-   "summary": "",
-   "published": "2026-10-16T22:50:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/UqXq9YIzqYbiq8ehMl9ih/0fbf9d7445908e5247f1b0bc96eb16a8/powell.png?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Elks"
-   ],
-   "url": "https://www.cfl.ca/article/powell-finishes-the-job-after-the-interception",
    "source": "CFL.ca"
   },
   {
@@ -3236,16 +3234,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "AC Milan backs fan boycott over ‘excessive’ away ticket prices",
-   "summary": "AC Milan came out firmly in support of its fans protesting against excessive away ticket prices, threatening to retaliate against clubs it believes are unfairly charging Rossoneri supporters.",
-   "published": "2026-10-21T08:38-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/07/san.siro_.stadium.1280.jpg",
+   "league": "nfl",
+   "headline": "Elliott was released by Titans after pulling gun in parking lot, Saleh says",
+   "summary": "",
+   "published": "2026-10-21T15:03-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Jordan-Elliot.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/serie-a/article/ac-milan-backs-fan-boycott-over-excessive-away-ticket-prices/",
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/elliott-was-released-by-titans-after-pulling-gun-in-parking-lot-saleh-says/",
    "source": "Sportsnet"
   },
   {
@@ -3304,19 +3302,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Canadiens’ Dobes misses chance to right ship with costly penalty",
-   "summary": "This 4-3 overtime loss for the Montreal Canadiens was the result of a series of bad decisions, and the last one will haunt the player who needed a win most.",
-   "published": "2026-10-21T00:35-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Montreal-Canadiens-goaltender-Jakub-Dobes.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canadiens-dobes-misses-chance-to-right-ship-with-costly-penalty/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Report: Red Wings’ Dylan Larkin expands trade list to 10 teams",
    "summary": "Dylan Larkin has reportedly opened up his trade request to include more teams.",
    "published": "2026-10-20T20:06-04:00",
@@ -3359,6 +3344,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "AC Milan backs fan boycott over ‘excessive’ away ticket prices",
+   "summary": "AC Milan came out firmly in support of its fans protesting against excessive away ticket prices, threatening to retaliate against clubs it believes are unfairly charging Rossoneri supporters.",
+   "published": "2026-10-21T08:38-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/07/san.siro_.stadium.1280.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/serie-a/article/ac-milan-backs-fan-boycott-over-excessive-away-ticket-prices/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "Report: Giants turning to McCarthy as starting QB vs. Texans",
    "summary": "",
@@ -3395,6 +3393,32 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/report-warriors-exploring-porzingis-trade-routes-amid-health-uncertainty/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Canada’s Fernandez outlasts Sasnovich to reach Ningbo Open quarters",
+   "summary": "",
+   "published": "2026-10-21T09:04-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/leylah-fernandez.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Tennis",
+   "url": "https://www.sportsnet.ca/wta/article/canadas-fernandez-outlasts-sasnovich-to-reach-ningbo-open-quarters/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Canadiens’ Dobes misses chance to right ship with costly penalty",
+   "summary": "This 4-3 overtime loss for the Montreal Canadiens was the result of a series of bad decisions, and the last one will haunt the player who needed a win most.",
+   "published": "2026-10-21T00:35-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Montreal-Canadiens-goaltender-Jakub-Dobes.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canadiens-dobes-misses-chance-to-right-ship-with-costly-penalty/",
    "source": "Sportsnet"
   },
   {
@@ -3447,19 +3471,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/oilers-ride-elite-power-play-to-win-over-tight-checking-wild/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Canada’s Fernandez outlasts Sasnovich to reach Ningbo Open quarters",
-   "summary": "",
-   "published": "2026-10-21T09:04-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/leylah-fernandez.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Tennis",
-   "url": "https://www.sportsnet.ca/wta/article/canadas-fernandez-outlasts-sasnovich-to-reach-ningbo-open-quarters/",
    "source": "Sportsnet"
   },
   {
@@ -3544,47 +3555,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/how-gavin-mckennas-first-10-games-compare-to-other-first-overall-picks/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "How World Series-bound Rays found ‘a source of inspiration’ in 2025 Blue Jays",
-   "summary": "A year ago, a World Series berth seemed so far away for the Rays. But instead of seeing a trying road ahead, Tampa Bay saw opportunity — in the 2025 Blue Jays. Shi Davidi explains how last year’s AL champs were a source ",
-   "published": "2026-10-20T08:11-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177118575.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "sn_team_count": 2,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/how-world-series-bound-rays-found-a-source-of-inspiration-in-2025-blue-jays/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Brewers ace Jacob Misiorowski to start Game 1 of World Series",
-   "summary": "",
-   "published": "2026-10-20T20:09-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/ba89036c3b2ff5c9f7577a121f497486ab1832f161104173c9930e1d5ef07185.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/brewers-ace-jacob-misiorowski-to-start-game-1-of-world-series/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Brewers, Rays clash in World Series both looking for first title",
-   "summary": "The Milwaukee Brewers and Tampa Bay Rays will play a Suds vs. Sun World Series that will produce a first-time champion and likely baseball’s first all-indoor championship.",
-   "published": "2026-10-19T23:49-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Tampa-Bay-Rays-pitcher-Cam-Booser.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/brewers-rays-clash-in-world-series-both-looking-for-first-title/",
    "source": "Sportsnet"
   },
   {
