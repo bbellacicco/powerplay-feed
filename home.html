@@ -584,7 +584,7 @@
       var va = el('a', 'small vid'); va.href = video.url; va.target = '_blank'; va.rel = 'noopener';
       featImg(va, video, 560, 320);
       (va.querySelector('.fimg') || va).appendChild(el('span', 'play'));
-      var vo = el('div', 'ov'); vo.appendChild(el('div', 'kick', 'Video')); vo.appendChild(el('h3', null, video.headline)); va.appendChild(vo);
+      var vo = el('div', 'ov'); vo.appendChild(el('div', 'kick', video.kick || 'Video')); vo.appendChild(el('h3', null, video.headline)); va.appendChild(vo);
       // plays in the big player over the top stories, with the story behind the video underneath and a Share button
       va.onclick = function (e) {
         if (!vidEmbed(video.url)) return;   // not YouTube / Vimeo: open it in a new tab
@@ -895,6 +895,8 @@
       var vidId = function (u) { var m = String(u || '').match(/(?:[?&]v=|youtu\.be\/|\/shorts\/|vimeo\.com\/(?:video\/)?)([\w-]{6,})/); return m ? m[1] : u; };
       var haveVid = {}; ppVids.forEach(function (v) { haveVid[vidId(v.url)] = 1; });
       (net.local || []).forEach(function (v) { if (v.u && v.t && !haveVid[vidId(v.u)]) ppVids.push({ headline: v.t, url: v.u, image: v.i, published: v.p.length === 10 ? v.p + 'T00:00:00' : v.p }); });
+      // the Spitfires' game highlights from the OHL's YouTube channel take the box when they're newer than Powerplay's latest video
+      (net.pro || []).forEach(function (v) { if (v.sp && v.u && v.i) ppVids.push({ headline: v.t.replace(/^OHL Highlights:\s*/i, '').replace(/\s+@\s+/, ' at ').replace(/\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2}(st|nd|rd|th)?,?\s+\d{4}\s*$/i, ''), url: v.u, image: v.i, published: v.p, kick: 'Spitfires highlights' }); });
       var topVid = ppVids.filter(function (v) { return v.image; }).sort(function (a, b) { return new Date(b.published) - new Date(a.published); })[0] || null;
       // YouTube's standard thumbnail is 4:3 with black bars; use the widescreen one so the picture fills the box
       if (topVid) {
