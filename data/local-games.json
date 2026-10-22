@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T22:35:26-04:00",
+ "updated": "2026-10-21T22:46:50-04:00",
  "today": "2026-10-21",
  "range": [
   "2026-10-18",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -3124,6 +3124,21 @@
  ],
  "more_news": [
   {
+   "league": "nba",
+   "headline": "Kawhi Leonard drops 23 as Raptors demolish Bulls in season opener",
+   "summary": "Kawhi Leonard scored 23 points in his first regular-season game back with the Raptors as Toronto earned an emphatic 135-92 win over the Chicago Bulls on Wednesday.",
+   "published": "2026-10-21T22:39-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/kawhi-2-1.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 2,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/kawhi-leonard-drops-23-as-raptors-demolish-bulls-in-season-opener/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Brady Tkachuk heavily booed by Ottawa crowd in return with Panthers",
    "summary": "",
@@ -3176,18 +3191,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "NFL suspends second Bills DB for spitting, though Sam Franklin denies",
-   "summary": "Buffalo Bills defensive back Sam Franklin became the team’s second player to be suspended by the NFL for one game without pay for spitting at a Raiders opponent during a game last weekend, the league announced Wednesday.",
-   "published": "2026-10-21T10:23-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Sam-Franklin.jpg",
+   "league": "other",
+   "headline": "Forge FC tops CF Montreal on penalty kicks to win Canadian championship",
+   "summary": "",
+   "published": "2026-10-21T22:34-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177129806.jpg",
    "video": false,
-   "teams": [
-    "Buffalo Bills"
-   ],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-suspends-2nd-bills-db-for-spitting-though-sam-franklin-denies-allegation/",
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/soccer/article/forge-fc-tops-cf-montreal-on-penalty-kicks-to-win-canadian-championship/",
    "source": "Sportsnet"
   },
   {
@@ -3536,6 +3549,21 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/49ers-managing-mike-evans-achilles-injury-after-he-left-last-game-early/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "NFL suspends second Bills DB for spitting, though Sam Franklin denies",
+   "summary": "Buffalo Bills defensive back Sam Franklin became the team’s second player to be suspended by the NFL for one game without pay for spitting at a Raiders opponent during a game last weekend, the league announced Wednesday.",
+   "published": "2026-10-21T10:23-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Sam-Franklin.jpg",
+   "video": false,
+   "teams": [
+    "Buffalo Bills"
+   ],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-suspends-2nd-bills-db-for-spitting-though-sam-franklin-denies-allegation/",
    "source": "Sportsnet"
   },
   {
