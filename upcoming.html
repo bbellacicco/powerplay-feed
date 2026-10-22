@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coming Up | Powerplay Windsor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+<!--
+  Coming Up (Local Hub tab): every local game on ONE day, nothing before or after.
+  Opens on today; the day buttons pick another day (as far ahead as the schedules go).
+  Data: local-games.json (Spitfires, Lancers, junior hockey), saints.json (St. Clair), highschool.json (WECSSAA).
+  ?day=2026-10-22 opens on that day.
+-->
+<style>
+  :root { --bg: #0b1a33; --panel: #10244a; --row: #132b57; --line: #1e3a6e; --text: #f2f5fb; --muted: #9fb0cf; --accent: #e8b021;
+    --spitfires: #d4202c; --lancers: #0f6bd6; --saints: #1f9d55; --junior: #0ea5a4; --highschool: #8b5cf6; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.35 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 12px; }
+  h1 { font-family: 'Graduate', 'Rockwell', Georgia, serif; font-weight: 400; font-size: 17px; -webkit-text-stroke: .7px currentColor; paint-order: stroke fill; line-height: 1.1; margin: 0 0 10px; letter-spacing: .03em; text-transform: uppercase; }
+  h1 span { color: var(--accent); }
+  .days { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+  .days button { border: 1px solid var(--line); background: var(--panel); color: var(--text); font: inherit; font-size: 13px; font-weight: 700; padding: 8px 12px; border-radius: 4px; cursor: pointer; text-align: center; line-height: 1.15; }
+  .days button small { display: block; font-size: 11px; font-weight: 600; color: var(--muted); }
+  .days button[aria-pressed="true"] { background: #fff; color: #0b1a33; border-color: #fff; box-shadow: inset 0 -3px 0 var(--accent); }
+  .days button[aria-pressed="true"] small { color: #3a4a6b; }
+  .dayhead { font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin: 2px 0 10px; }
+  .dayhead span { color: var(--muted); }
+  .grp { margin-bottom: 14px; }
+  .grp h2 { display: flex; align-items: center; gap: 8px; font-size: 12px; text-transform: uppercase; letter-spacing: .1em; margin: 0 0 6px; color: #fff; }
+  .grp h2::before { content: ''; width: 10px; height: 10px; border-radius: 2px; background: var(--tc); }
+  .grp h2 em { font-style: normal; color: var(--muted); font-weight: 600; letter-spacing: .04em; }
+  .sub { font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 8px 0 4px; }
+  .g { display: grid; grid-template-columns: 74px 1fr auto; gap: 10px; align-items: center; background: var(--row); border-left: 4px solid var(--tc); border-radius: 6px; padding: 8px 10px; margin-bottom: 5px; }
+  .g .t { font-weight: 800; font-size: 13px; color: var(--accent); white-space: nowrap; }
+  .g .t.live { color: #ff4d4d; }
+  .g .t.fin { color: var(--muted); }
+  .g .m { min-width: 0; }
+  .g .who { font-weight: 700; line-height: 1.25; }
+  .g .who .at { color: var(--muted); font-weight: 600; }
+  .g .meta { color: var(--muted); font-size: 12px; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .g .r { text-align: right; white-space: nowrap; font-size: 12px; }
+  .g .r b { font-size: 14px; font-variant-numeric: tabular-nums; }
+  .g .r .tix { color: var(--accent); font-weight: 800; text-decoration: none; }
+  .empty { color: var(--muted); background: var(--panel); border-radius: 8px; padding: 16px; }
+  footer { color: var(--muted); font-size: 11.5px; text-align: center; margin-top: 14px; }
+  @media (max-width: 520px) { .g { grid-template-columns: 62px 1fr; } .g .r { grid-column: 2; text-align: left; } .days button { padding: 7px 9px; font-size: 12px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Coming <span>Up</span></h1>
+  <div class="days" id="days"></div>
+  <div id="list"><div class="empty">Loading games…</div></div>
+  <footer>Powerplay Windsor · Schedules from chl.ca, golancers.ca, stclairsaints.ca, ojhl.ca, gohl.ca, thepjhl.ca and wecssaa.com</footer>
+</div>
+<script>
+(function () {
+  var BASE = 'https://bbellacicco.github.io/powerplay-feed/data/';
+  var TZ = 'America/Toronto';
+  var MON = ['Jan.', 'Feb.', 'March', 'April', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'];
+  var GROUPS = [['spitfires', 'Windsor Spitfires', 'OHL'], ['lancers', 'Windsor Lancers', 'OUA'], ['saints', 'St. Clair Saints', 'OCAA'],
+    ['junior', 'Junior hockey', ''], ['highschool', 'High school', 'WECSSAA']];
+  var US = { spitfires: 'Spitfires', lancers: 'Lancers', saints: 'Saints' };
+  var qs = new URLSearchParams(location.search);
+  var games = [], day = '';
+
+  function el(t, c, x) { var e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; }
+  function getJSON(n) { return fetch(BASE + n + '?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }); }
+  function parts(d) { var p = {}; new Intl.DateTimeFormat('en-CA', { timeZone: TZ, year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: '2-digit', hourCycle: 'h23', weekday: 'long' }).formatToParts(d).forEach(function (x) { p[x.type] = x.value; }); return p; }
+  function dayKey(d) { var p = parts(d); return p.year + '-' + ('0' + p.month).slice(-2) + '-' + ('0' + p.day).slice(-2); }
+  function cpTime(d) { var p = parts(d), h = +p.hour; return (h % 12 || 12) + (p.minute === '00' ? '' : ':' + p.minute) + (h < 12 ? ' a.m.' : ' p.m.'); }
+  function noon(k) { return new Date(k + 'T12:00:00'); }
+  function cpDate(k) { var p = parts(noon(k)); return MON[+p.month - 1] + ' ' + (+p.day); }
+  function weekday(k) { return parts(noon(k)).weekday; }
+
+  function load() {
+    Promise.all([getJSON('local-games.json'), getJSON('saints.json'), getJSON('highschool.json')]).then(function (r) {
+      var lg = r[0] || {}, sc = r[1], hs = r[2];
+      var all = (lg.games || []).slice();
+      if (sc && sc.games) all = all.filter(function (g) { return !(g.team === 'saints' && g.sport !== 'Football'); })
+        .concat(sc.games.filter(function (g) { return g.sport !== 'Football'; }));
+      if (hs && hs.games) all = all.filter(function (g) { return g.team !== 'highschool'; }).concat(hs.games);
+      var seen = {};
+      games = all.filter(function (g) { var k = g.id || (g.team + g.start + g.opponent); if (seen[k]) return false; seen[k] = 1; return true; });
+      draw();
+    });
+  }
+
+  function draw() {
+    var today = dayKey(new Date());
+    // the day buttons: today and every later day that has games (as far ahead as the schedules go)
+    var keys = {}; games.forEach(function (g) { var k = dayKey(new Date(g.start)); if (k >= today) keys[k] = 1; });
+    keys[today] = 1;
+    var list = Object.keys(keys).sort().slice(0, 7);
+    if (!day) day = qs.get('day') && keys[qs.get('day')] ? qs.get('day') : today;
+    if (list.indexOf(day) < 0) day = today;
+    var bar = document.getElementById('days'); bar.innerHTML = '';
+    list.forEach(function (k, i) {
+      var b = el('button'); b.type = 'button';
+      b.appendChild(document.createTextNode(k === today ? 'Today' : i === 1 && k === dayKey(new Date(Date.now() + 864e5)) ? 'Tomorrow' : weekday(k).slice(0, 3)));
+      b.appendChild(el('small', null, cpDate(k)));
+      b.setAttribute('aria-pressed', String(k === day));
+      b.onclick = function () { day = k; draw(); };
+      bar.appendChild(b);
+    });
+
+    var box = document.getElementById('list'); box.innerHTML = '';
+    var mine = games.filter(function (g) { return dayKey(new Date(g.start)) === day; })
+      .sort(function (a, b) { return (a.time_tbd ? 1 : 0) - (b.time_tbd ? 1 : 0) || (a.start < b.start ? -1 : a.start > b.start ? 1 : 0); });
+    var head = el('div', 'dayhead', (day === today ? 'Today · ' : '') + weekday(day) + ', ' + cpDate(day));
+    head.appendChild(el('span', null, ' · ' + mine.length + (mine.length === 1 ? ' game' : ' games')));
+    box.appendChild(head);
+    if (!mine.length) { box.appendChild(el('div', 'empty', 'No local games on the schedule this day.')); return; }
+
+    GROUPS.forEach(function (gr) {
+      var gs = mine.filter(function (g) { return g.team === gr[0]; });
+      if (!gs.length) return;
+      var sec = el('section', 'grp'); sec.style.setProperty('--tc', 'var(--' + gr[0] + ')');
+      var h2 = el('h2', null, gr[1] + ' '); if (gr[2]) h2.appendChild(el('em', null, gr[2])); sec.appendChild(h2);
+      // high school and junior hockey: a sub-heading per sport / league
+      var byKey = gr[0] === 'highschool' || gr[0] === 'junior';
+      var lastSub = null;
+      (byKey ? gs.slice().sort(function (a, b) { return a.sport < b.sport ? -1 : a.sport > b.sport ? 1 : (a.start < b.start ? -1 : 1); }) : gs).forEach(function (g) {
+        if (byKey && g.sport !== lastSub) { lastSub = g.sport; sec.appendChild(el('div', 'sub', g.sport)); }
+        sec.appendChild(row(g, byKey));
+      });
+      box.appendChild(sec);
+    });
+  }
+
+  function row(g, noSport) {
+    var r = el('div', 'g'), d = new Date(g.start);
+    var st = g.status === 'live' ? ['LIVE', 'live'] : g.status === 'final' ? ['Final', 'fin'] : g.status === 'postponed' ? ['PPD', 'fin'] : g.status === 'cancelled' ? ['CAN', 'fin'] : [g.time_tbd ? 'TBA' : cpTime(d), ''];
+    r.appendChild(el('div', 't' + (st[1] ? ' ' + st[1] : ''), st[0]));
+    var m = el('div', 'm'), who = el('div', 'who');
+    var us = g.club || US[g.team] || '', a, h;
+    if (g.home && g.away) { a = g.away; h = g.home; }
+    else if (g.home_away === 'H') { a = g.opponent; h = us; }
+    else if (g.home_away === 'A') { a = us; h = g.opponent; }
+    else { a = us; h = g.opponent; }
+    who.appendChild(document.createTextNode(a + ' '));
+    who.appendChild(el('span', 'at', g.home_away === 'N' && !(g.home && g.away) ? 'vs. ' : 'at '));
+    who.appendChild(document.createTextNode(h));
+    m.appendChild(who);
+    var bits = [];
+    if (!noSport && g.sport && g.team !== 'spitfires') bits.push(g.sport);
+    if (g.location) bits.push(g.location);
+    if (g.note) bits.push(g.note);
+    if (bits.length) m.appendChild(el('div', 'meta', bits.join(' · ')));
+    r.appendChild(m);
+    var rt = el('div', 'r');
+    if ((g.status === 'final' || g.status === 'live') && g.our_score != null && g.opp_score != null) {
+      var sa = g.home && g.away ? g.our_score : g.home_away === 'H' ? g.opp_score : g.our_score;
+      var sh = g.home && g.away ? g.opp_score : g.home_away === 'H' ? g.our_score : g.opp_score;
+      rt.appendChild(el('b', null, sa + '–' + sh));
+    } else if (g.links && g.links.tickets && g.status === 'upcoming') {
+      var t = el('a', 'tix', 'Tickets'); t.href = g.links.tickets; t.target = '_blank'; t.rel = 'noopener'; rt.appendChild(t);
+    }
+    r.appendChild(rt);
+    return r;
+  }
+
+  load();
+  setInterval(load, 5 * 60000);
+})();
+</script>
+<script>
+/* Inside the Local Hub: tell it how tall this widget is, so it never scrolls on its own (traps the finger on iPhones). */
+(function () {
+  if (window.parent === window || !/[?&]in=sports\b/.test(location.search)) return;
+  var css = document.createElement('style'); css.textContent = 'html,body{overflow:hidden!important;height:auto!important}';
+  document.head.appendChild(css);
+  var last = 0;
+  function send() {
+    var h = Math.ceil(document.body.getBoundingClientRect().height);
+    if (h && Math.abs(h - last) > 2) { last = h; try { parent.postMessage({ pp: 'height', h: h }, '*'); } catch (e) {} }
+  }
+  window.addEventListener('load', send); window.addEventListener('resize', send);
+  if (window.ResizeObserver) new ResizeObserver(send).observe(document.body);
+  setInterval(send, 1500); send();
+})();
+</script>
+</body>
+</html>
