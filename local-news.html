@@ -482,7 +482,7 @@
         // (?videos=1 brings them back)
         stories = (j.stories || []).filter(function (s) { return SHOW_VIDEOS || (s.source !== 'YouTube' && s.source !== 'Vimeo'); });
         storiesFailed = false;
-        if (WANT_STORY && !wantTabSet) {   // a shared story: open on that team, so more of its news sits underneath
+        if (WANT_STORY && !wantTabSet && state.tab === 'all') {   // a shared story: open on that team, so more of its news sits underneath
           wantTabSet = true;
           var hit = stories.filter(function (st) { return skey(st.url) === WANT_STORY; })[0];
           if (hit && LABEL[hit.team] && hit.team !== 'highschool') state.tab = hit.team;
@@ -699,7 +699,9 @@
     tx.appendChild(el('h2', null, s.headline));
     if (s.summary && s.summary !== s.headline) tx.appendChild(el('p', null, s.summary));
     var host = (String(s.url).match(/^https?:\/\/(?:www\.)?([^\/?#]+)/i) || [])[1] || '';
-    var go = el('a', 'go', 'Read the full story' + (host ? ' on ' + host : '') + ' \u2197'); go.href = s.url; go.target = '_blank'; go.rel = 'noopener';
+    var own = /powerplaywindsor\.com/i.test(host);     // your own post opens right on your site; a team's in a new tab
+    var go = el('a', 'go', own ? 'Read the full story \u2192' : 'Read the full story' + (host ? ' on ' + host : '') + ' \u2197'); go.href = s.url;
+    if (own) go.target = '_top'; else { go.target = '_blank'; go.rel = 'noopener'; }
     tx.appendChild(go);
     box.appendChild(tx);
     return box;
