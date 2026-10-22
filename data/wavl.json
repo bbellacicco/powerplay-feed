@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-21T12:00:02-04:00",
- "today": "2026-10-21",
+ "updated": "2026-10-22T00:00:01-04:00",
+ "today": "2026-10-22",
  "source": "https://wavl.net",
  "leagues": [
   {
@@ -2931,54 +2931,27 @@
    "url": "https://wavl.net/standings?league=wed&seasonId=1",
    "nights": [
     {
-     "date": "2026-10-21",
-     "week": "Season 1 · Week 3 · Wednesday, October 21",
+     "date": "2026-10-28",
+     "week": "Season 1 · Week 4 · Wednesday, October 28",
      "gyms": [
       {
        "gym": "Bellewood",
        "addr": "2500 Labelle St",
-       "week": "Season 1 · Week 3 · Wednesday, October 21",
+       "week": "Season 1 · Week 4 · Wednesday, October 28",
        "tier": "1",
        "time": "6:30",
        "teams": [
-        {
-         "num": "4",
-         "name": "Set To Kill",
-         "home": true,
-         "rank": "1"
-        },
         {
          "num": "2",
          "name": "Tips Count",
-         "home": false,
+         "home": true,
          "rank": "6"
         },
         {
-         "num": "9",
-         "name": "Big Dig Energy Wed",
+         "num": "5",
+         "name": "Haikyu Wednesday",
          "home": false,
-         "rank": "9"
-        }
-       ]
-      },
-      {
-       "gym": "Lasalle Public #1",
-       "addr": "1600 Mayfair Ave",
-       "week": "Season 1 · Week 3 · Wednesday, October 21",
-       "tier": "1",
-       "time": "6:30",
-       "teams": [
-        {
-         "num": "1",
-         "name": "Greek Gods 2.0",
-         "home": true,
-         "rank": "2"
-        },
-        {
-         "num": "6",
-         "name": "Addicted to Sets",
-         "home": false,
-         "rank": "8"
+         "rank": "5"
         },
         {
          "num": "8",
@@ -2989,36 +2962,63 @@
        ]
       },
       {
-       "gym": "Lassaline",
-       "addr": "3145 Wildwood Dr",
-       "week": "Season 1 · Week 3 · Wednesday, October 21",
+       "gym": "Lasalle Public #1",
+       "addr": "1600 Mayfair Ave",
+       "week": "Season 1 · Week 4 · Wednesday, October 28",
        "tier": "1",
        "time": "6:30",
        "teams": [
         {
-         "num": "7",
-         "name": "Serving Cerveza",
+         "num": "1",
+         "name": "Greek Gods 2.0",
          "home": true,
          "rank": "3"
         },
         {
+         "num": "4",
+         "name": "Set To Kill",
+         "home": false,
+         "rank": "1"
+        },
+        {
+         "num": "7",
+         "name": "Serving Cerveza",
+         "home": false,
+         "rank": "2"
+        }
+       ]
+      },
+      {
+       "gym": "Lassaline",
+       "addr": "3145 Wildwood Dr",
+       "week": "Season 1 · Week 4 · Wednesday, October 28",
+       "tier": "1",
+       "time": "6:30",
+       "teams": [
+        {
          "num": "3",
          "name": "Coreys Gaggle",
-         "home": false,
+         "home": true,
          "rank": "7"
         },
         {
-         "num": "5",
-         "name": "Haikyu Wednesday",
+         "num": "6",
+         "name": "Addicted to Sets",
          "home": false,
-         "rank": "5"
+         "rank": "8"
+        },
+        {
+         "num": "9",
+         "name": "Big Dig Energy Wed",
+         "home": false,
+         "rank": "9"
         }
        ]
       },
       {
        "gym": "Corpus Christie",
        "addr": "910 Raymo Rd",
-       "week": "Season 1 · Week 3 · Wednesday, October 21",
+       "week": "Season 1 · Week 4 · Wednesday, October 28",
        "tier": "2",
        "time": "6:30",
        "teams": [
@@ -3029,64 +3029,37 @@
          "rank": "9"
         },
         {
-         "num": "6",
-         "name": "Orville Ready Blockers",
+         "num": "4",
+         "name": "Can't Get Right",
          "home": false,
-         "rank": "7"
+         "rank": "8"
         },
         {
-         "num": "8",
-         "name": "Block Party",
+         "num": "7",
+         "name": "Windsor Nine Nine",
          "home": false,
-         "rank": "3"
+         "rank": "5"
         }
        ]
       },
       {
        "gym": "Glenwood",
        "addr": "1601 Norfolk St",
-       "week": "Season 1 · Week 3 · Wednesday, October 21",
+       "week": "Season 1 · Week 4 · Wednesday, October 28",
        "tier": "2",
        "time": "6:30",
        "teams": [
-        {
-         "num": "7",
-         "name": "Windsor Nine Nine",
-         "home": true,
-         "rank": "5"
-        },
         {
          "num": "3",
          "name": "Set It and Forget It",
-         "home": false,
-         "rank": "4"
-        },
-        {
-         "num": "5",
-         "name": "Vertically Challenged",
-         "home": false,
-         "rank": "1"
-        }
-       ]
-      },
-      {
-       "gym": "OLMC",
-       "addr": "4401 Mt Royal Dr",
-       "week": "Season 1 · Week 3 · Wednesday, October 21",
-       "tier": "2",
-       "time": "6:30",
-       "teams": [
-        {
-         "num": "4",
-         "name": "Can't Get Right",
          "home": true,
-         "rank": "8"
+         "rank": "3"
         },
         {
-         "num": "2",
-         "name": "Let's Go",
+         "num": "6",
+         "name": "Orville Ready Blockers",
          "home": false,
-         "rank": "2"
+         "rank": "7"
         },
         {
          "num": "9",
@@ -3097,36 +3070,63 @@
        ]
       },
       {
+       "gym": "OLMC",
+       "addr": "4401 Mt Royal Dr",
+       "week": "Season 1 · Week 4 · Wednesday, October 28",
+       "tier": "2",
+       "time": "6:30",
+       "teams": [
+        {
+         "num": "2",
+         "name": "Let's Go",
+         "home": true,
+         "rank": "1"
+        },
+        {
+         "num": "5",
+         "name": "Vertically Challenged",
+         "home": false,
+         "rank": "4"
+        },
+        {
+         "num": "8",
+         "name": "Block Party",
+         "home": false,
+         "rank": "2"
+        }
+       ]
+      },
+      {
        "gym": "Calcutta",
        "addr": "1860 Chandler Ave",
-       "week": "Season 1 · Week 3 · Wednesday, October 21",
+       "week": "Season 1 · Week 4 · Wednesday, October 28",
        "tier": "3",
        "time": "6:30",
        "teams": [
         {
-         "num": "4",
-         "name": "Rock Solid",
-         "home": true,
-         "rank": "9"
-        },
-        {
          "num": "2",
          "name": "Rotator Cuff Tearrors",
-         "home": false,
-         "rank": "5"
+         "home": true,
+         "rank": "6"
         },
         {
-         "num": "9",
-         "name": "The Generals",
+         "num": "5",
+         "name": "Pass and Hitties",
          "home": false,
-         "rank": "7"
+         "rank": "3"
+        },
+        {
+         "num": "8",
+         "name": "Wallbangers",
+         "home": false,
+         "rank": "2"
         }
        ]
       },
       {
        "gym": "David Maxwelll",
        "addr": "1648 Francois Rd",
-       "week": "Season 1 · Week 3 · Wednesday, October 21",
+       "week": "Season 1 · Week 4 · Wednesday, October 28",
        "tier": "3",
        "time": "6:30",
        "teams": [
@@ -3134,17 +3134,17 @@
          "num": "1",
          "name": "Local Swingers",
          "home": true,
-         "rank": "6"
+         "rank": "5"
         },
         {
-         "num": "6",
-         "name": "Jump Around",
+         "num": "4",
+         "name": "Rock Solid",
          "home": false,
-         "rank": "4"
+         "rank": "8"
         },
         {
-         "num": "8",
-         "name": "Wallbangers",
+         "num": "7",
+         "name": "Mudflaps",
          "home": false,
          "rank": "1"
         }
@@ -3153,75 +3153,48 @@
       {
        "gym": "Roseville",
        "addr": "6265 Roseville Garden",
-       "week": "Season 1 · Week 3 · Wednesday, October 21",
+       "week": "Season 1 · Week 4 · Wednesday, October 28",
        "tier": "3",
        "time": "6:30",
        "teams": [
         {
-         "num": "7",
-         "name": "Mudflaps",
-         "home": true,
-         "rank": "2"
-        },
-        {
          "num": "3",
          "name": "Tune Squad",
-         "home": false,
-         "rank": "8"
+         "home": true,
+         "rank": "9"
         },
         {
-         "num": "5",
-         "name": "Pass and Hitties",
+         "num": "6",
+         "name": "Jump Around",
          "home": false,
-         "rank": "3"
+         "rank": "7"
+        },
+        {
+         "num": "9",
+         "name": "The Generals",
+         "home": false,
+         "rank": "4"
         }
        ]
       },
       {
        "gym": "Prince Edward",
        "addr": "949 Giles Blvd E",
-       "week": "Season 1 · Week 3 · Wednesday, October 21",
+       "week": "Season 1 · Week 4 · Wednesday, October 28",
        "tier": "4",
        "time": "6:30",
        "teams": [
-        {
-         "num": "7",
-         "name": "Inappropriate Touches",
-         "home": true,
-         "rank": "8"
-        },
         {
          "num": "3",
          "name": "How I Set Your Mother",
+         "home": true,
+         "rank": "1"
+        },
+        {
+         "num": "6",
+         "name": "The Unknown",
          "home": false,
          "rank": "2"
-        },
-        {
-         "num": "5",
-         "name": "Empire Spikes Back",
-         "home": false,
-         "rank": "3"
-        }
-       ]
-      },
-      {
-       "gym": "Sandwhich West #1",
-       "addr": "2055 Wyoming Ave",
-       "week": "Season 1 · Week 3 · Wednesday, October 21",
-       "tier": "4",
-       "time": "6:30",
-       "teams": [
-        {
-         "num": "4",
-         "name": "The Bus Drivers",
-         "home": true,
-         "rank": "5"
-        },
-        {
-         "num": "2",
-         "name": "Digs and Balls",
-         "home": false,
-         "rank": "4"
         },
         {
          "num": "9",
@@ -3232,9 +3205,36 @@
        ]
       },
       {
+       "gym": "Sandwhich West #1",
+       "addr": "2055 Wyoming Ave",
+       "week": "Season 1 · Week 4 · Wednesday, October 28",
+       "tier": "4",
+       "time": "6:30",
+       "teams": [
+        {
+         "num": "2",
+         "name": "Digs and Balls",
+         "home": true,
+         "rank": "3"
+        },
+        {
+         "num": "5",
+         "name": "Empire Spikes Back",
+         "home": false,
+         "rank": "4"
+        },
+        {
+         "num": "8",
+         "name": "Royals",
+         "home": false,
+         "rank": "6"
+        }
+       ]
+      },
+      {
        "gym": "St Christopher",
        "addr": "1213 EC Row E",
-       "week": "Season 1 · Week 3 · Wednesday, October 21",
+       "week": "Season 1 · Week 4 · Wednesday, October 28",
        "tier": "4",
        "time": "6:30",
        "teams": [
@@ -3242,65 +3242,38 @@
          "num": "1",
          "name": "A1 Sauce",
          "home": true,
-         "rank": "6"
-        },
-        {
-         "num": "6",
-         "name": "The Unknown",
-         "home": false,
-         "rank": "1"
-        },
-        {
-         "num": "8",
-         "name": "Royals",
-         "home": false,
          "rank": "7"
+        },
+        {
+         "num": "4",
+         "name": "The Bus Drivers",
+         "home": false,
+         "rank": "5"
+        },
+        {
+         "num": "7",
+         "name": "Inappropriate Touches",
+         "home": false,
+         "rank": "8"
         }
        ]
       },
       {
        "gym": "Hetherington",
        "addr": "8800 Menard St",
-       "week": "Season 1 · Week 3 · Wednesday, October 21",
+       "week": "Season 1 · Week 4 · Wednesday, October 28",
        "tier": "5",
        "time": "6:30",
        "teams": [
-        {
-         "num": "4",
-         "name": "Access Denied",
-         "home": true,
-         "rank": "5"
-        },
         {
          "num": "2",
          "name": "Afraid of Women",
-         "home": false,
-         "rank": "6"
-        },
-        {
-         "num": "9",
-         "name": "Dig My Ace",
-         "home": false,
-         "rank": "3"
-        }
-       ]
-      },
-      {
-       "gym": "St Andre",
-       "addr": "13765 St Gregorys Rd",
-       "week": "Season 1 · Week 3 · Wednesday, October 21",
-       "tier": "5",
-       "time": "6:30",
-       "teams": [
-        {
-         "num": "1",
-         "name": "Lil Giants",
          "home": true,
-         "rank": "4"
+         "rank": "8"
         },
         {
-         "num": "6",
-         "name": "Reign of Taryny wed",
+         "num": "5",
+         "name": "Hit It and Quit It",
          "home": false,
          "rank": "9"
         },
@@ -3308,82 +3281,82 @@
          "num": "8",
          "name": "Swingers",
          "home": false,
-         "rank": "8"
+         "rank": "6"
+        }
+       ]
+      },
+      {
+       "gym": "St Andre",
+       "addr": "13765 St Gregorys Rd",
+       "week": "Season 1 · Week 4 · Wednesday, October 28",
+       "tier": "5",
+       "time": "6:30",
+       "teams": [
+        {
+         "num": "1",
+         "name": "Lil Giants",
+         "home": true,
+         "rank": "5"
+        },
+        {
+         "num": "4",
+         "name": "Access Denied",
+         "home": false,
+         "rank": "3"
+        },
+        {
+         "num": "7",
+         "name": "One Win",
+         "home": false,
+         "rank": "2"
         }
        ]
       },
       {
        "gym": "St Gabriel",
        "addr": "1400 Roselawn Blvd",
-       "week": "Season 1 · Week 3 · Wednesday, October 21",
+       "week": "Season 1 · Week 4 · Wednesday, October 28",
        "tier": "5",
        "time": "6:30",
        "teams": [
         {
-         "num": "7",
-         "name": "One Win",
-         "home": true,
-         "rank": "2"
-        },
-        {
          "num": "3",
          "name": "Poppin Volley",
-         "home": false,
+         "home": true,
          "rank": "1"
         },
         {
-         "num": "5",
-         "name": "Hit It and Quit It",
+         "num": "6",
+         "name": "Reign of Taryny wed",
          "home": false,
          "rank": "7"
-        }
-       ]
-      },
-      {
-       "gym": "General Brock",
-       "addr": "3312 Sandwich St",
-       "week": "Season 1 · Week 3 · Wednesday, October 21",
-       "tier": "6",
-       "time": "6:30",
-       "teams": [
-        {
-         "num": "4",
-         "name": "Just the Tip",
-         "home": true,
-         "rank": "9"
-        },
-        {
-         "num": "2",
-         "name": "Ride the Hod Wed",
-         "home": false,
-         "rank": "5"
         },
         {
          "num": "9",
-         "name": "Suck My Dig",
+         "name": "Dig My Ace",
          "home": false,
          "rank": "4"
         }
        ]
       },
       {
-       "gym": "John Campbell",
-       "addr": "1255 Tecumseh Rd E",
-       "week": "Season 1 · Week 3 · Wednesday, October 21",
+       "gym": "General Brock",
+       "addr": "3312 Sandwich St",
+       "week": "Season 1 · Week 4 · Wednesday, October 28",
        "tier": "6",
        "time": "6:30",
        "teams": [
         {
-         "num": "1",
-         "name": "Moose Pack",
+         "num": "2",
+         "name": "Ride the Hod Wed",
          "home": true,
-         "rank": "3"
+         "rank": "5"
         },
         {
-         "num": "6",
-         "name": "Laj",
+         "num": "5",
+         "name": "Vurt Da Furk",
          "home": false,
-         "rank": "8"
+         "rank": "7"
         },
         {
          "num": "8",
@@ -3394,36 +3367,63 @@
        ]
       },
       {
-       "gym": "Queen Victoria",
-       "addr": "1376 Victoria Ave",
-       "week": "Season 1 · Week 3 · Wednesday, October 21",
+       "gym": "John Campbell",
+       "addr": "1255 Tecumseh Rd E",
+       "week": "Season 1 · Week 4 · Wednesday, October 28",
        "tier": "6",
        "time": "6:30",
        "teams": [
         {
-         "num": "7",
-         "name": "Dig Game Undefeated",
+         "num": "1",
+         "name": "Moose Pack",
          "home": true,
-         "rank": "1"
-        },
-        {
-         "num": "3",
-         "name": "Notorious DIG",
-         "home": false,
          "rank": "2"
         },
         {
-         "num": "5",
-         "name": "Vurt Da Furk",
+         "num": "4",
+         "name": "Just the Tip",
          "home": false,
-         "rank": "7"
+         "rank": "9"
+        },
+        {
+         "num": "7",
+         "name": "Dig Game Undefeated",
+         "home": false,
+         "rank": "1"
+        }
+       ]
+      },
+      {
+       "gym": "Queen Victoria",
+       "addr": "1376 Victoria Ave",
+       "week": "Season 1 · Week 4 · Wednesday, October 28",
+       "tier": "6",
+       "time": "6:30",
+       "teams": [
+        {
+         "num": "3",
+         "name": "Notorious DIG",
+         "home": true,
+         "rank": "4"
+        },
+        {
+         "num": "6",
+         "name": "Laj",
+         "home": false,
+         "rank": "8"
+        },
+        {
+         "num": "9",
+         "name": "Suck My Dig",
+         "home": false,
+         "rank": "3"
         }
        ]
       },
       {
        "gym": "Hugh Beaton",
        "addr": "2229 Chilver Rd",
-       "week": "Season 1 · Week 3 · Wednesday, October 21",
+       "week": "Season 1 · Week 4 · Wednesday, October 28",
        "tier": "7",
        "time": "6:30",
        "teams": [
@@ -3434,62 +3434,35 @@
          "rank": "1"
         },
         {
-         "num": "6",
-         "name": "Inglourious Badgers",
+         "num": "4",
+         "name": "Against the Wall",
          "home": false,
-         "rank": "3"
+         "rank": "6"
         },
         {
-         "num": "8",
-         "name": "For Hits Sake",
+         "num": "7",
+         "name": "Ace Holes",
          "home": false,
-         "rank": "8"
+         "rank": "5"
         }
        ]
       },
       {
        "gym": "LA Desmarais",
        "addr": "10715 Eastcourt Dr",
-       "week": "Season 1 · Week 3 · Wednesday, October 21",
+       "week": "Season 1 · Week 4 · Wednesday, October 28",
        "tier": "7",
        "time": "6:30",
        "teams": [
         {
-         "num": "7",
-         "name": "Ace Holes",
+         "num": "3",
+         "name": "Super Smashers",
          "home": true,
          "rank": "7"
         },
         {
-         "num": "3",
-         "name": "Super Smashers",
-         "home": false,
-         "rank": "6"
-        },
-        {
-         "num": "5",
-         "name": "Smashed Up",
-         "home": false,
-         "rank": "9"
-        }
-       ]
-      },
-      {
-       "gym": "St Anne",
-       "addr": "1140 Monmouth",
-       "week": "Season 1 · Week 3 · Wednesday, October 21",
-       "tier": "7",
-       "time": "6:30",
-       "teams": [
-        {
-         "num": "4",
-         "name": "Against the Wall",
-         "home": true,
-         "rank": "5"
-        },
-        {
-         "num": "2",
-         "name": "Domestic Disputes",
+         "num": "6",
+         "name": "Inglourious Badgers",
          "home": false,
          "rank": "2"
         },
@@ -3497,59 +3470,86 @@
          "num": "9",
          "name": "Bumpkins",
          "home": false,
+         "rank": "3"
+        }
+       ]
+      },
+      {
+       "gym": "St Anne",
+       "addr": "1140 Monmouth",
+       "week": "Season 1 · Week 4 · Wednesday, October 28",
+       "tier": "7",
+       "time": "6:30",
+       "teams": [
+        {
+         "num": "2",
+         "name": "Domestic Disputes",
+         "home": true,
          "rank": "4"
+        },
+        {
+         "num": "5",
+         "name": "Smashed Up",
+         "home": false,
+         "rank": "8"
+        },
+        {
+         "num": "8",
+         "name": "For Hits Sake",
+         "home": false,
+         "rank": "9"
         }
        ]
       },
       {
        "gym": "Princess Elizabeth",
        "addr": "5399 Raymond Ave",
-       "week": "Season 1 · Week 3 · Wednesday, October 21",
+       "week": "Season 1 · Week 4 · Wednesday, October 28",
        "tier": "8",
        "time": "6:30",
        "teams": [
         {
-         "num": "4",
-         "name": "CK Potter",
-         "home": true,
-         "rank": "6"
-        },
-        {
          "num": "2",
          "name": "WBF",
-         "home": false,
+         "home": true,
          "rank": "3"
         },
         {
-         "num": "9",
-         "name": "The Block is Hot",
+         "num": "5",
+         "name": "Rick's 6",
          "home": false,
          "rank": "5"
+        },
+        {
+         "num": "8",
+         "name": "Grading After This",
+         "home": false,
+         "rank": "7"
         }
        ]
       },
       {
        "gym": "Roseland",
        "addr": "620 Cabana Rd East",
-       "week": "Season 1 · Week 3 · Wednesday, October 21",
+       "week": "Season 1 · Week 4 · Wednesday, October 28",
        "tier": "8",
        "time": "6:30",
        "teams": [
         {
-         "num": "7",
-         "name": "Waka Blocka Flame",
-         "home": true,
-         "rank": "1"
-        },
-        {
          "num": "3",
          "name": "Setting the Vibes",
-         "home": false,
-         "rank": "7"
+         "home": true,
+         "rank": "8"
         },
         {
-         "num": "5",
-         "name": "Rick's 6",
+         "num": "6",
+         "name": "On Your Knees",
+         "home": false,
+         "rank": "9"
+        },
+        {
+         "num": "9",
+         "name": "The Block is Hot",
          "home": false,
          "rank": "4"
         }
@@ -3558,7 +3558,7 @@
       {
        "gym": "St Joseph",
        "addr": "9381 N Townline Rd",
-       "week": "Season 1 · Week 3 · Wednesday, October 21",
+       "week": "Season 1 · Week 4 · Wednesday, October 28",
        "tier": "8",
        "time": "6:30",
        "teams": [
@@ -3569,41 +3569,41 @@
          "rank": "2"
         },
         {
-         "num": "6",
-         "name": "On Your Knees",
+         "num": "4",
+         "name": "CK Potter",
          "home": false,
-         "rank": "9"
+         "rank": "6"
         },
         {
-         "num": "8",
-         "name": "Grading After This",
+         "num": "7",
+         "name": "Waka Blocka Flame",
          "home": false,
-         "rank": "8"
+         "rank": "1"
         }
        ]
       },
       {
        "gym": "Central",
        "addr": "700 Norfolk St",
-       "week": "Season 1 · Week 3 · Wednesday, October 21",
+       "week": "Season 1 · Week 4 · Wednesday, October 28",
        "tier": "9",
        "time": "6:30",
        "teams": [
         {
-         "num": "7",
-         "name": "ETV",
-         "home": true,
-         "rank": "9"
-        },
-        {
          "num": "3",
          "name": "Nothing Drops",
-         "home": false,
-         "rank": "3"
+         "home": true,
+         "rank": "5"
         },
         {
-         "num": "5",
-         "name": "We Dig",
+         "num": "6",
+         "name": "Rule 12",
+         "home": false,
+         "rank": "1"
+        },
+        {
+         "num": "9",
+         "name": "Sets and Candy",
          "home": false,
          "rank": "4"
         }
@@ -3612,48 +3612,21 @@
       {
        "gym": "Notre Dame",
        "addr": "2751 Partington Ave",
-       "week": "Season 1 · Week 3 · Wednesday, October 21",
+       "week": "Season 1 · Week 4 · Wednesday, October 28",
        "tier": "9",
        "time": "6:30",
        "teams": [
-        {
-         "num": "4",
-         "name": "SWAG",
-         "home": true,
-         "rank": "5"
-        },
         {
          "num": "2",
          "name": "Pony Up & Play",
-         "home": false,
+         "home": true,
          "rank": "8"
         },
         {
-         "num": "9",
-         "name": "Sets and Candy",
+         "num": "5",
+         "name": "We Dig",
          "home": false,
          "rank": "2"
-        }
-       ]
-      },
-      {
-       "gym": "OLPH",
-       "addr": "775 Capitol St",
-       "week": "Season 1 · Week 3 · Wednesday, October 21",
-       "tier": "9",
-       "time": "6:30",
-       "teams": [
-        {
-         "num": "1",
-         "name": "We Tried",
-         "home": true,
-         "rank": "6"
-        },
-        {
-         "num": "6",
-         "name": "Rule 12",
-         "home": false,
-         "rank": "1"
         },
         {
          "num": "8",
@@ -3664,36 +3637,63 @@
        ]
       },
       {
+       "gym": "OLPH",
+       "addr": "775 Capitol St",
+       "week": "Season 1 · Week 4 · Wednesday, October 28",
+       "tier": "9",
+       "time": "6:30",
+       "teams": [
+        {
+         "num": "1",
+         "name": "We Tried",
+         "home": true,
+         "rank": "6"
+        },
+        {
+         "num": "4",
+         "name": "SWAG",
+         "home": false,
+         "rank": "3"
+        },
+        {
+         "num": "7",
+         "name": "ETV",
+         "home": false,
+         "rank": "9"
+        }
+       ]
+      },
+      {
        "gym": "Cornation",
        "addr": "5400 Coronation Ave",
-       "week": "Season 1 · Week 3 · Wednesday, October 21",
+       "week": "Season 1 · Week 4 · Wednesday, October 28",
        "tier": "10",
        "time": "6:30",
        "teams": [
         {
-         "num": "7",
-         "name": "Lounge Lizards",
-         "home": true,
-         "rank": "3"
-        },
-        {
          "num": "3",
          "name": "Hot Cross Buns",
-         "home": false,
+         "home": true,
          "rank": "2"
         },
         {
-         "num": "5",
-         "name": "Low roof hitters",
+         "num": "6",
+         "name": "Hits N Giggles",
          "home": false,
-         "rank": "1"
+         "rank": "5"
+        },
+        {
+         "num": "9",
+         "name": "Cupcake Crushers",
+         "home": false,
+         "rank": "6"
         }
        ]
       },
       {
        "gym": "Marlborough",
        "addr": "3557 Melbourne Rd",
-       "week": "Season 1 · Week 3 · Wednesday, October 21",
+       "week": "Season 1 · Week 4 · Wednesday, October 28",
        "tier": "10",
        "time": "6:30",
        "teams": [
@@ -3701,46 +3701,46 @@
          "num": "1",
          "name": "Thunderballz",
          "home": true,
-         "rank": "8"
+         "rank": "9"
         },
         {
-         "num": "6",
-         "name": "Hits N Giggles",
+         "num": "4",
+         "name": "Rude Dogs",
          "home": false,
          "rank": "7"
         },
         {
-         "num": "8",
-         "name": "Los Mejores",
+         "num": "7",
+         "name": "Lounge Lizards",
          "home": false,
-         "rank": "9"
+         "rank": "3"
         }
        ]
       },
       {
        "gym": "Southwood",
        "addr": "1355 Cabana Rd W",
-       "week": "Season 1 · Week 3 · Wednesday, October 21",
+       "week": "Season 1 · Week 4 · Wednesday, October 28",
        "tier": "10",
        "time": "6:30",
        "teams": [
         {
-         "num": "4",
-         "name": "Rude Dogs",
-         "home": true,
-         "rank": "5"
-        },
-        {
          "num": "2",
          "name": "Calm Your Tips",
-         "home": false,
+         "home": true,
          "rank": "4"
         },
         {
-         "num": "9",
-         "name": "Cupcake Crushers",
+         "num": "5",
+         "name": "Low roof hitters",
          "home": false,
-         "rank": "6"
+         "rank": "1"
+        },
+        {
+         "num": "8",
+         "name": "Los Mejores",
+         "home": false,
+         "rank": "8"
         }
        ]
       }
