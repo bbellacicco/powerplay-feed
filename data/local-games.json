@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T22:06:35-04:00",
+ "updated": "2026-10-21T22:16:56-04:00",
  "today": "2026-10-21",
  "range": [
   "2026-10-18",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 28
+   "count": 30
   },
   "club_news": {
    "ok": true,
@@ -1306,10 +1306,10 @@
    "home_away": "H",
    "opponent": "Blenheim Blades",
    "location": "Wheatley Area Arena",
-   "status": "final",
-   "our_score": 1,
-   "opp_score": 7,
-   "result": "L",
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
+   "result": null,
    "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960414?configuration=45"
@@ -3137,6 +3137,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Senators’ Linus Ullmark exits vs. Panthers with apparent injury",
+   "summary": "",
+   "published": "2026-10-21T22:14-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177105879.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/senators-linus-ullmark-exits-vs-panthers-with-apparent-injury/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "NFL suspends second Bills DB for spitting, though Sam Franklin denies",
    "summary": "Buffalo Bills defensive back Sam Franklin became the team’s second player to be suspended by the NFL for one game without pay for spitting at a Raiders opponent during a game last weekend, the league announced Wednesday.",
@@ -3201,21 +3214,6 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/elliott-was-released-by-titans-after-pulling-gun-in-parking-lot-saleh-says/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Kawhi Leonard pens tribute video to Toronto ahead of Raptors return",
-   "summary": "Ahead of the Toronto Raptors’ regular-season opener against the Chicago Bulls on Wednesday night (Sportsnet and Sportsnet+, 7:30 p.m. ET / 4:30 p.m. PT), Leonard put together a tribute video to properly reintroduce himse",
-   "published": "2026-10-20T19:17-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/kawhi-1.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/kawhi-leonard-pens-tribute-video-to-toronto-ahead-of-raptors-return/",
    "source": "Sportsnet"
   },
   {
@@ -3285,6 +3283,34 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/new-look-raptors-enter-season-with-championship-aspirations/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Kawhi Leonard pens tribute video to Toronto ahead of Raptors return",
+   "summary": "Ahead of the Toronto Raptors’ regular-season opener against the Chicago Bulls on Wednesday night (Sportsnet and Sportsnet+, 7:30 p.m. ET / 4:30 p.m. PT), Leonard put together a tribute video to properly reintroduce himse",
+   "published": "2026-10-20T19:17-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/kawhi-1.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/kawhi-leonard-pens-tribute-video-to-toronto-ahead-of-raptors-return/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Davis scores 34 points in Washington debut, leading Wizards over Bucks",
+   "summary": "",
+   "published": "2026-10-21T22:07-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-94.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/davis-scores-34-points-in-washington-debut-leading-wizards-over-bucks/",
    "source": "Sportsnet"
   },
   {
@@ -4101,7 +4127,7 @@
    "league": "mlb",
    "headline": "Watch LIVE: Blue Jays prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-21T21:21-04:00",
+   "published": "2026-10-21T22:13-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -4509,14 +4535,14 @@
      {
       "name": "Sarnia Sting",
       "abbr": "SAR",
-      "gp": 12,
-      "w": 5,
+      "gp": 13,
+      "w": 6,
       "l": 6,
       "otl": 1,
-      "pts": 11,
+      "pts": 13,
       "gf": 54,
       "ga": 56,
-      "strk": "L4"
+      "strk": "W1"
      },
      {
       "name": "Windsor Spitfires",
@@ -4550,14 +4576,14 @@
      {
       "name": "London Knights",
       "abbr": "LDN",
-      "gp": 9,
+      "gp": 10,
       "w": 7,
-      "l": 1,
+      "l": 2,
       "otl": 1,
       "pts": 15,
       "gf": 44,
       "ga": 31,
-      "strk": "W3"
+      "strk": "L1"
      },
      {
       "name": "Kitchener Rangers",
