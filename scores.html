@@ -8,11 +8,12 @@
 <!--
   The Local Hub (Wix page "Local Scores", address /scores-standings), with a switch at the top:
     Scores     the Local Scoreboard (games, standings)
+    Coming Up  every local game on one day (today, or a day picked)
     Stories    every Powerplay blog story (top stories, team rows, search back to 2019), plus team news
     Spotlight  The Local Sports Spotlight
     Athletes   Athlete Profiles
     Network    the Powerplay Network videos
-  ?tab=scores|stories|spotlight|athletes|network   open on that switch
+  ?tab=scores|upcoming|stories|spotlight|athletes|network   open on that switch
   Each widget sizes itself to fit (nothing scrolls inside the page, which traps the finger on iPhones).
   Embed on the Wix "Local Scores" page, full width: about 1,900px tall on desktop, 2,150px on mobile.
 -->
@@ -23,12 +24,12 @@
   /* nothing on this page scrolls by itself: on iPhones a scrolling box inside the page traps the finger */
   html, body { overflow: hidden; }
   .top { display: flex; justify-content: center; padding: 22px 16px 6px; }
-  /* five sections: a squared-off grid, three across the top and two wider ones below */
+  /* six sections: a squared-off grid, three across and two rows */
   .switch { display: grid; grid-template-columns: repeat(6, 1fr); width: 100%; max-width: 560px; gap: 1px; background: rgba(255,255,255,.16);
     border: 1px solid rgba(255,255,255,.16); border-radius: 3px; overflow: hidden; }
   .switch button { border: 0; border-radius: 0; background: #0e2044; color: #cfd8ea; font: inherit; font-size: 13px; font-weight: 800; letter-spacing: .08em;
     text-transform: uppercase; padding: 12px 6px; cursor: pointer; white-space: nowrap; }
-  .switch button { grid-column: span 2; } .switch button:nth-child(n+4) { grid-column: span 3; }
+  .switch button { grid-column: span 2; }
   .switch button:hover { color: #fff; background: #15305e; }
   .switch button[aria-selected="true"] { background: #fff; color: #0b1a33; box-shadow: inset 0 -3px 0 #e8b021; }
   .top { position: relative; align-items: center; gap: 10px; }
@@ -54,6 +55,7 @@
   <div class="top" id="top">
     <div class="switch" role="tablist" aria-label="Section">
       <button type="button" role="tab" data-tab="scores">Scores</button>
+      <button type="button" role="tab" data-tab="upcoming">Coming Up</button>
       <button type="button" role="tab" data-tab="stories">Stories</button>
       <button type="button" role="tab" data-tab="spotlight">Spotlight</button>
       <button type="button" role="tab" data-tab="athletes">Athletes</button>
@@ -70,6 +72,7 @@
   var HUB = encodeURIComponent('https://www.powerplaywindsor.com/scores-standings');
   var PARTS = {
     scores:    [['local-games_3_3.html', 760, 900, '&other=none']],
+    upcoming:  [['upcoming.html', 900, 1100, '']],
     stories:   [['news.html', 1700, 1950, '', 'Powerplay stories'], ['local-news.html', 470, 570, '&other=none&lock=1', 'Team news']],
     spotlight: [['spotlight.html', 1250, 1180, '']],
     athletes:  [['athletes.html', 420, 380, '']],
@@ -123,7 +126,7 @@
     });
   });
   // share button: shares whichever section is showing (its own link opens the page on that section)
-  var NAMES = { scores: 'Local Scores', stories: 'Local Stories', spotlight: 'The Local Sports Spotlight', athletes: 'Athlete Profiles', network: 'the Powerplay Network' };
+  var NAMES = { scores: 'Local Scores', upcoming: 'Coming Up: local games', stories: 'Local Stories', spotlight: 'The Local Sports Spotlight', athletes: 'Athlete Profiles', network: 'the Powerplay Network' };
   var current = 'scores';
   if (window.PPShare) {
     var sb = PPShare.button(function () { return { title: NAMES[current].replace(/^the /, 'The '), url: PPShare.link(current), text: 'Check out ' + NAMES[current] + ' on Powerplay Windsor' }; });
