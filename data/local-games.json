@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-22T14:16:54-04:00",
+ "updated": "2026-10-22T14:31:43-04:00",
  "today": "2026-10-22",
  "range": [
   "2026-10-19",
@@ -1158,11 +1158,11 @@
    "home_away": "H",
    "opponent": "Komoka Kings",
    "location": "Vollmer Culture R.C., LaSalle, ON",
-   "status": "live",
-   "our_score": 0,
-   "opp_score": 0,
-   "result": null,
-   "note": "20:00 1st",
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 1,
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15599"
    },
@@ -3393,6 +3393,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "mlb",
+   "headline": "Todd Benzinger, 1990 World Series champion dies at 63",
+   "summary": "Todd Benzinger, a member of the Cincinnati Reds’ 1990 World Series championship team, has died. He was 63.",
+   "published": "2026-10-22T14:18-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-8-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/todd-benzinger-1990-world-series-champion-dies-at-63/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "Forge FC tops CF Montreal on penalty kicks to win Canadian championship",
    "summary": "",
@@ -3522,19 +3535,6 @@
    "sn_team_count": 2,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/rays-brewers-lean-on-opposite-pitching-strengths-to-reach-world-series/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "How fighters can find path to victory at UFC 333",
-   "summary": "UFC 333 takes place on Saturday with two championship bouts at the top of the card. Aaron Bronsteter breaks down how some of the fighters can find their path to victory.",
-   "published": "2026-10-21T14:17-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/02/two-time-UFC-featherweight-champion-Alexander-Volkanovski.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/how-fighters-can-find-path-to-victory-at-ufc-333/",
    "source": "Sportsnet"
   },
   {
@@ -5025,6 +5025,18 @@
       "strk": "L1"
      },
      {
+      "name": "LaSalle Vipers",
+      "abbr": "LAS",
+      "gp": 12,
+      "w": 5,
+      "l": 7,
+      "otl": 0,
+      "pts": 10,
+      "gf": 32,
+      "ga": 51,
+      "strk": "W1"
+     },
+     {
       "name": "Woodstock Navy Vets",
       "abbr": "WNV",
       "gp": 12,
@@ -5049,28 +5061,16 @@
       "strk": "W1"
      },
      {
-      "name": "LaSalle Vipers",
-      "abbr": "LAS",
-      "gp": 11,
-      "w": 4,
-      "l": 7,
-      "otl": 0,
-      "pts": 8,
-      "gf": 29,
-      "ga": 50,
-      "strk": "L4"
-     },
-     {
       "name": "Komoka Kings",
       "abbr": "KOM",
-      "gp": 13,
+      "gp": 14,
       "w": 4,
-      "l": 9,
+      "l": 10,
       "otl": 0,
       "pts": 8,
-      "gf": 39,
-      "ga": 58,
-      "strk": "L5"
+      "gf": 40,
+      "ga": 61,
+      "strk": "L6"
      },
      {
       "name": "Sarnia Legionnaires",
@@ -5140,14 +5140,14 @@
      {
       "name": "Waterloo Siskins",
       "abbr": "WAT",
-      "gp": 11,
-      "w": 6,
+      "gp": 12,
+      "w": 7,
       "l": 3,
       "otl": 2,
-      "pts": 14,
+      "pts": 16,
       "gf": 41,
       "ga": 31,
-      "strk": "L2"
+      "strk": "W1"
      },
      {
       "name": "Pelham Panthers",
@@ -5188,14 +5188,14 @@
      {
       "name": "Stoney Creek Generals",
       "abbr": "SCG",
-      "gp": 16,
+      "gp": 17,
       "w": 4,
-      "l": 12,
+      "l": 13,
       "otl": 0,
       "pts": 8,
       "gf": 49,
       "ga": 74,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Hamilton Steel",
