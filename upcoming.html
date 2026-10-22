@@ -42,8 +42,18 @@
   .g .r { text-align: right; white-space: nowrap; font-size: 12px; }
   .g .r b { font-size: 14px; font-variant-numeric: tabular-nums; }
   .g .r .tix { color: var(--accent); font-weight: 800; text-decoration: none; }
+  /* high school: compact one-line rows, two across on wider screens */
+  .hsg { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 6px; }
+  .c { display: grid; grid-template-columns: 66px 1fr auto; gap: 8px; align-items: center; background: var(--row); border-left: 3px solid var(--tc); border-radius: 4px; padding: 5px 8px; font-size: 13px; min-width: 0; }
+  .c .t { font-weight: 800; font-size: 12px; color: var(--accent); white-space: nowrap; }
+  .c .t.live { color: #ff4d4d; } .c .t.fin { color: var(--muted); }
+  .c .who { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+  .c .who .at { color: var(--muted); font-weight: 500; }
+  .c .x { color: var(--muted); font-size: 11px; white-space: nowrap; }
+  .c .x b { color: var(--text); font-size: 12.5px; font-variant-numeric: tabular-nums; }
   .empty { color: var(--muted); background: var(--panel); border-radius: 8px; padding: 16px; }
   footer { color: var(--muted); font-size: 11.5px; text-align: center; margin-top: 14px; }
+  @media (max-width: 640px) { .hsg { grid-template-columns: 1fr; } }
   @media (max-width: 520px) { .g { grid-template-columns: 62px 1fr; } .g .r { grid-column: 2; text-align: left; } .days button { padding: 7px 9px; font-size: 12px; } }
 </style>
 </head>
@@ -121,12 +131,33 @@
       // high school and junior hockey: a sub-heading per sport / league
       var byKey = gr[0] === 'highschool' || gr[0] === 'junior';
       var lastSub = null;
+      var hsBox = null;
       (byKey ? gs.slice().sort(function (a, b) { return a.sport < b.sport ? -1 : a.sport > b.sport ? 1 : (a.start < b.start ? -1 : 1); }) : gs).forEach(function (g) {
-        if (byKey && g.sport !== lastSub) { lastSub = g.sport; sec.appendChild(el('div', 'sub', g.sport)); }
-        sec.appendChild(row(g, byKey));
+        if (byKey && g.sport !== lastSub) {
+          lastSub = g.sport;
+          var n = gs.filter(function (x) { return x.sport === g.sport; }).length;
+          sec.appendChild(el('div', 'sub', g.sport + (gr[0] === 'highschool' ? ' \u00b7 ' + n : '')));
+          if (gr[0] === 'highschool') { hsBox = el('div', 'hsg'); sec.appendChild(hsBox); }
+        }
+        if (gr[0] === 'highschool') hsBox.appendChild(compact(g)); else sec.appendChild(row(g, byKey));
       });
       box.appendChild(sec);
     });
+  }
+
+  // high school: time, "Away at Home", and the tier or score, on one line
+  function compact(g) {
+    var c = el('div', 'c'), d = new Date(g.start);
+    var st = g.status === 'live' ? ['LIVE', 'live'] : g.status === 'final' ? ['Final', 'fin'] : g.status === 'postponed' ? ['PPD', 'fin'] : g.status === 'cancelled' ? ['CAN', 'fin'] : [g.time_tbd ? 'TBA' : cpTime(d), ''];
+    c.appendChild(el('div', 't' + (st[1] ? ' ' + st[1] : ''), st[0]));
+    var who = el('div', 'who'); who.title = g.away + ' at ' + g.home + (g.note ? ' \u00b7 ' + g.note : '');
+    who.appendChild(document.createTextNode(g.away + ' ')); who.appendChild(el('span', 'at', 'at ')); who.appendChild(document.createTextNode(g.home));
+    c.appendChild(who);
+    var x = el('div', 'x');
+    if ((g.status === 'final' || g.status === 'live') && g.our_score != null && g.opp_score != null) x.appendChild(el('b', null, g.our_score + '\u2013' + g.opp_score));
+    else x.textContent = (String(g.note || '').match(/Tier\s*\d|Group\s*\d/i) || [''])[0].replace(/Tier\s*/i, 'T').replace(/Group\s*/i, 'G');
+    c.appendChild(x);
+    return c;
   }
 
   function row(g, noSport) {
