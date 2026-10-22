@@ -1,9 +1,9 @@
 {
- "updated": "2026-10-21T23:49:57-04:00",
- "today": "2026-10-21",
+ "updated": "2026-10-22T00:04:58-04:00",
+ "today": "2026-10-22",
  "range": [
-  "2026-10-18",
-  "2026-10-24"
+  "2026-10-19",
+  "2026-10-25"
  ],
  "teams": {
   "spitfires": {
@@ -111,117 +111,6 @@
   }
  },
  "games": [
-  {
-   "id": "lancers-6459",
-   "team": "lancers",
-   "sport": "Men's Volleyball",
-   "start": "2026-10-18T11:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Brandon Bobcats",
-   "location": "Winnipeg, MB",
-   "status": "final",
-   "our_score": 0,
-   "opp_score": 3,
-   "result": "L",
-   "note": "Winnipeg Tournament",
-   "links": {}
-  },
-  {
-   "id": "lancers-6187",
-   "team": "lancers",
-   "sport": "Women's Soccer",
-   "start": "2026-10-18T14:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Waterloo Warriors",
-   "location": "Waterloo, ON",
-   "status": "final",
-   "our_score": 4,
-   "opp_score": 0,
-   "result": "W",
-   "note": "",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6187",
-    "recap": "https://golancers.ca/news/2026/10/19/womens-soccer-windsor-secures-playoff-spot-with-shutout-over-waterloo.aspx"
-   }
-  },
-  {
-   "id": "junior-gs2960403",
-   "team": "junior",
-   "sport": "PJHL (Jr. C)",
-   "start": "2026-10-18T15:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Dresden Kings",
-   "location": "Lambton-Kent Memorial Centre",
-   "status": "final",
-   "our_score": 0,
-   "opp_score": 6,
-   "result": "L",
-   "note": "",
-   "links": {
-    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960403?configuration=45"
-   },
-   "club": "Wheatley Sharks"
-  },
-  {
-   "id": "lancers-6199",
-   "team": "lancers",
-   "sport": "Men's Soccer",
-   "start": "2026-10-18T16:15:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Waterloo Warriors",
-   "location": "Waterloo, ON",
-   "status": "final",
-   "our_score": 0,
-   "opp_score": 0,
-   "result": "T",
-   "note": "",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6199",
-    "recap": "https://golancers.ca/news/2026/10/19/mens-soccer-lancers-end-season-with-scoreless-draw-against-waterloo.aspx"
-   }
-  },
-  {
-   "id": "junior-gojhl15597",
-   "team": "junior",
-   "sport": "GOHL (Jr. B)",
-   "start": "2026-10-18T18:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "St. Thomas Stars",
-   "location": "Joe Thornton C.C., St. Thomas, ON",
-   "status": "final",
-   "our_score": 2,
-   "opp_score": 6,
-   "result": "L",
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.gohl.ca/stats/game-center/15597"
-   },
-   "club": "LaSalle Vipers"
-  },
-  {
-   "id": "junior-gojhl15594",
-   "team": "junior",
-   "sport": "GOHL (Jr. B)",
-   "start": "2026-10-18T19:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Strathroy Rockets",
-   "location": "Chatham Memorial Arena, Chatham, ON",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 2,
-   "result": "W",
-   "note": "OT",
-   "links": {
-    "gamecentre": "https://www.gohl.ca/stats/game-center/15594"
-   },
-   "club": "Chatham Maroons"
-  },
   {
    "id": "highschool-2026-10-19-81",
    "team": "highschool",
@@ -2337,6 +2226,82 @@
     "tickets": "https://wfcucentre.evenue.net/event/S27/G08",
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29120/"
    }
+  },
+  {
+   "id": "junior-gojhl15620",
+   "team": "junior",
+   "sport": "GOHL (Jr. B)",
+   "start": "2026-10-25T14:30:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Ayr Centennials",
+   "location": "North Dumfries C.C., Ayr, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.gohl.ca/stats/game-center/15620"
+   },
+   "club": "Chatham Maroons"
+  },
+  {
+   "id": "junior-ojhl16619",
+   "team": "junior",
+   "sport": "OJHL (Jr. A)",
+   "start": "2026-10-25T18:10:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Niagara Falls Canucks",
+   "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.ojhl.ca/stats/game-center/16619"
+   },
+   "club": "Leamington Flyers"
+  },
+  {
+   "id": "junior-gs2960467",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-10-25T19:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Blenheim Blades",
+   "location": "Blenheim Memorial Arena",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960467?configuration=45"
+   },
+   "club": "Lakeshore Canadiens"
+  },
+  {
+   "id": "junior-gs2960454",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-10-25T19:30:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Mooretown Flags",
+   "location": "Mooretown Sports Complex",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960454?configuration=45"
+   },
+   "club": "Amherstburg Admirals"
   }
  ],
  "pro_games": [
@@ -3179,19 +3144,6 @@
   },
   {
    "league": "other",
-   "headline": "Dream beat Valkyries for 2-1 lead in WNBA Finals",
-   "summary": "",
-   "published": "2026-10-21T22:28-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-96.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/wnba/article/dream-beat-valkyries-for-2-1-lead-in-wnba-finals/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
    "headline": "Forge FC tops CF Montreal on penalty kicks to win Canadian championship",
    "summary": "",
    "published": "2026-10-21T22:34-04:00",
@@ -3217,16 +3169,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "Elliott was released by Titans after pulling gun in parking lot, Saleh says",
+   "league": "nba",
+   "headline": "Davis scores 34 points in Washington debut, leading Wizards over Bucks",
    "summary": "",
-   "published": "2026-10-21T15:03-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Jordan-Elliot.jpg",
+   "published": "2026-10-21T22:07-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-94.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/elliott-was-released-by-titans-after-pulling-gun-in-parking-lot-saleh-says/",
+   "sn_team_count": 2,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/davis-scores-34-points-in-washington-debut-leading-wizards-over-bucks/",
    "source": "Sportsnet"
   },
   {
@@ -3243,6 +3195,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nfl",
+   "headline": "Elliott was released by Titans after pulling gun in parking lot, Saleh says",
+   "summary": "",
+   "published": "2026-10-21T15:03-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Jordan-Elliot.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/elliott-was-released-by-titans-after-pulling-gun-in-parking-lot-saleh-says/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Marc-Edouard Vlasic says he’s done playing hockey",
    "summary": "",
@@ -3253,6 +3218,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/marc-edouard-vlasic-says-hes-done-playing-hockey/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "WNBA Finals Takeaways: Reese double-double lifts Dream to 2-1 series lead",
+   "summary": "Angel Reese double-doubles have become commonplace, but to hit the mark three games in a row in the Finals is another thing entirely. Sarah Maat has the takeaways from Game 3 of the WNBA Finals.",
+   "published": "2026-10-21T23:58-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177129598.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/wnba/article/wnba-finals-takeaways-reese-double-double-lifts-dream-to-2-1-series-lead/",
    "source": "Sportsnet"
   },
   {
@@ -3268,19 +3246,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/early-analysis-what-are-this-years-maple-leafs/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "NHL’s Top 12 UFAs of 2027: Latest rumours, reports",
-   "summary": "Future first-ballot Hall of Famers, Stanley Cup champions, team captains, top-four blue-liners, and game-breaking wingers may all be available to eager GMs this off-season. Luke Fox ranks hockey’s best impending unrestri",
-   "published": "2026-10-21T16:07-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Quinn-Hughes.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/nhls-top-12-ufas-of-2027-latest-rumours-reports/",
    "source": "Sportsnet"
   },
   {
@@ -3326,7 +3291,7 @@
   },
   {
    "league": "nba",
-   "headline": "Anthony Edwards scores 45, T-Wolves roll past Heat to spoil Giannis’ opener",
+   "headline": "Edwards, Ball star as Timberwolves roll past Heat to spoil Giannis’ opener",
    "summary": "",
    "published": "2026-10-21T22:44-04:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-98.jpg",
@@ -3335,19 +3300,6 @@
    "sn_team_count": 2,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/anthony-edwards-scores-45-t-wolves-roll-past-heat-to-spoil-giannis-opener/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Davis scores 34 points in Washington debut, leading Wizards over Bucks",
-   "summary": "",
-   "published": "2026-10-21T22:07-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-94.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/davis-scores-34-points-in-washington-debut-leading-wizards-over-bucks/",
    "source": "Sportsnet"
   },
   {
@@ -3363,6 +3315,19 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/kawhi-leonard-pens-tribute-video-to-toronto-ahead-of-raptors-return/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "NHL’s Top 12 UFAs of 2027: Latest rumours, reports",
+   "summary": "Future first-ballot Hall of Famers, Stanley Cup champions, team captains, top-four blue-liners, and game-breaking wingers may all be available to eager GMs this off-season. Luke Fox ranks hockey’s best impending unrestri",
+   "published": "2026-10-21T16:07-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Quinn-Hughes.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/nhls-top-12-ufas-of-2027-latest-rumours-reports/",
    "source": "Sportsnet"
   },
   {
