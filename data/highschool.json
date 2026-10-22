@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-22T19:30:02-04:00",
+ "updated": "2026-10-22T19:45:02-04:00",
  "today": "2026-10-22",
  "games": [
   {
@@ -1143,6 +1143,26 @@
    "home": "Tecumseh Vista Academy"
   },
   {
+   "id": "highschool-2026-10-22-62",
+   "team": "highschool",
+   "sport": "Senior Boys Football",
+   "start": "2026-10-22T00:00:00-04:00",
+   "time_tbd": true,
+   "home_away": "N",
+   "opponent": "L'Essor",
+   "location": "Holy Names",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "St. Anne",
+   "home": "L'Essor"
+  },
+  {
    "id": "highschool-2026-10-22-51",
    "team": "highschool",
    "sport": "Senior Boys Volleyball",
@@ -1231,9 +1251,9 @@
    "home_away": "N",
    "opponent": "Brennan",
    "location": "Brennan",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "final",
+   "our_score": 24,
+   "opp_score": 65,
    "result": null,
    "note": "Tier 2",
    "links": {
@@ -1241,26 +1261,6 @@
    },
    "away": "Herman",
    "home": "Brennan"
-  },
-  {
-   "id": "highschool-2026-10-22-62",
-   "team": "highschool",
-   "sport": "Senior Boys Football",
-   "start": "2026-10-22T19:30:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "L'Essor",
-   "location": "Holy Names",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "St. Anne",
-   "home": "L'Essor"
   },
   {
    "id": "highschool-2026-10-23-63",
