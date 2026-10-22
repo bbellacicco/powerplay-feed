@@ -93,7 +93,7 @@
     var m = v.url.match(/[?&]v=([\w-]{11})/) || v.url.match(/youtu\.be\/([\w-]{11})/) || v.url.match(/\/shorts\/([\w-]{11})/);
     if (m) return 'https://www.youtube-nocookie.com/embed/' + m[1] + '?autoplay=1&rel=0&playsinline=1&modestbranding=1';
     m = v.url.match(/vimeo\.com\/(?:video\/)?(\d+)/);
-    if (m) return 'https://player.vimeo.com/video/' + m[1] + '?autoplay=1&title=0&byline=0&portrait=0';
+    if (m) return 'https://player.vimeo.com/video/' + m[1] + '?autoplay=1&muted=0&title=0&byline=0&portrait=0';
     return '';
   }
 
