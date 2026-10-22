@@ -122,7 +122,7 @@
   window.addEventListener('message', function (e) {
     if (!e.data || e.data.pp !== 'height' || !(e.data.h > 50)) return;
     [].forEach.call(document.querySelectorAll('.pane iframe'), function (f) {
-      if (f.contentWindow === e.source) f.style.height = Math.min(e.data.h, 4000) + 'px';
+      if (f.contentWindow === e.source) f.style.height = Math.min(e.data.h, 9000) + 'px';
     });
   });
   // share button: shares whichever section is showing (its own link opens the page on that section)
