@@ -166,6 +166,7 @@
   .ghost { background: rgba(11,26,51,.9); color: #fff; border: 1px solid rgba(255,255,255,.3); border-radius: 999px; font: inherit; font-size: 12px; font-weight: 700; padding: 6px 12px; cursor: pointer; text-decoration: none; }
   .ghost:hover { border-color: var(--accent); color: var(--accent); }
   .vplayer .cap #vshare:empty { display: none; }
+  .big > .pps-btn.topshare { position: absolute; right: 12px; top: 12px; z-index: 5; padding: 7px 12px; font-size: 12.5px; background: rgba(11,26,51,.85); border-color: rgba(255,255,255,.4); }
   .scard { position: relative; } .scard > .pps-btn.mini { position: absolute; right: 6px; top: 6px; z-index: 4; padding: 5px 8px; font-size: 11px; background: rgba(11,26,51,.82); border-color: rgba(255,255,255,.35); }
   .vplayer .cap #vshare .pps-btn { background: var(--accent); color: #0b1a33; border-color: var(--accent); }
   .vplayer .desc { background: #10244a; border-top: 1px solid rgba(255,255,255,.08); padding: 10px 12px 12px; font-size: 13.5px; line-height: 1.45; color: #dbe3f2; }
@@ -578,7 +579,15 @@
     var ov = el('div', 'ov'); ov.appendChild(el('div', 'kick', storyCat(f, 'Latest')));
     ov.appendChild(el('h2', null, f.headline));
     if (f.summary && f.summary !== f.headline) ov.appendChild(el('p', null, f.summary));
-    big.appendChild(ov); box.appendChild(big);
+    big.appendChild(ov);
+    // share the top story through a powerplaywindsor.com landing page (the story up top, then on to the article)
+    if (window.PPShare) {
+      var fsb = PPShare.button({ title: f.headline, url: SITE + 'scores-standings?tab=stories&s=' + skey(f.url) + '&team=powerplay',
+        text: f.headline + ' | Powerplay Windsor', image: f.image ? wix(f.image, 1200, 630) : '' });
+      fsb.classList.add('mini', 'topshare'); fsb.addEventListener('click', function (e) { e.preventDefault(); });
+      big.appendChild(fsb);
+    }
+    box.appendChild(big);
     var side = el('div', 'fside');
     if (video) {
       var va = el('a', 'small vid'); va.href = video.url; va.target = '_blank'; va.rel = 'noopener';
@@ -700,7 +709,7 @@
   document.getElementById('fsnext').onclick = function () { pshow(pcur + 1); };
   document.addEventListener('keydown', function (e) {
     if (fsv.classList.contains('on')) { if (e.key === 'ArrowLeft') pshow(pcur - 1); else if (e.key === 'ArrowRight') pshow(pcur + 1); }
-    else if (e.key === 'Escape') { document.getElementById('vclose').click(); document.getElementById('hclose').click(); }
+    else if (e.key === 'Escape') { ['vclose', 'hclose'].forEach(function (id) { var b = document.getElementById(id); if (b) b.click(); }); }
   });
 
   // ---------- local scores ----------
