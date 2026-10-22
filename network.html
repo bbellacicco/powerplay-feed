@@ -390,7 +390,7 @@
       vtextP.then(function () { if (player.classList.contains('on') && document.getElementById('ptitle').textContent === v.t) showDesc(v); });
     }
     var box = document.getElementById('pdesc'), txt = document.getElementById('pdtxt'), more = document.getElementById('pdmore');
-    var d = String((vtext && vtext[vkey(v.u)]) || v.d || '').replace(/\r/g, '').replace(/\n{3,}/g, '\n\n').trim();
+    var d = String((vtext && vtext[vkey(v.u)]) || (/^This is ".+" by .+ on Vimeo/.test(v.d || '') ? '' : v.d) || '').replace(/\r/g, '').replace(/\n{3,}/g, '\n\n').trim();
     // drop a description that's only the title again
     if (!d || d.toLowerCase() === String(v.t || '').toLowerCase()) { box.hidden = true; txt.textContent = ''; fitWrap(); return; }
     txt.innerHTML = '';
