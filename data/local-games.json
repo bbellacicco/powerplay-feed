@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T21:01:55-04:00",
+ "updated": "2026-10-21T21:20:04-04:00",
  "today": "2026-10-21",
  "range": [
   "2026-10-18",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 31
   },
   "club_news": {
    "ok": true,
@@ -3137,49 +3137,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nba",
-   "headline": "New-look Raptors enter season with championship aspirations",
-   "summary": "Timing is everything in the NBA. For the new-look Toronto Raptors, the overwhelming question is whether their time is now, writes Michael Grange.",
-   "published": "2026-10-20T17:47-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/leonard_kawhi1280-1.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/new-look-raptors-enter-season-with-championship-aspirations/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Early analysis: What are this year’s Maple Leafs?",
-   "summary": "Through 11 games the Maple Leafs have already faced some adversity, some ups and downs, and the group is starting to come together. But what is this team going to be, exactly? Justin Bourne shares his early thoughts on t",
-   "published": "2026-10-21T13:40-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/leafs-4.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/early-analysis-what-are-this-years-maple-leafs/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "NHL’s Top 12 UFAs of 2027: Latest rumours, reports",
-   "summary": "Future first-ballot Hall of Famers, Stanley Cup champions, team captains, top-four blue-liners, and game-breaking wingers may all be available to eager GMs this off-season. Luke Fox ranks hockey’s best impending unrestri",
-   "published": "2026-10-21T16:07-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Quinn-Hughes.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/nhls-top-12-ufas-of-2027-latest-rumours-reports/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nfl",
    "headline": "NFL suspends second Bills DB for spitting, though Sam Franklin denies",
    "summary": "Buffalo Bills defensive back Sam Franklin became the team’s second player to be suspended by the NFL for one game without pay for spitting at a Raiders opponent during a game last weekend, the league announced Wednesday.",
@@ -3289,6 +3246,34 @@
   },
   {
    "league": "nhl",
+   "headline": "Early analysis: What are this year’s Maple Leafs?",
+   "summary": "Through 11 games the Maple Leafs have already faced some adversity, some ups and downs, and the group is starting to come together. But what is this team going to be, exactly? Justin Bourne shares his early thoughts on t",
+   "published": "2026-10-21T13:40-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/leafs-4.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/early-analysis-what-are-this-years-maple-leafs/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "NHL’s Top 12 UFAs of 2027: Latest rumours, reports",
+   "summary": "Future first-ballot Hall of Famers, Stanley Cup champions, team captains, top-four blue-liners, and game-breaking wingers may all be available to eager GMs this off-season. Luke Fox ranks hockey’s best impending unrestri",
+   "published": "2026-10-21T16:07-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Quinn-Hughes.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/nhls-top-12-ufas-of-2027-latest-rumours-reports/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Fan reaction ‘not going to change’ how Brady Tkachuk feels about Ottawa",
    "summary": "Former Senators captain Brady Tkachuk is facing his old squad for the first time as a member of the Panthers on Wednesday night. Ryan Dixon has the story from Kanata ahead of the emotionally charged affair.",
    "published": "2026-10-21T12:27-04:00",
@@ -3298,6 +3283,34 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/blood-sweat-and-tears-brady-tkachuk-talks-return-to-ottawa/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "New-look Raptors enter season with championship aspirations",
+   "summary": "Timing is everything in the NBA. For the new-look Toronto Raptors, the overwhelming question is whether their time is now, writes Michael Grange.",
+   "published": "2026-10-20T17:47-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/leonard_kawhi1280-1.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/new-look-raptors-enter-season-with-championship-aspirations/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Canucks GM Ryan Johnson preaching patience as losses pile up",
+   "summary": "With the rebuilding Canucks on an eight-game losing streak, GM Ryan Johnson isn’t panicking. “Before it gets better, it was going to get really hard, and we have to understand that.”",
+   "published": "2026-10-21T20:59-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Ryan-Johnson.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canucks-gm-ryan-johnson-preaching-patience-as-losses-pile-up/",
    "source": "Sportsnet"
   },
   {
@@ -3337,6 +3350,19 @@
    "sn_team_count": 2,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/rays-brewers-lean-on-opposite-pitching-strengths-to-reach-world-series/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Surgery not on table for Ohtani, says Dodgers president",
+   "summary": "",
+   "published": "2026-10-21T16:47-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177077344.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/surgery-not-on-table-for-ohtani-says-dodgers-president/",
    "source": "Sportsnet"
   },
   {
@@ -3510,58 +3536,6 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/roger-goodell-comfortable-with-security-for-nfls-paris-game/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "AC Milan backs fan boycott over ‘excessive’ away ticket prices",
-   "summary": "AC Milan came out firmly in support of its fans protesting against excessive away ticket prices, threatening to retaliate against clubs it believes are unfairly charging Rossoneri supporters.",
-   "published": "2026-10-21T08:38-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/07/san.siro_.stadium.1280.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/serie-a/article/ac-milan-backs-fan-boycott-over-excessive-away-ticket-prices/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Giants turning to McCarthy as starting QB vs. Texans",
-   "summary": "",
-   "published": "2026-10-21T13:01-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-2026-10-18T160408.331.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/report-giants-turning-to-mccarthy-as-starting-qb-vs-texans/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Lamar Jackson returns to Ravens practice, but still limited because ankle injury",
-   "summary": "",
-   "published": "2026-10-21T17:21-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/lamar-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/lamar-jackson-returns-to-ravens-practice-but-still-limited-because-ankle-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Jerry Jones, Dallas Cowboys arrive at camp without off-field distractions",
-   "summary": "The Dallas Cowboys typically arrive at training camp with some sort of off-field drama swirling around the team, often in the form of a high-profile contract dispute, but there are no such issues this year going into the",
-   "published": "2026-07-28T18:26-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/07/Untitled-design-2026-07-28T152526.981.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/jerry-jones-dallas-cowboys-arrive-at-camp-without-off-field-distractions/",
    "source": "Sportsnet"
   },
   {
@@ -3969,15 +3943,15 @@
   },
   {
    "league": "mlb",
-   "headline": "This Gold Glove finalist has emerged as one of MLB's best two-way catchers",
+   "headline": "Watch Tigers prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-15T09:13-04:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/v1792020463/mlb/ean7zn9t2fahpstordp0",
+   "published": "2026-10-21T20:39-04:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
     "Detroit Tigers"
    ],
-   "url": "https://www.mlb.com/tigers/news/dillon-dingler-named-al-gold-glove-finalist",
+   "url": "https://www.mlb.com/tigers/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
    "source": "Team site"
   },
   {
@@ -4008,6 +3982,19 @@
   },
   {
    "league": "mlb",
+   "headline": "This Gold Glove finalist has emerged as one of MLB's best two-way catchers",
+   "summary": "",
+   "published": "2026-10-15T09:13-04:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/v1792020463/mlb/ean7zn9t2fahpstordp0",
+   "video": false,
+   "teams": [
+    "Detroit Tigers"
+   ],
+   "url": "https://www.mlb.com/tigers/news/dillon-dingler-named-al-gold-glove-finalist",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
    "headline": "Dingler seeks 2nd straight Gold Glove at catcher; McKinstry nominated at utility",
    "summary": "",
    "published": "2026-10-14T13:07-04:00",
@@ -4017,19 +4004,6 @@
     "Detroit Tigers"
    ],
    "url": "https://www.mlb.com/tigers/news/2026-gold-glove-award-finalists",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
-   "headline": "Watch Tigers prospects in Arizona Fall League action",
-   "summary": "",
-   "published": "2026-10-21T20:39-04:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
-   "video": false,
-   "teams": [
-    "Detroit Tigers"
-   ],
-   "url": "https://www.mlb.com/tigers/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
    "source": "Team site"
   },
   {
