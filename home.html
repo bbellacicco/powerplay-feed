@@ -639,7 +639,7 @@
       vtextP.then(function () { if (vp.classList.contains('on') && vcur === s) vDesc(s); });
     }
     var box = document.getElementById('vdesc'), txt = document.getElementById('vdtxt'), more = document.getElementById('vdmore');
-    var d = String((vtext && vtext[vkey(s.url)]) || s.summary || '').replace(/\r/g, '').replace(/\n{3,}/g, '\n\n').trim();
+    var d = String((vtext && vtext[vkey(s.url)]) || (/^This is ".+" by .+ on Vimeo/.test(s.summary || '') ? '' : s.summary) || '').replace(/\r/g, '').replace(/\n{3,}/g, '\n\n').trim();
     if (!d || d.toLowerCase() === String(s.headline || '').toLowerCase()) { box.hidden = true; return; }
     txt.innerHTML = '';
     d.split(/(https?:\/\/[^\s<]+)/).forEach(function (part, i) {
