@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T21:31:53-04:00",
+ "updated": "2026-10-21T21:46:56-04:00",
  "today": "2026-10-21",
  "range": [
   "2026-10-18",
@@ -1306,10 +1306,10 @@
    "home_away": "H",
    "opponent": "Blenheim Blades",
    "location": "Wheatley Area Arena",
-   "status": "live",
-   "our_score": 0,
-   "opp_score": 0,
-   "result": null,
+   "status": "final",
+   "our_score": 1,
+   "opp_score": 7,
+   "result": "L",
    "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960414?configuration=45"
@@ -3125,7 +3125,7 @@
  "more_news": [
   {
    "league": "nhl",
-   "headline": "Tkachuk heavily booed by Ottawa crowd in return with Panthers",
+   "headline": "Brady Tkachuk heavily booed by Ottawa crowd in return with Panthers",
    "summary": "",
    "published": "2026-10-21T20:42-04:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/tkachukkawhi.jpg",
@@ -3179,15 +3179,15 @@
   },
   {
    "league": "nhl",
-   "headline": "Hurricanes activate Seth Jarvis from injured reserve",
-   "summary": "",
-   "published": "2026-10-21T18:01-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/11/seth-jarvis.jpg",
+   "headline": "Mario Lemieux’s son, Austin, ready to test his game in PGA Tour debut",
+   "summary": "Austin Lemieux will make his PGA Tour debut on Thursday at the Butterfield Bermuda Championship. Adam Stanley explains how Mario’s son is preparing to test his mettle against some of the best golfers in the world.",
+   "published": "2026-10-21T21:40-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/AustinLemiuex.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/hurricanes-activate-seth-jarvis-from-injured-reserve/",
+   "sn_team_count": 0,
+   "sport": "Golf",
+   "url": "https://www.sportsnet.ca/pga/article/mario-lemieuxs-son-austin-ready-to-test-his-game-in-pga-tour-debut/",
    "source": "Sportsnet"
   },
   {
@@ -3337,6 +3337,19 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/from-cowboy-boots-to-kilometres-calgary-left-its-mark-on-coleman/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Hurricanes activate Seth Jarvis from injured reserve",
+   "summary": "",
+   "published": "2026-10-21T18:01-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/11/seth-jarvis.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/hurricanes-activate-seth-jarvis-from-injured-reserve/",
    "source": "Sportsnet"
   },
   {
@@ -3523,19 +3536,6 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/article/goodell-nfl-welcomes-review-of-how-eagles-handled-hurts-blood-clots/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Roger Goodell comfortable with security for NFL’s Paris game",
-   "summary": "NFL Commissioner Roger Goodell said Wednesday he has a high comfort level in the New Orleans Saints and Pittsburgh Steelers safely playing in Paris on Sunday in light of the civil unrest that could include more protests ",
-   "published": "2026-10-21T14:15-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-2.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/roger-goodell-comfortable-with-security-for-nfls-paris-game/",
    "source": "Sportsnet"
   },
   {
@@ -4822,8 +4822,8 @@
       "l": 1,
       "otl": 2,
       "pts": 24,
-      "gf": 66,
-      "ga": 25,
+      "gf": 67,
+      "ga": 26,
       "strk": "W7"
      },
      {
@@ -4930,8 +4930,8 @@
       "l": 11,
       "otl": 0,
       "pts": 10,
-      "gf": 40,
-      "ga": 65,
+      "gf": 41,
+      "ga": 66,
       "strk": "W1"
      }
     ]
@@ -5419,14 +5419,14 @@
      {
       "name": "Blenheim Blades",
       "abbr": "BLE",
-      "gp": 12,
-      "w": 9,
+      "gp": 13,
+      "w": 10,
       "l": 3,
       "otl": 0,
-      "pts": 18,
-      "gf": 54,
-      "ga": 33,
-      "strk": "W2"
+      "pts": 20,
+      "gf": 61,
+      "ga": 34,
+      "strk": "W3"
      },
      {
       "name": "Dresden Kings",
@@ -5443,14 +5443,14 @@
      {
       "name": "Wheatley Sharks",
       "abbr": "WHE",
-      "gp": 16,
+      "gp": 17,
       "w": 7,
-      "l": 9,
+      "l": 10,
       "otl": 0,
       "pts": 14,
-      "gf": 46,
-      "ga": 56,
-      "strk": "L2"
+      "gf": 47,
+      "ga": 63,
+      "strk": "L3"
      },
      {
       "name": "Mooretown Flags",
