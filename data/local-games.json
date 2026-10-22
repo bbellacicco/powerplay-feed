@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-22T10:32:01-04:00",
+ "updated": "2026-10-22T10:46:45-04:00",
  "today": "2026-10-22",
  "range": [
   "2026-10-19",
@@ -1177,13 +1177,14 @@
    "home_away": "A",
    "opponent": "Brock Badgers",
    "location": "St. Catharines, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 0,
+   "opp_score": 1,
+   "result": "L",
    "note": "OUA Playoffs - Round 1",
    "links": {
-    "watch": "https://oua.tv/?school=windsor"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6495",
+    "recap": "https://golancers.ca/news/2026/10/22/womens-soccer-lancers-wrap-up-season-with-loss-to-brock-in-first-round-playoff-game.aspx"
    }
   },
   {
@@ -3120,6 +3121,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Penguins’ Ben Kindel back in Pittsburgh after collapsing on team plane",
+   "summary": "",
+   "published": "2026-10-22T10:31-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/ben-kindel.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/penguins-ben-kindel-back-in-pittsburgh-after-collapsing-on-team-plane/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nba",
    "headline": "Warriors rookie Yaxel Lendeborg calls out Luka Doncic",
    "summary": "",
@@ -3182,19 +3196,6 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/soccer/article/forge-fc-tops-cf-montreal-on-penalty-kicks-to-win-canadian-championship/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Flyers rookie Cole Knuble scores first two career goals in victory over Sabres",
-   "summary": "",
-   "published": "2026-10-21T22:34-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-97.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/flyers-rookie-cole-knuble-scores-first-two-career-goals-in-victory-over-sabres/",
    "source": "Sportsnet"
   },
   {
@@ -3318,6 +3319,19 @@
    "sn_team_count": 2,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/doncic-kessler-combo-shines-in-lakers-win-over-warriors/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "NFL Week 7 Pick ‘Em: Patriots back in primetime spotlight vs. Bears",
+   "summary": "It’s Week 7 already? The NFL season is cruising along with surprising division leaders and even more surprising slow starts – not to mention we got our first firing of the year.",
+   "published": "2026-10-22T10:38-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177121001-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 4,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-7-pick-em-patriots-back-in-primetime-spotlight-vs-bears/",
    "source": "Sportsnet"
   },
   {
@@ -3466,19 +3480,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "Elliott was released by Titans after pulling gun in parking lot, Saleh says",
-   "summary": "",
-   "published": "2026-10-21T15:03-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Jordan-Elliot.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/elliott-was-released-by-titans-after-pulling-gun-in-parking-lot-saleh-says/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "other",
    "headline": "Toronto FC’s Walker Zimmerman, Kobe Franklin out vs. Columbus Crew",
    "summary": "Defenders Walker Zimmerman and Kobe Franklin are set to miss Saturday’s game against Columbus Crew as they work their way back from injury, it was announced Wednesday.",
@@ -3503,6 +3504,19 @@
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/champions-league/article/man-uniteds-crisis-deepens-with-loss-at-champions-league-newcomer-como/",
    "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "LIONS DAILY: Detroit ready to 'rip this Band-Aid off,' start Cade Mays at center",
+   "summary": "",
+   "published": "2026-10-22T10:00-04:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/sc7omj5brho6fnrmz0pw.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Lions"
+   ],
+   "url": "https://www.detroitlions.com/news/lions-daily-detroit-ready-to-rip-this-band-aid-off-start-cade-mays-at-center",
+   "source": "Team site"
   },
   {
    "league": "nfl",
@@ -3684,19 +3698,6 @@
     "Detroit Lions"
    ],
    "url": "https://www.detroitlions.com/news/detroit-lions-announce-munich-game-2026-fan-activations-and-fan-fest",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
-   "headline": "NFC NORTH: Where all four teams stand heading into Week 6",
-   "summary": "Tim Twentyman takes a look at where all four teams in the NFC North stand heading into Week 6 of the 2026 NFL season.",
-   "published": "2026-10-14T07:00-04:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/bparkektf9j4nyjaclvf.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Lions"
-   ],
-   "url": "https://www.detroitlions.com/news/nfc-north-where-all-four-teams-stand-heading-into-week-6-gibbs-goff-murray-love",
    "source": "Team site"
   },
   {
