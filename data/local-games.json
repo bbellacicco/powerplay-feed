@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-22T16:46:46-04:00",
+ "updated": "2026-10-22T17:01:40-04:00",
  "today": "2026-10-22",
  "range": [
   "2026-10-19",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 37
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -3080,19 +3080,6 @@
  ],
  "more_news": [
   {
-   "league": "mlb",
-   "headline": "Watch Live: Rays speak ahead of World Series",
-   "summary": "",
-   "published": "2026-10-22T16:04-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/martinez.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/watch-live-rays-speak-ahead-of-world-series/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "Real Kyper’s Trade Board 2.0: Feeling out the best fits for Larkin, Hellebuyck",
    "summary": "The NHL season is not even a month old yet, but the trade chatter is already relentless. Nick Kypreos takes a look at who’s hot and who’s not among the trade buzz.",
@@ -3134,6 +3121,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "No more easy wins: Raptors face tougher competition as NBA pushes parity",
+   "summary": "The Raptors have hopes of reaching great heights this season, but maintaining their dominance against the bottom third of the NBA will be just as important — and significantly more difficult.",
+   "published": "2026-10-22T16:19-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/raptors.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/no-more-easy-wins-raptors-face-tougher-competition-as-nba-pushes-parity/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "How the Montreal Canadiens are approaching the trade market",
    "summary": "In his latest notebook looking at situations around the league, Frank Seravalli writes how Montreal’s young players has management re-thinking its trade plans, where the Carolina Hurricanes are at in the Connor Hellebuyc",
@@ -3157,21 +3159,6 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/is-it-ever-going-to-happen-what-life-is-like-for-an-nhl-holdout/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "NHL Power Rankings: Checking in on the new guy",
-   "summary": "After a few months of speculation, we’re seeing familiar faces in new places hit their stride. Emily Sadler checks in on the newcomers on all 32 teams in this week’s power rankings.",
-   "published": "2026-10-22T12:43-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/devon-levi-1.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 7,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/nhl-power-rankings-checking-in-on-the-new-guy/",
    "source": "Sportsnet"
   },
   {
@@ -3214,16 +3201,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "Baker Mayfield expects to start for Buccaneers vs. Panthers, barring a setback",
+   "league": "cfl",
+   "headline": "CFL reveals team award-winners ahead of final vote",
    "summary": "",
-   "published": "2026-10-22T15:26-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/11/baker.jpg",
+   "published": "2026-10-22T16:45-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/rourke.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
+   "sn_team_count": 9,
    "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/baker-mayfield-expects-to-start-for-buccaneers-vs-panthers-barring-a-setback/",
+   "url": "https://www.sportsnet.ca/cfl/article/cfl-reveals-team-award-winners-ahead-of-final-vote/",
    "source": "Sportsnet"
   },
   {
@@ -3268,19 +3255,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Senators place Linus Ullmark on injured reserve",
-   "summary": "",
-   "published": "2026-10-22T12:56-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/04/ullmark.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/senators-place-ullmark-on-injury-reserve/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nba",
    "headline": "‘Lost all respect’: Warriors rookie Yaxel Lendeborg calls out Lakers’ Luka Doncic",
    "summary": "",
@@ -3294,16 +3268,18 @@
    "source": "Sportsnet"
   },
   {
-   "league": "cfl",
-   "headline": "CFL reveals team award-winners ahead of final vote",
-   "summary": "",
-   "published": "2026-10-22T16:45-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/rourke.jpg",
+   "league": "nhl",
+   "headline": "NHL Power Rankings: Checking in on the new guy",
+   "summary": "After a few months of speculation, we’re seeing familiar faces in new places hit their stride. Emily Sadler checks in on the newcomers on all 32 teams in this week’s power rankings.",
+   "published": "2026-10-22T12:43-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/devon-levi-1.jpg",
    "video": false,
-   "teams": [],
-   "sn_team_count": 9,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/cfl-reveals-team-award-winners-ahead-of-final-vote/",
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 7,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/nhl-power-rankings-checking-in-on-the-new-guy/",
    "source": "Sportsnet"
   },
   {
@@ -3484,6 +3460,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nfl",
+   "headline": "Baker Mayfield expects to start for Buccaneers vs. Panthers, barring a setback",
+   "summary": "",
+   "published": "2026-10-22T15:26-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/11/baker.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/baker-mayfield-expects-to-start-for-buccaneers-vs-panthers-barring-a-setback/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Canucks GM Ryan Johnson preaching patience as losses pile up",
    "summary": "With the rebuilding Canucks on an eight-game losing streak, GM Ryan Johnson isn’t panicking. “Before it gets better, it was going to get really hard, and we have to understand that.”",
@@ -3564,17 +3553,17 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Asian soccer chief gives no hint about support or opposition for Infantino",
-   "summary": "",
-   "published": "2026-10-22T09:22-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/07/FIFA-President-Gianni-Infantino.jpg",
+   "league": "nfl",
+   "headline": "NOTEBOOK: Branch 'ready to roll' as he nears return",
+   "summary": "Tim Twentyman covers all the Detroit Lions news of the day including defensive back Brian Branch & center Cade Mays preparing to return, a new punt returner on special teams and more.",
+   "published": "2026-10-22T16:57-04:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/xsoulxktm0onzuhnmbov.jpg",
    "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/fifa-world-cup/article/asian-soccer-chief-gives-no-hint-about-support-or-opposition-for-infantino/",
-   "source": "Sportsnet"
+   "teams": [
+    "Detroit Lions"
+   ],
+   "url": "https://www.detroitlions.com/news/detroit-lions-brian-branch-ready-to-roll-nears-return-mays-carter",
+   "source": "Team site"
   },
   {
    "league": "nfl",
@@ -3756,19 +3745,6 @@
     "Detroit Lions"
    ],
    "url": "https://www.detroitlions.com/news/breaking-down-the-detroit-lions-remaining-games-campbell-gibbs-branch",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
-   "headline": "Week 6 Bye | The Official Detroit Lions Podcast",
-   "summary": "Tim Twentyman and Brooke Kirchhofer discuss Detroit's start to the 2026 NFL season and talk with Lions Legend T.J. Lang about the offensive line and quarterback Jared Goff.",
-   "published": "2026-10-16T07:00-04:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/wn47ieurtlnvsh3ql7zr.png",
-   "video": false,
-   "teams": [
-    "Detroit Lions"
-   ],
-   "url": "https://www.detroitlions.com/news/week-6-bye-the-official-detroit-lions-podcast",
    "source": "Team site"
   },
   {
