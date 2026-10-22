@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T22:16:56-04:00",
+ "updated": "2026-10-21T22:35:26-04:00",
  "today": "2026-10-21",
  "range": [
   "2026-10-18",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 30
+   "count": 31
   },
   "club_news": {
    "ok": true,
@@ -1306,10 +1306,10 @@
    "home_away": "H",
    "opponent": "Blenheim Blades",
    "location": "Wheatley Area Arena",
-   "status": "live",
-   "our_score": 0,
-   "opp_score": 0,
-   "result": null,
+   "status": "final",
+   "our_score": 1,
+   "opp_score": 7,
+   "result": "L",
    "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960414?configuration=45"
@@ -3138,6 +3138,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Mario Lemieux’s son, Austin, ready to test his game in PGA Tour debut",
+   "summary": "Austin Lemieux will make his PGA Tour debut on Thursday at the Butterfield Bermuda Championship. Adam Stanley explains how Mario’s son is preparing to test his mettle against some of the best golfers in the world.",
+   "published": "2026-10-21T21:40-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/AustinLemiuex.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Golf",
+   "url": "https://www.sportsnet.ca/pga/article/mario-lemieuxs-son-austin-ready-to-test-his-game-in-pga-tour-debut/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Senators’ Linus Ullmark exits vs. Panthers with apparent injury",
    "summary": "",
    "published": "2026-10-21T22:14-04:00",
@@ -3147,6 +3160,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/senators-linus-ullmark-exits-vs-panthers-with-apparent-injury/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Dream beat Valkyries for 2-1 lead in WNBA Finals",
+   "summary": "",
+   "published": "2026-10-21T22:28-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-96.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/wnba/article/dream-beat-valkyries-for-2-1-lead-in-wnba-finals/",
    "source": "Sportsnet"
   },
   {
@@ -3162,32 +3188,6 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/nfl-suspends-2nd-bills-db-for-spitting-though-sam-franklin-denies-allegation/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Toronto FC’s Walker Zimmerman, Kobe Franklin out vs. Columbus Crew",
-   "summary": "Defenders Walker Zimmerman and Kobe Franklin are set to miss Saturday’s game against Columbus Crew as they work their way back from injury, it was announced Wednesday.",
-   "published": "2026-10-21T17:51-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/zimm.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/toronto-fcs-walker-zimmerman-kobe-franklin-out-vs-columbus-crew/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Mario Lemieux’s son, Austin, ready to test his game in PGA Tour debut",
-   "summary": "Austin Lemieux will make his PGA Tour debut on Thursday at the Butterfield Bermuda Championship. Adam Stanley explains how Mario’s son is preparing to test his mettle against some of the best golfers in the world.",
-   "published": "2026-10-21T21:40-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/AustinLemiuex.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Golf",
-   "url": "https://www.sportsnet.ca/pga/article/mario-lemieuxs-son-austin-ready-to-test-his-game-in-pga-tour-debut/",
    "source": "Sportsnet"
   },
   {
@@ -3415,6 +3415,19 @@
    "sn_team_count": 0,
    "sport": "MMA",
    "url": "https://www.sportsnet.ca/ufc/article/how-fighters-can-find-path-to-victory-at-ufc-333/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Toronto FC’s Walker Zimmerman, Kobe Franklin out vs. Columbus Crew",
+   "summary": "Defenders Walker Zimmerman and Kobe Franklin are set to miss Saturday’s game against Columbus Crew as they work their way back from injury, it was announced Wednesday.",
+   "published": "2026-10-21T17:51-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/zimm.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/toronto-fcs-walker-zimmerman-kobe-franklin-out-vs-columbus-crew/",
    "source": "Sportsnet"
   },
   {
@@ -3932,7 +3945,7 @@
    "league": "mlb",
    "headline": "Watch Tigers prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-21T21:21-04:00",
+   "published": "2026-10-21T22:13-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
