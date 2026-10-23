@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23T14:16:37-04:00",
+ "updated": "2026-10-23T14:31:43-04:00",
  "today": "2026-10-23",
  "range": [
   "2026-10-20",
@@ -58,8 +58,8 @@
    "count": 0
   },
   "cfl": {
-   "ok": true,
-   "count": 4
+   "ok": false,
+   "error": "<urlopen error [Errno 104] Connection reset by peer>"
   },
   "cfl_news": {
    "ok": true,
@@ -3050,6 +3050,19 @@
  "more_news": [
   {
    "league": "nhl",
+   "headline": "Watch Live: Jets GM Kevin Cheveldayoff speaks after Hellebuyck trade",
+   "summary": "The Winnipeg Jets made one of the most consequential trades in franchise history on Friday, dealing star goalie Connor Hellebuyck to the New Jersey Devils. General manager Kevin Cheveldayoff will meet with the media to d",
+   "published": "2026-10-23T14:13-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/03/Chevy.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/watch-live-jets-gm-kevin-cheveldayoff-speaks-after-hellebuyck-trade/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Jets deal Connor Hellebuyck to Devils, ending trade-request saga",
    "summary": "",
    "published": "2026-10-23T12:36-04:00",
@@ -3085,19 +3098,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/how-panthers-style-system-is-igniting-oilers-blazing-start/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Watch Live: Jets GM Kevin Cheveldayoff speaks after Hellebuyck trade",
-   "summary": "The Winnipeg Jets made one of the most consequential trades in franchise history on Friday, dealing star goalie Connor Hellebuyck to the New Jersey Devils. General manager Kevin Cheveldayoff will meet with the media to d",
-   "published": "2026-10-23T14:13-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/03/Chevy.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/watch-live-jets-gm-kevin-cheveldayoff-speaks-after-hellebuyck-trade/",
    "source": "Sportsnet"
   },
   {
@@ -3580,6 +3580,19 @@
   },
   {
    "league": "nfl",
+   "headline": "NOTEBOOK: St. Brown holds himself to high standard",
+   "summary": "Tim Twentyman covers all the Detroit Lions news of the day including wide receiver Amon-Ra St. Brown's performance, preparing for the Green Bay Packers and more.",
+   "published": "2026-10-23T14:30-04:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/jl07mwqdhw6wgjirm6bd.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Lions"
+   ],
+   "url": "https://www.detroitlions.com/news/detroit-lions-st-brown-holds-himself-to-high-standard-branch-petzing",
+   "source": "Team site"
+  },
+  {
+   "league": "nfl",
    "headline": "LIONS DAILY: Detroit turning to this veteran to replace Kennedy at punt returner",
    "summary": "",
    "published": "2026-10-23T10:00-04:00",
@@ -3758,19 +3771,6 @@
     "Detroit Lions"
    ],
    "url": "https://www.detroitlions.com/news/mike-bilina-of-sanford-meridian-high-school-named-the-detroit-lions-high-school-football-coach-of-the-week-week-8",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
-   "headline": "LIONS DAILY: Why Campbell feels better about Lions at 3-2 this year than 5-2 last year",
-   "summary": "",
-   "published": "2026-10-20T10:00-04:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/y8uh2q9v9kszqb5qzcp6.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Lions"
-   ],
-   "url": "https://www.detroitlions.com/news/lions-daily-why-campbell-feels-better-about-lions-at-3-2-this-year-than-5-2-last-year",
    "source": "Team site"
   },
   {
