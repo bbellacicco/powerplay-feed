@@ -574,15 +574,16 @@
     heads = heads || [];
     var key = items.concat(heads).concat(video ? [video] : []).map(function (s) { return s.url; }).join('|'); if (key === featKey) return; featKey = key;
     var box = document.getElementById('feat'); box.innerHTML = '';
-    var f = items[0], big = el('a', 'big'); big.href = f.url; big.target = '_top';
+    var f = items[0], big = el('a', 'big'); big.href = f.url;
+    if (f.url.indexOf(SITE) === 0) big.target = '_top'; else { big.target = '_blank'; big.rel = 'noopener'; }   // a story on another site opens in a new tab
     featImg(big, f, 1100, 620);
-    var ov = el('div', 'ov'); ov.appendChild(el('div', 'kick', storyCat(f, 'Latest')));
+    var ov = el('div', 'ov'); ov.appendChild(el('div', 'kick', /nhl\.com/.test(f.url) ? 'NHL' : f.team && f.team !== 'powerplay' ? (TEAM[f.team] || 'Latest') : storyCat(f, 'Latest')));
     ov.appendChild(el('h2', null, f.headline));
     if (f.summary && f.summary !== f.headline) ov.appendChild(el('p', null, f.summary));
     big.appendChild(ov);
     // share the top story through a powerplaywindsor.com landing page (the story up top, then on to the article)
     if (window.PPShare) {
-      var fsb = PPShare.button({ title: f.headline, url: SITE + 'scores-standings?tab=stories&s=' + skey(f.url) + '&team=powerplay',
+      var fsb = PPShare.button({ title: f.headline, url: SITE + 'scores-standings?tab=stories&s=' + skey(f.url) + '&team=' + encodeURIComponent(f.team || 'powerplay'),
         text: f.headline + ' | Powerplay Windsor', image: f.image ? wix(f.image, 1200, 630) : '' });
       fsb.classList.add('mini', 'topshare'); fsb.addEventListener('click', function (e) { e.preventDefault(); });
       big.appendChild(fsb);
