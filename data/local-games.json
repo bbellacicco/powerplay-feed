@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-22T22:01:57-04:00",
+ "updated": "2026-10-22T22:16:57-04:00",
  "today": "2026-10-22",
  "range": [
   "2026-10-19",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -3079,18 +3079,31 @@
  ],
  "more_news": [
   {
-   "league": "nba",
-   "headline": "No more easy wins: Raptors face tougher competition as NBA pushes parity",
-   "summary": "The Raptors have hopes of reaching great heights this season, but maintaining their dominance against the bottom third of the NBA will be just as important — and significantly more difficult.",
-   "published": "2026-10-22T16:19-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/raptors.jpg",
+   "league": "nhl",
+   "headline": "Stecher scores in final minute to lift Maple Leafs over Rangers",
+   "summary": "",
+   "published": "2026-10-22T22:05-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Stecher.jpg",
    "video": false,
    "teams": [
-    "Toronto Raptors"
+    "Toronto Maple Leafs"
    ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/no-more-easy-wins-raptors-face-tougher-competition-as-nba-pushes-parity/",
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/stecher-scores-in-final-minute-to-lift-maple-leafs-over-rangers/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Balanced scoring attack leads Sharks to victory over Senators",
+   "summary": "The San Jose Sharks picked up their first regulation win of the season Thursday night with a 6-2 win over the Ottawa Senators.",
+   "published": "2026-10-22T22:04-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Senators-vs-Sharks.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/balanced-scoring-attack-leads-sharks-to-victory-over-senators/",
    "source": "Sportsnet"
   },
   {
@@ -3171,19 +3184,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/panthers-cooper-black-becomes-tallest-goalie-to-play-nhl-game/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Former NHL player Ron Duguay dies at 69 after a bout with cancer",
-   "summary": "",
-   "published": "2026-10-22T10:18-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177131565.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/former-nhl-player-ron-duguay-dies-at-69-after-a-bout-with-cancer/",
    "source": "Sportsnet"
   },
   {
@@ -3280,6 +3280,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "No more easy wins: Raptors face tougher competition as NBA pushes parity",
+   "summary": "The Raptors have hopes of reaching great heights this season, but maintaining their dominance against the bottom third of the NBA will be just as important — and significantly more difficult.",
+   "published": "2026-10-22T16:19-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/raptors.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/no-more-easy-wins-raptors-face-tougher-competition-as-nba-pushes-parity/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Maple Leafs’ Jake McCabe avoids serious injury but advises young NHLers",
    "summary": "While Kent Johnson’s high stick didn’t seem intentional, Jake McCabe isn’t giving it a complete pass. Luke Fox breaks down what the Maple Leafs defenceman thinks after avoiding serious injury.",
@@ -3362,16 +3377,29 @@
    "source": "Sportsnet"
   },
   {
-   "league": "mlb",
-   "headline": "With lockout looming, World Series could be MLB’s last games for a while",
-   "summary": "On the eve of the World Series, there is a realization these may be Major League Baseball’s last games for a while.",
-   "published": "2026-10-22T20:39-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/world-series.jpg",
+   "league": "other",
+   "headline": "UFC 333 Cage Locks: Volkanovski, Evloev clash for featherweight gold",
+   "summary": "UFC 333 takes place in Abu Dhabi on Saturday with title fights and high-stakes matchups throughout the card. Get ready for all the action with the latest edition of Cage Locks.",
+   "published": "2026-10-22T14:43-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/02/volkanovski_alexander1280.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/with-lockout-looming-world-series-could-be-mlbs-last-games-for-a-while/",
+   "sport": "MMA",
+   "url": "https://www.sportsnet.ca/ufc/article/ufc-333-cage-locks-volkanovski-evloev-clash-for-featherweight-gold/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "NFL Week 7 Pick ‘Em: Can Chiefs stay perfect vs. champion Seahawks?",
+   "summary": "Is it Week 7 already? The NFL season is cruising along with surprising division leaders and even more surprising slow starts – not to mention we got our first firing of the year.",
+   "published": "2026-10-22T10:38-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Kansas-City-Chiefs-running-back-Kenneth-Walker-III.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 4,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-7-pick-em-patriots-back-in-primetime-spotlight-vs-bears/",
    "source": "Sportsnet"
   },
   {
@@ -3424,32 +3452,6 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/cfl/article/elks-dl-darien-newell-suspended-a-second-time-for-drug-violation/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "UFC 333 Cage Locks: Volkanovski, Evloev clash for featherweight gold",
-   "summary": "UFC 333 takes place in Abu Dhabi on Saturday with title fights and high-stakes matchups throughout the card. Get ready for all the action with the latest edition of Cage Locks.",
-   "published": "2026-10-22T14:43-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/02/volkanovski_alexander1280.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/ufc-333-cage-locks-volkanovski-evloev-clash-for-featherweight-gold/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "NFL Week 7 Pick ‘Em: Patriots back in primetime spotlight vs. Bears",
-   "summary": "Is it Week 7 already? The NFL season is cruising along with surprising division leaders and even more surprising slow starts – not to mention we got our first firing of the year.",
-   "published": "2026-10-22T10:38-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177121001-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 4,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-7-pick-em-patriots-back-in-primetime-spotlight-vs-bears/",
    "source": "Sportsnet"
   },
   {
@@ -3528,6 +3530,21 @@
    "sn_team_count": 0,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/wnba/article/wnba-finals-takeaways-reese-double-double-lifts-dream-to-2-1-series-lead/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "‘You can’t rush greatness’: Leonard deliberate in Raptors’ dominant opening win",
+   "summary": "Kawhi Leonard does things at his own pace. He’s deliberate and calculated. And while Wednesday’s blowout wasn’t an explosive reintroduction, it served as a good reminder. Michael Grange has the story.",
+   "published": "2026-10-22T01:02-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/kawhi-2-1.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/you-cant-rush-greatness-leonard-deliberate-in-raptors-dominant-opening-win/",
    "source": "Sportsnet"
   },
   {
