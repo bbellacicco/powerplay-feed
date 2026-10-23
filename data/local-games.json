@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23T14:31:43-04:00",
+ "updated": "2026-10-23T14:50:24-04:00",
  "today": "2026-10-23",
  "range": [
   "2026-10-20",
@@ -58,8 +58,8 @@
    "count": 0
   },
   "cfl": {
-   "ok": false,
-   "error": "<urlopen error [Errno 104] Connection reset by peer>"
+   "ok": true,
+   "count": 4
   },
   "cfl_news": {
    "ok": true,
@@ -3236,6 +3236,19 @@
   },
   {
    "league": "mlb",
+   "headline": "World Series preview: Brewers, Rays eye Fall Classic breakthrough",
+   "summary": "If one thing is clear entering this World Series, it’s that the Brewers and Rays were the best of the best in their respective leagues. Now, they’ll battle it out to become a first-time champion. Zach Worden previews the",
+   "published": "2026-10-23T08:54-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177077710.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/world-series-preview-brewers-rays-eye-fall-classic-breakthrough/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
    "headline": "Small factors that could swing a tight World Series",
    "summary": "The 2026 World Series could come down to finding small advantages throughout games. Nick Ashbourne highlights small factors that could swing a tight Fall Classic between the Brewers and Rays.",
    "published": "2026-10-23T11:00-04:00",
@@ -3284,32 +3297,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/rays-nick-martinez-to-start-game-1-of-world-series/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "World Series preview: Brewers, Rays eye Fall Classic breakthrough",
-   "summary": "If one thing is clear entering this World Series, it’s that the Brewers and Rays were the best of the best in their respective leagues. Now, they’ll battle it out to become a first-time champion. Zach Worden previews the",
-   "published": "2026-10-23T08:54-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177077710.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/world-series-preview-brewers-rays-eye-fall-classic-breakthrough/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "‘It’s just not real’: McDavid makes even more history in Oilers’ shootout win",
-   "summary": "It’s just obscene what Connor McDavid is doing in his 29-year old season, ripping through the competition even more surgically than in years past. On Thursday, he hit yet another milestone.",
-   "published": "2026-10-23T01:46-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/mcdavid-3.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/its-just-not-real-mcdavid-makes-even-more-history-in-oilers-shootout-win/",
    "source": "Sportsnet"
   },
   {
@@ -3375,6 +3362,19 @@
    "sn_team_count": 0,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/wnba/article/kelly-krauskopf-steps-down-as-indiana-fever-president/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "‘It’s just not real’: McDavid makes even more history in Oilers’ shootout win",
+   "summary": "It’s just obscene what Connor McDavid is doing in his 29-year old season, ripping through the competition even more surgically than in years past. On Thursday, he hit yet another milestone.",
+   "published": "2026-10-23T01:46-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/mcdavid-3.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/its-just-not-real-mcdavid-makes-even-more-history-in-oilers-shootout-win/",
    "source": "Sportsnet"
   },
   {
