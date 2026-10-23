@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-22T21:31:41-04:00",
+ "updated": "2026-10-22T21:46:40-04:00",
  "today": "2026-10-22",
  "range": [
   "2026-10-19",
@@ -1975,11 +1975,11 @@
    "home_away": "A",
    "opponent": "Soo Greyhounds",
    "location": "GFL Memorial Gardens, Sault Ste. Marie, ON",
-   "status": "live",
+   "status": "final",
    "our_score": 4,
-   "opp_score": 4,
-   "result": null,
-   "note": "04:15 OT",
+   "opp_score": 5,
+   "result": "OTL",
+   "note": "OT",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29106/"
    }
@@ -1993,11 +1993,11 @@
    "home_away": "H",
    "opponent": "St. Michaels Buzzers",
    "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
-   "status": "live",
+   "status": "final",
    "our_score": 7,
    "opp_score": 3,
-   "result": null,
-   "note": "Unofficial Final",
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16603"
    },
@@ -3148,16 +3148,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Golden Knights’ Marner unavailable vs. Blues due to family matter",
+   "league": "nfl",
+   "headline": "Pro Football Hall of Famer Marshall Faulk reveals he has Parkinson’s disease",
    "summary": "",
-   "published": "2026-10-22T19:46-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/marner.jpg",
+   "published": "2026-10-22T21:31-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/faulk.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/golden-knights-marner-unavailable-vs-blues-due-to-family-matter/",
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/pro-football-hall-of-famer-marshall-faulk-reveals-he-has-parkinsons-disease/",
    "source": "Sportsnet"
   },
   {
@@ -4145,15 +4145,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Blue Jays lead AL with 5 Gold Glove nominees",
+   "headline": "Watch LIVE: Blue Jays prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-14T13:07-04:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/wfbuwgporg32wfwjttw8",
+   "published": "2026-10-22T21:21-04:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
     "Toronto Blue Jays"
    ],
-   "url": "https://www.mlb.com/bluejays/news/2026-gold-glove-award-finalists",
+   "url": "https://www.mlb.com/bluejays/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
    "source": "Team site"
   },
   {
@@ -4184,6 +4184,19 @@
   },
   {
    "league": "mlb",
+   "headline": "Blue Jays lead AL with 5 Gold Glove nominees",
+   "summary": "",
+   "published": "2026-10-14T13:07-04:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/wfbuwgporg32wfwjttw8",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "url": "https://www.mlb.com/bluejays/news/2026-gold-glove-award-finalists",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
    "headline": "Early key to Blue Jays' offseason: Become more dangerous on the bases",
    "summary": "",
    "published": "2026-10-12T09:55-04:00",
@@ -4193,19 +4206,6 @@
     "Toronto Blue Jays"
    ],
    "url": "https://www.mlb.com/bluejays/news/blue-jays-aiming-to-get-better-at-baserunning",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
-   "headline": "Watch Blue Jays prospects in Arizona Fall League action",
-   "summary": "",
-   "published": "2026-10-22T21:21-04:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "url": "https://www.mlb.com/bluejays/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
    "source": "Team site"
   },
   {
@@ -4430,7 +4430,7 @@
       "l": 7,
       "otl": 0,
       "pts": 10,
-      "gf": 43,
+      "gf": 44,
       "ga": 45,
       "strk": "W2"
      },
@@ -4443,7 +4443,7 @@
       "otl": 2,
       "pts": 10,
       "gf": 34,
-      "ga": 43,
+      "ga": 44,
       "strk": "L1"
      }
     ]
@@ -4454,14 +4454,14 @@
      {
       "name": "Sudbury Wolves",
       "abbr": "SBY",
-      "gp": 10,
-      "w": 7,
+      "gp": 11,
+      "w": 8,
       "l": 2,
       "otl": 1,
-      "pts": 15,
+      "pts": 17,
       "gf": 47,
       "ga": 27,
-      "strk": "L2"
+      "strk": "W1"
      },
      {
       "name": "Niagara IceDogs",
@@ -4478,14 +4478,14 @@
      {
       "name": "North Bay Battalion",
       "abbr": "NB",
-      "gp": 11,
+      "gp": 12,
       "w": 4,
-      "l": 7,
+      "l": 8,
       "otl": 0,
       "pts": 8,
       "gf": 35,
       "ga": 45,
-      "strk": "L2"
+      "strk": "L3"
      },
      {
       "name": "Brampton Steelheads",
@@ -4502,14 +4502,14 @@
      {
       "name": "Barrie Colts",
       "abbr": "BAR",
-      "gp": 11,
-      "w": 1,
+      "gp": 12,
+      "w": 2,
       "l": 9,
       "otl": 1,
-      "pts": 3,
-      "gf": 22,
+      "pts": 5,
+      "gf": 23,
       "ga": 46,
-      "strk": "L5"
+      "strk": "W1"
      }
     ]
    },
@@ -4519,14 +4519,14 @@
      {
       "name": "Soo Greyhounds",
       "abbr": "SOO",
-      "gp": 11,
-      "w": 8,
+      "gp": 12,
+      "w": 9,
       "l": 2,
       "otl": 1,
-      "pts": 17,
-      "gf": 44,
+      "pts": 19,
+      "gf": 45,
       "ga": 38,
-      "strk": "L1"
+      "strk": "W1"
      },
      {
       "name": "Saginaw Spirit",
@@ -4567,13 +4567,13 @@
      {
       "name": "Windsor Spitfires",
       "abbr": "WSR",
-      "gp": 11,
+      "gp": 12,
       "w": 4,
       "l": 5,
-      "otl": 2,
-      "pts": 10,
+      "otl": 3,
+      "pts": 11,
       "gf": 41,
-      "ga": 44,
+      "ga": 45,
       "strk": "W1"
      }
     ]
@@ -4632,13 +4632,13 @@
      {
       "name": "Owen Sound Attack",
       "abbr": "OS",
-      "gp": 11,
+      "gp": 12,
       "w": 3,
       "l": 8,
-      "otl": 0,
-      "pts": 6,
+      "otl": 1,
+      "pts": 7,
       "gf": 28,
-      "ga": 51,
+      "ga": 52,
       "strk": "W1"
      }
     ]
@@ -4723,14 +4723,14 @@
      {
       "name": "St. Michaels Buzzers",
       "abbr": "STM",
-      "gp": 15,
+      "gp": 16,
       "w": 6,
-      "l": 8,
+      "l": 9,
       "otl": 1,
       "pts": 13,
       "gf": 48,
       "ga": 72,
-      "strk": "L2"
+      "strk": "L3"
      },
      {
       "name": "Aurora Tigers",
@@ -4834,6 +4834,18 @@
       "strk": "W8"
      },
      {
+      "name": "Leamington Flyers",
+      "abbr": "LEA",
+      "gp": 15,
+      "w": 12,
+      "l": 2,
+      "otl": 1,
+      "pts": 25,
+      "gf": 61,
+      "ga": 26,
+      "strk": "W5"
+     },
+     {
       "name": "Toronto Patriots",
       "abbr": "PAT",
       "gp": 15,
@@ -4844,18 +4856,6 @@
       "gf": 82,
       "ga": 28,
       "strk": "W7"
-     },
-     {
-      "name": "Leamington Flyers",
-      "abbr": "LEA",
-      "gp": 14,
-      "w": 11,
-      "l": 2,
-      "otl": 1,
-      "pts": 23,
-      "gf": 61,
-      "ga": 26,
-      "strk": "W4"
      },
      {
       "name": "Burlington Cougars",
@@ -4951,14 +4951,14 @@
      {
       "name": "St. Marys Lincolns",
       "abbr": "SMY",
-      "gp": 12,
-      "w": 11,
+      "gp": 13,
+      "w": 12,
       "l": 1,
       "otl": 0,
-      "pts": 22,
+      "pts": 24,
       "gf": 85,
       "ga": 28,
-      "strk": "W9"
+      "strk": "W10"
      },
      {
       "name": "Chatham Maroons",
@@ -5083,14 +5083,14 @@
      {
       "name": "Sarnia Legionnaires",
       "abbr": "SAR",
-      "gp": 9,
+      "gp": 10,
       "w": 0,
-      "l": 9,
+      "l": 10,
       "otl": 0,
       "pts": 0,
       "gf": 19,
       "ga": 66,
-      "strk": "L9"
+      "strk": "L10"
      }
     ]
    },
@@ -5189,7 +5189,7 @@
       "l": 5,
       "otl": 0,
       "pts": 10,
-      "gf": 54,
+      "gf": 57,
       "ga": 57,
       "strk": "L2"
      },
@@ -5226,7 +5226,7 @@
       "otl": 0,
       "pts": 2,
       "gf": 34,
-      "ga": 65,
+      "ga": 68,
       "strk": "L6"
      },
      {
