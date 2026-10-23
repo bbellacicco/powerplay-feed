@@ -450,8 +450,9 @@
       if (i < 0) return false;
       if (state.tab !== tab) setTab(tab);
       state.chip = 'all'; state.team = ''; state.q = ''; state.page = Math.floor(i / PER); chips(); grid();
-      var cardEl = document.querySelectorAll('#grid .card')[i % PER];
-      if (cardEl) play(data[tab][i], cardEl);
+      // a shared link: the player opens right at the top, so it's the first thing the visitor sees
+      play(data[tab][i], { offsetTop: 0 });
+      try { player.scrollIntoView({ block: 'start' }); } catch (e) {}
       return true;
     });
   }
