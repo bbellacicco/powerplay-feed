@@ -104,7 +104,8 @@
 <script>
 (function () {
   var REPO = 'https://bbellacicco.github.io/powerplay-feed/';
-  var q = new URLSearchParams(location.search), show = (q.get('show') || 'example').replace(/[^\w-]/g, '');
+  // ?show=<folder> opens that slideshow; with none, the newest one in the slideshow list
+  var q = new URLSearchParams(location.search), show = (q.get('show') || '').replace(/[^\w-]/g, '');
   var base = REPO + 'slideshows/' + show + '/';
   var slides = [], at = 0, timer = null, SECONDS = 5;
   var $ = function (id) { return document.getElementById(id); };
@@ -157,6 +158,7 @@
   }
 
   var meta = {};
+  function start() {
   fetch(base + 'captions.txt?t=' + Date.now()).then(function (r) { if (!r.ok) throw r.status; return r.text(); }).then(function (txt) {
     var d = parse(txt); meta = d.meta; slides = d.slides;
     if (!slides.length) throw 'empty';
@@ -186,6 +188,12 @@
   }).catch(function () {
     $('stage').innerHTML = '<div class="msg">This slideshow isn’t up yet.</div>'; $('cap').style.display = 'none';
   });
+  }
+  if (show) start();
+  else fetch(REPO + 'data/slideshows.json?t=' + Date.now()).then(function (r) { return r.json(); }).then(function (j) {
+    var first = (j.slideshows || [])[0];
+    show = first ? first.key : 'example'; base = REPO + 'slideshows/' + show + '/'; start();
+  }).catch(function () { show = 'example'; base = REPO + 'slideshows/example/'; start(); });
 
   $('prev').onclick = function () { go(at - 1); };
   $('next').onclick = function () { go(at + 1); };
