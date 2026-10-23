@@ -1,9 +1,9 @@
 {
- "updated": "2026-10-22T23:55:21-04:00",
- "today": "2026-10-22",
+ "updated": "2026-10-23T00:05:19-04:00",
+ "today": "2026-10-23",
  "range": [
-  "2026-10-19",
-  "2026-10-25"
+  "2026-10-20",
+  "2026-10-26"
  ],
  "teams": {
   "spitfires": {
@@ -111,46 +111,6 @@
   }
  },
  "games": [
-  {
-   "id": "highschool-2026-10-19-81",
-   "team": "highschool",
-   "sport": "Junior Boys Volleyball",
-   "start": "2026-10-19T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Assumption",
-   "location": "Assumption School",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 0,
-   "result": null,
-   "note": "Tier 1 · date change",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Erie Migration",
-   "home": "Assumption"
-  },
-  {
-   "id": "highschool-2026-10-19-82",
-   "team": "highschool",
-   "sport": "Senior Boys Volleyball",
-   "start": "2026-10-19T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Assumption",
-   "location": "Assumption School",
-   "status": "final",
-   "our_score": 1,
-   "opp_score": 2,
-   "result": null,
-   "note": "Tier 1 · date change",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Erie Migration",
-   "home": "Assumption"
-  },
   {
    "id": "highschool-2026-10-20-83",
    "team": "highschool",
@@ -3291,21 +3251,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nba",
-   "headline": "No more easy wins: Raptors face tougher competition as NBA pushes parity",
-   "summary": "The Raptors have hopes of reaching great heights this season, but maintaining their dominance against the bottom third of the NBA will be just as important — and significantly more difficult.",
-   "published": "2026-10-22T16:19-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/raptors.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/no-more-easy-wins-raptors-face-tougher-competition-as-nba-pushes-parity/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "Panthers’ Cooper Black becomes tallest goalie to play NHL game",
    "summary": "",
@@ -3332,16 +3277,18 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Nikishin not part of Hurricanes’ trade offer to Jets for Hellebuyck",
-   "summary": "Sportsnet’s Elliotte Friedman and Kyle Bukauskas discussed the latest in the star goaltender’s trade-request saga on Thursday’s episode of 32 Thoughts: The Podcast.",
-   "published": "2026-10-22T17:51-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/nikishin.jpg",
+   "league": "nba",
+   "headline": "No more easy wins: Raptors face tougher competition as NBA pushes parity",
+   "summary": "The Raptors have hopes of reaching great heights this season, but maintaining their dominance against the bottom third of the NBA will be just as important — and significantly more difficult.",
+   "published": "2026-10-22T16:19-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/raptors.jpg",
    "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/nikishin-not-part-of-hurricanes-trade-offer-to-jets-for-hellebuyck/",
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/no-more-easy-wins-raptors-face-tougher-competition-as-nba-pushes-parity/",
    "source": "Sportsnet"
   },
   {
@@ -3387,6 +3334,34 @@
   },
   {
    "league": "nhl",
+   "headline": "Nikishin not part of Hurricanes’ trade offer to Jets for Hellebuyck",
+   "summary": "Sportsnet’s Elliotte Friedman and Kyle Bukauskas discussed the latest in the star goaltender’s trade-request saga on Thursday’s episode of 32 Thoughts: The Podcast.",
+   "published": "2026-10-22T17:51-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/nikishin.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/nikishin-not-part-of-hurricanes-trade-offer-to-jets-for-hellebuyck/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Red Wings looking for young centres in trade talks",
+   "summary": "",
+   "published": "2026-10-22T19:48-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Detroit-Red-Wings-defenseman-Simon-Edvinsson.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Red Wings"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/red-wings-looking-for-young-centres-in-trade-talks/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "NHL Power Rankings: Checking in on the new guy",
    "summary": "After a few months of speculation, we’re seeing familiar faces in new places hit their stride. Emily Sadler checks in on the newcomers on all 32 teams in this week’s power rankings.",
    "published": "2026-10-22T12:43-04:00",
@@ -3411,21 +3386,6 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/whl/article/why-15-year-old-madden-daneault-already-is-excelling-in-the-whl-hes-an-anomaly/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Red Wings looking for young centres in trade talks",
-   "summary": "",
-   "published": "2026-10-22T19:48-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Detroit-Red-Wings-defenseman-Simon-Edvinsson.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Red Wings"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/red-wings-looking-for-young-centres-in-trade-talks/",
    "source": "Sportsnet"
   },
   {
@@ -3926,7 +3886,7 @@
    "league": "mlb",
    "headline": "Watch Tigers prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-22T21:21-04:00",
+   "published": "2026-10-22T23:59-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -4145,9 +4105,9 @@
   },
   {
    "league": "mlb",
-   "headline": "Watch LIVE: Blue Jays prospects in Arizona Fall League action",
+   "headline": "Watch Blue Jays prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-22T21:21-04:00",
+   "published": "2026-10-22T23:59-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
