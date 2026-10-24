@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23T21:46:54-04:00",
+ "updated": "2026-10-23T22:02:05-04:00",
  "today": "2026-10-23",
  "range": [
   "2026-10-20",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 36
+   "count": 37
   },
   "club_news": {
    "ok": true,
@@ -2064,10 +2064,10 @@
    "home_away": "A",
    "opponent": "Dresden Kings",
    "location": "Lambton-Kent Memorial Centre",
-   "status": "live",
-   "our_score": 0,
-   "opp_score": 0,
-   "result": null,
+   "status": "final",
+   "our_score": 4,
+   "opp_score": 1,
+   "result": "W",
    "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960433?configuration=45"
@@ -2264,28 +2264,6 @@
  ],
  "pro_games": [
   {
-   "id": "cfl-cfl6669",
-   "team": "cfl",
-   "sport": "CFL",
-   "start": "2026-10-23T22:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "B.C. Lions",
-   "location": "BC Place",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.cfl.ca/schedule/"
-   },
-   "away": "Winnipeg Blue Bombers",
-   "home": "B.C. Lions",
-   "away_abbr": "WPG",
-   "home_abbr": "BC"
-  },
-  {
    "id": "cfl-cfl6670",
    "team": "cfl",
    "sport": "CFL",
@@ -2338,9 +2316,9 @@
    "home_away": "N",
    "opponent": "Toronto Argonauts",
    "location": "BMO Field",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "final",
+   "our_score": 33,
+   "opp_score": 16,
    "result": null,
    "note": "",
    "links": {
@@ -2350,9 +2328,44 @@
    "home": "Toronto Argonauts",
    "away_abbr": "MTL",
    "home_abbr": "TOR"
+  },
+  {
+   "id": "cfl-cfl6669",
+   "team": "cfl",
+   "sport": "CFL",
+   "start": "2026-10-23T22:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "B.C. Lions",
+   "location": "BC Place",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.cfl.ca/schedule/"
+   },
+   "away": "Winnipeg Blue Bombers",
+   "home": "B.C. Lions",
+   "away_abbr": "WPG",
+   "home_abbr": "BC"
   }
  ],
  "pro_news": [
+  {
+   "league": "cfl",
+   "headline": "KASEEM FERDINAND SEALS IT FOR THE ALS!",
+   "summary": "",
+   "published": "2026-10-23T21:44:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/1uWtvy6kFuPiwyeTxs30pa/5ee26af3625f4003c140c9de522cfe54/Untitled-1.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Alouettes"
+   ],
+   "url": "https://www.cfl.ca/article/kaseem-ferdinand-seals-it-for-the-als",
+   "source": "CFL.ca"
+  },
   {
    "league": "cfl",
    "headline": "Unreal First CFL TD for Tucker Horn!",
@@ -2632,19 +2645,6 @@
     "Roughriders"
    ],
    "url": "https://www.cfl.ca/article/entire-playoff-clinching-drive-for-the-roughriders",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Dustin Crum has his first TD for the Alouettes!",
-   "summary": "",
-   "published": "2026-10-17T15:22:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/2UAGPdSayJb4qOcZZhuAvo/88d155284ae7068730b77d8b13572202/MTL_1ST_TD.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Alouettes"
-   ],
-   "url": "https://www.cfl.ca/article/dustin-crum-has-his-first-td-for-the-alouettes",
    "source": "CFL.ca"
   },
   {
@@ -3046,6 +3046,21 @@
  ],
  "more_news": [
   {
+   "league": "nba",
+   "headline": "Barnes, Barrett lead stingy Raptors to win over Wizards",
+   "summary": "Scottie Barnes had 28 points and 14 rebounds, and the Toronto Raptors continued their stellar defensive start to the season with a 112-102 victory over the Washington Wizards on Friday night.",
+   "published": "2026-10-23T22:00-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Raps-1.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/barnes-barrett-lead-stingy-raptors-to-win-over-wizards/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Scout’s Analysis: Breaking down the Connor Hellebuyck blockbuster trade",
    "summary": "The New Jersey Devils are the winners of the Connor Hellebuyck sweepstakes, pulling off a big trade with Winnipeg right as the goaltender was scheduled to return to the team. Jason Bukala breaks down both sides of the de",
@@ -3337,6 +3352,19 @@
   },
   {
    "league": "other",
+   "headline": "Canada rolls past England again in women’s rugby",
+   "summary": "",
+   "published": "2026-10-23T21:20-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/cf1e830b0ac8ed876cf62a9c90731b3be50081ce5ce9e3b8ebb369bda306516a.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "More Sports",
+   "url": "https://www.sportsnet.ca/more/article/canada-rolls-past-england-again-in-womens-rugby/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
    "headline": "Breakout midfielder Alonso Coello central to Toronto FC’s playoff push",
    "summary": "Alonso Coello has played over 100 matches with Toronto FC — but none in the MLS post-season. Now, the Spanish midfielder, in the midst of a career year, has his sights set on changing that.",
    "published": "2026-10-23T11:40-04:00",
@@ -3504,19 +3532,6 @@
    "sn_team_count": 0,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/ncaa-mens-basketball/article/dale-brown-well-regarded-lsu-basketball-coach-dies-at-age-90/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Tyrrell Hatton, Ian Poulter announce departure from LIV Golf",
-   "summary": "",
-   "published": "2026-10-23T15:05-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/tyrrell-hatton.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Golf",
-   "url": "https://www.sportsnet.ca/golf/article/tyrrell-hatton-ian-poulter-announce-departure-from-liv-golf/",
    "source": "Sportsnet"
   },
   {
@@ -4249,7 +4264,7 @@
      "pts": 26,
      "pf": 532,
      "pa": 421,
-     "flags": "y"
+     "flags": ""
     },
     {
      "abbr": "BC",
@@ -4261,7 +4276,7 @@
      "pts": 20,
      "pf": 506,
      "pa": 450,
-     "flags": "x"
+     "flags": ""
     },
     {
      "abbr": "SSK",
@@ -4273,7 +4288,7 @@
      "pts": 18,
      "pf": 470,
      "pa": 464,
-     "flags": "x"
+     "flags": ""
     },
     {
      "abbr": "CGY",
@@ -4307,26 +4322,26 @@
     {
      "abbr": "MTL",
      "name": "Montreal Alouettes",
-     "gp": 17,
-     "w": 13,
+     "gp": 18,
+     "w": 14,
      "l": 4,
      "t": 0,
-     "pts": 26,
-     "pf": 591,
-     "pa": 460,
-     "flags": "y"
+     "pts": 28,
+     "pf": 624,
+     "pa": 476,
+     "flags": ""
     },
     {
      "abbr": "TOR",
      "name": "Toronto Argonauts",
-     "gp": 17,
+     "gp": 18,
      "w": 9,
-     "l": 8,
+     "l": 9,
      "t": 0,
      "pts": 18,
-     "pf": 501,
-     "pa": 495,
-     "flags": "x"
+     "pf": 517,
+     "pa": 528,
+     "flags": ""
     },
     {
      "abbr": "HAM",
@@ -4397,27 +4412,27 @@
       "strk": "L1"
      },
      {
+      "name": "Oshawa Generals",
+      "abbr": "OSH",
+      "gp": 14,
+      "w": 5,
+      "l": 6,
+      "otl": 3,
+      "pts": 13,
+      "gf": 39,
+      "ga": 44,
+      "strk": "W1"
+     },
+     {
       "name": "Peterborough Petes",
       "abbr": "PBO",
-      "gp": 13,
+      "gp": 14,
       "w": 6,
-      "l": 7,
+      "l": 8,
       "otl": 0,
       "pts": 12,
       "gf": 44,
       "ga": 50,
-      "strk": "W3"
-     },
-     {
-      "name": "Oshawa Generals",
-      "abbr": "OSH",
-      "gp": 13,
-      "w": 4,
-      "l": 6,
-      "otl": 3,
-      "pts": 11,
-      "gf": 39,
-      "ga": 44,
       "strk": "L1"
      }
     ]
@@ -4558,14 +4573,14 @@
      {
       "name": "Guelph Storm",
       "abbr": "GUE",
-      "gp": 11,
+      "gp": 12,
       "w": 9,
-      "l": 2,
+      "l": 3,
       "otl": 0,
       "pts": 18,
       "gf": 51,
       "ga": 33,
-      "strk": "W9"
+      "strk": "L1"
      },
      {
       "name": "London Knights",
@@ -4582,14 +4597,14 @@
      {
       "name": "Kitchener Rangers",
       "abbr": "KIT",
-      "gp": 13,
-      "w": 6,
+      "gp": 14,
+      "w": 7,
       "l": 5,
       "otl": 2,
-      "pts": 14,
+      "pts": 16,
       "gf": 43,
       "ga": 43,
-      "strk": "W2"
+      "strk": "W3"
      },
      {
       "name": "Erie Otters",
@@ -4631,7 +4646,7 @@
       "otl": 0,
       "pts": 28,
       "gf": 73,
-      "ga": 48,
+      "ga": 49,
       "strk": "L1"
      },
      {
@@ -4642,7 +4657,7 @@
       "l": 5,
       "otl": 2,
       "pts": 22,
-      "gf": 69,
+      "gf": 70,
       "ga": 60,
       "strk": "L1"
      },
@@ -4731,6 +4746,18 @@
       "strk": "L7"
      },
      {
+      "name": "Lindsay Muskies",
+      "abbr": "LIN",
+      "gp": 15,
+      "w": 4,
+      "l": 11,
+      "otl": 0,
+      "pts": 8,
+      "gf": 56,
+      "ga": 83,
+      "strk": "W1"
+     },
+     {
       "name": "Toronto Warriors",
       "abbr": "TOW",
       "gp": 16,
@@ -4752,18 +4779,6 @@
       "pts": 7,
       "gf": 38,
       "ga": 77,
-      "strk": "W1"
-     },
-     {
-      "name": "Lindsay Muskies",
-      "abbr": "LIN",
-      "gp": 15,
-      "w": 4,
-      "l": 11,
-      "otl": 0,
-      "pts": 8,
-      "gf": 56,
-      "ga": 83,
       "strk": "W1"
      }
     ]
@@ -4947,6 +4962,18 @@
       "strk": "L1"
      },
      {
+      "name": "Listowel Cyclones",
+      "abbr": "LIS",
+      "gp": 14,
+      "w": 8,
+      "l": 3,
+      "otl": 3,
+      "pts": 19,
+      "gf": 57,
+      "ga": 43,
+      "strk": "W2"
+     },
+     {
       "name": "St. Thomas Stars",
       "abbr": "STT",
       "gp": 11,
@@ -4959,28 +4986,28 @@
       "strk": "W1"
      },
      {
-      "name": "Listowel Cyclones",
-      "abbr": "LIS",
-      "gp": 13,
-      "w": 7,
-      "l": 3,
-      "otl": 3,
-      "pts": 17,
-      "gf": 57,
-      "ga": 43,
-      "strk": "W1"
-     },
-     {
       "name": "Stratford Warriors",
       "abbr": "SFD",
-      "gp": 10,
+      "gp": 11,
       "w": 7,
       "l": 3,
-      "otl": 0,
-      "pts": 14,
+      "otl": 1,
+      "pts": 15,
       "gf": 42,
-      "ga": 34,
+      "ga": 35,
       "strk": "W7"
+     },
+     {
+      "name": "Strathroy Rockets",
+      "abbr": "SRY",
+      "gp": 14,
+      "w": 5,
+      "l": 7,
+      "otl": 2,
+      "pts": 12,
+      "gf": 59,
+      "ga": 58,
+      "strk": "W2"
      },
      {
       "name": "Elmira Sugar Kings",
@@ -5026,20 +5053,8 @@
       "l": 7,
       "otl": 0,
       "pts": 10,
-      "gf": 41,
+      "gf": 42,
       "ga": 52,
-      "strk": "W1"
-     },
-     {
-      "name": "Strathroy Rockets",
-      "abbr": "SRY",
-      "gp": 13,
-      "w": 4,
-      "l": 7,
-      "otl": 2,
-      "pts": 10,
-      "gf": 58,
-      "ga": 58,
       "strk": "W1"
      },
      {
@@ -5051,20 +5066,20 @@
       "otl": 0,
       "pts": 8,
       "gf": 42,
-      "ga": 63,
+      "ga": 64,
       "strk": "L6"
      },
      {
       "name": "Sarnia Legionnaires",
       "abbr": "SAR",
-      "gp": 10,
+      "gp": 11,
       "w": 0,
-      "l": 10,
+      "l": 11,
       "otl": 0,
       "pts": 0,
       "gf": 21,
       "ga": 70,
-      "strk": "L10"
+      "strk": "L11"
      }
     ]
    },
@@ -5374,6 +5389,18 @@
     "group": "PJHL West Stobbs",
     "teams": [
      {
+      "name": "Essex 73's",
+      "abbr": "ESS",
+      "gp": 14,
+      "w": 13,
+      "l": 1,
+      "otl": 0,
+      "pts": 26,
+      "gf": 55,
+      "ga": 19,
+      "strk": "W12"
+     },
+     {
       "name": "Lakeshore Canadiens",
       "abbr": "LAK",
       "gp": 15,
@@ -5384,18 +5411,6 @@
       "gf": 61,
       "ga": 26,
       "strk": "W1"
-     },
-     {
-      "name": "Essex 73's",
-      "abbr": "ESS",
-      "gp": 13,
-      "w": 12,
-      "l": 1,
-      "otl": 0,
-      "pts": 24,
-      "gf": 51,
-      "ga": 18,
-      "strk": "W11"
      },
      {
       "name": "Blenheim Blades",
@@ -5412,14 +5427,14 @@
      {
       "name": "Dresden Kings",
       "abbr": "DRE",
-      "gp": 15,
+      "gp": 16,
       "w": 8,
-      "l": 6,
+      "l": 7,
       "otl": 1,
       "pts": 17,
-      "gf": 72,
-      "ga": 56,
-      "strk": "W1"
+      "gf": 73,
+      "ga": 60,
+      "strk": "L1"
      },
      {
       "name": "Wheatley Sharks",
