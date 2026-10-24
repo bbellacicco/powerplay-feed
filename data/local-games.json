@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24T00:50:56-04:00",
+ "updated": "2026-10-24T01:16:54-04:00",
  "today": "2026-10-24",
  "range": [
   "2026-10-21",
@@ -1492,9 +1492,9 @@
    "home_away": "N",
    "opponent": "B.C. Lions",
    "location": "BC Place",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "final",
+   "our_score": 34,
+   "opp_score": 10,
    "result": null,
    "note": "",
    "links": {
@@ -1507,6 +1507,32 @@
   }
  ],
  "pro_news": [
+  {
+   "league": "cfl",
+   "headline": "BRADY OLIVEIRA RUNS FOR LONG TD TO GIVE BLUE BOMBERS THE LEAD",
+   "summary": "",
+   "published": "2026-10-24T00:50:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/8tIL3vjvJHRIVJKVB7oKK/18fe324d7952fb11e794e8020ddac23c/WPG_2ND_TD.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Blue Bombers"
+   ],
+   "url": "https://www.cfl.ca/article/brady-oliveira-runs-for-long-td-to-give-blue-bombers-the-lead",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Dru Brown comes into game late and makes an IMMEDIATE Impact!",
+   "summary": "",
+   "published": "2026-10-24T00:27:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/1gjBVaZP1Gbsv9WXmiHiGM/dd77e3c2d224a91ed30e00d9851e38d1/WPG_1ST_TD.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Blue Bombers"
+   ],
+   "url": "https://www.cfl.ca/article/dru-brown-comes-into-game-late-and-makes-an-immediate-impact",
+   "source": "CFL.ca"
+  },
   {
    "league": "cfl",
    "headline": "Recap: Montreal 33, Toronto 16",
@@ -1772,33 +1798,6 @@
     "Argonauts"
    ],
    "url": "https://www.cfl.ca/article/argonauts-ink-american-linebacker-vi-jones",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Recap: Calgary 32, BC 13",
-   "summary": "",
-   "published": "2026-10-17T22:44:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/7rav99ClgzzRLiVxuR04uy/a8be212b8878837e940c8d36eae5ad77/BC_VS_CGY_THMB_ENG.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Stampeders",
-    "Lions"
-   ],
-   "url": "https://www.cfl.ca/article/recap-calgary-32-bc-13",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "WHAT A CATCH BY JUSTIN MCINNIS!",
-   "summary": "",
-   "published": "2026-10-17T19:32:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/2SjV3zw1k0gCYkAEuuVsvO/958159d5c3ec309107f5ec379ac286de/Untitled-1.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Lions"
-   ],
-   "url": "https://www.cfl.ca/article/what-a-catch-by-justin-mcinnis",
    "source": "CFL.ca"
   },
   {
@@ -2294,6 +2293,19 @@
   },
   {
    "league": "cfl",
+   "headline": "Blue Bombers clinch final playoff spot with win over Lions",
+   "summary": "",
+   "published": "2026-10-24T01:01-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Bombers.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/blue-bombers-clinch-final-playoff-spot-with-win-over-lions/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "cfl",
    "headline": "Blue Bombers QB Zach Collaros exits must-win game vs. Lions",
    "summary": "",
    "published": "2026-10-24T00:24-04:00",
@@ -2316,19 +2328,6 @@
    "sn_team_count": 0,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/mlbpa-head-bruce-meyer-reaffirms-that-players-have-no-interest-in-salary-cap/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Oilers’ Mattias Ekholm out vs. Maple Leafs with concussion",
-   "summary": "",
-   "published": "2026-10-23T15:30-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/Edmonton-Oilers-defenseman-Mattias-Ekholm.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/oilers-mattias-ekholm-out-vs-maple-leafs-with-concussion/",
    "source": "Sportsnet"
   },
   {
@@ -3356,13 +3355,13 @@
     {
      "abbr": "BC",
      "name": "BC Lions",
-     "gp": 17,
+     "gp": 18,
      "w": 10,
-     "l": 7,
+     "l": 8,
      "t": 0,
      "pts": 20,
-     "pf": 506,
-     "pa": 450,
+     "pf": 516,
+     "pa": 484,
      "flags": "x"
     },
     {
@@ -3392,14 +3391,14 @@
     {
      "abbr": "WPG",
      "name": "Winnipeg Blue Bombers",
-     "gp": 17,
-     "w": 8,
+     "gp": 18,
+     "w": 9,
      "l": 9,
      "t": 0,
-     "pts": 16,
-     "pf": 443,
-     "pa": 482,
-     "flags": ""
+     "pts": 18,
+     "pf": 477,
+     "pa": 492,
+     "flags": "x"
     }
    ]
   },
