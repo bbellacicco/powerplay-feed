@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24T18:01:40-04:00",
+ "updated": "2026-10-24T18:20:14-04:00",
  "today": "2026-10-24",
  "range": [
   "2026-10-21",
@@ -2098,50 +2098,6 @@
  ],
  "pro_games": [
   {
-   "id": "cfl-cfl6670",
-   "team": "cfl",
-   "sport": "CFL",
-   "start": "2026-10-24T15:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Hamilton Tiger-Cats",
-   "location": "Hamilton Stadium",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.cfl.ca/schedule/"
-   },
-   "away": "Ottawa REDBLACKS",
-   "home": "Hamilton Tiger-Cats",
-   "away_abbr": "OTT",
-   "home_abbr": "HAM"
-  },
-  {
-   "id": "cfl-cfl6671",
-   "team": "cfl",
-   "sport": "CFL",
-   "start": "2026-10-24T15:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Saskatchewan Roughriders",
-   "location": "Mosaic Stadium",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.cfl.ca/schedule/"
-   },
-   "away": "Edmonton Elks",
-   "home": "Saskatchewan Roughriders",
-   "away_abbr": "EDM",
-   "home_abbr": "SSK"
-  },
-  {
    "id": "cfl-cfl6668",
    "team": "cfl",
    "sport": "CFL",
@@ -2184,6 +2140,50 @@
    "home": "B.C. Lions",
    "away_abbr": "WPG",
    "home_abbr": "BC"
+  },
+  {
+   "id": "cfl-cfl6671",
+   "team": "cfl",
+   "sport": "CFL",
+   "start": "2026-10-24T15:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Saskatchewan Roughriders",
+   "location": "Mosaic Stadium",
+   "status": "final",
+   "our_score": 9,
+   "opp_score": 16,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.cfl.ca/schedule/"
+   },
+   "away": "Edmonton Elks",
+   "home": "Saskatchewan Roughriders",
+   "away_abbr": "EDM",
+   "home_abbr": "SSK"
+  },
+  {
+   "id": "cfl-cfl6670",
+   "team": "cfl",
+   "sport": "CFL",
+   "start": "2026-10-24T15:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Hamilton Tiger-Cats",
+   "location": "Hamilton Stadium",
+   "status": "final",
+   "our_score": 22,
+   "opp_score": 35,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.cfl.ca/schedule/"
+   },
+   "away": "Ottawa REDBLACKS",
+   "home": "Hamilton Tiger-Cats",
+   "away_abbr": "OTT",
+   "home_abbr": "HAM"
   }
  ],
  "pro_news": [
@@ -2912,16 +2912,42 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "‘I just feel gratitude’: Hughes reflects on Canucks tenure ahead of return",
+   "summary": "The defenceman will be greeted by a degree of hostility Sunday when he steps on the ice at Rogers Arena from the visitors’ bench for the first time.",
+   "published": "2026-10-24T18:08-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Quinn-Hughes.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/i-just-feel-gratitude-hughes-reflects-on-canucks-tenure-ahead-of-return/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
-   "headline": "Alexander Volkanovski stops Movsar Evloev to defend featherweight belt at UFC 333",
-   "summary": "Alexander Volkanovski stopped Movsar Evloev to defend his belt in a fight that was close on paper, but not in how it played out inside the Octagon. Adam Martin breaks down the action from an exciting UFC 333 card.",
-   "published": "2026-10-24T17:39-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/04/Alexander-Volkonovski-UFC.jpg",
+   "headline": "Toronto FC’s second-half rally falls short vs. Columbus Crew",
+   "summary": "",
+   "published": "2026-10-24T18:03-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Toronto-FC-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/toronto-fcs-second-half-rally-falls-short-vs-columbus-crew/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "cfl",
+   "headline": "Argonauts to face Blue Bombers in East semifinal",
+   "summary": "",
+   "published": "2026-10-24T18:06-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/Untitled-design-1-65.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/alexander-volkanovski-stops-movsar-evloev-to-defend-featherweight-belt-at-ufc-333/",
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/argonauts-to-face-blue-bombers-in-east-semifinal/",
    "source": "Sportsnet"
   },
   {
@@ -2935,6 +2961,32 @@
    "sn_team_count": 0,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/wnba/article/wnba-finals-takeaways-valkyries-return-to-defensive-identity-to-tie-series/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Alexander Volkanovski stops Movsar Evloev to defend featherweight belt at UFC 333",
+   "summary": "Alexander Volkanovski stopped Movsar Evloev to defend his belt in a fight that was close on paper, but not in how it played out inside the Octagon. Adam Martin breaks down the action from an exciting UFC 333 card.",
+   "published": "2026-10-24T17:39-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/04/Alexander-Volkonovski-UFC.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "MMA",
+   "url": "https://www.sportsnet.ca/ufc/article/alexander-volkanovski-stops-movsar-evloev-to-defend-featherweight-belt-at-ufc-333/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "cfl",
+   "headline": "CFL playoff schedule, matchups set after regular-season finale",
+   "summary": "",
+   "published": "2026-10-24T18:07-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/11/roughriders-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/cfl-playoff-schedule-matchups-set-after-regular-season-finale/",
    "source": "Sportsnet"
   },
   {
@@ -2978,19 +3030,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Senators’ Johansson to start vs. Rangers, Burakovsky draws back in",
-   "summary": "Forward Andre Burakovsky is slated to replace Hayden Hodgson, while veteran goalie Jonas Johansson will man the crease, the head coach told reporters before puck drop (Sportsnet 360 and Sportsnet+, 7 p.m. ET / 4 p.m. PT)",
-   "published": "2026-10-24T11:37-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Jonas.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/senators-johansson-to-start-vs-rangers-burakovsky-draws-back-in/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Capitals claim defenceman Jack St. Ivany off waivers from Jets",
    "summary": "The Winnipeg Jets defenceman was claimed off waivers Saturday by the Washington Capitals, the team announced.",
    "published": "2026-10-24T14:26-04:00",
@@ -3013,32 +3052,6 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/ravens-lamar-jackson-ruled-out-vs-bengals-with-ankle-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "CF Montreal eliminated from playoff contention with shutout loss to Nashville",
-   "summary": "",
-   "published": "2026-10-24T15:51-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/hennadii-synchuk.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/cf-montreal-eliminated-from-playoff-contention-with-shutout-loss-to-nashville/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Former NBA player Malik Beasley negotiating plea deal over gambling charges",
-   "summary": "Former NBA player Malik Beasley is negotiating a plea agreement with the Department of Justice after initially pleading not guilty to charges that he altered his play in certain games in 2024 to enrich sports bettors and",
-   "published": "2026-10-24T14:21-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/beas.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/former-nba-player-malik-beasley-negotiating-plea-deal-over-gambling-charges/",
    "source": "Sportsnet"
   },
   {
@@ -3070,6 +3083,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "Former NBA player Malik Beasley negotiating plea deal over gambling charges",
+   "summary": "Former NBA player Malik Beasley is negotiating a plea agreement with the Department of Justice after initially pleading not guilty to charges that he altered his play in certain games in 2024 to enrich sports bettors and",
+   "published": "2026-10-24T14:21-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/beas.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/former-nba-player-malik-beasley-negotiating-plea-deal-over-gambling-charges/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "Canada’s Fernandez to face top-ranked Rybakina in Ningbo Open final",
    "summary": "The Montreal native beat Marie Bouzkova 6-3, 7-5 in the Ningbo Open semifinals on Saturday and will face top-ranked Elena Rybakina in Sunday’s championship match.",
@@ -3083,18 +3109,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Maple Leafs prepare for stiff test against Connor McDavid, Oilers",
-   "summary": "Riding a three-game win streak, the Maple Leafs head to Edmonton Saturday set to take on a whole different test in the red-hot Connor McDavid and his Oilers. Sportsnet’s Sonny Sachdeva explores how the Maple Leafs are pr",
-   "published": "2026-10-23T15:49-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/02/matthews-mcdavid.jpg",
+   "league": "other",
+   "headline": "CF Montreal eliminated from playoff contention with shutout loss to Nashville",
+   "summary": "",
+   "published": "2026-10-24T15:51-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/hennadii-synchuk.jpg",
    "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-prepare-for-stiff-test-against-connor-mcdavid-oilers/",
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/cf-montreal-eliminated-from-playoff-contention-with-shutout-loss-to-nashville/",
    "source": "Sportsnet"
   },
   {
@@ -3102,12 +3126,38 @@
    "headline": "Quinn Hughes on Wild contract talks: ‘My two feet are planted in Minnesota’",
    "summary": "Quinn Hughes is enjoying his time with the Minnesota Wild, but the star defenceman stopped short of offering a definitive answer about his long-term future with the team.",
    "published": "2026-10-24T16:49-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Quinn-Hughes.jpg",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/hughes-1.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/quinn-hughes-on-wild-contract-talks-my-two-feet-are-planted-in-minnesota/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "cfl",
+   "headline": "Tre Ford, Marc Liegghio lead Tiger-Cats to win over Redblacks",
+   "summary": "",
+   "published": "2026-10-24T18:12-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177141783.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/tre-ford-marc-liegghio-lead-tiger-cats-to-win-over-redblacks/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Cincinnati stuns previously unbeaten Texas Tech",
+   "summary": "",
+   "published": "2026-10-24T18:18-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/cinci.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/ncaa-mens-football/article/cincinnati-stuns-previously-unbeaten-texas-tech/",
    "source": "Sportsnet"
   },
   {
@@ -3279,58 +3329,6 @@
    "sn_team_count": 2,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/cfl/article/crums-two-first-half-touchdowns-lead-alouettes-past-argonauts/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "cfl",
-   "headline": "Blue Bombers clinch final playoff spot with win over Lions",
-   "summary": "",
-   "published": "2026-10-24T01:01-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Bombers.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/blue-bombers-clinch-final-playoff-spot-with-win-over-lions/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "cfl",
-   "headline": "Blue Bombers QB Zach Collaros exits must-win game vs. Lions",
-   "summary": "",
-   "published": "2026-10-24T00:24-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/08/e5135777a2ab2e98e626b8344accac69c05ab9ab7b60ccb1f428dc41c805205f.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/blue-bombers-qb-zach-collaros-exits-must-win-game-vs-lions/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Scout’s Analysis: Breaking down the Connor Hellebuyck blockbuster trade",
-   "summary": "The New Jersey Devils are the winners of the Connor Hellebuyck sweepstakes, pulling off a big trade with Winnipeg right as the goaltender was scheduled to return to the team. Jason Bukala breaks down both sides of the de",
-   "published": "2026-10-23T16:28-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Winnipeg-Jets-goalie-Connor-Hellebuyck.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "",
-   "url": "https://www.sportsnet.ca/nhl/article/scouts-analysis-breaking-down-the-connor-hellebuyck-blockbuster/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "End of Hellebuyck era brings relief for Jets, Cheveldayoff",
-   "summary": "Connor Hellebuyck had hung over the Jets like a dark cloud since his camp went public with a trade demand in late August. Jeff Hamilton has more on why there is a sense of relief in Winnipeg after Friday’s blockbuster wi",
-   "published": "2026-10-23T20:20-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Winnipeg-Jets-goaltender-Connor-Hellebuyck.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/end-of-hellebuyck-era-brings-relief-for-jets-cheveldayoff/",
    "source": "Sportsnet"
   },
   {
@@ -3714,7 +3712,7 @@
    "league": "mlb",
    "headline": "Watch Tigers prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-22T23:59-04:00",
+   "published": "2026-10-24T18:00-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -3935,7 +3933,7 @@
    "league": "mlb",
    "headline": "Watch Blue Jays prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-22T23:59-04:00",
+   "published": "2026-10-24T18:00-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -4056,13 +4054,13 @@
     {
      "abbr": "EDM",
      "name": "Edmonton Elks",
-     "gp": 17,
+     "gp": 18,
      "w": 13,
-     "l": 4,
+     "l": 5,
      "t": 0,
      "pts": 26,
-     "pf": 532,
-     "pa": 421,
+     "pf": 541,
+     "pa": 437,
      "flags": "y"
     },
     {
@@ -4080,13 +4078,13 @@
     {
      "abbr": "SSK",
      "name": "Saskatchewan Roughriders",
-     "gp": 17,
-     "w": 9,
+     "gp": 18,
+     "w": 10,
      "l": 8,
      "t": 0,
-     "pts": 18,
-     "pf": 470,
-     "pa": 464,
+     "pts": 20,
+     "pf": 486,
+     "pa": 473,
      "flags": "x"
     },
     {
@@ -4111,7 +4109,7 @@
      "pts": 18,
      "pf": 477,
      "pa": 492,
-     "flags": "x"
+     "flags": "c"
     }
    ]
   },
@@ -4145,25 +4143,25 @@
     {
      "abbr": "HAM",
      "name": "Hamilton Tiger-Cats",
-     "gp": 17,
-     "w": 5,
+     "gp": 18,
+     "w": 6,
      "l": 12,
      "t": 0,
-     "pts": 10,
-     "pf": 408,
-     "pa": 501,
+     "pts": 12,
+     "pf": 443,
+     "pa": 523,
      "flags": ""
     },
     {
      "abbr": "OTT",
      "name": "Ottawa Redblacks",
-     "gp": 17,
+     "gp": 18,
      "w": 1,
-     "l": 16,
+     "l": 17,
      "t": 0,
      "pts": 2,
-     "pf": 415,
-     "pa": 638,
+     "pf": 437,
+     "pa": 673,
      "flags": ""
     }
    ]
@@ -4653,7 +4651,7 @@
       "l": 5,
       "otl": 2,
       "pts": 24,
-      "gf": 88,
+      "gf": 89,
       "ga": 54,
       "strk": "W1"
      },
@@ -4714,7 +4712,7 @@
       "otl": 2,
       "pts": 12,
       "gf": 56,
-      "ga": 89,
+      "ga": 90,
       "strk": "W2"
      },
      {
