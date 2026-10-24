@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23T20:02:19-04:00",
+ "updated": "2026-10-23T20:16:45-04:00",
  "today": "2026-10-23",
  "range": [
   "2026-10-20",
@@ -1992,14 +1992,12 @@
    "home_away": "A",
    "opponent": "Guelph Gryphons",
    "location": "Guelph, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 87,
+   "opp_score": 65,
+   "result": "W",
    "note": "",
-   "links": {
-    "watch": "https://oua.tv/?school=Windsor"
-   }
+   "links": {}
   },
   {
    "id": "junior-gojhl15608",
@@ -2010,11 +2008,11 @@
    "home_away": "A",
    "opponent": "St. Catharines Falcons",
    "location": "Seymour-Hannah S.E.C., St. Catharines, ON",
-   "status": "live",
-   "our_score": 1,
-   "opp_score": 0,
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
    "result": null,
-   "note": "09:27 2nd",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15608"
    },
@@ -2357,6 +2355,19 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "Unreal First CFL TD for Tucker Horn!",
+   "summary": "",
+   "published": "2026-10-23T19:30:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/Ut321MJTtNEVXQ3Ug8BgD/0a666c3aa3bcee406bd3bb80ad26cfda/Untitled-1.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Argonauts"
+   ],
+   "url": "https://www.cfl.ca/article/unreal-first-cfl-td-for-tucker-horn",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "What's at stake for every team in Week 21",
    "summary": "",
    "published": "2026-10-23T00:00:00-04:00",
@@ -2634,20 +2645,6 @@
     "Alouettes"
    ],
    "url": "https://www.cfl.ca/article/dustin-crum-has-his-first-td-for-the-alouettes",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Recap: Edmonton 35, Winnipeg 27",
-   "summary": "",
-   "published": "2026-10-17T01:40:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/2fPmwM5oXp6qdt5q6BKV78/897cde4031bd41ae024e42960c02540f/recap.png?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Elks",
-    "Blue Bombers"
-   ],
-   "url": "https://www.cfl.ca/article/recap-edmonton-35-winnipeg-27",
    "source": "CFL.ca"
   },
   {
@@ -4398,7 +4395,7 @@
       "l": 1,
       "otl": 2,
       "pts": 16,
-      "gf": 39,
+      "gf": 40,
       "ga": 30,
       "strk": "W6"
      },
@@ -4411,7 +4408,7 @@
       "otl": 0,
       "pts": 14,
       "gf": 55,
-      "ga": 55,
+      "ga": 56,
       "strk": "L1"
      },
      {
@@ -4463,7 +4460,7 @@
       "l": 4,
       "otl": 1,
       "pts": 13,
-      "gf": 33,
+      "gf": 35,
       "ga": 37,
       "strk": "W1"
      },
@@ -4528,7 +4525,7 @@
       "l": 3,
       "otl": 2,
       "pts": 14,
-      "gf": 46,
+      "gf": 47,
       "ga": 40,
       "strk": "L1"
      },
@@ -4541,7 +4538,7 @@
       "otl": 1,
       "pts": 13,
       "gf": 39,
-      "ga": 27,
+      "ga": 28,
       "strk": "W4"
      },
      {
@@ -4552,7 +4549,7 @@
       "l": 6,
       "otl": 1,
       "pts": 13,
-      "gf": 56,
+      "gf": 57,
       "ga": 58,
       "strk": "W1"
      },
@@ -4581,8 +4578,8 @@
       "l": 2,
       "otl": 0,
       "pts": 18,
-      "gf": 49,
-      "ga": 29,
+      "gf": 50,
+      "ga": 30,
       "strk": "W9"
      },
      {
@@ -4594,7 +4591,7 @@
       "otl": 1,
       "pts": 15,
       "gf": 46,
-      "ga": 33,
+      "ga": 34,
       "strk": "L1"
      },
      {
@@ -4605,8 +4602,8 @@
       "l": 5,
       "otl": 2,
       "pts": 14,
-      "gf": 39,
-      "ga": 41,
+      "gf": 40,
+      "ga": 42,
       "strk": "W2"
      },
      {
@@ -4618,7 +4615,7 @@
       "otl": 1,
       "pts": 11,
       "gf": 31,
-      "ga": 42,
+      "ga": 44,
       "strk": "L2"
      },
      {
@@ -4732,7 +4729,7 @@
       "l": 9,
       "otl": 0,
       "pts": 10,
-      "gf": 39,
+      "gf": 40,
       "ga": 57,
       "strk": "L2"
      },
@@ -4744,7 +4741,7 @@
       "l": 9,
       "otl": 1,
       "pts": 9,
-      "gf": 54,
+      "gf": 56,
       "ga": 69,
       "strk": "L6"
      },
@@ -4781,7 +4778,7 @@
       "otl": 0,
       "pts": 6,
       "gf": 51,
-      "ga": 78,
+      "ga": 80,
       "strk": "L1"
      }
     ]
@@ -4870,7 +4867,7 @@
       "otl": 3,
       "pts": 17,
       "gf": 62,
-      "ga": 71,
+      "ga": 72,
       "strk": "L1"
      },
      {
@@ -5045,7 +5042,7 @@
       "otl": 0,
       "pts": 10,
       "gf": 39,
-      "ga": 50,
+      "ga": 52,
       "strk": "W1"
      },
      {
@@ -5068,7 +5065,7 @@
       "l": 10,
       "otl": 0,
       "pts": 8,
-      "gf": 40,
+      "gf": 42,
       "ga": 61,
       "strk": "L6"
      },
@@ -5133,7 +5130,7 @@
       "l": 2,
       "otl": 1,
       "pts": 21,
-      "gf": 54,
+      "gf": 55,
       "ga": 31,
       "strk": "W1"
      },
@@ -5218,7 +5215,7 @@
       "otl": 1,
       "pts": 3,
       "gf": 35,
-      "ga": 73,
+      "ga": 74,
       "strk": "L6"
      },
      {
