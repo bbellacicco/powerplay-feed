@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24T10:31:38-04:00",
+ "updated": "2026-10-24T10:50:09-04:00",
  "today": "2026-10-24",
  "range": [
   "2026-10-21",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 32
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -2204,6 +2204,21 @@
  ],
  "more_news": [
   {
+   "league": "nhl",
+   "headline": "Quick Shifts: Maple Leafs, Mike Babcock set to reunite as foes in Edmonton",
+   "summary": "Saturday night in Edmonton will mark the first time Mike Babcock faces the Maple Leafs since his 2019 exit. Sportsnet’s Luke Fox dives into how his former troops feel about his return and more in the latest Quick Shifts.",
+   "published": "2026-10-24T08:27-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Edmonton-Oilers-head-coach-Mike-Babcock.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 6,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/quick-shifts-maple-leafs-mike-babcock-set-to-reunite-as-foes-in-edmonton/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "mlb",
    "headline": "Brewers stars lead way in World Series-opening win over Rays",
    "summary": "In the first World Series game Milwaukee has hosted since 1982, the Brewers lived up to the moment and beat the Rays behind a collective effort from their biggest stars.",
@@ -2232,18 +2247,29 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Quick Shifts: Maple Leafs, Mike Babcock set to reunite as foes in Edmonton",
-   "summary": "Saturday night in Edmonton will mark the first time Mike Babcock faces the Maple Leafs since his 2019 exit. Sportsnet’s Luke Fox dives into how his former troops feel about his return and more in the latest Quick Shifts.",
-   "published": "2026-10-24T08:27-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Edmonton-Oilers-head-coach-Mike-Babcock.jpg",
+   "league": "other",
+   "headline": "UFC 333 Cage Locks: Volkanovski, Evloev clash for featherweight gold",
+   "summary": "UFC 333 takes place in Abu Dhabi on Saturday with title fights and high-stakes matchups throughout the card. Get ready for all the action with the latest edition of Cage Locks.",
+   "published": "2026-10-22T14:43-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/02/volkanovski_alexander1280.jpg",
    "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 6,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/quick-shifts-maple-leafs-mike-babcock-set-to-reunite-as-foes-in-edmonton/",
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "MMA",
+   "url": "https://www.sportsnet.ca/ufc/article/ufc-333-cage-locks-volkanovski-evloev-clash-for-featherweight-gold/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Breakout midfielder Alonso Coello central to Toronto FC’s playoff push",
+   "summary": "Alonso Coello has played over 100 matches with Toronto FC — but none in the MLS post-season. Now, the Spanish midfielder, in the midst of a career year, has his sights set on changing that.",
+   "published": "2026-10-23T11:40-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/alonso-coello.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/breakout-midfielder-alonso-coello-central-to-toronto-fcs-playoff-push/",
    "source": "Sportsnet"
   },
   {
@@ -2257,19 +2283,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/centres-stabilize-canadiens-in-first-game-without-suzuki/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "UFC 333 Cage Locks: Volkanovski, Evloev clash for featherweight gold",
-   "summary": "UFC 333 takes place in Abu Dhabi on Saturday with title fights and high-stakes matchups throughout the card. Get ready for all the action with the latest edition of Cage Locks.",
-   "published": "2026-10-22T14:43-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/02/volkanovski_alexander1280.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/ufc-333-cage-locks-volkanovski-evloev-clash-for-featherweight-gold/",
    "source": "Sportsnet"
   },
   {
