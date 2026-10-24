@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24T18:31:43-04:00",
+ "updated": "2026-10-24T18:47:12-04:00",
  "today": "2026-10-24",
  "range": [
   "2026-10-21",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -3200,16 +3200,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nba",
-   "headline": "76ers’ LeBron James won’t play against Bucks in first half of back-to-back",
-   "summary": "LeBron James is out for the Philadelphia 76ers because of lower back pain management for Saturday’s game against the Milwaukee Bucks.",
-   "published": "2026-10-24T13:53-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/lbj.jpg",
+   "league": "other",
+   "headline": "Mercedes driver Kimi Antonelli earns surprise pole for US Grand Prix",
+   "summary": "Kimi Antonelli earned a surprise pole position Saturday for the United States Grand Prix, giving the championship leader a chance to close out the season title with a victory if his closest rivals falter.",
+   "published": "2026-10-24T18:36-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Mercedes-driver-Kimi-Antonelli.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/76ers-lebron-james-ruled-out-vs-bucks-the-first-in-a-back-to-back/",
+   "sn_team_count": 0,
+   "sport": "Auto Racing",
+   "url": "https://www.sportsnet.ca/formula-1/article/mercedes-driver-kimi-antonelli-earns-surprise-pole-for-us-grand-prix/",
    "source": "Sportsnet"
   },
   {
@@ -3316,32 +3316,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/centres-stabilize-canadiens-in-first-game-without-suzuki/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Scout’s Analysis: Breaking down the Connor Hellebuyck blockbuster trade",
-   "summary": "The New Jersey Devils are the winners of the Connor Hellebuyck sweepstakes, pulling off a big trade with Winnipeg right as the goaltender was scheduled to return to the team. Jason Bukala breaks down both sides of the de",
-   "published": "2026-10-23T16:28-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Winnipeg-Jets-goalie-Connor-Hellebuyck.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "",
-   "url": "https://www.sportsnet.ca/nhl/article/scouts-analysis-breaking-down-the-connor-hellebuyck-blockbuster/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "End of Hellebuyck era brings relief for Jets, Cheveldayoff",
-   "summary": "Connor Hellebuyck had hung over the Jets like a dark cloud since his camp went public with a trade demand in late August. Jeff Hamilton has more on why there is a sense of relief in Winnipeg after Friday’s blockbuster wi",
-   "published": "2026-10-23T20:20-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Winnipeg-Jets-goaltender-Connor-Hellebuyck.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/end-of-hellebuyck-era-brings-relief-for-jets-cheveldayoff/",
    "source": "Sportsnet"
   },
   {
@@ -3725,7 +3699,7 @@
    "league": "mlb",
    "headline": "Watch Tigers prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-24T18:00-04:00",
+   "published": "2026-10-24T18:39-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -3946,7 +3920,7 @@
    "league": "mlb",
    "headline": "Watch Blue Jays prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-24T18:00-04:00",
+   "published": "2026-10-24T18:39-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -4460,6 +4434,18 @@
       "strk": "W1"
      },
      {
+      "name": "Cobourg Cougars",
+      "abbr": "COB",
+      "gp": 15,
+      "w": 11,
+      "l": 3,
+      "otl": 1,
+      "pts": 23,
+      "gf": 73,
+      "ga": 54,
+      "strk": "W4"
+     },
+     {
       "name": "Wellington Dukes",
       "abbr": "WEL",
       "gp": 18,
@@ -4470,18 +4456,6 @@
       "gf": 70,
       "ga": 61,
       "strk": "L1"
-     },
-     {
-      "name": "Cobourg Cougars",
-      "abbr": "COB",
-      "gp": 14,
-      "w": 10,
-      "l": 3,
-      "otl": 1,
-      "pts": 21,
-      "gf": 72,
-      "ga": 54,
-      "strk": "W3"
      },
      {
       "name": "Pickering Panthers",
@@ -4498,14 +4472,14 @@
      {
       "name": "Newmarket Hurricanes",
       "abbr": "NMH",
-      "gp": 16,
+      "gp": 17,
       "w": 8,
-      "l": 7,
+      "l": 8,
       "otl": 1,
       "pts": 17,
       "gf": 51,
-      "ga": 47,
-      "strk": "W4"
+      "ga": 48,
+      "strk": "L1"
      },
      {
       "name": "Stouffville Spirit",
@@ -4665,7 +4639,7 @@
       "otl": 2,
       "pts": 24,
       "gf": 89,
-      "ga": 54,
+      "ga": 56,
       "strk": "W1"
      },
      {
@@ -4724,7 +4698,7 @@
       "l": 10,
       "otl": 2,
       "pts": 12,
-      "gf": 56,
+      "gf": 58,
       "ga": 90,
       "strk": "W2"
      },
