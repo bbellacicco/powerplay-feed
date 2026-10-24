@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23T21:32:12-04:00",
+ "updated": "2026-10-23T21:46:54-04:00",
  "today": "2026-10-23",
  "range": [
   "2026-10-20",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 37
+   "count": 36
   },
   "club_news": {
    "ok": true,
@@ -3520,19 +3520,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Canada’s Leylah Fernandez beats Russia’s Alexandrova to reach Ningbo semifinals",
-   "summary": "",
-   "published": "2026-10-23T09:34-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/CP176715261.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Tennis",
-   "url": "https://www.sportsnet.ca/wta/article/canadas-leylah-fernandez-beats-russias-alexandrova-to-reach-ningbo-semifinals/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nfl",
    "headline": "Lions vs. Packers injury report: Oct. 23",
    "summary": "Lions vs. Packers injury report and game designations for Friday, October 23.",
@@ -4376,14 +4363,14 @@
      {
       "name": "Brantford Bulldogs",
       "abbr": "BFD",
-      "gp": 12,
-      "w": 9,
+      "gp": 13,
+      "w": 10,
       "l": 2,
       "otl": 1,
-      "pts": 19,
+      "pts": 21,
       "gf": 59,
       "ga": 32,
-      "strk": "W2"
+      "strk": "W3"
      },
      {
       "name": "Ottawa 67's",
@@ -4441,38 +4428,38 @@
      {
       "name": "Sudbury Wolves",
       "abbr": "SBY",
-      "gp": 11,
+      "gp": 12,
       "w": 8,
-      "l": 2,
+      "l": 3,
       "otl": 1,
       "pts": 17,
       "gf": 50,
       "ga": 32,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Niagara IceDogs",
       "abbr": "NIAG",
-      "gp": 11,
-      "w": 6,
+      "gp": 12,
+      "w": 7,
       "l": 4,
       "otl": 1,
-      "pts": 13,
+      "pts": 15,
       "gf": 37,
       "ga": 39,
-      "strk": "W1"
+      "strk": "W2"
      },
      {
       "name": "North Bay Battalion",
       "abbr": "NB",
-      "gp": 12,
-      "w": 4,
+      "gp": 13,
+      "w": 5,
       "l": 8,
       "otl": 0,
-      "pts": 8,
+      "pts": 10,
       "gf": 40,
       "ga": 48,
-      "strk": "L3"
+      "strk": "W1"
      },
      {
       "name": "Barrie Colts",
@@ -4489,14 +4476,14 @@
      {
       "name": "Brampton Steelheads",
       "abbr": "BRAM",
-      "gp": 10,
+      "gp": 11,
       "w": 1,
-      "l": 7,
+      "l": 8,
       "otl": 2,
       "pts": 4,
       "gf": 27,
       "ga": 50,
-      "strk": "W1"
+      "strk": "L1"
      }
     ]
    },
@@ -4516,40 +4503,40 @@
       "strk": "W1"
      },
      {
-      "name": "Saginaw Spirit",
-      "abbr": "SAG",
-      "gp": 11,
-      "w": 6,
-      "l": 3,
-      "otl": 2,
-      "pts": 14,
-      "gf": 49,
-      "ga": 40,
-      "strk": "L1"
-     },
-     {
       "name": "Flint Firebirds",
       "abbr": "FLNT",
-      "gp": 9,
-      "w": 6,
+      "gp": 10,
+      "w": 7,
       "l": 2,
       "otl": 1,
-      "pts": 13,
-      "gf": 39,
+      "pts": 15,
+      "gf": 40,
       "ga": 30,
-      "strk": "W4"
+      "strk": "W5"
+     },
+     {
+      "name": "Saginaw Spirit",
+      "abbr": "SAG",
+      "gp": 12,
+      "w": 6,
+      "l": 3,
+      "otl": 3,
+      "pts": 15,
+      "gf": 49,
+      "ga": 41,
+      "strk": "L1"
      },
      {
       "name": "Sarnia Sting",
       "abbr": "SAR",
-      "gp": 13,
+      "gp": 14,
       "w": 6,
-      "l": 6,
+      "l": 7,
       "otl": 1,
       "pts": 13,
       "gf": 58,
       "ga": 62,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Windsor Spitfires",
@@ -4583,14 +4570,14 @@
      {
       "name": "London Knights",
       "abbr": "LDN",
-      "gp": 10,
-      "w": 7,
+      "gp": 11,
+      "w": 8,
       "l": 2,
       "otl": 1,
-      "pts": 15,
+      "pts": 17,
       "gf": 50,
       "ga": 35,
-      "strk": "L1"
+      "strk": "W1"
      },
      {
       "name": "Kitchener Rangers",
@@ -4607,11 +4594,11 @@
      {
       "name": "Erie Otters",
       "abbr": "ER",
-      "gp": 11,
+      "gp": 12,
       "w": 5,
       "l": 5,
-      "otl": 1,
-      "pts": 11,
+      "otl": 2,
+      "pts": 12,
       "gf": 33,
       "ga": 46,
       "strk": "L2"
@@ -4644,7 +4631,7 @@
       "otl": 0,
       "pts": 28,
       "gf": 73,
-      "ga": 47,
+      "ga": 48,
       "strk": "L1"
      },
      {
@@ -4655,7 +4642,7 @@
       "l": 5,
       "otl": 2,
       "pts": 22,
-      "gf": 68,
+      "gf": 69,
       "ga": 60,
       "strk": "L1"
      },
@@ -4691,8 +4678,8 @@
       "l": 7,
       "otl": 2,
       "pts": 16,
-      "gf": 57,
-      "ga": 53,
+      "gf": 59,
+      "ga": 54,
       "strk": "W1"
      },
      {
@@ -4722,26 +4709,26 @@
      {
       "name": "Aurora Tigers",
       "abbr": "AUR",
-      "gp": 14,
+      "gp": 15,
       "w": 5,
-      "l": 9,
+      "l": 10,
       "otl": 0,
       "pts": 10,
       "gf": 40,
       "ga": 59,
-      "strk": "L2"
+      "strk": "L3"
      },
      {
       "name": "Trenton Golden Hawks",
       "abbr": "TRN",
-      "gp": 14,
+      "gp": 15,
       "w": 4,
-      "l": 9,
+      "l": 10,
       "otl": 1,
       "pts": 9,
       "gf": 59,
-      "ga": 73,
-      "strk": "L6"
+      "ga": 74,
+      "strk": "L7"
      },
      {
       "name": "Toronto Warriors",
@@ -4763,21 +4750,21 @@
       "l": 11,
       "otl": 1,
       "pts": 7,
-      "gf": 37,
-      "ga": 75,
+      "gf": 38,
+      "ga": 77,
       "strk": "W1"
      },
      {
       "name": "Lindsay Muskies",
       "abbr": "LIN",
-      "gp": 14,
-      "w": 3,
+      "gp": 15,
+      "w": 4,
       "l": 11,
       "otl": 0,
-      "pts": 6,
-      "gf": 55,
+      "pts": 8,
+      "gf": 56,
       "ga": 83,
-      "strk": "L1"
+      "strk": "W1"
      }
     ]
    },
@@ -4804,7 +4791,7 @@
       "l": 2,
       "otl": 1,
       "pts": 27,
-      "gf": 63,
+      "gf": 64,
       "ga": 36,
       "strk": "W7"
      },
@@ -4853,20 +4840,20 @@
       "otl": 2,
       "pts": 22,
       "gf": 85,
-      "ga": 53,
+      "ga": 54,
       "strk": "L1"
      },
      {
       "name": "Oakville Blades",
       "abbr": "OAK",
-      "gp": 17,
-      "w": 7,
+      "gp": 18,
+      "w": 8,
       "l": 7,
       "otl": 3,
-      "pts": 17,
+      "pts": 19,
       "gf": 64,
       "ga": 72,
-      "strk": "L1"
+      "strk": "W1"
      },
      {
       "name": "Mississauga Chargers",
@@ -4943,7 +4930,7 @@
       "l": 1,
       "otl": 0,
       "pts": 24,
-      "gf": 86,
+      "gf": 87,
       "ga": 30,
       "strk": "W10"
      },
@@ -4968,7 +4955,7 @@
       "otl": 0,
       "pts": 18,
       "gf": 47,
-      "ga": 24,
+      "ga": 25,
       "strk": "W1"
      },
      {
