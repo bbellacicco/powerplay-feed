@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23T21:17:10-04:00",
+ "updated": "2026-10-23T21:32:12-04:00",
  "today": "2026-10-23",
  "range": [
   "2026-10-20",
@@ -2008,11 +2008,11 @@
    "home_away": "A",
    "opponent": "St. Catharines Falcons",
    "location": "Seymour-Hannah S.E.C., St. Catharines, ON",
-   "status": "live",
+   "status": "final",
    "our_score": 1,
    "opp_score": 2,
-   "result": null,
-   "note": "00:00 3rd",
+   "result": "L",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15608"
    },
@@ -3092,7 +3092,7 @@
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-3-2.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
+   "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/mcdavid-welcomes-hellebuycks-move-east-as-nhl-stars-react-to-blockbuster-trade/",
    "source": "Sportsnet"
@@ -4381,7 +4381,7 @@
       "l": 2,
       "otl": 1,
       "pts": 19,
-      "gf": 58,
+      "gf": 59,
       "ga": 32,
       "strk": "W2"
      },
@@ -4418,7 +4418,7 @@
       "otl": 0,
       "pts": 12,
       "gf": 44,
-      "ga": 49,
+      "ga": 50,
       "strk": "W3"
      },
      {
@@ -4429,7 +4429,7 @@
       "l": 6,
       "otl": 3,
       "pts": 11,
-      "gf": 38,
+      "gf": 39,
       "ga": 44,
       "strk": "L1"
      }
@@ -4446,8 +4446,8 @@
       "l": 2,
       "otl": 1,
       "pts": 17,
-      "gf": 49,
-      "ga": 31,
+      "gf": 50,
+      "ga": 32,
       "strk": "W1"
      },
      {
@@ -4458,7 +4458,7 @@
       "l": 4,
       "otl": 1,
       "pts": 13,
-      "gf": 36,
+      "gf": 37,
       "ga": 39,
       "strk": "W1"
      },
@@ -4470,8 +4470,8 @@
       "l": 8,
       "otl": 0,
       "pts": 8,
-      "gf": 39,
-      "ga": 47,
+      "gf": 40,
+      "ga": 48,
       "strk": "L3"
      },
      {
@@ -4495,7 +4495,7 @@
       "otl": 2,
       "pts": 4,
       "gf": 27,
-      "ga": 49,
+      "ga": 50,
       "strk": "W1"
      }
     ]
@@ -4547,7 +4547,7 @@
       "l": 6,
       "otl": 1,
       "pts": 13,
-      "gf": 57,
+      "gf": 58,
       "ga": 62,
       "strk": "W1"
      },
@@ -4577,7 +4577,7 @@
       "otl": 0,
       "pts": 18,
       "gf": 51,
-      "ga": 32,
+      "ga": 33,
       "strk": "W9"
      },
      {
@@ -4589,7 +4589,7 @@
       "otl": 1,
       "pts": 15,
       "gf": 50,
-      "ga": 34,
+      "ga": 35,
       "strk": "L1"
      },
      {
@@ -4600,7 +4600,7 @@
       "l": 5,
       "otl": 2,
       "pts": 14,
-      "gf": 42,
+      "gf": 43,
       "ga": 43,
       "strk": "W2"
      },
@@ -4613,7 +4613,7 @@
       "otl": 1,
       "pts": 11,
       "gf": 33,
-      "ga": 45,
+      "ga": 46,
       "strk": "L2"
      },
      {
@@ -4691,8 +4691,8 @@
       "l": 7,
       "otl": 2,
       "pts": 16,
-      "gf": 55,
-      "ga": 52,
+      "gf": 57,
+      "ga": 53,
       "strk": "W1"
      },
      {
@@ -4763,8 +4763,8 @@
       "l": 11,
       "otl": 1,
       "pts": 7,
-      "gf": 36,
-      "ga": 73,
+      "gf": 37,
+      "ga": 75,
       "strk": "W1"
      },
      {
@@ -4787,14 +4787,14 @@
      {
       "name": "Collingwood Blues",
       "abbr": "COL",
-      "gp": 18,
-      "w": 17,
+      "gp": 19,
+      "w": 18,
       "l": 1,
       "otl": 0,
-      "pts": 34,
+      "pts": 36,
       "gf": 116,
       "ga": 35,
-      "strk": "W11"
+      "strk": "W12"
      },
      {
       "name": "Milton Menace",
@@ -4805,7 +4805,7 @@
       "otl": 1,
       "pts": 27,
       "gf": 63,
-      "ga": 35,
+      "ga": 36,
       "strk": "W7"
      },
      {
@@ -4852,7 +4852,7 @@
       "l": 5,
       "otl": 2,
       "pts": 22,
-      "gf": 84,
+      "gf": 85,
       "ga": 53,
       "strk": "L1"
      },
@@ -4883,14 +4883,14 @@
      {
       "name": "Niagara Falls Canucks",
       "abbr": "NFC",
-      "gp": 19,
+      "gp": 20,
       "w": 6,
-      "l": 11,
+      "l": 12,
       "otl": 2,
       "pts": 14,
       "gf": 60,
       "ga": 87,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Georgetown Raiders",
@@ -4912,8 +4912,8 @@
       "l": 8,
       "otl": 2,
       "pts": 12,
-      "gf": 39,
-      "ga": 80,
+      "gf": 40,
+      "ga": 81,
       "strk": "L5"
      },
      {
@@ -4924,8 +4924,8 @@
       "l": 12,
       "otl": 0,
       "pts": 10,
-      "gf": 46,
-      "ga": 66,
+      "gf": 47,
+      "ga": 67,
       "strk": "L1"
      }
     ]
@@ -4943,21 +4943,21 @@
       "l": 1,
       "otl": 0,
       "pts": 24,
-      "gf": 85,
-      "ga": 29,
+      "gf": 86,
+      "ga": 30,
       "strk": "W10"
      },
      {
       "name": "Chatham Maroons",
       "abbr": "CHA",
-      "gp": 12,
+      "gp": 13,
       "w": 10,
-      "l": 2,
+      "l": 3,
       "otl": 0,
       "pts": 20,
       "gf": 59,
       "ga": 33,
-      "strk": "W3"
+      "strk": "L1"
      },
      {
       "name": "St. Thomas Stars",
@@ -4967,8 +4967,8 @@
       "l": 2,
       "otl": 0,
       "pts": 18,
-      "gf": 46,
-      "ga": 23,
+      "gf": 47,
+      "ga": 24,
       "strk": "W1"
      },
      {
@@ -4979,7 +4979,7 @@
       "l": 3,
       "otl": 3,
       "pts": 17,
-      "gf": 56,
+      "gf": 57,
       "ga": 43,
       "strk": "W1"
      },
@@ -4992,7 +4992,7 @@
       "otl": 0,
       "pts": 14,
       "gf": 42,
-      "ga": 33,
+      "ga": 34,
       "strk": "W7"
      },
      {
@@ -5051,7 +5051,7 @@
       "l": 7,
       "otl": 2,
       "pts": 10,
-      "gf": 57,
+      "gf": 58,
       "ga": 58,
       "strk": "W1"
      },
@@ -5076,7 +5076,7 @@
       "otl": 0,
       "pts": 0,
       "gf": 21,
-      "ga": 69,
+      "ga": 70,
       "strk": "L10"
      }
     ]
@@ -5084,6 +5084,18 @@
    {
     "group": "Eastern Conference",
     "teams": [
+     {
+      "name": "St. Catharines Falcons",
+      "abbr": "SCF",
+      "gp": 15,
+      "w": 13,
+      "l": 2,
+      "otl": 0,
+      "pts": 26,
+      "gf": 72,
+      "ga": 35,
+      "strk": "W4"
+     },
      {
       "name": "Fort Erie Meteors",
       "abbr": "FEM",
@@ -5095,18 +5107,6 @@
       "gf": 63,
       "ga": 34,
       "strk": "W12"
-     },
-     {
-      "name": "St. Catharines Falcons",
-      "abbr": "SCF",
-      "gp": 14,
-      "w": 12,
-      "l": 2,
-      "otl": 0,
-      "pts": 24,
-      "gf": 72,
-      "ga": 35,
-      "strk": "W3"
      },
      {
       "name": "Cambridge Redhawks",
@@ -5123,14 +5123,14 @@
      {
       "name": "Caledonia Corvairs",
       "abbr": "CAL",
-      "gp": 13,
-      "w": 10,
+      "gp": 14,
+      "w": 11,
       "l": 2,
       "otl": 1,
-      "pts": 21,
+      "pts": 23,
       "gf": 57,
       "ga": 33,
-      "strk": "W1"
+      "strk": "W2"
      },
      {
       "name": "Waterloo Siskins",
@@ -5207,14 +5207,14 @@
      {
       "name": "Brantford Titans",
       "abbr": "BFD",
-      "gp": 13,
+      "gp": 14,
       "w": 1,
-      "l": 11,
+      "l": 12,
       "otl": 1,
       "pts": 3,
       "gf": 37,
       "ga": 76,
-      "strk": "L6"
+      "strk": "L7"
      },
      {
       "name": "Welland Canadians",
