@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23T22:31:57-04:00",
+ "updated": "2026-10-23T22:46:55-04:00",
  "today": "2026-10-23",
  "range": [
   "2026-10-20",
@@ -2046,14 +2046,12 @@
    "home_away": "A",
    "opponent": "Lakehead Thunderwolves",
    "location": "Thunder Bay, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "watch": "https://oua.tv/?school=Windsor"
-   }
+   "status": "final",
+   "our_score": 4,
+   "opp_score": 5,
+   "result": "L",
+   "note": "OT",
+   "links": {}
   },
   {
    "id": "junior-gs2960433",
@@ -2083,15 +2081,12 @@
    "home_away": "H",
    "opponent": "Ottawa Gee-Gees",
    "location": "Adie Knox Arena",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 5,
+   "result": "L",
    "note": "",
-   "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=172",
-    "watch": "https://oua.tv/?school=Windsor"
-   }
+   "links": {}
   },
   {
    "id": "lancers-6222",
@@ -2102,14 +2097,12 @@
    "home_away": "A",
    "opponent": "Guelph Gryphons",
    "location": "Guelph, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 81,
+   "opp_score": 102,
+   "result": "L",
    "note": "",
-   "links": {
-    "watch": "https://oua.tv/?school=Windsor"
-   }
+   "links": {}
   },
   {
    "id": "lancers-6124",
@@ -3153,7 +3146,7 @@
   },
   {
    "league": "nba",
-   "headline": "Mavericks’ Cooper Flagg ruled out vs. Pacers with shoulder injury",
+   "headline": "Mavericks beat Pacers but lose Flagg to injury",
    "summary": "",
    "published": "2026-10-23T21:02-04:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/01/Cooper-Flagg.jpg",
@@ -4957,6 +4950,18 @@
       "strk": "W7"
      },
      {
+      "name": "Woodstock Navy Vets",
+      "abbr": "WNV",
+      "gp": 13,
+      "w": 6,
+      "l": 7,
+      "otl": 0,
+      "pts": 12,
+      "gf": 43,
+      "ga": 52,
+      "strk": "W2"
+     },
+     {
       "name": "Strathroy Rockets",
       "abbr": "SRY",
       "gp": 14,
@@ -5005,28 +5010,16 @@
       "strk": "W1"
      },
      {
-      "name": "Woodstock Navy Vets",
-      "abbr": "WNV",
-      "gp": 12,
-      "w": 5,
-      "l": 7,
-      "otl": 0,
-      "pts": 10,
-      "gf": 43,
-      "ga": 52,
-      "strk": "W1"
-     },
-     {
       "name": "Komoka Kings",
       "abbr": "KOM",
-      "gp": 14,
+      "gp": 15,
       "w": 4,
-      "l": 10,
+      "l": 11,
       "otl": 0,
       "pts": 8,
       "gf": 42,
       "ga": 65,
-      "strk": "L6"
+      "strk": "L7"
      },
      {
       "name": "Sarnia Legionnaires",
