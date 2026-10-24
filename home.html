@@ -907,7 +907,11 @@
       (net.local || []).forEach(function (v) { if (v.u && v.t && !haveVid[vidId(v.u)]) ppVids.push({ headline: v.t, url: v.u, image: v.i, published: v.p.length === 10 ? v.p + 'T00:00:00' : v.p }); });
       // the Spitfires' game highlights from the OHL's YouTube channel take the box when they're newer than Powerplay's latest video
       (net.pro || []).forEach(function (v) { if (v.sp && v.u && v.i) ppVids.push({ headline: v.t.replace(/^OHL Highlights:\s*/i, '').replace(/\s+@\s+/, ' at ').replace(/\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2}(st|nd|rd|th)?,?\s+\d{4}\s*$/i, ''), url: v.u, image: v.i, published: v.p, kick: 'Spitfires highlights' }); });
-      var topVid = ppVids.filter(function (v) { return v.image; }).sort(function (a, b) { return new Date(b.published) - new Date(a.published); })[0] || null;
+      var byNew = function (a, b) { return new Date(b.published) - new Date(a.published); };
+      // your own newest video keeps the box while it's under 2 days old; only then can a newer Spitfires highlight take over
+      var ownVid = ppVids.filter(function (v) { return v.image && !v.kick; }).sort(byNew)[0] || null;
+      var topVid = ownVid && Date.now() - new Date(ownVid.published).getTime() < 2 * 864e5 ? ownVid
+        : (ppVids.filter(function (v) { return v.image; }).sort(byNew)[0] || null);
       // YouTube's standard thumbnail is 4:3 with black bars; use the widescreen one so the picture fills the box
       if (topVid) {
         var yid = (topVid.url.match(/[?&]v=([\w-]{11})/) || topVid.url.match(/youtu\.be\/([\w-]{11})/) || topVid.url.match(/\/shorts\/([\w-]{11})/) || [])[1];
