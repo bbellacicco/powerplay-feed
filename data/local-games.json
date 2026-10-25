@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24T21:02:03-04:00",
+ "updated": "2026-10-24T21:16:45-04:00",
  "today": "2026-10-24",
  "range": [
   "2026-10-21",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 30
   },
   "club_news": {
    "ok": true,
@@ -811,7 +811,9 @@
    "opp_score": 5,
    "result": "L",
    "note": "",
-   "links": {}
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6286"
+   }
   },
   {
    "id": "lancers-6222",
@@ -828,7 +830,8 @@
    "result": "L",
    "note": "",
    "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6222"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6222",
+    "recap": "https://golancers.ca/news/2026/10/24/mens-basketball-mens-basketball-falls-to-guelph-in-season-opener.aspx"
    }
   },
   {
@@ -897,9 +900,9 @@
    "location": "WFCU Centre, Windsor",
    "status": "live",
    "our_score": 3,
-   "opp_score": 1,
+   "opp_score": 2,
    "result": null,
-   "note": "17:25 3rd",
+   "note": "07:59 3rd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29120/"
    }
@@ -3281,19 +3284,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "mlb",
-   "headline": "Brewers turn to Robert Gasser vs. Rays’ Freddy Peralta in Game 3 of World Series",
-   "summary": "The Milwaukee Brewers have tabbed Gasser to square off against the Tampa Bay Rays’ Freddy Peralta in Game 3 on Monday, per USA Today’s Bob Nightengale.",
-   "published": "2026-10-24T12:25-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/gasser.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/brewers-turn-to-robert-gasser-vs-rays-freddy-peralta-in-game-3-of-world-series/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nfl",
    "headline": "Lions vs. Packers: How to watch, listen and follow",
    "summary": "The Detroit Lions host the Green Bay Packers on Sunday, Oct. 25 at 4:25 p.m. EDT. Here is everything you need to keep up with the action.",
@@ -3674,7 +3664,7 @@
    "league": "mlb",
    "headline": "Watch Tigers prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-24T19:49-04:00",
+   "published": "2026-10-24T21:04-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -3895,7 +3885,7 @@
    "league": "mlb",
    "headline": "Watch Blue Jays prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-24T19:49-04:00",
+   "published": "2026-10-24T21:04-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -4143,7 +4133,7 @@
       "otl": 1,
       "pts": 21,
       "gf": 61,
-      "ga": 34,
+      "ga": 35,
       "strk": "W3"
      },
      {
@@ -4255,7 +4245,7 @@
       "l": 8,
       "otl": 2,
       "pts": 4,
-      "gf": 29,
+      "gf": 30,
       "ga": 52,
       "strk": "L1"
      }
@@ -4272,7 +4262,7 @@
       "l": 2,
       "otl": 1,
       "pts": 19,
-      "gf": 46,
+      "gf": 47,
       "ga": 41,
       "strk": "W1"
      },
@@ -4284,7 +4274,7 @@
       "l": 2,
       "otl": 1,
       "pts": 15,
-      "gf": 45,
+      "gf": 46,
       "ga": 32,
       "strk": "W5"
      },
@@ -4297,7 +4287,7 @@
       "otl": 3,
       "pts": 15,
       "gf": 51,
-      "ga": 46,
+      "ga": 47,
       "strk": "L1"
      },
      {
@@ -4321,7 +4311,7 @@
       "otl": 3,
       "pts": 11,
       "gf": 44,
-      "ga": 46,
+      "ga": 47,
       "strk": "W1"
      }
     ]
@@ -4350,7 +4340,7 @@
       "otl": 1,
       "pts": 17,
       "gf": 51,
-      "ga": 36,
+      "ga": 38,
       "strk": "W1"
      },
      {
@@ -4385,7 +4375,7 @@
       "l": 8,
       "otl": 1,
       "pts": 7,
-      "gf": 29,
+      "gf": 31,
       "ga": 53,
       "strk": "W1"
      }
@@ -4512,7 +4502,7 @@
       "l": 11,
       "otl": 0,
       "pts": 8,
-      "gf": 57,
+      "gf": 59,
       "ga": 86,
       "strk": "W1"
      },
@@ -4638,7 +4628,7 @@
       "otl": 0,
       "pts": 14,
       "gf": 57,
-      "ga": 88,
+      "ga": 90,
       "strk": "W1"
      },
      {
@@ -4878,7 +4868,7 @@
       "otl": 1,
       "pts": 23,
       "gf": 82,
-      "ga": 40,
+      "ga": 41,
       "strk": "W4"
      },
      {
@@ -4889,7 +4879,7 @@
       "l": 2,
       "otl": 1,
       "pts": 23,
-      "gf": 57,
+      "gf": 58,
       "ga": 35,
       "strk": "W2"
      },
@@ -4901,7 +4891,7 @@
       "l": 3,
       "otl": 2,
       "pts": 16,
-      "gf": 45,
+      "gf": 46,
       "ga": 33,
       "strk": "W1"
      },
@@ -4926,7 +4916,7 @@
       "otl": 0,
       "pts": 14,
       "gf": 53,
-      "ga": 49,
+      "ga": 50,
       "strk": "L1"
      },
      {
@@ -4950,7 +4940,7 @@
       "otl": 0,
       "pts": 8,
       "gf": 54,
-      "ga": 77,
+      "ga": 80,
       "strk": "L2"
      },
      {
@@ -4961,7 +4951,7 @@
       "l": 10,
       "otl": 3,
       "pts": 7,
-      "gf": 38,
+      "gf": 41,
       "ga": 72,
       "strk": "W1"
      },
