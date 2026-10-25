@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24T20:51:28-04:00",
+ "updated": "2026-10-24T21:02:03-04:00",
  "today": "2026-10-24",
  "range": [
   "2026-10-21",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 30
+   "count": 31
   },
   "club_news": {
    "ok": true,
@@ -720,7 +720,8 @@
    "result": "W",
    "note": "",
    "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6200"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6200",
+    "recap": "https://golancers.ca/news/2026/10/24/womens-basketball-lancers-open-season-with-convincing-victory-over-guelph.aspx"
    }
   },
   {
@@ -839,13 +840,13 @@
    "home_away": "A",
    "opponent": "Guelph Gryphons",
    "location": "Guelph, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 27,
+   "opp_score": 23,
+   "result": "W",
    "note": "",
    "links": {
-    "watch": "https://oua.yaretv.com/"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6124"
    }
   },
   {
@@ -898,7 +899,7 @@
    "our_score": 3,
    "opp_score": 1,
    "result": null,
-   "note": "00:00 2nd",
+   "note": "17:25 3rd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29120/"
    }
@@ -2940,6 +2941,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "mlb",
+   "headline": "Rays’ Liam Hicks becomes fourth Canadian-born player to homer in World Series",
+   "summary": "",
+   "published": "2026-10-24T20:58-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177142720.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/rays-liam-hicks-becomes-fourth-canadian-born-player-to-homer-in-world-series/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "WNBA Finals Takeaways: Valkyries return to defensive identity to tie series",
    "summary": "The Valkyries returned to their defensive identity in Game 4, stopping the ball and dictating the pace against feisty Dream team. Sarah Maat has the takeaways from Game 4 of the WNBA Finals.",
@@ -3018,19 +3032,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Two Canadians two back of lead at Bermuda Championship",
-   "summary": "Seamus Power made up a two-shot deficit over the wind-blown closing holes Saturday at Port Royal for a 4-under 67, giving him a share of the lead with Austin Smotherman going into the final round of the Butterfield Bermu",
-   "published": "2026-10-24T17:39-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/05/conners.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Golf",
-   "url": "https://www.sportsnet.ca/pga/article/two-canadians-two-back-of-lead-at-bermuda-championship/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "Lightning’s Hedman out vs. Mammoth, day-to-day with lower-body injury",
    "summary": "The Tampa Bay Lightning will be without their captain for at least one game.",
@@ -3056,6 +3057,19 @@
    "sn_team_count": 6,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/nfl-week-7-preview-walker-returns-to-seattle-with-undefeated-chiefs/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Two Canadians two back of lead at Bermuda Championship",
+   "summary": "Seamus Power made up a two-shot deficit over the wind-blown closing holes Saturday at Port Royal for a 4-under 67, giving him a share of the lead with Austin Smotherman going into the final round of the Butterfield Bermu",
+   "published": "2026-10-24T17:39-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/05/conners.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Golf",
+   "url": "https://www.sportsnet.ca/pga/article/two-canadians-two-back-of-lead-at-bermuda-championship/",
    "source": "Sportsnet"
   },
   {
@@ -4128,7 +4142,7 @@
       "l": 2,
       "otl": 1,
       "pts": 21,
-      "gf": 60,
+      "gf": 61,
       "ga": 34,
       "strk": "W3"
      },
@@ -4200,14 +4214,14 @@
      {
       "name": "Niagara IceDogs",
       "abbr": "NIAG",
-      "gp": 12,
+      "gp": 13,
       "w": 7,
-      "l": 4,
+      "l": 5,
       "otl": 1,
       "pts": 15,
       "gf": 39,
       "ga": 44,
-      "strk": "W2"
+      "strk": "L1"
      },
      {
       "name": "North Bay Battalion",
@@ -4218,7 +4232,7 @@
       "otl": 0,
       "pts": 10,
       "gf": 44,
-      "ga": 50,
+      "ga": 51,
       "strk": "W1"
      },
      {
@@ -4229,7 +4243,7 @@
       "l": 9,
       "otl": 1,
       "pts": 5,
-      "gf": 25,
+      "gf": 26,
       "ga": 50,
       "strk": "W1"
      },
@@ -4242,7 +4256,7 @@
       "otl": 2,
       "pts": 4,
       "gf": 29,
-      "ga": 51,
+      "ga": 52,
       "strk": "L1"
      }
     ]
@@ -4270,7 +4284,7 @@
       "l": 2,
       "otl": 1,
       "pts": 15,
-      "gf": 44,
+      "gf": 45,
       "ga": 32,
       "strk": "W5"
      },
@@ -4283,7 +4297,7 @@
       "otl": 3,
       "pts": 15,
       "gf": 51,
-      "ga": 45,
+      "ga": 46,
       "strk": "L1"
      },
      {
@@ -4354,14 +4368,14 @@
      {
       "name": "Erie Otters",
       "abbr": "ER",
-      "gp": 12,
-      "w": 5,
+      "gp": 13,
+      "w": 6,
       "l": 5,
       "otl": 2,
-      "pts": 12,
+      "pts": 14,
       "gf": 38,
       "ga": 48,
-      "strk": "L2"
+      "strk": "W1"
      },
      {
       "name": "Owen Sound Attack",
@@ -4864,7 +4878,7 @@
       "otl": 1,
       "pts": 23,
       "gf": 82,
-      "ga": 39,
+      "ga": 40,
       "strk": "W4"
      },
      {
@@ -4887,7 +4901,7 @@
       "l": 3,
       "otl": 2,
       "pts": 16,
-      "gf": 44,
+      "gf": 45,
       "ga": 33,
       "strk": "W1"
      },
@@ -4935,7 +4949,7 @@
       "l": 13,
       "otl": 0,
       "pts": 8,
-      "gf": 53,
+      "gf": 54,
       "ga": 77,
       "strk": "L2"
      },
@@ -4948,7 +4962,7 @@
       "otl": 3,
       "pts": 7,
       "gf": 38,
-      "ga": 71,
+      "ga": 72,
       "strk": "W1"
      },
      {
