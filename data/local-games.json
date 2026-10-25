@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24T22:31:58-04:00",
+ "updated": "2026-10-24T22:47:05-04:00",
  "today": "2026-10-24",
  "range": [
   "2026-10-21",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 30
   },
   "club_news": {
    "ok": true,
@@ -852,7 +852,8 @@
    "result": "W",
    "note": "",
    "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6124"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6124",
+    "recap": "https://golancers.ca/news/2026/10/24/football-no-6-lancers-come-from-behind-to-defeat-gryphons.aspx"
    }
   },
   {
@@ -3066,6 +3067,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Alex Tuch scores OT winner against old team, Caps beat Sabres",
+   "summary": "",
+   "published": "2026-10-24T22:08-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/tuch-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/alex-tuch-scores-ot-winner-against-old-team-caps-beat-sabres/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Ducks’ Leo Carlsson burns Flyers with goal and assist in win",
    "summary": "Leo Carlsson came within one financial decision of becoming a Philadelphia Flyer last summer. On Saturday, the Anaheim centre found a way to beat the team that tried to pry him away from the Ducks.",
    "published": "2026-10-24T17:03-04:00",
@@ -3262,19 +3276,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Mercedes driver Kimi Antonelli earns surprise pole for US Grand Prix",
-   "summary": "Kimi Antonelli earned a surprise pole position Saturday for the United States Grand Prix, giving the championship leader a chance to close out the season title with a victory if his closest rivals falter.",
-   "published": "2026-10-24T18:36-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Mercedes-driver-Kimi-Antonelli.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Auto Racing",
-   "url": "https://www.sportsnet.ca/formula-1/article/mercedes-driver-kimi-antonelli-earns-surprise-pole-for-us-grand-prix/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nba",
    "headline": "Report: Magic’s Paolo Banchero out four to six weeks with ankle sprain",
    "summary": "The Orlando Magic forward is set to miss the next four to six weeks after suffering a low-grade right high ankle sprain, ESPN’s Shams Charania reported Saturday.",
@@ -3285,19 +3286,6 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/report-magics-paolo-banchero-out-four-to-six-weeks-with-ankle-sprain/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Mavericks’ Cooper Flagg out at least one week with shoulder sprain",
-   "summary": "",
-   "published": "2026-10-24T14:11-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/cooper-flagg-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/mavericks-cooper-flagg-out-at-least-one-week-with-shoulder-sprain/",
    "source": "Sportsnet"
   },
   {
