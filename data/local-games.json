@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25T14:46:47-04:00",
+ "updated": "2026-10-25T15:01:40-04:00",
  "today": "2026-10-25",
  "range": [
   "2026-10-22",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 30
+   "count": 31
   },
   "club_news": {
    "ok": true,
@@ -726,10 +726,10 @@
    "opponent": "Ayr Centennials",
    "location": "North Dumfries C.C., Ayr, ON",
    "status": "live",
-   "our_score": 0,
-   "opp_score": 0,
+   "our_score": 1,
+   "opp_score": 1,
    "result": null,
-   "note": "13:25 1st",
+   "note": "04:39 1st",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15620"
    },
@@ -2809,6 +2809,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Report: Date, venue for WNBA Finals Game 6 unclear",
+   "summary": "There will be a Game 6 of the WNBA Finals. When and where it takes place, however, is far less secure.",
+   "published": "2026-10-25T14:56-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/gabby-williams-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/wnba/article/report-date-venue-for-wnba-finals-game-6-unclear/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "Rodgers throws TD in Paris as Steelers beat Saints in NFL’s regular-season France debut",
    "summary": "",
@@ -2845,19 +2858,6 @@
    "sn_team_count": 2,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/premier-league/article/premier-league-roundup-man-united-humbled-by-bournemouth/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "cfl",
-   "headline": "Argonauts to face Blue Bombers in East semifinal",
-   "summary": "",
-   "published": "2026-10-24T18:06-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/Untitled-design-1-65.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/argonauts-to-face-blue-bombers-in-east-semifinal/",
    "source": "Sportsnet"
   },
   {
@@ -2953,6 +2953,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/oilers-lack-of-depth-proves-costly-in-loss-to-maple-leafs/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "cfl",
+   "headline": "Argonauts to face Blue Bombers in East semifinal",
+   "summary": "",
+   "published": "2026-10-24T18:06-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/Untitled-design-1-65.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/argonauts-to-face-blue-bombers-in-east-semifinal/",
    "source": "Sportsnet"
   },
   {
@@ -3139,6 +3152,19 @@
   },
   {
    "league": "nfl",
+   "headline": "INACTIVES: Lions vs. Packers",
+   "summary": "Tim Twentyman reports on inactives for Sunday's Lions-Packers matchup.",
+   "published": "2026-10-25T14:55-04:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/mhraduuf4whyytwuhuov.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Lions"
+   ],
+   "url": "https://www.detroitlions.com/news/inactives-lions-vs-packers-branch-mays",
+   "source": "Team site"
+  },
+  {
+   "league": "nfl",
    "headline": "LIONS DAILY: Detroit activates Brian Branch, Cade Mays for Packers game",
    "summary": "",
    "published": "2026-10-25T13:45-04:00",
@@ -3317,19 +3343,6 @@
     "Detroit Lions"
    ],
    "url": "https://www.detroitlions.com/news/lions-daily-detroit-ready-to-rip-this-band-aid-off-start-cade-mays-at-center",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
-   "headline": "Week 7 opponent: What the Packers are saying",
-   "summary": "Find out what the Green Bay Packers are saying as they prepare for their Week 7 matchup vs. the Detroit Lions.",
-   "published": "2026-10-22T07:00-04:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/vazjikkapnjk5sjtda0r.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Lions"
-   ],
-   "url": "https://www.detroitlions.com/news/week-7-opponent-what-the-packers-are-saying-jacobs-parsons-gibbs",
    "source": "Team site"
   },
   {
@@ -4409,7 +4422,7 @@
       "l": 3,
       "otl": 1,
       "pts": 27,
-      "gf": 65,
+      "gf": 67,
       "ga": 36,
       "strk": "L1"
      },
@@ -4530,7 +4543,7 @@
       "otl": 2,
       "pts": 12,
       "gf": 40,
-      "ga": 82,
+      "ga": 84,
       "strk": "L6"
      }
     ]
@@ -4560,8 +4573,8 @@
       "l": 3,
       "otl": 0,
       "pts": 20,
-      "gf": 59,
-      "ga": 33,
+      "gf": 60,
+      "ga": 34,
       "strk": "L1"
      },
      {
@@ -4632,7 +4645,7 @@
       "l": 7,
       "otl": 0,
       "pts": 12,
-      "gf": 43,
+      "gf": 44,
       "ga": 52,
       "strk": "W2"
      },
@@ -4758,7 +4771,7 @@
       "otl": 1,
       "pts": 15,
       "gf": 53,
-      "ga": 52,
+      "ga": 53,
       "strk": "L1"
      },
      {
@@ -4769,8 +4782,8 @@
       "l": 3,
       "otl": 2,
       "pts": 14,
-      "gf": 44,
-      "ga": 40,
+      "gf": 45,
+      "ga": 41,
       "strk": "W1"
      },
      {
