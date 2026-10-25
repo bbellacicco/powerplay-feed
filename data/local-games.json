@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25T10:35:14-04:00",
+ "updated": "2026-10-25T11:16:37-04:00",
  "today": "2026-10-25",
  "range": [
   "2026-10-22",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 27
+   "count": 28
   },
   "club_news": {
    "ok": true,
@@ -2889,16 +2889,18 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Canada’s Fernandez drops Ningbo Open final against top-ranked Rybakina",
+   "league": "nba",
+   "headline": "Pistons’ Jalen Duren out at least two weeks with right hamstring strain",
    "summary": "",
-   "published": "2026-10-25T08:05-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/leylah-1-1.jpg",
+   "published": "2026-10-25T11:00-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/01/Duren.jpg",
    "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Tennis",
-   "url": "https://www.sportsnet.ca/wta/article/canadas-fernandez-drops-ningbo-open-final-against-top-ranked-rybakina/",
+   "teams": [
+    "Detroit Pistons"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/pistons-jalen-duren-out-at-least-two-weeks-with-right-hamstring-strain/",
    "source": "Sportsnet"
   },
   {
@@ -2993,16 +2995,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Lightning’s Hedman out vs. Mammoth, day-to-day with lower-body injury",
-   "summary": "The Tampa Bay Lightning will be without their captain for at least one game.",
-   "published": "2026-10-24T20:42-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/01/Tampa-Bay-Lightning-defenseman-Victor-Hedman.jpg",
+   "league": "other",
+   "headline": "Canada’s Fernandez drops Ningbo Open final against top-ranked Rybakina",
+   "summary": "",
+   "published": "2026-10-25T08:05-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/leylah-1-1.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/lightnings-hedman-out-vs-mammoth-day-to-day-with-lower-body-injury/",
+   "sn_team_count": 0,
+   "sport": "Tennis",
+   "url": "https://www.sportsnet.ca/wta/article/canadas-fernandez-drops-ningbo-open-final-against-top-ranked-rybakina/",
    "source": "Sportsnet"
   },
   {
@@ -3068,6 +3070,19 @@
    "sn_team_count": 0,
    "sport": "MMA",
    "url": "https://www.sportsnet.ca/ufc/article/van-kape-prates-morales-set-to-headline-ufc-336-in-toronto/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Lightning’s Hedman out vs. Mammoth, day-to-day with lower-body injury",
+   "summary": "The Tampa Bay Lightning will be without their captain for at least one game.",
+   "published": "2026-10-24T20:42-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/01/Tampa-Bay-Lightning-defenseman-Victor-Hedman.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/lightnings-hedman-out-vs-mammoth-day-to-day-with-lower-body-injury/",
    "source": "Sportsnet"
   },
   {
