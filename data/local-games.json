@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24T20:31:57-04:00",
+ "updated": "2026-10-24T20:51:28-04:00",
  "today": "2026-10-24",
  "range": [
   "2026-10-21",
@@ -719,7 +719,9 @@
    "opp_score": 65,
    "result": "W",
    "note": "",
-   "links": {}
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6200"
+   }
   },
   {
    "id": "junior-gojhl15608",
@@ -824,7 +826,9 @@
    "opp_score": 102,
    "result": "L",
    "note": "",
-   "links": {}
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6222"
+   }
   },
   {
    "id": "lancers-6124",
@@ -894,7 +898,7 @@
    "our_score": 3,
    "opp_score": 1,
    "result": null,
-   "note": "04:07 2nd",
+   "note": "00:00 2nd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29120/"
    }
@@ -3027,6 +3031,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Lightning’s Hedman out vs. Mammoth, day-to-day with lower-body injury",
+   "summary": "The Tampa Bay Lightning will be without their captain for at least one game.",
+   "published": "2026-10-24T20:42-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/01/Tampa-Bay-Lightning-defenseman-Victor-Hedman.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/lightnings-hedman-out-vs-mammoth-day-to-day-with-lower-body-injury/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "NFL Week 7 preview: Walker returns to Seattle with undefeated Chiefs",
    "summary": "Kenneth Walker III is a big reason why the Chiefs are undefeated, and now he gets to face his former team. Kellen Forrest previews the big Chiefs-Seahawks clash and more in his Week 7 preview.",
@@ -3039,19 +3056,6 @@
    "sn_team_count": 6,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/nfl-week-7-preview-walker-returns-to-seattle-with-undefeated-chiefs/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Former NBA player Malik Beasley negotiating plea deal over gambling charges",
-   "summary": "Former NBA player Malik Beasley is negotiating a plea agreement with the Department of Justice after initially pleading not guilty to charges that he altered his play in certain games in 2024 to enrich sports bettors and",
-   "published": "2026-10-24T14:21-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/beas.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/former-nba-player-malik-beasley-negotiating-plea-deal-over-gambling-charges/",
    "source": "Sportsnet"
   },
   {
@@ -3133,16 +3137,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Friday Four: How realistic is 200 points for Oilers’ Connor McDavid?",
-   "summary": "If anyone can do it, it’s him. With Connor McDavid off to a torrid start to the season, Michael Amato explores how realistic the 200-point mark is for the Oilers captain.",
-   "published": "2026-10-23T08:08-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177085238.jpg",
+   "league": "nba",
+   "headline": "Former NBA player Malik Beasley negotiating plea deal over gambling charges",
+   "summary": "Former NBA player Malik Beasley is negotiating a plea agreement with the Department of Justice after initially pleading not guilty to charges that he altered his play in certain games in 2024 to enrich sports bettors and",
+   "published": "2026-10-24T14:21-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/beas.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/friday-four-how-realistic-is-200-points-for-oilers-connor-mcdavid/",
+   "sn_team_count": 0,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/former-nba-player-malik-beasley-negotiating-plea-deal-over-gambling-charges/",
    "source": "Sportsnet"
   },
   {
@@ -4213,7 +4217,7 @@
       "l": 8,
       "otl": 0,
       "pts": 10,
-      "gf": 41,
+      "gf": 44,
       "ga": 50,
       "strk": "W1"
      },
@@ -4226,7 +4230,7 @@
       "otl": 1,
       "pts": 5,
       "gf": 25,
-      "ga": 47,
+      "ga": 50,
       "strk": "W1"
      },
      {
@@ -4560,7 +4564,7 @@
       "otl": 2,
       "pts": 26,
       "gf": 67,
-      "ga": 29,
+      "ga": 30,
       "strk": "W8"
      },
      {
@@ -4595,7 +4599,7 @@
       "l": 3,
       "otl": 0,
       "pts": 24,
-      "gf": 85,
+      "gf": 86,
       "ga": 28,
       "strk": "W7"
      },
@@ -4758,8 +4762,8 @@
       "l": 7,
       "otl": 2,
       "pts": 12,
-      "gf": 61,
-      "ga": 59,
+      "gf": 62,
+      "ga": 60,
       "strk": "W2"
      },
      {
@@ -4770,7 +4774,7 @@
       "l": 7,
       "otl": 1,
       "pts": 11,
-      "gf": 49,
+      "gf": 50,
       "ga": 54,
       "strk": "W1"
      },
@@ -4807,7 +4811,7 @@
       "otl": 0,
       "pts": 8,
       "gf": 42,
-      "ga": 71,
+      "ga": 72,
       "strk": "L7"
      },
      {
@@ -4835,8 +4839,8 @@
       "l": 2,
       "otl": 0,
       "pts": 26,
-      "gf": 73,
-      "ga": 37,
+      "gf": 74,
+      "ga": 38,
       "strk": "W4"
      },
      {
@@ -4860,7 +4864,7 @@
       "otl": 1,
       "pts": 23,
       "gf": 82,
-      "ga": 38,
+      "ga": 39,
       "strk": "W4"
      },
      {
@@ -4883,7 +4887,7 @@
       "l": 3,
       "otl": 2,
       "pts": 16,
-      "gf": 43,
+      "gf": 44,
       "ga": 33,
       "strk": "W1"
      },
@@ -4931,8 +4935,8 @@
       "l": 13,
       "otl": 0,
       "pts": 8,
-      "gf": 52,
-      "ga": 75,
+      "gf": 53,
+      "ga": 77,
       "strk": "L2"
      },
      {
@@ -4943,8 +4947,8 @@
       "l": 10,
       "otl": 3,
       "pts": 7,
-      "gf": 36,
-      "ga": 70,
+      "gf": 38,
+      "ga": 71,
       "strk": "W1"
      },
      {
