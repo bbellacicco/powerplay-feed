@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25T17:32:17-04:00",
+ "updated": "2026-10-25T17:46:38-04:00",
  "today": "2026-10-25",
  "range": [
   "2026-10-22",
@@ -744,11 +744,11 @@
    "home_away": "H",
    "opponent": "Niagara Falls Canucks",
    "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
-   "note": "",
+   "note": "20:00 1st",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16619"
    },
@@ -2832,6 +2832,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Canadians tie for third at Bermuda Championship after final round cancelled",
+   "summary": "",
+   "published": "2026-10-25T17:36-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/07/corey-conners-open.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Golf",
+   "url": "https://www.sportsnet.ca/pga/article/canadians-tie-for-third-at-bermuda-championship-after-final-round-cancelled/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "Falcons force four turnovers to hand 49ers first loss",
    "summary": "",
@@ -2868,19 +2881,6 @@
    "sn_team_count": 0,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/wnba/article/report-date-venue-for-wnba-finals-game-6-unclear/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "cfl",
-   "headline": "CFL playoff schedule, matchups set after regular-season finale",
-   "summary": "",
-   "published": "2026-10-24T18:07-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/11/roughriders-2.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/cfl-playoff-schedule-matchups-set-after-regular-season-finale/",
    "source": "Sportsnet"
   },
   {
@@ -3021,6 +3021,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Canada’s Fernandez drops Ningbo Open final against top-ranked Rybakina",
+   "summary": "",
+   "published": "2026-10-25T08:05-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/leylah-1-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Tennis",
+   "url": "https://www.sportsnet.ca/wta/article/canadas-fernandez-drops-ningbo-open-final-against-top-ranked-rybakina/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Maple Leafs get full team effort in blowout win over McDavid’s Oilers",
    "summary": "The air outside Rogers Place chilled to minus -10 C on a brisk autumn evening. Yet the Maple Leafs came into town for their annual meeting with the Oilers hot — and left scorching.",
@@ -3046,19 +3059,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/oilers-lack-of-depth-proves-costly-in-loss-to-maple-leafs/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "cfl",
-   "headline": "Argonauts to face Blue Bombers in East semifinal",
-   "summary": "",
-   "published": "2026-10-24T18:06-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/Untitled-design-1-65.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/argonauts-to-face-blue-bombers-in-east-semifinal/",
    "source": "Sportsnet"
   },
   {
@@ -3140,29 +3140,29 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Canada’s Fernandez drops Ningbo Open final against top-ranked Rybakina",
+   "league": "cfl",
+   "headline": "Argonauts to face Blue Bombers in East semifinal",
    "summary": "",
-   "published": "2026-10-25T08:05-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/leylah-1-1.jpg",
+   "published": "2026-10-24T18:06-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/Untitled-design-1-65.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
-   "sport": "Tennis",
-   "url": "https://www.sportsnet.ca/wta/article/canadas-fernandez-drops-ningbo-open-final-against-top-ranked-rybakina/",
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/argonauts-to-face-blue-bombers-in-east-semifinal/",
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Final round of Bermuda Championship postponed with pair of Canadians in contention",
+   "league": "cfl",
+   "headline": "CFL playoff schedule, matchups set after regular-season finale",
    "summary": "",
-   "published": "2026-10-25T08:45-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/12/CP174440873-1.jpg",
+   "published": "2026-10-24T18:07-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/11/roughriders-2.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
-   "sport": "Golf",
-   "url": "https://www.sportsnet.ca/pga/article/final-round-of-bermuda-championship-postponed-with-pair-of-canadians-in-contention/",
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/cfl-playoff-schedule-matchups-set-after-regular-season-finale/",
    "source": "Sportsnet"
   },
   {
