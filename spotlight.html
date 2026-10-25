@@ -128,7 +128,7 @@
     var id = vid(v.u); if (!id) { window.open(v.u, '_blank', 'noopener'); return; }
     frame.innerHTML = '';
     var f = document.createElement('iframe');
-    f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&playsinline=1&modestbranding=1'; f.title = v.t;
+    f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&playsinline=1&modestbranding=1&vq=hd1080'; f.title = v.t;
     f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; f.allowFullscreen = true;
     frame.appendChild(f);
     document.getElementById('ptitle').textContent = v.t;
