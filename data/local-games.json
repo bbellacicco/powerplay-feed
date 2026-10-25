@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25T18:46:41-04:00",
+ "updated": "2026-10-25T19:01:47-04:00",
  "today": "2026-10-25",
  "range": [
   "2026-10-22",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -782,9 +782,9 @@
    "home_away": "A",
    "opponent": "Mooretown Flags",
    "location": "Mooretown Sports Complex",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
    "note": "",
    "links": {
@@ -2740,19 +2740,6 @@
  "more_news": [
   {
    "league": "nhl",
-   "headline": "Canadiens gear up for great outdoors at Heritage Classic: ‘Can’t wait’",
-   "summary": "Outdoor hockey in Winnipeg, mercifully in October rather than December or January. The Canadiens will experience many memories from their childhood days when they face the Jets in the Heritage Classic on Sunday night.",
-   "published": "2026-10-25T09:06-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/josh-anderson.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canadiens-gear-up-for-great-outdoors-at-heritage-classic-cant-wait/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Maple Leafs Notebook: Raddysh talks viral McDavid tweets",
    "summary": "Darren Raddysh and Connor McDavid are longtime pals, as social-media sleuths discovered Saturday during the Leafs-Oilers game. The former Erie Otters teammates have maintained their connection as pros.",
    "published": "2026-10-25T17:10-04:00",
@@ -2777,6 +2764,19 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/what-we-learned-from-connor-hellebuycks-first-weekend-with-the-devils/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "NFL Week 7 roundup: Dolphins down Jets for first win",
+   "summary": "",
+   "published": "2026-10-25T16:38-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/dolphins.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-7-roundup-dolphins-down-jets-for-first-win/",
    "source": "Sportsnet"
   },
   {
@@ -2874,32 +2874,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Kraken forward Jared McCann sidelined long-term with lower-body injury",
-   "summary": "",
-   "published": "2026-10-25T13:55-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/jared-mccann.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/kraken-forward-jared-mccann-sidelined-long-term-with-lower-body-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "NFL Week 7 roundup: Dolphins down Jets for first win",
-   "summary": "",
-   "published": "2026-10-25T16:38-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/dolphins.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-7-roundup-dolphins-down-jets-for-first-win/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "‘I just feel gratitude’: Hughes reflects on Canucks tenure ahead of return",
    "summary": "The defenceman will be greeted by a degree of hostility Sunday when he steps on the ice at Rogers Arena from the visitors’ bench for the first time.",
    "published": "2026-10-24T18:08-04:00",
@@ -2938,6 +2912,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/rangers-sign-goalie-james-reimer-to-one-year-deal/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Kraken forward Jared McCann sidelined long-term with lower-body injury",
+   "summary": "",
+   "published": "2026-10-25T13:55-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/jared-mccann.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/kraken-forward-jared-mccann-sidelined-long-term-with-lower-body-injury/",
    "source": "Sportsnet"
   },
   {
@@ -3152,19 +3139,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/batherson-nets-hat-trick-as-senators-sink-rangers/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "‘A little lamb chops and some gravy’: Brown addresses squabbles with Tatum",
-   "summary": "Jaylen Brown says there’s “no beef” between himself and former Boston teammate Jayson Tatum even as their squabbles have dragged into the season.",
-   "published": "2026-10-24T23:39-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Jaylen-Brown.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/a-little-lamb-chops-and-some-gravy-brown-addresses-squabbles-with-tatum/",
    "source": "Sportsnet"
   },
   {
@@ -4453,7 +4427,7 @@
       "l": 1,
       "otl": 0,
       "pts": 36,
-      "gf": 116,
+      "gf": 117,
       "ga": 35,
       "strk": "W12"
      },
@@ -4562,7 +4536,7 @@
       "otl": 0,
       "pts": 12,
       "gf": 47,
-      "ga": 67,
+      "ga": 68,
       "strk": "W1"
      },
      {
