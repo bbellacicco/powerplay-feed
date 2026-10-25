@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25T16:31:42-04:00",
+ "updated": "2026-10-25T16:50:16-04:00",
  "today": "2026-10-25",
  "range": [
   "2026-10-22",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -725,11 +725,11 @@
    "home_away": "A",
    "opponent": "Ayr Centennials",
    "location": "North Dumfries C.C., Ayr, ON",
-   "status": "live",
+   "status": "final",
    "our_score": 3,
    "opp_score": 6,
-   "result": null,
-   "note": "02:24 3rd",
+   "result": "L",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15620"
    },
@@ -2768,18 +2768,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "NFL Week 7 preview: Walker returns to Seattle with undefeated Chiefs",
-   "summary": "Kenneth Walker III is a big reason why the Chiefs are undefeated, and now he gets to face his former team. Kellen Forrest previews the big Chiefs-Seahawks clash and more in his Week 7 preview.",
-   "published": "2026-10-24T14:02-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/Untitled-design-1-19.jpg",
+   "league": "nhl",
+   "headline": "Canadiens gear up for great outdoors at Heritage Classic: ‘Can’t wait’",
+   "summary": "Outdoor hockey in Winnipeg, mercifully in October rather than December or January. The Canadiens will experience many memories from their childhood days when they face the Jets in the Heritage Classic on Sunday night.",
+   "published": "2026-10-25T09:06-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/josh-anderson.jpg",
    "video": false,
-   "teams": [
-    "Detroit Lions"
-   ],
-   "sn_team_count": 6,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-7-preview-walker-returns-to-seattle-with-undefeated-chiefs/",
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canadiens-gear-up-for-great-outdoors-at-heritage-classic-cant-wait/",
    "source": "Sportsnet"
   },
   {
@@ -2823,6 +2821,19 @@
   },
   {
    "league": "nfl",
+   "headline": "Malik Willis sparks Dolphins’ first win, holding off a late Jets rally 28-25",
+   "summary": "",
+   "published": "2026-10-25T16:32-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/malik.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/malik-willis-sparks-dolphins-first-win-holding-off-a-late-jets-rally-28-25/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
    "headline": "Bucky Irving runs for two TDs, Bucs force four turnovers in rout of Panthers",
    "summary": "",
    "published": "2026-10-25T16:13-04:00",
@@ -2832,19 +2843,6 @@
    "sn_team_count": 2,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/bucky-irving-runs-for-two-tds-bucs-force-four-turnovers-in-rout-of-panthers/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Burrow throws four TD passes as Bengals storm past Jackson-less Ravens",
-   "summary": "",
-   "published": "2026-10-25T16:18-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/joe-burrow.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/burrow-throws-four-td-passes-as-bengals-storm-past-jackson-less-ravens/",
    "source": "Sportsnet"
   },
   {
@@ -2887,6 +2885,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nfl",
+   "headline": "NFL Week 7 roundup: Dolphins down Jets for first win",
+   "summary": "",
+   "published": "2026-10-25T16:38-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/dolphins.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-7-roundup-dolphins-down-jets-for-first-win/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "‘I just feel gratitude’: Hughes reflects on Canucks tenure ahead of return",
    "summary": "The defenceman will be greeted by a degree of hostility Sunday when he steps on the ice at Rogers Arena from the visitors’ bench for the first time.",
@@ -2900,16 +2911,31 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Canadiens gear up for great outdoors at Heritage Classic: ‘Can’t wait’",
-   "summary": "Outdoor hockey in Winnipeg, mercifully in October rather than December or January. The Canadiens will experience many memories from their childhood days when they face the Jets in the Heritage Classic on Sunday night.",
-   "published": "2026-10-25T09:06-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/josh-anderson.jpg",
+   "league": "nfl",
+   "headline": "NFL Week 7 preview: Walker returns to Seattle with undefeated Chiefs",
+   "summary": "Kenneth Walker III is a big reason why the Chiefs are undefeated, and now he gets to face his former team. Kellen Forrest previews the big Chiefs-Seahawks clash and more in his Week 7 preview.",
+   "published": "2026-10-24T14:02-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/Untitled-design-1-19.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Lions"
+   ],
+   "sn_team_count": 6,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-7-preview-walker-returns-to-seattle-with-undefeated-chiefs/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Burrow throws four TD passes as Bengals storm past Jackson-less Ravens",
+   "summary": "",
+   "published": "2026-10-25T16:18-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/joe-burrow.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canadiens-gear-up-for-great-outdoors-at-heritage-classic-cant-wait/",
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/burrow-throws-four-td-passes-as-bengals-storm-past-jackson-less-ravens/",
    "source": "Sportsnet"
   },
   {
@@ -3161,19 +3187,6 @@
    "sn_team_count": 0,
    "sport": "Golf",
    "url": "https://www.sportsnet.ca/pga/article/final-round-of-bermuda-championship-postponed-with-pair-of-canadians-in-contention/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Rays’ Liam Hicks becomes fourth Canadian-born player to homer in World Series",
-   "summary": "",
-   "published": "2026-10-24T20:58-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177142720.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/rays-liam-hicks-becomes-fourth-canadian-born-player-to-homer-in-world-series/",
    "source": "Sportsnet"
   },
   {
@@ -4121,14 +4134,14 @@
      {
       "name": "Brampton Steelheads",
       "abbr": "BRAM",
-      "gp": 12,
+      "gp": 13,
       "w": 2,
-      "l": 8,
+      "l": 9,
       "otl": 2,
       "pts": 6,
       "gf": 33,
       "ga": 57,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Barrie Colts",
@@ -4139,7 +4152,7 @@
       "otl": 1,
       "pts": 5,
       "gf": 31,
-      "ga": 57,
+      "ga": 58,
       "strk": "L1"
      }
     ]
@@ -4220,7 +4233,7 @@
       "l": 3,
       "otl": 0,
       "pts": 18,
-      "gf": 56,
+      "gf": 57,
       "ga": 38,
       "strk": "L1"
      },
@@ -4245,20 +4258,20 @@
       "otl": 2,
       "pts": 16,
       "gf": 48,
-      "ga": 48,
+      "ga": 49,
       "strk": "W3"
      },
      {
       "name": "Erie Otters",
       "abbr": "ER",
-      "gp": 13,
-      "w": 6,
+      "gp": 14,
+      "w": 7,
       "l": 5,
       "otl": 2,
-      "pts": 14,
+      "pts": 16,
       "gf": 43,
       "ga": 50,
-      "strk": "W1"
+      "strk": "W2"
      },
      {
       "name": "Owen Sound Attack",
@@ -4268,7 +4281,7 @@
       "l": 8,
       "otl": 1,
       "pts": 9,
-      "gf": 37,
+      "gf": 38,
       "ga": 57,
       "strk": "W2"
      }
@@ -4287,7 +4300,7 @@
       "l": 3,
       "otl": 0,
       "pts": 30,
-      "gf": 74,
+      "gf": 75,
       "ga": 51,
       "strk": "W1"
      },
@@ -4448,7 +4461,7 @@
       "l": 3,
       "otl": 1,
       "pts": 27,
-      "gf": 69,
+      "gf": 70,
       "ga": 36,
       "strk": "L1"
      },
@@ -4473,7 +4486,7 @@
       "otl": 2,
       "pts": 26,
       "gf": 69,
-      "ga": 32,
+      "ga": 33,
       "strk": "L1"
      },
      {
@@ -4569,7 +4582,7 @@
       "otl": 2,
       "pts": 12,
       "gf": 40,
-      "ga": 86,
+      "ga": 87,
       "strk": "L6"
      }
     ]
@@ -4606,14 +4619,14 @@
      {
       "name": "Chatham Maroons",
       "abbr": "CHA",
-      "gp": 13,
+      "gp": 14,
       "w": 10,
-      "l": 3,
+      "l": 4,
       "otl": 0,
       "pts": 20,
       "gf": 62,
       "ga": 39,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "St. Thomas Stars",
@@ -4671,7 +4684,7 @@
       "l": 7,
       "otl": 0,
       "pts": 12,
-      "gf": 45,
+      "gf": 46,
       "ga": 58,
       "strk": "W2"
      },
@@ -4789,6 +4802,18 @@
       "strk": "W2"
      },
      {
+      "name": "Ayr Centennials",
+      "abbr": "AYR",
+      "gp": 12,
+      "w": 7,
+      "l": 3,
+      "otl": 2,
+      "pts": 16,
+      "gf": 50,
+      "ga": 43,
+      "strk": "W2"
+     },
+     {
       "name": "Pelham Panthers",
       "abbr": "PEL",
       "gp": 13,
@@ -4797,20 +4822,8 @@
       "otl": 1,
       "pts": 15,
       "gf": 59,
-      "ga": 54,
+      "ga": 55,
       "strk": "L1"
-     },
-     {
-      "name": "Ayr Centennials",
-      "abbr": "AYR",
-      "gp": 11,
-      "w": 6,
-      "l": 3,
-      "otl": 2,
-      "pts": 14,
-      "gf": 50,
-      "ga": 43,
-      "strk": "W1"
      },
      {
       "name": "Port Colborne Sailors",
