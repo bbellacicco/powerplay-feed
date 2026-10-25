@@ -1,9 +1,9 @@
 {
- "updated": "2026-10-24T23:46:55-04:00",
- "today": "2026-10-24",
+ "updated": "2026-10-25T00:05:02-04:00",
+ "today": "2026-10-25",
  "range": [
-  "2026-10-21",
-  "2026-10-27"
+  "2026-10-22",
+  "2026-10-28"
  ],
  "teams": {
   "spitfires": {
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 28
+   "count": 29
   },
   "club_news": {
    "ok": true,
@@ -111,203 +111,6 @@
   }
  },
  "games": [
-  {
-   "id": "highschool-2026-10-21-48",
-   "team": "highschool",
-   "sport": "Junior Boys Football",
-   "start": "2026-10-21T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Essex",
-   "location": "Essex",
-   "status": "final",
-   "our_score": 7,
-   "opp_score": 36,
-   "result": null,
-   "note": "",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "L'Essor",
-   "home": "Essex"
-  },
-  {
-   "id": "highschool-2026-10-21-49",
-   "team": "highschool",
-   "sport": "Junior Boys Football",
-   "start": "2026-10-21T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Holy Names",
-   "location": "Holy Names",
-   "status": "final",
-   "our_score": 0,
-   "opp_score": 49,
-   "result": null,
-   "note": "",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "St. Anne",
-   "home": "Holy Names"
-  },
-  {
-   "id": "highschool-2026-10-21-43",
-   "team": "highschool",
-   "sport": "Junior Girls Basketball",
-   "start": "2026-10-21T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Villanova",
-   "location": "Villanova",
-   "status": "final",
-   "our_score": 37,
-   "opp_score": 10,
-   "result": null,
-   "note": "Tier 1",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "St. Anne",
-   "home": "Villanova"
-  },
-  {
-   "id": "highschool-2026-10-21-47",
-   "team": "highschool",
-   "sport": "Junior Girls Basketball",
-   "start": "2026-10-21T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Erie Migration",
-   "location": "Erie Migration",
-   "status": "final",
-   "our_score": 18,
-   "opp_score": 54,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Assumption",
-   "home": "Erie Migration"
-  },
-  {
-   "id": "highschool-2026-10-21-46",
-   "team": "highschool",
-   "sport": "Senior Boys Volleyball",
-   "start": "2026-10-21T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Maranatha",
-   "location": "Maranatha",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 0,
-   "result": null,
-   "note": "Group 3 · Date change",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Ste. Cecile",
-   "home": "Maranatha"
-  },
-  {
-   "id": "highschool-2026-10-21-44",
-   "team": "highschool",
-   "sport": "Senior Girls Basketball",
-   "start": "2026-10-21T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Erie Migration",
-   "location": "Erie Migration",
-   "status": "final",
-   "our_score": 33,
-   "opp_score": 43,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Assumption",
-   "home": "Erie Migration"
-  },
-  {
-   "id": "highschool-2026-10-21-45",
-   "team": "highschool",
-   "sport": "Senior Girls Basketball",
-   "start": "2026-10-21T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Belle River",
-   "location": "Belle River",
-   "status": "final",
-   "our_score": 27,
-   "opp_score": 31,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Massey",
-   "home": "Belle River"
-  },
-  {
-   "id": "junior-gojhl15599",
-   "team": "junior",
-   "sport": "GOHL (Jr. B)",
-   "start": "2026-10-21T19:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Komoka Kings",
-   "location": "Vollmer Culture R.C., LaSalle, ON",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 1,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.gohl.ca/stats/game-center/15599"
-   },
-   "club": "LaSalle Vipers"
-  },
-  {
-   "id": "lancers-6495",
-   "team": "lancers",
-   "sport": "Women's Soccer",
-   "start": "2026-10-21T19:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Brock Badgers",
-   "location": "St. Catharines, ON",
-   "status": "final",
-   "our_score": 0,
-   "opp_score": 1,
-   "result": "L",
-   "note": "OUA Playoffs - Round 1",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6495",
-    "recap": "https://golancers.ca/news/2026/10/22/womens-soccer-lancers-wrap-up-season-with-loss-to-brock-in-first-round-playoff-game.aspx"
-   }
-  },
-  {
-   "id": "junior-gs2960414",
-   "team": "junior",
-   "sport": "PJHL (Jr. C)",
-   "start": "2026-10-21T19:30:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Blenheim Blades",
-   "location": "Wheatley Area Arena",
-   "status": "final",
-   "our_score": 1,
-   "opp_score": 7,
-   "result": "L",
-   "note": "",
-   "links": {
-    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960414?configuration=45"
-   },
-   "club": "Wheatley Sharks"
-  },
   {
    "id": "highschool-2026-10-22-55",
    "team": "highschool",
@@ -2107,6 +1910,44 @@
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960471?configuration=45"
    },
    "club": "Essex 73's"
+  },
+  {
+   "id": "junior-gojhl15625",
+   "team": "junior",
+   "sport": "GOHL (Jr. B)",
+   "start": "2026-10-28T19:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Woodstock Navy Vets",
+   "location": "Vollmer Culture R.C., LaSalle, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.gohl.ca/stats/game-center/15625"
+   },
+   "club": "LaSalle Vipers"
+  },
+  {
+   "id": "junior-gs2960475",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-10-28T19:30:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Amherstburg Admirals",
+   "location": "Wheatley Area Arena",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960475?configuration=45"
+   },
+   "club": "Wheatley Sharks"
   }
  ],
  "pro_games": [
@@ -2923,6 +2764,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/oilers-lack-of-depth-proves-costly-in-loss-to-maple-leafs/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Relentless Brewers rally past sloppy Rays to take 2-0 World Series lead",
+   "summary": "",
+   "published": "2026-10-24T23:49-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177143260.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/brewers-rally-from-early-deficit-to-take-2-0-world-series-lead-over-rays/",
    "source": "Sportsnet"
   },
   {
