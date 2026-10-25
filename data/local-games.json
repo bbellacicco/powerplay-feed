@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25T18:05:18-04:00",
+ "updated": "2026-10-25T18:16:42-04:00",
  "today": "2026-10-25",
  "range": [
   "2026-10-22",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -745,10 +745,10 @@
    "opponent": "Niagara Falls Canucks",
    "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
    "status": "live",
-   "our_score": 0,
+   "our_score": 1,
    "opp_score": 0,
    "result": null,
-   "note": "20:00 1st",
+   "note": "17:55 1st",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16619"
    },
@@ -2793,6 +2793,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "Raptors’ Kawhi Leonard out vs. Timberwolves with knee swelling",
+   "summary": "Forward Kawhi Leonard has been ruled out of Sunday’s showdown against the Minnesota Timberwolves with left knee swelling, the team announced before tip-off.",
+   "published": "2026-10-25T18:11-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/kahwi.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/raptors-kawhi-leonard-out-vs-timberwolves-with-knee-swelling/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Hurricanes sign defenceman Alexander Nikishin to one-year, $3M deal",
    "summary": "Alexander Nikishin’s restricted free agency saga has come to an end.",
@@ -2806,16 +2821,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Rangers sign goalie James Reimer to one-year deal",
-   "summary": "",
-   "published": "2026-10-25T12:16-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-6-4.jpg",
+   "league": "other",
+   "headline": "European roundup: Bayern back on top in Germany after beating Freiburg",
+   "summary": "Ballon d’Or contender Harry Kane failed to find the net, but Bayern Munich defeated Freiburg 3-1 on the road to regain first place in the Bundesliga on Sunday.",
+   "published": "2026-10-25T17:53-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Bayern-Munich.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/rangers-sign-goalie-james-reimer-to-one-year-deal/",
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/soccer/article/european-roundup-bayern-back-on-top-in-germany-after-beating-freiburg/",
    "source": "Sportsnet"
   },
   {
@@ -2829,19 +2844,6 @@
    "sn_team_count": 0,
    "sport": "Auto Racing",
    "url": "https://www.sportsnet.ca/formula-1/article/kimi-antonelli-wins-us-grand-prix-tightens-grip-on-historic-f1-title-chase/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Rodgers throws TD in Paris as Steelers beat Saints in NFL’s regular-season France debut",
-   "summary": "",
-   "published": "2026-10-25T13:00-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-6-2.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/rodgers-throws-td-in-paris-as-steelers-beat-saints-in-nfls-regular-season-france-debut/",
    "source": "Sportsnet"
   },
   {
@@ -2884,19 +2886,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Report: Date, venue for WNBA Finals Game 6 unclear",
-   "summary": "There will be a Game 6 of the WNBA Finals. When and where it takes place, however, is far less secure.",
-   "published": "2026-10-25T14:56-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/gabby-williams-2.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/wnba/article/report-date-venue-for-wnba-finals-game-6-unclear/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nfl",
    "headline": "NFL Week 7 roundup: Dolphins down Jets for first win",
    "summary": "",
@@ -2936,6 +2925,19 @@
    "sn_team_count": 6,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/sunday-overreactions-can-blue-jackets-convince-werenski-to-stay/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Rangers sign goalie James Reimer to one-year deal",
+   "summary": "",
+   "published": "2026-10-25T12:16-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-6-4.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/rangers-sign-goalie-james-reimer-to-one-year-deal/",
    "source": "Sportsnet"
   },
   {
@@ -2992,6 +2994,19 @@
   },
   {
    "league": "other",
+   "headline": "Report: Date, venue for WNBA Finals Game 6 unclear",
+   "summary": "There will be a Game 6 of the WNBA Finals. When and where it takes place, however, is far less secure.",
+   "published": "2026-10-25T14:56-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/gabby-williams-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/wnba/article/report-date-venue-for-wnba-finals-game-6-unclear/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
    "headline": "Premier League Roundup: Man United humbled by Bournemouth",
    "summary": "",
    "published": "2026-10-25T12:14-04:00",
@@ -3044,19 +3059,6 @@
    "sn_team_count": 6,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/nfl-week-7-preview-walker-returns-to-seattle-with-undefeated-chiefs/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "European roundup: Bayern back on top in Germany after beating Freiburg",
-   "summary": "Ballon d’Or contender Harry Kane failed to find the net, but Bayern Munich defeated Freiburg 3-1 on the road to regain first place in the Bundesliga on Sunday.",
-   "published": "2026-10-25T17:53-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Bayern-Munich.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/soccer/article/european-roundup-bayern-back-on-top-in-germany-after-beating-freiburg/",
    "source": "Sportsnet"
   },
   {
@@ -3163,19 +3165,6 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/a-little-lamb-chops-and-some-gravy-brown-addresses-squabbles-with-tatum/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Toronto FC’s second-half rally falls short vs. Columbus Crew",
-   "summary": "",
-   "published": "2026-10-24T18:03-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Toronto-FC-2.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/toronto-fcs-second-half-rally-falls-short-vs-columbus-crew/",
    "source": "Sportsnet"
   },
   {
@@ -4089,7 +4078,7 @@
       "l": 6,
       "otl": 3,
       "pts": 13,
-      "gf": 39,
+      "gf": 40,
       "ga": 44,
       "strk": "W1"
      },
@@ -4119,7 +4108,7 @@
       "otl": 1,
       "pts": 17,
       "gf": 50,
-      "ga": 32,
+      "ga": 33,
       "strk": "L1"
      },
      {
@@ -4524,7 +4513,7 @@
       "l": 2,
       "otl": 1,
       "pts": 25,
-      "gf": 61,
+      "gf": 62,
       "ga": 26,
       "strk": "W5"
      },
@@ -4561,7 +4550,7 @@
       "otl": 2,
       "pts": 14,
       "gf": 60,
-      "ga": 87,
+      "ga": 88,
       "strk": "L2"
      },
      {
