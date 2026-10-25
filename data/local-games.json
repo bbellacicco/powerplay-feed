@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24T21:46:52-04:00",
+ "updated": "2026-10-24T22:05:42-04:00",
  "today": "2026-10-24",
  "range": [
   "2026-10-21",
@@ -39,7 +39,7 @@
   },
   "lancers": {
    "ok": true,
-   "count": 94
+   "count": 95
   },
   "junior": {
    "ok": true,
@@ -776,7 +776,9 @@
    "opp_score": 5,
    "result": "L",
    "note": "OT",
-   "links": {}
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6341"
+   }
   },
   {
    "id": "junior-gs2960433",
@@ -812,7 +814,8 @@
    "result": "L",
    "note": "",
    "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6286"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6286",
+    "recap": "https://golancers.ca/news/2026/10/24/womens-hockey-lancers-drop-home-opener-to-visiting-gee-gees.aspx"
    }
   },
   {
@@ -861,14 +864,13 @@
    "home_away": "H",
    "opponent": "Carleton Ravens",
    "location": "Adie Knox Arena",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 6,
+   "opp_score": 2,
+   "result": "W",
    "note": "",
    "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=172",
-    "watch": "https://oua.tv/?school=Windsor"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6287"
    }
   },
   {
@@ -880,13 +882,13 @@
    "home_away": "A",
    "opponent": "Lakehead Thunderwolves",
    "location": "Thunder Bay, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 4,
+   "result": "L",
+   "note": "OT",
    "links": {
-    "watch": "https://oua.tv/?school=Windsor"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6342"
    }
   },
   {
@@ -898,11 +900,11 @@
    "home_away": "H",
    "opponent": "Soo Greyhounds",
    "location": "WFCU Centre, Windsor",
-   "status": "live",
+   "status": "final",
    "our_score": 4,
    "opp_score": 3,
-   "result": null,
-   "note": "End of Game",
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29120/"
    }
@@ -2983,6 +2985,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Nikita Kucherov sets Lightning all-time points record",
+   "summary": "",
+   "published": "2026-10-24T21:58-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177141728.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/nikita-kucherov-sets-lightning-all-time-points-record/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "cfl",
    "headline": "CFL playoff schedule, matchups set after regular-season finale",
    "summary": "",
@@ -3009,19 +3024,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Ducks’ Leo Carlsson burns Flyers with goal and assist in win",
-   "summary": "Leo Carlsson came within one financial decision of becoming a Philadelphia Flyer last summer. On Saturday, the Anaheim centre found a way to beat the team that tried to pry him away from the Ducks.",
-   "published": "2026-10-24T17:03-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Leo.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/ducks-leo-carlsson-burns-flyers-with-goal-and-assist-in-win/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "other",
    "headline": "Van-Kape, Prates-Morales set to headline UFC 336 in Toronto",
    "summary": "",
@@ -3032,6 +3034,32 @@
    "sn_team_count": 0,
    "sport": "MMA",
    "url": "https://www.sportsnet.ca/ufc/article/van-kape-prates-morales-set-to-headline-ufc-336-in-toronto/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Hurricanes tried trading for forward to flip to Jets for Hellebuyck",
+   "summary": "",
+   "published": "2026-10-24T21:32-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/04/connor-hellebuyck.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/hurricanes-tried-trading-for-forward-to-flip-to-jets-for-hellebuyck/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Ducks’ Leo Carlsson burns Flyers with goal and assist in win",
+   "summary": "Leo Carlsson came within one financial decision of becoming a Philadelphia Flyer last summer. On Saturday, the Anaheim centre found a way to beat the team that tried to pry him away from the Ducks.",
+   "published": "2026-10-24T17:03-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Leo.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/ducks-leo-carlsson-burns-flyers-with-goal-and-assist-in-win/",
    "source": "Sportsnet"
   },
   {
@@ -3255,32 +3283,6 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/premier-league/article/premier-league-roundup-man-citys-perfect-start-ends-with-loss-at-aston-villa/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Brewers stars lead way in World Series-opening win over Rays",
-   "summary": "In the first World Series game Milwaukee has hosted since 1982, the Brewers lived up to the moment and beat the Rays behind a collective effort from their biggest stars.",
-   "published": "2026-10-23T23:27-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177138546.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/brewers-beat-rays-behind-strong-pitching-in-game-1-of-world-series/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Brewers’ Misiorowski sets World Series velocity record on first pitch",
-   "summary": "",
-   "published": "2026-10-23T20:37-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Miz.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/brewers-misiorowski-sets-world-series-velocity-record-on-first-pitch/",
    "source": "Sportsnet"
   },
   {
@@ -3623,15 +3625,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Here's how Tigers prospects have fared at Arizona Fall League",
+   "headline": "Watch LIVE: Tigers prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-22T07:18-04:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/w26xzdkhrmksf3er7d1m",
+   "published": "2026-10-24T21:44-04:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
     "Detroit Tigers"
    ],
-   "url": "https://www.mlb.com/tigers/news/how-tigers-prospects-are-doing-in-2026-arizona-fall-league",
+   "url": "https://www.mlb.com/tigers/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
    "source": "Team site"
   },
   {
@@ -3649,6 +3651,19 @@
   },
   {
    "league": "mlb",
+   "headline": "Here's how Tigers prospects have fared at Arizona Fall League",
+   "summary": "",
+   "published": "2026-10-22T07:18-04:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/w26xzdkhrmksf3er7d1m",
+   "video": false,
+   "teams": [
+    "Detroit Tigers"
+   ],
+   "url": "https://www.mlb.com/tigers/news/how-tigers-prospects-are-doing-in-2026-arizona-fall-league",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
    "headline": "Tigers' offseason starts with key decision on Jansen's option",
    "summary": "",
    "published": "2026-10-19T10:45-04:00",
@@ -3658,19 +3673,6 @@
     "Detroit Tigers"
    ],
    "url": "https://www.mlb.com/tigers/news/tigers-club-option-for-veteran-closer-kenley-jansen-2027",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
-   "headline": "Watch Tigers prospects in Arizona Fall League action",
-   "summary": "",
-   "published": "2026-10-24T21:04-04:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
-   "video": false,
-   "teams": [
-    "Detroit Tigers"
-   ],
-   "url": "https://www.mlb.com/tigers/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
    "source": "Team site"
   },
   {
@@ -4221,8 +4223,8 @@
       "l": 8,
       "otl": 0,
       "pts": 10,
-      "gf": 45,
-      "ga": 51,
+      "gf": 46,
+      "ga": 52,
       "strk": "W1"
      },
      {
@@ -4245,8 +4247,8 @@
       "l": 9,
       "otl": 1,
       "pts": 5,
-      "gf": 26,
-      "ga": 51,
+      "gf": 27,
+      "ga": 52,
       "strk": "W1"
      }
     ]
@@ -4257,14 +4259,14 @@
      {
       "name": "Soo Greyhounds",
       "abbr": "SOO",
-      "gp": 12,
+      "gp": 13,
       "w": 9,
-      "l": 2,
+      "l": 3,
       "otl": 1,
       "pts": 19,
       "gf": 48,
       "ga": 42,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Flint Firebirds",
@@ -4305,14 +4307,14 @@
      {
       "name": "Windsor Spitfires",
       "abbr": "WSR",
-      "gp": 12,
-      "w": 4,
+      "gp": 13,
+      "w": 5,
       "l": 5,
       "otl": 3,
-      "pts": 11,
+      "pts": 13,
       "gf": 45,
       "ga": 48,
-      "strk": "W1"
+      "strk": "W2"
      }
     ]
    },
@@ -4334,14 +4336,14 @@
      {
       "name": "London Knights",
       "abbr": "LDN",
-      "gp": 11,
+      "gp": 12,
       "w": 8,
-      "l": 2,
+      "l": 3,
       "otl": 1,
       "pts": 17,
       "gf": 51,
       "ga": 40,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Kitchener Rangers",
@@ -4370,14 +4372,14 @@
      {
       "name": "Owen Sound Attack",
       "abbr": "OS",
-      "gp": 12,
-      "w": 3,
+      "gp": 13,
+      "w": 4,
       "l": 8,
       "otl": 1,
-      "pts": 7,
+      "pts": 9,
       "gf": 33,
       "ga": 53,
-      "strk": "W1"
+      "strk": "W2"
      }
     ]
    }
@@ -4449,26 +4451,26 @@
      {
       "name": "Stouffville Spirit",
       "abbr": "STO",
-      "gp": 14,
+      "gp": 15,
       "w": 7,
       "l": 6,
-      "otl": 1,
-      "pts": 15,
+      "otl": 2,
+      "pts": 16,
       "gf": 56,
-      "ga": 47,
+      "ga": 48,
       "strk": "W1"
      },
      {
       "name": "St. Michaels Buzzers",
       "abbr": "STM",
-      "gp": 16,
-      "w": 6,
+      "gp": 17,
+      "w": 7,
       "l": 9,
       "otl": 1,
-      "pts": 13,
-      "gf": 50,
+      "pts": 15,
+      "gf": 51,
       "ga": 74,
-      "strk": "L3"
+      "strk": "W1"
      },
      {
       "name": "Aurora Tigers",
@@ -4497,11 +4499,11 @@
      {
       "name": "Lindsay Muskies",
       "abbr": "LIN",
-      "gp": 15,
+      "gp": 16,
       "w": 4,
       "l": 11,
-      "otl": 0,
-      "pts": 8,
+      "otl": 1,
+      "pts": 9,
       "gf": 59,
       "ga": 87,
       "strk": "W1"
@@ -4622,14 +4624,14 @@
      {
       "name": "Mississauga Chargers",
       "abbr": "MIS",
-      "gp": 18,
-      "w": 7,
+      "gp": 19,
+      "w": 8,
       "l": 11,
       "otl": 0,
-      "pts": 14,
+      "pts": 16,
       "gf": 58,
       "ga": 90,
-      "strk": "W1"
+      "strk": "W2"
      },
      {
       "name": "Niagara Falls Canucks",
@@ -4747,6 +4749,18 @@
       "strk": "W7"
      },
      {
+      "name": "Strathroy Rockets",
+      "abbr": "SRY",
+      "gp": 15,
+      "w": 6,
+      "l": 7,
+      "otl": 2,
+      "pts": 14,
+      "gf": 63,
+      "ga": 60,
+      "strk": "W3"
+     },
+     {
       "name": "Elmira Sugar Kings",
       "abbr": "ELM",
       "gp": 14,
@@ -4768,18 +4782,6 @@
       "pts": 12,
       "gf": 43,
       "ga": 52,
-      "strk": "W2"
-     },
-     {
-      "name": "Strathroy Rockets",
-      "abbr": "SRY",
-      "gp": 14,
-      "w": 5,
-      "l": 7,
-      "otl": 2,
-      "pts": 12,
-      "gf": 63,
-      "ga": 60,
       "strk": "W2"
      },
      {
@@ -4838,14 +4840,26 @@
      {
       "name": "St. Catharines Falcons",
       "abbr": "SCF",
-      "gp": 15,
+      "gp": 16,
       "w": 13,
-      "l": 2,
+      "l": 3,
       "otl": 0,
       "pts": 26,
       "gf": 74,
       "ga": 39,
-      "strk": "W4"
+      "strk": "L1"
+     },
+     {
+      "name": "Caledonia Corvairs",
+      "abbr": "CAL",
+      "gp": 15,
+      "w": 12,
+      "l": 2,
+      "otl": 1,
+      "pts": 25,
+      "gf": 60,
+      "ga": 35,
+      "strk": "W3"
      },
      {
       "name": "Fort Erie Meteors",
@@ -4872,18 +4886,6 @@
       "strk": "L1"
      },
      {
-      "name": "Caledonia Corvairs",
-      "abbr": "CAL",
-      "gp": 14,
-      "w": 11,
-      "l": 2,
-      "otl": 1,
-      "pts": 23,
-      "gf": 60,
-      "ga": 35,
-      "strk": "W2"
-     },
-     {
       "name": "Waterloo Siskins",
       "abbr": "WAT",
       "gp": 13,
@@ -4896,6 +4898,18 @@
       "strk": "W2"
      },
      {
+      "name": "Pelham Panthers",
+      "abbr": "PEL",
+      "gp": 13,
+      "w": 7,
+      "l": 5,
+      "otl": 1,
+      "pts": 15,
+      "gf": 53,
+      "ga": 52,
+      "strk": "L1"
+     },
+     {
       "name": "Ayr Centennials",
       "abbr": "AYR",
       "gp": 11,
@@ -4906,18 +4920,6 @@
       "gf": 44,
       "ga": 40,
       "strk": "W1"
-     },
-     {
-      "name": "Pelham Panthers",
-      "abbr": "PEL",
-      "gp": 12,
-      "w": 7,
-      "l": 5,
-      "otl": 0,
-      "pts": 14,
-      "gf": 53,
-      "ga": 52,
-      "strk": "L1"
      },
      {
       "name": "Port Colborne Sailors",
