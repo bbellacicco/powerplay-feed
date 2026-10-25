@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25T00:05:02-04:00",
+ "updated": "2026-10-25T00:16:54-04:00",
  "today": "2026-10-25",
  "range": [
   "2026-10-22",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 29
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -2768,8 +2768,8 @@
   },
   {
    "league": "mlb",
-   "headline": "Relentless Brewers rally past sloppy Rays to take 2-0 World Series lead",
-   "summary": "",
+   "headline": "Relentless Brewers rally past Rays to take 2-0 World Series lead",
+   "summary": "When Liam Hicks homered in the first inning on Saturday, the Rays seemed well on their way to a Game 2 win. But thanks to a persistent offence and impressive bullpen, the Brewers rallied back to take a commanding 2-0 lea",
    "published": "2026-10-24T23:49-04:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177143260.jpg",
    "video": false,
@@ -2845,6 +2845,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "‘A little lamb chops and some gravy’: Brown addresses squabbles with Tatum",
+   "summary": "Jaylen Brown says there’s “no beef” between himself and former Boston teammate Jayson Tatum even as their squabbles have dragged into the season.",
+   "published": "2026-10-24T23:39-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Jaylen-Brown.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/a-little-lamb-chops-and-some-gravy-brown-addresses-squabbles-with-tatum/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "WNBA Finals Takeaways: Valkyries return to defensive identity to tie series",
    "summary": "The Valkyries returned to their defensive identity in Game 4, stopping the ball and dictating the pace against feisty Dream team. Sarah Maat has the takeaways from Game 4 of the WNBA Finals.",
@@ -2884,19 +2897,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Nikita Kucherov sets Lightning all-time points record",
-   "summary": "",
-   "published": "2026-10-24T21:58-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177141728.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/nikita-kucherov-sets-lightning-all-time-points-record/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "cfl",
    "headline": "CFL playoff schedule, matchups set after regular-season finale",
    "summary": "",
@@ -2920,6 +2920,19 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/hurricanes-tried-trading-for-forward-to-flip-to-jets-for-hellebuyck/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Nikita Kucherov sets Lightning all-time points record",
+   "summary": "",
+   "published": "2026-10-24T21:58-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177141728.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/nikita-kucherov-sets-lightning-all-time-points-record/",
    "source": "Sportsnet"
   },
   {
@@ -3068,16 +3081,29 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "Ravens’ Lamar Jackson ruled out vs. Bengals with ankle injury",
-   "summary": "The Baltimore Ravens have ruled star quarterback Lamar Jackson out for Sunday’s game against Cincinnati because of an ankle injury.",
-   "published": "2026-10-24T16:12-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/11/lamar.jpg",
+   "league": "other",
+   "headline": "UCF survives wild finish to stun unbeaten BYU in double overtime",
+   "summary": "",
+   "published": "2026-10-24T20:01-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/UCF.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 1,
+   "sport": "Football Hockey",
+   "url": "https://www.sportsnet.ca/ncaa-mens-football/article/ucf-stuns-unbeaten-byu-in-overtime-thriller/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Manning, Texas hang on to beat Ole Miss after blowing 21-point lead",
+   "summary": "",
+   "published": "2026-10-25T00:07-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Arch.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
    "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/ravens-lamar-jackson-ruled-out-vs-bengals-with-ankle-injury/",
+   "url": "https://www.sportsnet.ca/ncaa-mens-football/article/manning-texas-hang-on-to-beat-ole-miss-after-blowing-21-point-lead/",
    "source": "Sportsnet"
   },
   {
@@ -3091,6 +3117,19 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/ncaa-mens-football/article/cincinnati-stuns-previously-unbeaten-texas-tech/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Ravens’ Lamar Jackson ruled out vs. Bengals with ankle injury",
+   "summary": "The Baltimore Ravens have ruled star quarterback Lamar Jackson out for Sunday’s game against Cincinnati because of an ankle injury.",
+   "published": "2026-10-24T16:12-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/11/lamar.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/ravens-lamar-jackson-ruled-out-vs-bengals-with-ankle-injury/",
    "source": "Sportsnet"
   },
   {
@@ -3461,7 +3500,7 @@
    "league": "mlb",
    "headline": "Watch LIVE: Tigers prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-24T21:44-04:00",
+   "published": "2026-10-25T00:13-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -3721,7 +3760,7 @@
    "league": "mlb",
    "headline": "Watch Blue Jays prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-24T21:44-04:00",
+   "published": "2026-10-25T00:13-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
