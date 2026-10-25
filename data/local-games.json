@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24T21:16:45-04:00",
+ "updated": "2026-10-24T21:31:56-04:00",
  "today": "2026-10-24",
  "range": [
   "2026-10-21",
@@ -899,10 +899,10 @@
    "opponent": "Soo Greyhounds",
    "location": "WFCU Centre, Windsor",
    "status": "live",
-   "our_score": 3,
-   "opp_score": 2,
+   "our_score": 4,
+   "opp_score": 3,
    "result": null,
-   "note": "07:59 3rd",
+   "note": "00:00 3rd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29120/"
    }
@@ -4133,7 +4133,7 @@
       "otl": 1,
       "pts": 21,
       "gf": 61,
-      "ga": 35,
+      "ga": 36,
       "strk": "W3"
      },
      {
@@ -4221,7 +4221,7 @@
       "l": 8,
       "otl": 0,
       "pts": 10,
-      "gf": 44,
+      "gf": 45,
       "ga": 51,
       "strk": "W1"
      },
@@ -4234,7 +4234,7 @@
       "otl": 1,
       "pts": 5,
       "gf": 26,
-      "ga": 50,
+      "ga": 51,
       "strk": "W1"
      },
      {
@@ -4245,7 +4245,7 @@
       "l": 8,
       "otl": 2,
       "pts": 4,
-      "gf": 30,
+      "gf": 31,
       "ga": 52,
       "strk": "L1"
      }
@@ -4262,8 +4262,8 @@
       "l": 2,
       "otl": 1,
       "pts": 19,
-      "gf": 47,
-      "ga": 41,
+      "gf": 48,
+      "ga": 42,
       "strk": "W1"
      },
      {
@@ -4310,8 +4310,8 @@
       "l": 5,
       "otl": 3,
       "pts": 11,
-      "gf": 44,
-      "ga": 47,
+      "gf": 45,
+      "ga": 48,
       "strk": "W1"
      }
     ]
@@ -4340,7 +4340,7 @@
       "otl": 1,
       "pts": 17,
       "gf": 51,
-      "ga": 38,
+      "ga": 39,
       "strk": "W1"
      },
      {
@@ -4375,7 +4375,7 @@
       "l": 8,
       "otl": 1,
       "pts": 7,
-      "gf": 31,
+      "gf": 32,
       "ga": 53,
       "strk": "W1"
      }
@@ -4568,7 +4568,7 @@
       "otl": 2,
       "pts": 26,
       "gf": 67,
-      "ga": 30,
+      "ga": 32,
       "strk": "W8"
      },
      {
@@ -4603,7 +4603,7 @@
       "l": 3,
       "otl": 0,
       "pts": 24,
-      "gf": 86,
+      "gf": 88,
       "ga": 28,
       "strk": "W7"
      },
@@ -4747,6 +4747,18 @@
       "strk": "W7"
      },
      {
+      "name": "Elmira Sugar Kings",
+      "abbr": "ELM",
+      "gp": 14,
+      "w": 6,
+      "l": 7,
+      "otl": 1,
+      "pts": 13,
+      "gf": 50,
+      "ga": 54,
+      "strk": "W2"
+     },
+     {
       "name": "Woodstock Navy Vets",
       "abbr": "WNV",
       "gp": 13,
@@ -4769,18 +4781,6 @@
       "gf": 62,
       "ga": 60,
       "strk": "W2"
-     },
-     {
-      "name": "Elmira Sugar Kings",
-      "abbr": "ELM",
-      "gp": 13,
-      "w": 5,
-      "l": 7,
-      "otl": 1,
-      "pts": 11,
-      "gf": 50,
-      "ga": 54,
-      "strk": "W1"
      },
      {
       "name": "London Nationals",
@@ -4809,14 +4809,14 @@
      {
       "name": "Komoka Kings",
       "abbr": "KOM",
-      "gp": 15,
+      "gp": 16,
       "w": 4,
-      "l": 11,
+      "l": 12,
       "otl": 0,
       "pts": 8,
       "gf": 42,
       "ga": 72,
-      "strk": "L7"
+      "strk": "L8"
      },
      {
       "name": "Sarnia Legionnaires",
@@ -4862,14 +4862,14 @@
      {
       "name": "Cambridge Redhawks",
       "abbr": "CAM",
-      "gp": 13,
+      "gp": 14,
       "w": 11,
-      "l": 1,
+      "l": 2,
       "otl": 1,
       "pts": 23,
       "gf": 82,
       "ga": 41,
-      "strk": "W4"
+      "strk": "L1"
      },
      {
       "name": "Caledonia Corvairs",
@@ -4886,14 +4886,14 @@
      {
       "name": "Waterloo Siskins",
       "abbr": "WAT",
-      "gp": 12,
-      "w": 7,
+      "gp": 13,
+      "w": 8,
       "l": 3,
       "otl": 2,
-      "pts": 16,
+      "pts": 18,
       "gf": 46,
       "ga": 33,
-      "strk": "W1"
+      "strk": "W2"
      },
      {
       "name": "Ayr Centennials",
@@ -4932,28 +4932,28 @@
       "strk": "W1"
      },
      {
+      "name": "Hamilton Steel",
+      "abbr": "HAM",
+      "gp": 16,
+      "w": 3,
+      "l": 10,
+      "otl": 3,
+      "pts": 9,
+      "gf": 41,
+      "ga": 72,
+      "strk": "W2"
+     },
+     {
       "name": "Stoney Creek Generals",
       "abbr": "SCG",
-      "gp": 17,
+      "gp": 18,
       "w": 4,
       "l": 13,
-      "otl": 0,
-      "pts": 8,
+      "otl": 1,
+      "pts": 9,
       "gf": 54,
       "ga": 80,
       "strk": "L2"
-     },
-     {
-      "name": "Hamilton Steel",
-      "abbr": "HAM",
-      "gp": 15,
-      "w": 2,
-      "l": 10,
-      "otl": 3,
-      "pts": 7,
-      "gf": 41,
-      "ga": 72,
-      "strk": "W1"
      },
      {
       "name": "Brantford Titans",
