@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26T15:01:49-04:00",
+ "updated": "2026-10-26T15:31:45-04:00",
  "today": "2026-10-26",
  "range": [
   "2026-10-23",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 29
+   "count": 31
   },
   "club_news": {
    "ok": true,
@@ -2456,6 +2456,21 @@
  ],
  "more_news": [
   {
+   "league": "nhl",
+   "headline": "Maple Leafs GM Chayka talks defence, Cowan, McKenna",
+   "summary": "Toronto Maple Leafs GM John Chayka discusses the team’s four-game winning streak, the possibility of adding a defenceman via trade, and the development of young stars Gavin McKenna and Easton Cowan.",
+   "published": "2026-10-26T15:20-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/05/john-chayka.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-gm-chayka-talks-defence-cowan-mckenna/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "mlb",
    "headline": "Brewers, Rays preparing for Game 3 in different ways as World Series shifts to Trop",
    "summary": "As the Brewers look to take a commanding 3-0 World Series lead, they are preparing for all the quirks that come with playing at the Trop. The Rays, meanwhile employed a more relaxed approach ahead of Game 3. Sportsnet’s ",
@@ -2481,19 +2496,6 @@
    "sn_team_count": 8,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/champion-hurricanes-still-the-team-to-beat-even-without-landing-hellebuyck/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Canadiens’ Fowler proves big-game reputation in win over Jets in Heritage Classic",
-   "summary": "Jacob Fowler looked cool and composed, like he always does; like a kid just yucking it up with his buddies on a backyard rink rather than one playing under the nation’s watch. The Canadiens goalie was the best player on ",
-   "published": "2026-10-26T00:08-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/fowler.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canadiens-fowler-proves-big-game-reputation-in-win-over-jets-in-heritage-classic/",
    "source": "Sportsnet"
   },
   {
@@ -2551,6 +2553,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "Magic’s Jalen Suggs out at least two weeks with mild bone bruise",
+   "summary": "The Orlando Magic can breathe a sigh of relief.",
+   "published": "2026-10-26T15:22-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP176149633-scaled.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/magics-jalen-suggs-out-at-least-two-weeks-with-mild-bone-bruise/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "WNBA Finals Game 6 set for Thursday afternoon at State Farm Arena",
    "summary": "",
@@ -2574,19 +2589,6 @@
    "sn_team_count": 3,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/draisaitl-cooley-fowler-named-nhls-three-stars-of-the-week/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Mets’ Francisco Lindor wins Roberto Clemente Award for humanitarian work",
-   "summary": "New York Mets shortstop Francisco Lindor has won the Roberto Clemente Award from Major League Baseball for his humanitarian work.",
-   "published": "2026-10-26T13:04-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-23.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/mets-francisco-lindor-wins-roberto-clemente-award-for-humanitarian-work/",
    "source": "Sportsnet"
   },
   {
@@ -2632,6 +2634,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Canadiens’ Fowler proves big-game reputation in win over Jets in Heritage Classic",
+   "summary": "Jacob Fowler looked cool and composed, like he always does; like a kid just yucking it up with his buddies on a backyard rink rather than one playing under the nation’s watch. The Canadiens goalie was the best player on ",
+   "published": "2026-10-26T00:08-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/fowler.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canadiens-fowler-proves-big-game-reputation-in-win-over-jets-in-heritage-classic/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Unfazed Hughes burns former team as Wild hand Canucks another loss",
    "summary": "Favour was few and far between for Quinn Hughes in his return to Vancouver. But on the scoreboard, it was Hughes who got the last laugh against his former team.",
    "published": "2026-10-26T02:55-04:00",
@@ -2641,6 +2656,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/unfazed-hughes-burns-former-team-as-wild-hand-canucks-another-loss/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Mets’ Francisco Lindor wins Roberto Clemente Award for humanitarian work",
+   "summary": "New York Mets shortstop Francisco Lindor has won the Roberto Clemente Award from Major League Baseball for his humanitarian work.",
+   "published": "2026-10-26T13:04-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-23.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/mets-francisco-lindor-wins-roberto-clemente-award-for-humanitarian-work/",
    "source": "Sportsnet"
   },
   {
