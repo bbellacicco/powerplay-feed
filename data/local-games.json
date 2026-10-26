@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26T12:02:53-04:00",
+ "updated": "2026-10-26T12:19:51-04:00",
  "today": "2026-10-26",
  "range": [
   "2026-10-23",
@@ -46,8 +46,8 @@
    "count": 161
   },
   "saints": {
-   "ok": false,
-   "error": "The read operation timed out"
+   "ok": true,
+   "count": 9
   },
   "highschool": {
    "ok": false,
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 27
+   "count": 26
   },
   "club_news": {
    "ok": true,
@@ -2514,16 +2514,31 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nba",
-   "headline": "Thunder’s Jalen Williams stretchered off with injury vs. Clippers",
-   "summary": "Thunder forward Jalen Williams was stretchered off the court against the Los Angeles Clippers Sunday night after suffering an apparent lower-leg injury in the fourth quarter.",
-   "published": "2026-10-25T21:31-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Jalen-Williams.jpg",
+   "league": "nhl",
+   "headline": "Maple Leafs notebook: Raddysh talks viral McDavid tweets",
+   "summary": "Darren Raddysh and Connor McDavid are longtime pals, as social-media sleuths discovered Saturday during the Leafs-Oilers game. The former Erie Otters teammates have maintained their connection as pros.",
+   "published": "2026-10-25T17:10-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-7-7.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-notebook-raddysh-talks-viral-mcdavid-tweets/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "CF Montreal continues to bumble its way through disastrous season",
+   "summary": "Montreal began its MLS season with six losses in its opening seven games, and has done little to improve since, writes John Molinaro.",
+   "published": "2026-10-26T10:58-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-20.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/thunders-jalen-williams-stretchered-off-with-injury-vs-clippers/",
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/cf-montreal-continues-to-bumble-its-way-through-disastrous-season/",
    "source": "Sportsnet"
   },
   {
@@ -2537,6 +2552,19 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/cfl/article/argonauts-signing-qb-chad-kelly-to-contract-extension/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Thunder’s Jalen Williams stretchered off with injury vs. Clippers",
+   "summary": "Thunder forward Jalen Williams was stretchered off the court against the Los Angeles Clippers Sunday night after suffering an apparent lower-leg injury in the fourth quarter.",
+   "published": "2026-10-25T21:31-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Jalen-Williams.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/thunders-jalen-williams-stretchered-off-with-injury-vs-clippers/",
    "source": "Sportsnet"
   },
   {
@@ -2581,18 +2609,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nba",
-   "headline": "Raptors’ Kawhi Leonard out vs. Timberwolves with knee swelling",
-   "summary": "Forward Kawhi Leonard has been ruled out of Sunday’s showdown against the Minnesota Timberwolves with left knee swelling, the team announced before tip-off.",
-   "published": "2026-10-25T18:11-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/kahwi.jpg",
+   "league": "other",
+   "headline": "Austin Smotherman wins Bermuda playoff for second straight victory",
+   "summary": "",
+   "published": "2026-10-26T10:06-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/austin-smotherman.jpg",
    "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-kawhi-leonard-out-vs-timberwolves-with-knee-swelling/",
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Golf",
+   "url": "https://www.sportsnet.ca/pga/article/austin-smotherman-wins-bermuda-playoff-for-second-straight-victory/",
    "source": "Sportsnet"
   },
   {
@@ -2619,34 +2645,6 @@
    "sn_team_count": 0,
    "sport": "Auto Racing",
    "url": "https://www.sportsnet.ca/formula-1/article/f1-takeaways-antonelli-dominates-to-win-u-s-gp-with-title-now-in-reach/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Maple Leafs notebook: Raddysh talks viral McDavid tweets",
-   "summary": "Darren Raddysh and Connor McDavid are longtime pals, as social-media sleuths discovered Saturday during the Leafs-Oilers game. The former Erie Otters teammates have maintained their connection as pros.",
-   "published": "2026-10-25T17:10-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-7-7.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-notebook-raddysh-talks-viral-mcdavid-tweets/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "CF Montreal continues to bumble its way through disastrous season",
-   "summary": "Montreal began its MLS season with six losses in its opening seven games, and has done little to improve since, writes John Molinaro.",
-   "published": "2026-10-26T10:58-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-20.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/cf-montreal-continues-to-bumble-its-way-through-disastrous-season/",
    "source": "Sportsnet"
   },
   {
@@ -2686,19 +2684,6 @@
    "sn_team_count": 0,
    "sport": "More Sports",
    "url": "https://www.sportsnet.ca/more/article/biyarslanovs-title-fight-in-jeopardy-as-delgado-fails-to-arrive-in-riyadh/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Austin Smotherman wins Bermuda playoff for second straight victory",
-   "summary": "",
-   "published": "2026-10-26T10:06-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/austin-smotherman.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Golf",
-   "url": "https://www.sportsnet.ca/pga/article/austin-smotherman-wins-bermuda-playoff-for-second-straight-victory/",
    "source": "Sportsnet"
   },
   {
