@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25T20:47:25-04:00",
+ "updated": "2026-10-25T21:01:40-04:00",
  "today": "2026-10-25",
  "range": [
   "2026-10-22",
@@ -763,10 +763,10 @@
    "home_away": "A",
    "opponent": "Blenheim Blades",
    "location": "Blenheim Memorial Arena",
-   "status": "live",
-   "our_score": 0,
-   "opp_score": 0,
-   "result": null,
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 1,
+   "result": "W",
    "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960467?configuration=45"
@@ -4025,26 +4025,26 @@
      {
       "name": "Kingston Frontenacs",
       "abbr": "KGN",
-      "gp": 13,
-      "w": 8,
+      "gp": 14,
+      "w": 9,
       "l": 5,
       "otl": 0,
-      "pts": 16,
+      "pts": 18,
       "gf": 62,
       "ga": 57,
-      "strk": "W1"
+      "strk": "W2"
      },
      {
       "name": "Ottawa 67's",
       "abbr": "OTT",
-      "gp": 11,
+      "gp": 12,
       "w": 7,
-      "l": 2,
+      "l": 3,
       "otl": 2,
       "pts": 16,
       "gf": 41,
       "ga": 37,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Oshawa Generals",
@@ -4365,7 +4365,7 @@
       "otl": 0,
       "pts": 10,
       "gf": 41,
-      "ga": 59,
+      "ga": 60,
       "strk": "L3"
      },
      {
@@ -4412,7 +4412,7 @@
       "l": 11,
       "otl": 2,
       "pts": 8,
-      "gf": 35,
+      "gf": 36,
       "ga": 93,
       "strk": "L3"
      }
@@ -4629,7 +4629,7 @@
       "otl": 1,
       "pts": 15,
       "gf": 46,
-      "ga": 37,
+      "ga": 38,
       "strk": "W7"
      },
      {
@@ -4652,7 +4652,7 @@
       "l": 7,
       "otl": 1,
       "pts": 13,
-      "gf": 52,
+      "gf": 53,
       "ga": 58,
       "strk": "W2"
      },
@@ -4849,7 +4849,7 @@
       "l": 12,
       "otl": 1,
       "pts": 3,
-      "gf": 44,
+      "gf": 45,
       "ga": 79,
       "strk": "L7"
      },
@@ -4862,7 +4862,7 @@
       "otl": 0,
       "pts": 2,
       "gf": 29,
-      "ga": 92,
+      "ga": 93,
       "strk": "L4"
      }
     ]
@@ -5024,6 +5024,18 @@
     "group": "PJHL West Stobbs",
     "teams": [
      {
+      "name": "Lakeshore Canadiens",
+      "abbr": "LAK",
+      "gp": 16,
+      "w": 13,
+      "l": 1,
+      "otl": 2,
+      "pts": 28,
+      "gf": 64,
+      "ga": 27,
+      "strk": "W2"
+     },
+     {
       "name": "Essex 73's",
       "abbr": "ESS",
       "gp": 14,
@@ -5036,28 +5048,16 @@
       "strk": "W12"
      },
      {
-      "name": "Lakeshore Canadiens",
-      "abbr": "LAK",
-      "gp": 15,
-      "w": 12,
-      "l": 1,
-      "otl": 2,
-      "pts": 26,
-      "gf": 61,
-      "ga": 26,
-      "strk": "W1"
-     },
-     {
       "name": "Blenheim Blades",
       "abbr": "BLE",
-      "gp": 13,
+      "gp": 14,
       "w": 10,
-      "l": 3,
+      "l": 4,
       "otl": 0,
       "pts": 20,
-      "gf": 61,
-      "ga": 34,
-      "strk": "W3"
+      "gf": 62,
+      "ga": 37,
+      "strk": "L1"
      },
      {
       "name": "Dresden Kings",
