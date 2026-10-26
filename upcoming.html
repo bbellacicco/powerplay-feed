@@ -10,6 +10,7 @@
   Opens on today; the day buttons pick another day (as far ahead as the schedules go).
   Data: local-games.json (Spitfires, Lancers, junior hockey), saints.json (St. Clair), highschool.json (WECSSAA).
   ?day=2026-10-22 opens on that day.
+  Community Calendar strip on top: calendar.json (the collector reads each post's "When:" line; past events are dropped).
 -->
 <style>
   :root { --bg: #0b1a33; --panel: #10244a; --row: #132b57; --line: #1e3a6e; --text: #f2f5fb; --muted: #9fb0cf; --accent: #e8b021;
@@ -53,6 +54,22 @@
   .c .x b { color: var(--text); font-size: 12.5px; font-variant-numeric: tabular-nums; }
   .empty { color: var(--muted); background: var(--panel); border-radius: 8px; padding: 16px; }
   footer { color: var(--muted); font-size: 11.5px; text-align: center; margin-top: 14px; }
+  /* Community Calendar: up to five upcoming community events (blog posts in that category) */
+  .cal { margin-bottom: 16px; }
+  .cal h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .1em; margin: 0 0 6px; color: #fff; display: flex; align-items: center; gap: 8px; }
+  .cal h2::before { content: ''; width: 10px; height: 10px; border-radius: 2px; background: var(--accent); }
+  .cal .ev { display: grid; grid-template-columns: 52px 1fr 96px; gap: 10px; align-items: center; background: var(--row); border-left: 4px solid var(--accent); border-radius: 6px; padding: 7px 8px 7px 10px; margin-bottom: 5px; color: inherit; text-decoration: none; }
+  .cal .ev:hover { background: #18346a; }
+  .cal .dt { text-align: center; background: #fff; color: #0b1a33; border-radius: 5px; padding: 4px 0 5px; line-height: 1; }
+  .cal .dt small { display: block; font-size: 10px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: #a5161f; }
+  .cal .dt b { display: block; font-size: 20px; font-weight: 800; margin-top: 2px; }
+  .cal .ev .m { min-width: 0; }
+  .cal .ev .hl { font-weight: 700; line-height: 1.25; }
+  .cal .ev .meta { color: var(--muted); font-size: 12px; margin-top: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .cal .ev .meta b { color: var(--accent); font-weight: 700; }
+  .cal .ev img { width: 96px; height: 58px; object-fit: cover; border-radius: 4px; display: block; }
+  .cal .ev.noimg { grid-template-columns: 52px 1fr; }
+  @media (max-width: 520px) { .cal .ev { grid-template-columns: 48px 1fr 72px; } .cal .ev img { width: 72px; height: 48px; } }
   @media (max-width: 640px) { .hsg { grid-template-columns: 1fr; } }
   @media (max-width: 520px) { .g { grid-template-columns: 62px 1fr; } .g .r { grid-column: 2; text-align: left; } .days button { padding: 7px 9px; font-size: 12px; } }
 </style>
@@ -60,6 +77,7 @@
 <body>
 <div class="wrap">
   <h1>Coming <span>Up</span></h1>
+  <div class="cal" id="cal" hidden></div>
   <div class="days" id="days"></div>
   <div id="list"><div class="empty">Loading games…</div></div>
   <footer>Powerplay Windsor · Schedules from chl.ca, golancers.ca, stclairsaints.ca, ojhl.ca, gohl.ca, thepjhl.ca and wecssaa.com</footer>
@@ -84,7 +102,31 @@
   function cpDate(k) { var p = parts(noon(k)); return MON[+p.month - 1] + ' ' + (+p.day); }
   function weekday(k) { return parts(noon(k)).weekday; }
 
+  // Community Calendar: the five newest event posts that haven't happened yet, soonest first
+  function drawCal(c) {
+    var box = document.getElementById('cal'), today = dayKey(new Date());
+    var evs = ((c && c.events) || []).filter(function (e) { return (e.end || e.date) >= today; }).slice(0, 5);
+    box.innerHTML = '';
+    box.hidden = !evs.length;
+    if (!evs.length) return;
+    box.appendChild(el('h2', '', 'Community Calendar'));
+    evs.forEach(function (e) {
+      var a = el('a', 'ev' + (e.image ? '' : ' noimg')); a.href = e.url; a.target = '_top';
+      var p = parts(noon(e.date)), dt = el('div', 'dt');
+      dt.appendChild(el('small', '', e.date === today ? 'Today' : MON[+p.month - 1].replace('.', '')));
+      dt.appendChild(el('b', '', +p.day));
+      a.appendChild(dt);
+      var m = el('div', 'm'); m.appendChild(el('div', 'hl', e.headline));
+      var meta = el('div', 'meta'), w = e.when || (weekday(e.date) + ', ' + cpDate(e.date));
+      meta.appendChild(el('b', '', w)); if (e.where) meta.appendChild(document.createTextNode(' · ' + e.where));
+      m.appendChild(meta); a.appendChild(m);
+      if (e.image) { var im = el('img'); im.src = e.image; im.alt = ''; im.loading = 'lazy'; im.onerror = function () { this.remove(); a.className = 'ev noimg'; }; a.appendChild(im); }
+      box.appendChild(a);
+    });
+  }
+
   function load() {
+    getJSON('calendar.json').then(drawCal);
     Promise.all([getJSON('local-games.json'), getJSON('saints.json'), getJSON('highschool.json')]).then(function (r) {
       var lg = r[0] || {}, sc = r[1], hs = r[2];
       var all = (lg.games || []).slice();
