@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26T11:46:41-04:00",
+ "updated": "2026-10-26T12:02:53-04:00",
  "today": "2026-10-26",
  "range": [
   "2026-10-23",
@@ -43,11 +43,11 @@
   },
   "junior": {
    "ok": true,
-   "count": 160
+   "count": 161
   },
   "saints": {
-   "ok": true,
-   "count": 9
+   "ok": false,
+   "error": "The read operation timed out"
   },
   "highschool": {
    "ok": false,
@@ -2461,6 +2461,21 @@
  "more_news": [
   {
    "league": "nhl",
+   "headline": "Champion Hurricanes still the team to beat — even without landing Hellebuyck",
+   "summary": "If you thought the Hurricanes might be slowed by a championship hangover, think again. Sportsnet’s Ryan Dixon explores why the Hurricanes are the team to beat in the East and more in his NHL weekend review.",
+   "published": "2026-10-26T11:46-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/aho-blake-ehlers.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 8,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/champion-hurricanes-still-the-team-to-beat-even-without-landing-hellebuyck/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Canadiens’ Fowler proves big-game reputation in win over Jets in Heritage Classic",
    "summary": "Jacob Fowler looked cool and composed, like he always does; like a kid just yucking it up with his buddies on a backyard rink rather than one playing under the nation’s watch. The Canadiens goalie was the best player on ",
    "published": "2026-10-26T00:08-04:00",
@@ -2483,21 +2498,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/unfazed-hughes-burns-former-team-as-wild-hand-canucks-another-loss/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Raptors no match for Timberwolves without Kawhi Leonard",
-   "summary": "There was never a moment that trading for Kawhi Leonard didn’t come packed with risk. The Raptors’ first glimpse at life without the injured star this season wasn’t pretty.",
-   "published": "2026-10-25T23:41-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/barnes-1.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-no-match-for-timberwolves-without-kawhi-leonard/",
    "source": "Sportsnet"
   },
   {
@@ -2550,6 +2550,21 @@
    "sn_team_count": 0,
    "sport": "Tennis",
    "url": "https://www.sportsnet.ca/wta/article/canadas-leylah-fernandez-jumps-to-no-23-in-wta-rankings/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Raptors no match for Timberwolves without Kawhi Leonard",
+   "summary": "There was never a moment that trading for Kawhi Leonard didn’t come packed with risk. The Raptors’ first glimpse at life without the injured star this season wasn’t pretty.",
+   "published": "2026-10-25T23:41-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/barnes-1.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/raptors-no-match-for-timberwolves-without-kawhi-leonard/",
    "source": "Sportsnet"
   },
   {
@@ -2608,19 +2623,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Sights and sounds from NHL Heritage Classic in Winnipeg",
-   "summary": "The latest edition of the NHL’s Heritage Classic is here.",
-   "published": "2026-10-25T17:01-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Heritage-Classic-2026-rendering-cropped.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/sights-and-sounds-from-nhl-heritage-classic-in-winnipeg/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Maple Leafs notebook: Raddysh talks viral McDavid tweets",
    "summary": "Darren Raddysh and Connor McDavid are longtime pals, as social-media sleuths discovered Saturday during the Leafs-Oilers game. The former Erie Otters teammates have maintained their connection as pros.",
    "published": "2026-10-25T17:10-04:00",
@@ -2675,6 +2677,19 @@
   },
   {
    "league": "other",
+   "headline": "Biyarslanov’s title fight in jeopardy as Delgado fails to arrive in Riyadh",
+   "summary": "A title fight between Toronto’s Arthur Biyarslanov and Mexico’s Lindolfo Delgado is likely off, with promoters looking for a new opponent for Biyarslanov.",
+   "published": "2026-10-26T11:44-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-21.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "More Sports",
+   "url": "https://www.sportsnet.ca/more/article/biyarslanovs-title-fight-in-jeopardy-as-delgado-fails-to-arrive-in-riyadh/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
    "headline": "Austin Smotherman wins Bermuda playoff for second straight victory",
    "summary": "",
    "published": "2026-10-26T10:06-04:00",
@@ -2701,18 +2716,15 @@
   },
   {
    "league": "nhl",
-   "headline": "Sunday Overreactions: Can Blue Jackets convince Werenski to stay?",
-   "summary": "After Zach Werenski seemingly had a foot out the door in Columbus this summer, could the Blue Jackets’ slow start have trade talks pick up around the defenceman once again? Michael Amato dives into Werenski’s future and ",
-   "published": "2026-10-25T08:26-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177105043.jpg",
+   "headline": "Sights and sounds from NHL Heritage Classic in Winnipeg",
+   "summary": "The latest edition of the NHL’s Heritage Classic is here.",
+   "published": "2026-10-25T17:01-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Heritage-Classic-2026-rendering-cropped.jpg",
    "video": false,
-   "teams": [
-    "Detroit Red Wings",
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 6,
+   "teams": [],
+   "sn_team_count": 2,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/sunday-overreactions-can-blue-jackets-convince-werenski-to-stay/",
+   "url": "https://www.sportsnet.ca/nhl/article/sights-and-sounds-from-nhl-heritage-classic-in-winnipeg/",
    "source": "Sportsnet"
   },
   {
@@ -2780,19 +2792,6 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/magics-jalen-suggs-exits-vs-knicks-with-apparent-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "NBA roundup: Defending champion Knicks drop to 0-3 after loss to Magic",
-   "summary": "",
-   "published": "2026-10-25T22:04-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Knicks.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/defending-champion-knicks-drop-to-0-3-after-loss-to-magic/",
    "source": "Sportsnet"
   },
   {
