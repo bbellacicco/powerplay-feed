@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26T12:31:38-04:00",
+ "updated": "2026-10-26T12:50:26-04:00",
  "today": "2026-10-26",
  "range": [
   "2026-10-23",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 27
+   "count": 28
   },
   "club_news": {
    "ok": true,
@@ -1775,6 +1775,22 @@
   },
   {
    "league": "cfl",
+   "headline": "6 stats that could loom large in the Division Semi-Finals",
+   "summary": "",
+   "published": "2026-10-26T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/ypLD7jBNnQbqzMANNiOOB/0f23fd48863acd0bb29da50efe5476d7/Justin_McInnis_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Lions",
+    "Roughriders",
+    "Argonauts",
+    "Blue Bombers"
+   ],
+   "url": "https://www.cfl.ca/article/6-stats-that-could-loom-large-in-the-division-semi-finals",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Overrreaction Monday: 3 hot takes from Week 21",
    "summary": "",
    "published": "2026-10-26T00:00:00-04:00",
@@ -2035,26 +2051,6 @@
    "video": false,
    "teams": [],
    "url": "https://www.cfl.ca/article/kmpg-playoff-probability-what-is-the-most-likely-113th-grey-cup-matchup",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Weekly Predictor: Who wins in Week 21?",
-   "summary": "",
-   "published": "2026-10-20T00:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/16g1E9qUg0n8NFPpeQ7aqD/6108c32080de9b5cff311f2a7cf76371/White_Eberhardt_2026.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "REDBLACKS",
-    "Lions",
-    "Elks",
-    "Tiger-Cats",
-    "Alouettes",
-    "Roughriders",
-    "Argonauts",
-    "Blue Bombers"
-   ],
-   "url": "https://www.cfl.ca/article/weekly-predictor-who-wins-in-week-21",
    "source": "CFL.ca"
   },
   {
@@ -2488,19 +2484,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Unfazed Hughes burns former team as Wild hand Canucks another loss",
-   "summary": "Favour was few and far between for Quinn Hughes in his return to Vancouver. But on the scoreboard, it was Hughes who got the last laugh against his former team.",
-   "published": "2026-10-26T02:55-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/quinn.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/unfazed-hughes-burns-former-team-as-wild-hand-canucks-another-loss/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "mlb",
    "headline": "Brewers, Rays preparing for Game 3 in different ways as World Series shifts to Trop",
    "summary": "As the Brewers look to take a commanding 3-0 World Series lead, they are preparing for all the quirks that come with playing at the Trop. The Rays, meanwhile employed a more relaxed approach ahead of Game 3. Sportsnet’s ",
@@ -2648,16 +2631,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "NFL Week 7 takeaways: Falcons are dangerous with Penix Jr.",
-   "summary": "It’s been a roller coaster of a ride to start the first half of the season in Atlanta, but boy, have the highs been high. Evan Davidson examines this and more in his Week 7 takeaways.",
-   "published": "2026-10-25T23:59-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/penix.jpg",
+   "league": "nhl",
+   "headline": "Unfazed Hughes burns former team as Wild hand Canucks another loss",
+   "summary": "Favour was few and far between for Quinn Hughes in his return to Vancouver. But on the scoreboard, it was Hughes who got the last laugh against his former team.",
+   "published": "2026-10-26T02:55-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/quinn.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-7-takeaways-falcons-are-dangerous-with-penix-jr/",
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/unfazed-hughes-burns-former-team-as-wild-hand-canucks-another-loss/",
    "source": "Sportsnet"
   },
   {
@@ -2674,8 +2657,34 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nfl",
+   "headline": "NFL Week 7 takeaways: Falcons are dangerous with Penix Jr.",
+   "summary": "It’s been a roller coaster of a ride to start the first half of the season in Atlanta, but boy, have the highs been high. Evan Davidson examines this and more in his Week 7 takeaways.",
+   "published": "2026-10-25T23:59-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/penix.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-7-takeaways-falcons-are-dangerous-with-penix-jr/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
-   "headline": "Rafael Nadal to play in Las Vegas exhibition in February for 1st U.S. action since retirement",
+   "headline": "Auger-Aliassime, Shapovalov headline Canada’s roster at Davis Cup Final 8",
+   "summary": "",
+   "published": "2026-10-26T12:29-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/Untitled-design-1-36.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Tennis",
+   "url": "https://www.sportsnet.ca/atp/article/auger-aliassime-shapovalov-headline-canadas-roster-at-davis-cup-final-8/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Rafael Nadal to play in Las Vegas exhibition in February for first U.S. action since retirement",
    "summary": "",
    "published": "2026-10-26T12:22-04:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-8-2.jpg",
