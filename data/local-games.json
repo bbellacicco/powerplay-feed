@@ -1,9 +1,9 @@
 {
- "updated": "2026-10-25T23:46:53-04:00",
- "today": "2026-10-25",
+ "updated": "2026-10-26T00:05:32-04:00",
+ "today": "2026-10-26",
  "range": [
-  "2026-10-22",
-  "2026-10-28"
+  "2026-10-23",
+  "2026-10-29"
  ],
  "teams": {
   "spitfires": {
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 32
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -111,323 +111,6 @@
   }
  },
  "games": [
-  {
-   "id": "highschool-2026-10-22-55",
-   "team": "highschool",
-   "sport": "Junior Boys Volleyball",
-   "start": "2026-10-22T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Kennedy",
-   "location": "Kennedy",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 0,
-   "result": null,
-   "note": "Tier 1",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Assumption",
-   "home": "Kennedy"
-  },
-  {
-   "id": "highschool-2026-10-22-56",
-   "team": "highschool",
-   "sport": "Junior Boys Volleyball",
-   "start": "2026-10-22T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Tecumseh Vista Academy",
-   "location": "Tecumseh Vista Academy",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 0,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Riverside",
-   "home": "Tecumseh Vista Academy"
-  },
-  {
-   "id": "highschool-2026-10-22-57",
-   "team": "highschool",
-   "sport": "Junior Boys Volleyball",
-   "start": "2026-10-22T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Catholic Central",
-   "location": "Catholic Central",
-   "status": "final",
-   "our_score": 1,
-   "opp_score": 2,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Brennan",
-   "home": "Catholic Central"
-  },
-  {
-   "id": "highschool-2026-10-22-50",
-   "team": "highschool",
-   "sport": "Junior Girls Basketball",
-   "start": "2026-10-22T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Brennan",
-   "location": "Brennan",
-   "status": "final",
-   "our_score": 37,
-   "opp_score": 59,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Walkerville",
-   "home": "Brennan"
-  },
-  {
-   "id": "highschool-2026-10-22-60",
-   "team": "highschool",
-   "sport": "Senior Boys Football",
-   "start": "2026-10-22T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Catholic Central",
-   "location": "Catholic Central",
-   "status": "final",
-   "our_score": 0,
-   "opp_score": 1,
-   "result": null,
-   "note": "Brennan forfeits",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Brennan",
-   "home": "Catholic Central"
-  },
-  {
-   "id": "highschool-2026-10-22-61",
-   "team": "highschool",
-   "sport": "Senior Boys Football",
-   "start": "2026-10-22T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Kennedy",
-   "location": "Holy Names",
-   "status": "final",
-   "our_score": 44,
-   "opp_score": 36,
-   "result": null,
-   "note": "",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Cardinal Carter",
-   "home": "Kennedy"
-  },
-  {
-   "id": "highschool-2026-10-22-62",
-   "team": "highschool",
-   "sport": "Senior Boys Football",
-   "start": "2026-10-22T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Tecumseh Vista Academy",
-   "location": "Tecumseh Vista Academy",
-   "status": "final",
-   "our_score": 0,
-   "opp_score": 14,
-   "result": null,
-   "note": "",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Riverside",
-   "home": "Tecumseh Vista Academy"
-  },
-  {
-   "id": "highschool-2026-10-22-63",
-   "team": "highschool",
-   "sport": "Senior Boys Football",
-   "start": "2026-10-22T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "L'Essor",
-   "location": "Holy Names",
-   "status": "final",
-   "our_score": 12,
-   "opp_score": 35,
-   "result": null,
-   "note": "",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "St. Anne",
-   "home": "L'Essor"
-  },
-  {
-   "id": "highschool-2026-10-22-51",
-   "team": "highschool",
-   "sport": "Senior Boys Volleyball",
-   "start": "2026-10-22T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Kennedy",
-   "location": "Kennedy",
-   "status": "final",
-   "our_score": 0,
-   "opp_score": 3,
-   "result": null,
-   "note": "Tier 1",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Assumption",
-   "home": "Kennedy"
-  },
-  {
-   "id": "highschool-2026-10-22-52",
-   "team": "highschool",
-   "sport": "Senior Boys Volleyball",
-   "start": "2026-10-22T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Tecumseh Vista Academy",
-   "location": "Tecumseh Vista Academy",
-   "status": "final",
-   "our_score": 2,
-   "opp_score": 1,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Riverside",
-   "home": "Tecumseh Vista Academy"
-  },
-  {
-   "id": "highschool-2026-10-22-53",
-   "team": "highschool",
-   "sport": "Senior Boys Volleyball",
-   "start": "2026-10-22T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Catholic Central",
-   "location": "Catholic Central",
-   "status": "final",
-   "our_score": 1,
-   "opp_score": 2,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Brennan",
-   "home": "Catholic Central"
-  },
-  {
-   "id": "highschool-2026-10-22-54",
-   "team": "highschool",
-   "sport": "Senior Boys Volleyball",
-   "start": "2026-10-22T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Walkerville",
-   "location": "Walkerville",
-   "status": "final",
-   "our_score": 0,
-   "opp_score": 3,
-   "result": null,
-   "note": "Group 3",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Westview Freedom Academy",
-   "home": "Walkerville"
-  },
-  {
-   "id": "highschool-2026-10-22-59",
-   "team": "highschool",
-   "sport": "Senior Boys Volleyball",
-   "start": "2026-10-22T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Maranatha",
-   "location": "Maranatha",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Group 3 · Late start time",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Lamothe-Cadillac",
-   "home": "Maranatha"
-  },
-  {
-   "id": "highschool-2026-10-22-58",
-   "team": "highschool",
-   "sport": "Senior Girls Basketball",
-   "start": "2026-10-22T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Brennan",
-   "location": "Brennan",
-   "status": "final",
-   "our_score": 24,
-   "opp_score": 65,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Herman",
-   "home": "Brennan"
-  },
-  {
-   "id": "spitfires-ohl29106",
-   "team": "spitfires",
-   "sport": "Hockey",
-   "start": "2026-10-22T19:07:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Soo Greyhounds",
-   "location": "GFL Memorial Gardens, Sault Ste. Marie, ON",
-   "status": "final",
-   "our_score": 4,
-   "opp_score": 5,
-   "result": "OTL",
-   "note": "OT",
-   "links": {
-    "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29106/"
-   }
-  },
-  {
-   "id": "junior-ojhl16603",
-   "team": "junior",
-   "sport": "OJHL (Jr. A)",
-   "start": "2026-10-22T19:10:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "St. Michaels Buzzers",
-   "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
-   "status": "final",
-   "our_score": 7,
-   "opp_score": 3,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.ojhl.ca/stats/game-center/16603"
-   },
-   "club": "Leamington Flyers"
-  },
   {
    "id": "highschool-2026-10-23-64",
    "team": "highschool",
@@ -1948,6 +1631,44 @@
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960475?configuration=45"
    },
    "club": "Wheatley Sharks"
+  },
+  {
+   "id": "spitfires-ohl29132",
+   "team": "spitfires",
+   "sport": "Hockey",
+   "start": "2026-10-29T19:05:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Erie Otters",
+   "location": "WFCU Centre, Windsor",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "tickets": "https://wfcucentre.evenue.net/event/S27/G09",
+    "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29132/"
+   }
+  },
+  {
+   "id": "junior-ojhl16626",
+   "team": "junior",
+   "sport": "OJHL (Jr. A)",
+   "start": "2026-10-29T19:10:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Milton Menace",
+   "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.ojhl.ca/stats/game-center/16626"
+   },
+   "club": "Leamington Flyers"
   }
  ],
  "pro_games": [
@@ -2793,6 +2514,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nfl",
+   "headline": "Smith-Njigba helps Seahawks hand Chiefs first loss of season",
+   "summary": "",
+   "published": "2026-10-25T23:48-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/JSN.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/smith-njigba-helps-seahawks-hand-chiefs-first-loss-of-season/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Sights and sounds from NHL Heritage Classic in Winnipeg",
    "summary": "The latest edition of the NHL’s Heritage Classic is here.",
@@ -2861,19 +2595,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Hurricanes sign defenceman Alexander Nikishin to one-year, $3M deal",
-   "summary": "Alexander Nikishin’s restricted free agency saga has come to an end.",
-   "published": "2026-10-25T17:11-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/nikishin.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/hurricanes-sign-defenceman-alexander-nikishin-to-one-year-3m-deal/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Maple Leafs Notebook: Raddysh talks viral McDavid tweets",
    "summary": "Darren Raddysh and Connor McDavid are longtime pals, as social-media sleuths discovered Saturday during the Leafs-Oilers game. The former Erie Otters teammates have maintained their connection as pros.",
    "published": "2026-10-25T17:10-04:00",
@@ -2885,6 +2606,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-notebook-raddysh-talks-viral-mcdavid-tweets/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "NFL Week 7 takeaways: Falcons are dangerous with Penix Jr.",
+   "summary": "It’s been a roller coaster of a ride to start the first half of the season in Atlanta, but boy, have the highs been high. Evan Davidson examines this and more in his Week 7 takeaways.",
+   "published": "2026-10-25T23:59-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/penix.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-7-takeaways-falcons-are-dangerous-with-penix-jr/",
    "source": "Sportsnet"
   },
   {
@@ -2917,16 +2651,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "Aaron Glenn’s seat heating up as Jets fall to 2-5 after loss to winless Dolphins",
-   "summary": "Aaron Glenn still insists the New York Jets are heading in the right direction.",
-   "published": "2026-10-25T19:06-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Aaron-Glenn.jpg",
+   "league": "nhl",
+   "headline": "Hurricanes sign defenceman Alexander Nikishin to one-year, $3M deal",
+   "summary": "Alexander Nikishin’s restricted free agency saga has come to an end.",
+   "published": "2026-10-25T17:11-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/nikishin.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/aaron-glenns-seat-heating-up-as-jets-fall-to-2-5-after-loss-to-winless-dolphins/",
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/hurricanes-sign-defenceman-alexander-nikishin-to-one-year-3m-deal/",
    "source": "Sportsnet"
   },
   {
@@ -2953,6 +2687,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/kraken-forward-jared-mccann-sidelined-long-term-with-lower-body-injury/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Aaron Glenn’s seat heating up as Jets fall to 2-5 after loss to winless Dolphins",
+   "summary": "Aaron Glenn still insists the New York Jets are heading in the right direction.",
+   "published": "2026-10-25T19:06-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Aaron-Glenn.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/aaron-glenns-seat-heating-up-as-jets-fall-to-2-5-after-loss-to-winless-dolphins/",
    "source": "Sportsnet"
   },
   {
@@ -3156,19 +2903,6 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/hellebuyck-embraces-fresh-start-with-devils-postpones-message-to-jets-fans/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Batherson nets hat trick as Senators sink Rangers",
-   "summary": "",
-   "published": "2026-10-24T22:07-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Sens-4.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/batherson-nets-hat-trick-as-senators-sink-rangers/",
    "source": "Sportsnet"
   },
   {
