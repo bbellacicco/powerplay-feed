@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25T20:16:52-04:00",
+ "updated": "2026-10-25T20:36:15-04:00",
  "today": "2026-10-25",
  "range": [
   "2026-10-22",
@@ -744,11 +744,11 @@
    "home_away": "H",
    "opponent": "Niagara Falls Canucks",
    "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
-   "status": "live",
+   "status": "final",
    "our_score": 5,
    "opp_score": 1,
-   "result": null,
-   "note": "01:32 3rd",
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16619"
    },
@@ -4458,6 +4458,18 @@
       "strk": "W1"
      },
      {
+      "name": "Leamington Flyers",
+      "abbr": "LEA",
+      "gp": 16,
+      "w": 13,
+      "l": 2,
+      "otl": 1,
+      "pts": 27,
+      "gf": 66,
+      "ga": 27,
+      "strk": "W6"
+     },
+     {
       "name": "Toronto Patriots",
       "abbr": "PAT",
       "gp": 16,
@@ -4480,18 +4492,6 @@
       "gf": 92,
       "ga": 58,
       "strk": "W2"
-     },
-     {
-      "name": "Leamington Flyers",
-      "abbr": "LEA",
-      "gp": 15,
-      "w": 12,
-      "l": 2,
-      "otl": 1,
-      "pts": 25,
-      "gf": 66,
-      "ga": 27,
-      "strk": "W5"
      },
      {
       "name": "Oakville Blades",
@@ -4520,14 +4520,14 @@
      {
       "name": "Niagara Falls Canucks",
       "abbr": "NFC",
-      "gp": 20,
+      "gp": 21,
       "w": 6,
-      "l": 12,
+      "l": 13,
       "otl": 2,
       "pts": 14,
       "gf": 61,
       "ga": 92,
-      "strk": "L2"
+      "strk": "L3"
      },
      {
       "name": "Buffalo Jr. Sabres",
@@ -4777,7 +4777,7 @@
       "l": 3,
       "otl": 2,
       "pts": 18,
-      "gf": 47,
+      "gf": 48,
       "ga": 35,
       "strk": "W2"
      },
@@ -4814,7 +4814,7 @@
       "otl": 0,
       "pts": 12,
       "gf": 59,
-      "ga": 58,
+      "ga": 59,
       "strk": "W1"
      },
      {
