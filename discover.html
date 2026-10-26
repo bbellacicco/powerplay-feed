@@ -166,7 +166,7 @@
   function isVid(s) { return s.source === 'YouTube' || s.source === 'Vimeo' || /youtube\.com|youtu\.be|vimeo\.com/.test(s.url || ''); }
   function ytId(u) { var m = String(u || '').match(/(?:[?&]v=|youtu\.be\/|\/shorts\/)([\w-]{11})/); return m ? m[1] : ''; }
   function vidEmbed(u) {
-    var id = ytId(u); if (id) return 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&playsinline=1&modestbranding=1&vq=hd1080';
+    var id = ytId(u); if (id) return 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&playsinline=1&modestbranding=1';
     var m = String(u).match(/vimeo\.com\/(?:video\/)?(\d+)/); return m ? 'https://player.vimeo.com/video/' + m[1] + '?autoplay=0&muted=0&title=0&byline=0&portrait=0&playsinline=1&quality=1080p' : '';
   }
   function bigThumb(v) { var id = ytId(v.url); return id ? 'https://i.ytimg.com/vi/' + id + '/hq720.jpg' : v.image; }
@@ -333,7 +333,7 @@
     (net && net.local || []).forEach(function (v) { if (v.u && v.t && v.i && !have[ytId(v.u) || v.u]) vids.push({ headline: v.t, url: v.u, image: v.i, published: String(v.p || '').length === 10 ? v.p + 'T00:00:00' : v.p }); });
     vids.sort(function (a, b) { return new Date(b.published) - new Date(a.published); });
     if (!vids.length) vids = (net && net.local || []).filter(function (v) { return v.u && v.t && v.i; }).slice(0, 3).map(function (v) { return { headline: v.t, url: v.u, image: v.i, published: v.p }; });
-    var video = pickOne(vids, 3);
+    var video = vids[0] || null;   // always your newest video (the story still changes from visit to visit)
     // headlines: newest local stories, one per team, not the featured one
     var seen = {}, heads = [];
     stories.forEach(function (s) {
