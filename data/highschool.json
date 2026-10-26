@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26T17:00:01-04:00",
+ "updated": "2026-10-26T17:15:01-04:00",
  "today": "2026-10-26",
  "games": [
   {
@@ -103,6 +103,26 @@
    "home": "St. Joseph's"
   },
   {
+   "id": "highschool-2026-10-26-76",
+   "team": "highschool",
+   "sport": "Junior Girls Basketball",
+   "start": "2026-10-26T00:00:00-04:00",
+   "time_tbd": true,
+   "home_away": "N",
+   "opponent": "Riverside",
+   "location": "Riverside",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Tier 2",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Sandwich",
+   "home": "Riverside"
+  },
+  {
    "id": "highschool-2026-10-26-71",
    "team": "highschool",
    "sport": "Senior Boys Volleyball",
@@ -131,9 +151,9 @@
    "home_away": "N",
    "opponent": "St. Anne",
    "location": "St. Anne",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "final",
+   "our_score": 0,
+   "opp_score": 3,
    "result": null,
    "note": "Tier 1 · date change",
    "links": {
@@ -241,26 +261,6 @@
    },
    "away": "UMEI",
    "home": "Westview Freedom Academy"
-  },
-  {
-   "id": "highschool-2026-10-26-76",
-   "team": "highschool",
-   "sport": "Junior Girls Basketball",
-   "start": "2026-10-26T17:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Riverside",
-   "location": "Riverside",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Sandwich",
-   "home": "Riverside"
   },
   {
    "id": "highschool-2026-10-26-77",
