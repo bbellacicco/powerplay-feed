@@ -876,7 +876,7 @@
       var stories = (news.stories || []).filter(function (s) { return s.url && s.headline; })
         .sort(function (a, b) { return new Date(b.published) - new Date(a.published); });
       // top stories: Powerplay's three newest written stories with a real photo
-      var seenH = {}, featItems = stories.filter(function (s) { return s.team === 'powerplay' && !isVid(s) && s.image && !GENERIC_IMG.test(s.image) && /powerplaywindsor\.com/.test(s.url); })
+      var seenH = {}, featItems = stories.filter(function (s) { return s.team === 'powerplay' && !isVid(s) && !/community calendar/i.test(s.cats || '') && s.image && !GENERIC_IMG.test(s.image) && /powerplaywindsor\.com/.test(s.url); })
         .filter(function (s) { var k = s.headline.toLowerCase().replace(/[^a-z0-9]+/g, ''); if (seenH[k]) return false; seenH[k] = 1; return true; });
       // scheduled top story (featured.txt): from its time, an older story takes the big box until a newer story is posted
       var sched = ((r[8] && r[8].featured) || []).filter(function (f) { return f.url && new Date(f.from).getTime() <= Date.now(); })
