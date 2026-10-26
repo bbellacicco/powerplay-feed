@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25T22:30:03-04:00",
+ "updated": "2026-10-25T23:00:02-04:00",
  "today": "2026-10-25",
  "games": [
   {
@@ -93,22 +93,6 @@
    }
   },
   {
-   "id": "saints-presto2026-10-24-3",
-   "team": "saints",
-   "sport": "Men's Volleyball",
-   "start": "2026-10-24T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "A",
-   "opponent": "Cambrian",
-   "location": "",
-   "status": "final",
-   "our_score": 1,
-   "opp_score": 3,
-   "result": "L",
-   "note": "",
-   "links": {}
-  },
-  {
    "id": "saints-presto2026-10-24-0",
    "team": "saints",
    "sport": "Baseball",
@@ -153,13 +137,31 @@
    "home_away": "A",
    "opponent": "Cambrian",
    "location": "",
+   "status": "final",
+   "our_score": 2,
+   "opp_score": 3,
+   "result": "L",
+   "note": "",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/wvball/2026-27/boxscores/20261024_0g1n.xml"
+   }
+  },
+  {
+   "id": "saints-presto2026-10-24-3",
+   "team": "saints",
+   "sport": "Men's Volleyball",
+   "start": "2026-10-24T15:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Cambrian",
+   "location": "",
    "status": "upcoming",
    "our_score": null,
    "opp_score": null,
    "result": null,
    "note": "",
    "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/wvball/2026-27/boxscores/20261024_0g1n.xml"
+    "boxscore": "https://www.saintsathletics.ca/sports/mvball/2026-27/boxscores/20261024_iakr.xml"
    }
   },
   {
