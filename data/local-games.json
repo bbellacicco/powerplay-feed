@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25T21:16:58-04:00",
+ "updated": "2026-10-25T21:51:24-04:00",
  "today": "2026-10-25",
  "range": [
   "2026-10-22",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 30
   },
   "club_news": {
    "ok": true,
@@ -782,10 +782,10 @@
    "home_away": "A",
    "opponent": "Mooretown Flags",
    "location": "Mooretown Sports Complex",
-   "status": "live",
-   "our_score": 0,
-   "opp_score": 0,
-   "result": null,
+   "status": "final",
+   "our_score": 4,
+   "opp_score": 6,
+   "result": "L",
    "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960454?configuration=45"
@@ -2739,18 +2739,16 @@
  ],
  "more_news": [
   {
-   "league": "nhl",
-   "headline": "Maple Leafs Notebook: Raddysh talks viral McDavid tweets",
-   "summary": "Darren Raddysh and Connor McDavid are longtime pals, as social-media sleuths discovered Saturday during the Leafs-Oilers game. The former Erie Otters teammates have maintained their connection as pros.",
-   "published": "2026-10-25T17:10-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-7-7.jpg",
+   "league": "nba",
+   "headline": "Thunder’s Jalen Williams stretchered off with injury vs. Clippers",
+   "summary": "Thunder forward Jalen Williams was stretchered off the court against the Los Angeles Clippers Sunday night after suffering an apparent lower-leg injury in the fourth quarter.",
+   "published": "2026-10-25T21:31-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/jdub.jpg",
    "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
+   "teams": [],
    "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-notebook-raddysh-talks-viral-mcdavid-tweets/",
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/thunders-jalen-williams-stretchered-off-with-injury-vs-clippers/",
    "source": "Sportsnet"
   },
   {
@@ -2808,18 +2806,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "Jake Bates kicks FG as time expires to give Lions tight win over Packers",
-   "summary": "Jake Bates made a 22-yard field goal as time expired to give the Detroit Lions a 20-17 win over the Green Bay Packers on Sunday.",
-   "published": "2026-10-25T20:01-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/lions-1.jpg",
+   "league": "nba",
+   "headline": "Magic’s Jalen Suggs exits vs. Knicks with apparent injury",
+   "summary": "Point guard Jalen Suggs exited Sunday’s game against the New York Knicks after suffering an apparent injury to his right leg.",
+   "published": "2026-10-25T21:40-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP176149633-scaled.jpg",
    "video": false,
-   "teams": [
-    "Detroit Lions"
-   ],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/jake-bates-kicks-fg-as-time-expires-to-give-lions-tight-win-over-packers/",
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/magics-jalen-suggs-exits-vs-knicks-with-apparent-injury/",
    "source": "Sportsnet"
   },
   {
@@ -2859,6 +2855,21 @@
    "sn_team_count": 0,
    "sport": "Golf",
    "url": "https://www.sportsnet.ca/pga/article/canadians-tie-for-third-at-bermuda-championship-after-final-round-cancelled/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Maple Leafs Notebook: Raddysh talks viral McDavid tweets",
+   "summary": "Darren Raddysh and Connor McDavid are longtime pals, as social-media sleuths discovered Saturday during the Leafs-Oilers game. The former Erie Otters teammates have maintained their connection as pros.",
+   "published": "2026-10-25T17:10-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-7-7.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-notebook-raddysh-talks-viral-mcdavid-tweets/",
    "source": "Sportsnet"
   },
   {
@@ -2931,15 +2942,17 @@
   },
   {
    "league": "nfl",
-   "headline": "Burrow throws four TD passes as Bengals storm past Jackson-less Ravens",
-   "summary": "",
-   "published": "2026-10-25T16:18-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/joe-burrow.jpg",
+   "headline": "Jake Bates kicks FG as time expires to give Lions tight win over Packers",
+   "summary": "Jake Bates made a 22-yard field goal as time expired to give the Detroit Lions a 20-17 win over the Green Bay Packers on Sunday.",
+   "published": "2026-10-25T20:01-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/lions-1.jpg",
    "video": false,
-   "teams": [],
+   "teams": [
+    "Detroit Lions"
+   ],
    "sn_team_count": 2,
    "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/burrow-throws-four-td-passes-as-bengals-storm-past-jackson-less-ravens/",
+   "url": "https://www.sportsnet.ca/nfl/article/jake-bates-kicks-fg-as-time-expires-to-give-lions-tight-win-over-packers/",
    "source": "Sportsnet"
   },
   {
@@ -3106,19 +3119,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Flames pay tribute to 2004 team with workmanlike victory",
-   "summary": "On a night recognizing the 2004 team that came one win away from winning the Stanley Cup, the Flames did their best impression of that lunch pail crew to secure their third win in a row.",
-   "published": "2026-10-25T01:19-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Flames-10.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/flames-pay-tribute-to-2004-team-with-workmanlike-victory/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Batherson nets hat trick as Senators sink Rangers",
    "summary": "",
    "published": "2026-10-24T22:07-04:00",
@@ -3141,19 +3141,6 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/cfl/article/argonauts-to-face-blue-bombers-in-east-semifinal/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "cfl",
-   "headline": "CFL playoff schedule, matchups set after regular-season finale",
-   "summary": "",
-   "published": "2026-10-24T18:07-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/11/roughriders-2.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/cfl-playoff-schedule-matchups-set-after-regular-season-finale/",
    "source": "Sportsnet"
   },
   {
@@ -3537,7 +3524,7 @@
    "league": "mlb",
    "headline": "Watch Tigers prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-25T00:13-04:00",
+   "published": "2026-10-25T21:45-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -3758,7 +3745,7 @@
    "league": "mlb",
    "headline": "Watch Blue Jays prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-25T00:13-04:00",
+   "published": "2026-10-25T21:45-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -4351,8 +4338,8 @@
       "l": 10,
       "otl": 0,
       "pts": 10,
-      "gf": 41,
-      "ga": 60,
+      "gf": 43,
+      "ga": 61,
       "strk": "L3"
      },
      {
@@ -4399,8 +4386,8 @@
       "l": 11,
       "otl": 2,
       "pts": 8,
-      "gf": 36,
-      "ga": 93,
+      "gf": 37,
+      "ga": 95,
       "strk": "L3"
      }
     ]
@@ -4759,11 +4746,11 @@
      {
       "name": "Waterloo Siskins",
       "abbr": "WAT",
-      "gp": 13,
+      "gp": 14,
       "w": 8,
       "l": 3,
-      "otl": 2,
-      "pts": 18,
+      "otl": 3,
+      "pts": 19,
       "gf": 48,
       "ga": 36,
       "strk": "W2"
@@ -4795,14 +4782,14 @@
      {
       "name": "Port Colborne Sailors",
       "abbr": "PCS",
-      "gp": 11,
-      "w": 6,
+      "gp": 12,
+      "w": 7,
       "l": 5,
       "otl": 0,
-      "pts": 12,
+      "pts": 14,
       "gf": 60,
       "ga": 59,
-      "strk": "W1"
+      "strk": "W2"
      },
      {
       "name": "Hamilton Steel",
@@ -5073,26 +5060,26 @@
      {
       "name": "Mooretown Flags",
       "abbr": "MOO",
-      "gp": 16,
-      "w": 4,
+      "gp": 17,
+      "w": 5,
       "l": 9,
       "otl": 3,
-      "pts": 11,
-      "gf": 47,
-      "ga": 59,
-      "strk": "L4"
+      "pts": 13,
+      "gf": 53,
+      "ga": 63,
+      "strk": "W1"
      },
      {
       "name": "Amherstburg Admirals",
       "abbr": "AMH",
-      "gp": 15,
+      "gp": 16,
       "w": 4,
-      "l": 11,
+      "l": 12,
       "otl": 0,
       "pts": 8,
-      "gf": 40,
-      "ga": 53,
-      "strk": "L2"
+      "gf": 44,
+      "ga": 59,
+      "strk": "L3"
      },
      {
       "name": "Walpole Island Wild",
