@@ -1,9 +1,9 @@
 {
- "updated": "2026-10-26T23:46:52-04:00",
- "today": "2026-10-26",
+ "updated": "2026-10-27T00:08:41-04:00",
+ "today": "2026-10-27",
  "range": [
-  "2026-10-23",
-  "2026-10-29"
+  "2026-10-24",
+  "2026-10-30"
  ],
  "teams": {
   "spitfires": {
@@ -59,7 +59,7 @@
   },
   "cfl": {
    "ok": true,
-   "count": 4
+   "count": 2
   },
   "cfl_news": {
    "ok": true,
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -111,219 +111,6 @@
   }
  },
  "games": [
-  {
-   "id": "highschool-2026-10-23-64",
-   "team": "highschool",
-   "sport": "Senior Boys Football",
-   "start": "2026-10-23T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "North Star",
-   "location": "Libro Credit Union Centre",
-   "status": "final",
-   "our_score": 1,
-   "opp_score": 0,
-   "result": null,
-   "note": "North Star forfeits",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Herman",
-   "home": "North Star"
-  },
-  {
-   "id": "highschool-2026-10-23-65",
-   "team": "highschool",
-   "sport": "Senior Boys Football",
-   "start": "2026-10-23T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Essex",
-   "location": "Essex",
-   "status": "final",
-   "our_score": 41,
-   "opp_score": 6,
-   "result": null,
-   "note": "",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Holy Names",
-   "home": "Essex"
-  },
-  {
-   "id": "highschool-2026-10-23-66",
-   "team": "highschool",
-   "sport": "Senior Boys Football",
-   "start": "2026-10-23T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "Sandwich",
-   "location": "Sandwich",
-   "status": "final",
-   "our_score": 26,
-   "opp_score": 16,
-   "result": null,
-   "note": "",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Villanova",
-   "home": "Sandwich"
-  },
-  {
-   "id": "highschool-2026-10-23-67",
-   "team": "highschool",
-   "sport": "Senior Boys Football",
-   "start": "2026-10-23T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "N",
-   "opponent": "St. Joseph's",
-   "location": "Libro Credit Union Centre",
-   "status": "final",
-   "our_score": 55,
-   "opp_score": 35,
-   "result": null,
-   "note": "",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Belle River",
-   "home": "St. Joseph's"
-  },
-  {
-   "id": "lancers-6200",
-   "team": "lancers",
-   "sport": "Women's Basketball",
-   "start": "2026-10-23T18:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Guelph Gryphons",
-   "location": "Guelph, ON",
-   "status": "final",
-   "our_score": 87,
-   "opp_score": 65,
-   "result": "W",
-   "note": "",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6200",
-    "recap": "https://golancers.ca/news/2026/10/24/womens-basketball-lancers-open-season-with-convincing-victory-over-guelph.aspx"
-   }
-  },
-  {
-   "id": "junior-gojhl15608",
-   "team": "junior",
-   "sport": "GOHL (Jr. B)",
-   "start": "2026-10-23T19:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "St. Catharines Falcons",
-   "location": "Seymour-Hannah S.E.C., St. Catharines, ON",
-   "status": "final",
-   "our_score": 1,
-   "opp_score": 2,
-   "result": "L",
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.gohl.ca/stats/game-center/15608"
-   },
-   "club": "Chatham Maroons"
-  },
-  {
-   "id": "junior-gs2960422",
-   "team": "junior",
-   "sport": "PJHL (Jr. C)",
-   "start": "2026-10-23T19:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Amherstburg Admirals",
-   "location": "Atlas Tube Centre",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 2,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960422?configuration=45"
-   },
-   "club": "Lakeshore Canadiens"
-  },
-  {
-   "id": "lancers-6341",
-   "team": "lancers",
-   "sport": "Men's Hockey",
-   "start": "2026-10-23T19:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Lakehead Thunderwolves",
-   "location": "Thunder Bay, ON",
-   "status": "final",
-   "our_score": 4,
-   "opp_score": 5,
-   "result": "L",
-   "note": "OT",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6341",
-    "recap": "https://golancers.ca/news/2026/10/24/mens-hockey-lancers-drop-pair-of-overtime-decisions-to-lakehead.aspx"
-   }
-  },
-  {
-   "id": "junior-gs2960433",
-   "team": "junior",
-   "sport": "PJHL (Jr. C)",
-   "start": "2026-10-23T19:30:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Dresden Kings",
-   "location": "Lambton-Kent Memorial Centre",
-   "status": "final",
-   "our_score": 4,
-   "opp_score": 1,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960433?configuration=45"
-   },
-   "club": "Essex 73's"
-  },
-  {
-   "id": "lancers-6286",
-   "team": "lancers",
-   "sport": "Women's Hockey",
-   "start": "2026-10-23T19:30:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Ottawa Gee-Gees",
-   "location": "Adie Knox Arena",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 5,
-   "result": "L",
-   "note": "",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6286",
-    "recap": "https://golancers.ca/news/2026/10/24/womens-hockey-lancers-drop-home-opener-to-visiting-gee-gees.aspx"
-   }
-  },
-  {
-   "id": "lancers-6222",
-   "team": "lancers",
-   "sport": "Men's Basketball",
-   "start": "2026-10-23T20:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Guelph Gryphons",
-   "location": "Guelph, ON",
-   "status": "final",
-   "our_score": 81,
-   "opp_score": 102,
-   "result": "L",
-   "note": "",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6222",
-    "recap": "https://golancers.ca/news/2026/10/24/mens-basketball-mens-basketball-falls-to-guelph-in-season-opener.aspx"
-   }
-  },
   {
    "id": "lancers-6124",
    "team": "lancers",
@@ -1669,53 +1456,157 @@
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16626"
    },
    "club": "Leamington Flyers"
+  },
+  {
+   "id": "lancers-6244",
+   "team": "lancers",
+   "sport": "Women's Volleyball",
+   "start": "2026-10-30T12:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Western Mustangs",
+   "location": "London, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "watch": "https://oua.tv/?school=Windsor"
+   }
+  },
+  {
+   "id": "lancers-6264",
+   "team": "lancers",
+   "sport": "Men's Volleyball",
+   "start": "2026-10-30T13:30:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Western Mustangs",
+   "location": "London, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "watch": "https://oua.tv/?school=Windsor"
+   }
+  },
+  {
+   "id": "lancers-6201",
+   "team": "lancers",
+   "sport": "Women's Basketball",
+   "start": "2026-10-30T18:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "York Lions",
+   "location": "Toldo Lancer Centre",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=171",
+    "watch": "https://oua.tv/?school=Windsor"
+   }
+  },
+  {
+   "id": "junior-gs2960487",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-10-30T19:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Wheatley Sharks",
+   "location": "Atlas Tube Centre",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960487?configuration=45"
+   },
+   "club": "Lakeshore Canadiens"
+  },
+  {
+   "id": "junior-gs2960488",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-10-30T19:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Essex 73's",
+   "location": "Tecumseh",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960488?configuration=45"
+   },
+   "club": "Amherstburg Admirals"
+  },
+  {
+   "id": "lancers-6343",
+   "team": "lancers",
+   "sport": "Men's Hockey",
+   "start": "2026-10-30T19:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Waterloo Warriors",
+   "location": "Waterloo, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "watch": "https://oua.tv/?school=Windsor"
+   }
+  },
+  {
+   "id": "lancers-6288",
+   "team": "lancers",
+   "sport": "Women's Hockey",
+   "start": "2026-10-30T19:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Laurier Golden Hawks",
+   "location": "Waterloo, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "watch": "https://oua.tv/?school=Windsor"
+   }
+  },
+  {
+   "id": "lancers-6223",
+   "team": "lancers",
+   "sport": "Men's Basketball",
+   "start": "2026-10-30T20:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "York Lions",
+   "location": "Toldo Lancer Centre",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=171",
+    "watch": "https://oua.tv/?school=Windsor"
+   }
   }
  ],
  "pro_games": [
-  {
-   "id": "cfl-cfl6668",
-   "team": "cfl",
-   "sport": "CFL",
-   "start": "2026-10-23T19:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Toronto Argonauts",
-   "location": "BMO Field",
-   "status": "final",
-   "our_score": 33,
-   "opp_score": 16,
-   "result": null,
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.cfl.ca/schedule/"
-   },
-   "away": "Montreal Alouettes",
-   "home": "Toronto Argonauts",
-   "away_abbr": "MTL",
-   "home_abbr": "TOR"
-  },
-  {
-   "id": "cfl-cfl6669",
-   "team": "cfl",
-   "sport": "CFL",
-   "start": "2026-10-23T22:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "B.C. Lions",
-   "location": "BC Place",
-   "status": "final",
-   "our_score": 34,
-   "opp_score": 10,
-   "result": null,
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.cfl.ca/schedule/"
-   },
-   "away": "Winnipeg Blue Bombers",
-   "home": "B.C. Lions",
-   "away_abbr": "WPG",
-   "home_abbr": "BC"
-  },
   {
    "id": "cfl-cfl6671",
    "team": "cfl",
@@ -2460,6 +2351,21 @@
  ],
  "more_news": [
   {
+   "league": "nhl",
+   "headline": "Gridin scores twice as Flames beat Maple Leafs for fourth straight win",
+   "summary": "",
+   "published": "2026-10-26T23:46-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177155522.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/gridin-scores-twice-as-flames-beat-maple-leafs-for-fourth-straight-win/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "mlb",
    "headline": "Brewers overwhelm Rays in Game 3 to move one win from first World Series title",
    "summary": "The Brewers continued to avalanche their way through the post-season on Monday, using an eight-run fifth inning to beat the Rays and move one win away from their first-ever title.",
@@ -2470,6 +2376,21 @@
    "sn_team_count": 2,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/brewers-blitz-rays-in-game-3-to-take-commanding-3-0-world-series-lead/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Auston Matthews becomes fastest in Maple Leafs history to reach 800 points",
+   "summary": "",
+   "published": "2026-10-26T23:54-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/matthews.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/auston-matthews-becomes-fastest-in-maple-leafs-history-to-reach-800-points/",
    "source": "Sportsnet"
   },
   {
@@ -2527,29 +2448,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "James Reimer pulled after first period in Rangers debut",
-   "summary": "",
-   "published": "2026-10-26T20:12-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/61a7cb40e131b345cf33b8deb6be76d385bc50849e46ba1c0cb68450fe0aac4b.jpg",
+   "league": "nfl",
+   "headline": "Cowboys add to Eagles’ woes with blowout win",
+   "summary": "Dak Prescott threw for 212 yards and three touchdowns, two to CeeDee Lamb, and the Dallas Cowboys beat Philadelphia 38-21 on Monday night to hand the Eagles their fifth straight loss.",
+   "published": "2026-10-26T23:53-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Dallas-Cowboys-quarterback-Dak-Prescott.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/james-reimer-pulled-after-first-period-in-rangers-debut/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Thunder’s Jalen Williams, Cason Wallace out long-term with significant injuries",
-   "summary": "",
-   "published": "2026-10-26T18:12-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Jalen-Williams.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/thunders-jalen-williams-cason-wallace-out-long-term-with-significant-injuries/",
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/cowboys-add-to-eagles-woes-with-blowout-win/",
    "source": "Sportsnet"
   },
   {
@@ -2660,6 +2568,45 @@
    "sn_team_count": 8,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/champion-hurricanes-still-the-team-to-beat-even-without-landing-hellebuyck/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Cavaliers storm back to beat Timberwolves in OT",
+   "summary": "",
+   "published": "2026-10-26T22:57-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Cleveland-Cavaliers-guard-Donovan-Mitchell-45-is-fouled-by-Minnesota-Timberwolves-forward-Jonathan-Kuminga-24.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/cavaliers-storm-back-to-beat-timberwolves-in-ot/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Mavericks, Flagg keep Heat winless",
+   "summary": "",
+   "published": "2026-10-26T22:47-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Dallas-Mavericks-forward-Cooper-Flagg.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Basketball Football",
+   "url": "https://www.sportsnet.ca/nba/article/mavericks-flagg-keep-heat-winless/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Jazz forwards Lauri Markkanen, Jaren Jackson, Jr. exit early with injuries",
+   "summary": "",
+   "published": "2026-10-26T23:40-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/b13e2201bee023a3eb6c9d54e7b85d60130d704021454cac386381bb329420b4.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/jazz-forwards-lauri-markkanen-jaren-jackson-jr-exit-early-with-injuries/",
    "source": "Sportsnet"
   },
   {
@@ -2833,45 +2780,6 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/raptors-no-match-for-timberwolves-without-kawhi-leonard/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Canada’s Leylah Fernandez jumps to No. 23 in WTA rankings",
-   "summary": "",
-   "published": "2026-10-26T10:15-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/leylah.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Tennis",
-   "url": "https://www.sportsnet.ca/wta/article/canadas-leylah-fernandez-jumps-to-no-23-in-wta-rankings/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Flyers’ Rasmus Ristolainen out two weeks with hand injury",
-   "summary": "",
-   "published": "2026-10-26T12:59-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/rasmus-ristolainen.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/flyers-rasmus-ristolainen-out-two-weeks-with-hand-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "F1 takeaways: Antonelli dominates to win U.S. GP with title now in reach",
-   "summary": "Kimi Antonelli did what he needed to do Sunday, converting pole position into a win with a dominant drive at the U.S. GP. Alas, fate wasn’t entirely in his hands to clinch his maiden world title, postponing the inevitabl",
-   "published": "2026-10-25T20:03-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/antonelli_kimi1280.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Auto Racing",
-   "url": "https://www.sportsnet.ca/formula-1/article/f1-takeaways-antonelli-dominates-to-win-u-s-gp-with-title-now-in-reach/",
    "source": "Sportsnet"
   },
   {
