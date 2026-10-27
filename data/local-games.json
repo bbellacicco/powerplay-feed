@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T18:50:20-04:00",
+ "updated": "2026-10-27T19:01:46-04:00",
  "today": "2026-10-27",
  "range": [
   "2026-10-24",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -1371,9 +1371,9 @@
    "home_away": "H",
    "opponent": "Walpole Island Wild",
    "location": "Essex Centre Complex",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
    "note": "",
    "links": {
@@ -2402,18 +2402,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Jack Roslovic playing his best for Maple Leafs, just later than he wished",
-   "summary": "Jack Roslovic is riding the high of his best October yet, and it’s not particularly close.",
-   "published": "2026-10-27T14:35-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Jack-Roslovic.jpg",
+   "league": "nba",
+   "headline": "Report: Anthony Edwards to undergo knee surgery, miss up to two months",
+   "summary": "",
+   "published": "2026-10-27T18:58-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-98.jpg",
    "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
+   "teams": [],
    "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/jack-roslovic-playing-his-best-for-maple-leafs-but-later-than-he-wished/",
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/anthony-edwards-to-reportedly-undergo-knee-surgery-miss-up-to-two-months/",
    "source": "Sportsnet"
   },
   {
@@ -2520,6 +2518,21 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/golden-knights-turn-to-adin-hill-after-carter-hart-exits-morning-skate-with-injury/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Jack Roslovic playing his best for Maple Leafs, just later than he wished",
+   "summary": "Jack Roslovic is riding the high of his best October yet, and it’s not particularly close.",
+   "published": "2026-10-27T14:35-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Jack-Roslovic.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/jack-roslovic-playing-his-best-for-maple-leafs-but-later-than-he-wished/",
    "source": "Sportsnet"
   },
   {
