@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T14:31:41-04:00",
+ "updated": "2026-10-27T14:46:38-04:00",
  "today": "2026-10-27",
  "range": [
   "2026-10-24",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 32
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -1655,6 +1655,17 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "EVERY CFL Touchdown from Week 21!",
+   "summary": "",
+   "published": "2026-10-27T02:00:00-04:00",
+   "image": "",
+   "video": true,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/every-cfl-touchdown-from-week-21",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "3 X-factors that could shape the Eastern Semi-Final",
    "summary": "",
    "published": "2026-10-27T00:00:00-04:00",
@@ -1932,19 +1943,6 @@
     "Blue Bombers"
    ],
    "url": "https://www.cfl.ca/article/every-completion-from-dru-brown-in-his-playoff-clinching-performance",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "BRADY OLIVEIRA RUNS FOR LONG TD TO GIVE BLUE BOMBERS THE LEAD",
-   "summary": "",
-   "published": "2026-10-24T00:50:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/8tIL3vjvJHRIVJKVB7oKK/18fe324d7952fb11e794e8020ddac23c/WPG_2ND_TD.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Blue Bombers"
-   ],
-   "url": "https://www.cfl.ca/article/brady-oliveira-runs-for-long-td-to-give-blue-bombers-the-lead",
    "source": "CFL.ca"
   },
   {
@@ -2352,6 +2350,19 @@
  ],
  "more_news": [
   {
+   "league": "cfl",
+   "headline": "Watch Live: Argonauts, QB Chad Kelly speak after agreeing to extension",
+   "summary": "",
+   "published": "2026-10-27T14:38-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/chad-kelly.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/watch-live-argonauts-qb-chad-kelly-speak-after-agreeing-to-extension/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "NHL’s most interesting goalie situations a month into the season",
    "summary": "Everybody loves a good crease controversy. With that in mind, as we hit the one-month mark of the new season, Rory Boylen takes a look at some goaltending setups we’re watching closely.",
@@ -2362,6 +2373,19 @@
    "sn_team_count": 3,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/nhls-most-interesting-goalie-situations-a-month-into-the-season/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Canadian Jim Henderson’s pitching plans have Brewers on verge of title",
+   "summary": "With his pitching days in the big leagues coming to a close in 2016, Calgary native Jim Henderson started looking into coaching possibilities. It led to an eventual job with the Brewers, where Henderson has helped develo",
+   "published": "2026-10-27T14:33-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/henderson.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/canadian-jim-hendersons-pitching-plans-have-brewers-on-verge-of-title/",
    "source": "Sportsnet"
   },
   {
@@ -2377,6 +2401,21 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/raptors-kawhi-leonard-out-at-least-a-week-with-knee-swelling/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Jack Roslovic playing his best for Maple Leafs, but later than he wished",
+   "summary": "Jack Roslovic is riding the high of his best October yet, and it’s not particularly close.",
+   "published": "2026-10-27T14:35-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Jack-Roslovic.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/jack-roslovic-playing-his-best-for-maple-leafs-but-later-than-he-wished/",
    "source": "Sportsnet"
   },
   {
@@ -2406,19 +2445,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "cfl",
-   "headline": "Reports: Blue Bombers QB Zach Collaros misses practice after injury",
-   "summary": "",
-   "published": "2026-10-27T13:15-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/07/Collaros.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/reports-blue-bombers-qb-zach-collaros-misses-practice-after-injury/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "Penguins’ Ben Kindel returns to practice after collapsing on plane",
    "summary": "Ben Kindel is back practising with the Pittsburgh Penguins.",
@@ -2432,16 +2458,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Dustin Byfuglien pens message to Jets fans after alumni-game return",
-   "summary": "",
-   "published": "2026-10-26T20:44-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2018/10/Dustin-Byfuglien.jpg",
+   "league": "other",
+   "headline": "Deion Sanders brushes off comment about offering money to silence critics",
+   "summary": "Deion Sanders on Tuesday downplayed comments from a person close to him who suggested the Colorado coach was willing to pay $50,000 to silence his critics.",
+   "published": "2026-10-27T14:33-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-31.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/dustin-byfuglien-pens-message-to-jets-fans-after-alumni-game-return/",
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/ncaa-mens-football/article/deion-sanders-brushes-off-comment-about-offering-money-to-silence-critics/",
    "source": "Sportsnet"
   },
   {
@@ -2471,18 +2497,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Maple Leafs’ Kirill Marchenko exits vs. Flames with lower-body injury",
+   "league": "cfl",
+   "headline": "Reports: Blue Bombers QB Zach Collaros misses practice after injury",
    "summary": "",
-   "published": "2026-10-26T22:39-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/marchenko-1.jpg",
+   "published": "2026-10-27T13:15-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/07/Collaros.jpg",
    "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-kirill-marchenko-exits-vs-flames-with-lower-body-injury/",
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/reports-blue-bombers-qb-zach-collaros-misses-practice-after-injury/",
    "source": "Sportsnet"
   },
   {
@@ -2500,17 +2524,15 @@
   },
   {
    "league": "nhl",
-   "headline": "Auston Matthews becomes fastest in Maple Leafs history to reach 800 points",
+   "headline": "Dustin Byfuglien pens message to Jets fans after alumni-game return",
    "summary": "",
-   "published": "2026-10-26T23:54-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/matthews.jpg",
+   "published": "2026-10-26T20:44-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2018/10/Dustin-Byfuglien.jpg",
    "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
+   "teams": [],
    "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/auston-matthews-becomes-fastest-in-maple-leafs-history-to-reach-800-points/",
+   "url": "https://www.sportsnet.ca/nhl/article/dustin-byfuglien-pens-message-to-jets-fans-after-alumni-game-return/",
    "source": "Sportsnet"
   },
   {
