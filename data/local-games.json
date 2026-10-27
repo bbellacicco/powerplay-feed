@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T16:47:00-04:00",
+ "updated": "2026-10-27T17:01:40-04:00",
  "today": "2026-10-27",
  "range": [
   "2026-10-24",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -2348,6 +2348,21 @@
  ],
  "more_news": [
   {
+   "league": "nba",
+   "headline": "Raptors face early test of life without Kawhi Leonard",
+   "summary": "The news about Kawhi Leonard missing time due to an issue with his left knee was both predictable and encouraging. Michael Grange explains why in his latest.",
+   "published": "2026-10-27T16:46-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/kawhi-4.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/raptors-face-early-test-of-life-without-kawhi-leonard/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "NHL’s most interesting goalie situations a month into the season",
    "summary": "Everybody loves a good crease controversy. With that in mind, as we hit the one-month mark of the new season, Rory Boylen takes a look at some goaltending setups we’re watching closely.",
@@ -2374,23 +2389,8 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nba",
-   "headline": "Raptors’ Kawhi Leonard out at least a week with knee swelling",
-   "summary": "Forward Kawhi Leonard is set to undergo treatment and a rehabilitation program to address swelling in his left knee and will be reevaluated in a week, the team announced Tuesday.",
-   "published": "2026-10-27T11:32-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/kahwi.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-kawhi-leonard-out-at-least-a-week-with-knee-swelling/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
-   "headline": "Jack Roslovic playing his best for Maple Leafs, but later than he wished",
+   "headline": "Jack Roslovic playing his best for Maple Leafs, just later than he wished",
    "summary": "Jack Roslovic is riding the high of his best October yet, and it’s not particularly close.",
    "published": "2026-10-27T14:35-04:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Jack-Roslovic.jpg",
@@ -2440,6 +2440,21 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/hellebuyck-to-make-first-start-for-devils-vs-stars/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Raptors’ Kawhi Leonard out at least a week with knee swelling",
+   "summary": "Forward Kawhi Leonard is set to undergo treatment and a rehabilitation program to address swelling in his left knee and will be reevaluated in a week, the team announced Tuesday.",
+   "published": "2026-10-27T11:32-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/kahwi.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/raptors-kawhi-leonard-out-at-least-a-week-with-knee-swelling/",
    "source": "Sportsnet"
   },
   {
@@ -2495,19 +2510,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "Seahawks acquire Pro Bowl guard Quenton Nelson from Colts",
-   "summary": "The Indianapolis Colts have traded Pro Bowl guard Quenton Nelson to the Seattle Seahawks, ESPN’s Adam Schefter reported Tuesday.",
-   "published": "2026-10-27T12:49-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/QUenton.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/report-seahawks-acquire-pro-bowl-guard-quenton-nelson-from-colts/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "Penguins’ Ben Kindel returns to practice after collapsing on plane",
    "summary": "Ben Kindel is back practising with the Pittsburgh Penguins.",
@@ -2534,8 +2536,34 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nfl",
+   "headline": "Report: Colts trade DT DeForest Buckner back to 49ers",
+   "summary": "The NFC West-leading 49ers have reportedly agreed to acquire defensive tackle DeForest Buckner from the Indianapolis Colts.",
+   "published": "2026-10-27T16:59-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Indianapolis-Colts-defensive-tackle-DeForest-Buckner-.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/report-colts-trade-dt-deforest-buckner-back-to-49ers/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Seahawks acquire Pro Bowl guard Quenton Nelson from Colts",
+   "summary": "The Indianapolis Colts have traded Pro Bowl guard Quenton Nelson to the Seattle Seahawks, ESPN’s Adam Schefter reported Tuesday.",
+   "published": "2026-10-27T12:49-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/QUenton.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/report-seahawks-acquire-pro-bowl-guard-quenton-nelson-from-colts/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "cfl",
-   "headline": "Reports: Blue Bombers QB Zach Collaros misses practice after injury",
+   "headline": "Blue Bombers QB Zach Collaros misses practice after rib injury",
    "summary": "",
    "published": "2026-10-27T13:15-04:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2025/07/Collaros.jpg",
@@ -2743,19 +2771,6 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/ncaa-mens-football/article/mississippi-state-qb-kamario-taylor-out-for-season-set-for-foot-surgery/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Jay-Z to headline Super Bowl LXI halftime show",
-   "summary": "",
-   "published": "2026-10-26T22:03-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Jay-Z.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/jay-z-to-headline-super-bowl-lxi-halftime-show/",
    "source": "Sportsnet"
   },
   {
