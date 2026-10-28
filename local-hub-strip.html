@@ -96,10 +96,27 @@
     return new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Toronto', month: 'short', day: 'numeric' }).format(new Date(t));
   }
   var TEAM_LOGO = { spitfires: 'https://assets.leaguestat.com/ohl/logos/17.png' };   // same as the Local Hub
+  var JR_LOGOS = {      // local junior clubs: logo for stories, headlines and score cards (logos/junior/ are copies on GitHub)
+    'Chatham Maroons': 'https://bbellacicco.github.io/powerplay-feed/logos/junior/chatham-maroons.png',
+    "Essex 73's": 'https://bbellacicco.github.io/powerplay-feed/logos/junior/essex-73s.png',
+    'LaSalle Vipers': 'https://assets.leaguestat.com/gojhl/logos/50x50/19.png',
+    'Leamington Flyers': 'https://assets.leaguestat.com/ojhl/logos/50x50/19.png',
+    'Amherstburg Admirals': 'https://imagedelivery.net/ErrQpIaCOWR-Tz51PhN1zA/cff8047d-808d-4925-36de-4f3a0f83f100/256',
+    'Lakeshore Canadiens': 'https://imagedelivery.net/ErrQpIaCOWR-Tz51PhN1zA/463ba5c9-0f2d-4d2c-d205-56d34ab32100/256',
+    'Wheatley Sharks': 'https://imagedelivery.net/ErrQpIaCOWR-Tz51PhN1zA/9a13d52f-6120-4c7c-b14c-32e488f0f000/256'
+  };
+  function clubLogo(name) {   // "Essex 73's", "Essex 73s", "Chatham Maroons", "Chatham" ...
+    var n = String(name || '').toLowerCase().replace(/[’']/g, '');
+    if (!n) return '';
+    for (var k in JR_LOGOS) { var kk = k.toLowerCase().replace(/[’']/g, ''); if (n === kk || n.indexOf(kk) >= 0 || (n.length > 4 && kk.indexOf(n) === 0)) return JR_LOGOS[k]; }
+    return '';
+  }
   function tile(s) {
-    if (TEAM_LOGO[s.team]) {
+    var logoSrc = TEAM_LOGO[s.team] || (s.team === 'junior' && clubLogo(s.club));
+    if (logoSrc) {
       var lt = el('div', 'tile logo');
-      var li = new Image(); li.src = TEAM_LOGO[s.team]; li.alt = '';
+      if (s.team === 'junior') lt.style.borderBottomColor = '#0891b2';
+      var li = new Image(); li.src = logoSrc; li.alt = '';
       lt.appendChild(li);
       lt.appendChild(el('small', null, /^game story/i.test(s.headline) ? 'GAME STORY' : s.video ? 'VIDEO' : 'NEWS'));
       return lt;
