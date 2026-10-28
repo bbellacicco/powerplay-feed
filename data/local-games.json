@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T22:01:58-04:00",
+ "updated": "2026-10-27T22:36:07-04:00",
  "today": "2026-10-27",
  "range": [
   "2026-10-24",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 30
+   "count": 29
   },
   "club_news": {
    "ok": true,
@@ -2364,19 +2364,6 @@
   },
   {
    "league": "nhl",
-   "headline": "NHL’s most interesting goalie situations a month into the season",
-   "summary": "Everybody loves a good crease controversy. With that in mind, as we hit the one-month mark of the new season, Rory Boylen takes a look at some goaltending setups we’re watching closely.",
-   "published": "2026-10-27T13:02-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Montreal-Canadiens-goaltender-Jacob-Fowler.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 3,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/nhls-most-interesting-goalie-situations-a-month-into-the-season/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Connor Hellebuyck makes first start for Devils vs. Stars",
    "summary": "The newly acquired goaltender will make his starting debut for the New Jersey Devils on Tuesday in Dallas against the Stars, the team announced after morning skate.",
    "published": "2026-10-27T13:04-04:00",
@@ -2505,6 +2492,19 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/mls/article/mls-preview-toronto-fc-set-to-host-d-c-united-in-high-stakes-clash/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "NHL’s most interesting goalie situations a month into the season",
+   "summary": "Everybody loves a good crease controversy. With that in mind, as we hit the one-month mark of the new season, Rory Boylen takes a look at some goaltending setups we’re watching closely.",
+   "published": "2026-10-27T13:02-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Montreal-Canadiens-goaltender-Jacob-Fowler.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 3,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/nhls-most-interesting-goalie-situations-a-month-into-the-season/",
    "source": "Sportsnet"
   },
   {
@@ -2728,19 +2728,6 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/hockey/article/hockey-canada-brings-back-order-of-hockey-in-canada-after-multi-year-hiatus/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Mississippi State QB Kamario Taylor out for season, set for foot surgery",
-   "summary": "Mississippi State quarterback Kamario Taylor will miss the rest of the season because of a foot injury that requires surgery, the school said in a statement on Tuesday.",
-   "published": "2026-10-27T13:57-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-29.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/ncaa-mens-football/article/mississippi-state-qb-kamario-taylor-out-for-season-set-for-foot-surgery/",
    "source": "Sportsnet"
   },
   {
@@ -3885,14 +3872,14 @@
      {
       "name": "Pickering Panthers",
       "abbr": "PIC",
-      "gp": 18,
+      "gp": 19,
       "w": 9,
-      "l": 7,
+      "l": 8,
       "otl": 2,
       "pts": 20,
       "gf": 64,
       "ga": 61,
-      "strk": "W3"
+      "strk": "L1"
      },
      {
       "name": "Newmarket Hurricanes",
@@ -4020,6 +4007,18 @@
       "strk": "W1"
      },
      {
+      "name": "Burlington Cougars",
+      "abbr": "BUR",
+      "gp": 20,
+      "w": 13,
+      "l": 5,
+      "otl": 2,
+      "pts": 28,
+      "gf": 97,
+      "ga": 60,
+      "strk": "W3"
+     },
+     {
       "name": "King Rebellion",
       "abbr": "KNG",
       "gp": 17,
@@ -4054,18 +4053,6 @@
       "gf": 88,
       "ga": 28,
       "strk": "W8"
-     },
-     {
-      "name": "Burlington Cougars",
-      "abbr": "BUR",
-      "gp": 19,
-      "w": 12,
-      "l": 5,
-      "otl": 2,
-      "pts": 26,
-      "gf": 97,
-      "ga": 60,
-      "strk": "W2"
      },
      {
       "name": "Oakville Blades",
