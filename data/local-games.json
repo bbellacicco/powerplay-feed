@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T04:50:36-04:00",
+ "updated": "2026-10-28T05:32:01-04:00",
  "today": "2026-10-28",
  "range": [
   "2026-10-25",
@@ -38,8 +38,8 @@
    "count": 8
   },
   "lancers": {
-   "ok": true,
-   "count": 95
+   "ok": false,
+   "error": "<urlopen error [Errno 111] Connection refused>"
   },
   "junior": {
    "ok": true,
@@ -51,7 +51,7 @@
   },
   "highschool": {
    "ok": false,
-   "error": "HTTP Error 403: Forbidden"
+   "error": "<urlopen error _ssl.c:993: The handshake operation timed out>"
   },
   "sheet": {
    "ok": true,
