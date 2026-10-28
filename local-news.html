@@ -345,7 +345,7 @@
   function fbCard(team) {
     var key = Object.keys(SOCIAL).filter(function (k) { return SOCIAL[k].indexOf(team) >= 0; })[0];
     var c = el('div', 'fbcard'), lg = el('div', 'fblogo');
-    var src = key !== 'junior' && TEAM_LOGO[key];
+    var src = key !== 'junior' ? TEAM_LOGO[key] : clubLogo(team.name);
     if (src) { var im = new Image(); im.src = src; im.alt = ''; im.onerror = function () { im.remove(); lg.textContent = team.name.replace(/^(Windsor|St\. Clair)\s+/, '').slice(0, 2).toUpperCase(); }; lg.appendChild(im); }
     else lg.textContent = team.name.replace(/^(Windsor|St\. Clair)\s+/, '').slice(0, 2).toUpperCase();
     c.appendChild(lg);
@@ -646,13 +646,29 @@
   var TEAM_LOGO = { spitfires: 'https://assets.leaguestat.com/ohl/logos/17.png',
     lancers: 'https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/golancers.ca/images/responsive_2025/logo_main.png',
     powerplay: 'https://bbellacicco.github.io/powerplay-feed/logos/pp-icon.png' };
-  var LOGO_LINE = { spitfires: '#d4202a', lancers: '#0b5cad', powerplay: '#e8b021' };
+  var LOGO_LINE = { spitfires: '#d4202a', lancers: '#0b5cad', powerplay: '#e8b021', junior: '#0891b2' };
+  var JR_LOGOS = {      // local junior clubs: logo for stories, headlines and score cards (logos/junior/ are copies on GitHub)
+    'Chatham Maroons': 'https://bbellacicco.github.io/powerplay-feed/logos/junior/chatham-maroons.png',
+    "Essex 73's": 'https://bbellacicco.github.io/powerplay-feed/logos/junior/essex-73s.png',
+    'LaSalle Vipers': 'https://assets.leaguestat.com/gojhl/logos/50x50/19.png',
+    'Leamington Flyers': 'https://assets.leaguestat.com/ojhl/logos/50x50/19.png',
+    'Amherstburg Admirals': 'https://imagedelivery.net/ErrQpIaCOWR-Tz51PhN1zA/cff8047d-808d-4925-36de-4f3a0f83f100/256',
+    'Lakeshore Canadiens': 'https://imagedelivery.net/ErrQpIaCOWR-Tz51PhN1zA/463ba5c9-0f2d-4d2c-d205-56d34ab32100/256',
+    'Wheatley Sharks': 'https://imagedelivery.net/ErrQpIaCOWR-Tz51PhN1zA/9a13d52f-6120-4c7c-b14c-32e488f0f000/256'
+  };
+  function clubLogo(name) {   // "Essex 73's", "Essex 73s", "Chatham Maroons", "Chatham" ...
+    var n = String(name || '').toLowerCase().replace(/[’']/g, '');
+    if (!n) return '';
+    for (var k in JR_LOGOS) { var kk = k.toLowerCase().replace(/[’']/g, ''); if (n === kk || n.indexOf(kk) >= 0 || (n.length > 4 && kk.indexOf(n) === 0)) return JR_LOGOS[k]; }
+    return '';
+  }
   function teamTile(s) {
     var kind0 = /^game story/i.test(s.headline) ? 'GAME STORY' : /highlight/i.test(s.headline) ? 'HIGHLIGHTS' : 'NEWS';
-    if (TEAM_LOGO[s.team]) {
+    var logoSrc = TEAM_LOGO[s.team] || (s.team === 'junior' && clubLogo(s.club));
+    if (logoSrc) {
       var lt = el('div', 'thumb tile-logo' + (s.team === 'powerplay' ? ' dark' : ''));
       lt.style.borderBottomColor = LOGO_LINE[s.team];
-      var li = new Image(); li.src = TEAM_LOGO[s.team]; li.alt = ''; li.loading = 'lazy';
+      var li = new Image(); li.src = logoSrc; li.alt = ''; li.loading = 'lazy';
       lt.appendChild(li);
       lt.appendChild(el('div', 'tl-kind', kind0));
       return lt;
