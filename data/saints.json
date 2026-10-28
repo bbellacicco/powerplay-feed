@@ -1,79 +1,7 @@
 {
- "updated": "2026-10-27T00:00:02-04:00",
- "today": "2026-10-27",
+ "updated": "2026-10-28T00:00:01-04:00",
+ "today": "2026-10-28",
  "games": [
-  {
-   "id": "saints-presto2026-10-24-0",
-   "team": "saints",
-   "sport": "Baseball",
-   "start": "2026-10-24T13:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Durham",
-   "location": "",
-   "status": "final",
-   "our_score": 2,
-   "opp_score": 10,
-   "result": "L",
-   "note": "7 innings · Exhibition · OCAA Championship Bronze Medal Game",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/bsb/2026-27/boxscores/20261024_6etm.xml"
-   }
-  },
-  {
-   "id": "saints-presto2026-10-24-1",
-   "team": "saints",
-   "sport": "Fastball",
-   "start": "2026-10-24T13:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Durham",
-   "location": "",
-   "status": "final",
-   "our_score": 6,
-   "opp_score": 5,
-   "result": "W",
-   "note": "Exhibition · OCAA Championship Gold Medal Game 1 - Winner Game 6 vs Winner Game 7",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/fastball/2026-27/boxscores/20261024_w98i.xml"
-   }
-  },
-  {
-   "id": "saints-presto2026-10-24-2",
-   "team": "saints",
-   "sport": "Women's Volleyball",
-   "start": "2026-10-24T13:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Cambrian",
-   "location": "",
-   "status": "final",
-   "our_score": 2,
-   "opp_score": 3,
-   "result": "L",
-   "note": "",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/wvball/2026-27/boxscores/20261024_0g1n.xml"
-   }
-  },
-  {
-   "id": "saints-presto2026-10-24-3",
-   "team": "saints",
-   "sport": "Men's Volleyball",
-   "start": "2026-10-24T15:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Cambrian",
-   "location": "",
-   "status": "final",
-   "our_score": 1,
-   "opp_score": 3,
-   "result": "L",
-   "note": "",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/mvball/2026-27/boxscores/20261024_iakr.xml"
-   }
-  },
   {
    "id": "saints-presto2026-10-25-0",
    "team": "saints",
@@ -126,6 +54,96 @@
    "note": "",
    "links": {
     "boxscore": "https://www.saintsathletics.ca/sports/mvball/2026-27/boxscores/20261025_cul1.xml"
+   }
+  },
+  {
+   "id": "saints-presto2026-10-31-1",
+   "team": "saints",
+   "sport": "Women's Soccer",
+   "start": "2026-10-31T12:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Centennial",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "OCAA Championship Semi-Final #1",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/wsoc/2026-27p/boxscores/20261031_y667.xml"
+   }
+  },
+  {
+   "id": "saints-presto2026-10-31-2",
+   "team": "saints",
+   "sport": "Women's Volleyball",
+   "start": "2026-10-31T13:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Conestoga",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/wvball/2026-27/boxscores/20261031_c9jz.xml"
+   }
+  },
+  {
+   "id": "saints-presto2026-10-31-3",
+   "team": "saints",
+   "sport": "Men's Volleyball",
+   "start": "2026-10-31T15:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Conestoga",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/mvball/2026-27/boxscores/20261031_dnpi.xml"
+   }
+  },
+  {
+   "id": "saints-presto2026-10-31-4",
+   "team": "saints",
+   "sport": "Women's Basketball",
+   "start": "2026-10-31T16:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Humber",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/wbkb/2026-27/boxscores/20261031_cg5c.xml"
+   }
+  },
+  {
+   "id": "saints-presto2026-10-31-5",
+   "team": "saints",
+   "sport": "Men's Basketball",
+   "start": "2026-10-31T18:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Humber",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/mbkb/2026-27/boxscores/20261031_2x6t.xml"
    }
   }
  ]
