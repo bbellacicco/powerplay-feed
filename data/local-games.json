@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T19:17:24-04:00",
+ "updated": "2026-10-28T19:32:12-04:00",
  "today": "2026-10-28",
  "range": [
   "2026-10-25",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -1315,11 +1315,11 @@
    "home_away": "H",
    "opponent": "Woodstock Navy Vets",
    "location": "Vollmer Culture R.C., LaSalle, ON",
-   "status": "live",
-   "our_score": 1,
-   "opp_score": 0,
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
    "result": null,
-   "note": "10:14 1st",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15625"
    },
@@ -2517,32 +2517,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Where the NHL salary cap could soar to in the next three years",
-   "summary": "The NHL’s salary cap is still going through a “smoothing” process as the league comes out of the pandemic-induced flat cap wanting to avoid a sudden jump. But as we get to the end of that process, how high could the uppe",
-   "published": "2026-10-28T13:24-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/02/bettman.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/where-the-nhl-salary-cap-could-soar-to-in-the-next-three-years/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "MLS preview: Toronto FC set to host D.C. United in high-stakes clash",
-   "summary": "There are 14 MLS matches on Wednesday, and none has higher stakes than the contest between Toronto FC and D.C. United. John Molinaro previews what promises to be a tension-filled match.",
-   "published": "2026-10-27T20:01-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/TFC-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/mls-preview-toronto-fc-set-to-host-d-c-united-in-high-stakes-clash/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Wild GM Bill Guerin talks Hughes negotiations: ‘I haven’t really decided’",
    "summary": "",
    "published": "2026-10-28T18:22-04:00",
@@ -2645,6 +2619,19 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/reports-chiefs-to-sign-kicker-justin-tucker-to-practice-squad/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Where the NHL salary cap could soar to in the next three years",
+   "summary": "The NHL’s salary cap is still going through a “smoothing” process as the league comes out of the pandemic-induced flat cap wanting to avoid a sudden jump. But as we get to the end of that process, how high could the uppe",
+   "published": "2026-10-28T13:24-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/02/bettman.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/where-the-nhl-salary-cap-could-soar-to-in-the-next-three-years/",
    "source": "Sportsnet"
   },
   {
@@ -2896,21 +2883,6 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/mavericks-ceo-rick-welts-retiring-again-will-be-replaced-by-president-ethan-casson/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Raptors face early test of life without Kawhi Leonard",
-   "summary": "The news about Kawhi Leonard missing time due to an issue with his left knee was both predictable and encouraging. Michael Grange explains why in his latest.",
-   "published": "2026-10-27T16:46-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/kawhi-4.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-face-early-test-of-life-without-kawhi-leonard/",
    "source": "Sportsnet"
   },
   {
@@ -3320,7 +3292,7 @@
    "league": "mlb",
    "headline": "Watch Tigers prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-28T16:28-04:00",
+   "published": "2026-10-28T19:25-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -3487,9 +3459,9 @@
   },
   {
    "league": "mlb",
-   "headline": "Watch LIVE: Blue Jays prospects in Arizona Fall League action",
+   "headline": "Watch Blue Jays prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-28T16:28-04:00",
+   "published": "2026-10-28T19:25-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -4408,7 +4380,7 @@
       "l": 8,
       "otl": 0,
       "pts": 12,
-      "gf": 46,
+      "gf": 47,
       "ga": 59,
       "strk": "L1"
      },
@@ -4421,7 +4393,7 @@
       "otl": 1,
       "pts": 11,
       "gf": 46,
-      "ga": 57,
+      "ga": 59,
       "strk": "L2"
      },
      {
@@ -4433,7 +4405,7 @@
       "otl": 0,
       "pts": 10,
       "gf": 33,
-      "ga": 51,
+      "ga": 52,
       "strk": "W1"
      },
      {
@@ -4444,7 +4416,7 @@
       "l": 12,
       "otl": 0,
       "pts": 8,
-      "gf": 42,
+      "gf": 44,
       "ga": 72,
       "strk": "L8"
      },
