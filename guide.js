@@ -37,6 +37,8 @@
     '.ppg .pg-li:first-child{border-top:0}' +
     '.ppg .pg-li .pg-tm{flex:none;width:58px;font-weight:800;font-size:12.5px;color:#e8b021;white-space:nowrap}' +
     '.ppg .pg-li .pg-tx{min-width:0;flex:1}' +
+    '.ppg .pg-li .pg-tm.pg-live{color:#ff4d4d}.ppg .pg-li .pg-tm.pg-live::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#ff4d4d;margin-right:5px;vertical-align:1px;animation:pgpulse 1.2s infinite}.ppg .pg-li .pg-tm.pg-fin{color:#9fb0cf}' +
+    '.ppg .pg-sc{color:#fff;font-weight:900;font-variant-numeric:tabular-nums}@keyframes pgpulse{50%{opacity:.25}}' +
     '.ppg .pg-li .pg-a{font-weight:700;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}' +
     '.ppg .pg-li .pg-b{color:#9fb0cf;font-size:11.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}' +
     '.ppg .pg-dt{flex:none;width:40px;text-align:center;background:#fff;color:#0b1a33;border-radius:5px;padding:3px 0 4px;line-height:1}' +
@@ -77,6 +79,7 @@
     return [us, g.opponent, g.our_score, g.opp_score];
   }
 
+  var box_live = false;   // any game live right now (refresh every minute instead of every five)
   function load() {
     return Promise.all([getJSON('local-games.json'), getJSON('saints.json'), getJSON('highschool.json'), getJSON('calendar.json')]).then(function (r) {
       var lg = r[0] || {}, sc = r[1], hs = r[2], cal = r[3];
@@ -107,6 +110,7 @@
 
   // 1. today's games (or the next day that has some)
   function gamesCol(d, target, compact) {
+    box_live = false;
     var col = el('div', 'pg-col'), today = dayKey(new Date());
     var future = d.games.filter(function (g) { return dayKey(new Date(g.start)) >= today; });
     var day = future.some(function (g) { return dayKey(new Date(g.start)) === today; }) ? today
@@ -125,19 +129,37 @@
     });
     col.appendChild(chips);
     var now = Date.now();
-    var pick = mine.filter(function (g) { return g.status !== 'final' && g.status !== 'cancelled'; })
+    var stale = function (g) { return g.status === 'live' && now - new Date(g.start).getTime() > 4 * 3600e3; };   // data behind: don't show it as live
+    var isLive = function (g) { return g.status === 'live' && !stale(g); };
+    var scored = function (g) { return g.our_score != null && g.opp_score != null; };
+    var n = compact ? 3 : 4;
+    // live games first (with the score), then the next games, then today's finals if there's room
+    var live = mine.filter(isLive).sort(function (a, b) { return RANK[a.team] - RANK[b.team]; });
+    var next = mine.filter(function (g) { return !isLive(g) && g.status !== 'final' && g.status !== 'cancelled'; })
       .sort(function (a, b) { return (RANK[a.team] - RANK[b.team]) || (a.time_tbd ? 1 : 0) - (b.time_tbd ? 1 : 0) || (a.start < b.start ? -1 : 1); })
-      .slice(0, compact ? 3 : 4);
-    pick.sort(function (a, b) { return (a.time_tbd ? 1 : 0) - (b.time_tbd ? 1 : 0) || (a.start < b.start ? -1 : 1); });
+      .slice(0, Math.max(n - live.length, 0))
+      .sort(function (a, b) { return (a.time_tbd ? 1 : 0) - (b.time_tbd ? 1 : 0) || (a.start < b.start ? -1 : 1); });
+    var done = mine.filter(function (g) { return g.status === 'final' && scored(g); })
+      .sort(function (a, b) { return RANK[a.team] - RANK[b.team]; });
+    var pick = live.concat(next);
+    pick = pick.concat(done.slice(0, Math.max(n - pick.length, 0)));
     var list = el('div');
     pick.forEach(function (g) {
       var s = sides(g), li = el('div', 'pg-li'); li.style.setProperty('--c', COLOR[g.team] || '#e8b021');
-      var live = g.status === 'live' || (!g.time_tbd && new Date(g.start).getTime() < now && g.status === 'upcoming' && now - new Date(g.start).getTime() < 3 * 3600e3);
-      li.appendChild(el('div', 'pg-tm', g.status === 'live' ? 'LIVE' : g.status === 'postponed' ? 'PPD' : g.time_tbd ? 'TBA' : cpTime(new Date(g.start))));
-      var tx = el('div', 'pg-tx'); tx.appendChild(el('div', 'pg-a', s[0] + (g.home_away === 'N' && !(g.home && g.away) ? ' vs. ' : ' at ') + s[1]));
-      tx.appendChild(el('div', 'pg-b', label(g))); li.appendChild(tx); list.appendChild(li);
-      if (live && g.status !== 'live') li.firstChild.textContent = 'Now';
+      var lv = isLive(g), fin = g.status === 'final';
+      var started = !g.time_tbd && g.status === 'upcoming' && new Date(g.start).getTime() < now && now - new Date(g.start).getTime() < 3 * 3600e3;
+      var tm = el('div', 'pg-tm' + (lv ? ' pg-live' : fin ? ' pg-fin' : ''),
+        lv ? 'LIVE' : fin ? 'Final' : g.status === 'postponed' ? 'PPD' : started ? 'Now' : g.time_tbd ? 'TBA' : cpTime(new Date(g.start)));
+      li.appendChild(tm);
+      var tx = el('div', 'pg-tx'), a = el('div', 'pg-a');
+      if ((lv || fin) && (scored(g) || lv)) {     // "Saginaw Spirit 2 at Spitfires 3", scores in bold
+        a.appendChild(document.createTextNode(s[0] + ' ')); a.appendChild(el('b', 'pg-sc', String(s[2] == null ? 0 : s[2])));
+        a.appendChild(document.createTextNode(' at ' + s[1] + ' ')); a.appendChild(el('b', 'pg-sc', String(s[3] == null ? 0 : s[3])));
+      } else a.textContent = s[0] + (g.home_away === 'N' && !(g.home && g.away) ? ' vs. ' : ' at ') + s[1];
+      tx.appendChild(a);
+      tx.appendChild(el('div', 'pg-b', label(g) + (lv && g.detail ? ' · ' + g.detail : ''))); li.appendChild(tx); list.appendChild(li);
     });
+    box_live = live.length > 0;
     col.appendChild(list);
     var rest = mine.length - pick.length;
     goLink(col, rest > 0 ? 'See all ' + mine.length + ' games' : 'See the full schedule', hubLink('upcoming') + (day !== today ? '&day=' + day : ''), target);
@@ -211,8 +233,10 @@
     if (!document.getElementById('ppg-css')) { var s = document.createElement('style'); s.id = 'ppg-css'; s.textContent = CSS; document.head.appendChild(s); }
     var last = null;
     function go() { load().then(function (d) { last = d; draw(box, d, o); if (o.onDraw) o.onDraw(); }); }
-    go();
-    setInterval(go, 5 * 60000);
+    var lastRun = 0;
+    function tick() { if (Date.now() - lastRun >= (box_live ? 60000 : 5 * 60000)) { lastRun = Date.now(); go(); } }
+    tick();
+    setInterval(tick, 15000);
     setInterval(function () { if (last) { var fr = box.querySelector('.pg-fresh'); if (fr) fr.lastChild.textContent = ago(last.updated); } }, 60000);
   }
 
