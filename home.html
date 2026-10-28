@@ -10,7 +10,7 @@
 <!--
   The homepage in one clean, spaced-out embed (streaming-app style):
     Powerplay's three newest stories (one big, two beside it, like the News page), the Powerplay Network, a search bar, then rows:
-    Local scores · Latest stories · Pro scores · Pro headlines · Athlete profiles.
+    Local scores · Pro scores · Powerplay Network · Latest stories · Game Day Snaps · Athlete profiles · Pro headlines.
   Each row: title, "Presented by" sponsor, "See all ›" to the full page. Rows swipe sideways (arrows on desktop).
   Same data as the other widgets; refreshes itself every few minutes.
   Embed full width in Wix: about 3,560px tall on desktop, 4,700px on mobile (includes testimonials and About).
@@ -337,13 +337,13 @@
 
   // ---------- rows ----------
   var ROWS = [
-    { key: 'network', title: 'Powerplay Network', by: null, all: LINK.network, tab: 'network' },
     { key: 'local', title: 'Local scores', by: ['Unifor Local 444', 'logos/unifor-444.png'], all: LINK.scores, tab: 'scores' },
+    { key: 'pro', title: 'Pro scores', by: ['Unifor Local 2458', 'logos/unifor-2458.png'], all: LINK.pro, tab: 'pro' },
+    { key: 'network', title: 'Powerplay Network', by: null, all: LINK.network, tab: 'network' },
     { key: 'stories', title: 'Latest stories', by: ['St. Clair College Alumni', 'logos/st-clair-alumni.png'], all: LINK.local, tab: 'stories' },
     { key: 'photos', title: 'Game Day Snaps', gold: 'Snaps', by: null, all: null, tab: null },
-    { key: 'pro', title: 'Pro scores', by: ['Unifor Local 2458', 'logos/unifor-2458.png'], all: LINK.pro, tab: 'pro' },
-    { key: 'prohead', title: 'Pro headlines', by: ['The D’Amore Group', 'logos/damore-group.png'], all: LINK.pro, tab: 'pro-updates' },
-    { key: 'athletes', title: 'Athlete profiles', by: null, all: LINK.athletes, tab: 'athletes' }
+    { key: 'athletes', title: 'Athlete profiles', by: null, all: LINK.athletes, tab: 'athletes' },
+    { key: 'prohead', title: 'Pro headlines', by: ['The D’Amore Group', 'logos/damore-group.png'], all: LINK.pro, tab: 'pro-updates' }
   ];
   var SHARE_TEXT = { network: 'Watch the latest local highlights and interviews', local: 'Local scores', stories: 'The latest Windsor-Essex sports stories',
     pro: 'Pro scores for our teams', prohead: 'Pro headlines', athletes: 'Athlete profiles', photos: 'Game Day Snaps: game reports in pictures' };
@@ -378,11 +378,7 @@
     document.getElementById('rows').appendChild(sec);
     rowEl[r.key] = row;
   });
-  // the Powerplay Network sits right under the top stories, above the search bar
-  (function () {
-    var net = document.getElementById('row-network'), f = document.getElementById('sform');
-    if (net && f) { f.parentNode.insertBefore(net, f); net.style.marginTop = '30px'; }
-  })();
+  // rows run in ROWS order, below the search bar (the Network is third, after local and pro scores)
   function fill(key, nodes, emptyText) {
     var row = rowEl[key]; row.innerHTML = '';
     if (!nodes.length) { row.appendChild(el('div', 'empty', emptyText)); return; }
