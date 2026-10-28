@@ -12,6 +12,7 @@
   rarely gets the story they just finished.
   discover.html            both panels
   discover.html?only=local one panel (only=pro for the other)
+  Above the panels: the local guide (guide.js) with today's games, latest scores and the Community Calendar.
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -131,6 +132,7 @@
     <div class="w"><div class="k">Keep the game going</div><h1>More from <em>Powerplay Windsor</em></h1></div>
     <a class="home" id="home" target="_top">Visit the home page ›</a>
   </div>
+  <div id="guide" style="margin:0 0 14px"></div>
   <div id="panels"></div>
 </div>
 <script>
@@ -433,5 +435,7 @@
   });
 })();
 </script>
+<script src="guide.js?v=1"></script>
+<script>if (window.PPGuide) PPGuide.render(document.getElementById('guide'), { target: '_top', compact: true, kicker: 'Your local sports guide', title: 'What\u2019s happening in Windsor-Essex' });</script>
 </body>
 </html>
