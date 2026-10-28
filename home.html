@@ -7,13 +7,15 @@
 <title>Home | Powerplay Windsor</title>
 <script src="arrows.js"></script>
 <script src="share.js?v=4"></script>
+<script src="guide.js?v=1"></script>
 <!--
   The homepage in one clean, spaced-out embed (streaming-app style):
-    Powerplay's three newest stories (one big, two beside it, like the News page), the Powerplay Network, a search bar, then rows:
+    Powerplay's three newest stories (one big, two beside it, like the News page), the local guide (guide.js: today's games,
+    latest scores, Community Calendar), a search bar, then rows:
     Local scores · Pro scores · Powerplay Network · Latest stories · Game Day Snaps · Athlete profiles · Pro headlines.
   Each row: title, "Presented by" sponsor, "See all ›" to the full page. Rows swipe sideways (arrows on desktop).
   Same data as the other widgets; refreshes itself every few minutes.
-  Embed full width in Wix: about 3,560px tall on desktop, 4,700px on mobile (includes testimonials and About).
+  Embed full width in Wix: about 4,050px tall on desktop, 5,250px on mobile (includes the local guide, testimonials and About).
   Links (optional): ?local=<Local Sports page> ?pro=<Pro Sports page> ?network=<Network page> ?athletes=<Spotlights page> ?search=<search page>
 -->
 <style>
@@ -64,6 +66,7 @@
 
   /* ---------- search ---------- */
   .search { display: flex; gap: 10px; align-items: center; margin: 22px 40px 0; }
+  .guide { margin: 26px 40px 0; }
   .field { flex: 1; display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 16px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 8px; }
   .field:focus-within { border-color: var(--accent); }
   .field svg { width: 18px; height: 18px; stroke: var(--muted); flex: none; }
@@ -198,7 +201,7 @@
     .big h2 { -webkit-line-clamp: 3; margin-bottom: 0; }
 
     .btn { padding: 9px 15px; font-size: 13px; }
-    .search { margin: 18px 16px 0; } .search .btn { display: none; }
+    .guide { margin: 20px 16px 0; } .search { margin: 18px 16px 0; } .search .btn { display: none; }
     section { margin-top: 30px; }
     .rfollow { padding: 0 16px; } .rfollow .lbl { width: 100%; }
     .rhead { margin: 0 16px 10px; padding: 8px 10px 8px 12px; flex-wrap: wrap; row-gap: 6px; } .rhead > div:first-child { display: contents; } .rhead h2 { font-size: 25px; order: 1; } .rhead .rright { order: 2; margin-left: auto; gap: 6px; } .rhead .by { order: 3; width: 100%; font-size: 10px; } .rhead .by .chip { height: 24px; padding: 2px 6px; } .rhead .by img { height: 19px; } .rhead a.all { padding: 5px 8px; font-size: 11px; } .rhead .pps-btn span { display: none; } .rhead .pps-btn { padding: 6px 8px; }
@@ -239,6 +242,7 @@
 <body>
 <div class="page" id="page">
   <div class="feat" id="feat"></div>
+  <div class="guide" id="guide"></div>
 
   <form class="search" id="sform" role="search">
     <label class="field">
@@ -976,5 +980,6 @@
   setInterval(function () { if (!vp.classList.contains('on')) load(); }, 3 * 60000);
 })();
 </script>
+<script>if (window.PPGuide) PPGuide.render(document.getElementById('guide'), { target: '_top' });</script>
 </body>
 </html>
