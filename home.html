@@ -593,7 +593,7 @@
     var f = items[0], big = el('a', 'big'); big.href = f.url;
     if (f.url.indexOf(SITE) === 0) big.target = '_top'; else { big.target = '_blank'; big.rel = 'noopener'; }   // a story on another site opens in a new tab
     featImg(big, f, 1100, 620);
-    if (f.snaps) big.onclick = function (e) { e.preventDefault(); playShow(f.snaps); };   // the slideshow plays right here
+    if (f.snaps) big.onclick = function (e) { e.preventDefault(); playShow(f.snaps, document.getElementById('feat')); };   // the slideshow plays right here
     var ov = el('div', 'ov'); ov.appendChild(el('div', 'kick', f.kick || (/nhl\.com/.test(f.url) ? 'NHL' : f.team && f.team !== 'powerplay' ? (TEAM[f.team] || 'Latest') : storyCat(f, 'Latest'))));
     ov.appendChild(el('h2', null, f.headline));
     if (f.summary && f.summary !== f.headline) ov.appendChild(el('p', null, f.summary));
@@ -623,7 +623,7 @@
     }
     items.slice(1, video ? 1 : heads.length >= 3 ? 2 : 3).forEach(function (s) {
       var a = el('a', 'small'); a.href = s.url; a.target = '_top'; featImg(a, s, 560, 320);
-      if (s.snaps) a.onclick = function (e) { e.preventDefault(); playShow(s.snaps); };
+      if (s.snaps) a.onclick = function (e) { e.preventDefault(); playShow(s.snaps, document.getElementById('feat')); };
       var o = el('div', 'ov'); o.appendChild(el('div', 'kick', s.kick || storyCat(s, 'Recent'))); o.appendChild(el('h3', null, s.headline)); a.appendChild(o);
       side.appendChild(a);
     });
@@ -686,15 +686,15 @@
              text: (s.headline || 'A Powerplay video') + ' | Powerplay Network', image: yt ? 'https://i.ytimg.com/vi/' + k + '/hqdefault.jpg' : (s.image || '') };
   }));
   // Game Day Snaps slideshows play in the same pop-up, below the strip heading
-  function playShow(sh) {
+  function playShow(sh, at) {   // at: the element to open over (the top-story box); otherwise over the Game Day Snaps row
     var fr = document.getElementById('vframe'); fr.innerHTML = ''; fr.classList.add('gal');
     var f = document.createElement('iframe'); f.src = REPO + 'gallery.html?show=' + encodeURIComponent(sh.key); f.allow = 'fullscreen'; f.allowFullscreen = true; f.title = sh.title; fr.appendChild(f);
     document.getElementById('vtitle').textContent = sh.title;
     var ext = document.getElementById('vext'); ext.href = sh.url; ext.textContent = 'Open full page ↗'; ext.style.display = '';
     document.getElementById('vshare').style.display = 'none'; document.getElementById('vdesc').hidden = true;
     vp.classList.add('on');
-    var sec = document.getElementById('row-photos'), page = document.getElementById('page');
-    vp.style.top = Math.max(0, Math.min(sec.offsetTop - 10, page.offsetHeight - vp.offsetHeight - 10)) + 'px';
+    var sec = at || document.getElementById('row-photos'), page = document.getElementById('page');
+    vp.style.top = Math.max(0, Math.min(sec.offsetTop - (at ? 0 : 10), page.offsetHeight - vp.offsetHeight - 10)) + 'px';
   }
   document.getElementById('vclose').onclick = function () { vp.classList.remove('on'); var fr = document.getElementById('vframe'); fr.innerHTML = ''; fr.classList.remove('gal'); };
 
