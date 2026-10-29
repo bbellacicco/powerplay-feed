@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T21:17:10-04:00",
+ "updated": "2026-10-28T21:32:15-04:00",
  "today": "2026-10-28",
  "range": [
   "2026-10-25",
@@ -1594,10 +1594,10 @@
    "home_away": "H",
    "opponent": "Amherstburg Admirals",
    "location": "Wheatley Area Arena",
-   "status": "live",
-   "our_score": 0,
-   "opp_score": 0,
-   "result": null,
+   "status": "final",
+   "our_score": 2,
+   "opp_score": 6,
+   "result": "L",
    "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960475?configuration=45"
@@ -3487,6 +3487,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Oilers’ McDavid sets NHL record with 13-game season-opening assist streak",
+   "summary": "",
+   "published": "2026-10-28T21:19-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/Edmonton-Oilers-center-Connor-McDavid.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/oilers-mcdavid-sets-nhl-record-with-13-game-season-opening-assist-streak/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Wild GM Bill Guerin talks Hughes negotiations: ‘I haven’t really decided’",
    "summary": "",
    "published": "2026-10-28T18:22-04:00",
@@ -3511,19 +3524,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-provide-injury-updates-for-several-players/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Oilers’ Zach Hyman placed on injured reserve with ‘stiff neck’",
-   "summary": "Zach Hyman is heading back to the injured reserve.",
-   "published": "2026-10-28T12:16-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/hyman.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/oilers-zach-hyman-placed-on-injured-reserve-with-stiff-neck/",
    "source": "Sportsnet"
   },
   {
@@ -3664,15 +3664,15 @@
   },
   {
    "league": "nhl",
-   "headline": "Oilers’ Dickinson, Ekholm return vs. Flames",
-   "summary": "Despite Zach Hyman heading to the injured reserve, the Edmonton Oilers are getting two key members of their lineup back.",
-   "published": "2026-10-28T17:24-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/04/Jason-Dickinson.jpg",
+   "headline": "Oilers’ Zach Hyman placed on injured reserve with ‘stiff neck’",
+   "summary": "Zach Hyman is heading back to the injured reserve.",
+   "published": "2026-10-28T12:16-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/hyman.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/oilers-dickinson-ekholm-expected-to-return-vs-flames/",
+   "url": "https://www.sportsnet.ca/nhl/article/oilers-zach-hyman-placed-on-injured-reserve-with-stiff-neck/",
    "source": "Sportsnet"
   },
   {
@@ -4266,9 +4266,9 @@
   },
   {
    "league": "mlb",
-   "headline": "Watch Tigers prospects in Arizona Fall League action",
+   "headline": "LIVE: Watch Tigers prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-28T19:37-04:00",
+   "published": "2026-10-28T21:20-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -4437,7 +4437,7 @@
    "league": "mlb",
    "headline": "Watch Blue Jays prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-28T19:37-04:00",
+   "published": "2026-10-28T21:20-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -4840,8 +4840,8 @@
       "l": 4,
       "otl": 1,
       "pts": 19,
-      "gf": 52,
-      "ga": 43,
+      "gf": 53,
+      "ga": 45,
       "strk": "L2"
      },
      {
@@ -4864,8 +4864,8 @@
       "l": 4,
       "otl": 3,
       "pts": 15,
-      "gf": 51,
-      "ga": 51,
+      "gf": 53,
+      "ga": 52,
       "strk": "L2"
      },
      {
@@ -5349,6 +5349,18 @@
       "strk": "L1"
      },
      {
+      "name": "London Nationals",
+      "abbr": "LON",
+      "gp": 15,
+      "w": 6,
+      "l": 8,
+      "otl": 1,
+      "pts": 13,
+      "gf": 50,
+      "ga": 60,
+      "strk": "W1"
+     },
+     {
       "name": "LaSalle Vipers",
       "abbr": "LAS",
       "gp": 13,
@@ -5373,28 +5385,16 @@
       "strk": "L2"
      },
      {
-      "name": "London Nationals",
-      "abbr": "LON",
-      "gp": 14,
-      "w": 5,
-      "l": 8,
-      "otl": 1,
-      "pts": 11,
-      "gf": 50,
-      "ga": 60,
-      "strk": "L2"
-     },
-     {
       "name": "Komoka Kings",
       "abbr": "KOM",
-      "gp": 16,
+      "gp": 17,
       "w": 4,
-      "l": 12,
+      "l": 13,
       "otl": 0,
       "pts": 8,
       "gf": 45,
       "ga": 76,
-      "strk": "L8"
+      "strk": "L9"
      },
      {
       "name": "Sarnia Legionnaires",
@@ -5766,14 +5766,14 @@
      {
       "name": "Wheatley Sharks",
       "abbr": "WHE",
-      "gp": 17,
+      "gp": 18,
       "w": 7,
-      "l": 10,
+      "l": 11,
       "otl": 0,
       "pts": 14,
-      "gf": 47,
-      "ga": 63,
-      "strk": "L3"
+      "gf": 49,
+      "ga": 69,
+      "strk": "L4"
      },
      {
       "name": "Mooretown Flags",
@@ -5790,14 +5790,14 @@
      {
       "name": "Amherstburg Admirals",
       "abbr": "AMH",
-      "gp": 16,
-      "w": 4,
+      "gp": 17,
+      "w": 5,
       "l": 12,
       "otl": 0,
-      "pts": 8,
-      "gf": 44,
-      "ga": 59,
-      "strk": "L3"
+      "pts": 10,
+      "gf": 50,
+      "ga": 61,
+      "strk": "W1"
      },
      {
       "name": "Walpole Island Wild",
