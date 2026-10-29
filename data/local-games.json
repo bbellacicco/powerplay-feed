@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T20:17:42-04:00",
+ "updated": "2026-10-28T20:32:12-04:00",
  "today": "2026-10-28",
  "range": [
   "2026-10-25",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 30
   },
   "club_news": {
    "ok": true,
@@ -1575,11 +1575,11 @@
    "home_away": "H",
    "opponent": "Woodstock Navy Vets",
    "location": "Vollmer Culture R.C., LaSalle, ON",
-   "status": "live",
-   "our_score": 2,
-   "opp_score": 2,
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
    "result": null,
-   "note": "00:37 2nd",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15625"
    },
@@ -3487,21 +3487,6 @@
   },
   {
    "league": "nhl",
-   "headline": "McKenna unites with Matthews as Maple Leafs juggle lineup",
-   "summary": "It took until Game 15, but Gavin McKenna finally walked into the Toronto Maple Leafs’ dressing room and saw his name to the left of Auston Matthews’ on the top line.",
-   "published": "2026-10-28T16:45-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/McKenna-and-Matthews.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/mckenna-unites-with-matthews-as-maple-leafs-juggle-lineup/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Wild GM Bill Guerin talks Hughes negotiations: ‘I haven’t really decided’",
    "summary": "",
    "published": "2026-10-28T18:22-04:00",
@@ -3632,6 +3617,21 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/where-the-nhl-salary-cap-could-soar-to-in-the-next-three-years/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "McKenna unites with Matthews as Maple Leafs juggle lineup",
+   "summary": "It took until Game 15, but Gavin McKenna finally walked into the Toronto Maple Leafs’ dressing room and saw his name to the left of Auston Matthews’ on the top line.",
+   "published": "2026-10-28T16:45-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/McKenna-and-Matthews.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/mckenna-unites-with-matthews-as-maple-leafs-juggle-lineup/",
    "source": "Sportsnet"
   },
   {
@@ -3859,19 +3859,6 @@
    "sn_team_count": 0,
    "sport": "Golf",
    "url": "https://www.sportsnet.ca/tgl/article/report-tiger-woods-expected-to-play-in-tgl-opener/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Mavericks CEO Rick Welts retiring again, will be replaced by president Ethan Casson",
-   "summary": "",
-   "published": "2026-10-28T12:52-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-8-6.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/mavericks-ceo-rick-welts-retiring-again-will-be-replaced-by-president-ethan-casson/",
    "source": "Sportsnet"
   },
   {
@@ -4853,7 +4840,7 @@
       "l": 4,
       "otl": 1,
       "pts": 19,
-      "gf": 50,
+      "gf": 52,
       "ga": 43,
       "strk": "L2"
      },
@@ -4878,7 +4865,7 @@
       "otl": 3,
       "pts": 15,
       "gf": 51,
-      "ga": 49,
+      "ga": 51,
       "strk": "L2"
      },
      {
