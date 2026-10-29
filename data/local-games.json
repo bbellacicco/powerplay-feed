@@ -1,9 +1,9 @@
 {
- "updated": "2026-10-28T23:49:53-04:00",
- "today": "2026-10-28",
+ "updated": "2026-10-29T00:06:21-04:00",
+ "today": "2026-10-29",
  "range": [
-  "2026-10-25",
-  "2026-10-31"
+  "2026-10-26",
+  "2026-11-01"
  ],
  "teams": {
   "spitfires": {
@@ -39,7 +39,7 @@
   },
   "lancers": {
    "ok": true,
-   "count": 95
+   "count": 131
   },
   "junior": {
    "ok": true,
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -111,82 +111,6 @@
   }
  },
  "games": [
-  {
-   "id": "junior-gojhl15620",
-   "team": "junior",
-   "sport": "GOHL (Jr. B)",
-   "start": "2026-10-25T14:30:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Ayr Centennials",
-   "location": "North Dumfries C.C., Ayr, ON",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 6,
-   "result": "L",
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.gohl.ca/stats/game-center/15620"
-   },
-   "club": "Chatham Maroons"
-  },
-  {
-   "id": "junior-ojhl16619",
-   "team": "junior",
-   "sport": "OJHL (Jr. A)",
-   "start": "2026-10-25T18:10:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Niagara Falls Canucks",
-   "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
-   "status": "final",
-   "our_score": 5,
-   "opp_score": 1,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.ojhl.ca/stats/game-center/16619"
-   },
-   "club": "Leamington Flyers"
-  },
-  {
-   "id": "junior-gs2960467",
-   "team": "junior",
-   "sport": "PJHL (Jr. C)",
-   "start": "2026-10-25T19:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Blenheim Blades",
-   "location": "Blenheim Memorial Arena",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 1,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960467?configuration=45"
-   },
-   "club": "Lakeshore Canadiens"
-  },
-  {
-   "id": "junior-gs2960454",
-   "team": "junior",
-   "sport": "PJHL (Jr. C)",
-   "start": "2026-10-25T19:30:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Mooretown Flags",
-   "location": "Mooretown Sports Complex",
-   "status": "final",
-   "our_score": 4,
-   "opp_score": 6,
-   "result": "L",
-   "note": "",
-   "links": {
-    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960454?configuration=45"
-   },
-   "club": "Amherstburg Admirals"
-  },
   {
    "id": "highschool-2026-10-26-9",
    "team": "highschool",
@@ -2713,6 +2637,44 @@
     "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=173",
     "watch": "https://oua.tv/?school=Windsor"
    }
+  },
+  {
+   "id": "spitfires-ohl29145",
+   "team": "spitfires",
+   "sport": "Hockey",
+   "start": "2026-11-01T14:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Brampton Steelheads",
+   "location": "CAA Centre, Brampton",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "tickets": "https://www.ticketmaster.ca/mississauga-steelheads-tickets/artist/1753776",
+    "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29145/"
+   }
+  },
+  {
+   "id": "junior-gojhl15645",
+   "team": "junior",
+   "sport": "GOHL (Jr. B)",
+   "start": "2026-11-01T19:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Listowel Cyclones",
+   "location": "Chatham Memorial Arena, Chatham, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.gohl.ca/stats/game-center/15645"
+   },
+   "club": "Chatham Maroons"
   }
  ],
  "pro_games": [
@@ -3525,6 +3487,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "No. 1 pick AJ Dybantsa scores 19 in NBA debut as Wizards fall to Cavaliers",
+   "summary": "AJ Dybantsa showed on his first possession of an NBA game that he wasn’t going to shy away from the expectations that come with being the No. 1 pick.",
+   "published": "2026-10-28T23:49-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/ec70c3528235f4999fb0dceb882ea7520b9b667834b59da16717132b5b9abbc3.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/no-1-pick-aj-dybantsa-scores-19-in-nba-debut-as-wizards-fall-to-cavaliers/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Flames’ Devin Cooley exits vs. Oilers with lower-body injury",
    "summary": "",
@@ -3561,19 +3536,6 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/mls/article/cf-montreal-sunk-by-abadas-hat-trick-in-loss-to-charlotte-fc/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Canada holds off U.S. in pre-tournament game ahead of women’s worlds",
-   "summary": "",
-   "published": "2026-10-28T22:25-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/02/canada-usa-murphy-watts.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/wwhc/article/canada-holds-off-u-s-in-pre-tournament-game-ahead-of-womens-worlds/",
    "source": "Sportsnet"
   },
   {
@@ -3617,6 +3579,19 @@
   },
   {
    "league": "mlb",
+   "headline": "Charming, cantankerous Pat Murphy leads Brewers to first World Series title",
+   "summary": "",
+   "published": "2026-10-28T23:54-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/c4f30163889114ed46d5c99d45456aacbe29c63b92ac7b62bcef4f68f3a1f1d2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/charming-cantankerous-pat-murphy-leads-brewers-to-first-world-series-title/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
    "headline": "Brewers’ Misiorowski exits Game 5 of World Series due to calf cramp",
    "summary": "",
    "published": "2026-10-28T22:36-04:00",
@@ -3626,6 +3601,19 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/brewers-misiorowski-exits-game-5-of-world-series-due-to-cramping/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Canada holds off U.S. in pre-tournament game ahead of women’s worlds",
+   "summary": "",
+   "published": "2026-10-28T22:25-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/02/canada-usa-murphy-watts.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/wwhc/article/canada-holds-off-u-s-in-pre-tournament-game-ahead-of-womens-worlds/",
    "source": "Sportsnet"
   },
   {
@@ -3868,45 +3856,6 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/rams-myles-garrett-remains-out-of-practice-will-miss-7th-straight-game/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "‘Unflappable guy’: Matthew Schaefer off to strong sophomore start for Islanders",
-   "summary": "Less than a month into the current campaign, Schaefer has shown no sign of a sophomore slump.",
-   "published": "2026-10-28T10:37-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Schaefer.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/unflappable-guy-matthew-schaefer-off-to-strong-sophomore-start-for-islanders/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Despite early tipoff, Dream say WNBA Finals Game 6 vs. Valkyries is a sellout",
-   "summary": "Game 6 of the WNBA Finals between Atlanta and Golden State on Thursday is a sellout despite its much-criticized 12:30 p.m. ET tipoff, the Dream announced Wednesday.",
-   "published": "2026-10-28T16:14-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/WNBA-court.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/wnba/article/despite-early-tipoff-dream-say-wnba-finals-game-6-vs-valkyries-is-a-sellout/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "NHL’s most interesting goalie situations a month into the season",
-   "summary": "Everybody loves a good crease controversy. With that in mind, as we hit the one-month mark of the new season, Rory Boylen takes a look at some goaltending setups we’re watching closely.",
-   "published": "2026-10-27T13:02-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Montreal-Canadiens-goaltender-Jacob-Fowler.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 3,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/nhls-most-interesting-goalie-situations-a-month-into-the-season/",
    "source": "Sportsnet"
   },
   {
