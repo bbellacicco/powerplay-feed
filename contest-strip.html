@@ -47,6 +47,12 @@
   .share svg { width: 15px; height: 15px; fill: currentColor; }
   .share .copy { white-space: nowrap; width: auto; padding: 0 12px; border-radius: 999px; font-size: 12px; font-weight: 800; gap: 6px; }
   .share .copy.ok { border-color: #2ecc71; color: #2ecc71; }
+  .alt { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 6px; }
+  .alt[hidden] { display: none; }
+  .alt span { color: var(--muted); font-size: 11.5px; font-weight: 700; width: 100%; text-align: center; }
+  .alt button, .alt a { border: 1px solid rgba(255,255,255,.3); background: rgba(255,255,255,.08); color: var(--text); border-radius: 999px; padding: 6px 12px; font: 800 12px system-ui, sans-serif; cursor: pointer; white-space: nowrap; }
+  .alt button:hover, .alt a:hover { border-color: var(--accent); color: var(--accent); }
+  .alt .ok { border-color: #2ecc71; color: #2ecc71; }
   @media (max-width: 760px) {
     .strip { grid-template-columns: 84px 1fr; grid-template-areas: 'logo txt' 'line line' 'acts acts'; gap: 8px 10px; padding: 12px 12px 14px 10px; }
     .txt { align-self: center; }
@@ -68,8 +74,9 @@
   </div>
   <div class="line" id="line">Email your <b>name and phone number</b> to <b>powerplaysportsvideo@gmail.com</b> with the subject ‘Spitfires tickets’ for your chance to win.</div>
   <div class="acts">
-    <a class="enter" id="enter" target="_top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13zm2.2.5 7.8 6 7.8-6H4.2zM20 7.6l-7.4 5.7a1 1 0 0 1-1.2 0L4 7.6V18h16V7.6z"/></svg>Enter by email</a>
+    <a class="enter" id="enter" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13zm2.2.5 7.8 6 7.8-6H4.2zM20 7.6l-7.4 5.7a1 1 0 0 1-1.2 0L4 7.6V18h16V7.6z"/></svg>Enter by email</a>
     <div class="share" id="share"><span>Share</span></div>
+    <div class="alt" id="alt" hidden><span>No email app opened?</span><button type="button" id="cpmail">Copy email</button><a id="gmail" target="_blank" rel="noopener">Use Gmail</a></div>
   </div>
 </div>
 <script>
@@ -84,6 +91,20 @@
   // the email opens ready to send: subject filled in, with spaces for name and phone number
   var body = 'Hi Powerplay Windsor,\n\nPlease enter me in the Spitfires ticket contest.\n\nName:\nPhone number:\n\nThanks!';
   document.getElementById('enter').href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent('Spitfires tickets') + '&body=' + encodeURIComponent(body);
+  // computers without a mail program (and some phones inside the Wix box) do nothing with an email link:
+  // after a tap, offer Copy email and Gmail instead (in place of the share buttons for 30 seconds)
+  document.getElementById('gmail').href = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(EMAIL) + '&su=' + encodeURIComponent('Spitfires tickets') + '&body=' + encodeURIComponent(body);
+  var altT;
+  document.getElementById('enter').addEventListener('click', function () {
+    var alt = document.getElementById('alt'), sh = document.getElementById('share');
+    setTimeout(function () { alt.hidden = false; sh.style.display = 'none'; }, 700);
+    clearTimeout(altT); altT = setTimeout(function () { alt.hidden = true; sh.style.display = ''; }, 30000);
+  });
+  document.getElementById('cpmail').onclick = function () {
+    var b = this, ok = function () { b.textContent = 'Copied ✓'; b.classList.add('ok'); };
+    try { if (navigator.clipboard && window.isSecureContext) { navigator.clipboard.writeText(EMAIL).then(ok, function () { prompt('Email address:', EMAIL); }); return; } } catch (e) {}
+    prompt('Email address:', EMAIL);
+  };
 
   // share row (right in the strip, no pop-up menu, so nothing gets cut off in the Wix box)
   var text = TITLE + ' with Powerplay Windsor!';
