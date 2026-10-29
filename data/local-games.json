@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T18:47:15-04:00",
+ "updated": "2026-10-29T19:02:42-04:00",
  "today": "2026-10-29",
  "range": [
   "2026-10-26",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 37
+   "count": 38
   },
   "club_news": {
    "ok": true,
@@ -2196,11 +2196,11 @@
    "home_away": "H",
    "opponent": "Milton Menace",
    "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
-   "note": "",
+   "note": "20:00 1st",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16626"
    },
@@ -3554,16 +3554,42 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Senators’ Thomas Chabot to return against Kings, Warren Foegele out",
-   "summary": "The Ottawa Senators have their captain back.",
-   "published": "2026-10-29T14:43-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177083202.jpg",
+   "league": "other",
+   "headline": "PWHL announces roster expansion and increased minimum salaries",
+   "summary": "The PWHL is growing in more ways than one.",
+   "published": "2026-10-29T17:33-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/741016efc01f49674787fecf01120b608a880177944a43e2e2a913875db51822.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
+   "sn_team_count": 0,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/senators-thomas-chabot-to-return-against-kings-warren-foegele-out/",
+   "url": "https://www.sportsnet.ca/pwhl/article/pwhl-announces-roster-expansion-and-increased-minimum-salaries/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Frost captain Kendall Coyne Schofield missing PWHL season due to pregnancy",
+   "summary": "",
+   "published": "2026-10-29T17:51-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/KCS.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/pwhl/article/frost-captain-kendall-coyne-schofield-missing-pwhl-season-due-to-pregnancy/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Canada, U.S. may have to wear generic jerseys at women’s worlds",
+   "summary": "The Canadian and U.S. teams may look a little different than we’re used to at this year’s IIHF Women’s World Championship.",
+   "published": "2026-10-29T14:11-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/02/canada-usa-murphy-watts.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/women-hockey/article/report-canada-usa-could-be-forced-to-wear-generic-jerseys-at-womens-worlds/",
    "source": "Sportsnet"
   },
   {
@@ -3593,32 +3619,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "cfl",
-   "headline": "Alouettes, Argonauts lead CFL divisional all-star selections",
-   "summary": "",
-   "published": "2026-10-29T12:29-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/argo.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/alouettes-argonauts-lead-cfl-divisional-all-star-selections/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Canada, U.S. may have to wear generic jerseys at women’s worlds",
-   "summary": "The Canadian and U.S. teams may look a little different than we’re used to at this year’s IIHF Women’s World Championship.",
-   "published": "2026-10-29T14:11-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/02/canada-usa-murphy-watts.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/women-hockey/article/report-canada-usa-could-be-forced-to-wear-generic-jerseys-at-womens-worlds/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "other",
    "headline": "WNBA Finals Takeaways: Dream defend home court to force Game 7",
    "summary": "It was a weird matinee start for the WNBA Finals, but Allisha Gray and the Atlanta Dream looked well rested as they forced the first Game 7 in WNBA history. Kai Gammage has the takeaways after Game 6.",
@@ -3642,6 +3642,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/flames-morgan-frost-the-latest-to-say-he-wants-to-stay-in-calgary/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Senators’ Thomas Chabot to return against Kings, Warren Foegele out",
+   "summary": "The Ottawa Senators have their captain back.",
+   "published": "2026-10-29T14:43-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177083202.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/senators-thomas-chabot-to-return-against-kings-warren-foegele-out/",
    "source": "Sportsnet"
   },
   {
@@ -3697,6 +3710,32 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "CPL playoff preview: Atletico Ottawa vies for repeat",
+   "summary": "From an expansion team to the reigning champions, the CPL playoffs promise to provide plenty of intrigue. Sportsnet’s John Molinaro has the full preview.",
+   "published": "2026-10-29T14:23-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/atletico-ottawa.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/canadian-premier-league/article/cpl-playoff-preview-atletico-ottawa-vies-for-repeat/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "cfl",
+   "headline": "CFL West semifinal preview: Lions vs. Roughriders back on playoff docket",
+   "summary": "The Lions host the Roughriders on Saturday in a CFL West semifinal, marking the third year in a row they’ll square off in the post-season. Here’s a capsule look at the latest installment of this post-season rivalry.",
+   "published": "2026-10-29T09:58-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/11/B.C.-Lions-quarterback-Nathan-Rourke.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/cfl-west-semifinal-preview-lions-vs-roughriders-back-on-playoff-docket/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "cfl",
    "headline": "Receiver Tyler Kahmann enjoyed solid rookie season with Argonauts",
    "summary": "",
@@ -3724,28 +3763,15 @@
   },
   {
    "league": "cfl",
-   "headline": "CFL West semifinal preview: Lions vs. Roughriders back on playoff docket",
-   "summary": "The Lions host the Roughriders on Saturday in a CFL West semifinal, marking the third year in a row they’ll square off in the post-season. Here’s a capsule look at the latest installment of this post-season rivalry.",
-   "published": "2026-10-29T09:58-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/11/B.C.-Lions-quarterback-Nathan-Rourke.jpg",
+   "headline": "Alouettes, Argonauts lead CFL divisional all-star selections",
+   "summary": "",
+   "published": "2026-10-29T12:29-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/argo.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
    "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/cfl-west-semifinal-preview-lions-vs-roughriders-back-on-playoff-docket/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "CPL playoff preview: Atletico Ottawa vies for repeat",
-   "summary": "From an expansion team to the reigning champions, the CPL playoffs promise to provide plenty of intrigue. Sportsnet’s John Molinaro has the full preview.",
-   "published": "2026-10-29T14:23-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/atletico-ottawa.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/canadian-premier-league/article/cpl-playoff-preview-atletico-ottawa-vies-for-repeat/",
+   "url": "https://www.sportsnet.ca/cfl/article/alouettes-argonauts-lead-cfl-divisional-all-star-selections/",
    "source": "Sportsnet"
   },
   {
@@ -3904,21 +3930,6 @@
    "sn_team_count": 0,
    "sport": "Auto Racing",
    "url": "https://www.sportsnet.ca/formula-1/article/f1-leader-kimi-antonelli-has-viral-illness-ahead-of-mexico-city-grand-prix/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Raptors find blueprint for life without Leonard in win over Magic",
-   "summary": "In Wednesday’s win over the Magic, the Raptors looked like the team they’re going to need to be whether Kawhi Leonard is in the lineup or not, but especially if he’s not.",
-   "published": "2026-10-29T00:37-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Raps-3.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-find-blueprint-for-life-without-leonard-in-win-over-magic/",
    "source": "Sportsnet"
   },
   {
@@ -4367,7 +4378,7 @@
    "league": "mlb",
    "headline": "Watch Tigers prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-29T18:25-04:00",
+   "published": "2026-10-29T18:44-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
