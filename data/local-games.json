@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T14:02:08-04:00",
+ "updated": "2026-10-29T14:17:13-04:00",
  "today": "2026-10-29",
  "range": [
   "2026-10-26",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -2726,6 +2726,17 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "Trey Vaval PRANKED with Most Outstanding Special Teams Player Award!",
+   "summary": "",
+   "published": "2026-10-29T13:20:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/7455SHNoXgPspGn6IzMa7Z/1428973dca848efa25112b6f765f308a/image.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/trey-vaval-pranked-with-most-outstanding-special-teams-player-award",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "KPMG Playoff Probability: Which teams are most likely to meet in the 113th Grey Cup?",
    "summary": "",
    "published": "2026-10-29T00:00:00-04:00",
@@ -2964,20 +2975,6 @@
     "Tiger-Cats"
    ],
    "url": "https://www.cfl.ca/article/wild-touchdown-catch-by-jaelen-gill",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Recap: Winnipeg 34, BC 10",
-   "summary": "",
-   "published": "2026-10-24T02:26:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/1TWnzHyFL0t4Wp5nXYQ5zm/59079a6d92cbc6c47a45cd47fd536fa4/WEEK_21_-_WPG_VS_BC_THUMBNAIL.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Lions",
-    "Blue Bombers"
-   ],
-   "url": "https://www.cfl.ca/article/recap-winnipeg-34-bc-10",
    "source": "CFL.ca"
   },
   {
@@ -3421,9 +3418,9 @@
  "more_news": [
   {
    "league": "nhl",
-   "headline": "Dylan Larkin to stay out of games until Red Wings complete trade",
+   "headline": "Larkin decides to sit out until Red Wings complete trade",
    "summary": "",
-   "published": "2026-10-29T13:08-04:00",
+   "published": "2026-10-29T14:00-04:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177065117.jpg",
    "video": false,
    "teams": [
@@ -3431,7 +3428,7 @@
    ],
    "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/dylan-larkin-to-stay-out-of-games-until-red-wings-complete-trade/",
+   "url": "https://www.sportsnet.ca/nhl/article/larkin-decides-to-sit-out-until-red-wings-complete-trade/",
    "source": "Sportsnet"
   },
   {
@@ -3541,6 +3538,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Report: Canada, USA could be forced to wear generic jerseys at women’s worlds",
+   "summary": "The Canadian and U.S. teams may look a little different than we’re used to at this year’s IIHF Women’s World Championship.",
+   "published": "2026-10-29T14:11-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/02/canada-usa-murphy-watts.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/women-hockey/article/report-canada-usa-could-be-forced-to-wear-generic-jerseys-at-womens-worlds/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Injured Panthers Brad Marchand, Aleksander Barkov resume skating",
    "summary": "The Florida Panthers could be about a month away from nearing full forward health.",
@@ -3577,19 +3587,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/hurricanes-taylor-hall-to-miss-a-few-more-games-due-to-upper-body-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "cfl",
-   "headline": "Bombers playing waiting game with status of QB Collaros as date with Argos nears",
-   "summary": "",
-   "published": "2026-10-29T08:17-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/collaros.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/bombers-playing-waiting-game-with-status-of-qb-collaros-as-date-with-argos-nears/",
    "source": "Sportsnet"
   },
   {
@@ -3670,6 +3667,19 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/cfl/article/cfl-west-semifinal-preview-lions-vs-roughriders-back-on-playoff-docket/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "cfl",
+   "headline": "Bombers playing waiting game with status of QB Collaros as date with Argos nears",
+   "summary": "",
+   "published": "2026-10-29T08:17-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/collaros.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/bombers-playing-waiting-game-with-status-of-qb-collaros-as-date-with-argos-nears/",
    "source": "Sportsnet"
   },
   {
