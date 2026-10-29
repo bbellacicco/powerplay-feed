@@ -27,7 +27,8 @@
     '.ppg .pg-by{display:flex;align-items:center;gap:7px;font-size:11px;color:#9fb0cf;letter-spacing:.04em;text-transform:uppercase;font-weight:700}' +
     '.ppg .pg-by b{color:#f2f5fb;text-transform:none;letter-spacing:0;font-size:12.5px}' +
     '.ppg .pg-spchip{display:inline-flex;align-items:center;background:#fff;border-radius:4px;padding:3px 7px;height:30px}.ppg .pg-spchip img{height:24px;width:auto;max-width:90px;object-fit:contain;display:block}' +
-    '@media (max-width:820px){.ppg .pg-gr{align-items:flex-start;width:100%}.ppg .pg-by{flex-wrap:wrap}}' +
+    '.ppg .pg-krow{display:flex;align-items:center;justify-content:space-between;gap:8px}.ppg .pg-fresh.pg-fm{display:none}' +
+    '@media (max-width:820px){.ppg .pg-gh{flex-direction:column;align-items:stretch;gap:9px}.ppg .pg-gs{display:none}.ppg .pg-gk{font-size:10px}' + '.ppg .pg-gr{flex-direction:row;align-items:center;justify-content:space-between;width:100%;gap:8px;padding-top:9px;border-top:1px solid rgba(255,255,255,.08)}' + '.ppg .pg-by{gap:6px;font-size:9.5px;min-width:0}.ppg .pg-by b{font-size:11.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}.ppg .pg-spchip{height:24px;padding:2px 5px}.ppg .pg-spchip img{height:20px}' + '.ppg .pg-fresh{font-size:10.5px;padding:3px 8px;gap:5px;flex:none}.ppg .pg-fresh i{width:7px;height:7px}.ppg .pg-fresh.pg-fd{display:none}.ppg .pg-fresh.pg-fm{display:inline-flex}.ppg .pg-gr{justify-content:flex-start}.ppg .pg-by span{white-space:nowrap}.ppg .pg-by b{overflow:visible}}' +
     '.ppg .pg-fresh{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;color:#cfe0ff;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:5px 11px;white-space:nowrap}' +
     '.ppg .pg-fresh i{width:8px;height:8px;border-radius:50%;background:#2ecc71;box-shadow:0 0 0 3px rgba(46,204,113,.25)}' +
     '.ppg .pg-cols{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:12px;padding:0 14px 14px 18px}' +
@@ -229,7 +230,7 @@
     box.innerHTML = '';
     var g = el('div', 'ppg' + (o.compact ? ' compact' : ''));
     var h = el('div', 'pg-gh'), l = el('div');
-    l.appendChild(el('div', 'pg-gk', o.kicker || 'Your local sports guide'));
+    var krow = el('div', 'pg-krow'); krow.appendChild(el('div', 'pg-gk', o.kicker || 'Your local sports guide')); l.appendChild(krow);
     l.appendChild(el('div', 'pg-gt', o.title || 'Windsor-Essex sports, all in one place'));
     l.appendChild(el('div', 'pg-gs', o.sub || 'Every local game, score and community event, checked around the clock.'));
     h.appendChild(l);
@@ -242,7 +243,10 @@
       rt.appendChild(by);
     }
     var f = ago(d.updated);
-    if (f) { var fr = el('span', 'pg-fresh'); fr.appendChild(el('i')); fr.appendChild(document.createTextNode(f)); rt.appendChild(fr); }
+    if (f) {   // computers: under the sponsor; phones: beside "Your local sports guide" (short: "6 min ago")
+      var fr = el('span', 'pg-fresh pg-fd'); fr.appendChild(el('i')); fr.appendChild(document.createTextNode(f)); rt.appendChild(fr);
+      var fm = el('span', 'pg-fresh pg-fm'); fm.appendChild(el('i')); fm.appendChild(document.createTextNode(f.replace(/^Updated /, ''))); krow.appendChild(fm);
+    }
     h.appendChild(rt);
     g.appendChild(h);
     var cols = el('div', 'pg-cols');
@@ -263,7 +267,7 @@
     function tick() { if (Date.now() - lastRun >= (box_live ? 60000 : 5 * 60000)) { lastRun = Date.now(); go(); } }
     tick();
     setInterval(tick, 15000);
-    setInterval(function () { if (last) { var fr = box.querySelector('.pg-fresh'); if (fr) fr.lastChild.textContent = ago(last.updated); } }, 60000);
+    setInterval(function () { if (last) { [].forEach.call(box.querySelectorAll('.pg-fresh'), function (fr) { var t = ago(last.updated); fr.lastChild.textContent = fr.classList.contains('pg-fm') ? t.replace(/^Updated /, '') : t; }); } }, 60000);
   }
 
   window.PPGuide = { render: render };
