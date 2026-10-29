@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T16:46:59-04:00",
+ "updated": "2026-10-29T17:02:31-04:00",
  "today": "2026-10-29",
  "range": [
   "2026-10-26",
@@ -99,11 +99,11 @@
   },
   "pwhl_news": {
    "ok": true,
-   "count": 24
+   "count": 25
   },
   "sportsnet": {
    "ok": true,
-   "count": 37
+   "count": 38
   },
   "club_news": {
    "ok": true,
@@ -3110,6 +3110,17 @@
   },
   {
    "league": "pwhl",
+   "headline": "Joint Statement From the PWHL and Pwhlpa Regarding PWHL Rosters Increasing to 24 Players",
+   "summary": "",
+   "published": "2026-10-29T21:00:00+00:00",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/2627-PR-Wordmark_Header-EN-1920x1080",
+   "video": false,
+   "teams": [],
+   "url": "https://www.thepwhl.com/en/news/2026/october/29/joint-statement-from-the-pwhl-and-pwhlpa-regarding-pwhl-rosters-increasing-to-24-players-for-2026-27-season",
+   "source": "thepwhl.com"
+  },
+  {
+   "league": "pwhl",
    "headline": "Vancouver Goldeneyes Unveil First Jerseys Featuring Team Logo",
    "summary": "",
    "published": "2026-10-21T18:45:00+00:00",
@@ -3460,16 +3471,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Flames’ Morgan Frost the latest to say he wants to stay in Calgary",
-   "summary": "Morgan Frost’s declaration that he wants to stay in Calgary was refreshing in a city that hasn’t been a magnet for veteran commitments. Eric Francis spoke to Frost about the opportunity he has with the Flames.",
-   "published": "2026-10-29T13:34-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Frost.jpg",
+   "league": "cfl",
+   "headline": "Argonauts coach Mike Miller leaning on veterans in playoff debut",
+   "summary": "Mike Miller is preparing for his first CFL playoff game as a head coach of the Toronto Argonauts, facing off against Mike O’Shea, someone he has a deep respect for but knows will bring a tough post-season challenge.",
+   "published": "2026-10-29T16:59-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/mike-miller-argos.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/flames-morgan-frost-the-latest-to-say-he-wants-to-stay-in-calgary/",
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/argonauts-coach-mike-miller-leaning-on-veterans-in-playoff-debut/",
    "source": "Sportsnet"
   },
   {
@@ -3580,7 +3591,7 @@
   },
   {
    "league": "other",
-   "headline": "Report: Canada, USA could be forced to wear generic jerseys at women’s worlds",
+   "headline": "Canada, U.S. may have to wear generic jerseys at women’s worlds",
    "summary": "The Canadian and U.S. teams may look a little different than we’re used to at this year’s IIHF Women’s World Championship.",
    "published": "2026-10-29T14:11-04:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/02/canada-usa-murphy-watts.jpg",
@@ -3605,16 +3616,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "UFC Vegas 123 preview: Nolan has massive opportunity vs. Moicano",
-   "summary": "The Octagon heads back to Meta Apex in Las Vegas, Nevada, for UFC Vegas 123: Nolan vs. Moicano. With 12 fights on the card, plenty of storylines are worth watching, so let’s dig in.",
-   "published": "2026-10-29T10:57-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/moicano.jpg",
+   "league": "nhl",
+   "headline": "Flames’ Morgan Frost the latest to say he wants to stay in Calgary",
+   "summary": "Morgan Frost’s declaration that he wants to stay in Calgary was refreshing in a city that hasn’t been a magnet for veteran commitments. Eric Francis spoke to Frost about the opportunity he has with the Flames.",
+   "published": "2026-10-29T13:34-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Frost.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/ufc-vegas-123-preview-nolan-has-massive-opportunity-vs-moicano/",
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/flames-morgan-frost-the-latest-to-say-he-wants-to-stay-in-calgary/",
    "source": "Sportsnet"
   },
   {
@@ -3641,6 +3652,34 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/penguins-activate-kindel-and-girard-off-injured-reserve/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "UFC Vegas 123 preview: Nolan has massive opportunity vs. Moicano",
+   "summary": "The Octagon heads back to Meta Apex in Las Vegas, Nevada, for UFC Vegas 123: Nolan vs. Moicano. With 12 fights on the card, plenty of storylines are worth watching, so let’s dig in.",
+   "published": "2026-10-29T10:57-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/moicano.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "MMA",
+   "url": "https://www.sportsnet.ca/ufc/article/ufc-vegas-123-preview-nolan-has-massive-opportunity-vs-moicano/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Raptors holding opponents to lowest average points per game early in season",
+   "summary": "",
+   "published": "2026-10-29T16:45-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Walter.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/raptors-holding-opponents-to-lowest-average-points-per-game-early-in-season/",
    "source": "Sportsnet"
   },
   {
@@ -3892,19 +3931,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/oilers-mcdavid-sets-nhl-record-with-13-game-season-opening-assist-streak/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Flames’ Wolf gets feet wet again to mixed results after Cooley injury",
-   "summary": "A lower-body injury to Devin Cooley opened the door for Dustin Wolf to start his redemption tour with the Flames. As Eric Francis writes, the results were mixed.",
-   "published": "2026-10-29T01:21-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/flames-12.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/flames-wolf-gets-feet-wet-again-to-mixed-results-after-cooley-injury/",
    "source": "Sportsnet"
   },
   {
