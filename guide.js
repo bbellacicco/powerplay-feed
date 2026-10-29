@@ -13,6 +13,7 @@
   var COLOR = { spitfires: '#d4202c', lancers: '#0f6bd6', saints: '#1f9d55', junior: '#0ea5a4', highschool: '#8b5cf6' };
   var RANK = { spitfires: 0, lancers: 1, saints: 2, junior: 3, highschool: 4 };
   var US = { spitfires: 'Spitfires', lancers: 'Lancers', saints: 'Saints' };
+  var TIPS = 'powerplaysportsvideo@gmail.com';   // where fans send events and story ideas
   var SPONSOR = { name: 'St. Clair College Alumni', logo: 'https://bbellacicco.github.io/powerplay-feed/logos/st-clair-alumni.png' };   // "Presented by" in the guide's header
 
   var CSS = '' +
@@ -59,6 +60,9 @@
     '.ppg .pg-col:hover{border-color:rgba(232,176,33,.45)}' +
     '@media (max-width:820px){.ppg .pg-cols{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-right:14px;scrollbar-width:none}.ppg .pg-cols::-webkit-scrollbar{display:none}.ppg .pg-col{flex:0 0 84%;scroll-snap-align:start}.ppg .pg-gt{font-size:19px}.ppg .pg-gh{padding:12px 14px 8px 18px}}' +
     '@media (max-width:480px){.ppg .pg-gh{padding:10px 12px 8px 14px;gap:7px}.ppg .pg-gk{font-size:9.5px;letter-spacing:.08em}.ppg .pg-gt{font-size:17px}' + '.ppg .pg-gr{padding-top:7px}.ppg .pg-by{gap:5px;font-size:8.5px;letter-spacing:.03em;flex-wrap:nowrap}.ppg .pg-by b{font-size:11px;white-space:normal;line-height:1.15}.ppg .pg-spchip{height:22px;padding:1px 4px}.ppg .pg-spchip img{height:19px}' + '.ppg .pg-cols{gap:8px;padding:0 12px 12px 14px}.ppg .pg-col{flex-basis:88%;padding:10px 10px 8px}.ppg .pg-ch b{font-size:10.5px;letter-spacing:.05em;white-space:nowrap}.ppg .pg-ch span{font-size:11px}' + '.ppg .pg-big{font-size:24px;margin-bottom:6px}.ppg .pg-big small{font-size:12.5px}.ppg .pg-chip{font-size:10.5px;padding:2px 6px}' + '.ppg .pg-li{gap:7px;padding:5px 0}.ppg .pg-li .pg-tm{width:46px;font-size:11px}.ppg .pg-li .pg-a{font-size:12.5px;white-space:normal;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;line-height:1.2}.ppg .pg-li .pg-b{font-size:10.5px}' + '.ppg .pg-sl{font-size:12.5px}.ppg .pg-sl .pg-sc{font-size:13px}.ppg .pg-dt{width:36px}.ppg .pg-go{font-size:12px}}' +
+    '.ppg .pg-tip{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:4px 8px;margin:0 14px 12px 18px;padding:9px 12px;border-radius:8px;background:rgba(232,176,33,.1);border:1px dashed rgba(232,176,33,.45);font-size:13px;color:#dbe3f2;text-align:center}' +
+    '.ppg .pg-tip b{color:#e8b021;font-weight:800}.ppg .pg-tip .pg-tipm,.ppg .pg-tip .pg-tipa{display:none}.ppg .pg-tipa{flex-basis:100%;font-size:11.5px;color:#9fb0cf}.ppg .pg-tip:hover{background:rgba(232,176,33,.18)}' +
+    '@media (max-width:480px){.ppg .pg-tip{margin:0 12px 10px 14px;font-size:12px;padding:8px 10px}.ppg .pg-tip .pg-tipd{display:none}.ppg .pg-tip .pg-tipm{display:inline}.ppg .pg-tip .pg-tipa{display:block}}' +
     '.ppg.compact .pg-gt{font-size:18px}.ppg.compact .pg-big{font-size:24px}';
 
   function el(t, c, x) { var e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; }
@@ -255,6 +259,16 @@
     cols.appendChild(finalsCol(d, o.target, o.compact));
     cols.appendChild(calCol(d, o.target, o.compact));
     g.appendChild(cols);
+    // one line under the guide: fans send their events and story ideas
+    if (o.tips !== false) {
+      var tip = el('a', 'pg-tip'); tip.href = 'mailto:' + TIPS + '?subject=' + encodeURIComponent('Event / story idea for Powerplay Windsor');
+      tip.target = '_top';
+      tip.appendChild(el('span', 'pg-tipq', 'Got an event or story idea?'));
+      tip.appendChild(el('b', 'pg-tipd', 'Email ' + TIPS + ' \u203a'));
+      tip.appendChild(el('b', 'pg-tipm', 'Email us \u203a'));     // phones: short, with the address on its own line
+      tip.appendChild(el('span', 'pg-tipa', TIPS));
+      g.appendChild(tip);
+    }
     box.appendChild(g);
   }
 
