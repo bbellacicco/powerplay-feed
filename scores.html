@@ -13,7 +13,7 @@
     Spotlight  The Local Sports Spotlight
     Athletes   Athlete Profiles
     Network    the Powerplay Network videos
-  ?tab=scores|upcoming|stories|spotlight|athletes|network   open on that switch
+  ?tab=stories|scores|upcoming|network|spotlight|athletes   open on that switch (default: stories)
   Each widget sizes itself to fit (nothing scrolls inside the page, which traps the finger on iPhones).
   Embed on the Wix "Local Scores" page, full width: about 1,900px tall on desktop, 2,150px on mobile.
 -->
@@ -54,12 +54,12 @@
 <body>
   <div class="top" id="top">
     <div class="switch" role="tablist" aria-label="Section">
+      <button type="button" role="tab" data-tab="stories">Stories</button>
       <button type="button" role="tab" data-tab="scores">Scores</button>
       <button type="button" role="tab" data-tab="upcoming">Coming Up</button>
-      <button type="button" role="tab" data-tab="stories">Stories</button>
+      <button type="button" role="tab" data-tab="network">Network</button>
       <button type="button" role="tab" data-tab="spotlight">Spotlight</button>
       <button type="button" role="tab" data-tab="athletes">Athletes</button>
-      <button type="button" role="tab" data-tab="network">Network</button>
     </div>
   </div>
   <div id="panes"></div>
@@ -85,7 +85,7 @@
   var TEAM = (new URLSearchParams(location.search).get('team') || '').replace(/[^a-z]/g, '');   // the shared story's team
   var built = {}, box = document.getElementById('panes');
   function show(tab) {
-    if (!PARTS[tab]) tab = 'scores';
+    if (!PARTS[tab]) tab = 'stories';
     if (!built[tab]) {
       var pane = document.createElement('div'); pane.className = 'pane'; pane.id = 'pane-' + tab;
       PARTS[tab].forEach(function (w) {
@@ -127,7 +127,7 @@
   });
   // share button: shares whichever section is showing (its own link opens the page on that section)
   var NAMES = { scores: 'Local Scores', upcoming: 'Coming Up: local games', stories: 'Local Stories', spotlight: 'The Local Sports Spotlight', athletes: 'Athlete Profiles', network: 'the Powerplay Network' };
-  var current = 'scores';
+  var current = 'stories';
   if (window.PPShare) {
     var sb = PPShare.button(function () { return { title: NAMES[current].replace(/^the /, 'The '), url: PPShare.link(current), text: 'Check out ' + NAMES[current] + ' on Powerplay Windsor' }; });
     sb.classList.add('sharebtn'); document.getElementById('top').appendChild(sb);
@@ -137,7 +137,7 @@
   // which switch to open: ?tab= when opened directly, or the hand-off from a "See all" link elsewhere (good for 2 minutes)
   var start = new URLSearchParams(location.search).get('tab');
   try { var h = JSON.parse(localStorage.getItem('pp-tab') || 'null'); localStorage.removeItem('pp-tab'); if (!start && h && Date.now() - h.t < 120000) start = h.tab; } catch (e) {}
-  show(PLAY ? 'network' : STORY ? 'stories' : (start || 'scores'));
+  show(PLAY ? 'network' : STORY ? 'stories' : (start || 'stories'));   // opens on Stories (the first switch)
 })();
 </script>
 </body>
