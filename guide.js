@@ -44,6 +44,7 @@
     '.ppg .pg-li .pg-tm{flex:none;width:58px;font-weight:800;font-size:12.5px;color:#e8b021;white-space:nowrap}' +
     '.ppg .pg-li .pg-tx{min-width:0;flex:1}' +
     '.ppg .pg-li .pg-tm.pg-live{color:#ff4d4d}.ppg .pg-li .pg-tm.pg-live::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#ff4d4d;margin-right:5px;vertical-align:1px;animation:pgpulse 1.2s infinite}.ppg .pg-li .pg-tm.pg-fin{color:#9fb0cf}' +
+    '.ppg .pg-sb{display:flex;flex-direction:column;gap:1px}.ppg .pg-sl{display:flex;align-items:baseline;gap:8px;font-size:13px;font-weight:600;color:#cfd8ea}.ppg .pg-sl .pg-sn{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ppg .pg-sl .pg-sc{flex:none;min-width:22px;text-align:right;font-size:14px}.ppg .pg-sl.pg-win{color:#fff;font-weight:800}.ppg .pg-sb + .pg-b{margin-top:2px}' +
     '.ppg .pg-sc{color:#fff;font-weight:900;font-variant-numeric:tabular-nums}@keyframes pgpulse{50%{opacity:.25}}' +
     '.ppg .pg-li .pg-a{font-weight:700;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}' +
     '.ppg .pg-li .pg-b{color:#9fb0cf;font-size:11.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}' +
@@ -114,6 +115,17 @@
   }
   function goLink(col, text, href, target) { var a = el('a', 'pg-go', text + ' ›'); a.href = href; a.target = target; col.appendChild(a); }
 
+  // two lines, scoreboard style: each team with its score at the right edge, so the score never gets cut off on a phone
+  function scoreBox(rows) {   // rows: [[name, score, winner?], [name, score, winner?]]
+    var b = el('div', 'pg-sb');
+    rows.forEach(function (r) {
+      var line = el('div', 'pg-sl' + (r[2] ? ' pg-win' : ''));
+      line.appendChild(el('span', 'pg-sn', r[0])); line.appendChild(el('b', 'pg-sc', String(r[1] == null ? 0 : r[1])));
+      b.appendChild(line);
+    });
+    return b;
+  }
+
   // 1. today's games (or the next day that has some)
   function gamesCol(d, target, compact) {
     box_live = false;
@@ -158,9 +170,8 @@
         lv ? 'LIVE' : fin ? 'Final' : g.status === 'postponed' ? 'PPD' : started ? 'Now' : g.time_tbd ? 'TBA' : cpTime(new Date(g.start)));
       li.appendChild(tm);
       var tx = el('div', 'pg-tx'), a = el('div', 'pg-a');
-      if ((lv || fin) && (scored(g) || lv)) {     // "Saginaw Spirit 2 at Spitfires 3", scores in bold
-        a.appendChild(document.createTextNode(s[0] + ' ')); a.appendChild(el('b', 'pg-sc', String(s[2] == null ? 0 : s[2])));
-        a.appendChild(document.createTextNode(' at ' + s[1] + ' ')); a.appendChild(el('b', 'pg-sc', String(s[3] == null ? 0 : s[3])));
+      if ((lv || fin) && (scored(g) || lv)) {     // away over home, scores lined up on the right
+        a = scoreBox([[s[0], s[2], fin && +s[2] > +s[3]], [s[1], s[3], fin && +s[3] > +s[2]]]);
       } else a.textContent = s[0] + (g.home_away === 'N' && !(g.home && g.away) ? ' vs. ' : ' at ') + s[1];
       tx.appendChild(a);
       tx.appendChild(el('div', 'pg-b', label(g) + (lv && (g.detail || g.note) ? ' · ' + (g.detail || g.note) : ''))); li.appendChild(tx); list.appendChild(li);
@@ -186,7 +197,7 @@
     show.forEach(function (g) {
       var s = sides(g), li = el('div', 'pg-li'); li.style.setProperty('--c', COLOR[g.team] || '#e8b021'); li.appendChild(el('i'));
       var w = +s[2] >= +s[3] ? [s[0], s[2], s[1], s[3]] : [s[1], s[3], s[0], s[2]];
-      var tx = el('div', 'pg-tx'); tx.appendChild(el('div', 'pg-a', w[0] + ' ' + w[1] + ', ' + w[2] + ' ' + w[3]));
+      var tx = el('div', 'pg-tx'); tx.appendChild(scoreBox([[w[0], w[1], +w[1] !== +w[3]], [w[2], w[3], false]]));   // winner on top
       var k = dayKey(new Date(g.start));
       tx.appendChild(el('div', 'pg-b', label(g) + ' · ' + (k === dayKey(new Date()) ? 'Today' : k === dayKey(new Date(Date.now() - 864e5)) ? 'Yesterday' : wd(k))));
       li.appendChild(tx); col.appendChild(li);
