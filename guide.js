@@ -157,7 +157,7 @@
         a.appendChild(document.createTextNode(' at ' + s[1] + ' ')); a.appendChild(el('b', 'pg-sc', String(s[3] == null ? 0 : s[3])));
       } else a.textContent = s[0] + (g.home_away === 'N' && !(g.home && g.away) ? ' vs. ' : ' at ') + s[1];
       tx.appendChild(a);
-      tx.appendChild(el('div', 'pg-b', label(g) + (lv && g.detail ? ' · ' + g.detail : ''))); li.appendChild(tx); list.appendChild(li);
+      tx.appendChild(el('div', 'pg-b', label(g) + (lv && (g.detail || g.note) ? ' · ' + (g.detail || g.note) : ''))); li.appendChild(tx); list.appendChild(li);
     });
     box_live = live.length > 0;
     col.appendChild(list);
