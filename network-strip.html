@@ -25,6 +25,8 @@
   .title span { color: var(--accent); }
   .sub { color: var(--muted); font-size: 11px; margin-top: 2px; }
   .sub b { color: var(--text); font-weight: 600; }
+  .sub { display: flex; align-items: center; gap: 5px; white-space: nowrap; overflow: hidden; }
+  .sub .slogo { height: 18px; width: 18px; object-fit: contain; border-radius: 3px; background: #fff; flex: none; }
   .more { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 12px; white-space: nowrap; }
   .strip { display: flex; gap: 10px; overflow-x: auto; padding: 0 12px 10px; scroll-snap-type: x mandatory; scroll-padding-left: 12px; scrollbar-width: thin; }
   .card { flex: 0 0 auto; width: 230px; background: var(--row); border-radius: 8px; overflow: hidden; scroll-snap-align: start;
@@ -60,7 +62,7 @@
   <div class="top">
     <div style="min-width:0">
       <div class="title">Powerplay <span>Network</span></div>
-      <div class="sub">Latest highlights on <b>YouTube</b> &amp; <b>Vimeo</b></div>
+      <div class="sub">Presented by <img class="slogo" src="https://static.wixstatic.com/media/0be2db_9da56760ff7c49b798008220ba008a1a~mv2.jpg/v1/fit/w_200,h_200,q_90/mlp-pro-wrestling.jpg" alt="" onerror="this.remove()"><b>Maple Leaf Pro Wrestling</b></div>
     </div>
     <a class="more" id="more" target="_top" href="https://www.powerplaywindsor.com/scores-standings?tab=network" onclick="try{localStorage.setItem('pp-tab',JSON.stringify({tab:'network',t:Date.now()}))}catch(e){}">All videos &rarr;</a>
   </div>
