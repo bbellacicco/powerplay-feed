@@ -13,6 +13,7 @@
   var COLOR = { spitfires: '#d4202c', lancers: '#0f6bd6', saints: '#1f9d55', junior: '#0ea5a4', highschool: '#8b5cf6' };
   var RANK = { spitfires: 0, lancers: 1, saints: 2, junior: 3, highschool: 4 };
   var US = { spitfires: 'Spitfires', lancers: 'Lancers', saints: 'Saints' };
+  var SPONSOR = { name: 'St. Clair College Alumni', logo: 'https://bbellacicco.github.io/powerplay-feed/logos/st-clair-alumni.png' };   // "Presented by" in the guide's header
 
   var CSS = '' +
     '.ppg{position:relative;border:1px solid #1e3a6e;border-radius:12px;overflow:hidden;background:radial-gradient(120% 160% at 0% 0%,rgba(232,176,33,.13),transparent 55%),linear-gradient(180deg,#10244a,#0b1a33);color:#f2f5fb;font:14px/1.35 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}' +
@@ -22,6 +23,11 @@
     '.ppg .pg-gk{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#e8b021}' +
     '.ppg .pg-gt{margin:3px 0 0;font-size:22px;font-weight:900;line-height:1.1;letter-spacing:-.01em}' +
     '.ppg .pg-gs{color:#9fb0cf;font-size:13px;margin-top:3px}' +
+    '.ppg .pg-gr{display:flex;flex-direction:column;align-items:flex-end;gap:7px}' +
+    '.ppg .pg-by{display:flex;align-items:center;gap:7px;font-size:11px;color:#9fb0cf;letter-spacing:.04em;text-transform:uppercase;font-weight:700}' +
+    '.ppg .pg-by b{color:#f2f5fb;text-transform:none;letter-spacing:0;font-size:12.5px}' +
+    '.ppg .pg-spchip{display:inline-flex;align-items:center;background:#fff;border-radius:4px;padding:3px 7px;height:30px}.ppg .pg-spchip img{height:24px;width:auto;max-width:90px;object-fit:contain;display:block}' +
+    '@media (max-width:820px){.ppg .pg-gr{align-items:flex-start;width:100%}.ppg .pg-by{flex-wrap:wrap}}' +
     '.ppg .pg-fresh{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;color:#cfe0ff;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:5px 11px;white-space:nowrap}' +
     '.ppg .pg-fresh i{width:8px;height:8px;border-radius:50%;background:#2ecc71;box-shadow:0 0 0 3px rgba(46,204,113,.25)}' +
     '.ppg .pg-cols{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:12px;padding:0 14px 14px 18px}' +
@@ -216,8 +222,17 @@
     l.appendChild(el('div', 'pg-gt', o.title || 'Windsor-Essex sports, all in one place'));
     l.appendChild(el('div', 'pg-gs', o.sub || 'Every local game, score and community event, checked around the clock.'));
     h.appendChild(l);
+    var rt = el('div', 'pg-gr');
+    var sp = o.sponsor === false ? null : (o.sponsor || SPONSOR);
+    if (sp) {    // "Presented by" the guide's sponsor
+      var by = el('div', 'pg-by'); by.appendChild(el('span', null, 'Presented by'));
+      var chip = el('span', 'pg-spchip'), im = new Image(); im.src = sp.logo; im.alt = sp.name; im.onerror = function () { chip.remove(); };
+      chip.appendChild(im); by.appendChild(chip); by.appendChild(el('b', null, sp.name));
+      rt.appendChild(by);
+    }
     var f = ago(d.updated);
-    if (f) { var fr = el('span', 'pg-fresh'); fr.appendChild(el('i')); fr.appendChild(document.createTextNode(f)); h.appendChild(fr); }
+    if (f) { var fr = el('span', 'pg-fresh'); fr.appendChild(el('i')); fr.appendChild(document.createTextNode(f)); rt.appendChild(fr); }
+    h.appendChild(rt);
     g.appendChild(h);
     var cols = el('div', 'pg-cols');
     cols.appendChild(gamesCol(d, o.target, o.compact));
