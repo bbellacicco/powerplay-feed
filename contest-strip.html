@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Win Spitfires Tickets | Powerplay Windsor</title>
+<!--
+  Contest strip (embed first on the Local Hub page): win tickets to a Windsor Spitfires game.
+  Fans enter by email (powerplaysportsvideo@gmail.com, subject and a short form filled in for them).
+  Share row: Facebook, X, text message and Copy link, all pointing at a powerplaywindsor.com address
+  (default: the Local Hub with ?contest=spitfires, which gives Facebook the contest picture and title).
+  Change the wording without touching this file:
+    ?headline=Win two tickets to Friday's Spitfires game
+    ?line=Email your name and phone number by Thursday at noon. Winner drawn Thursday.
+    ?share=https://www.powerplaywindsor.com/some-page   (the address the Share buttons pass along)
+  Embed full width in Wix: about 170px tall on desktop, 360px on mobile.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #0b1a33; --text: #f2f5fb; --muted: #b8c4dc; --accent: #e8b021; --red: #d4202c; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.35 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  a { color: inherit; text-decoration: none; }
+  .strip { position: relative; display: grid; grid-template-columns: 170px 1fr auto; grid-template-areas: 'logo txt acts' 'logo line acts'; align-items: center; gap: 0 18px; margin: 8px; padding: 12px 18px 12px 14px;
+    border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,.12);
+    background: radial-gradient(90% 160% at 0% 50%, rgba(212,32,44,.35), transparent 60%), linear-gradient(100deg, #0f2147 0%, #0b1a33 60%, #071229 100%); }
+  .strip::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: linear-gradient(90deg, var(--red), #7a0f17 50%, var(--accent)); }
+  .logo { grid-area: logo; } .txt { grid-area: txt; align-self: end; } .line { grid-area: line; align-self: start; } .acts { grid-area: acts; }
+  .logo { width: 100%; height: auto; display: block; filter: drop-shadow(0 4px 10px rgba(0,0,0,.45)); }
+  .k { display: inline-flex; align-items: center; gap: 7px; font-size: 11px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+  .k::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--red); box-shadow: 0 0 0 3px rgba(212,32,44,.3); }
+  h1 { margin: 3px 0 4px; font: 400 32px/1 'Bebas Neue', Impact, 'Arial Narrow', sans-serif; letter-spacing: .02em; text-transform: uppercase; }
+  h1 em { font-style: normal; color: var(--accent); }
+  .line { color: var(--muted); font-size: 14px; }
+  .line b { color: var(--text); }
+  .acts { display: flex; flex-direction: column; align-items: stretch; gap: 8px; min-width: 210px; }
+  .enter { display: flex; align-items: center; justify-content: center; gap: 8px; background: var(--accent); color: #0b1a33; font-weight: 900; font-size: 15px; letter-spacing: .02em;
+    padding: 12px 18px; border-radius: 8px; box-shadow: 0 6px 16px rgba(232,176,33,.25); white-space: nowrap; }
+  .enter:hover { background: #ffc832; }
+  .enter svg { width: 18px; height: 18px; fill: currentColor; }
+  .share { display: flex; align-items: center; justify-content: center; gap: 6px; }
+  .share span { color: var(--muted); font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; margin-right: 2px; }
+  .share a, .share button { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; border: 1px solid rgba(255,255,255,.22);
+    background: rgba(255,255,255,.06); color: var(--text); cursor: pointer; padding: 0; font: inherit; }
+  .share a:hover, .share button:hover { border-color: var(--accent); color: var(--accent); }
+  .share svg { width: 15px; height: 15px; fill: currentColor; }
+  .share .copy { white-space: nowrap; width: auto; padding: 0 12px; border-radius: 999px; font-size: 12px; font-weight: 800; gap: 6px; }
+  .share .copy.ok { border-color: #2ecc71; color: #2ecc71; }
+  @media (max-width: 760px) {
+    .strip { grid-template-columns: 84px 1fr; grid-template-areas: 'logo txt' 'line line' 'acts acts'; gap: 8px 10px; padding: 12px 12px 14px 10px; }
+    .txt { align-self: center; }
+    .acts { min-width: 0; margin-top: 2px; }
+    .share { gap: 5px; } .share span { display: none; }
+    h1 { font-size: 25px; }
+    .line { font-size: 12.5px; }
+    .line b { white-space: nowrap; }
+    .kpp { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="strip">
+  <img class="logo" src="logos/spitfires-logo.png" alt="Windsor Spitfires">
+  <div class="txt">
+    <div class="k">Contest<span class="kpp">· Powerplay Windsor</span></div>
+    <h1 id="hl">Win tickets to a <em>Windsor Spitfires</em> game</h1>
+  </div>
+  <div class="line" id="line">Email your <b>name and phone number</b> to <b>powerplaysportsvideo@gmail.com</b> with the subject ‘Spitfires tickets’ for your chance to win.</div>
+  <div class="acts">
+    <a class="enter" id="enter" target="_top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13zm2.2.5 7.8 6 7.8-6H4.2zM20 7.6l-7.4 5.7a1 1 0 0 1-1.2 0L4 7.6V18h16V7.6z"/></svg>Enter by email</a>
+    <div class="share" id="share"><span>Share</span></div>
+  </div>
+</div>
+<script>
+(function () {
+  var EMAIL = 'powerplaysportsvideo@gmail.com';
+  var qs = new URLSearchParams(location.search);
+  var SHARE = qs.get('share') || 'https://www.powerplaywindsor.com/scores-standings?contest=spitfires';
+  var TITLE = 'Win tickets to a Windsor Spitfires game';
+  if (qs.get('headline')) { document.getElementById('hl').textContent = qs.get('headline'); TITLE = qs.get('headline'); }
+  if (qs.get('line')) document.getElementById('line').textContent = qs.get('line');
+
+  // the email opens ready to send: subject filled in, with spaces for name and phone number
+  var body = 'Hi Powerplay Windsor,\n\nPlease enter me in the Spitfires ticket contest.\n\nName:\nPhone number:\n\nThanks!';
+  document.getElementById('enter').href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent('Spitfires tickets') + '&body=' + encodeURIComponent(body);
+
+  // share row (right in the strip, no pop-up menu, so nothing gets cut off in the Wix box)
+  var text = TITLE + ' with Powerplay Windsor!';
+  var ICONS = {
+    fb: 'M14 8.5V6.6c0-.9.6-1.1 1-1.1h2.5V1.7L14 1.7c-3.8 0-4.6 2.8-4.6 4.6v2.2H7v3.9h2.4V22.3H14V12.4h3.1l.4-3.9H14z',
+    x: 'M17.8 2.5h3.3l-7.2 8.2 8.5 11.2h-6.6l-5.2-6.8-6 6.8H1.3l7.7-8.8L.9 2.5h6.8l4.7 6.2 5.4-6.2zm-1.2 17.4h1.8L6.6 4.4H4.6l12 15.5z',
+    sms: 'M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 1-2zm3 6v2h2V9H7zm4 0v2h2V9h-2zm4 0v2h2V9h-2z',
+    link: 'M10.6 13.4a1 1 0 0 0 1.4 1.4l4.9-4.9a3.5 3.5 0 0 0-5-5l-2.1 2.1a1 1 0 1 0 1.4 1.4l2.1-2.1a1.5 1.5 0 0 1 2.2 2.2l-4.9 4.9zm2.8-2.8a1 1 0 0 0-1.4-1.4l-4.9 4.9a3.5 3.5 0 0 0 5 5l2.1-2.1a1 1 0 1 0-1.4-1.4l-2.1 2.1a1.5 1.5 0 0 1-2.2-2.2l4.9-4.9z'
+  };
+  function icon(d) { return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="' + d + '"/></svg>'; }
+  var box = document.getElementById('share');
+  [['Facebook', 'fb', 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(SHARE)],
+   ['X', 'x', 'https://x.com/intent/post?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(SHARE)],
+   ['Text message', 'sms', 'sms:?&body=' + encodeURIComponent(text + ' ' + SHARE)]].forEach(function (s) {
+    var a = document.createElement('a'); a.href = s[2]; a.target = s[1] === 'sms' ? '_top' : '_blank'; a.rel = 'noopener';
+    a.title = 'Share on ' + s[0]; a.setAttribute('aria-label', 'Share on ' + s[0]); a.innerHTML = icon(ICONS[s[1]]);
+    box.appendChild(a);
+  });
+  var c = document.createElement('button'); c.type = 'button'; c.className = 'copy'; c.innerHTML = icon(ICONS.link) + '<b>Copy link</b>';
+  c.onclick = function () {
+    var done = function () { c.classList.add('ok'); c.lastChild.textContent = 'Copied ✓'; setTimeout(function () { c.classList.remove('ok'); c.lastChild.textContent = 'Copy link'; }, 2000); };
+    try {
+      if (navigator.clipboard && window.isSecureContext) { navigator.clipboard.writeText(SHARE).then(done, fallback); return; }
+    } catch (e) {}
+    fallback();
+    function fallback() {
+      var t = document.createElement('textarea'); t.value = SHARE; t.style.position = 'fixed'; t.style.opacity = '0'; document.body.appendChild(t); t.select();
+      var ok = false; try { ok = document.execCommand('copy'); } catch (e) {}
+      t.remove(); if (ok) done(); else prompt('Copy this link:', SHARE);
+    }
+  };
+  box.appendChild(c);
+})();
+</script>
+</body>
+</html>
