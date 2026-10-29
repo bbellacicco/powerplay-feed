@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T21:05:49-04:00",
+ "updated": "2026-10-28T21:17:10-04:00",
  "today": "2026-10-28",
  "range": [
   "2026-10-25",
@@ -1575,11 +1575,11 @@
    "home_away": "H",
    "opponent": "Woodstock Navy Vets",
    "location": "Vollmer Culture R.C., LaSalle, ON",
-   "status": "live",
+   "status": "final",
    "our_score": 6,
    "opp_score": 2,
-   "result": null,
-   "note": "00:00 3rd",
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15625"
    },
@@ -4058,6 +4058,19 @@
   },
   {
    "league": "nfl",
+   "headline": "Tre'Davious White's homecoming, Tyrell Shavers' return and Spencer Brown's status",
+   "summary": "Tre'Davious White, Tyrell Shavers and Spencer Brown all garnered major attention on Wednesday",
+   "published": "2026-10-28T21:10-04:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/bills/xhq4bktrauh5mi24ebpv.png",
+   "video": false,
+   "teams": [
+    "Buffalo Bills"
+   ],
+   "url": "https://www.buffalobills.com/news/tre-davious-white-s-homecoming-tyrell-shavers-return-and-spencer-brown-s-status",
+   "source": "Team site"
+  },
+  {
+   "league": "nfl",
    "headline": "Bills open 21-day practice window for Tyrell Shavers while DJ Moore, Ed Oliver spotted at Wednesday practice",
    "summary": "Updates on WR Tyrell Shavers, WR DJ Moore and DL Ed Oliver at the start of Week 8",
    "published": "2026-10-28T15:11-04:00",
@@ -4171,19 +4184,6 @@
     "Buffalo Bills"
    ],
    "url": "https://www.buffalobills.com/news/the-advanced-stats-behind-the-bills-week-6-win-in-las-vegas",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
-   "headline": "Bills sign CB Tre'Davious White to practice squad, release CB A.J. Woods",
-   "summary": "White joins the Bills for his third stint, ninth year with the team.",
-   "published": "2026-10-19T17:59-04:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/bills/jjasj762apuclaym05yu.png",
-   "video": false,
-   "teams": [
-    "Buffalo Bills"
-   ],
-   "url": "https://www.buffalobills.com/news/bills-sign-cb-tre-davious-white-to-practice-squad-release-cb-a-j-woods",
    "source": "Team site"
   },
   {
@@ -5349,16 +5349,28 @@
       "strk": "L1"
      },
      {
+      "name": "LaSalle Vipers",
+      "abbr": "LAS",
+      "gp": 13,
+      "w": 6,
+      "l": 7,
+      "otl": 0,
+      "pts": 12,
+      "gf": 38,
+      "ga": 53,
+      "strk": "W2"
+     },
+     {
       "name": "Woodstock Navy Vets",
       "abbr": "WNV",
-      "gp": 14,
+      "gp": 15,
       "w": 6,
-      "l": 8,
+      "l": 9,
       "otl": 0,
       "pts": 12,
       "gf": 48,
       "ga": 64,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "London Nationals",
@@ -5368,21 +5380,9 @@
       "l": 8,
       "otl": 1,
       "pts": 11,
-      "gf": 49,
-      "ga": 59,
+      "gf": 50,
+      "ga": 60,
       "strk": "L2"
-     },
-     {
-      "name": "LaSalle Vipers",
-      "abbr": "LAS",
-      "gp": 12,
-      "w": 5,
-      "l": 7,
-      "otl": 0,
-      "pts": 10,
-      "gf": 38,
-      "ga": 53,
-      "strk": "W1"
      },
      {
       "name": "Komoka Kings",
@@ -5392,8 +5392,8 @@
       "l": 12,
       "otl": 0,
       "pts": 8,
-      "gf": 44,
-      "ga": 75,
+      "gf": 45,
+      "ga": 76,
       "strk": "L8"
      },
      {
