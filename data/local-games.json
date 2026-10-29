@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T19:02:42-04:00",
+ "updated": "2026-10-29T19:17:15-04:00",
  "today": "2026-10-29",
  "range": [
   "2026-10-26",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 38
+   "count": 36
   },
   "club_news": {
    "ok": true,
@@ -2177,13 +2177,12 @@
    "home_away": "H",
    "opponent": "Erie Otters",
    "location": "WFCU Centre, Windsor",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
-   "note": "",
+   "note": "19:25 1st",
    "links": {
-    "tickets": "https://wfcucentre.evenue.net/event/S27/G09",
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29132/"
    }
   },
@@ -2200,7 +2199,7 @@
    "our_score": 0,
    "opp_score": 0,
    "result": null,
-   "note": "20:00 1st",
+   "note": "17:33 1st",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16626"
    },
@@ -3445,21 +3444,6 @@
   },
   {
    "league": "nhl",
-   "headline": "NHL power rankings: Picking out potential pumpkins",
-   "summary": "It’s pumpkin-picking season. In the spirit of fall, Sportsnet’s Ryan Dixon identifies some over-performers that may be due to come back down to earth in his weekly power rankings.",
-   "published": "2026-10-29T12:13-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/vasily-podkolzin.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 8,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/nhl-power-rankings-picking-out-potential-pumpkins/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Could the Edmonton Oilers be eyeing Matt Rempe?",
    "summary": "In his latest collection of notes, Frank Seravalli writes about the Oilers’ search for more toughness and if Matt Rempe could be an answer; why the Flyers might seek a defenceman; and more.",
    "published": "2026-10-29T12:24-04:00",
@@ -3555,6 +3539,19 @@
   },
   {
    "league": "other",
+   "headline": "WNBA Finals Takeaways: Dream defend home court to force Game 7",
+   "summary": "It was a weird matinee start for the WNBA Finals, but Allisha Gray and the Atlanta Dream looked well rested as they forced the first Game 7 in WNBA history. Kai Gammage has the takeaways after Game 6.",
+   "published": "2026-10-29T15:57-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Dream.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/wnba/article/wnba-finals-takeaways-dream-defend-home-court-to-force-game-7/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
    "headline": "PWHL announces roster expansion and increased minimum salaries",
    "summary": "The PWHL is growing in more ways than one.",
    "published": "2026-10-29T17:33-04:00",
@@ -3593,19 +3590,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Flames awaiting update on injured goaltender Devin Cooley",
-   "summary": "",
-   "published": "2026-10-29T17:16-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177111679.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/flames-awaiting-update-on-injured-goaltender-devin-cooley/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nfl",
    "headline": "Titans trade All-Pro DT Jeffery Simmons to Bears",
    "summary": "",
@@ -3619,16 +3603,18 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "WNBA Finals Takeaways: Dream defend home court to force Game 7",
-   "summary": "It was a weird matinee start for the WNBA Finals, but Allisha Gray and the Atlanta Dream looked well rested as they forced the first Game 7 in WNBA history. Kai Gammage has the takeaways after Game 6.",
-   "published": "2026-10-29T15:57-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Dream.jpg",
+   "league": "nhl",
+   "headline": "NHL power rankings: Picking out potential pumpkins",
+   "summary": "It’s pumpkin-picking season. In the spirit of fall, Sportsnet’s Ryan Dixon identifies some over-performers that may be due to come back down to earth in his weekly power rankings.",
+   "published": "2026-10-29T12:13-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/vasily-podkolzin.jpg",
    "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/wnba/article/wnba-finals-takeaways-dream-defend-home-court-to-force-game-7/",
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 8,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/nhl-power-rankings-picking-out-potential-pumpkins/",
    "source": "Sportsnet"
   },
   {
@@ -3642,6 +3628,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/flames-morgan-frost-the-latest-to-say-he-wants-to-stay-in-calgary/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Flames awaiting update on injured goaltender Devin Cooley",
+   "summary": "",
+   "published": "2026-10-29T17:16-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177111679.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/flames-awaiting-update-on-injured-goaltender-devin-cooley/",
    "source": "Sportsnet"
   },
   {
@@ -3681,19 +3680,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/former-toronto-metropolitan-university-d-artem-duda-to-make-nhl-debut-with-mammoth/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Wild claim Cameron Crotty off waivers from Senators",
-   "summary": "A familiar face returns to the state of hockey.",
-   "published": "2026-10-29T14:38-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-56.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/wild-claim-cameron-crotty-off-waivers-from-senators/",
    "source": "Sportsnet"
   },
   {
@@ -3917,19 +3903,6 @@
    "sn_team_count": 0,
    "sport": "Tennis",
    "url": "https://www.sportsnet.ca/wta/article/canadas-fernandez-holds-off-mertens-rally-to-advance-at-japan-open/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "F1 leader Kimi Antonelli has viral illness ahead of Mexico City Grand Prix",
-   "summary": "Kimi Antonelli, who could become the youngest Formula 1 champion in history this weekend, has a viral illness and will miss Thursday’s media obligations at the Mexico City Grand Prix, Mercedes said.",
-   "published": "2026-10-29T15:01-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-57.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Auto Racing",
-   "url": "https://www.sportsnet.ca/formula-1/article/f1-leader-kimi-antonelli-has-viral-illness-ahead-of-mexico-city-grand-prix/",
    "source": "Sportsnet"
   },
   {
@@ -4782,7 +4755,7 @@
       "otl": 1,
       "pts": 21,
       "gf": 61,
-      "ga": 36,
+      "ga": 37,
       "strk": "L1"
      },
      {
@@ -4829,7 +4802,7 @@
       "l": 8,
       "otl": 0,
       "pts": 12,
-      "gf": 44,
+      "gf": 45,
       "ga": 50,
       "strk": "L1"
      }
@@ -5067,8 +5040,8 @@
       "l": 3,
       "otl": 1,
       "pts": 23,
-      "gf": 73,
-      "ga": 54,
+      "gf": 75,
+      "ga": 55,
       "strk": "W4"
      },
      {
@@ -5115,8 +5088,8 @@
       "l": 9,
       "otl": 1,
       "pts": 15,
-      "gf": 51,
-      "ga": 74,
+      "gf": 52,
+      "ga": 76,
       "strk": "W1"
      },
      {
@@ -5564,7 +5537,7 @@
       "l": 3,
       "otl": 2,
       "pts": 16,
-      "gf": 50,
+      "gf": 51,
       "ga": 43,
       "strk": "W2"
      },
@@ -5577,7 +5550,7 @@
       "otl": 0,
       "pts": 14,
       "gf": 60,
-      "ga": 59,
+      "ga": 60,
       "strk": "W2"
      },
      {
@@ -5588,8 +5561,8 @@
       "l": 10,
       "otl": 3,
       "pts": 9,
-      "gf": 41,
-      "ga": 72,
+      "gf": 42,
+      "ga": 73,
       "strk": "W2"
      },
      {
@@ -5612,8 +5585,8 @@
       "l": 12,
       "otl": 1,
       "pts": 5,
-      "gf": 45,
-      "ga": 79,
+      "gf": 46,
+      "ga": 80,
       "strk": "W1"
      },
      {
