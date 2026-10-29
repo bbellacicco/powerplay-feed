@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28T20:47:02-04:00",
+ "updated": "2026-10-28T20:58:00-04:00",
  "today": "2026-10-28",
  "range": [
   "2026-10-25",
@@ -1576,10 +1576,10 @@
    "opponent": "Woodstock Navy Vets",
    "location": "Vollmer Culture R.C., LaSalle, ON",
    "status": "live",
-   "our_score": 3,
+   "our_score": 5,
    "opp_score": 2,
    "result": null,
-   "note": "12:17 3rd",
+   "note": "08:59 3rd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15625"
    },
@@ -3177,17 +3177,6 @@
   },
   {
    "league": "pwhl",
-   "headline": "PWHL and Paris Jewellers Unveil 2026 MontréAl Victoire Walter Cup Champions Ring",
-   "summary": "",
-   "published": "2026-10-20T20:00:00+00:00",
-   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/MTL_Ring_Reveal-1920x1080-ENG",
-   "video": false,
-   "teams": [],
-   "url": "https://www.thepwhl.com/en/news/2026/october/20/pwhl-and-paris-jewellers-unveil-2026-montreal-victoire-walter-cup-champions-ring",
-   "source": "thepwhl.com"
-  },
-  {
-   "league": "pwhl",
    "headline": "Sceptres Re-Sign Sara Hjalmarsson to Two-Year Contract",
    "summary": "",
    "published": "2026-10-20T14:00:00+00:00",
@@ -3197,6 +3186,17 @@
     "Toronto Sceptres"
    ],
    "url": "https://www.thepwhl.com/en/teams/toronto-sceptres/news/2026/october/20/sceptres-re-sign-sara-hjalmarsson-to-two-year-contract",
+   "source": "thepwhl.com"
+  },
+  {
+   "league": "pwhl",
+   "headline": "PWHL and Paris Jewellers Unveil 2026 MontréAl Victoire Walter Cup Champions Ring",
+   "summary": "",
+   "published": "2026-10-20T12:00:00+00:00",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/c_auto,g_auto,h_800,w_1188/q_auto/f_auto/MTL_Ring_Reveal-1920x1080-ENG",
+   "video": false,
+   "teams": [],
+   "url": "https://www.thepwhl.com/en/news/2026/october/20/pwhl-and-paris-jewellers-unveil-2026-montreal-victoire-walter-cup-champions-ring",
    "source": "thepwhl.com"
   },
   {
@@ -3527,6 +3527,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "Timberwolves say Edwards will be ‘good as new’ after knee surgery",
+   "summary": "The Minnesota Timberwolves believe Anthony Edwards will be “good as new” following arthroscopic surgery for a lingering injury to his right knee, president of basketball operations Tim Connelly said Wednesday.",
+   "published": "2026-10-28T20:29-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-98.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/timberwolves-say-edwards-will-be-good-as-new-after-knee-surgery/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "WNBA draft lottery set for Nov. 15, with Tempo tied for best odds",
    "summary": "The team that will get a franchise-altering pick will be revealed on Nov. 15.",
@@ -3563,19 +3576,6 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/cfl/article/alexander-philpot-fajardo-finalists-for-cfl-most-outstanding-player-award/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Rays’ Drew Rasmussen starting must-win Game 5 on short rest",
-   "summary": "Drew Rasmussen will take the ball with the Tampa Bay Rays’ season on the line.",
-   "published": "2026-10-28T15:28-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-8-9.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/report-rays-drew-rasmussen-starting-must-win-game-5-on-short-rest/",
    "source": "Sportsnet"
   },
   {
@@ -3664,7 +3664,7 @@
   },
   {
    "league": "nhl",
-   "headline": "Oilers’ Dickinson, Ekholm expected to return vs. Flames",
+   "headline": "Oilers’ Dickinson, Ekholm return vs. Flames",
    "summary": "Despite Zach Hyman heading to the injured reserve, the Edmonton Oilers are getting two key members of their lineup back.",
    "published": "2026-10-28T17:24-04:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/04/Jason-Dickinson.jpg",
@@ -5357,7 +5357,7 @@
       "otl": 0,
       "pts": 12,
       "gf": 48,
-      "ga": 61,
+      "ga": 63,
       "strk": "L1"
      },
      {
@@ -5368,7 +5368,7 @@
       "l": 8,
       "otl": 1,
       "pts": 11,
-      "gf": 48,
+      "gf": 49,
       "ga": 59,
       "strk": "L2"
      },
@@ -5380,7 +5380,7 @@
       "l": 7,
       "otl": 0,
       "pts": 10,
-      "gf": 35,
+      "gf": 37,
       "ga": 53,
       "strk": "W1"
      },
@@ -5393,7 +5393,7 @@
       "otl": 0,
       "pts": 8,
       "gf": 44,
-      "ga": 74,
+      "ga": 75,
       "strk": "L8"
      },
      {
