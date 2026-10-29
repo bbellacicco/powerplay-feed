@@ -422,6 +422,13 @@
     return LOGOS[s.team] || null;
   }
 
+  // a Community Calendar post stays out of the big box, unless it's also filed under a sports category
+  // (University of Windsor, High School Sports...): then it's a story too, and takes the box like any other
+  function calOnly(s) {
+    var cats = String(s.cats || '').split(/\s*,\s*/).filter(Boolean);
+    if (!cats.some(function (c) { return /community calendar/i.test(c); })) return false;
+    return !cats.some(function (c) { return !/community calendar|powerplay today|featured|all posts|uncategori/i.test(c); });
+  }
   function skey(u) {   // short id for a story link (the Local Hub's Wix page makes the same one)
     var t = String(u || '').trim().toLowerCase().replace(/[?#].*$/, '').replace(/\/$/, ''), h = 0x811c9dc5;
     for (var i = 0; i < t.length; i++) { h ^= t.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; }
@@ -896,7 +903,7 @@
       var stories = (news.stories || []).filter(function (s) { return s.url && s.headline; })
         .sort(function (a, b) { return new Date(b.published) - new Date(a.published); });
       // top stories: Powerplay's three newest written stories with a real photo
-      var seenH = {}, featItems = stories.filter(function (s) { return s.team === 'powerplay' && !isVid(s) && !/community calendar/i.test(s.cats || '') && s.image && !GENERIC_IMG.test(s.image) && /powerplaywindsor\.com/.test(s.url); })
+      var seenH = {}, featItems = stories.filter(function (s) { return s.team === 'powerplay' && !isVid(s) && !calOnly(s) && s.image && !GENERIC_IMG.test(s.image) && /powerplaywindsor\.com/.test(s.url); })
         .filter(function (s) { var k = s.headline.toLowerCase().replace(/[^a-z0-9]+/g, ''); if (seenH[k]) return false; seenH[k] = 1; return true; });
       // Game Day Snaps share the big box's rhythm: a new slideshow takes the box when it's newer than the latest story,
       // until a newer story (or slideshow) is posted. "posted" comes from publish.py (when the slideshow first went up).
