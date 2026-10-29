@@ -262,7 +262,7 @@
     // one line under the guide: fans send their events and story ideas
     if (o.tips !== false) {
       var tip = el('a', 'pg-tip'); tip.href = 'mailto:' + TIPS + '?subject=' + encodeURIComponent('Event / story idea for Powerplay Windsor');
-      tip.target = '_top';
+      tip.target = '_blank'; tip.rel = 'noopener';   // _top is blocked for email links inside the Wix box
       tip.appendChild(el('span', 'pg-tipq', 'Got an event or story idea?'));
       tip.appendChild(el('b', 'pg-tipd', 'Email ' + TIPS + ' \u203a'));
       tip.appendChild(el('b', 'pg-tipm', 'Email us \u203a'));     // phones: short, with the address on its own line
