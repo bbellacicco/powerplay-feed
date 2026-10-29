@@ -27,6 +27,10 @@
     letter-spacing: .03em; text-transform: uppercase; margin: 0; line-height: 1.1; }
   h1 span { color: var(--accent); }
   .tagline { color: var(--muted); font-size: 12.5px; margin-top: 4px; }
+  .presby { display: flex; align-items: center; gap: 7px; margin-top: 7px; color: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; }
+  .presby b { color: var(--text); font-size: 12.5px; letter-spacing: 0; text-transform: none; }
+  .presby .chip { display: inline-flex; align-items: center; background: #fff; border-radius: 4px; padding: 2px; height: 30px; }
+  .presby .chip img { height: 26px; width: auto; display: block; border-radius: 2px; }
   .tabs { display: flex; background: var(--panel); border: 1px solid var(--line); border-radius: 999px; padding: 3px; }
   .tab { border: 0; background: transparent; color: var(--text); font: inherit; font-weight: 800; font-size: 13px; padding: 8px 16px; border-radius: 999px; cursor: pointer; letter-spacing: .02em; }
   .tab.on { background: var(--accent); color: #0b1a33; }
@@ -100,6 +104,7 @@
     <div>
       <h1>Powerplay <span>Network</span></h1>
       <div class="tagline" id="tagline">Every Powerplay highlight and interview, in one place</div>
+      <div class="presby">Presented by <span class="chip"><img src="https://static.wixstatic.com/media/0be2db_9da56760ff7c49b798008220ba008a1a~mv2.jpg/v1/fit/w_200,h_200,q_90/mlp-pro-wrestling.jpg" alt="Maple Leaf Pro Wrestling" onerror="this.parentNode.remove()"></span><b>Maple Leaf Pro Wrestling</b></div>
     </div>
     <div class="tabs" role="tablist">
       <button class="tab on" type="button" role="tab" data-tab="local">Local Network</button>
