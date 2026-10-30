@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T21:47:15-04:00",
+ "updated": "2026-10-29T22:02:52-04:00",
  "today": "2026-10-29",
  "range": [
   "2026-10-26",
@@ -2177,11 +2177,11 @@
    "home_away": "H",
    "opponent": "Erie Otters",
    "location": "WFCU Centre, Windsor",
-   "status": "live",
+   "status": "final",
    "our_score": 3,
    "opp_score": 0,
-   "result": null,
-   "note": "End of Game",
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29132/"
    }
@@ -2195,11 +2195,11 @@
    "home_away": "H",
    "opponent": "Milton Menace",
    "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
-   "status": "live",
+   "status": "final",
    "our_score": 1,
-   "opp_score": 3,
-   "result": null,
-   "note": "Unofficial Final",
+   "opp_score": 4,
+   "result": "L",
+   "note": "",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16626"
    },
@@ -3443,19 +3443,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Could the Edmonton Oilers be eyeing Matt Rempe?",
-   "summary": "In his latest collection of notes, Frank Seravalli writes about the Oilers’ search for more toughness and if Matt Rempe could be an answer; why the Flyers might seek a defenceman; and more.",
-   "published": "2026-10-29T12:24-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/12/rempe_matt1280.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/could-the-edmonton-oilers-be-eyeing-matt-rempe/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "cfl",
    "headline": "Argonauts coach Mike Miller leaning on veterans in playoff debut",
    "summary": "Mike Miller is leaning on his veterans ahead of his playoff head coaching debut on Saturday. For the Argonauts’ leader, the matchup with Bombers’ coach Mike O’Shea carries an added layer of personal significance, writes ",
@@ -3536,6 +3523,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nfl",
+   "headline": "Panthers’ Will Lee, Packers’ Christian Watson injured on long pass play",
+   "summary": "Carolina Panthers cornerback Will Lee was carted into the locker room with a hamstring injury after getting hurt on the same play in which Green Bay Packers wide receiver Christian Watson suffered a chest injury in the s",
+   "published": "2026-10-29T21:47-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Christian-Watson.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/panthers-will-lee-packers-christian-watson-injured-on-long-pass-play/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "mlb",
    "headline": "MLB releases list of off-season free agents",
    "summary": "Now that the 2026 MLB season has come and gone, it’s officially transaction time.",
@@ -3548,19 +3548,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/mlb-releases-list-of-off-season-free-agents/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "TFC, CF Montreal, Whitecaps announce 2027 MLS Sprint Season schedule",
-   "summary": "MLS unveiled its 2027 Sprint Season schedule on Thursday.",
-   "published": "2026-10-29T14:27-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/Untitled-design-98.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/toronto-fc-announces-2027-mls-sprint-season-schedule/",
    "source": "Sportsnet"
   },
   {
@@ -3587,6 +3574,19 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/women-hockey/article/report-canada-usa-could-be-forced-to-wear-generic-jerseys-at-womens-worlds/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Could the Edmonton Oilers be eyeing Matt Rempe?",
+   "summary": "In his latest collection of notes, Frank Seravalli writes about the Oilers’ search for more toughness and if Matt Rempe could be an answer; why the Flyers might seek a defenceman; and more.",
+   "published": "2026-10-29T12:24-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/12/rempe_matt1280.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/could-the-edmonton-oilers-be-eyeing-matt-rempe/",
    "source": "Sportsnet"
   },
   {
@@ -3789,16 +3789,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Senators’ Thomas Chabot to return against Kings, Warren Foegele out",
-   "summary": "The Ottawa Senators have their captain back.",
-   "published": "2026-10-29T14:43-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177083202.jpg",
+   "league": "other",
+   "headline": "TFC, CF Montreal, Whitecaps announce 2027 MLS Sprint Season schedule",
+   "summary": "MLS unveiled its 2027 Sprint Season schedule on Thursday.",
+   "published": "2026-10-29T14:27-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/Untitled-design-98.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/senators-thomas-chabot-to-return-against-kings-warren-foegele-out/",
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/toronto-fc-announces-2027-mls-sprint-season-schedule/",
    "source": "Sportsnet"
   },
   {
@@ -4864,6 +4864,18 @@
       "strk": "W7"
      },
      {
+      "name": "Windsor Spitfires",
+      "abbr": "WSR",
+      "gp": 14,
+      "w": 6,
+      "l": 5,
+      "otl": 3,
+      "pts": 15,
+      "gf": 48,
+      "ga": 48,
+      "strk": "W3"
+     },
+     {
       "name": "Saginaw Spirit",
       "abbr": "SAG",
       "gp": 14,
@@ -4886,18 +4898,6 @@
       "gf": 61,
       "ga": 66,
       "strk": "L2"
-     },
-     {
-      "name": "Windsor Spitfires",
-      "abbr": "WSR",
-      "gp": 13,
-      "w": 5,
-      "l": 5,
-      "otl": 3,
-      "pts": 13,
-      "gf": 48,
-      "ga": 48,
-      "strk": "W2"
      }
     ]
    },
@@ -4943,14 +4943,14 @@
      {
       "name": "Erie Otters",
       "abbr": "ER",
-      "gp": 14,
+      "gp": 15,
       "w": 7,
-      "l": 5,
+      "l": 6,
       "otl": 2,
       "pts": 16,
       "gf": 43,
       "ga": 53,
-      "strk": "W2"
+      "strk": "L1"
      },
      {
       "name": "Owen Sound Attack",
@@ -5135,14 +5135,14 @@
      {
       "name": "Milton Menace",
       "abbr": "MIL",
-      "gp": 18,
-      "w": 14,
+      "gp": 19,
+      "w": 15,
       "l": 3,
       "otl": 1,
-      "pts": 29,
-      "gf": 73,
+      "pts": 31,
+      "gf": 74,
       "ga": 37,
-      "strk": "W1"
+      "strk": "W2"
      },
      {
       "name": "Burlington Cougars",
@@ -5171,14 +5171,14 @@
      {
       "name": "Leamington Flyers",
       "abbr": "LEA",
-      "gp": 16,
+      "gp": 17,
       "w": 13,
-      "l": 2,
+      "l": 3,
       "otl": 1,
       "pts": 27,
       "gf": 67,
-      "ga": 30,
-      "strk": "W6"
+      "ga": 31,
+      "strk": "L1"
      },
      {
       "name": "Toronto Patriots",
@@ -5310,14 +5310,14 @@
      {
       "name": "St. Thomas Stars",
       "abbr": "STT",
-      "gp": 12,
+      "gp": 13,
       "w": 9,
-      "l": 2,
+      "l": 3,
       "otl": 1,
       "pts": 19,
       "gf": 48,
       "ga": 30,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Stratford Warriors",
@@ -5406,14 +5406,14 @@
      {
       "name": "Sarnia Legionnaires",
       "abbr": "SAR",
-      "gp": 11,
-      "w": 0,
+      "gp": 12,
+      "w": 1,
       "l": 11,
       "otl": 0,
-      "pts": 0,
+      "pts": 2,
       "gf": 25,
       "ga": 71,
-      "strk": "L11"
+      "strk": "W1"
      }
     ]
    },
