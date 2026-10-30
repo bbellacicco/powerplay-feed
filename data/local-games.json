@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T07:48:17-04:00",
+ "updated": "2026-10-30T08:20:58-04:00",
  "today": "2026-10-30",
  "range": [
   "2026-10-27",
@@ -38,8 +38,8 @@
    "count": 8
   },
   "lancers": {
-   "ok": true,
-   "count": 131
+   "ok": false,
+   "error": "HTTP Error 500: Internal Server Error"
   },
   "junior": {
    "ok": true,
@@ -3168,6 +3168,19 @@
  ],
  "more_news": [
   {
+   "league": "other",
+   "headline": "Russia must be allowed to return to international hockey, court rules",
+   "summary": "",
+   "published": "2026-10-30T08:05-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/russia.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/hockey/article/russia-must-be-allowed-to-return-to-international-hockey-court-rules/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Canadiens complete perfect road trip without Suzuki",
    "summary": "No Nick Suzuki, no Ivan Demidov, no Mike Matheson, no functional power play, no problem for the Canadiens. Eric Engels breaks down a collective game from Montreal to complete a perfect road trip.",
@@ -3191,19 +3204,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/canucks-takeaways-late-game-collapse-clouds-strong-road-effort/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Kings beat Senators in OT after blowing a four-goal lead in third period",
-   "summary": "",
-   "published": "2026-10-30T01:39-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Ottawa-Senators-right-wing-Claude-Giroux-right-moves-the-puck-while-under-pressure-from-Los-Angeles-Kings-defenseman-Joel-Edmundson.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/kings-beat-senators-in-ot-after-blowing-a-four-goal-lead-in-third-period/",
    "source": "Sportsnet"
   },
   {
@@ -3245,6 +3245,32 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/could-the-edmonton-oilers-be-eyeing-matt-rempe/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Fernandez reaches Japan semis after top-ranked Rybakina withdraws due to injury",
+   "summary": "",
+   "published": "2026-10-30T08:12-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/fernandez-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Tennis",
+   "url": "https://www.sportsnet.ca/wta/article/fernandez-reaches-japan-semis-after-top-ranked-rybakina-withdraws-due-to-injury/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Kings beat Senators in OT after blowing a four-goal lead in third period",
+   "summary": "",
+   "published": "2026-10-30T01:39-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Ottawa-Senators-right-wing-Claude-Giroux-right-moves-the-puck-while-under-pressure-from-Los-Angeles-Kings-defenseman-Joel-Edmundson.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/kings-beat-senators-in-ot-after-blowing-a-four-goal-lead-in-third-period/",
    "source": "Sportsnet"
   },
   {
@@ -3328,32 +3354,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "WNBA Finals Takeaways: Dream defend home court to force Game 7",
-   "summary": "It was a weird matinee start for the WNBA Finals, but Allisha Gray and the Atlanta Dream looked well rested as they forced the first Game 7 in WNBA history. Kai Gammage has the takeaways after Game 6.",
-   "published": "2026-10-29T15:57-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Dream.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/wnba/article/wnba-finals-takeaways-dream-defend-home-court-to-force-game-7/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Canada, U.S. may have to wear generic jerseys at women’s worlds",
-   "summary": "The Canadian and U.S. teams may look a little different than we’re used to at this year’s IIHF Women’s World Championship.",
-   "published": "2026-10-29T14:11-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/02/canada-usa-murphy-watts.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/women-hockey/article/report-canada-usa-could-be-forced-to-wear-generic-jerseys-at-womens-worlds/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "Seider reacts to Larkin leaving Red Wings: ‘Turn the page’",
    "summary": "Moritz Seider is looking ahead as his former captain waits at home for a trade.",
@@ -3397,6 +3397,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Canada, U.S. may have to wear generic jerseys at women’s worlds",
+   "summary": "The Canadian and U.S. teams may look a little different than we’re used to at this year’s IIHF Women’s World Championship.",
+   "published": "2026-10-29T14:11-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/02/canada-usa-murphy-watts.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/women-hockey/article/report-canada-usa-could-be-forced-to-wear-generic-jerseys-at-womens-worlds/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Senators’ Hodgson ejected for boarding Kings’ Clarke",
    "summary": "Hayden Hodgson might be getting a call from the NHL after a boarding play on Thursday.",
@@ -3420,6 +3433,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/senators-andre-burakovsky-exits-vs-kings-with-lower-body-injury/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "WNBA Finals Takeaways: Dream defend home court to force Game 7",
+   "summary": "It was a weird matinee start for the WNBA Finals, but Allisha Gray and the Atlanta Dream looked well rested as they forced the first Game 7 in WNBA history. Kai Gammage has the takeaways after Game 6.",
+   "published": "2026-10-29T15:57-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Dream.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/wnba/article/wnba-finals-takeaways-dream-defend-home-court-to-force-game-7/",
    "source": "Sportsnet"
   },
   {
@@ -3604,32 +3630,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/milwaukee-to-celebrate-a-world-series-title-58-years-in-the-making-with-parade/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "UFC Vegas 123 preview: Nolan has massive opportunity vs. Moicano",
-   "summary": "The Octagon heads back to Meta Apex in Las Vegas, Nevada, for UFC Vegas 123: Nolan vs. Moicano. With 12 fights on the card, plenty of storylines are worth watching, so let’s dig in.",
-   "published": "2026-10-29T10:57-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/moicano.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/ufc-vegas-123-preview-nolan-has-massive-opportunity-vs-moicano/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Frost captain Kendall Coyne Schofield missing PWHL season due to pregnancy",
-   "summary": "",
-   "published": "2026-10-29T17:51-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/KCS.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/pwhl/article/frost-captain-kendall-coyne-schofield-missing-pwhl-season-due-to-pregnancy/",
    "source": "Sportsnet"
   },
   {
