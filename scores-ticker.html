@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Scores Ticker | Powerplay Windsor</title>
 <!--
-  Scrolling scores bar (56px on computers; on phones a 40px bar with a gold scores button under it, 70px in all).
+  Scrolling scores bar (56px on computers, 40px on phones). The gold scores button was dropped (Oct. 2026).
   Shows live games first, then today's upcoming games and the latest finals:
     - local teams from data/local-games.json + data/highschool.json + data/saints.json
     - your pro teams (Red Wings, Pistons, Lions, Leafs, Canadiens, Raptors, Bills) live from ESPN
@@ -15,7 +15,7 @@
 -->
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-/* desktop: a 56px bar (Wix embed 56px tall). Phones: a 40px bar plus a gold scores button under it (Wix mobile embed 70px tall) */
+/* desktop: a 56px bar (Wix embed 56px tall). Phones: a 40px bar (Wix mobile embed 40px tall) */
 html,body{width:100%;height:56px;background:#000;overflow:hidden}
 #wrap{display:flex;width:100%;height:56px}
 #brand{flex:0 0 auto;height:56px;display:flex;align-items:center;padding:0 14px 0 12px;background:#000;position:relative;z-index:2;box-shadow:8px 0 10px -4px #000}
@@ -46,7 +46,7 @@ a.ticker-item:hover .team{color:#FFE600}
 #more .s{display:none}
 #morebar{display:none}
 @media (max-width:480px){
-  html,body{height:70px}
+  html,body{height:40px}
   #wrap,#brand,#ticker-viewport,#ticker-stage,.ticker-item{height:40px}
   #brand{padding:0 8px 0 6px}
   #brand img{height:28px}
@@ -67,9 +67,7 @@ a.ticker-item:hover .team{color:#FFE600}
   <!-- sponsor logo, fixed at the start of the ticker -->
   <div id="brand"><img src="https://bbellacicco.github.io/powerplay-feed/0d683d_ee52021b769747ab96f919a4a7aa1732~mv2.jpg" alt="Scarehouse Windsor" onerror="this.parentNode.style.display='none'"></div>
   <div id="ticker-viewport"><div id="ticker-stage"></div></div>
-  <a id="more" href="https://www.powerplaywindsor.com/scores-standings" target="_top" aria-label="All local scores and standings"><span class="l">All scores &rsaquo;</span><span class="s">Scores &rsaquo;</span></a>
 </div>
-<a id="morebar" href="https://www.powerplaywindsor.com/scores-standings" target="_top">Click here for scores &rsaquo;</a>
 <script>
 var SPEED = 50;                 // pixels per second
 var MAX_ITEMS = 5;              // total items on the ticker
