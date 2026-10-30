@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T08:20:58-04:00",
+ "updated": "2026-10-30T08:32:45-04:00",
  "today": "2026-10-30",
  "range": [
   "2026-10-27",
@@ -38,8 +38,8 @@
    "count": 8
   },
   "lancers": {
-   "ok": false,
-   "error": "HTTP Error 500: Internal Server Error"
+   "ok": true,
+   "count": 131
   },
   "junior": {
    "ok": true,
@@ -3274,6 +3274,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "Fourth edition of NBA Cup set to tip off with wild court designs, shot at trophy",
+   "summary": "",
+   "published": "2026-10-30T08:22-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/12/Knicks.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/fourth-edition-of-nba-cup-set-to-tip-off-with-wild-court-designs-shot-at-trophy/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Red Wings suspend Larkin without pay after forward says he won’t play",
    "summary": "Dylan Larkin will not be paid while he awaits a trade from the Detroit Red Wings.",
@@ -3312,19 +3327,6 @@
    "sn_team_count": 2,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/love-throws-three-td-passes-packers-beat-panthers-to-keep-pace-in-afc-north/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Packers’ Watson goes to hospital mid-game with chest injury but later returns",
-   "summary": "Carolina Panthers cornerback Will Lee was carted into the locker room with a hamstring injury after getting hurt on the same play in which Green Bay Packers wide receiver Christian Watson suffered a chest injury in the s",
-   "published": "2026-10-29T21:47-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Christian-Watson.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/panthers-will-lee-packers-christian-watson-injured-on-long-pass-play/",
    "source": "Sportsnet"
   },
   {
@@ -3489,6 +3491,19 @@
   },
   {
    "league": "nfl",
+   "headline": "Packers’ Watson goes to hospital mid-game with chest injury but later returns",
+   "summary": "Carolina Panthers cornerback Will Lee was carted into the locker room with a hamstring injury after getting hurt on the same play in which Green Bay Packers wide receiver Christian Watson suffered a chest injury in the s",
+   "published": "2026-10-29T21:47-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Christian-Watson.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/panthers-will-lee-packers-christian-watson-injured-on-long-pass-play/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
    "headline": "NFL Week 8 Pick ‘Em: Can shorthanded Eagles get back on track?",
    "summary": "Somehow, someway, we’re basically at the halfway point of the NFL season. Week 8 features a loaded slate of games, headlined by some important divisional clashes. Evan Davidson shares his picks for every contest.",
    "published": "2026-10-29T10:01-04:00",
@@ -3607,29 +3622,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Flames awaiting update on injured goaltender Devin Cooley",
-   "summary": "",
-   "published": "2026-10-29T17:16-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177111679.jpg",
+   "league": "other",
+   "headline": "UFC Vegas 123 preview: Nolan has massive opportunity vs. Moicano",
+   "summary": "The Octagon heads back to Meta Apex in Las Vegas, Nevada, for UFC Vegas 123: Nolan vs. Moicano. With 12 fights on the card, plenty of storylines are worth watching, so let’s dig in.",
+   "published": "2026-10-29T10:57-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/moicano.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/flames-awaiting-update-on-injured-goaltender-devin-cooley/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Milwaukee closing schools for Brewers’ World Series title parade",
-   "summary": "Milwaukee could come to a standstill as fans celebrate the Brewers’ first World Series title.",
-   "published": "2026-10-29T13:26-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-54.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/milwaukee-to-celebrate-a-world-series-title-58-years-in-the-making-with-parade/",
+   "sn_team_count": 0,
+   "sport": "MMA",
+   "url": "https://www.sportsnet.ca/ufc/article/ufc-vegas-123-preview-nolan-has-massive-opportunity-vs-moicano/",
    "source": "Sportsnet"
   },
   {
