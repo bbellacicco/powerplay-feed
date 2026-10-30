@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T17:05:51-04:00",
+ "updated": "2026-10-30T17:17:52-04:00",
  "today": "2026-10-30",
  "range": [
   "2026-10-27",
@@ -43,7 +43,7 @@
   },
   "junior": {
    "ok": true,
-   "count": 160
+   "count": 155
   },
   "saints": {
    "ok": true,
@@ -78,8 +78,8 @@
    "count": 24
   },
   "standings_pjhl": {
-   "ok": true,
-   "count": 8
+   "ok": false,
+   "error": "no PJHL standings found on the team pages"
   },
   "standings_pwhl": {
    "ok": true,
@@ -2531,6 +2531,20 @@
   },
   {
    "league": "cfl",
+   "headline": "Opportunity to win Grey Cup as crossover team \"really excites\" Brady Oliveira",
+   "summary": "",
+   "published": "2026-10-30T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/4wla27dcbPZEl2KMpAEb2z/4190bd7ca3ac190ba496fb744b58e35d/Brady_Oliveira_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Blue Bombers",
+    "Argonauts"
+   ],
+   "url": "https://www.cfl.ca/article/opportunity-to-win-grey-cup-as-crossover-team-really-excites-brady-oliveira",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Trey Vaval PRANKED with Most Outstanding Special Teams Player Award!",
    "summary": "",
    "published": "2026-10-29T13:20:00-04:00",
@@ -2637,20 +2651,6 @@
     "Roughriders"
    ],
    "url": "https://www.cfl.ca/article/what-regular-season-matchups-tell-us-ahead-of-division-semi-finals",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "3 storylines to watch in the Eastern Semi-Final presented by Wegovy",
-   "summary": "",
-   "published": "2026-10-28T00:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/6Ov4OreEoyabsh6jTiq2Js/b1bd2ded42ec8e81c2e35a5a22192757/Chad_Kelly_2026.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Argonauts",
-    "Blue Bombers"
-   ],
-   "url": "https://www.cfl.ca/article/3-storylines-to-watch-in-the-eastern-semi-final",
    "source": "CFL.ca"
   },
   {
@@ -3317,6 +3317,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Canucks place forward Filip Chytil on injured reserve",
+   "summary": "Filip Chytil won’t be in the lineup when his Vancouver Canucks take on the Toronto Maple Leafs.",
+   "published": "2026-10-30T16:27-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Chytil.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canucks-filip-chytil-to-miss-game-vs-maple-leafs/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "Hockey Canada seeks clarity on Russia’s possible return to world juniors",
    "summary": "A ruling ordering the International Ice Hockey Federation to reinstate Russia has raised questions about the upcoming world junior men’s hockey championship in Alberta and angered some participating countries.",
@@ -3340,19 +3353,6 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/cfl/article/argonauts-tyler-kahmann-named-cfls-most-outstanding-rookie/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Canucks’ Filip Chytil to miss game vs. Maple Leafs",
-   "summary": "Filip Chytil won’t be in the lineup when his Vancouver Canucks take on the Toronto Maple Leafs.",
-   "published": "2026-10-30T16:27-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Chytil.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canucks-filip-chytil-to-miss-game-vs-maple-leafs/",
    "source": "Sportsnet"
   },
   {
