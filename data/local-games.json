@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T16:48:20-04:00",
+ "updated": "2026-10-31T17:02:47-04:00",
  "today": "2026-10-31",
  "range": [
   "2026-10-28",
@@ -62,8 +62,8 @@
    "count": 2
   },
   "cfl_news": {
-   "ok": true,
-   "count": 30
+   "ok": false,
+   "error": "<urlopen error _ssl.c:993: The handshake operation timed out>"
   },
   "standings_ohl": {
    "ok": true,
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 36
   },
   "club_news": {
    "ok": true,
@@ -2592,6 +2592,19 @@
  ],
  "more_news": [
   {
+   "league": "nhl",
+   "headline": "Connor McDavid extends assist streak to 14 games as Oilers shut out Islanders",
+   "summary": "",
+   "published": "2026-10-31T16:49-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/connor-mcdavid-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/connor-mcdavid-extends-assist-streak-to-14-games-as-oilers-shut-out-islanders/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "cfl",
    "headline": "Blue Bombers shock Argonauts in final minute to reach East final",
    "summary": "The Toronto Argonauts’ season is over after a stunning turnaround on Saturday in the CFL East semifinal. Mike Koreen has the story from BMO Field.",
@@ -2686,6 +2699,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Daniel Rios scores in stoppage time to help CF Montreal salvage draw with NYCFC",
+   "summary": "Daniel Ríos scored two minutes into second-half stoppage time to rally CF Montreal to a 1-1 draw with New York City FC on Saturday at Citi Field.",
+   "published": "2026-10-31T16:59-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/mtl.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/daniel-rios-scores-in-stoppage-time-to-help-cf-montreal-salvage-draw-with-nycfc/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "Report: Colts in talks to trade RB Jonathan Taylor",
    "summary": "The Colts are willing to trade star running back Jonathan Taylor and are active in talks with several teams, ESPN’s Adam Schefter and Ian Rapoport reported Saturday.",
@@ -2709,19 +2735,6 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/report-thunder-no-longer-signing-ochai-agbaji/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Ducks waive defenceman Nick Jensen",
-   "summary": "The Ducks waived the defenceman on Saturday after just four games, Sportsnet’s Elliotte Friedman reported.",
-   "published": "2026-10-31T14:20-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/nick-jensen.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/ducks-waive-defenceman-nick-jensen/",
    "source": "Sportsnet"
   },
   {
@@ -4003,11 +4016,11 @@
      {
       "name": "Barrie Colts",
       "abbr": "BAR",
-      "gp": 15,
+      "gp": 16,
       "w": 3,
       "l": 10,
-      "otl": 2,
-      "pts": 8,
+      "otl": 3,
+      "pts": 9,
       "gf": 36,
       "ga": 62,
       "strk": "W1"
@@ -4044,14 +4057,14 @@
      {
       "name": "Flint Firebirds",
       "abbr": "FLNT",
-      "gp": 13,
-      "w": 9,
+      "gp": 14,
+      "w": 10,
       "l": 3,
       "otl": 1,
-      "pts": 19,
+      "pts": 21,
       "gf": 51,
       "ga": 38,
-      "strk": "L1"
+      "strk": "W1"
      },
      {
       "name": "Windsor Spitfires",
@@ -4074,7 +4087,7 @@
       "otl": 3,
       "pts": 15,
       "gf": 54,
-      "ga": 54,
+      "ga": 55,
       "strk": "L4"
      },
      {
@@ -4102,7 +4115,7 @@
       "l": 3,
       "otl": 0,
       "pts": 22,
-      "gf": 61,
+      "gf": 62,
       "ga": 42,
       "strk": "W2"
      },
