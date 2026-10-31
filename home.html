@@ -955,7 +955,7 @@
       // highlights), newest first: the newest takes the big box, the second newest the box beside it
       var byNew = function (a, b) { return new Date(b.published) - new Date(a.published); };
       var wide = function (v) {   // YouTube's standard thumbnail is 4:3 with black bars; the widescreen one fills the box
-        var yid = (v.url.match(/[?&]v=([\w-]{11})/) || v.url.match(/youtu\.be\/([\w-]{11})/) || v.url.match(/\/shorts\/([\w-]{11})/) || [])[1];
+        var yid = !v.isSp && (v.url.match(/[?&]v=([\w-]{11})/) || v.url.match(/youtu\.be\/([\w-]{11})/) || v.url.match(/\/shorts\/([\w-]{11})/) || [])[1];   // Spitfires highlights keep Powerplay's own picture
         return Object.assign({}, v, { isVideo: true }, yid ? { image: 'https://i.ytimg.com/vi/' + yid + '/hq720.jpg', alt: 'https://i.ytimg.com/vi/' + yid + '/mqdefault.jpg' } : {});
       };
       // featured.txt "no box: spitfires until ..." (or a link): those go to Headlines instead of the top boxes, until that time
