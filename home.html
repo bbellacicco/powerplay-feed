@@ -917,7 +917,7 @@
       // Game Day Snaps share the big box's rhythm: a new slideshow takes the box when it's newer than the latest story,
       // until a newer story (or slideshow) is posted. "posted" comes from publish.py (when the slideshow first went up).
       ((r[7] && r[7].slideshows) || []).slice(0, 3).forEach(function (sh) {
-        if (!sh.posted || !sh.cover) return;
+        if (!sh.posted || !sh.cover || sh.nobox) return;   // "box: no" in captions.txt: Headlines and the Snaps row only
         featItems.push({ headline: sh.title.replace(/^game day snaps:\s*/i, ''), url: sh.url, image: sh.cover, summary: sh.desc || '',
           published: sh.posted, team: 'powerplay', snaps: sh, kick: 'Game Day Snaps' + (sh.count ? ' \u00b7 ' + sh.count + ' photos' : '') });
       });
@@ -967,6 +967,14 @@
       var topVid = top.filter(function (s) { return s.isVideo; })[0] || null;
       var usedTop = {}; top.slice(0, 2).forEach(function (s) { if (!s.isVideo) usedTop[s.url] = 1; });
       var heads = pickHeads(stories, lg, usedTop, drop);
+      // a slideshow marked "box: no" goes straight to the top of Headlines for its first two days
+      var noBox = ((r[7] && r[7].slideshows) || []).filter(function (sh) { return sh.nobox && sh.posted && Date.now() - new Date(sh.posted).getTime() < 48 * 3600e3; })[0];
+      if (noBox && heads.length) {
+        var locals = heads.filter(function (h) { return h.local; });
+        if (locals.length >= 2) heads.splice(heads.indexOf(locals[locals.length - 1]), 1);   // keeps two local and two pro headlines
+        heads.unshift({ url: noBox.url, headline: noBox.title.replace(/^game day snaps:\s*/i, ''), tag: 'Game Day Snaps \u00b7 Powerplay', col: '#e8b021',
+          local: true, logo: headLogo('powerplay'), abbr: 'Snaps', published: noBox.posted });
+      }
       if (top.length) buildFeat(top, heads);
       var featUrls = {}; top.slice(0, heads.length >= 3 ? 2 : 3).forEach(function (s) { if (!s.isVideo) featUrls[s.url] = 1; });
       // local scores
