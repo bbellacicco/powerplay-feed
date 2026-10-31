@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T15:15:01-04:00",
+ "updated": "2026-10-31T15:30:01-04:00",
  "today": "2026-10-31",
  "games": [
   {
@@ -40,15 +40,17 @@
    "sport": "Men's Volleyball",
    "start": "2026-10-31T15:00:00-04:00",
    "time_tbd": false,
-   "home_away": "H",
+   "home_away": "A",
    "opponent": "Conestoga",
    "location": "",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 1,
+   "opp_score": 0,
    "result": null,
-   "note": "",
-   "links": {}
+   "note": "20-25",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/mvball/2026-27/boxscores/20261031_dnpi.xml"
+   }
   },
   {
    "id": "saints-presto2026-10-31-4",
