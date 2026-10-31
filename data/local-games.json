@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T10:22:29-04:00",
+ "updated": "2026-10-31T10:47:56-04:00",
  "today": "2026-10-31",
  "range": [
   "2026-10-28",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 36
+   "count": 38
   },
   "club_news": {
    "ok": true,
@@ -2716,6 +2716,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Premier League roundup: Man United loses at Chelsea, leaving Carrick in further jeopardy",
+   "summary": "Michael Carrick’s position as Manchester United manager was jeopardized further Saturday with a 2-0 loss at Chelsea in the Premier League, with a red card to Lisandro Martinez adding to the woes of the beleaguered Englis",
+   "published": "2026-10-31T10:44-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/chels.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/premier-league/article/premier-league-roundup-man-united-loses-at-chelsea-leaving-carrick-in-further-jeopardy/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nba",
    "headline": "Suns’ Brooks ejected for kicking Nuggets’ Murray in groin",
    "summary": "",
@@ -2726,19 +2739,6 @@
    "sn_team_count": 2,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/suns-brooks-ejected-for-kicking-nuggets-murray-in-groin/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Thunder’s Chet Holmgren out eight to 10 weeks with knee injury",
-   "summary": "",
-   "published": "2026-10-30T21:09-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/chet.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/report-thunders-chet-holmgren-out-eight-to-10-weeks-with-knee-injury/",
    "source": "Sportsnet"
   },
   {
@@ -2871,6 +2871,19 @@
    "sn_team_count": 0,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/roundup-nba-cup-begins-with-10-games/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Thunder’s Chet Holmgren out eight to 10 weeks with knee injury",
+   "summary": "",
+   "published": "2026-10-30T21:09-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/chet.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/report-thunders-chet-holmgren-out-eight-to-10-weeks-with-knee-injury/",
    "source": "Sportsnet"
   },
   {
@@ -3036,29 +3049,44 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "NFL Week 8 Pick ‘Em: Can shorthanded Eagles get back on track?",
-   "summary": "Somehow, someway, we’re basically at the halfway point of the NFL season. Week 8 features a loaded slate of games, headlined by some important divisional clashes. Evan Davidson shares his picks for every contest.",
-   "published": "2026-10-29T10:01-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Philadelphia-Eagles-defensive-tackle-Jalen-Carter.jpg",
+   "league": "cfl",
+   "headline": "CFL East semifinal preview: Argonauts offence faces tough test vs. Blue Bombers",
+   "summary": "The Toronto Argonauts have home-field advantage and a golden opportunity to advance to the CFL East final, but they’ll have to get past a familiar playoff foe. With Winnipeg turning to backup quarterback Dru Brown in pla",
+   "published": "2026-10-30T13:45-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/Untitled-design-1-65.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
+   "sn_team_count": 1,
    "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-8-pick-em-panthers-look-to-make-road-statement/",
+   "url": "https://www.sportsnet.ca/cfl/article/cfl-east-semifinal-preview-argonauts-offence-faces-tough-test-vs-blue-bombers/",
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "UFC Vegas 123 preview: Nolan has massive opportunity vs. Moicano",
-   "summary": "The Octagon heads back to Meta Apex in Las Vegas, Nevada, for UFC Vegas 123: Nolan vs. Moicano. With 12 fights on the card, plenty of storylines are worth watching, so let’s dig in.",
-   "published": "2026-10-29T10:57-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/moicano.jpg",
+   "league": "nhl",
+   "headline": "Sources: Nikita Kucherov tells Lightning he won’t re-sign, asks for trade",
+   "summary": "According to multiple sources, Nikita Kucherov has informed both his teammates and the Lightning organization that he will not be re-signing with Tampa Bay and would like to be traded.",
+   "published": "2026-10-30T18:47-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Tampa-Bay-Lightning-right-wing-Nikita-Kucherov.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/ufc-vegas-123-preview-nolan-has-massive-opportunity-vs-moicano/",
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/sources-nikita-kucherov-tells-lightning-he-wont-re-sign-asks-for-trade/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Barnes hits new heights on offence but Raptors fall to Magic",
+   "summary": "Scottie Barnes had the worst offensive game of his career less than a week ago. It stuck with him.",
+   "published": "2026-10-31T00:44-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Toronto-Raptors-Scottie-Barnes-4-battles-against-Orlando-Magics-Wendell-Carter-Jr.-34.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/barnes-hits-new-heights-on-offence-but-raptors-fall-to-magic/",
    "source": "Sportsnet"
   },
   {
