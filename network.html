@@ -40,7 +40,12 @@
   .find svg { width: 16px; height: 16px; stroke: var(--muted); flex: none; }
   .find input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--text); font: inherit; font-size: 16px; }
   .find input::placeholder { color: var(--muted); }
-  .chips { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+  /* categories: one row you swipe sideways (instead of stacking line after line on phones) */
+  .chips { display: flex; gap: 6px; flex-wrap: nowrap; overflow-x: auto; margin: 0 -14px 12px; padding: 0 14px 2px; scrollbar-width: none; -webkit-overflow-scrolling: touch; scroll-snap-type: x proximity;
+    -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent 100%); mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent 100%); }
+  .chips::-webkit-scrollbar { display: none; }
+  .chips > * { flex: none; scroll-snap-align: start; }
+  .chips > .teamsel { width: 230px; max-width: 70vw; margin-top: 0; }
   .chip { position: relative; border: 1px solid var(--line); background: #0e2044; color: var(--muted); border-radius: 4px; padding: 8px 12px 7px; font: inherit; font-size: 11.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; cursor: pointer; }
   .chip::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: var(--accent); opacity: .5; }
   .chip.on::before { opacity: 1; }
@@ -456,8 +461,10 @@
       if (state.tab !== tab) setTab(tab);
       state.chip = 'all'; state.team = ''; state.q = ''; state.page = Math.floor(i / PER); chips(); grid();
       // a shared link: the player opens right at the top, so it's the first thing the visitor sees
-      play(data[tab][i], { offsetTop: 0 });
-      try { player.scrollIntoView({ block: 'start' }); } catch (e) {}
+      // (over the page's heading, search and categories, right at the very top)
+      var gw = document.getElementById('gridwrap');
+      play(data[tab][i], { offsetTop: -Math.max(0, gw.offsetTop - 8) });
+      try { window.scrollTo(0, 0); } catch (e) {}
       return true;
     });
   }
