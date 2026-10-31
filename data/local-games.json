@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T19:18:04-04:00",
+ "updated": "2026-10-31T19:33:17-04:00",
  "today": "2026-10-31",
  "range": [
   "2026-10-28",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -1422,7 +1422,8 @@
    "result": "W",
    "note": "OUA Quarter-Finals",
    "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6496"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6496",
+    "recap": "https://golancers.ca/news/2026/10/31/lancer-football-defeats-guelph-heads-to-oua-semi-finals.aspx"
    }
   },
   {
@@ -1510,9 +1511,9 @@
    "location": "Fort Erie Leisureplex, Fort Erie, ON",
    "status": "live",
    "our_score": 0,
-   "opp_score": 0,
+   "opp_score": 1,
    "result": null,
-   "note": "13:48 1st",
+   "note": "02:12 1st",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15639"
    },
@@ -1835,28 +1836,6 @@
  ],
  "pro_games": [
   {
-   "id": "cfl-cfl6673",
-   "team": "cfl",
-   "sport": "CFL",
-   "start": "2026-10-31T16:30:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "B.C. Lions",
-   "location": "BC Place",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.cfl.ca/schedule/"
-   },
-   "away": "Saskatchewan Roughriders",
-   "home": "B.C. Lions",
-   "away_abbr": "SSK",
-   "home_abbr": "BC"
-  },
-  {
    "id": "cfl-cfl6672",
    "team": "cfl",
    "sport": "CFL",
@@ -1877,9 +1856,71 @@
    "home": "Toronto Argonauts",
    "away_abbr": "WPG",
    "home_abbr": "TOR"
+  },
+  {
+   "id": "cfl-cfl6673",
+   "team": "cfl",
+   "sport": "CFL",
+   "start": "2026-10-31T16:30:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "B.C. Lions",
+   "location": "BC Place",
+   "status": "final",
+   "our_score": 26,
+   "opp_score": 33,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.cfl.ca/schedule/"
+   },
+   "away": "Saskatchewan Roughriders",
+   "home": "B.C. Lions",
+   "away_abbr": "SSK",
+   "home_abbr": "BC"
   }
  ],
  "pro_news": [
+  {
+   "league": "cfl",
+   "headline": "Make that TWO TD's for Jevon Cottoy",
+   "summary": "",
+   "published": "2026-10-31T18:57:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/5hXkBDbHAC2nn8WOnS8vyM/dfddbbf2797c8b72f817b8f538b31e76/BC_3RD_TD.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Lions"
+   ],
+   "url": "https://www.cfl.ca/article/make-that-two-td-s-for-jevon-cottoy",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "ESF Recap: Winnipeg 25, Toronto 22",
+   "summary": "",
+   "published": "2026-10-31T18:45:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/5jKJNaXn2w8jQoq0mAuNL0/478a90a1f334bb1dfe77ac4ced374206/ESF_WPG_TOR_THUMB.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Blue Bombers",
+    "Argonauts"
+   ],
+   "url": "https://www.cfl.ca/article/esf-recap-winnipeg-25-toronto-22",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "HOW ABOUT A 70 YARD TD FOR JEVON COTTOY!!",
+   "summary": "",
+   "published": "2026-10-31T18:39:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/WOQ3l9MEq5a9niRZ5sjy3/84006e466611f8c37c5bce60eec7bf91/BC_2ND_TD.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Lions"
+   ],
+   "url": "https://www.cfl.ca/article/how-about-a-70-yard-td-for-jevon-cottoy",
+   "source": "CFL.ca"
+  },
   {
    "league": "cfl",
    "headline": "69 YARD PASSING TD FROM NATHAN ROURKE",
@@ -1949,41 +1990,16 @@
   },
   {
    "league": "cfl",
-   "headline": "Bombers Scoop and Score to Silence the Crowd!",
+   "headline": "Big second half propels Lions over Riders in Western Semi-Final presented by Wegovy®",
    "summary": "",
-   "published": "2026-10-31T15:40:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/1RAFnvZEHpgcjFaeS5SQFD/c6a050e85acc5c04a20615d15698fb2d/bombers.png?w=640&fm=jpg&q=70",
-   "video": true,
+   "published": "2026-10-31T03:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/19TP9iqirkUT7b0tkbRE5d/b8f8aea2053312fe9afd0879474ad18a/Nathan_Rourke_2026_10.jpg?w=640&fm=jpg&q=70",
+   "video": false,
    "teams": [
-    "Blue Bombers"
+    "Lions",
+    "Roughriders"
    ],
-   "url": "https://www.cfl.ca/article/bombers-scoop-and-score-to-silence-the-crowd",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Kelly Connects with Kahmann to Get the Argos on the Board!",
-   "summary": "",
-   "published": "2026-10-31T14:08:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/5m4shrskcGnHMWS3YYdqki/14283c018609de5abfd8c464d4456c88/kahmann.png?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Argonauts"
-   ],
-   "url": "https://www.cfl.ca/article/kelly-connects-with-kahmann-to-get-the-argos-on-the-board",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Wilson Takes It to the End Zone After an Incredible One-Handed Grab!",
-   "summary": "",
-   "published": "2026-10-31T13:45:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/GcpPlCfiQ4yDLPSRRt8cA/1920fc7e42d6ef3b2ec93c3597e318a4/wilson2.png?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Blue Bombers"
-   ],
-   "url": "https://www.cfl.ca/article/wilson-takes-it-to-the-end-zone-after-an-incredible-one-handed-grab",
+   "url": "https://www.cfl.ca/article/big-second-half-propels-lions-over-riders-in-western-semi-final-presented-by-wegovy",
    "source": "CFL.ca"
   },
   {
@@ -2268,17 +2284,6 @@
    "video": true,
    "teams": [],
    "url": "https://www.cfl.ca/article/unveiling-the-new-cfl-indigenous-logo",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Saskatchewan artists bring CFL’s Indigenous logos to life through mural",
-   "summary": "",
-   "published": "2026-09-30T00:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/1bfkW5E0cq6xjrztJAzclI/776ca51067dcc2014d65763690770662/Dustin_Ritter_3.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/saskatchewan-artists-bring-cfl-s-indigenous-logos-to-life-through-mural",
    "source": "CFL.ca"
   },
   {
@@ -2627,6 +2632,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Senators beat Sharks to tie franchise record for most October wins",
+   "summary": "",
+   "published": "2026-10-31T19:16-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/ed8d949e8ae5599e5c11ad24a7d689c5ae3e3d86570e79364d085e8eec5cf308.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/senators-beat-sharks-to-tie-franchise-record-for-most-october-wins/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "cfl",
    "headline": "Argonauts QB Chad Kelly injured vs. Blue Bombers",
    "summary": "Quarterback Chad Kelly exited Saturday’s post-season showdown against the Winnipeg Blue Bombers after suffering an apparent upper-body injury.",
@@ -2692,19 +2710,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Senators’ Burakovsky, Foegele out three to four weeks",
-   "summary": "Forwards Andre Burakovsky and Warren Foegele are set to miss the next three to four weeks with injuries, head coach Travis Green said before Ottawa’s showdown against the San Jose Sharks on Saturday.",
-   "published": "2026-10-31T14:41-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/foegele.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/senators-burakovsky-foegele-out-three-to-four-weeks/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nfl",
    "headline": "Report: Colts in talks to trade RB Jonathan Taylor",
    "summary": "The Colts are willing to trade star running back Jonathan Taylor and are active in talks with several teams, ESPN’s Adam Schefter and Ian Rapoport reported Saturday.",
@@ -2728,6 +2733,19 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/report-thunder-no-longer-signing-ochai-agbaji/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "cfl",
+   "headline": "Rourke leads Lions past Roughriders in West semifinal",
+   "summary": "",
+   "published": "2026-10-31T19:25-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Rourke-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/rourke-leads-lions-past-roughriders-in-west-semifinal/",
    "source": "Sportsnet"
   },
   {
@@ -2762,19 +2780,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "With big weekend ahead for Toronto FC, Fraser could look for help from Gilman",
-   "summary": "TFC still have plenty of work to do, starting with Sunday’s road game vs. Atlanta United FC, if they hope to clinch their first post-season berth since 2020.",
-   "published": "2026-10-30T11:54-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/07/tfc-1-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/with-big-weekend-ahead-for-toronto-fc-fraser-could-look-for-help-from-gilman/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "Canucks’ Leevi Merilainen making most of unexpected opportunity",
    "summary": "The last time Leevi Merilainen had the stage to himself, it was a tough showing. But with the Canucks, the 24-year-old is coping better with the spotlight. Iain MacIntyre has the story.",
@@ -2785,6 +2790,32 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/canucks-leevi-merilainen-making-most-of-unexpected-opportunity/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Senators’ Burakovsky, Foegele out three to four weeks",
+   "summary": "Forwards Andre Burakovsky and Warren Foegele are set to miss the next three to four weeks with injuries, head coach Travis Green said before Ottawa’s showdown against the San Jose Sharks on Saturday.",
+   "published": "2026-10-31T14:41-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/foegele.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/senators-burakovsky-foegele-out-three-to-four-weeks/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "With big weekend ahead for Toronto FC, Fraser could look for help from Gilman",
+   "summary": "TFC still have plenty of work to do, starting with Sunday’s road game vs. Atlanta United FC, if they hope to clinch their first post-season berth since 2020.",
+   "published": "2026-10-30T11:54-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/07/tfc-1-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/with-big-weekend-ahead-for-toronto-fc-fraser-could-look-for-help-from-gilman/",
    "source": "Sportsnet"
   },
   {
@@ -4543,7 +4574,7 @@
       "otl": 0,
       "pts": 12,
       "gf": 38,
-      "ga": 53,
+      "ga": 54,
       "strk": "W2"
      },
      {
@@ -4631,7 +4662,7 @@
       "l": 1,
       "otl": 0,
       "pts": 24,
-      "gf": 64,
+      "gf": 65,
       "ga": 39,
       "strk": "L1"
      },
@@ -4643,7 +4674,7 @@
       "l": 3,
       "otl": 3,
       "pts": 19,
-      "gf": 48,
+      "gf": 50,
       "ga": 36,
       "strk": "W2"
      },
@@ -4704,7 +4735,7 @@
       "otl": 1,
       "pts": 9,
       "gf": 55,
-      "ga": 84,
+      "ga": 85,
       "strk": "L3"
      },
      {
@@ -4716,7 +4747,7 @@
       "otl": 1,
       "pts": 5,
       "gf": 52,
-      "ga": 93,
+      "ga": 95,
       "strk": "L2"
      },
      {
@@ -4727,7 +4758,7 @@
       "l": 15,
       "otl": 0,
       "pts": 2,
-      "gf": 31,
+      "gf": 32,
       "ga": 98,
       "strk": "L6"
      }
