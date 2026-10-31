@@ -950,7 +950,7 @@
       var haveVid = {}; ppVids.forEach(function (v) { haveVid[vidId(v.url)] = 1; });
       (net.local || []).forEach(function (v) { if (v.u && v.t && !haveVid[vidId(v.u)]) ppVids.push({ headline: v.t, url: v.u, image: v.i, published: v.p.length === 10 ? v.p + 'T00:00:00' : v.p }); });
       // the Spitfires' game highlights from the OHL's YouTube channel take the box when they're newer than Powerplay's latest video
-      (net.pro || []).forEach(function (v) { if (v.sp && v.u && v.i) ppVids.push({ headline: v.t.replace(/^OHL Highlights:\s*/i, '').replace(/\s+@\s+/, ' at ').replace(/\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2}(st|nd|rd|th)?,?\s+\d{4}\s*$/i, ''), url: v.u, image: v.i, published: v.p, kick: 'Spitfires highlights' }); });
+      (net.pro || []).forEach(function (v) { if (v.sp && v.u && v.i) ppVids.push({ isSp: true, headline: v.t.replace(/^OHL Highlights:\s*/i, '').replace(/\s+@\s+/, ' at ').replace(/\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2}(st|nd|rd|th)?,?\s+\d{4}\s*$/i, ''), url: v.u, image: v.i, published: v.p, kick: 'Spitfires highlights' }); });
       // one timeline for the top boxes: stories (and Game Day Snaps) and videos (yours, plus the Spitfires' OHL
       // highlights), newest first: the newest takes the big box, the second newest the box beside it
       var byNew = function (a, b) { return new Date(b.published) - new Date(a.published); };
@@ -958,7 +958,14 @@
         var yid = (v.url.match(/[?&]v=([\w-]{11})/) || v.url.match(/youtu\.be\/([\w-]{11})/) || v.url.match(/\/shorts\/([\w-]{11})/) || [])[1];
         return Object.assign({}, v, { isVideo: true }, yid ? { image: 'https://i.ytimg.com/vi/' + yid + '/hq720.jpg', alt: 'https://i.ytimg.com/vi/' + yid + '/mqdefault.jpg' } : {});
       };
-      var topVids = ppVids.filter(function (v) { return v.image; }).sort(byNew).slice(0, 2).map(wide);
+      // featured.txt "no box: spitfires until ..." (or a link): those go to Headlines instead of the top boxes, until that time
+      var noBoxRules = ((r[8] && r[8].nobox) || []).filter(function (n) { return n.what && new Date(n.until).getTime() > Date.now(); });
+      var boxBlocked = function (x) {
+        return noBoxRules.some(function (n) { return /^spitfires$/i.test(n.what) ? !!x.isSp : key(n.what) === key(x.url); });
+      };
+      var spBumped = ppVids.filter(function (v) { return v.isSp && v.image && boxBlocked(v); }).sort(byNew)[0] || null;
+      var topVids = ppVids.filter(function (v) { return v.image && !boxBlocked(v); }).sort(byNew).slice(0, 2).map(wide);
+      featItems = featItems.filter(function (s) { return !boxBlocked(s); });
       var schedTop = sched && featItems[0] && key(featItems[0].url) === key(sched.url) && !featItems.slice(1).some(function (s) { return new Date(s.published) > new Date(featItems[0].published); }) ? featItems[0] : null;
       var top = featItems.filter(function (s) { return s !== schedTop; }).concat(topVids).sort(byNew);
       if (schedTop && !topVids.some(function (v) { return new Date(v.published) > new Date(sched.from); })) top.unshift(schedTop);   // a scheduled story keeps the big box until something newer is posted
@@ -974,6 +981,12 @@
         if (locals.length >= 2) heads.splice(heads.indexOf(locals[locals.length - 1]), 1);   // keeps two local and two pro headlines
         heads.unshift({ url: noBox.url, headline: noBox.title.replace(/^game day snaps:\s*/i, ''), tag: 'Game Day Snaps \u00b7 Powerplay', col: '#e8b021',
           local: true, logo: headLogo('powerplay'), abbr: 'Snaps', published: noBox.posted });
+      }
+      if (spBumped && heads.length && Date.now() - new Date(spBumped.published).getTime() < 36 * 3600e3) {   // the bumped Spitfires highlights lead Headlines
+        var loc2 = heads.filter(function (h) { return h.local; });
+        if (loc2.length >= 2) heads.splice(heads.indexOf(loc2[loc2.length - 1]), 1);
+        heads.unshift({ url: SITE + 'scores-standings?tab=network&v=' + encodeURIComponent(vkey(spBumped.url).replace(':', '-')), headline: 'Highlights: ' + spBumped.headline,
+          tag: 'Spitfires highlights \u00b7 OHL', col: '#d4202a', local: true, logo: headLogo('spitfires'), abbr: 'Spits', published: spBumped.published });
       }
       if (top.length) buildFeat(top, heads);
       var featUrls = {}; top.slice(0, heads.length >= 3 ? 2 : 3).forEach(function (s) { if (!s.isVideo) featUrls[s.url] = 1; });
