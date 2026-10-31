@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T16:18:04-04:00",
+ "updated": "2026-10-31T16:37:07-04:00",
  "today": "2026-10-31",
  "range": [
   "2026-10-28",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 36
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -1454,10 +1454,10 @@
    "opponent": "Owen Sound Attack",
    "location": "Harry Lumley Bayshore Community Centre, Owen Sound",
    "status": "live",
-   "our_score": 6,
+   "our_score": 8,
    "opp_score": 0,
    "result": null,
-   "note": "09:03 3rd",
+   "note": "01:30 3rd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29143/"
    }
@@ -1883,6 +1883,20 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "Wild finish in the Eastern Semi-Final!",
+   "summary": "",
+   "published": "2026-10-31T16:10:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/6FAxgWHIrHcx5w0jXhtEx6/17ad14c13fad715f94ae3059cc36121b/image__1_.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Blue Bombers",
+    "Argonauts"
+   ],
+   "url": "https://www.cfl.ca/article/wild-finish-in-the-eastern-semi-final",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Bombers Scoop and Score to Silence the Crowd!",
    "summary": "",
    "published": "2026-10-31T15:40:00-04:00",
@@ -2076,17 +2090,6 @@
     "Roughriders"
    ],
    "url": "https://www.cfl.ca/article/darnell-sankey-on-matchup-against-riders-i-just-feel-like-we-re-better",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Trey Vaval PRANKED with Most Outstanding Special Teams Player Award!",
-   "summary": "",
-   "published": "2026-10-29T13:20:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/7455SHNoXgPspGn6IzMa7Z/1428973dca848efa25112b6f765f308a/image.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/trey-vaval-pranked-with-most-outstanding-special-teams-player-award",
    "source": "CFL.ca"
   },
   {
@@ -2613,19 +2616,6 @@
    "sn_team_count": 9,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/quick-shifts-how-nikita-kucherovs-trade-request-helps-lightning/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "cfl",
-   "headline": "CFL West semifinal preview: Lions vs. Roughriders back on playoff docket",
-   "summary": "The Lions host the Roughriders on Saturday in a CFL West semifinal, marking the third year in a row they’ll square off in the post-season. Here’s a capsule look at the latest installment of this post-season rivalry.",
-   "published": "2026-10-29T09:58-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/11/B.C.-Lions-quarterback-Nathan-Rourke.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/cfl-west-semifinal-preview-lions-vs-roughriders-back-on-playoff-docket/",
    "source": "Sportsnet"
   },
   {
@@ -4016,8 +4006,8 @@
       "l": 10,
       "otl": 2,
       "pts": 8,
-      "gf": 35,
-      "ga": 61,
+      "gf": 36,
+      "ga": 62,
       "strk": "W1"
      },
      {
@@ -4057,8 +4047,8 @@
       "l": 3,
       "otl": 1,
       "pts": 19,
-      "gf": 50,
-      "ga": 37,
+      "gf": 51,
+      "ga": 38,
       "strk": "L1"
      },
      {
@@ -4069,7 +4059,7 @@
       "l": 5,
       "otl": 3,
       "pts": 15,
-      "gf": 54,
+      "gf": 56,
       "ga": 48,
       "strk": "W3"
      },
@@ -4081,7 +4071,7 @@
       "l": 6,
       "otl": 3,
       "pts": 15,
-      "gf": 53,
+      "gf": 54,
       "ga": 54,
       "strk": "L4"
      },
@@ -4111,7 +4101,7 @@
       "otl": 0,
       "pts": 22,
       "gf": 61,
-      "ga": 41,
+      "ga": 42,
       "strk": "W2"
      },
      {
@@ -4159,7 +4149,7 @@
       "otl": 1,
       "pts": 13,
       "gf": 42,
-      "ga": 66,
+      "ga": 68,
       "strk": "W4"
      }
     ]
