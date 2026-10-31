@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T14:18:13-04:00",
+ "updated": "2026-10-31T14:32:47-04:00",
  "today": "2026-10-31",
  "range": [
   "2026-10-28",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -1457,7 +1457,7 @@
    "our_score": 0,
    "opp_score": 0,
    "result": null,
-   "note": "13:36 1st",
+   "note": "05:37 1st",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29143/"
    }
@@ -1883,6 +1883,19 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "Kelly Connects with Kahmann to Get the Argos on the Board!",
+   "summary": "",
+   "published": "2026-10-31T14:08:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/5m4shrskcGnHMWS3YYdqki/14283c018609de5abfd8c464d4456c88/kahmann.png?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Argonauts"
+   ],
+   "url": "https://www.cfl.ca/article/kelly-connects-with-kahmann-to-get-the-argos-on-the-board",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Wilson Takes It to the End Zone After an Incredible One-Handed Grab!",
    "summary": "",
    "published": "2026-10-31T13:45:00-04:00",
@@ -2090,19 +2103,6 @@
     "Roughriders"
    ],
    "url": "https://www.cfl.ca/article/3-storylines-to-watch-in-the-western-semi-final",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Halloween Playoff Football: Can Argos Slay the Bombers?",
-   "summary": "",
-   "published": "2026-10-28T03:30:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/582bwC46GVrnaoGVEn6NRA/426edf5e46dac251968a4961cf038c4a/TOREASTv4.png?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Argonauts"
-   ],
-   "url": "https://www.cfl.ca/article/halloween-playoff-football-can-argos-slay-the-bombers",
    "source": "CFL.ca"
   },
   {
@@ -2663,6 +2663,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Ducks waive defenceman Nick Jensen",
+   "summary": "The Ducks waived the defenceman on Saturday after just four games, Sportsnet’s Elliotte Friedman reported.",
+   "published": "2026-10-31T14:20-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/nick-jensen.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/ducks-waive-defenceman-nick-jensen/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "Premier League roundup: Carrick job in jeopardy as Man United loses to Chelsea",
    "summary": "Michael Carrick’s position as Manchester United manager was jeopardized further Saturday with a 2-0 loss at Chelsea in the Premier League, with a red card to Lisandro Martinez adding to the woes of the beleaguered Englis",
@@ -2673,19 +2686,6 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/premier-league/article/premier-league-roundup-man-united-loses-at-chelsea-leaving-carrick-in-further-jeopardy/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Haas hands Hirakawa F1 debut in Mexico in place of Ocon in sudden change",
-   "summary": "Haas is giving Ryo Hirakawa a Formula 1 race debut in Mexico on Sunday after announcing abruptly on Saturday that he would replace veteran Esteban Ocon.",
-   "published": "2026-10-31T11:03-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/ocon.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Auto Racing",
-   "url": "https://www.sportsnet.ca/formula-1/article/haas-hands-hirakawa-f1-debut-in-mexico-in-place-of-ocon-in-sudden-change/",
    "source": "Sportsnet"
   },
   {
@@ -2715,16 +2715,19 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "With big weekend ahead for Toronto FC, Fraser could look for help from Gilman",
-   "summary": "TFC still have plenty of work to do, starting with Sunday’s road game vs. Atlanta United FC, if they hope to clinch their first post-season berth since 2020.",
-   "published": "2026-10-30T11:54-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/07/tfc-1-1.jpg",
+   "league": "nfl",
+   "headline": "NFL Week 8 preview: Bills vs. Ravens headlines loaded slate",
+   "summary": "There are no shortage of marquee matchups in the NFL this weekend. Kellen Forrest previews all of Sunday’s biggest games in his Week 8 preview.",
+   "published": "2026-10-31T14:27-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/09/bills.jpg",
    "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/with-big-weekend-ahead-for-toronto-fc-fraser-could-look-for-help-from-gilman/",
+   "teams": [
+    "Detroit Lions",
+    "Buffalo Bills"
+   ],
+   "sn_team_count": 8,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-8-preview-bills-vs-ravens-headlines-loaded-slate/",
    "source": "Sportsnet"
   },
   {
@@ -2738,6 +2741,19 @@
    "sn_team_count": 0,
    "sport": "MMA",
    "url": "https://www.sportsnet.ca/ufc/article/ufc-vegas-123-preview-nolan-has-massive-opportunity-vs-moicano/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "With big weekend ahead for Toronto FC, Fraser could look for help from Gilman",
+   "summary": "TFC still have plenty of work to do, starting with Sunday’s road game vs. Atlanta United FC, if they hope to clinch their first post-season berth since 2020.",
+   "published": "2026-10-30T11:54-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/07/tfc-1-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/with-big-weekend-ahead-for-toronto-fc-fraser-could-look-for-help-from-gilman/",
    "source": "Sportsnet"
   },
   {
@@ -2779,6 +2795,19 @@
    "sn_team_count": 0,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/japanese-rhp-kaima-taira-set-to-move-to-mlb/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Haas hands Hirakawa F1 debut in Mexico in place of Ocon in sudden change",
+   "summary": "Haas is giving Ryo Hirakawa a Formula 1 race debut in Mexico on Sunday after announcing abruptly on Saturday that he would replace veteran Esteban Ocon.",
+   "published": "2026-10-31T11:03-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/ocon.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Auto Racing",
+   "url": "https://www.sportsnet.ca/formula-1/article/haas-hands-hirakawa-f1-debut-in-mexico-in-place-of-ocon-in-sudden-change/",
    "source": "Sportsnet"
   },
   {
@@ -2953,19 +2982,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nba",
-   "headline": "LeBron James leads 76ers over reigning champion Knicks in NBA Cup opener",
-   "summary": "LeBron James scored 20 points and hit the go-ahead fadeaway late, and Tyrese Maxey had 27 points to lead the Philadelphia 76ers to a 98-93 win over the New York Knicks in an NBA Cup group game on Friday night.",
-   "published": "2026-10-30T22:22-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177179481.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/lebron-james-leads-76ers-over-reigning-champion-knicks-in-nba-cup-opener/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "What Connor Hellebuyck does for Devils’ run at the Stanley Cup",
    "summary": "Consistency in the Devils crease has been fleeting. What does the Connor Hellebuyck acquisition do to change that? Adam Vingan breaks it down.",
@@ -2976,32 +2992,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/what-connor-hellebuyck-does-for-devils-run-at-the-stanley-cup/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "cfl",
-   "headline": "Argonauts’ Tyler Kahmann named CFL’s most outstanding rookie",
-   "summary": "",
-   "published": "2026-10-30T11:56-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Argonauts.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/argonauts-tyler-kahmann-named-cfls-most-outstanding-rookie/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Six key takeaways from the first month of the NHL season",
-   "summary": "What have we learned through the first month of the NHL season? We take a look around the league at some takeaways as the calendar gets set to flip to November.",
-   "published": "2026-10-30T14:27-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177085238.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/six-key-takeaways-from-the-first-month-of-the-nhl-season/",
    "source": "Sportsnet"
   },
   {
@@ -3969,7 +3959,7 @@
       "l": 10,
       "otl": 2,
       "pts": 8,
-      "gf": 33,
+      "gf": 34,
       "ga": 60,
       "strk": "W1"
      },
@@ -4011,7 +4001,7 @@
       "otl": 1,
       "pts": 19,
       "gf": 49,
-      "ga": 35,
+      "ga": 36,
       "strk": "L1"
      },
      {
