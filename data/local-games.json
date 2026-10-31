@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T22:17:54-04:00",
+ "updated": "2026-10-30T22:33:28-04:00",
  "today": "2026-10-30",
  "range": [
   "2026-10-27",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -3174,6 +3174,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "Barnes has career-high 41 points but Raptors lose to Magic in NBA Cup game",
+   "summary": "",
+   "published": "2026-10-30T22:21-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Raps-4.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 2,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/barnes-has-career-high-41-points-but-raptors-lose-to-magic-in-nba-cup-game/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Lightning ‘have no intention’ of trading Nikita Kucherov",
    "summary": "Lightning general manager Julien Brisebois released a statement on Friday night after Sportsnet’s Elliotte Friedman reported that Nikita Kucherov had informed the team that he would not be re-signing and would prefer a t",
@@ -3533,19 +3548,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nba",
-   "headline": "Trail Blazers’ Ja Morant to miss at least four weeks with hamstring strain",
-   "summary": "The Portland Trail Blazers will be without one of their star point guards for the next month.",
-   "published": "2026-10-30T14:54-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/morant.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/trail-blazers-ja-morant-to-miss-at-least-four-weeks-with-hamstring-strain/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "other",
    "headline": "Curling power rankings: Swiss skips Paetz, Schwaller lead the way",
    "summary": "We’re early into the first curling season of the new quadrennial, and it’s time to see how teams stack up. Here are our first power rankings of the 2026-27 campaign.",
@@ -3559,16 +3561,29 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nba",
-   "headline": "Canada’s Dwight Powell signs with Turkish club Fenerbahce",
-   "summary": "Dwight Powell is taking his basketball career overseas.",
-   "published": "2026-10-30T13:01-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-84.jpg",
+   "league": "nfl",
+   "headline": "NFL Week 8 Pick ‘Em: Can shorthanded Eagles get back on track?",
+   "summary": "Somehow, someway, we’re basically at the halfway point of the NFL season. Week 8 features a loaded slate of games, headlined by some important divisional clashes. Evan Davidson shares his picks for every contest.",
+   "published": "2026-10-29T10:01-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Philadelphia-Eagles-defensive-tackle-Jalen-Carter.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/canadas-dwight-powell-signs-with-turkish-club-fenerbahce/",
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-8-pick-em-panthers-look-to-make-road-statement/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "UFC Vegas 123 preview: Nolan has massive opportunity vs. Moicano",
+   "summary": "The Octagon heads back to Meta Apex in Las Vegas, Nevada, for UFC Vegas 123: Nolan vs. Moicano. With 12 fights on the card, plenty of storylines are worth watching, so let’s dig in.",
+   "published": "2026-10-29T10:57-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/moicano.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "MMA",
+   "url": "https://www.sportsnet.ca/ufc/article/ufc-vegas-123-preview-nolan-has-massive-opportunity-vs-moicano/",
    "source": "Sportsnet"
   },
   {
@@ -3978,7 +3993,7 @@
    "league": "mlb",
    "headline": "Watch Tigers prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-30T17:04-04:00",
+   "published": "2026-10-30T22:23-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -4173,7 +4188,7 @@
    "league": "mlb",
    "headline": "Watch Blue Jays prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-30T17:04-04:00",
+   "published": "2026-10-30T22:23-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -4415,14 +4430,14 @@
      {
       "name": "Brantford Bulldogs",
       "abbr": "BFD",
-      "gp": 15,
-      "w": 10,
+      "gp": 16,
+      "w": 11,
       "l": 4,
       "otl": 1,
-      "pts": 21,
+      "pts": 23,
       "gf": 67,
       "ga": 41,
-      "strk": "L2"
+      "strk": "W1"
      },
      {
       "name": "Kingston Frontenacs",
@@ -4439,14 +4454,14 @@
      {
       "name": "Ottawa 67's",
       "abbr": "OTT",
-      "gp": 13,
+      "gp": 14,
       "w": 8,
-      "l": 3,
+      "l": 4,
       "otl": 2,
       "pts": 18,
       "gf": 47,
       "ga": 42,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Oshawa Generals",
@@ -5148,27 +5163,27 @@
       "strk": "L2"
      },
      {
+      "name": "Cambridge Redhawks",
+      "abbr": "CAM",
+      "gp": 15,
+      "w": 12,
+      "l": 2,
+      "otl": 1,
+      "pts": 25,
+      "gf": 87,
+      "ga": 42,
+      "strk": "W1"
+     },
+     {
       "name": "Fort Erie Meteors",
       "abbr": "FEM",
-      "gp": 12,
+      "gp": 13,
       "w": 12,
-      "l": 0,
+      "l": 1,
       "otl": 0,
       "pts": 24,
       "gf": 64,
       "ga": 39,
-      "strk": "W12"
-     },
-     {
-      "name": "Cambridge Redhawks",
-      "abbr": "CAM",
-      "gp": 14,
-      "w": 11,
-      "l": 2,
-      "otl": 1,
-      "pts": 23,
-      "gf": 87,
-      "ga": 42,
       "strk": "L1"
      },
      {
