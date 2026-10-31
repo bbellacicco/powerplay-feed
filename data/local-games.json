@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T13:33:18-04:00",
+ "updated": "2026-10-31T14:06:31-04:00",
  "today": "2026-10-31",
  "range": [
   "2026-10-28",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -1883,6 +1883,19 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "Wilson Takes It to the End Zone After an Incredible One-Handed Grab!",
+   "summary": "",
+   "published": "2026-10-31T13:45:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/GcpPlCfiQ4yDLPSRRt8cA/1920fc7e42d6ef3b2ec93c3597e318a4/wilson2.png?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Blue Bombers"
+   ],
+   "url": "https://www.cfl.ca/article/wilson-takes-it-to-the-end-zone-after-an-incredible-one-handed-grab",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Halloween Playoff Football: Winnipeg's Redemption",
    "summary": "",
    "published": "2026-10-31T09:00:00-04:00",
@@ -2090,17 +2103,6 @@
     "Argonauts"
    ],
    "url": "https://www.cfl.ca/article/halloween-playoff-football-can-argos-slay-the-bombers",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "EVERY CFL Touchdown from Week 21!",
-   "summary": "",
-   "published": "2026-10-27T02:00:00-04:00",
-   "image": "",
-   "video": true,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/every-cfl-touchdown-from-week-21",
    "source": "CFL.ca"
   },
   {
@@ -2609,34 +2611,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "With big weekend ahead for Toronto FC, Fraser could look for help from Gilman",
-   "summary": "TFC still have plenty of work to do, starting with Sunday’s road game vs. Atlanta United FC, if they hope to clinch their first post-season berth since 2020.",
-   "published": "2026-10-30T11:54-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/07/tfc-1-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/with-big-weekend-ahead-for-toronto-fc-fraser-could-look-for-help-from-gilman/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Barnes hits new heights on offence but Raptors fall to Magic",
-   "summary": "Scottie Barnes had the worst offensive game of his career less than a week ago. It stuck with him.",
-   "published": "2026-10-31T00:44-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Toronto-Raptors-Scottie-Barnes-4-battles-against-Orlando-Magics-Wendell-Carter-Jr.-34.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/barnes-hits-new-heights-on-offence-but-raptors-fall-to-magic/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "Canadiens’ Mike Matheson out two weeks with lower-body injury",
    "summary": "The Montreal Canadiens defenceman will be out for two weeks with a lower-body injury, according to Sportsnet’s Eric Engels.",
@@ -2742,15 +2716,30 @@
   },
   {
    "league": "other",
-   "headline": "UFC Vegas 123 preview: Nolan has massive opportunity vs. Moicano",
-   "summary": "The Octagon heads back to Meta Apex in Las Vegas, Nevada, for UFC Vegas 123: Nolan vs. Moicano. With 12 fights on the card, plenty of storylines are worth watching, so let’s dig in.",
-   "published": "2026-10-29T10:57-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/moicano.jpg",
+   "headline": "With big weekend ahead for Toronto FC, Fraser could look for help from Gilman",
+   "summary": "TFC still have plenty of work to do, starting with Sunday’s road game vs. Atlanta United FC, if they hope to clinch their first post-season berth since 2020.",
+   "published": "2026-10-30T11:54-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/07/tfc-1-1.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/ufc-vegas-123-preview-nolan-has-massive-opportunity-vs-moicano/",
+   "sn_team_count": 1,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/with-big-weekend-ahead-for-toronto-fc-fraser-could-look-for-help-from-gilman/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Barnes hits new heights on offence but Raptors fall to Magic",
+   "summary": "Scottie Barnes had the worst offensive game of his career less than a week ago. It stuck with him.",
+   "published": "2026-10-31T00:44-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Toronto-Raptors-Scottie-Barnes-4-battles-against-Orlando-Magics-Wendell-Carter-Jr.-34.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/barnes-hits-new-heights-on-offence-but-raptors-fall-to-magic/",
    "source": "Sportsnet"
   },
   {
