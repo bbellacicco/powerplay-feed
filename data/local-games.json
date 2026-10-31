@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T18:32:51-04:00",
+ "updated": "2026-10-31T18:47:59-04:00",
  "today": "2026-10-31",
  "range": [
   "2026-10-28",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -2628,22 +2628,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Quick Shifts: How Nikita Kucherov’s trade request helps Lightning",
-   "summary": "There have been some wild reactions to the even wilder bombshell that was Nikita Kucherov’s trade request. But, as Sportsnet’s Luke Fox writes in the latest Quick Shifts, the reigning MVP may actually be doing the Lightn",
-   "published": "2026-10-31T09:07-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP176445631.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Red Wings",
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 9,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/quick-shifts-how-nikita-kucherovs-trade-request-helps-lightning/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "cfl",
    "headline": "Argonauts QB Chad Kelly injured vs. Blue Bombers",
    "summary": "Quarterback Chad Kelly exited Saturday’s post-season showdown against the Winnipeg Blue Bombers after suffering an apparent upper-body injury.",
@@ -2748,19 +2732,19 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "NFL Week 8 preview: Bills vs. Ravens headlines loaded slate",
-   "summary": "There are no shortage of marquee matchups in the NFL this weekend. Kellen Forrest previews all of Sunday’s biggest games in his Week 8 preview.",
-   "published": "2026-10-31T14:27-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/09/bills.jpg",
+   "league": "nhl",
+   "headline": "Quick Shifts: How Nikita Kucherov’s trade request helps Lightning",
+   "summary": "There have been some wild reactions to the even wilder bombshell that was Nikita Kucherov’s trade request. But, as Sportsnet’s Luke Fox writes in the latest Quick Shifts, the reigning MVP may actually be doing the Lightn",
+   "published": "2026-10-31T09:07-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP176445631.jpg",
    "video": false,
    "teams": [
-    "Detroit Lions",
-    "Buffalo Bills"
+    "Detroit Red Wings",
+    "Toronto Maple Leafs"
    ],
-   "sn_team_count": 8,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-8-preview-bills-vs-ravens-headlines-loaded-slate/",
+   "sn_team_count": 9,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/quick-shifts-how-nikita-kucherovs-trade-request-helps-lightning/",
    "source": "Sportsnet"
   },
   {
@@ -2789,6 +2773,22 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/tanev-joshua-set-to-boost-maple-leafs-in-vancouver/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "NFL Week 8 preview: Bills vs. Ravens headlines loaded slate",
+   "summary": "There are no shortage of marquee matchups in the NFL this weekend. Kellen Forrest previews all of Sunday’s biggest games in his Week 8 preview.",
+   "published": "2026-10-31T14:27-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/09/bills.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Lions",
+    "Buffalo Bills"
+   ],
+   "sn_team_count": 8,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-8-preview-bills-vs-ravens-headlines-loaded-slate/",
    "source": "Sportsnet"
   },
   {
@@ -3036,21 +3036,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/what-connor-hellebuyck-does-for-devils-run-at-the-stanley-cup/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Maple Leafs starting Anthony Stolarz vs. Canucks",
-   "summary": "Head coach Jim Hiller confirmed that Stolarz will start against the Vancouver Canucks on Rogers Saturday Night Hockey (7 p.m. ET/ 4 p.m. PT on Sportsnet and Sportsnet+).",
-   "published": "2026-10-30T16:17-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Toronto-Maple-Leafs-goaltender-Anthony-Stolarz.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-starting-anthony-stolarz-vs-canucks/",
    "source": "Sportsnet"
   },
   {
@@ -4193,6 +4178,18 @@
       "strk": "L1"
      },
      {
+      "name": "Newmarket Hurricanes",
+      "abbr": "NMH",
+      "gp": 19,
+      "w": 9,
+      "l": 8,
+      "otl": 2,
+      "pts": 20,
+      "gf": 57,
+      "ga": 53,
+      "strk": "W1"
+     },
+     {
       "name": "Pickering Panthers",
       "abbr": "PIC",
       "gp": 19,
@@ -4202,18 +4199,6 @@
       "pts": 20,
       "gf": 64,
       "ga": 61,
-      "strk": "L1"
-     },
-     {
-      "name": "Newmarket Hurricanes",
-      "abbr": "NMH",
-      "gp": 18,
-      "w": 8,
-      "l": 8,
-      "otl": 2,
-      "pts": 18,
-      "gf": 57,
-      "ga": 53,
       "strk": "L1"
      },
      {
@@ -4231,14 +4216,14 @@
      {
       "name": "St. Michaels Buzzers",
       "abbr": "STM",
-      "gp": 18,
+      "gp": 19,
       "w": 7,
-      "l": 10,
+      "l": 11,
       "otl": 1,
       "pts": 15,
       "gf": 57,
       "ga": 84,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Aurora Tigers",
@@ -4260,7 +4245,7 @@
       "l": 10,
       "otl": 2,
       "pts": 10,
-      "gf": 64,
+      "gf": 65,
       "ga": 78,
       "strk": "L7"
      },
@@ -4398,7 +4383,7 @@
       "otl": 0,
       "pts": 16,
       "gf": 58,
-      "ga": 92,
+      "ga": 93,
       "strk": "W2"
      },
      {
