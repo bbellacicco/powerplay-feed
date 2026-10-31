@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T16:37:07-04:00",
+ "updated": "2026-10-31T16:48:20-04:00",
  "today": "2026-10-31",
  "range": [
   "2026-10-28",
@@ -1453,11 +1453,11 @@
    "home_away": "A",
    "opponent": "Owen Sound Attack",
    "location": "Harry Lumley Bayshore Community Centre, Owen Sound",
-   "status": "live",
+   "status": "final",
    "our_score": 8,
    "opp_score": 0,
-   "result": null,
-   "note": "01:30 3rd",
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29143/"
    }
@@ -1883,6 +1883,19 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "Demski Delivers with 44 seconds left!",
+   "summary": "",
+   "published": "2026-10-31T16:35:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/303HiLJxjO5z1cqjQteyI1/d7124535382fa22b1c761567f1e6cb7f/Demski.png?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Blue Bombers"
+   ],
+   "url": "https://www.cfl.ca/article/demski-delivers-with-44-seconds-left",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Wild finish in the Eastern Semi-Final!",
    "summary": "",
    "published": "2026-10-31T16:10:00-04:00",
@@ -1979,17 +1992,6 @@
    "video": true,
    "teams": [],
    "url": "https://www.cfl.ca/article/football-fatherhood-featuring-ryan-hunter-presented-by-embark",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Tyler Kahmann Gets SURPRISED With CFL's Most Outstanding Rookie Award!",
-   "summary": "",
-   "published": "2026-10-30T11:20:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/1rmXFdqJw2lA9bK3RU0z3k/3f94925247692ce58dfd4dc73354e833/MOR_V3.png?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/tyler-kahmann-gets-surprised-with-cfl-s-most-outstanding-rookie-award",
    "source": "CFL.ca"
   },
   {
@@ -4054,14 +4056,14 @@
      {
       "name": "Windsor Spitfires",
       "abbr": "WSR",
-      "gp": 14,
-      "w": 6,
+      "gp": 15,
+      "w": 7,
       "l": 5,
       "otl": 3,
-      "pts": 15,
+      "pts": 17,
       "gf": 56,
       "ga": 48,
-      "strk": "W3"
+      "strk": "W4"
      },
      {
       "name": "Saginaw Spirit",
@@ -4143,14 +4145,14 @@
      {
       "name": "Owen Sound Attack",
       "abbr": "OS",
-      "gp": 15,
+      "gp": 16,
       "w": 6,
-      "l": 8,
+      "l": 9,
       "otl": 1,
       "pts": 13,
       "gf": 42,
       "ga": 68,
-      "strk": "W4"
+      "strk": "L1"
      }
     ]
    }
@@ -4215,7 +4217,7 @@
       "l": 8,
       "otl": 2,
       "pts": 18,
-      "gf": 52,
+      "gf": 53,
       "ga": 50,
       "strk": "L1"
      },
@@ -4240,7 +4242,7 @@
       "otl": 1,
       "pts": 15,
       "gf": 54,
-      "ga": 79,
+      "ga": 80,
       "strk": "L1"
      },
      {
