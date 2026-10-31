@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T19:33:17-04:00",
+ "updated": "2026-10-31T19:47:56-04:00",
  "today": "2026-10-31",
  "range": [
   "2026-10-28",
@@ -1509,11 +1509,11 @@
    "home_away": "A",
    "opponent": "Fort Erie Meteors",
    "location": "Fort Erie Leisureplex, Fort Erie, ON",
-   "status": "live",
-   "our_score": 0,
-   "opp_score": 1,
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
    "result": null,
-   "note": "02:12 1st",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15639"
    },
@@ -2684,6 +2684,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Toronto FC facing must-win after Columbus beats D.C. United",
+   "summary": "",
+   "published": "2026-10-31T19:37-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Toronto-FC-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/toronto-fc-facing-must-win-after-columbus-beats-d-c-united/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Islanders’ Heineman ejected after knee-on-knee collision with Oilers’ Howard",
    "summary": "Isaac Howard’s first period ended early Saturday.",
@@ -2694,19 +2707,6 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/islanders-heineman-ejected-after-knee-on-knee-collision-with-oilers-howard/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Canadiens’ Mike Matheson out two weeks with lower-body injury",
-   "summary": "The Montreal Canadiens defenceman will be out for two weeks with a lower-body injury, according to Sportsnet’s Eric Engels.",
-   "published": "2026-10-31T11:28-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/mike-matheson.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canadiens-mike-matheson-out-two-weeks-with-lower-body-injury/",
    "source": "Sportsnet"
   },
   {
@@ -2790,6 +2790,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/canucks-leevi-merilainen-making-most-of-unexpected-opportunity/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Canadiens’ Mike Matheson out two weeks with lower-body injury",
+   "summary": "The Montreal Canadiens defenceman will be out for two weeks with a lower-body injury, according to Sportsnet’s Eric Engels.",
+   "published": "2026-10-31T11:28-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/mike-matheson.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canadiens-mike-matheson-out-two-weeks-with-lower-body-injury/",
    "source": "Sportsnet"
   },
   {
@@ -3027,19 +3040,6 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/hockey/article/canadian-government-strongly-opposes-russia-returning-to-iihf-competitions/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "What Connor Hellebuyck does for Devils’ run at the Stanley Cup",
-   "summary": "Consistency in the Devils crease has been fleeting. What does the Connor Hellebuyck acquisition do to change that? Adam Vingan breaks it down.",
-   "published": "2026-10-30T14:33-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-23-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/what-connor-hellebuyck-does-for-devils-run-at-the-stanley-cup/",
    "source": "Sportsnet"
   },
   {
@@ -3949,30 +3949,6 @@
     "group": "Central Division",
     "teams": [
      {
-      "name": "Rouyn-Noranda Huskies",
-      "abbr": "RN",
-      "gp": 0,
-      "w": 0,
-      "l": 0,
-      "otl": 0,
-      "pts": 0,
-      "gf": 0,
-      "ga": 0,
-      "strk": ""
-     },
-     {
-      "name": "Val-d'Or Foreurs",
-      "abbr": "VDO",
-      "gp": 0,
-      "w": 0,
-      "l": 0,
-      "otl": 0,
-      "pts": 0,
-      "gf": 0,
-      "ga": 0,
-      "strk": ""
-     },
-     {
       "name": "Sudbury Wolves",
       "abbr": "SBY",
       "gp": 14,
@@ -4031,6 +4007,30 @@
       "gf": 37,
       "ga": 67,
       "strk": "L3"
+     },
+     {
+      "name": "Rouyn-Noranda Huskies",
+      "abbr": "RN",
+      "gp": 0,
+      "w": 0,
+      "l": 0,
+      "otl": 0,
+      "pts": 0,
+      "gf": 0,
+      "ga": 0,
+      "strk": ""
+     },
+     {
+      "name": "Val-d'Or Foreurs",
+      "abbr": "VDO",
+      "gp": 0,
+      "w": 0,
+      "l": 0,
+      "otl": 0,
+      "pts": 0,
+      "gf": 0,
+      "ga": 0,
+      "strk": ""
      }
     ]
    },
@@ -4225,8 +4225,8 @@
       "l": 8,
       "otl": 2,
       "pts": 20,
-      "gf": 64,
-      "ga": 61,
+      "gf": 65,
+      "ga": 63,
       "strk": "L1"
      },
      {
@@ -4237,8 +4237,8 @@
       "l": 7,
       "otl": 2,
       "pts": 16,
-      "gf": 58,
-      "ga": 51,
+      "gf": 60,
+      "ga": 52,
       "strk": "L1"
      },
      {
@@ -4525,7 +4525,7 @@
       "l": 4,
       "otl": 1,
       "pts": 17,
-      "gf": 46,
+      "gf": 47,
       "ga": 40,
       "strk": "L1"
      },
@@ -4550,7 +4550,7 @@
       "otl": 2,
       "pts": 14,
       "gf": 65,
-      "ga": 64,
+      "ga": 65,
       "strk": "L1"
      },
      {
@@ -4674,7 +4674,7 @@
       "l": 3,
       "otl": 3,
       "pts": 19,
-      "gf": 50,
+      "gf": 51,
       "ga": 36,
       "strk": "W2"
      },
@@ -4747,7 +4747,7 @@
       "otl": 1,
       "pts": 5,
       "gf": 52,
-      "ga": 95,
+      "ga": 96,
       "strk": "L2"
      },
      {
