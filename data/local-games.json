@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T18:47:59-04:00",
+ "updated": "2026-10-31T19:06:44-04:00",
  "today": "2026-10-31",
  "range": [
   "2026-10-28",
@@ -39,7 +39,7 @@
   },
   "lancers": {
    "ok": true,
-   "count": 131
+   "count": 132
   },
   "junior": {
    "ok": true,
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 31
   },
   "club_news": {
    "ok": true,
@@ -1416,14 +1416,13 @@
    "home_away": "H",
    "opponent": "Guelph Gryphons",
    "location": "Alumni Stadium",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 28,
+   "opp_score": 24,
+   "result": "W",
    "note": "OUA Quarter-Finals",
    "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=169",
-    "watch": "https://oua.yaretv.com/"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6496"
    }
   },
   {
@@ -2776,22 +2775,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "NFL Week 8 preview: Bills vs. Ravens headlines loaded slate",
-   "summary": "There are no shortage of marquee matchups in the NFL this weekend. Kellen Forrest previews all of Sunday’s biggest games in his Week 8 preview.",
-   "published": "2026-10-31T14:27-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/09/bills.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Lions",
-    "Buffalo Bills"
-   ],
-   "sn_team_count": 8,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-8-preview-bills-vs-ravens-headlines-loaded-slate/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "Canucks’ Leevi Merilainen making most of unexpected opportunity",
    "summary": "The last time Leevi Merilainen had the stage to himself, it was a tough showing. But with the Canucks, the 24-year-old is coping better with the spotlight. Iain MacIntyre has the story.",
@@ -2818,19 +2801,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "Patriots’ A.J. Brown, Treveyon Henderson won’t play against Dolphins",
-   "summary": "",
-   "published": "2026-10-31T13:21-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/11/Hendo.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/patriots-a-j-brown-treveyon-henderson-wont-play-against-dolphins/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "mlb",
    "headline": "Japanese RHP Kaima Taira set to move to MLB",
    "summary": "Japanese right-hander Kaima Taira wants to move to Major League Baseball.",
@@ -2845,15 +2815,57 @@
   },
   {
    "league": "other",
-   "headline": "Haas hands Hirakawa F1 debut in Mexico in place of Ocon in sudden change",
-   "summary": "Haas is giving Ryo Hirakawa a Formula 1 race debut in Mexico on Sunday after announcing abruptly on Saturday that he would replace veteran Esteban Ocon.",
-   "published": "2026-10-31T11:03-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/ocon.jpg",
+   "headline": "Lewis Hamilton wins pole for Ferrari at Mexico City Grand Prix",
+   "summary": "",
+   "published": "2026-10-31T18:48-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Lewis-Hamilton.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
    "sport": "Auto Racing",
-   "url": "https://www.sportsnet.ca/formula-1/article/haas-hands-hirakawa-f1-debut-in-mexico-in-place-of-ocon-in-sudden-change/",
+   "url": "https://www.sportsnet.ca/formula-1/article/lewis-hamilton-wins-pole-for-ferrari-at-mexico-city-grand-prix/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "NFL Week 8 preview: Bills vs. Ravens headlines loaded slate",
+   "summary": "There are no shortage of marquee matchups in the NFL this weekend. Kellen Forrest previews all of Sunday’s biggest games in his Week 8 preview.",
+   "published": "2026-10-31T14:27-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/09/bills.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Lions",
+    "Buffalo Bills"
+   ],
+   "sn_team_count": 8,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-8-preview-bills-vs-ravens-headlines-loaded-slate/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "NFL Week 8 Pick ‘Em: Can shorthanded Eagles get back on track?",
+   "summary": "Somehow, someway, we’re basically at the halfway point of the NFL season. Week 8 features a loaded slate of games, headlined by some important divisional clashes. Evan Davidson shares his picks for every contest.",
+   "published": "2026-10-29T10:01-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Philadelphia-Eagles-defensive-tackle-Jalen-Carter.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-8-pick-em-panthers-look-to-make-road-statement/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Patriots’ A.J. Brown, Treveyon Henderson won’t play against Dolphins",
+   "summary": "",
+   "published": "2026-10-31T13:21-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/11/Hendo.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/patriots-a-j-brown-treveyon-henderson-wont-play-against-dolphins/",
    "source": "Sportsnet"
   },
   {
@@ -2958,45 +2970,6 @@
    "sn_team_count": 0,
    "sport": "Olympics",
    "url": "https://www.sportsnet.ca/olympics/article/canadas-roussel-grabs-two-medals-at-short-track-speedskating-world-tour/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Reeling Jets fall to Panthers for eighth straight loss",
-   "summary": "",
-   "published": "2026-10-30T21:59-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Jets-5.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/reeling-jets-fall-to-panthers-for-eighth-straight-loss/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Klapka’s heavyweight fight sets tone in Flames’ win over Kraken",
-   "summary": "While a scoring binge by the youngsters was important, it was a pair of messages sent by Adam Klapka’s fight that set the tone for the Flames on Friday.",
-   "published": "2026-10-31T00:58-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Klapka.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/klapkas-heavyweight-fight-sets-tone-in-flames-win-over-kraken/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "NFL Week 8 Pick ‘Em: Can shorthanded Eagles get back on track?",
-   "summary": "Somehow, someway, we’re basically at the halfway point of the NFL season. Week 8 features a loaded slate of games, headlined by some important divisional clashes. Evan Davidson shares his picks for every contest.",
-   "published": "2026-10-29T10:01-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Philadelphia-Eagles-defensive-tackle-Jalen-Carter.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-8-pick-em-panthers-look-to-make-road-statement/",
    "source": "Sportsnet"
   },
   {
@@ -4048,14 +4021,14 @@
      {
       "name": "Saginaw Spirit",
       "abbr": "SAG",
-      "gp": 15,
+      "gp": 16,
       "w": 6,
-      "l": 6,
+      "l": 7,
       "otl": 3,
       "pts": 15,
       "gf": 56,
       "ga": 59,
-      "strk": "L4"
+      "strk": "L5"
      },
      {
       "name": "Sarnia Sting",
@@ -4077,14 +4050,14 @@
      {
       "name": "Guelph Storm",
       "abbr": "GUE",
-      "gp": 14,
-      "w": 11,
+      "gp": 15,
+      "w": 12,
       "l": 3,
       "otl": 0,
-      "pts": 22,
+      "pts": 24,
       "gf": 66,
       "ga": 44,
-      "strk": "W2"
+      "strk": "W3"
      },
      {
       "name": "London Knights",
@@ -4346,7 +4319,7 @@
       "l": 2,
       "otl": 2,
       "pts": 28,
-      "gf": 71,
+      "gf": 72,
       "ga": 35,
       "strk": "W1"
      },
@@ -4407,7 +4380,7 @@
       "otl": 2,
       "pts": 14,
       "gf": 65,
-      "ga": 97,
+      "ga": 98,
       "strk": "W1"
      },
      {
