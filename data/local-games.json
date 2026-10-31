@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T17:02:47-04:00",
+ "updated": "2026-10-31T17:17:50-04:00",
  "today": "2026-10-31",
  "range": [
   "2026-10-28",
@@ -62,8 +62,8 @@
    "count": 2
   },
   "cfl_news": {
-   "ok": false,
-   "error": "<urlopen error _ssl.c:993: The handshake operation timed out>"
+   "ok": true,
+   "count": 30
   },
   "standings_ohl": {
    "ok": true,
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 36
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -1883,6 +1883,20 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "Every Scoring Play from the Eastern Semi-Final",
+   "summary": "",
+   "published": "2026-10-31T17:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/6Z1PT0tXr2hEbEqHslTVBp/3720da221e534f59f947fff242e73af9/ESF_ScoringPlays_WPG_THUMB.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Argonauts",
+    "Blue Bombers"
+   ],
+   "url": "https://www.cfl.ca/article/every-scoring-play-from-the-eastern-semi-final",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Demski Delivers with 44 seconds left!",
    "summary": "",
    "published": "2026-10-31T16:35:00-04:00",
@@ -1974,6 +1988,20 @@
   },
   {
    "league": "cfl",
+   "headline": "3 stats that defined Winnipeg's win over Toronto in the Eastern Semi-Final presented by Wegovy®",
+   "summary": "",
+   "published": "2026-10-31T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/2zEigdqetdA5qxgM0HjUT0/347c13afeee76674596a631c9f8836da/Dru_brown_2026_07.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Argonauts",
+    "Blue Bombers"
+   ],
+   "url": "https://www.cfl.ca/article/3-stats-that-defined-winnipeg-s-win-over-toronto-in-the-eastern-semi-final-presented-by-wegovy",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Halloween Playoff Football: \"They Don't Like Us\"",
    "summary": "",
    "published": "2026-10-30T18:00:00-04:00",
@@ -1981,17 +2009,6 @@
    "video": true,
    "teams": [],
    "url": "https://www.cfl.ca/article/halloween-playoff-football-they-dont-like-us",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Football & Fatherhood featuring Ryan Hunter | Presented by Embark",
-   "summary": "",
-   "published": "2026-10-30T14:30:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/1BJacgTSesDjjq8B9e0k51/baf69730279bea9ea21511cf41cd7765/hunter_thumb_1.png?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/football-fatherhood-featuring-ryan-hunter-presented-by-embark",
    "source": "CFL.ca"
   },
   {
@@ -2259,17 +2276,6 @@
    "video": false,
    "teams": [],
    "url": "https://www.cfl.ca/article/saskatchewan-artists-bring-cfl-s-indigenous-logos-to-life-through-mural",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "CFL & Capital Power Bring Football to Indigenous Youth | Truth and Reconciliation",
-   "summary": "",
-   "published": "2026-09-27T08:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/12NplMOl0eI7JFPMmI4O3q/d9b9de40429af80b008a94a6142365dc/edm_00_01_18_02.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/cfl-capital-power-bring-football-to-indigenous-youth-truth-and-reconciliation",
    "source": "CFL.ca"
   },
   {
@@ -2925,6 +2931,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Ducks waive defenceman Nick Jensen",
+   "summary": "The Ducks waived the defenceman on Saturday after just four games, Sportsnet’s Elliotte Friedman reported.",
+   "published": "2026-10-31T14:20-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/nick-jensen.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/ducks-waive-defenceman-nick-jensen/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "Bayern Munich’s Olise, Saibari and Gnabry all go off hurt in Klassiker",
    "summary": "",
@@ -2977,19 +2996,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Mike Babcock’s Oilers overhaul paying off through structure, accountability",
-   "summary": "Suddenly, the Oilers can win games with their defensive structure. And like the guy or not, there is a two-word answer for all of it: Mike Babcock. Sportsnet’s Mark Spector has more.",
-   "published": "2026-10-30T14:50-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/oilers-2.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/mike-babcocks-oilers-overhaul-paying-off-through-structure-accountability/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "other",
    "headline": "Canada shut out by U.S. in second world championship tune-up",
    "summary": "",
@@ -3028,19 +3034,6 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/barnes-hits-new-heights-on-offence-but-raptors-fall-to-magic/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Thunder’s Chet Holmgren out eight to 10 weeks with knee injury",
-   "summary": "",
-   "published": "2026-10-30T21:09-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/chet.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/report-thunders-chet-holmgren-out-eight-to-10-weeks-with-knee-injury/",
    "source": "Sportsnet"
   },
   {
@@ -4087,7 +4080,7 @@
       "otl": 3,
       "pts": 15,
       "gf": 54,
-      "ga": 55,
+      "ga": 56,
       "strk": "L4"
      },
      {
@@ -4115,7 +4108,7 @@
       "l": 3,
       "otl": 0,
       "pts": 22,
-      "gf": 62,
+      "gf": 63,
       "ga": 42,
       "strk": "W2"
      },
