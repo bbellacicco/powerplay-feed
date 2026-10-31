@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T19:06:44-04:00",
+ "updated": "2026-10-31T19:18:04-04:00",
  "today": "2026-10-31",
  "range": [
   "2026-10-28",
@@ -67,7 +67,7 @@
   },
   "standings_ohl": {
    "ok": true,
-   "count": 20
+   "count": 22
   },
   "standings_ojhl": {
    "ok": true,
@@ -1508,11 +1508,11 @@
    "home_away": "A",
    "opponent": "Fort Erie Meteors",
    "location": "Fort Erie Leisureplex, Fort Erie, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
-   "note": "",
+   "note": "13:48 1st",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15639"
    },
@@ -2654,6 +2654,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Canadiens’ Kirby Dach out vs. Penguins due to illness",
+   "summary": "",
+   "published": "2026-10-31T19:08-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177180455.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canadiens-kirby-dach-out-vs-penguins-due-to-illness/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Islanders’ Heineman ejected after knee-on-knee collision with Oilers’ Howard",
    "summary": "Isaac Howard’s first period ended early Saturday.",
    "published": "2026-10-31T14:57-04:00",
@@ -2689,19 +2702,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/senators-burakovsky-foegele-out-three-to-four-weeks/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Daniel Rios scores in stoppage time to help CF Montreal salvage draw with NYCFC",
-   "summary": "Daniel Ríos scored two minutes into second-half stoppage time to rally CF Montreal to a 1-1 draw with New York City FC on Saturday at Citi Field.",
-   "published": "2026-10-31T16:59-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/mtl.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/daniel-rios-scores-in-stoppage-time-to-help-cf-montreal-salvage-draw-with-nycfc/",
    "source": "Sportsnet"
   },
   {
@@ -2747,19 +2747,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "With big weekend ahead for Toronto FC, Fraser could look for help from Gilman",
-   "summary": "TFC still have plenty of work to do, starting with Sunday’s road game vs. Atlanta United FC, if they hope to clinch their first post-season berth since 2020.",
-   "published": "2026-10-30T11:54-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/07/tfc-1-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/with-big-weekend-ahead-for-toronto-fc-fraser-could-look-for-help-from-gilman/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "Tanev, Joshua set to boost Maple Leafs in Vancouver",
    "summary": "Chris Tanev and Dakota Joshua are both expected to be in the lineup on Saturday when the Maple Leafs take on the Canucks. Luke Fox has more on how their return has contributed to the club’s excitement.",
@@ -2772,6 +2759,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/tanev-joshua-set-to-boost-maple-leafs-in-vancouver/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "With big weekend ahead for Toronto FC, Fraser could look for help from Gilman",
+   "summary": "TFC still have plenty of work to do, starting with Sunday’s road game vs. Atlanta United FC, if they hope to clinch their first post-season berth since 2020.",
+   "published": "2026-10-30T11:54-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/07/tfc-1-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/with-big-weekend-ahead-for-toronto-fc-fraser-could-look-for-help-from-gilman/",
    "source": "Sportsnet"
   },
   {
@@ -3918,6 +3918,30 @@
     "group": "Central Division",
     "teams": [
      {
+      "name": "Rouyn-Noranda Huskies",
+      "abbr": "RN",
+      "gp": 0,
+      "w": 0,
+      "l": 0,
+      "otl": 0,
+      "pts": 0,
+      "gf": 0,
+      "ga": 0,
+      "strk": ""
+     },
+     {
+      "name": "Val-d'Or Foreurs",
+      "abbr": "VDO",
+      "gp": 0,
+      "w": 0,
+      "l": 0,
+      "otl": 0,
+      "pts": 0,
+      "gf": 0,
+      "ga": 0,
+      "strk": ""
+     },
+     {
       "name": "Sudbury Wolves",
       "abbr": "SBY",
       "gp": 14,
@@ -4213,14 +4237,14 @@
      {
       "name": "Trenton Golden Hawks",
       "abbr": "TRN",
-      "gp": 16,
-      "w": 4,
+      "gp": 17,
+      "w": 5,
       "l": 10,
       "otl": 2,
-      "pts": 10,
+      "pts": 12,
       "gf": 65,
       "ga": 78,
-      "strk": "L7"
+      "strk": "W1"
      },
      {
       "name": "Lindsay Muskies",
@@ -4350,14 +4374,14 @@
      {
       "name": "Mississauga Chargers",
       "abbr": "MIS",
-      "gp": 19,
+      "gp": 20,
       "w": 8,
-      "l": 11,
+      "l": 12,
       "otl": 0,
       "pts": 16,
       "gf": 58,
       "ga": 93,
-      "strk": "W2"
+      "strk": "L1"
      },
      {
       "name": "Niagara Falls Canucks",
