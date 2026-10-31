@@ -593,44 +593,53 @@
   }
 
   var featKey = '';
-  function buildFeat(items, heads, video) {
+  // top boxes: one timeline of stories, Game Day Snaps and videos, newest first.
+  // items[0] takes the big box, items[1] the box beside it (and items[2] too when there are no Headlines)
+  function buildFeat(items, heads) {
     heads = heads || [];
-    var key = items.concat(heads).concat(video ? [video] : []).map(function (s) { return s.url; }).join('|'); if (key === featKey) return; featKey = key;
+    var key = items.concat(heads).map(function (s) { return s.url; }).join('|'); if (key === featKey) return; featKey = key;
     var box = document.getElementById('feat'); box.innerHTML = '';
-    var f = items[0], big = el('a', 'big'); big.href = f.url;
-    if (f.url.indexOf(SITE) === 0) big.target = '_top'; else { big.target = '_blank'; big.rel = 'noopener'; }   // a story on another site opens in a new tab
-    featImg(big, f, 1100, 620);
-    if (f.snaps) big.onclick = function (e) { e.preventDefault(); playShow(f.snaps, document.getElementById('feat')); };   // the slideshow plays right here
-    var ov = el('div', 'ov'); ov.appendChild(el('div', 'kick', f.kick || (/nhl\.com/.test(f.url) ? 'NHL' : f.team && f.team !== 'powerplay' ? (TEAM[f.team] || 'Latest') : storyCat(f, 'Latest'))));
-    ov.appendChild(el('h2', null, f.headline));
-    if (f.summary && f.summary !== f.headline) ov.appendChild(el('p', null, f.summary));
-    big.appendChild(ov);
-    // share the top story through a powerplaywindsor.com landing page (the story up top, then on to the article)
+    var featEl = document.getElementById('feat');
+    function vidBox(v, cls, w, h) {     // a video: plays right over the top boxes (write-up and Share underneath)
+      var va = el('a', cls + ' vid'); va.href = v.url; va.target = '_blank'; va.rel = 'noopener';
+      featImg(va, v, w, h);
+      (va.querySelector('.fimg') || va).appendChild(el('span', 'play'));
+      var vo = el('div', 'ov'); vo.appendChild(el('div', 'kick', v.kick || 'Video')); vo.appendChild(el(cls === 'big' ? 'h2' : 'h3', null, v.headline)); va.appendChild(vo);
+      va.onclick = function (e) {
+        if (!vidEmbed(v.url)) return;   // not YouTube / Vimeo: open it in a new tab
+        e.preventDefault();
+        playRow(v, va, featEl);
+      };
+      return va;
+    }
+    var f = items[0], big;
+    if (f.isVideo) big = vidBox(f, 'big', 1100, 620);
+    else {
+      big = el('a', 'big'); big.href = f.url;
+      if (f.url.indexOf(SITE) === 0) big.target = '_top'; else { big.target = '_blank'; big.rel = 'noopener'; }   // a story on another site opens in a new tab
+      featImg(big, f, 1100, 620);
+      if (f.snaps) big.onclick = function (e) { e.preventDefault(); playShow(f.snaps, featEl); };   // the slideshow plays right here
+      var ov = el('div', 'ov'); ov.appendChild(el('div', 'kick', f.kick || (/nhl\.com/.test(f.url) ? 'NHL' : f.team && f.team !== 'powerplay' ? (TEAM[f.team] || 'Latest') : storyCat(f, 'Latest'))));
+      ov.appendChild(el('h2', null, f.headline));
+      if (f.summary && f.summary !== f.headline) ov.appendChild(el('p', null, f.summary));
+      big.appendChild(ov);
+    }
+    // share the top item through a powerplaywindsor.com address (story landing, slideshow page or the video in the Network)
     if (window.PPShare) {
-      var fsb = f.snaps ? PPShare.button({ title: f.snaps.title, url: f.snaps.url, text: f.snaps.title + ' | Powerplay Windsor', image: f.snaps.cover })
+      var vk = f.isVideo ? vkey(f.url).replace(':', '-') : '';
+      var fsb = f.isVideo ? PPShare.button({ title: f.headline, url: SITE + 'scores-standings?tab=network&v=' + encodeURIComponent(vk), text: f.headline + ' | Powerplay Network', image: f.image || '' })
+        : f.snaps ? PPShare.button({ title: f.snaps.title, url: f.snaps.url, text: f.snaps.title + ' | Powerplay Windsor', image: f.snaps.cover })
         : PPShare.button({ title: f.headline, url: SITE + 'scores-standings?tab=stories&s=' + skey(f.url) + '&team=' + encodeURIComponent(f.team || 'powerplay'),
         text: f.headline + ' | Powerplay Windsor', image: f.image ? wix(f.image, 1200, 630) : '' });
-      fsb.classList.add('mini', 'topshare'); fsb.addEventListener('click', function (e) { e.preventDefault(); });
+      fsb.classList.add('mini', 'topshare'); fsb.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); });
       big.appendChild(fsb);
     }
     box.appendChild(big);
     var side = el('div', 'fside');
-    if (video) {
-      var va = el('a', 'small vid'); va.href = video.url; va.target = '_blank'; va.rel = 'noopener';
-      featImg(va, video, 560, 320);
-      (va.querySelector('.fimg') || va).appendChild(el('span', 'play'));
-      var vo = el('div', 'ov'); vo.appendChild(el('div', 'kick', video.kick || 'Video')); vo.appendChild(el('h3', null, video.headline)); va.appendChild(vo);
-      // plays in the big player over the top stories, with the story behind the video underneath and a Share button
-      va.onclick = function (e) {
-        if (!vidEmbed(video.url)) return;   // not YouTube / Vimeo: open it in a new tab
-        e.preventDefault();
-        playRow(video, va, document.getElementById('feat'));
-      };
-      side.appendChild(va);
-    }
-    items.slice(1, video ? 1 : heads.length >= 3 ? 2 : 3).forEach(function (s) {
+    items.slice(1, heads.length >= 3 ? 2 : 3).forEach(function (s) {
+      if (s.isVideo) { side.appendChild(vidBox(s, 'small', 560, 320)); return; }
       var a = el('a', 'small'); a.href = s.url; a.target = '_top'; featImg(a, s, 560, 320);
-      if (s.snaps) a.onclick = function (e) { e.preventDefault(); playShow(s.snaps, document.getElementById('feat')); };
+      if (s.snaps) a.onclick = function (e) { e.preventDefault(); playShow(s.snaps, featEl); };
       var o = el('div', 'ov'); o.appendChild(el('div', 'kick', s.kick || storyCat(s, 'Recent'))); o.appendChild(el('h3', null, s.headline)); a.appendChild(o);
       side.appendChild(a);
     });
@@ -942,18 +951,24 @@
       (net.local || []).forEach(function (v) { if (v.u && v.t && !haveVid[vidId(v.u)]) ppVids.push({ headline: v.t, url: v.u, image: v.i, published: v.p.length === 10 ? v.p + 'T00:00:00' : v.p }); });
       // the Spitfires' game highlights from the OHL's YouTube channel take the box when they're newer than Powerplay's latest video
       (net.pro || []).forEach(function (v) { if (v.sp && v.u && v.i) ppVids.push({ headline: v.t.replace(/^OHL Highlights:\s*/i, '').replace(/\s+@\s+/, ' at ').replace(/\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2}(st|nd|rd|th)?,?\s+\d{4}\s*$/i, ''), url: v.u, image: v.i, published: v.p, kick: 'Spitfires highlights' }); });
-      // the newest video wins the box: yours, or the Spitfires' latest game highlights when they're newer
+      // one timeline for the top boxes: stories (and Game Day Snaps) and videos (yours, plus the Spitfires' OHL
+      // highlights), newest first: the newest takes the big box, the second newest the box beside it
       var byNew = function (a, b) { return new Date(b.published) - new Date(a.published); };
-      var topVid = ppVids.filter(function (v) { return v.image; }).sort(byNew)[0] || null;
-      // YouTube's standard thumbnail is 4:3 with black bars; use the widescreen one so the picture fills the box
-      if (topVid) {
-        var yid = (topVid.url.match(/[?&]v=([\w-]{11})/) || topVid.url.match(/youtu\.be\/([\w-]{11})/) || topVid.url.match(/\/shorts\/([\w-]{11})/) || [])[1];
-        if (yid) topVid = Object.assign({}, topVid, { image: 'https://i.ytimg.com/vi/' + yid + '/hq720.jpg', alt: 'https://i.ytimg.com/vi/' + yid + '/mqdefault.jpg' });
-      }
-      var usedTop = {}; featItems.slice(0, topVid ? 1 : 2).forEach(function (s) { usedTop[s.url] = 1; });
+      var wide = function (v) {   // YouTube's standard thumbnail is 4:3 with black bars; the widescreen one fills the box
+        var yid = (v.url.match(/[?&]v=([\w-]{11})/) || v.url.match(/youtu\.be\/([\w-]{11})/) || v.url.match(/\/shorts\/([\w-]{11})/) || [])[1];
+        return Object.assign({}, v, { isVideo: true }, yid ? { image: 'https://i.ytimg.com/vi/' + yid + '/hq720.jpg', alt: 'https://i.ytimg.com/vi/' + yid + '/mqdefault.jpg' } : {});
+      };
+      var topVids = ppVids.filter(function (v) { return v.image; }).sort(byNew).slice(0, 2).map(wide);
+      var schedTop = sched && featItems[0] && key(featItems[0].url) === key(sched.url) && !featItems.slice(1).some(function (s) { return new Date(s.published) > new Date(featItems[0].published); }) ? featItems[0] : null;
+      var top = featItems.filter(function (s) { return s !== schedTop; }).concat(topVids).sort(byNew);
+      if (schedTop && !topVids.some(function (v) { return new Date(v.published) > new Date(sched.from); })) top.unshift(schedTop);   // a scheduled story keeps the big box until something newer is posted
+      else if (schedTop) top.splice(1, 0, schedTop);
+      top = top.slice(0, 3);
+      var topVid = top.filter(function (s) { return s.isVideo; })[0] || null;
+      var usedTop = {}; top.slice(0, 2).forEach(function (s) { if (!s.isVideo) usedTop[s.url] = 1; });
       var heads = pickHeads(stories, lg, usedTop, drop);
-      if (featItems.length) buildFeat(featItems, heads, topVid);
-      var featUrls = {}; featItems.slice(0, topVid ? 1 : heads.length >= 3 ? 2 : 3).forEach(function (s) { featUrls[s.url] = 1; });
+      if (top.length) buildFeat(top, heads);
+      var featUrls = {}; top.slice(0, heads.length >= 3 ? 2 : 3).forEach(function (s) { if (!s.isVideo) featUrls[s.url] = 1; });
       // local scores
       var teams = lg.teams || {};
       fill('local', localGames(lg, hs, sc).map(function (g) { return localCard(g, teams); }), 'No local games right now.');
@@ -986,7 +1001,7 @@
       }
       // Powerplay Network: newest YouTube/Vimeo videos
       var vids = stories.filter(isVid), seenV = {};
-      if (topVid) { seenV[vidId(topVid.url)] = 1; seenV[topVid.headline.toLowerCase().replace(/[^a-z0-9]+/g, '')] = 1; }   // already featured at the top
+      top.slice(0, heads.length >= 3 ? 2 : 3).forEach(function (t) { if (t.isVideo) { seenV[vidId(t.url)] = 1; seenV[t.headline.toLowerCase().replace(/[^a-z0-9]+/g, '')] = 1; } });   // already featured at the top
       var haveV2 = {}; vids.forEach(function (v) { haveV2[vidId(v.url)] = 1; });
       (net.local || []).forEach(function (v) { if (!haveV2[vidId(v.u)]) vids.push({ headline: v.t, url: v.u, image: v.i, published: v.p.length === 10 ? v.p + 'T00:00:00' : v.p, source: v.s, video: true }); });
       vids = vids.sort(function (a, b) { return new Date(b.published) - new Date(a.published); })
