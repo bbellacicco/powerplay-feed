@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T16:02:52-04:00",
+ "updated": "2026-10-31T16:18:04-04:00",
  "today": "2026-10-31",
  "range": [
   "2026-10-28",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 36
   },
   "club_news": {
    "ok": true,
@@ -1457,7 +1457,7 @@
    "our_score": 6,
    "opp_score": 0,
    "result": null,
-   "note": "20:00 3rd",
+   "note": "09:03 3rd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29143/"
    }
@@ -1836,28 +1836,6 @@
  ],
  "pro_games": [
   {
-   "id": "cfl-cfl6672",
-   "team": "cfl",
-   "sport": "CFL",
-   "start": "2026-10-31T13:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Toronto Argonauts",
-   "location": "BMO Field",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.cfl.ca/schedule/"
-   },
-   "away": "Winnipeg Blue Bombers",
-   "home": "Toronto Argonauts",
-   "away_abbr": "WPG",
-   "home_abbr": "TOR"
-  },
-  {
    "id": "cfl-cfl6673",
    "team": "cfl",
    "sport": "CFL",
@@ -1878,9 +1856,44 @@
    "home": "B.C. Lions",
    "away_abbr": "SSK",
    "home_abbr": "BC"
+  },
+  {
+   "id": "cfl-cfl6672",
+   "team": "cfl",
+   "sport": "CFL",
+   "start": "2026-10-31T13:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Toronto Argonauts",
+   "location": "BMO Field",
+   "status": "final",
+   "our_score": 25,
+   "opp_score": 22,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.cfl.ca/schedule/"
+   },
+   "away": "Winnipeg Blue Bombers",
+   "home": "Toronto Argonauts",
+   "away_abbr": "WPG",
+   "home_abbr": "TOR"
   }
  ],
  "pro_news": [
+  {
+   "league": "cfl",
+   "headline": "Bombers Scoop and Score to Silence the Crowd!",
+   "summary": "",
+   "published": "2026-10-31T15:40:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/1RAFnvZEHpgcjFaeS5SQFD/c6a050e85acc5c04a20615d15698fb2d/bombers.png?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Blue Bombers"
+   ],
+   "url": "https://www.cfl.ca/article/bombers-scoop-and-score-to-silence-the-crowd",
+   "source": "CFL.ca"
+  },
   {
    "league": "cfl",
    "headline": "Kelly Connects with Kahmann to Get the Argos on the Board!",
@@ -1916,6 +1929,20 @@
    "video": true,
    "teams": [],
    "url": "https://www.cfl.ca/article/halloween-playoff-football-winnipeg-s-redemption",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Bombers rally past Argos in thrillling Eastern Semi-Final presented by Wegovy®",
+   "summary": "",
+   "published": "2026-10-31T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/1oucLhq1CMEtjlHfbIy33m/cac01d3ad54724d327efecd37efbc78a/Nic_demski_2026_05.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Argonauts",
+    "Blue Bombers"
+   ],
+   "url": "https://www.cfl.ca/article/bombers-rally-past-argos-in-thrillling-eastern-semi-final-presented-by-wegovy",
    "source": "CFL.ca"
   },
   {
@@ -2060,19 +2087,6 @@
    "video": true,
    "teams": [],
    "url": "https://www.cfl.ca/article/trey-vaval-pranked-with-most-outstanding-special-teams-player-award",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Halloween Playoff Football: \"Our Time\" in BC?",
-   "summary": "",
-   "published": "2026-10-29T04:50:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/4nMU2SMvkgf8EQdUz65yYx/76cabcc5394182833770670e0ad157ea/BCWEST.png?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Lions"
-   ],
-   "url": "https://www.cfl.ca/article/halloween-playoff-football-our-time-in-bc",
    "source": "CFL.ca"
   },
   {
@@ -2251,17 +2265,6 @@
    "video": true,
    "teams": [],
    "url": "https://www.cfl.ca/article/cfl-capital-power-bring-football-to-indigenous-youth-truth-and-reconciliation",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "The story behind the CFL's new Indigenous-themed logo",
-   "summary": "",
-   "published": "2026-09-24T00:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/1XYIRhvFmWwfdrlwX0It8o/609bfe296d04a1f9b911d9db5365d15e/CFL_Indigenous_Logos.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/the-story-behind-the-cfl-s-new-indigenous-themed-logo",
    "source": "CFL.ca"
   },
   {
@@ -2583,6 +2586,19 @@
   }
  ],
  "more_news": [
+  {
+   "league": "cfl",
+   "headline": "Blue Bombers shock Argonauts in final minute to reach East final",
+   "summary": "The Toronto Argonauts’ season is over after a stunning turnaround on Saturday in the CFL East semifinal. Mike Koreen has the story from BMO Field.",
+   "published": "2026-10-31T16:03-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/6407717870112.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/blue-bombers-shock-argonauts-in-final-minute-to-reach-east-final/",
+   "source": "Sportsnet"
+  },
   {
    "league": "nhl",
    "headline": "Quick Shifts: How Nikita Kucherov’s trade request helps Lightning",
