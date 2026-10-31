@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T15:03:02-04:00",
+ "updated": "2026-10-31T15:21:17-04:00",
  "today": "2026-10-31",
  "range": [
   "2026-10-28",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -1398,13 +1398,13 @@
    "home_away": "A",
    "opponent": "Western Mustangs",
    "location": "London, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
+   "status": "final",
+   "our_score": 1,
+   "opp_score": 3,
+   "result": "L",
+   "note": "14-25, 25-17, 23-25, 19-25",
    "links": {
-    "watch": "https://oua.tv/?school=Windsor"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6245"
    }
   },
   {
@@ -1454,10 +1454,10 @@
    "opponent": "Owen Sound Attack",
    "location": "Harry Lumley Bayshore Community Centre, Owen Sound",
    "status": "live",
-   "our_score": 2,
+   "our_score": 3,
    "opp_score": 0,
    "result": null,
-   "note": "20:00 2nd",
+   "note": "08:52 2nd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29143/"
    }
@@ -2839,6 +2839,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Matt Pavelich, first linesman in Hockey Hall of Fame, dead at 92",
+   "summary": "",
+   "published": "2026-10-31T15:08-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2021/12/nhl-logo-on-net.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/matt-pavelich-first-linesman-in-hockey-hall-of-fame-dead-at-92/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Sources: Nikita Kucherov tells Lightning he won’t re-sign, asks for trade",
    "summary": "According to multiple sources, Nikita Kucherov has informed both his teammates and the Lightning organization that he will not be re-signing with Tampa Bay and would like to be traded.",
@@ -4027,7 +4040,7 @@
       "l": 5,
       "otl": 3,
       "pts": 15,
-      "gf": 50,
+      "gf": 51,
       "ga": 48,
       "strk": "W3"
      },
@@ -4117,7 +4130,7 @@
       "otl": 1,
       "pts": 13,
       "gf": 42,
-      "ga": 62,
+      "ga": 63,
       "strk": "W4"
      }
     ]
