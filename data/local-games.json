@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30T22:06:14-04:00",
+ "updated": "2026-10-30T22:17:54-04:00",
  "today": "2026-10-30",
  "range": [
   "2026-10-27",
@@ -2088,10 +2088,10 @@
    "home_away": "H",
    "opponent": "Essex 73's",
    "location": "Tecumseh",
-   "status": "live",
-   "our_score": 0,
-   "opp_score": 0,
-   "result": null,
+   "status": "final",
+   "our_score": 1,
+   "opp_score": 2,
+   "result": "L",
    "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960488?configuration=45"
@@ -2183,14 +2183,13 @@
    "home_away": "H",
    "opponent": "York Lions",
    "location": "Toldo Lancer Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 65,
+   "opp_score": 73,
+   "result": "L",
    "note": "",
    "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=171",
-    "watch": "https://oua.tv/?school=Windsor"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6223"
    }
   },
   {
@@ -4678,14 +4677,14 @@
      {
       "name": "Markham Royals",
       "abbr": "MAR",
-      "gp": 19,
-      "w": 15,
+      "gp": 20,
+      "w": 16,
       "l": 4,
       "otl": 0,
-      "pts": 30,
+      "pts": 32,
       "gf": 79,
       "ga": 54,
-      "strk": "L1"
+      "strk": "W1"
      },
      {
       "name": "Cobourg Cougars",
@@ -4774,14 +4773,14 @@
      {
       "name": "Trenton Golden Hawks",
       "abbr": "TRN",
-      "gp": 15,
+      "gp": 16,
       "w": 4,
-      "l": 9,
+      "l": 10,
       "otl": 2,
       "pts": 10,
       "gf": 62,
       "ga": 78,
-      "strk": "L6"
+      "strk": "L7"
      },
      {
       "name": "Lindsay Muskies",
@@ -4827,14 +4826,14 @@
      {
       "name": "Collingwood Blues",
       "abbr": "COL",
-      "gp": 20,
+      "gp": 21,
       "w": 19,
-      "l": 1,
+      "l": 2,
       "otl": 0,
       "pts": 38,
       "gf": 121,
       "ga": 41,
-      "strk": "W13"
+      "strk": "L1"
      },
      {
       "name": "Milton Menace",
@@ -4861,6 +4860,18 @@
       "strk": "W4"
      },
      {
+      "name": "Toronto Patriots",
+      "abbr": "PAT",
+      "gp": 17,
+      "w": 14,
+      "l": 3,
+      "otl": 0,
+      "pts": 28,
+      "gf": 94,
+      "ga": 31,
+      "strk": "W9"
+     },
+     {
       "name": "King Rebellion",
       "abbr": "KNG",
       "gp": 17,
@@ -4883,18 +4894,6 @@
       "gf": 67,
       "ga": 31,
       "strk": "L1"
-     },
-     {
-      "name": "Toronto Patriots",
-      "abbr": "PAT",
-      "gp": 16,
-      "w": 13,
-      "l": 3,
-      "otl": 0,
-      "pts": 26,
-      "gf": 94,
-      "ga": 31,
-      "strk": "W8"
      },
      {
       "name": "Oakville Blades",
