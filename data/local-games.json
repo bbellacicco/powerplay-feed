@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T13:33:18-05:00",
+ "updated": "2026-11-01T13:47:53-05:00",
  "today": "2026-11-01",
  "range": [
   "2026-10-29",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 36
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -2310,6 +2310,21 @@
  ],
  "more_news": [
   {
+   "league": "nfl",
+   "headline": "Ravens’ Lamar Jackson exits against Bills with thumb injury",
+   "summary": "The Baltimore Ravens quarterback exited with a thumb injury in the first quarter of Sunday’s game against the Buffalo Bills and was ruled questionable by the team soon after.",
+   "published": "2026-11-01T13:37-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/lamar-2.jpg",
+   "video": false,
+   "teams": [
+    "Buffalo Bills"
+   ],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/ravens-lamar-jackson-exits-against-bills-with-thumb-injury/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Sunday Overreactions: Lightning, Wild can’t risk losing stars for nothing",
    "summary": "The Lightning and Wild find themselves in similar positions, needing to decide the best course of action with stars Nikita Kucherov and Quinn Hughes on expiring contracts. Michael Amato explores their conundrum and more ",
@@ -2322,21 +2337,6 @@
    "sn_team_count": 6,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/sunday-overreactions-lightning-wild-cant-risk-losing-stars-for-nothing/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Maple Leafs talk Kucherov trade possibility after win over Canucks",
-   "summary": "Are the Maple Leafs really a candidate to make a deal for Nikita Kucherov? Some of his former teammates now on the Leafs would love to have Kucherov back on their side.",
-   "published": "2026-10-31T23:51-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/leafs-2-2.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-talk-kucherov-trade-possibility-after-win-over-canucks/",
    "source": "Sportsnet"
   },
   {
@@ -2367,15 +2367,17 @@
   },
   {
    "league": "nhl",
-   "headline": "Canadiens’ Evans among veterans stepping up in Suzuki’s absence",
-   "summary": "What Jake Evans has provided in Nick Suzuki’s absence is worth highlighting, especially considering the standard he’s set for his Canadiens teammates. Eric Engels explains how Saturday’s win showcased the impact Montreal",
-   "published": "2026-11-01T00:02-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177185497.jpg",
+   "headline": "Maple Leafs talk Kucherov trade possibility after win over Canucks",
+   "summary": "Are the Maple Leafs really a candidate to make a deal for Nikita Kucherov? Some of his former teammates now on the Leafs would love to have Kucherov back on their side.",
+   "published": "2026-10-31T23:51-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/leafs-2-2.jpg",
    "video": false,
-   "teams": [],
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
    "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canadiens-evans-among-veterans-stepping-up-in-suzukis-absence/",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-talk-kucherov-trade-possibility-after-win-over-canucks/",
    "source": "Sportsnet"
   },
   {
@@ -2513,6 +2515,19 @@
    "sn_team_count": 8,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/nfl-week-8-preview-bills-vs-ravens-headlines-loaded-slate/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Canadiens’ Evans among veterans stepping up in Suzuki’s absence",
+   "summary": "What Jake Evans has provided in Nick Suzuki’s absence is worth highlighting, especially considering the standard he’s set for his Canadiens teammates. Eric Engels explains how Saturday’s win showcased the impact Montreal",
+   "published": "2026-11-01T00:02-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177185497.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canadiens-evans-among-veterans-stepping-up-in-suzukis-absence/",
    "source": "Sportsnet"
   },
   {
@@ -2763,32 +2778,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/senators-burakovsky-foegele-out-three-to-four-weeks/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Report: Padres decline Nick Pivetta’s club option for 2027",
-   "summary": "",
-   "published": "2026-10-31T20:44-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/pivetta.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/report-padres-decline-nick-pivettas-club-option-for-2027/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Angel Reese’s record Finals rebounding not enough as Dream fall in Game 7",
-   "summary": "Angel Reese’s first post-season ended just short of a championship. Reese had eight points, 12 rebounds and two blocks, but Atlanta fell to Golden State 68-63 in Game 7 of the WNBA Finals on Saturday night.",
-   "published": "2026-10-31T23:19-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/a11eca24d9f93ecf749ce92b9ef84577ba26dc9643704d5c5d6b495a0af66256.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/wnba/article/angel-reeses-record-finals-rebounding-not-enough-as-dream-fall-in-game-7/",
    "source": "Sportsnet"
   },
   {
