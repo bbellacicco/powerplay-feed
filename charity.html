@@ -326,11 +326,13 @@
   function calendar(events) {
     var box = document.getElementById('cal'); box.innerHTML = '';
     if (!events.length) { box.appendChild(el('div', 'sm', 'No events on the calendar yet. Holding a fundraiser? Send us the details.')); return; }
-    events.slice(0, 6).forEach(function (e) {
-      var a = el('a', 'ev'); a.href = e.url; a.target = '_top';
+    events.slice(0, 8).forEach(function (e) {
+      var a = el('a', 'ev'); a.href = e.url || '#';
+      if (/powerplaywindsor\.com/.test(e.url || '')) a.target = '_top'; else { a.target = '_blank'; a.rel = 'noopener'; }
+      if (!e.url) a.onclick = function (ev) { ev.preventDefault(); };
       var d = new Date(e.date + 'T12:00:00'), dd = el('div', 'd');
       dd.appendChild(el('span', null, MON[d.getMonth()].replace('.', '').slice(0, 3))); dd.appendChild(el('b', null, String(d.getDate())));
-      var t = el('div'); t.appendChild(el('div', 't', e.headline)); t.appendChild(el('div', 'w', [e.when, e.where].filter(Boolean).join(' · ')));
+      var t = el('div'); t.appendChild(el('div', 't', e.headline)); t.appendChild(el('div', 'w', [e.when, e.where, e.source ? 'via ' + e.source : ''].filter(Boolean).join(' · ')));
       a.appendChild(dd); a.appendChild(t); box.appendChild(a);
     });
   }
