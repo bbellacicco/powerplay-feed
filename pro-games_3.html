@@ -486,7 +486,8 @@
     // Scores: today's games (live, finals and later today) with yesterday's finals under them.
     // Coming Up: tomorrow on. Both stacked, one game per line, grouped by day; tap a game for its coverage.
     var yKey = dayKey(new Date(now.getTime() - 864e5));
-    if (!UPCOMING) list = list.filter(function (g) { var k = dayKey(new Date(g.start)); return k === todayKey || (k === yKey && g.status !== 'upcoming'); });
+    // the All tab (every league) sticks to today's games; the other tabs add yesterday's finals
+    if (!UPCOMING) list = list.filter(function (g) { var k = dayKey(new Date(g.start)); return k === todayKey || (state.tab !== 'all' && k === yKey && g.status !== 'upcoming'); });
     else list = list.filter(function (g) { return dayKey(new Date(g.start)) > todayKey && g.status !== 'final'; });
     if (!list.length) { box.appendChild(el('div', 'empty', UPCOMING ? 'No games in the next few days.' : 'No games today. See Coming Up for the next games.')); return; }
     var groups = [], byKey = {};
