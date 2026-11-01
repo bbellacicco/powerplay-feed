@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T16:18:00-05:00",
+ "updated": "2026-11-01T16:36:53-05:00",
  "today": "2026-11-01",
  "range": [
   "2026-10-29",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -1236,10 +1236,10 @@
    "opponent": "Brampton Steelheads",
    "location": "CAA Centre, Brampton",
    "status": "live",
-   "our_score": 2,
+   "our_score": 3,
    "opp_score": 0,
    "result": null,
-   "note": "05:26 3rd",
+   "note": "End of Game",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29145/"
    }
@@ -2312,17 +2312,15 @@
  "more_news": [
   {
    "league": "nfl",
-   "headline": "Ravens down to third QB after Lamar Jackson, Tyler Huntley leave injured",
-   "summary": "The Baltimore Ravens quarterback exited with a thumb injury in the first quarter of Sunday’s game against the Buffalo Bills and was ruled questionable by the team soon after.",
-   "published": "2026-11-01T13:37-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/lamar-2.jpg",
+   "headline": "Buccaneers beat Falcons without completing pass for only third time in NFL history",
+   "summary": "",
+   "published": "2026-11-01T16:11-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-design-8.jpg",
    "video": false,
-   "teams": [
-    "Buffalo Bills"
-   ],
+   "teams": [],
    "sn_team_count": 2,
    "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/ravens-lamar-jackson-exits-against-bills-with-thumb-injury/",
+   "url": "https://www.sportsnet.ca/nfl/article/buccaneers-beat-falcons-despite-failing-to-complete-a-single-pass-in-wet-sloppy-conditions/",
    "source": "Sportsnet"
   },
   {
@@ -2341,29 +2339,18 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "With must-win match ahead for Toronto FC, Fraser could look for help from Gilman",
-   "summary": "TFC still have plenty of work to do, starting with Sunday’s road game vs. Atlanta United FC, if they hope to clinch their first post-season berth since 2020.",
-   "published": "2026-10-30T11:54-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/07/tfc-1-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/with-big-weekend-ahead-for-toronto-fc-fraser-could-look-for-help-from-gilman/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nfl",
-   "headline": "Buccaneers beat Falcons without completing pass for only third time in NFL history",
-   "summary": "",
-   "published": "2026-11-01T16:11-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-design-8.jpg",
+   "headline": "Ravens down to third QB after Lamar Jackson, Tyler Huntley leave injured",
+   "summary": "The Baltimore Ravens quarterback exited with a thumb injury in the first quarter of Sunday’s game against the Buffalo Bills and was ruled questionable by the team soon after.",
+   "published": "2026-11-01T13:37-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/lamar-2.jpg",
    "video": false,
-   "teams": [],
+   "teams": [
+    "Buffalo Bills"
+   ],
    "sn_team_count": 2,
    "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/buccaneers-beat-falcons-despite-failing-to-complete-a-single-pass-in-wet-sloppy-conditions/",
+   "url": "https://www.sportsnet.ca/nfl/article/ravens-lamar-jackson-exits-against-bills-with-thumb-injury/",
    "source": "Sportsnet"
   },
   {
@@ -3633,7 +3620,7 @@
       "otl": 1,
       "pts": 23,
       "gf": 67,
-      "ga": 43,
+      "ga": 46,
       "strk": "W1"
      },
      {
@@ -3644,7 +3631,7 @@
       "l": 5,
       "otl": 0,
       "pts": 20,
-      "gf": 68,
+      "gf": 71,
       "ga": 58,
       "strk": "W3"
      },
@@ -3680,7 +3667,7 @@
       "l": 9,
       "otl": 0,
       "pts": 14,
-      "gf": 52,
+      "gf": 53,
       "ga": 60,
       "strk": "L1"
      }
@@ -3710,20 +3697,20 @@
       "otl": 1,
       "pts": 15,
       "gf": 45,
-      "ga": 54,
+      "ga": 55,
       "strk": "L2"
      },
      {
       "name": "North Bay Battalion",
       "abbr": "NB",
-      "gp": 16,
+      "gp": 17,
       "w": 7,
-      "l": 8,
+      "l": 9,
       "otl": 1,
       "pts": 15,
-      "gf": 59,
-      "ga": 63,
-      "strk": "W3"
+      "gf": 60,
+      "ga": 64,
+      "strk": "L1"
      },
      {
       "name": "Barrie Colts",
@@ -3746,8 +3733,20 @@
       "otl": 2,
       "pts": 6,
       "gf": 37,
-      "ga": 69,
+      "ga": 70,
       "strk": "L3"
+     },
+     {
+      "name": "Val-d'Or Foreurs",
+      "abbr": "VDO",
+      "gp": 1,
+      "w": 1,
+      "l": 0,
+      "otl": 0,
+      "pts": 2,
+      "gf": 4,
+      "ga": 2,
+      "strk": "W1"
      },
      {
       "name": "Rouyn-Noranda Huskies",
@@ -3760,18 +3759,6 @@
       "gf": 4,
       "ga": 3,
       "strk": ""
-     },
-     {
-      "name": "Val-d'Or Foreurs",
-      "abbr": "VDO",
-      "gp": 0,
-      "w": 0,
-      "l": 0,
-      "otl": 0,
-      "pts": 0,
-      "gf": 3,
-      "ga": 1,
-      "strk": ""
      }
     ]
    },
@@ -3779,28 +3766,28 @@
     "group": "West Division",
     "teams": [
      {
-      "name": "Soo Greyhounds",
-      "abbr": "SOO",
-      "gp": 16,
-      "w": 10,
-      "l": 5,
-      "otl": 1,
-      "pts": 21,
-      "gf": 60,
-      "ga": 53,
-      "strk": "L1"
-     },
-     {
       "name": "Flint Firebirds",
       "abbr": "FLNT",
-      "gp": 14,
-      "w": 10,
+      "gp": 15,
+      "w": 11,
       "l": 3,
       "otl": 1,
-      "pts": 21,
+      "pts": 23,
       "gf": 56,
       "ga": 39,
-      "strk": "W1"
+      "strk": "W2"
+     },
+     {
+      "name": "Soo Greyhounds",
+      "abbr": "SOO",
+      "gp": 17,
+      "w": 10,
+      "l": 5,
+      "otl": 2,
+      "pts": 22,
+      "gf": 60,
+      "ga": 54,
+      "strk": "L1"
      },
      {
       "name": "Windsor Spitfires",
@@ -3810,7 +3797,7 @@
       "l": 5,
       "otl": 3,
       "pts": 17,
-      "gf": 58,
+      "gf": 59,
       "ga": 48,
       "strk": "W4"
      },
@@ -3829,14 +3816,14 @@
      {
       "name": "Sarnia Sting",
       "abbr": "SAR",
-      "gp": 16,
+      "gp": 17,
       "w": 6,
-      "l": 9,
+      "l": 10,
       "otl": 1,
       "pts": 13,
       "gf": 65,
       "ga": 75,
-      "strk": "L3"
+      "strk": "L4"
      }
     ]
    },
@@ -3858,14 +3845,14 @@
      {
       "name": "London Knights",
       "abbr": "LDN",
-      "gp": 14,
-      "w": 9,
+      "gp": 15,
+      "w": 10,
       "l": 3,
       "otl": 2,
-      "pts": 20,
-      "gf": 63,
+      "pts": 22,
+      "gf": 64,
       "ga": 52,
-      "strk": "W1"
+      "strk": "W2"
      },
      {
       "name": "Kitchener Rangers",
@@ -3913,26 +3900,26 @@
      {
       "name": "Markham Royals",
       "abbr": "MAR",
-      "gp": 20,
+      "gp": 21,
       "w": 16,
-      "l": 4,
+      "l": 5,
       "otl": 0,
       "pts": 32,
       "gf": 81,
       "ga": 57,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Cobourg Cougars",
       "abbr": "COB",
-      "gp": 16,
-      "w": 12,
+      "gp": 17,
+      "w": 13,
       "l": 3,
       "otl": 1,
-      "pts": 25,
+      "pts": 27,
       "gf": 81,
       "ga": 59,
-      "strk": "W5"
+      "strk": "W6"
      },
      {
       "name": "Wellington Dukes",
@@ -3985,13 +3972,13 @@
      {
       "name": "St. Michaels Buzzers",
       "abbr": "STM",
-      "gp": 19,
+      "gp": 20,
       "w": 7,
       "l": 11,
-      "otl": 1,
-      "pts": 15,
+      "otl": 2,
+      "pts": 16,
       "gf": 60,
-      "ga": 86,
+      "ga": 88,
       "strk": "L2"
      },
      {
@@ -4027,7 +4014,7 @@
       "otl": 2,
       "pts": 10,
       "gf": 63,
-      "ga": 93,
+      "ga": 94,
       "strk": "W1"
      },
      {
@@ -4038,7 +4025,7 @@
       "l": 12,
       "otl": 1,
       "pts": 9,
-      "gf": 43,
+      "gf": 44,
       "ga": 80,
       "strk": "W1"
      },
@@ -4051,7 +4038,7 @@
       "otl": 2,
       "pts": 8,
       "gf": 45,
-      "ga": 114,
+      "ga": 115,
       "strk": "L6"
      }
     ]
@@ -4067,21 +4054,21 @@
       "l": 2,
       "otl": 0,
       "pts": 38,
-      "gf": 125,
+      "gf": 127,
       "ga": 42,
       "strk": "L1"
      },
      {
       "name": "Milton Menace",
       "abbr": "MIL",
-      "gp": 19,
-      "w": 15,
+      "gp": 20,
+      "w": 16,
       "l": 3,
       "otl": 1,
-      "pts": 31,
-      "gf": 76,
+      "pts": 33,
+      "gf": 78,
       "ga": 40,
-      "strk": "W2"
+      "strk": "W3"
      },
      {
       "name": "Toronto Patriots",
@@ -4176,7 +4163,7 @@
       "otl": 2,
       "pts": 14,
       "gf": 66,
-      "ga": 103,
+      "ga": 105,
       "strk": "L1"
      },
      {
@@ -4187,7 +4174,7 @@
       "l": 10,
       "otl": 2,
       "pts": 14,
-      "gf": 48,
+      "gf": 49,
       "ga": 93,
       "strk": "W1"
      },
@@ -4403,7 +4390,7 @@
       "l": 2,
       "otl": 1,
       "pts": 25,
-      "gf": 93,
+      "gf": 94,
       "ga": 42,
       "strk": "W1"
      },
@@ -4428,7 +4415,7 @@
       "otl": 1,
       "pts": 19,
       "gf": 64,
-      "ga": 63,
+      "ga": 64,
       "strk": "W2"
      },
      {
