@@ -71,9 +71,10 @@
   // each part: the widgets in it and their heights (desktop, phone)
   var HUB = encodeURIComponent('https://www.powerplaywindsor.com/scores-standings');
   var PARTS = {
-    scores:    [['local-games_3_3.html', 760, 900, '&other=none']],
+    scores:    [['local-games_3_3.html', 760, 900, '&other=none&current=no']],
     upcoming:  [['upcoming.html', 900, 1100, '']],
-    stories:   [['news.html', 1700, 1950, '', 'Powerplay stories'], ['local-news.html', 470, 570, '&other=none&lock=1', 'Team news']],
+    // a part with no name of its own goes with the named part above it (Powerplay stories = What's Going On + Every story)
+    stories:   [['home.html', 1000, 1350, '&view=hub', 'Powerplay stories'], ['news.html', 900, 1300, '&every=1'], ['local-news.html', 470, 570, '&other=none&lock=1', 'Team news']],
     spotlight: [['spotlight.html', 1250, 1180, '']],
     athletes:  [['athletes.html', 420, 380, '']],
     network:   [['network.html', 1300, 1520, '&only=local']]
@@ -102,11 +103,13 @@
       var subs = PARTS[tab].filter(function (w) { return w[4]; });
       if (subs.length > 1) {
         var frames = pane.querySelectorAll('iframe'), bar = document.createElement('div'); bar.className = 'subswitch';
+        var group = [], g = -1;
+        PARTS[tab].forEach(function (w) { if (w[4]) g++; group.push(Math.max(g, 0)); });
         var pick = function (n) {
-          [].forEach.call(frames, function (f, i) { f.style.display = i === n ? '' : 'none'; });
+          [].forEach.call(frames, function (f, i) { f.style.display = group[i] === n ? '' : 'none'; });
           [].forEach.call(bar.children, function (b, i) { b.setAttribute('aria-pressed', String(i === n)); });
         };
-        PARTS[tab].forEach(function (w, n) {
+        subs.forEach(function (w, n) {
           var b = document.createElement('button'); b.type = 'button'; b.textContent = w[4];
           b.onclick = function () { pick(n); }; bar.appendChild(b);
         });
