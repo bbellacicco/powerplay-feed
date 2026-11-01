@@ -331,7 +331,12 @@
     });
   }
   function buildLocal(P, news, lg, hs, net) {
-    var stories = (news && news.stories || []).filter(function (s) { return s.url && s.headline; }).sort(function (a, b) { return new Date(b.published) - new Date(a.published); });
+    // Charity Hub posts (only charity categories, no sports one) stay off the sports pages
+    function charityOnly(cats) {
+      var c = String(cats || '').split(/\s*,\s*/).filter(function (x) { return x && !/^(all posts|featured|powerplay today|uncategori[sz]ed)$/i.test(x); });
+      return c.length > 0 && c.every(function (x) { return /charit|cheque|check presentation|fundrais|impact stor|volunteer/i.test(x); });
+    }
+    var stories = (news && news.stories || []).filter(function (s) { return s.url && s.headline && !charityOnly(s.cats); }).sort(function (a, b) { return new Date(b.published) - new Date(a.published); });
     var ppStories = stories.filter(function (s) { return s.team === 'powerplay' && !isVid(s) && s.image && !GENERIC_IMG.test(s.image) && /powerplaywindsor\.com\/post\//.test(s.url); });
     // newest Powerplay videos (news feed has exact times; the Network list fills in)
     var vids = stories.filter(function (s) { return s.team === 'powerplay' && isVid(s); }).map(function (s) { return { headline: s.headline, url: s.url, image: s.image, published: s.published }; });
