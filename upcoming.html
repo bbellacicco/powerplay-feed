@@ -10,7 +10,7 @@
   Opens on today; the day buttons pick another day (as far ahead as the schedules go).
   Data: local-games.json (Spitfires, Lancers, junior hockey), saints.json (St. Clair), highschool.json (WECSSAA).
   ?day=2026-10-22 opens on that day.
-  Community Calendar strip on top: calendar.json (the collector reads each post's "When:" line; past events are dropped).
+  Events & games strip on top: Community Calendar posts (calendar.json), topped up with upcoming home games; (the collector reads each post's "When:" line; past events are dropped).
 -->
 <style>
   :root { --bg: #0b1a33; --panel: #10244a; --row: #132b57; --line: #1e3a6e; --text: #f2f5fb; --muted: #9fb0cf; --accent: #e8b021;
@@ -69,6 +69,7 @@
   .cal .ev .meta b { color: var(--accent); font-weight: 700; }
   .cal .ev img { width: 96px; height: 58px; object-fit: cover; border-radius: 4px; display: block; }
   .cal .ev.noimg { grid-template-columns: 52px 1fr; }
+  .cal .ev.game { border-left-color: var(--tc); } .cal .ev.game .dt { box-shadow: inset 0 -3px 0 var(--tc); }
   @media (max-width: 520px) { .cal .ev { grid-template-columns: 48px 1fr 72px; } .cal .ev img { width: 72px; height: 48px; } }
   @media (max-width: 640px) { .hsg { grid-template-columns: 1fr; } }
   @media (max-width: 520px) { .g { grid-template-columns: 62px 1fr; } .g .r { grid-column: 2; text-align: left; } .days button { padding: 7px 9px; font-size: 12px; } }
@@ -103,15 +104,40 @@
   function weekday(k) { return parts(noon(k)).weekday; }
 
   // Community Calendar: the five newest event posts that haven't happened yet, soonest first
+  // not enough event posts: upcoming home games fill the strip (Spitfires, Lancers, Saints first, then the
+  // Flyers, Vipers and the local PJHL clubs), up to 5 in all, over the next 7 days
+  var CAL_CLUBS = /^(leamington flyers|lasalle vipers|lakeshore canadiens|essex 73'?s|wheatley sharks|amherstburg admirals)$/i;
+  function calTier(g) { return g.team === 'spitfires' ? 0 : g.team === 'lancers' ? 1 : g.team === 'saints' ? 2 : g.team === 'junior' && CAL_CLUBS.test(g.club || '') ? 3 : 9; }
+  function gameEvents(n) {
+    if (n <= 0) return [];
+    var now = Date.now(), week = now + 7 * 864e5;
+    return games.filter(function (g) {
+      var t = new Date(g.start).getTime();
+      return g.home_away === 'H' && calTier(g) < 9 && g.status !== 'final' && g.status !== 'cancelled' && g.status !== 'postponed' && t > now && t < week;
+    }).sort(function (a, b) { return calTier(a) - calTier(b) || (a.start < b.start ? -1 : 1); }).slice(0, n).map(function (g) {
+      var who = g.team === 'spitfires' ? 'Spitfires' : g.team === 'lancers' ? 'Lancers ' + String(g.sport || '').toLowerCase()
+        : g.team === 'saints' ? 'Saints ' + String(g.sport || '').toLowerCase() : (g.club || '');
+      return { game: true, team: g.team, date: dayKey(new Date(g.start)), start: g.start, headline: who + ' vs. ' + g.opponent,
+        when: g.time_tbd ? 'Time TBA' : cpTime(new Date(g.start)), where: g.location || '' };
+    });
+  }
+  var calData = null;
+
   function drawCal(c) {
     var box = document.getElementById('cal'), today = dayKey(new Date());
     var evs = ((c && c.events) || []).filter(function (e) { return (e.end || e.date) >= today; }).slice(0, 5);
+    evs = evs.concat(gameEvents(5 - evs.length))
+      .sort(function (a, b) { return a.date < b.date ? -1 : a.date > b.date ? 1 : (a.game ? 1 : 0) - (b.game ? 1 : 0) || ((a.start || '') < (b.start || '') ? -1 : 1); });
     box.innerHTML = '';
     box.hidden = !evs.length;
     if (!evs.length) return;
-    box.appendChild(el('h2', '', 'Community Calendar'));
+    box.appendChild(el('h2', '', 'Events & games'));
     evs.forEach(function (e) {
-      var a = el('a', 'ev' + (e.image ? '' : ' noimg')); a.href = e.url; a.target = '_top';
+      var a = el('a', 'ev' + (e.image ? '' : ' noimg') + (e.game ? ' game' : ''));
+      if (e.game) {      // a game: opens that day's schedule right here
+        a.href = '#'; a.style.setProperty('--tc', 'var(--' + e.team + ')');
+        a.onclick = function (ev) { ev.preventDefault(); day = e.date; draw(); try { document.getElementById('days').scrollIntoView({ behavior: 'smooth' }); } catch (er) {} };
+      } else { a.href = e.url; a.target = '_top'; }
       var p = parts(noon(e.date)), dt = el('div', 'dt');
       dt.appendChild(el('small', '', e.date === today ? 'Today' : MON[+p.month - 1].replace('.', '')));
       dt.appendChild(el('b', '', +p.day));
@@ -126,7 +152,7 @@
   }
 
   function load() {
-    getJSON('calendar.json').then(drawCal);
+    getJSON('calendar.json').then(function (c) { calData = c; if (games.length) drawCal(calData); });
     Promise.all([getJSON('local-games.json'), getJSON('saints.json'), getJSON('highschool.json')]).then(function (r) {
       var lg = r[0] || {}, sc = r[1], hs = r[2];
       var all = (lg.games || []).slice();
@@ -136,6 +162,7 @@
       var seen = {};
       games = all.filter(function (g) { var k = g.id || (g.team + g.start + g.opponent); if (seen[k]) return false; seen[k] = 1; return true; });
       draw();
+      drawCal(calData);
     });
   }
 
