@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T14:17:58-05:00",
+ "updated": "2026-11-01T14:33:22-05:00",
  "today": "2026-11-01",
  "range": [
   "2026-10-29",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -1236,10 +1236,10 @@
    "opponent": "Brampton Steelheads",
    "location": "CAA Centre, Brampton",
    "status": "live",
-   "our_score": 0,
+   "our_score": 1,
    "opp_score": 0,
    "result": null,
-   "note": "10:55 1st",
+   "note": "02:53 1st",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29145/"
    }
@@ -2367,6 +2367,32 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Arsenal beats Liverpool to end Anfield torment, go top of Premier League",
+   "summary": "Arsenal eked out its first win at Anfield in 14 years by beating Liverpool 1-0 through Kai Havertz’s first-half goal to climb to first place in the Premier League on Sunday.",
+   "published": "2026-11-01T14:11-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/arsenal.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/premier-league/article/arsenal-beats-liverpool-to-end-anfield-torment-go-top-of-premier-league/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Flyers activate Konecny, Tippett off injured reserve",
+   "summary": "A pair of forwards are making their return to the Philadelphia Flyers.",
+   "published": "2026-11-01T14:17-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/12/Travis-Konecney.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/flyers-activate-konecny-tippett-off-injured-reserve/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Kucherov would consider trade to Maple Leafs or Canadiens",
    "summary": "",
@@ -2398,15 +2424,15 @@
   },
   {
    "league": "other",
-   "headline": "Arsenal beats Liverpool to end Anfield torment, go top of Premier League",
-   "summary": "Arsenal eked out its first win at Anfield in 14 years by beating Liverpool 1-0 through Kai Havertz’s first-half goal to climb to first place in the Premier League on Sunday.",
-   "published": "2026-11-01T14:11-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/arsenal.jpg",
+   "headline": "Notre Dame beats Villanova in men’s NCAA basketball season opener in Rome",
+   "summary": "Brady Koehler scored key baskets down the stretch, and Notre Dame made a late comeback after trailing for most of the second half to beat Villanova 74-70 in the college basketball season opener in Rome on Sunday.",
+   "published": "2026-11-01T12:34-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/ND.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/premier-league/article/arsenal-beats-liverpool-to-end-anfield-torment-go-top-of-premier-league/",
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/ncaa-mens-basketball/article/notre-dame-beats-villanova-in-mens-ncaa-basketball-season-opener-in-rome/",
    "source": "Sportsnet"
   },
   {
@@ -2420,32 +2446,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/ducks-defenceman-nick-jensen-clears-waivers/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Oilers’ Isaac Howard out against Rangers, appears to have avoided major injury",
-   "summary": "",
-   "published": "2026-11-01T12:39-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/isaac-howard.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/oilers-isaac-howard-out-against-rangers-appears-to-have-avoided-major-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Notre Dame beats Villanova in men’s NCAA basketball season opener in Rome",
-   "summary": "Brady Koehler scored key baskets down the stretch, and Notre Dame made a late comeback after trailing for most of the second half to beat Villanova 74-70 in the college basketball season opener in Rome on Sunday.",
-   "published": "2026-11-01T12:34-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/ND.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/ncaa-mens-basketball/article/notre-dame-beats-villanova-in-mens-ncaa-basketball-season-opener-in-rome/",
    "source": "Sportsnet"
   },
   {
@@ -2503,6 +2503,19 @@
    "sn_team_count": 8,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/nfl-week-8-preview-bills-vs-ravens-headlines-loaded-slate/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Oilers’ Isaac Howard out against Rangers, appears to have avoided major injury",
+   "summary": "",
+   "published": "2026-11-01T12:39-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/isaac-howard.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/oilers-isaac-howard-out-against-rangers-appears-to-have-avoided-major-injury/",
    "source": "Sportsnet"
   },
   {
@@ -3683,7 +3696,7 @@
       "otl": 1,
       "pts": 21,
       "gf": 58,
-      "ga": 37,
+      "ga": 38,
       "strk": "W2"
      },
      {
@@ -3707,7 +3720,7 @@
       "otl": 1,
       "pts": 15,
       "gf": 58,
-      "ga": 60,
+      "ga": 62,
       "strk": "W3"
      },
      {
@@ -3731,7 +3744,7 @@
       "otl": 2,
       "pts": 6,
       "gf": 37,
-      "ga": 67,
+      "ga": 68,
       "strk": "L3"
      },
      {
@@ -3742,7 +3755,7 @@
       "l": 0,
       "otl": 0,
       "pts": 0,
-      "gf": 0,
+      "gf": 1,
       "ga": 1,
       "strk": ""
      },
@@ -3754,7 +3767,7 @@
       "l": 0,
       "otl": 0,
       "pts": 0,
-      "gf": 0,
+      "gf": 2,
       "ga": 0,
       "strk": ""
      }
@@ -3771,7 +3784,7 @@
       "l": 5,
       "otl": 1,
       "pts": 21,
-      "gf": 56,
+      "gf": 57,
       "ga": 50,
       "strk": "L1"
      },
@@ -3783,7 +3796,7 @@
       "l": 3,
       "otl": 1,
       "pts": 21,
-      "gf": 51,
+      "gf": 52,
       "ga": 38,
       "strk": "W1"
      },
@@ -3795,7 +3808,7 @@
       "l": 5,
       "otl": 3,
       "pts": 17,
-      "gf": 56,
+      "gf": 57,
       "ga": 48,
       "strk": "W4"
      },
@@ -3820,7 +3833,7 @@
       "otl": 1,
       "pts": 13,
       "gf": 64,
-      "ga": 70,
+      "ga": 71,
       "strk": "L3"
      }
     ]
@@ -3849,7 +3862,7 @@
       "otl": 2,
       "pts": 20,
       "gf": 60,
-      "ga": 48,
+      "ga": 49,
       "strk": "W1"
      },
      {
@@ -3903,7 +3916,7 @@
       "l": 4,
       "otl": 0,
       "pts": 32,
-      "gf": 79,
+      "gf": 80,
       "ga": 54,
       "strk": "W1"
      },
@@ -3916,7 +3929,7 @@
       "otl": 1,
       "pts": 25,
       "gf": 78,
-      "ga": 57,
+      "ga": 58,
       "strk": "W5"
      },
      {
@@ -3975,7 +3988,7 @@
       "l": 11,
       "otl": 1,
       "pts": 15,
-      "gf": 57,
+      "gf": 58,
       "ga": 84,
       "strk": "L2"
      },
@@ -4065,7 +4078,7 @@
       "otl": 1,
       "pts": 31,
       "gf": 74,
-      "ga": 37,
+      "ga": 38,
       "strk": "W2"
      },
      {
