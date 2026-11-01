@@ -27,6 +27,16 @@
   html, body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.35 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
   a { color: inherit; }
   .page { position: relative; max-width: 1240px; margin: 0 auto; padding: 0 0 28px; }
+  /* Local Hub version (?view=hub): heading, the top boxes and the Latest stories row only */
+  .hubtitle { display: none; }
+  html.hubview .hubtitle { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 26px 40px 0; }
+  html.hubview .hubtitle h1 { margin: 0; font-family: 'Graduate', 'Rockwell', Georgia, serif; font-weight: 400; font-size: 26px; -webkit-text-stroke: .7px currentColor;
+    text-transform: uppercase; letter-spacing: .03em; }
+  html.hubview .hubtitle h1 span { color: var(--accent); }
+  html.hubview .hubtitle .n { color: var(--muted); font-size: 13px; }
+  html.hubview .feat { padding-top: 16px; }
+  html.hubview #guide, html.hubview #sform, html.hubview #rows > section:not(#row-stories), html.hubview .page > section, html.hubview #row-stories .all { display: none !important; }
+  @media (max-width: 760px) { html.hubview .hubtitle { padding: 18px 16px 0; } html.hubview .hubtitle h1 { font-size: 21px; } }
 
   /* ---------- top stories: one big feature + two beside it (same as the News page) ---------- */
   .feat { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; padding: 22px 40px 0; height: 478px; }
@@ -239,10 +249,13 @@
   }
   .game .side .rc { font-size: 11px; font-weight: 700; color: rgba(255,255,255,.85); font-variant-numeric: tabular-nums; }
 </style>
-<script>try{if(window.top!==window.self)document.documentElement.className+=' inwix';}catch(e){document.documentElement.className+=' inwix';}</script>
+<script>try{if(window.top!==window.self)document.documentElement.className+=' inwix';}catch(e){document.documentElement.className+=' inwix';}
+/* ?view=hub: the Local Hub's Stories section (What's Going On + Latest stories only) */
+if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className += ' hubview';</script>
 </head>
 <body>
 <div class="page" id="page">
+  <div class="hubtitle"><h1>What&rsquo;s <span>Going On</span></h1><div class="n">The newest stories, videos and Game Day Snaps</div></div>
   <div class="feat" id="feat"></div>
   <div class="guide" id="guide"></div>
 
@@ -1086,6 +1099,20 @@
   setInterval(function () { if (!vp.classList.contains('on')) load(); }, 3 * 60000);
 })();
 </script>
-<script>if (window.PPGuide) PPGuide.render(document.getElementById('guide'), { target: '_top' });</script>
+<script>if (window.PPGuide && !/[?&]view=hub\b/.test(location.search)) PPGuide.render(document.getElementById('guide'), { target: '_top' });</script>
+<script>
+/* inside the Local Hub (?in=sports): tell the hub how tall this is, so it never scrolls on its own */
+(function () {
+  if (window.parent === window || !/[?&]in=sports\b/.test(location.search)) return;
+  var last = 0;
+  function send() {
+    var h = Math.ceil(document.getElementById('page').getBoundingClientRect().height);
+    if (h && Math.abs(h - last) > 2) { last = h; try { parent.postMessage({ pp: 'height', h: h }, '*'); } catch (e) {} }
+  }
+  window.addEventListener('load', send); window.addEventListener('resize', send);
+  if (window.ResizeObserver) new ResizeObserver(send).observe(document.getElementById('page'));
+  setInterval(send, 1500); send();
+})();
+</script>
 </body>
 </html>
