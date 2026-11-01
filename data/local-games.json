@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T17:17:53-05:00",
+ "updated": "2026-11-01T17:32:51-05:00",
  "today": "2026-11-01",
  "range": [
   "2026-10-29",
@@ -2340,19 +2340,6 @@
   },
   {
    "league": "nfl",
-   "headline": "Ravens’ Lamar Jackson to be placed on IR with potentially season-ending injury",
-   "summary": "",
-   "published": "2026-11-01T16:43-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/lamar-2.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/ravens-lamar-jackson-to-be-placed-on-ir-with-potentially-season-ending-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
    "headline": "Buccaneers beat Falcons without completing pass for only third time in NFL history",
    "summary": "",
    "published": "2026-11-01T16:11-05:00",
@@ -2474,6 +2461,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-talk-kucherov-trade-possibility-after-win-over-canucks/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Ravens’ Lamar Jackson to be placed on IR with potentially season-ending injury",
+   "summary": "",
+   "published": "2026-11-01T16:43-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/lamar-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/ravens-lamar-jackson-to-be-placed-on-ir-with-potentially-season-ending-injury/",
    "source": "Sportsnet"
   },
   {
@@ -2757,6 +2757,19 @@
   },
   {
    "league": "nfl",
+   "headline": "HC Dan Campbell: Thoughts and prayers are with Jack and his family",
+   "summary": "Detroit Lions head coach Dan Campbell said after the game he didn't have any new information on linebacker Jack Campbell's injury.",
+   "published": "2026-11-01T17:21-05:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/cuzx95rpemphggqvoyct.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Lions"
+   ],
+   "url": "https://www.detroitlions.com/news/campbell-thoughts-and-prayers-are-with-jack-and-his-family",
+   "source": "Team site"
+  },
+  {
+   "league": "nfl",
    "headline": "RECAP: Lions vs. Vikings",
    "summary": "Tim Twentyman recaps the Detroit Lions’ 19-15 victory over the Minnesota Vikings.",
    "published": "2026-11-01T16:40-05:00",
@@ -2935,19 +2948,6 @@
     "Detroit Lions"
    ],
    "url": "https://www.detroitlions.com/news/lions-vs-vikings-practice-report-oct-29-gibbs-stbrown-joseph",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
-   "headline": "10 takeaways from Petzing, Sheppard & Fipp",
-   "summary": "Catch up on all the news from the coordinator media sessions with Drew Petzing, Kelvin Sheppard and Dave Fipp.",
-   "published": "2026-10-29T13:40-04:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/efv9ybtb7ezqdqjeuus6.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Lions"
-   ],
-   "url": "https://www.detroitlions.com/news/10-takeaways-from-petzing-sheppard-fipp-branch-joseph-gibbs",
    "source": "Team site"
   },
   {
@@ -4034,14 +4034,14 @@
      {
       "name": "Collingwood Blues",
       "abbr": "COL",
-      "gp": 21,
-      "w": 19,
+      "gp": 22,
+      "w": 20,
       "l": 2,
       "otl": 0,
-      "pts": 38,
+      "pts": 40,
       "gf": 128,
       "ga": 42,
-      "strk": "L1"
+      "strk": "W1"
      },
      {
       "name": "Milton Menace",
@@ -4154,14 +4154,14 @@
      {
       "name": "Georgetown Raiders",
       "abbr": "GEO",
-      "gp": 20,
+      "gp": 21,
       "w": 6,
-      "l": 12,
+      "l": 13,
       "otl": 2,
       "pts": 14,
       "gf": 66,
       "ga": 106,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Buffalo Jr. Sabres",
@@ -4332,6 +4332,18 @@
     "group": "Eastern Conference",
     "teams": [
      {
+      "name": "Cambridge Redhawks",
+      "abbr": "CAM",
+      "gp": 16,
+      "w": 13,
+      "l": 2,
+      "otl": 1,
+      "pts": 27,
+      "gf": 94,
+      "ga": 42,
+      "strk": "W2"
+     },
+     {
       "name": "Caledonia Corvairs",
       "abbr": "CAL",
       "gp": 16,
@@ -4368,18 +4380,6 @@
       "strk": "L2"
      },
      {
-      "name": "Cambridge Redhawks",
-      "abbr": "CAM",
-      "gp": 15,
-      "w": 12,
-      "l": 2,
-      "otl": 1,
-      "pts": 25,
-      "gf": 94,
-      "ga": 42,
-      "strk": "W1"
-     },
-     {
       "name": "Waterloo Siskins",
       "abbr": "WAT",
       "gp": 15,
@@ -4394,14 +4394,14 @@
      {
       "name": "Pelham Panthers",
       "abbr": "PEL",
-      "gp": 15,
+      "gp": 16,
       "w": 9,
-      "l": 5,
+      "l": 6,
       "otl": 1,
       "pts": 19,
       "gf": 64,
       "ga": 64,
-      "strk": "W2"
+      "strk": "L1"
      },
      {
       "name": "Ayr Centennials",
