@@ -92,10 +92,13 @@
     var c = document.createElement('button'); c.type = 'button'; c.textContent = 'Copy link';
     c.onclick = function () { if (copy(url)) { c.textContent = 'Link copied ✓'; c.className = 'ok'; setTimeout(close, 1200); } else { prompt('Copy this link:', url); } };
     m.appendChild(c);
-    document.body.appendChild(m);
-    var r = btn.getBoundingClientRect(), left = r.right + window.scrollX - m.offsetWidth;
+    // a full-screen viewer (athlete profiles) only shows what's inside it: the menu goes in there
+    var host = document.fullscreenElement || document.webkitFullscreenElement || document.body, fs = host !== document.body;
+    host.appendChild(m);
+    if (fs) m.style.position = 'fixed';
+    var r = btn.getBoundingClientRect(), left = r.right + (fs ? 0 : window.scrollX) - m.offsetWidth;
     m.style.left = Math.max(8, Math.min(left, document.documentElement.clientWidth - m.offsetWidth - 8)) + 'px';
-    m.style.top = (r.bottom + window.scrollY + 6) + 'px';
+    m.style.top = (r.bottom + (fs ? 0 : window.scrollY) + 6) + 'px';
     open = m;
   }
 
