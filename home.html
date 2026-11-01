@@ -676,7 +676,11 @@
   function playRow(s, cardEl, at) {
     var src = vidEmbed(s.url); if (!src) return openUrl(s.url);
     var fr = document.getElementById('vframe'); fr.innerHTML = ''; fr.classList.remove('gal');
-    var f = document.createElement('iframe'); f.src = src; f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; f.allowFullscreen = true; f.title = s.headline; fr.appendChild(f);
+    // the player is shown (full size) BEFORE the video loads: a video that starts in a hidden box measures
+    // itself as tiny and picks the lowest quality (240p)
+    vp.classList.add('on');
+    var f = document.createElement('iframe'); f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; f.allowFullscreen = true; f.title = s.headline; fr.appendChild(f);
+    requestAnimationFrame(function () { f.src = src; });
     document.getElementById('vtitle').textContent = s.headline;
     document.getElementById('vext').style.display = 'none';        // videos stay on Powerplay (no "Watch on YouTube")
     vcur = s; document.getElementById('vshare').style.display = '';
