@@ -54,6 +54,7 @@
     '.ppg .pg-dt small{display:block;font-size:9px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#a5161f}' +
     '.ppg .pg-cal .pg-a{white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;line-height:1.25}.ppg .pg-cal .pg-li{align-items:flex-start}' +
     '.ppg .pg-dt b{display:block;font-size:16px;font-weight:800;margin-top:1px}' +
+    '.ppg .pg-li.pg-game .pg-dt{box-shadow:inset 0 -3px 0 var(--c)}' +
     '.ppg .pg-none{color:#9fb0cf;font-size:13px;padding:6px 0}' +
     '.ppg .pg-go{margin-top:auto;padding-top:9px;font-size:12.5px;font-weight:800;color:#e8b021}' +
     '.ppg .pg-go:hover{text-decoration:underline}' +
@@ -213,13 +214,40 @@
   }
 
   // 3. Community Calendar: what's on in the community, from your event posts
+  // when there aren't enough Community Calendar posts, upcoming home games fill the rest:
+  // Spitfires, Lancers and Saints first, then the Flyers, Vipers and the local PJHL clubs (next 7 days)
+  var CAL_CLUBS = /^(leamington flyers|lasalle vipers|lakeshore canadiens|essex 73'?s|wheatley sharks|amherstburg admirals)$/i;
+  function calTier(g) { return g.team === 'spitfires' ? 0 : g.team === 'lancers' ? 1 : g.team === 'saints' ? 2 : g.team === 'junior' && CAL_CLUBS.test(g.club || '') ? 3 : 9; }
+  function gameEvents(games, n, skipDay) {
+    if (n <= 0) return [];
+    var now = Date.now(), week = now + 7 * 864e5;
+    var pool = games.filter(function (g) {
+      var t = new Date(g.start).getTime();
+      return g.home_away === 'H' && calTier(g) < 9 && g.status !== 'final' && g.status !== 'cancelled' && g.status !== 'postponed' && t > now && t < week;
+    });
+    var later = pool.filter(function (g) { return dayKey(new Date(g.start)) !== skipDay; });
+    if (later.length) pool = later;                       // Today's games are already listed beside it
+    pool.sort(function (a, b) { return calTier(a) - calTier(b) || (a.start < b.start ? -1 : 1); });
+    return pool.slice(0, n).map(function (g) {
+      var who = g.team === 'spitfires' ? 'Spitfires' : g.team === 'lancers' ? 'Lancers ' + String(g.sport || '').toLowerCase()
+        : g.team === 'saints' ? 'Saints ' + String(g.sport || '').toLowerCase() : (g.club || '');
+      return { game: true, team: g.team, date: dayKey(new Date(g.start)), start: g.start, headline: who + ' vs. ' + g.opponent,
+        when: g.time_tbd ? 'Time TBA' : cpTime(new Date(g.start)), where: g.location || '',
+        url: hubLink('upcoming') + '&day=' + dayKey(new Date(g.start)) };
+    });
+  }
+
   function calCol(d, target, compact) {
     var col = el('div', 'pg-col pg-cal'), today = dayKey(new Date());
-    var evs = d.events.filter(function (e) { return (e.end || e.date) >= today; }).slice(0, compact ? 3 : 4);
-    colHead(col, 'Community Calendar', evs.length ? 'Coming up' : '');
+    var max = compact ? 3 : 4;
+    var evs = d.events.filter(function (e) { return (e.end || e.date) >= today; }).slice(0, max);
+    evs = evs.concat(gameEvents(d.games, max - evs.length, today))
+      .sort(function (a, b) { return a.date < b.date ? -1 : a.date > b.date ? 1 : (a.game ? 1 : 0) - (b.game ? 1 : 0) || ((a.start || '') < (b.start || '') ? -1 : 1); });
+    colHead(col, 'Coming Up', evs.length ? 'Events & games' : '');
     if (!evs.length) col.appendChild(el('div', 'pg-none', 'New community events are posted here as they are announced.'));
     evs.forEach(function (e) {
-      var a = el('a', 'pg-li'); a.href = e.url; a.target = target;
+      var a = el('a', 'pg-li' + (e.game ? ' pg-game' : '')); a.href = e.url; a.target = target;
+      if (e.game) a.style.setProperty('--c', COLOR[e.team] || '#e8b021');
       var dt = el('div', 'pg-dt'), nd = noon(e.date);
       dt.appendChild(el('small', null, e.date === today ? 'Today' : MON[nd.getMonth()].replace('.', '').slice(0, 4)));
       dt.appendChild(el('b', null, String(nd.getDate()))); a.appendChild(dt);
@@ -227,7 +255,7 @@
       tx.appendChild(el('div', 'pg-b', [e.when, e.where].filter(Boolean).join(' · '))); a.appendChild(tx);
       col.appendChild(a);
     });
-    goLink(col, 'See the calendar', hubLink('upcoming'), target);
+    goLink(col, 'See everything coming up', hubLink('upcoming'), target);
     return col;
   }
 
