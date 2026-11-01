@@ -366,9 +366,13 @@
     var src = embed(v.u);
     if (!src) { window.open(v.u, '_blank', 'noopener'); return; }
     frame.innerHTML = '';
-    var f = document.createElement('iframe'); f.src = src; f.title = v.t;
+    // show the player (full size) before the video loads: a video that starts in a hidden box measures itself
+    // as tiny and picks the lowest quality (240p)
+    player.classList.add('on');
+    var f = document.createElement('iframe'); f.title = v.t;
     f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; f.allowFullscreen = true;
     frame.appendChild(f);
+    requestAnimationFrame(function () { f.src = src; });
     document.getElementById('ptitle').textContent = v.t;
     cur = v;
     showDesc(v);
