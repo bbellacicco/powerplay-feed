@@ -439,6 +439,11 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
 
   // a Community Calendar post stays out of the big box, unless it's also filed under a sports category
   // (University of Windsor, High School Sports...): then it's a story too, and takes the box like any other
+  // Charity Hub posts (only charity categories, no sports one) stay off the sports pages
+  function charityOnly(cats) {
+    var c = String(cats || '').split(/\s*,\s*/).filter(function (x) { return x && !/^(all posts|featured|powerplay today|uncategori[sz]ed)$/i.test(x); });
+    return c.length > 0 && c.every(function (x) { return /charit|cheque|check presentation|fundrais|impact stor|volunteer/i.test(x); });
+  }
   function calOnly(s) {
     var cats = String(s.cats || '').split(/\s*,\s*/).filter(Boolean);
     if (!cats.some(function (c) { return /community calendar/i.test(c); })) return false;
@@ -950,7 +955,7 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
     Promise.all([getJSON('local-news.json'), getJSON('local-games.json'), getJSON('highschool.json'), getJSON('saints.json'), getJSON('network.json'), getJSON('profiles.json'), getJSON('team-logos.json'), getJSON('slideshows.json'), getJSON('featured.json')]).then(function (r) {
       if (r[6] && r[6].logos) TEAM_LOGOS = r[6].logos;
       var news = r[0] || {}, lg = r[1] || {}, hs = r[2], sc = r[3], net = r[4] || {}, pf = r[5] || {};
-      var stories = (news.stories || []).filter(function (s) { return s.url && s.headline; })
+      var stories = (news.stories || []).filter(function (s) { return s.url && s.headline && !charityOnly(s.cats); })
         .sort(function (a, b) { return new Date(b.published) - new Date(a.published); });
       // top stories: Powerplay's three newest written stories with a real photo
       var seenH = {}, featItems = stories.filter(function (s) { return s.team === 'powerplay' && !isVid(s) && !calOnly(s) && s.image && !GENERIC_IMG.test(s.image) && /powerplaywindsor\.com/.test(s.url); })
