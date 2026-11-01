@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
 <title>Athlete Profiles Strip | Powerplay Windsor</title>
+<script src="share.js?v=5"></script>
 <!--
   Slim, scrollable row of the athlete profiles for the homepage (same list as athletes.html: data/profiles.json).
   Tapping an athlete makes the profile fill the screen (full screen; on iPhone the full-screen viewer page profile.html).
@@ -30,6 +31,9 @@
   .card img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
   .card::after { content: "View profile"; position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 8px 6px; font-size: 11px; font-weight: 800; color: #fff;
     background: linear-gradient(transparent, rgba(11,26,51,.92)); text-align: left; }
+  .card > .pps-btn.mini { position: absolute; right: 5px; top: 5px; z-index: 3; padding: 4px 7px; font-size: 10.5px; background: rgba(11,26,51,.82); border-color: rgba(255,255,255,.35); }
+  .fsbar .acts { display: flex; gap: 8px; align-items: center; }
+  #fsshare .pps-btn { background: var(--accent); color: #0b1a33; border-color: var(--accent); padding: 7px 12px 7px 10px; font-size: 13px; }
   .tile { flex: 0 0 auto; width: 140px; aspect-ratio: 3 / 4; border-radius: 8px; border: 2px dashed var(--line); background: var(--panel); color: var(--accent);
     display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-decoration: none; font-weight: 800; text-align: center;
     scroll-snap-align: start; padding: 10px; transition: border-color .15s; }
@@ -57,7 +61,7 @@
   </div>
   <div class="strip" id="strip"><div class="empty">Loading…</div></div>
   <div class="fs" id="fs" role="dialog" aria-label="Athlete profile">
-    <div class="fsbar"><span id="fspos"></span><button type="button" id="fsclose">&#10005; Close</button></div>
+    <div class="fsbar"><span id="fspos"></span><span class="acts"><span id="fsshare"></span><button type="button" id="fsclose">&#10005; Close</button></span></div>
     <img id="fsimg" alt="Athlete profile">
     <button class="fsnav prev" type="button" id="fsprev" aria-label="Previous profile">&#8249;</button>
     <button class="fsnav next" type="button" id="fsnext" aria-label="Next profile">&#8250;</button>
@@ -84,6 +88,18 @@
     big.onerror = function () { if (big.src !== full(all[cur].img)) big.src = full(all[cur].img); };
     document.getElementById('fspos').textContent = (cur + 1) + ' of ' + all.length;
   }
+  // share one athlete: powerplaywindsor.com/scores-standings?tab=athletes&p=<key> (same key as athletes.html and publish.py)
+  function pkey(p) {
+    if (p.key) return p.key;
+    var m = String(p.img).match(/static\.wixstatic\.com\/media\/[0-9a-z]+_([0-9a-f]{10})/);
+    if (m) return m[1];
+    return String(p.img).split('/').pop().replace(/\.[^.]*$/, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'profile';
+  }
+  function shareData(p) {
+    return { title: 'Athlete Profile', url: 'https://www.powerplaywindsor.com/scores-standings?tab=athletes&p=' + encodeURIComponent(pkey(p)),
+             text: 'Get to know this Windsor-Essex athlete | Powerplay Windsor', image: p.share ? REPO + p.share : large(p.img) };
+  }
+  if (window.PPShare) document.getElementById('fsshare').appendChild(PPShare.button(function () { return shareData(all[cur] || {}); }));
   function fsEl() { return document.fullscreenElement || document.webkitFullscreenElement; }
   function enlarge(n, list) {
     all = list;
@@ -118,6 +134,11 @@
         img.onerror = function () { if (img.src !== full(p.img)) img.src = full(p.img); };
         c.appendChild(img);
         c.onclick = function () { enlarge(i, all); };
+        if (window.PPShare) {
+          var sb = PPShare.button(function () { return shareData(p); });
+          sb.classList.add('mini'); sb.addEventListener('click', function (e) { e.stopPropagation(); });
+          c.appendChild(sb);
+        }
         box.appendChild(c);
       });
       // the "More" tile: the rest are on the Athlete Profiles page
