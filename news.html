@@ -116,6 +116,8 @@
   /* Local Sports Hub version */
   .hubchips { padding: 0 40px; margin: 26px 0 -14px; }
   .hub .grid { min-height: 0 !important; }
+  .everyonly .ptitle, .everyonly #feat, .everyonly #rows { display: none !important; }
+  .everyonly .page { padding-top: 4px; } .everyonly #every { margin-top: 10px; }
   @media (max-width: 700px) { .hubchips { padding: 0 16px; margin-top: 22px; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; } .hubchips .chip { flex: none; } }
 </style>
 </head>
@@ -145,6 +147,9 @@
   var DATA = 'https://bbellacicco.github.io/powerplay-feed/data/';
   // inside the Local Sports Hub (?in=sports): one story row with team chips and 8 stories a page, so it fits the hub
   var HUB = window.parent !== window && /[?&]in=sports\b/.test(location.search);
+  // ?every=1 (the Local Hub, under What's Going On): only the Every story section
+  var EVERY = /[?&]every=1\b/.test(location.search);
+  if (EVERY) document.documentElement.classList.add('everyonly');
   var TZ = 'America/Toronto', PER = HUB ? 8 : 12, rowTeam = 'latest';
   var MON = ['Jan.', 'Feb.', 'March', 'April', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'];
   // teams: blog categories first, then words in the headline/summary
@@ -303,7 +308,8 @@
       list.sort(function (a, b) { return b._ts - a._ts; });
       all = list;
       document.getElementById('total').textContent = list.length.toLocaleString('en-CA') + ' stories since 2019';
-      featured(list); rows(list); chips(); grid();
+      if (!EVERY) { featured(list); rows(list); }
+      chips(); grid();
     });
   }
   load();
