@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T19:47:56-04:00",
+ "updated": "2026-10-31T20:03:38-04:00",
  "today": "2026-10-31",
  "range": [
   "2026-10-28",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -1382,12 +1382,14 @@
    "home_away": "H",
    "opponent": "OUA Championships",
    "location": "Malden Park",
-   "status": "upcoming",
+   "status": "final",
    "our_score": null,
    "opp_score": null,
    "result": null,
-   "note": "",
-   "links": {}
+   "note": "W - 2nd, M - 5th",
+   "links": {
+    "recap": "https://golancers.ca/news/2026/10/31/lancers-claim-silver-at-oua-cross-country-championships.aspx"
+   }
   },
   {
    "id": "lancers-6245",
@@ -1435,13 +1437,13 @@
    "home_away": "A",
    "opponent": "Western Mustangs",
    "location": "London, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 0,
+   "result": "W",
+   "note": "26-24, 25-16, 25-22",
    "links": {
-    "watch": "https://oua.tv/?school=Windsor"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6265"
    }
   },
   {
@@ -1471,14 +1473,13 @@
    "home_away": "H",
    "opponent": "Waterloo Warriors",
    "location": "Toldo Lancer Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 77,
+   "opp_score": 42,
+   "result": "W",
    "note": "",
    "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=171",
-    "watch": "https://oua.tv/?school=Windsor"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6202"
    }
   },
   {
@@ -1509,11 +1510,11 @@
    "home_away": "A",
    "opponent": "Fort Erie Meteors",
    "location": "Fort Erie Leisureplex, Fort Erie, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 1,
+   "opp_score": 2,
    "result": null,
-   "note": "",
+   "note": "10:26 2nd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15639"
    },
@@ -2633,6 +2634,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Penguins’ Sidney Crosby sets NHL record for assists with single franchise",
+   "summary": "",
+   "published": "2026-10-31T19:49-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP176099990.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/penguins-sidney-crosby-sets-nhl-record-for-assists-with-single-franchise/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Senators beat Sharks to tie franchise record for most October wins",
    "summary": "",
    "published": "2026-10-31T19:16-04:00",
@@ -2707,19 +2721,6 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/islanders-heineman-ejected-after-knee-on-knee-collision-with-oilers-howard/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Report: Colts in talks to trade RB Jonathan Taylor",
-   "summary": "The Colts are willing to trade star running back Jonathan Taylor and are active in talks with several teams, ESPN’s Adam Schefter and Ian Rapoport reported Saturday.",
-   "published": "2026-10-31T09:20-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/JT.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/report-colts-in-talks-to-trade-rb-jonathan-taylor/",
    "source": "Sportsnet"
   },
   {
@@ -2846,6 +2847,19 @@
   },
   {
    "league": "mlb",
+   "headline": "Rays exercise Drew Rasmussen’s $20M team option for 2027",
+   "summary": "",
+   "published": "2026-10-31T18:57-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-8-9.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/rays-exercise-drew-rasmussens-20m-team-option-for-2027/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
    "headline": "Japanese RHP Kaima Taira set to move to MLB",
    "summary": "Japanese right-hander Kaima Taira wants to move to Major League Baseball.",
    "published": "2026-10-31T09:24-04:00",
@@ -2897,6 +2911,19 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/nfl-week-8-pick-em-panthers-look-to-make-road-statement/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Report: Colts in talks to trade RB Jonathan Taylor",
+   "summary": "The Colts are willing to trade star running back Jonathan Taylor and are active in talks with several teams, ESPN’s Adam Schefter and Ian Rapoport reported Saturday.",
+   "published": "2026-10-31T09:20-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/JT.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/report-colts-in-talks-to-trade-rb-jonathan-taylor/",
    "source": "Sportsnet"
   },
   {
@@ -3001,45 +3028,6 @@
    "sn_team_count": 1,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/bundesliga/article/bayern-munichs-olise-saibari-and-gnabry-all-go-off-hurt-in-klassiker/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Canada’s Roussel grabs two medals at short track speedskating World Tour",
-   "summary": "",
-   "published": "2026-10-31T17:17-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/12/Roussel1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Olympics",
-   "url": "https://www.sportsnet.ca/olympics/article/canadas-roussel-grabs-two-medals-at-short-track-speedskating-world-tour/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Canada shut out by U.S. in second world championship tune-up",
-   "summary": "",
-   "published": "2026-10-30T21:41-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP175466301.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/wwhc/article/canada-shut-out-by-u-s-in-second-world-championship-tune-up/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Canadian government ‘strongly opposes’ Russia returning to IIHF competitions",
-   "summary": "The Government of Canada has condemned a decision by the Court of Arbitration for Sport to allow Russia to return to international hockey competitions.",
-   "published": "2026-10-30T17:48-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/07/canada.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/hockey/article/canadian-government-strongly-opposes-russia-returning-to-iihf-competitions/",
    "source": "Sportsnet"
   },
   {
@@ -4225,7 +4213,7 @@
       "l": 8,
       "otl": 2,
       "pts": 20,
-      "gf": 65,
+      "gf": 66,
       "ga": 63,
       "strk": "L1"
      },
@@ -4238,7 +4226,7 @@
       "otl": 2,
       "pts": 16,
       "gf": 60,
-      "ga": 52,
+      "ga": 53,
       "strk": "L1"
      },
      {
@@ -4355,6 +4343,18 @@
       "strk": "W4"
      },
      {
+      "name": "King Rebellion",
+      "abbr": "KNG",
+      "gp": 18,
+      "w": 14,
+      "l": 2,
+      "otl": 2,
+      "pts": 30,
+      "gf": 73,
+      "ga": 35,
+      "strk": "W2"
+     },
+     {
       "name": "Toronto Patriots",
       "abbr": "PAT",
       "gp": 17,
@@ -4365,18 +4365,6 @@
       "gf": 94,
       "ga": 31,
       "strk": "W9"
-     },
-     {
-      "name": "King Rebellion",
-      "abbr": "KNG",
-      "gp": 17,
-      "w": 13,
-      "l": 2,
-      "otl": 2,
-      "pts": 28,
-      "gf": 72,
-      "ga": 35,
-      "strk": "W1"
      },
      {
       "name": "Leamington Flyers",
@@ -4429,14 +4417,14 @@
      {
       "name": "Georgetown Raiders",
       "abbr": "GEO",
-      "gp": 19,
+      "gp": 20,
       "w": 6,
-      "l": 11,
+      "l": 12,
       "otl": 2,
       "pts": 14,
       "gf": 65,
-      "ga": 98,
-      "strk": "W1"
+      "ga": 99,
+      "strk": "L1"
      },
      {
       "name": "Caledon Admirals",
@@ -4525,7 +4513,7 @@
       "l": 4,
       "otl": 1,
       "pts": 17,
-      "gf": 47,
+      "gf": 49,
       "ga": 40,
       "strk": "L1"
      },
@@ -4550,7 +4538,7 @@
       "otl": 2,
       "pts": 14,
       "gf": 65,
-      "ga": 65,
+      "ga": 67,
       "strk": "L1"
      },
      {
@@ -4573,8 +4561,8 @@
       "l": 7,
       "otl": 0,
       "pts": 12,
-      "gf": 38,
-      "ga": 54,
+      "gf": 39,
+      "ga": 55,
       "strk": "W2"
      },
      {
@@ -4597,7 +4585,7 @@
       "l": 13,
       "otl": 0,
       "pts": 8,
-      "gf": 45,
+      "gf": 46,
       "ga": 76,
       "strk": "L9"
      },
@@ -4610,7 +4598,7 @@
       "otl": 0,
       "pts": 2,
       "gf": 25,
-      "ga": 71,
+      "ga": 72,
       "strk": "W1"
      }
     ]
@@ -4662,8 +4650,8 @@
       "l": 1,
       "otl": 0,
       "pts": 24,
-      "gf": 65,
-      "ga": 39,
+      "gf": 66,
+      "ga": 40,
       "strk": "L1"
      },
      {
@@ -4674,7 +4662,7 @@
       "l": 3,
       "otl": 3,
       "pts": 19,
-      "gf": 51,
+      "gf": 52,
       "ga": 36,
       "strk": "W2"
      },
@@ -4735,7 +4723,7 @@
       "otl": 1,
       "pts": 9,
       "gf": 55,
-      "ga": 85,
+      "ga": 87,
       "strk": "L3"
      },
      {
@@ -4747,7 +4735,7 @@
       "otl": 1,
       "pts": 5,
       "gf": 52,
-      "ga": 96,
+      "ga": 97,
       "strk": "L2"
      },
      {
@@ -4758,7 +4746,7 @@
       "l": 15,
       "otl": 0,
       "pts": 2,
-      "gf": 32,
+      "gf": 34,
       "ga": 98,
       "strk": "L6"
      }
