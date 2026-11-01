@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pro Hub Strip | Powerplay Windsor</title>
+<!--
+  Pro Hub teaser strip for the homepage: two scores for our pro teams (live first, then today's finals,
+  then yesterday's, otherwise the next games) and a button to the Pro Hub (powerplaywindsor.com/local-sports).
+  Scores load live from ESPN (NFL, NHL, NBA, MLB) and refresh every minute while a game is on.
+  Embed full width in Wix: about 130px tall on desktop, 250px on mobile.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #0b1a33; --card: #132b57; --line: #1e3a6e; --text: #f2f5fb; --muted: #b8c4dc; --accent: #e8b021; --live: #e5484d; --win: #2fbf71; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.35 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; overflow: hidden; }
+  a { color: inherit; text-decoration: none; }
+  .strip { position: relative; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 18px; margin: 8px; padding: 14px 18px;
+    border-radius: 12px; border: 1px solid rgba(255,255,255,.12); background: linear-gradient(100deg, #10244a 0%, #0b1a33 70%); overflow: hidden; }
+  .strip::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: var(--accent); }
+  .k { font-size: 11px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+  h1 { margin: 2px 0 0; font: 400 30px/1 'Bebas Neue', Impact, 'Arial Narrow', sans-serif; letter-spacing: .02em; text-transform: uppercase; white-space: nowrap; }
+  h1 em { font-style: normal; color: var(--accent); }
+  .by { color: var(--muted); font-size: 12px; margin-top: 3px; white-space: nowrap; }
+  .games { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; min-width: 0; }
+  .g { display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 9px 12px; min-width: 0; }
+  .g:hover { border-color: var(--accent); }
+  .g .st { grid-column: 1 / -1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  .g .st.live { color: var(--live); }
+  .g .t { font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+  .g .t.w { color: #fff; } .g .t.l { color: var(--muted); font-weight: 600; }
+  .g .s { font-weight: 800; font-variant-numeric: tabular-nums; text-align: right; }
+  .empty { color: var(--muted); }
+  .go { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: #0b1a33; font-weight: 900; padding: 12px 18px; border-radius: 8px; white-space: nowrap; }
+  .go:hover { filter: brightness(1.08); }
+  @media (max-width: 760px) {
+    .strip { grid-template-columns: 1fr; gap: 10px; padding: 12px 14px 15px; }
+    .strip { grid-template-columns: minmax(0, 1fr); }
+    .head { display: block; }
+    h1 { font-size: 26px; }
+    .games { gap: 8px; }
+    .g { padding: 8px 9px; } .g .t { font-size: 13px; }
+    .go { justify-content: center; }
+  }
+</style>
+</head>
+<body>
+<div class="strip">
+  <a class="head" href="https://www.powerplaywindsor.com/local-sports" target="_top">
+    <div><div class="k">Pro Hub</div><h1>Our pro teams, <em>live</em></h1></div>
+    <div class="by">Presented by <b>Unifor Local 2458</b></div>
+  </a>
+  <div class="games" id="games"><div class="empty">Loading scores…</div></div>
+  <a class="go" href="https://www.powerplaywindsor.com/local-sports" target="_top">Every pro score &rarr;</a>
+</div>
+<script>
+(function () {
+  var HUB = 'https://www.powerplaywindsor.com/local-sports', TZ = 'America/Toronto';
+  var LEAGUES = { nfl: 'football/nfl', nhl: 'hockey/nhl', nba: 'basketball/nba', mlb: 'baseball/mlb' };
+  var OURS = { nhl: ['DET', 'TOR', 'MTL'], nba: ['DET', 'TOR'], nfl: ['DET', 'BUF'], mlb: ['DET', 'TOR'] };
+  function el(t, c, x) { var e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; }
+  function day(d) { return new Intl.DateTimeFormat('en-CA', { timeZone: TZ, year: 'numeric', month: '2-digit', day: '2-digit' }).format(d).replace(/-/g, ''); }
+  function clock(d) { return new Intl.DateTimeFormat('en-CA', { timeZone: TZ, hour: 'numeric', minute: '2-digit' }).format(d).replace(/\s?a\.?m\.?/i, ' a.m.').replace(/\s?p\.?m\.?/i, ' p.m.').replace(':00', ''); }
+  var MON = ['Jan.', 'Feb.', 'March', 'April', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'];
+  function games(lg, d) {
+    return fetch('https://site.api.espn.com/apis/site/v2/sports/' + LEAGUES[lg] + '/scoreboard?dates=' + d).then(function (r) { return r.ok ? r.json() : { events: [] }; })
+      .then(function (j) {
+        return (j.events || []).map(function (e) {
+          var c = e.competitions[0], st = e.status.type;
+          var side = function (h) { var x = c.competitors.filter(function (t) { return t.homeAway === h; })[0];
+            return { abbr: x.team.abbreviation, name: x.team.shortDisplayName || x.team.name, score: x.score, winner: x.winner }; };
+          return { lg: lg, start: e.date, state: st.state, detail: st.shortDetail || '', home: side('home'), away: side('away'), off: /POSTPONED|CANCELED/.test(st.name) };
+        }).filter(function (g) { return !g.off && (OURS[lg].indexOf(g.home.abbr) >= 0 || OURS[lg].indexOf(g.away.abbr) >= 0); });
+      }).catch(function () { return []; });
+  }
+  function card(g) {
+    var a = el('a', 'g'); a.href = HUB; a.target = '_top';
+    var label = g.state === 'in' ? 'Live · ' + g.detail : g.state === 'post' ? 'Final' + (g._y ? ' · yesterday' : '')
+      : (g._today ? 'Today' : (function (d) { var p = {}; new Intl.DateTimeFormat('en-CA', { timeZone: TZ, weekday: 'short', month: 'numeric', day: 'numeric' }).formatToParts(d).forEach(function (x) { p[x.type] = x.value; }); return p.weekday.replace('.', '') + '., ' + MON[+p.month - 1] + ' ' + p.day; })(new Date(g.start))) + ' · ' + clock(new Date(g.start));
+    a.appendChild(el('div', 'st' + (g.state === 'in' ? ' live' : ''), label + ' · ' + g.lg.toUpperCase()));
+    [g.away, g.home].forEach(function (t) {
+      var done = g.state === 'post';
+      a.appendChild(el('div', 't' + (done ? (t.winner ? ' w' : ' l') : ''), (t === g.home ? '@ ' : '') + t.name));
+      a.appendChild(el('div', 's', g.state === 'pre' ? '' : String(t.score)));
+    });
+    return a;
+  }
+  function load() {
+    var now = new Date(), today = day(now), yday = day(new Date(now - 864e5)), tom = day(new Date(now.getTime() + 864e5));
+    var jobs = [];
+    Object.keys(LEAGUES).forEach(function (lg) { [yday, today, tom].forEach(function (d) { jobs.push(games(lg, d).then(function (l) { l.forEach(function (g) { g._d = d; g._today = d === today; g._y = d === yday; }); return l; })); }); });
+    Promise.all(jobs).then(function (r) {
+      var all = [].concat.apply([], r), seen = {};
+      all = all.filter(function (g) { var k = g.lg + g.start + g.home.abbr; if (seen[k]) return false; seen[k] = 1; return true; });
+      var live = all.filter(function (g) { return g.state === 'in'; });
+      var finToday = all.filter(function (g) { return g.state === 'post' && g._today; }).sort(function (a, b) { return b.start.localeCompare(a.start); });
+      var finY = all.filter(function (g) { return g.state === 'post' && g._y; }).sort(function (a, b) { return b.start.localeCompare(a.start); });
+      var next = all.filter(function (g) { return g.state === 'pre' && new Date(g.start) > now; }).sort(function (a, b) { return a.start.localeCompare(b.start); });
+      var pick = live.concat(finToday, finY.length && live.length + finToday.length < 2 ? finY : [], next).slice(0, 2);
+      var box = document.getElementById('games'); box.innerHTML = '';
+      if (!pick.length) box.appendChild(el('div', 'empty', 'Red Wings, Leafs, Habs, Lions, Bills, Pistons, Raptors, Tigers and Jays: every score in the Pro Hub.'));
+      pick.forEach(function (g) { box.appendChild(card(g)); });
+      setTimeout(load, live.length ? 60000 : 5 * 60000);
+    });
+  }
+  load();
+})();
+</script>
+</body>
+</html>
