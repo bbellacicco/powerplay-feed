@@ -186,6 +186,11 @@
     for (var i = 0; i < TEAMS.length - 1; i++) { var t = TEAMS[i]; if ((t[3] && t[3].test(cats)) || (t[4] && t[4].test(hay))) return t[0]; }
     return 'more';
   }
+  // Charity Hub posts (only charity categories, no sports one) stay off the sports pages
+  function charityOnly(cats) {
+    var c = String(cats || '').split(/\s*,\s*/).filter(function (x) { return x && !/^(all posts|featured|powerplay today|uncategori[sz]ed)$/i.test(x); });
+    return c.length > 0 && c.every(function (x) { return /charit|cheque|check presentation|fundrais|impact stor|volunteer/i.test(x); });
+  }
   function open(u) { try { top.location.href = u; } catch (e) { location.href = u; } }
 
   function card(s, opts) {
@@ -300,10 +305,11 @@
       var seen = {}, list = [];
       // the newest posts from the Local Hub feed first (they arrive a little sooner), then the full archive
       news.forEach(function (s) {
+        if (charityOnly(s.cats)) { seen[s.url] = 1; return; }
         if (s.team !== 'powerplay' || s.source === 'YouTube' || s.source === 'Vimeo' || !/powerplaywindsor\.com\/post\//.test(s.url || '')) return;
         seen[s.url] = 1; list.push({ t: s.headline, d: s.summary || '', u: s.url, i: s.image, p: s.published, c: '' });
       });
-      arch.forEach(function (a) { if (a.s === 'Blog' && !seen[a.u]) { seen[a.u] = 1; list.push(a); } });
+      arch.forEach(function (a) { if (a.s === 'Blog' && !seen[a.u] && !charityOnly(a.c)) { seen[a.u] = 1; list.push(a); } });
       list.forEach(function (s) { s.team = team(s); s._h = ' ' + norm(s.t + ' ' + s.d + ' ' + (s.c || '')) + ' '; s._ts = new Date(s.p.length === 10 ? s.p + 'T12:00:00' : s.p).getTime() || 0; });
       list.sort(function (a, b) { return b._ts - a._ts; });
       all = list;
