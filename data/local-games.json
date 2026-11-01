@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T21:48:09-04:00",
+ "updated": "2026-10-31T22:03:05-04:00",
  "today": "2026-10-31",
  "range": [
   "2026-10-28",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 29
+   "count": 28
   },
   "club_news": {
    "ok": true,
@@ -1553,14 +1553,13 @@
    "home_away": "H",
    "opponent": "York Lions",
    "location": "Adie Knox Arena",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 6,
+   "opp_score": 1,
+   "result": "W",
    "note": "",
    "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=173",
-    "watch": "https://oua.tv/?school=Windsor"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6344"
    }
   },
   {
@@ -1890,6 +1889,33 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "Robert Carter Jr. makes UNREAL INTERCEPTION!!!",
+   "summary": "",
+   "published": "2026-10-31T20:36:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/SzQcxerzRer7RR9tPfjwO/56c6a20fd74da2dd6898465bfd44d042/BC_INT.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Lions"
+   ],
+   "url": "https://www.cfl.ca/article/robert-carter-jr-makes-unreal-interception",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Every Scoring Play from the Western Semi-Final",
+   "summary": "",
+   "published": "2026-10-31T20:11:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/5nfWbQZ2RA5hAwKH5VaYYI/2005dcadca9774272d90dd456d5f4fa2/WSF_EveryScoring_THUMB.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Lions",
+    "Roughriders"
+   ],
+   "url": "https://www.cfl.ca/article/every-scoring-play-from-the-western-semi-final",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Make that TWO TD's for Jevon Cottoy",
    "summary": "",
    "published": "2026-10-31T18:57:00-04:00",
@@ -1970,33 +1996,6 @@
   },
   {
    "league": "cfl",
-   "headline": "Demski Delivers with 44 seconds left!",
-   "summary": "",
-   "published": "2026-10-31T16:35:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/303HiLJxjO5z1cqjQteyI1/d7124535382fa22b1c761567f1e6cb7f/Demski.png?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Blue Bombers"
-   ],
-   "url": "https://www.cfl.ca/article/demski-delivers-with-44-seconds-left",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Wild finish in the Eastern Semi-Final!",
-   "summary": "",
-   "published": "2026-10-31T16:10:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/6FAxgWHIrHcx5w0jXhtEx6/17ad14c13fad715f94ae3059cc36121b/image__1_.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Blue Bombers",
-    "Argonauts"
-   ],
-   "url": "https://www.cfl.ca/article/wild-finish-in-the-eastern-semi-final",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
    "headline": "Big second half propels Lions over Riders in Western Semi-Final presented by Wegovy®",
    "summary": "",
    "published": "2026-10-31T03:00:00-04:00",
@@ -2035,6 +2034,36 @@
     "Blue Bombers"
    ],
    "url": "https://www.cfl.ca/article/3-stats-that-defined-winnipeg-s-win-over-toronto-in-the-eastern-semi-final-presented-by-wegovy",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "DaShaun Amos on Eastern Semi-Final presented by Wegovy® loss: \"We left some plays out there\"",
+   "summary": "",
+   "published": "2026-10-31T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/7kfbwlDaLoGQO0phPdWQD1/04dab4a8ca5563f3c5a44341941355ec/DaShaun_Amos_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Argonauts",
+    "Blue Bombers"
+   ],
+   "url": "https://www.cfl.ca/article/dashaun-amos-on-eastern-semi-final-presented-by-wegovy-loss-we-left-some-plays-out-there",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Division Finals presented by Wegovy® set for Montreal and Edmonton",
+   "summary": "",
+   "published": "2026-10-31T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/10ItiRldbbJJCh2UHLdsJa/2cf57b1a683449fe4bc13549e929cd86/Austin_Mack_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Alouettes",
+    "Blue Bombers",
+    "Elks",
+    "Lions"
+   ],
+   "url": "https://www.cfl.ca/article/division-final-saturday-presented-by-wegovy-set-for-montreal-and-edmonton",
    "source": "CFL.ca"
   },
   {
@@ -2095,22 +2124,6 @@
   },
   {
    "league": "cfl",
-   "headline": "Depth Charts: How the teams will line up in the Division Semi-Finals presented by Wegovy®",
-   "summary": "",
-   "published": "2026-10-30T00:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/2fy5yt0txaQD537Qw7B8HC/d147ddba75cae80c28565ab98a512305/Jevon_Cottoy_2026.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Argonauts",
-    "Blue Bombers",
-    "Lions",
-    "Roughriders"
-   ],
-   "url": "https://www.cfl.ca/article/depth-charts-how-the-teams-will-line-up-in-the-division-semi-finals",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
    "headline": "Chad Kelly on facing Bombers: \"Take what the defence gives you\"",
    "summary": "",
    "published": "2026-10-30T00:00:00-04:00",
@@ -2135,36 +2148,6 @@
     "Argonauts"
    ],
    "url": "https://www.cfl.ca/article/opportunity-to-win-grey-cup-as-crossover-team-really-excites-brady-oliveira",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Darnell Sankey on matchup against Riders: \"I just feel like we're better\"",
-   "summary": "",
-   "published": "2026-10-30T00:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/6brmZR4Huj35bIjZcbcuPh/8200768f86ba8801fc4278338451d23d/Darnell_Sankey_2026_2.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Lions",
-    "Roughriders"
-   ],
-   "url": "https://www.cfl.ca/article/darnell-sankey-on-matchup-against-riders-i-just-feel-like-we-re-better",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "3 strengths for every team in Division Semi-Finals presented by Wegovy®",
-   "summary": "",
-   "published": "2026-10-29T00:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/3tc67AyZOiHZtrXj2TPILv/bb867c5bb9b921c46426b95babf61fa2/Jamieson_Sheahan_2026.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Argonauts",
-    "Blue Bombers",
-    "Lions",
-    "Roughriders"
-   ],
-   "url": "https://www.cfl.ca/article/3-strengths-for-every-team-in-division-semi-finals",
    "source": "CFL.ca"
   },
   {
@@ -2291,6 +2274,17 @@
    "video": true,
    "teams": [],
    "url": "https://www.cfl.ca/article/unveiling-the-new-cfl-indigenous-logo",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Saskatchewan artists bring CFL’s Indigenous logos to life through mural",
+   "summary": "",
+   "published": "2026-09-30T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/1bfkW5E0cq6xjrztJAzclI/776ca51067dcc2014d65763690770662/Dustin_Ritter_3.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/saskatchewan-artists-bring-cfl-s-indigenous-logos-to-life-through-mural",
    "source": "CFL.ca"
   },
   {
@@ -2828,16 +2822,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Canada’s Fernandez beats Uzbekistan’s Rakhimova to reach final in Japan",
+   "league": "mlb",
+   "headline": "Report: Padres decline Nick Pivetta’s club option for 2027",
    "summary": "",
-   "published": "2026-10-31T01:16-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/leylah-fernandez.jpg",
+   "published": "2026-10-31T20:44-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/pivetta.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
-   "sport": "Tennis",
-   "url": "https://www.sportsnet.ca/wta/article/canadas-fernandez-beats-uzbekistans-rakhimova-to-reach-final-in-japan/",
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/report-padres-decline-nick-pivettas-club-option-for-2027/",
    "source": "Sportsnet"
   },
   {
@@ -2984,19 +2978,6 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/cfl/article/argonauts-qb-chad-kelly-injured-vs-blue-bombers/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Matt Pavelich, first linesman in Hockey Hall of Fame, dead at 92",
-   "summary": "",
-   "published": "2026-10-31T15:08-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2021/12/nhl-logo-on-net.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/matt-pavelich-first-linesman-in-hockey-hall-of-fame-dead-at-92/",
    "source": "Sportsnet"
   },
   {
@@ -4171,7 +4152,7 @@
       "otl": 2,
       "pts": 20,
       "gf": 70,
-      "ga": 66,
+      "ga": 68,
       "strk": "L1"
      },
      {
@@ -4194,7 +4175,7 @@
       "l": 7,
       "otl": 2,
       "pts": 16,
-      "gf": 63,
+      "gf": 65,
       "ga": 57,
       "strk": "L1"
      },
@@ -4477,14 +4458,14 @@
      {
       "name": "Stratford Warriors",
       "abbr": "SFD",
-      "gp": 13,
-      "w": 8,
+      "gp": 14,
+      "w": 9,
       "l": 4,
       "otl": 1,
-      "pts": 17,
+      "pts": 19,
       "gf": 51,
       "ga": 44,
-      "strk": "L1"
+      "strk": "W1"
      },
      {
       "name": "London Nationals",
@@ -4501,11 +4482,11 @@
      {
       "name": "Strathroy Rockets",
       "abbr": "SRY",
-      "gp": 16,
+      "gp": 17,
       "w": 6,
       "l": 8,
-      "otl": 2,
-      "pts": 14,
+      "otl": 3,
+      "pts": 15,
       "gf": 69,
       "ga": 69,
       "strk": "L1"
@@ -4549,26 +4530,26 @@
      {
       "name": "Komoka Kings",
       "abbr": "KOM",
-      "gp": 17,
-      "w": 4,
+      "gp": 18,
+      "w": 5,
       "l": 13,
       "otl": 0,
-      "pts": 8,
-      "gf": 55,
+      "pts": 10,
+      "gf": 56,
       "ga": 76,
-      "strk": "L9"
+      "strk": "W1"
      },
      {
       "name": "Sarnia Legionnaires",
       "abbr": "SAR",
-      "gp": 12,
+      "gp": 13,
       "w": 1,
-      "l": 11,
+      "l": 12,
       "otl": 0,
       "pts": 2,
       "gf": 25,
-      "ga": 81,
-      "strk": "W1"
+      "ga": 82,
+      "strk": "L1"
      }
     ]
    },
