@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T18:32:55-05:00",
+ "updated": "2026-11-01T18:47:37-05:00",
  "today": "2026-11-01",
  "range": [
   "2026-10-29",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 30
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -2311,6 +2311,19 @@
  ],
  "more_news": [
   {
+   "league": "other",
+   "headline": "Toronto FC eliminated from playoff contention with loss to Atlanta",
+   "summary": "",
+   "published": "2026-11-01T18:35-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/TFC.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/toronto-fc-eliminated-from-playoff-contention-with-loss-to-atlanta/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "NFL Week 8 roundup: Lions hand Vikings first loss",
    "summary": "Jared Goff threw a go-ahead, seven-yard touchdown pass to Jameson Williams with 4:35 left and the Detroit Lions beat the Minnesota Vikings 19-15 on Sunday, handing the NFL’s last undefeated team its first loss.",
@@ -2459,21 +2472,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Maple Leafs talk Kucherov trade possibility after win over Canucks",
-   "summary": "Are the Maple Leafs really a candidate to make a deal for Nikita Kucherov? Some of his former teammates now on the Leafs would love to have Kucherov back on their side.",
-   "published": "2026-10-31T23:51-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/leafs-2-2.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-talk-kucherov-trade-possibility-after-win-over-canucks/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Ducks defenceman Nick Jensen clears waivers",
    "summary": "After being placed on waivers Saturday, the Anaheim Ducks defenceman cleared on Sunday, per Sportsnet’s Elliotte Friedman.",
    "published": "2026-11-01T14:09-05:00",
@@ -2511,6 +2509,34 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/red-wings-dylan-larkin-may-alter-trade-list/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Maple Leafs talk Kucherov trade possibility after win over Canucks",
+   "summary": "Are the Maple Leafs really a candidate to make a deal for Nikita Kucherov? Some of his former teammates now on the Leafs would love to have Kucherov back on their side.",
+   "published": "2026-10-31T23:51-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/leafs-2-2.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-talk-kucherov-trade-possibility-after-win-over-canucks/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Colts HC Shane Steichen plans to ‘evaluate everything’ after latest loss",
+   "summary": "Indianapolis Colts coach Shane Steichen plans to “evaluate everything, every position.” If he’s given a chance.",
+   "published": "2026-11-01T18:34-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/01/Shane-Steichen.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/colts-hc-shane-steichen-plans-to-evaluate-everything-after-latest-loss/",
    "source": "Sportsnet"
   },
   {
