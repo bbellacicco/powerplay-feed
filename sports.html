@@ -22,7 +22,7 @@
   html, body { overflow: hidden; }
   .top { display: flex; justify-content: center; padding: 22px 16px 6px; }
   /* three sections: a squared-off bar */
-  .switch { display: grid; grid-template-columns: repeat(3, 1fr); width: 100%; max-width: 480px; gap: 1px; background: rgba(255,255,255,.16);
+  .switch { display: grid; grid-template-columns: repeat(4, 1fr); width: 100%; max-width: 620px; gap: 1px; background: rgba(255,255,255,.16);
     border: 1px solid rgba(255,255,255,.16); border-radius: 3px; overflow: hidden; }
   .switch button { border: 0; border-radius: 0; background: #0e2044; color: #cfd8ea; font: inherit; font-size: 13px; font-weight: 800; letter-spacing: .08em;
     text-transform: uppercase; padding: 12px 6px; cursor: pointer; white-space: nowrap; }
@@ -51,6 +51,7 @@
   <div class="top" id="top">
     <div class="switch" role="tablist" aria-label="Section">
       <button type="button" role="tab" data-tab="scores">Scores</button>
+      <button type="button" role="tab" data-tab="upcoming">Coming Up</button>
       <button type="button" role="tab" data-tab="updates">Updates</button>
       <button type="button" role="tab" data-tab="network">Network</button>
     </div>
@@ -63,7 +64,8 @@
   var phone = window.innerWidth < 700;
   // each part: the widgets in it and their heights (desktop, phone)
   var PARTS = {
-    scores:  [['pro-games_3.html', 760, 900, '']],
+    scores:  [['pro-games_3.html', 420, 480, '']],
+    upcoming: [['pro-games_3.html', 900, 1100, '&view=upcoming']],
     updates: [['news-feed.html', 1150, 1250, '']],
     network: [['network.html', 1300, 1520, '&only=pro']]
   };
@@ -110,7 +112,7 @@
     });
   });
   // share button: shares whichever section is showing (its own link opens the page on that section)
-  var NAMES = { scores: 'Pro Scores', updates: 'Pro Updates', network: 'the Pro Network' };
+  var NAMES = { scores: 'Pro Scores', upcoming: 'Pro Games Coming Up', updates: 'Pro Updates', network: 'the Pro Network' };
   var current = 'scores';
   if (window.PPShare) {
     var sb = PPShare.button(function () { return { title: NAMES[current].replace(/^the /, 'The '), url: PPShare.link(current === 'scores' ? 'pro' : 'pro-' + current), text: 'Check out ' + NAMES[current] + ' on Powerplay Windsor' }; });
