@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T17:32:51-05:00",
+ "updated": "2026-11-01T17:52:51-05:00",
  "today": "2026-11-01",
  "range": [
   "2026-10-29",
@@ -1253,11 +1253,11 @@
    "home_away": "H",
    "opponent": "Listowel Cyclones",
    "location": "Chatham Memorial Arena, Chatham, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
-   "note": "",
+   "note": "20:00 1st",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15645"
    },
@@ -2339,6 +2339,32 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Kraken trade Shane Wright to Predators for Matthew Wood",
+   "summary": "",
+   "published": "2026-11-01T17:30-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/01/shane-wright.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/kraken-trading-shane-wright-to-predators-for-matthew-wood/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Mercedes driver Kimi Antonelli becomes youngest champion in F1 history at age 20",
+   "summary": "Twenty-year-old Mercedes driver Kimi Antonelli became the youngest champion in the history of Formula 1 on Sunday with four races still left in the season.",
+   "published": "2026-11-01T17:33-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/kimi2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Auto Racing",
+   "url": "https://www.sportsnet.ca/formula-1/article/mercedes-driver-kimi-antonelli-becomes-youngest-champion-in-f1-history-at-age-20/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "Buccaneers beat Falcons without completing pass for only third time in NFL history",
    "summary": "",
@@ -2362,21 +2388,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/jets-shut-out-by-hurricanes-red-hot-goalie-pyotr-kochetkov/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Lions LB Jack Campbell stretchered off field vs. Vikings",
-   "summary": "The Detroit Lions linebacker was stretchered off the field after making a tackle against the Minnesota Vikings and seemingly injuring himself.",
-   "published": "2026-11-01T15:49-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/05/lions.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Lions"
-   ],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/lions-lb-jack-campbell-stretchered-off-field-vs-vikings/",
    "source": "Sportsnet"
   },
   {
@@ -2433,19 +2444,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/red-wings-dylan-larkin-may-alter-trade-list/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "What’s at stake for Toronto FC against Atlanta",
-   "summary": "There’s a lot at stake for Toronto FC this weekend.",
-   "published": "2026-10-29T17:15-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/tfc-2.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/whats-at-stake-for-toronco-fc-vs-atlanta-this-weekend/",
    "source": "Sportsnet"
   },
   {
@@ -3975,7 +3973,7 @@
       "otl": 0,
       "pts": 14,
       "gf": 48,
-      "ga": 63,
+      "ga": 64,
       "strk": "W2"
      },
      {
@@ -4056,6 +4054,18 @@
       "strk": "W3"
      },
      {
+      "name": "King Rebellion",
+      "abbr": "KNG",
+      "gp": 19,
+      "w": 14,
+      "l": 2,
+      "otl": 3,
+      "pts": 31,
+      "gf": 76,
+      "ga": 39,
+      "strk": "W2"
+     },
+     {
       "name": "Toronto Patriots",
       "abbr": "PAT",
       "gp": 18,
@@ -4080,18 +4090,6 @@
       "strk": "W4"
      },
      {
-      "name": "King Rebellion",
-      "abbr": "KNG",
-      "gp": 18,
-      "w": 14,
-      "l": 2,
-      "otl": 2,
-      "pts": 30,
-      "gf": 76,
-      "ga": 38,
-      "strk": "W2"
-     },
-     {
       "name": "Leamington Flyers",
       "abbr": "LEA",
       "gp": 17,
@@ -4106,14 +4104,14 @@
      {
       "name": "Oakville Blades",
       "abbr": "OAK",
-      "gp": 19,
-      "w": 8,
+      "gp": 20,
+      "w": 9,
       "l": 8,
       "otl": 3,
-      "pts": 19,
-      "gf": 67,
+      "pts": 21,
+      "gf": 68,
       "ga": 76,
-      "strk": "L1"
+      "strk": "W1"
      },
      {
       "name": "Mississauga Chargers",
@@ -4171,7 +4169,7 @@
       "l": 14,
       "otl": 0,
       "pts": 12,
-      "gf": 50,
+      "gf": 51,
       "ga": 73,
       "strk": "L2"
      }
