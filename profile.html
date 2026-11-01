@@ -24,9 +24,11 @@
   .prev { left: 8px; } .next { right: 8px; }
   .msg { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; color: #9fb0cf; }
 </style>
+<script src="share.js?v=5"></script>
+<style>.bar .r { display: flex; align-items: center; gap: 10px; } #pshare .pps-btn { background: #e8b021; color: #0b1a33; border-color: #e8b021; padding: 8px 14px 8px 12px; font-size: 13px; }</style>
 </head>
 <body>
-  <div class="bar"><button type="button" id="back">&larr; Back</button><span class="pos" id="pos"></span></div>
+  <div class="bar"><button type="button" id="back">&larr; Back</button><span class="r"><span class="pos" id="pos"></span><span id="pshare"></span></span></div>
   <div class="stage" id="stage"><img id="big" alt="Athlete profile"></div>
   <button class="nav prev" type="button" id="prev" aria-label="Previous profile">&#8249;</button>
   <button class="nav next" type="button" id="next" aria-label="Next profile">&#8250;</button>
@@ -50,6 +52,18 @@
     // load the neighbours early so swiping is instant
     [cur + 1, cur - 1].forEach(function (k) { var p = list[(k + list.length) % list.length]; if (p) { var im = new Image(); im.src = large(p.img); } });
   }
+  // share this athlete: powerplaywindsor.com/scores-standings?tab=athletes&p=<key> (same key as athletes.html and publish.py)
+  function pkey(p) {
+    if (p.key) return p.key;
+    var m = String(p.img).match(/static\.wixstatic\.com\/media\/[0-9a-z]+_([0-9a-f]{10})/);
+    if (m) return m[1];
+    return String(p.img).split('/').pop().replace(/\.[^.]*$/, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'profile';
+  }
+  if (window.PPShare) document.getElementById('pshare').appendChild(PPShare.button(function () {
+    var p = list[cur] || {};
+    return { title: 'Athlete Profile', url: 'https://www.powerplaywindsor.com/scores-standings?tab=athletes&p=' + encodeURIComponent(pkey(p)),
+             text: 'Get to know this Windsor-Essex athlete | Powerplay Windsor', image: p.share ? REPO + p.share : large(p.img || '') };
+  }));
   document.getElementById('prev').onclick = function () { show(cur - 1); };
   document.getElementById('next').onclick = function () { show(cur + 1); };
   document.getElementById('back').onclick = function () { if (history.length > 1) history.back(); else location.href = BACK; };
