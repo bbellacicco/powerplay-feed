@@ -8,7 +8,7 @@
 <title>Pro Scoreboard | Powerplay Windsor</title>
 <script src="arrows.js"></script>
 <!--
-  Pro sports widget: yesterday, today and the next 3 days.
+  Pro sports widget: yesterday, today and the next 2 days.
   NFL, NHL, NBA and MLB load live from ESPN each time the page opens, so scores are
   always current. CFL comes from data/local-games.json ("pro_games"), which the
   daily GitHub Action fills from cfl.ca (ESPN's CFL data is out of date).
@@ -154,7 +154,7 @@
 <script>
 (function () {
   var TZ = 'America/Toronto';
-  var DAYS_BACK = 2, DAYS_AHEAD = 1;   // two days before today through tomorrow
+  var DAYS_BACK = 1, DAYS_AHEAD = 2;   // yesterday through two days from now
   var LEAGUES = {
     nfl: { label: 'NFL', path: 'football/nfl' },
     nhl: { label: 'NHL', path: 'hockey/nhl' },
@@ -461,7 +461,7 @@
         return;
       }
     }
-    if (!list.length) { box.appendChild(el('div', 'empty', 'No games from two days ago through tomorrow.')); return; }
+    if (!list.length) { box.appendChild(el('div', 'empty', 'No games from yesterday through the next two days.')); return; }
     var groups = [], cur = null;
     list.forEach(function (g) {
       var k = dayKey(new Date(g.start));
