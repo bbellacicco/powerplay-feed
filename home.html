@@ -467,6 +467,16 @@
       sb.classList.add('mini'); sb.addEventListener('click', function (e) { e.preventDefault(); });
       c.appendChild(sb);
     }
+    // a video: Share opens it on powerplaywindsor.com (Local Hub > Network, playing at the top)
+    if (window.PPShare && vid && !(opts && opts.noShare)) {
+      var vk2 = vkey(s.url).replace(':', '-');
+      if (vk2) {
+        var vb = PPShare.button({ title: s.headline, url: SITE + 'scores-standings?tab=network&v=' + encodeURIComponent(vk2),
+          text: s.headline + ' | Powerplay Network', image: /^[\w-]{11}$/.test(vk2) ? 'https://i.ytimg.com/vi/' + vk2 + '/hqdefault.jpg' : (s.image || '') });
+        vb.classList.add('mini'); vb.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); });
+        c.appendChild(vb);
+      }
+    }
     c.appendChild(pic);
     c.appendChild(el('div', 'hl', s.headline));
     c.appendChild(el('div', 'sm', (opts && opts.sub) || ago(s.published)));
@@ -1011,6 +1021,11 @@
         // NEW only on the newest one
         if (n === 0 && Date.now() - new Date(sh.date + 'T12:00:00').getTime() < 3 * 864e5) { var pc = c.querySelector('.pic'); if (pc) pc.appendChild(el('span', 'newbadge', 'NEW')); }
         c.onclick = function (e) { e.preventDefault(); playShow(sh); };
+        if (window.PPShare) {      // Share: the slideshow's own powerplaywindsor.com page (with its cover picture on Facebook)
+          var sb2 = PPShare.button({ title: sh.title, url: sh.url, text: sh.title + ' | Powerplay Windsor', image: sh.cover });
+          sb2.classList.add('mini'); sb2.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); });
+          c.insertBefore(sb2, c.firstChild);
+        }
         return c;
       }), 'Game reports in pictures are on the way.');
       // "NEW" beside the strip title
