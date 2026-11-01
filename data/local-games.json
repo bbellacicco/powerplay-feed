@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T21:18:14-04:00",
+ "updated": "2026-10-31T21:36:49-04:00",
  "today": "2026-10-31",
  "range": [
   "2026-10-28",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 30
+   "count": 29
   },
   "club_news": {
    "ok": true,
@@ -1373,7 +1373,7 @@
    "note": "",
    "links": {
     "boxscore": "https://golancers.ca/boxscore.aspx?id=6223",
-    "recap": "https://golancers.ca/news/2026/10/31/mens-basketball-drops-home-opener-to-york.aspx"
+    "recap": "https://golancers.ca/news/2026/10/30/mens-basketball-drops-home-opener-to-york.aspx"
    }
   },
   {
@@ -1484,7 +1484,8 @@
    "result": "W",
    "note": "",
    "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6202"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6202",
+    "recap": "https://golancers.ca/news/2026/10/31/womens-basketball-windsor-dominates-waterloo-on-halloween.aspx"
    }
   },
   {
@@ -1502,7 +1503,8 @@
    "result": "L",
    "note": "",
    "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6224"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6224",
+    "recap": "https://golancers.ca/news/2026/10/31/mens-basketball-lancers-edged-by-warriors.aspx"
    }
   },
   {
@@ -1514,11 +1516,11 @@
    "home_away": "A",
    "opponent": "Fort Erie Meteors",
    "location": "Fort Erie Leisureplex, Fort Erie, ON",
-   "status": "live",
+   "status": "final",
    "our_score": 2,
    "opp_score": 4,
-   "result": null,
-   "note": "Unofficial Final",
+   "result": "L",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15639"
    },
@@ -1533,13 +1535,13 @@
    "home_away": "A",
    "opponent": "Waterloo Warriors",
    "location": "Waterloo, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 1,
+   "opp_score": 4,
+   "result": "L",
    "note": "",
    "links": {
-    "watch": "https://oua.tv/?school=Windsor"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6289"
    }
   },
   {
@@ -2633,6 +2635,36 @@
   },
   {
    "league": "nhl",
+   "headline": "Kucherov would consider trade to Maple Leafs or Canadiens",
+   "summary": "",
+   "published": "2026-10-31T21:22-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Tampa-Bay-Lightnings-Nikita-Kucherov.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 3,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/kucherov-would-consider-trade-to-maple-leafs-or-canadiens/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Red Wings’ Dylan Larkin may alter trade list",
+   "summary": "",
+   "published": "2026-10-31T21:20-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177124210.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Red Wings"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/red-wings-dylan-larkin-may-alter-trade-list/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Penguins’ Sidney Crosby sets NHL record for assists with single franchise",
    "summary": "",
    "published": "2026-10-31T19:49-04:00",
@@ -2697,19 +2729,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Canadiens’ Kirby Dach out vs. Penguins due to illness",
-   "summary": "",
-   "published": "2026-10-31T19:08-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177180455.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canadiens-kirby-dach-out-vs-penguins-due-to-illness/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "other",
    "headline": "Toronto FC facing must-win after Columbus beats D.C. United",
    "summary": "",
@@ -2720,19 +2739,6 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/mls/article/toronto-fc-facing-must-win-after-columbus-beats-d-c-united/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Islanders’ Heineman ejected after knee-on-knee collision with Oilers’ Howard",
-   "summary": "Isaac Howard’s first period ended early Saturday.",
-   "published": "2026-10-31T14:57-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/01/Howard.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/islanders-heineman-ejected-after-knee-on-knee-collision-with-oilers-howard/",
    "source": "Sportsnet"
   },
   {
@@ -2762,21 +2768,6 @@
    "sn_team_count": 9,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/quick-shifts-how-nikita-kucherovs-trade-request-helps-lightning/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Tanev, Joshua set to boost Maple Leafs in Vancouver",
-   "summary": "Chris Tanev and Dakota Joshua are both expected to be in the lineup on Saturday when the Maple Leafs take on the Canucks. Luke Fox has more on how their return has contributed to the club’s excitement.",
-   "published": "2026-10-30T18:54-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Toronto-Maple-Leafs-defenseman-Chris-Tanev.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/tanev-joshua-set-to-boost-maple-leafs-in-vancouver/",
    "source": "Sportsnet"
   },
   {
@@ -2868,6 +2859,19 @@
    "sn_team_count": 0,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/japanese-rhp-kaima-taira-set-to-move-to-mlb/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Orioles decline Luis Robert Jr.’s $20 million club option for 2027",
+   "summary": "The Baltimore Orioles declined outfielder Luis Robert Jr.’s $20 million club option for 2027.",
+   "published": "2026-10-31T19:50-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/Luis-Robert-Jr.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/orioles-decline-luis-robert-jr-s-20-million-club-option-for-2027/",
    "source": "Sportsnet"
   },
   {
@@ -2988,19 +2992,6 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/matt-pavelich-first-linesman-in-hockey-hall-of-fame-dead-at-92/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Ducks waive defenceman Nick Jensen",
-   "summary": "The Ducks waived the defenceman on Saturday after just four games, Sportsnet’s Elliotte Friedman reported.",
-   "published": "2026-10-31T14:20-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/nick-jensen.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/ducks-waive-defenceman-nick-jensen/",
    "source": "Sportsnet"
   },
   {
@@ -3410,7 +3401,7 @@
    "league": "mlb",
    "headline": "Watch Tigers prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-31T20:53-04:00",
+   "published": "2026-10-31T21:32-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -3605,7 +3596,7 @@
    "league": "mlb",
    "headline": "Watch Blue Jays prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-31T20:53-04:00",
+   "published": "2026-10-31T21:32-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -4186,7 +4177,7 @@
       "l": 8,
       "otl": 2,
       "pts": 20,
-      "gf": 68,
+      "gf": 70,
       "ga": 66,
       "strk": "L1"
      },
@@ -4199,7 +4190,7 @@
       "otl": 2,
       "pts": 16,
       "gf": 63,
-      "ga": 55,
+      "ga": 57,
       "strk": "L1"
      },
      {
@@ -4487,7 +4478,7 @@
       "otl": 1,
       "pts": 17,
       "gf": 50,
-      "ga": 43,
+      "ga": 44,
       "strk": "L1"
      },
      {
@@ -4510,7 +4501,7 @@
       "l": 8,
       "otl": 2,
       "pts": 14,
-      "gf": 68,
+      "gf": 69,
       "ga": 68,
       "strk": "L1"
      },
@@ -4529,14 +4520,14 @@
      {
       "name": "LaSalle Vipers",
       "abbr": "LAS",
-      "gp": 13,
+      "gp": 14,
       "w": 6,
-      "l": 7,
+      "l": 8,
       "otl": 0,
       "pts": 12,
       "gf": 40,
       "ga": 57,
-      "strk": "W2"
+      "strk": "L1"
      },
      {
       "name": "Woodstock Navy Vets",
@@ -4558,7 +4549,7 @@
       "l": 13,
       "otl": 0,
       "pts": 8,
-      "gf": 52,
+      "gf": 55,
       "ga": 76,
       "strk": "L9"
      },
@@ -4571,7 +4562,7 @@
       "otl": 0,
       "pts": 2,
       "gf": 25,
-      "ga": 78,
+      "ga": 81,
       "strk": "W1"
      }
     ]
@@ -4590,6 +4581,18 @@
       "gf": 67,
       "ga": 38,
       "strk": "W4"
+     },
+     {
+      "name": "Fort Erie Meteors",
+      "abbr": "FEM",
+      "gp": 14,
+      "w": 13,
+      "l": 1,
+      "otl": 0,
+      "pts": 26,
+      "gf": 68,
+      "ga": 41,
+      "strk": "W1"
      },
      {
       "name": "St. Catharines Falcons",
@@ -4614,18 +4617,6 @@
       "gf": 87,
       "ga": 42,
       "strk": "W1"
-     },
-     {
-      "name": "Fort Erie Meteors",
-      "abbr": "FEM",
-      "gp": 13,
-      "w": 12,
-      "l": 1,
-      "otl": 0,
-      "pts": 24,
-      "gf": 68,
-      "ga": 41,
-      "strk": "L1"
      },
      {
       "name": "Waterloo Siskins",
@@ -4690,11 +4681,11 @@
      {
       "name": "Stoney Creek Generals",
       "abbr": "SCG",
-      "gp": 19,
+      "gp": 20,
       "w": 4,
       "l": 14,
-      "otl": 1,
-      "pts": 9,
+      "otl": 2,
+      "pts": 10,
       "gf": 59,
       "ga": 89,
       "strk": "L3"
@@ -4714,14 +4705,14 @@
      {
       "name": "Welland Canadians",
       "abbr": "WEL",
-      "gp": 16,
-      "w": 1,
+      "gp": 17,
+      "w": 2,
       "l": 15,
       "otl": 0,
-      "pts": 2,
+      "pts": 4,
       "gf": 36,
       "ga": 102,
-      "strk": "L6"
+      "strk": "W1"
      }
     ]
    }
