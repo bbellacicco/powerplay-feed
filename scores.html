@@ -82,6 +82,7 @@
   var PLAY = (new URLSearchParams(location.search).get('play') || '').replace(/[^\w-]/g, '');
   // a shared team story (powerplaywindsor.com/scores-standings?tab=stories&s=...) opens Stories > Team news with it on top
   var STORY = (new URLSearchParams(location.search).get('story') || '').replace(/[^0-9a-f]/g, '');
+  var PROFILE = (new URLSearchParams(location.search).get('profile') || '').toLowerCase().replace(/[^a-z0-9-]/g, '');   // a shared athlete profile
   var TEAM = (new URLSearchParams(location.search).get('team') || '').replace(/[^a-z]/g, '');   // the shared story's team
   var built = {}, box = document.getElementById('panes');
   function show(tab) {
@@ -90,7 +91,7 @@
       var pane = document.createElement('div'); pane.className = 'pane'; pane.id = 'pane-' + tab;
       PARTS[tab].forEach(function (w) {
         var f = document.createElement('iframe');
-        f.src = REPO + w[0] + V + w[3] + (tab === 'network' && PLAY ? '&play=' + encodeURIComponent(PLAY) : '') + (tab === 'stories' && STORY && w[0] === 'local-news.html' ? '&story=' + STORY + (TEAM ? '&tab=' + TEAM : '') : '') + '&in=sports'; f.title = w[0].replace(/[_.].*$/, '');
+        f.src = REPO + w[0] + V + w[3] + ((tab === 'network' || tab === 'spotlight') && PLAY ? '&play=' + encodeURIComponent(PLAY) : '') + (tab === 'athletes' && PROFILE ? '&p=' + PROFILE : '') + (tab === 'stories' && STORY && w[0] === 'local-news.html' ? '&story=' + STORY + (TEAM ? '&tab=' + TEAM : '') : '') + '&in=sports'; f.title = w[0].replace(/[_.].*$/, '');
         f.scrolling = 'no';
         f.style.height = (phone ? w[2] : w[1]) + 'px';
         f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; f.allowFullscreen = true;
@@ -116,7 +117,7 @@
     Object.keys(built).forEach(function (k) { built[k].classList.toggle('on', k === tab); });
     current = tab;
     [].forEach.call(document.querySelectorAll('.switch button'), function (b) { b.setAttribute('aria-selected', String(b.getAttribute('data-tab') === tab)); });
-    try { history.replaceState(null, '', '?tab=' + tab + (tab === 'network' && PLAY ? '&play=' + PLAY : '') + (tab === 'stories' && STORY ? '&story=' + STORY : '')); } catch (e) {}
+    try { history.replaceState(null, '', '?tab=' + tab + ((tab === 'network' || tab === 'spotlight') && PLAY ? '&play=' + PLAY : '') + (tab === 'athletes' && PROFILE ? '&profile=' + PROFILE : '') + (tab === 'stories' && STORY ? '&story=' + STORY : '')); } catch (e) {}
   }
   // each widget reports its height; its frame matches it exactly, so nothing scrolls inside the page
   window.addEventListener('message', function (e) {
@@ -137,7 +138,7 @@
   // which switch to open: ?tab= when opened directly, or the hand-off from a "See all" link elsewhere (good for 2 minutes)
   var start = new URLSearchParams(location.search).get('tab');
   try { var h = JSON.parse(localStorage.getItem('pp-tab') || 'null'); localStorage.removeItem('pp-tab'); if (!start && h && Date.now() - h.t < 120000) start = h.tab; } catch (e) {}
-  show(PLAY ? 'network' : STORY ? 'stories' : (start || 'stories'));   // opens on Stories (the first switch)
+  show(PLAY ? (start === 'spotlight' ? 'spotlight' : 'network') : PROFILE ? 'athletes' : STORY ? 'stories' : (start || 'stories'));   // opens on Stories (the first switch)
 })();
 </script>
 </body>
