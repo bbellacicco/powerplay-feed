@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T16:36:53-05:00",
+ "updated": "2026-11-01T16:47:54-05:00",
  "today": "2026-11-01",
  "range": [
   "2026-10-29",
@@ -1235,11 +1235,11 @@
    "home_away": "A",
    "opponent": "Brampton Steelheads",
    "location": "CAA Centre, Brampton",
-   "status": "live",
+   "status": "final",
    "our_score": 3,
    "opp_score": 0,
-   "result": null,
-   "note": "End of Game",
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29145/"
    }
@@ -2312,15 +2312,15 @@
  "more_news": [
   {
    "league": "nfl",
-   "headline": "Buccaneers beat Falcons without completing pass for only third time in NFL history",
-   "summary": "",
-   "published": "2026-11-01T16:11-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-design-8.jpg",
+   "headline": "NFL Week 8 roundup: Lions hand Vikings first loss",
+   "summary": "Jared Goff threw a go-ahead, seven-yard touchdown pass to Jameson Williams with 4:35 left and the Detroit Lions beat the Minnesota Vikings 19-15 on Sunday, handing the NFL’s last undefeated team its first loss.",
+   "published": "2026-11-01T16:45-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/goff.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 2,
+   "sn_team_count": 0,
    "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/buccaneers-beat-falcons-despite-failing-to-complete-a-single-pass-in-wet-sloppy-conditions/",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-8-roundup-lions-hand-vikings-first-loss/",
    "source": "Sportsnet"
   },
   {
@@ -2340,17 +2340,28 @@
   },
   {
    "league": "nfl",
-   "headline": "Ravens down to third QB after Lamar Jackson, Tyler Huntley leave injured",
-   "summary": "The Baltimore Ravens quarterback exited with a thumb injury in the first quarter of Sunday’s game against the Buffalo Bills and was ruled questionable by the team soon after.",
-   "published": "2026-11-01T13:37-05:00",
+   "headline": "Ravens’ Lamar Jackson to be placed on IR with potentially season-ending injury",
+   "summary": "",
+   "published": "2026-11-01T16:43-05:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/lamar-2.jpg",
    "video": false,
-   "teams": [
-    "Buffalo Bills"
-   ],
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/ravens-lamar-jackson-to-be-placed-on-ir-with-potentially-season-ending-injury/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Buccaneers beat Falcons without completing pass for only third time in NFL history",
+   "summary": "",
+   "published": "2026-11-01T16:11-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-design-8.jpg",
+   "video": false,
+   "teams": [],
    "sn_team_count": 2,
    "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/ravens-lamar-jackson-exits-against-bills-with-thumb-injury/",
+   "url": "https://www.sportsnet.ca/nfl/article/buccaneers-beat-falcons-despite-failing-to-complete-a-single-pass-in-wet-sloppy-conditions/",
    "source": "Sportsnet"
   },
   {
@@ -2707,19 +2718,6 @@
   },
   {
    "league": "nhl",
-   "headline": "NHL Roundup: Tage Thompson scores twice in Sabres’ win over Kings",
-   "summary": "Tage Thompson scored twice, including the go-ahead goal with 6:20 remaining, and the Buffalo Sabres beat the Los Angeles Kings 3-2 on Saturday to extend their road point streak to seven games.",
-   "published": "2026-10-31T19:20-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-8-21.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/tage-thompson-scores-twice-in-sabres-win-over-kings/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Penguins’ Sidney Crosby sets NHL record for assists with single franchise",
    "summary": "",
    "published": "2026-10-31T19:49-04:00",
@@ -2769,6 +2767,19 @@
    "sport": "",
    "url": "https://www.sportsnet.ca/curling/article/grant-hardie-isabella-wrana-win-european-curling-championships/",
    "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "RECAP: Lions vs. Vikings",
+   "summary": "Tim Twentyman recaps the Detroit Lions’ 19-15 victory over the Minnesota Vikings.",
+   "published": "2026-11-01T16:40-05:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/xfu384166eotgvzkq4il.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Lions"
+   ],
+   "url": "https://www.detroitlions.com/news/recap-lions-vs-vikings-gibbs-goff-williams",
+   "source": "Team site"
   },
   {
    "league": "nfl",
@@ -2954,15 +2965,15 @@
   },
   {
    "league": "nfl",
-   "headline": "LIONS DAILY: Goff welcomes 'cat-and-mouse chess game' with unbeaten Vikings",
-   "summary": "",
-   "published": "2026-10-29T09:40-04:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/rhnnnyy3xqkgf4e5flx4.jpg",
+   "headline": "Bills 36, Ravens 10 | Final Score, recap + highlights",
+   "summary": "Josh Allen scored the 259th touchdown of his career, surpassing Jim Kelly for most pass TDs in Bills history; Joe Brady becomes first coach in team history to begin his coaching career with a 6-1 record.",
+   "published": "2026-11-01T16:46-05:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/bills/xxjhh3oaflvwxpfaddpq.png",
    "video": false,
    "teams": [
-    "Detroit Lions"
+    "Buffalo Bills"
    ],
-   "url": "https://www.detroitlions.com/news/lions-daily-goff-welcomes-cat-and-mouse-chess-game-with-unbeaten-vikings",
+   "url": "https://www.buffalobills.com/news/bills-36-ravens-10-final-score-recap-highlights",
    "source": "Team site"
   },
   {
@@ -3080,19 +3091,6 @@
     "Buffalo Bills"
    ],
    "url": "https://www.buffalobills.com/news/what-does-a-week-inside-the-bills-quarterback-room-with-josh-allen-look-like",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
-   "headline": "Tre'Davious White's homecoming, Tyrell Shavers' return and Spencer Brown's status",
-   "summary": "Tre'Davious White, Tyrell Shavers and Spencer Brown all garnered major attention on Wednesday",
-   "published": "2026-10-28T21:10-04:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/bills/xhq4bktrauh5mi24ebpv.png",
-   "video": false,
-   "teams": [
-    "Buffalo Bills"
-   ],
-   "url": "https://www.buffalobills.com/news/tre-davious-white-s-homecoming-tyrell-shavers-return-and-spencer-brown-s-status",
    "source": "Team site"
   },
   {
@@ -3648,6 +3646,18 @@
       "strk": "L1"
      },
      {
+      "name": "Peterborough Petes",
+      "abbr": "PBO",
+      "gp": 17,
+      "w": 8,
+      "l": 9,
+      "otl": 0,
+      "pts": 16,
+      "gf": 53,
+      "ga": 60,
+      "strk": "W1"
+     },
+     {
       "name": "Oshawa Generals",
       "abbr": "OSH",
       "gp": 16,
@@ -3658,18 +3668,6 @@
       "gf": 46,
       "ga": 49,
       "strk": "W2"
-     },
-     {
-      "name": "Peterborough Petes",
-      "abbr": "PBO",
-      "gp": 16,
-      "w": 7,
-      "l": 9,
-      "otl": 0,
-      "pts": 14,
-      "gf": 53,
-      "ga": 60,
-      "strk": "L1"
      }
     ]
    },
@@ -3679,23 +3677,23 @@
      {
       "name": "Sudbury Wolves",
       "abbr": "SBY",
-      "gp": 14,
+      "gp": 15,
       "w": 10,
-      "l": 3,
+      "l": 4,
       "otl": 1,
       "pts": 21,
       "gf": 60,
       "ga": 41,
-      "strk": "W2"
+      "strk": "L1"
      },
      {
       "name": "Niagara IceDogs",
       "abbr": "NIAG",
-      "gp": 14,
+      "gp": 15,
       "w": 7,
       "l": 6,
-      "otl": 1,
-      "pts": 15,
+      "otl": 2,
+      "pts": 16,
       "gf": 45,
       "ga": 55,
       "strk": "L2"
@@ -3727,14 +3725,14 @@
      {
       "name": "Brampton Steelheads",
       "abbr": "BRAM",
-      "gp": 15,
+      "gp": 16,
       "w": 2,
-      "l": 11,
+      "l": 12,
       "otl": 2,
       "pts": 6,
       "gf": 37,
       "ga": 70,
-      "strk": "L3"
+      "strk": "L4"
      },
      {
       "name": "Val-d'Or Foreurs",
@@ -3751,14 +3749,14 @@
      {
       "name": "Rouyn-Noranda Huskies",
       "abbr": "RN",
-      "gp": 0,
-      "w": 0,
+      "gp": 1,
+      "w": 1,
       "l": 0,
       "otl": 0,
-      "pts": 0,
+      "pts": 2,
       "gf": 4,
       "ga": 3,
-      "strk": ""
+      "strk": "W1"
      }
     ]
    },
@@ -3792,14 +3790,14 @@
      {
       "name": "Windsor Spitfires",
       "abbr": "WSR",
-      "gp": 15,
-      "w": 7,
+      "gp": 16,
+      "w": 8,
       "l": 5,
       "otl": 3,
-      "pts": 17,
+      "pts": 19,
       "gf": 59,
       "ga": 48,
-      "strk": "W4"
+      "strk": "W5"
      },
      {
       "name": "Saginaw Spirit",
@@ -4013,7 +4011,7 @@
       "l": 11,
       "otl": 2,
       "pts": 10,
-      "gf": 63,
+      "gf": 64,
       "ga": 94,
       "strk": "W1"
      },
@@ -4026,7 +4024,7 @@
       "otl": 1,
       "pts": 9,
       "gf": 44,
-      "ga": 80,
+      "ga": 81,
       "strk": "W1"
      },
      {
