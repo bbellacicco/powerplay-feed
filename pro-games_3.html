@@ -16,7 +16,7 @@
 
   Embed in Wix (Embed Code > Embed a site):
     https://bbellacicco.github.io/powerplay-feed/pro-games.html
-  Optional: ?tab=all | nfl | nhl | pwhl | nba | mlb | cfl  start on a league instead of "Our Teams"
+  Optional: ?tab=nfl | nhl | pwhl | nba | mlb | cfl  start on a league instead of All
 -->
 <style>
   :root {
@@ -87,6 +87,21 @@
   .stack .time.fin { color: var(--muted); }
   .stack .score { text-align: right; }
   .stack .score .cov { margin-top: 3px; }
+  /* stats: league leaders, one card per category */
+  .sgrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 12px; }
+  .scard2 { background: var(--row); border-radius: 8px; padding: 10px 12px; }
+  .scard2 h3 { margin: 0 0 6px; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); }
+  .lrow { display: flex; align-items: center; gap: 8px; padding: 5px 0; border-top: 1px solid var(--line); color: inherit; text-decoration: none; }
+  .lrow:first-of-type { border-top: 0; }
+  .lrow:hover .nm { text-decoration: underline; }
+  .lrow .rk { width: 14px; color: var(--muted); font-size: 12px; }
+  .lrow img { width: 28px; height: 28px; border-radius: 50%; object-fit: cover; background: var(--panel); flex: none; }
+  .lrow .nm { flex: 1; min-width: 0; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .lrow .nm small { color: var(--muted); font-weight: 600; }
+  .lrow b { font-variant-numeric: tabular-nums; }
+  .lrow.ours .nm { color: var(--accent); }
+  @media (max-width: 900px) { .sgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 560px) { .sgrid { grid-template-columns: minmax(0, 1fr); } }
   .hint { color: var(--muted); font-size: 12px; text-align: center; margin-top: 10px; }
   @media (max-width: 480px) { .stack .game { grid-template-columns: 4px 58px 1fr auto; gap: 8px; padding-right: 10px; } .stack .score .cov { font-size: 11px; } }
   .score .cov { display: block; margin-top: 6px; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .02em; }
@@ -154,7 +169,7 @@
       <div class="sponsor"><span>Presented by <b>Unifor Local 2458</b></span></div></div></div>
     </div>
     <div class="right">
-      <div class="views" role="group" aria-label="View"><button id="v-games">Scores</button><button id="v-standings">Standings</button></div>
+      <div class="views" role="group" aria-label="View"><button id="v-games">Scores</button><button id="v-standings">Standings</button><button id="v-stats">Stats</button></div>
       <div class="updated" id="updated"></div>
     </div>
   </header>
@@ -189,12 +204,12 @@
     { league: 'mlb', abbr: 'DET', name: 'Detroit Tigers' },
     { league: 'mlb', abbr: 'TOR', name: 'Toronto Blue Jays' }
   ];
-  var TABS = [['ours', 'Our Teams'], ['all', 'All'], ['nfl', 'NFL'], ['nhl', 'NHL'], ['pwhl', 'PWHL'], ['nba', 'NBA'], ['mlb', 'MLB'], ['cfl', 'CFL']];
+  var TABS = [['all', 'All'], ['nfl', 'NFL'], ['nhl', 'NHL'], ['pwhl', 'PWHL'], ['nba', 'NBA'], ['mlb', 'MLB'], ['cfl', 'CFL']];
 
   var qs = new URLSearchParams(location.search);
   var UPCOMING = qs.get('view') === 'upcoming';     // the Pro Hub's Coming Up tab
-  var view = qs.get('view') === 'standings' ? 'standings' : 'games';
-  var state = { tab: LEAGUES[qs.get('tab')] || qs.get('tab') === 'all' ? qs.get('tab') : 'ours', team: 'all' };
+  var view = qs.get('view') === 'standings' ? 'standings' : qs.get('view') === 'stats' ? 'stats' : 'games';
+  var state = { tab: LEAGUES[qs.get('tab')] ? qs.get('tab') : 'all', team: 'all' };   // opens on All (no Our Teams tab)
   var games = [];
 
   function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
@@ -318,6 +333,7 @@
     var box = document.getElementById('tabs'); box.innerHTML = '';
     TABS.forEach(function (t) {
       if (view === 'standings' && (t[0] === 'ours' || t[0] === 'all' || NO_STANDINGS.indexOf(t[0]) >= 0)) return;   // standings are one league at a time
+      if (view === 'stats' && t[0] === 'all') return;                                                                  // stats too
       var b = el('button', 'pill', t[1]);
       b.setAttribute('aria-pressed', String(state.tab === t[0]));
       b.onclick = function () { state.tab = t[0]; state.team = 'all'; render(); };
@@ -344,7 +360,7 @@
   }
 
   function views() {
-    [['games', 'v-games'], ['standings', 'v-standings']].forEach(function (v) {
+    [['games', 'v-games'], ['standings', 'v-standings'], ['stats', 'v-stats']].forEach(function (v) {
       var b = document.getElementById(v[1]);
       b.setAttribute('aria-pressed', String(view === v[0]));
       b.onclick = function () { if (view !== v[0]) { view = v[0]; render(); } };
@@ -409,6 +425,59 @@
     box.appendChild(bar);
     return [groups[GROUP[key]]];
   }
+  // ---- Stats: the league leaders (ESPN) for NHL, NBA and NFL; CFL, PWHL and MLB link to the league's own stats
+  var STAT_CATS = {
+    nhl: [['points', 'Points'], ['goals', 'Goals'], ['assists', 'Assists'], ['wins', 'Goalie wins'], ['avgGoalsAgainst', 'Goals-against average'], ['savePct', 'Save percentage']],
+    nba: [['pointsPerGame', 'Points per game'], ['reboundsPerGame', 'Rebounds per game'], ['assistsPerGame', 'Assists per game'], ['stealsPerGame', 'Steals per game'], ['blocksPerGame', 'Blocks per game'], ['3PointsMadePerGame', 'Threes per game']],
+    nfl: [['passingYards', 'Passing yards'], ['passingTouchdowns', 'Passing touchdowns'], ['rushingYards', 'Rushing yards'], ['receivingYards', 'Receiving yards'], ['sacks', 'Sacks'], ['interceptions', 'Interceptions']]
+  };
+  var STAT_LINKS = { cfl: ['CFL', 'https://www.cfl.ca/stats/'], pwhl: ['PWHL', 'https://www.thepwhl.com/en/stats'], mlb: ['MLB', 'https://www.mlb.com/stats/'] };
+  var statCache = {};
+  function renderStats() {
+    if (!LEAGUES[state.tab]) state.tab = 'nhl';
+    tabs();
+    document.getElementById('team').style.display = 'none';
+    var k = state.tab, box = document.getElementById('list');
+    document.getElementById('updated').textContent = '';
+    box.innerHTML = '';
+    if (!STAT_CATS[k]) {
+      var ln = STAT_LINKS[k], m = el('div', 'empty');
+      m.appendChild(document.createTextNode((k === 'mlb' ? 'The MLB season is over. ' : '') + 'Full ' + ln[0] + ' stats: '));
+      var a = el('a', null, ln[1].replace(/^https:\/\/(www\.)?/, '').replace(/\/$/, '')); a.href = ln[1]; a.target = '_blank'; a.rel = 'noopener'; a.style.color = 'var(--accent)'; m.appendChild(a);
+      box.appendChild(m); return;
+    }
+    box.appendChild(el('div', 'empty', 'Loading stats\u2026'));
+    if (!statCache[k]) statCache[k] = fetch('https://site.api.espn.com/apis/site/v3/sports/' + LEAGUES[k].path + '/leaders').then(function (r) { return r.json(); }).catch(function () { statCache[k] = null; return null; });
+    statCache[k].then(function (j) {
+      if (view !== 'stats' || state.tab !== k) return;
+      box.innerHTML = '';
+      var cats = (j && j.leaders && j.leaders.categories) || [], by = {};
+      cats.forEach(function (c) { by[c.name] = c; });
+      var season = j && j.requestedSeason && j.requestedSeason.displayName;
+      document.getElementById('updated').textContent = season ? season + ' season' : '';
+      var ours = OUR_TEAMS.filter(function (t) { return t.league === k; }).map(function (t) { return t.abbr; });
+      var grid = el('div', 'sgrid');
+      STAT_CATS[k].forEach(function (sc) {
+        var c = by[sc[0]]; if (!c || !(c.leaders || []).length) return;
+        var card = el('section', 'scard2'); card.appendChild(el('h3', null, sc[1]));
+        c.leaders.slice(0, 5).forEach(function (l, i) {
+          var ab = (l.team && l.team.abbreviation) || '', a2 = el('a', 'lrow' + (ours.indexOf(ab) >= 0 ? ' ours' : ''));
+          var link = ((l.athlete && l.athlete.links) || []).filter(function (x) { return (x.rel || []).indexOf('playercard') >= 0; })[0];
+          if (link) { a2.href = link.href; a2.target = '_blank'; a2.rel = 'noopener'; }
+          a2.appendChild(el('span', 'rk', String(i + 1)));
+          if (l.athlete && l.athlete.headshot && l.athlete.headshot.href) { var im = el('img'); im.src = l.athlete.headshot.href; im.alt = ''; im.loading = 'lazy'; im.onerror = function () { im.remove(); }; a2.appendChild(im); }
+          var nm = el('span', 'nm', (l.athlete && l.athlete.displayName) || ''); nm.appendChild(el('small', null, ' ' + ab)); a2.appendChild(nm);
+          a2.appendChild(el('b', null, l.displayValue));
+          card.appendChild(a2);
+        });
+        grid.appendChild(card);
+      });
+      if (!grid.children.length) { box.appendChild(el('div', 'empty', 'Stats unavailable right now.')); return; }
+      box.appendChild(grid);
+      box.appendChild(el('div', 'hint', 'League leaders from ESPN. Tap a player for their full stats.'));
+    });
+  }
+
   function renderStandings() {
     if (!LEAGUES[state.tab] || NO_STANDINGS.indexOf(state.tab) >= 0) state.tab = 'nhl';
     tabs();
@@ -453,6 +522,7 @@
   function render() {
     views();
     if (view === 'standings') return renderStandings();
+    if (view === 'stats') return renderStats();
     document.getElementById('updated').textContent = UPCOMING
       ? fmt(new Date(), { month: 'short', day: 'numeric' }) + ' – ' + fmt(dates[dates.length - 1], { month: 'short', day: 'numeric' })
       : 'Updated ' + fmt(new Date(), { hour: 'numeric', minute: '2-digit' });
