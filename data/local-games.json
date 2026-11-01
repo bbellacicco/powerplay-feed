@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T20:03:38-04:00",
+ "updated": "2026-10-31T20:21:41-04:00",
  "today": "2026-10-31",
  "range": [
   "2026-10-28",
@@ -1370,7 +1370,8 @@
    "result": "L",
    "note": "",
    "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6223"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6223",
+    "recap": "https://golancers.ca/news/2026/10/31/mens-basketball-drops-home-opener-to-york.aspx"
    }
   },
   {
@@ -1491,14 +1492,13 @@
    "home_away": "H",
    "opponent": "Waterloo Warriors",
    "location": "Toldo Lancer Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 76,
+   "opp_score": 84,
+   "result": "L",
    "note": "",
    "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=171",
-    "watch": "https://oua.tv/?school=Windsor"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6224"
    }
   },
   {
@@ -1510,11 +1510,11 @@
    "home_away": "A",
    "opponent": "Fort Erie Meteors",
    "location": "Fort Erie Leisureplex, Fort Erie, ON",
-   "status": "live",
-   "our_score": 1,
-   "opp_score": 2,
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
    "result": null,
-   "note": "10:26 2nd",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15639"
    },
@@ -2659,16 +2659,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "cfl",
-   "headline": "Argonauts QB Chad Kelly injured vs. Blue Bombers",
-   "summary": "Quarterback Chad Kelly exited Saturday’s post-season showdown against the Winnipeg Blue Bombers after suffering an apparent upper-body injury.",
-   "published": "2026-10-31T15:47-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/chad.jpg",
+   "league": "other",
+   "headline": "Idle Whitecaps clinch first place in Western Conference",
+   "summary": "",
+   "published": "2026-10-31T20:18-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/Whitecaps-3-1.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/argonauts-qb-chad-kelly-injured-vs-blue-bombers/",
+   "sn_team_count": 1,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/idle-whitecaps-clinch-first-place-in-western-conference/",
    "source": "Sportsnet"
   },
   {
@@ -3437,7 +3437,7 @@
    "league": "mlb",
    "headline": "Watch Tigers prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-31T18:20-04:00",
+   "published": "2026-10-31T20:07-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -3632,7 +3632,7 @@
    "league": "mlb",
    "headline": "Watch Blue Jays prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-31T18:20-04:00",
+   "published": "2026-10-31T20:07-04:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -4585,7 +4585,7 @@
       "l": 13,
       "otl": 0,
       "pts": 8,
-      "gf": 46,
+      "gf": 49,
       "ga": 76,
       "strk": "L9"
      },
@@ -4598,7 +4598,7 @@
       "otl": 0,
       "pts": 2,
       "gf": 25,
-      "ga": 72,
+      "ga": 75,
       "strk": "W1"
      }
     ]
@@ -4722,7 +4722,7 @@
       "l": 14,
       "otl": 1,
       "pts": 9,
-      "gf": 55,
+      "gf": 56,
       "ga": 87,
       "strk": "L3"
      },
@@ -4747,7 +4747,7 @@
       "otl": 0,
       "pts": 2,
       "gf": 34,
-      "ga": 98,
+      "ga": 99,
       "strk": "L6"
      }
     ]
