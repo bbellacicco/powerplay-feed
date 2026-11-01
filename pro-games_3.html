@@ -78,6 +78,17 @@
 
   .score { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
   .score b { font-size: 16px; }
+  /* stacked games (Scores and Coming Up), like the Local Hub's Coming Up */
+  .stack .game { grid-template-columns: 5px 78px 1fr auto; padding: 0 14px 0 0; margin-bottom: 6px; cursor: pointer; min-height: 54px; }
+  .stack .game > .time, .stack .game > .main, .stack .game > .score { padding: 9px 0; }
+  .stack .game:hover { background: #17336a; }
+  .stack .time { font-size: 13px; font-weight: 700; color: var(--accent); }
+  .stack .time.live { color: var(--loss); text-transform: uppercase; }
+  .stack .time.fin { color: var(--muted); }
+  .stack .score { text-align: right; }
+  .stack .score .cov { margin-top: 3px; }
+  .hint { color: var(--muted); font-size: 12px; text-align: center; margin-top: 10px; }
+  @media (max-width: 480px) { .stack .game { grid-template-columns: 4px 58px 1fr auto; gap: 8px; padding-right: 10px; } .stack .score .cov { font-size: 11px; } }
   .score .cov { display: block; margin-top: 6px; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .02em; }
   .dstrip .game:hover { box-shadow: inset 0 0 0 1px var(--accent); }
   .badge { display: inline-block; min-width: 26px; text-align: center; font-size: 11px; font-weight: 700;
@@ -472,35 +483,32 @@
         return;
       }
     }
-    if (!UPCOMING) {          // current scores: live games first, then the newest finals, all in one line
-      var cur0 = list.filter(function (g) { return g.status === 'live' || (g.status === 'final' && Date.now() - new Date(g.start).getTime() < 36 * 3600e3); });
-      cur0.sort(function (a, b) { return (a.status === 'live' ? 0 : 1) - (b.status === 'live' ? 0 : 1) || (a.status === 'live' ? a.start.localeCompare(b.start) : b.start.localeCompare(a.start)); });
-      if (!cur0.length) { box.appendChild(el('div', 'empty', 'No current scores right now. See Coming Up for the next games.')); return; }
-      var sec0 = el('section', 'day today'), h20 = el('h2', null, 'Current scores');
-      h20.appendChild(el('span', 'n', ' \u00b7 tap a score for the game coverage'));
-      sec0.appendChild(h20);
-      var st0 = el('div', 'dstrip'); cur0.forEach(function (g) { st0.appendChild(row(g)); }); sec0.appendChild(st0);
-      box.appendChild(sec0);
-      return;
-    }
-    list = list.filter(function (g) { return g.status === 'upcoming' || g.status === 'postponed'; });
-    if (!list.length) { box.appendChild(el('div', 'empty', 'No games in the next few days.')); return; }
-    var groups = [], cur = null;
+    // Scores: today's games (live, finals and later today) with yesterday's finals under them.
+    // Coming Up: tomorrow on. Both stacked, one game per line, grouped by day; tap a game for its coverage.
+    var yKey = dayKey(new Date(now.getTime() - 864e5));
+    if (!UPCOMING) list = list.filter(function (g) { var k = dayKey(new Date(g.start)); return k === todayKey || (k === yKey && g.status !== 'upcoming'); });
+    else list = list.filter(function (g) { return dayKey(new Date(g.start)) > todayKey && g.status !== 'final'; });
+    if (!list.length) { box.appendChild(el('div', 'empty', UPCOMING ? 'No games in the next few days.' : 'No games today. See Coming Up for the next games.')); return; }
+    var groups = [], byKey = {};
     list.forEach(function (g) {
       var k = dayKey(new Date(g.start));
-      if (!cur || cur.k !== k) { cur = { k: k, d: new Date(g.start), games: [] }; groups.push(cur); }
-      cur.games.push(g);
+      if (!byKey[k]) { byKey[k] = { k: k, d: new Date(g.start), games: [] }; groups.push(byKey[k]); }
+      byKey[k].games.push(g);
     });
+    groups.sort(function (a, b) { return UPCOMING || (a.k !== todayKey && b.k !== todayKey) ? (a.k < b.k ? -1 : 1) : (a.k === todayKey ? -1 : 1); });
     groups.forEach(function (grp) {
+      // live games first, then the rest by start time
+      grp.games.sort(function (a, b) { return (a.status === 'live' ? 0 : 1) - (b.status === 'live' ? 0 : 1) || (a.start < b.start ? -1 : a.start > b.start ? 1 : 0); });
       var sec = el('section', 'day' + (grp.k === todayKey ? ' today' : ''));
-      var h2 = el('h2', null, (grp.k === todayKey ? 'Today · ' : '') + fmt(grp.d, { weekday: 'long', month: 'short', day: 'numeric' }));
+      var h2 = el('h2', null, (grp.k === todayKey ? 'Today · ' : grp.k === yKey ? 'Yesterday · ' : '') + fmt(grp.d, { weekday: 'long', month: 'short', day: 'numeric' }));
       h2.appendChild(el('span', 'n', ' · ' + grp.games.length + (grp.games.length === 1 ? ' game' : ' games')));
       sec.appendChild(h2);
-      var strip = el('div', 'dstrip');
-      grp.games.forEach(function (g) { strip.appendChild(row(g)); });
-      sec.appendChild(strip);
+      var stack = el('div', 'stack');
+      grp.games.forEach(function (g) { stack.appendChild(row(g, true)); });
+      sec.appendChild(stack);
       box.appendChild(sec);
     });
+    if (!UPCOMING) box.appendChild(el('div', 'hint', 'Tap a game for the recap, the live gamecast or a preview.'));
   }
 
   // games not on today's date carry their date, so "4:25 PM" is never mistaken for today
@@ -511,8 +519,8 @@
     var wd = new Date(Date.UTC(y, m - 1, day)).getUTCDay();
     return WDAY[wd] + ', ' + CPMON[m - 1] + ' ' + day;
   }
-  function timeText(g) {
-    var d = new Date(g.start), other = dayKey(d) !== todayKey, date = other ? cpDay(d) + ' \u00b7 ' : '';
+  function timeText(g, short) {
+    var d = new Date(g.start), other = !short && dayKey(d) !== todayKey, date = other ? cpDay(d) + ' \u00b7 ' : '';
     if (g.status === 'final') return other ? 'Final \u00b7 ' + cpDay(d) : 'Final';
     if (g.status === 'live') return 'Live now';
     if (g.tbd) return date + 'TBA';
@@ -520,10 +528,10 @@
       .replace(/\s?([ap])\.?m\.?/i, function (_, x) { return ' ' + x.toUpperCase() + 'M'; });
   }
 
-  function row(g) {
+  function row(g, short) {
     var r = el('div', 'game l-' + g.league);
     r.appendChild(el('div', 'stripe'));
-    r.appendChild(el('div', 'time', timeText(g)));
+    r.appendChild(el('div', 'time' + (g.status === 'live' ? ' live' : g.status === 'final' ? ' fin' : ''), timeText(g, short)));
     var main = el('div', 'main'), who = el('div', 'who');
     // each team's record on games that haven't started yet: "Brewers (97-65)"
     function rec(t) { if (g.status === 'upcoming' && t.rec) who.appendChild(el('span', 'rec', ' (' + t.rec + ')')); }
@@ -578,7 +586,7 @@
     if (g.status === 'live' && g.detail) { var m2 = main.lastChild; m2.textContent = g.detail + ' · ' + m2.textContent; }
     if (g.link) {
       r.style.cursor = 'pointer'; r.onclick = function () { window.open(g.link, '_blank', 'noopener'); };
-      if (g.status === 'final' || g.status === 'live') sc.appendChild(el('span', 'cov', g.status === 'live' ? 'Gamecast \u203a' : 'Recap \u203a'));
+      sc.appendChild(el('span', 'cov', g.status === 'live' ? 'Gamecast \u203a' : g.status === 'final' ? 'Recap \u203a' : 'Preview \u203a'));
     }
     r.appendChild(sc);
     return r;
