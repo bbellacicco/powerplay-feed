@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T14:06:27-05:00",
+ "updated": "2026-11-01T14:17:58-05:00",
  "today": "2026-11-01",
  "range": [
   "2026-10-29",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -998,7 +998,8 @@
    "result": "W",
    "note": "",
    "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6343"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6343",
+    "recap": "https://golancers.ca/news/2026/11/1/mens-hockey-lancers-hold-off-late-push-from-waterloo-to-secure-victory.aspx"
    }
   },
   {
@@ -1016,7 +1017,8 @@
    "result": "L",
    "note": "",
    "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6288"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6288",
+    "recap": "https://golancers.ca/news/2026/11/1/womens-hockey-womens-hockey-falls-to-laurier-in-waterloo.aspx"
    }
   },
   {
@@ -1237,7 +1239,7 @@
    "our_score": 0,
    "opp_score": 0,
    "result": null,
-   "note": "18:30 1st",
+   "note": "10:55 1st",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29145/"
    }
@@ -2352,34 +2354,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "NFL Week 8 Pick ‘Em: Can shorthanded Eagles get back on track?",
-   "summary": "Somehow, someway, we’re basically at the halfway point of the NFL season. Week 8 features a loaded slate of games, headlined by some important divisional clashes. Evan Davidson shares his picks for every contest.",
-   "published": "2026-10-29T10:01-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Philadelphia-Eagles-defensive-tackle-Jalen-Carter.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-8-pick-em-panthers-look-to-make-road-statement/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Maple Leafs talk Kucherov trade possibility after win over Canucks",
-   "summary": "Are the Maple Leafs really a candidate to make a deal for Nikita Kucherov? Some of his former teammates now on the Leafs would love to have Kucherov back on their side.",
-   "published": "2026-10-31T23:51-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/leafs-2-2.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-talk-kucherov-trade-possibility-after-win-over-canucks/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "cfl",
    "headline": "No recovery timeline for Argonauts’ Chad Kelly after injury vs. Blue Bombers",
    "summary": "Quarterback Chad Kelly exited the Argonauts’ 25-22 East semifinal loss to the Winnipeg Blue Bombers on Saturday with an apparent upper-body injury, but the team did not provide additional details as to the severity of th",
@@ -2423,6 +2397,32 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Arsenal beats Liverpool to end Anfield torment, go top of Premier League",
+   "summary": "Arsenal eked out its first win at Anfield in 14 years by beating Liverpool 1-0 through Kai Havertz’s first-half goal to climb to first place in the Premier League on Sunday.",
+   "published": "2026-11-01T14:11-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/arsenal.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/premier-league/article/arsenal-beats-liverpool-to-end-anfield-torment-go-top-of-premier-league/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Ducks defenceman Nick Jensen clears waivers",
+   "summary": "After being placed on waivers Saturday, the Anaheim Ducks defenceman cleared on Sunday, per Sportsnet’s Elliotte Friedman.",
+   "published": "2026-11-01T14:09-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/nick-jensen.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/ducks-defenceman-nick-jensen-clears-waivers/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Oilers’ Isaac Howard out against Rangers, appears to have avoided major injury",
    "summary": "",
@@ -2449,6 +2449,63 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "What’s at stake for Toronto FC against Atlanta",
+   "summary": "There’s a lot at stake for Toronto FC this weekend.",
+   "published": "2026-10-29T17:15-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/tfc-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/whats-at-stake-for-toronco-fc-vs-atlanta-this-weekend/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "NFL Week 8 Pick ‘Em: Can shorthanded Eagles get back on track?",
+   "summary": "Somehow, someway, we’re basically at the halfway point of the NFL season. Week 8 features a loaded slate of games, headlined by some important divisional clashes. Evan Davidson shares his picks for every contest.",
+   "published": "2026-10-29T10:01-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Philadelphia-Eagles-defensive-tackle-Jalen-Carter.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-8-pick-em-panthers-look-to-make-road-statement/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Maple Leafs talk Kucherov trade possibility after win over Canucks",
+   "summary": "Are the Maple Leafs really a candidate to make a deal for Nikita Kucherov? Some of his former teammates now on the Leafs would love to have Kucherov back on their side.",
+   "published": "2026-10-31T23:51-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/leafs-2-2.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-talk-kucherov-trade-possibility-after-win-over-canucks/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "NFL Week 8 preview: Bills vs. Ravens headlines loaded slate",
+   "summary": "There are no shortage of marquee matchups in the NFL this weekend. Kellen Forrest previews all of Sunday’s biggest games in his Week 8 preview.",
+   "published": "2026-10-31T14:27-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/09/bills.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Lions",
+    "Buffalo Bills"
+   ],
+   "sn_team_count": 8,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-8-preview-bills-vs-ravens-headlines-loaded-slate/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Bruins’ Nikita Zadorov fined $5,000 for roughing Blackhawks’ Alex Vlasic",
    "summary": "The Boston Bruins defenceman has been fined $5,000, the maximum allowable under the collective bargaining agreement, for roughing the Chicago Blackhawks blueliner, the NHL’s department of player safety announced Sunday.",
@@ -2472,35 +2529,6 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/capitals-acquire-goalie-remi-poirier-from-devils-for-pick/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "What’s at stake for Toronto FC against Atlanta",
-   "summary": "There’s a lot at stake for Toronto FC this weekend.",
-   "published": "2026-10-29T17:15-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/tfc-2.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/whats-at-stake-for-toronco-fc-vs-atlanta-this-weekend/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "NFL Week 8 preview: Bills vs. Ravens headlines loaded slate",
-   "summary": "There are no shortage of marquee matchups in the NFL this weekend. Kellen Forrest previews all of Sunday’s biggest games in his Week 8 preview.",
-   "published": "2026-10-31T14:27-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/09/bills.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Lions",
-    "Buffalo Bills"
-   ],
-   "sn_team_count": 8,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-8-preview-bills-vs-ravens-headlines-loaded-slate/",
    "source": "Sportsnet"
   },
   {
@@ -2738,45 +2766,6 @@
    "sn_team_count": 0,
    "sport": "Tennis",
    "url": "https://www.sportsnet.ca/wta/article/fernandez-loses-three-set-showdown-to-shnaider-in-japan-open-final/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Islanders’ Heineman ejected after knee-on-knee collision with Oilers’ Howard",
-   "summary": "Isaac Howard’s first period ended early Saturday.",
-   "published": "2026-10-31T14:57-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/01/Howard.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/islanders-heineman-ejected-after-knee-on-knee-collision-with-oilers-howard/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Canadiens’ Mike Matheson out two weeks with lower-body injury",
-   "summary": "The Montreal Canadiens defenceman will be out for two weeks with a lower-body injury, according to Sportsnet’s Eric Engels.",
-   "published": "2026-10-31T11:28-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/mike-matheson.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canadiens-mike-matheson-out-two-weeks-with-lower-body-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Senators’ Burakovsky, Foegele out three to four weeks",
-   "summary": "Forwards Andre Burakovsky and Warren Foegele are set to miss the next three to four weeks with injuries, head coach Travis Green said before Ottawa’s showdown against the San Jose Sharks on Saturday.",
-   "published": "2026-10-31T14:41-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/foegele.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/senators-burakovsky-foegele-out-three-to-four-weeks/",
    "source": "Sportsnet"
   },
   {
@@ -3693,7 +3682,7 @@
       "l": 3,
       "otl": 1,
       "pts": 21,
-      "gf": 57,
+      "gf": 58,
       "ga": 37,
       "strk": "W2"
      },
@@ -3754,7 +3743,7 @@
       "otl": 0,
       "pts": 0,
       "gf": 0,
-      "ga": 0,
+      "ga": 1,
       "strk": ""
      },
      {
@@ -3783,7 +3772,7 @@
       "otl": 1,
       "pts": 21,
       "gf": 56,
-      "ga": 49,
+      "ga": 50,
       "strk": "L1"
      },
      {
@@ -3859,7 +3848,7 @@
       "l": 3,
       "otl": 2,
       "pts": 20,
-      "gf": 59,
+      "gf": 60,
       "ga": 48,
       "strk": "W1"
      },
