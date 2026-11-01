@@ -104,12 +104,13 @@
     var src = embed(v);
     if (!src) { window.open(v.url, '_blank', 'noopener'); return; }
     frame.innerHTML = '';
+    player.classList.add('on');      // shown before the video loads, so it doesn't start at the lowest quality
     var f = document.createElement('iframe');
-    f.src = src; f.title = v.headline;
+    f.title = v.headline;
     f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; f.allowFullscreen = true;
     frame.appendChild(f);
+    requestAnimationFrame(function () { f.src = src; });
     ext.href = v.url; ext.textContent = 'Watch on ' + v.source + ' ↗';
-    player.classList.add('on');
     document.getElementById('close').focus();
   }
   function stop() { player.classList.remove('on'); frame.innerHTML = ''; }
