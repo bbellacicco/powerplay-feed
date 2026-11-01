@@ -6,6 +6,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
 <title>Athlete Profiles | Powerplay Windsor</title>
 <script src="arrows.js"></script>
+<script src="share.js?v=5"></script>
 <!--
   Athlete Profiles: a grid of Buddy's profile graphics (the top of each shows the athlete's name and team).
   Tap one and it fills the screen (full screen; on iPhone the full-screen viewer page profile.html), with arrows (or swipe) to the next. one swipeable row with every profile.
@@ -34,6 +35,9 @@
   .card img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
   .card::after { content: "View profile"; position: absolute; left: 0; right: 0; bottom: 0; padding: 22px 10px 8px; font-size: 12px; font-weight: 800; letter-spacing: .04em;
     color: #fff; background: linear-gradient(transparent, rgba(11,26,51,.92)); text-align: left; }
+  .card > .pps-btn.mini { position: absolute; right: 6px; top: 6px; z-index: 3; padding: 5px 8px; font-size: 11px; background: rgba(11,26,51,.82); border-color: rgba(255,255,255,.35); }
+  .view .bar #ashare .pps-btn { background: var(--accent); color: #0b1a33; border-color: var(--accent); padding: 6px 12px 6px 10px; }
+  .view .bar #ashare:empty { display: none; }
   .pager { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 14px; }
   .pager button { border: 1px solid var(--line); background: var(--panel); color: var(--text); border-radius: 999px; padding: 8px 16px; font: inherit; font-weight: 700; cursor: pointer; }
   .pager button:disabled { opacity: .35; cursor: default; }
@@ -78,7 +82,7 @@
   <div class="grid" id="grid"><div class="empty">Loading…</div></div>
   <div class="pager" id="pager"></div>
   <div class="view" id="view" role="dialog" aria-label="Athlete profile">
-    <div class="bar"><span id="pos"></span><span class="acts"><a id="fullsize" target="_blank" rel="noopener" href="#">Open full size &#8599;</a><button type="button" id="close">&#10005; Close</button></span></div>
+    <div class="bar"><span id="pos"></span><span class="acts"><span id="ashare"></span><a id="fullsize" target="_blank" rel="noopener" href="#">Open full size &#8599;</a><button type="button" id="close">&#10005; Close</button></span></div>
     <div class="stage">
       <img id="big" alt="Athlete profile">
       <button class="nav prev" type="button" id="prev" aria-label="Previous profile">&#8249;</button>
@@ -101,6 +105,21 @@
   function thumb(src) { return wix(src, 'fill/w_400,h_533,al_t,q_80'); }
   function large(src) { return wix(src, 'fit/w_1000,h_1450,q_85'); }
 
+  // sharing: powerplaywindsor.com/scores-standings?tab=athletes&p=<key> opens the Local Hub on this athlete's profile
+  // (the same key publish.py writes: the file name, or the first 10 letters of a Wix image's id)
+  var SITE = 'https://www.powerplaywindsor.com/';
+  function pkey(p) {
+    if (p.key) return p.key;
+    var m = String(p.img).match(/static\.wixstatic\.com\/media\/[0-9a-z]+_([0-9a-f]{10})/);
+    if (m) return m[1];
+    return String(p.img).split('/').pop().replace(/\.[^.]*$/, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'profile';
+  }
+  function shareData(p) {
+    return { title: 'Athlete Profile', url: SITE + 'scores-standings?tab=athletes&p=' + encodeURIComponent(pkey(p)),
+             text: 'Get to know this Windsor-Essex athlete | Powerplay Windsor', image: p.share ? REPO + p.share : large(p.img) };
+  }
+  if (window.PPShare) document.getElementById('ashare').appendChild(PPShare.button(function () { return shareData(list[cur] || list[0]); }));
+
   function grid() {
     var pages = Math.max(1, Math.ceil(list.length / PER)), box = document.getElementById('grid');
     box.innerHTML = '';
@@ -112,6 +131,11 @@
       var img = new Image(); img.src = thumb(p.img); img.alt = ''; img.loading = 'lazy';
       img.onerror = function () { if (img.src !== full(p.img)) img.src = full(p.img); };
       c.appendChild(img);
+      if (window.PPShare) {
+        var sb = PPShare.button(function () { return shareData(p); });
+        sb.classList.add('mini'); sb.addEventListener('click', function (e) { e.stopPropagation(); });
+        c.appendChild(sb);
+      }
       c.onclick = function () { enlarge(n, c); };
       box.appendChild(c);
     });
@@ -191,6 +215,9 @@
       var want = null;
       try { var h = JSON.parse(localStorage.getItem('pp-athlete') || 'null'); localStorage.removeItem('pp-athlete'); if (h && Date.now() - h.t < 120000) want = h.img; } catch (e) {}
       var n = want ? list.map(function (p) { return p.img; }).indexOf(want) : -1;
+      // a shared link (?p=<key>): open that athlete's profile
+      var pk = (qs.get('p') || '').toLowerCase().replace(/[^a-z0-9-]/g, '');
+      if (n < 0 && pk) n = list.map(pkey).indexOf(pk);
       if (n >= 0) {
         page = Math.floor(n / PER); grid();
         var cardEl = document.querySelectorAll('.card')[n % PER];
