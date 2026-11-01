@@ -94,6 +94,7 @@
   .scard .body { padding: 7px 9px 10px; }
   .scard .meta { margin: 0 0 3px; font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .scard .headline { font-size: 13.5px; line-height: 1.28; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .rtitle { margin: 22px 0 10px; font-size: 19px; font-weight: 800; } .rtitle:first-child { margin-top: 4px; }
   .swipe { color: var(--muted); font-size: 12px; text-align: center; padding: 2px 0 4px; }
   @media (max-width: 420px) { .scard { width: 205px; } }
 
@@ -278,10 +279,37 @@
     });
     var box = document.getElementById('list'); box.innerHTML = '';
     if (!list.length) { box.appendChild(el('div', 'empty', 'No recent stories.')); return; }
+    // more rows under the first one (Our Teams and All, with no team picked): fills the page with fresh stories
+    var extra = state.team === 'all' ? moreRows(list) : [];
+    var TITLE = { ours: 'Our teams', all: 'Latest across the leagues' };
+    row(box, extra.length ? (TITLE[state.tab] || 'Latest') : '', list);
+    extra.forEach(function (r) { row(box, r[0], r[1]); });
+  }
+  function row(box, title, list) {
+    if (!list.length) return;
+    if (title) box.appendChild(el('h2', 'rtitle', title));
     var strip = el('div', 'sstrip');
     list.slice(0, 40).forEach(function (s) { strip.appendChild(card(s)); });
     box.appendChild(strip);
-    if (list.length > 1) box.appendChild(el('div', 'swipe', 'Swipe for more'));
+    if (list.length > 1 && !title) box.appendChild(el('div', 'swipe', 'Swipe for more'));
+  }
+  // Our Teams: 'Around the leagues', then the busiest league right now (most stories in the last two days)
+  // All: 'Our teams', then the busiest league. Stories already in a row above don't show again.
+  function moreRows(first) {
+    var used = {}; first.slice(0, 40).forEach(function (s) { used[s.url] = 1; });
+    function fresh2(list) { return list.filter(function (s) { return !used[s.url]; }); }
+    function take(list) { list.slice(0, 20).forEach(function (s) { used[s.url] = 1; }); return list; }
+    var out = [];
+    if (state.tab === 'ours') { var around = fresh2(stories.all); if (around.length >= 3) out.push(['Around the leagues', take(around)]); }
+    if (state.tab === 'all') { var ours = fresh2(stories.ours); if (ours.length >= 3) out.push(['Our teams', take(ours)]); }
+    var busy = ['nhl', 'nfl', 'nba', 'mlb', 'cfl', 'pwhl'].map(function (k) {
+      var l = fresh2(stories[k] || []);
+      var n = l.filter(function (s) { return Date.now() - new Date(s.published).getTime() < 2 * 864e5; }).length;
+      return [k, l, n];
+    }).filter(function (x) { return x[1].length >= 3; }).sort(function (a, b) { return b[2] - a[2]; });
+    if (busy[0]) out.push(['Around the ' + LEAGUES[busy[0][0]].label, take(busy[0][1])]);
+    if (busy[1] && out.length < 2) out.push(['Around the ' + LEAGUES[busy[1][0]].label, take(fresh2(busy[1][1]))]);
+    return out;
   }
 
   function card(s) {
