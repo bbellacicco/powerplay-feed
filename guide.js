@@ -237,10 +237,27 @@
     });
   }
 
+  // an event post is "over" once its day has passed, or on the day itself once its time has passed:
+  // "7:10 p.m." -> gone 3 hours after the start; "1 to 4 p.m." -> gone an hour after it ends; no time -> end of the day
+  function evOver(e, today) {
+    var last = e.end || e.date;
+    if (last < today) return true;
+    if (last > today) return false;
+    var re = /(\d{1,2})(?::(\d\d))?\s*([ap])\.?\s*m\b\.?/gi, m, t = null, n = 0;
+    var txt = String(e.when || '');
+    var range = /\d\s*(?:-|–|to)\s*\d{1,2}(?::\d\d)?\s*[ap]\.?\s*m/i.test(txt);
+    while ((m = re.exec(txt))) { var h = (+m[1] % 12) + (m[3].toLowerCase() === 'p' ? 12 : 0); t = h * 60 + (+(m[2] || 0)); n++; }
+    if (t === null) return false;
+    var nowP = {}; new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Toronto', hour: 'numeric', minute: '2-digit', hourCycle: 'h23' })
+      .formatToParts(new Date()).forEach(function (x) { nowP[x.type] = x.value; });
+    var nowMin = (+nowP.hour) * 60 + (+nowP.minute);
+    return nowMin > t + (range || n > 1 ? 60 : 180);
+  }
+
   function calCol(d, target, compact) {
     var col = el('div', 'pg-col pg-cal'), today = dayKey(new Date());
     var max = compact ? 3 : 4;
-    var evs = d.events.filter(function (e) { return (e.end || e.date) >= today; }).slice(0, max);
+    var evs = d.events.filter(function (e) { return !evOver(e, today); }).slice(0, max);
     evs = evs.concat(gameEvents(d.games, max - evs.length, today))
       .sort(function (a, b) { return a.date < b.date ? -1 : a.date > b.date ? 1 : (a.game ? 1 : 0) - (b.game ? 1 : 0) || ((a.start || '') < (b.start || '') ? -1 : 1); });
     colHead(col, 'Coming Up', evs.length ? 'Events & games' : '');
