@@ -8,7 +8,8 @@
 <title>Pro Scoreboard | Powerplay Windsor</title>
 <script src="arrows.js"></script>
 <!--
-  Pro sports widget: yesterday, today and the next 2 days.
+  Pro sports widget. Scores (default): one line of current scores (live games, and finals from yesterday and today),
+  each linked to the game's coverage (recap / gamecast). ?view=upcoming: Coming Up, the next games by day.
   NFL, NHL, NBA and MLB load live from ESPN each time the page opens, so scores are
   always current. CFL comes from data/local-games.json ("pro_games"), which the
   daily GitHub Action fills from cfl.ca (ESPN's CFL data is out of date).
@@ -77,6 +78,8 @@
 
   .score { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
   .score b { font-size: 16px; }
+  .score .cov { display: block; margin-top: 6px; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .02em; }
+  .dstrip .game:hover { box-shadow: inset 0 0 0 1px var(--accent); }
   .badge { display: inline-block; min-width: 26px; text-align: center; font-size: 11px; font-weight: 700;
     padding: 2px 5px; border-radius: 4px; margin-left: 6px; color: #fff; background: var(--tie); }
   .badge.W { background: var(--win); } .badge.L, .badge.OTL { background: var(--loss); }
@@ -140,7 +143,7 @@
       <div class="sponsor"><span>Presented by <b>Unifor Local 2458</b></span></div></div></div>
     </div>
     <div class="right">
-      <div class="views" role="group" aria-label="View"><button id="v-games">Games</button><button id="v-standings">Standings</button></div>
+      <div class="views" role="group" aria-label="View"><button id="v-games">Scores</button><button id="v-standings">Standings</button></div>
       <div class="updated" id="updated"></div>
     </div>
   </header>
@@ -154,7 +157,7 @@
 <script>
 (function () {
   var TZ = 'America/Toronto';
-  var DAYS_BACK = 1, DAYS_AHEAD = 2;   // yesterday through two days from now
+  var DAYS_BACK = 1, DAYS_AHEAD = 3;   // yesterday (current scores) through three days from now (Coming Up)
   var LEAGUES = {
     nfl: { label: 'NFL', path: 'football/nfl' },
     nhl: { label: 'NHL', path: 'hockey/nhl' },
@@ -178,6 +181,7 @@
   var TABS = [['ours', 'Our Teams'], ['all', 'All'], ['nfl', 'NFL'], ['nhl', 'NHL'], ['pwhl', 'PWHL'], ['nba', 'NBA'], ['mlb', 'MLB'], ['cfl', 'CFL']];
 
   var qs = new URLSearchParams(location.search);
+  var UPCOMING = qs.get('view') === 'upcoming';     // the Pro Hub's Coming Up tab
   var view = qs.get('view') === 'standings' ? 'standings' : 'games';
   var state = { tab: LEAGUES[qs.get('tab')] || qs.get('tab') === 'all' ? qs.get('tab') : 'ours', team: 'all' };
   var games = [];
@@ -221,6 +225,12 @@
       return (j.events || []).map(function (e) { return parseEvent(key, e); });
     }).catch(function () { return []; });
   }
+  // the game's coverage on ESPN: the recap after a final, the gamecast while it's on, the preview before
+  function coverage(e, status) {
+    var ls = e.links || [];
+    function by(rel) { var x = ls.filter(function (l) { return (l.rel || []).indexOf(rel) >= 0; })[0]; return x && x.href; }
+    return (status === 'final' ? by('recap') || by('boxscore') : status === 'live' ? by('summary') || by('live') : by('preview') || by('summary')) || (ls[0] && ls[0].href) || '';
+  }
   // one ESPN event (scoreboard or team schedule) -> a game
   function parseEvent(key, e) {
         e.status = e.status || (e.competitions[0] && e.competitions[0].status) || { type: {} };
@@ -241,7 +251,7 @@
           note: season === 1 ? 'Preseason' : season === 3 ? (seriesInfo(c).round || 'Playoffs') : '',
           series: season === 3 ? seriesInfo(c).series : '',
           tbd: e.timeValid === false,
-          link: (e.links && e.links[0] && e.links[0].href) || ''
+          link: coverage(e, status)
         };
   }
   // a team's last result and next game, when it has nothing in the two-days-back-to-tomorrow window
@@ -432,8 +442,9 @@
   function render() {
     views();
     if (view === 'standings') return renderStandings();
-    document.getElementById('updated').textContent =
-      fmt(dates[0], { month: 'short', day: 'numeric' }) + ' – ' + fmt(dates[dates.length - 1], { month: 'short', day: 'numeric' });
+    document.getElementById('updated').textContent = UPCOMING
+      ? fmt(new Date(), { month: 'short', day: 'numeric' }) + ' – ' + fmt(dates[dates.length - 1], { month: 'short', day: 'numeric' })
+      : 'Updated ' + fmt(new Date(), { hour: 'numeric', minute: '2-digit' });
     tabs();
     var list = games.filter(function (g) { return state.tab === 'ours' ? isOurs(g) : state.tab === 'all' ? true : g.league === state.tab; });
     teamSelect(list);
@@ -461,7 +472,19 @@
         return;
       }
     }
-    if (!list.length) { box.appendChild(el('div', 'empty', 'No games from yesterday through the next two days.')); return; }
+    if (!UPCOMING) {          // current scores: live games first, then the newest finals, all in one line
+      var cur0 = list.filter(function (g) { return g.status === 'live' || (g.status === 'final' && Date.now() - new Date(g.start).getTime() < 36 * 3600e3); });
+      cur0.sort(function (a, b) { return (a.status === 'live' ? 0 : 1) - (b.status === 'live' ? 0 : 1) || (a.status === 'live' ? a.start.localeCompare(b.start) : b.start.localeCompare(a.start)); });
+      if (!cur0.length) { box.appendChild(el('div', 'empty', 'No current scores right now. See Coming Up for the next games.')); return; }
+      var sec0 = el('section', 'day today'), h20 = el('h2', null, 'Current scores');
+      h20.appendChild(el('span', 'n', ' \u00b7 tap a score for the game coverage'));
+      sec0.appendChild(h20);
+      var st0 = el('div', 'dstrip'); cur0.forEach(function (g) { st0.appendChild(row(g)); }); sec0.appendChild(st0);
+      box.appendChild(sec0);
+      return;
+    }
+    list = list.filter(function (g) { return g.status === 'upcoming' || g.status === 'postponed'; });
+    if (!list.length) { box.appendChild(el('div', 'empty', 'No games in the next few days.')); return; }
     var groups = [], cur = null;
     list.forEach(function (g) {
       var k = dayKey(new Date(g.start));
@@ -491,6 +514,7 @@
   function timeText(g) {
     var d = new Date(g.start), other = dayKey(d) !== todayKey, date = other ? cpDay(d) + ' \u00b7 ' : '';
     if (g.status === 'final') return other ? 'Final \u00b7 ' + cpDay(d) : 'Final';
+    if (g.status === 'live') return 'Live now';
     if (g.tbd) return date + 'TBA';
     return date + fmt(d, { hour: 'numeric', minute: '2-digit' })
       .replace(/\s?([ap])\.?m\.?/i, function (_, x) { return ' ' + x.toUpperCase() + 'M'; });
@@ -552,7 +576,10 @@
       sc.appendChild(el('span', 'badge off', g.status === 'postponed' ? 'PPD' : 'CAN'));
     }
     if (g.status === 'live' && g.detail) { var m2 = main.lastChild; m2.textContent = g.detail + ' · ' + m2.textContent; }
-    if (g.link) { r.style.cursor = 'pointer'; r.onclick = function () { window.open(g.link, '_blank', 'noopener'); }; }
+    if (g.link) {
+      r.style.cursor = 'pointer'; r.onclick = function () { window.open(g.link, '_blank', 'noopener'); };
+      if (g.status === 'final' || g.status === 'live') sc.appendChild(el('span', 'cov', g.status === 'live' ? 'Gamecast \u203a' : 'Recap \u203a'));
+    }
     r.appendChild(sc);
     return r;
   }
@@ -562,6 +589,10 @@
   function schedule() {
     var live = games.some(function (g) { return g.status === 'live'; });
     setTimeout(function () { load(); }, live ? 30 * 1000 : 2 * 60 * 1000);
+  }
+  if (UPCOMING) {      // Coming Up: its own title, no Games/Standings switch
+    document.querySelector('h1').innerHTML = 'Coming <span>Up</span>';
+    document.querySelector('.views').style.display = 'none';
   }
   render();
   load();
