@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31T20:33:03-04:00",
+ "updated": "2026-10-31T20:48:05-04:00",
  "today": "2026-10-31",
  "range": [
   "2026-10-28",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 30
   },
   "club_news": {
    "ok": true,
@@ -1241,7 +1241,8 @@
    "result": "L",
    "note": "25-18, 25-22, 21-25, 22-25, 8-15",
    "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6244"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6244",
+    "recap": "https://golancers.ca/news/2026/10/31/womens-volleyball-swept-by-mustangs-in-london.aspx"
    }
   },
   {
@@ -1407,7 +1408,8 @@
    "result": "L",
    "note": "14-25, 25-17, 23-25, 19-25",
    "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6245"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6245",
+    "recap": "https://golancers.ca/news/2026/10/31/womens-volleyball-swept-by-mustangs-in-london.aspx"
    }
   },
   {
@@ -1510,11 +1512,11 @@
    "home_away": "A",
    "opponent": "Fort Erie Meteors",
    "location": "Fort Erie Leisureplex, Fort Erie, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 1,
+   "opp_score": 4,
    "result": null,
-   "note": "",
+   "note": "11:29 3rd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15639"
    },
@@ -1884,6 +1886,20 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "Every Scoring Play from the Western Semi-Final",
+   "summary": "",
+   "published": "2026-10-31T20:11:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/5nfWbQZ2RA5hAwKH5VaYYI/2005dcadca9774272d90dd456d5f4fa2/WSF_EveryScoring_THUMB.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Lions",
+    "Roughriders"
+   ],
+   "url": "https://www.cfl.ca/article/every-scoring-play-from-the-western-semi-final",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Make that TWO TD's for Jevon Cottoy",
    "summary": "",
    "published": "2026-10-31T18:57:00-04:00",
@@ -1977,20 +1993,6 @@
   },
   {
    "league": "cfl",
-   "headline": "Wild finish in the Eastern Semi-Final!",
-   "summary": "",
-   "published": "2026-10-31T16:10:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/6FAxgWHIrHcx5w0jXhtEx6/17ad14c13fad715f94ae3059cc36121b/image__1_.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Blue Bombers",
-    "Argonauts"
-   ],
-   "url": "https://www.cfl.ca/article/wild-finish-in-the-eastern-semi-final",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
    "headline": "Big second half propels Lions over Riders in Western Semi-Final presented by Wegovy®",
    "summary": "",
    "published": "2026-10-31T03:00:00-04:00",
@@ -2029,6 +2031,20 @@
     "Blue Bombers"
    ],
    "url": "https://www.cfl.ca/article/3-stats-that-defined-winnipeg-s-win-over-toronto-in-the-eastern-semi-final-presented-by-wegovy",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "DaShaun Amos on Eastern Semi-Final presented by Wegovy® loss: \"We left some plays out there\"",
+   "summary": "",
+   "published": "2026-10-31T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/7kfbwlDaLoGQO0phPdWQD1/04dab4a8ca5563f3c5a44341941355ec/DaShaun_Amos_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Argonauts",
+    "Blue Bombers"
+   ],
+   "url": "https://www.cfl.ca/article/dashaun-amos-on-eastern-semi-final-presented-by-wegovy-loss-we-left-some-plays-out-there",
    "source": "CFL.ca"
   },
   {
@@ -2089,22 +2105,6 @@
   },
   {
    "league": "cfl",
-   "headline": "Depth Charts: How the teams will line up in the Division Semi-Finals presented by Wegovy®",
-   "summary": "",
-   "published": "2026-10-30T00:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/2fy5yt0txaQD537Qw7B8HC/d147ddba75cae80c28565ab98a512305/Jevon_Cottoy_2026.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Argonauts",
-    "Blue Bombers",
-    "Lions",
-    "Roughriders"
-   ],
-   "url": "https://www.cfl.ca/article/depth-charts-how-the-teams-will-line-up-in-the-division-semi-finals",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
    "headline": "Chad Kelly on facing Bombers: \"Take what the defence gives you\"",
    "summary": "",
    "published": "2026-10-30T00:00:00-04:00",
@@ -2143,22 +2143,6 @@
     "Roughriders"
    ],
    "url": "https://www.cfl.ca/article/darnell-sankey-on-matchup-against-riders-i-just-feel-like-we-re-better",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "3 strengths for every team in Division Semi-Finals presented by Wegovy®",
-   "summary": "",
-   "published": "2026-10-29T00:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/3tc67AyZOiHZtrXj2TPILv/bb867c5bb9b921c46426b95babf61fa2/Jamieson_Sheahan_2026.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Argonauts",
-    "Blue Bombers",
-    "Lions",
-    "Roughriders"
-   ],
-   "url": "https://www.cfl.ca/article/3-strengths-for-every-team-in-division-semi-finals",
    "source": "CFL.ca"
   },
   {
@@ -2285,6 +2269,17 @@
    "video": true,
    "teams": [],
    "url": "https://www.cfl.ca/article/unveiling-the-new-cfl-indigenous-logo",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Saskatchewan artists bring CFL’s Indigenous logos to life through mural",
+   "summary": "",
+   "published": "2026-09-30T00:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/1bfkW5E0cq6xjrztJAzclI/776ca51067dcc2014d65763690770662/Dustin_Ritter_3.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/saskatchewan-artists-bring-cfl-s-indigenous-logos-to-life-through-mural",
    "source": "CFL.ca"
   },
   {
@@ -2685,6 +2680,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "mlb",
+   "headline": "Report: Padres decline Nick Pivetta’s club option for 2027",
+   "summary": "",
+   "published": "2026-10-31T20:44-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/pivetta.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/report-padres-decline-nick-pivettas-club-option-for-2027/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Canadiens’ Kirby Dach out vs. Penguins due to illness",
    "summary": "",
@@ -2724,29 +2732,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nba",
-   "headline": "Report: Thunder no longer signing Ochai Agbaji",
-   "summary": "",
-   "published": "2026-10-31T12:01-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/ochai-agbaji.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/report-thunder-no-longer-signing-ochai-agbaji/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "cfl",
-   "headline": "Rourke leads Lions past Roughriders in West semifinal",
-   "summary": "",
-   "published": "2026-10-31T19:25-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Rourke-1.jpg",
+   "headline": "Lions, Rourke flip script on Roughriders to reach West final",
+   "summary": "The B.C. Lions found another gear when their season was on the line, rallying from a 17-3 deficit to defeat the Saskatchewan Roughriders. David Morassutti has takeaways from the CFL’s West semifinal.",
+   "published": "2026-10-31T20:40-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/lions-rourke-cottoy.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 2,
    "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/rourke-leads-lions-past-roughriders-in-west-semifinal/",
+   "url": "https://www.sportsnet.ca/cfl/article/lions-rourke-flip-script-on-roughriders-to-reach-west-final/",
    "source": "Sportsnet"
   },
   {
@@ -2885,6 +2880,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "Report: Thunder no longer signing Ochai Agbaji",
+   "summary": "",
+   "published": "2026-10-31T12:01-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/ochai-agbaji.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/report-thunder-no-longer-signing-ochai-agbaji/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "NFL Week 8 preview: Bills vs. Ravens headlines loaded slate",
    "summary": "There are no shortage of marquee matchups in the NFL this weekend. Kellen Forrest previews all of Sunday’s biggest games in his Week 8 preview.",
@@ -2980,45 +2988,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Sources: Nikita Kucherov tells Lightning he won’t re-sign, asks for trade",
-   "summary": "According to multiple sources, Nikita Kucherov has informed both his teammates and the Lightning organization that he will not be re-signing with Tampa Bay and would like to be traded.",
-   "published": "2026-10-30T18:47-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Tampa-Bay-Lightning-right-wing-Nikita-Kucherov.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/sources-nikita-kucherov-tells-lightning-he-wont-re-sign-asks-for-trade/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Lightning ‘have no intention’ of trading Nikita Kucherov",
-   "summary": "Lightning general manager Julien Brisebois released a statement on Friday night after Sportsnet’s Elliotte Friedman reported that Nikita Kucherov had informed the team that he would not be re-signing and would prefer a t",
-   "published": "2026-10-30T21:41-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Tampa-Bay-Lightnings-Nikita-Kucherov.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/lightning-have-no-intention-of-trading-nikita-kucherov/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "‘Never a dull moment’: Fans react to Kucherov trade request from Lightning",
-   "summary": "",
-   "published": "2026-10-30T19:09-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/02/CP175606152.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/never-a-dull-moment-fans-react-to-kucherov-trade-request-from-lightning/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Ducks waive defenceman Nick Jensen",
    "summary": "The Ducks waived the defenceman on Saturday after just four games, Sportsnet’s Elliotte Friedman reported.",
    "published": "2026-10-31T14:20-04:00",
@@ -3028,19 +2997,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/ducks-waive-defenceman-nick-jensen/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Bayern Munich’s Olise, Saibari and Gnabry all go off hurt in Klassiker",
-   "summary": "",
-   "published": "2026-10-31T15:54-04:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-8-23.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/bundesliga/article/bayern-munichs-olise-saibari-and-gnabry-all-go-off-hurt-in-klassiker/",
    "source": "Sportsnet"
   },
   {
@@ -4375,7 +4331,7 @@
       "l": 3,
       "otl": 0,
       "pts": 28,
-      "gf": 96,
+      "gf": 97,
       "ga": 31,
       "strk": "W9"
      },
@@ -4424,7 +4380,7 @@
       "otl": 2,
       "pts": 16,
       "gf": 62,
-      "ga": 94,
+      "ga": 95,
       "strk": "W1"
      },
      {
@@ -4527,7 +4483,7 @@
       "otl": 1,
       "pts": 17,
       "gf": 50,
-      "ga": 41,
+      "ga": 43,
       "strk": "L1"
      },
      {
@@ -4550,7 +4506,7 @@
       "l": 8,
       "otl": 2,
       "pts": 14,
-      "gf": 66,
+      "gf": 68,
       "ga": 68,
       "strk": "L1"
      },
@@ -4575,7 +4531,7 @@
       "otl": 0,
       "pts": 12,
       "gf": 39,
-      "ga": 55,
+      "ga": 57,
       "strk": "W2"
      },
      {
@@ -4598,7 +4554,7 @@
       "l": 13,
       "otl": 0,
       "pts": 8,
-      "gf": 49,
+      "gf": 50,
       "ga": 76,
       "strk": "L9"
      },
@@ -4611,7 +4567,7 @@
       "otl": 0,
       "pts": 2,
       "gf": 25,
-      "ga": 75,
+      "ga": 76,
       "strk": "W1"
      }
     ]
@@ -4663,7 +4619,7 @@
       "l": 1,
       "otl": 0,
       "pts": 24,
-      "gf": 66,
+      "gf": 68,
       "ga": 40,
       "strk": "L1"
      },
@@ -4675,7 +4631,7 @@
       "l": 3,
       "otl": 3,
       "pts": 19,
-      "gf": 53,
+      "gf": 54,
       "ga": 36,
       "strk": "W2"
      },
@@ -4735,7 +4691,7 @@
       "l": 14,
       "otl": 1,
       "pts": 9,
-      "gf": 56,
+      "gf": 57,
       "ga": 87,
       "strk": "L3"
      },
@@ -4748,7 +4704,7 @@
       "otl": 1,
       "pts": 5,
       "gf": 52,
-      "ga": 98,
+      "ga": 99,
       "strk": "L2"
      },
      {
@@ -4760,7 +4716,7 @@
       "otl": 0,
       "pts": 2,
       "gf": 34,
-      "ga": 99,
+      "ga": 100,
       "strk": "L6"
      }
     ]
