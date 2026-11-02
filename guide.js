@@ -56,6 +56,7 @@
     '.ppg .pg-dt b{display:block;font-size:16px;font-weight:800;margin-top:1px}' +
     '.ppg .pg-li.pg-game .pg-dt{box-shadow:inset 0 -3px 0 var(--c)}' +
     '.ppg .pg-none{color:#9fb0cf;font-size:13px;padding:6px 0}' +
+    '.ppg .pg-sub{margin:8px 0 2px;padding-top:7px;border-top:1px solid rgba(255,255,255,.12);font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#9fb0cf}' +
     '.ppg .pg-go{margin-top:auto;padding-top:9px;font-size:12.5px;font-weight:800;color:#e8b021}' +
     '.ppg .pg-go:hover{text-decoration:underline}' +
     '.ppg .pg-col:hover{border-color:rgba(232,176,33,.45)}' +
@@ -202,7 +203,7 @@
     var stale = function (g) { return g.status === 'live' && now - new Date(g.start).getTime() > 4 * 3600e3; };   // data behind: don't show it as live
     var isLive = function (g) { return g.status === 'live' && !stale(g); };
     var scored = function (g) { return g.our_score != null && g.opp_score != null; };
-    var n = compact ? 3 : 4;
+    var n = compact ? 3 : 5;
     // live games first (with the score), then the next games, then today's finals if there's room
     var live = mine.filter(isLive).sort(function (a, b) { return RANK[a.team] - RANK[b.team]; });
     var next = mine.filter(function (g) { return !isLive(g) && g.status !== 'final' && g.status !== 'cancelled'; })
@@ -213,8 +214,20 @@
       .sort(function (a, b) { return RANK[a.team] - RANK[b.team]; });
     var pick = live.concat(next);
     pick = pick.concat(done.slice(0, Math.max(n - pick.length, 0)));
+    // room left (a quiet day): the next day's games fill the column, under their own label
+    var nextDay = '', extra = [];
+    if (!compact && pick.length < n) {
+      nextDay = future.map(function (g) { return dayKey(new Date(g.start)); }).filter(function (k) { return k > day; }).sort()[0] || '';
+      if (nextDay) extra = future.filter(function (g) { return dayKey(new Date(g.start)) === nextDay && g.status !== 'cancelled'; })
+        .sort(function (a, b) { return (RANK[a.team] - RANK[b.team]) || (a.start < b.start ? -1 : 1); }).slice(0, n - pick.length)
+        .sort(function (a, b) { return (a.time_tbd ? 1 : 0) - (b.time_tbd ? 1 : 0) || (a.start < b.start ? -1 : 1); });
+    }
     var list = el('div');
-    pick.forEach(function (g) {
+    pick.concat(extra.length ? ['divider'] : [], extra).forEach(function (g) {
+      if (g === 'divider') {
+        list.appendChild(el('div', 'pg-sub', (nextDay === dayKey(new Date(Date.now() + 864e5)) && day === today ? 'Tomorrow' : wd(nextDay)) + ' \u00b7 ' + wd(nextDay).slice(0, 3) + '., ' + cpDate(nextDay)));
+        return;
+      }
       var s = sides(g), li = el('div', 'pg-li'); li.style.setProperty('--c', COLOR[g.team] || '#e8b021');
       var lv = isLive(g), fin = g.status === 'final';
       var started = !g.time_tbd && g.status === 'upcoming' && new Date(g.start).getTime() < now && now - new Date(g.start).getTime() < 3 * 3600e3;
@@ -242,7 +255,7 @@
     var fin = d.games.filter(function (g) { return g.status === 'final' && g.our_score != null && g.opp_score != null && new Date(g.start).getTime() > since; });
     fin.sort(function (a, b) { return b.start < a.start ? -1 : b.start > a.start ? 1 : RANK[a.team] - RANK[b.team]; });
     var ours = fin.filter(function (g) { return g.team !== 'highschool'; }), hsg = fin.filter(function (g) { return g.team === 'highschool'; });
-    var n = compact ? 4 : 5, show = ours.slice(0, Math.max(n - Math.min(2, hsg.length), 0));
+    var n = compact ? 4 : 6, show = ours.slice(0, Math.max(n - Math.min(2, hsg.length), 0));
     show = show.concat(hsg.slice(0, n - show.length));
     colHead(col, 'Latest scores', fin.length ? fin.length + ' finals' : '');
     if (!show.length) col.appendChild(el('div', 'pg-none', 'No local finals in the last two days.'));
@@ -262,10 +275,10 @@
   // when there aren't enough Community Calendar posts, upcoming home games fill the rest:
   // Spitfires, Lancers and Saints first, then the Flyers, Vipers and the local PJHL clubs (next 7 days)
   var CAL_CLUBS = /^(leamington flyers|lasalle vipers|lakeshore canadiens|essex 73'?s|wheatley sharks|amherstburg admirals)$/i;
-  function calTier(g) { return g.team === 'spitfires' ? 0 : g.team === 'lancers' ? 1 : g.team === 'saints' ? 2 : g.team === 'junior' && CAL_CLUBS.test(g.club || '') ? 3 : 9; }
+  function calTier(g) { return g.team === 'spitfires' ? 0 : g.team === 'lancers' ? 1 : g.team === 'saints' ? 2 : g.team === 'junior' && CAL_CLUBS.test(g.club || '') ? 3 : g.team === 'junior' ? 4 : 9; }
   function gameEvents(games, n, skipDay) {
     if (n <= 0) return [];
-    var now = Date.now(), week = now + 7 * 864e5;
+    var now = Date.now(), week = now + 14 * 864e5;   // the next two weeks
     var pool = games.filter(function (g) {
       var t = new Date(g.start).getTime();
       return g.home_away === 'H' && calTier(g) < 9 && g.status !== 'final' && g.status !== 'cancelled' && g.status !== 'postponed' && t > now && t < week;
@@ -301,7 +314,7 @@
 
   function calCol(d, target, compact) {
     var col = el('div', 'pg-col pg-cal'), today = dayKey(new Date());
-    var max = compact ? 3 : 4;
+    var max = compact ? 3 : 6;
     var evs = d.events.filter(function (e) { return !evOver(e, today); }).slice(0, max);
     evs = evs.concat(gameEvents(d.games, max - evs.length, today))
       .sort(function (a, b) { return a.date < b.date ? -1 : a.date > b.date ? 1 : (a.game ? 1 : 0) - (b.game ? 1 : 0) || ((a.start || '') < (b.start || '') ? -1 : 1); });
