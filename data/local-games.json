@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T21:18:04-05:00",
+ "updated": "2026-11-01T21:36:42-05:00",
  "today": "2026-11-01",
  "range": [
   "2026-10-29",
@@ -1590,6 +1590,17 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "CFL Cinematic Recap: Winnipeg Blue Bombers @ Toronto Argonauts - Eastern Semi-Final presented by Wegovy®",
+   "summary": "",
+   "published": "2026-11-01T21:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/37RyIsaiUD3tg7KuYn5Z2U/190361c1997e0a118240812531cec09c/CR_SF.png?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/cfl-cinematic-recap-winnipeg-blue-bombers-toronto-argonauts-eastern-semi-final-presented-by-wegovy",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "WSF Recap: BC 33, Saskatchewan 26",
    "summary": "",
    "published": "2026-10-31T22:00:00-04:00",
@@ -1680,19 +1691,6 @@
     "Lions"
    ],
    "url": "https://www.cfl.ca/article/69-yard-passing-td-from-nathan-rourke",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "BIG Third Down stop by Roughriders leads to Tommy Stevens TD",
-   "summary": "",
-   "published": "2026-10-31T17:43:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/1boB2piW7LlSvI9fJk8IYp/edf15135b5d2c9c567e61f18235d531c/SSK_1ST_TD.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Roughriders"
-   ],
-   "url": "https://www.cfl.ca/article/big-third-down-stop-by-roughriders-leads-to-tommy-stevens-td",
    "source": "CFL.ca"
   },
   {
@@ -3096,13 +3094,13 @@
    "league": "mlb",
    "headline": "Twice as nice! Dingler repeats as Gold Glove winner",
    "summary": "",
-   "published": "2026-11-01T21:15-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/private/t_16x9/t_w1024/v1762130085/mlb/zd8zskuzqfvmp2fwsj4z",
+   "published": "2026-11-01T21:29-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/uoqoqw1bye0cbcagpdfs",
    "video": false,
    "teams": [
     "Detroit Tigers"
    ],
-   "url": "https://www.mlb.com/tigers/news/2026-gold-glove-award-winners",
+   "url": "https://www.mlb.com/tigers/news/dillon-dingler-wins-second-gold-glove-award-2026",
    "source": "Team site"
   },
   {
@@ -3635,14 +3633,26 @@
      {
       "name": "Ottawa 67's",
       "abbr": "OTT",
-      "gp": 14,
-      "w": 8,
+      "gp": 15,
+      "w": 9,
       "l": 4,
       "otl": 2,
-      "pts": 18,
+      "pts": 20,
       "gf": 54,
       "ga": 48,
-      "strk": "L1"
+      "strk": "W1"
+     },
+     {
+      "name": "Oshawa Generals",
+      "abbr": "OSH",
+      "gp": 17,
+      "w": 6,
+      "l": 6,
+      "otl": 5,
+      "pts": 17,
+      "gf": 52,
+      "ga": 56,
+      "strk": "W2"
      },
      {
       "name": "Peterborough Petes",
@@ -3655,18 +3665,6 @@
       "gf": 53,
       "ga": 60,
       "strk": "W1"
-     },
-     {
-      "name": "Oshawa Generals",
-      "abbr": "OSH",
-      "gp": 16,
-      "w": 6,
-      "l": 6,
-      "otl": 4,
-      "pts": 16,
-      "gf": 52,
-      "ga": 56,
-      "strk": "W2"
      }
     ]
    },
@@ -4311,7 +4309,7 @@
       "otl": 0,
       "pts": 12,
       "gf": 55,
-      "ga": 65,
+      "ga": 66,
       "strk": "L2"
      },
      {
@@ -4334,7 +4332,7 @@
       "l": 12,
       "otl": 0,
       "pts": 2,
-      "gf": 26,
+      "gf": 27,
       "ga": 89,
       "strk": "L1"
      }
@@ -4394,13 +4392,25 @@
      {
       "name": "Waterloo Siskins",
       "abbr": "WAT",
-      "gp": 15,
-      "w": 9,
+      "gp": 16,
+      "w": 10,
       "l": 3,
       "otl": 3,
-      "pts": 21,
-      "gf": 55,
+      "pts": 23,
+      "gf": 56,
       "ga": 37,
+      "strk": "W4"
+     },
+     {
+      "name": "Ayr Centennials",
+      "abbr": "AYR",
+      "gp": 14,
+      "w": 8,
+      "l": 3,
+      "otl": 3,
+      "pts": 19,
+      "gf": 56,
+      "ga": 47,
       "strk": "W3"
      },
      {
@@ -4414,18 +4424,6 @@
       "gf": 64,
       "ga": 64,
       "strk": "L1"
-     },
-     {
-      "name": "Ayr Centennials",
-      "abbr": "AYR",
-      "gp": 13,
-      "w": 8,
-      "l": 3,
-      "otl": 2,
-      "pts": 18,
-      "gf": 56,
-      "ga": 46,
-      "strk": "W3"
      },
      {
       "name": "Port Colborne Sailors",
