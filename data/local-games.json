@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T21:03:33-05:00",
+ "updated": "2026-11-01T21:18:04-05:00",
  "today": "2026-11-01",
  "range": [
   "2026-10-29",
@@ -1253,11 +1253,11 @@
    "home_away": "H",
    "opponent": "Listowel Cyclones",
    "location": "Chatham Memorial Arena, Chatham, ON",
-   "status": "live",
-   "our_score": 5,
+   "status": "final",
+   "our_score": 6,
    "opp_score": 3,
-   "result": null,
-   "note": "04:11 3rd",
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15645"
    },
@@ -3096,7 +3096,7 @@
    "league": "mlb",
    "headline": "Twice as nice! Dingler repeats as Gold Glove winner",
    "summary": "",
-   "published": "2026-11-01T20:57-05:00",
+   "published": "2026-11-01T21:15-05:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/private/t_16x9/t_w1024/v1762130085/mlb/zd8zskuzqfvmp2fwsj4z",
    "video": false,
    "teams": [
@@ -3950,8 +3950,8 @@
       "l": 9,
       "otl": 2,
       "pts": 20,
-      "gf": 70,
-      "ga": 71,
+      "gf": 71,
+      "ga": 72,
       "strk": "L2"
      },
      {
@@ -3998,8 +3998,8 @@
       "l": 10,
       "otl": 2,
       "pts": 12,
-      "gf": 68,
-      "ga": 78,
+      "gf": 69,
+      "ga": 79,
       "strk": "W1"
      },
      {
@@ -4207,40 +4207,40 @@
       "strk": "W12"
      },
      {
+      "name": "St. Thomas Stars",
+      "abbr": "STT",
+      "gp": 15,
+      "w": 11,
+      "l": 3,
+      "otl": 1,
+      "pts": 23,
+      "gf": 55,
+      "ga": 33,
+      "strk": "W2"
+     },
+     {
       "name": "Listowel Cyclones",
       "abbr": "LIS",
-      "gp": 16,
+      "gp": 17,
       "w": 10,
-      "l": 3,
+      "l": 4,
       "otl": 3,
       "pts": 23,
       "gf": 68,
-      "ga": 51,
-      "strk": "W4"
-     },
-     {
-      "name": "St. Thomas Stars",
-      "abbr": "STT",
-      "gp": 14,
-      "w": 10,
-      "l": 3,
-      "otl": 1,
-      "pts": 21,
-      "gf": 55,
-      "ga": 33,
-      "strk": "W1"
+      "ga": 52,
+      "strk": "L1"
      },
      {
       "name": "Chatham Maroons",
       "abbr": "CHA",
-      "gp": 14,
-      "w": 10,
+      "gp": 15,
+      "w": 11,
       "l": 4,
       "otl": 0,
-      "pts": 20,
-      "gf": 67,
+      "pts": 22,
+      "gf": 68,
       "ga": 42,
-      "strk": "L2"
+      "strk": "W1"
      },
      {
       "name": "Stratford Warriors",
@@ -4281,14 +4281,14 @@
      {
       "name": "Elmira Sugar Kings",
       "abbr": "ELM",
-      "gp": 16,
+      "gp": 17,
       "w": 6,
-      "l": 9,
+      "l": 10,
       "otl": 1,
       "pts": 13,
       "gf": 57,
       "ga": 69,
-      "strk": "L2"
+      "strk": "L3"
      },
      {
       "name": "LaSalle Vipers",
@@ -4344,6 +4344,18 @@
     "group": "Eastern Conference",
     "teams": [
      {
+      "name": "Caledonia Corvairs",
+      "abbr": "CAL",
+      "gp": 17,
+      "w": 14,
+      "l": 2,
+      "otl": 1,
+      "pts": 29,
+      "gf": 70,
+      "ga": 40,
+      "strk": "W5"
+     },
+     {
       "name": "Cambridge Redhawks",
       "abbr": "CAM",
       "gp": 16,
@@ -4354,18 +4366,6 @@
       "gf": 94,
       "ga": 42,
       "strk": "W2"
-     },
-     {
-      "name": "Caledonia Corvairs",
-      "abbr": "CAL",
-      "gp": 16,
-      "w": 13,
-      "l": 2,
-      "otl": 1,
-      "pts": 27,
-      "gf": 70,
-      "ga": 40,
-      "strk": "W4"
      },
      {
       "name": "Fort Erie Meteors",
@@ -4478,14 +4478,14 @@
      {
       "name": "Welland Canadians",
       "abbr": "WEL",
-      "gp": 17,
+      "gp": 18,
       "w": 2,
-      "l": 15,
+      "l": 16,
       "otl": 0,
       "pts": 4,
       "gf": 38,
       "ga": 105,
-      "strk": "W1"
+      "strk": "L1"
      }
     ]
    }
