@@ -659,7 +659,9 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
       var vk = f.isVideo ? vkey(f.url).replace(':', '-') : '';
       var fsb = f.isVideo ? PPShare.button({ title: f.headline, url: SITE + 'scores-standings?tab=network&v=' + encodeURIComponent(vk), text: f.headline + ' | Powerplay Network', image: f.image || '' })
         : f.snaps ? PPShare.button({ title: f.snaps.title, url: f.snaps.url, text: f.snaps.title + ' | Powerplay Windsor', image: f.snaps.cover })
-        : PPShare.button({ title: f.headline, url: SITE + 'scores-standings?tab=stories&s=' + skey(f.url) + '&team=' + encodeURIComponent(f.team || 'powerplay'),
+        // a Powerplay blog post shares its own address (Wix gives Facebook its picture right away, no "checking your request");
+        // a team's story on another site goes through the Local Hub
+        : PPShare.button({ title: f.headline, url: /^https:\/\/(www\.)?powerplaywindsor\.com\/post\//.test(f.url) ? f.url : SITE + 'scores-standings?tab=stories&s=' + skey(f.url) + '&team=' + encodeURIComponent(f.team || 'powerplay'),
         text: f.headline + ' | Powerplay Windsor', image: f.image ? wix(f.image, 1200, 630) : '' });
       fsb.classList.add('mini', 'topshare'); fsb.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); });
       big.appendChild(fsb);
