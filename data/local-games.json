@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T20:03:05-05:00",
+ "updated": "2026-11-01T20:21:42-05:00",
  "today": "2026-11-01",
  "range": [
   "2026-10-29",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -1254,10 +1254,10 @@
    "opponent": "Listowel Cyclones",
    "location": "Chatham Memorial Arena, Chatham, ON",
    "status": "live",
-   "our_score": 1,
+   "our_score": 4,
    "opp_score": 1,
    "result": null,
-   "note": "15:01 2nd",
+   "note": "02:23 2nd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15645"
    },
@@ -2338,21 +2338,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Sunday Overreactions: Lightning, Wild can’t risk losing stars for nothing",
-   "summary": "The Lightning and Wild find themselves in similar positions, needing to decide the best course of action with stars Nikita Kucherov and Quinn Hughes on expiring contracts. Michael Amato explores their conundrum and more ",
-   "published": "2026-11-01T08:30-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Quinn-Hughes.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 6,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/sunday-overreactions-lightning-wild-cant-risk-losing-stars-for-nothing/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Kraken trade Shane Wright to Predators for Matthew Wood",
    "summary": "",
    "published": "2026-11-01T17:30-05:00",
@@ -2378,29 +2363,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Canada’s Andreescu upsets Maria to claim Queretaro Open singles championship",
+   "league": "nfl",
+   "headline": "Ravens’ Lamar Jackson to be placed on IR with potentially season-ending injury",
    "summary": "",
-   "published": "2026-11-01T19:53-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/Untitled-design-2026-06-25T123759.821.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Tennis",
-   "url": "https://www.sportsnet.ca/wta/article/canadas-andreescu-upsets-maria-to-claim-queretaro-open-singles-championship/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "White’s brace leads Whitecaps to dominant victory over Sounders",
-   "summary": "There’s no such thing as a meaningless game for the Vancouver Whitecaps.",
-   "published": "2026-11-01T17:48-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-design-8-5.jpg",
+   "published": "2026-11-01T16:43-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/lamar-2.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 1,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/whites-brace-leads-vancouver-whitecaps-to-dominant-victory-over-seattle-sounders/",
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/ravens-lamar-jackson-to-be-placed-on-ir-with-potentially-season-ending-injury/",
    "source": "Sportsnet"
   },
   {
@@ -2456,16 +2428,31 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "Ravens’ Lamar Jackson to be placed on IR with potentially season-ending injury",
+   "league": "other",
+   "headline": "Canada’s Andreescu upsets Maria to claim Queretaro Open singles championship",
    "summary": "",
-   "published": "2026-11-01T16:43-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/lamar-2.jpg",
+   "published": "2026-11-01T19:53-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/Untitled-design-2026-06-25T123759.821.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/ravens-lamar-jackson-to-be-placed-on-ir-with-potentially-season-ending-injury/",
+   "sn_team_count": 0,
+   "sport": "Tennis",
+   "url": "https://www.sportsnet.ca/wta/article/canadas-andreescu-upsets-maria-to-claim-queretaro-open-singles-championship/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Sunday Overreactions: Lightning, Wild can’t risk losing stars for nothing",
+   "summary": "The Lightning and Wild find themselves in similar positions, needing to decide the best course of action with stars Nikita Kucherov and Quinn Hughes on expiring contracts. Michael Amato explores their conundrum and more ",
+   "published": "2026-11-01T08:30-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Quinn-Hughes.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 6,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/sunday-overreactions-lightning-wild-cant-risk-losing-stars-for-nothing/",
    "source": "Sportsnet"
   },
   {
@@ -2507,6 +2494,34 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/two-early-goals-lift-wild-to-win-over-capitals/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Lions LB Jack Campbell stretchered off field vs. Vikings",
+   "summary": "The Detroit Lions linebacker was stretchered off the field after making a tackle against the Minnesota Vikings and seemingly injuring himself.",
+   "published": "2026-11-01T15:49-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/05/lions.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Lions"
+   ],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/lions-lb-jack-campbell-stretchered-off-field-vs-vikings/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "White’s brace leads Whitecaps to dominant victory over Sounders",
+   "summary": "There’s no such thing as a meaningless game for the Vancouver Whitecaps.",
+   "published": "2026-11-01T17:48-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-design-8-5.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/whites-brace-leads-vancouver-whitecaps-to-dominant-victory-over-seattle-sounders/",
    "source": "Sportsnet"
   },
   {
@@ -2563,21 +2578,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-talk-kucherov-trade-possibility-after-win-over-canucks/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Lions LB Jack Campbell stretchered off field vs. Vikings",
-   "summary": "The Detroit Lions linebacker was stretchered off the field after making a tackle against the Minnesota Vikings and seemingly injuring himself.",
-   "published": "2026-11-01T15:49-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/05/lions.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Lions"
-   ],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/lions-lb-jack-campbell-stretchered-off-field-vs-vikings/",
    "source": "Sportsnet"
   },
   {
@@ -2750,19 +2750,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/penguins-sidney-crosby-sets-nhl-record-for-assists-with-single-franchise/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Grant Hardie, Isabella Wrana win European curling championships",
-   "summary": "",
-   "published": "2026-11-01T13:18-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/grant-hardie.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "",
-   "url": "https://www.sportsnet.ca/curling/article/grant-hardie-isabella-wrana-win-european-curling-championships/",
    "source": "Sportsnet"
   },
   {
@@ -3638,8 +3625,8 @@
       "l": 4,
       "otl": 2,
       "pts": 18,
-      "gf": 50,
-      "ga": 46,
+      "gf": 51,
+      "ga": 47,
       "strk": "L1"
      },
      {
@@ -3662,8 +3649,8 @@
       "l": 6,
       "otl": 4,
       "pts": 16,
-      "gf": 50,
-      "ga": 52,
+      "gf": 51,
+      "ga": 53,
       "strk": "W2"
      }
     ]
@@ -4213,7 +4200,7 @@
       "otl": 3,
       "pts": 23,
       "gf": 66,
-      "ga": 47,
+      "ga": 50,
       "strk": "W4"
      },
      {
@@ -4224,8 +4211,8 @@
       "l": 3,
       "otl": 1,
       "pts": 21,
-      "gf": 51,
-      "ga": 30,
+      "gf": 53,
+      "ga": 32,
       "strk": "W1"
      },
      {
@@ -4236,7 +4223,7 @@
       "l": 4,
       "otl": 0,
       "pts": 20,
-      "gf": 63,
+      "gf": 66,
       "ga": 40,
       "strk": "L2"
      },
@@ -4284,8 +4271,8 @@
       "l": 9,
       "otl": 1,
       "pts": 13,
-      "gf": 54,
-      "ga": 65,
+      "gf": 56,
+      "ga": 67,
       "strk": "L2"
      },
      {
@@ -4308,8 +4295,8 @@
       "l": 9,
       "otl": 0,
       "pts": 12,
-      "gf": 48,
-      "ga": 64,
+      "gf": 50,
+      "ga": 65,
       "strk": "L2"
      },
      {
@@ -4332,8 +4319,8 @@
       "l": 12,
       "otl": 0,
       "pts": 2,
-      "gf": 25,
-      "ga": 82,
+      "gf": 26,
+      "ga": 84,
       "strk": "L1"
      }
     ]
