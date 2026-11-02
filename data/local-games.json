@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02T14:33:26-05:00",
+ "updated": "2026-11-02T14:47:54-05:00",
  "today": "2026-11-02",
  "range": [
   "2026-10-30",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 32
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -1027,6 +1027,20 @@
   },
   {
    "league": "cfl",
+   "headline": "Who has the edge in the Eastern Final presented by Wegovy®?",
+   "summary": "",
+   "published": "2026-11-02T00:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/nvm1ugjWQVubUGCG46tup/3ebb723f672af32cdf814f993dea80eb/Tyler_Snead_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Alouettes",
+    "Blue Bombers"
+   ],
+   "url": "https://www.cfl.ca/article/who-has-the-edge-in-the-eastern-final-presented-by-wegovy",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Overreaction Monday: 5 hot takes from the Division Semi-Finals presented by Wegovy®",
    "summary": "",
    "published": "2026-11-02T00:00:00-05:00",
@@ -1221,20 +1235,6 @@
     "Roughriders"
    ],
    "url": "https://www.cfl.ca/article/trevor-harris-gives-credit-to-lions-defence-after-falling-short-in-the-division-semi-final-presented-by-wegovy",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "5 things to know about the Eastern Semi-Final presented by Wegovy®",
-   "summary": "",
-   "published": "2026-10-30T03:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/5r6WyiwxxnSDmTYloqNrpt/3e761a25492fe2c9324cd6e2ea0ff5c0/Dru_Brown_2026_2.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Argonauts",
-    "Blue Bombers"
-   ],
-   "url": "https://www.cfl.ca/article/5-things-to-know-about-the-eastern-semi-final",
    "source": "CFL.ca"
   },
   {
@@ -1887,6 +1887,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/oilers-journeyman-matt-tomkins-earns-win-in-first-msg-start/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Toronto FC’s season-long comeback falls short of playoffs",
+   "summary": "After playing catch-up for most of the season — in the standings and on a game-to-game basis — Toronto FC’s comeback-kid pedigree finally ran out. John Molinaro recaps the action from around MLS this weekend.",
+   "published": "2026-11-02T10:32-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/tfc-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/toronto-fcs-season-long-comeback-falls-short-of-playoffs/",
    "source": "Sportsnet"
   },
   {
