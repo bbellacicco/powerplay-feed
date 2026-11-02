@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02T17:17:54-05:00",
+ "updated": "2026-11-02T17:37:03-05:00",
  "today": "2026-11-02",
  "range": [
   "2026-10-30",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -1665,28 +1665,30 @@
  "more_news": [
   {
    "league": "nhl",
-   "headline": "Lightning’s Kucherov says trade request was due to ‘poor communication and respect’",
-   "summary": "Speaking with reporters after the Tampa Bay Lightning’s Monday practice, Kucherov explained that his decision to request a trade from the only NHL team he’s known came down to a matter of “poor communication and respect.",
-   "published": "2026-11-02T12:54-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/kuch.jpg",
+   "headline": "Breaking down the Nikita Kucherov situation",
+   "summary": "The reverberations from Nikita Kucherov’s trade request are still being felt Monday. Here’s a look at the most pressing questions to break it all down.",
+   "published": "2026-11-02T16:54-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/10/CP175135871.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/lightnings-kucherov-says-trade-request-was-due-to-poor-communication-and-respect/",
+   "url": "https://www.sportsnet.ca/nhl/article/nhl-rumour-roundup-breaking-down-the-nikita-kucherov-situation/",
    "source": "Sportsnet"
   },
   {
    "league": "nhl",
-   "headline": "‘Plug-and-play’ Nugent-Hopkins closing in on monster milestone for Oilers",
-   "summary": "As he approaches the franchise record for most games played, Ryan Nugent-Hopkins has become Edmonton’s comfort food. Mark Spector explains.",
-   "published": "2026-11-02T15:31-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-design-25.jpg",
+   "headline": "Cowan, Matthews reunite as Maple Leafs shuffle lines for Mammoth test",
+   "summary": "A month into this Maple Leafs campaign, Jim Hiller’s willingness to throw lines in a blender has been abundantly clear. Easton Cowan’s rollercoaster ride through the lineup exemplifies it best, Sonny Sachdeva writes.",
+   "published": "2026-11-02T16:38-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/easton.jpg",
    "video": false,
-   "teams": [],
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
    "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/plug-and-play-nugent-hopkins-closing-in-on-monster-milestone-for-oilers/",
+   "url": "https://www.sportsnet.ca/nhl/article/cowan-matthews-reunite-as-maple-leafs-shuffle-lines-for-mammoth-test/",
    "source": "Sportsnet"
   },
   {
@@ -1715,6 +1717,19 @@
    "sn_team_count": 0,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/top-10-free-agent-position-players-arozarena-leads-star-bereft-class/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "‘Plug-and-play’ Nugent-Hopkins closing in on monster milestone for Oilers",
+   "summary": "As he approaches the franchise record for most games played, Ryan Nugent-Hopkins has become Edmonton’s comfort food. Mark Spector explains.",
+   "published": "2026-11-02T15:31-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-design-25.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/plug-and-play-nugent-hopkins-closing-in-on-monster-milestone-for-oilers/",
    "source": "Sportsnet"
   },
   {
@@ -1748,6 +1763,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Lightning’s Kucherov says trade request was due to ‘poor communication and respect’",
+   "summary": "Speaking with reporters after the Tampa Bay Lightning’s Monday practice, Kucherov explained that his decision to request a trade from the only NHL team he’s known came down to a matter of “poor communication and respect.",
+   "published": "2026-11-02T12:54-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/kuch.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/lightnings-kucherov-says-trade-request-was-due-to-poor-communication-and-respect/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nba",
    "headline": "Raptors’ Scottie Barnes questionable vs. Clippers",
    "summary": "The Toronto Raptors bad luck is showing no signs of turning.",
@@ -1760,6 +1788,19 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/raptors-scottie-barnes-questionable-vs-clippers/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Eight impending MLB free agents receive qualifying offers",
+   "summary": "With MLB free agency set to open on Nov. 2 at 5 p.m. ET, eight players have received qualifying offers from their respective teams.",
+   "published": "2026-11-02T17:08-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/randy-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/eight-impending-mlb-free-agents-receive-qualifying-offers/",
    "source": "Sportsnet"
   },
   {
@@ -1791,19 +1832,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "Criticism mounts for Schottenheimer as Cowboys keep finding ways to lose",
-   "summary": "",
-   "published": "2026-11-02T12:37-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/01/Brian-Schottenheimer.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/criticism-mounts-for-schottenheimer-as-cowboys-keep-finding-ways-to-lose/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "Oilers’ Jarry named NHL’s second star along with Thompson and Carlsson",
    "summary": "Edmonton Oilers goaltender Tristan Jarry has been named the NHL’s second star of the week.",
@@ -1829,19 +1857,6 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/preliminary-indications-for-lions-campbell-positive-team-says/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "LaFleur says Packers anticipate keeping Jacobs on roster",
-   "summary": "Green Bay coach Matt LaFleur says the Packers plan to keep Josh Jacobs on their roster following the news of previous allegations against the running back, who has pleaded no contest to two misdemeanour charges stemming ",
-   "published": "2026-11-02T16:25-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/05/Green-Bay-Packers-running-back-Josh-Jacobs.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/lafleur-says-packers-anticipate-keeping-jacobs-on-roster/",
    "source": "Sportsnet"
   },
   {
@@ -1922,6 +1937,32 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/ex-guardians-pitchers-go-to-trial-in-new-york-on-fraud-charges/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "LaFleur says Packers anticipate keeping Jacobs on roster",
+   "summary": "Green Bay coach Matt LaFleur says the Packers plan to keep Josh Jacobs on their roster following the news of previous allegations against the running back, who has pleaded no contest to two misdemeanour charges stemming ",
+   "published": "2026-11-02T16:25-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/05/Green-Bay-Packers-running-back-Josh-Jacobs.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/lafleur-says-packers-anticipate-keeping-jacobs-on-roster/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Criticism mounts for Schottenheimer as Cowboys keep finding ways to lose",
+   "summary": "",
+   "published": "2026-11-02T12:37-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/01/Brian-Schottenheimer.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/criticism-mounts-for-schottenheimer-as-cowboys-keep-finding-ways-to-lose/",
    "source": "Sportsnet"
   },
   {
@@ -2028,19 +2069,6 @@
    "sn_team_count": 0,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/maddon-piniella-among-eight-on-hall-of-fame-contemporary-era-ballot/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Jerry Koosman, part of 1969 Miracle Mets’ World Series victory, dies at 83",
-   "summary": "Jerry Koosman, an All-Star left-hander who got the final out of the Miracle Mets’ shocking 1969 World Series victory over the Baltimore Orioles, died Sunday. He was 83.",
-   "published": "2026-11-02T12:23-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-design-80.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/jerry-koosman-part-of-1969-miracle-mets-world-series-victory-dies-at-83/",
    "source": "Sportsnet"
   },
   {
@@ -2307,6 +2335,19 @@
   },
   {
    "league": "nfl",
+   "headline": "Jim Leonhard: Bills' game plan was to be \"aggressive\" regardless of Lamar Jackson injury",
+   "summary": "For the first time this season, Jim Leonhard called plays from up in the coach's booth",
+   "published": "2026-11-02T17:27-05:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/bills/ccsuucu6lcsz8ljojfyb.png",
+   "video": false,
+   "teams": [
+    "Buffalo Bills"
+   ],
+   "url": "https://www.buffalobills.com/news/jim-leonhard-bills-game-plan-was-to-be-aggressive-regardless-of-lamar-jackson-injury",
+   "source": "Team site"
+  },
+  {
+   "league": "nfl",
    "headline": "'We've created our identity' | The Bills defense reflects on its dominant showing against the Ravens",
    "summary": "Buffalo's defensive breakout broken down by the players and coaches who made it happen",
    "published": "2026-11-01T22:02-05:00",
@@ -2420,19 +2461,6 @@
     "Buffalo Bills"
    ],
    "url": "https://www.buffalobills.com/news/we-know-the-type-of-talent-they-have-the-bills-look-ahead-to-their-matchup-against-the-baltimore-ravens",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
-   "headline": "Goo Goo Dolls to headline Thanksgiving halftime show for Bills vs. Chiefs at Highmark Stadium",
-   "summary": "Buffalo rock legends Goo Goo Dolls will headline a special halftime performance when the Bills host the Kansas City Chiefs on Thanksgiving",
-   "published": "2026-10-30T10:14-04:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/bills/valxkoclaomlriirydwi.jpg",
-   "video": false,
-   "teams": [
-    "Buffalo Bills"
-   ],
-   "url": "https://www.buffalobills.com/news/goo-goo-dolls-to-headline-thanksgiving-halftime-show-for-bills-vs-chiefs-at-highmark-stadium",
    "source": "Team site"
   },
   {
