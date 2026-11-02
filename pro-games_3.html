@@ -125,6 +125,9 @@
   .stand tr + tr td { border-top: 1px solid var(--line); }
   .stand td .rk { color: var(--muted); display: inline-block; width: 18px; }
   .stand td img { width: 18px; height: 18px; object-fit: contain; vertical-align: -4px; margin-right: 6px; }
+  .stand tr.sech td { background: var(--panel); color: var(--accent); font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; text-align: left; padding: 5px 8px; }
+  .stand tr.cut td { border-bottom: 2px solid var(--accent); }
+  .stand td .rk { width: 30px; font-size: 11px; }
   .stand tr.ours td { background: rgba(232, 176, 33, .12); }
   .stand tr.ours td:first-child { color: var(--accent); font-weight: 700; }
   .stand .flag { color: var(--muted); font-size: 11px; margin-left: 4px; }
@@ -384,7 +387,7 @@
         var groups = [];
         (function walk(n, parent) {
           if (n.standings && n.standings.entries && n.standings.entries.length) {
-            groups.push({ group: n.name, teams: n.standings.entries.map(function (e) {
+            groups.push({ group: n.name, conf: parent && parent.name, teams: n.standings.entries.map(function (e) {
               var st = {}; e.stats.forEach(function (x) { if (!(x.abbreviation in st)) st[x.abbreviation] = x; });
               var v = function (a) { return st[a] ? st[a].displayValue : ''; };
               var num = function (a) { return st[a] ? Number(st[a].value) : 0; };
@@ -478,6 +481,27 @@
     });
   }
 
+  // NHL wild card: in each conference, the top three in each division, then everyone else by points;
+  // the top two of those hold the wild card spots (a line under the second)
+  function wildCards(divs) {
+    var out = [];
+    ['Eastern Conference', 'Western Conference'].forEach(function (conf) {
+      var ds = divs.filter(function (d) { return d.conf === conf; });
+      if (ds.length !== 2) return;
+      var teams = [], rest = [];
+      ds.forEach(function (d) {
+        var sorted = d.teams.slice().sort(function (a, b) { return b._sort - a._sort; }), name = d.group.replace(/ Division$/, '');
+        sorted.slice(0, 3).forEach(function (t, i) { teams.push(Object.assign({}, t, { _sec: name, _rk: name.charAt(0) + (i + 1) })); });
+        rest = rest.concat(sorted.slice(3));
+      });
+      rest.sort(function (a, b) { return b._sort - a._sort; }).forEach(function (t, i) {
+        teams.push(Object.assign({}, t, { _sec: 'Wild card', _rk: i < 2 ? 'WC' + (i + 1) : '', _cut: i === 1 }));
+      });
+      out.push({ group: conf.replace(' Conference', '') + ' wild card', teams: teams });
+    });
+    return out;
+  }
+
   function renderStandings() {
     if (!LEAGUES[state.tab] || NO_STANDINGS.indexOf(state.tab) >= 0) state.tab = 'nhl';
     tabs();
@@ -493,6 +517,7 @@
       box.innerHTML = '';
       if (!groups || !groups.length) { box.appendChild(el('div', 'empty', 'Standings unavailable right now.')); return; }
       var ours = OUR_TEAMS.filter(function (t) { return t.league === k; }).map(function (t) { return t.abbr; });
+      if (k === 'nhl') groups = groups.concat(wildCards(groups));
       groups = pickGroup(k, groups, function (t) { return ours.indexOf(t.abbr) >= 0; }, box, renderStandings);
       groups.forEach(function (g) {
         var sec = el('section', 'stand');
@@ -502,8 +527,11 @@
         COLS[k].forEach(function (c) { head.appendChild(el('th', c[2] ? 'wide' : null, c[0])); });
         tbl.appendChild(head);
         g.teams.forEach(function (t, i) {
-          var tr = el('tr', ours.indexOf(t.abbr) >= 0 ? 'ours' : null), td = el('td');
-          td.appendChild(el('span', 'rk', String(i + 1)));
+          if (t._sec && (i === 0 || g.teams[i - 1]._sec !== t._sec)) {     // wild card view: a heading row per part
+            var hr = el('tr', 'sech'), hd = el('td', null, t._sec); hd.colSpan = COLS[k].length + 1; hr.appendChild(hd); tbl.appendChild(hr);
+          }
+          var tr = el('tr', [ours.indexOf(t.abbr) >= 0 ? 'ours' : '', t._cut ? 'cut' : ''].join(' ').trim() || null), td = el('td');
+          td.appendChild(el('span', 'rk', t._rk != null ? t._rk : String(i + 1)));
           if (t.logo) { var img = el('img'); img.src = t.logo; img.alt = ''; img.onerror = function () { img.remove(); }; td.appendChild(img); }
           td.appendChild(document.createTextNode(t.name));
           if (t.flags) td.appendChild(el('span', 'flag', t.flags));
