@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02T10:47:58-05:00",
+ "updated": "2026-11-02T11:02:57-05:00",
  "today": "2026-11-02",
  "range": [
   "2026-10-30",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 30
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -1677,16 +1677,18 @@
  ],
  "more_news": [
   {
-   "league": "nhl",
-   "headline": "Oilers journeyman Matt Tomkins earns win in first MSG start",
-   "summary": "It’s been a long road from Indianapolis to New York City for Oilers goalie Matt Tomkins. Mark Spector has the story of how Tomkins ended up as the first star on America’s biggest hockey stage.",
-   "published": "2026-11-01T22:32-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177192360-1.jpg",
+   "league": "mlb",
+   "headline": "What Monday’s deadlines mean for Blue Jays’ off-season",
+   "summary": "The MLB off-season is quietly underway, and for a Toronto Blue Jays team that’s had extra time to prepare, the intrigue is about to build. Ben Nicholson-Smith tells us why.",
+   "published": "2026-11-02T10:55-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/04/Untitled-design-3-2.jpg",
    "video": false,
-   "teams": [],
+   "teams": [
+    "Toronto Blue Jays"
+   ],
    "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/oilers-journeyman-matt-tomkins-earns-win-in-first-msg-start/",
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/what-mondays-deadlines-mean-for-blue-jays-off-season/",
    "source": "Sportsnet"
   },
   {
@@ -1705,18 +1707,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "NFL Week 8 takeaways: Buccaneers pull off stunning zero-completion win",
-   "summary": "The Buccaneers accomplished something that hasn’t been done in 52 years on Sunday. Kellen Forrest dives into Tampa Bay’s unconventional victory and much more in his Week 8 takeaways.",
-   "published": "2026-11-02T00:16-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Buccaneers.jpg",
+   "league": "nhl",
+   "headline": "Oilers journeyman Matt Tomkins earns win in first MSG start",
+   "summary": "It’s been a long road from Indianapolis to New York City for Oilers goalie Matt Tomkins. Mark Spector has the story of how Tomkins ended up as the first star on America’s biggest hockey stage.",
+   "published": "2026-11-01T22:32-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177192360-1.jpg",
    "video": false,
-   "teams": [
-    "Detroit Lions"
-   ],
-   "sn_team_count": 7,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-8-takeaways-buccaneers-pull-off-stunning-zero-completion-win/",
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/oilers-journeyman-matt-tomkins-earns-win-in-first-msg-start/",
    "source": "Sportsnet"
   },
   {
@@ -1746,18 +1746,18 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nba",
-   "headline": "Raptors can’t slow down superstar Luka Doncic in loss to Lakers",
-   "summary": "In his first season in Los Angeles as the singular star, Luka Doncic is putting the NBA’s most decorated glamour franchise on his back and the rest of the league on notice. The Raptors can attest.",
-   "published": "2026-11-02T02:05-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/raptors.jpg",
+   "league": "nfl",
+   "headline": "NFL Week 8 takeaways: Buccaneers pull off stunning zero-completion win",
+   "summary": "The Buccaneers accomplished something that hasn’t been done in 52 years on Sunday. Kellen Forrest dives into Tampa Bay’s unconventional victory and much more in his Week 8 takeaways.",
+   "published": "2026-11-02T00:16-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Buccaneers.jpg",
    "video": false,
    "teams": [
-    "Toronto Raptors"
+    "Detroit Lions"
    ],
-   "sn_team_count": 2,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-cant-slow-down-superstar-luka-doncic-in-loss-to-lakers/",
+   "sn_team_count": 7,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-8-takeaways-buccaneers-pull-off-stunning-zero-completion-win/",
    "source": "Sportsnet"
   },
   {
@@ -1867,6 +1867,34 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "Raptors can’t slow down superstar Luka Doncic in loss to Lakers",
+   "summary": "In his first season in Los Angeles as the singular star, Luka Doncic is putting the NBA’s most decorated glamour franchise on his back and the rest of the league on notice. The Raptors can attest.",
+   "published": "2026-11-02T02:05-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/raptors.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 2,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/raptors-cant-slow-down-superstar-luka-doncic-in-loss-to-lakers/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Canada’s Leylah Fernandez returns to top 20 after making second straight final",
+   "summary": "",
+   "published": "2026-11-02T10:49-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/Leylah-Fernandez-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Tennis",
+   "url": "https://www.sportsnet.ca/wta/article/canadas-leylah-fernandez-returns-to-top-20-after-making-second-straight-final/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "Canada’s Auger-Aliassime drops out of ATP top 10, falls six spots to No. 13",
    "summary": "",
@@ -1890,6 +1918,19 @@
    "sn_team_count": 0,
    "sport": "Auto Racing",
    "url": "https://www.sportsnet.ca/formula-1/article/mercedes-driver-kimi-antonelli-becomes-youngest-champion-in-f1-history-at-age-20/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "NFL Week 8 roundup: Lions hand Vikings first loss",
+   "summary": "Jared Goff threw a go-ahead, seven-yard touchdown pass to Jameson Williams with 4:35 left and the Detroit Lions beat the Minnesota Vikings 19-15 on Sunday, handing the NFL’s last undefeated team its first loss.",
+   "published": "2026-11-01T16:45-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/goff.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-8-roundup-lions-hand-vikings-first-loss/",
    "source": "Sportsnet"
   },
   {
@@ -1986,19 +2027,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Japan’s Mao Shimada wins gold at Skate Canada International",
-   "summary": "",
-   "published": "2026-11-01T22:44-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Mao-Shimada.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Olympics",
-   "url": "https://www.sportsnet.ca/olympics/article/japans-mao-shimada-wins-gold-at-skate-canada-international/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nba",
    "headline": "NBA Roundup: Porter, Randle help Nets earn victory over Pacers",
    "summary": "",
@@ -2080,6 +2108,19 @@
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/nothing-has-changed-for-lightning-amid-kucherov-trade-ask-says-cooper/",
    "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "LIONS DAILY: Run game slams door on Vikings in slugfest",
+   "summary": "",
+   "published": "2026-11-02T10:30-05:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/pv8gfgzyywiv0sabxpzd.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Lions"
+   ],
+   "url": "https://www.detroitlions.com/news/lions-daily-run-game-slams-door-on-vikings-in-slugfest",
+   "source": "Team site"
   },
   {
    "league": "nfl",
@@ -2261,19 +2302,6 @@
     "Detroit Lions"
    ],
    "url": "https://www.detroitlions.com/news/lions-daily-how-valuable-is-detroit-s-scout-team-it-was-a-major-key-in-win-over-packers",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
-   "headline": "Twentyman's Mailbag: How will Lions handle Minnesota's blitz-heavy defense?",
-   "summary": "Tim Twentyman answers fan-submitted questions as the Detroit Lions prepare for their Week 8 matchup vs. the Minnesota Vikings.",
-   "published": "2026-10-30T07:30-04:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/h8ov1um8axy6knuuzx2o.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Lions"
-   ],
-   "url": "https://www.detroitlions.com/news/mailbag-how-will-lions-handle-blitz-heavy-minnesota-vikings-gibbs-miller-joseph",
    "source": "Team site"
   },
   {
