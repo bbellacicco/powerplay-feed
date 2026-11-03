@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T18:30:01-05:00",
+ "updated": "2026-11-03T18:45:01-05:00",
  "today": "2026-11-03",
  "games": [
   {
@@ -261,6 +261,26 @@
    },
    "away": "Cardinal Carter",
    "home": "L'Essor"
+  },
+  {
+   "id": "highschool-2026-11-03-147",
+   "team": "highschool",
+   "sport": "Junior Boys Football",
+   "start": "2026-11-03T00:00:00-05:00",
+   "time_tbd": true,
+   "home_away": "N",
+   "opponent": "Villanova",
+   "location": "Sandwich",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "3A Playoffs",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "St. Anne",
+   "home": "Villanova"
   },
   {
    "id": "highschool-2026-11-03-124",
@@ -631,9 +651,9 @@
    "home_away": "N",
    "opponent": "Assumption",
    "location": "Assumption School",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "final",
+   "our_score": 2,
+   "opp_score": 1,
    "result": null,
    "note": "Tier 1",
    "links": {
@@ -841,26 +861,6 @@
    },
    "away": "Leamington",
    "home": "Ste. Cecile"
-  },
-  {
-   "id": "highschool-2026-11-03-147",
-   "team": "highschool",
-   "sport": "Junior Boys Football",
-   "start": "2026-11-03T19:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Villanova",
-   "location": "Sandwich",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "3A Playoffs",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "St. Anne",
-   "home": "Villanova"
   },
   {
    "id": "highschool-2026-11-04-148",
