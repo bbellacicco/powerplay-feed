@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02T21:03:18-05:00",
+ "updated": "2026-11-02T21:21:26-05:00",
  "today": "2026-11-02",
  "range": [
   "2026-10-30",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -1833,7 +1833,7 @@
   },
   {
    "league": "mlb",
-   "headline": "Eight impending MLB free agents receive qualifying offers",
+   "headline": "Eight MLB free agents receive qualifying offers",
    "summary": "With MLB free agency set to open on Nov. 2 at 5 p.m. ET, eight players have received qualifying offers from their respective teams.",
    "published": "2026-11-02T17:08-05:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/randy-1.jpg",
@@ -1900,6 +1900,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Long Island cancer centre unveils room named for late mother of Islanders’ Schaefer",
+   "summary": "Before he was picked first in the draft by the New York Islanders last year, Matthew Schaefer made his late mother’s fight against cancer before her death in 2024 a central part of what motivates him.",
+   "published": "2026-11-02T17:34-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Schaefer-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/long-island-cancer-centre-unveils-room-named-for-late-mother-of-islanders-schaefer/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Maple Leafs tab Sergei Bobrovsky for start against Mammoth",
    "summary": "",
    "published": "2026-11-02T12:53-05:00",
@@ -1911,19 +1924,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-tab-sergei-bobrovsky-for-start-against-mammoth/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Long Island cancer centre unveils room named for late mother of Islanders’ Schaefer",
-   "summary": "Before he was picked first in the draft by the New York Islanders last year, Matthew Schaefer made his late mother’s fight against cancer before her death in 2024 a central part of what motivates him.",
-   "published": "2026-11-02T17:34-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Schaefer-2.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/long-island-cancer-centre-unveils-room-named-for-late-mother-of-islanders-schaefer/",
    "source": "Sportsnet"
   },
   {
@@ -1952,19 +1952,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-place-forward-bo-groulx-on-waivers/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Panthers’ Markstrom to return from injury vs. Red Wings",
-   "summary": "Jacob Markstrom will make his return to the net in Monday’s game against the Detroit Red Wings, Panthers head coach Paul Maurice confirmed.",
-   "published": "2026-11-02T11:59-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/markstro.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/panthers-markstrom-to-return-from-injury-vs-devils/",
    "source": "Sportsnet"
   },
   {
@@ -2112,32 +2099,6 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/thunder-to-retire-russell-westbrooks-no-0-jersey/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Canada’s Leylah Fernandez returns to top 20 after making second straight final",
-   "summary": "",
-   "published": "2026-11-02T10:49-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/Leylah-Fernandez-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Tennis",
-   "url": "https://www.sportsnet.ca/wta/article/canadas-leylah-fernandez-returns-to-top-20-after-making-second-straight-final/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Canada’s Auger-Aliassime drops out of ATP top 10, falls six spots to No. 13",
-   "summary": "",
-   "published": "2026-11-02T08:58-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/07/faa-2.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Tennis",
-   "url": "https://www.sportsnet.ca/atp/article/alexander-zverevs-long-wait-for-no-1-ends-after-dominant-season/",
    "source": "Sportsnet"
   },
   {
@@ -3258,14 +3219,14 @@
      {
       "name": "Cobourg Cougars",
       "abbr": "COB",
-      "gp": 17,
-      "w": 13,
+      "gp": 18,
+      "w": 14,
       "l": 3,
       "otl": 1,
-      "pts": 27,
-      "gf": 83,
+      "pts": 29,
+      "gf": 84,
       "ga": 61,
-      "strk": "W6"
+      "strk": "W7"
      },
      {
       "name": "Wellington Dukes",
@@ -3282,13 +3243,13 @@
      {
       "name": "Newmarket Hurricanes",
       "abbr": "NMH",
-      "gp": 19,
+      "gp": 20,
       "w": 9,
       "l": 8,
-      "otl": 2,
-      "pts": 20,
+      "otl": 3,
+      "pts": 21,
       "gf": 59,
-      "ga": 55,
+      "ga": 56,
       "strk": "W1"
      },
      {
