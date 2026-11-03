@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T10:48:16-05:00",
+ "updated": "2026-11-03T11:06:26-05:00",
  "today": "2026-11-03",
  "range": [
   "2026-10-31",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 30
+   "count": 31
   },
   "club_news": {
    "ok": true,
@@ -1970,6 +1970,22 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "6 things that could decide who moves on to the 113th Grey Cup",
+   "summary": "",
+   "published": "2026-11-03T00:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/3H54uztBZIiHS19khnFVXl/7d1fd1680b6a766fe75ed52de4b458d1/Brady_Oliveira_2026_2.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Lions",
+    "Elks",
+    "Alouettes",
+    "Blue Bombers"
+   ],
+   "url": "https://www.cfl.ca/article/6-things-that-could-decide-who-moves-on-to-the-113th-grey-cup",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Weekly Predictor: Who wins the Division Finals presented by Wegovy®",
    "summary": "",
    "published": "2026-11-03T00:00:00-05:00",
@@ -1982,6 +1998,20 @@
     "Blue Bombers"
    ],
    "url": "https://www.cfl.ca/article/weekly-predictor-who-wins-the-division-finals-presented-by-wegovy",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "3 X-factors that could shape the Western Final presented by Wegovy®",
+   "summary": "",
+   "published": "2026-11-03T00:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/4stJNZsnECMmfqd9YKc0iN/e4008c72a483e1d075e381298fe786f9/Nathan_Rourke_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Lions",
+    "Elks"
+   ],
+   "url": "https://www.cfl.ca/article/3-x-factors-that-could-shape-the-western-final-presented-by-wegovy",
    "source": "CFL.ca"
   },
   {
@@ -2091,31 +2121,6 @@
     "Blue Bombers"
    ],
    "url": "https://www.cfl.ca/article/where-to-watch-the-division-finals-presented-by-wegovy",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Who has the edge in the Eastern Final presented by Wegovy®?",
-   "summary": "",
-   "published": "2026-11-02T00:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/nvm1ugjWQVubUGCG46tup/3ebb723f672af32cdf814f993dea80eb/Tyler_Snead_2026.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Alouettes",
-    "Blue Bombers"
-   ],
-   "url": "https://www.cfl.ca/article/who-has-the-edge-in-the-eastern-final-presented-by-wegovy",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Overreaction Monday: 5 hot takes from the Division Semi-Finals presented by Wegovy®",
-   "summary": "",
-   "published": "2026-11-02T00:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/Ku6w1Fo24HLAaHgCrkt8B/3c767a4c76b146b991d6bd30f30ac02b/Dru_Brown_2026_4.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/overreaction-monday-5-hot-takes-from-the-division-semi-finals-presented-by-wegovy",
    "source": "CFL.ca"
   },
   {
@@ -2677,16 +2682,18 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Takeaways: Wolf continues return to form as Flames beat Sharks",
-   "summary": "Devin Cooley’s mid-heater injury gave Dustin Wolf a chance to regain his past form. He made good on the opportunity Monday night in San Jose, writes Eric Francis.",
-   "published": "2026-11-03T00:38-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Wolf.jpg",
+   "league": "mlb",
+   "headline": "MLB free-agent rankings: Tarik Skubal tops the best pitchers available",
+   "summary": "While the position-player contingent of the 2026 free-agent class lacks a true superstar, the same is not true of the available pitchers. David Singh ranks the available hurlers.",
+   "published": "2026-11-03T08:30-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/skubal.jpg",
    "video": false,
-   "teams": [],
+   "teams": [
+    "Toronto Blue Jays"
+   ],
    "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/takeaways-wolf-continues-return-to-form-as-flames-beat-sharks/",
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/mlb-free-agent-rankings-tarik-skubal-tops-the-best-pitchers-available/",
    "source": "Sportsnet"
   },
   {
@@ -2705,18 +2712,18 @@
    "source": "Sportsnet"
   },
   {
-   "league": "mlb",
-   "headline": "MLB free-agent rankings: Tarik Skubal tops the best pitchers available",
-   "summary": "While the position-player contingent of the 2026 free-agent class lacks a true superstar, the same is not true of the available pitchers. David Singh ranks the available hurlers.",
-   "published": "2026-11-03T08:30-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/skubal.jpg",
+   "league": "nfl",
+   "headline": "NFL mid-season power rankings: NFC North teams dominating",
+   "summary": "The calendar has flipped to November, and with Week 8 in the books, we’re now at the mid-season mark. That was quick. Evan Davidson weighs all 32 squads in his NFL power rankings.",
+   "published": "2026-11-03T11:03-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/caleb.jpg",
    "video": false,
    "teams": [
-    "Toronto Blue Jays"
+    "Buffalo Bills"
    ],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/mlb-free-agent-rankings-tarik-skubal-tops-the-best-pitchers-available/",
+   "sn_team_count": 3,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-mid-season-power-rankings-nfc-north-teams-dominating/",
    "source": "Sportsnet"
   },
   {
@@ -2764,7 +2771,7 @@
   },
   {
    "league": "other",
-   "headline": "Finland, Sweden, Norway threaten boycott of IIHF games against Russia",
+   "headline": "Finland, Sweden, Czechia threaten boycott of IIHF games against Russia",
    "summary": "The Finnish Ice Hockey Association said Monday its national teams won’t play against Russia in international tournaments as long as the war in Ukraine is ongoing.",
    "published": "2026-11-02T17:38-05:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Finland-players-celebrate-with-the-trophy-after-winning-the-2026-IIHF-Mens-Ice-Hockey-World-Championship-final-match.jpg",
@@ -2776,16 +2783,44 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "Caleb Williams, Jeffery Simmons lead Bears past Seahawks",
-   "summary": "Caleb Williams threw a touchdown pass on the opening drive and Jeffery Simmons delivered just what Chicago needed on defence as the Bears beat the Seattle Seahawks 34-17 on Monday night.",
-   "published": "2026-11-02T23:40-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Chicago-Bears-quarterback-Caleb-Williams-18.jpg",
+   "league": "nhl",
+   "headline": "Maple Leafs upgrade injured John Tavares to day-to-day",
+   "summary": "",
+   "published": "2026-11-03T10:53-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-57.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-upgrade-injured-john-tavares-to-day-to-day/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Tenerife player dead after on-field collision in second-division match",
+   "summary": "",
+   "published": "2026-11-03T08:26-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/jesus-de-miguel.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/caleb-williams-jeffery-simmons-lead-bears-past-seahawks/",
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/soccer/article/tenerife-player-dead-after-on-field-collision-in-second-division-match/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Takeaways: Wolf continues return to form as Flames beat Sharks",
+   "summary": "Devin Cooley’s mid-heater injury gave Dustin Wolf a chance to regain his past form. He made good on the opportunity Monday night in San Jose, writes Eric Francis.",
+   "published": "2026-11-03T00:38-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Wolf.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/takeaways-wolf-continues-return-to-form-as-flames-beat-sharks/",
    "source": "Sportsnet"
   },
   {
@@ -2801,19 +2836,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/blue-jays-cease-varland-named-as-cy-young-and-reliever-of-the-year-finalists/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Tenerife player dead after on-field collision in second-division match",
-   "summary": "",
-   "published": "2026-11-03T08:26-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/jesus-de-miguel.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/soccer/article/tenerife-player-dead-after-on-field-collision-in-second-division-match/",
    "source": "Sportsnet"
   },
   {
@@ -2842,19 +2864,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/blue-jays-decline-myles-straws-2027-club-option/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Lightning’s Kucherov says trade request was due to ‘poor communication and respect’",
-   "summary": "Speaking with reporters after the Tampa Bay Lightning’s Monday practice, Kucherov explained that his decision to request a trade from the only NHL team he’s known came down to a matter of “poor communication and respect.",
-   "published": "2026-11-02T12:54-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/kuch.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/lightnings-kucherov-says-trade-request-was-due-to-poor-communication-and-respect/",
    "source": "Sportsnet"
   },
   {
@@ -2933,6 +2942,19 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/report-qb-needy-ravens-sign-kedon-slovis-away-from-packers/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Lightning’s Kucherov says trade request was due to ‘poor communication and respect’",
+   "summary": "Speaking with reporters after the Tampa Bay Lightning’s Monday practice, Kucherov explained that his decision to request a trade from the only NHL team he’s known came down to a matter of “poor communication and respect.",
+   "published": "2026-11-02T12:54-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/kuch.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/lightnings-kucherov-says-trade-request-was-due-to-poor-communication-and-respect/",
    "source": "Sportsnet"
   },
   {
