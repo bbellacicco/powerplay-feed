@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T09:17:51-05:00",
+ "updated": "2026-11-03T09:32:49-05:00",
  "today": "2026-11-03",
  "range": [
   "2026-10-31",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 32
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -1970,6 +1970,22 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "Weekly Predictor: Who wins the Division Finals presented by Wegovy®",
+   "summary": "",
+   "published": "2026-11-03T00:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/6dfG880InUInrRHDES4mCu/9882b3aaa5025bea860fc2165e36f419/Tyrice_Beverette_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Elks",
+    "Lions",
+    "Alouettes",
+    "Blue Bombers"
+   ],
+   "url": "https://www.cfl.ca/article/weekly-predictor-who-wins-the-division-finals-presented-by-wegovy",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "CFL Cinematic Recap: BC Lions vs. Saskatchewan Roughriders - Western Semi-Final presented by Wegovy®",
    "summary": "",
    "published": "2026-11-02T17:00:00-05:00",
@@ -2178,20 +2194,6 @@
   },
   {
    "league": "cfl",
-   "headline": "Bombers rally past Argos in thrillling Eastern Semi-Final presented by Wegovy®",
-   "summary": "",
-   "published": "2026-10-31T00:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/1oucLhq1CMEtjlHfbIy33m/cac01d3ad54724d327efecd37efbc78a/Nic_demski_2026_05.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Argonauts",
-    "Blue Bombers"
-   ],
-   "url": "https://www.cfl.ca/article/bombers-rally-past-argos-in-thrillling-eastern-semi-final-presented-by-wegovy",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
    "headline": "DaShaun Amos on Eastern Semi-Final presented by Wegovy® loss: \"We left some plays out there\"",
    "summary": "",
    "published": "2026-10-31T00:00:00-04:00",
@@ -2202,20 +2204,6 @@
     "Blue Bombers"
    ],
    "url": "https://www.cfl.ca/article/dashaun-amos-on-eastern-semi-final-presented-by-wegovy-loss-we-left-some-plays-out-there",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Dru Brown on Nic Demski: \"I feel like he's been winning on those routes for 10 years\"",
-   "summary": "",
-   "published": "2026-10-31T00:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/Tk2elD6VAmyAm2Ti11DKl/08a9248bdb0eaefd3136df71794ff480/Nic_Demski_2026.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Blue Bombers",
-    "Argonauts"
-   ],
-   "url": "https://www.cfl.ca/article/dru-brown-on-nic-demski-i-feel-like-he-s-been-winning-on-those-routes-for-10-years",
    "source": "CFL.ca"
   },
   {
@@ -2353,6 +2341,17 @@
    "video": false,
    "teams": [],
    "url": "https://www.cfl.ca/article/saskatchewan-artists-bring-cfl-s-indigenous-logos-to-life-through-mural",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "CFL & Capital Power Bring Football to Indigenous Youth | Truth and Reconciliation",
+   "summary": "",
+   "published": "2026-09-27T08:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/12NplMOl0eI7JFPMmI4O3q/d9b9de40429af80b008a94a6142365dc/edm_00_01_18_02.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/cfl-capital-power-bring-football-to-indigenous-youth-truth-and-reconciliation",
    "source": "CFL.ca"
   },
   {
@@ -2763,6 +2762,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Finland, Sweden, Norway threaten boycott of IIHF games against Russia",
+   "summary": "The Finnish Ice Hockey Association said Monday its national teams won’t play against Russia in international tournaments as long as the war in Ukraine is ongoing.",
+   "published": "2026-11-02T17:38-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Finland-players-celebrate-with-the-trophy-after-winning-the-2026-IIHF-Mens-Ice-Hockey-World-Championship-final-match.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/hockey/article/finland-says-its-national-teams-wont-play-against-russia-in-hockey-tournaments/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "mlb",
    "headline": "Blue Jays’ Cease, Varland named as Cy Young and Reliever of the Year finalists",
    "summary": "",
@@ -2791,19 +2803,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Finland, Sweden, Norway threaten boycott of IIHF games against Russia",
-   "summary": "The Finnish Ice Hockey Association said Monday its national teams won’t play against Russia in international tournaments as long as the war in Ukraine is ongoing.",
-   "published": "2026-11-02T17:38-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Finland-players-celebrate-with-the-trophy-after-winning-the-2026-IIHF-Mens-Ice-Hockey-World-Championship-final-match.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/hockey/article/finland-says-its-national-teams-wont-play-against-russia-in-hockey-tournaments/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "mlb",
    "headline": "Blue Jays decline Myles Straw’s 2027 club option",
    "summary": "",
@@ -2816,19 +2815,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/blue-jays-decline-myles-straws-2027-club-option/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Warriors’ Draymond Green ejected vs. Suns, gets into scuffle with Dillon Brooks",
-   "summary": "",
-   "published": "2026-11-03T00:19-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177173556.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/warriors-draymond-green-ejected-vs-suns-gets-into-scuffle-with-dillon-brooks/",
    "source": "Sportsnet"
   },
   {
@@ -2845,6 +2831,32 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Tenerife player dead after on-field collision in second-division match",
+   "summary": "",
+   "published": "2026-11-03T08:26-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/jesus-de-miguel.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/soccer/article/tenerife-player-dead-after-on-field-collision-in-second-division-match/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Asian Cup in Saudi Arabia postponed due to conflict in Middle East",
+   "summary": "The 2027 Asian Cup soccer tournament has been delayed almost a year in the wake of recent deadly attacks on host country Saudi Arabia.",
+   "published": "2026-11-03T09:29-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Copy-of-Untitled-Design-5.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/soccer/article/asian-cup-in-saudi-arabia-postponed-due-to-conflict-in-middle-east/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "mlb",
    "headline": "MLB announces award finalists; Crow-Armstrong, Alvarez up for MVP",
    "summary": "",
@@ -2855,6 +2867,32 @@
    "sn_team_count": 0,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/mlb-reveals-end-of-year-award-finalists/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "GSOC Masters preview: Can Mouat and Homan get back on track?",
+   "summary": "At the P&H Masters, there is pressure on Rachel Homan and Bruce Mouat. Justin Arenburg has more on that as he previews the second stop on the Grand Slam of Curling tour.",
+   "published": "2026-11-02T13:44-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/10/2025GSOCTourChallenge-NiskuAB-555-copy.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Curling",
+   "url": "https://www.sportsnet.ca/curling/article/gsoc-masters-preview-can-mouat-and-homan-get-back-on-track/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Back in skip position, Bottcher settling in nicely with new-look foursome",
+   "summary": "",
+   "published": "2026-11-03T08:16-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/04/bottcher_brendan-1280.jpeg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Curling",
+   "url": "https://www.sportsnet.ca/grand-slam-of-curling/article/back-in-skip-position-bottcher-settling-in-nicely-with-new-look-foursome/",
    "source": "Sportsnet"
   },
   {
@@ -2898,45 +2936,6 @@
   },
   {
    "league": "other",
-   "headline": "Tenerife player dead after on-field collision in second-division match",
-   "summary": "",
-   "published": "2026-11-03T08:26-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/jesus-de-miguel.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/soccer/article/tenerife-player-dead-after-on-field-collision-in-second-division-match/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "GSOC Masters preview: Can Mouat and Homan get back on track?",
-   "summary": "At the P&H Masters, there is pressure on Rachel Homan and Bruce Mouat. Justin Arenburg has more on that as he previews the second stop on the Grand Slam of Curling tour.",
-   "published": "2026-11-02T13:44-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/10/2025GSOCTourChallenge-NiskuAB-555-copy.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Curling",
-   "url": "https://www.sportsnet.ca/curling/article/gsoc-masters-preview-can-mouat-and-homan-get-back-on-track/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Back in skip position, Bottcher settling in nicely with new-look foursome",
-   "summary": "",
-   "published": "2026-11-03T08:16-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/04/bottcher_brendan-1280.jpeg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Curling",
-   "url": "https://www.sportsnet.ca/grand-slam-of-curling/article/back-in-skip-position-bottcher-settling-in-nicely-with-new-look-foursome/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
    "headline": "Report: Liberty not retaining head coach Chris DeMarco after one season",
    "summary": "",
    "published": "2026-11-03T08:45-05:00",
@@ -2950,6 +2949,19 @@
   },
   {
    "league": "nba",
+   "headline": "Report: Ailing Thunder sign wing Dalen Terry to two-year deal",
+   "summary": "Wing Dalen Terry signed a two-year contract with the club, ESPN’s Shams Charania reported on Tuesday.",
+   "published": "2026-11-03T09:20-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/dalen-terry.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/report-ailing-thunder-sign-wing-dalen-terry-to-two-year-deal/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
    "headline": "NBA Roundup: Rockets best Celtics, move into first in West",
    "summary": "",
    "published": "2026-11-02T23:30-05:00",
@@ -2959,6 +2971,19 @@
    "sn_team_count": 2,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/sengun-leads-rockets-past-celtics-as-houston-moves-into-first-in-west/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Warriors’ Draymond Green ejected vs. Suns, gets into scuffle with Dillon Brooks",
+   "summary": "",
+   "published": "2026-11-03T00:19-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177173556.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/warriors-draymond-green-ejected-vs-suns-gets-into-scuffle-with-dillon-brooks/",
    "source": "Sportsnet"
   },
   {
@@ -2998,19 +3023,6 @@
    "sn_team_count": 2,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/76ers-beat-bulls-to-improve-to-7-1/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Knicks beat Nets for 15th time in a row",
-   "summary": "Landry Shamet scored a season-high 22 points and the New York Knicks beat the Brooklyn Nets 103-90 on Monday night for their 15th straight victory over their city rival.",
-   "published": "2026-11-02T22:40-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Brooklyn-Nets-Julius-Randle-defends-New-York-Knicks-Og-Anunoby.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/knicks-beat-nets-for-15th-time-in-a-row/",
    "source": "Sportsnet"
   },
   {
