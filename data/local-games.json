@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T00:05:14-05:00",
+ "updated": "2026-11-04T00:17:10-05:00",
  "today": "2026-11-04",
  "range": [
   "2026-11-01",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 36
+   "count": 37
   },
   "club_news": {
    "ok": true,
@@ -2663,33 +2663,29 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nba",
-   "headline": "Raptors’ Leonard begins return-to-play process, will be re-evaluated in one week",
+   "league": "nhl",
+   "headline": "Gauthier scores three, Ducks hold off Vancouver Canucks for narrow win",
    "summary": "",
-   "published": "2026-11-03T19:11-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Leonard.jpg",
+   "published": "2026-11-04T00:03-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Vancouver-Canucks-right-wing-Jonathan-Lekkerimaki-controls-the-puck-as-Anaheim-Ducks-right-wing-Beckett-Sennecke.jpg",
    "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-leonard-begins-return-to-play-process-will-be-re-evaluated-in-one-week/",
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/gauthier-scores-three-ducks-hold-off-vancouver-canucks-for-narrow-win/",
    "source": "Sportsnet"
   },
   {
-   "league": "mlb",
-   "headline": "MLB proposes starting salary cap with higher ceiling, floor in 2028",
-   "summary": "Major League Baseball proposed pushing back implementation of a salary cap to 2028 while implementing various benefits next year. Shi Davidi has the story.",
-   "published": "2026-11-03T14:17-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/02/manfred.jpg",
+   "league": "other",
+   "headline": "GSOC Masters Day 1 Takeaways: Canadian Gray-Withers shines in debut",
+   "summary": "Canada’s Team Serena Gray-Withers introduced themselves to the GSOC scene with a debut win over defending world champions Team Xenia Schwaller. Justin Arenburg has that and more Day 1 takeaways.",
+   "published": "2026-11-03T23:58-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/2026GSOCMasters-MedicineHat-035-copy.jpg",
    "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/report-mlb-proposes-postponing-salary-cap-to-2028/",
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Curling",
+   "url": "https://www.sportsnet.ca/curling/article/gsoc-masters-day-1-takeaways-canadian-gray-withers-shines-in-debut/",
    "source": "Sportsnet"
   },
   {
@@ -2716,6 +2712,36 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/world-juniors/article/prime-minister-mark-carney-says-russia-will-not-be-allowed-to-compete-at-world-juniors/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "MLB proposes starting salary cap with higher ceiling, floor in 2028",
+   "summary": "Major League Baseball proposed pushing back implementation of a salary cap to 2028 while implementing various benefits next year. Shi Davidi has the story.",
+   "published": "2026-11-03T14:17-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/02/manfred.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/report-mlb-proposes-postponing-salary-cap-to-2028/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Raptors’ Leonard begins return-to-play process, will be re-evaluated in one week",
+   "summary": "",
+   "published": "2026-11-03T19:11-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Leonard.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/raptors-leonard-begins-return-to-play-process-will-be-re-evaluated-in-one-week/",
    "source": "Sportsnet"
   },
   {
@@ -2773,32 +2799,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Alphonso Davies returns to Canada’s roster for games vs. Guatemala",
-   "summary": "",
-   "published": "2026-11-03T11:08-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2023/06/Davies-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/soccer/article/alphonso-davies-returns-to-canadas-roster-for-games-vs-guatemala/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Ravens to start undrafted Joe Fagnano vs. Jaguars, sign QB from Packers",
-   "summary": "",
-   "published": "2026-11-03T09:32-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/kedon-slovis.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/report-qb-needy-ravens-sign-kedon-slovis-away-from-packers/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "‘What happened?’: Hockey world reacts to Jets’ improbable comeback",
    "summary": "",
@@ -2809,6 +2809,21 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/what-happened-hockey-world-reacts-to-jets-improbable-comeback/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Taking stock of early NHL playoff picture",
+   "summary": "Nearing the official quarter mark of the season, Rory Boylen took a look at some positive and negative indicators for the teams in the playoff picture.",
+   "published": "2026-11-03T16:59-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Sens-2.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 5,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/taking-stock-of-early-nhl-playoff-picture/",
    "source": "Sportsnet"
   },
   {
@@ -2850,21 +2865,6 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/lightnings-kucherov-has-two-helpers-in-first-home-game-since-asking-for-trade/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Taking stock of early NHL playoff picture",
-   "summary": "Nearing the official quarter mark of the season, Rory Boylen took a look at some positive and negative indicators for the teams in the playoff picture.",
-   "published": "2026-11-03T16:59-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Sens-2.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 5,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/taking-stock-of-early-nhl-playoff-picture/",
    "source": "Sportsnet"
   },
   {
@@ -2953,6 +2953,19 @@
   },
   {
    "league": "nfl",
+   "headline": "Ravens to start undrafted Joe Fagnano vs. Jaguars, sign QB from Packers",
+   "summary": "",
+   "published": "2026-11-03T09:32-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/kedon-slovis.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/report-qb-needy-ravens-sign-kedon-slovis-away-from-packers/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
    "headline": "NFL mid-season power rankings: NFC North teams dominating",
    "summary": "The calendar has flipped to November, and with Week 8 in the books, we’re now at the mid-season mark. That was quick. Evan Davidson weighs all 32 squads in his NFL power rankings.",
    "published": "2026-11-03T11:03-05:00",
@@ -3007,6 +3020,19 @@
   },
   {
    "league": "other",
+   "headline": "Alphonso Davies returns to Canada’s roster for games vs. Guatemala",
+   "summary": "",
+   "published": "2026-11-03T11:08-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2023/06/Davies-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/soccer/article/alphonso-davies-returns-to-canadas-roster-for-games-vs-guatemala/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
    "headline": "Canada’s Sarah Fillier expected to play at worlds after injury scare",
    "summary": "",
    "published": "2026-11-03T13:04-05:00",
@@ -3057,19 +3083,6 @@
    "sn_team_count": 7,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/ranking-all-32-nhl-hometown-remix-jerseys/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Rahm says he’s willing to accept penalties to return to PGA Tour",
-   "summary": "Jon Rahm can only hope peaceful times are ahead, except it’s not that simple.",
-   "published": "2026-11-03T12:36-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP176649193-scaled.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Golf",
-   "url": "https://www.sportsnet.ca/pga-tour/article/rahm-says-hes-willing-to-accept-penalties-to-return-to-pga-tour/",
    "source": "Sportsnet"
   },
   {
@@ -3713,7 +3726,7 @@
    "league": "mlb",
    "headline": "Watch Blue Jays prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-11-03T23:34-05:00",
+   "published": "2026-11-04T00:14-05:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
