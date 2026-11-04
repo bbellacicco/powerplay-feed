@@ -816,7 +816,8 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
     var recent = games.filter(function (g) { return g.status === 'final' && g.our_score != null && new Date(g.start).getTime() >= since; }).sort(byP);
     var next = games.filter(function (g) { return g.status === 'upcoming' && new Date(g.start).getTime() >= now - 3 * 3600e3; })
       .sort(function (a, b) { return a.start < b.start ? -1 : a.start > b.start ? 1 : priority(a) - priority(b); });
-    return live.concat(recent, next).slice(0, 14);
+    // live games stay out of this row until they're final (the sports guide above shows them live)
+    return recent.concat(next).slice(0, 14);
   }
 
   // ---------- team logos on local score cards (where we have them) ----------
