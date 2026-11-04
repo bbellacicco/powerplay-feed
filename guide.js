@@ -56,12 +56,15 @@
     '.ppg .pg-dt b{display:block;font-size:16px;font-weight:800;margin-top:1px}' +
     '.ppg .pg-li.pg-game .pg-dt{box-shadow:inset 0 -3px 0 var(--c)}' +
     '.ppg .pg-none{color:#9fb0cf;font-size:13px;padding:6px 0}' +
+    '.ppg button.pg-chip{border:1px solid transparent;color:inherit;font-family:inherit;cursor:pointer}.ppg button.pg-chip:hover{border-color:var(--c)}' +
+    '.ppg button.pg-chip.pg-on{background:#fff;color:#0b1a33;border-color:#fff}' +
+    '.ppg .pg-scroll{max-height:330px;overflow-y:auto;scrollbar-width:thin;padding-right:4px}.ppg .pg-sub.pg-subtop{margin-top:0;padding-top:0;border-top:0;color:#e8b021}' +
     '.ppg .pg-sub{margin:8px 0 2px;padding-top:7px;border-top:1px solid rgba(255,255,255,.12);font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#9fb0cf}' +
     '.ppg .pg-go{margin-top:auto;padding-top:9px;font-size:12.5px;font-weight:800;color:#e8b021}' +
     '.ppg .pg-go:hover{text-decoration:underline}' +
     '.ppg .pg-col:hover{border-color:rgba(232,176,33,.45)}' +
     '@media (max-width:820px){.ppg .pg-cols{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-right:14px;scrollbar-width:none}.ppg .pg-cols::-webkit-scrollbar{display:none}.ppg .pg-col{flex:0 0 84%;scroll-snap-align:start}.ppg .pg-gt{font-size:19px}.ppg .pg-gh{padding:12px 14px 8px 18px}}' +
-    '@media (max-width:480px){.ppg .pg-gh{padding:10px 12px 8px 14px;gap:7px}.ppg .pg-gk{font-size:9.5px;letter-spacing:.08em}.ppg .pg-gt{font-size:17px}' + '.ppg .pg-gr{padding-top:7px}.ppg .pg-by{gap:5px;font-size:8.5px;letter-spacing:.03em;flex-wrap:nowrap}.ppg .pg-by b{font-size:11px;white-space:normal;line-height:1.15}.ppg .pg-spchip{height:22px;padding:1px 4px}.ppg .pg-spchip img{height:19px}' + '.ppg .pg-cols{gap:8px;padding:0 12px 12px 14px}.ppg .pg-col{flex-basis:88%;padding:10px 10px 8px}.ppg .pg-ch b{font-size:10.5px;letter-spacing:.05em;white-space:nowrap}.ppg .pg-ch span{font-size:11px}' + '.ppg .pg-big{font-size:24px;margin-bottom:6px}.ppg .pg-big small{font-size:12.5px}.ppg .pg-chip{font-size:10.5px;padding:2px 6px}' + '.ppg .pg-li{gap:7px;padding:5px 0}.ppg .pg-li .pg-tm{width:46px;font-size:11px}.ppg .pg-li .pg-a{font-size:12.5px;white-space:normal;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;line-height:1.2}.ppg .pg-li .pg-b{font-size:10.5px}' + '.ppg .pg-sl{font-size:12.5px}.ppg .pg-sl .pg-sc{font-size:13px}.ppg .pg-dt{width:36px}.ppg .pg-go{font-size:12px}}' +
+    '@media (max-width:480px){.ppg .pg-gh{padding:10px 12px 8px 14px;gap:7px}.ppg .pg-gk{font-size:9.5px;letter-spacing:.08em}.ppg .pg-gt{font-size:17px}' + '.ppg .pg-gr{padding-top:7px}.ppg .pg-by{gap:5px;font-size:8.5px;letter-spacing:.03em;flex-wrap:nowrap}.ppg .pg-by b{font-size:11px;white-space:normal;line-height:1.15}.ppg .pg-spchip{height:22px;padding:1px 4px}.ppg .pg-spchip img{height:19px}' + '.ppg .pg-cols{gap:8px;padding:0 12px 12px 14px}.ppg .pg-col{flex-basis:88%;padding:10px 10px 8px}.ppg .pg-ch b{font-size:10.5px;letter-spacing:.05em;white-space:nowrap}.ppg .pg-ch span{font-size:11px}' + '.ppg .pg-big{font-size:24px;margin-bottom:6px}.ppg .pg-big small{font-size:12.5px}.ppg .pg-chip{font-size:10.5px;padding:2px 6px}' + '.ppg .pg-li{gap:7px;padding:5px 0}.ppg .pg-li .pg-tm{width:54px;font-size:11px}.ppg .pg-li .pg-a{font-size:12.5px;white-space:normal;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;line-height:1.2}.ppg .pg-li .pg-b{font-size:10.5px}' + '.ppg .pg-li.pg-scored{flex-wrap:wrap;row-gap:2px}.ppg .pg-li.pg-scored .pg-tm{width:100%}.ppg .pg-sl .pg-sn{white-space:normal;line-height:1.2}' + '.ppg .pg-pros .pg-pg{white-space:normal}' + '.ppg .pg-sl{font-size:12.5px}.ppg .pg-sl .pg-sc{font-size:13px}.ppg .pg-dt{width:36px}.ppg .pg-go{font-size:12px}}' +
     '.ppg .pg-tip{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:4px 8px;margin:0 14px 12px 18px;padding:9px 12px;border-radius:8px;background:rgba(232,176,33,.1);border:1px dashed rgba(232,176,33,.45);font-size:13px;color:#dbe3f2;text-align:center}' +
     '.ppg .pg-tip b{color:#e8b021;font-weight:800}.ppg .pg-tip .pg-tipm,.ppg .pg-tip .pg-tipa{display:none}.ppg .pg-tipa{flex-basis:100%;font-size:11.5px;color:#9fb0cf}.ppg .pg-tip:hover{background:rgba(232,176,33,.18)}' +
     '@media (max-width:480px){.ppg .pg-tip{margin:0 12px 10px 14px;font-size:12px;padding:8px 10px}.ppg .pg-tip .pg-tipd{display:none}.ppg .pg-tip .pg-tipm{display:inline}.ppg .pg-tip .pg-tipa{display:block}}' +
@@ -108,6 +111,8 @@
     return [us, g.opponent, g.our_score, g.opp_score];
   }
 
+  var PICK = null, redraw = null;   // the team picked in Today's games, and a way to redraw the guide
+  var TEAMNAME = { spitfires: 'Spitfires', lancers: 'Lancers', saints: 'Saints', junior: 'Junior hockey', highschool: 'High school' };
   var box_live = false, pro_live = false;   // any game live right now (refresh every minute instead of every five)
   // our pro teams (ESPN, live): two games for the Pro Hub line. A live game first, then today's finals,
   // then yesterday's, otherwise the next games coming up.
@@ -192,10 +197,15 @@
     if (!mine.length) { col.appendChild(el('div', 'pg-none', 'No local games on the schedule yet.')); goLink(col, 'See the schedule', hubLink('upcoming'), target); return col; }
     var big = el('div', 'pg-big', String(mine.length)); big.appendChild(el('small', null, mine.length === 1 ? 'local game' : 'local games')); col.appendChild(big);
     var count = {}; mine.forEach(function (g) { count[g.team] = (count[g.team] || 0) + 1; });
+    if (PICK && !count[PICK]) PICK = null;
+    // tap a team to list all of its games today (tap it again for everything)
     var chips = el('div', 'pg-chips');
     Object.keys(count).sort(function (a, b) { return RANK[a] - RANK[b]; }).forEach(function (t) {
-      var c = el('span', 'pg-chip'); c.style.setProperty('--c', COLOR[t] || '#e8b021'); c.appendChild(el('i'));
-      c.appendChild(document.createTextNode(({ spitfires: 'Spitfires', lancers: 'Lancers', saints: 'Saints', junior: 'Junior hockey', highschool: 'High school' })[t] + ' ' + count[t]));
+      var c = el('button', 'pg-chip' + (PICK === t ? ' pg-on' : '')); c.type = 'button';
+      c.setAttribute('aria-pressed', String(PICK === t));
+      c.style.setProperty('--c', COLOR[t] || '#e8b021'); c.appendChild(el('i'));
+      c.appendChild(document.createTextNode(TEAMNAME[t] + ' ' + count[t]));
+      c.onclick = function (e) { e.preventDefault(); e.stopPropagation(); PICK = PICK === t ? null : t; if (redraw) redraw(); };
       chips.appendChild(c);
     });
     col.appendChild(chips);
@@ -214,15 +224,20 @@
       .sort(function (a, b) { return RANK[a.team] - RANK[b.team]; });
     var pick = live.concat(next);
     pick = pick.concat(done.slice(0, Math.max(n - pick.length, 0)));
+    if (PICK) {     // one team picked: every one of its games today, live first, then by start time
+      pick = mine.filter(function (g) { return g.team === PICK && g.status !== 'cancelled'; })
+        .sort(function (a, b) { return (isLive(a) ? 0 : 1) - (isLive(b) ? 0 : 1) || (a.time_tbd ? 1 : 0) - (b.time_tbd ? 1 : 0) || (a.start < b.start ? -1 : 1); });
+    }
     // room left (a quiet day): the next day's games fill the column, under their own label
     var nextDay = '', extra = [];
-    if (!compact && pick.length < n) {
+    if (!compact && !PICK && pick.length < n) {
       nextDay = future.map(function (g) { return dayKey(new Date(g.start)); }).filter(function (k) { return k > day; }).sort()[0] || '';
       if (nextDay) extra = future.filter(function (g) { return dayKey(new Date(g.start)) === nextDay && g.status !== 'cancelled'; })
         .sort(function (a, b) { return (RANK[a.team] - RANK[b.team]) || (a.start < b.start ? -1 : 1); }).slice(0, n - pick.length)
         .sort(function (a, b) { return (a.time_tbd ? 1 : 0) - (b.time_tbd ? 1 : 0) || (a.start < b.start ? -1 : 1); });
     }
-    var list = el('div');
+    var list = el('div', PICK ? 'pg-scroll' : null);
+    if (PICK) list.appendChild(el('div', 'pg-sub pg-subtop', TEAMNAME[PICK] + ' \u00b7 ' + pick.length + (pick.length === 1 ? ' game' : ' games') + ' \u00b7 tap again for all'));
     pick.concat(extra.length ? ['divider'] : [], extra).forEach(function (g) {
       if (g === 'divider') {
         list.appendChild(el('div', 'pg-sub', (nextDay === dayKey(new Date(Date.now() + 864e5)) && day === today ? 'Tomorrow' : wd(nextDay)) + ' \u00b7 ' + wd(nextDay).slice(0, 3) + '., ' + cpDate(nextDay)));
@@ -236,6 +251,7 @@
       li.appendChild(tm);
       var tx = el('div', 'pg-tx'), a = el('div', 'pg-a');
       if ((lv || fin) && (scored(g) || lv)) {     // away over home, scores lined up on the right
+        li.classList.add('pg-scored');
         a = scoreBox([[s[0], s[2], fin && +s[2] > +s[3]], [s[1], s[3], fin && +s[3] > +s[2]]]);
       } else a.textContent = s[0] + (g.home_away === 'N' && !(g.home && g.away) ? ' vs. ' : ' at ') + s[1];
       tx.appendChild(a);
@@ -404,7 +420,7 @@
     var o = opts || {}; o.target = o.target || '_top';
     if (!document.getElementById('ppg-css')) { var s = document.createElement('style'); s.id = 'ppg-css'; s.textContent = CSS; document.head.appendChild(s); }
     var last = null;
-    function go() { load().then(function (d) { last = d; draw(box, d, o); if (o.onDraw) o.onDraw(); }); }
+    function go() { load().then(function (d) { last = d; redraw = function () { draw(box, d, o); if (o.onDraw) o.onDraw(); }; redraw(); }); }
     var lastRun = 0;
     function tick() { if (Date.now() - lastRun >= (box_live || pro_live ? 60000 : 5 * 60000)) { lastRun = Date.now(); go(); } }
     tick();
