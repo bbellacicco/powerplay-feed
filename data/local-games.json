@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T13:31:57-05:00",
+ "updated": "2026-11-04T13:47:00-05:00",
  "today": "2026-11-04",
  "range": [
   "2026-11-01",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 36
+   "count": 37
   },
   "club_news": {
    "ok": true,
@@ -2655,6 +2655,19 @@
   },
   {
    "league": "nhl",
+   "headline": "How teams and star players would benefit from shorter term contracts",
+   "summary": "In the flat cap era, every team was chasing contract efficiencies to ice the best rosters. But Justin Bourne writes now that the cap is rising so much, both teams and players should reconsider how they think about contra",
+   "published": "2026-11-04T13:40-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/Tampa-Bay-Lightning-right-wing-Nikita-Kucherov.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "",
+   "url": "https://www.sportsnet.ca/nhl/article/how-teams-and-star-players-would-benefit-from-shorter-term-contracts/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Connor Hellebuyck cites family as reason for ‘difficult’ trade request",
    "summary": "",
    "published": "2026-11-04T11:30-05:00",
@@ -2664,19 +2677,6 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/connor-hellebuyck-cites-family-as-reason-for-difficult-trade-request/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Canucks battle to the end in combative loss to Ducks",
-   "summary": "It was another game in which the rebuilding Canucks, even with their many flaws, were fully engaged, combative and played their opponents even at five-on-five.",
-   "published": "2026-11-04T01:51-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/canucks-ducks.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canucks-battle-to-the-end-in-combative-loss-to-ducks/",
    "source": "Sportsnet"
   },
   {
@@ -2799,34 +2799,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Canadiens on wrong side of history in skid-stopping comeback win for Jets",
-   "summary": "No matter how poorly the Canadiens played, they were in the best position possible with the clock ticking down, and then they inexcusably crumbled.",
-   "published": "2026-11-04T00:35-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/havs.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canadiens-on-wrong-side-of-history-in-skid-stopping-comeback-win-for-jets/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Maple Leafs lose momentum after Raddysh penalty in loss to Mammoth",
-   "summary": "",
-   "published": "2026-11-04T00:25-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/leafs.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-lose-momentum-after-raddysh-penalty-in-loss-to-mammoth/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nfl",
    "headline": "Browns place QB Deshaun Watson in concussion protocol",
    "summary": "",
@@ -2917,6 +2889,47 @@
    "sn_team_count": 0,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/mlb-off-season-transaction-tracker-the-top-free-agent-signings-and-trades/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Canadiens on wrong side of history in skid-stopping comeback win for Jets",
+   "summary": "No matter how poorly the Canadiens played, they were in the best position possible with the clock ticking down, and then they inexcusably crumbled.",
+   "published": "2026-11-04T00:35-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/havs.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canadiens-on-wrong-side-of-history-in-skid-stopping-comeback-win-for-jets/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Maple Leafs lose momentum after Raddysh penalty in loss to Mammoth",
+   "summary": "",
+   "published": "2026-11-04T00:25-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/leafs.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-lose-momentum-after-raddysh-penalty-in-loss-to-mammoth/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Canucks battle to the end in combative loss to Ducks",
+   "summary": "It was another game in which the rebuilding Canucks, even with their many flaws, were fully engaged, combative and played their opponents even at five-on-five.",
+   "published": "2026-11-04T01:51-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/canucks-ducks.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canucks-battle-to-the-end-in-combative-loss-to-ducks/",
    "source": "Sportsnet"
   },
   {
@@ -3951,6 +3964,18 @@
     "group": "East Division",
     "teams": [
      {
+      "name": "Kingston Frontenacs",
+      "abbr": "KGN",
+      "gp": 17,
+      "w": 12,
+      "l": 5,
+      "otl": 0,
+      "pts": 24,
+      "gf": 74,
+      "ga": 59,
+      "strk": "W5"
+     },
+     {
       "name": "Brantford Bulldogs",
       "abbr": "BFD",
       "gp": 17,
@@ -3963,28 +3988,16 @@
       "strk": "L1"
      },
      {
-      "name": "Kingston Frontenacs",
-      "abbr": "KGN",
-      "gp": 16,
-      "w": 11,
-      "l": 5,
-      "otl": 0,
-      "pts": 22,
-      "gf": 74,
-      "ga": 59,
-      "strk": "W4"
-     },
-     {
       "name": "Ottawa 67's",
       "abbr": "OTT",
-      "gp": 15,
+      "gp": 16,
       "w": 9,
-      "l": 4,
+      "l": 5,
       "otl": 2,
       "pts": 20,
       "gf": 55,
       "ga": 51,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Oshawa Generals",
