@@ -37,6 +37,30 @@
     '.pps-follow a.yt{background:#ff3d3d;border-color:#ff3d3d}.pps-follow a.yt svg{fill:#fff}';
   document.head.appendChild(css);
 
+  // share.powerplaywindsor.com: a preview page for each story, video, Game Day Snaps and athlete profile
+  // (made by the PC every 15 minutes). Facebook reads those without Wix's "checking your request" screen,
+  // and a click goes straight on to the page on powerplaywindsor.com. Used when the list says it's live.
+  var MAP = null;
+  try {
+    fetch('https://bbellacicco.github.io/powerplay-feed/data/share-pages.json?t=' + Math.floor(Date.now() / 3e5), { cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.json() : null; }).then(function (j) { if (j && j.live) MAP = j; }).catch(function () {});
+  } catch (e) {}
+  function better(u) {
+    if (!MAP || !u) return u;
+    try {
+      var x = new URL(u), q = x.searchParams, path = x.pathname.replace(/\/$/, '');
+      if (!/(^|\.)powerplaywindsor\.com$/.test(x.hostname)) return u;
+      if (/^\/post\//.test(path)) return (MAP.posts || {})['https://www.powerplaywindsor.com' + path] || u;
+      if (path === '/scores-standings') {
+        if (q.get('s')) return (MAP.stories || {})[q.get('s')] || u;
+        if (q.get('v') && q.get('tab') !== 'spotlight') return (MAP.videos || {})[q.get('v')] || u;
+        if (q.get('p')) return (MAP.athletes || {})[q.get('p')] || u;
+      }
+      if (q.get('show') && /^\/(game-day-snaps|charity-hub)$/.test(path)) return (MAP.snaps || {})[q.get('show')] || u;
+    } catch (e) {}
+    return u;
+  }
+
   function svg(d) { return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="' + d + '"/></svg>'; }
   var open = null;
   function close() { if (open) { open.remove(); open = null; } }
@@ -103,6 +127,7 @@
   }
 
   window.PPShare = {
+    better: better,
     link: function (tab) {
       if (tab === 'pro') return SITE + 'local-sports?tab=scores';
       if (/^pro-/.test(tab)) return SITE + 'local-sports?tab=' + tab.slice(4);
@@ -116,6 +141,7 @@
       b.onclick = function (ev) {
         ev.stopPropagation();
         var data = typeof o === 'function' ? o() : o;
+        data = Object.assign({}, data, { url: better(data.url) });   // the share.powerplaywindsor.com page, when there is one
         // phones: inside the Wix box the phone's share sheet is blocked and the Facebook app just flashes,
         // so the share opens on its own page (share.html) where the phone's own share list works
         if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
