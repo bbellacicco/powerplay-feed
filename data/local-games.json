@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T21:51:55-05:00",
+ "updated": "2026-11-03T22:02:54-05:00",
  "today": "2026-11-03",
  "range": [
   "2026-10-31",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 36
+   "count": 37
   },
   "club_news": {
    "ok": true,
@@ -2686,6 +2686,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Mammoth break tie late to beat Maple Leafs",
+   "summary": "",
+   "published": "2026-11-03T21:54-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/leafs.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/mammoth-break-tie-late-to-beat-maple-leafs/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nba",
    "headline": "Raptors’ Leonard begins return-to-play process, will be re-evaluated in one week",
    "summary": "",
@@ -4188,14 +4203,14 @@
      {
       "name": "Guelph Storm",
       "abbr": "GUE",
-      "gp": 15,
-      "w": 12,
+      "gp": 16,
+      "w": 13,
       "l": 3,
       "otl": 0,
-      "pts": 24,
+      "pts": 26,
       "gf": 69,
       "ga": 46,
-      "strk": "W3"
+      "strk": "W4"
      },
      {
       "name": "London Knights",
@@ -4212,14 +4227,14 @@
      {
       "name": "Kitchener Rangers",
       "abbr": "KIT",
-      "gp": 16,
+      "gp": 17,
       "w": 8,
-      "l": 5,
+      "l": 6,
       "otl": 3,
       "pts": 19,
       "gf": 53,
       "ga": 52,
-      "strk": "W4"
+      "strk": "L1"
      },
      {
       "name": "Erie Otters",
@@ -4301,6 +4316,18 @@
       "strk": "W1"
      },
      {
+      "name": "Stouffville Spirit",
+      "abbr": "STO",
+      "gp": 18,
+      "w": 9,
+      "l": 7,
+      "otl": 2,
+      "pts": 20,
+      "gf": 73,
+      "ga": 59,
+      "strk": "W2"
+     },
+     {
       "name": "Pickering Panthers",
       "abbr": "PIC",
       "gp": 21,
@@ -4311,18 +4338,6 @@
       "gf": 71,
       "ga": 72,
       "strk": "L3"
-     },
-     {
-      "name": "Stouffville Spirit",
-      "abbr": "STO",
-      "gp": 17,
-      "w": 8,
-      "l": 7,
-      "otl": 2,
-      "pts": 18,
-      "gf": 73,
-      "ga": 59,
-      "strk": "W1"
      },
      {
       "name": "Aurora Tigers",
@@ -4524,14 +4539,14 @@
      {
       "name": "Georgetown Raiders",
       "abbr": "GEO",
-      "gp": 21,
+      "gp": 22,
       "w": 6,
-      "l": 13,
+      "l": 14,
       "otl": 2,
       "pts": 14,
       "gf": 68,
       "ga": 114,
-      "strk": "L2"
+      "strk": "L3"
      },
      {
       "name": "Buffalo Jr. Sabres",
