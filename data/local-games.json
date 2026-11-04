@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-03T23:47:09-05:00",
- "today": "2026-11-03",
+ "updated": "2026-11-04T00:05:14-05:00",
+ "today": "2026-11-04",
  "range": [
-  "2026-10-31",
-  "2026-11-06"
+  "2026-11-01",
+  "2026-11-07"
  ],
  "teams": {
   "spitfires": {
@@ -39,7 +39,7 @@
   },
   "lancers": {
    "ok": true,
-   "count": 132
+   "count": 45
   },
   "junior": {
    "ok": true,
@@ -111,194 +111,6 @@
   }
  },
  "games": [
-  {
-   "id": "lancers-6387",
-   "team": "lancers",
-   "sport": "Cross Country",
-   "start": "2026-10-31T11:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "OUA Championships",
-   "location": "Malden Park",
-   "status": "final",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "W - 2nd, M - 5th",
-   "links": {
-    "recap": "https://golancers.ca/news/2026/10/31/lancers-claim-silver-at-oua-cross-country-championships.aspx"
-   }
-  },
-  {
-   "id": "lancers-6245",
-   "team": "lancers",
-   "sport": "Women's Volleyball",
-   "start": "2026-10-31T12:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Western Mustangs",
-   "location": "London, ON",
-   "status": "final",
-   "our_score": 1,
-   "opp_score": 3,
-   "result": "L",
-   "note": "14-25, 25-17, 23-25, 19-25",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6245",
-    "recap": "https://golancers.ca/news/2026/10/31/womens-volleyball-swept-by-mustangs-in-london.aspx"
-   }
-  },
-  {
-   "id": "lancers-6496",
-   "team": "lancers",
-   "sport": "Football",
-   "start": "2026-10-31T13:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Guelph Gryphons",
-   "location": "Alumni Stadium",
-   "status": "final",
-   "our_score": 28,
-   "opp_score": 24,
-   "result": "W",
-   "note": "OUA Quarter-Finals",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6496",
-    "recap": "https://golancers.ca/news/2026/10/31/lancer-football-defeats-guelph-heads-to-oua-semi-finals.aspx"
-   }
-  },
-  {
-   "id": "lancers-6265",
-   "team": "lancers",
-   "sport": "Men's Volleyball",
-   "start": "2026-10-31T13:30:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Western Mustangs",
-   "location": "London, ON",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 0,
-   "result": "W",
-   "note": "26-24, 25-16, 25-22",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6265",
-    "recap": "https://golancers.ca/news/2026/10/31/mens-volleyball-windsor-opens-season-with-double-win-over-western.aspx"
-   }
-  },
-  {
-   "id": "spitfires-ohl29143",
-   "team": "spitfires",
-   "sport": "Hockey",
-   "start": "2026-10-31T14:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Owen Sound Attack",
-   "location": "Harry Lumley Bayshore Community Centre, Owen Sound",
-   "status": "final",
-   "our_score": 8,
-   "opp_score": 0,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29143/"
-   }
-  },
-  {
-   "id": "lancers-6202",
-   "team": "lancers",
-   "sport": "Women's Basketball",
-   "start": "2026-10-31T16:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Waterloo Warriors",
-   "location": "Toldo Lancer Centre",
-   "status": "final",
-   "our_score": 77,
-   "opp_score": 42,
-   "result": "W",
-   "note": "",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6202",
-    "recap": "https://golancers.ca/news/2026/10/31/womens-basketball-windsor-dominates-waterloo-on-halloween.aspx"
-   }
-  },
-  {
-   "id": "lancers-6224",
-   "team": "lancers",
-   "sport": "Men's Basketball",
-   "start": "2026-10-31T18:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Waterloo Warriors",
-   "location": "Toldo Lancer Centre",
-   "status": "final",
-   "our_score": 76,
-   "opp_score": 84,
-   "result": "L",
-   "note": "",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6224",
-    "recap": "https://golancers.ca/news/2026/10/31/mens-basketball-lancers-edged-by-warriors.aspx"
-   }
-  },
-  {
-   "id": "junior-gojhl15639",
-   "team": "junior",
-   "sport": "GOHL (Jr. B)",
-   "start": "2026-10-31T19:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Fort Erie Meteors",
-   "location": "Fort Erie Leisureplex, Fort Erie, ON",
-   "status": "final",
-   "our_score": 2,
-   "opp_score": 4,
-   "result": "L",
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.gohl.ca/stats/game-center/15639"
-   },
-   "club": "LaSalle Vipers"
-  },
-  {
-   "id": "lancers-6289",
-   "team": "lancers",
-   "sport": "Women's Hockey",
-   "start": "2026-10-31T19:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Waterloo Warriors",
-   "location": "Waterloo, ON",
-   "status": "final",
-   "our_score": 1,
-   "opp_score": 4,
-   "result": "L",
-   "note": "",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6289",
-    "recap": "https://golancers.ca/news/2026/11/2/womens-hockey-falls-to-waterloo-on-the-road.aspx"
-   }
-  },
-  {
-   "id": "lancers-6344",
-   "team": "lancers",
-   "sport": "Men's Hockey",
-   "start": "2026-10-31T19:30:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "York Lions",
-   "location": "Adie Knox Arena",
-   "status": "final",
-   "our_score": 6,
-   "opp_score": 1,
-   "result": "W",
-   "note": "",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6344",
-    "recap": "https://golancers.ca/news/2026/11/2/mens-hockey-mens-hockey-dominates-lions-at-home.aspx"
-   }
-  },
   {
    "id": "spitfires-ohl29145",
    "team": "spitfires",
@@ -1919,52 +1731,202 @@
    "links": {
     "watch": "https://oua.tv/?school=Windsor"
    }
+  },
+  {
+   "id": "lancers-6497",
+   "team": "lancers",
+   "sport": "Football",
+   "start": "2026-11-07T13:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Western Mustangs",
+   "location": "London, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "OUA Semi-Finals",
+   "links": {
+    "tickets": "https://westernmustangstickets.universitytickets.com/w/",
+    "watch": "https://oua.tv/"
+   }
+  },
+  {
+   "id": "lancers-6346",
+   "team": "lancers",
+   "sport": "Men's Hockey",
+   "start": "2026-11-07T16:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "TMU Bold",
+   "location": "Adie Knox Arena",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=173",
+    "watch": "https://oua.tv/?school=Windsor"
+   }
+  },
+  {
+   "id": "lancers-6204",
+   "team": "lancers",
+   "sport": "Women's Basketball",
+   "start": "2026-11-07T18:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Toronto Varsity Blues",
+   "location": "Toronto, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "watch": "https://oua.tv/?school=Windsor"
+   }
+  },
+  {
+   "id": "junior-gojhl15664",
+   "team": "junior",
+   "sport": "GOHL (Jr. B)",
+   "start": "2026-11-07T19:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Elmira Sugar Kings",
+   "location": "Vollmer Culture R.C., LaSalle, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.gohl.ca/stats/game-center/15664"
+   },
+   "club": "LaSalle Vipers"
+  },
+  {
+   "id": "junior-gs2960559",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-11-07T19:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Wheatley Sharks",
+   "location": "Libro Centre",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960559?configuration=45"
+   },
+   "club": "Amherstburg Admirals"
+  },
+  {
+   "id": "junior-gs2960569",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-11-07T19:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Mooretown Flags",
+   "location": "Mooretown Sports Complex",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960569?configuration=45"
+   },
+   "club": "Lakeshore Canadiens"
+  },
+  {
+   "id": "lancers-6291",
+   "team": "lancers",
+   "sport": "Women's Hockey",
+   "start": "2026-11-07T19:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Toronto Varsity Blues",
+   "location": "Adie Knox Arena",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=172",
+    "watch": "https://oua.tv/?school=Windsor"
+   }
+  },
+  {
+   "id": "lancers-6226",
+   "team": "lancers",
+   "sport": "Men's Basketball",
+   "start": "2026-11-07T20:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Toronto Varsity Blues",
+   "location": "Toronto, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "watch": "https://oua.tv/?school=Windsor"
+   }
   }
  ],
  "pro_games": [
   {
-   "id": "cfl-cfl6672",
+   "id": "cfl-cfl6674",
    "team": "cfl",
    "sport": "CFL",
-   "start": "2026-10-31T13:00:00-04:00",
+   "start": "2026-11-07T15:00:00-05:00",
    "time_tbd": false,
    "home_away": "N",
-   "opponent": "Toronto Argonauts",
-   "location": "BMO Field",
-   "status": "final",
-   "our_score": 25,
-   "opp_score": 22,
+   "opponent": "Montreal Alouettes",
+   "location": "Percival Molson Memorial Stadium",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
    "result": null,
    "note": "",
    "links": {
     "gamecentre": "https://www.cfl.ca/schedule/"
    },
    "away": "Winnipeg Blue Bombers",
-   "home": "Toronto Argonauts",
+   "home": "Montreal Alouettes",
    "away_abbr": "WPG",
-   "home_abbr": "TOR"
+   "home_abbr": "MTL"
   },
   {
-   "id": "cfl-cfl6673",
+   "id": "cfl-cfl6675",
    "team": "cfl",
    "sport": "CFL",
-   "start": "2026-10-31T16:30:00-04:00",
+   "start": "2026-11-07T18:30:00-05:00",
    "time_tbd": false,
    "home_away": "N",
-   "opponent": "B.C. Lions",
-   "location": "BC Place",
-   "status": "final",
-   "our_score": 26,
-   "opp_score": 33,
+   "opponent": "Edmonton Elks",
+   "location": "Play Alberta Field at Commonwealth Stadium",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
    "result": null,
    "note": "",
    "links": {
     "gamecentre": "https://www.cfl.ca/schedule/"
    },
-   "away": "Saskatchewan Roughriders",
-   "home": "B.C. Lions",
-   "away_abbr": "SSK",
-   "home_abbr": "BC"
+   "away": "B.C. Lions",
+   "home": "Edmonton Elks",
+   "away_abbr": "BC",
+   "home_abbr": "EDM"
   }
  ],
  "pro_news": [
