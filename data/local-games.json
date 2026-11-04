@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T23:17:37-05:00",
+ "updated": "2026-11-03T23:35:22-05:00",
  "today": "2026-11-03",
  "range": [
   "2026-10-31",
@@ -43,7 +43,7 @@
   },
   "junior": {
    "ok": true,
-   "count": 155
+   "count": 131
   },
   "saints": {
    "ok": true,
@@ -1353,25 +1353,6 @@
     "gamecentre": "https://www.gohl.ca/stats/game-center/15649"
    },
    "club": "LaSalle Vipers"
-  },
-  {
-   "id": "junior-gs2960529",
-   "team": "junior",
-   "sport": "PJHL (Jr. C)",
-   "start": "2026-11-04T19:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Mooretown Flags",
-   "location": "Wheatley Area Arena",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960529?configuration=45"
-   },
-   "club": "Wheatley Sharks"
   },
   {
    "id": "highschool-2026-11-05-154",
@@ -2851,6 +2832,47 @@
   },
   {
    "league": "nhl",
+   "headline": "NHL Roundup: Robertson’s natural hat trick paces Stars to win over Caps",
+   "summary": "",
+   "published": "2026-11-03T22:01-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Jason-Robertson.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/robertsons-speedy-natural-hat-trick-paces-stars-to-win-over-caps/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Blue Jackets explode for seven goals in win over Avalanche",
+   "summary": "",
+   "published": "2026-11-03T23:22-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Columbus-Blue-Jackets-players-celebrate-their-goal-against-the-Colorado-Avalanche.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/blue-jackets-explode-for-seven-goals-in-win-over-avalanche/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Lightning’s Kucherov has two helpers in first home game since asking for trade",
+   "summary": "Brayden Point scored two goals, Anthony Cirelli got one and the Tampa Bay Lightning beat the Detroit Red Wings 4-2 on Tuesday night for their seventh straight home win.",
+   "published": "2026-11-03T21:56-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/Tampa-Bay-Lightning-right-wing-Nikita-Kucherov.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Red Wings"
+   ],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/lightnings-kucherov-has-two-helpers-in-first-home-game-since-asking-for-trade/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Taking stock of early NHL playoff picture",
    "summary": "Nearing the official quarter mark of the season, Rory Boylen took a look at some positive and negative indicators for the teams in the playoff picture.",
    "published": "2026-11-03T16:59-05:00",
@@ -3042,16 +3064,31 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Ranking all 32 NHL Hometown Remix jerseys",
+   "summary": "The NHL’s Hometown Remix collection delivered plenty of creativity, nostalgia and bold designs, but not every team hit the mark. From Anaheim’s 1990s-inspired look to Chicago’s disappointing green jersey, here’s how all ",
+   "published": "2026-11-02T17:44-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/tavares-hometown-remix.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 7,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/ranking-all-32-nhl-hometown-remix-jerseys/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
-   "headline": "Man U fans bid to disrupt Champions League match by hurling tennis balls",
-   "summary": "",
-   "published": "2026-11-03T16:04-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Man-U.jpg",
+   "headline": "Rahm says he’s willing to accept penalties to return to PGA Tour",
+   "summary": "Jon Rahm can only hope peaceful times are ahead, except it’s not that simple.",
+   "published": "2026-11-03T12:36-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP176649193-scaled.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/champions-league/article/man-u-fans-bid-to-disrupt-champions-league-match-by-hurling-tennis-balls/",
+   "sport": "Golf",
+   "url": "https://www.sportsnet.ca/pga-tour/article/rahm-says-hes-willing-to-accept-penalties-to-return-to-pga-tour/",
    "source": "Sportsnet"
   },
   {
@@ -3069,43 +3106,15 @@
   },
   {
    "league": "other",
-   "headline": "Rahm says he’s willing to accept penalties to return to PGA Tour",
-   "summary": "Jon Rahm can only hope peaceful times are ahead, except it’s not that simple.",
-   "published": "2026-11-03T12:36-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP176649193-scaled.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Golf",
-   "url": "https://www.sportsnet.ca/pga-tour/article/rahm-says-hes-willing-to-accept-penalties-to-return-to-pga-tour/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Ranking all 32 NHL Hometown Remix jerseys",
-   "summary": "The NHL’s Hometown Remix collection delivered plenty of creativity, nostalgia and bold designs, but not every team hit the mark. From Anaheim’s 1990s-inspired look to Chicago’s disappointing green jersey, here’s how all ",
-   "published": "2026-11-02T17:44-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/tavares-hometown-remix.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 7,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/ranking-all-32-nhl-hometown-remix-jerseys/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "B.C. team says it didn’t know executive was being investigated for sex crimes",
+   "headline": "Man U fans bid to disrupt Champions League match by hurling tennis balls",
    "summary": "",
-   "published": "2026-11-03T13:41-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-26.jpg",
+   "published": "2026-11-03T16:04-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Man-U.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/hockey/article/b-c-team-says-it-didnt-know-executive-was-being-investigated-for-sex-crimes/",
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/champions-league/article/man-u-fans-bid-to-disrupt-champions-league-match-by-hurling-tennis-balls/",
    "source": "Sportsnet"
   },
   {
@@ -3119,32 +3128,6 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/nfl-trade-deadline-tracker-follow-all-the-deals/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "AP source: Duce Robinson to have season-ending knee surgery",
-   "summary": "Florida State receiver Duce Robinson, the team’s leading receiver, will have season-ending knee surgery, a person familiar with the decision told The Associated Press on Tuesday.",
-   "published": "2026-11-03T13:12-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Copy-of-Untitled-Design-13.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/ncaafb/article/ap-source-duce-robinson-to-have-season-ending-knee-surgery/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "cfl",
-   "headline": "Lions linebacker Darnell Sankey named CFL’s top defensive player",
-   "summary": "A historic first season with the B.C. Lions landed middle linebacker Darnell Sankey the CFL’s top defensive player award.",
-   "published": "2026-11-03T13:21-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sankey.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/lions-linebacker-darnell-sankey-named-cfls-top-defensive-player/",
    "source": "Sportsnet"
   },
   {
