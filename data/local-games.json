@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T15:17:02-05:00",
+ "updated": "2026-11-04T15:32:27-05:00",
  "today": "2026-11-04",
  "range": [
   "2026-11-01",
@@ -46,8 +46,8 @@
    "count": 155
   },
   "saints": {
-   "ok": false,
-   "error": "The read operation timed out"
+   "ok": true,
+   "count": 9
   },
   "highschool": {
    "ok": false,
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 37
+   "count": 38
   },
   "club_news": {
    "ok": true,
@@ -2799,6 +2799,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Canadiens pick up the pieces after ’embarrassing, unacceptable’ collapse against Jets",
+   "summary": "",
+   "published": "2026-11-04T15:19-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/jacob-fowler.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canadiens-pick-up-the-pieces-after-embarrassing-unacceptable-collapse-against-jets/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "Champions League Roundup: Real Madrid pulls off another comeback, Liverpool beaten by Fenerbahce",
    "summary": "",
@@ -3313,6 +3326,19 @@
   },
   {
    "league": "nfl",
+   "headline": "The advanced stats behind the Bills' dominant Week 8 win over the Baltimore Ravens",
+   "summary": "An in-depth look into Buffalo's largest victory of the season",
+   "published": "2026-11-04T15:30-05:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/bills/veluzvjjhlwpqrq1tadq.jpg",
+   "video": false,
+   "teams": [
+    "Buffalo Bills"
+   ],
+   "url": "https://www.buffalobills.com/news/the-advanced-stats-behind-the-bills-dominant-week-8-win-over-the-baltimore-ravens",
+   "source": "Team site"
+  },
+  {
+   "league": "nfl",
    "headline": "Buffalo Bills Recognize WNYCFO as High School Football Officiating Crew of the Month",
    "summary": "The crew includes Bob Lockhart of Webster (Referee), Jim Maxwell of Rochester (Umpire), Peter McCabe of Lakeville (Head Linesman), Wray Richardson of Hilton (Line Judge), and Ed Wood of Le Roy (Back Judge).",
    "published": "2026-11-04T09:59-05:00",
@@ -3426,19 +3452,6 @@
     "Buffalo Bills"
    ],
    "url": "https://www.buffalobills.com/news/bills-issue-injury-update-on-wr-joshua-palmer",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
-   "headline": "Buffalo Bills inactives vs. Ravens Week 8",
-   "summary": "Bills Week 8 status for DJ Moore, Dalton Kincaid and Spencer Brown revealed",
-   "published": "2026-11-01T11:29-05:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/bills/m6hawmq7x6sricdyzzbh.png",
-   "video": false,
-   "teams": [
-    "Buffalo Bills"
-   ],
-   "url": "https://www.buffalobills.com/news/buffalo-bills-inactives-vs-ravens-week-8",
    "source": "Team site"
   },
   {
@@ -4393,6 +4406,18 @@
       "strk": "W3"
      },
      {
+      "name": "King Rebellion",
+      "abbr": "KNG",
+      "gp": 20,
+      "w": 15,
+      "l": 2,
+      "otl": 3,
+      "pts": 33,
+      "gf": 80,
+      "ga": 40,
+      "strk": "W3"
+     },
+     {
       "name": "Toronto Patriots",
       "abbr": "PAT",
       "gp": 19,
@@ -4403,18 +4428,6 @@
       "gf": 102,
       "ga": 32,
       "strk": "W11"
-     },
-     {
-      "name": "King Rebellion",
-      "abbr": "KNG",
-      "gp": 19,
-      "w": 14,
-      "l": 2,
-      "otl": 3,
-      "pts": 31,
-      "gf": 80,
-      "ga": 40,
-      "strk": "W2"
      },
      {
       "name": "Burlington Cougars",
@@ -4467,14 +4480,14 @@
      {
       "name": "Caledon Admirals",
       "abbr": "CAL",
-      "gp": 19,
+      "gp": 20,
       "w": 7,
-      "l": 10,
+      "l": 11,
       "otl": 2,
       "pts": 16,
       "gf": 50,
       "ga": 97,
-      "strk": "W2"
+      "strk": "L1"
      },
      {
       "name": "Niagara Falls Canucks",
