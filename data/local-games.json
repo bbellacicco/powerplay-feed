@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T14:02:25-05:00",
+ "updated": "2026-11-04T14:17:29-05:00",
  "today": "2026-11-04",
  "range": [
   "2026-11-01",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 37
+   "count": 36
   },
   "club_news": {
    "ok": true,
@@ -1932,6 +1932,17 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "FRONT of the Line..",
+   "summary": "",
+   "published": "2026-11-04T13:50:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/4cDxKP75Nonb9jdx74jRhU/e16bd2468e9e1d46023aaeee09dcdb23/awards_Nov4_V2.png?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/front-of-the-line",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "3 storylines to watch in the Eastern Final presented by Wegovy®",
    "summary": "",
    "published": "2026-11-04T00:00:00-05:00",
@@ -2141,19 +2152,6 @@
     "Roughriders"
    ],
    "url": "https://www.cfl.ca/article/wsf-recap-bc-33-saskatchewan-26",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Robert Carter Jr. makes UNREAL INTERCEPTION!!!",
-   "summary": "",
-   "published": "2026-10-31T20:36:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/SzQcxerzRer7RR9tPfjwO/56c6a20fd74da2dd6898465bfd44d042/BC_INT.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Lions"
-   ],
-   "url": "https://www.cfl.ca/article/robert-carter-jr-makes-unreal-interception",
    "source": "CFL.ca"
   },
   {
@@ -2680,19 +2678,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Oilers continue to look like different team despite loss to speedy Devils",
-   "summary": "Life isn’t so bad for the last team in the NHL without a regulation road loss. Mark Spector has more on the new-look Oilers from New Jersey.",
-   "published": "2026-11-04T00:31-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/oilers-devils.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/oilers-continue-to-look-like-different-team-despite-loss-to-speedy-devils/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "other",
    "headline": "Canada dismisses fears of international blowback over Russian world junior hockey ban",
    "summary": "",
@@ -2747,16 +2732,29 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Nova Scotia to host 2028 women’s curling world championship",
+   "league": "nhl",
+   "headline": "Blue Jackets’ Andrae, Heinen hit waivers as Jets’ Lambert clears",
    "summary": "",
-   "published": "2026-11-04T10:35-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/02/CP175811864.jpg",
+   "published": "2026-11-04T14:16-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/emil-andrae.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
-   "sport": "",
-   "url": "https://www.sportsnet.ca/curling/article/nova-scotia-to-host-2028-womens-curling-world-championship/",
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/blue-jackets-andrae-heinen-hit-waivers-as-jets-lambert-clears/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Seahawks’ Sam Darnold out against Cardinals with quad injury",
+   "summary": "",
+   "published": "2026-11-04T14:04-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/darnold.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/seahawks-sam-darnold-out-against-cardinals-with-quad-injury/",
    "source": "Sportsnet"
   },
   {
@@ -2773,16 +2771,29 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Flames legend Jarome Iginla battling health issues",
-   "summary": "Jarome Iginla is facing a battle far removed from the rink. Eric Francis spoke to the Flames legend about the health issues he’s dealing with.",
-   "published": "2026-11-03T14:29-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Iginla.jpg",
+   "league": "other",
+   "headline": "Nova Scotia to host 2028 women’s curling world championship",
+   "summary": "",
+   "published": "2026-11-04T10:35-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/02/CP175811864.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "",
+   "url": "https://www.sportsnet.ca/curling/article/nova-scotia-to-host-2028-womens-curling-world-championship/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Report: Eagles starting QB Joe Milton over Tanner McKee vs. Giants",
+   "summary": "",
+   "published": "2026-11-04T14:14-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-8.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/flames-legend-jarome-iginla-battling-health-issues/",
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/report-eagles-starting-qb-joe-milton-over-tanner-mckee-vs-giants/",
    "source": "Sportsnet"
   },
   {
@@ -2796,19 +2807,6 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/packers-parsons-begins-practising-as-he-gets-closer-to-season-debut/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Browns place QB Deshaun Watson in concussion protocol",
-   "summary": "",
-   "published": "2026-11-04T09:48-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/watson-2.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/browns-place-qb-deshaun-watson-in-concussion-protocol/",
    "source": "Sportsnet"
   },
   {
@@ -2826,15 +2824,15 @@
   },
   {
    "league": "nfl",
-   "headline": "Packers’ Parsons begins practising as he gets closer to season debut",
+   "headline": "Browns place QB Deshaun Watson in concussion protocol",
    "summary": "",
-   "published": "2026-11-04T13:13-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/09/Parsons.jpg",
+   "published": "2026-11-04T09:48-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/watson-2.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 1,
    "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/packers-parsons-begins-practising-as-he-gets-closer-to-season-debut/",
+   "url": "https://www.sportsnet.ca/nfl/article/browns-place-qb-deshaun-watson-in-concussion-protocol/",
    "source": "Sportsnet"
   },
   {
@@ -2906,6 +2904,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Oilers continue to look like different team despite loss to speedy Devils",
+   "summary": "Life isn’t so bad for the last team in the NHL without a regulation road loss. Mark Spector has more on the new-look Oilers from New Jersey.",
+   "published": "2026-11-04T00:31-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/oilers-devils.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/oilers-continue-to-look-like-different-team-despite-loss-to-speedy-devils/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Maple Leafs lose momentum after Raddysh penalty in loss to Mammoth",
    "summary": "",
    "published": "2026-11-04T00:25-05:00",
@@ -2930,6 +2941,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/canucks-battle-to-the-end-in-combative-loss-to-ducks/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Flames legend Jarome Iginla battling health issues",
+   "summary": "Jarome Iginla is facing a battle far removed from the rink. Eric Francis spoke to the Flames legend about the health issues he’s dealing with.",
+   "published": "2026-11-03T14:29-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Iginla.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/flames-legend-jarome-iginla-battling-health-issues/",
    "source": "Sportsnet"
   },
   {
@@ -3001,32 +3025,6 @@
   },
   {
    "league": "other",
-   "headline": "Miami gets top spot in first CFP rankings, Notre Dame at No. 11",
-   "summary": "",
-   "published": "2026-11-03T20:11-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Miami-University.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/ncaa-mens-football/article/miami-gets-top-spot-in-first-cfp-rankings-notre-dame-at-no-11/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Canada’s Olivier Rioux notches double-double in UC Irvine debut",
-   "summary": "",
-   "published": "2026-11-04T00:39-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/03/Olivier-Rioux.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/ncaa-mens-basketball/article/canadas-olivier-rioux-notches-double-double-in-uc-irvine-debut/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
    "headline": "Rory McIlroy says there’s no risk playing in Abu Dhabi amid Middle East tensions",
    "summary": "",
    "published": "2026-11-04T08:14-05:00",
@@ -3051,19 +3049,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/report-mlb-proposes-postponing-salary-cap-to-2028/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Champions League Roundup: Man United make dramatic comeback",
-   "summary": "Manchester United staged a stunning comeback to recover from its worst-ever start to a European home game by beating Roma 3-2 in the Champions League on Tuesday.",
-   "published": "2026-11-03T17:20-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/01/Man-u.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/champions-league/article/champions-league-roundup-man-united-make-dramatic-comeback/",
    "source": "Sportsnet"
   },
   {
@@ -4418,7 +4403,7 @@
       "l": 2,
       "otl": 3,
       "pts": 31,
-      "gf": 78,
+      "gf": 79,
       "ga": 39,
       "strk": "W2"
      },
@@ -4479,7 +4464,7 @@
       "otl": 2,
       "pts": 16,
       "gf": 49,
-      "ga": 95,
+      "ga": 96,
       "strk": "W2"
      },
      {
