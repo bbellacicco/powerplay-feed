@@ -56,6 +56,7 @@
     '.ppg .pg-dt b{display:block;font-size:16px;font-weight:800;margin-top:1px}' +
     '.ppg .pg-li.pg-game .pg-dt{box-shadow:inset 0 -3px 0 var(--c)}' +
     '.ppg .pg-none{color:#9fb0cf;font-size:13px;padding:6px 0}' +
+    '.ppg a.pg-link{border-radius:6px;transition:background .15s}.ppg a.pg-link:hover{background:rgba(255,255,255,.05)}.ppg a.pg-link:hover .pg-a,.ppg a.pg-link:hover .pg-sn{text-decoration:underline}' +
     '.ppg button.pg-chip{border:1px solid transparent;color:inherit;font-family:inherit;cursor:pointer}.ppg button.pg-chip:hover{border-color:var(--c)}' +
     '.ppg button.pg-chip.pg-on{background:#fff;color:#0b1a33;border-color:#fff}' +
     '.ppg .pg-scroll{max-height:330px;overflow-y:auto;scrollbar-width:thin;padding-right:4px}.ppg .pg-sub.pg-subtop{margin-top:0;padding-top:0;border-top:0;color:#e8b021}' +
@@ -71,7 +72,7 @@
     '.ppg.compact .pg-gt{font-size:18px}.ppg.compact .pg-big{font-size:24px}' +
     /* the Pro Hub line: two scores for our pro teams and a link to the Pro Hub */
     '.ppg .pg-pro{display:flex;align-items:center;gap:10px 14px;margin:0 14px 12px 18px;padding:10px 12px;border-radius:10px;background:rgba(8,20,40,.55);border:1px solid rgba(255,255,255,.08);flex-wrap:wrap}' +
-    '.ppg .pg-pro:hover{border-color:rgba(232,176,33,.45)}' +
+    '.ppg a.pg-pg:hover{background:rgba(255,255,255,.12)}.ppg .pg-prog:hover{text-decoration:underline}' +
     '.ppg .pg-prol{display:flex;flex-direction:column;flex:none}.ppg .pg-prol b{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.ppg .pg-prol span{color:#9fb0cf;font-size:11px}' +
     '.ppg .pg-pros{display:flex;gap:8px;flex:1;min-width:0;flex-wrap:wrap}' +
     '.ppg .pg-pg{display:flex;align-items:center;flex-wrap:wrap;gap:8px;max-width:100%;background:rgba(255,255,255,.06);border-radius:6px;padding:6px 10px;font-size:13px;font-weight:700;min-width:0;white-space:nowrap}' +
@@ -131,7 +132,9 @@
               var c = e.competitions[0], st = e.status.type;
               var side = function (h) { var x = c.competitors.filter(function (t) { return t.homeAway === h; })[0];
                 return { abbr: x.team.abbreviation, name: x.team.shortDisplayName || x.team.name, logo: x.team.logo || '', score: x.score, win: x.winner }; };
-              return { lg: lg, start: e.date, state: st.state, detail: st.shortDetail || '', away: side('away'), home: side('home'), day: n - 1, off: /POSTPONED|CANCELED/.test(st.name) };
+              var ls = e.links || [], by = function (r) { var x = ls.filter(function (l) { return (l.rel || []).indexOf(r) >= 0; })[0]; return x && x.href; };
+              var link = st.state === 'post' ? (by('recap') || by('boxscore') || by('summary')) : (by('summary') || by('preview'));
+              return { lg: lg, start: e.date, state: st.state, detail: st.shortDetail || '', away: side('away'), home: side('home'), day: n - 1, off: /POSTPONED|CANCELED/.test(st.name), link: link || '' };
             }).filter(function (g) { return !g.off && (PRO_OURS[lg].indexOf(g.home.abbr) >= 0 || PRO_OURS[lg].indexOf(g.away.abbr) >= 0); });
           }));
       });
@@ -144,7 +147,7 @@
       var fin0 = all.filter(function (g) { return g.state === 'post' && g.day === 0; }).sort(newest);
       var fin1 = all.filter(function (g) { return g.state === 'post' && g.day === -1; }).sort(newest);
       var next = all.filter(function (g) { return g.state === 'pre' && new Date(g.start) > now; }).sort(function (a, b) { return a.start.localeCompare(b.start); });
-      return live.concat(fin0, fin1, next).slice(0, 2);
+      return live.concat(fin0, fin1, next).slice(0, 3);
     }).catch(function () { return []; });
   }
   function load() {
@@ -185,6 +188,17 @@
       b.appendChild(line);
     });
     return b;
+  }
+
+  // every game in the guide is a link: the game centre / box score / recap when the league has one,
+  // otherwise the Local Hub (scores for live and final games, Coming Up for the rest)
+  function gameRow(g, target) {
+    var L = g.links || {}, live = g.status === 'live', fin = g.status === 'final';
+    var u = live ? (L.gamecentre || L.boxscore || L.powerplay) : fin ? (L.powerplay || L.recap || L.boxscore || L.gamecentre) : (L.gamecentre || L.powerplay);
+    var a = el('a', 'pg-li pg-link');
+    if (u) { a.href = u; if (u.indexOf('powerplaywindsor.com') >= 0) a.target = target; else { a.target = '_blank'; a.rel = 'noopener'; } }
+    else { a.href = live || fin ? hubLink('scores') : hubLink('upcoming') + '&day=' + dayKey(new Date(g.start)); a.target = target; }
+    return a;
   }
 
   // 1. today's games (or the next day that has some)
@@ -246,7 +260,7 @@
         list.appendChild(el('div', 'pg-sub', (nextDay === dayKey(new Date(Date.now() + 864e5)) && day === today ? 'Tomorrow' : wd(nextDay)) + ' \u00b7 ' + wd(nextDay).slice(0, 3) + '., ' + cpDate(nextDay)));
         return;
       }
-      var s = sides(g), li = el('div', 'pg-li'); li.style.setProperty('--c', COLOR[g.team] || '#e8b021');
+      var s = sides(g), li = gameRow(g, target); li.style.setProperty('--c', COLOR[g.team] || '#e8b021');
       var lv = isLive(g), fin = g.status === 'final';
       var started = !g.time_tbd && g.status === 'upcoming' && new Date(g.start).getTime() < now && now - new Date(g.start).getTime() < 3 * 3600e3;
       var tm = el('div', 'pg-tm' + (lv ? ' pg-live' : fin ? ' pg-fin' : ''),
@@ -279,7 +293,7 @@
     colHead(col, 'Latest scores', fin.length ? fin.length + ' finals' : '');
     if (!show.length) col.appendChild(el('div', 'pg-none', 'No local finals in the last two days.'));
     show.forEach(function (g) {
-      var s = sides(g), li = el('div', 'pg-li'); li.style.setProperty('--c', COLOR[g.team] || '#e8b021'); li.appendChild(el('i'));
+      var s = sides(g), li = gameRow(g, target); li.style.setProperty('--c', COLOR[g.team] || '#e8b021'); li.appendChild(el('i'));
       var w = +s[2] >= +s[3] ? [s[0], s[2], s[1], s[3]] : [s[1], s[3], s[0], s[2]];
       var tx = el('div', 'pg-tx'); tx.appendChild(scoreBox([[w[0], w[1], +w[1] !== +w[3]], [w[2], w[3], false]]));   // winner on top
       var k = dayKey(new Date(g.start));
@@ -354,14 +368,15 @@
   }
 
   function proLine(list, target) {
-    var a = el('a', 'pg-pro'); a.href = PRO_HUB; a.target = target;
-    var l = el('div', 'pg-prol'); l.appendChild(el('b', null, 'Pro Hub')); l.appendChild(el('span', null, 'Presented by Unifor Local 2458')); a.appendChild(l);
+    var a = el('div', 'pg-pro');
+    var l = el('a', 'pg-prol'); l.href = PRO_HUB; l.target = target; l.appendChild(el('b', null, 'Pro Hub')); l.appendChild(el('span', null, 'Presented by Unifor Local 2458')); a.appendChild(l);
     var gs = el('div', 'pg-pros');
     if (!list.length) gs.appendChild(el('span', 'pg-pg', 'Wings, Leafs, Habs, Lions, Bills, Pistons, Raptors, Tigers and Jays'));
     list.forEach(function (g) {
-      var c = el('span', 'pg-pg'), st;
+      var c = el('a', 'pg-pg'), st;          // tap a score: the game on ESPN (gamecast, recap or preview)
+      if (g.link) { c.href = g.link; c.target = '_blank'; c.rel = 'noopener'; } else { c.href = PRO_HUB; c.target = target; }
       if (g.state === 'in') st = el('em', 'pg-live', 'Live \u00b7 ' + g.detail);
-      else if (g.state === 'post') st = el('em', null, g.day === -1 ? 'Final \u00b7 yesterday' : 'Final');
+      else if (g.state === 'post') st = el('em', null, g.day === -1 ? 'Final \u00b7 ' + wd(dayKey(new Date(g.start))).slice(0, 3) + '.' : 'Final');
       else { var k = dayKey(new Date(g.start)), today = dayKey(new Date()); st = el('em', null, (k === today ? 'Today' : wd(k).slice(0, 3) + '.') + ' \u00b7 ' + cpTime(new Date(g.start))); }
       c.appendChild(st);
       // each team: its logo (the abbreviation if the logo won't load) and its score, side by side
@@ -381,7 +396,7 @@
       gs.appendChild(c);
     });
     a.appendChild(gs);
-    a.appendChild(el('span', 'pg-prog', 'Every pro score \u203a'));
+    var go = el('a', 'pg-prog', 'Every pro score \u203a'); go.href = PRO_HUB; go.target = target; a.appendChild(go);
     return a;
   }
 
