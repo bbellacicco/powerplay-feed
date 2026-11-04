@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T11:47:33-05:00",
+ "updated": "2026-11-04T12:08:11-05:00",
  "today": "2026-11-04",
  "range": [
   "2026-11-01",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 37
+   "count": 36
   },
   "club_news": {
    "ok": true,
@@ -1932,6 +1932,20 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "3 storylines to watch in the Eastern Final presented by Wegovy®",
+   "summary": "",
+   "published": "2026-11-04T00:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/1PTFo7u9Rba3CpzW6C19nR/f3b4809c6c245d840240a07c24d1f74e/Tyson_Philpot_2026_WPG.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Alouettes",
+    "Blue Bombers"
+   ],
+   "url": "https://www.cfl.ca/article/3-storylines-to-watch-in-the-eastern-final-presented-by-wegovy",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "How each team can win the Division Finals presented by Wegovy®",
    "summary": "",
    "published": "2026-11-04T00:00:00-05:00",
@@ -2091,20 +2105,6 @@
     "Elks"
    ],
    "url": "https://www.cfl.ca/article/6-stats-that-could-loom-large-in-the-division-finals-presented-by-wegovy",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Who has the edge in the Western Final presented by Wegovy®?",
-   "summary": "",
-   "published": "2026-11-02T00:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/5IYpK2dgsOtM9oy0pslcy/65df1c9853d3a8e2b60d7b31206a32a0/Justin_Rankin_2026.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Elks",
-    "Lions"
-   ],
-   "url": "https://www.cfl.ca/article/who-has-the-edge-in-the-western-final-presented-by-wegovy",
    "source": "CFL.ca"
   },
   {
@@ -2666,6 +2666,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Scout’s Analysis: First ranking of top 32 prospects for 2027 NHL Draft",
+   "summary": "With the first part of the season well underway, Jason Bukala has viewed enough of the 2027 NHL Draft class to drop his first ranking of the top 32 prospects.",
+   "published": "2026-11-04T11:54-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-23.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/scouts-analysis-first-ranking-of-top-32-prospects-for-2027-nhl-draft/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Canadiens on wrong side of history in skid-stopping comeback win for Jets",
    "summary": "No matter how poorly the Canadiens played, they were in the best position possible with the clock ticking down, and then they inexcusably crumbled.",
    "published": "2026-11-04T00:35-05:00",
@@ -2675,19 +2688,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/canadiens-on-wrong-side-of-history-in-skid-stopping-comeback-win-for-jets/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Oilers continue to look like different team despite loss to speedy Devils",
-   "summary": "Life isn’t so bad for the last team in the NHL without a regulation road loss. Mark Spector has more on the new-look Oilers from New Jersey.",
-   "published": "2026-11-04T00:31-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/oilers-devils.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/oilers-continue-to-look-like-different-team-despite-loss-to-speedy-devils/",
    "source": "Sportsnet"
   },
   {
@@ -2705,17 +2705,15 @@
   },
   {
    "league": "nhl",
-   "headline": "Maple Leafs lose momentum after Raddysh penalty in loss to Mammoth",
-   "summary": "",
-   "published": "2026-11-04T00:25-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/leafs.jpg",
+   "headline": "Oilers continue to look like different team despite loss to speedy Devils",
+   "summary": "Life isn’t so bad for the last team in the NHL without a regulation road loss. Mark Spector has more on the new-look Oilers from New Jersey.",
+   "published": "2026-11-04T00:31-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/oilers-devils.jpg",
    "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
+   "teams": [],
    "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-lose-momentum-after-raddysh-penalty-in-loss-to-mammoth/",
+   "url": "https://www.sportsnet.ca/nhl/article/oilers-continue-to-look-like-different-team-despite-loss-to-speedy-devils/",
    "source": "Sportsnet"
   },
   {
@@ -2824,15 +2822,17 @@
   },
   {
    "league": "nhl",
-   "headline": "‘What happened?’: Hockey world reacts to Jets’ improbable comeback",
+   "headline": "Maple Leafs lose momentum after Raddysh penalty in loss to Mammoth",
    "summary": "",
-   "published": "2026-11-03T22:37-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Jers.jpg",
+   "published": "2026-11-04T00:25-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/leafs.jpg",
    "video": false,
-   "teams": [],
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
    "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/what-happened-hockey-world-reacts-to-jets-improbable-comeback/",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-lose-momentum-after-raddysh-penalty-in-loss-to-mammoth/",
    "source": "Sportsnet"
   },
   {
@@ -2862,19 +2862,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Miami gets top spot in first CFP rankings, Notre Dame at No. 11",
-   "summary": "",
-   "published": "2026-11-03T20:11-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Miami-University.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/ncaa-mens-football/article/miami-gets-top-spot-in-first-cfp-rankings-notre-dame-at-no-11/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nba",
    "headline": "Raptors’ Leonard begins return-to-play process, will be re-evaluated in one week",
    "summary": "",
@@ -2887,19 +2874,6 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/raptors-leonard-begins-return-to-play-process-will-be-re-evaluated-in-one-week/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Canada’s Olivier Rioux notches double-double in UC Irvine debut",
-   "summary": "",
-   "published": "2026-11-04T00:39-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/03/Olivier-Rioux.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/ncaa-mens-basketball/article/canadas-olivier-rioux-notches-double-double-in-uc-irvine-debut/",
    "source": "Sportsnet"
   },
   {
@@ -2926,6 +2900,45 @@
    "sn_team_count": 0,
    "sport": "Tennis",
    "url": "https://www.sportsnet.ca/atp/article/zverevs-tenure-as-no-1-in-mens-tennis-begins-with-second-round-loss-to-musetti-at-paris-masters/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "‘What happened?’: Hockey world reacts to Jets’ improbable comeback",
+   "summary": "",
+   "published": "2026-11-03T22:37-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Jers.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/what-happened-hockey-world-reacts-to-jets-improbable-comeback/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Miami gets top spot in first CFP rankings, Notre Dame at No. 11",
+   "summary": "",
+   "published": "2026-11-03T20:11-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Miami-University.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/ncaa-mens-football/article/miami-gets-top-spot-in-first-cfp-rankings-notre-dame-at-no-11/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Canada’s Olivier Rioux notches double-double in UC Irvine debut",
+   "summary": "",
+   "published": "2026-11-04T00:39-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/03/Olivier-Rioux.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/ncaa-mens-basketball/article/canadas-olivier-rioux-notches-double-double-in-uc-irvine-debut/",
    "source": "Sportsnet"
   },
   {
@@ -2995,21 +3008,6 @@
    "sn_team_count": 5,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/taking-stock-of-early-nhl-playoff-picture/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Lightning’s Kucherov has two helpers in first home game since asking for trade",
-   "summary": "Brayden Point scored two goals, Anthony Cirelli got one and the Tampa Bay Lightning beat the Detroit Red Wings 4-2 on Tuesday night for their seventh straight home win.",
-   "published": "2026-11-03T21:56-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/Tampa-Bay-Lightning-right-wing-Nikita-Kucherov.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Red Wings"
-   ],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/lightnings-kucherov-has-two-helpers-in-first-home-game-since-asking-for-trade/",
    "source": "Sportsnet"
   },
   {
@@ -3105,19 +3103,6 @@
    "sn_team_count": 0,
    "sport": "More Sports",
    "url": "https://www.sportsnet.ca/more/article/woman-running-nyc-marathon-for-charity-dies-two-miles-from-finish/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Man U fans bid to disrupt Champions League match by hurling tennis balls",
-   "summary": "",
-   "published": "2026-11-03T16:04-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Man-U.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/champions-league/article/man-u-fans-bid-to-disrupt-champions-league-match-by-hurling-tennis-balls/",
    "source": "Sportsnet"
   },
   {
