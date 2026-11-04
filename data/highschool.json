@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T20:30:01-05:00",
+ "updated": "2026-11-03T21:15:01-05:00",
  "today": "2026-11-03",
  "games": [
   {
@@ -271,9 +271,9 @@
    "home_away": "N",
    "opponent": "Villanova",
    "location": "Sandwich",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "final",
+   "our_score": 0,
+   "opp_score": 49,
    "result": null,
    "note": "3A Playoffs",
    "links": {
@@ -965,6 +965,26 @@
   {
    "id": "highschool-2026-11-04-153",
    "team": "highschool",
+   "sport": "Senior Boys Volleyball",
+   "start": "2026-11-04T16:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Essex",
+   "location": "Essex",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "2A Playoffs",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Herman",
+   "home": "Essex"
+  },
+  {
+   "id": "highschool-2026-11-04-154",
+   "team": "highschool",
    "sport": "Junior Girls Basketball",
    "start": "2026-11-04T16:30:00-05:00",
    "time_tbd": false,
@@ -983,7 +1003,7 @@
    "home": "North Star"
   },
   {
-   "id": "highschool-2026-11-04-154",
+   "id": "highschool-2026-11-04-155",
    "team": "highschool",
    "sport": "Senior Boys Volleyball",
    "start": "2026-11-04T17:00:00-05:00",
@@ -1003,27 +1023,7 @@
    "home": "Tecumseh Vista Academy"
   },
   {
-   "id": "highschool-2026-11-04-155",
-   "team": "highschool",
-   "sport": "Senior Boys Volleyball",
-   "start": "2026-11-04T17:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Essex",
-   "location": "Essex",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "2A Playoffs",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Herman",
-   "home": "Essex"
-  },
-  {
-   "id": "highschool-2026-11-04-157",
+   "id": "highschool-2026-11-04-158",
    "team": "highschool",
    "sport": "Junior Boys Football",
    "start": "2026-11-04T17:30:00-05:00",
@@ -1049,6 +1049,26 @@
    "start": "2026-11-04T17:30:00-05:00",
    "time_tbd": false,
    "home_away": "N",
+   "opponent": "Essex",
+   "location": "Essex",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "2A Playoffs",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Catholic Central",
+   "home": "Essex"
+  },
+  {
+   "id": "highschool-2026-11-04-157",
+   "team": "highschool",
+   "sport": "Junior Boys Volleyball",
+   "start": "2026-11-04T17:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
    "opponent": "Riverside",
    "location": "Riverside",
    "status": "upcoming",
@@ -1063,7 +1083,7 @@
    "home": "Riverside"
   },
   {
-   "id": "highschool-2026-11-04-158",
+   "id": "highschool-2026-11-04-159",
    "team": "highschool",
    "sport": "Junior Boys Volleyball",
    "start": "2026-11-04T18:00:00-05:00",
@@ -1081,26 +1101,6 @@
    },
    "away": "Cardinal Carter",
    "home": "North Star"
-  },
-  {
-   "id": "highschool-2026-11-04-159",
-   "team": "highschool",
-   "sport": "Junior Boys Volleyball",
-   "start": "2026-11-04T18:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Essex",
-   "location": "Essex",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "2A Playoffs",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Catholic Central",
-   "home": "Essex"
   },
   {
    "id": "highschool-2026-11-05-160",
