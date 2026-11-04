@@ -64,7 +64,7 @@
     '.ppg .pg-go:hover{text-decoration:underline}' +
     '.ppg .pg-col:hover{border-color:rgba(232,176,33,.45)}' +
     '@media (max-width:820px){.ppg .pg-cols{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-right:14px;scrollbar-width:none}.ppg .pg-cols::-webkit-scrollbar{display:none}.ppg .pg-col{flex:0 0 84%;scroll-snap-align:start}.ppg .pg-gt{font-size:19px}.ppg .pg-gh{padding:12px 14px 8px 18px}}' +
-    '@media (max-width:480px){.ppg .pg-gh{padding:10px 12px 8px 14px;gap:7px}.ppg .pg-gk{font-size:9.5px;letter-spacing:.08em}.ppg .pg-gt{font-size:17px}' + '.ppg .pg-gr{padding-top:7px}.ppg .pg-by{gap:5px;font-size:8.5px;letter-spacing:.03em;flex-wrap:nowrap}.ppg .pg-by b{font-size:11px;white-space:normal;line-height:1.15}.ppg .pg-spchip{height:22px;padding:1px 4px}.ppg .pg-spchip img{height:19px}' + '.ppg .pg-cols{gap:8px;padding:0 12px 12px 14px}.ppg .pg-col{flex-basis:88%;padding:10px 10px 8px}.ppg .pg-ch b{font-size:10.5px;letter-spacing:.05em;white-space:nowrap}.ppg .pg-ch span{font-size:11px}' + '.ppg .pg-big{font-size:24px;margin-bottom:6px}.ppg .pg-big small{font-size:12.5px}.ppg .pg-chip{font-size:10.5px;padding:2px 6px}' + '.ppg .pg-li{gap:7px;padding:5px 0}.ppg .pg-li .pg-tm{width:54px;font-size:11px}.ppg .pg-li .pg-a{font-size:12.5px;white-space:normal;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;line-height:1.2}.ppg .pg-li .pg-b{font-size:10.5px}' + '.ppg .pg-li.pg-scored{flex-wrap:wrap;row-gap:2px}.ppg .pg-li.pg-scored .pg-tm{width:100%}.ppg .pg-sl .pg-sn{white-space:normal;line-height:1.2}' + '.ppg .pg-pros .pg-pg{white-space:normal;flex-wrap:wrap;row-gap:2px;width:100%}' + '.ppg .pg-sl{font-size:12.5px}.ppg .pg-sl .pg-sc{font-size:13px}.ppg .pg-dt{width:36px}.ppg .pg-go{font-size:12px}}' +
+    '@media (max-width:480px){.ppg .pg-gh{padding:10px 12px 8px 14px;gap:7px}.ppg .pg-gk{font-size:9.5px;letter-spacing:.08em}.ppg .pg-gt{font-size:17px}' + '.ppg .pg-gr{padding-top:7px}.ppg .pg-by{gap:5px;font-size:8.5px;letter-spacing:.03em;flex-wrap:nowrap}.ppg .pg-by b{font-size:11px;white-space:normal;line-height:1.15}.ppg .pg-spchip{height:22px;padding:1px 4px}.ppg .pg-spchip img{height:19px}' + '.ppg .pg-cols{gap:8px;padding:0 12px 12px 14px}.ppg .pg-col{flex-basis:88%;padding:10px 10px 8px}.ppg .pg-ch b{font-size:10.5px;letter-spacing:.05em;white-space:nowrap}.ppg .pg-ch span{font-size:11px}' + '.ppg .pg-big{font-size:24px;margin-bottom:6px}.ppg .pg-big small{font-size:12.5px}.ppg .pg-chip{font-size:10.5px;padding:2px 6px}' + '.ppg .pg-li{gap:7px;padding:5px 0}.ppg .pg-li .pg-tm{width:54px;font-size:11px}.ppg .pg-li .pg-a{font-size:12.5px;white-space:normal;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;line-height:1.2}.ppg .pg-li .pg-b{font-size:10.5px}' + '.ppg .pg-li.pg-scored{flex-wrap:wrap;row-gap:2px}.ppg .pg-li.pg-scored .pg-tm{width:100%}.ppg .pg-sl .pg-sn{white-space:normal;line-height:1.2}' +  '.ppg .pg-sl{font-size:12.5px}.ppg .pg-sl .pg-sc{font-size:13px}.ppg .pg-dt{width:36px}.ppg .pg-go{font-size:12px}}' +
     '.ppg .pg-tip{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:4px 8px;margin:0 14px 12px 18px;padding:9px 12px;border-radius:8px;background:rgba(232,176,33,.1);border:1px dashed rgba(232,176,33,.45);font-size:13px;color:#dbe3f2;text-align:center}' +
     '.ppg .pg-tip b{color:#e8b021;font-weight:800}.ppg .pg-tip .pg-tipm,.ppg .pg-tip .pg-tipa{display:none}.ppg .pg-tipa{flex-basis:100%;font-size:11.5px;color:#9fb0cf}.ppg .pg-tip:hover{background:rgba(232,176,33,.18)}' +
     '@media (max-width:480px){.ppg .pg-tip{margin:0 12px 10px 14px;font-size:12px;padding:8px 10px}.ppg .pg-tip .pg-tipd{display:none}.ppg .pg-tip .pg-tipm{display:inline}.ppg .pg-tip .pg-tipa{display:block}}' +
@@ -77,11 +77,12 @@
     '.ppg .pg-pg{display:flex;align-items:center;flex-wrap:wrap;gap:8px;max-width:100%;background:rgba(255,255,255,.06);border-radius:6px;padding:6px 10px;font-size:13px;font-weight:700;min-width:0;white-space:nowrap}' +
     '.ppg .pg-pg em{font-style:normal;font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#9fb0cf}.ppg .pg-pg em.pg-live{color:#ff4d4d}' +
     '.ppg .pg-pg .pg-sc{color:#fff}.ppg .pg-pg .pg-lo{color:#9fb0cf;font-weight:600}' +
+    '.ppg .pg-row{display:inline-flex;align-items:center;gap:8px;white-space:nowrap}' +
     '.ppg .pg-tm2{display:inline-flex;align-items:center;gap:6px}.ppg .pg-tm2 img{width:24px;height:24px;object-fit:contain;display:block}' +
     '.ppg .pg-tm2.pg-lo img{opacity:.55}.ppg .pg-tm2.pg-lo .pg-sc{color:#9fb0cf}.ppg .pg-at{color:#9fb0cf;font-weight:600}.ppg .pg-ab{font-size:12px;letter-spacing:.04em}' +
     '.ppg .pg-prog{flex:none;font-size:12.5px;font-weight:800;color:#e8b021;white-space:nowrap}' +
     '@media (max-width:640px){.ppg .pg-pro{margin:0 12px 10px 14px;padding:9px 10px;gap:8px}.ppg .pg-prol{flex-direction:row;align-items:baseline;gap:8px;width:100%;justify-content:space-between}' +
-    '.ppg .pg-pros{flex-direction:column;width:100%}.ppg .pg-pg{font-size:12.5px}.ppg .pg-prog{width:100%;text-align:center}}';
+    '.ppg .pg-pros{flex-direction:row;flex-wrap:nowrap;width:100%;gap:8px}' + '.ppg .pg-pros .pg-pg{flex:1 1 0;min-width:0;justify-content:center;gap:4px 6px;padding:6px 6px;font-size:12.5px}' + '.ppg .pg-pros .pg-pg em{width:100%;text-align:center;font-size:9.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}' + '.ppg .pg-tm2{gap:4px}.ppg .pg-tm2 img{width:22px;height:22px}.ppg .pg-prog{width:100%;text-align:center}.ppg .pg-row{flex-wrap:nowrap}}';
   var PRO_HUB = 'https://www.powerplaywindsor.com/local-sports';
   var PRO_LG = { nfl: 'football/nfl', nhl: 'hockey/nhl', nba: 'basketball/nba', mlb: 'baseball/mlb' };
   var PRO_OURS = { nhl: ['DET', 'TOR', 'MTL'], nba: ['DET', 'TOR'], nfl: ['DET', 'BUF'], mlb: ['DET', 'TOR'] };
@@ -363,9 +364,10 @@
       else if (g.state === 'post') st = el('em', null, g.day === -1 ? 'Final \u00b7 yesterday' : 'Final');
       else { var k = dayKey(new Date(g.start)), today = dayKey(new Date()); st = el('em', null, (k === today ? 'Today' : wd(k).slice(0, 3) + '.') + ' \u00b7 ' + cpTime(new Date(g.start))); }
       c.appendChild(st);
-      // each team: its logo (the abbreviation if the logo won't load) and its score
+      // each team: its logo (the abbreviation if the logo won't load) and its score, side by side
+      var rowEl = el('span', 'pg-row'); c.appendChild(rowEl);
       [g.away, g.home].forEach(function (t, i) {
-        if (i) c.appendChild(el('span', 'pg-at', '@'));
+        if (i) rowEl.appendChild(el('span', 'pg-at', '@'));
         var sp = el('span', 'pg-tm2' + (g.state === 'post' && !t.win ? ' pg-lo' : ''));
         sp.title = t.name;
         if (t.logo) {
@@ -374,7 +376,7 @@
           sp.appendChild(im);
         } else sp.appendChild(el('b', 'pg-ab', t.abbr));
         if (g.state !== 'pre') sp.appendChild(el('span', 'pg-sc', String(t.score)));
-        c.appendChild(sp);
+        rowEl.appendChild(sp);
       });
       gs.appendChild(c);
     });
