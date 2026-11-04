@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T15:01:59-05:00",
+ "updated": "2026-11-04T15:17:02-05:00",
  "today": "2026-11-04",
  "range": [
   "2026-11-01",
@@ -46,8 +46,8 @@
    "count": 155
   },
   "saints": {
-   "ok": true,
-   "count": 9
+   "ok": false,
+   "error": "The read operation timed out"
   },
   "highschool": {
    "ok": false,
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 37
   },
   "club_news": {
    "ok": true,
@@ -2691,21 +2691,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Maple Leafs’ Tavares could return Saturday, Roslovic misses practice",
-   "summary": "",
-   "published": "2026-11-04T14:35-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/02/tavares_john1280.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-tavares-could-return-saturday-roslovic-misses-practice/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "other",
    "headline": "Canada yet to see IIHF jerseys it must wear at women’s worlds",
    "summary": "",
@@ -2732,6 +2717,34 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Maple Leafs’ Tavares could return Saturday, Roslovic misses practice",
+   "summary": "",
+   "published": "2026-11-04T14:35-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/02/tavares_john1280.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-tavares-could-return-saturday-roslovic-misses-practice/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Report: Ravens finalizing trade for Cardinals QB Jacoby Brissett",
+   "summary": "",
+   "published": "2026-11-04T14:58-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/11/594f621466a93314894a05b0e8d933299db4d43454ba88526ae5cbf8b62d8539.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/report-ravens-finalizing-trade-for-cardinals-qb-jacoby-brissett/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "Canada dismisses fears of international blowback over Russian world junior hockey ban",
    "summary": "",
@@ -2742,19 +2755,6 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/hockey/article/iihf-maintains-opposition-to-russias-reinstatement-silent-on-canadas-position/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Canada’s Chris Boucher signs with China’s Shanghai Sharks",
-   "summary": "",
-   "published": "2026-11-04T09:45-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/02/Untitled-design-16.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/canadas-chris-boucher-signs-with-chinas-shanghai-sharks/",
    "source": "Sportsnet"
   },
   {
@@ -2773,16 +2773,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "Report: Ravens finalizing trade for Cardinals QB Jacoby Brissett",
+   "league": "mlb",
+   "headline": "Cleveland Guardians pitchers Emmanuel Clase, Luis Ortiz described as ‘cheaters’ at trial",
    "summary": "",
-   "published": "2026-11-04T14:58-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/11/594f621466a93314894a05b0e8d933299db4d43454ba88526ae5cbf8b62d8539.jpg",
+   "published": "2026-11-04T15:16-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/02/Cleveland-Guardians-Emmanuel-Clase.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/report-ravens-finalizing-trade-for-cardinals-qb-jacoby-brissett/",
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/cleveland-guardians-pitchers-emmanuel-clase-luis-ortiz-described-as-cheaters-at-trial/",
    "source": "Sportsnet"
   },
   {
@@ -2796,6 +2796,19 @@
    "sn_team_count": 0,
    "sport": "Golf",
    "url": "https://www.sportsnet.ca/pga/article/heat-of-the-battle-canadians-fired-up-as-they-chase-down-pga-tour-cards/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Champions League Roundup: Real Madrid pulls off another comeback, Liverpool beaten by Fenerbahce",
+   "summary": "",
+   "published": "2026-11-04T15:11-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-11.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/champions-league/article/champions-league-roundup-real-madrid-pulls-off-another-comeback-liverpool-beaten-by-fenerbahce/",
    "source": "Sportsnet"
   },
   {
@@ -3008,6 +3021,19 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/report-albert-pujols-interviewing-for-astros-managerial-vacancy/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Canada’s Chris Boucher signs with China’s Shanghai Sharks",
+   "summary": "",
+   "published": "2026-11-04T09:45-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/02/Untitled-design-16.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/canadas-chris-boucher-signs-with-chinas-shanghai-sharks/",
    "source": "Sportsnet"
   },
   {
@@ -3417,6 +3443,19 @@
   },
   {
    "league": "mlb",
+   "headline": "McGonigle named Tiger of the Year after historic rookie season",
+   "summary": "",
+   "published": "2026-11-04T15:07-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/dwomovhfxhtffiocfzt8",
+   "video": false,
+   "teams": [
+    "Detroit Tigers"
+   ],
+   "url": "https://www.mlb.com/tigers/news/kevin-mcgonigle-tiger-of-the-year-award-2026-bbwaa",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
    "headline": "Max Clark's fashion game on display with fans at MLB Flagship Store",
    "summary": "",
    "published": "2026-11-03T18:17-05:00",
@@ -3426,19 +3465,6 @@
     "Detroit Tigers"
    ],
    "url": "https://www.mlb.com/tigers/news/max-clark-meets-fans-at-mlb-flagship-store-in-new-york-city",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
-   "headline": "Kyle Hudson set to be named Tigers' first-base coach (sources)",
-   "summary": "",
-   "published": "2026-11-03T20:01-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/vyyn9oqc2jbqdwbumju2",
-   "video": false,
-   "teams": [
-    "Detroit Tigers"
-   ],
-   "url": "https://www.mlb.com/tigers/news/tigers-kyle-hudson-first-base-coach",
    "source": "Team site"
   },
   {
@@ -3456,6 +3482,19 @@
   },
   {
    "league": "mlb",
+   "headline": "Kyle Hudson set to be named Tigers' first-base coach (sources)",
+   "summary": "",
+   "published": "2026-11-03T20:01-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/vyyn9oqc2jbqdwbumju2",
+   "video": false,
+   "teams": [
+    "Detroit Tigers"
+   ],
+   "url": "https://www.mlb.com/tigers/news/tigers-kyle-hudson-first-base-coach",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
    "headline": "Here are the rosters for Sunday's AFL Fall Stars Game",
    "summary": "",
    "published": "2026-11-04T11:01-05:00",
@@ -3465,19 +3504,6 @@
     "Detroit Tigers"
    ],
    "url": "https://www.mlb.com/tigers/news/2026-arizona-fall-league-fall-stars-game-rosters",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
-   "headline": "McGonigle, Clark rank high on '26 rookies based on long-term value list",
-   "summary": "",
-   "published": "2026-11-03T19:20-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/r42shozhsgqkcjss05js",
-   "video": false,
-   "teams": [
-    "Detroit Tigers"
-   ],
-   "url": "https://www.mlb.com/tigers/news/ranking-2026-rookies-based-on-long-term-value",
    "source": "Team site"
   },
   {
@@ -3495,15 +3521,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Tigers bring righty reliever Petit back into fold",
+   "headline": "McGonigle, Clark rank high on '26 rookies based on long-term value list",
    "summary": "",
-   "published": "2026-11-03T13:42-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/cz0mr6xohhmt7wmommfo",
+   "published": "2026-11-03T19:20-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/r42shozhsgqkcjss05js",
    "video": false,
    "teams": [
     "Detroit Tigers"
    ],
-   "url": "https://www.mlb.com/tigers/news/tigers-add-pitcher-rj-petit-from-rockies",
+   "url": "https://www.mlb.com/tigers/news/ranking-2026-rookies-based-on-long-term-value",
    "source": "Team site"
   },
   {
@@ -3534,6 +3560,19 @@
   },
   {
    "league": "mlb",
+   "headline": "Tigers bring righty reliever Petit back into fold",
+   "summary": "",
+   "published": "2026-11-03T13:42-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/cz0mr6xohhmt7wmommfo",
+   "video": false,
+   "teams": [
+    "Detroit Tigers"
+   ],
+   "url": "https://www.mlb.com/tigers/news/tigers-add-pitcher-rj-petit-from-rockies",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
    "headline": "Named a finalist, McGonigle looks to become Tigers’ first ROY in 10 years",
    "summary": "",
    "published": "2026-11-02T20:36-05:00",
@@ -3549,7 +3588,7 @@
    "league": "mlb",
    "headline": "Watch Tigers prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-11-04T00:35-05:00",
+   "published": "2026-11-04T15:01-05:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -3595,19 +3634,6 @@
     "Detroit Tigers"
    ],
    "url": "https://www.mlb.com/tigers/news/dillon-dingler-wins-second-gold-glove-award-2026",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
-   "headline": "1 snub for each BBWAA Award who deserves recognition",
-   "summary": "",
-   "published": "2026-11-02T21:14-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/h9nkno4djctdnroamcxl",
-   "video": false,
-   "teams": [
-    "Detroit Tigers"
-   ],
-   "url": "https://www.mlb.com/tigers/news/biggest-snubs-for-2026-bbwaa-awards",
    "source": "Team site"
   },
   {
@@ -3664,15 +3690,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Which Blue Jays could be up for award hardware?",
+   "headline": "Watch LIVE: Blue Jays prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-10-29T07:03-04:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/v1793226276/mlb/ptujgpldogpeyjsxvz63",
+   "published": "2026-11-04T15:01-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
     "Toronto Blue Jays"
    ],
-   "url": "https://www.mlb.com/bluejays/news/vladimir-guerrero-jr-and-other-blue-jays-could-win-2026-mlb-awards",
+   "url": "https://www.mlb.com/bluejays/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
    "source": "Team site"
   },
   {
@@ -3690,15 +3716,15 @@
   },
   {
    "league": "mlb",
-   "headline": "What can the Blue Jays learn from the Brewers and Rays this World Series?",
+   "headline": "Which Blue Jays could be up for award hardware?",
    "summary": "",
-   "published": "2026-10-26T09:22-04:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/zf7vgs6wcilukgkr3tiz",
+   "published": "2026-10-29T07:03-04:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/v1793226276/mlb/ptujgpldogpeyjsxvz63",
    "video": false,
    "teams": [
     "Toronto Blue Jays"
    ],
-   "url": "https://www.mlb.com/bluejays/news/blue-jays-rays-brewers-2026-world-series",
+   "url": "https://www.mlb.com/bluejays/news/vladimir-guerrero-jr-and-other-blue-jays-could-win-2026-mlb-awards",
    "source": "Team site"
   },
   {
@@ -3729,15 +3755,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Watch Blue Jays prospects in Arizona Fall League action",
+   "headline": "What can the Blue Jays learn from the Brewers and Rays this World Series?",
    "summary": "",
-   "published": "2026-11-04T00:35-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
+   "published": "2026-10-26T09:22-04:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/zf7vgs6wcilukgkr3tiz",
    "video": false,
    "teams": [
     "Toronto Blue Jays"
    ],
-   "url": "https://www.mlb.com/bluejays/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
+   "url": "https://www.mlb.com/bluejays/news/blue-jays-rays-brewers-2026-world-series",
    "source": "Team site"
   },
   {
@@ -4386,7 +4412,7 @@
       "l": 2,
       "otl": 3,
       "pts": 31,
-      "gf": 79,
+      "gf": 80,
       "ga": 40,
       "strk": "W2"
      },
@@ -4447,7 +4473,7 @@
       "otl": 2,
       "pts": 16,
       "gf": 50,
-      "ga": 96,
+      "ga": 97,
       "strk": "W2"
      },
      {
