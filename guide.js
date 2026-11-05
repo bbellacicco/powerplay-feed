@@ -370,7 +370,7 @@
 
   function proLine(list, target) {
     var a = el('div', 'pg-pro');
-    var l = el('a', 'pg-prol'); l.href = PRO_HUB; l.target = target; l.appendChild(el('b', null, 'Pro Hub')); l.appendChild(el('span', null, 'Presented by Unifor Local 2458')); a.appendChild(l);
+    var l = el('a', 'pg-prol'); l.href = PRO_HUB; l.target = target; l.appendChild(el('b', null, 'Pro Hub')); l.appendChild(el('span', null, 'Presented by Scarehouse Windsor')); a.appendChild(l);
     var gs = el('div', 'pg-pros');
     if (!list.length) { var nn = el('span', 'pg-pg', 'Wings, Leafs, Habs, Lions, Bills, Pistons, Raptors, Tigers and Jays'); nn.style.gridColumn = '1 / -1'; gs.appendChild(nn); }
     list.forEach(function (g) {
