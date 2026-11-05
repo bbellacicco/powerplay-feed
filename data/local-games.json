@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T21:17:14-05:00",
+ "updated": "2026-11-04T21:32:13-05:00",
  "today": "2026-11-04",
  "range": [
   "2026-11-01",
@@ -1156,11 +1156,11 @@
    "home_away": "H",
    "opponent": "Strathroy Rockets",
    "location": "Vollmer Culture R.C., LaSalle, ON",
-   "status": "live",
+   "status": "final",
    "our_score": 3,
    "opp_score": 2,
-   "result": null,
-   "note": "04:42 3rd",
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15649"
    },
@@ -2828,6 +2828,21 @@
   },
   {
    "league": "nba",
+   "headline": "Nuggets’ DeRozan out vs. Raptors with back spasms",
+   "summary": "The Toronto Raptors will have to wait for a reunion with one of the franchise’s all-time greats.",
+   "published": "2026-11-04T21:26-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/DeMar.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 2,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/nuggets-derozan-out-vs-raptors-with-back-spasms/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
    "headline": "Report: Warriors not paying Porzingis amid health-related absence",
    "summary": "",
    "published": "2026-11-04T17:51-05:00",
@@ -3142,19 +3157,6 @@
    "sn_team_count": 0,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/teruaki-sato-among-four-top-japanese-players-posted-for-mlb-signing/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "MLB off-season transaction tracker: The top free-agent signings and trades",
-   "summary": "",
-   "published": "2026-11-02T20:20-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177011641.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/mlb-off-season-transaction-tracker-the-top-free-agent-signings-and-trades/",
    "source": "Sportsnet"
   },
   {
@@ -4149,7 +4151,7 @@
       "otl": 2,
       "pts": 22,
       "gf": 60,
-      "ga": 60,
+      "ga": 61,
       "strk": "L1"
      },
      {
@@ -4237,7 +4239,7 @@
       "l": 6,
       "otl": 2,
       "pts": 18,
-      "gf": 53,
+      "gf": 54,
       "ga": 56,
       "strk": "W1"
      },
@@ -4575,14 +4577,14 @@
      {
       "name": "St. Thomas Stars",
       "abbr": "STT",
-      "gp": 15,
-      "w": 11,
+      "gp": 16,
+      "w": 12,
       "l": 3,
       "otl": 1,
-      "pts": 23,
+      "pts": 25,
       "gf": 61,
       "ga": 36,
-      "strk": "W2"
+      "strk": "W3"
      },
      {
       "name": "Listowel Cyclones",
@@ -4623,26 +4625,38 @@
      {
       "name": "London Nationals",
       "abbr": "LON",
-      "gp": 16,
+      "gp": 17,
       "w": 7,
-      "l": 8,
+      "l": 9,
       "otl": 1,
       "pts": 15,
       "gf": 61,
       "ga": 70,
-      "strk": "W2"
+      "strk": "L1"
      },
      {
       "name": "Strathroy Rockets",
       "abbr": "SRY",
-      "gp": 17,
+      "gp": 18,
       "w": 6,
-      "l": 8,
+      "l": 9,
       "otl": 3,
       "pts": 15,
       "gf": 71,
       "ga": 72,
-      "strk": "L1"
+      "strk": "L2"
+     },
+     {
+      "name": "LaSalle Vipers",
+      "abbr": "LAS",
+      "gp": 15,
+      "w": 7,
+      "l": 8,
+      "otl": 0,
+      "pts": 14,
+      "gf": 43,
+      "ga": 59,
+      "strk": "W1"
      },
      {
       "name": "Woodstock Navy Vets",
@@ -4667,18 +4681,6 @@
       "gf": 57,
       "ga": 69,
       "strk": "L3"
-     },
-     {
-      "name": "LaSalle Vipers",
-      "abbr": "LAS",
-      "gp": 14,
-      "w": 6,
-      "l": 8,
-      "otl": 0,
-      "pts": 12,
-      "gf": 43,
-      "ga": 59,
-      "strk": "L1"
      },
      {
       "name": "Komoka Kings",
