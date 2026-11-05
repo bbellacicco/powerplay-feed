@@ -74,7 +74,8 @@
     '.ppg .pg-pro{display:flex;align-items:center;gap:10px 14px;margin:0 14px 12px 18px;padding:10px 12px;border-radius:10px;background:rgba(8,20,40,.55);border:1px solid rgba(255,255,255,.08);flex-wrap:wrap}' +
     '.ppg a.pg-pg:hover{background:rgba(255,255,255,.12)}.ppg .pg-prog:hover{text-decoration:underline}' +
     '.ppg .pg-prol{display:flex;flex-direction:column;flex:none}.ppg .pg-prol b{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.ppg .pg-prol span{color:#9fb0cf;font-size:11px}' +
-    '.ppg .pg-pros{display:flex;gap:8px;flex:1;min-width:0;flex-wrap:wrap}' +
+    '.ppg .pg-pros{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;flex:1;min-width:0}' +
+    '.ppg .pg-pros .pg-pg{flex-direction:column;justify-content:center;gap:3px;text-align:center}.ppg .pg-pros .pg-pg em{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}' +
     '.ppg .pg-pg{display:flex;align-items:center;flex-wrap:wrap;gap:8px;max-width:100%;background:rgba(255,255,255,.06);border-radius:6px;padding:6px 10px;font-size:13px;font-weight:700;min-width:0;white-space:nowrap}' +
     '.ppg .pg-pg em{font-style:normal;font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#9fb0cf}.ppg .pg-pg em.pg-live{color:#ff4d4d}' +
     '.ppg .pg-pg .pg-sc{color:#fff}.ppg .pg-pg .pg-lo{color:#9fb0cf;font-weight:600}' +
@@ -83,7 +84,7 @@
     '.ppg .pg-tm2.pg-lo img{opacity:.55}.ppg .pg-tm2.pg-lo .pg-sc{color:#9fb0cf}.ppg .pg-at{color:#9fb0cf;font-weight:600}.ppg .pg-ab{font-size:12px;letter-spacing:.04em}' +
     '.ppg .pg-prog{flex:none;font-size:12.5px;font-weight:800;color:#e8b021;white-space:nowrap}' +
     '@media (max-width:640px){.ppg .pg-pro{margin:0 12px 10px 14px;padding:9px 10px;gap:8px}.ppg .pg-prol{flex-direction:row;align-items:baseline;gap:8px;width:100%;justify-content:space-between}' +
-    '.ppg .pg-pros{flex-direction:row;flex-wrap:nowrap;width:100%;gap:8px}' + '.ppg .pg-pros .pg-pg{flex:1 1 0;min-width:0;justify-content:center;gap:4px 6px;padding:6px 6px;font-size:12.5px}' + '.ppg .pg-pros .pg-pg em{width:100%;text-align:center;font-size:9.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}' + '.ppg .pg-tm2{gap:4px}.ppg .pg-tm2 img{width:22px;height:22px}.ppg .pg-prog{width:100%;text-align:center}.ppg .pg-row{flex-wrap:nowrap}}';
+    '.ppg .pg-pros{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;gap:8px}' + '.ppg .pg-pros .pg-pg{min-width:0;justify-content:center;gap:4px 6px;padding:6px 6px;font-size:12.5px}' + '.ppg .pg-pros .pg-pg em{width:100%;text-align:center;font-size:9.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}' + '.ppg .pg-tm2{gap:4px}.ppg .pg-tm2 img{width:22px;height:22px}.ppg .pg-prog{width:100%;text-align:center}.ppg .pg-row{flex-wrap:nowrap}}';
   var PRO_HUB = 'https://www.powerplaywindsor.com/local-sports';
   var PRO_LG = { nfl: 'football/nfl', nhl: 'hockey/nhl', nba: 'basketball/nba', mlb: 'baseball/mlb' };
   var PRO_OURS = { nhl: ['DET', 'TOR', 'MTL'], nba: ['DET', 'TOR'], nfl: ['DET', 'BUF'], mlb: ['DET', 'TOR'] };
@@ -147,7 +148,7 @@
       var fin0 = all.filter(function (g) { return g.state === 'post' && g.day === 0; }).sort(newest);
       var fin1 = all.filter(function (g) { return g.state === 'post' && g.day === -1; }).sort(newest);
       var next = all.filter(function (g) { return g.state === 'pre' && new Date(g.start) > now; }).sort(function (a, b) { return a.start.localeCompare(b.start); });
-      return live.concat(fin0, fin1, next).slice(0, 3);
+      return live.concat(fin0, fin1, next).slice(0, 4);
     }).catch(function () { return []; });
   }
   function load() {
@@ -371,7 +372,7 @@
     var a = el('div', 'pg-pro');
     var l = el('a', 'pg-prol'); l.href = PRO_HUB; l.target = target; l.appendChild(el('b', null, 'Pro Hub')); l.appendChild(el('span', null, 'Presented by Unifor Local 2458')); a.appendChild(l);
     var gs = el('div', 'pg-pros');
-    if (!list.length) gs.appendChild(el('span', 'pg-pg', 'Wings, Leafs, Habs, Lions, Bills, Pistons, Raptors, Tigers and Jays'));
+    if (!list.length) { var nn = el('span', 'pg-pg', 'Wings, Leafs, Habs, Lions, Bills, Pistons, Raptors, Tigers and Jays'); nn.style.gridColumn = '1 / -1'; gs.appendChild(nn); }
     list.forEach(function (g) {
       var c = el('a', 'pg-pg'), st;          // tap a score: the game on ESPN (gamecast, recap or preview)
       if (g.link) { c.href = g.link; c.target = '_blank'; c.rel = 'noopener'; } else { c.href = PRO_HUB; c.target = target; }
