@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T18:15:02-05:00",
+ "updated": "2026-11-05T18:45:02-05:00",
  "today": "2026-11-05",
  "games": [
   {
@@ -1131,9 +1131,9 @@
    "home_away": "N",
    "opponent": "Belle River",
    "location": "Belle River",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "final",
+   "our_score": 1,
+   "opp_score": 3,
    "result": null,
    "note": "2A Playoffs",
    "links": {
@@ -1323,6 +1323,46 @@
    "home": "Essex"
   },
   {
+   "id": "highschool-2026-11-05-81",
+   "team": "highschool",
+   "sport": "Senior Boys Football",
+   "start": "2026-11-05T00:00:00-05:00",
+   "time_tbd": true,
+   "home_away": "N",
+   "opponent": "TBA",
+   "location": "Holy Names",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Bowl Series",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "TBA",
+   "home": "TBA"
+  },
+  {
+   "id": "highschool-2026-11-05-82",
+   "team": "highschool",
+   "sport": "Senior Boys Football",
+   "start": "2026-11-05T00:00:00-05:00",
+   "time_tbd": true,
+   "home_away": "N",
+   "opponent": "Belle River",
+   "location": "Tecumseh Vista Academy",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "2A Playoffs",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Cardinal Carter",
+   "home": "Belle River"
+  },
+  {
    "id": "highschool-2026-11-05-57",
    "team": "highschool",
    "sport": "Senior Boys Volleyball",
@@ -1451,9 +1491,9 @@
    "home_away": "N",
    "opponent": "Lamothe-Cadillac",
    "location": "Lamothe Cadillac",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "final",
+   "our_score": 1,
+   "opp_score": 3,
    "result": null,
    "note": "1A Playoffs",
    "links": {
@@ -1621,46 +1661,6 @@
    },
    "away": "Maranatha",
    "home": "Lamothe-Cadillac"
-  },
-  {
-   "id": "highschool-2026-11-05-81",
-   "team": "highschool",
-   "sport": "Senior Boys Football",
-   "start": "2026-11-05T19:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "TBA",
-   "location": "Holy Names",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Bowl Series",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "TBA",
-   "home": "TBA"
-  },
-  {
-   "id": "highschool-2026-11-05-82",
-   "team": "highschool",
-   "sport": "Senior Boys Football",
-   "start": "2026-11-05T19:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Belle River",
-   "location": "Tecumseh Vista Academy",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "2A Playoffs",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Cardinal Carter",
-   "home": "Belle River"
   }
  ]
 }
