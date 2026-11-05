@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T07:02:01-05:00",
+ "updated": "2026-11-05T07:16:59-05:00",
  "today": "2026-11-05",
  "range": [
   "2026-11-02",
@@ -50,8 +50,8 @@
    "count": 9
   },
   "highschool": {
-   "ok": true,
-   "count": 120
+   "ok": false,
+   "error": "HTTP Error 403: Forbidden"
   },
   "sheet": {
    "ok": true,
@@ -3443,6 +3443,19 @@
   },
   {
    "league": "nfl",
+   "headline": "Week 9 opponent: What the Dolphins are saying",
+   "summary": "Find out what the Miami Dolphins are saying as they prepare for their Week 9 matchup vs. the Detroit Lions.",
+   "published": "2026-11-05T07:00-05:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/u5goto6la1qyyc9vmcgl.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Lions"
+   ],
+   "url": "https://www.detroitlions.com/news/week-9-opponent-what-the-dolphins-are-saying-goff-hutchinson-bell",
+   "source": "Team site"
+  },
+  {
+   "league": "nfl",
    "headline": "Lions at Dolphins practice report: Nov. 4",
    "summary": "Lions at Dolphins practice report for Wednesday, November 4.",
    "published": "2026-11-04T15:52-05:00",
@@ -3621,19 +3634,6 @@
     "Detroit Lions"
    ],
    "url": "https://www.detroitlions.com/news/detroit-lions-thanksgiving-day-classic-halftime-show-powered-by-verizon-to-be-headlined-by-wu-tang-clan",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
-   "headline": "INACTIVES: Lions vs. Vikings",
-   "summary": "Tim Twentyman reports on inactives for Sunday's Lions-Vikings matchup.",
-   "published": "2026-11-01T11:30-05:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/wisptocfh6qnnw22xbdt.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Lions"
-   ],
-   "url": "https://www.detroitlions.com/news/inactives-lions-vs-vikings-mccreary-branch-meeks",
    "source": "Team site"
   },
   {
