@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T19:15:01-05:00",
+ "updated": "2026-11-04T19:30:01-05:00",
  "today": "2026-11-04",
  "games": [
   {
@@ -871,9 +871,9 @@
    "home_away": "N",
    "opponent": "St. Joseph's",
    "location": "Tecumseh Vista Academy",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "final",
+   "our_score": 27,
+   "opp_score": 23,
    "result": null,
    "note": "3A Playoffs",
    "links": {
@@ -1143,26 +1143,6 @@
    "home": "Assumption"
   },
   {
-   "id": "highschool-2026-11-05-61",
-   "team": "highschool",
-   "sport": "Junior Boys Volleyball",
-   "start": "2026-11-05T01:01:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Erie Migration",
-   "location": "Erie Migration",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "2A Playoffs",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "TBA",
-   "home": "Erie Migration"
-  },
-  {
    "id": "highschool-2026-11-05-55",
    "team": "highschool",
    "sport": "Junior Girls Basketball",
@@ -1201,46 +1181,6 @@
    },
    "away": "Walkerville",
    "home": "Riverside"
-  },
-  {
-   "id": "highschool-2026-11-05-62",
-   "team": "highschool",
-   "sport": "Senior Boys Volleyball",
-   "start": "2026-11-05T01:01:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Erie Migration",
-   "location": "Erie Migration",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "2A Playoffs",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "TBA",
-   "home": "Erie Migration"
-  },
-  {
-   "id": "highschool-2026-11-05-63",
-   "team": "highschool",
-   "sport": "Senior Boys Volleyball",
-   "start": "2026-11-05T01:01:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "North Star",
-   "location": "North Star",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "2A Playoffs",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "TBA",
-   "home": "North Star"
   },
   {
    "id": "highschool-2026-11-05-57",
@@ -1283,7 +1223,27 @@
    "home": "Erie Migration"
   },
   {
-   "id": "highschool-2026-11-05-64",
+   "id": "highschool-2026-11-05-62",
+   "team": "highschool",
+   "sport": "Senior Boys Volleyball",
+   "start": "2026-11-05T14:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "North Star",
+   "location": "North Star",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "2A Playoffs",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Riverside",
+   "home": "North Star"
+  },
+  {
+   "id": "highschool-2026-11-05-61",
    "team": "highschool",
    "sport": "Senior Girls Basketball",
    "start": "2026-11-05T14:30:00-05:00",
@@ -1303,7 +1263,27 @@
    "home": "Belle River"
   },
   {
-   "id": "highschool-2026-11-05-66",
+   "id": "highschool-2026-11-05-63",
+   "team": "highschool",
+   "sport": "Senior Boys Volleyball",
+   "start": "2026-11-05T15:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Erie Migration",
+   "location": "Erie Migration",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "2A Playoffs",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Tecumseh Vista Academy",
+   "home": "Erie Migration"
+  },
+  {
+   "id": "highschool-2026-11-05-65",
    "team": "highschool",
    "sport": "Junior Boys Volleyball",
    "start": "2026-11-05T16:00:00-05:00",
@@ -1323,7 +1303,7 @@
    "home": "Massey"
   },
   {
-   "id": "highschool-2026-11-05-67",
+   "id": "highschool-2026-11-05-66",
    "team": "highschool",
    "sport": "Senior Boys Volleyball",
    "start": "2026-11-05T16:00:00-05:00",
@@ -1343,7 +1323,7 @@
    "home": "Holy Names"
   },
   {
-   "id": "highschool-2026-11-05-68",
+   "id": "highschool-2026-11-05-67",
    "team": "highschool",
    "sport": "Senior Boys Volleyball",
    "start": "2026-11-05T16:00:00-05:00",
@@ -1363,7 +1343,7 @@
    "home": "Villanova"
   },
   {
-   "id": "highschool-2026-11-05-69",
+   "id": "highschool-2026-11-05-68",
    "team": "highschool",
    "sport": "Senior Boys Volleyball",
    "start": "2026-11-05T16:00:00-05:00",
@@ -1379,11 +1359,11 @@
    "links": {
     "standings": "https://wecssaa.com/viewScores.php"
    },
-   "away": "TBA",
+   "away": "Assumption",
    "home": "Kennedy"
   },
   {
-   "id": "highschool-2026-11-05-70",
+   "id": "highschool-2026-11-05-69",
    "team": "highschool",
    "sport": "Senior Boys Volleyball",
    "start": "2026-11-05T16:00:00-05:00",
@@ -1399,8 +1379,28 @@
    "links": {
     "standings": "https://wecssaa.com/viewScores.php"
    },
-   "away": "TBA",
+   "away": "Essex",
    "home": "Leamington"
+  },
+  {
+   "id": "highschool-2026-11-05-70",
+   "team": "highschool",
+   "sport": "Senior Boys Volleyball",
+   "start": "2026-11-05T16:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "UMEI",
+   "location": "UMEI",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "1A Playoffs",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Windsor Islamic",
+   "home": "UMEI"
   },
   {
    "id": "highschool-2026-11-05-71",
@@ -1443,27 +1443,7 @@
    "home": "Lamothe-Cadillac"
   },
   {
-   "id": "highschool-2026-11-05-73",
-   "team": "highschool",
-   "sport": "Senior Boys Volleyball",
-   "start": "2026-11-05T16:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "UMEI",
-   "location": "UMEI",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "1A Playoffs",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Windsor Islamic",
-   "home": "UMEI"
-  },
-  {
-   "id": "highschool-2026-11-05-65",
+   "id": "highschool-2026-11-05-64",
    "team": "highschool",
    "sport": "Senior Girls Basketball",
    "start": "2026-11-05T16:00:00-05:00",
@@ -1481,6 +1461,26 @@
    },
    "away": "TBA",
    "home": "TBA"
+  },
+  {
+   "id": "highschool-2026-11-05-73",
+   "team": "highschool",
+   "sport": "Junior Boys Volleyball",
+   "start": "2026-11-05T17:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Erie Migration",
+   "location": "Erie Migration",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "2A Playoffs",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "TBA",
+   "home": "Erie Migration"
   },
   {
    "id": "highschool-2026-11-05-75",
