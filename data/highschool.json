@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T20:00:01-05:00",
+ "updated": "2026-11-04T20:15:01-05:00",
  "today": "2026-11-04",
  "games": [
   {
@@ -951,9 +951,9 @@
    "home_away": "N",
    "opponent": "North Star",
    "location": "North Star",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "final",
+   "our_score": 0,
+   "opp_score": 3,
    "result": null,
    "note": "2A Playoffs",
    "links": {
@@ -1105,28 +1105,28 @@
   {
    "id": "highschool-2026-11-05-55",
    "team": "highschool",
-   "sport": "Junior Girls Basketball",
-   "start": "2026-11-05T01:01:00-05:00",
+   "sport": "Senior Girls Basketball",
+   "start": "2026-11-05T14:30:00-05:00",
    "time_tbd": false,
    "home_away": "N",
-   "opponent": "Riverside",
-   "location": "Riverside",
+   "opponent": "Belle River",
+   "location": "Belle River",
    "status": "upcoming",
    "our_score": null,
    "opp_score": null,
    "result": null,
-   "note": "2A Playoffs · 9v8",
+   "note": "2A Playoffs · 12v5",
    "links": {
     "standings": "https://wecssaa.com/viewScores.php"
    },
-   "away": "Walkerville",
-   "home": "Riverside"
+   "away": "Cardinal Carter",
+   "home": "Belle River"
   },
   {
    "id": "highschool-2026-11-05-56",
    "team": "highschool",
    "sport": "Senior Girls Basketball",
-   "start": "2026-11-05T01:01:00-05:00",
+   "start": "2026-11-05T14:30:00-05:00",
    "time_tbd": false,
    "home_away": "N",
    "opponent": "Riverside",
@@ -1165,26 +1165,6 @@
   {
    "id": "highschool-2026-11-05-58",
    "team": "highschool",
-   "sport": "Senior Girls Basketball",
-   "start": "2026-11-05T14:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Belle River",
-   "location": "Belle River",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "2A Playoffs · 12v5",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Cardinal Carter",
-   "home": "Belle River"
-  },
-  {
-   "id": "highschool-2026-11-05-59",
-   "team": "highschool",
    "sport": "Senior Boys Volleyball",
    "start": "2026-11-05T15:00:00-05:00",
    "time_tbd": false,
@@ -1203,7 +1183,7 @@
    "home": "North Star"
   },
   {
-   "id": "highschool-2026-11-05-60",
+   "id": "highschool-2026-11-05-59",
    "team": "highschool",
    "sport": "Junior Girls Basketball",
    "start": "2026-11-05T15:30:00-05:00",
@@ -1241,6 +1221,26 @@
    },
    "away": "Sandwich",
    "home": "Massey"
+  },
+  {
+   "id": "highschool-2026-11-05-60",
+   "team": "highschool",
+   "sport": "Junior Girls Basketball",
+   "start": "2026-11-05T16:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Riverside",
+   "location": "Riverside",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "2A Playoffs · 9v8",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Walkerville",
+   "home": "Riverside"
   },
   {
    "id": "highschool-2026-11-05-62",
