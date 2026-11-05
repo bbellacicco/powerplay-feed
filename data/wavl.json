@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T00:00:01-05:00",
+ "updated": "2026-11-05T03:00:01-05:00",
  "today": "2026-11-05",
  "source": "https://wavl.net",
  "leagues": [
@@ -1960,7 +1960,933 @@
    "code": "wed",
    "name": "Wednesday Primeau",
    "season": "Season 2",
-   "tiers": [],
+   "tiers": [
+    {
+     "tier": "1",
+     "teams": [
+      {
+       "name": "Serving Cerveza",
+       "stats": [
+        "6",
+        "6",
+        "0",
+        "154",
+        "+37"
+       ]
+      },
+      {
+       "name": "Haikyu Wednesday",
+       "stats": [
+        "6",
+        "5",
+        "1",
+        "148",
+        "+33"
+       ]
+      },
+      {
+       "name": "Greek Gods 2.0",
+       "stats": [
+        "6",
+        "4",
+        "2",
+        "143",
+        "+27"
+       ]
+      },
+      {
+       "name": "Coreys Gaggle",
+       "stats": [
+        "6",
+        "4",
+        "2",
+        "139",
+        "+12"
+       ]
+      },
+      {
+       "name": "Addicted to Sets",
+       "stats": [
+        "6",
+        "4",
+        "2",
+        "127",
+        "-9"
+       ]
+      },
+      {
+       "name": "Big Digs and Hot Passes",
+       "stats": [
+        "6",
+        "2",
+        "4",
+        "129",
+        "-10"
+       ]
+      },
+      {
+       "name": "Set It and Forget It",
+       "stats": [
+        "6",
+        "1",
+        "5",
+        "126",
+        "-27"
+       ]
+      },
+      {
+       "name": "Tips Count",
+       "stats": [
+        "6",
+        "1",
+        "5",
+        "109",
+        "-39"
+       ]
+      },
+      {
+       "name": "Set To Kill",
+       "stats": [
+        "6",
+        "0",
+        "6",
+        "126",
+        "-24"
+       ]
+      }
+     ]
+    },
+    {
+     "tier": "2",
+     "teams": [
+      {
+       "name": "Let's Go",
+       "stats": [
+        "6",
+        "4",
+        "2",
+        "137",
+        "+21"
+       ]
+      },
+      {
+       "name": "Mudflaps",
+       "stats": [
+        "6",
+        "4",
+        "2",
+        "142",
+        "+13"
+       ]
+      },
+      {
+       "name": "Big Dig Energy Wed",
+       "stats": [
+        "6",
+        "4",
+        "2",
+        "138",
+        "+12"
+       ],
+       "missing": true
+      },
+      {
+       "name": "Windsor Nine Nine",
+       "stats": [
+        "6",
+        "4",
+        "2",
+        "143",
+        "+8"
+       ]
+      },
+      {
+       "name": "Vertically Challenged",
+       "stats": [
+        "6",
+        "3",
+        "3",
+        "141",
+        "+4"
+       ]
+      },
+      {
+       "name": "Set Me Maybe",
+       "stats": [
+        "6",
+        "3",
+        "3",
+        "137",
+        "-5"
+       ]
+      },
+      {
+       "name": "Block Party",
+       "stats": [
+        "6",
+        "2",
+        "4",
+        "142",
+        "-3"
+       ]
+      },
+      {
+       "name": "Orville Ready Blockers",
+       "stats": [
+        "6",
+        "2",
+        "4",
+        "130",
+        "-17"
+       ]
+      },
+      {
+       "name": "Wallbangers",
+       "stats": [
+        "6",
+        "1",
+        "5",
+        "116",
+        "-33"
+       ]
+      }
+     ]
+    },
+    {
+     "tier": "3",
+     "teams": [
+      {
+       "name": "How I Set Your Mother",
+       "stats": [
+        "6",
+        "6",
+        "0",
+        "150",
+        "+24"
+       ]
+      },
+      {
+       "name": "The Unknown",
+       "stats": [
+        "6",
+        "5",
+        "1",
+        "144",
+        "+24"
+       ],
+       "missing": true
+      },
+      {
+       "name": "Volley Ballerz",
+       "stats": [
+        "6",
+        "4",
+        "2",
+        "145",
+        "+14"
+       ]
+      },
+      {
+       "name": "The Generals",
+       "stats": [
+        "6",
+        "3",
+        "3",
+        "138",
+        "+9"
+       ]
+      },
+      {
+       "name": "Can't Get Right",
+       "stats": [
+        "6",
+        "3",
+        "3",
+        "138",
+        "+1"
+       ]
+      },
+      {
+       "name": "Jump Around",
+       "stats": [
+        "6",
+        "2",
+        "4",
+        "127",
+        "-11"
+       ]
+      },
+      {
+       "name": "Pass and Hitties",
+       "stats": [
+        "6",
+        "2",
+        "4",
+        "131",
+        "-13"
+       ]
+      },
+      {
+       "name": "Rotator Cuff Tearrors",
+       "stats": [
+        "6",
+        "2",
+        "4",
+        "121",
+        "-23"
+       ]
+      },
+      {
+       "name": "Local Swingers",
+       "stats": [
+        "6",
+        "0",
+        "6",
+        "125",
+        "-25"
+       ]
+      }
+     ]
+    },
+    {
+     "tier": "4",
+     "teams": [
+      {
+       "name": "One Win",
+       "stats": [
+        "6",
+        "5",
+        "1",
+        "152",
+        "+23"
+       ]
+      },
+      {
+       "name": "The Bus Drivers",
+       "stats": [
+        "6",
+        "4",
+        "2",
+        "144",
+        "+9"
+       ]
+      },
+      {
+       "name": "Royals",
+       "stats": [
+        "6",
+        "4",
+        "2",
+        "144",
+        "+4"
+       ]
+      },
+      {
+       "name": "Rock Solid",
+       "stats": [
+        "6",
+        "4",
+        "2",
+        "134",
+        "-2"
+       ]
+      },
+      {
+       "name": "Empire Spikes Back",
+       "stats": [
+        "6",
+        "1",
+        "5",
+        "136",
+        "-7"
+       ]
+      },
+      {
+       "name": "Poppin Volley",
+       "stats": [
+        "6",
+        "0",
+        "6",
+        "123",
+        "-27"
+       ]
+      }
+     ]
+    },
+    {
+     "tier": "5",
+     "teams": [
+      {
+       "name": "Dig Game Undefeated",
+       "stats": [
+        "6",
+        "5",
+        "1",
+        "147",
+        "+41"
+       ]
+      },
+      {
+       "name": "Afraid of Women",
+       "stats": [
+        "6",
+        "5",
+        "1",
+        "149",
+        "+11"
+       ]
+      },
+      {
+       "name": "Dig My Ace",
+       "stats": [
+        "6",
+        "4",
+        "2",
+        "149",
+        "+15"
+       ]
+      },
+      {
+       "name": "Access Denied",
+       "stats": [
+        "6",
+        "4",
+        "2",
+        "138",
+        "+14"
+       ]
+      },
+      {
+       "name": "Gagan and the 5 Dwarves",
+       "stats": [
+        "6",
+        "4",
+        "2",
+        "141",
+        "+1"
+       ]
+      },
+      {
+       "name": "Lil Giants",
+       "stats": [
+        "6",
+        "3",
+        "3",
+        "143",
+        "-3"
+       ]
+      },
+      {
+       "name": "Inappropriate Touches",
+       "stats": [
+        "6",
+        "1",
+        "5",
+        "137",
+        "-8"
+       ]
+      },
+      {
+       "name": "Swingers",
+       "stats": [
+        "6",
+        "1",
+        "5",
+        "126",
+        "-16"
+       ],
+       "missing": true
+      },
+      {
+       "name": "Reign of Taryny wed",
+       "stats": [
+        "6",
+        "0",
+        "6",
+        "95",
+        "-55"
+       ]
+      }
+     ]
+    },
+    {
+     "tier": "6",
+     "teams": [
+      {
+       "name": "Moose Pack",
+       "stats": [
+        "6",
+        "6",
+        "0",
+        "152",
+        "+57"
+       ]
+      },
+      {
+       "name": "I Like Big Digs",
+       "stats": [
+        "6",
+        "5",
+        "1",
+        "143",
+        "+38"
+       ]
+      },
+      {
+       "name": "We Dig Balls",
+       "stats": [
+        "6",
+        "5",
+        "1",
+        "146",
+        "+28"
+       ]
+      },
+      {
+       "name": "Suck My Dig",
+       "stats": [
+        "6",
+        "4",
+        "2",
+        "141",
+        "+29"
+       ]
+      },
+      {
+       "name": "Bumpkins",
+       "stats": [
+        "6",
+        "2",
+        "4",
+        "133",
+        "-7"
+       ]
+      },
+      {
+       "name": "Notorious DIG",
+       "stats": [
+        "6",
+        "2",
+        "4",
+        "122",
+        "-12"
+       ]
+      },
+      {
+       "name": "Vurt Da Furk",
+       "stats": [
+        "6",
+        "2",
+        "4",
+        "120",
+        "-21"
+       ]
+      },
+      {
+       "name": "Ride the Hod Wed",
+       "stats": [
+        "6",
+        "1",
+        "5",
+        "101",
+        "-45"
+       ]
+      },
+      {
+       "name": "Hit It and Quit It",
+       "stats": [
+        "6",
+        "0",
+        "6",
+        "83",
+        "-67"
+       ]
+      }
+     ]
+    },
+    {
+     "tier": "7",
+     "teams": [
+      {
+       "name": "Waka Blocka Flame",
+       "stats": [
+        "6",
+        "5",
+        "1",
+        "151",
+        "+37"
+       ]
+      },
+      {
+       "name": "Domestic Disputes",
+       "stats": [
+        "6",
+        "4",
+        "2",
+        "149",
+        "+48"
+       ]
+      },
+      {
+       "name": "Just Smashed!",
+       "stats": [
+        "6",
+        "4",
+        "2",
+        "132",
+        "+19"
+       ]
+      },
+      {
+       "name": "Against the Wall",
+       "stats": [
+        "6",
+        "4",
+        "2",
+        "135",
+        "+6"
+       ]
+      },
+      {
+       "name": "Smashed Up",
+       "stats": [
+        "6",
+        "3",
+        "3",
+        "137",
+        "+2"
+       ]
+      },
+      {
+       "name": "Ace Holes",
+       "stats": [
+        "6",
+        "3",
+        "3",
+        "116",
+        "-11"
+       ]
+      },
+      {
+       "name": "Inglourious Badgers",
+       "stats": [
+        "6",
+        "2",
+        "4",
+        "130",
+        "-8"
+       ]
+      },
+      {
+       "name": "Laj",
+       "stats": [
+        "6",
+        "1",
+        "5",
+        "116",
+        "-26"
+       ]
+      },
+      {
+       "name": "Just the Tip",
+       "stats": [
+        "6",
+        "1",
+        "5",
+        "84",
+        "-67"
+       ]
+      }
+     ]
+    },
+    {
+     "tier": "8",
+     "teams": [
+      {
+       "name": "Super Smashers",
+       "stats": [
+        "6",
+        "6",
+        "0",
+        "150",
+        "+43"
+       ]
+      },
+      {
+       "name": "For Hits Sake",
+       "stats": [
+        "6",
+        "5",
+        "1",
+        "151",
+        "+46"
+       ]
+      },
+      {
+       "name": "We Dig",
+       "stats": [
+        "6",
+        "4",
+        "2",
+        "144",
+        "+24"
+       ]
+      },
+      {
+       "name": "Rick's 6",
+       "stats": [
+        "6",
+        "4",
+        "2",
+        "138",
+        "+3"
+       ]
+      },
+      {
+       "name": "The Block is Hot",
+       "stats": [
+        "6",
+        "3",
+        "3",
+        "133",
+        "+18"
+       ]
+      },
+      {
+       "name": "WBF",
+       "stats": [
+        "6",
+        "3",
+        "3",
+        "131",
+        "+1"
+       ],
+       "missing": true
+      },
+      {
+       "name": "CK Potter",
+       "stats": [
+        "6",
+        "1",
+        "5",
+        "123",
+        "-27"
+       ]
+      },
+      {
+       "name": "Grading After This",
+       "stats": [
+        "6",
+        "1",
+        "5",
+        "86",
+        "-64"
+       ]
+      },
+      {
+       "name": "Setting the Vibes",
+       "stats": [
+        "6",
+        "0",
+        "6",
+        "106",
+        "-44"
+       ]
+      }
+     ]
+    },
+    {
+     "tier": "9",
+     "teams": [
+      {
+       "name": "Rule 12",
+       "stats": [
+        "6",
+        "6",
+        "0",
+        "150",
+        "+33"
+       ]
+      },
+      {
+       "name": "Low roof hitters",
+       "stats": [
+        "6",
+        "5",
+        "1",
+        "145",
+        "+40"
+       ]
+      },
+      {
+       "name": "Sets and Candy",
+       "stats": [
+        "6",
+        "4",
+        "2",
+        "140",
+        "+22"
+       ]
+      },
+      {
+       "name": "Lounge Lizards",
+       "stats": [
+        "6",
+        "4",
+        "2",
+        "131",
+        "-4"
+       ]
+      },
+      {
+       "name": "SWAG",
+       "stats": [
+        "6",
+        "3",
+        "3",
+        "139",
+        "+19"
+       ]
+      },
+      {
+       "name": "Nothing Drops",
+       "stats": [
+        "6",
+        "2",
+        "4",
+        "128",
+        "-6"
+       ]
+      },
+      {
+       "name": "We Tried",
+       "stats": [
+        "6",
+        "2",
+        "4",
+        "109",
+        "-34"
+       ]
+      },
+      {
+       "name": "Kinky Sets",
+       "stats": [
+        "6",
+        "1",
+        "5",
+        "122",
+        "-18"
+       ]
+      },
+      {
+       "name": "On Your Knees",
+       "stats": [
+        "6",
+        "0",
+        "6",
+        "98",
+        "-52"
+       ],
+       "missing": true
+      }
+     ]
+    },
+    {
+     "tier": "10",
+     "teams": [
+      {
+       "name": "Cupcake Crushers",
+       "stats": [
+        "6",
+        "5",
+        "1",
+        "140",
+        "+42"
+       ]
+      },
+      {
+       "name": "Calm Your Tips",
+       "stats": [
+        "6",
+        "5",
+        "1",
+        "151",
+        "+32"
+       ]
+      },
+      {
+       "name": "Rude Dogs",
+       "stats": [
+        "6",
+        "4",
+        "2",
+        "135",
+        "+23"
+       ]
+      },
+      {
+       "name": "Hot Cross Buns",
+       "stats": [
+        "6",
+        "4",
+        "2",
+        "144",
+        "+16"
+       ]
+      },
+      {
+       "name": "ETV",
+       "stats": [
+        "6",
+        "3",
+        "3",
+        "129",
+        "+4"
+       ]
+      },
+      {
+       "name": "Pony Up & Play",
+       "stats": [
+        "6",
+        "3",
+        "3",
+        "126",
+        "-9"
+       ]
+      },
+      {
+       "name": "Hits N Giggles",
+       "stats": [
+        "6",
+        "2",
+        "4",
+        "127",
+        "-14"
+       ]
+      },
+      {
+       "name": "Los Mejores",
+       "stats": [
+        "6",
+        "1",
+        "5",
+        "97",
+        "-46"
+       ]
+      },
+      {
+       "name": "Thunderballz",
+       "stats": [
+        "6",
+        "0",
+        "6",
+        "102",
+        "-48"
+       ]
+      }
+     ]
+    }
+   ],
    "url": "https://wavl.net/standings?league=wed&seasonId=2",
    "nights": [
     {
