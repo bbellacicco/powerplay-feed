@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T19:02:10-05:00",
+ "updated": "2026-11-04T19:18:12-05:00",
  "today": "2026-11-04",
  "range": [
   "2026-11-01",
@@ -1156,11 +1156,11 @@
    "home_away": "H",
    "opponent": "Strathroy Rockets",
    "location": "Vollmer Culture R.C., LaSalle, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
-   "note": "",
+   "note": "18:48 1st",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15649"
    },
@@ -2813,6 +2813,19 @@
   },
   {
    "league": "other",
+   "headline": "Golden State Valkyries celebrate first WNBA title with Bay Area parade",
+   "summary": "Gabby Williams hopped off a double-decker bus and began dancing through the streets, blowing a whistle to the beat and slapping high-fives with fans all while keeping her WNBA Finals MVP trophy safely tucked in her left ",
+   "published": "2026-11-04T18:58-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-1-copy-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/wnba/article/golden-state-valkyries-celebrate-first-wnba-title-with-bay-area-parade/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
    "headline": "‘Heat of the battle’: Canadians fired up as they chase down PGA Tour cards",
    "summary": "A foursome of Canadians is right on the edge of earning full PGA Tour status for 2027 with just three tournaments left this season. Adam Stanley takes a look at their chances.",
    "published": "2026-11-04T08:43-05:00",
@@ -2915,6 +2928,19 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/cfl/article/blue-bombers-tackle-jarell-broxton-named-cfls-top-offensive-lineman/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "NFL trade deadline tracker: Follow all the deals",
+   "summary": "",
+   "published": "2026-11-03T12:00-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Jeff.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-trade-deadline-tracker-follow-all-the-deals/",
    "source": "Sportsnet"
   },
   {
@@ -3114,32 +3140,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/report-albert-pujols-interviewing-for-astros-managerial-vacancy/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Canada’s Chris Boucher signs with China’s Shanghai Sharks",
-   "summary": "",
-   "published": "2026-11-04T09:45-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/02/Untitled-design-16.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/canadas-chris-boucher-signs-with-chinas-shanghai-sharks/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "NFL trade deadline tracker: Follow all the deals",
-   "summary": "",
-   "published": "2026-11-03T12:00-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Jeff.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-trade-deadline-tracker-follow-all-the-deals/",
    "source": "Sportsnet"
   },
   {
@@ -4056,7 +4056,7 @@
       "l": 4,
       "otl": 1,
       "pts": 21,
-      "gf": 60,
+      "gf": 61,
       "ga": 41,
       "strk": "L1"
      },
@@ -4093,7 +4093,7 @@
       "otl": 3,
       "pts": 9,
       "gf": 36,
-      "ga": 62,
+      "ga": 63,
       "strk": "W1"
      },
      {
@@ -4134,7 +4134,7 @@
       "otl": 2,
       "pts": 22,
       "gf": 60,
-      "ga": 54,
+      "ga": 56,
       "strk": "L1"
      },
      {
@@ -4222,7 +4222,7 @@
       "l": 6,
       "otl": 2,
       "pts": 18,
-      "gf": 47,
+      "gf": 49,
       "ga": 56,
       "strk": "W1"
      },
@@ -4565,7 +4565,7 @@
       "l": 3,
       "otl": 1,
       "pts": 23,
-      "gf": 55,
+      "gf": 56,
       "ga": 33,
       "strk": "W2"
      },
@@ -4614,7 +4614,7 @@
       "otl": 1,
       "pts": 15,
       "gf": 58,
-      "ga": 64,
+      "ga": 65,
       "strk": "W2"
      },
      {
