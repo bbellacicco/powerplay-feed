@@ -1,61 +1,7 @@
 {
- "updated": "2026-11-04T22:00:01-05:00",
- "today": "2026-11-04",
+ "updated": "2026-11-05T00:00:01-05:00",
+ "today": "2026-11-05",
  "games": [
-  {
-   "id": "saints-presto2026-11-01-0",
-   "team": "saints",
-   "sport": "Women's Basketball",
-   "start": "2026-11-01T13:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Sheridan",
-   "location": "",
-   "status": "final",
-   "our_score": 59,
-   "opp_score": 42,
-   "result": "W",
-   "note": "",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/wbkb/2026-27/boxscores/20261101_aovo.xml"
-   }
-  },
-  {
-   "id": "saints-presto2026-11-01-2",
-   "team": "saints",
-   "sport": "Men's Basketball",
-   "start": "2026-11-01T15:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Sheridan",
-   "location": "",
-   "status": "final",
-   "our_score": 95,
-   "opp_score": 65,
-   "result": "W",
-   "note": "",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/mbkb/2026-27/boxscores/20261101_gwu8.xml"
-   }
-  },
-  {
-   "id": "saints-presto2026-11-01-1",
-   "team": "saints",
-   "sport": "Women's Soccer",
-   "start": "2026-11-01T15:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Seneca",
-   "location": "",
-   "status": "final",
-   "our_score": 0,
-   "opp_score": 1,
-   "result": "L",
-   "note": "OCAA Championship Gold Medal Game",
-   "links": {
-    "boxscore": "https://www.saintsathletics.ca/sports/wsoc/2026-27p/boxscores/20261101_wu52.xml"
-   }
-  },
   {
    "id": "saints-presto2026-11-04-0",
    "team": "saints",
@@ -124,6 +70,42 @@
    "note": "",
    "links": {
     "boxscore": "https://www.saintsathletics.ca/sports/mbkb/2026-27/boxscores/20261107_lfbn.xml"
+   }
+  },
+  {
+   "id": "saints-presto2026-11-08-0",
+   "team": "saints",
+   "sport": "Women's Basketball",
+   "start": "2026-11-08T13:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Mohawk",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/wbkb/2026-27/boxscores/20261108_txsg.xml"
+   }
+  },
+  {
+   "id": "saints-presto2026-11-08-1",
+   "team": "saints",
+   "sport": "Men's Basketball",
+   "start": "2026-11-08T15:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Mohawk",
+   "location": "",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/mbkb/2026-27/boxscores/20261108_uago.xml"
    }
   }
  ]
