@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T21:47:40-05:00",
+ "updated": "2026-11-04T22:05:27-05:00",
  "today": "2026-11-04",
  "range": [
   "2026-11-01",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 37
+   "count": 40
   },
   "club_news": {
    "ok": true,
@@ -2709,6 +2709,19 @@
   },
   {
    "league": "nba",
+   "headline": "Knicks tie franchise record for most points in first half",
+   "summary": "The New York Knicks have made history against the Chicago Bulls at Madison Square Garden.",
+   "published": "2026-11-04T21:47-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-1-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/knicks-tie-franchise-record-for-most-points-in-first-half/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
    "headline": "Hornets’ Knueppel ruled out with leg soreness in season debut",
    "summary": "",
    "published": "2026-11-04T21:10-05:00",
@@ -2907,21 +2920,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Maple Leafs’ Tavares could return Saturday, Roslovic misses practice",
-   "summary": "",
-   "published": "2026-11-04T14:35-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/02/tavares_john1280.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-tavares-could-return-saturday-roslovic-misses-practice/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "other",
    "headline": "Canada dismisses fears of international blowback over Russian world junior hockey ban",
    "summary": "",
@@ -3116,6 +3114,47 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/packers-parsons-begins-practising-as-he-gets-closer-to-season-debut/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Top 10 free-agent pitchers: Tarik Skubal looks for record deal",
+   "summary": "While the position-player contingent of the 2026 free-agent class lacks a true superstar, the same is not true of the available pitchers. David Singh ranks the available hurlers.",
+   "published": "2026-11-03T08:30-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/skubal.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/mlb-free-agent-rankings-tarik-skubal-tops-the-best-pitchers-available/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Top 10 free-agent position players: Arozarena leads star-bereft class",
+   "summary": "Before a possible lockout, November could be a busy month. On the position player side, while there are no superstars available, there are plenty of standout contributors. David Singh takes a look at the 2026 class of ba",
+   "published": "2026-11-02T09:41-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/randy.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/top-10-free-agent-position-players-arozarena-leads-star-bereft-class/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Teruaki Sato among top Japanese players posted for MLB signing",
+   "summary": "",
+   "published": "2026-11-01T17:42-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP175940485.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/teruaki-sato-among-four-top-japanese-players-posted-for-mlb-signing/",
    "source": "Sportsnet"
   },
   {
@@ -4126,6 +4165,18 @@
       "strk": "W5"
      },
      {
+      "name": "Sarnia Sting",
+      "abbr": "SAR",
+      "gp": 18,
+      "w": 7,
+      "l": 10,
+      "otl": 1,
+      "pts": 15,
+      "gf": 70,
+      "ga": 79,
+      "strk": "W1"
+     },
+     {
       "name": "Saginaw Spirit",
       "abbr": "SAG",
       "gp": 16,
@@ -4136,18 +4187,6 @@
       "gf": 56,
       "ga": 59,
       "strk": "L5"
-     },
-     {
-      "name": "Sarnia Sting",
-      "abbr": "SAR",
-      "gp": 17,
-      "w": 6,
-      "l": 10,
-      "otl": 1,
-      "pts": 13,
-      "gf": 70,
-      "ga": 79,
-      "strk": "L4"
      }
     ]
    },
@@ -4205,14 +4244,14 @@
      {
       "name": "Owen Sound Attack",
       "abbr": "OS",
-      "gp": 16,
+      "gp": 17,
       "w": 6,
-      "l": 9,
+      "l": 10,
       "otl": 1,
       "pts": 13,
       "gf": 46,
       "ga": 73,
-      "strk": "L1"
+      "strk": "L2"
      }
     ]
    }
