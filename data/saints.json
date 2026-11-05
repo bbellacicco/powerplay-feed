@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T20:00:01-05:00",
+ "updated": "2026-11-04T21:00:01-05:00",
  "today": "2026-11-04",
  "games": [
   {
@@ -80,15 +80,17 @@
    "sport": "Men's Volleyball",
    "start": "2026-11-04T20:00:00-05:00",
    "time_tbd": false,
-   "home_away": "H",
+   "home_away": "A",
    "opponent": "Fanshawe",
    "location": "",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 1,
+   "opp_score": 0,
    "result": null,
-   "note": "",
-   "links": {}
+   "note": "21-25",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/mvball/2026-27/boxscores/20261104_viek.xml"
+   }
   },
   {
    "id": "saints-presto2026-11-07-0",
