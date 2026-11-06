@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T20:17:49-05:00",
+ "updated": "2026-11-05T20:35:29-05:00",
  "today": "2026-11-05",
  "range": [
   "2026-11-02",
@@ -1816,10 +1816,10 @@
    "opponent": "Peterborough Petes",
    "location": "Peterborough Memorial Centre, Peterborough",
    "status": "live",
-   "our_score": 0,
+   "our_score": 1,
    "opp_score": 1,
    "result": null,
-   "note": "18:30 2nd",
+   "note": "06:17 2nd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29159/"
    }
@@ -1835,9 +1835,9 @@
    "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
    "status": "live",
    "our_score": 1,
-   "opp_score": 2,
+   "opp_score": 3,
    "result": null,
-   "note": "12:04 2nd",
+   "note": "00:30 2nd",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16647"
    },
@@ -3432,7 +3432,7 @@
   {
    "league": "nfl",
    "headline": "Vikings QB Kyler Murray out Monday, Carson Wentz starting",
-   "summary": "",
+   "summary": "Minnesota Vikings quarterback Kyler Murray will miss at least the next game because of a hamstring strain, the latest twist for the team at a constantly revolving position.",
    "published": "2026-11-05T13:38-05:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/kyler.jpg",
    "video": false,
@@ -3873,15 +3873,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Here are the rosters for Sunday's AFL Fall Stars Game",
+   "headline": "LIVE: Watch Tigers prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-11-04T11:01-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/wm4gzcdag1xucowe2rii",
+   "published": "2026-11-05T20:20-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
     "Detroit Tigers"
    ],
-   "url": "https://www.mlb.com/tigers/news/2026-arizona-fall-league-fall-stars-game-rosters",
+   "url": "https://www.mlb.com/tigers/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
    "source": "Team site"
   },
   {
@@ -3908,6 +3908,19 @@
     "Detroit Tigers"
    ],
    "url": "https://www.mlb.com/milb/prospects/2026/tigers/",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
+   "headline": "Here are the rosters for Sunday's AFL Fall Stars Game",
+   "summary": "",
+   "published": "2026-11-04T11:01-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/wm4gzcdag1xucowe2rii",
+   "video": false,
+   "teams": [
+    "Detroit Tigers"
+   ],
+   "url": "https://www.mlb.com/tigers/news/2026-arizona-fall-league-fall-stars-game-rosters",
    "source": "Team site"
   },
   {
@@ -3947,19 +3960,6 @@
     "Detroit Tigers"
    ],
    "url": "https://www.mlb.com/tigers/news/kevin-mcgonigle-2026-al-rookie-of-the-year-award-finalist",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
-   "headline": "Watch Tigers prospects in Arizona Fall League action",
-   "summary": "",
-   "published": "2026-11-05T17:58-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
-   "video": false,
-   "teams": [
-    "Detroit Tigers"
-   ],
-   "url": "https://www.mlb.com/tigers/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
    "source": "Team site"
   },
   {
@@ -4044,7 +4044,7 @@
    "league": "mlb",
    "headline": "Watch Blue Jays prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-11-05T17:58-05:00",
+   "published": "2026-11-05T20:20-05:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -4366,7 +4366,7 @@
       "otl": 0,
       "pts": 16,
       "gf": 54,
-      "ga": 60,
+      "ga": 61,
       "strk": "W1"
      }
     ]
@@ -4471,7 +4471,7 @@
       "l": 5,
       "otl": 3,
       "pts": 19,
-      "gf": 59,
+      "gf": 60,
       "ga": 49,
       "strk": "W5"
      },
@@ -4789,7 +4789,7 @@
       "otl": 1,
       "pts": 27,
       "gf": 68,
-      "ga": 33,
+      "ga": 34,
       "strk": "L1"
      },
      {
@@ -4800,7 +4800,7 @@
       "l": 8,
       "otl": 3,
       "pts": 21,
-      "gf": 70,
+      "gf": 71,
       "ga": 77,
       "strk": "W1"
      },
@@ -4879,8 +4879,8 @@
       "l": 1,
       "otl": 0,
       "pts": 28,
-      "gf": 95,
-      "ga": 31,
+      "gf": 96,
+      "ga": 32,
       "strk": "W12"
      },
      {
@@ -5011,8 +5011,8 @@
       "l": 13,
       "otl": 0,
       "pts": 2,
-      "gf": 29,
-      "ga": 92,
+      "gf": 30,
+      "ga": 93,
       "strk": "L2"
      }
     ]
@@ -5040,7 +5040,7 @@
       "l": 2,
       "otl": 1,
       "pts": 27,
-      "gf": 96,
+      "gf": 97,
       "ga": 44,
       "strk": "W2"
      },
@@ -5089,7 +5089,7 @@
       "otl": 3,
       "pts": 19,
       "gf": 58,
-      "ga": 49,
+      "ga": 50,
       "strk": "W3"
      },
      {
