@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T18:17:32-05:00",
+ "updated": "2026-11-06T18:32:28-05:00",
  "today": "2026-11-06",
  "range": [
   "2026-11-03",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -1710,9 +1710,9 @@
    "home_away": "H",
    "opponent": "Blenheim Blades",
    "location": "Atlas Tube Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
    "note": "",
    "links": {
@@ -3223,6 +3223,19 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/jets-rule-out-garrett-wilson-vs-chiefs-with-concussion-but-breece-hall-returns-from-quad-injury/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Report: Diamondbacks’ Carroll undergoes elbow surgery",
+   "summary": "",
+   "published": "2026-11-06T18:18-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/04/CP176166960.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/report-diamondbacks-carroll-undergoes-elbow-surgey/",
    "source": "Sportsnet"
   },
   {
