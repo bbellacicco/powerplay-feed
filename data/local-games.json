@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T11:17:02-05:00",
+ "updated": "2026-11-06T11:35:24-05:00",
  "today": "2026-11-06",
  "range": [
   "2026-11-03",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 36
+   "count": 38
   },
   "club_news": {
    "ok": true,
@@ -2117,6 +2117,22 @@
   },
   {
    "league": "cfl",
+   "headline": "Depth Charts: How the teams will line up in the Division Finals presented by Wegovy®",
+   "summary": "",
+   "published": "2026-11-06T00:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/5oDv6lBRzzAU18wFyNfMds/fa5b7a75bdc40cde3aec46767bd4fa84/Montrell_Washington_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Alouettes",
+    "Blue Bombers",
+    "Elks",
+    "Lions"
+   ],
+   "url": "https://www.cfl.ca/article/depth-charts-how-the-teams-will-line-up-in-the-division-finals-presented-by-wegovy",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Two Surprises. Two Awards. Tyson Philpot & Davis Alexander",
    "summary": "",
    "published": "2026-11-05T11:50:00-05:00",
@@ -2299,22 +2315,6 @@
     "Alouettes"
    ],
    "url": "https://www.cfl.ca/article/3-x-factors-that-could-shape-the-eastern-final-presented-by-wegovy",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Weekly Predictor: Who wins the Division Finals presented by Wegovy®",
-   "summary": "",
-   "published": "2026-11-03T00:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/6dfG880InUInrRHDES4mCu/9882b3aaa5025bea860fc2165e36f419/Tyrice_Beverette_2026.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Elks",
-    "Lions",
-    "Alouettes",
-    "Blue Bombers"
-   ],
-   "url": "https://www.cfl.ca/article/weekly-predictor-who-wins-the-division-finals-presented-by-wegovy",
    "source": "CFL.ca"
   },
   {
@@ -2834,28 +2834,15 @@
   },
   {
    "league": "nhl",
-   "headline": "Canadiens show character in comeback win over Mammoth",
-   "summary": "Thursday’s win was the response the Canadiens were looking for after Tuesday’s embarrassing brush with history. Eric Engels explains how Montreal showed its character by coming back to beat the Mammoth in OT.",
-   "published": "2026-11-06T00:03-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177218051.jpg",
+   "headline": "Friday Four: Most interesting landing spots for Nikita Kucherov",
+   "summary": "The news that Nikita Kucherov wants out of Tampa is still buzzing. With that in mind, Michael Amato takes a look at four of the most interesting fits for Kucherov if he were to become available.",
+   "published": "2026-11-06T07:58-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Kucherov.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
+   "sn_team_count": 5,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canadiens-show-character-in-comeback-win-over-mammoth/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Canucks take step back in lopsided loss to Jets",
-   "summary": "As a minimum objective, they have vowed to be competitive and difficult to play against during this rebuild. The Canucks could scarcely have been easier to beat on Thursday.",
-   "published": "2026-11-06T00:09-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/canucks1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canucks-take-step-back-in-lopsided-loss-to-jets/",
+   "url": "https://www.sportsnet.ca/nhl/article/friday-four-most-interesting-landing-spots-for-nikita-kucherov/",
    "source": "Sportsnet"
   },
   {
@@ -2875,15 +2862,30 @@
   },
   {
    "league": "nhl",
-   "headline": "Friday Four: Most interesting landing spots for Nikita Kucherov",
-   "summary": "The news that Nikita Kucherov wants out of Tampa is still buzzing. With that in mind, Michael Amato takes a look at four of the most interesting fits for Kucherov if he were to become available.",
-   "published": "2026-11-06T07:58-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Kucherov.jpg",
+   "headline": "Canucks take step back in lopsided loss to Jets",
+   "summary": "As a minimum objective, they have vowed to be competitive and difficult to play against during this rebuild. The Canucks could scarcely have been easier to beat on Thursday.",
+   "published": "2026-11-06T00:09-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/canucks1.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 5,
+   "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/friday-four-most-interesting-landing-spots-for-nikita-kucherov/",
+   "url": "https://www.sportsnet.ca/nhl/article/canucks-take-step-back-in-lopsided-loss-to-jets/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Which familiar faces could Blue Jays reunite with in free agency?",
+   "summary": "With MLB free agency underway, the Blue Jays have several familiar faces worth considering as they look to rebound from a disappointing 2026 season. Nick Ashbourne takes a look at the top candidates.",
+   "published": "2026-11-06T08:08-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/Gausman.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/which-familiar-faces-could-blue-jays-reunite-with-in-free-agency/",
    "source": "Sportsnet"
   },
   {
@@ -2903,6 +2905,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Canadiens show character in comeback win over Mammoth",
+   "summary": "Thursday’s win was the response the Canadiens were looking for after Tuesday’s embarrassing brush with history. Eric Engels explains how Montreal showed its character by coming back to beat the Mammoth in OT.",
+   "published": "2026-11-06T00:03-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177218051.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canadiens-show-character-in-comeback-win-over-mammoth/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Canadiens’ Demidov progressing in recovery, no timeline for return",
    "summary": "Demidov, who has been out since Oct. 3 with a lower-body injury, has been skating with the team and is progressing in his recovery, but remains without an exact timeline for his return, general manager Kent Hughes said t",
    "published": "2026-11-06T10:57-05:00",
@@ -2912,19 +2927,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/canadiens-demidov-progressing-in-recovery-no-timeline-for-return/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Oilers’ emergency goaltender Brett Epp serves as backup vs. Ducks",
-   "summary": "The Edmonton Oilers will have a new face on the bench as they take on the Anaheim Ducks.",
-   "published": "2026-11-05T19:25-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/epp.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/oilers-emergency-goaltender-brett-epp-to-serve-as-backup-vs-ducks/",
    "source": "Sportsnet"
   },
   {
@@ -2954,6 +2956,45 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nfl",
+   "headline": "Report: Ravens send two picks to Cardinals in Jacoby Brissett trade",
+   "summary": "In return, the Arizona Cardinals will receive a 2027 fourth-round draft pick and a 2028 seventh-round pick, while also sending a 2027 fifth to the Ravens, ESPN’s Ian Rapoport reported on Friday.",
+   "published": "2026-11-06T11:21-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/jacoby-brissett.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/report-ravens-send-two-picks-to-cardinals-in-jacoby-brissett-trade/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Oilers’ emergency goaltender Brett Epp serves as backup vs. Ducks",
+   "summary": "The Edmonton Oilers will have a new face on the bench as they take on the Anaheim Ducks.",
+   "published": "2026-11-05T19:25-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/epp.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/oilers-emergency-goaltender-brett-epp-to-serve-as-backup-vs-ducks/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Patriots’ TreVeyon Henderson dealing with unexplained neurological symptoms",
+   "summary": "",
+   "published": "2026-11-06T10:57-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-19.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/patriots-treveyon-henderson-dealing-with-unexplained-neurological-symptoms/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Oilers’ Podkolzin receives game misconduct vs. Ducks",
    "summary": "Vasily Podkolzin came to his captain’s defence on Thursday, but ended up with a game misconduct for his efforts.",
@@ -2977,32 +3018,6 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/cfl/article/blue-bombers-list-collaros-as-game-time-decision-for-east-division-final/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "GSOC Masters Day 3 Takeaways: Brydone making life easy for Mouat",
-   "summary": "Team Bruce Mouat looks just as good as ever, thanks in large part to a new member of the squad.",
-   "published": "2026-11-05T23:55-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/2026GSOCCoopInvitational-Victoria-013-1-copy.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Curling",
-   "url": "https://www.sportsnet.ca/curling/article/gsoc-masters-day-3-takeaways-brydone-making-life-easy-for-mouat/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Patriots’ TreVeyon Henderson dealing with unexplained neurological symptoms",
-   "summary": "",
-   "published": "2026-11-06T10:57-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-19.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/patriots-treveyon-henderson-dealing-with-unexplained-neurological-symptoms/",
    "source": "Sportsnet"
   },
   {
@@ -3055,6 +3070,19 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/cfl/article/cfl-east-final-preview-alouettes-look-to-continue-dominant-season-with-grey-cup-berth/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "GSOC Masters Day 3 Takeaways: Brydone making life easy for Mouat",
+   "summary": "Team Bruce Mouat looks just as good as ever, thanks in large part to a new member of the squad.",
+   "published": "2026-11-05T23:55-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/2026GSOCCoopInvitational-Victoria-013-1-copy.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Curling",
+   "url": "https://www.sportsnet.ca/curling/article/gsoc-masters-day-3-takeaways-brydone-making-life-easy-for-mouat/",
    "source": "Sportsnet"
   },
   {
@@ -3126,6 +3154,19 @@
   },
   {
    "league": "other",
+   "headline": "FIFA’s legal head Garcia leaves as Infantino faces intense presidential re-election campaign",
+   "summary": "",
+   "published": "2026-11-06T11:20-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/fifa.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/fifa-world-cup/article/fifas-legal-head-garcia-leaves-as-infantino-faces-intense-presidential-reelection-campaign/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
    "headline": "Rory McIlroy rebounds from penalty to fire 11 birdies at Abu Dhabi Championship",
    "summary": "",
    "published": "2026-11-06T08:49-05:00",
@@ -3152,7 +3193,7 @@
   },
   {
    "league": "other",
-   "headline": "Cole Palmer out of England Nationsl League squad, Jobe Bellingham called up",
+   "headline": "Cole Palmer out of England Nations League squad, Jobe Bellingham called up",
    "summary": "Chelsea forward Cole Palmer has been left out of England’s squad for the upcoming Nations League games against Croatia and Spain.",
    "published": "2026-11-06T09:15-05:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/cold.jpg",
@@ -3161,19 +3202,6 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/soccer/article/cole-palmer-out-of-england-nationsl-league-squad-jobe-bellingham-called-up/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Maple Leaf missing from IIHF-mandated Canada women’s hockey jerseys",
-   "summary": "",
-   "published": "2026-11-05T15:11-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/02/canada-usa-murphy-watts.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/wwhc/article/maple-leaf-missing-from-iihf-mandated-canada-womens-hockey-jerseys/",
    "source": "Sportsnet"
   },
   {
@@ -3626,6 +3654,19 @@
   },
   {
    "league": "mlb",
+   "headline": "Longtime MLB catcher Maldonado among new faces on Tigers' coaching staff for '27",
+   "summary": "",
+   "published": "2026-11-06T11:30-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/qieb7hwco4rf43gtuicb",
+   "video": false,
+   "teams": [
+    "Detroit Tigers"
+   ],
+   "url": "https://www.mlb.com/tigers/news/tigers-announce-2027-mlb-coaching-training-staffs",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
    "headline": "McGonigle up for Silver Slugger in 2 categories; Greene, Dingler also nominated",
    "summary": "",
    "published": "2026-11-05T11:13-05:00",
@@ -3635,19 +3676,6 @@
     "Detroit Tigers"
    ],
    "url": "https://www.mlb.com/tigers/news/2026-silver-slugger-award-finalists",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
-   "headline": "McGonigle named Tiger of the Year after historic rookie season",
-   "summary": "",
-   "published": "2026-11-04T15:07-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/dwomovhfxhtffiocfzt8",
-   "video": false,
-   "teams": [
-    "Detroit Tigers"
-   ],
-   "url": "https://www.mlb.com/tigers/news/kevin-mcgonigle-tiger-of-the-year-award-2026-bbwaa",
    "source": "Team site"
   },
   {
@@ -3665,6 +3693,19 @@
   },
   {
    "league": "mlb",
+   "headline": "McGonigle named Tiger of the Year after historic rookie season",
+   "summary": "",
+   "published": "2026-11-04T15:07-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/dwomovhfxhtffiocfzt8",
+   "video": false,
+   "teams": [
+    "Detroit Tigers"
+   ],
+   "url": "https://www.mlb.com/tigers/news/kevin-mcgonigle-tiger-of-the-year-award-2026-bbwaa",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
    "headline": "Max Clark's fashion game on display with fans at MLB Flagship Store",
    "summary": "",
    "published": "2026-11-03T18:17-05:00",
@@ -3674,19 +3715,6 @@
     "Detroit Tigers"
    ],
    "url": "https://www.mlb.com/tigers/news/max-clark-meets-fans-at-mlb-flagship-store-in-new-york-city",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
-   "headline": "Kyle Hudson set to be named Tigers' first-base coach (sources)",
-   "summary": "",
-   "published": "2026-11-03T20:01-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/vyyn9oqc2jbqdwbumju2",
-   "video": false,
-   "teams": [
-    "Detroit Tigers"
-   ],
-   "url": "https://www.mlb.com/tigers/news/tigers-kyle-hudson-first-base-coach",
    "source": "Team site"
   },
   {
@@ -3704,15 +3732,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Watch Tigers prospects in Arizona Fall League action",
+   "headline": "Kyle Hudson set to be named Tigers' first-base coach (sources)",
    "summary": "",
-   "published": "2026-11-05T23:33-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
+   "published": "2026-11-03T20:01-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/vyyn9oqc2jbqdwbumju2",
    "video": false,
    "teams": [
     "Detroit Tigers"
    ],
-   "url": "https://www.mlb.com/tigers/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
+   "url": "https://www.mlb.com/tigers/news/tigers-kyle-hudson-first-base-coach",
    "source": "Team site"
   },
   {
@@ -3739,6 +3767,19 @@
     "Detroit Tigers"
    ],
    "url": "https://www.mlb.com/milb/prospects/2026/tigers/",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
+   "headline": "Watch Tigers prospects in Arizona Fall League action",
+   "summary": "",
+   "published": "2026-11-05T23:33-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
+   "video": false,
+   "teams": [
+    "Detroit Tigers"
+   ],
+   "url": "https://www.mlb.com/tigers/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
    "source": "Team site"
   },
   {
@@ -3804,19 +3845,6 @@
     "Detroit Tigers"
    ],
    "url": "https://www.mlb.com/tigers/news/kenley-jansen-drew-anderson-jacob-waguespack-tigers-moves",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
-   "headline": "Where could Tigers use help this offseason?",
-   "summary": "",
-   "published": "2026-11-02T09:25-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/samjf5ykjdpzx5cs9esj",
-   "video": false,
-   "teams": [
-    "Detroit Tigers"
-   ],
-   "url": "https://www.mlb.com/tigers/news/where-the-tigers-could-add-in-free-agency-this-offseason",
    "source": "Team site"
   },
   {
