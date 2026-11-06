@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T21:32:21-05:00",
+ "updated": "2026-11-05T21:51:15-05:00",
  "today": "2026-11-05",
  "range": [
   "2026-11-02",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -1816,10 +1816,10 @@
    "opponent": "Peterborough Petes",
    "location": "Peterborough Memorial Centre, Peterborough",
    "status": "live",
-   "our_score": 3,
-   "opp_score": 2,
+   "our_score": 4,
+   "opp_score": 3,
    "result": null,
-   "note": "05:14 3rd",
+   "note": "End of Game",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29159/"
    }
@@ -1833,11 +1833,11 @@
    "home_away": "H",
    "opponent": "Oakville Blades",
    "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
-   "status": "live",
+   "status": "final",
    "our_score": 1,
    "opp_score": 5,
-   "result": null,
-   "note": "Unofficial Final",
+   "result": "L",
+   "note": "",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16647"
    },
@@ -3119,6 +3119,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "Raptors’ Scottie Barnes questionable vs. Bucks",
+   "summary": "The Toronto Raptors might be without another key player when they take on the Milwaukee Bucks.",
+   "published": "2026-11-05T21:46-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/barnes.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/raptors-scottie-barnes-questionable-vs-bucks/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "Chiefs’ Rashee Rice files for bankruptcy over debts from crash, alleged assault",
    "summary": "Kansas City Chiefs receiver Rashee Rice has filed for bankruptcy, claiming $3.5 million in debts, most of it connected to civil litigation involving his high-speed crash in Texas and allegations of assault by a former gi",
@@ -3157,21 +3172,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/blue-jays-varland-among-players-eligible-for-salary-arbitration-early/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Report: Blue Jays re-signing Rudy Martin Jr. to minor-league deal",
-   "summary": "",
-   "published": "2026-11-05T11:47-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/rudy-martin-jr.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/report-blue-jays-re-signing-rudy-martin-jr-to-minor-league-deal/",
    "source": "Sportsnet"
   },
   {
@@ -3229,16 +3229,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Gold medallist Hayley Wickenheiser among latest Order of Hockey in Canada honourees",
-   "summary": "",
-   "published": "2026-11-05T13:04-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2017/01/wickenheiser_hayley1280.jpg",
+   "league": "nhl",
+   "headline": "Oilers’ emergency goaltender Brett Epp serves as backup vs. Ducks",
+   "summary": "The Edmonton Oilers will have a new face on the bench as they take on the Anaheim Ducks.",
+   "published": "2026-11-05T19:25-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177192360-1.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
+   "sn_team_count": 2,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/hockey/article/gold-medallist-hayley-wickenheiser-among-latest-order-of-hockey-in-canada-honourees/",
+   "url": "https://www.sportsnet.ca/nhl/article/oilers-emergency-goaltender-brett-epp-to-serve-as-backup-vs-ducks/",
    "source": "Sportsnet"
   },
   {
@@ -3267,6 +3267,21 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/fourth-option-gives-blue-jays-flexibility-with-pitching-prospect-jake-bloss/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Report: Blue Jays re-signing Rudy Martin Jr. to minor-league deal",
+   "summary": "",
+   "published": "2026-11-05T11:47-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/rudy-martin-jr.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/report-blue-jays-re-signing-rudy-martin-jr-to-minor-league-deal/",
    "source": "Sportsnet"
   },
   {
@@ -4337,8 +4352,8 @@
       "l": 9,
       "otl": 0,
       "pts": 16,
-      "gf": 55,
-      "ga": 63,
+      "gf": 56,
+      "ga": 64,
       "strk": "W1"
      }
     ]
@@ -4361,14 +4376,14 @@
      {
       "name": "Niagara IceDogs",
       "abbr": "NIAG",
-      "gp": 15,
+      "gp": 16,
       "w": 7,
-      "l": 6,
+      "l": 7,
       "otl": 2,
       "pts": 16,
       "gf": 48,
       "ga": 61,
-      "strk": "L2"
+      "strk": "L3"
      },
      {
       "name": "North Bay Battalion",
@@ -4397,14 +4412,14 @@
      {
       "name": "Brampton Steelheads",
       "abbr": "BRAM",
-      "gp": 16,
-      "w": 2,
+      "gp": 17,
+      "w": 3,
       "l": 12,
       "otl": 2,
-      "pts": 6,
+      "pts": 8,
       "gf": 43,
       "ga": 73,
-      "strk": "L4"
+      "strk": "W1"
      }
     ]
    },
@@ -4443,8 +4458,8 @@
       "l": 5,
       "otl": 3,
       "pts": 19,
-      "gf": 62,
-      "ga": 50,
+      "gf": 63,
+      "ga": 51,
       "strk": "W5"
      },
      {
@@ -4755,26 +4770,26 @@
      {
       "name": "Leamington Flyers",
       "abbr": "LEA",
-      "gp": 17,
+      "gp": 18,
       "w": 13,
-      "l": 3,
+      "l": 4,
       "otl": 1,
       "pts": 27,
       "gf": 68,
       "ga": 36,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Oakville Blades",
       "abbr": "OAK",
-      "gp": 20,
-      "w": 9,
+      "gp": 21,
+      "w": 10,
       "l": 8,
       "otl": 3,
-      "pts": 21,
+      "pts": 23,
       "gf": 73,
       "ga": 77,
-      "strk": "W1"
+      "strk": "W2"
      },
      {
       "name": "Mississauga Chargers",
@@ -4993,6 +5008,18 @@
     "group": "Eastern Conference",
     "teams": [
      {
+      "name": "Cambridge Redhawks",
+      "abbr": "CAM",
+      "gp": 17,
+      "w": 14,
+      "l": 2,
+      "otl": 1,
+      "pts": 29,
+      "gf": 98,
+      "ga": 45,
+      "strk": "W3"
+     },
+     {
       "name": "Caledonia Corvairs",
       "abbr": "CAL",
       "gp": 17,
@@ -5003,18 +5030,6 @@
       "gf": 70,
       "ga": 40,
       "strk": "W5"
-     },
-     {
-      "name": "Cambridge Redhawks",
-      "abbr": "CAM",
-      "gp": 16,
-      "w": 13,
-      "l": 2,
-      "otl": 1,
-      "pts": 27,
-      "gf": 98,
-      "ga": 45,
-      "strk": "W2"
      },
      {
       "name": "Fort Erie Meteors",
@@ -5067,11 +5082,11 @@
      {
       "name": "Ayr Centennials",
       "abbr": "AYR",
-      "gp": 14,
+      "gp": 15,
       "w": 8,
       "l": 3,
-      "otl": 3,
-      "pts": 19,
+      "otl": 4,
+      "pts": 20,
       "gf": 59,
       "ga": 51,
       "strk": "W3"
