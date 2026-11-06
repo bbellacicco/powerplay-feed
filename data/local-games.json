@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T21:51:15-05:00",
+ "updated": "2026-11-05T22:02:26-05:00",
  "today": "2026-11-05",
  "range": [
   "2026-11-02",
@@ -1777,13 +1777,14 @@
    "home_away": "A",
    "opponent": "TMU Bold",
    "location": "Toronto, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 5,
+   "opp_score": 0,
+   "result": "W",
    "note": "",
    "links": {
-    "watch": "https://oua.tv/?school=Windsor"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6290",
+    "recap": "https://golancers.ca/news/2026/11/5/womens-hockey-womens-hockey-dominates-shuts-out-tmu.aspx"
    }
   },
   {
@@ -1815,11 +1816,11 @@
    "home_away": "A",
    "opponent": "Peterborough Petes",
    "location": "Peterborough Memorial Centre, Peterborough",
-   "status": "live",
+   "status": "final",
    "our_score": 4,
    "opp_score": 3,
-   "result": null,
-   "note": "End of Game",
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29159/"
    }
@@ -1892,14 +1893,13 @@
    "home_away": "H",
    "opponent": "Guelph Gryphons",
    "location": "Adie Knox Arena",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 4,
+   "result": "L",
    "note": "",
    "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=173",
-    "watch": "https://oua.tv/?school=Windsor"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6345"
    }
   },
   {
@@ -4347,14 +4347,14 @@
      {
       "name": "Peterborough Petes",
       "abbr": "PBO",
-      "gp": 17,
+      "gp": 18,
       "w": 8,
-      "l": 9,
+      "l": 10,
       "otl": 0,
       "pts": 16,
       "gf": 56,
       "ga": 64,
-      "strk": "W1"
+      "strk": "L1"
      }
     ]
    },
@@ -4453,14 +4453,14 @@
      {
       "name": "Windsor Spitfires",
       "abbr": "WSR",
-      "gp": 16,
-      "w": 8,
+      "gp": 17,
+      "w": 9,
       "l": 5,
       "otl": 3,
-      "pts": 19,
+      "pts": 21,
       "gf": 63,
       "ga": 51,
-      "strk": "W5"
+      "strk": "W6"
      },
      {
       "name": "Sarnia Sting",
