@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T12:32:00-05:00",
+ "updated": "2026-11-06T12:49:55-05:00",
  "today": "2026-11-06",
  "range": [
   "2026-11-03",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 36
   },
   "club_news": {
    "ok": true,
@@ -2133,6 +2133,20 @@
   },
   {
    "league": "cfl",
+   "headline": "5 things to know about the Eastern Final presented by Wegovy®",
+   "summary": "",
+   "published": "2026-11-06T00:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/2N8ry3EDavKeq4uOoTX3Pk/f0b909d45f785845bc855257d16a96c2/Brady_Oliveira_2026_EF.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Alouettes",
+    "Blue Bombers"
+   ],
+   "url": "https://www.cfl.ca/article/5-things-to-know-about-the-eastern-final-presented-by-wegovy",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Two Surprises. Two Awards. Tyson Philpot & Davis Alexander",
    "summary": "",
    "published": "2026-11-05T11:50:00-05:00",
@@ -2301,20 +2315,6 @@
     "Blue Bombers"
    ],
    "url": "https://www.cfl.ca/article/6-things-that-could-decide-who-moves-on-to-the-113th-grey-cup",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "3 X-factors that could shape the Eastern Final presented by Wegovy®",
-   "summary": "",
-   "published": "2026-11-03T00:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/4MrKTlGa1ftNixcnugxCxB/9881056180dd77ef591a6f0539c4477a/Trey_Vaval_2026.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Blue Bombers",
-    "Alouettes"
-   ],
-   "url": "https://www.cfl.ca/article/3-x-factors-that-could-shape-the-eastern-final-presented-by-wegovy",
    "source": "CFL.ca"
   },
   {
@@ -2905,6 +2905,21 @@
   },
   {
    "league": "nhl",
+   "headline": "Maple Leafs’ Tavares ‘heading toward’ return vs. Canadiens after regular practice",
+   "summary": "",
+   "published": "2026-11-06T12:34-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/05/Toronto-Maple-Leafs-center-John-Tavares.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-tavares-heading-toward-return-vs-canadiens-after-regular-practice/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Canadiens’ Demidov progressing in recovery, no timeline for return",
    "summary": "Demidov, who has been out since Oct. 3 with a lower-body injury, has been skating with the team and is progressing in his recovery, but remains without an exact timeline for his return, general manager Kent Hughes said t",
    "published": "2026-11-06T10:57-05:00",
@@ -2914,19 +2929,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/canadiens-demidov-progressing-in-recovery-no-timeline-for-return/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "‘He’s not easy’: Doc Rivers talks coaching Giannis Antetokounmpo",
-   "summary": "Back in front of the microphone after a nearly three-year stint with the Milwaukee Bucks, Doc Rivers had the chance to talk about his experience coaching the Greek superstar in the final years of his tenure with the team",
-   "published": "2026-11-06T10:28-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Giannis.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/hes-not-easy-doc-rivers-talks-coaching-giannis-antetokounmpo/",
    "source": "Sportsnet"
   },
   {
@@ -2940,6 +2942,19 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/ice-hockey-world-championship/article/german-government-wants-to-keep-hockey-worlds-as-russias-return-leads-to-boycott/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "‘He’s not easy’: Doc Rivers talks coaching Giannis Antetokounmpo",
+   "summary": "Back in front of the microphone after a nearly three-year stint with the Milwaukee Bucks, Doc Rivers had the chance to talk about his experience coaching the Greek superstar in the final years of his tenure with the team",
+   "published": "2026-11-06T10:28-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Giannis.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/hes-not-easy-doc-rivers-talks-coaching-giannis-antetokounmpo/",
    "source": "Sportsnet"
   },
   {
@@ -2982,19 +2997,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Oilers’ emergency goaltender Brett Epp serves as backup vs. Ducks",
-   "summary": "The Edmonton Oilers will have a new face on the bench as they take on the Anaheim Ducks.",
-   "published": "2026-11-05T19:25-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/epp.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/oilers-emergency-goaltender-brett-epp-to-serve-as-backup-vs-ducks/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "cfl",
    "headline": "Blue Bombers list Collaros as game-time decision for East Division final",
    "summary": "",
@@ -3022,7 +3024,7 @@
   },
   {
    "league": "other",
-   "headline": "Eldridge has three points, Canada beats Sweden at women’s world hockey championship",
+   "headline": "Eldridge has three points as Canada beats Sweden at women’s worlds",
    "summary": "",
    "published": "2026-11-06T11:56-05:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-20.jpg",
@@ -3111,6 +3113,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/canadiens-show-character-in-comeback-win-over-mammoth/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Oilers’ emergency goaltender Brett Epp serves as backup vs. Ducks",
+   "summary": "The Edmonton Oilers will have a new face on the bench as they take on the Anaheim Ducks.",
+   "published": "2026-11-05T19:25-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/epp.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/oilers-emergency-goaltender-brett-epp-to-serve-as-backup-vs-ducks/",
    "source": "Sportsnet"
   },
   {
