@@ -358,11 +358,11 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
   // ---------- rows ----------
   var ROWS = [
     { key: 'stories', title: 'Latest stories', by: ['St. Clair College Alumni', 'logos/st-clair-alumni.png'], all: LINK.local, tab: 'stories' },
+    { key: 'network', title: 'Powerplay Network', by: ['Maple Leaf Pro Wrestling', 'https://static.wixstatic.com/media/0be2db_9da56760ff7c49b798008220ba008a1a~mv2.jpg/v1/fit/w_200,h_200,q_90/mlp-pro-wrestling.jpg'], all: LINK.network, tab: 'network' },
     { key: 'photos', title: 'Game Day Snaps', gold: 'Snaps', by: null, all: null, tab: null },
     { key: 'athletes', title: 'Athlete profiles', by: null, all: LINK.athletes, tab: 'athletes' },
     { key: 'local', title: 'Local scores', by: ['Unifor Local 444', 'logos/unifor-444.png'], all: LINK.scores, tab: 'scores' },
     { key: 'pro', title: 'Pro scores', by: ['Unifor Local 2458', 'logos/unifor-2458.png'], all: LINK.pro, tab: 'pro' },
-    { key: 'network', title: 'Powerplay Network', by: ['Maple Leaf Pro Wrestling', 'https://static.wixstatic.com/media/0be2db_9da56760ff7c49b798008220ba008a1a~mv2.jpg/v1/fit/w_200,h_200,q_90/mlp-pro-wrestling.jpg'], all: LINK.network, tab: 'network' },
     { key: 'prohead', title: 'Pro headlines', by: ['The D’Amore Group', 'logos/damore-group.png'], all: LINK.pro, tab: 'pro-updates' }
   ];
   var SHARE_TEXT = { network: 'Watch the latest local highlights and interviews', local: 'Local scores', stories: 'The latest Windsor-Essex sports stories',
@@ -398,7 +398,7 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
     document.getElementById('rows').appendChild(sec);
     rowEl[r.key] = row;
   });
-  // rows run in ROWS order, below the search bar: stories, Game Day Snaps and athlete profiles first, then the scores
+  // rows run in ROWS order, below the search bar: stories, the Network, Game Day Snaps and athlete profiles first, then the scores
   function fill(key, nodes, emptyText) {
     var row = rowEl[key]; row.innerHTML = '';
     if (!nodes.length) { row.appendChild(el('div', 'empty', emptyText)); return; }
