@@ -13,6 +13,8 @@
   Embed in Wix at full width, 56px tall (70px in the Wix mobile editor):
     https://bbellacicco.github.io/powerplay-feed/scores-ticker.html
   Options: ?mix=local  or  ?mix=pro   (default shows both)
+           ?size=slim   a slim 34px bar with smaller type, like the score ribbons in the blog strip
+                        (Wix embed 34px tall on computers and phones)
 -->
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -61,7 +63,20 @@ a.ticker-item:hover .team{color:#FFE600}
     background:#FFE600;color:#000;text-decoration:none;font:900 12px/26px Arial,sans-serif;letter-spacing:.8px;text-transform:uppercase;
     box-shadow:0 0 12px rgba(255,230,0,.5)}
 }
+/* ?size=slim: a slim 34px bar, small but legible (same size as the score ribbons in the blog strip) */
+html.slim,html.slim body{height:34px}
+html.slim #wrap,html.slim #brand,html.slim #ticker-viewport,html.slim #ticker-stage,html.slim .ticker-item,html.slim #more{height:34px}
+html.slim .ticker-item{font-size:12.5px;gap:6px;padding:0 16px;font-weight:600}
+html.slim .badge{font-size:9px;padding:2px 5px;letter-spacing:.06em}
+html.slim .badge-live::before{width:5px;height:5px}
+html.slim .meta{font-size:9.5px;letter-spacing:.06em}
+html.slim .sep{height:34px;line-height:34px;font-size:11px}
+html.slim #brand img{height:26px}
+html.slim #more span{font-size:10.5px;padding:6px 10px;box-shadow:0 0 8px rgba(255,230,0,.35)}
+html.slim #morebar{display:none!important}
+@media (max-width:480px){html.slim .ticker-item{font-size:12px;padding:0 12px}}
 </style>
+<script>if (/[?&]size=slim\b/.test(location.search)) document.documentElement.className += ' slim';</script>
 </head>
 <body>
 <div id="wrap">
