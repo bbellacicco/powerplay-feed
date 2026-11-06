@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T21:17:42-05:00",
+ "updated": "2026-11-05T21:32:21-05:00",
  "today": "2026-11-05",
  "range": [
   "2026-11-02",
@@ -1817,9 +1817,9 @@
    "location": "Peterborough Memorial Centre, Peterborough",
    "status": "live",
    "our_score": 3,
-   "opp_score": 1,
+   "opp_score": 2,
    "result": null,
-   "note": "16:39 3rd",
+   "note": "05:14 3rd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29159/"
    }
@@ -1835,9 +1835,9 @@
    "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
    "status": "live",
    "our_score": 1,
-   "opp_score": 4,
+   "opp_score": 5,
    "result": null,
-   "note": "03:48 3rd",
+   "note": "Unofficial Final",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16647"
    },
@@ -3081,15 +3081,15 @@
   },
   {
    "league": "nhl",
-   "headline": "Oilers’ emergency goaltender Brett Epp to serve as backup vs. Ducks",
-   "summary": "The Edmonton Oilers will have a new face on the bench as they take on the Anaheim Ducks.",
-   "published": "2026-11-05T19:25-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177192360-1.jpg",
+   "headline": "Bouchard becomes fastest defenceman in Oilers history to hit 10 goals",
+   "summary": "",
+   "published": "2026-11-05T21:18-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/04/Edmonton-Oilers-defenseman-Evan-Bouchard.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 2,
+   "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/oilers-emergency-goaltender-brett-epp-to-serve-as-backup-vs-ducks/",
+   "url": "https://www.sportsnet.ca/nhl/article/bouchard-becomes-fastest-defenceman-in-oilers-history-to-hit-10-goals/",
    "source": "Sportsnet"
   },
   {
@@ -4337,7 +4337,7 @@
       "l": 9,
       "otl": 0,
       "pts": 16,
-      "gf": 54,
+      "gf": 55,
       "ga": 63,
       "strk": "W1"
      }
@@ -4444,7 +4444,7 @@
       "otl": 3,
       "pts": 19,
       "gf": 62,
-      "ga": 49,
+      "ga": 50,
       "strk": "W5"
      },
      {
@@ -4761,7 +4761,7 @@
       "otl": 1,
       "pts": 27,
       "gf": 68,
-      "ga": 35,
+      "ga": 36,
       "strk": "L1"
      },
      {
@@ -4772,7 +4772,7 @@
       "l": 8,
       "otl": 3,
       "pts": 21,
-      "gf": 72,
+      "gf": 73,
       "ga": 77,
       "strk": "W1"
      },
@@ -4846,14 +4846,14 @@
      {
       "name": "St. Marys Lincolns",
       "abbr": "SMY",
-      "gp": 15,
-      "w": 14,
+      "gp": 16,
+      "w": 15,
       "l": 1,
       "otl": 0,
-      "pts": 28,
+      "pts": 30,
       "gf": 99,
       "ga": 32,
-      "strk": "W12"
+      "strk": "W13"
      },
      {
       "name": "St. Thomas Stars",
@@ -4978,14 +4978,14 @@
      {
       "name": "Sarnia Legionnaires",
       "abbr": "SAR",
-      "gp": 14,
+      "gp": 15,
       "w": 1,
-      "l": 13,
+      "l": 14,
       "otl": 0,
       "pts": 2,
       "gf": 30,
       "ga": 96,
-      "strk": "L2"
+      "strk": "L3"
      }
     ]
    },
@@ -5012,8 +5012,8 @@
       "l": 2,
       "otl": 1,
       "pts": 27,
-      "gf": 97,
-      "ga": 44,
+      "gf": 98,
+      "ga": 45,
       "strk": "W2"
      },
      {
@@ -5053,6 +5053,18 @@
       "strk": "W4"
      },
      {
+      "name": "Pelham Panthers",
+      "abbr": "PEL",
+      "gp": 17,
+      "w": 10,
+      "l": 6,
+      "otl": 1,
+      "pts": 21,
+      "gf": 67,
+      "ga": 65,
+      "strk": "W1"
+     },
+     {
       "name": "Ayr Centennials",
       "abbr": "AYR",
       "gp": 14,
@@ -5060,21 +5072,9 @@
       "l": 3,
       "otl": 3,
       "pts": 19,
-      "gf": 58,
-      "ga": 50,
+      "gf": 59,
+      "ga": 51,
       "strk": "W3"
-     },
-     {
-      "name": "Pelham Panthers",
-      "abbr": "PEL",
-      "gp": 16,
-      "w": 9,
-      "l": 6,
-      "otl": 1,
-      "pts": 19,
-      "gf": 67,
-      "ga": 65,
-      "strk": "L1"
      },
      {
       "name": "Port Colborne Sailors",
@@ -5091,14 +5091,14 @@
      {
       "name": "Hamilton Steel",
       "abbr": "HAM",
-      "gp": 18,
+      "gp": 19,
       "w": 5,
-      "l": 10,
+      "l": 11,
       "otl": 3,
       "pts": 13,
       "gf": 56,
       "ga": 82,
-      "strk": "W4"
+      "strk": "L1"
      },
      {
       "name": "Stoney Creek Generals",
