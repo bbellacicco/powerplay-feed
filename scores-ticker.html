@@ -13,8 +13,8 @@
   Embed in Wix at full width, 56px tall (70px in the Wix mobile editor):
     https://bbellacicco.github.io/powerplay-feed/scores-ticker.html
   Options: ?mix=local  or  ?mix=pro   (default shows both)
-           ?size=slim   a slim 34px bar with smaller type, like the score ribbons in the blog strip
-                        (Wix embed 34px tall on computers and phones)
+           Standard: a slim 34px bar with smaller type, like the score ribbons in the blog strip
+                        (Wix embed 34px tall on computers and phones).  ?size=big  the old 56px bar
 -->
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -76,7 +76,7 @@ html.slim #more span{font-size:10.5px;padding:6px 10px;box-shadow:0 0 8px rgba(2
 html.slim #morebar{display:none!important}
 @media (max-width:480px){html.slim .ticker-item{font-size:12px;padding:0 12px}}
 </style>
-<script>if (/[?&]size=slim\b/.test(location.search)) document.documentElement.className += ' slim';</script>
+<script>/* slim is the standard now (Nov. 2026); ?size=big brings back the 56px bar */ if (!/[?&]size=big\b/.test(location.search)) document.documentElement.className += ' slim';</script>
 </head>
 <body>
 <div id="wrap">
