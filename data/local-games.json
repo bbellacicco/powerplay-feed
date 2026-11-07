@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T18:32:26-05:00",
+ "updated": "2026-11-07T18:50:47-05:00",
  "today": "2026-11-07",
  "range": [
   "2026-11-04",
@@ -1219,9 +1219,9 @@
    "home_away": "H",
    "opponent": "Wheatley Sharks",
    "location": "Libro Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
    "note": "",
    "links": {
@@ -2258,6 +2258,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Toronto FC drops MLS season finale against Union",
+   "summary": "",
+   "published": "2026-11-07T18:41-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/tfc-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/toronto-fc-drops-mls-season-finale-against-union/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Jets’ Josh Morrissey sheds non-contact jersey at practice",
    "summary": "",
@@ -2336,19 +2349,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Germany beats Austria at women’s worlds, Denmark prevails over Japan",
-   "summary": "",
-   "published": "2026-11-07T16:26-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Germany.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/wwhc/article/germany-beats-austria-at-womens-worlds-denmark-prevails-over-japan/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "‘I feel like I belong’: Zayne Parekh coming into his own with Flames",
    "summary": "Zayne Parekh is confident, comfortable and creating. As a result, he’s starting to look every bit like a difference-maker for the Flames.",
@@ -2398,6 +2398,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/james-reimer-placed-on-unconditional-waivers/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Germany beats Austria at women’s worlds, Denmark prevails over Japan",
+   "summary": "",
+   "published": "2026-11-07T16:26-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Germany.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/wwhc/article/germany-beats-austria-at-womens-worlds-denmark-prevails-over-japan/",
    "source": "Sportsnet"
   },
   {
@@ -2642,19 +2655,6 @@
    "sn_team_count": 0,
    "sport": "Tennis",
    "url": "https://www.sportsnet.ca/atp/article/shelton-rallies-in-third-set-to-reach-final-in-paris-faces-either-alcaraz-or-ruud/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Norris earns pole for Sao Paulo GP as grid shaken up by engine penalties",
-   "summary": "McLaren’s Lando Norris earned pole position for Sao Paulo Grand Prix on Saturday.",
-   "published": "2026-11-07T11:07-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Lando-Norris.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Auto Racing",
-   "url": "https://www.sportsnet.ca/formula-1/article/verstappen-tops-final-practice-as-several-drivers-recieve-engine-penalties/",
    "source": "Sportsnet"
   },
   {
@@ -3596,7 +3596,7 @@
       "otl": 1,
       "pts": 15,
       "gf": 68,
-      "ga": 78,
+      "ga": 79,
       "strk": "L2"
      },
      {
@@ -3701,7 +3701,7 @@
       "l": 3,
       "otl": 0,
       "pts": 28,
-      "gf": 80,
+      "gf": 81,
       "ga": 53,
       "strk": "W5"
      },
@@ -3799,26 +3799,26 @@
      {
       "name": "Newmarket Hurricanes",
       "abbr": "NMH",
-      "gp": 21,
-      "w": 9,
+      "gp": 22,
+      "w": 10,
       "l": 9,
       "otl": 3,
-      "pts": 21,
-      "gf": 66,
+      "pts": 23,
+      "gf": 67,
       "ga": 64,
-      "strk": "L1"
+      "strk": "W1"
      },
      {
       "name": "Stouffville Spirit",
       "abbr": "STO",
-      "gp": 18,
+      "gp": 19,
       "w": 9,
-      "l": 7,
+      "l": 8,
       "otl": 2,
       "pts": 20,
       "gf": 75,
-      "ga": 63,
-      "strk": "W2"
+      "ga": 64,
+      "strk": "L1"
      },
      {
       "name": "Pickering Panthers",
@@ -4026,7 +4026,7 @@
       "otl": 2,
       "pts": 16,
       "gf": 66,
-      "ga": 105,
+      "ga": 107,
       "strk": "L2"
      },
      {
@@ -4037,7 +4037,7 @@
       "l": 15,
       "otl": 2,
       "pts": 14,
-      "gf": 70,
+      "gf": 72,
       "ga": 124,
       "strk": "L4"
      },
