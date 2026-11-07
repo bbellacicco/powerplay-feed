@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T22:32:15-05:00",
+ "updated": "2026-11-06T22:51:43-05:00",
  "today": "2026-11-06",
  "range": [
   "2026-11-03",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 32
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -1729,11 +1729,11 @@
    "home_away": "A",
    "opponent": "Ottawa 67's",
    "location": "TD Place, Ottawa, ON",
-   "status": "live",
+   "status": "final",
    "our_score": 5,
    "opp_score": 4,
-   "result": null,
-   "note": "End of Game",
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29165/"
    }
@@ -2883,6 +2883,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "mlb",
+   "headline": "Blue Jays win American League Team Gold Glove",
+   "summary": "",
+   "published": "2026-11-06T22:39-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/05/gimenez-1.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/blue-jays-win-american-league-team-gold-glove/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "‘Remarkable’: Gretzky gives McDavid flowers amid historically hot start",
    "summary": "Despite seeing his records at risk, Gretzky had nothing but praise for the current Oilers superstar as he pushes to break The Great One’s single-season points record.",
@@ -2973,19 +2988,6 @@
    "sn_team_count": 0,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/ncaa-mens-basketball/article/canadas-miles-sadler-scores-25-in-second-game-west-virginia-beats-stetson/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Two players score on wrong basket on weird day for women’s college hoops",
-   "summary": "",
-   "published": "2026-11-06T16:49-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/ncaa.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/basketball/article/two-players-score-on-wrong-basket-on-weird-day-for-womens-college-hoops/",
    "source": "Sportsnet"
   },
   {
@@ -3142,6 +3144,19 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/cfl/article/cfl-east-final-preview-alouettes-look-to-continue-dominant-season-with-grey-cup-berth/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Two players score on wrong basket on weird day for women’s college hoops",
+   "summary": "",
+   "published": "2026-11-06T16:49-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/ncaa.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/basketball/article/two-players-score-on-wrong-basket-on-weird-day-for-womens-college-hoops/",
    "source": "Sportsnet"
   },
   {
@@ -4118,14 +4133,14 @@
      {
       "name": "Ottawa 67's",
       "abbr": "OTT",
-      "gp": 16,
+      "gp": 17,
       "w": 9,
-      "l": 5,
+      "l": 6,
       "otl": 2,
       "pts": 20,
       "gf": 59,
       "ga": 56,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Oshawa Generals",
@@ -4248,14 +4263,14 @@
      {
       "name": "Windsor Spitfires",
       "abbr": "WSR",
-      "gp": 17,
-      "w": 9,
+      "gp": 18,
+      "w": 10,
       "l": 5,
       "otl": 3,
-      "pts": 21,
+      "pts": 23,
       "gf": 68,
       "ga": 55,
-      "strk": "W6"
+      "strk": "W7"
      },
      {
       "name": "Sarnia Sting",
@@ -4515,6 +4530,18 @@
       "strk": "W2"
      },
      {
+      "name": "Milton Menace",
+      "abbr": "MIL",
+      "gp": 21,
+      "w": 17,
+      "l": 3,
+      "otl": 1,
+      "pts": 35,
+      "gf": 82,
+      "ga": 43,
+      "strk": "W4"
+     },
+     {
       "name": "King Rebellion",
       "abbr": "KNG",
       "gp": 21,
@@ -4527,25 +4554,13 @@
       "strk": "W4"
      },
      {
-      "name": "Milton Menace",
-      "abbr": "MIL",
+      "name": "Toronto Patriots",
+      "abbr": "PAT",
       "gp": 20,
       "w": 16,
       "l": 3,
       "otl": 1,
       "pts": 33,
-      "gf": 82,
-      "ga": 43,
-      "strk": "W3"
-     },
-     {
-      "name": "Toronto Patriots",
-      "abbr": "PAT",
-      "gp": 19,
-      "w": 16,
-      "l": 3,
-      "otl": 0,
-      "pts": 32,
       "gf": 105,
       "ga": 36,
       "strk": "W11"
@@ -4553,14 +4568,14 @@
      {
       "name": "Burlington Cougars",
       "abbr": "BUR",
-      "gp": 21,
-      "w": 14,
+      "gp": 22,
+      "w": 15,
       "l": 5,
       "otl": 2,
-      "pts": 30,
+      "pts": 32,
       "gf": 115,
       "ga": 65,
-      "strk": "W4"
+      "strk": "W5"
      },
      {
       "name": "Leamington Flyers",
@@ -4625,14 +4640,14 @@
      {
       "name": "Georgetown Raiders",
       "abbr": "GEO",
-      "gp": 22,
+      "gp": 23,
       "w": 6,
-      "l": 14,
+      "l": 15,
       "otl": 2,
       "pts": 14,
       "gf": 68,
       "ga": 124,
-      "strk": "L3"
+      "strk": "L4"
      },
      {
       "name": "Buffalo Jr. Sabres",
