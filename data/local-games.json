@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T18:02:16-05:00",
+ "updated": "2026-11-07T18:17:17-05:00",
  "today": "2026-11-07",
  "range": [
   "2026-11-04",
@@ -1418,28 +1418,6 @@
  ],
  "pro_games": [
   {
-   "id": "cfl-cfl6674",
-   "team": "cfl",
-   "sport": "CFL",
-   "start": "2026-11-07T15:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Montreal Alouettes",
-   "location": "Percival Molson Memorial Stadium",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.cfl.ca/schedule/"
-   },
-   "away": "Winnipeg Blue Bombers",
-   "home": "Montreal Alouettes",
-   "away_abbr": "WPG",
-   "home_abbr": "MTL"
-  },
-  {
    "id": "cfl-cfl6675",
    "team": "cfl",
    "sport": "CFL",
@@ -1460,9 +1438,44 @@
    "home": "Edmonton Elks",
    "away_abbr": "BC",
    "home_abbr": "EDM"
+  },
+  {
+   "id": "cfl-cfl6674",
+   "team": "cfl",
+   "sport": "CFL",
+   "start": "2026-11-07T15:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Montreal Alouettes",
+   "location": "Percival Molson Memorial Stadium",
+   "status": "final",
+   "our_score": 23,
+   "opp_score": 33,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.cfl.ca/schedule/"
+   },
+   "away": "Winnipeg Blue Bombers",
+   "home": "Montreal Alouettes",
+   "away_abbr": "WPG",
+   "home_abbr": "MTL"
   }
  ],
  "pro_news": [
+  {
+   "league": "cfl",
+   "headline": "Great drive by Blue Bombers keeps things CLOSE",
+   "summary": "",
+   "published": "2026-11-07T17:57:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/4gFZsIL3aSijAyfjZ5mOpk/527549cde9b3d8d959700bc9090c7613/WPG_1ST_TD.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Blue Bombers"
+   ],
+   "url": "https://www.cfl.ca/article/great-drive-by-blue-bombers-keeps-things-close",
+   "source": "CFL.ca"
+  },
   {
    "league": "cfl",
    "headline": "O-Lineman TD ALERT!!!",
@@ -1703,17 +1716,6 @@
    "video": true,
    "teams": [],
    "url": "https://www.cfl.ca/article/who-is-the-cfl-s-george-reed-most-outstanding-player-2026-mop-finalists",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "FRONT of the Line..",
-   "summary": "",
-   "published": "2026-11-04T13:50:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/4cDxKP75Nonb9jdx74jRhU/e16bd2468e9e1d46023aaeee09dcdb23/awards_Nov4_V2.png?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/front-of-the-line",
    "source": "CFL.ca"
   },
   {
@@ -2225,6 +2227,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "cfl",
+   "headline": "Alouettes returning to Grey Cup after win over Blue Bombers in East final",
+   "summary": "",
+   "published": "2026-11-07T18:08-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/scott.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/alouettes-returning-to-grey-cup-after-win-over-blue-bombers-in-east-final/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "NFL Week 9 preview: Garrett’s return gives Rams needed jolt",
    "summary": "Week 9 marks the midway point of the season and every team’s outlook will likely depend on its record. Zach Phillips breaks down all the action, including an exciting return, heading into another busy NFL slate.",
@@ -2342,19 +2357,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "UFC Vegas 124 preview: Heavyweight main event should be violent, quick",
-   "summary": "The main event of UFC Vegas 124 saw a late change, but Waldo Cortes-Acosta and Johnny Walker stepped up. Adam Martin highlights how this heavyweight main event should be a violent but quick battle.",
-   "published": "2026-11-05T10:15-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-13.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/ufc-vegas-124-preview-heavyweight-main-event-should-be-violent-quick/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "‘I feel like I belong’: Zayne Parekh coming into his own with Flames",
    "summary": "Zayne Parekh is confident, comfortable and creating. As a result, he’s starting to look every bit like a difference-maker for the Flames.",
@@ -2365,6 +2367,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/i-feel-like-i-belong-zayne-parekh-coming-into-his-own-with-flames/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "UFC Vegas 124 preview: Heavyweight main event should be violent, quick",
+   "summary": "The main event of UFC Vegas 124 saw a late change, but Waldo Cortes-Acosta and Johnny Walker stepped up. Adam Martin highlights how this heavyweight main event should be a violent but quick battle.",
+   "published": "2026-11-05T10:15-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-13.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "MMA",
+   "url": "https://www.sportsnet.ca/ufc/article/ufc-vegas-124-preview-heavyweight-main-event-should-be-violent-quick/",
    "source": "Sportsnet"
   },
   {
@@ -2635,19 +2650,6 @@
    "sn_team_count": 0,
    "sport": "Tennis",
    "url": "https://www.sportsnet.ca/atp/article/shelton-rallies-in-third-set-to-reach-final-in-paris-faces-either-alcaraz-or-ruud/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Norris earns pole for Sao Paulo GP as grid shaken up by engine penalties",
-   "summary": "McLaren’s Lando Norris earned pole position for Sao Paulo Grand Prix on Saturday.",
-   "published": "2026-11-07T11:07-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Lando-Norris.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Auto Racing",
-   "url": "https://www.sportsnet.ca/formula-1/article/verstappen-tops-final-practice-as-several-drivers-recieve-engine-penalties/",
    "source": "Sportsnet"
   },
   {
@@ -3226,7 +3228,7 @@
    "league": "mlb",
    "headline": "Watch Blue Jays prospect Parker in tonight's AFL Home Run Derby",
    "summary": "",
-   "published": "2026-11-07T14:14-05:00",
+   "published": "2026-11-07T18:05-05:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/arwbnyum6p7uxhuqfcdp",
    "video": false,
    "teams": [
@@ -3589,7 +3591,7 @@
       "otl": 1,
       "pts": 15,
       "gf": 68,
-      "ga": 75,
+      "ga": 76,
       "strk": "L2"
      },
      {
@@ -3694,7 +3696,7 @@
       "l": 3,
       "otl": 0,
       "pts": 28,
-      "gf": 77,
+      "gf": 78,
       "ga": 53,
       "strk": "W5"
      },
@@ -3797,7 +3799,7 @@
       "l": 9,
       "otl": 3,
       "pts": 21,
-      "gf": 65,
+      "gf": 66,
       "ga": 64,
       "strk": "L1"
      },
@@ -3810,7 +3812,7 @@
       "otl": 2,
       "pts": 20,
       "gf": 75,
-      "ga": 62,
+      "ga": 63,
       "strk": "W2"
      },
      {
@@ -4019,7 +4021,7 @@
       "otl": 2,
       "pts": 16,
       "gf": 66,
-      "ga": 104,
+      "ga": 105,
       "strk": "L2"
      },
      {
@@ -4030,7 +4032,7 @@
       "l": 15,
       "otl": 2,
       "pts": 14,
-      "gf": 69,
+      "gf": 70,
       "ga": 124,
       "strk": "L4"
      },
