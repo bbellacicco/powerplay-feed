@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06T21:47:17-05:00",
+ "updated": "2026-11-06T22:02:14-05:00",
  "today": "2026-11-06",
  "range": [
   "2026-11-03",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -1749,9 +1749,9 @@
    "location": "Pyramid R.C., St. Marys, ON",
    "status": "live",
    "our_score": 5,
-   "opp_score": 5,
+   "opp_score": 6,
    "result": null,
-   "note": "04:48 3rd",
+   "note": "Unofficial Final",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15658"
    },
@@ -1766,11 +1766,11 @@
    "home_away": "A",
    "opponent": "King Rebellion",
    "location": "Zancor Centre",
-   "status": "live",
+   "status": "final",
    "our_score": 1,
    "opp_score": 3,
-   "result": null,
-   "note": "00:19 3rd",
+   "result": "L",
+   "note": "",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16650"
    },
@@ -2922,6 +2922,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "Alexander-Walker’s 28 points lead Hawks past Wizards",
+   "summary": "",
+   "published": "2026-11-06T21:47-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177222339.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/alexander-walkers-28-points-lead-hawks-past-wizards/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Maple Leafs’ Tavares ‘heading toward’ return vs. Canadiens after regular practice",
    "summary": "",
@@ -2937,18 +2950,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nba",
-   "headline": "Raptors’ Immanuel Quickley, Scottie Barnes out vs. Bucks",
-   "summary": "Point guard Immanuel Quickley has been downgraded to questionable with right hamstring tightness for Friday’s game against the Milwaukee Bucks, the team announced in their injury report.",
-   "published": "2026-11-06T13:03-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/IQ.jpg",
+   "league": "nhl",
+   "headline": "Blue Jackets’ Sean Monahan exits vs. Sabres with lower-body injury",
+   "summary": "",
+   "published": "2026-11-06T21:18-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177198422.jpg",
    "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
+   "teams": [],
    "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-immanuel-quickley-scottie-barnes-questionable-vs-bucks/",
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/blue-jackets-sean-monahan-exits-vs-sabres-with-lower-body-injury/",
    "source": "Sportsnet"
   },
   {
@@ -2975,19 +2986,6 @@
    "sn_team_count": 0,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/basketball/article/two-players-score-on-wrong-basket-on-weird-day-for-womens-college-hoops/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Browns to start Shedeur Sanders vs. Saints with Deshaun Watson in concussion protocol",
-   "summary": "",
-   "published": "2026-11-06T14:49-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-21.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/browns-to-start-shedeur-sanders-vs-saints-with-deshaun-watson-in-concussion-protocol/",
    "source": "Sportsnet"
   },
   {
@@ -3204,6 +3202,19 @@
   },
   {
    "league": "nfl",
+   "headline": "Browns to start Shedeur Sanders vs. Saints with Deshaun Watson in concussion protocol",
+   "summary": "",
+   "published": "2026-11-06T14:49-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-21.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/browns-to-start-shedeur-sanders-vs-saints-with-deshaun-watson-in-concussion-protocol/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
    "headline": "Patriots’ TreVeyon Henderson dealing with unexplained neurological symptoms",
    "summary": "",
    "published": "2026-11-06T10:57-05:00",
@@ -3217,19 +3228,6 @@
   },
   {
    "league": "nfl",
-   "headline": "Report: Ravens send two picks to Cardinals in Jacoby Brissett trade",
-   "summary": "In return, the Arizona Cardinals will receive a 2027 fourth-round draft pick and a 2028 seventh-round pick, while also sending a 2027 fifth to the Ravens, ESPN’s Ian Rapoport reported on Friday.",
-   "published": "2026-11-06T11:21-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/jacoby-brissett.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/report-ravens-send-two-picks-to-cardinals-in-jacoby-brissett-trade/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
    "headline": "Jets rule out Garrett Wilson vs. Chiefs with concussion, but Breece Hall returns from quad injury",
    "summary": "",
    "published": "2026-11-06T12:05-05:00",
@@ -3239,6 +3237,19 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/jets-rule-out-garrett-wilson-vs-chiefs-with-concussion-but-breece-hall-returns-from-quad-injury/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Diamondbacks’ Carroll undergoes elbow surgery",
+   "summary": "",
+   "published": "2026-11-06T18:18-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/04/CP176166960.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/report-diamondbacks-carroll-undergoes-elbow-surgey/",
    "source": "Sportsnet"
   },
   {
@@ -4083,6 +4094,18 @@
     "group": "East Division",
     "teams": [
      {
+      "name": "Brantford Bulldogs",
+      "abbr": "BFD",
+      "gp": 18,
+      "w": 12,
+      "l": 5,
+      "otl": 1,
+      "pts": 25,
+      "gf": 70,
+      "ga": 48,
+      "strk": "W1"
+     },
+     {
       "name": "Kingston Frontenacs",
       "abbr": "KGN",
       "gp": 17,
@@ -4093,18 +4116,6 @@
       "gf": 79,
       "ga": 61,
       "strk": "W5"
-     },
-     {
-      "name": "Brantford Bulldogs",
-      "abbr": "BFD",
-      "gp": 17,
-      "w": 11,
-      "l": 5,
-      "otl": 1,
-      "pts": 23,
-      "gf": 70,
-      "ga": 48,
-      "strk": "L1"
      },
      {
       "name": "Ottawa 67's",
@@ -4174,14 +4185,14 @@
      {
       "name": "North Bay Battalion",
       "abbr": "NB",
-      "gp": 17,
+      "gp": 18,
       "w": 7,
-      "l": 9,
+      "l": 10,
       "otl": 1,
       "pts": 15,
       "gf": 62,
       "ga": 69,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Barrie Colts",
@@ -4215,14 +4226,14 @@
      {
       "name": "Flint Firebirds",
       "abbr": "FLNT",
-      "gp": 15,
+      "gp": 16,
       "w": 11,
-      "l": 3,
+      "l": 4,
       "otl": 1,
       "pts": 23,
       "gf": 60,
       "ga": 45,
-      "strk": "W2"
+      "strk": "L1"
      },
      {
       "name": "Soo Greyhounds",
@@ -4251,26 +4262,26 @@
      {
       "name": "Sarnia Sting",
       "abbr": "SAR",
-      "gp": 18,
+      "gp": 19,
       "w": 7,
-      "l": 10,
+      "l": 11,
       "otl": 1,
       "pts": 15,
       "gf": 72,
       "ga": 82,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Saginaw Spirit",
       "abbr": "SAG",
-      "gp": 16,
+      "gp": 17,
       "w": 6,
-      "l": 7,
+      "l": 8,
       "otl": 3,
       "pts": 15,
       "gf": 59,
       "ga": 64,
-      "strk": "L5"
+      "strk": "L6"
      }
     ]
    },
@@ -4280,59 +4291,59 @@
      {
       "name": "Guelph Storm",
       "abbr": "GUE",
-      "gp": 16,
-      "w": 13,
+      "gp": 17,
+      "w": 14,
       "l": 3,
       "otl": 0,
-      "pts": 26,
+      "pts": 28,
       "gf": 71,
       "ga": 47,
-      "strk": "W4"
+      "strk": "W5"
      },
      {
       "name": "London Knights",
       "abbr": "LDN",
-      "gp": 15,
-      "w": 10,
+      "gp": 16,
+      "w": 11,
       "l": 3,
       "otl": 2,
-      "pts": 22,
+      "pts": 24,
       "gf": 69,
       "ga": 55,
-      "strk": "W2"
+      "strk": "W3"
      },
      {
       "name": "Erie Otters",
       "abbr": "ER",
-      "gp": 17,
-      "w": 9,
+      "gp": 18,
+      "w": 10,
       "l": 6,
       "otl": 2,
-      "pts": 20,
+      "pts": 22,
       "gf": 60,
       "ga": 60,
-      "strk": "W2"
+      "strk": "W3"
      },
      {
       "name": "Kitchener Rangers",
       "abbr": "KIT",
-      "gp": 17,
-      "w": 8,
+      "gp": 18,
+      "w": 9,
       "l": 6,
       "otl": 3,
-      "pts": 19,
+      "pts": 21,
       "gf": 58,
       "ga": 54,
-      "strk": "L1"
+      "strk": "W1"
      },
      {
       "name": "Owen Sound Attack",
       "abbr": "OS",
-      "gp": 17,
+      "gp": 18,
       "w": 6,
       "l": 10,
-      "otl": 1,
-      "pts": 13,
+      "otl": 2,
+      "pts": 14,
       "gf": 47,
       "ga": 75,
       "strk": "L2"
@@ -4371,14 +4382,14 @@
      {
       "name": "Wellington Dukes",
       "abbr": "WEL",
-      "gp": 20,
-      "w": 11,
+      "gp": 21,
+      "w": 12,
       "l": 6,
       "otl": 3,
-      "pts": 25,
+      "pts": 27,
       "gf": 83,
       "ga": 65,
-      "strk": "L1"
+      "strk": "W1"
      },
      {
       "name": "Newmarket Hurricanes",
@@ -4389,7 +4400,7 @@
       "otl": 3,
       "pts": 21,
       "gf": 62,
-      "ga": 61,
+      "ga": 62,
       "strk": "W1"
      },
      {
@@ -4431,14 +4442,14 @@
      {
       "name": "St. Michaels Buzzers",
       "abbr": "STM",
-      "gp": 20,
+      "gp": 21,
       "w": 7,
-      "l": 11,
+      "l": 12,
       "otl": 2,
       "pts": 16,
       "gf": 60,
       "ga": 93,
-      "strk": "L2"
+      "strk": "L3"
      },
      {
       "name": "Trenton Golden Hawks",
@@ -4448,7 +4459,7 @@
       "l": 10,
       "otl": 2,
       "pts": 14,
-      "gf": 74,
+      "gf": 75,
       "ga": 82,
       "strk": "W2"
      },
@@ -4506,6 +4517,18 @@
       "strk": "W2"
      },
      {
+      "name": "King Rebellion",
+      "abbr": "KNG",
+      "gp": 21,
+      "w": 16,
+      "l": 2,
+      "otl": 3,
+      "pts": 35,
+      "gf": 83,
+      "ga": 41,
+      "strk": "W4"
+     },
+     {
       "name": "Milton Menace",
       "abbr": "MIL",
       "gp": 20,
@@ -4514,19 +4537,7 @@
       "otl": 1,
       "pts": 33,
       "gf": 81,
-      "ga": 42,
-      "strk": "W3"
-     },
-     {
-      "name": "King Rebellion",
-      "abbr": "KNG",
-      "gp": 20,
-      "w": 15,
-      "l": 2,
-      "otl": 3,
-      "pts": 33,
-      "gf": 83,
-      "ga": 41,
+      "ga": 43,
       "strk": "W3"
      },
      {
@@ -4537,7 +4548,7 @@
       "l": 3,
       "otl": 0,
       "pts": 32,
-      "gf": 104,
+      "gf": 105,
       "ga": 35,
       "strk": "W11"
      },
@@ -4556,14 +4567,14 @@
      {
       "name": "Leamington Flyers",
       "abbr": "LEA",
-      "gp": 18,
+      "gp": 19,
       "w": 13,
-      "l": 4,
+      "l": 5,
       "otl": 1,
       "pts": 27,
       "gf": 69,
       "ga": 39,
-      "strk": "L2"
+      "strk": "L3"
      },
      {
       "name": "Oakville Blades",
@@ -4652,21 +4663,21 @@
       "l": 1,
       "otl": 0,
       "pts": 30,
-      "gf": 104,
+      "gf": 105,
       "ga": 37,
       "strk": "W13"
      },
      {
       "name": "St. Thomas Stars",
       "abbr": "STT",
-      "gp": 16,
-      "w": 12,
+      "gp": 17,
+      "w": 13,
       "l": 3,
       "otl": 1,
-      "pts": 25,
+      "pts": 27,
       "gf": 66,
       "ga": 38,
-      "strk": "W3"
+      "strk": "W4"
      },
      {
       "name": "Listowel Cyclones",
@@ -4676,7 +4687,7 @@
       "l": 4,
       "otl": 3,
       "pts": 23,
-      "gf": 73,
+      "gf": 74,
       "ga": 54,
       "strk": "L1"
      },
@@ -4689,20 +4700,20 @@
       "otl": 0,
       "pts": 22,
       "gf": 73,
-      "ga": 47,
+      "ga": 48,
       "strk": "W1"
      },
      {
       "name": "Stratford Warriors",
       "abbr": "SFD",
-      "gp": 14,
+      "gp": 15,
       "w": 9,
-      "l": 4,
+      "l": 5,
       "otl": 1,
       "pts": 19,
       "gf": 53,
       "ga": 51,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "London Nationals",
@@ -4713,7 +4724,7 @@
       "otl": 1,
       "pts": 15,
       "gf": 63,
-      "ga": 75,
+      "ga": 76,
       "strk": "L1"
      },
      {
@@ -4724,7 +4735,7 @@
       "l": 9,
       "otl": 3,
       "pts": 15,
-      "gf": 76,
+      "gf": 79,
       "ga": 77,
       "strk": "L2"
      },
@@ -4749,7 +4760,7 @@
       "otl": 0,
       "pts": 14,
       "gf": 62,
-      "ga": 73,
+      "ga": 76,
       "strk": "W1"
      },
      {
@@ -4767,14 +4778,14 @@
      {
       "name": "Komoka Kings",
       "abbr": "KOM",
-      "gp": 18,
+      "gp": 19,
       "w": 5,
-      "l": 13,
+      "l": 14,
       "otl": 0,
       "pts": 10,
       "gf": 58,
       "ga": 81,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Sarnia Legionnaires",
@@ -4818,6 +4829,18 @@
       "strk": "W5"
      },
      {
+      "name": "Fort Erie Meteors",
+      "abbr": "FEM",
+      "gp": 15,
+      "w": 14,
+      "l": 1,
+      "otl": 0,
+      "pts": 28,
+      "gf": 75,
+      "ga": 43,
+      "strk": "W2"
+     },
+     {
       "name": "St. Catharines Falcons",
       "abbr": "SCF",
       "gp": 18,
@@ -4827,18 +4850,6 @@
       "pts": 28,
       "gf": 82,
       "ga": 49,
-      "strk": "W1"
-     },
-     {
-      "name": "Fort Erie Meteors",
-      "abbr": "FEM",
-      "gp": 14,
-      "w": 13,
-      "l": 1,
-      "otl": 0,
-      "pts": 26,
-      "gf": 75,
-      "ga": 43,
       "strk": "W1"
      },
      {
@@ -4856,11 +4867,11 @@
      {
       "name": "Pelham Panthers",
       "abbr": "PEL",
-      "gp": 17,
+      "gp": 18,
       "w": 10,
       "l": 6,
-      "otl": 1,
-      "pts": 21,
+      "otl": 2,
+      "pts": 22,
       "gf": 69,
       "ga": 68,
       "strk": "W1"
@@ -4880,14 +4891,14 @@
      {
       "name": "Port Colborne Sailors",
       "abbr": "PCS",
-      "gp": 14,
-      "w": 7,
+      "gp": 15,
+      "w": 8,
       "l": 7,
       "otl": 0,
-      "pts": 14,
+      "pts": 16,
       "gf": 68,
       "ga": 73,
-      "strk": "L2"
+      "strk": "W1"
      },
      {
       "name": "Hamilton Steel",
