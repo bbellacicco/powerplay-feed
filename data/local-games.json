@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T13:17:01-05:00",
+ "updated": "2026-11-08T13:35:29-05:00",
  "today": "2026-11-08",
  "range": [
   "2026-11-05",
@@ -50,8 +50,8 @@
    "count": 9
   },
   "highschool": {
-   "ok": false,
-   "error": "HTTP Error 403: Forbidden"
+   "ok": true,
+   "count": 123
   },
   "sheet": {
    "ok": true,
@@ -1789,6 +1789,17 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "The Last Edmonton vs. Montreal Grey Cup | FULL GAME (2005)",
+   "summary": "",
+   "published": "2026-11-08T18:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/3j0s4OFb7TmqmnEHXSpinK/9aa309a34859c0f559bb06a2ca0dd9aa/93rdGC_FullGame_THUMB.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/the-last-edmonton-vs-montreal-grey-cup-full-game-2005",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Every Scoring Play from the Western Final",
    "summary": "",
    "published": "2026-11-07T22:07:00-05:00",
@@ -1878,20 +1889,6 @@
     "Elks"
    ],
    "url": "https://www.cfl.ca/article/cody-fajardo-takes-it-himself",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "EF Recap: Montreal 33, Winnipeg 23",
-   "summary": "",
-   "published": "2026-11-07T20:40:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/65R16PaT8jZ2vkAd5MYLkP/433530ccefd290d3efa66c8cf9f9abeb/EF_Recap_THUMB.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Alouettes",
-    "Blue Bombers"
-   ],
-   "url": "https://www.cfl.ca/article/ef-recap-montreal-33-winnipeg-23",
    "source": "CFL.ca"
   },
   {
@@ -2664,6 +2661,19 @@
   },
   {
    "league": "nba",
+   "headline": "Lakers’ Doncic ruled out vs. Pistons with low back tightness",
+   "summary": "The early MVP favourite is unable to play on Sunday night.",
+   "published": "2026-11-08T13:34-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-design-75.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/lakers-doncic-ruled-out-vs-pistons-with-low-back-tightness/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
    "headline": "Raptors’ Scottie Barnes, Immanuel Quickley questionable vs. Grizzlies",
    "summary": "",
    "published": "2026-11-08T12:29-05:00",
@@ -2693,19 +2703,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "Cowboys wide receiver George Pickens ruled out vs. Colts with hamstring injury",
-   "summary": "The Dallas Cowboys will be shorthanded for their matchup with the Indianapolis Colts on Sunday.",
-   "published": "2026-11-08T11:47-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/Untitled-design-copy-3-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/cowboys-wide-receiver-george-pickens-ruled-out-vs-colts-with-hamstring-injury/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "‘Extremely grateful’: Price, Bergeron headline 2026 Hockey Hall of Fame class",
    "summary": "",
@@ -2729,6 +2726,19 @@
    "sn_team_count": 2,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/burrow-powers-bengals-past-falcons-in-madrid-for-fourth-straight-win/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Cowboys wide receiver George Pickens ruled out vs. Colts with hamstring injury",
+   "summary": "The Dallas Cowboys will be shorthanded for their matchup with the Indianapolis Colts on Sunday.",
+   "published": "2026-11-08T11:47-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/Untitled-design-copy-3-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/cowboys-wide-receiver-george-pickens-ruled-out-vs-colts-with-hamstring-injury/",
    "source": "Sportsnet"
   },
   {
@@ -2781,6 +2791,19 @@
    "sn_team_count": 0,
    "sport": "Football Tennis",
    "url": "https://www.sportsnet.ca/atp/article/alcaraz-beats-shelton-in-paris-masters-final-for-his-fifth-title-this-year/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Report: Kings trade Nique Clifford to Thunder for pair of seconds",
+   "summary": "The Kings have traded Nique Clifford to the Oklahoma City Thunder for two second-round picks, ESPN’s Shams Charania reported on Sunday.",
+   "published": "2026-11-08T13:16-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Clifford.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/report-kings-trade-nique-clifford-to-thunder-for-pair-of-seconds/",
    "source": "Sportsnet"
   },
   {
@@ -2929,32 +2952,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Jets’ Josh Morrissey sheds non-contact jersey at practice",
-   "summary": "",
-   "published": "2026-11-07T17:20-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/02/CP216108862.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/jets-josh-morrissey-sheds-non-contact-jersey-at-practice/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "NHL Roundup: Crosby moves up NHL scoring list in Penguins’ win over Kings",
-   "summary": "",
-   "published": "2026-11-08T00:07-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177228074.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/crosby-takes-sole-possession-of-6th-on-scoring-list-in-penguins-win-over-kings/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "other",
    "headline": "Kyle Larson is on the verge of becoming the 11th NASCAR driver with three Cup Series titles",
    "summary": "",
@@ -3010,15 +3007,15 @@
   },
   {
    "league": "other",
-   "headline": "UFC’s Dana White to meet with Trump over offer to be White House press secretary",
+   "headline": "MLS Cup Playoffs seedings, matchups set after Decision Day",
    "summary": "",
-   "published": "2026-11-07T19:27-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/trump.jpg",
+   "published": "2026-11-07T22:24-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/Whitecaps-2.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
-   "sport": "",
-   "url": "https://www.sportsnet.ca/ufc/article/ufcs-dana-white-to-meet-with-trump-over-offer-to-be-white-house-press-secretary/",
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/mls-cup-playoffs-seedings-matchups-set-after-decision-day/",
    "source": "Sportsnet"
   },
   {
