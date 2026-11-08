@@ -5,6 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Discover | Powerplay Windsor</title>
+<script src="share.js?v=5"></script>
 <!--
   "Discover" strips for the bottom of every blog post (one Wix embed under the post).
   Two panels, Local and Pro. Each has a running scores ribbon, two featured boxes, the latest headlines,
@@ -40,6 +41,29 @@
   .phead { display: flex; align-items: center; gap: 10px; padding: 12px 14px 10px 18px; }
   .phead h2 { margin: 0; font: 400 26px/1 'Bebas Neue', Impact, 'Arial Narrow', sans-serif; letter-spacing: .03em; text-transform: uppercase; }
   .phead h2 em { font-style: normal; color: var(--pc); }
+  /* the video pop-out (like the homepage): player, title, Share, and the video's own write-up */
+  #panels { position: relative; }
+  .vplayer { position: absolute; left: 14px; right: 14px; z-index: 20; background: #000; border-radius: 10px; overflow: hidden; box-shadow: 0 14px 44px rgba(0,0,0,.7); display: none; }
+  .vplayer.on { display: block; }
+  .vplayer .fr { position: relative; aspect-ratio: 16 / 9; max-height: 62vh; margin: 0 auto; }
+  .vplayer iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .vplayer .cap { display: flex; align-items: center; gap: 10px; padding: 9px 12px; background: #10244a; }
+  .vplayer .cap .t { flex: 1; min-width: 0; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .vplayer .cap .x { flex: none; background: rgba(255,255,255,.08); color: #fff; border: 1px solid rgba(255,255,255,.3); border-radius: 999px; font: inherit; font-size: 12.5px; font-weight: 700; padding: 6px 12px; cursor: pointer; }
+  .vplayer .cap #vshare:empty { display: none; }
+  .vplayer .cap #vshare .pps-btn { background: var(--pc, #e8b021); color: #0b1a33; border-color: var(--pc, #e8b021); }
+  .vplayer .desc { background: #10244a; border-top: 1px solid rgba(255,255,255,.08); padding: 10px 12px 12px; font-size: 13.5px; line-height: 1.45; color: #dbe3f2; }
+  .vplayer .desc .txt { white-space: pre-line; overflow-wrap: anywhere; }
+  .vplayer .desc.clip .txt { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  .vplayer .desc a { color: #e8b021; }
+  .vplayer .desc .more { margin-top: 6px; background: none; border: 0; padding: 0; color: #e8b021; font: inherit; font-size: 12.5px; font-weight: 800; cursor: pointer; }
+  @media (max-width: 700px) { .vplayer { left: 6px; right: 6px; } .vplayer .cap .t { font-size: 13px; } }
+  .ltabs { display: flex; gap: 6px; padding: 0 14px 10px 18px; overflow-x: auto; scrollbar-width: none; }
+  .ltabs::-webkit-scrollbar { display: none; }
+  .ltab { flex: none; border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.06); color: #cfd8ea; border-radius: 999px; padding: 6px 12px;
+    font: 700 12px/1 system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; cursor: pointer; white-space: nowrap; }
+  .ltab:hover { border-color: var(--pc); color: #fff; }
+  .ltab.on { background: #fff; color: #0b1a33; border-color: #fff; }
   .phead .sub { color: var(--muted); font-size: 12px; flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .phead .all { flex: none; color: var(--pc); font-weight: 800; font-size: 12px; letter-spacing: .05em; text-transform: uppercase; white-space: nowrap; }
   .phead .all:hover { text-decoration: underline; }
@@ -139,7 +163,13 @@
     <a class="home" id="home" target="_top">Visit the home page ›</a>
   </div>
   <div id="guide" style="margin:0 0 14px"></div>
-  <div id="panels"></div>
+  <div id="panels">
+    <div class="vplayer" id="vplayer" role="dialog" aria-label="Video player">
+      <div class="fr" id="vframe"></div>
+      <div class="cap"><div class="t" id="vtitle"></div><span id="vshare"></span><button type="button" class="x" id="vclose">&#10005; Close</button></div>
+      <div class="desc" id="vdesc" hidden><div class="txt" id="vdtxt"></div><button type="button" class="more" id="vdmore">Show more</button></div>
+    </div>
+  </div>
 </div>
 <script>
 (function () {
@@ -259,14 +289,49 @@
     im.onerror = function () { if (v.image && im.src !== v.image) im.src = v.image; };
     b.appendChild(im); b.appendChild(el('span', 'pl'));
     var vt = el('span', 'vt'); vt.appendChild(el('span', 'chip', chipTxt)); vt.appendChild(document.createElement('br')); vt.appendChild(el('span', 't', v.headline)); b.appendChild(vt);
-    b.onclick = function () {
-      var src = vidEmbed(v.url); if (!src) { openUrl(v.url); return; }
-      if (b.querySelector('iframe')) return;
-      var f = document.createElement('iframe'); f.src = src; f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen'; f.allowFullscreen = true; f.title = v.headline;
-      b.appendChild(f);
-    };
+    b.onclick = function () { playPop(v, b); };
     return b;
   }
+  // ---------- video pop-out ----------
+  var vp = document.getElementById('vplayer'), vcur = null, vtext = null, vtextP = null;
+  function vkey(u) { var m = String(u || '').match(/(?:[?&]v=|youtu\.be\/|\/shorts\/)([\w-]{11})/); if (m) return m[1]; m = String(u || '').match(/vimeo\.com\/(?:video\/)?(\d+)/); return m ? 'vimeo:' + m[1] : ''; }
+  function playPop(v, boxEl) {
+    var src = vidEmbed(v.url); if (!src) { openUrl(v.url); return; }
+    var fr = document.getElementById('vframe'); fr.innerHTML = '';
+    // shown full size BEFORE the video loads, so it doesn't start at the lowest quality
+    vp.classList.add('on');
+    var f = document.createElement('iframe'); f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; f.allowFullscreen = true; f.title = v.headline; fr.appendChild(f);
+    requestAnimationFrame(function () { f.src = src; });
+    document.getElementById('vtitle').textContent = v.headline;
+    vcur = v; vDesc(v);
+    var panelEl = boxEl.closest('.panel'), gridEl = boxEl.closest('.grid') || boxEl;
+    vp.style.top = Math.max(0, panelEl.offsetTop + gridEl.offsetTop - 6) + 'px';
+  }
+  function vDesc(v) {
+    if (!vtext) {
+      if (!vtextP) vtextP = getJSON('video-text.json').then(function (j) { vtext = (j && j.text) || {}; });
+      vtextP.then(function () { if (vp.classList.contains('on') && vcur === v) vDesc(v); });
+    }
+    var box = document.getElementById('vdesc'), txt = document.getElementById('vdtxt'), more = document.getElementById('vdmore');
+    var d = String((vtext && vtext[vkey(v.url)]) || '').replace(/\r/g, '').replace(/\n{3,}/g, '\n\n').trim();
+    if (!d || d.toLowerCase() === String(v.headline || '').toLowerCase()) { box.hidden = true; return; }
+    txt.innerHTML = '';
+    d.split(/(https?:\/\/[^\s<]+)/).forEach(function (part, i) {
+      if (i % 2) { var a = el('a', null, part); a.href = part.replace(/[).,]+$/, ''); a.target = '_blank'; a.rel = 'noopener'; txt.appendChild(a); }
+      else txt.appendChild(document.createTextNode(part));
+    });
+    box.hidden = false; box.classList.add('clip'); more.textContent = 'Show more';
+    requestAnimationFrame(function () { more.style.display = txt.scrollHeight > txt.clientHeight + 2 ? '' : 'none'; });
+    more.onclick = function () { var c = box.classList.toggle('clip'); more.textContent = c ? 'Show more' : 'Show less'; };
+  }
+  document.getElementById('vclose').onclick = function () { vp.classList.remove('on'); document.getElementById('vframe').innerHTML = ''; };
+  // Share: opens it on powerplaywindsor.com (Local Hub > Network, playing at the top)
+  if (window.PPShare) document.getElementById('vshare').appendChild(PPShare.button(function () {
+    var v = vcur || {}, k = vkey(v.url).replace(':', '-'), yt = /^[\w-]{11}$/.test(k);
+    return { title: v.headline || 'Powerplay Network', url: SITE + 'scores-standings?tab=network&v=' + encodeURIComponent(k),
+             text: (v.headline || 'A Powerplay video') + ' | Powerplay Network', image: yt ? 'https://i.ytimg.com/vi/' + k + '/hqdefault.jpg' : (v.image || '') };
+  }));
+
   function headsBox(title, list) {
     var box = el('div', 'heads'); box.appendChild(el('div', 'hh', title));
     list.forEach(function (h) {
@@ -345,6 +410,37 @@
     (net && net.local || []).forEach(function (v) { if (v.u && v.t && v.i && !have[ytId(v.u) || v.u]) vids.push({ headline: v.t, url: v.u, image: v.i, published: String(v.p || '').length === 10 ? v.p + 'T00:00:00' : v.p }); });
     vids.sort(function (a, b) { return new Date(b.published) - new Date(a.published); });
     if (!vids.length) vids = (net && net.local || []).filter(function (v) { return v.u && v.t && v.i; }).slice(0, 3).map(function (v) { return { headline: v.t, url: v.u, image: v.i, published: v.p }; });
+    // team tabs (All · Spitfires · Lancers · Saints · High school · Junior): pick one and the boxes and headlines show only that team
+    var THEME = { spitfires: /spitfire|\bspits\b|\bohl\b/i, lancers: /lancer|uwindsor|university of windsor/i, saints: /\bsaints\b|st\.? clair/i,
+      highschool: /high school|wecssaa|ofsaa|secondary|holy names|villanova|st\.? joseph|assumption|brennan|kennedy|massey|walkerville|riverside|herman|forster|tecumseh vista|belle river|essex dist|kingsville|leamington dist|cardinal carter|st\.? anne|l'essor|sandwich|harrow|general amherst|north star|ste\.? cecile|lajeunesse|catholic central|\blaj\b/i,
+      junior: /\b(ojhl|gohl|pjhl)\b|junior hockey|lakeshore canadiens|leamington flyers|lasalle vipers|essex 73|amherstburg admirals|wheatley sharks/i };
+    function about(x, team) { return x.team === team || ((x.team === 'powerplay' || !x.team) && THEME[team].test(' ' + x.headline + ' ' + (x.summary || '') + ' ' + (x.cats || '') + ' ')); }
+    if (!P.tabs) {
+      P.tabs = el('div', 'ltabs'); P.pick = 'all';
+      P.root.insertBefore(P.tabs, P.ribbon);
+    }
+    P.tabs.innerHTML = '';
+    [['all', 'All'], ['spitfires', 'Spitfires'], ['lancers', 'Lancers'], ['saints', 'Saints'], ['highschool', 'High school'], ['junior', 'Junior hockey']].forEach(function (t) {
+      var b = el('button', 'ltab' + (P.pick === t[0] ? ' on' : ''), t[1]); b.type = 'button';
+      b.onclick = function () { P.pick = t[0]; buildLocal(P, news, lg, hs, net); };
+      P.tabs.appendChild(b);
+    });
+    if (P.pick !== 'all') {
+      var tm = P.pick;
+      var tv = vids.filter(function (v) { return THEME[tm].test(' ' + v.headline + ' '); });
+      var ts = stories.filter(function (x) { return !isVid(x) && about(x, tm); });
+      var boxes = ts.filter(function (x) { return x.image && !GENERIC_IMG.test(x.image); }).map(function (x) { return { kind: 'story', s: x, t: new Date(x.published).getTime() }; })
+        .concat(tv.map(function (v) { return { kind: 'video', s: v, t: new Date(v.published).getTime() }; }))
+        .sort(function (a, b) { return b.t - a.t; }).slice(0, 2);
+      var usedT = {}; boxes.forEach(function (it) { usedT[it.s.url] = 1; });
+      var hl = ts.filter(function (x) { return !usedT[x.url]; }).slice(0, 4).map(function (x) {
+        var tg = LTAG[x.team] || ['Local', ''];
+        return { url: x.url, headline: x.headline, logo: x.team === 'saints' ? saintsLogo() : tg[1], abbr: x.team === 'junior' ? (x.club || 'Junior').replace(/^(Windsor|St\. Clair)\s+/, '') : tg[0] };
+      });
+      fillGrid(P.grid, boxes.map(function (it, n) { var b = it.kind === 'story' ? storyBox(it.s, cat(it.s), 'Read the story \u203a') : videoBox(it.s, 'Powerplay video'); if (b) b.classList.add(n ? 'second' : 'lead'); return b; })
+        .concat([hl.length && headsBox('Latest headlines', hl)]));
+      return;
+    }
     // the two boxes: your two newest posts, story or video, newest first
     var latest = ppStories.map(function (s) { return { kind: 'story', s: s, t: new Date(s.published).getTime() }; })
       .concat(vids.map(function (v) { return { kind: 'video', s: v, t: new Date(v.published).getTime() }; }))
@@ -362,7 +458,7 @@
     fillGrid(P.grid, latest.map(function (it, n) { var b = it.kind === 'story' ? storyBox(it.s, cat(it.s), 'Read the story ›') : videoBox(it.s, 'Powerplay video'); if (b) b.classList.add(n ? 'second' : 'lead'); return b; })
       .concat([heads.length && headsBox('Latest headlines', heads)]));
     var games = (lg && lg.games || []).filter(function (g) { return g.team !== 'highschool'; }).concat(hs && hs.games || []);
-    ribbon(P.ribbon, localScores(games, lg && lg.teams || {}));
+    if (!P.ribbonDone) { P.ribbonDone = 1; ribbon(P.ribbon, localScores(games, lg && lg.teams || {})); }
   }
 
   // ---------- PRO ----------
