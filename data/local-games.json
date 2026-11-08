@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T10:17:21-05:00",
+ "updated": "2026-11-08T10:32:10-05:00",
  "today": "2026-11-08",
  "range": [
   "2026-11-05",
@@ -854,7 +854,8 @@
    "result": "L",
    "note": "",
    "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6225"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6225",
+    "recap": "https://golancers.ca/news/2026/11/8/mens-basketball-lancers-drop-pair-of-road-games.aspx"
    }
   },
   {
@@ -979,14 +980,13 @@
    "home_away": "H",
    "opponent": "Toronto Varsity Blues",
    "location": "Adie Knox Arena",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 5,
+   "opp_score": 2,
+   "result": "W",
    "note": "",
    "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=172",
-    "watch": "https://oua.tv/?school=Windsor"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6291"
    }
   },
   {
@@ -998,13 +998,14 @@
    "home_away": "A",
    "opponent": "Toronto Varsity Blues",
    "location": "Toronto, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 94,
+   "opp_score": 101,
+   "result": "L",
    "note": "",
    "links": {
-    "watch": "https://oua.tv/?school=Windsor"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6226",
+    "recap": "https://golancers.ca/news/2026/11/8/mens-basketball-lancers-drop-pair-of-road-games.aspx"
    }
   },
   {
@@ -2526,6 +2527,19 @@
  "more_news": [
   {
    "league": "nhl",
+   "headline": "Sunday Overreactions: Will Blackhawks’ rebuild ever turn a corner?",
+   "summary": "The Blackhawks have missed the playoffs six years in a row and appear headed for a seventh. Has their rebuild hit a wall? Michael Amato discusses that and more in Sunday Overreactions.",
+   "published": "2026-11-08T08:12-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/blackhawks1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 5,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/sunday-overreactions-will-blackhawks-rebuild-ever-turn-a-corner/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Fowler channels Price’s poise as Canadiens hold off Maple Leafs",
    "summary": "Jacob Fowler showed the calm and poise of freshly enshrined Hall of Famer Carey Price on Saturday, helping Montreal beat the Maple Leafs. As Eric Engels writes, it said everything you need to know about the Canadiens’ yo",
    "published": "2026-11-07T23:41-05:00",
@@ -2550,19 +2564,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-hurt-by-turnovers-in-loss-to-canadiens/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Sunday Overreactions: Will Blackhawks’ rebuild ever turn a corner?",
-   "summary": "The Blackhawks have missed the playoffs six years in a row and appear headed for a seventh. Has their rebuild hit a wall? Michael Amato discusses that and more in Sunday Overreactions.",
-   "published": "2026-11-08T08:12-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/blackhawks1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 5,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/sunday-overreactions-will-blackhawks-rebuild-ever-turn-a-corner/",
    "source": "Sportsnet"
   },
   {
@@ -2989,6 +2990,19 @@
   },
   {
    "league": "nfl",
+   "headline": "LIONS DAILY: A smile, a chip and a sense of urgency drive this rookie defender",
+   "summary": "",
+   "published": "2026-11-08T10:00-05:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/va5rzadxtb4qbvaoml2x.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Lions"
+   ],
+   "url": "https://www.detroitlions.com/news/lions-daily-a-smile-a-chip-and-a-sense-of-urgency-drive-this-rookie-defender",
+   "source": "Team site"
+  },
+  {
+   "league": "nfl",
    "headline": "5 things to watch: Lions at Dolphins",
    "summary": "Tim Twentyman takes a look at five things to watch in Sunday's Lions-Dolphins matchup.",
    "published": "2026-11-08T07:00-05:00",
@@ -3167,19 +3181,6 @@
     "Detroit Lions"
    ],
    "url": "https://www.detroitlions.com/news/lions-at-dolphins-practice-report-nov-4-branch-reed-stbrown",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
-   "headline": "Statement from Jack Campbell",
-   "summary": "",
-   "published": "2026-11-04T12:33-05:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/dk2jzb5xdtgjl1rhn3nc.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Lions"
-   ],
-   "url": "https://www.detroitlions.com/news/statement-from-jack-campbell",
    "source": "Team site"
   },
   {
