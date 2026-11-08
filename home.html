@@ -1102,10 +1102,6 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
       allV.forEach(function (v) { haveV3[vidId(v.url)] = 1; });
       (net.local || []).forEach(function (v) { if (!haveV3[vidId(v.u)]) allV.push({ headline: v.t, url: v.u, image: v.i, published: v.p.length === 10 ? v.p + 'T00:00:00' : v.p, source: v.s, video: true, team: 'powerplay' }); });
       var pool = stories.filter(function (s) { return !isVid(s); }).concat(allV);
-      // their games too: the latest finals (last week) and the next games, at the front of the strip
-      var tGames = (lg.games || []).filter(function (g) { return g.team !== 'highschool'; }).concat(hs && hs.games ? hs.games : []);
-      if (sc && sc.games) tGames = tGames.filter(function (g) { return !(g.team === 'saints' && g.sport !== 'Football'); }).concat(sc.games.filter(function (g) { return g.sport !== 'Football'; }));
-      var nowT = Date.now();
       [['lancers', 'Lancers', THEME.lancers, 'Lancers Lounge stories are on the way.'],
        ['saints', 'Saints', THEME.saints, 'Saints Nation stories are on the way.'],
        ['hs', 'High school', THEME.highschool, 'High school stories are on the way.']].forEach(function (t) {
@@ -1116,11 +1112,6 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
           return t[2].test(' ' + x.headline + ' ' + (x.summary || '') + ' ' + (x.cats || '') + ' ');
         }).filter(function (x) { var k = isVid(x) || x.video ? vidId(x.url) : x.url; if (seenT[k]) return false; seenT[k] = 1; return true; })
           .sort(function (a, b) { return new Date(b.published) - new Date(a.published); }).slice(0, 25);
-        var mine = tGames.filter(function (g) { return g.team === team; });
-        var fins = mine.filter(function (g) { return g.status === 'final' && g.our_score != null && nowT - new Date(g.start).getTime() < 7 * 864e5; })
-          .sort(function (a, b) { return a.start < b.start ? 1 : -1; }).slice(0, 3);
-        var nexts = mine.filter(function (g) { return (g.status === 'upcoming' || g.status === 'live') && new Date(g.start).getTime() > nowT - 3 * 3600e3; })
-          .sort(function (a, b) { return a.start < b.start ? -1 : 1; }).slice(0, 2);
         // Game Day Snaps about them
         var snapsT = shows.filter(function (sh) { return t[2].test(' ' + sh.title + ' ' + (sh.desc || '') + ' '); }).slice(0, 4).map(function (sh) {
           var c = storyCard({ headline: sh.title, url: sh.url, image: sh.cover, published: sh.posted || sh.date + 'T12:00:00', team: 'powerplay' }, { tag: 'Game Day Snaps', sub: 'Game Day Snaps \u00b7 ' + ago(sh.posted || sh.date + 'T12:00:00'), tile: t[1] });
@@ -1132,7 +1123,7 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
           return { t: new Date(x.published).getTime(), node: storyCard(x, v ? { play: true, tag: 'Video', sub: (x.source || 'Video') + ' \u00b7 ' + ago(x.published), tile: 'Powerplay' }
             : { tag: x.team === 'powerplay' ? 'Powerplay' : t[1], sub: (x.team === 'powerplay' ? 'Powerplay Windsor' : (TEAM[x.team] || t[1]) + (x.sport ? ' \u00b7 ' + x.sport : '')) + ' \u00b7 ' + ago(x.published), tile: t[1] }) };
         }).concat(snapsT).sort(function (a, b) { return b.t - a.t; }).map(function (x) { return x.node; });
-        fill(t[0], fins.concat(nexts).map(function (g) { return localCard(g, teams); }).concat(cards), t[3]);
+        fill(t[0], cards, t[3]);   // no score cards here: scores have their own rows and the sports guide
       });
       // pro headlines: our teams first
       var pro = (lg.pro_news || []).concat(lg.more_news || []).filter(function (s) { return s.url && s.headline; });
