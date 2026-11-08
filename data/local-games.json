@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T01:47:12-05:00",
+ "updated": "2026-11-08T03:01:54-05:00",
  "today": "2026-11-08",
  "range": [
   "2026-11-05",
@@ -50,8 +50,8 @@
    "count": 9
   },
   "highschool": {
-   "ok": false,
-   "error": "HTTP Error 403: Forbidden"
+   "ok": true,
+   "count": 123
   },
   "sheet": {
    "ok": true,
@@ -1638,6 +1638,66 @@
    "club": "Essex 73's"
   },
   {
+   "id": "highschool-2026-11-11-108",
+   "team": "highschool",
+   "sport": "Senior Girls Basketball",
+   "start": "2026-11-11T01:01:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "1st finalist",
+   "location": "1st finalist",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "1A Playoffs · Championship Game",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "2nd finalist",
+   "home": "1st finalist"
+  },
+  {
+   "id": "highschool-2026-11-11-109",
+   "team": "highschool",
+   "sport": "Junior Girls Basketball",
+   "start": "2026-11-11T16:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "TBA",
+   "location": "TBA",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "3A Playoffs",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "TBA",
+   "home": "TBA"
+  },
+  {
+   "id": "highschool-2026-11-11-110",
+   "team": "highschool",
+   "sport": "Senior Girls Basketball",
+   "start": "2026-11-11T16:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "TBA",
+   "location": "TBA",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "3A Playoffs",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "TBA",
+   "home": "TBA"
+  },
+  {
    "id": "junior-gojhl15676",
    "team": "junior",
    "sport": "GOHL (Jr. B)",
@@ -2479,15 +2539,15 @@
   },
   {
    "league": "nhl",
-   "headline": "McDavid extends assist streak, Oilers double up slumping Canucks",
-   "summary": "",
-   "published": "2026-11-07T22:50-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/drai.jpg",
+   "headline": "Canucks match effort by high-powered Oilers but crumble in third period",
+   "summary": "It was a distinctly better effort than the Canucks managed in Thursday’s lifeless loss. But their opponent was much better too.",
+   "published": "2026-11-08T02:54-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/canucks2.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/mcdavid-extends-assist-streak-oilers-double-up-slumping-canucks/",
+   "url": "https://www.sportsnet.ca/nhl/article/canucks-match-effort-by-high-powered-oilers-but-crumble-in-third-period/",
    "source": "Sportsnet"
   },
   {
