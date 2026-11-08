@@ -182,6 +182,7 @@
   .ghost { background: rgba(11,26,51,.9); color: #fff; border: 1px solid rgba(255,255,255,.3); border-radius: 999px; font: inherit; font-size: 12px; font-weight: 700; padding: 6px 12px; cursor: pointer; text-decoration: none; }
   .ghost:hover { border-color: var(--accent); color: var(--accent); }
   .vplayer .cap #vshare:empty { display: none; }
+  .small > .pps-btn.topshare { position: absolute; right: 10px; top: 10px; z-index: 5; padding: 6px 10px; font-size: 12px; background: rgba(11,26,51,.85); border-color: rgba(255,255,255,.4); }
   .big > .pps-btn.topshare { position: absolute; right: 12px; top: 12px; z-index: 5; padding: 7px 12px; font-size: 12.5px; background: rgba(11,26,51,.85); border-color: rgba(255,255,255,.4); }
   .scard { position: relative; } .scard > .pps-btn.mini { position: absolute; right: 6px; top: 6px; z-index: 4; padding: 5px 8px; font-size: 11px; background: rgba(11,26,51,.82); border-color: rgba(255,255,255,.35); }
   .vplayer .cap #vshare .pps-btn { background: var(--accent); color: #0b1a33; border-color: var(--accent); }
@@ -352,6 +353,12 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
     if (m) return 'https://player.vimeo.com/video/' + m[1] + '?autoplay=0&muted=0&title=0&byline=0&portrait=0&playsinline=1&quality=1080p';
     return '';
   }
+  // which Powerplay posts and videos belong in Lancers Lounge, Saints Nation and High School Huddle
+  var THEME = {
+    lancers: /lancer|uwindsor|university of windsor/i,
+    saints: /\bsaints\b|st\.? clair/i,
+    highschool: /high school|wecssaa|ofsaa|secondary|holy names|villanova|st\.? joseph|assumption|brennan|kennedy|massey|walkerville|riverside|herman|forster|tecumseh vista|belle river|essex dist|kingsville|leamington dist|cardinal carter|st\.? anne|l'essor|sandwich|harrow|general amherst|north star|ste\.? cecile|lajeunesse|catholic central|\blaj\b/i
+  };
   function isVid(s) { return s.source === 'YouTube' || s.source === 'Vimeo'; }
   function openUrl(u) { if (u.indexOf(SITE) === 0) { try { top.location.href = u; } catch (e) { location.href = u; } } else window.open(u, '_blank', 'noopener'); }
 
@@ -361,6 +368,9 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
     { key: 'network', title: 'Powerplay Network', by: ['Maple Leaf Pro Wrestling', 'https://static.wixstatic.com/media/0be2db_9da56760ff7c49b798008220ba008a1a~mv2.jpg/v1/fit/w_200,h_200,q_90/mlp-pro-wrestling.jpg'], all: LINK.network, tab: 'network' },
     { key: 'photos', title: 'Game Day Snaps', gold: 'Snaps', by: null, all: null, tab: null },
     { key: 'athletes', title: 'Athlete profiles', by: null, all: LINK.athletes, tab: 'athletes' },
+    { key: 'lancers', title: 'Lancers Lounge', gold: 'Lounge', by: null, all: SITE + 'headlines/categories/lancers-lounge', tab: null },
+    { key: 'saints', title: 'Saints Nation', gold: 'Nation', by: null, all: SITE + 'headlines/categories/st-clair-athletics', tab: null },
+    { key: 'hs', title: 'High School Huddle', gold: 'Huddle', by: null, all: SITE + 'scores-standings?tab=stories', tab: null },
     { key: 'local', title: 'Local scores', by: ['Unifor Local 444', 'logos/unifor-444.png'], all: LINK.scores, tab: 'scores' },
     { key: 'pro', title: 'Pro scores', by: ['Unifor Local 2458', 'logos/unifor-2458.png'], all: LINK.pro, tab: 'pro' },
     { key: 'prohead', title: 'Pro headlines', by: ['The D’Amore Group', 'logos/damore-group.png'], all: LINK.pro, tab: 'pro-updates' }
@@ -398,7 +408,7 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
     document.getElementById('rows').appendChild(sec);
     rowEl[r.key] = row;
   });
-  // rows run in ROWS order, below the search bar: stories, the Network, Game Day Snaps and athlete profiles first, then the scores
+  // rows run in ROWS order, below the search bar: stories, the Network, Game Day Snaps, athlete profiles, then Lancers Lounge, Saints Nation and High School Huddle, then the scores
   function fill(key, nodes, emptyText) {
     var row = rowEl[key]; row.innerHTML = '';
     if (!nodes.length) { row.appendChild(el('div', 'empty', emptyText)); return; }
@@ -460,7 +470,7 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
     var vid = isVid(s) || s.video;
     var c = el(vid && opts && opts.play ? 'button' : 'a', 'scard');
     if (c.tagName === 'A') { c.href = s.url; if (s.url.indexOf(SITE) === 0) c.target = '_top'; else { c.target = '_blank'; c.rel = 'noopener'; } }
-    else { c.type = 'button'; c.onclick = function () { playRow(s, c); }; }
+    else { c.type = 'button'; c.onclick = function () { playRow(s, c, c.closest('section')); }; }
     var pic = el('div', 'pic');
     function tile() {
       pic.innerHTML = ''; pic.className = 'pic';
@@ -655,25 +665,27 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
       if (f.summary && f.summary !== f.headline) ov.appendChild(el('p', null, f.summary));
       big.appendChild(ov);
     }
-    // share the top item through a powerplaywindsor.com address (story landing, slideshow page or the video in the Network)
-    if (window.PPShare) {
+    // share buttons on the top boxes: through a powerplaywindsor.com address (story landing, slideshow page or the video in the Network)
+    function feedShare(f) {
+      if (!window.PPShare) return null;
       var vk = f.isVideo ? vkey(f.url).replace(':', '-') : '';
-      var fsb = f.isVideo ? PPShare.button({ title: f.headline, url: SITE + 'scores-standings?tab=network&v=' + encodeURIComponent(vk), text: f.headline + ' | Powerplay Network', image: f.image || '' })
+      var b = f.isVideo ? PPShare.button({ title: f.headline, url: SITE + 'scores-standings?tab=network&v=' + encodeURIComponent(vk), text: f.headline + ' | Powerplay Network', image: f.image || '' })
         : f.snaps ? PPShare.button({ title: f.snaps.title, url: f.snaps.url, text: f.snaps.title + ' | Powerplay Windsor', image: f.snaps.cover })
-        // a Powerplay blog post shares its own address (Wix gives Facebook its picture right away, no "checking your request");
-        // a team's story on another site goes through the Local Hub
+        // a Powerplay blog post shares its own address; a team's story on another site goes through the Local Hub
         : PPShare.button({ title: f.headline, url: /^https:\/\/(www\.)?powerplaywindsor\.com\/post\//.test(f.url) ? f.url : SITE + 'scores-standings?tab=stories&s=' + skey(f.url) + '&team=' + encodeURIComponent(f.team || 'powerplay'),
-        text: f.headline + ' | Powerplay Windsor', image: f.image ? wix(f.image, 1200, 630) : '' });
-      fsb.classList.add('mini', 'topshare'); fsb.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); });
-      big.appendChild(fsb);
+          text: f.headline + ' | Powerplay Windsor', image: f.image ? wix(f.image, 1200, 630) : '' });
+      b.classList.add('mini', 'topshare'); b.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); });
+      return b;
     }
+    var fsb = feedShare(f); if (fsb) big.appendChild(fsb);
     box.appendChild(big);
     var side = el('div', 'fside');
     items.slice(1, heads.length >= 3 ? 2 : 3).forEach(function (s) {
-      if (s.isVideo) { side.appendChild(vidBox(s, 'small', 560, 320)); return; }
+      if (s.isVideo) { var vb2 = vidBox(s, 'small', 560, 320), sb2 = feedShare(s); if (sb2) vb2.appendChild(sb2); side.appendChild(vb2); return; }
       var a = el('a', 'small'); a.href = s.url; a.target = '_top'; featImg(a, s, 560, 320);
       if (s.snaps) a.onclick = function (e) { e.preventDefault(); playShow(s.snaps, featEl); };
       var o = el('div', 'ov'); o.appendChild(el('div', 'kick', s.kick || storyCat(s, 'Recent'))); o.appendChild(el('h3', null, s.headline)); a.appendChild(o);
+      var sb3 = feedShare(s); if (sb3) a.appendChild(sb3);
       side.appendChild(a);
     });
     if (heads.length >= 3) {
@@ -1083,6 +1095,28 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
       vids = vids.sort(function (a, b) { return new Date(b.published) - new Date(a.published); })
         .filter(function (v) { var k = v.headline.toLowerCase().replace(/[^a-z0-9]+/g, ''), id = vidId(v.url); if (seenV[k] || seenV[id]) return false; seenV[k] = seenV[id] = 1; return true; }).slice(0, 15);
       fill('network', vids.map(function (v) { return storyCard(v, { play: true, sub: (v.source || 'Video') + ' · ' + ago(v.published), tile: 'Powerplay' }); }), 'Videos are on the way.');
+      // Lancers Lounge, Saints Nation, High School Huddle: every story and video about them, newest first
+      // (the team's own news, Powerplay posts and Powerplay videos). Students' Lancers Lounge posts land here too.
+      var allV = stories.filter(isVid).slice(), haveV3 = {};
+      allV.forEach(function (v) { haveV3[vidId(v.url)] = 1; });
+      (net.local || []).forEach(function (v) { if (!haveV3[vidId(v.u)]) allV.push({ headline: v.t, url: v.u, image: v.i, published: v.p.length === 10 ? v.p + 'T00:00:00' : v.p, source: v.s, video: true, team: 'powerplay' }); });
+      var pool = stories.filter(function (s) { return !isVid(s); }).concat(allV);
+      [['lancers', 'Lancers', THEME.lancers, 'Lancers Lounge stories are on the way.'],
+       ['saints', 'Saints', THEME.saints, 'Saints Nation stories are on the way.'],
+       ['hs', 'High school', THEME.highschool, 'High school stories are on the way.']].forEach(function (t) {
+        var team = t[0] === 'hs' ? 'highschool' : t[0], seenT = {};
+        var list = pool.filter(function (x) {
+          if (x.team === team) return true;
+          if (x.team !== 'powerplay' && !isVid(x) && !x.video) return false;
+          return t[2].test(' ' + x.headline + ' ' + (x.summary || '') + ' ' + (x.cats || '') + ' ');
+        }).filter(function (x) { var k = isVid(x) || x.video ? vidId(x.url) : x.url; if (seenT[k]) return false; seenT[k] = 1; return true; })
+          .sort(function (a, b) { return new Date(b.published) - new Date(a.published); }).slice(0, 15);
+        fill(t[0], list.map(function (x) {
+          var v = isVid(x) || x.video;
+          return storyCard(x, v ? { play: true, tag: 'Video', sub: (x.source || 'Video') + ' \u00b7 ' + ago(x.published), tile: 'Powerplay' }
+            : { tag: x.team === 'powerplay' ? 'Powerplay' : t[1], sub: (x.team === 'powerplay' ? 'Powerplay Windsor' : (TEAM[x.team] || t[1]) + (x.sport ? ' \u00b7 ' + x.sport : '')) + ' \u00b7 ' + ago(x.published), tile: t[1] });
+        }), t[3]);
+      });
       // pro headlines: our teams first
       var pro = (lg.pro_news || []).concat(lg.more_news || []).filter(function (s) { return s.url && s.headline; });
       var seenP = {}; pro = pro.filter(function (s) { if (seenP[s.url]) return false; seenP[s.url] = 1; return true; });
