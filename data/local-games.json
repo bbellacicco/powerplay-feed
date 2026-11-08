@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T17:01:59-05:00",
+ "updated": "2026-11-08T17:20:49-05:00",
  "today": "2026-11-08",
  "range": [
   "2026-11-05",
@@ -2564,6 +2564,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Maple Leafs’ Morgan Rielly, Chris Tanev out vs. Devils",
+   "summary": "",
+   "published": "2026-11-08T17:09-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/leafs-rielly.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-morgan-rielly-chris-tanev-out-vs-devils/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "Canada stays perfect at women’s world hockey championship with rout of Japan",
    "summary": "",
@@ -2626,21 +2641,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/senators-activate-linus-ullmark-from-injured-reserve/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Report: Leafs call up D Cole McWard, send F Vinni Lettieri to AHL",
-   "summary": "",
-   "published": "2026-11-08T11:41-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/cole.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/report-leafs-call-up-d-cole-mcward-send-f-vinni-lettieri-to-ahl/",
    "source": "Sportsnet"
   },
   {
@@ -2774,7 +2774,7 @@
    "teams": [],
    "sn_team_count": 0,
    "sport": "Auto Racing",
-   "url": "https://www.sportsnet.ca/article/lando-norris-wins-sao-paulo-grand-prix-mercedes-clinches-constructors-title/",
+   "url": "https://www.sportsnet.ca/formula-1/article/lando-norris-wins-sao-paulo-grand-prix-mercedes-clinches-constructors-title/",
    "source": "Sportsnet"
   },
   {
@@ -4108,14 +4108,14 @@
      {
       "name": "Wellington Dukes",
       "abbr": "WEL",
-      "gp": 21,
-      "w": 12,
+      "gp": 22,
+      "w": 13,
       "l": 6,
       "otl": 3,
-      "pts": 27,
+      "pts": 29,
       "gf": 87,
       "ga": 68,
-      "strk": "W1"
+      "strk": "W2"
      },
      {
       "name": "Newmarket Hurricanes",
@@ -4190,6 +4190,18 @@
       "strk": "L4"
      },
      {
+      "name": "North York Rangers",
+      "abbr": "NYR",
+      "gp": 19,
+      "w": 5,
+      "l": 12,
+      "otl": 2,
+      "pts": 12,
+      "gf": 49,
+      "ga": 85,
+      "strk": "W2"
+     },
+     {
       "name": "Lindsay Muskies",
       "abbr": "LIN",
       "gp": 20,
@@ -4200,18 +4212,6 @@
       "gf": 72,
       "ga": 103,
       "strk": "L1"
-     },
-     {
-      "name": "North York Rangers",
-      "abbr": "NYR",
-      "gp": 18,
-      "w": 5,
-      "l": 12,
-      "otl": 1,
-      "pts": 11,
-      "gf": 49,
-      "ga": 85,
-      "strk": "W2"
      },
      {
       "name": "Toronto Warriors",
@@ -4243,6 +4243,18 @@
       "strk": "W2"
      },
      {
+      "name": "King Rebellion",
+      "abbr": "KNG",
+      "gp": 22,
+      "w": 17,
+      "l": 2,
+      "otl": 3,
+      "pts": 37,
+      "gf": 91,
+      "ga": 42,
+      "strk": "W5"
+     },
+     {
       "name": "Toronto Patriots",
       "abbr": "PAT",
       "gp": 21,
@@ -4267,28 +4279,16 @@
       "strk": "W4"
      },
      {
-      "name": "King Rebellion",
-      "abbr": "KNG",
-      "gp": 21,
-      "w": 16,
-      "l": 2,
-      "otl": 3,
-      "pts": 35,
-      "gf": 91,
-      "ga": 42,
-      "strk": "W4"
-     },
-     {
       "name": "Burlington Cougars",
       "abbr": "BUR",
-      "gp": 22,
-      "w": 15,
+      "gp": 23,
+      "w": 16,
       "l": 5,
       "otl": 2,
-      "pts": 32,
+      "pts": 34,
       "gf": 121,
       "ga": 68,
-      "strk": "W5"
+      "strk": "W6"
      },
      {
       "name": "Leamington Flyers",
@@ -4341,26 +4341,26 @@
      {
       "name": "Caledon Admirals",
       "abbr": "CAL",
-      "gp": 21,
+      "gp": 22,
       "w": 7,
-      "l": 12,
+      "l": 13,
       "otl": 2,
       "pts": 16,
       "gf": 55,
       "ga": 109,
-      "strk": "L2"
+      "strk": "L3"
      },
      {
       "name": "Niagara Falls Canucks",
       "abbr": "NFC",
-      "gp": 25,
+      "gp": 26,
       "w": 7,
-      "l": 16,
+      "l": 17,
       "otl": 2,
       "pts": 16,
       "gf": 68,
       "ga": 118,
-      "strk": "L3"
+      "strk": "L4"
      },
      {
       "name": "Buffalo Jr. Sabres",
@@ -4531,6 +4531,18 @@
     "group": "Eastern Conference",
     "teams": [
      {
+      "name": "Caledonia Corvairs",
+      "abbr": "CAL",
+      "gp": 19,
+      "w": 16,
+      "l": 2,
+      "otl": 1,
+      "pts": 33,
+      "gf": 82,
+      "ga": 45,
+      "strk": "W7"
+     },
+     {
       "name": "Cambridge Redhawks",
       "abbr": "CAM",
       "gp": 18,
@@ -4541,18 +4553,6 @@
       "gf": 101,
       "ga": 47,
       "strk": "W4"
-     },
-     {
-      "name": "Caledonia Corvairs",
-      "abbr": "CAL",
-      "gp": 18,
-      "w": 15,
-      "l": 2,
-      "otl": 1,
-      "pts": 31,
-      "gf": 82,
-      "ga": 45,
-      "strk": "W6"
      },
      {
       "name": "Fort Erie Meteors",
@@ -4605,14 +4605,14 @@
      {
       "name": "Pelham Panthers",
       "abbr": "PEL",
-      "gp": 18,
+      "gp": 19,
       "w": 10,
-      "l": 6,
+      "l": 7,
       "otl": 2,
       "pts": 22,
       "gf": 72,
       "ga": 73,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Port Colborne Sailors",
