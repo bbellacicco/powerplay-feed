@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T21:20:44-05:00",
+ "updated": "2026-11-07T21:32:12-05:00",
  "today": "2026-11-07",
  "range": [
   "2026-11-04",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -1219,10 +1219,10 @@
    "home_away": "H",
    "opponent": "Wheatley Sharks",
    "location": "Libro Centre",
-   "status": "live",
-   "our_score": 0,
-   "opp_score": 0,
-   "result": null,
+   "status": "final",
+   "our_score": 5,
+   "opp_score": 4,
+   "result": "W",
    "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960559?configuration=45"
@@ -1918,28 +1918,6 @@
  ],
  "pro_games": [
   {
-   "id": "cfl-cfl6675",
-   "team": "cfl",
-   "sport": "CFL",
-   "start": "2026-11-07T18:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Edmonton Elks",
-   "location": "Play Alberta Field at Commonwealth Stadium",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.cfl.ca/schedule/"
-   },
-   "away": "B.C. Lions",
-   "home": "Edmonton Elks",
-   "away_abbr": "BC",
-   "home_abbr": "EDM"
-  },
-  {
    "id": "cfl-cfl6674",
    "team": "cfl",
    "sport": "CFL",
@@ -1960,9 +1938,70 @@
    "home": "Montreal Alouettes",
    "away_abbr": "WPG",
    "home_abbr": "MTL"
+  },
+  {
+   "id": "cfl-cfl6675",
+   "team": "cfl",
+   "sport": "CFL",
+   "start": "2026-11-07T18:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Edmonton Elks",
+   "location": "Play Alberta Field at Commonwealth Stadium",
+   "status": "final",
+   "our_score": 16,
+   "opp_score": 28,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.cfl.ca/schedule/"
+   },
+   "away": "B.C. Lions",
+   "home": "Edmonton Elks",
+   "away_abbr": "BC",
+   "home_abbr": "EDM"
   }
  ],
  "pro_news": [
+  {
+   "league": "cfl",
+   "headline": "Fajardo to Mack in CRUNCH TIME",
+   "summary": "",
+   "published": "2026-11-07T21:19:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/6twsfKwR4U0K2o2d11oMKi/215cc2613f80949e1fc02e9f7aa4758d/EDM_2ND_TD.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Elks"
+   ],
+   "url": "https://www.cfl.ca/article/fajardo-to-mack-in-crunch-time",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Nathan Rourke ties it up!!",
+   "summary": "",
+   "published": "2026-11-07T21:05:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/1v4Wu1q26mgJXsa6cnjwCn/0b57f83b0fdfe1c52e6603678390153b/BC_1ST_TD.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Lions"
+   ],
+   "url": "https://www.cfl.ca/article/nathan-rourke-ties-it-up",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Cody Fajardo takes it himself!",
+   "summary": "",
+   "published": "2026-11-07T20:47:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/1ZnXqV2lwxZkRyeJPvBYTS/6357989df40946191ddf6410368df7e6/EDM_1ST_TD.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Elks"
+   ],
+   "url": "https://www.cfl.ca/article/cody-fajardo-takes-it-himself",
+   "source": "CFL.ca"
+  },
   {
    "league": "cfl",
    "headline": "EF Recap: Montreal 33, Winnipeg 23",
@@ -2032,42 +2071,16 @@
   },
   {
    "league": "cfl",
-   "headline": "O-Lineman TD ALERT!!!",
+   "headline": "Elks punch ticket to 113th Grey Cup with win over Lions in Western Final presented by Wegovy®",
    "summary": "",
-   "published": "2026-11-07T16:35:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/7JW5IMDSfg1pEtU9Nv4n0j/438300cee7d03669c65435a740615603/MTL_2ND_TD.jpg?w=640&fm=jpg&q=70",
-   "video": true,
+   "published": "2026-11-07T02:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/7krqIKmVAkW73BR1rhdVCj/cf8d2411c0b45461eb591f161f316096/Cody_Fajardo_2026_2.jpg?w=640&fm=jpg&q=70",
+   "video": false,
    "teams": [
-    "Alouettes"
+    "Elks",
+    "Lions"
    ],
-   "url": "https://www.cfl.ca/article/o-lineman-td-alert",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Nearly one of the Craziest Plays EVER",
-   "summary": "",
-   "published": "2026-11-07T16:14:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/K2f2rVvkrtH7b69SzGKSV/508ceadd723f486a1e2a61c467fd1642/almost_insane.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Alouettes",
-    "Blue Bombers"
-   ],
-   "url": "https://www.cfl.ca/article/nearly-one-of-the-craziest-plays-ever",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "MASSIVE Charleston Rambo catch leads to Alouettes TD",
-   "summary": "",
-   "published": "2026-11-07T15:51:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/3akp068DEWZSBfk1W82NM4/0d9b9249aa579f0b660bbaa40f6622ee/MTL_1ST_TD.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Alouettes"
-   ],
-   "url": "https://www.cfl.ca/article/massive-charleston-rambo-catch-leads-to-alouettes-td",
+   "url": "https://www.cfl.ca/article/elks-punch-ticket-to-113th-grey-cup-with-win-over-lions-in-western-final-presented-by-wegovy",
    "source": "CFL.ca"
   },
   {
@@ -2166,20 +2179,6 @@
     "Lions"
    ],
    "url": "https://www.cfl.ca/article/nathan-rourke-on-facing-the-elks-defence-there-s-a-fine-line-between-playing-safe-and-making-smart-decisions",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "3 keys to victory for BC, Edmonton in the Western Final presented by Wegovy®",
-   "summary": "",
-   "published": "2026-11-06T00:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/JiQw7psAOA5k23N3bFJF4/606cf8817a1b8157302ad36dab2b718f/James_Butler_2026.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Lions",
-    "Elks"
-   ],
-   "url": "https://www.cfl.ca/article/3-keys-to-victory-for-bc-edmonton-in-the-western-final-presented-by-wegovy",
    "source": "CFL.ca"
   },
   {
@@ -2734,28 +2733,41 @@
   },
   {
    "league": "nhl",
-   "headline": "‘Extremely grateful’: Price, Bergeron headline 2026 Hockey Hall of Fame class",
+   "headline": "Canadiens expect Hage, Zharovsky to join team at end of season",
    "summary": "",
-   "published": "2026-11-07T17:37-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/fame.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/extremely-grateful-price-bergeron-headline-2026-hockey-hall-of-fame-class/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Jets’ Josh Morrissey sheds non-contact jersey at practice",
-   "summary": "",
-   "published": "2026-11-07T17:20-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/02/CP216108862.jpg",
+   "published": "2026-11-07T21:14-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/04/Michigan-forward-Michael-Hage.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/jets-josh-morrissey-sheds-non-contact-jersey-at-practice/",
+   "url": "https://www.sportsnet.ca/nhl/article/canadiens-expect-hage-zharovsky-to-join-team-at-end-of-season/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Trade noise getting louder around Blues’ Binnington",
+   "summary": "",
+   "published": "2026-11-07T21:13-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/St.-Louis-Blues-goaltender-Jordan-Binnington.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/trade-noise-getting-louder-around-blues-binnington/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "cfl",
+   "headline": "Alexander says Bombers player taunted him about late father in East final",
+   "summary": "",
+   "published": "2026-11-07T21:23-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/1309193d6e3b2475fd1d606864488e9da61c137b0deaf2cb1461c09ed9381f24.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/alexander-says-bombers-player-taunted-him-about-late-father-in-east-final/",
    "source": "Sportsnet"
   },
   {
@@ -2798,16 +2810,29 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "IIHF issues statement on Russian and Belarusian participation in tournaments",
-   "summary": "Following a ruling last week from the Court of Arbitration for Sport (CAS) to reinstate Russia to international hockey competitions, the IIHF stated on Saturday that, while it disagrees with the ruling, it is taking the ",
-   "published": "2026-11-07T09:08-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-7.jpg",
+   "league": "cfl",
+   "headline": "Elks beat Lions to set up clash with Alouettes in Grey Cup",
+   "summary": "",
+   "published": "2026-11-07T21:28-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/elks.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/elks-beat-lions-to-set-up-clash-with-alouettes-in-grey-cup/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "‘Extremely grateful’: Price, Bergeron headline 2026 Hockey Hall of Fame class",
+   "summary": "",
+   "published": "2026-11-07T17:37-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/fame.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/ice-hockey-world-championship/article/iihf-issues-statement-on-russian-and-belarusian-participation-in-tournaments/",
+   "url": "https://www.sportsnet.ca/nhl/article/extremely-grateful-price-bergeron-headline-2026-hockey-hall-of-fame-class/",
    "source": "Sportsnet"
   },
   {
@@ -2836,6 +2861,45 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/panthers-vilmanis-exits-vs-capitals-after-hit-from-behind-by-wilson/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Agent for Blackhawks’ Byram explains absence",
+   "summary": "",
+   "published": "2026-11-07T21:27-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/bowen-byram.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/agent-for-blackhawks-byram-explains-absence/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Jets’ Josh Morrissey sheds non-contact jersey at practice",
+   "summary": "",
+   "published": "2026-11-07T17:20-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/02/CP216108862.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/jets-josh-morrissey-sheds-non-contact-jersey-at-practice/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "IIHF issues statement on Russian and Belarusian participation in tournaments",
+   "summary": "Following a ruling last week from the Court of Arbitration for Sport (CAS) to reinstate Russia to international hockey competitions, the IIHF stated on Saturday that, while it disagrees with the ruling, it is taking the ",
+   "published": "2026-11-07T09:08-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-7.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/ice-hockey-world-championship/article/iihf-issues-statement-on-russian-and-belarusian-participation-in-tournaments/",
    "source": "Sportsnet"
   },
   {
@@ -3063,58 +3127,6 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/alijah-martin-has-game-of-his-life-as-raptors-knock-off-bucks-in-nba-cup-play/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "LeBron James has rough Cleveland return as 76ers suffer second loss",
-   "summary": "",
-   "published": "2026-11-07T00:26-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/604539e4d29fab7b6decd4aae1a4d9d949b412af1f39d9188092c304411b659a.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/lebron-james-has-rough-cleveland-return-as-76ers-suffer-second-loss/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Blue Jackets’ Sean Monahan exits vs. Sabres with lower-body injury",
-   "summary": "",
-   "published": "2026-11-06T21:18-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177198422.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/blue-jackets-sean-monahan-exits-vs-sabres-with-lower-body-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Norris scores twice as Sabres beat Blue Jackets",
-   "summary": "",
-   "published": "2026-11-06T22:05-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177222567.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/norris-scores-twice-as-sabres-beat-blue-jackets/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "‘Remarkable’: Gretzky gives McDavid flowers amid historically hot start",
-   "summary": "Despite seeing his records at risk, Gretzky had nothing but praise for the current Oilers superstar as he pushes to break The Great One’s single-season points record.",
-   "published": "2026-11-06T15:32-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/McD.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/remarkable-gretzky-gives-mcdavid-flowers-amid-historically-hot-start/",
    "source": "Sportsnet"
   },
   {
@@ -3693,7 +3705,7 @@
    "league": "mlb",
    "headline": "Watch LIVE: Blue Jays prospect Parker in AFL Home Run Derby",
    "summary": "",
-   "published": "2026-11-07T21:16-05:00",
+   "published": "2026-11-07T21:24-05:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/idfa2f7zjb0nolrs6ywx",
    "video": false,
    "teams": [
@@ -4079,7 +4091,7 @@
       "l": 12,
       "otl": 2,
       "pts": 8,
-      "gf": 47,
+      "gf": 48,
       "ga": 77,
       "strk": "W1"
      }
@@ -4109,7 +4121,7 @@
       "otl": 1,
       "pts": 23,
       "gf": 64,
-      "ga": 49,
+      "ga": 50,
       "strk": "L1"
      },
      {
@@ -4413,7 +4425,7 @@
       "l": 3,
       "otl": 1,
       "pts": 33,
-      "gf": 108,
+      "gf": 109,
       "ga": 38,
       "strk": "W11"
      },
@@ -4474,7 +4486,7 @@
       "otl": 2,
       "pts": 16,
       "gf": 52,
-      "ga": 100,
+      "ga": 101,
       "strk": "L1"
      },
      {
@@ -4593,6 +4605,18 @@
       "strk": "W1"
      },
      {
+      "name": "Elmira Sugar Kings",
+      "abbr": "ELM",
+      "gp": 18,
+      "w": 7,
+      "l": 10,
+      "otl": 1,
+      "pts": 15,
+      "gf": 62,
+      "ga": 72,
+      "strk": "W1"
+     },
+     {
       "name": "London Nationals",
       "abbr": "LON",
       "gp": 18,
@@ -4627,18 +4651,6 @@
       "gf": 62,
       "ga": 76,
       "strk": "L1"
-     },
-     {
-      "name": "Elmira Sugar Kings",
-      "abbr": "ELM",
-      "gp": 18,
-      "w": 7,
-      "l": 10,
-      "otl": 1,
-      "pts": 15,
-      "gf": 62,
-      "ga": 72,
-      "strk": "W1"
      },
      {
       "name": "Komoka Kings",
@@ -4677,7 +4689,7 @@
       "l": 2,
       "otl": 1,
       "pts": 29,
-      "gf": 100,
+      "gf": 101,
       "ga": 47,
       "strk": "W3"
      },
@@ -4689,7 +4701,7 @@
       "l": 2,
       "otl": 1,
       "pts": 29,
-      "gf": 76,
+      "gf": 77,
       "ga": 42,
       "strk": "W5"
      },
@@ -4702,7 +4714,7 @@
       "otl": 0,
       "pts": 28,
       "gf": 79,
-      "ga": 47,
+      "ga": 48,
       "strk": "W2"
      },
      {
@@ -4714,7 +4726,7 @@
       "otl": 0,
       "pts": 28,
       "gf": 84,
-      "ga": 51,
+      "ga": 52,
       "strk": "W1"
      },
      {
@@ -4749,7 +4761,7 @@
       "l": 3,
       "otl": 4,
       "pts": 20,
-      "gf": 63,
+      "gf": 64,
       "ga": 55,
       "strk": "W3"
      },
@@ -4762,7 +4774,7 @@
       "otl": 0,
       "pts": 16,
       "gf": 70,
-      "ga": 79,
+      "ga": 80,
       "strk": "W1"
      },
      {
@@ -4780,14 +4792,26 @@
      {
       "name": "Stoney Creek Generals",
       "abbr": "SCG",
-      "gp": 21,
+      "gp": 22,
       "w": 4,
-      "l": 15,
+      "l": 16,
       "otl": 2,
       "pts": 10,
       "gf": 65,
       "ga": 98,
-      "strk": "L4"
+      "strk": "L5"
+     },
+     {
+      "name": "Brantford Titans",
+      "abbr": "BFD",
+      "gp": 20,
+      "w": 3,
+      "l": 15,
+      "otl": 2,
+      "pts": 8,
+      "gf": 61,
+      "ga": 108,
+      "strk": "W1"
      },
      {
       "name": "Welland Canadians",
@@ -4800,18 +4824,6 @@
       "gf": 43,
       "ga": 109,
       "strk": "W1"
-     },
-     {
-      "name": "Brantford Titans",
-      "abbr": "BFD",
-      "gp": 19,
-      "w": 2,
-      "l": 15,
-      "otl": 2,
-      "pts": 6,
-      "gf": 61,
-      "ga": 108,
-      "strk": "L3"
      }
     ]
    }
