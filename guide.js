@@ -372,7 +372,7 @@
     var a = el('div', 'pg-pro');
     var l = el('a', 'pg-prol'); l.href = PRO_HUB; l.target = target; l.appendChild(el('b', null, 'Pro Hub')); l.appendChild(el('span', null, 'Presented by Scarehouse Windsor')); a.appendChild(l);
     var gs = el('div', 'pg-pros');
-    if (!list.length) { var nn = el('span', 'pg-pg', 'Wings, Leafs, Habs, Lions, Bills, Pistons, Raptors, Tigers and Jays'); nn.style.gridColumn = '1 / -1'; gs.appendChild(nn); }
+    if (!list.length) { var nn = el('span', 'pg-pg', 'Wings, Leafs, Habs, Lions, Bills, Pistons, Raptors, Tigers and Jays'); nn.style.gridColumn = '1 / -1'; nn.style.whiteSpace = 'normal'; nn.style.textAlign = 'center'; gs.appendChild(nn); }
     list.forEach(function (g) {
       var c = el('a', 'pg-pg'), st;          // tap a score: the game on ESPN (gamecast, recap or preview)
       if (g.link) { c.href = g.link; c.target = '_blank'; c.rel = 'noopener'; } else { c.href = PRO_HUB; c.target = target; }
