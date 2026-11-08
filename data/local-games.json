@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T21:32:12-05:00",
+ "updated": "2026-11-07T21:47:47-05:00",
  "today": "2026-11-07",
  "range": [
   "2026-11-04",
@@ -1238,10 +1238,10 @@
    "home_away": "A",
    "opponent": "Mooretown Flags",
    "location": "Mooretown Sports Complex",
-   "status": "live",
-   "our_score": 0,
-   "opp_score": 0,
-   "result": null,
+   "status": "final",
+   "our_score": 4,
+   "opp_score": 3,
+   "result": "W",
    "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960569?configuration=45"
@@ -3705,7 +3705,7 @@
    "league": "mlb",
    "headline": "Watch LIVE: Blue Jays prospect Parker in AFL Home Run Derby",
    "summary": "",
-   "published": "2026-11-07T21:24-05:00",
+   "published": "2026-11-07T21:40-05:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/idfa2f7zjb0nolrs6ywx",
    "video": false,
    "teams": [
@@ -4074,14 +4074,14 @@
      {
       "name": "Barrie Colts",
       "abbr": "BAR",
-      "gp": 17,
+      "gp": 18,
       "w": 3,
-      "l": 11,
+      "l": 12,
       "otl": 3,
       "pts": 9,
       "gf": 38,
       "ga": 67,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Brampton Steelheads",
@@ -4103,14 +4103,14 @@
      {
       "name": "Soo Greyhounds",
       "abbr": "SOO",
-      "gp": 19,
-      "w": 11,
+      "gp": 20,
+      "w": 12,
       "l": 6,
       "otl": 2,
-      "pts": 24,
+      "pts": 26,
       "gf": 69,
       "ga": 65,
-      "strk": "W1"
+      "strk": "W2"
      },
      {
       "name": "Flint Firebirds",
@@ -4137,6 +4137,18 @@
       "strk": "W7"
      },
      {
+      "name": "Saginaw Spirit",
+      "abbr": "SAG",
+      "gp": 18,
+      "w": 7,
+      "l": 8,
+      "otl": 3,
+      "pts": 17,
+      "gf": 64,
+      "ga": 64,
+      "strk": "W1"
+     },
+     {
       "name": "Sarnia Sting",
       "abbr": "SAR",
       "gp": 19,
@@ -4147,18 +4159,6 @@
       "gf": 72,
       "ga": 82,
       "strk": "L1"
-     },
-     {
-      "name": "Saginaw Spirit",
-      "abbr": "SAG",
-      "gp": 17,
-      "w": 6,
-      "l": 8,
-      "otl": 3,
-      "pts": 15,
-      "gf": 64,
-      "ga": 64,
-      "strk": "L6"
      }
     ]
    },
@@ -4192,14 +4192,14 @@
      {
       "name": "Erie Otters",
       "abbr": "ER",
-      "gp": 18,
+      "gp": 19,
       "w": 10,
-      "l": 6,
+      "l": 7,
       "otl": 2,
       "pts": 22,
       "gf": 60,
       "ga": 65,
-      "strk": "W3"
+      "strk": "L1"
      },
      {
       "name": "Kitchener Rangers",
@@ -4209,7 +4209,7 @@
       "l": 6,
       "otl": 3,
       "pts": 21,
-      "gf": 60,
+      "gf": 61,
       "ga": 56,
       "strk": "W1"
      },
@@ -4222,7 +4222,7 @@
       "otl": 2,
       "pts": 14,
       "gf": 49,
-      "ga": 77,
+      "ga": 78,
       "strk": "L2"
      }
     ]
@@ -4281,6 +4281,18 @@
       "strk": "W1"
      },
      {
+      "name": "Pickering Panthers",
+      "abbr": "PIC",
+      "gp": 22,
+      "w": 10,
+      "l": 10,
+      "otl": 2,
+      "pts": 22,
+      "gf": 75,
+      "ga": 75,
+      "strk": "W1"
+     },
+     {
       "name": "Stouffville Spirit",
       "abbr": "STO",
       "gp": 19,
@@ -4293,28 +4305,16 @@
       "strk": "L1"
      },
      {
-      "name": "Pickering Panthers",
-      "abbr": "PIC",
-      "gp": 21,
-      "w": 9,
-      "l": 10,
-      "otl": 2,
-      "pts": 20,
-      "gf": 74,
-      "ga": 75,
-      "strk": "L3"
-     },
-     {
       "name": "Aurora Tigers",
       "abbr": "AUR",
-      "gp": 18,
-      "w": 8,
+      "gp": 19,
+      "w": 9,
       "l": 10,
       "otl": 0,
-      "pts": 16,
-      "gf": 54,
+      "pts": 18,
+      "gf": 55,
       "ga": 67,
-      "strk": "W3"
+      "strk": "W4"
      },
      {
       "name": "Trenton Golden Hawks",
@@ -4343,14 +4343,14 @@
      {
       "name": "Lindsay Muskies",
       "abbr": "LIN",
-      "gp": 19,
+      "gp": 20,
       "w": 5,
-      "l": 12,
+      "l": 13,
       "otl": 2,
       "pts": 12,
       "gf": 72,
-      "ga": 102,
-      "strk": "W1"
+      "ga": 103,
+      "strk": "L1"
      },
      {
       "name": "North York Rangers",
@@ -4425,7 +4425,7 @@
       "l": 3,
       "otl": 1,
       "pts": 33,
-      "gf": 109,
+      "gf": 111,
       "ga": 38,
       "strk": "W11"
      },
@@ -4468,26 +4468,14 @@
      {
       "name": "Mississauga Chargers",
       "abbr": "MIS",
-      "gp": 21,
+      "gp": 22,
       "w": 8,
       "l": 13,
-      "otl": 0,
-      "pts": 16,
+      "otl": 1,
+      "pts": 17,
       "gf": 62,
-      "ga": 101,
+      "ga": 102,
       "strk": "L2"
-     },
-     {
-      "name": "Caledon Admirals",
-      "abbr": "CAL",
-      "gp": 20,
-      "w": 7,
-      "l": 11,
-      "otl": 2,
-      "pts": 16,
-      "gf": 52,
-      "ga": 101,
-      "strk": "L1"
      },
      {
       "name": "Georgetown Raiders",
@@ -4500,6 +4488,18 @@
       "gf": 75,
       "ga": 125,
       "strk": "W1"
+     },
+     {
+      "name": "Caledon Admirals",
+      "abbr": "CAL",
+      "gp": 20,
+      "w": 7,
+      "l": 11,
+      "otl": 2,
+      "pts": 16,
+      "gf": 52,
+      "ga": 103,
+      "strk": "L1"
      },
      {
       "name": "Niagara Falls Canucks",
@@ -4600,7 +4600,7 @@
       "l": 9,
       "otl": 3,
       "pts": 17,
-      "gf": 84,
+      "gf": 85,
       "ga": 79,
       "strk": "W1"
      },
@@ -4625,7 +4625,7 @@
       "otl": 1,
       "pts": 15,
       "gf": 65,
-      "ga": 81,
+      "ga": 82,
       "strk": "L2"
      },
      {
@@ -4684,26 +4684,38 @@
      {
       "name": "Cambridge Redhawks",
       "abbr": "CAM",
-      "gp": 17,
-      "w": 14,
+      "gp": 18,
+      "w": 15,
       "l": 2,
       "otl": 1,
-      "pts": 29,
+      "pts": 31,
       "gf": 101,
       "ga": 47,
-      "strk": "W3"
+      "strk": "W4"
      },
      {
       "name": "Caledonia Corvairs",
       "abbr": "CAL",
-      "gp": 17,
-      "w": 14,
+      "gp": 18,
+      "w": 15,
       "l": 2,
       "otl": 1,
-      "pts": 29,
+      "pts": 31,
       "gf": 77,
       "ga": 42,
-      "strk": "W5"
+      "strk": "W6"
+     },
+     {
+      "name": "St. Catharines Falcons",
+      "abbr": "SCF",
+      "gp": 19,
+      "w": 14,
+      "l": 4,
+      "otl": 1,
+      "pts": 29,
+      "gf": 84,
+      "ga": 52,
+      "strk": "W1"
      },
      {
       "name": "Fort Erie Meteors",
@@ -4716,18 +4728,6 @@
       "gf": 79,
       "ga": 48,
       "strk": "W2"
-     },
-     {
-      "name": "St. Catharines Falcons",
-      "abbr": "SCF",
-      "gp": 18,
-      "w": 14,
-      "l": 4,
-      "otl": 0,
-      "pts": 28,
-      "gf": 84,
-      "ga": 52,
-      "strk": "W1"
      },
      {
       "name": "Waterloo Siskins",
@@ -4768,14 +4768,14 @@
      {
       "name": "Port Colborne Sailors",
       "abbr": "PCS",
-      "gp": 15,
+      "gp": 16,
       "w": 8,
-      "l": 7,
+      "l": 8,
       "otl": 0,
       "pts": 16,
       "gf": 70,
       "ga": 80,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Hamilton Steel",
