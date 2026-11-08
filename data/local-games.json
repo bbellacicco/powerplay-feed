@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T17:46:57-05:00",
+ "updated": "2026-11-08T18:01:55-05:00",
  "today": "2026-11-08",
  "range": [
   "2026-11-05",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 36
   },
   "club_news": {
    "ok": true,
@@ -1073,11 +1073,11 @@
    "home_away": "H",
    "opponent": "Stouffville Spirit",
    "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
-   "note": "",
+   "note": "20:00 1st",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16660"
    },
@@ -2538,16 +2538,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Sunday Overreactions: Will Blackhawks’ rebuild ever turn a corner?",
-   "summary": "The Blackhawks have missed the playoffs six years in a row and appear headed for a seventh. Has their rebuild hit a wall? Michael Amato discusses that and more in Sunday Overreactions.",
-   "published": "2026-11-08T08:12-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/blackhawks1.jpg",
+   "league": "other",
+   "headline": "Sweden’s Isabella Wrana defeats Miku Nihira for first GSOC title since 2023",
+   "summary": "",
+   "published": "2026-11-08T17:48-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/2026GSOCMasters-MedicineHat-708-copy.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 5,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/sunday-overreactions-will-blackhawks-rebuild-ever-turn-a-corner/",
+   "sn_team_count": 0,
+   "sport": "Curling",
+   "url": "https://www.sportsnet.ca/curling/article/swedens-isabella-wrana-defeats-miku-nihira-for-first-gsoc-title-since-2023/",
    "source": "Sportsnet"
   },
   {
@@ -2561,6 +2561,19 @@
    "sn_team_count": 0,
    "sport": "Curling",
    "url": "https://www.sportsnet.ca/curling/article/matt-dunstone-defeats-bruce-mouat-to-repeat-as-gsoc-masters-champions/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Rams star WR Puka Nacua suffers knee injury, will have MRI Monday",
+   "summary": "",
+   "published": "2026-11-08T17:44-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Puka.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/rams-star-wr-puka-nacua-suffers-knee-injury-will-have-mri-monday/",
    "source": "Sportsnet"
   },
   {
@@ -2656,6 +2669,19 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/raptors-scottie-barnes-immanuel-quickley-questionable-vs-grizzlies/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Sunday Overreactions: Will Blackhawks’ rebuild ever turn a corner?",
+   "summary": "The Blackhawks have missed the playoffs six years in a row and appear headed for a seventh. Has their rebuild hit a wall? Michael Amato discusses that and more in Sunday Overreactions.",
+   "published": "2026-11-08T08:12-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/blackhawks1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 5,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/sunday-overreactions-will-blackhawks-rebuild-ever-turn-a-corner/",
    "source": "Sportsnet"
   },
   {
@@ -4301,14 +4327,14 @@
      {
       "name": "Oakville Blades",
       "abbr": "OAK",
-      "gp": 21,
-      "w": 10,
+      "gp": 22,
+      "w": 11,
       "l": 8,
       "otl": 3,
-      "pts": 23,
+      "pts": 25,
       "gf": 79,
       "ga": 81,
-      "strk": "W2"
+      "strk": "W3"
      },
      {
       "name": "Mississauga Chargers",
@@ -4361,14 +4387,14 @@
      {
       "name": "Buffalo Jr. Sabres",
       "abbr": "BUF",
-      "gp": 22,
+      "gp": 23,
       "w": 6,
-      "l": 15,
+      "l": 16,
       "otl": 1,
       "pts": 13,
       "gf": 57,
       "ga": 86,
-      "strk": "L3"
+      "strk": "L4"
      }
     ]
    }
