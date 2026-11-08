@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T03:01:54-05:00",
+ "updated": "2026-11-08T03:16:56-05:00",
  "today": "2026-11-08",
  "range": [
   "2026-11-05",
@@ -50,8 +50,8 @@
    "count": 9
   },
   "highschool": {
-   "ok": true,
-   "count": 123
+   "ok": false,
+   "error": "HTTP Error 403: Forbidden"
   },
   "sheet": {
    "ok": true,
