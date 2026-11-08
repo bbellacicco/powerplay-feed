@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T13:35:29-05:00",
+ "updated": "2026-11-08T13:47:02-05:00",
  "today": "2026-11-08",
  "range": [
   "2026-11-05",
@@ -50,8 +50,8 @@
    "count": 9
   },
   "highschool": {
-   "ok": true,
-   "count": 123
+   "ok": false,
+   "error": "HTTP Error 403: Forbidden"
   },
   "sheet": {
    "ok": true,
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 37
+   "count": 36
   },
   "club_news": {
    "ok": true,
@@ -2553,21 +2553,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Maple Leafs hurt by turnovers in loss to Canadiens",
-   "summary": "The Maple Leafs rallied in the third but it wasn’t enough to overcome an early deficit against the Canadiens.",
-   "published": "2026-11-07T23:53-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/leafs-3.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-hurt-by-turnovers-in-loss-to-canadiens/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Flames defenceman Kevin Bahl to undergo season-ending Achilles surgery",
    "summary": "Defenceman Kevin Bahl is set to undergo season-ending surgery to repair a ruptured Achilles tendon, the team announced Sunday.",
    "published": "2026-11-08T11:03-05:00",
@@ -2860,6 +2845,21 @@
   },
   {
    "league": "nhl",
+   "headline": "Maple Leafs hurt by turnovers in loss to Canadiens",
+   "summary": "The Maple Leafs rallied in the third but it wasn’t enough to overcome an early deficit against the Canadiens.",
+   "published": "2026-11-07T23:53-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/leafs-3.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-hurt-by-turnovers-in-loss-to-canadiens/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Cousins scores late winner to lift Senators past Mammoth",
    "summary": "",
    "published": "2026-11-07T22:07-05:00",
@@ -2975,19 +2975,6 @@
    "sn_team_count": 0,
    "sport": "Golf",
    "url": "https://www.sportsnet.ca/european/article/rahm-begins-rebuild-by-winning-in-abu-dhabi-after-holding-off-mcilroy-and-hatton/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "cfl",
-   "headline": "Alexander says Bombers player taunted him about late father in East final",
-   "summary": "",
-   "published": "2026-11-07T21:23-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/1309193d6e3b2475fd1d606864488e9da61c137b0deaf2cb1461c09ed9381f24.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/alexander-says-bombers-player-taunted-him-about-late-father-in-east-final/",
    "source": "Sportsnet"
   },
   {
@@ -3477,7 +3464,7 @@
    "league": "mlb",
    "headline": "Watch Tigers prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-11-07T22:39-05:00",
+   "published": "2026-11-08T13:37-05:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
@@ -3659,7 +3646,7 @@
    "league": "mlb",
    "headline": "Watch Blue Jays prospects in Arizona Fall League action",
    "summary": "",
-   "published": "2026-11-07T22:39-05:00",
+   "published": "2026-11-08T13:37-05:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
    "video": false,
    "teams": [
