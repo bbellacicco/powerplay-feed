@@ -420,7 +420,7 @@
       P.root.insertBefore(P.tabs, P.ribbon);
     }
     P.tabs.innerHTML = '';
-    [['all', 'All'], ['spitfires', 'Spitfires'], ['lancers', 'Lancers'], ['saints', 'Saints'], ['highschool', 'High school'], ['junior', 'Junior hockey']].forEach(function (t) {
+    [['all', 'All'], ['lancers', 'Lancers Lounge'], ['saints', 'Saints Nation'], ['highschool', 'High School Huddle'], ['spitfires', 'Spitfires'], ['junior', 'Junior hockey']].forEach(function (t) {
       var b = el('button', 'ltab' + (P.pick === t[0] ? ' on' : ''), t[1]); b.type = 'button';
       b.onclick = function () { P.pick = t[0]; buildLocal(P, news, lg, hs, net); };
       P.tabs.appendChild(b);
