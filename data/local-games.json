@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T16:32:24-05:00",
+ "updated": "2026-11-08T16:47:07-05:00",
  "today": "2026-11-08",
  "range": [
   "2026-11-05",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -1036,11 +1036,11 @@
    "home_away": "A",
    "opponent": "Kingston Frontenacs",
    "location": "Slush Puppie Place, Kingston, ON",
-   "status": "live",
+   "status": "final",
    "our_score": 4,
    "opp_score": 3,
-   "result": null,
-   "note": "End of Game",
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29173/"
    }
@@ -2674,6 +2674,45 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nfl",
+   "headline": "Kenneth Walker scores 3 TDs as Chiefs roll past woeful Jets",
+   "summary": "",
+   "published": "2026-11-08T16:35-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/Untitled-design-1-20.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/kenneth-walker-scores-3-tds-as-chiefs-roll-past-woeful-jets/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Rams stymie Commanders in Myles Garrett’s return",
+   "summary": "",
+   "published": "2026-11-08T16:45-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/donald_garrett1280.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/rams-stymie-commanders-in-myles-garretts-return/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Burrow powers Bengals past Falcons in Madrid for fourth straight win",
+   "summary": "",
+   "published": "2026-11-08T13:10-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/burrow_joe1280.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/burrow-powers-bengals-past-falcons-in-madrid-for-fourth-straight-win/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Flames’ Devin Cooley to start vs. Flyers, Brayden Pachal recalled from AHL",
    "summary": "Devin Cooley is set to make his return to the Calgary Flames’ crease for Sunday’s showdown against the Philadelphia Flyers (Sportsnet West, 7 p.m. ET / 6 p.m. ABT), the team announced after morning skate.",
@@ -2702,7 +2741,7 @@
   {
    "league": "other",
    "headline": "Kyle Larson becomes first back-to-back NASCAR Cup Series champion since 2010",
-   "summary": "",
+   "summary": "Kyle Larson is now a three-time NASCAR champion.",
    "published": "2026-11-08T16:19-05:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/larson_kyle1280.jpg",
    "video": false,
@@ -2723,32 +2762,6 @@
    "sn_team_count": 0,
    "sport": "Auto Racing",
    "url": "https://www.sportsnet.ca/article/lando-norris-wins-sao-paulo-grand-prix-mercedes-clinches-constructors-title/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Burrow powers Bengals past Falcons in Madrid for fourth straight win",
-   "summary": "",
-   "published": "2026-11-08T13:10-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/burrow_joe1280.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/burrow-powers-bengals-past-falcons-in-madrid-for-fourth-straight-win/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Cowboys wide receiver George Pickens ruled out vs. Colts with hamstring injury",
-   "summary": "The Dallas Cowboys will be shorthanded for their matchup with the Indianapolis Colts on Sunday.",
-   "published": "2026-11-08T11:47-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/Untitled-design-copy-3-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/cowboys-wide-receiver-george-pickens-ruled-out-vs-colts-with-hamstring-injury/",
    "source": "Sportsnet"
   },
   {
@@ -2963,34 +2976,6 @@
    "sn_team_count": 0,
    "sport": "Auto Racing",
    "url": "https://www.sportsnet.ca/nascar-cup/article/kyle-larson-is-on-the-verge-of-becoming-the-11th-nascar-driver-with-three-cup-series-titles/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Rahm begins rebuild by winning in Abu Dhabi after holding off McIlroy and Hatton",
-   "summary": "Rahm shot 5-under 67 and was 23-under par for the week at Yas Links, two strokes clear of Hatton (68) and four ahead of McIlroy (69) in the first of the two season-ending playoff tournaments in the United Arab Emirates.",
-   "published": "2026-11-08T08:35-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/rahm-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Golf",
-   "url": "https://www.sportsnet.ca/european/article/rahm-begins-rebuild-by-winning-in-abu-dhabi-after-holding-off-mcilroy-and-hatton/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Blue Jays prospect Aaron Parker wins Arizona Fall League Home Run Derby",
-   "summary": "Toronto Blue Jays prospect Aaron Parker put an exclamation point on his breakout 2026 season on Saturday night under the lights in Arizona.",
-   "published": "2026-11-07T22:53-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/07/blue_jays_logo1280.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/blue-jays-prospect-aaron-parker-wins-arizona-fall-league-home-run-derby/",
    "source": "Sportsnet"
   },
   {
@@ -3837,14 +3822,14 @@
      {
       "name": "Kingston Frontenacs",
       "abbr": "KGN",
-      "gp": 18,
+      "gp": 19,
       "w": 13,
-      "l": 5,
+      "l": 6,
       "otl": 0,
       "pts": 26,
       "gf": 82,
       "ga": 65,
-      "strk": "W6"
+      "strk": "L1"
      },
      {
       "name": "Brantford Bulldogs",
@@ -3890,7 +3875,7 @@
       "l": 10,
       "otl": 0,
       "pts": 16,
-      "gf": 58,
+      "gf": 59,
       "ga": 66,
       "strk": "L1"
      }
@@ -3902,14 +3887,14 @@
      {
       "name": "Sudbury Wolves",
       "abbr": "SBY",
-      "gp": 17,
-      "w": 11,
+      "gp": 18,
+      "w": 12,
       "l": 5,
       "otl": 1,
-      "pts": 23,
+      "pts": 25,
       "gf": 72,
       "ga": 52,
-      "strk": "L1"
+      "strk": "W1"
      },
      {
       "name": "Niagara IceDogs",
@@ -3920,7 +3905,7 @@
       "otl": 2,
       "pts": 16,
       "gf": 50,
-      "ga": 63,
+      "ga": 64,
       "strk": "L3"
      },
      {
@@ -3950,14 +3935,14 @@
      {
       "name": "Barrie Colts",
       "abbr": "BAR",
-      "gp": 18,
+      "gp": 19,
       "w": 3,
-      "l": 12,
+      "l": 13,
       "otl": 3,
       "pts": 9,
       "gf": 41,
       "ga": 73,
-      "strk": "L2"
+      "strk": "L3"
      }
     ]
    },
@@ -3977,6 +3962,18 @@
       "strk": "W2"
      },
      {
+      "name": "Windsor Spitfires",
+      "abbr": "WSR",
+      "gp": 19,
+      "w": 11,
+      "l": 5,
+      "otl": 3,
+      "pts": 25,
+      "gf": 72,
+      "ga": 58,
+      "strk": "W8"
+     },
+     {
       "name": "Flint Firebirds",
       "abbr": "FLNT",
       "gp": 17,
@@ -3987,18 +3984,6 @@
       "gf": 64,
       "ga": 50,
       "strk": "L2"
-     },
-     {
-      "name": "Windsor Spitfires",
-      "abbr": "WSR",
-      "gp": 18,
-      "w": 10,
-      "l": 5,
-      "otl": 3,
-      "pts": 23,
-      "gf": 72,
-      "ga": 58,
-      "strk": "W7"
      },
      {
       "name": "Saginaw Spirit",
@@ -4020,7 +4005,7 @@
       "l": 11,
       "otl": 1,
       "pts": 15,
-      "gf": 75,
+      "gf": 76,
       "ga": 84,
       "strk": "L1"
      }
@@ -4050,7 +4035,7 @@
       "otl": 2,
       "pts": 24,
       "gf": 71,
-      "ga": 58,
+      "ga": 59,
       "strk": "W3"
      },
      {
@@ -4301,7 +4286,7 @@
       "l": 5,
       "otl": 2,
       "pts": 32,
-      "gf": 119,
+      "gf": 120,
       "ga": 68,
       "strk": "W5"
      },
@@ -4325,7 +4310,7 @@
       "l": 8,
       "otl": 3,
       "pts": 23,
-      "gf": 75,
+      "gf": 77,
       "ga": 80,
       "strk": "W2"
      },
@@ -4362,7 +4347,7 @@
       "otl": 2,
       "pts": 16,
       "gf": 55,
-      "ga": 107,
+      "ga": 108,
       "strk": "L2"
      },
      {
@@ -4386,7 +4371,7 @@
       "otl": 1,
       "pts": 13,
       "gf": 56,
-      "ga": 82,
+      "ga": 84,
       "strk": "L3"
      }
     ]
@@ -4565,8 +4550,8 @@
       "l": 2,
       "otl": 1,
       "pts": 31,
-      "gf": 81,
-      "ga": 44,
+      "gf": 82,
+      "ga": 45,
       "strk": "W6"
      },
      {
@@ -4608,14 +4593,14 @@
      {
       "name": "Ayr Centennials",
       "abbr": "AYR",
-      "gp": 16,
+      "gp": 17,
       "w": 9,
-      "l": 3,
+      "l": 4,
       "otl": 4,
       "pts": 22,
       "gf": 65,
       "ga": 59,
-      "strk": "W4"
+      "strk": "L1"
      },
      {
       "name": "Pelham Panthers",
@@ -4625,8 +4610,8 @@
       "l": 6,
       "otl": 2,
       "pts": 22,
-      "gf": 71,
-      "ga": 72,
+      "gf": 72,
+      "ga": 73,
       "strk": "W1"
      },
      {
@@ -4644,14 +4629,14 @@
      {
       "name": "Hamilton Steel",
       "abbr": "HAM",
-      "gp": 19,
-      "w": 5,
+      "gp": 20,
+      "w": 6,
       "l": 11,
       "otl": 3,
-      "pts": 13,
+      "pts": 15,
       "gf": 60,
       "ga": 83,
-      "strk": "L1"
+      "strk": "W1"
      },
      {
       "name": "Stoney Creek Generals",
