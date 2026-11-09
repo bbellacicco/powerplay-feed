@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T00:00:01-05:00",
+ "updated": "2026-11-09T10:30:01-05:00",
  "today": "2026-11-09",
  "games": [
   {
@@ -189,26 +189,6 @@
    "start": "2026-11-09T16:00:00-05:00",
    "time_tbd": false,
    "home_away": "N",
-   "opponent": "North Star",
-   "location": "North Star",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "2A Playoffs · 8 v 1",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Assumption",
-   "home": "North Star"
-  },
-  {
-   "id": "highschool-2026-11-09-93",
-   "team": "highschool",
-   "sport": "Senior Girls Basketball",
-   "start": "2026-11-09T16:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
    "opponent": "Tecumseh Vista Academy",
    "location": "Tecumseh Vista Academy",
    "status": "upcoming",
@@ -221,6 +201,26 @@
    },
    "away": "Riverside",
    "home": "Tecumseh Vista Academy"
+  },
+  {
+   "id": "highschool-2026-11-09-93",
+   "team": "highschool",
+   "sport": "Senior Girls Basketball",
+   "start": "2026-11-09T16:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "North Star",
+   "location": "North Star",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "2A Playoffs · 8 v 1",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Assumption",
+   "home": "North Star"
   },
   {
    "id": "highschool-2026-11-09-94",
@@ -526,61 +526,81 @@
    "id": "highschool-2026-11-11-109",
    "team": "highschool",
    "sport": "Junior Girls Basketball",
-   "start": "2026-11-11T16:00:00-05:00",
+   "start": "2026-11-11T15:30:00-05:00",
    "time_tbd": false,
    "home_away": "N",
-   "opponent": "TBA",
-   "location": "TBA",
+   "opponent": "St. Joseph's",
+   "location": "St. Joseph's",
    "status": "upcoming",
    "our_score": null,
    "opp_score": null,
    "result": null,
-   "note": "3A Playoffs",
+   "note": "3A Playoffs · 6/3 v 2",
    "links": {
     "standings": "https://wecssaa.com/viewScores.php"
    },
    "away": "TBA",
-   "home": "TBA"
+   "home": "St. Joseph's"
   },
   {
    "id": "highschool-2026-11-11-110",
    "team": "highschool",
-   "sport": "Senior Girls Basketball",
-   "start": "2026-11-11T16:00:00-05:00",
+   "sport": "Junior Girls Basketball",
+   "start": "2026-11-11T16:30:00-05:00",
    "time_tbd": false,
    "home_away": "N",
-   "opponent": "TBA",
-   "location": "TBA",
+   "opponent": "St. Anne",
+   "location": "St. Anne",
    "status": "upcoming",
    "our_score": null,
    "opp_score": null,
    "result": null,
-   "note": "3A Playoffs",
+   "note": "3A Playoffs · 5/4 v 1",
    "links": {
     "standings": "https://wecssaa.com/viewScores.php"
    },
    "away": "TBA",
-   "home": "TBA"
+   "home": "St. Anne"
   },
   {
-   "id": "highschool-2026-11-12-111",
+   "id": "highschool-2026-11-11-111",
    "team": "highschool",
-   "sport": "Junior Boys Volleyball",
-   "start": "2026-11-12T01:01:00-05:00",
+   "sport": "Senior Girls Basketball",
+   "start": "2026-11-11T17:00:00-05:00",
    "time_tbd": false,
    "home_away": "N",
-   "opponent": "TBA",
-   "location": "TBA",
+   "opponent": "St. Joseph's",
+   "location": "St. Joseph's",
    "status": "upcoming",
    "our_score": null,
    "opp_score": null,
    "result": null,
-   "note": "3A Playoffs",
+   "note": "3A Playoffs · 6/3 v 2",
    "links": {
     "standings": "https://wecssaa.com/viewScores.php"
    },
    "away": "TBA",
-   "home": "TBA"
+   "home": "St. Joseph's"
+  },
+  {
+   "id": "highschool-2026-11-11-112",
+   "team": "highschool",
+   "sport": "Senior Girls Basketball",
+   "start": "2026-11-11T18:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "St. Anne",
+   "location": "St. Anne",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "3A Playoffs · 5/4 v 1",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "TBA",
+   "home": "St. Anne"
   },
   {
    "id": "highschool-2026-11-12-113",
@@ -595,7 +615,7 @@
    "our_score": null,
    "opp_score": null,
    "result": null,
-   "note": "2A Playoffs",
+   "note": "3A Playoffs",
    "links": {
     "standings": "https://wecssaa.com/viewScores.php"
    },
@@ -603,9 +623,9 @@
    "home": "TBA"
   },
   {
-   "id": "highschool-2026-11-12-112",
+   "id": "highschool-2026-11-12-115",
    "team": "highschool",
-   "sport": "Senior Boys Volleyball",
+   "sport": "Junior Boys Volleyball",
    "start": "2026-11-12T01:01:00-05:00",
    "time_tbd": false,
    "home_away": "N",
@@ -615,7 +635,7 @@
    "our_score": null,
    "opp_score": null,
    "result": null,
-   "note": "3A Playoffs",
+   "note": "2A Playoffs",
    "links": {
     "standings": "https://wecssaa.com/viewScores.php"
    },
@@ -635,6 +655,26 @@
    "our_score": null,
    "opp_score": null,
    "result": null,
+   "note": "3A Playoffs",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "TBA",
+   "home": "TBA"
+  },
+  {
+   "id": "highschool-2026-11-12-116",
+   "team": "highschool",
+   "sport": "Senior Boys Volleyball",
+   "start": "2026-11-12T01:01:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "TBA",
+   "location": "TBA",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
    "note": "2A Playoffs",
    "links": {
     "standings": "https://wecssaa.com/viewScores.php"
@@ -643,7 +683,7 @@
    "home": "TBA"
   },
   {
-   "id": "highschool-2026-11-12-115",
+   "id": "highschool-2026-11-12-117",
    "team": "highschool",
    "sport": "Senior Boys Volleyball",
    "start": "2026-11-12T01:01:00-05:00",
@@ -663,7 +703,7 @@
    "home": "TBA"
   },
   {
-   "id": "highschool-2026-11-12-116",
+   "id": "highschool-2026-11-12-118",
    "team": "highschool",
    "sport": "Junior Boys Volleyball",
    "start": "2026-11-12T17:30:00-05:00",
@@ -683,7 +723,7 @@
    "home": "Lajeunesse"
   },
   {
-   "id": "highschool-2026-11-12-117",
+   "id": "highschool-2026-11-12-119",
    "team": "highschool",
    "sport": "Senior Boys Football",
    "start": "2026-11-12T17:30:00-05:00",
@@ -703,7 +743,7 @@
    "home": "Essex"
   },
   {
-   "id": "highschool-2026-11-12-118",
+   "id": "highschool-2026-11-12-120",
    "team": "highschool",
    "sport": "Senior Boys Football",
    "start": "2026-11-12T19:30:00-05:00",
