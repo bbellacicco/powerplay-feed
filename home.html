@@ -1120,6 +1120,8 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
       var allV = stories.filter(isVid).slice(), haveV3 = {};
       allV.forEach(function (v) { haveV3[vidId(v.url)] = 1; });
       (net.local || []).forEach(function (v) { if (!haveV3[vidId(v.u)]) allV.push({ headline: v.t, url: v.u, image: v.i, published: v.p.length === 10 ? v.p + 'T00:00:00' : v.p, source: v.s, video: true, team: 'powerplay' }); });
+      // the OHL's Spitfires game highlights (from its YouTube channel) go in Junior Hockey
+      (net.pro || []).forEach(function (v) { if (v.sp && v.u && !haveV3[vidId(v.u)]) { haveV3[vidId(v.u)] = 1; allV.push({ headline: 'Highlights: ' + v.t.replace(/^OHL Highlights:\s*/i, '').replace(/\s+@\s+/, ' at ').replace(/\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2}(st|nd|rd|th)?,?\s+\d{4}\s*$/i, ''), url: v.u, image: v.i, published: v.p, source: 'OHL', video: true, team: 'spitfires' }); } });
       var pool = stories.filter(function (s) { return !isVid(s); }).concat(allV);
       [['lancers', 'Lancers', THEME.lancers, 'Lancers Lounge stories are on the way.'],
        ['saints', 'Saints', THEME.saints, 'Saints Nation stories are on the way.'],
@@ -1140,7 +1142,7 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
         });
         var cards = list.map(function (x) {
           var v = isVid(x) || x.video;
-          return { t: new Date(x.published).getTime(), node: storyCard(x, v ? { play: true, tag: 'Video', sub: (x.source || 'Video') + ' \u00b7 ' + ago(x.published), tile: 'Powerplay' }
+          return { t: new Date(x.published).getTime(), node: storyCard(x, v ? { play: true, tag: 'Video', sub: (x.source || 'Video') + ' \u00b7 ' + ago(x.published), tile: x.team === 'spitfires' ? 'Spitfires' : 'Powerplay' }
             : { tag: x.team === 'powerplay' ? 'Powerplay' : x.team === 'junior' ? (x.club || t[1]).replace(/^(Windsor|St\. Clair)\s+/, '') : (TEAM[x.team] || t[1]), sub: (x.team === 'powerplay' ? 'Powerplay Windsor' : x.team === 'junior' ? (x.club || TEAM.junior) : (TEAM[x.team] || t[1]) + (x.sport ? ' \u00b7 ' + x.sport : '')) + ' \u00b7 ' + ago(x.published), tile: t[1] }) };
         }).concat(snapsT).sort(function (a, b) { return b.t - a.t; }).map(function (x) { return x.node; });
         fill(t[0], cards, t[3]);   // no score cards here: scores have their own rows and the sports guide
