@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T21:05:53-05:00",
+ "updated": "2026-11-08T21:17:33-05:00",
  "today": "2026-11-08",
  "range": [
   "2026-11-05",
@@ -62,8 +62,8 @@
    "count": 2
   },
   "cfl_news": {
-   "ok": true,
-   "count": 30
+   "ok": false,
+   "error": "<urlopen error _ssl.c:994: The handshake operation timed out>"
   },
   "standings_ohl": {
    "ok": true,
@@ -1093,10 +1093,10 @@
    "opponent": "LaSalle Vipers",
    "location": "Chatham Memorial Arena, Chatham, ON",
    "status": "live",
-   "our_score": 3,
+   "our_score": 4,
    "opp_score": 0,
    "result": null,
-   "note": "03:48 3rd",
+   "note": "Unofficial Final",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15672"
    },
@@ -2762,7 +2762,7 @@
   },
   {
    "league": "nhl",
-   "headline": "Lightning’s Brayden Point exits early vs. Jets",
+   "headline": "Lightning’s Brayden Point exits early vs. Jets, ‘may miss some time’",
    "summary": "",
    "published": "2026-11-08T20:13-05:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/point.jpg",
@@ -2825,6 +2825,45 @@
    "sn_team_count": 2,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/reaves-scores-43-points-leads-doncic-less-lakers-past-pistons/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Teenager Blades Brown wins becomes youngest PGA Tour winner in 95 years",
+   "summary": "",
+   "published": "2026-11-08T19:40-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/01/12a2e0d14002a25420527ff0a516ca1c84bb1b1562ec3e01c02fc61a2c68db0d.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Golf",
+   "url": "https://www.sportsnet.ca/pga/article/teenager-blades-brown-wins-becomes-youngest-pga-tour-winner-in-95-years/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Coco Gauff beats Jessica Pegula in all-American match at WTA Finals",
+   "summary": "",
+   "published": "2026-11-08T20:43-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/gauff-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Tennis",
+   "url": "https://www.sportsnet.ca/wta/article/coco-gauff-beats-jessica-pegula-in-all-american-match-at-wta-finals/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "‘Extremely grateful’: Price, Bergeron headline 2026 Hockey Hall of Fame class",
+   "summary": "",
+   "published": "2026-11-07T17:37-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/fame.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/extremely-grateful-price-bergeron-headline-2026-hockey-hall-of-fame-class/",
    "source": "Sportsnet"
   },
   {
@@ -2916,45 +2955,6 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/islanders-logan-stanley-fined-for-slashing-devils-nico-hischier/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Humana-Paredes, Wilkerson secure Olympic beach volleyball berth for Canada",
-   "summary": "",
-   "published": "2026-11-08T17:20-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/Untitled-design-2-17.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Olympics",
-   "url": "https://www.sportsnet.ca/olympics/article/humana-paredes-wilkerson-secure-olympic-beach-volleyball-berth-for-canada/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Kyle Larson becomes first back-to-back NASCAR Cup Series champion since 2010",
-   "summary": "Kyle Larson is now a three-time NASCAR champion.",
-   "published": "2026-11-08T16:19-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/larson_kyle1280.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Auto Racing",
-   "url": "https://www.sportsnet.ca/nascar-cup/article/kyle-larson-becomes-first-back-to-back-nascar-cup-series-champion-since-2010/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Lando Norris wins Sao Paulo Grand Prix, Mercedes clinches constructors’ title",
-   "summary": "McLaren driver Lando Norris dominated the Sao Paulo Grand Prix to win from pole position on Sunday.",
-   "published": "2026-11-08T13:53-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Brazil.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Auto Racing",
-   "url": "https://www.sportsnet.ca/formula-1/article/lando-norris-wins-sao-paulo-grand-prix-mercedes-clinches-constructors-title/",
    "source": "Sportsnet"
   },
   {
@@ -4375,14 +4375,14 @@
      {
       "name": "St. Thomas Stars",
       "abbr": "STT",
-      "gp": 17,
-      "w": 13,
+      "gp": 18,
+      "w": 14,
       "l": 3,
       "otl": 1,
-      "pts": 27,
+      "pts": 29,
       "gf": 72,
       "ga": 40,
-      "strk": "W4"
+      "strk": "W5"
      },
      {
       "name": "Listowel Cyclones",
@@ -4404,7 +4404,7 @@
       "l": 5,
       "otl": 0,
       "pts": 22,
-      "gf": 76,
+      "gf": 77,
       "ga": 48,
       "strk": "L1"
      },
@@ -4435,14 +4435,14 @@
      {
       "name": "Elmira Sugar Kings",
       "abbr": "ELM",
-      "gp": 18,
-      "w": 7,
+      "gp": 19,
+      "w": 8,
       "l": 10,
       "otl": 1,
-      "pts": 15,
+      "pts": 17,
       "gf": 68,
       "ga": 74,
-      "strk": "W1"
+      "strk": "W2"
      },
      {
       "name": "London Nationals",
@@ -4465,7 +4465,7 @@
       "otl": 0,
       "pts": 14,
       "gf": 46,
-      "ga": 67,
+      "ga": 68,
       "strk": "L1"
      },
      {
@@ -4495,14 +4495,14 @@
      {
       "name": "Sarnia Legionnaires",
       "abbr": "SAR",
-      "gp": 15,
+      "gp": 16,
       "w": 1,
-      "l": 14,
+      "l": 15,
       "otl": 0,
       "pts": 2,
       "gf": 32,
       "ga": 102,
-      "strk": "L3"
+      "strk": "L4"
      }
     ]
    },
@@ -4644,14 +4644,14 @@
      {
       "name": "Welland Canadians",
       "abbr": "WEL",
-      "gp": 19,
+      "gp": 20,
       "w": 3,
-      "l": 16,
+      "l": 17,
       "otl": 0,
       "pts": 6,
       "gf": 45,
       "ga": 115,
-      "strk": "W1"
+      "strk": "L1"
      }
     ]
    }
