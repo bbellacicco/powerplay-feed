@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T22:02:36-05:00",
+ "updated": "2026-11-08T22:20:56-05:00",
  "today": "2026-11-08",
  "range": [
   "2026-11-05",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -2525,6 +2525,19 @@
  ],
  "more_news": [
   {
+   "league": "nhl",
+   "headline": "Devils say Connor Hellebuyck won’t play vs. Jets in return to Winnipeg",
+   "summary": "",
+   "published": "2026-11-08T22:03-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177161178.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/devils-say-connor-hellebuyck-wont-play-in-return-to-winnipeg-vs-jets/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "NFL Week 9 roundup: Saints, Cowboys score dramatic wins",
    "summary": "Tyler Shough floated a 15-yard timing pass to Juwan Johnson toward the right corner of the end zone for a touchdown and the desperate New Orleans Saints stopped a do-or-die, two-point conversion to outlast the Cleveland ",
@@ -2535,19 +2548,6 @@
    "sn_team_count": 2,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/nfl-week-9-roundup-saints-down-browns-in-ot/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Devils beat Maple Leafs as Hellebuyck posts shutout",
-   "summary": "",
-   "published": "2026-11-08T22:00-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/devils.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/devils-beat-maple-leafs-as-hellebuyck-posts-shutout/",
    "source": "Sportsnet"
   },
   {
@@ -2655,29 +2655,31 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Takeaways: Dunstone defeats Mouat to repeat as GSOC Masters champions",
-   "summary": "Something about the Grand Slam of Curling Masters tournament brings out the best in Canada’s Team Matt Dunstone.",
-   "published": "2026-11-08T14:25-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/2026GSOCMasters-MedicineHat-646-copy.jpg",
+   "league": "nhl",
+   "headline": "Scheifele’s winner with 1.6 seconds remaining lifts Jets over Lightning",
+   "summary": "",
+   "published": "2026-11-08T21:33-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177234856.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
-   "sport": "Curling",
-   "url": "https://www.sportsnet.ca/curling/article/matt-dunstone-defeats-bruce-mouat-to-repeat-as-gsoc-masters-champions/",
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/scheifeles-winner-with-1-6-seconds-remaining-lifts-jets-over-lightning/",
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Takeaways: Wrana takes advantage of costly mistakes to claim second GSOC title",
-   "summary": "It’s been a fabulous seven days for Sweden’s Team Isabella Wrana. After winning the European Curling Championships in Czechia last weekend, the Swedes double-dipped with a P&H Masters title on Sunday.",
-   "published": "2026-11-08T17:48-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/2026GSOCMasters-MedicineHat-708-copy.jpg",
+   "league": "nhl",
+   "headline": "Devils beat Maple Leafs as Hellebuyck posts shutout",
+   "summary": "",
+   "published": "2026-11-08T22:00-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/devils.jpg",
    "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Curling",
-   "url": "https://www.sportsnet.ca/curling/article/swedens-isabella-wrana-defeats-miku-nihira-for-first-gsoc-title-since-2023/",
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/devils-beat-maple-leafs-as-hellebuyck-posts-shutout/",
    "source": "Sportsnet"
   },
   {
@@ -2756,6 +2758,32 @@
    "sn_team_count": 2,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/chargers-qb-justin-herbert-exits-game-vs-texans-with-apparent-finger-injury/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Takeaways: Dunstone defeats Mouat to repeat as GSOC Masters champions",
+   "summary": "Something about the Grand Slam of Curling Masters tournament brings out the best in Canada’s Team Matt Dunstone.",
+   "published": "2026-11-08T14:25-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/2026GSOCMasters-MedicineHat-646-copy.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Curling",
+   "url": "https://www.sportsnet.ca/curling/article/matt-dunstone-defeats-bruce-mouat-to-repeat-as-gsoc-masters-champions/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Takeaways: Wrana takes advantage of costly mistakes to claim second GSOC title",
+   "summary": "It’s been a fabulous seven days for Sweden’s Team Isabella Wrana. After winning the European Curling Championships in Czechia last weekend, the Swedes double-dipped with a P&H Masters title on Sunday.",
+   "published": "2026-11-08T17:48-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/2026GSOCMasters-MedicineHat-708-copy.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Curling",
+   "url": "https://www.sportsnet.ca/curling/article/swedens-isabella-wrana-defeats-miku-nihira-for-first-gsoc-title-since-2023/",
    "source": "Sportsnet"
   },
   {
@@ -2953,19 +2981,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/senators-activate-linus-ullmark-from-injured-reserve/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Islanders’ Logan Stanley fined for slashing Devils’ Nico Hischier",
-   "summary": "The New York Islanders defenceman has been fined $3,865.98, the maximum amount allowable under the collective bargaining agreement, for slashing New Jersey Devils forward Nico Hischier, the NHL’s department of player saf",
-   "published": "2026-11-08T13:15-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/logan.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/islanders-logan-stanley-fined-for-slashing-devils-nico-hischier/",
    "source": "Sportsnet"
   },
   {
