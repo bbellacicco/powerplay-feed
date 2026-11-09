@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T21:17:33-05:00",
+ "updated": "2026-11-08T21:32:14-05:00",
  "today": "2026-11-08",
  "range": [
   "2026-11-05",
@@ -62,8 +62,8 @@
    "count": 2
   },
   "cfl_news": {
-   "ok": false,
-   "error": "<urlopen error _ssl.c:994: The handshake operation timed out>"
+   "ok": true,
+   "count": 30
   },
   "standings_ohl": {
    "ok": true,
@@ -1092,11 +1092,11 @@
    "home_away": "H",
    "opponent": "LaSalle Vipers",
    "location": "Chatham Memorial Arena, Chatham, ON",
-   "status": "live",
+   "status": "final",
    "our_score": 4,
    "opp_score": 0,
-   "result": null,
-   "note": "Unofficial Final",
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15672"
    },
@@ -4399,14 +4399,14 @@
      {
       "name": "Chatham Maroons",
       "abbr": "CHA",
-      "gp": 16,
-      "w": 11,
+      "gp": 17,
+      "w": 12,
       "l": 5,
       "otl": 0,
-      "pts": 22,
+      "pts": 24,
       "gf": 77,
       "ga": 48,
-      "strk": "L1"
+      "strk": "W1"
      },
      {
       "name": "Stratford Warriors",
@@ -4459,14 +4459,14 @@
      {
       "name": "LaSalle Vipers",
       "abbr": "LAS",
-      "gp": 16,
+      "gp": 17,
       "w": 7,
-      "l": 9,
+      "l": 10,
       "otl": 0,
       "pts": 14,
       "gf": 46,
       "ga": 68,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Woodstock Navy Vets",
