@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T16:30:02-05:00",
+ "updated": "2026-11-09T16:45:02-05:00",
  "today": "2026-11-09",
  "games": [
   {
@@ -81,6 +81,26 @@
    },
    "away": "Brennan",
    "home": "Essex"
+  },
+  {
+   "id": "highschool-2026-11-09-94",
+   "team": "highschool",
+   "sport": "Junior Girls Basketball",
+   "start": "2026-11-09T00:00:00-05:00",
+   "time_tbd": true,
+   "home_away": "N",
+   "opponent": "North Star",
+   "location": "North Star",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "2A Playoffs · 5 v 4",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Belle River",
+   "home": "North Star"
   },
   {
    "id": "highschool-2026-11-09-84",
@@ -223,31 +243,11 @@
    "home": "North Star"
   },
   {
-   "id": "highschool-2026-11-09-94",
-   "team": "highschool",
-   "sport": "Junior Girls Basketball",
-   "start": "2026-11-09T17:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "North Star",
-   "location": "North Star",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "2A Playoffs · 5 v 4",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Belle River",
-   "home": "North Star"
-  },
-  {
    "id": "highschool-2026-11-09-95",
    "team": "highschool",
    "sport": "Senior Girls Basketball",
-   "start": "2026-11-09T17:30:00-05:00",
-   "time_tbd": false,
+   "start": "2026-11-09T00:00:00-05:00",
+   "time_tbd": true,
    "home_away": "N",
    "opponent": "Essex",
    "location": "Essex",
