@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T20:17:14-05:00",
+ "updated": "2026-11-08T20:32:20-05:00",
  "today": "2026-11-08",
  "range": [
   "2026-11-05",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -1077,7 +1077,7 @@
    "our_score": 2,
    "opp_score": 3,
    "result": null,
-   "note": "08:01 3rd",
+   "note": "00:00 3rd",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16660"
    },
@@ -1096,7 +1096,7 @@
    "our_score": 2,
    "opp_score": 0,
    "result": null,
-   "note": "05:12 2nd",
+   "note": "20:00 3rd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15672"
    },
@@ -2725,7 +2725,7 @@
   },
   {
    "league": "nfl",
-   "headline": "Chargers QB Justin Herbert exits game vs. Texans with apparent finger injury",
+   "headline": "Chargers QB Justin Herbert exits game vs. Texans with finger injury",
    "summary": "The Los Angeles Chargers’ dismal season may have just gotten even worse.",
    "published": "2026-11-08T19:26-05:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2025/11/Untitled-design-2025-11-30T202528.278.jpg",
@@ -2957,19 +2957,6 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/premier-league/article/premier-league-roundup-brighton-moves-up-to-second-liverpool-rebounds/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "‘Extremely grateful’: Price, Bergeron headline 2026 Hockey Hall of Fame class",
-   "summary": "",
-   "published": "2026-11-07T17:37-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/fame.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/extremely-grateful-price-bergeron-headline-2026-hockey-hall-of-fame-class/",
    "source": "Sportsnet"
   },
   {
@@ -3507,6 +3494,19 @@
   },
   {
    "league": "mlb",
+   "headline": "Watch LIVE: '26 AFL Fall Stars Game",
+   "summary": "",
+   "published": "2026-11-08T19:57-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kggxgdhxhbw9ucjmfftt",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "url": "https://www.mlb.com/bluejays/news/arizona-fall-league-fall-stars-game-2026-watch-live",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
    "headline": "Blue Jays' Parker goes from last-minute sub to Fall League HR Derby champ",
    "summary": "",
    "published": "2026-11-08T00:10-05:00",
@@ -3546,19 +3546,6 @@
   },
   {
    "league": "mlb",
-   "headline": "Finally healthy, Barriera 'falling in love with' baseball all over again in AFL",
-   "summary": "",
-   "published": "2026-11-03T16:01-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/iocyixwdio7oibugk1te",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "url": "https://www.mlb.com/bluejays/news/brandon-barriera-eager-to-prove-himself-in-afl",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
    "headline": "Solve today's Blue Jays trivia puzzle",
    "summary": "",
    "published": "2026-02-03T10:22-05:00",
@@ -3572,15 +3559,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Cease, Varland named finalists for AL Cy Young, Reliever of the Year Awards",
+   "headline": "Finally healthy, Barriera 'falling in love with' baseball all over again in AFL",
    "summary": "",
-   "published": "2026-11-02T20:11-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/jopmx21whsysligbdqps",
+   "published": "2026-11-03T16:01-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/iocyixwdio7oibugk1te",
    "video": false,
    "teams": [
     "Toronto Blue Jays"
    ],
-   "url": "https://www.mlb.com/bluejays/news/dylan-cease-louis-varland-finalists-2026-bbwaa-awards",
+   "url": "https://www.mlb.com/bluejays/news/brandon-barriera-eager-to-prove-himself-in-afl",
    "source": "Team site"
   },
   {
@@ -3607,6 +3594,19 @@
     "Toronto Blue Jays"
    ],
    "url": "https://www.mlb.com/milb/prospects/bluejays/",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
+   "headline": "Cease, Varland named finalists for AL Cy Young, Reliever of the Year Awards",
+   "summary": "",
+   "published": "2026-11-02T20:11-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/jopmx21whsysligbdqps",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "url": "https://www.mlb.com/bluejays/news/dylan-cease-louis-varland-finalists-2026-bbwaa-awards",
    "source": "Team site"
   },
   {
@@ -3672,19 +3672,6 @@
     "Toronto Blue Jays"
    ],
    "url": "https://www.mlb.com/bluejays/news/2026-arizona-fall-league-fall-stars-game-rosters",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
-   "headline": "What can the Blue Jays learn from the Brewers and Rays this World Series?",
-   "summary": "",
-   "published": "2026-10-26T09:22-04:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/zf7vgs6wcilukgkr3tiz",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "url": "https://www.mlb.com/bluejays/news/blue-jays-rays-brewers-2026-world-series",
    "source": "Team site"
   }
  ],
@@ -3833,7 +3820,7 @@
       "l": 5,
       "otl": 1,
       "pts": 25,
-      "gf": 73,
+      "gf": 74,
       "ga": 50,
       "strk": "W1"
      },
@@ -3870,7 +3857,7 @@
       "otl": 5,
       "pts": 17,
       "gf": 56,
-      "ga": 64,
+      "ga": 65,
       "strk": "L1"
      }
     ]
@@ -4396,7 +4383,7 @@
       "otl": 1,
       "pts": 27,
       "gf": 69,
-      "ga": 38,
+      "ga": 39,
       "strk": "W4"
      },
      {
@@ -4455,7 +4442,7 @@
       "l": 10,
       "otl": 1,
       "pts": 15,
-      "gf": 66,
+      "gf": 67,
       "ga": 74,
       "strk": "W1"
      },
@@ -4516,7 +4503,7 @@
       "otl": 0,
       "pts": 2,
       "gf": 32,
-      "ga": 100,
+      "ga": 101,
       "strk": "L3"
      }
     ]
@@ -4664,7 +4651,7 @@
       "l": 16,
       "otl": 0,
       "pts": 6,
-      "gf": 43,
+      "gf": 44,
       "ga": 112,
       "strk": "W1"
      }
