@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T11:31:40-05:00",
+ "updated": "2026-11-09T11:46:46-05:00",
  "today": "2026-11-09",
  "range": [
   "2026-11-06",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 32
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -1388,6 +1388,17 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "CFL Plays of the Week - Division Finals 2026",
+   "summary": "",
+   "published": "2026-11-09T11:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/2zdpJ7X54kVsZOJCVn1BqV/1c7b9cae1697ee42c7189d61020439f7/image.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/cfl-plays-of-the-week-division-finals-2026",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Overreaction Monday: 5 hot takes from the Division Finals presented by Wegovy®",
    "summary": "",
    "published": "2026-11-09T02:00:00-05:00",
@@ -1505,19 +1516,6 @@
     "Lions"
    ],
    "url": "https://www.cfl.ca/article/nathan-rourke-ties-it-up",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Cody Fajardo takes it himself!",
-   "summary": "",
-   "published": "2026-11-07T20:47:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/1ZnXqV2lwxZkRyeJPvBYTS/6357989df40946191ddf6410368df7e6/EDM_1ST_TD.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Elks"
-   ],
-   "url": "https://www.cfl.ca/article/cody-fajardo-takes-it-himself",
    "source": "CFL.ca"
   },
   {
@@ -1832,7 +1830,7 @@
    "headline": "Sirens Sign First-Round Pick Emma Peschel to Three-Year Contract",
    "summary": "",
    "published": "2026-11-04T17:30:00+00:00",
-   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/EMMA_PESCHEL-Signing-1920x1080_13",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_337/q_auto/f_auto/EMMA_PESCHEL-Signing-1920x1080_13",
    "video": false,
    "teams": [
     "New York Sirens"
@@ -2140,16 +2138,18 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Why Connor Hellebuyck won’t be ‘facing the music’ in Winnipeg",
-   "summary": "",
-   "published": "2026-11-08T22:03-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/New-Jersey-Devils-goaltender-Connor-Hellebuyck.jpg",
+   "league": "mlb",
+   "headline": "GM Meetings primer: What to expect as baseball industry gathers in Vegas",
+   "summary": "Major League Baseball’s annual GM Meetings, a groundwork-laying session for the off-season’s business, kick off this week in Las Vegas with a dark cloud overhead. Shi Davidi tells us what to expect.",
+   "published": "2026-11-09T11:34-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/05/CP170055368.jpg",
    "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/devils-say-connor-hellebuyck-wont-play-in-return-to-winnipeg-vs-jets/",
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/gm-meetings-primer-what-to-expect-as-baseball-industry-gathers-in-vegas/",
    "source": "Sportsnet"
   },
   {
@@ -2168,16 +2168,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Toronto FC relieve Robin Fraser of head-coaching duties",
-   "summary": "",
-   "published": "2026-11-09T09:11-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/fraser.jpg",
+   "league": "nhl",
+   "headline": "Ducks reclaiming mighty status behind youthful scoring surge",
+   "summary": "The way things are going, Anaheim might need to re-insert another word before “Ducks.” Ryan Dixon digs into the Ducks’ scoring surge, among other topics from the week that was in the NHL.",
+   "published": "2026-11-09T11:30-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/ducks.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/toronto-fc-relieve-robin-fraser-of-head-coaching-duties/",
+   "sn_team_count": 3,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/ducks-reclaiming-mighty-status-behind-youthful-scoring-surge/",
    "source": "Sportsnet"
   },
   {
@@ -2211,6 +2211,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Toronto FC relieve Robin Fraser of head-coaching duties",
+   "summary": "",
+   "published": "2026-11-09T09:11-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/fraser.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/toronto-fc-relieve-robin-fraser-of-head-coaching-duties/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Farabee’s complete game continues to shine as Flames rally past Flyers",
    "summary": "When Joel Farabee arrived in Calgary, he needed help figuring out how best to contribute. Now he wears an A and has added an offensive layer that has made him the Flames’ best and most productive forward this season.",
@@ -2238,6 +2251,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Why Connor Hellebuyck won’t be ‘facing the music’ in Winnipeg",
+   "summary": "",
+   "published": "2026-11-08T22:03-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/New-Jersey-Devils-goaltender-Connor-Hellebuyck.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/devils-say-connor-hellebuyck-wont-play-in-return-to-winnipeg-vs-jets/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Scheifele’s winner with 1.6 seconds remaining lifts Jets over Lightning",
    "summary": "",
    "published": "2026-11-08T21:33-05:00",
@@ -2251,7 +2277,7 @@
   },
   {
    "league": "nfl",
-   "headline": "Report: Falcons trade safety Jessie Bates to Jaguars for picks",
+   "headline": "Falcons trade safety Jessie Bates to Jaguars for picks",
    "summary": "The Atlanta Falcons have traded star defensive back Jessie Bates III to the Jacksonville Jaguars for a 2027 second-round pick and a 2028 fifth-round pick, ESPN’s Adam Schefter reported Monday.",
    "published": "2026-11-09T08:29-05:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/bates.jpg",
@@ -2276,32 +2302,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Report: Blackhawks not making coaching change amid slump",
-   "summary": "",
-   "published": "2026-11-08T18:52-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/jeff-blashill.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/report-blackhawks-not-making-coaching-change-amid-slump/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Norway says it has been bumped by IIHF to allow Russia to compete at world juniors",
-   "summary": "The Norwegian Ice Hockey Association said Sunday it has been informed that it is being bumped by Russia from competing in the world junior championships in Canada, a decision creating further uncertainty involving the 10",
-   "published": "2026-11-08T14:34-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2021/12/worldjuniors.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/world-juniors/article/norway-says-it-has-been-bumped-by-the-iihf-to-allow-russia-to-compete-at-world-juniors-in-canada/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nfl",
    "headline": "Canada stays perfect at women’s world hockey championship with rout of Japan",
    "summary": "",
@@ -2312,6 +2312,19 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/wwhc/article/canada-stays-perfect-at-womens-world-hockey-championship-with-rout-of-japan/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "‘Extremely grateful’: Price, Bergeron headline 2026 Hockey Hall of Fame class",
+   "summary": "",
+   "published": "2026-11-07T17:37-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/fame.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/extremely-grateful-price-bergeron-headline-2026-hockey-hall-of-fame-class/",
    "source": "Sportsnet"
   },
   {
@@ -2351,6 +2364,32 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/cfl/article/blue-bombers-qb-zach-collaros-not-ready-to-make-decision-on-future/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Norway says it has been bumped by IIHF to allow Russia to compete at world juniors",
+   "summary": "The Norwegian Ice Hockey Association said Sunday it has been informed that it is being bumped by Russia from competing in the world junior championships in Canada, a decision creating further uncertainty involving the 10",
+   "published": "2026-11-08T14:34-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2021/12/worldjuniors.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/world-juniors/article/norway-says-it-has-been-bumped-by-the-iihf-to-allow-russia-to-compete-at-world-juniors-in-canada/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Report: Blackhawks not making coaching change amid slump",
+   "summary": "",
+   "published": "2026-11-08T18:52-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/jeff-blashill.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/report-blackhawks-not-making-coaching-change-amid-slump/",
    "source": "Sportsnet"
   },
   {
@@ -2533,19 +2572,6 @@
    "sn_team_count": 2,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/lebron-james-has-season-high-22-as-76ers-beat-bulls/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "‘Extremely grateful’: Price, Bergeron headline 2026 Hockey Hall of Fame class",
-   "summary": "",
-   "published": "2026-11-07T17:37-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/fame.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/extremely-grateful-price-bergeron-headline-2026-hockey-hall-of-fame-class/",
    "source": "Sportsnet"
   },
   {
