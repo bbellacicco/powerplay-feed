@@ -79,12 +79,13 @@
     '.ppg .pg-pg{display:flex;align-items:center;flex-wrap:wrap;gap:8px;max-width:100%;background:rgba(255,255,255,.06);border-radius:6px;padding:6px 10px;font-size:13px;font-weight:700;min-width:0;white-space:nowrap}' +
     '.ppg .pg-pg em{font-style:normal;font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#9fb0cf}.ppg .pg-pg em.pg-live{color:#ff4d4d}' +
     '.ppg .pg-pg .pg-sc{color:#fff}.ppg .pg-pg .pg-lo{color:#9fb0cf;font-weight:600}' +
-    '.ppg .pg-row{display:inline-flex;align-items:center;gap:8px;white-space:nowrap}' +
+    '.ppg{-webkit-text-size-adjust:100%;text-size-adjust:100%}' +
+    '.ppg .pg-row{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;flex:none}' +
     '.ppg .pg-tm2{display:inline-flex;align-items:center;gap:6px}.ppg .pg-tm2 img{width:24px;height:24px;object-fit:contain;display:block}' +
     '.ppg .pg-tm2.pg-lo img{opacity:.55}.ppg .pg-tm2.pg-lo .pg-sc{color:#9fb0cf}.ppg .pg-at{color:#9fb0cf;font-weight:600}.ppg .pg-ab{font-size:12px;letter-spacing:.04em}' +
     '.ppg .pg-prog{flex:none;font-size:12.5px;font-weight:800;color:#e8b021;white-space:nowrap}' +
     '@media (max-width:640px){.ppg .pg-pro{margin:0 12px 10px 14px;padding:9px 10px;gap:8px}.ppg .pg-prol{flex-direction:row;align-items:baseline;gap:8px;width:100%;justify-content:space-between}' +
-    '.ppg .pg-pros{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;gap:8px}' + '.ppg .pg-pros .pg-pg{min-width:0;justify-content:center;gap:4px 6px;padding:6px 6px;font-size:12.5px}' + '.ppg .pg-pros .pg-pg em{width:100%;text-align:center;font-size:9.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}' + '.ppg .pg-tm2{gap:3px}.ppg .pg-tm2 img{width:18px;height:18px}.ppg .pg-prog{width:100%;text-align:center}' + '.ppg .pg-row{flex-wrap:nowrap;gap:4px;font-size:12px;letter-spacing:-.01em}.ppg .pg-row .pg-at{font-size:10.5px}.ppg .pg-pros .pg-pg{padding:6px 3px;overflow:hidden}.ppg .pg-ab{font-size:10.5px}}';
+    '.ppg .pg-pros{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;gap:8px}' + '.ppg .pg-pros .pg-pg{min-width:0;justify-content:center;gap:4px 6px;padding:6px 6px;font-size:12.5px}' + '.ppg .pg-pros .pg-pg em{width:100%;text-align:center;font-size:9.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}' + '.ppg .pg-tm2{gap:3px}.ppg .pg-tm2 img{width:18px;height:18px}.ppg .pg-prog{width:100%;text-align:center}' + '.ppg .pg-row{flex-wrap:nowrap;gap:4px;font-size:12px;letter-spacing:-.01em}.ppg .pg-row .pg-at{font-size:10.5px}.ppg .pg-pros .pg-pg{padding:6px 3px;overflow:hidden}.ppg .pg-ab{font-size:10.5px}.ppg .pg-big3 .pg-at{display:none}.ppg .pg-big3 .pg-row{gap:5px}}';
   var PRO_HUB = 'https://www.powerplaywindsor.com/local-sports';
   var PRO_LG = { nfl: 'football/nfl', nhl: 'hockey/nhl', nba: 'basketball/nba', mlb: 'baseball/mlb' };
   var PRO_OURS = { nhl: ['DET', 'TOR', 'MTL'], nba: ['DET', 'TOR'], nfl: ['DET', 'BUF'], mlb: ['DET', 'TOR'] };
@@ -394,9 +395,27 @@
         if (g.state !== 'pre') sp.appendChild(el('span', 'pg-sc', String(t.score)));
         rowEl.appendChild(sp);
       });
+      if (g.state !== 'pre' && (String(g.away.score).length > 2 || String(g.home.score).length > 2)) c.classList.add('pg-big3');
       gs.appendChild(c);
     });
     a.appendChild(gs);
+    // never cut a score off: shrink a row that's still too wide for its box (three-digit basketball scores on phones)
+    function fit() {
+      Array.prototype.forEach.call(gs.querySelectorAll('.pg-row'), function (r) {
+        r.style.transform = ''; r.style.alignSelf = ''; r.style.transformOrigin = '';
+        var room = r.parentNode.clientWidth - 6, w = r.scrollWidth;
+        if (room > 0 && w > room) {
+          var k = Math.max(0.6, room / w);
+          r.style.alignSelf = 'flex-start'; r.style.transformOrigin = 'left center';
+          var off = r.getBoundingClientRect().left - r.parentNode.getBoundingClientRect().left - r.parentNode.clientLeft;
+          r.style.transform = 'translateX(' + ((r.parentNode.clientWidth - w * k) / 2 - off).toFixed(1) + 'px) scale(' + k.toFixed(3) + ')';
+        }
+      });
+    }
+    var fitT = function () { requestAnimationFrame(fit); };
+    setTimeout(fitT, 0); setTimeout(fitT, 400); setTimeout(fitT, 1500);
+    window.addEventListener('resize', fitT);
+    gs.addEventListener('load', fitT, true);
     var go = el('a', 'pg-prog', 'Every pro score \u203a'); go.href = PRO_HUB; go.target = target; a.appendChild(go);
     return a;
   }
