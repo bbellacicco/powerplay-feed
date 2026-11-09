@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T15:00:02-05:00",
+ "updated": "2026-11-09T15:15:01-05:00",
  "today": "2026-11-09",
  "games": [
   {
@@ -63,6 +63,26 @@
    "home": "L'Essor"
   },
   {
+   "id": "highschool-2026-11-09-91",
+   "team": "highschool",
+   "sport": "Junior Girls Basketball",
+   "start": "2026-11-09T00:00:00-05:00",
+   "time_tbd": true,
+   "home_away": "N",
+   "opponent": "Essex",
+   "location": "Essex",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "2A Playoffs · 6 v 3",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Brennan",
+   "home": "Essex"
+  },
+  {
    "id": "highschool-2026-11-09-84",
    "team": "highschool",
    "sport": "Senior Girls Basketball",
@@ -123,31 +143,11 @@
    "home": "Brennan"
   },
   {
-   "id": "highschool-2026-11-09-91",
-   "team": "highschool",
-   "sport": "Junior Girls Basketball",
-   "start": "2026-11-09T16:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Essex",
-   "location": "Essex",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "2A Playoffs · 6 v 3",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Brennan",
-   "home": "Essex"
-  },
-  {
    "id": "highschool-2026-11-09-89",
    "team": "highschool",
    "sport": "Senior Girls Basketball",
-   "start": "2026-11-09T16:00:00-05:00",
-   "time_tbd": false,
+   "start": "2026-11-09T00:00:00-05:00",
+   "time_tbd": true,
    "home_away": "N",
    "opponent": "Ste. Cecile",
    "location": "Ste. Cecile",
@@ -166,8 +166,8 @@
    "id": "highschool-2026-11-09-90",
    "team": "highschool",
    "sport": "Senior Girls Basketball",
-   "start": "2026-11-09T16:00:00-05:00",
-   "time_tbd": false,
+   "start": "2026-11-09T00:00:00-05:00",
+   "time_tbd": true,
    "home_away": "N",
    "opponent": "Lajeunesse",
    "location": "Lajeunesse",
@@ -186,8 +186,8 @@
    "id": "highschool-2026-11-09-92",
    "team": "highschool",
    "sport": "Senior Girls Basketball",
-   "start": "2026-11-09T16:00:00-05:00",
-   "time_tbd": false,
+   "start": "2026-11-09T00:00:00-05:00",
+   "time_tbd": true,
    "home_away": "N",
    "opponent": "Tecumseh Vista Academy",
    "location": "Tecumseh Vista Academy",
@@ -206,8 +206,8 @@
    "id": "highschool-2026-11-09-93",
    "team": "highschool",
    "sport": "Senior Girls Basketball",
-   "start": "2026-11-09T16:00:00-05:00",
-   "time_tbd": false,
+   "start": "2026-11-09T00:00:00-05:00",
+   "time_tbd": true,
    "home_away": "N",
    "opponent": "North Star",
    "location": "North Star",
@@ -265,26 +265,6 @@
   {
    "id": "highschool-2026-11-10-96",
    "team": "highschool",
-   "sport": "Senior Boys Volleyball",
-   "start": "2026-11-10T01:01:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "UMEI",
-   "location": "UMEI",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "1A Playoffs · 3 @ 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Ste. Cecile",
-   "home": "UMEI"
-  },
-  {
-   "id": "highschool-2026-11-10-97",
-   "team": "highschool",
    "sport": "Junior Boys Football",
    "start": "2026-11-10T14:30:00-05:00",
    "time_tbd": false,
@@ -303,7 +283,7 @@
    "home": "Villanova"
   },
   {
-   "id": "highschool-2026-11-10-98",
+   "id": "highschool-2026-11-10-97",
    "team": "highschool",
    "sport": "Senior Boys Volleyball",
    "start": "2026-11-10T15:30:00-05:00",
@@ -323,7 +303,7 @@
    "home": "St. Joseph's"
   },
   {
-   "id": "highschool-2026-11-10-99",
+   "id": "highschool-2026-11-10-98",
    "team": "highschool",
    "sport": "Junior Boys Volleyball",
    "start": "2026-11-10T16:00:00-05:00",
@@ -343,7 +323,7 @@
    "home": "Villanova"
   },
   {
-   "id": "highschool-2026-11-10-100",
+   "id": "highschool-2026-11-10-99",
    "team": "highschool",
    "sport": "Junior Boys Volleyball",
    "start": "2026-11-10T16:00:00-05:00",
@@ -363,7 +343,7 @@
    "home": "Erie Migration"
   },
   {
-   "id": "highschool-2026-11-10-101",
+   "id": "highschool-2026-11-10-100",
    "team": "highschool",
    "sport": "Senior Boys Volleyball",
    "start": "2026-11-10T16:00:00-05:00",
@@ -383,7 +363,7 @@
    "home": "Kennedy"
   },
   {
-   "id": "highschool-2026-11-10-102",
+   "id": "highschool-2026-11-10-101",
    "team": "highschool",
    "sport": "Senior Boys Volleyball",
    "start": "2026-11-10T16:00:00-05:00",
@@ -401,6 +381,26 @@
    },
    "away": "Lamothe-Cadillac",
    "home": "Lajeunesse"
+  },
+  {
+   "id": "highschool-2026-11-10-102",
+   "team": "highschool",
+   "sport": "Senior Boys Volleyball",
+   "start": "2026-11-10T16:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "UMEI",
+   "location": "UMEI",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "1A Playoffs · 3 @ 2",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Ste. Cecile",
+   "home": "UMEI"
   },
   {
    "id": "highschool-2026-11-10-103",
