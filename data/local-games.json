@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T20:47:10-05:00",
+ "updated": "2026-11-08T21:05:53-05:00",
  "today": "2026-11-08",
  "range": [
   "2026-11-05",
@@ -1073,11 +1073,11 @@
    "home_away": "H",
    "opponent": "Stouffville Spirit",
    "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
-   "status": "live",
+   "status": "final",
    "our_score": 2,
    "opp_score": 3,
-   "result": null,
-   "note": "Unofficial Final",
+   "result": "L",
+   "note": "",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16660"
    },
@@ -1096,7 +1096,7 @@
    "our_score": 3,
    "opp_score": 0,
    "result": null,
-   "note": "15:28 3rd",
+   "note": "03:48 3rd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15672"
    },
@@ -1111,10 +1111,10 @@
    "home_away": "A",
    "opponent": "Blenheim Blades",
    "location": "Blenheim Memorial Arena",
-   "status": "live",
-   "our_score": 0,
-   "opp_score": 0,
-   "result": null,
+   "status": "final",
+   "our_score": 4,
+   "opp_score": 1,
+   "result": "W",
    "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960583?configuration=45"
@@ -2748,6 +2748,86 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Sunday Overreactions: Will Blackhawks’ rebuild ever turn a corner?",
+   "summary": "The Blackhawks have missed the playoffs six years in a row and appear headed for a seventh. Has their rebuild hit a wall? Michael Amato discusses that and more in Sunday Overreactions.",
+   "published": "2026-11-08T08:12-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/blackhawks1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 5,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/sunday-overreactions-will-blackhawks-rebuild-ever-turn-a-corner/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Lightning’s Brayden Point exits early vs. Jets",
+   "summary": "",
+   "published": "2026-11-08T20:13-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/point.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/lightnings-brayden-point-exits-early-vs-jets/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Bruins beat Panthers as teams combine for 126 penalty minutes",
+   "summary": "Elias Lindholm, Mikey Eyssimont and Morgan Geekie each scored a goal in an opening period that started out testy, carrying the Boston Bruins past the Florida Panthers 4-1 on Sunday.",
+   "published": "2026-11-08T16:27-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/penguins-bruins.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/bruins-beat-panthers-as-teams-combine-for-126-penalty-minutes/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Hertl scores pair, Golden Knights beat Sabres for third win in a row",
+   "summary": "",
+   "published": "2026-11-08T18:26-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/marner.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/hertl-scores-pair-golden-knights-beat-sabres-for-third-win-in-a-row/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "LeBron James has season-high 22 as 76ers beat Bulls",
+   "summary": "Jaylen Brown scored 29 points, Tyrese Maxey added 27 and LeBron James had his highest-scoring effort so far in a Philadelphia uniform as the 76ers held off the struggling Chicago Bulls 127-121 on Sunday afternoon.",
+   "published": "2026-11-08T18:43-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Philadelphia-76ers-LeBron-James-23-goes-up-to-shoot-against-Chicago-Bulls-Jordan-Hawkins-15.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/lebron-james-has-season-high-22-as-76ers-beat-bulls/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Reaves scores 43 points, leads Doncic-less Lakers past Pistons",
+   "summary": "",
+   "published": "2026-11-08T20:58-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Lakers-and-Pistons.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Pistons"
+   ],
+   "sn_team_count": 2,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/reaves-scores-43-points-leads-doncic-less-lakers-past-pistons/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "Kenneth Walker scores 3 TDs as Chiefs roll past woeful Jets",
    "summary": "",
@@ -2801,45 +2881,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Sunday Overreactions: Will Blackhawks’ rebuild ever turn a corner?",
-   "summary": "The Blackhawks have missed the playoffs six years in a row and appear headed for a seventh. Has their rebuild hit a wall? Michael Amato discusses that and more in Sunday Overreactions.",
-   "published": "2026-11-08T08:12-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/blackhawks1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 5,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/sunday-overreactions-will-blackhawks-rebuild-ever-turn-a-corner/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Bruins beat Panthers as teams combine for 126 penalty minutes",
-   "summary": "Elias Lindholm, Mikey Eyssimont and Morgan Geekie each scored a goal in an opening period that started out testy, carrying the Boston Bruins past the Florida Panthers 4-1 on Sunday.",
-   "published": "2026-11-08T16:27-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/penguins-bruins.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/bruins-beat-panthers-as-teams-combine-for-126-penalty-minutes/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Hertl scores pair, Golden Knights beat Sabres for third win in a row",
-   "summary": "",
-   "published": "2026-11-08T18:26-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/marner.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/hertl-scores-pair-golden-knights-beat-sabres-for-third-win-in-a-row/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Capitals’ Wilson won’t face supplemental discipline for hit on Vilmanis",
    "summary": "The Washington Capitals’ Tom Wilson won’t face further discipline after his actions on Saturday night.",
    "published": "2026-11-08T11:38-05:00",
@@ -2875,19 +2916,6 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/islanders-logan-stanley-fined-for-slashing-devils-nico-hischier/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "LeBron James has season-high 22 as 76ers beat Bulls",
-   "summary": "Jaylen Brown scored 29 points, Tyrese Maxey added 27 and LeBron James had his highest-scoring effort so far in a Philadelphia uniform as the 76ers held off the struggling Chicago Bulls 127-121 on Sunday afternoon.",
-   "published": "2026-11-08T18:43-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Philadelphia-76ers-LeBron-James-23-goes-up-to-shoot-against-Chicago-Bulls-Jordan-Hawkins-15.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/lebron-james-has-season-high-22-as-76ers-beat-bulls/",
    "source": "Sportsnet"
   },
   {
@@ -2927,32 +2955,6 @@
    "sn_team_count": 0,
    "sport": "Auto Racing",
    "url": "https://www.sportsnet.ca/formula-1/article/lando-norris-wins-sao-paulo-grand-prix-mercedes-clinches-constructors-title/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Premier League roundup: Man U authors stunning comeback, Brighton goes second",
-   "summary": "High-flying Brighton moved up to second in the Premier League with a 2-0 win against Brentford on Sunday.",
-   "published": "2026-11-08T11:36-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/man-u-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/premier-league/article/premier-league-roundup-brighton-moves-up-to-second-liverpool-rebounds/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "‘Extremely grateful’: Price, Bergeron headline 2026 Hockey Hall of Fame class",
-   "summary": "",
-   "published": "2026-11-07T17:37-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/fame.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/extremely-grateful-price-bergeron-headline-2026-hockey-hall-of-fame-class/",
    "source": "Sportsnet"
   },
   {
@@ -3797,6 +3799,18 @@
     "group": "East Division",
     "teams": [
      {
+      "name": "Brantford Bulldogs",
+      "abbr": "BFD",
+      "gp": 19,
+      "w": 13,
+      "l": 5,
+      "otl": 1,
+      "pts": 27,
+      "gf": 75,
+      "ga": 50,
+      "strk": "W2"
+     },
+     {
       "name": "Kingston Frontenacs",
       "abbr": "KGN",
       "gp": 19,
@@ -3807,18 +3821,6 @@
       "gf": 82,
       "ga": 65,
       "strk": "L1"
-     },
-     {
-      "name": "Brantford Bulldogs",
-      "abbr": "BFD",
-      "gp": 18,
-      "w": 12,
-      "l": 5,
-      "otl": 1,
-      "pts": 25,
-      "gf": 75,
-      "ga": 50,
-      "strk": "W1"
      },
      {
       "name": "Ottawa 67's",
@@ -3847,14 +3849,14 @@
      {
       "name": "Oshawa Generals",
       "abbr": "OSH",
-      "gp": 18,
+      "gp": 19,
       "w": 6,
-      "l": 7,
+      "l": 8,
       "otl": 5,
       "pts": 17,
       "gf": 56,
       "ga": 66,
-      "strk": "L1"
+      "strk": "L2"
      }
     ]
    },
@@ -4078,7 +4080,7 @@
       "l": 3,
       "otl": 1,
       "pts": 29,
-      "gf": 86,
+      "gf": 88,
       "ga": 63,
       "strk": "W7"
      },
@@ -4107,6 +4109,18 @@
       "strk": "W1"
      },
      {
+      "name": "Stouffville Spirit",
+      "abbr": "STO",
+      "gp": 20,
+      "w": 10,
+      "l": 8,
+      "otl": 2,
+      "pts": 22,
+      "gf": 78,
+      "ga": 66,
+      "strk": "W1"
+     },
+     {
       "name": "Pickering Panthers",
       "abbr": "PIC",
       "gp": 22,
@@ -4117,18 +4131,6 @@
       "gf": 75,
       "ga": 75,
       "strk": "W1"
-     },
-     {
-      "name": "Stouffville Spirit",
-      "abbr": "STO",
-      "gp": 19,
-      "w": 9,
-      "l": 8,
-      "otl": 2,
-      "pts": 20,
-      "gf": 78,
-      "ga": 66,
-      "strk": "L1"
      },
      {
       "name": "Aurora Tigers",
@@ -4199,7 +4201,7 @@
       "otl": 2,
       "pts": 8,
       "gf": 48,
-      "ga": 125,
+      "ga": 127,
       "strk": "L8"
      }
     ]
@@ -4210,14 +4212,26 @@
      {
       "name": "Collingwood Blues",
       "abbr": "COL",
-      "gp": 23,
+      "gp": 24,
       "w": 21,
-      "l": 2,
+      "l": 3,
       "otl": 0,
       "pts": 42,
       "gf": 137,
       "ga": 52,
-      "strk": "W2"
+      "strk": "L1"
+     },
+     {
+      "name": "Milton Menace",
+      "abbr": "MIL",
+      "gp": 22,
+      "w": 18,
+      "l": 3,
+      "otl": 1,
+      "pts": 37,
+      "gf": 88,
+      "ga": 44,
+      "strk": "W5"
      },
      {
       "name": "King Rebellion",
@@ -4244,18 +4258,6 @@
       "strk": "W12"
      },
      {
-      "name": "Milton Menace",
-      "abbr": "MIL",
-      "gp": 21,
-      "w": 17,
-      "l": 3,
-      "otl": 1,
-      "pts": 35,
-      "gf": 88,
-      "ga": 44,
-      "strk": "W4"
-     },
-     {
       "name": "Burlington Cougars",
       "abbr": "BUR",
       "gp": 23,
@@ -4270,14 +4272,14 @@
      {
       "name": "Leamington Flyers",
       "abbr": "LEA",
-      "gp": 19,
+      "gp": 20,
       "w": 13,
-      "l": 5,
+      "l": 6,
       "otl": 1,
       "pts": 27,
       "gf": 71,
       "ga": 42,
-      "strk": "L3"
+      "strk": "L4"
      },
      {
       "name": "Oakville Blades",
@@ -4378,8 +4380,8 @@
       "l": 3,
       "otl": 1,
       "pts": 27,
-      "gf": 70,
-      "ga": 39,
+      "gf": 72,
+      "ga": 40,
       "strk": "W4"
      },
      {
@@ -4527,8 +4529,8 @@
       "l": 2,
       "otl": 1,
       "pts": 31,
-      "gf": 107,
-      "ga": 47,
+      "gf": 108,
+      "ga": 48,
       "strk": "W4"
      },
      {
@@ -4563,8 +4565,8 @@
       "l": 3,
       "otl": 3,
       "pts": 23,
-      "gf": 56,
-      "ga": 43,
+      "gf": 57,
+      "ga": 44,
       "strk": "W4"
      },
      {
@@ -4647,8 +4649,8 @@
       "l": 16,
       "otl": 0,
       "pts": 6,
-      "gf": 44,
-      "ga": 113,
+      "gf": 45,
+      "ga": 115,
       "strk": "W1"
      }
     ]
