@@ -614,26 +614,8 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
     var dropped = drop && Date.now() - drop.at < 3 * 3600e3 && !used[drop.story.url] ? drop.story : null;
     if (dropped && out.some(function (o) { return o.url === dropped.url; })) dropped = null;   // already up there
     if (dropped && out.length) { out.splice(1); out.push(ppHead(dropped)); }
-    // the top local headline stays until a newer story replaces it. The second slot shows a new local story
-    // while it's under 3 hours old; otherwise it rotates every 3 hours among Powerplay's last three stories
-    else if (out.length > 1 && Date.now() - new Date(out[1].published).getTime() > 3 * 3600e3) {
-      out.splice(1);
-      // ...but never a story that's been overtaken: a preview stays out once a newer Powerplay story or video
-      // about the same team is up (Friday's 'Lancers head to London' drops out when Saturday's highlights land)
-      var themeOf = function (x) { var h = ' ' + x.headline + ' ' + (x.summary || '') + ' ' + (x.cats || '') + ' ', k;
-        for (k in THEME) if (THEME[k].test(h)) return k; return ''; };
-      var ppAll = stories.filter(function (s) { return s.team === 'powerplay'; });
-      var overtaken = function (s) { var th = themeOf(s); if (!th) return false;
-        return ppAll.some(function (x) { return x !== s && new Date(x.published) > new Date(s.published) && themeOf(x) === th; }); };
-      var ppPool = stories.filter(function (s) {
-        return s.team === 'powerplay' && !isVid(s) && /powerplaywindsor\.com\/post\//.test(s.url) && !used[s.url] && s.url !== out[0].url
-          && Date.now() - new Date(s.published).getTime() < 5 * 86400e3 && !overtaken(s);
-      }).slice(0, 3);
-      if (ppPool.length) {
-        var pp = ppPool[Math.floor(Date.now() / (3 * 3600e3)) % ppPool.length];
-        out.push(ppHead(pp));
-      }
-    }
+    // the second slot is simply the next-newest local story from a different team: no rotating older
+    // Powerplay stories, which brought back previews of games and events that had already happened
     // pro: our teams first (newest, two different teams), then the biggest league news
     var pro = (lg.pro_news || []).concat(lg.more_news || []).filter(function (x) {
       return x.headline && x.url && !x.video && /^(nhl|nfl|mlb|nba|pwhl)$/.test(x.league) && new Date(x.published).getTime() > recent;
