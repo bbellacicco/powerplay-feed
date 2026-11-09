@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T01:17:37-05:00",
+ "updated": "2026-11-09T02:05:59-05:00",
  "today": "2026-11-09",
  "range": [
   "2026-11-06",
@@ -50,8 +50,8 @@
    "count": 9
   },
   "highschool": {
-   "ok": false,
-   "error": "HTTP Error 403: Forbidden"
+   "ok": true,
+   "count": 123
   },
   "sheet": {
    "ok": true,
@@ -1104,6 +1104,146 @@
    "club": "Wheatley Sharks"
   },
   {
+   "id": "highschool-2026-11-12-111",
+   "team": "highschool",
+   "sport": "Junior Boys Volleyball",
+   "start": "2026-11-12T01:01:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "TBA",
+   "location": "TBA",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "3A Playoffs",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "TBA",
+   "home": "TBA"
+  },
+  {
+   "id": "highschool-2026-11-12-113",
+   "team": "highschool",
+   "sport": "Junior Boys Volleyball",
+   "start": "2026-11-12T01:01:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "TBA",
+   "location": "TBA",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "2A Playoffs",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "TBA",
+   "home": "TBA"
+  },
+  {
+   "id": "highschool-2026-11-12-112",
+   "team": "highschool",
+   "sport": "Senior Boys Volleyball",
+   "start": "2026-11-12T01:01:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "TBA",
+   "location": "TBA",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "3A Playoffs",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "TBA",
+   "home": "TBA"
+  },
+  {
+   "id": "highschool-2026-11-12-114",
+   "team": "highschool",
+   "sport": "Senior Boys Volleyball",
+   "start": "2026-11-12T01:01:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "TBA",
+   "location": "TBA",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "2A Playoffs",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "TBA",
+   "home": "TBA"
+  },
+  {
+   "id": "highschool-2026-11-12-115",
+   "team": "highschool",
+   "sport": "Senior Boys Volleyball",
+   "start": "2026-11-12T01:01:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "TBA",
+   "location": "TBA",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "1A Playoffs",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "TBA",
+   "home": "TBA"
+  },
+  {
+   "id": "highschool-2026-11-12-116",
+   "team": "highschool",
+   "sport": "Junior Boys Volleyball",
+   "start": "2026-11-12T17:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Lajeunesse",
+   "location": "Lajeunesse",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "1A Playoffs · 2 @ 1",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "UMEI",
+   "home": "Lajeunesse"
+  },
+  {
+   "id": "highschool-2026-11-12-117",
+   "team": "highschool",
+   "sport": "Senior Boys Football",
+   "start": "2026-11-12T17:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Essex",
+   "location": "St. Clair #1",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "2A Playoffs",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Belle River",
+   "home": "Essex"
+  },
+  {
    "id": "junior-gojhl15678",
    "team": "junior",
    "sport": "GOHL (Jr. B)",
@@ -1177,6 +1317,26 @@
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16669"
    },
    "club": "Leamington Flyers"
+  },
+  {
+   "id": "highschool-2026-11-12-118",
+   "team": "highschool",
+   "sport": "Senior Boys Football",
+   "start": "2026-11-12T19:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Holy Names",
+   "location": "St. Clair #1",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "3A Playoffs",
+   "links": {
+    "standings": "https://wecssaa.com/viewScores.php"
+   },
+   "away": "Herman",
+   "home": "Holy Names"
   }
  ],
  "pro_games": [
