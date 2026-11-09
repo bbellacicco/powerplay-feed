@@ -113,7 +113,14 @@
     border: 1px solid var(--accent); border-radius: 4px; padding: 6px 10px; }
   .rhead a.all:hover { background: var(--accent); color: #0b1a33; }
   .rhead .rright { display: flex; align-items: center; gap: 10px; flex: none; }
-  .rfollow { padding: 0 40px; margin: -4px 0 12px; }
+  .followband { display: flex; align-items: center; justify-content: space-between; gap: 14px 24px; flex-wrap: wrap; margin: 6px 40px 22px; padding: 18px 22px;
+    border-radius: 12px; background: linear-gradient(100deg, #132b57, #0f2247); border: 1px solid rgba(255,255,255,.1); }
+  .followband h2 { margin: 0; font-family: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif; font-weight: 400; font-size: 30px; line-height: 1; letter-spacing: .03em; text-transform: uppercase; color: #fff; }
+  .followband h2 em { font-style: normal; color: var(--accent); }
+  .followband .fbsub { color: var(--muted); font-size: 13px; margin-top: 3px; }
+  .followband .pps-follow { gap: 10px; }
+  .followband .pps-follow a { padding: 10px 16px 10px 13px; font-size: 14px; gap: 8px; }
+  .followband .pps-follow a svg { width: 18px; height: 18px; }
   .rowwrap { position: relative; }
   .row { display: flex; gap: 14px; overflow-x: auto; padding: 4px 40px 6px; scroll-snap-type: x mandatory; scroll-padding-left: 40px; scrollbar-width: none; }
   .row::-webkit-scrollbar { display: none; }
@@ -217,7 +224,9 @@
     .btn { padding: 9px 15px; font-size: 13px; }
     .guide { margin: 20px 16px 0; } .search { margin: 18px 16px 0; } .search .btn { display: none; }
     section { margin-top: 30px; }
-    .rfollow { padding: 0 16px; } .rfollow .lbl { width: 100%; }
+    .followband { margin: 4px 16px 18px; padding: 14px; }
+    .followband .pps-follow { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; gap: 8px; }
+    .followband .pps-follow a { justify-content: center; padding: 11px 8px; font-size: 13px; }
     .rhead { margin: 0 16px 10px; padding: 8px 10px 8px 12px; flex-wrap: wrap; row-gap: 6px; } .rhead > div:first-child { display: contents; } .rhead h2 { font-size: 25px; order: 1; } .rhead .rright { order: 2; margin-left: auto; gap: 6px; } .rhead .by { order: 3; width: 100%; font-size: 10px; } .rhead .by .chip { height: 24px; padding: 2px 6px; } .rhead .by img { height: 19px; } .rhead a.all { padding: 5px 8px; font-size: 11px; } .rhead .pps-btn span { display: none; } .rhead .pps-btn { padding: 6px 8px; }
     .row { padding: 4px 16px 6px; scroll-padding-left: 16px; gap: 10px; }
     .rarrow { display: none; }
@@ -357,6 +366,7 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
   var THEME = {
     lancers: /lancer|uwindsor|university of windsor/i,
     saints: /\bsaints\b|st\.? clair/i,
+    junior: /spitfires|\bspits\b|\bohl\b|\b(ojhl|gohl|pjhl)\b|junior hockey|junior b|junior c|lakeshore canadiens|leamington flyers|lasalle vipers|\bvipers\b|essex 73|73's|amherstburg admirals|\badmirals\b|wheatley sharks|tecumseh eco|belle river canadiens/i,
     highschool: /high school|wecssaa|ofsaa|secondary|holy names|villanova|st\.? joseph|assumption|brennan|kennedy|massey|walkerville|riverside|herman|forster|tecumseh vista|belle river|essex dist|kingsville|leamington dist|cardinal carter|st\.? anne|l'essor|sandwich|harrow|general amherst|north star|ste\.? cecile|lajeunesse|catholic central|\blaj\b/i
   };
   function isVid(s) { return s.source === 'YouTube' || s.source === 'Vimeo'; }
@@ -371,12 +381,13 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
     { key: 'lancers', title: 'Lancers Lounge', gold: 'Lounge', by: null, all: SITE + 'headlines/categories/lancers-lounge', tab: null, share: SITE + 'scores-standings?strip=lancers' },
     { key: 'saints', title: 'Saints Nation', gold: 'Nation', by: null, all: SITE + 'headlines/categories/st-clair-athletics', tab: null, share: SITE + 'scores-standings?strip=saints' },
     { key: 'hs', title: 'High School Huddle', gold: 'Huddle', by: null, all: SITE + 'headlines/categories/high-school-sports', tab: null, share: SITE + 'scores-standings?strip=hs' },
+    { key: 'junior', title: 'Junior Hockey', gold: 'Hockey', by: null, all: SITE + 'headlines/categories/junior-hockey', tab: null, share: SITE + 'scores-standings?strip=junior' },
     { key: 'local', title: 'Local scores', by: ['Unifor Local 444', 'logos/unifor-444.png'], all: LINK.scores, tab: 'scores' },
     { key: 'pro', title: 'Pro scores', by: ['Unifor Local 2458', 'logos/unifor-2458.png'], all: LINK.pro, tab: 'pro' },
     { key: 'prohead', title: 'Pro headlines', by: ['The D’Amore Group', 'logos/damore-group.png'], all: LINK.pro, tab: 'pro-updates' }
   ];
   var SHARE_TEXT = { network: 'Watch the latest local highlights and interviews', local: 'Local scores', stories: 'The latest Windsor-Essex sports stories',
-    lancers: 'Lancers Lounge: everything Windsor Lancers', saints: 'Saints Nation: everything St. Clair Saints', hs: 'High School Huddle: Windsor-Essex high school sports',
+    lancers: 'Lancers Lounge: everything Windsor Lancers', saints: 'Saints Nation: everything St. Clair Saints', hs: 'High School Huddle: Windsor-Essex high school sports', junior: 'Junior Hockey: the Spitfires and our junior teams',
     pro: 'Pro scores for our teams', prohead: 'Pro headlines', athletes: 'Athlete profiles', photos: 'Game Day Snaps: game reports in pictures' };
   var rowEl = {};
   ROWS.forEach(function (r) {
@@ -398,7 +409,6 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
     right.appendChild(a);
     head.appendChild(right);
     sec.appendChild(head);
-    if (r.key === 'network' && window.PPShare) { var fb = PPShare.follow(); fb.className += ' rfollow'; sec.appendChild(fb); }
     var wrap = el('div', 'rowwrap'), row = el('div', 'row');
     row.appendChild(el('div', 'empty', 'Loading…'));
     var l = el('button', 'rarrow l', '‹'), rr = el('button', 'rarrow r', '›'); l.type = rr.type = 'button';
@@ -408,6 +418,14 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
     wrap.appendChild(l); wrap.appendChild(row); wrap.appendChild(rr); sec.appendChild(wrap);
     document.getElementById('rows').appendChild(sec);
     rowEl[r.key] = row;
+    // its own spot after the Powerplay Network: follow Powerplay on social media
+    if (r.key === 'network' && window.PPShare) {
+      var band = el('section', 'followband'); band.id = 'row-follow';
+      var ft = el('div', 'fbtxt'); var fh = el('h2'); fh.appendChild(document.createTextNode('Follow ')); fh.appendChild(el('em', null, 'Powerplay'));
+      ft.appendChild(fh); ft.appendChild(el('div', 'fbsub', 'Highlights, scores and game-day photos, every day.'));
+      band.appendChild(ft); band.appendChild(PPShare.follow(false));
+      document.getElementById('rows').appendChild(band);
+    }
   });
   // rows run in ROWS order, below the search bar: stories, the Network, Game Day Snaps, athlete profiles, then Lancers Lounge, Saints Nation and High School Huddle, then the scores
   function fill(key, nodes, emptyText) {
@@ -1059,8 +1077,9 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
       // latest stories (written stories; videos have their own row)
       // the story that just left the big box leads Latest Stories, so it stays up front a while longer
       var lastTop = featItems[1] && !featItems[1].snaps && !featUrls[featItems[1].url] ? featItems[1] : null;
-      var rowStories = stories.filter(function (s) { return !isVid(s) && !featUrls[s.url] && (!lastTop || s.url !== lastTop.url); });
-      if (lastTop) rowStories.unshift(lastTop);
+      // only Powerplay's own stories here: team news goes to Lancers Lounge, Saints Nation, High School Huddle and Junior Hockey
+      var rowStories = stories.filter(function (s) { return s.team === 'powerplay' && !isVid(s) && !featUrls[s.url] && (!lastTop || s.url !== lastTop.url); });
+      if (lastTop && lastTop.team === 'powerplay') rowStories.unshift(lastTop);
       fill('stories', rowStories.slice(0, 15).map(function (s) {
         var who = s.team === 'junior' || s.team === 'powerplay' ? s.club || TEAM[s.team] : TEAM[s.team] + (s.sport ? ' · ' + s.sport : '');
         return storyCard(s, { tag: TEAM[s.team] === 'Powerplay' ? 'Powerplay' : (s.team === 'junior' ? (s.club || 'Junior') : TEAM[s.team]), sub: who + ' · ' + ago(s.published), tile: s.team === 'junior' ? (s.club || '').replace(/^(Windsor|St\. Clair)\s+/, '') : null });
@@ -1104,10 +1123,11 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
       var pool = stories.filter(function (s) { return !isVid(s); }).concat(allV);
       [['lancers', 'Lancers', THEME.lancers, 'Lancers Lounge stories are on the way.'],
        ['saints', 'Saints', THEME.saints, 'Saints Nation stories are on the way.'],
-       ['hs', 'High school', THEME.highschool, 'High school stories are on the way.']].forEach(function (t) {
-        var team = t[0] === 'hs' ? 'highschool' : t[0], seenT = {};
+       ['hs', 'High school', THEME.highschool, 'High school stories are on the way.'],
+       ['junior', 'Junior', THEME.junior, 'Junior hockey stories are on the way.']].forEach(function (t) {
+        var teams = t[0] === 'hs' ? ['highschool'] : t[0] === 'junior' ? ['junior', 'spitfires'] : [t[0]], seenT = {};
         var list = pool.filter(function (x) {
-          if (x.team === team) return true;
+          if (teams.indexOf(x.team) >= 0) return true;
           if (x.team !== 'powerplay' && !isVid(x) && !x.video) return false;
           return t[2].test(' ' + x.headline + ' ' + (x.summary || '') + ' ' + (x.cats || '') + ' ');
         }).filter(function (x) { var k = isVid(x) || x.video ? vidId(x.url) : x.url; if (seenT[k]) return false; seenT[k] = 1; return true; })
@@ -1121,7 +1141,7 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
         var cards = list.map(function (x) {
           var v = isVid(x) || x.video;
           return { t: new Date(x.published).getTime(), node: storyCard(x, v ? { play: true, tag: 'Video', sub: (x.source || 'Video') + ' \u00b7 ' + ago(x.published), tile: 'Powerplay' }
-            : { tag: x.team === 'powerplay' ? 'Powerplay' : t[1], sub: (x.team === 'powerplay' ? 'Powerplay Windsor' : (TEAM[x.team] || t[1]) + (x.sport ? ' \u00b7 ' + x.sport : '')) + ' \u00b7 ' + ago(x.published), tile: t[1] }) };
+            : { tag: x.team === 'powerplay' ? 'Powerplay' : x.team === 'junior' ? (x.club || t[1]).replace(/^(Windsor|St\. Clair)\s+/, '') : (TEAM[x.team] || t[1]), sub: (x.team === 'powerplay' ? 'Powerplay Windsor' : x.team === 'junior' ? (x.club || TEAM.junior) : (TEAM[x.team] || t[1]) + (x.sport ? ' \u00b7 ' + x.sport : '')) + ' \u00b7 ' + ago(x.published), tile: t[1] }) };
         }).concat(snapsT).sort(function (a, b) { return b.t - a.t; }).map(function (x) { return x.node; });
         fill(t[0], cards, t[3]);   // no score cards here: scores have their own rows and the sports guide
       });
