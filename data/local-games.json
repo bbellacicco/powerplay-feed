@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T22:17:02-05:00",
+ "updated": "2026-11-09T22:32:04-05:00",
  "today": "2026-11-09",
  "range": [
   "2026-11-06",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -2163,21 +2163,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nba",
-   "headline": "Raptors’ Barnes, Quickley, Murray-Boyles out vs. Grizzlies",
-   "summary": "",
-   "published": "2026-11-09T17:57-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/barnes.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-barnes-quickley-murray-boyles-out-vs-grizzlies/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "other",
    "headline": "Canada crushes Denmark at world women’s hockey championship",
    "summary": "",
@@ -2188,6 +2173,19 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/women-hockey/article/canada-crushes-denmark-at-world-womens-hockey-championship/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Van Koeverden casts doubt on Russia competing as neutrals at Alberta’s WJC",
+   "summary": "",
+   "published": "2026-11-09T11:11-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/03/Rogers-Place-Edmonton.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/world-juniors/article/sweden-says-it-wont-play-russia-at-wjc-as-norway-faces-losing-spot/",
    "source": "Sportsnet"
   },
   {
@@ -2269,21 +2267,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "mlb",
-   "headline": "Why Skubal, Blue Jays are destined to be linked this winter",
-   "summary": "Of late, the Blue Jays have done their due diligence with top free agents, sometimes pushing hard for them. Could the same be said for the Tarik Skubal sweepstakes? Ben Nicholson-Smith takes a look at what we do know ahe",
-   "published": "2026-11-09T10:43-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/skubal.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/why-recent-history-suggests-blue-jays-could-pursue-skubal/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "Why Connor Hellebuyck won’t be ‘facing the music’ in Winnipeg",
    "summary": "",
@@ -2294,21 +2277,6 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/devils-say-connor-hellebuyck-wont-play-in-return-to-winnipeg-vs-jets/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "GM Meetings primer: What to expect as baseball industry gathers in Vegas",
-   "summary": "Major League Baseball’s annual GM Meetings, a groundwork-laying session for the off-season’s business, kick off this week in Las Vegas with a dark cloud overhead. Shi Davidi tells us what to expect.",
-   "published": "2026-11-09T11:34-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/05/CP170055368.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/gm-meetings-primer-what-to-expect-as-baseball-industry-gathers-in-vegas/",
    "source": "Sportsnet"
   },
   {
@@ -2351,16 +2319,46 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Van Koeverden casts doubt on Russia competing as neutrals at Alberta’s WJC",
+   "league": "mlb",
+   "headline": "Why Skubal, Blue Jays are destined to be linked this winter",
+   "summary": "Of late, the Blue Jays have done their due diligence with top free agents, sometimes pushing hard for them. Could the same be said for the Tarik Skubal sweepstakes? Ben Nicholson-Smith takes a look at what we do know ahe",
+   "published": "2026-11-09T10:43-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/skubal.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/why-recent-history-suggests-blue-jays-could-pursue-skubal/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "GM Meetings primer: What to expect as baseball industry gathers in Vegas",
+   "summary": "Major League Baseball’s annual GM Meetings, a groundwork-laying session for the off-season’s business, kick off this week in Las Vegas with a dark cloud overhead. Shi Davidi tells us what to expect.",
+   "published": "2026-11-09T11:34-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/05/CP170055368.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/gm-meetings-primer-what-to-expect-as-baseball-industry-gathers-in-vegas/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "NFL trade deadline tracker: Follow all the deals",
    "summary": "",
-   "published": "2026-11-09T11:11-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/03/Rogers-Place-Edmonton.jpg",
+   "published": "2026-11-03T12:00-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-24.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/world-juniors/article/sweden-says-it-wont-play-russia-at-wjc-as-norway-faces-losing-spot/",
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-trade-deadline-tracker-follow-all-the-deals/",
    "source": "Sportsnet"
   },
   {
@@ -2456,19 +2454,6 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/extremely-grateful-price-bergeron-headline-2026-hockey-hall-of-fame-class/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "NFL trade deadline tracker: Follow all the deals",
-   "summary": "",
-   "published": "2026-11-03T12:00-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-24.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-trade-deadline-tracker-follow-all-the-deals/",
    "source": "Sportsnet"
   },
   {
