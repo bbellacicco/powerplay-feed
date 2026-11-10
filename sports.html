@@ -21,6 +21,7 @@
   html, body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.35 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
   /* nothing on this page scrolls by itself: on iPhones a scrolling box inside the page traps the finger */
   html, body { overflow: hidden; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   .top { display: flex; justify-content: center; padding: 22px 16px 6px; }
   /* three sections: a squared-off bar */
   .switch { display: grid; grid-template-columns: repeat(4, 1fr); width: 100%; max-width: 620px; gap: 1px; background: rgba(255,255,255,.16);
@@ -37,7 +38,9 @@
   @media (max-width: 560px) {
     .top { padding: 16px 10px 4px; }
     .switch { max-width: none; }
-    .switch button { padding: 11px 4px; font-size: 12px; letter-spacing: .06em; }
+    /* all four tabs fit across a phone: equal columns that can shrink, smaller letters, a long name may take two lines */
+    .switch { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .switch button { padding: 10px 2px; font-size: 11px; letter-spacing: .02em; white-space: normal; line-height: 1.15; }
     .top { flex-direction: column; } .sharebtn { position: static; transform: none; align-self: flex-end; }
   }
   .subswitch { display: flex; justify-content: center; gap: 0; margin: 12px auto 0; width: max-content; max-width: calc(100% - 32px);
