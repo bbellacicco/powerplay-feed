@@ -12,7 +12,7 @@
   and buttons into the hubs. Local: the two newest Powerplay posts, story or video (videos play right in the box).
   discover.html            both panels
   discover.html?only=local one panel (only=pro for the other)
-  Above the panels: the local guide (guide.js) with today's games, latest scores and the Community Calendar.
+  Below the panels: the local guide (guide.js) with today's games, latest scores and the Community Calendar.
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -162,7 +162,6 @@
     <div class="w"><div class="k">Keep the game going</div><h1>More from <em>Powerplay Windsor</em></h1></div>
     <a class="home" id="home" target="_top">Visit the home page ›</a>
   </div>
-  <div id="guide" style="margin:0 0 14px"></div>
   <div id="panels">
     <div class="vplayer" id="vplayer" role="dialog" aria-label="Video player">
       <div class="fr" id="vframe"></div>
@@ -170,6 +169,8 @@
       <div class="desc" id="vdesc" hidden><div class="txt" id="vdtxt"></div><button type="button" class="more" id="vdmore">Show more</button></div>
     </div>
   </div>
+  <!-- the sports guide sits under Around Windsor-Essex (the panels lead as the first impression) -->
+  <div id="guide" style="margin:14px 0 0"></div>
 </div>
 <script>
 (function () {
