@@ -285,8 +285,13 @@ function tick(t){
 function refresh(){
   Promise.all([mix === 'pro' ? [] : localItems(), mix === 'local' ? [] : proItems()])
     .then(function(r){
-      // local games keep their spots; our pro teams' games are mixed in after every two local ones
-      var loc = order(r[0], MAX_ITEMS), pro = order(r[1], mix === 'pro' ? MAX_ITEMS : MAX_PRO), out = [];
+      // what's happening now leads: every live game, local and pro, runs first (local ones ahead)
+      var isLive = function(i){ return i.kind === 'live'; }, notLive = function(i){ return i.kind !== 'live'; };
+      var liveL = order(r[0].filter(isLive), 20), liveP = order(r[1].filter(isLive), 20);
+      var out = liveL.concat(liveP);
+      // then finals and games coming up: local keep their spots, our pro teams' games mixed in after every two local ones
+      var loc = order(r[0].filter(notLive), Math.max(0, MAX_ITEMS - liveL.length)),
+          pro = order(r[1].filter(notLive), Math.max(0, (mix === 'pro' ? MAX_ITEMS : MAX_PRO) - liveP.length));
       while (loc.length || pro.length) {
         out = out.concat(loc.splice(0, pro.length ? 2 : loc.length));
         if (pro.length) out.push(pro.shift());
