@@ -123,6 +123,8 @@
   html.barmode .g { padding: 6px 0; } html.barmode .note { display: none; }
   html.barmode table { font-size: 12.5px; } html.barmode th, html.barmode td { padding: 4px 5px; }
   .closebar { display: flex; justify-content: flex-end; }
+  .closebar.bottom { justify-content: center; margin-top: 14px; }
+  .closebar.bottom .back { border: 1px solid rgba(232,176,33,.6); border-radius: 999px; padding: 9px 22px; }
   @media (max-width: 760px) {
     .page { padding: 14px 12px 20px; } h1 { font-size: 32px; }
     /* phones: every league button in view (two short rows), no sideways scrolling to find them */
@@ -446,10 +448,12 @@
         a.appendChild(el('b', null, sh.title.replace(/^game day snaps:\s*/i, ''))); a.appendChild(el('span', null, (sh.count ? sh.count + ' photos \u00b7 ' : '') + cpDay(new Date((sh.date || '') + 'T12:00:00')))); sg.appendChild(a); });
       sb2.appendChild(sg); box.appendChild(sb2);
     }
+    if (BAR) { var cb2 = el('div', 'closebar bottom'); var bk2 = el('button', 'back', '\u2715 Close'); bk2.type = 'button'; bk2.onclick = closeTeam; cb2.appendChild(bk2); box._bottom = cb2; }
     if (t.id === 'spitfires') {
       var ct = el('a', 'box contest'); ct.href = 'https://www.powerplaywindsor.com/scores-standings?contest=spitfires'; ct.target = '_top';
       ct.appendChild(el('b', null, 'Win Spitfires tickets')); ct.appendChild(el('span', null, 'Enter the Powerplay ticket draw \u203a')); box.appendChild(ct);
     }
+    if (box._bottom) box.appendChild(box._bottom);
     box.appendChild(el('div', 'note', 'Schedules and scores update every 15 minutes.'));
     if (!fromLink && !BAR) { try { window.scrollTo(0, 0); parent.postMessage({ pp: 'scrolltop' }, '*'); } catch (e) {} }
   }
@@ -492,20 +496,29 @@
   // the team's standings: its own group, with its row highlighted
   function standings(t) {
     var groups = null, re = null, title = 'Standings';
+    var has = function (gs, rx) { return (gs || []).some(function (x) { return (x.teams || []).some(function (r) { return rx.test(r.name); }); }); };
     if (t.std && std[t.std[0]]) { groups = std[t.std[0]]; re = t.std[1]; }
+    // university / college: the league whose sport (and men's / women's) matches AND has our team in it
     if (!groups && t.college) {
-      Object.keys(college).some(function (k) { var L = college[k], lab = (L.label || '').toLowerCase(), sp = t.college[1].toLowerCase();
-        var base = sp.replace(/^(men's|women's)\s+/, ''), gender = /^(men's|women's)/.exec(sp);
-        if (lab.indexOf(base) >= 0 && (!gender || lab.indexOf(gender[1]) >= 0 || !/(men's|women's)/.test(lab))) { groups = L.groups; re = t.college[0]; title = L.label || title; return true; } return false; });
+      var sp = t.college[1].toLowerCase(), base = sp.replace(/^(men's|women's)\s+/, '').replace('fastball', 'softball'), gender = /^(men's|women's)/.exec(sp);
+      Object.keys(college).some(function (k) { var L = college[k], lab = ' ' + (L.label || '').toLowerCase();
+        var gOk = !gender ? true : gender[1] === "women's" ? /women's/.test(lab) || !/men's/.test(lab) : /[^o]men's/.test(lab) || !/men's/.test(lab);
+        if (lab.indexOf(base) >= 0 && gOk && has(L.groups, t.college[0])) { groups = L.groups; re = t.college[0]; title = L.label || title; return true; } return false; });
     }
+    // high school: "Senior Girls Basketball" = sport "Girls Basketball", a "... Senior" tier with the school in it
     if (!groups && t.hs) {
-      Object.keys(hsStd).forEach(function (k) { var S = hsStd[k]; (S.leagues || []).forEach(function (L) { if ((L.league + ' ' + S.sport).toLowerCase() === t.hs[1].toLowerCase()) { groups = L.groups; title = L.league + ' ' + S.sport; } }); });
       re = new RegExp('^' + t.hs[0].replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i');
+      var hsp = t.hs[1].toLowerCase(), level = /senior/.test(hsp) ? 'senior' : /junior/.test(hsp) ? 'junior' : '';
+      Object.keys(hsStd).forEach(function (k) { var S = hsStd[k], sw = (S.sport || '').toLowerCase();
+        if (groups || sw.split(' ').some(function (w) { return hsp.indexOf(w) < 0; })) return;
+        (S.leagues || []).forEach(function (L) { var ln = (L.league || '').toLowerCase();
+          if (!groups && (!level || ln.indexOf(level) >= 0) && has(L.groups, re)) { groups = L.groups; title = L.league + ' ' + S.sport; } }); });
     }
     if (!groups) return null;
     var g = groups.filter(function (x) { return (x.teams || []).some(function (r) { return re.test(r.name); }); })[0];
     if (!g) return null;
-    var b = el('div', 'box'); b.appendChild(el('h3', null, g.group && g.group !== title ? g.group : title));
+    var head = t.hs ? title + (g.group && title.toLowerCase().indexOf(g.group.toLowerCase()) < 0 ? ' \u00b7 ' + g.group : '') : (g.group && g.group !== title ? g.group : title);
+    var b = el('div', 'box'); b.appendChild(el('h3', null, head));
     var wrap = el('div', 'tscroll'), tb = el('table'), hr = el('tr');
     var cols = g.cols || ['GP', 'W', 'L', 'OTL', 'PTS'];
     hr.appendChild(el('th', null, 'Team')); cols.forEach(function (c) { hr.appendChild(el('th', null, c)); }); tb.appendChild(hr);
@@ -519,6 +532,8 @@
 
   load(); setInterval(function () { var open = !document.getElementById('team').hidden ? document.getElementById('team').dataset.id : ''; load().then(function () { if (open && BYID[open]) openTeam(BYID[open], true); }); }, 5 * 60000);
 
+  // the homepage asks to close (someone tapped the blurred page behind the box)
+  window.addEventListener('message', function (e) { if (e.data && e.data.pp === 'closeteams' && BAR) { closeTeam(); barPick = ''; drawDrop(); markBar(); } });
   // inside the Local Hub: tell it how tall this is, so it never scrolls on its own
   (function () {
     if (window.parent === window) return; var last = 0;
