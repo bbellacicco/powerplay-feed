@@ -429,16 +429,16 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
     l.onclick = function () { row.scrollBy({ left: -row.clientWidth * 0.8, behavior: 'smooth' }); };
     rr.onclick = function () { row.scrollBy({ left: row.clientWidth * 0.8, behavior: 'smooth' }); };
     wrap.appendChild(l); wrap.appendChild(row); wrap.appendChild(rr); sec.appendChild(wrap);
-    document.getElementById('rows').appendChild(sec);
-    rowEl[r.key] = row;
-    // its own spot after the Powerplay Network: follow Powerplay on social media
-    if (r.key === 'network' && window.PPShare) {
+    // its own spot right above What's New: follow Powerplay on social media
+    if (r.key === 'stories' && window.PPShare) {
       var band = el('section', 'followband'); band.id = 'row-follow';
       var ft = el('div', 'fbtxt'); var fh = el('h2'); fh.appendChild(document.createTextNode('Follow ')); fh.appendChild(el('em', null, 'Powerplay'));
       ft.appendChild(fh); ft.appendChild(el('div', 'fbsub', 'Highlights, scores and game-day photos, every day.'));
       band.appendChild(ft); band.appendChild(PPShare.follow(false));
       document.getElementById('rows').appendChild(band);
     }
+    document.getElementById('rows').appendChild(sec);
+    rowEl[r.key] = row;
   });
   // rows run in ROWS order, below the search bar: stories, the Network, Game Day Snaps, athlete profiles, then Lancers Lounge, Saints Nation and High School Huddle, then the scores
   function fill(key, nodes, emptyText) {
