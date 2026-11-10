@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T11:01:42-05:00",
+ "updated": "2026-11-10T11:16:45-05:00",
  "today": "2026-11-10",
  "range": [
   "2026-11-07",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -1839,6 +1839,17 @@
   },
   {
    "league": "pwhl",
+   "headline": "PWHL Unveils Expansion Team Identities Ahead of Their Inaugural Seasons",
+   "summary": "",
+   "published": "2026-11-10T13:30:00+00:00",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/League-ExpansionHeader-16x9_1",
+   "video": false,
+   "teams": [],
+   "url": "https://www.thepwhl.com/en/news/2026/november/10/pwhl-unveils-expansion-team-identities-ahead-of-their-inaugural-seasons",
+   "source": "thepwhl.com"
+  },
+  {
+   "league": "pwhl",
    "headline": "Vegas Vanguards Lead the Way With New Brand Launch",
    "summary": "",
    "published": "2026-11-10T13:00:00+00:00",
@@ -1887,17 +1898,6 @@
     "Detroit Clutch"
    ],
    "url": "https://www.thepwhl.com/en/teams/detroit-clutch/news/2026/november/10/detroit-clutch-finds-inspiration-from-the-history-of-the-motor-city",
-   "source": "thepwhl.com"
-  },
-  {
-   "league": "pwhl",
-   "headline": "PWHL Unveils Expansion Team Identities Ahead of Their Inaugural Seasons",
-   "summary": "",
-   "published": "2026-11-10T12:00:00+00:00",
-   "image": "https://res.cloudinary.com/pwhl-low/image/upload/c_auto,g_auto,h_800,w_1188/q_auto/f_auto/League-ExpansionHeader-16x9_1",
-   "video": false,
-   "teams": [],
-   "url": "https://www.thepwhl.com/en/news/2026/november/10/pwhl-unveils-expansion-team-identities-ahead-of-their-inaugural-seasons",
    "source": "thepwhl.com"
   },
   {
@@ -2201,6 +2201,21 @@
   },
   {
    "league": "nhl",
+   "headline": "Maple Leafs give injury updates on Sissons, Rielly, Marchenko",
+   "summary": "",
+   "published": "2026-11-10T10:42-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Toronto-Maple-Leafs-center-Colton-Sissons.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-give-injury-updates-on-sissons-rielly-marchenko/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Levi stands tall as Oilers hold off Rangers with ‘B’ game",
    "summary": "Lost in Edmonton amid Connor McDavid and Leon Draisaitl’s scoring spree this season is that the Oilers just might have found the goalie they’ve been seeking in Devon Levi.",
    "published": "2026-11-10T00:05-05:00",
@@ -2223,19 +2238,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/slow-start-dooms-canucks-in-loss-to-flyers/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "pwhl",
-   "headline": "PWHL expansion clubs unveil team nicknames",
-   "summary": "",
-   "published": "2026-11-10T08:43-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/pwhl.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/pwhl/article/pwhl-expansion-clubs-unveil-team-nicknames/",
    "source": "Sportsnet"
   },
   {
@@ -2269,18 +2271,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Maple Leafs give injury updates on Sissons, Rielly, Marchenko",
+   "league": "pwhl",
+   "headline": "PWHL expansion clubs unveil team nicknames",
    "summary": "",
-   "published": "2026-11-10T10:42-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Toronto-Maple-Leafs-center-Colton-Sissons.jpg",
+   "published": "2026-11-10T08:43-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/pwhl.jpg",
    "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
+   "teams": [],
+   "sn_team_count": 0,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-give-injury-updates-on-sissons-rielly-marchenko/",
+   "url": "https://www.sportsnet.ca/pwhl/article/pwhl-expansion-clubs-unveil-team-nicknames/",
    "source": "Sportsnet"
   },
   {
@@ -2294,6 +2294,45 @@
    "sn_team_count": 1,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/mls/article/toronto-fc-gm-jason-hernandez-talks-search-for-new-coach/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Evander Kane signs with KHL’s Sibir Novosibirsk",
+   "summary": "",
+   "published": "2026-11-10T09:21-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/12/evander.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/evander-kane-signs-with-khls-sibir-novosibirsk/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Jets’ Josh Morrissey to return vs. Devils",
+   "summary": "",
+   "published": "2026-11-10T11:12-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/04/Untitled-design-48.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/jets-josh-morrissey-to-return-vs-devils/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Senators recall goalie Jackson Parsons from AHL Belleville",
+   "summary": "",
+   "published": "2026-11-10T10:16-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/07/parsons.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/senators-recall-goalie-jackson-parsons-from-ahl-belleville/",
    "source": "Sportsnet"
   },
   {
@@ -2313,19 +2352,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Evander Kane signs with KHL’s Sibir Novosibirsk",
-   "summary": "",
-   "published": "2026-11-10T09:21-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/12/evander.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/evander-kane-signs-with-khls-sibir-novosibirsk/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "McDavid’s historic assist streak ends in Oilers’ win over Rangers",
    "summary": "",
    "published": "2026-11-09T23:08-05:00",
@@ -2335,19 +2361,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/mcdavids-historic-assist-streak-ends-in-oilers-win-over-rangers/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Senators recall goalie Jackson Parsons from AHL Belleville",
-   "summary": "",
-   "published": "2026-11-10T10:16-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/07/parsons.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/senators-recall-goalie-jackson-parsons-from-ahl-belleville/",
    "source": "Sportsnet"
   },
   {
@@ -2361,19 +2374,6 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/wentz-cant-help-struggling-vikings-offence/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "CF Montreal being put up for sale by owner Joey Saputo",
-   "summary": "",
-   "published": "2026-11-09T16:21-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2018/05/saputo_joey.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/cf-montreal-being-put-up-for-sale-by-owner-joey-saputo/",
    "source": "Sportsnet"
   },
   {
@@ -2415,6 +2415,19 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/shorthanded-raptors-battle-hard-but-lose-to-grizzlies/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "CF Montreal being put up for sale by owner Joey Saputo",
+   "summary": "",
+   "published": "2026-11-09T16:21-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2018/05/saputo_joey.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/cf-montreal-being-put-up-for-sale-by-owner-joey-saputo/",
    "source": "Sportsnet"
   },
   {
@@ -2650,6 +2663,19 @@
   },
   {
    "league": "nfl",
+   "headline": "LIONS DAILY: A familiar connection gives Detroit's newest safety a head start",
+   "summary": "",
+   "published": "2026-11-10T11:00-05:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/v232rront7uainaepvgi.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Lions"
+   ],
+   "url": "https://www.detroitlions.com/news/lions-daily-a-familiar-connection-gives-detroit-s-newest-safety-a-head-start",
+   "source": "Team site"
+  },
+  {
+   "league": "nfl",
    "headline": "TWENTYMAN: 5 stats that stand out following Lions' Week 9 victory",
    "summary": "Tim Twentyman takes a look at five Detroit Lions' numbers that stand out following the team's Week 9 victory over the Miami Dolphins.",
    "published": "2026-11-10T07:00-05:00",
@@ -2832,19 +2858,6 @@
   },
   {
    "league": "nfl",
-   "headline": "Lions at Dolphins injury report: Nov. 6",
-   "summary": "Lions at Dolphins injury report and game designations for Friday, November 6.",
-   "published": "2026-11-06T16:00-05:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/ce0wzeikq8lj83b3fiox.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Lions"
-   ],
-   "url": "https://www.detroitlions.com/news/lions-at-dolphins-injury-report-nov-6-branch-stbrown-reed",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
    "headline": "'There's no panic' | The Bills stay strong through early struggles and injuries in MNF win over the Minnesota Vikings",
    "summary": "Overall team resiliency and Keleki Latu's first career TD",
    "published": "2026-11-10T02:06-05:00",
@@ -3016,7 +3029,7 @@
    "league": "mlb",
    "headline": "'27 Rookie of the Year candidates -- one from each team",
    "summary": "",
-   "published": "2026-11-09T20:15-05:00",
+   "published": "2026-11-10T11:00-05:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/c2tcerxcn8hcojs5hxgq",
    "video": false,
    "teams": [
@@ -3198,7 +3211,7 @@
    "league": "mlb",
    "headline": "'27 Rookie of the Year candidates -- one from each team",
    "summary": "",
-   "published": "2026-11-09T20:15-05:00",
+   "published": "2026-11-10T11:00-05:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/c2tcerxcn8hcojs5hxgq",
    "video": false,
    "teams": [
