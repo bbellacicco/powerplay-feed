@@ -95,6 +95,7 @@
   .mplay { position: absolute; left: 50%; top: 50%; width: 44px; height: 44px; margin: -22px 0 0 -22px; border-radius: 50%; background: rgba(11,26,51,.8); border: 2px solid #fff; }
   .mplay::after { content: ''; position: absolute; left: 17px; top: 12px; border-left: 14px solid #fff; border-top: 9px solid transparent; border-bottom: 9px solid transparent; }
   .mcard:hover b { text-decoration: underline; }
+  .mpic.noimg { background: linear-gradient(135deg, #17336a, #0e2044); }
   .contest { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 14px; text-decoration: none; background: linear-gradient(90deg, #2a0508, #10244a); border-color: #d4202c; }
   .contest b { font-family: 'Bebas Neue', Impact, sans-serif; font-weight: 400; font-size: 24px; letter-spacing: .03em; } .contest span { color: #e8b021; font-weight: 800; }
   /* ?view=bar: a slim bar of leagues at the top of the Local Hub; a team opens right under it */
@@ -399,8 +400,8 @@
     var live = gs.filter(function (g) { return g.status === 'live'; })[0];
     var up = gs.filter(function (g) { return g.status === 'upcoming' && new Date(g.start) > now - 3 * 3600e3; });
     var fin = gs.filter(function (g) { return g.status === 'final'; }).reverse();
-    var grid = el('div', 'grid2'), left = el('div'), right = el('div'); left.style.display = right.style.display = 'grid'; left.style.gap = right.style.gap = '14px';
-    // the game that matters most: live, otherwise the next one
+    var col = function () { var d = el('div'); d.style.display = 'grid'; d.style.gap = '14px'; d.style.alignContent = 'start'; return d; };
+    // row 1: the game that matters most (live, otherwise the next one) beside the latest news
     var top = live || up[0];
     var nb = el('div', 'box next' + (live ? ' livebox' : ''));
     if (top) {
@@ -413,32 +414,51 @@
       nb.appendChild(el('div', 'when', 'Next game'));
       nb.appendChild(el('div', 'none', 'Nothing on the schedule this week.'));
     }
-    left.appendChild(nb);
-    left.appendChild(gameBox('Coming up', up.slice(live ? 0 : 1), t, 'No other games this week.'));
-    left.appendChild(gameBox('Recent scores', fin.slice(0, BAR ? 4 : 8), t, 'No scores yet this week.'));
-    var tb = standings(t); if (tb) right.appendChild(tb);
-    var nw = news.filter(function (n) { return !n.video && !/youtube|vimeo/.test(n.url) && (t.news(n) || (n.team === 'powerplay' && t.about && t.about(n.headline + ' ' + (n.summary || '') + ' ' + (n.cats || '')))); }).slice(0, 6);
+    var mine = function (n) { return !n.video && !/youtube|vimeo/.test(n.url) && (t.news(n) || (n.team === 'powerplay' && t.about && t.about(n.headline + ' ' + (n.summary || '') + ' ' + (n.cats || '')))); };
+    var allNews = news.filter(mine);
+    var nw = allNews.slice(0, 4);
     var nbx = el('div', 'box news'); nbx.appendChild(el('h3', null, 'Latest news'));
     if (nw.length) nw.forEach(function (n) { var a = el('a'); a.href = n.url; a.target = /powerplaywindsor\.com/.test(n.url) ? '_top' : '_blank'; a.rel = 'noopener';
       a.appendChild(el('b', null, n.headline)); a.appendChild(el('span', null, (n.club || (n.team === 'powerplay' ? 'Powerplay Windsor' : '')) + (n.published ? ' · ' + cpDay(new Date(n.published)) : ''))); nbx.appendChild(a); });
     else nbx.appendChild(el('div', 'none', 'No news this week.'));
-    right.appendChild(nbx);
-    grid.appendChild(left); grid.appendChild(right); box.appendChild(grid);
-    // everything else we have on them: videos (Powerplay and, for the Spitfires, the OHL's highlights) and Game Day Snaps
-    var tv = t.about ? vids.filter(function (v) { return v.sp ? t.id === 'spitfires' : t.about(v.t + ' ' + (v.d || '')); }).slice(0, 8) : [];
-    if (tv.length) {
-      var vb = el('div', 'box media'); vb.appendChild(el('h3', null, 'Videos'));
-      var vg = el('div', 'mgrid');
-      tv.forEach(function (v) {
-        var c = el('button', 'mcard'); c.type = 'button';
-        var pic = el('div', 'mpic'); if (v.i) { var im = new Image(); im.src = v.i; im.alt = ''; im.loading = 'lazy'; pic.appendChild(im); } pic.appendChild(el('span', 'mplay')); c.appendChild(pic);
-        c.appendChild(el('b', null, v.t)); c.appendChild(el('span', null, v.src + ' \u00b7 ' + cpDay(new Date(v.p))));
-        c.onclick = function () { var src = embed(v.u); if (!src) { window.open(v.u, '_blank', 'noopener'); return; }
-          pic.innerHTML = ''; var f = document.createElement('iframe'); f.src = src; f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; f.allowFullscreen = true; f.title = v.t; pic.appendChild(f); c.onclick = null; };
-        vg.appendChild(c);
+    var row1 = el('div', 'grid2'), a1 = col(), b1 = col(); a1.appendChild(nb); b1.appendChild(nbx); row1.appendChild(a1); row1.appendChild(b1); box.appendChild(row1);
+
+    // row 2: stories and videos about them, with pictures: Powerplay's stories and videos, the team's own stories
+    // with a photo and, for the Spitfires, the OHL's game highlights. Newest first.
+    var tv = t.about ? vids.filter(function (v) { return v.sp ? t.id === 'spitfires' : t.about(v.t + ' ' + (v.d || '')); }) : [];
+    var GEN = /(1920x1080-|game-story|placeholder|leaguestat\.com|\/logos?\/|logo_main)/i;
+    var items = tv.map(function (v) { return { vid: v, at: new Date(v.p).getTime() }; })
+      .concat(allNews.filter(function (n) { return n.image && !GEN.test(n.image); }).map(function (n) { return { story: n, at: new Date(n.published).getTime() }; }))
+      .sort(function (a, b) { return b.at - a.at; }).slice(0, 8);
+    var mb = el('div', 'box media'); mb.appendChild(el('h3', null, 'Stories & videos'));
+    if (items.length) {
+      var mg = el('div', 'mgrid');
+      items.forEach(function (it) {
+        if (it.vid) {
+          var v = it.vid, c = el('button', 'mcard'); c.type = 'button';
+          var pic = el('div', 'mpic'); if (v.i) { var im = new Image(); im.src = v.i; im.alt = ''; im.loading = 'lazy'; pic.appendChild(im); } pic.appendChild(el('span', 'mplay')); c.appendChild(pic);
+          c.appendChild(el('b', null, v.t)); c.appendChild(el('span', null, 'Video · ' + v.src + ' · ' + cpDay(new Date(v.p))));
+          c.onclick = function () { var src = embed(v.u); if (!src) { window.open(v.u, '_blank', 'noopener'); return; }
+            pic.innerHTML = ''; var f = document.createElement('iframe'); f.src = src; f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; f.allowFullscreen = true; f.title = v.t; pic.appendChild(f); c.onclick = null; };
+          mg.appendChild(c);
+        } else {
+          var n = it.story, a = el('a', 'mcard'); a.href = n.url; a.target = /powerplaywindsor\.com/.test(n.url) ? '_top' : '_blank'; a.rel = 'noopener';
+          var p2 = el('div', 'mpic'); var im2 = new Image(); im2.src = n.image; im2.alt = ''; im2.loading = 'lazy'; im2.referrerPolicy = 'no-referrer'; im2.onerror = function () { p2.classList.add('noimg'); im2.remove(); }; p2.appendChild(im2); a.appendChild(p2);
+          a.appendChild(el('b', null, n.headline)); a.appendChild(el('span', null, (n.team === 'powerplay' ? 'Powerplay' : (n.club || 'Story')) + ' · ' + cpDay(new Date(n.published))));
+          mg.appendChild(a);
+        }
       });
-      vb.appendChild(vg); box.appendChild(vb);
-    }
+      mb.appendChild(mg);
+    } else mb.appendChild(el('div', 'none', 'Powerplay stories and videos about this team show up here as they’re posted.'));
+    box.appendChild(mb);
+
+    // row 3: the schedule beside the standings
+    var row3 = el('div', 'grid2'), a3 = col(), b3 = col(); row3.style.marginTop = '14px';
+    a3.appendChild(gameBox('Coming up', up.slice(live ? 0 : 1), t, 'No other games this week.'));
+    a3.appendChild(gameBox('Recent scores', fin.slice(0, BAR ? 5 : 8), t, 'No scores yet this week.'));
+    var tb = standings(t); if (tb) b3.appendChild(tb);
+    row3.appendChild(a3); if (tb) row3.appendChild(b3); else row3.style.gridTemplateColumns = 'minmax(0, 1fr)';
+    box.appendChild(row3);
     var ts = t.about ? snaps.filter(function (sh) { return t.about(sh.title + ' ' + (sh.desc || '')); }).slice(0, 4) : [];
     if (ts.length) {
       var sb2 = el('div', 'box media'); sb2.appendChild(el('h3', null, 'Game Day Snaps'));
