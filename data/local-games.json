@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-09T23:21:11-05:00",
- "today": "2026-11-09",
+ "updated": "2026-11-10T00:05:48-05:00",
+ "today": "2026-11-10",
  "range": [
-  "2026-11-06",
-  "2026-11-12"
+  "2026-11-07",
+  "2026-11-13"
  ],
  "teams": {
   "spitfires": {
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -111,119 +111,6 @@
   }
  },
  "games": [
-  {
-   "id": "lancers-6203",
-   "team": "lancers",
-   "sport": "Women's Basketball",
-   "start": "2026-11-06T18:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "TMU Bold",
-   "location": "Toronto, ON",
-   "status": "final",
-   "our_score": 72,
-   "opp_score": 96,
-   "result": "L",
-   "note": "",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6203",
-    "recap": "https://golancers.ca/news/2026/11/8/womens-basketball-womens-basketball-splits-gta-weekend.aspx"
-   }
-  },
-  {
-   "id": "junior-gs2960537",
-   "team": "junior",
-   "sport": "PJHL (Jr. C)",
-   "start": "2026-11-06T19:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Blenheim Blades",
-   "location": "Atlas Tube Centre",
-   "status": "final",
-   "our_score": 6,
-   "opp_score": 3,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960537?configuration=45"
-   },
-   "club": "Lakeshore Canadiens"
-  },
-  {
-   "id": "spitfires-ohl29165",
-   "team": "spitfires",
-   "sport": "Hockey",
-   "start": "2026-11-06T19:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Ottawa 67's",
-   "location": "TD Place, Ottawa, ON",
-   "status": "final",
-   "our_score": 5,
-   "opp_score": 4,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29165/"
-   }
-  },
-  {
-   "id": "junior-gojhl15658",
-   "team": "junior",
-   "sport": "GOHL (Jr. B)",
-   "start": "2026-11-06T19:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "St. Marys Lincolns",
-   "location": "Pyramid R.C., St. Marys, ON",
-   "status": "final",
-   "our_score": 5,
-   "opp_score": 6,
-   "result": "L",
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.gohl.ca/stats/game-center/15658"
-   },
-   "club": "Chatham Maroons"
-  },
-  {
-   "id": "junior-ojhl16650",
-   "team": "junior",
-   "sport": "OJHL (Jr. A)",
-   "start": "2026-11-06T19:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "King Rebellion",
-   "location": "Zancor Centre",
-   "status": "final",
-   "our_score": 1,
-   "opp_score": 3,
-   "result": "L",
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.ojhl.ca/stats/game-center/16650"
-   },
-   "club": "Leamington Flyers"
-  },
-  {
-   "id": "lancers-6225",
-   "team": "lancers",
-   "sport": "Men's Basketball",
-   "start": "2026-11-06T20:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "TMU Bold",
-   "location": "Toronto, ON",
-   "status": "final",
-   "our_score": 68,
-   "opp_score": 77,
-   "result": "L",
-   "note": "",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6225",
-    "recap": "https://golancers.ca/news/2026/11/8/mens-basketball-lancers-drop-pair-of-road-games.aspx"
-   }
-  },
   {
    "id": "lancers-6497",
    "team": "lancers",
@@ -1337,6 +1224,193 @@
    },
    "away": "Herman",
    "home": "Holy Names"
+  },
+  {
+   "id": "lancers-6205",
+   "team": "lancers",
+   "sport": "Women's Basketball",
+   "start": "2026-11-13T18:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Queen's Gaels",
+   "location": "Kingston, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "watch": "https://oua.tv/?school=Windsor"
+   }
+  },
+  {
+   "id": "lancers-6246",
+   "team": "lancers",
+   "sport": "Women's Volleyball",
+   "start": "2026-11-13T18:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "McMaster Marauders",
+   "location": "Toldo Lancer Centre",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=174",
+    "watch": "https://oua.tv/?school=Windsor"
+   }
+  },
+  {
+   "id": "junior-ojhl16673",
+   "team": "junior",
+   "sport": "OJHL (Jr. A)",
+   "start": "2026-11-13T19:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Collingwood Blues",
+   "location": "Eddie Bush Memorial Arena, Collingwood, Ontario",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.ojhl.ca/stats/game-center/16673"
+   },
+   "club": "Leamington Flyers"
+  },
+  {
+   "id": "junior-gs2960601",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-11-13T19:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Blenheim Blades",
+   "location": "Atlas Tube Centre",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960601?configuration=45"
+   },
+   "club": "Lakeshore Canadiens"
+  },
+  {
+   "id": "lancers-6348",
+   "team": "lancers",
+   "sport": "Men's Hockey",
+   "start": "2026-11-13T19:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Laurier Golden Hawks",
+   "location": "Waterloo, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "watch": "https://oua.tv/?school=Windsor"
+   }
+  },
+  {
+   "id": "junior-gojhl15685",
+   "team": "junior",
+   "sport": "GOHL (Jr. B)",
+   "start": "2026-11-13T19:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "St. Marys Lincolns",
+   "location": "Pyramid R.C., St. Marys, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.gohl.ca/stats/game-center/15685"
+   },
+   "club": "Chatham Maroons"
+  },
+  {
+   "id": "junior-gs2960612",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-11-13T19:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Wheatley Sharks",
+   "location": "Essex Centre Complex",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960612?configuration=45"
+   },
+   "club": "Essex 73's"
+  },
+  {
+   "id": "junior-gs2960611",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-11-13T19:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Dresden Kings",
+   "location": "Lambton-Kent Memorial Centre",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960611?configuration=45"
+   },
+   "club": "Amherstburg Admirals"
+  },
+  {
+   "id": "lancers-6266",
+   "team": "lancers",
+   "sport": "Men's Volleyball",
+   "start": "2026-11-13T19:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "McMaster Marauders",
+   "location": "Toldo Lancer Centre",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=174",
+    "watch": "https://oua.tv/?school=Windsor"
+   }
+  },
+  {
+   "id": "lancers-6227",
+   "team": "lancers",
+   "sport": "Men's Basketball",
+   "start": "2026-11-13T20:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Queen's Gaels",
+   "location": "Kingston, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "watch": "https://oua.tv/?school=Windsor"
+   }
   }
  ],
  "pro_games": [
@@ -2282,6 +2356,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nfl",
+   "headline": "Josh Allen, Bills move to 7-1 with win over sputtering Vikings",
+   "summary": "Josh Allen threw a touchdown pass with 44 seconds left before halftime, James Cook rushed 31 times for 107 yards and a late score, and the Buffalo Bills beat Minnesota 23-6 on Monday night, sending Vikings deeper into th",
+   "published": "2026-11-09T23:52-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Bills.jpg",
+   "video": false,
+   "teams": [
+    "Buffalo Bills"
+   ],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/josh-allen-bills-move-to-7-1-with-win-over-sputtering-vikings/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Why Connor Hellebuyck won’t be ‘facing the music’ in Winnipeg",
    "summary": "",
@@ -2335,8 +2424,8 @@
   },
   {
    "league": "nba",
-   "headline": "Doncic powers Lakers past Hawks for sixth straight win",
-   "summary": "",
+   "headline": "NBA Roundup: Doncic powers Lakers past Hawks for sixth straight win",
+   "summary": "Luka Doncic had 32 points, eight rebounds and 10 assists and the Los Angeles Lakers extended their winning streak to six games with a 124-114 win over the Atlanta Hawks on Monday night.",
    "published": "2026-11-09T21:50-05:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Luka.jpg",
    "video": false,
@@ -2759,6 +2848,19 @@
   },
   {
    "league": "nfl",
+   "headline": "Bills 23, Vikings 6 | Final Score, recap + highlights",
+   "summary": "Allen and Cook became the first QB-RB duo in NFL history to reach 5,000 as teammates in the same season.",
+   "published": "2026-11-10T00:01-05:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/bills/tgqdkpycpxst1nz2ofh1.png",
+   "video": false,
+   "teams": [
+    "Buffalo Bills"
+   ],
+   "url": "https://www.buffalobills.com/news/bills-23-vikings-6-final-score-recap-highlights",
+   "source": "Team site"
+  },
+  {
+   "league": "nfl",
    "headline": "Buffalo Bills at Minnesota Vikings | Where to watch, stream and listen | MNF Week 9",
    "summary": "TV Channel, Streaming and Radio for Bills at Vikings on Monday Night Football",
    "published": "2026-11-09T19:30-05:00",
@@ -2872,19 +2974,6 @@
     "Buffalo Bills"
    ],
    "url": "https://www.buffalobills.com/news/bills-sign-cb-kader-kohou-to-the-practice-squad",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
-   "headline": "Top Storylines for Bills vs. Vikings | Week 9",
-   "summary": "Breaking down how Buffalo's No. 1 offense matches up against the Vikings No. 1 defense",
-   "published": "2026-11-04T17:00-05:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/bills/a2zzinlqy12w4sw0s1s6.png",
-   "video": false,
-   "teams": [
-    "Buffalo Bills"
-   ],
-   "url": "https://www.buffalobills.com/news/top-storylines-for-bills-vs-vikings-week-9",
    "source": "Team site"
   },
   {
