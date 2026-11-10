@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T12:01:47-05:00",
+ "updated": "2026-11-10T12:19:30-05:00",
  "today": "2026-11-10",
  "range": [
   "2026-11-07",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 36
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -2327,6 +2327,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "mlb",
+   "headline": "Bob Boone, World Series champion and part of three-generation baseball family, dies at 78",
+   "summary": "",
+   "published": "2026-11-10T12:01-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2021/09/bob-boone-nationals-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/bob-boone-world-series-champion-and-part-of-three-generation-baseball-family-dies-at-78/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "Toronto FC GM Jason Hernandez talks search for new coach",
    "summary": "",
@@ -2337,19 +2350,6 @@
    "sn_team_count": 1,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/mls/article/toronto-fc-gm-jason-hernandez-talks-search-for-new-coach/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Evander Kane signs with KHL’s Sibir Novosibirsk",
-   "summary": "",
-   "published": "2026-11-10T09:21-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/12/evander.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/evander-kane-signs-with-khls-sibir-novosibirsk/",
    "source": "Sportsnet"
   },
   {
@@ -2393,17 +2393,28 @@
   },
   {
    "league": "nba",
-   "headline": "Shorthanded Raptors battle hard, but lose to Grizzlies",
-   "summary": "The Raptors battled against the Grizzlies on Monday. But with the Raptors missing most of their top weapons, process can only take you so far sometimes.",
-   "published": "2026-11-10T00:31-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-27.jpg",
+   "headline": "Why Jaylen Brown versus Jayson Tatum for the first time is a big deal",
+   "summary": "",
+   "published": "2026-11-10T12:08-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/dae1af4ae3a9835dbf4aa0d2fd941d57f7e3e00341e77709e53856f43c35601c.jpg",
    "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
+   "teams": [],
+   "sn_team_count": 2,
    "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/shorthanded-raptors-battle-hard-but-lose-to-grizzlies/",
+   "url": "https://www.sportsnet.ca/nba/article/why-jaylen-brown-versus-jayson-tatum-for-the-first-time-is-a-big-deal/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Evander Kane signs with KHL’s Sibir Novosibirsk",
+   "summary": "",
+   "published": "2026-11-10T09:21-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/12/evander.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/evander-kane-signs-with-khls-sibir-novosibirsk/",
    "source": "Sportsnet"
   },
   {
@@ -2472,6 +2483,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "Shorthanded Raptors battle hard, but lose to Grizzlies",
+   "summary": "The Raptors battled against the Grizzlies on Monday. But with the Raptors missing most of their top weapons, process can only take you so far sometimes.",
+   "published": "2026-11-10T00:31-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-27.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/shorthanded-raptors-battle-hard-but-lose-to-grizzlies/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "CF Montreal being put up for sale by owner Joey Saputo",
    "summary": "",
@@ -2482,19 +2508,6 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/mls/article/cf-montreal-being-put-up-for-sale-by-owner-joey-saputo/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Canada crushes Denmark at world women’s hockey championship",
-   "summary": "",
-   "published": "2026-11-09T16:10-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/worlds.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/women-hockey/article/canada-crushes-denmark-at-world-womens-hockey-championship/",
    "source": "Sportsnet"
   },
   {
@@ -2510,32 +2523,6 @@
    "sn_team_count": 2,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/josh-allen-bills-move-to-7-1-with-win-over-sputtering-vikings/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Spotlight on Flames defenceman Nemec after Bahl injury",
-   "summary": "After the Flames lost Kevin Bahl to injury, the interesting part became who would step up. His partner, Simon Nemec, now has an opportunity, writes Eric Francis.",
-   "published": "2026-11-09T14:31-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Nemec.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/spotlight-on-flames-defenceman-nemec-after-bahl-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Canadiens’ Arber Xhekaj finding comfort zone in depth role",
-   "summary": "Arber Xhekaj has been providing more evidence of just how comfortable he’s become in the role he had so much trouble nailing down last season. Eric Engels has the story.",
-   "published": "2026-11-09T08:10-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/xhekaj.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canadiens-arber-xhekaj-finding-comfort-zone-in-depth-role/",
    "source": "Sportsnet"
   },
   {
@@ -2648,19 +2635,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/gm-meetings-primer-what-to-expect-as-baseball-industry-gathers-in-vegas/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Canadian MLS clubs finish regular season in wildly different spots",
-   "summary": "Results on Decision Day just served to underline the vast differences between the Canadian MLS clubs. John Molinaro takes a look at where the Whitecaps, Toronto FC and CF Montreal stand.",
-   "published": "2026-11-09T11:46-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/toronto.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/canadian-mls-clubs-finish-regular-season-in-wildly-different-spots/",
    "source": "Sportsnet"
   },
   {
