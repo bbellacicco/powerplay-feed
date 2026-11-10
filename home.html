@@ -183,6 +183,8 @@
   .vplayer.on { display: block; }
   .vplayer .fr { position: relative; aspect-ratio: 16 / 9; max-height: 70vh; margin: 0 auto; }
   .vplayer .fr.gal { aspect-ratio: auto; max-height: none; height: 850px; }
+  .vplayer .fr.pic { aspect-ratio: auto; max-height: none; background: #000; }
+  .vplayer .fr.pic img { display: block; width: 100%; max-height: 78vh; object-fit: contain; margin: 0 auto; }
   .vplayer iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
   .vplayer .cap { display: flex; align-items: center; gap: 10px; padding: 9px 12px; background: #10244a; }
   .vplayer .cap .t { flex: 1; min-width: 0; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -320,6 +322,7 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
   var REPO = 'https://bbellacicco.github.io/powerplay-feed/', DATA = REPO + 'data/';
   var SITE = 'https://www.powerplaywindsor.com/';
   var qs = new URLSearchParams(location.search);
+  var WANT_POST = (qs.get('post') || '').replace(/[^0-9a-f]/g, ''), postOpened = false;
   var LINK = {
     local: qs.get('local') || SITE + 'scores-standings',
     scores: qs.get('scores') || SITE + 'scores-standings',
@@ -374,7 +377,7 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
 
   // ---------- rows ----------
   var ROWS = [
-    { key: 'stories', title: 'Latest stories', by: ['St. Clair College Alumni', 'logos/st-clair-alumni.png'], all: LINK.local, tab: 'stories' },
+    { key: 'stories', title: 'What\u2019s New', gold: 'New', by: ['St. Clair College Alumni', 'logos/st-clair-alumni.png'], all: LINK.local, tab: 'stories' },
     { key: 'network', title: 'Powerplay Network', by: ['Maple Leaf Pro Wrestling', 'https://static.wixstatic.com/media/0be2db_9da56760ff7c49b798008220ba008a1a~mv2.jpg/v1/fit/w_200,h_200,q_90/mlp-pro-wrestling.jpg'], all: LINK.network, tab: 'network' },
     { key: 'photos', title: 'Game Day Snaps', gold: 'Snaps', by: null, all: null, tab: null },
     { key: 'athletes', title: 'Athlete profiles', by: null, all: LINK.athletes, tab: 'athletes' },
@@ -490,6 +493,7 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
     var c = el(vid && opts && opts.play ? 'button' : 'a', 'scard');
     if (c.tagName === 'A') { c.href = s.url; if (s.url.indexOf(SITE) === 0) c.target = '_top'; else { c.target = '_blank'; c.rel = 'noopener'; } }
     else { c.type = 'button'; c.onclick = function () { playRow(s, c, c.closest('section')); }; }
+    if (s.post && c.tagName === 'A') c.onclick = function (e) { e.preventDefault(); playPost(s, c.closest('section')); };
     var pic = el('div', 'pic');
     function tile() {
       pic.innerHTML = ''; pic.className = 'pic';
@@ -669,6 +673,7 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
       if (f.url.indexOf(SITE) === 0) big.target = '_top'; else { big.target = '_blank'; big.rel = 'noopener'; }   // a story on another site opens in a new tab
       featImg(big, f, 1100, 620);
       if (f.snaps) big.onclick = function (e) { e.preventDefault(); playShow(f.snaps, featEl); };   // the slideshow plays right here
+      if (f.post) big.onclick = function (e) { e.preventDefault(); playPost(f, featEl); };          // a quick post opens right here
       var ov = el('div', 'ov'); ov.appendChild(el('div', 'kick', f.kick || (/nhl\.com/.test(f.url) ? 'NHL' : f.team && f.team !== 'powerplay' ? (TEAM[f.team] || 'Latest') : storyCat(f, 'Latest'))));
       ov.appendChild(el('h2', null, f.headline));
       if (f.summary && f.summary !== f.headline) ov.appendChild(el('p', null, f.summary));
@@ -681,7 +686,7 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
       var b = f.isVideo ? PPShare.button({ title: f.headline, url: SITE + 'scores-standings?tab=network&v=' + encodeURIComponent(vk), text: f.headline + ' | Powerplay Network', image: f.image || '' })
         : f.snaps ? PPShare.button({ title: f.snaps.title, url: f.snaps.url, text: f.snaps.title + ' | Powerplay Windsor', image: f.snaps.cover })
         // a Powerplay blog post shares its own address; a team's story on another site goes through the Local Hub
-        : PPShare.button({ title: f.headline, url: /^https:\/\/(www\.)?powerplaywindsor\.com\/post\//.test(f.url) ? f.url : SITE + 'scores-standings?tab=stories&s=' + skey(f.url) + '&team=' + encodeURIComponent(f.team || 'powerplay'),
+        : PPShare.button({ title: f.headline, url: /^https:\/\/(www\.)?powerplaywindsor\.com\/post\//.test(f.url) || f.post ? f.url : SITE + 'scores-standings?tab=stories&s=' + skey(f.url) + '&team=' + encodeURIComponent(f.team || 'powerplay'),
           text: f.headline + ' | Powerplay Windsor', image: f.image ? wix(f.image, 1200, 630) : '' });
       b.classList.add('mini', 'topshare'); b.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); });
       return b;
@@ -693,6 +698,7 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
       if (s.isVideo) { var vb2 = vidBox(s, 'small', 560, 320), sb2 = feedShare(s); if (sb2) vb2.appendChild(sb2); side.appendChild(vb2); return; }
       var a = el('a', 'small'); a.href = s.url; a.target = '_top'; featImg(a, s, 560, 320);
       if (s.snaps) a.onclick = function (e) { e.preventDefault(); playShow(s.snaps, featEl); };
+      if (s.post) a.onclick = function (e) { e.preventDefault(); playPost(s, featEl); };
       var o = el('div', 'ov'); o.appendChild(el('div', 'kick', s.kick || storyCat(s, 'Recent'))); o.appendChild(el('h3', null, s.headline)); a.appendChild(o);
       var sb3 = feedShare(s); if (sb3) a.appendChild(sb3);
       side.appendChild(a);
@@ -719,7 +725,7 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
   var vp = document.getElementById('vplayer');
   function playRow(s, cardEl, at) {
     var src = vidEmbed(s.url); if (!src) return openUrl(s.url);
-    var fr = document.getElementById('vframe'); fr.innerHTML = ''; fr.classList.remove('gal');
+    var fr = document.getElementById('vframe'); fr.innerHTML = ''; fr.classList.remove('gal'); fr.classList.remove('pic');
     // the player is shown (full size) BEFORE the video loads: a video that starts in a hidden box measures
     // itself as tiny and picks the lowest quality (240p)
     vp.classList.add('on');
@@ -755,13 +761,27 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
   }
   // share: the link opens powerplaywindsor.com with the video playing (Local Hub, Network)
   if (window.PPShare) document.getElementById('vshare').appendChild(PPShare.button(function () {
-    var s = vcur || {}, k = vkey(s.url).replace(':', '-'), yt = /^[\w-]{11}$/.test(k);
+    var s = vcur || {};
+    if (s.post) return { title: s.headline, url: s.url, text: s.headline + ' | Powerplay Windsor', image: s.image };
+    var k = vkey(s.url).replace(':', '-'), yt = /^[\w-]{11}$/.test(k);
     return { title: s.headline || 'Powerplay Network', url: SITE + 'scores-standings?tab=network&v=' + encodeURIComponent(k),
              text: (s.headline || 'A Powerplay video') + ' | Powerplay Network', image: yt ? 'https://i.ytimg.com/vi/' + k + '/hqdefault.jpg' : (s.image || '') };
   }));
   // Game Day Snaps slideshows play in the same pop-up, below the strip heading
+  // a quick post from the phone sheet (photo + a few words): opens right here, over the box it was tapped in
+  function playPost(s, at) {
+    var fr = document.getElementById('vframe'); fr.innerHTML = ''; fr.classList.remove('gal'); fr.classList.add('pic');
+    var im = new Image(); im.src = s.image; im.alt = s.headline; fr.appendChild(im);
+    document.getElementById('vtitle').textContent = s.headline;
+    document.getElementById('vext').style.display = 'none';
+    vcur = s; document.getElementById('vshare').style.display = '';
+    vDesc(s);
+    vp.classList.add('on');
+    var sec = at || document.getElementById('row-stories'), page = document.getElementById('page');
+    vp.style.top = Math.max(0, Math.min(sec.offsetTop - (at ? 0 : 10), page.offsetHeight - vp.offsetHeight - 10)) + 'px';
+  }
   function playShow(sh, at) {   // at: the element to open over (the top-story box); otherwise over the Game Day Snaps row
-    var fr = document.getElementById('vframe'); fr.innerHTML = ''; fr.classList.add('gal');
+    var fr = document.getElementById('vframe'); fr.innerHTML = ''; fr.classList.remove('pic'); fr.classList.add('gal');
     var f = document.createElement('iframe'); f.src = REPO + 'gallery.html?show=' + encodeURIComponent(sh.key); f.allow = 'fullscreen'; f.allowFullscreen = true; f.title = sh.title; fr.appendChild(f);
     document.getElementById('vtitle').textContent = sh.title;
     var ext = document.getElementById('vext'); ext.href = sh.url; ext.textContent = 'Open full page ↗'; ext.style.display = '';
@@ -770,7 +790,7 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
     var sec = at || document.getElementById('row-photos'), page = document.getElementById('page');
     vp.style.top = Math.max(0, Math.min(sec.offsetTop - (at ? 0 : 10), page.offsetHeight - vp.offsetHeight - 10)) + 'px';
   }
-  document.getElementById('vclose').onclick = function () { vp.classList.remove('on'); var fr = document.getElementById('vframe'); fr.innerHTML = ''; fr.classList.remove('gal'); };
+  document.getElementById('vclose').onclick = function () { vp.classList.remove('on'); var fr = document.getElementById('vframe'); fr.innerHTML = ''; fr.classList.remove('gal'); fr.classList.remove('pic'); };
 
   // ---------- search ----------
   if (window.innerWidth < 700) document.getElementById('q').placeholder = 'Search teams, scores, stories\u2026';
@@ -1074,6 +1094,11 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
         var who = s.team === 'junior' || s.team === 'powerplay' ? s.club || TEAM[s.team] : TEAM[s.team] + (s.sport ? ' · ' + s.sport : '');
         return storyCard(s, { tag: TEAM[s.team] === 'Powerplay' ? 'Powerplay' : (s.team === 'junior' ? (s.club || 'Junior') : TEAM[s.team]), sub: who + ' · ' + ago(s.published), tile: s.team === 'junior' ? (s.club || '').replace(/^(Windsor|St\. Clair)\s+/, '') : null });
       }), 'Stories are on the way.');
+      // a shared quick post (?post=<id>, passed on by the Local Hub): it opens as soon as the page loads
+      if (WANT_POST && !postOpened) {
+        var wp = stories.filter(function (s) { return s.post === WANT_POST; })[0];
+        if (wp) { postOpened = true; setTimeout(function () { playPost(wp, document.getElementById('feat')); }, 400); }
+      }
       // Game Day Snaps (game reports in pictures): newest first; tap one and it plays right here
       var shows = (r[7] && r[7].slideshows) || [];
       fill("photos", shows.slice(0, 12).map(function (sh, n) {
