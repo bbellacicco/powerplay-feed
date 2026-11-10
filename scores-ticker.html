@@ -88,6 +88,7 @@ html.slim #morebar{display:none!important}
 <script>
 var SPEED = 50;                 // pixels per second
 var MAX_ITEMS = 5;              // local items on the ticker
+var MAX_TOTAL = 5;              // the whole ticker: 5 entries at most
 var MAX_PRO = 3;                // plus up to this many pro games (the teams locals follow), mixed in
 var MAX_FINALS = 16;            // how many recent final scores to consider
 var MAX_UPCOMING = 12;          // upcoming games to show once the finals are old
@@ -296,7 +297,7 @@ function refresh(){
         out = out.concat(loc.splice(0, pro.length ? 2 : loc.length));
         if (pro.length) out.push(pro.shift());
       }
-      build(out);
+      build(out.slice(0, MAX_TOTAL));      // never more than 5 on the bar: live games first, then the rest
     });
 }
 refresh();
