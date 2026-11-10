@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T16:50:12-05:00",
+ "updated": "2026-11-10T17:01:51-05:00",
  "today": "2026-11-10",
  "range": [
   "2026-11-07",
@@ -78,8 +78,8 @@
    "count": 24
   },
   "standings_pjhl": {
-   "ok": false,
-   "error": "no PJHL standings found on the team pages"
+   "ok": true,
+   "count": 8
   },
   "standings_pwhl": {
    "ok": true,
@@ -4483,98 +4483,98 @@
      {
       "name": "Essex 73's",
       "abbr": "ESS",
-      "gp": 15,
-      "w": 14,
+      "gp": 17,
+      "w": 16,
       "l": 1,
       "otl": 0,
-      "pts": 28,
-      "gf": 61,
-      "ga": 19,
-      "strk": "W13"
+      "pts": 32,
+      "gf": 72,
+      "ga": 22,
+      "strk": "W16"
      },
      {
       "name": "Lakeshore Canadiens",
       "abbr": "LAK",
-      "gp": 16,
-      "w": 13,
+      "gp": 17,
+      "w": 14,
       "l": 1,
       "otl": 2,
-      "pts": 28,
-      "gf": 64,
-      "ga": 27,
-      "strk": "W2"
-     },
-     {
-      "name": "Blenheim Blades",
-      "abbr": "BLE",
-      "gp": 14,
-      "w": 10,
-      "l": 4,
-      "otl": 0,
-      "pts": 20,
-      "gf": 62,
-      "ga": 37,
-      "strk": "L1"
-     },
-     {
-      "name": "Dresden Kings",
-      "abbr": "DRE",
-      "gp": 17,
-      "w": 8,
-      "l": 8,
-      "otl": 1,
-      "pts": 17,
-      "gf": 77,
-      "ga": 67,
-      "strk": "L2"
+      "pts": 30,
+      "gf": 68,
+      "ga": 31,
+      "strk": "W5"
      },
      {
       "name": "Mooretown Flags",
       "abbr": "MOO",
       "gp": 19,
-      "w": 7,
+      "w": 8,
       "l": 9,
-      "otl": 3,
-      "pts": 17,
-      "gf": 68,
-      "ga": 71,
-      "strk": "W3"
+      "otl": 2,
+      "pts": 18,
+      "gf": 65,
+      "ga": 67,
+      "strk": "L2"
      },
      {
-      "name": "Wheatley Sharks",
-      "abbr": "WHE",
-      "gp": 18,
-      "w": 7,
-      "l": 11,
+      "name": "Dresden Kings",
+      "abbr": "DRE",
+      "gp": 16,
+      "w": 8,
+      "l": 7,
+      "otl": 1,
+      "pts": 17,
+      "gf": 70,
+      "ga": 64,
+      "strk": "W1"
+     },
+     {
+      "name": "Blenheim Blades",
+      "abbr": "BLE",
+      "gp": 15,
+      "w": 8,
+      "l": 7,
       "otl": 0,
-      "pts": 14,
-      "gf": 49,
-      "ga": 69,
-      "strk": "L4"
+      "pts": 16,
+      "gf": 52,
+      "ga": 45,
+      "strk": "L5"
      },
      {
       "name": "Amherstburg Admirals",
       "abbr": "AMH",
       "gp": 17,
-      "w": 5,
-      "l": 12,
+      "w": 7,
+      "l": 10,
       "otl": 0,
-      "pts": 10,
-      "gf": 50,
-      "ga": 61,
-      "strk": "W1"
+      "pts": 14,
+      "gf": 63,
+      "ga": 55,
+      "strk": "W2"
+     },
+     {
+      "name": "Wheatley Sharks",
+      "abbr": "WHE",
+      "gp": 18,
+      "w": 6,
+      "l": 10,
+      "otl": 2,
+      "pts": 14,
+      "gf": 52,
+      "ga": 75,
+      "strk": "L7"
      },
      {
       "name": "Walpole Island Wild",
       "abbr": "WAL",
-      "gp": 16,
+      "gp": 15,
       "w": 0,
-      "l": 16,
+      "l": 15,
       "otl": 0,
       "pts": 0,
-      "gf": 17,
+      "gf": 15,
       "ga": 98,
-      "strk": "L16"
+      "strk": "L15"
      }
     ]
    }
