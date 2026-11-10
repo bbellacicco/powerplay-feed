@@ -86,6 +86,7 @@
   var STORY = (new URLSearchParams(location.search).get('story') || '').replace(/[^0-9a-f]/g, '');
   var PROFILE = (new URLSearchParams(location.search).get('profile') || '').toLowerCase().replace(/[^a-z0-9-]/g, '');   // a shared athlete profile
   var TEAM = (new URLSearchParams(location.search).get('team') || '').replace(/[^a-z]/g, '');   // the shared story's team
+  var POST = (new URLSearchParams(location.search).get('post') || '').replace(/[^0-9a-f]/g, '');   // a shared quick post (photo + a few words)
   var built = {}, box = document.getElementById('panes');
   function show(tab) {
     if (!PARTS[tab]) tab = 'stories';
@@ -93,7 +94,7 @@
       var pane = document.createElement('div'); pane.className = 'pane'; pane.id = 'pane-' + tab;
       PARTS[tab].forEach(function (w) {
         var f = document.createElement('iframe');
-        f.src = REPO + w[0] + V + w[3] + ((tab === 'network' || tab === 'spotlight') && PLAY ? '&play=' + encodeURIComponent(PLAY) : '') + (tab === 'athletes' && PROFILE ? '&p=' + PROFILE : '') + (tab === 'stories' && STORY && w[0] === 'local-news.html' ? '&story=' + STORY + (TEAM ? '&tab=' + TEAM : '') : '') + '&in=sports'; f.title = w[0].replace(/[_.].*$/, '');
+        f.src = REPO + w[0] + V + w[3] + ((tab === 'network' || tab === 'spotlight') && PLAY ? '&play=' + encodeURIComponent(PLAY) : '') + (tab === 'athletes' && PROFILE ? '&p=' + PROFILE : '') + (tab === 'stories' && STORY && w[0] === 'local-news.html' ? '&story=' + STORY + (TEAM ? '&tab=' + TEAM : '') : '') + (tab === 'stories' && POST && w[0] === 'home.html' ? '&post=' + POST : '') + '&in=sports'; f.title = w[0].replace(/[_.].*$/, '');
         f.scrolling = 'no';
         f.style.height = (phone ? w[2] : w[1]) + 'px';
         f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; f.allowFullscreen = true;
@@ -121,7 +122,7 @@
     Object.keys(built).forEach(function (k) { built[k].classList.toggle('on', k === tab); });
     current = tab;
     [].forEach.call(document.querySelectorAll('.switch button'), function (b) { b.setAttribute('aria-selected', String(b.getAttribute('data-tab') === tab)); });
-    try { history.replaceState(null, '', '?tab=' + tab + ((tab === 'network' || tab === 'spotlight') && PLAY ? '&play=' + PLAY : '') + (tab === 'athletes' && PROFILE ? '&profile=' + PROFILE : '') + (tab === 'stories' && STORY ? '&story=' + STORY : '')); } catch (e) {}
+    try { history.replaceState(null, '', '?tab=' + tab + ((tab === 'network' || tab === 'spotlight') && PLAY ? '&play=' + PLAY : '') + (tab === 'athletes' && PROFILE ? '&profile=' + PROFILE : '') + (tab === 'stories' && STORY ? '&story=' + STORY : '') + (tab === 'stories' && POST ? '&post=' + POST : '')); } catch (e) {}
   }
   // each widget reports its height; its frame matches it exactly, so nothing scrolls inside the page
   window.addEventListener('message', function (e) {
