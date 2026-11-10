@@ -268,17 +268,19 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
 </head>
 <body>
 <div class="page" id="page">
-  <div class="hubtitle"><h1>What&rsquo;s <span>Going On</span></h1><div class="n">The newest stories, videos and Game Day Snaps</div></div>
-  <div class="feat" id="feat"></div>
-  <div class="guide" id="guide"></div>
-
   <form class="search" id="sform" role="search">
     <label class="field">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
-      <input id="q" type="search" placeholder="Search teams, scores, stories… or ask ‘how did the Spits do?’" autocomplete="off" enterkeyhint="search" aria-label="Search Powerplay Windsor">
+      <input id="q" type="search" placeholder="What would you like to know?" autocomplete="off" enterkeyhint="search" aria-label="Search Powerplay Windsor">
     </label>
     <button class="btn" type="submit">Search</button>
   </form>
+
+  <div class="hubtitle"><h1>What&rsquo;s <span>Going On</span></h1><div class="n">The newest stories, videos and Game Day Snaps</div></div>
+  <div class="feat" id="feat"></div>
+
+  <div class="guide" id="guide"></div>
+
 
   <div id="rows"></div>
 
@@ -793,7 +795,6 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
   document.getElementById('vclose').onclick = function () { vp.classList.remove('on'); var fr = document.getElementById('vframe'); fr.innerHTML = ''; fr.classList.remove('gal'); fr.classList.remove('pic'); };
 
   // ---------- search ----------
-  if (window.innerWidth < 700) document.getElementById('q').placeholder = 'Search teams, scores, stories\u2026';
   document.getElementById('sform').addEventListener('submit', function (e) {
     e.preventDefault();
     var v = document.getElementById('q').value.trim(); if (!v) { document.getElementById('q').focus(); return; }
