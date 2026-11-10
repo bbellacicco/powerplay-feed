@@ -80,6 +80,10 @@
   .teamswrap iframe { position: absolute; left: 0; top: 0; width: 100%; height: 58px; border: 0; border-radius: 10px; background: #10244a; box-shadow: 0 0 0 1px rgba(255,255,255,.1); }
   .teamswrap.open iframe { box-shadow: 0 0 0 1px rgba(232,176,33,.5), 0 18px 44px rgba(0,0,0,.6); }
   html.hubview .teamswrap { display: none !important; }
+  /* a team or league open in Local Teams: the rest of the page blurs and dims behind it; a tap on it closes the box */
+  #page > *:not(#teamswrap) { transition: filter .2s ease; }
+  html.teamsopen #page > *:not(#teamswrap) { filter: blur(6px) brightness(.55); cursor: pointer; }
+  html.teamsopen #page > *:not(#teamswrap) * { pointer-events: none; }
   .field { flex: 1; display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 16px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 8px; }
   .field:focus-within { border-color: var(--accent); }
   .field svg { width: 18px; height: 18px; stroke: var(--muted); flex: none; }
@@ -1204,7 +1208,14 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
     if (e.data.bar) wrap.style.height = e.data.bar + 'px';
     f.style.height = Math.min(e.data.h, 6000) + 'px';
     wrap.classList.toggle('open', !!e.data.open);
+    document.documentElement.classList.toggle('teamsopen', !!e.data.open);
   });
+  // tapping the blurred page closes the open team or league
+  document.getElementById('page').addEventListener('click', function (e) {
+    if (!document.documentElement.classList.contains('teamsopen') || wrap.contains(e.target)) return;
+    e.preventDefault(); e.stopPropagation();
+    try { f.contentWindow.postMessage({ pp: 'closeteams' }, '*'); } catch (er) {}
+  }, true);
 })();
 </script>
 <script>
