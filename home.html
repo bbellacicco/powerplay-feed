@@ -83,6 +83,7 @@
   .field svg { width: 18px; height: 18px; stroke: var(--muted); flex: none; }
   .field input { flex: 1; min-width: 0; background: transparent; border: 0; outline: 0; color: var(--text); font: inherit; font-size: 16px; }
   .field input::placeholder { color: var(--muted); }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }   /* iPhones: no enlarging the text inside the box */
   .search .btn { height: 48px; }
 
   /* ---------- rows ---------- */
@@ -225,6 +226,7 @@
 
     .btn { padding: 9px 15px; font-size: 13px; }
     .guide { margin: 20px 16px 0; } .search { margin: 18px 16px 0; } .search .btn { display: none; }
+    .field { padding: 0 12px; gap: 8px; } .field input::placeholder { font-size: 15px; }
     section { margin-top: 30px; }
     .followband { margin: 4px 16px 18px; padding: 14px; }
     .followband .pps-follow { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; gap: 8px; }
