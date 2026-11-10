@@ -341,14 +341,18 @@
       if (x[0] === 'search') { b.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>'; b.setAttribute('aria-label', 'Search for a team'); }
       else b.textContent = x[1];
       b.onclick = function () {
-        if (x[0] === 'ohl') { var sp = T.filter(function (t) { return t.sec === 'ohl'; })[0]; if (sp) openTeam(sp); return; }
+        if (x[0] === 'ohl') { var sp = T.filter(function (t) { return t.sec === 'ohl'; })[0];
+          if (sp && document.getElementById('team').dataset.id === 'spitfires') { closeTeam(); return; }   // tap again to close
+          if (sp) openTeam(sp); markBar(); return; }
+        closeTeam();                                   // one box at a time: a league's list replaces any open team
         barPick = barPick === x[0] ? '' : x[0]; drawDrop(); markBar();
       };
       bar.appendChild(b);
     });
     drawDrop();
   }
-  function markBar() { [].forEach.call(document.querySelectorAll('#bar .lb'), function (b) { b.classList.toggle('on', b.dataset.k === barPick); }); }
+  function markBar() { var open = document.getElementById('team').dataset.id;
+    [].forEach.call(document.querySelectorAll('#bar .lb'), function (b) { b.classList.toggle('on', b.dataset.k === barPick || (b.dataset.k === 'ohl' && open === 'spitfires')); }); }
   function drawDrop() {
     var d = document.getElementById('drop'); d.innerHTML = ''; d.hidden = !barPick;
     if (!barPick) return;
@@ -451,7 +455,7 @@
   }
   function closeTeam() {
     document.getElementById('team').hidden = true; document.getElementById('team').dataset.id = '';
-    if (BAR) return;
+    if (BAR) { markBar(); return; }
     document.getElementById('dir').hidden = false;
     try { history.replaceState(null, '', location.pathname + location.search.replace(/([?&])team=[^&]*&?/, '$1').replace(/[?&]$/, '')); } catch (e) {}
   }
