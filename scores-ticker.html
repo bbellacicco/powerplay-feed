@@ -87,7 +87,8 @@ html.slim #morebar{display:none!important}
 </div>
 <script>
 var SPEED = 50;                 // pixels per second
-var MAX_ITEMS = 5;              // total items on the ticker
+var MAX_ITEMS = 5;              // local items on the ticker
+var MAX_PRO = 3;                // plus up to this many pro games (the teams locals follow), mixed in
 var MAX_FINALS = 16;            // how many recent final scores to consider
 var MAX_UPCOMING = 12;          // upcoming games to show once the finals are old
 var FRESH_HOURS = 24;           // a final score counts as "current" for this many hours after the game
@@ -96,9 +97,10 @@ var BASE = 'https://bbellacicco.github.io/powerplay-feed/data/';
 var PRO = {                     // league: [ESPN path, our team abbreviations, label]
   nfl: ['football/nfl', ['DET','BUF'], 'NFL'],
   nhl: ['hockey/nhl', ['DET','TOR','MTL'], 'NHL'],
-  nba: ['basketball/nba', ['DET','TOR'], 'NBA']
+  nba: ['basketball/nba', ['DET','TOR'], 'NBA'],
+  mlb: ['baseball/mlb', ['DET','TOR'], 'MLB']
 };
-var mix = new URLSearchParams(location.search).get('mix') || 'local';   // local teams only unless ?mix=all or ?mix=pro
+var mix = new URLSearchParams(location.search).get('mix') || 'all';   // local + our pro teams; ?mix=local or ?mix=pro for one only
 
 var stage = document.getElementById('ticker-stage');
 var x = 0, loopWidth = 0, lastT = null, raf = null, lastKey = '';
@@ -188,7 +190,7 @@ function proItems(){
           var a = c.filter(function(t){ return t.homeAway === 'away'; })[0], h = c.filter(function(t){ return t.homeAway === 'home'; })[0];
           var kind = st.state === 'in' ? 'live' : st.state === 'post' ? 'final' : (dayKey(new Date(e.date)) === dayKey(now) ? 'upcoming' : null);
           if (!kind) return null;
-          return {pro: true, kind: kind, start: e.date, left: a.team.shortDisplayName, right: h.team.shortDisplayName,
+          return {pro: true, today: kind === 'upcoming', kind: kind, start: e.date, left: a.team.shortDisplayName, right: h.team.shortDisplayName,
                   ls: kind === 'upcoming' ? null : Number(a.score), rs: kind === 'upcoming' ? null : Number(h.score),
                   meta: [PRO[k][2], kind === 'live' ? st.shortDetail : kind === 'upcoming' ? clock(new Date(e.date)) : (st.shortDetail !== 'Final' ? st.shortDetail.replace('Final/', '') : '')].filter(Boolean).join(' · ')};
         }).filter(Boolean);
@@ -203,7 +205,8 @@ function proItems(){
 // Within a team group: live, then finals (newest first), then upcoming.
 // Once the finals are old (none in the last FRESH_HOURS), upcoming games fill the bar.
 var KIND_ORDER = { live: 0, final: 1, upcoming: 2 };
-function order(items){
+function order(items, max){
+  max = max || MAX_ITEMS;
   var now = Date.now(), since = now - FRESH_HOURS * 3600e3;
   var todayKey = dayKey(new Date());
   var live = items.filter(function(i){ return i.kind === 'live'; });
@@ -218,9 +221,9 @@ function order(items){
   };
   // live games and fresh finals first; if that's fewer than MAX_ITEMS, the next games coming up
   // fill the rest (soonest first), so a lone score doesn't just repeat across the bar
-  var top = live.concat(fin).sort(byPrio).slice(0, MAX_ITEMS);
+  var top = live.concat(fin).sort(byPrio).slice(0, max);
   var soon = up.sort(function(a, b){ return a.start < b.start ? -1 : a.start > b.start ? 1 : (a.prio || 5) - (b.prio || 5); });
-  return top.concat(soon.slice(0, MAX_ITEMS - top.length));
+  return top.concat(soon.slice(0, max - top.length));
 }
 
 // ---------- drawing (same seamless loop as ticker.html)
@@ -281,7 +284,15 @@ function tick(t){
 
 function refresh(){
   Promise.all([mix === 'pro' ? [] : localItems(), mix === 'local' ? [] : proItems()])
-    .then(function(r){ build(order(r[0].concat(r[1]))); });
+    .then(function(r){
+      // local games keep their spots; our pro teams' games are mixed in after every two local ones
+      var loc = order(r[0], MAX_ITEMS), pro = order(r[1], mix === 'pro' ? MAX_ITEMS : MAX_PRO), out = [];
+      while (loc.length || pro.length) {
+        out = out.concat(loc.splice(0, pro.length ? 2 : loc.length));
+        if (pro.length) out.push(pro.shift());
+      }
+      build(out);
+    });
 }
 refresh();
 setInterval(refresh, 60000);            // check for new scores every minute
