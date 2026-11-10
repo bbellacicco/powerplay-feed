@@ -168,6 +168,7 @@
 
   var qs = new URLSearchParams(location.search);
   var state = { tab: LEAGUES[qs.get('tab')] || qs.get('tab') === 'all' ? qs.get('tab') : 'ours', team: 'all' };
+  var LOCK = qs.get('lock') === '1' && !!LEAGUES[state.tab];   // one league only (chosen in the Pro Hub's league bar)
   var stories = { ours: [], all: [], nfl: [], nhl: [], nba: [], mlb: [], cfl: [], pwhl: [] };
 
   function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
@@ -248,6 +249,7 @@
 
   function tabs() {
     var box = document.getElementById('tabs'); box.innerHTML = '';
+    if (LOCK) { box.style.display = 'none'; return; }   // the Pro Hub's league bar picked the league
     TABS.forEach(function (t) {
       var b = el('button', 'pill', t[1]);
       b.setAttribute('aria-pressed', String(state.tab === t[0]));
