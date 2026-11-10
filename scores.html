@@ -53,6 +53,7 @@
 </style>
 </head>
 <body>
+  <iframe id="teambar" title="Find a team" scrolling="no" style="display:block;width:100%;height:58px;border:0;background:#10244a"></iframe>
   <div class="top" id="top">
     <div class="switch" role="tablist" aria-label="Section">
       <button type="button" role="tab" data-tab="stories">Stories</button>
@@ -87,6 +88,9 @@
   var PROFILE = (new URLSearchParams(location.search).get('profile') || '').toLowerCase().replace(/[^a-z0-9-]/g, '');   // a shared athlete profile
   var TEAM = (new URLSearchParams(location.search).get('team') || '').replace(/[^a-z]/g, '');   // the shared story's team
   var POST = (new URLSearchParams(location.search).get('post') || '').replace(/[^0-9a-f]/g, '');   // a shared quick post (photo + a few words)
+  var FIND = (new URLSearchParams(location.search).get('find') || '').toLowerCase().replace(/[^a-z0-9-]/g, '');   // a team's own link (Find a team)
+  // the Find a team bar across the top: Spitfires, Lancers, Saints, junior hockey, high school; a team opens right under it
+  document.getElementById('teambar').src = REPO + 'teams.html' + V + '&view=bar&in=sports' + (FIND ? '&find=' + FIND : '');
   var built = {}, box = document.getElementById('panes');
   function show(tab) {
     if (!PARTS[tab]) tab = 'stories';
@@ -126,8 +130,8 @@
   }
   // each widget reports its height; its frame matches it exactly, so nothing scrolls inside the page
   window.addEventListener('message', function (e) {
-    if (!e.data || e.data.pp !== 'height' || !(e.data.h > 50)) return;
-    [].forEach.call(document.querySelectorAll('.pane iframe'), function (f) {
+    if (!e.data || e.data.pp !== 'height' || !(e.data.h > 30)) return;
+    [].forEach.call(document.querySelectorAll('.pane iframe, #teambar'), function (f) {
       if (f.contentWindow === e.source) f.style.height = Math.min(e.data.h, 9000) + 'px';
     });
   });
