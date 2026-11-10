@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T21:17:03-05:00",
+ "updated": "2026-11-09T21:31:58-05:00",
  "today": "2026-11-09",
  "range": [
   "2026-11-06",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -1388,6 +1388,17 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "CFL Cinematic Recap: BC @ Edmonton",
+   "summary": "",
+   "published": "2026-11-10T12:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/2LzZF5MLUWomST4lJ9d1ey/5a428c19e889c15a98f465a9addb43f3/WF_Thumb_2.png?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/cfl-cinematic-recap-bc-edmonton",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Who has the edge in the 113th Grey Cup?",
    "summary": "",
    "published": "2026-11-10T00:00:00-05:00",
@@ -1398,6 +1409,17 @@
     "Elks"
    ],
    "url": "https://www.cfl.ca/article/who-has-the-edge-in-the-113th-grey-cup",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "EVERY CFL Touchdown from Division Finals presented by Wegovy®",
+   "summary": "",
+   "published": "2026-11-09T22:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/3XW4Y6tMBExA8poh4JfzBj/12b8c878f607eb2cdf485a1fecd85fe9/EveryTD.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/every-cfl-touchdown-from-division-finals-presented-by-wegovy",
    "source": "CFL.ca"
   },
   {
@@ -1568,32 +1590,6 @@
     "Elks"
    ],
    "url": "https://www.cfl.ca/article/huge-third-down-stop-for-elks-leads-to-big-fumble-return",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Fajardo to Mack in CRUNCH TIME",
-   "summary": "",
-   "published": "2026-11-07T21:19:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/6twsfKwR4U0K2o2d11oMKi/215cc2613f80949e1fc02e9f7aa4758d/EDM_2ND_TD.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Elks"
-   ],
-   "url": "https://www.cfl.ca/article/fajardo-to-mack-in-crunch-time",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Nathan Rourke ties it up!!",
-   "summary": "",
-   "published": "2026-11-07T21:05:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/1v4Wu1q26mgJXsa6cnjwCn/0b57f83b0fdfe1c52e6603678390153b/BC_1ST_TD.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Lions"
-   ],
-   "url": "https://www.cfl.ca/article/nathan-rourke-ties-it-up",
    "source": "CFL.ca"
   },
   {
@@ -2137,19 +2133,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Ducks reclaiming mighty status behind youthful scoring surge",
-   "summary": "The way things are going, Anaheim might need to re-insert another word before “Ducks.” Ryan Dixon digs into the Ducks’ scoring surge, among other topics from the week that was in the NHL.",
-   "published": "2026-11-09T11:30-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/ducks.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 3,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/ducks-reclaiming-mighty-status-behind-youthful-scoring-surge/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "mlb",
    "headline": "Tigers’ McGonigle, Reds’ Stewart named MLB’s Rookies of the Year",
    "summary": "",
@@ -2324,6 +2307,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/canadiens-arber-xhekaj-finding-comfort-zone-in-depth-role/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Ducks reclaiming mighty status behind youthful scoring surge",
+   "summary": "The way things are going, Anaheim might need to re-insert another word before “Ducks.” Ryan Dixon digs into the Ducks’ scoring surge, among other topics from the week that was in the NHL.",
+   "published": "2026-11-09T11:30-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/ducks.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 3,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/ducks-reclaiming-mighty-status-behind-youthful-scoring-surge/",
    "source": "Sportsnet"
   },
   {
@@ -2562,32 +2558,6 @@
    "sn_team_count": 0,
    "sport": "Curling",
    "url": "https://www.sportsnet.ca/curling/article/takeaways-parity-makes-repeating-as-gsoc-champs-a-rare-reality/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Miami to host 2028 NBA All-Star Weekend, AP source says",
-   "summary": "The NBA is finalizing Miami’s Kaseya Center as the host of the 2028 NBA All-Star Weekend, ESPN’s Shams Charania reported Monday.",
-   "published": "2026-11-09T13:46-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/heat-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/report-miami-to-host-2028-nba-all-star-weekend/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Giannis Antetokounmpo left ‘speechless’ after Doc Rivers’ criticisms",
-   "summary": "Speaking to Eric Nehm of The Athletic on Sunday, the Miami Heat forward was left stunned and “speechless” after learning of Rivers’ comments from an episode of the Bill Simmons Podcast, saying it’s “not easy” to coach to",
-   "published": "2026-11-09T12:35-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/football-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/giannis-antetokounmpo-left-speechless-after-doc-rivers-criticisms/",
    "source": "Sportsnet"
   },
   {
