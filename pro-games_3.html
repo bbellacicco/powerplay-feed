@@ -213,7 +213,8 @@
   var qs = new URLSearchParams(location.search);
   var UPCOMING = qs.get('view') === 'upcoming';     // the Pro Hub's Coming Up tab
   var view = qs.get('view') === 'standings' ? 'standings' : qs.get('view') === 'stats' ? 'stats' : 'games';
-  var state = { tab: LEAGUES[qs.get('tab')] ? qs.get('tab') : 'all', team: 'all' };   // opens on All (no Our Teams tab)
+  var state = { tab: LEAGUES[qs.get('tab')] ? qs.get('tab') : 'all', team: 'all' };
+  var LOCK = qs.get('lock') === '1' && !!LEAGUES[state.tab];   // one league only (chosen in the Pro Hub's league bar)   // opens on All (no Our Teams tab)
   var games = [];
 
   function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
@@ -335,6 +336,7 @@
 
   function tabs() {
     var box = document.getElementById('tabs'); box.innerHTML = '';
+    if (LOCK) { box.style.display = 'none'; return; }   // the Pro Hub's league bar picked the league
     TABS.forEach(function (t) {
       if (view === 'standings' && (t[0] === 'ours' || t[0] === 'all' || NO_STANDINGS.indexOf(t[0]) >= 0)) return;   // standings are one league at a time
       if (view === 'stats' && t[0] === 'all') return;                                                                  // stats too
