@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T00:30:02-05:00",
+ "updated": "2026-11-10T18:00:01-05:00",
  "today": "2026-11-10",
  "leagues": {
   "oua": {
@@ -1262,6 +1262,682 @@
         "293",
         "0-4",
         "Lost 4"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "oua_mice": {
+   "label": "OUA Men's Hockey",
+   "url": "https://oua.ca/sports/mice/2026-27/standings",
+   "groups": [
+    {
+     "group": "OUA Men's Hockey · West",
+     "cols": [
+      "GP",
+      "W",
+      "L",
+      "OTW",
+      "SOW",
+      "OTL",
+      "SOL"
+     ],
+     "teams": [
+      {
+       "name": "Windsor",
+       "stats": [
+        "9",
+        "6",
+        "3",
+        "0",
+        "0",
+        "2",
+        "0"
+       ]
+      },
+      {
+       "name": "Brock",
+       "stats": [
+        "8",
+        "5",
+        "3",
+        "1",
+        "0",
+        "1",
+        "1"
+       ]
+      },
+      {
+       "name": "Toronto",
+       "stats": [
+        "9",
+        "5",
+        "4",
+        "1",
+        "0",
+        "1",
+        "0"
+       ]
+      },
+      {
+       "name": "Western",
+       "stats": [
+        "9",
+        "5",
+        "4",
+        "0",
+        "1",
+        "0",
+        "0"
+       ]
+      },
+      {
+       "name": "Waterloo",
+       "stats": [
+        "10",
+        "5",
+        "5",
+        "1",
+        "1",
+        "0",
+        "0"
+       ]
+      },
+      {
+       "name": "Guelph",
+       "stats": [
+        "9",
+        "4",
+        "5",
+        "0",
+        "0",
+        "3",
+        "0"
+       ]
+      },
+      {
+       "name": "Lakehead",
+       "stats": [
+        "8",
+        "4",
+        "4",
+        "3",
+        "1",
+        "0",
+        "0"
+       ]
+      },
+      {
+       "name": "Laurier",
+       "stats": [
+        "8",
+        "3",
+        "5",
+        "1",
+        "0",
+        "1",
+        "1"
+       ]
+      },
+      {
+       "name": "TMU",
+       "stats": [
+        "8",
+        "3",
+        "5",
+        "0",
+        "0",
+        "0",
+        "1"
+       ]
+      },
+      {
+       "name": "York",
+       "stats": [
+        "8",
+        "3",
+        "5",
+        "1",
+        "0",
+        "0",
+        "0"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "oua_wice": {
+   "label": "OUA Women's Hockey",
+   "url": "https://oua.ca/sports/wice/2026-27/standings",
+   "groups": [
+    {
+     "group": "OUA Women's Hockey · West",
+     "cols": [
+      "GP",
+      "W",
+      "L",
+      "SOW",
+      "SOL",
+      "PTS",
+      "WIN %"
+     ],
+     "teams": [
+      {
+       "name": "Laurier",
+       "stats": [
+        "8",
+        "6",
+        "2",
+        "0",
+        "1",
+        "0",
+        "0.938"
+       ]
+      },
+      {
+       "name": "Guelph",
+       "stats": [
+        "8",
+        "5",
+        "3",
+        "0",
+        "0",
+        "0",
+        "0.625"
+       ]
+      },
+      {
+       "name": "Windsor",
+       "stats": [
+        "8",
+        "5",
+        "3",
+        "0",
+        "0",
+        "0",
+        "0.625"
+       ]
+      },
+      {
+       "name": "Western",
+       "stats": [
+        "8",
+        "4",
+        "4",
+        "0",
+        "0",
+        "0",
+        "0.500"
+       ]
+      },
+      {
+       "name": "Waterloo",
+       "stats": [
+        "7",
+        "4",
+        "3",
+        "0",
+        "1",
+        "0",
+        "0.643"
+       ]
+      },
+      {
+       "name": "York",
+       "stats": [
+        "7",
+        "1",
+        "6",
+        "1",
+        "0",
+        "0",
+        "0.143"
+       ]
+      },
+      {
+       "name": "Brock",
+       "stats": [
+        "8",
+        "1",
+        "7",
+        "0",
+        "0",
+        "0",
+        "0.375"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "oua_msoc": {
+   "label": "OUA Men's Soccer",
+   "url": "https://oua.ca/sports/msoc/2026-27/standings",
+   "groups": [
+    {
+     "group": "OUA Men's Soccer · West",
+     "cols": [
+      "GP",
+      "W-L-T",
+      "PTS"
+     ],
+     "teams": [
+      {
+       "name": "York",
+       "stats": [
+        "12",
+        "10-1-1",
+        "31"
+       ]
+      },
+      {
+       "name": "Western",
+       "stats": [
+        "12",
+        "7-3-2",
+        "23"
+       ]
+      },
+      {
+       "name": "McMaster",
+       "stats": [
+        "12",
+        "6-3-3",
+        "21"
+       ]
+      },
+      {
+       "name": "Waterloo",
+       "stats": [
+        "12",
+        "5-3-4",
+        "19"
+       ]
+      },
+      {
+       "name": "Guelph",
+       "stats": [
+        "12",
+        "5-4-3",
+        "18"
+       ]
+      },
+      {
+       "name": "Brock",
+       "stats": [
+        "12",
+        "5-7",
+        "15"
+       ]
+      },
+      {
+       "name": "Laurier",
+       "stats": [
+        "12",
+        "4-6-2",
+        "14"
+       ]
+      },
+      {
+       "name": "Windsor",
+       "stats": [
+        "12",
+        "2-9-1",
+        "7"
+       ]
+      },
+      {
+       "name": "Algoma",
+       "stats": [
+        "12",
+        "1-9-2",
+        "5"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "oua_wsoc": {
+   "label": "OUA Women's Soccer",
+   "url": "https://oua.ca/sports/wsoc/2026-27/standings",
+   "groups": [
+    {
+     "group": "OUA Women's Soccer · West",
+     "cols": [
+      "GP",
+      "W-L-T",
+      "PTS"
+     ],
+     "teams": [
+      {
+       "name": "Guelph",
+       "stats": [
+        "12",
+        "12-0",
+        "36"
+       ]
+      },
+      {
+       "name": "York",
+       "stats": [
+        "12",
+        "8-3-1",
+        "25"
+       ]
+      },
+      {
+       "name": "Brock",
+       "stats": [
+        "12",
+        "6-3-3",
+        "21"
+       ]
+      },
+      {
+       "name": "Laurier",
+       "stats": [
+        "12",
+        "5-4-3",
+        "18"
+       ]
+      },
+      {
+       "name": "Western",
+       "stats": [
+        "12",
+        "5-5-2",
+        "17"
+       ]
+      },
+      {
+       "name": "Windsor",
+       "stats": [
+        "12",
+        "4-4-4",
+        "16"
+       ]
+      },
+      {
+       "name": "McMaster",
+       "stats": [
+        "12",
+        "4-5-3",
+        "15"
+       ]
+      },
+      {
+       "name": "Waterloo",
+       "stats": [
+        "12",
+        "2-10",
+        "6"
+       ]
+      },
+      {
+       "name": "Algoma",
+       "stats": [
+        "12",
+        "0-12",
+        "0"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "ocaa_msoc": {
+   "label": "OCAA Men's Soccer",
+   "url": "https://www.ocaa.com/sports/msoc/2026-27/standings",
+   "groups": [
+    {
+     "group": "OCAA Men's Soccer · WEST",
+     "cols": [
+      "GP",
+      "Record",
+      "Win%",
+      "For",
+      "Aga.",
+      "Last 10",
+      "Streak"
+     ],
+     "teams": [
+      {
+       "name": "Fanshawe",
+       "stats": [
+        "10",
+        "9-0-1",
+        "0.950",
+        "41",
+        "3",
+        "9-0-1",
+        "Won 3"
+       ]
+      },
+      {
+       "name": "Humber",
+       "stats": [
+        "10",
+        "9-1",
+        "0.900",
+        "66",
+        "5",
+        "9-1",
+        "Won 4"
+       ]
+      },
+      {
+       "name": "Niagara",
+       "stats": [
+        "10",
+        "5-1-4",
+        "0.700",
+        "28",
+        "13",
+        "5-1-4",
+        "Lost 1"
+       ]
+      },
+      {
+       "name": "Mohawk",
+       "stats": [
+        "10",
+        "4-4-2",
+        "0.500",
+        "15",
+        "16",
+        "4-4-2",
+        "Won 1"
+       ]
+      },
+      {
+       "name": "St. Clair",
+       "stats": [
+        "10",
+        "4-5-1",
+        "0.450",
+        "32",
+        "19",
+        "4-5-1",
+        "Lost 4"
+       ]
+      },
+      {
+       "name": "Sheridan",
+       "stats": [
+        "10",
+        "4-6",
+        "0.400",
+        "20",
+        "24",
+        "4-6",
+        "Won 1"
+       ]
+      },
+      {
+       "name": "Conestoga",
+       "stats": [
+        "10",
+        "2-6-2",
+        "0.300",
+        "10",
+        "19",
+        "2-6-2",
+        "Lost 1"
+       ]
+      },
+      {
+       "name": "Redeemer",
+       "stats": [
+        "10",
+        "2-6-2",
+        "0.300",
+        "11",
+        "33",
+        "2-6-2",
+        "Lost 1"
+       ]
+      },
+      {
+       "name": "Lambton",
+       "stats": [
+        "10",
+        "0-10",
+        "0.000",
+        "3",
+        "94",
+        "0-10",
+        "Lost 10"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "ocaa_wsoc": {
+   "label": "OCAA Women's Soccer",
+   "url": "https://www.ocaa.com/sports/wsoc/2026-27/standings",
+   "groups": [
+    {
+     "group": "OCAA Women's Soccer · WEST",
+     "cols": [
+      "GP",
+      "Record",
+      "Win%",
+      "For",
+      "Aga.",
+      "Last 10",
+      "Streak"
+     ],
+     "teams": [
+      {
+       "name": "Mohawk",
+       "stats": [
+        "10",
+        "8-0-2",
+        "0.900",
+        "28",
+        "5",
+        "8-0-2",
+        "Won 1"
+       ]
+      },
+      {
+       "name": "St. Clair",
+       "stats": [
+        "10",
+        "8-1-1",
+        "0.850",
+        "45",
+        "3",
+        "8-1-1",
+        "Won 1"
+       ]
+      },
+      {
+       "name": "Humber",
+       "stats": [
+        "10",
+        "8-1-1",
+        "0.850",
+        "41",
+        "6",
+        "8-1-1",
+        "Won 2"
+       ]
+      },
+      {
+       "name": "Redeemer",
+       "stats": [
+        "10",
+        "4-4-2",
+        "0.500",
+        "16",
+        "14",
+        "4-4-2",
+        "Won 1"
+       ]
+      },
+      {
+       "name": "Fanshawe",
+       "stats": [
+        "10",
+        "3-3-4",
+        "0.500",
+        "20",
+        "13",
+        "3-3-4",
+        "Lost 1"
+       ]
+      },
+      {
+       "name": "Niagara",
+       "stats": [
+        "10",
+        "2-4-4",
+        "0.400",
+        "21",
+        "19",
+        "2-4-4",
+        "Lost 1"
+       ]
+      },
+      {
+       "name": "Conestoga",
+       "stats": [
+        "10",
+        "2-5-3",
+        "0.350",
+        "12",
+        "29",
+        "2-5-3",
+        "Lost 1"
+       ]
+      },
+      {
+       "name": "Sheridan",
+       "stats": [
+        "10",
+        "1-8-1",
+        "0.150",
+        "11",
+        "43",
+        "1-8-1",
+        "Lost 2"
+       ]
+      },
+      {
+       "name": "Lambton",
+       "stats": [
+        "10",
+        "0-10",
+        "0.000",
+        "0",
+        "62",
+        "0-10",
+        "Lost 10"
        ]
       }
      ]
