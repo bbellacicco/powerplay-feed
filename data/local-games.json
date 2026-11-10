@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T10:01:56-05:00",
+ "updated": "2026-11-10T10:35:17-05:00",
  "today": "2026-11-10",
  "range": [
   "2026-11-07",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -1462,6 +1462,17 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "CFL Cinematic Recap: Winnipeg @ Montreal",
+   "summary": "",
+   "published": "2026-11-10T12:30:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/4A0xuGvsbtzCUhycg1SpOS/74d551a63f4a922511a47c9cbdfeab49/EF_Thumb1.png?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/cfl-cinematic-recap-winnipeg-montreal",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "CFL Cinematic Recap: BC @ Edmonton",
    "summary": "",
    "published": "2026-11-10T12:00:00-05:00",
@@ -1651,19 +1662,6 @@
     "Lions"
    ],
    "url": "https://www.cfl.ca/article/recap-edmonton-28-bc-16",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "HUGE Third Down Stop for Elks leads to big fumble return!!",
-   "summary": "",
-   "published": "2026-11-07T21:37:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/55CMSSkeSk45T4jhDuZvNY/85baefe9dbd7fc6bcffda04b68fcf687/3RD_DOWN_STOP.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Elks"
-   ],
-   "url": "https://www.cfl.ca/article/huge-third-down-stop-for-elks-leads-to-big-fumble-return",
    "source": "CFL.ca"
   },
   {
@@ -2200,21 +2198,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nba",
-   "headline": "Shorthanded Raptors battle hard, but lose to Grizzlies",
-   "summary": "The Raptors battled against the Grizzlies on Monday. But with the Raptors missing most of their top weapons, process can only take you so far sometimes.",
-   "published": "2026-11-10T00:31-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-27.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/shorthanded-raptors-battle-hard-but-lose-to-grizzlies/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "Slow start dooms Canucks in loss to Flyers",
    "summary": "Playing for the second time in 24 hours, the Flyers held the Canucks to just six shots through 40 minutes. “Yeah, there’s actually no excuse for that. It’s unacceptable to show up like this.”",
@@ -2232,12 +2215,27 @@
    "headline": "PWHL expansion clubs unveil team nicknames",
    "summary": "",
    "published": "2026-11-10T08:43-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/pwhl_expansionnames1280.jpg",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/pwhl.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/pwhl/article/pwhl-expansion-clubs-unveil-team-nicknames/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Shorthanded Raptors battle hard, but lose to Grizzlies",
+   "summary": "The Raptors battled against the Grizzlies on Monday. But with the Raptors missing most of their top weapons, process can only take you so far sometimes.",
+   "published": "2026-11-10T00:31-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-27.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/shorthanded-raptors-battle-hard-but-lose-to-grizzlies/",
    "source": "Sportsnet"
   },
   {
@@ -2325,16 +2323,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Canada crushes Denmark at world women’s hockey championship",
+   "league": "nhl",
+   "headline": "Senators recall goalie Jackson Parsons from AHL Belleville",
    "summary": "",
-   "published": "2026-11-09T16:10-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/worlds.jpg",
+   "published": "2026-11-10T10:16-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/07/parsons.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
+   "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/women-hockey/article/canada-crushes-denmark-at-world-womens-hockey-championship/",
+   "url": "https://www.sportsnet.ca/nhl/article/senators-recall-goalie-jackson-parsons-from-ahl-belleville/",
    "source": "Sportsnet"
   },
   {
@@ -2426,6 +2424,19 @@
    "sn_team_count": 3,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/ducks-reclaiming-mighty-status-behind-youthful-scoring-surge/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Canada crushes Denmark at world women’s hockey championship",
+   "summary": "",
+   "published": "2026-11-09T16:10-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/worlds.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/women-hockey/article/canada-crushes-denmark-at-world-womens-hockey-championship/",
    "source": "Sportsnet"
   },
   {
