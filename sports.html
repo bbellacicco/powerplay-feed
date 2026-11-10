@@ -15,6 +15,8 @@
   Each widget sizes itself to fit (nothing scrolls inside the page, which traps the finger on iPhones).
   Embed on the Wix "Pro Hub" page, full width: about 1,700px tall on desktop and on mobile.
 -->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <style>
   :root { --bg: #0b1a33; --line: #1e3a6e; --text: #f2f5fb; --muted: #9fb0cf; --accent: #e8b021; }
   * { box-sizing: border-box; }
@@ -43,6 +45,13 @@
     .switch button { padding: 10px 2px; font-size: 11px; letter-spacing: .02em; white-space: normal; line-height: 1.15; }
     .top { flex-direction: column; } .sharebtn { position: static; transform: none; align-self: flex-end; }
   }
+  /* the league bar: pick a league and every section below shows just that league */
+  .lbar { display: flex; align-items: center; justify-content: center; gap: 6px; flex-wrap: wrap; padding: 12px 16px; background: #10244a; border-bottom: 1px solid rgba(255,255,255,.1); }
+  .lbar .lbl { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 21px; letter-spacing: .03em; color: #e8b021; margin-right: 6px; white-space: nowrap; }
+  .lbar button { font: inherit; font-size: 13.5px; font-weight: 800; letter-spacing: .04em; color: #f2f5fb; background: #132b57; border: 1px solid rgba(255,255,255,.14); border-radius: 999px; padding: 8px 14px; cursor: pointer; min-height: 38px; }
+  .lbar button:hover { border-color: #e8b021; }
+  .lbar button[aria-pressed="true"] { background: #fff; color: #0b1a33; border-color: #fff; }
+  @media (max-width: 560px) { .lbar { padding: 9px 10px; gap: 5px; } .lbar .lbl { width: 100%; text-align: center; font-size: 18px; margin: 0; } .lbar { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); } .lbar .lbl { grid-column: 1 / -1; } .lbar button { font-size: 12px; padding: 7px 0; min-height: 36px; letter-spacing: .02em; } }
   .subswitch { display: flex; justify-content: center; gap: 0; margin: 12px auto 0; width: max-content; max-width: calc(100% - 32px);
     border: 1px solid rgba(255,255,255,.16); border-radius: 3px; overflow: hidden; }
   .subswitch button { border: 0; border-radius: 0; background: transparent; color: #9fb0cf; font: inherit; font-size: 12px; font-weight: 800; letter-spacing: .08em;
@@ -52,6 +61,7 @@
 </style>
 </head>
 <body>
+  <div class="lbar" id="lbar" role="group" aria-label="League"><span class="lbl">Pick a league</span></div>
   <div class="top" id="top">
     <div class="switch" role="tablist" aria-label="Section">
       <button type="button" role="tab" data-tab="scores">Scores</button>
@@ -73,6 +83,24 @@
     updates: [['news-feed.html', 1150, 1250, '']],
     network: [['network.html', 1300, 1520, '&only=pro']]
   };
+  // the league bar: All, NHL, NFL, NBA, MLB, CFL, PWHL. Picking one rebuilds every section for that league
+  var LG = (new URLSearchParams(location.search).get('league') || '').toLowerCase();
+  var LGS = [['', 'All'], ['nhl', 'NHL'], ['nfl', 'NFL'], ['nba', 'NBA'], ['mlb', 'MLB'], ['cfl', 'CFL'], ['pwhl', 'PWHL']];
+  if (!LGS.some(function (l) { return l[0] === LG; })) LG = '';
+  function lgParam(w) {
+    if (!LG) return '';
+    return w[0] === 'network.html' ? '&league=' + LG : '&tab=' + LG + '&lock=1';
+  }
+  LGS.forEach(function (l) {
+    var b = document.createElement('button'); b.type = 'button'; b.textContent = l[1]; b.setAttribute('aria-pressed', String(l[0] === LG));
+    b.onclick = function () {
+      if (LG === l[0]) return; LG = l[0];
+      [].forEach.call(document.querySelectorAll('#lbar button'), function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+      Object.keys(built).forEach(function (k) { built[k].remove(); delete built[k]; });   // every section again, for this league
+      show(current);
+    };
+    document.getElementById('lbar').appendChild(b);
+  });
   var built = {}, box = document.getElementById('panes');
   function show(tab) {
     if (!PARTS[tab]) tab = 'scores';
@@ -80,7 +108,7 @@
       var pane = document.createElement('div'); pane.className = 'pane'; pane.id = 'pane-' + tab;
       PARTS[tab].forEach(function (w) {
         var f = document.createElement('iframe');
-        f.src = REPO + w[0] + V + w[3] + '&in=sports'; f.title = w[0].replace(/[_.].*$/, '');
+        f.src = REPO + w[0] + V + w[3] + lgParam(w) + '&in=sports'; f.title = w[0].replace(/[_.].*$/, '');
         f.scrolling = 'no';
         f.style.height = (phone ? w[2] : w[1]) + 'px';
         f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; f.allowFullscreen = true;
@@ -106,7 +134,7 @@
     Object.keys(built).forEach(function (k) { built[k].classList.toggle('on', k === tab); });
     current = tab;
     [].forEach.call(document.querySelectorAll('.switch button'), function (b) { b.setAttribute('aria-selected', String(b.getAttribute('data-tab') === tab)); });
-    try { history.replaceState(null, '', '?tab=' + tab); } catch (e) {}
+    try { history.replaceState(null, '', '?tab=' + tab + (LG ? '&league=' + LG : '')); } catch (e) {}
   }
   // each widget reports its height; its frame matches it exactly, so nothing scrolls inside the page
   window.addEventListener('message', function (e) {
@@ -119,7 +147,7 @@
   var NAMES = { scores: 'Pro Scores', upcoming: 'Pro Games Coming Up', updates: 'Pro Updates', network: 'the Pro Network' };
   var current = 'scores';
   if (window.PPShare) {
-    var sb = PPShare.button(function () { return { title: NAMES[current].replace(/^the /, 'The '), url: PPShare.link(current === 'scores' ? 'pro' : 'pro-' + current), text: 'Check out ' + NAMES[current] + ' on Powerplay Windsor' }; });
+    var sb = PPShare.button(function () { return { title: NAMES[current].replace(/^the /, 'The '), url: PPShare.link(current === 'scores' ? 'pro' : 'pro-' + current) + (LG ? '&league=' + LG : ''), text: 'Check out ' + NAMES[current] + ' on Powerplay Windsor' }; });
     sb.classList.add('sharebtn'); document.getElementById('top').appendChild(sb);
   }
   [].forEach.call(document.querySelectorAll('.switch button'), function (b) { b.onclick = function () { show(b.getAttribute('data-tab')); }; });
