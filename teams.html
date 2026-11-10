@@ -84,8 +84,39 @@
   .news a:first-child { border-top: 0; }
   .news b { display: block; } .news span { color: var(--muted); font-size: 12.5px; }
   .note { color: var(--muted); font-size: 12px; margin-top: 14px; }
+  /* ?view=bar: a slim bar of leagues at the top of the Local Hub; a team opens right under it */
+  html.barmode .page { max-width: none; padding: 0; }
+  .bar { display: flex; align-items: center; gap: 7px; overflow-x: auto; scrollbar-width: none; padding: 9px 16px; background: #10244a; border-bottom: 1px solid var(--line); }
+  .bar::-webkit-scrollbar { display: none; }
+  .bar .lbl { flex: none; font-family: 'Bebas Neue', Impact, sans-serif; font-size: 21px; letter-spacing: .03em; color: var(--accent); margin-right: 4px; white-space: nowrap; }
+  .bar .lb { flex: none; font: inherit; font-size: 13.5px; font-weight: 800; color: var(--text); background: var(--card2); border: 1px solid rgba(255,255,255,.14); border-radius: 999px; padding: 8px 13px; cursor: pointer; white-space: nowrap; min-height: 38px; }
+  .bar .lb:hover { border-color: var(--accent); }
+  .bar .lb.on { background: #fff; color: #0b1a33; border-color: #fff; }
+  .bar .lb svg { width: 15px; height: 15px; stroke: currentColor; vertical-align: -3px; }
+  .drop { padding: 10px 16px 12px; border-bottom: 1px solid var(--line); background: #0d1f40; }
+  .drop[hidden] { display: none; }
+  .drop .chips + .chips { margin-top: 8px; }
+  .tchip { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 1px; font: inherit; color: var(--text); background: var(--card2); border: 1px solid transparent; border-radius: 9px; padding: 7px 11px; cursor: pointer; text-align: left; min-height: 44px; justify-content: center; }
+  .tchip:hover { border-color: var(--accent); }
+  .tchip b { font-size: 13.5px; } .tchip span { color: var(--muted); font-size: 11.5px; } .tchip span.live { color: var(--live); font-weight: 800; }
+  .drop input { width: 100%; font: inherit; font-size: 16px; color: var(--text); background: #fff1; border: 2px solid rgba(255,255,255,.2); border-radius: 10px; padding: 10px 12px; outline: none; margin-bottom: 8px; }
+  .drop input:focus { border-color: var(--accent); }
+  html.barmode .team { padding: 10px 16px 14px; border-bottom: 1px solid var(--line); }
+  html.barmode .team h1 { font-size: 28px; }
+  html.barmode .thead { margin: 2px 0 10px; }
+  html.barmode .box { padding: 10px 12px; } html.barmode .box h3 { font-size: 18px; margin-bottom: 4px; }
+  html.barmode .grid2, html.barmode .grid2 > div { gap: 10px !important; }
+  html.barmode .next .vs { font-size: 19px; }
+  html.barmode .g { padding: 6px 0; } html.barmode .note { display: none; }
+  html.barmode table { font-size: 12.5px; } html.barmode th, html.barmode td { padding: 4px 5px; }
+  .closebar { display: flex; justify-content: flex-end; }
   @media (max-width: 760px) {
     .page { padding: 14px 12px 20px; } h1 { font-size: 32px; }
+    /* phones: every league button in view (two short rows), no sideways scrolling to find them */
+    .bar { padding: 8px 12px; flex-wrap: wrap; overflow: visible; gap: 6px; }
+    .bar .lbl { width: 100%; font-size: 18px; margin: 0; }
+    .bar .lb { font-size: 13px; padding: 7px 11px; min-height: 36px; }
+    .g { grid-template-columns: 76px minmax(0, 1fr) auto !important; } .drop { padding: 8px 12px 10px; } html.barmode .team { padding: 10px 12px 12px; }
     .grid2 { grid-template-columns: minmax(0, 1fr); }
     .leagues { grid-template-columns: minmax(0, 1fr); }
     .g { grid-template-columns: 64px minmax(0, 1fr) auto; }
@@ -94,6 +125,8 @@
 </head>
 <body>
 <div class="page" id="page">
+  <div class="bar" id="bar" hidden></div>
+  <div class="drop" id="drop" hidden></div>
   <div class="dir" id="dir">
     <h1>Find a <em>Team</em></h1>
     <div class="sub">Every local team&rsquo;s next game, scores, schedule and standings.</div>
@@ -113,6 +146,8 @@
   var SITE = 'https://www.powerplaywindsor.com/scores-standings';
   var TZ = 'America/Toronto';
   var qs = new URLSearchParams(location.search);
+  var BAR = qs.get('view') === 'bar';                 // the slim bar at the top of the Local Hub
+  if (BAR) { document.documentElement.classList.add('barmode'); document.getElementById('dir').hidden = true; }
   function el(t, c, x) { var e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; }
   function get(n) { return fetch(DATA + n + '?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }); }
   function slug(s) { return String(s).toLowerCase().replace(/&/g, 'and').replace(/'/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); }
@@ -181,9 +216,10 @@
       });
     });
     T.forEach(function (t) { t.games = games.filter(t.match).sort(function (a, b) { return new Date(a.start) - new Date(b.start); }); });
-    drawDir();
-    var want = (qs.get('team') || '').toLowerCase();
-    if (want && BYID[want]) openTeam(BYID[want], true);
+    if (BAR) drawBar(); else drawDir();
+    var want = (qs.get('find') || qs.get('team') || '').toLowerCase();
+    if (want && BYID[want] && !build.done) openTeam(BYID[want], true);
+    build.done = true;
   }
 
   // what's next for a team, in a few words
@@ -202,8 +238,9 @@
     return { us: g.our_score, them: g.opp_score, opp: g.opponent, at: g.home_away === 'H' ? 'vs' : g.home_away === 'N' ? 'vs' : '@' };
   }
   function wl(s) { return s.us == null || s.them == null ? '' : s.us > s.them ? 'W' : s.us < s.them ? 'L' : 'T'; }
-  function score(t, g) { var s = side(t, g); return s.us + '–' + s.them + ' ' + s.at + ' ' + s.opp; }
-  function res(t, g) { var s = side(t, g); return wl(s) + ' ' + s.us + '–' + s.them + ' ' + s.at + ' ' + s.opp; }
+  function atw(s) { return s.at === '@' ? 'at' : 'vs.'; }
+  function score(t, g) { var s = side(t, g); return s.us + '–' + s.them + ' ' + atw(s) + ' ' + s.opp; }
+  function res(t, g) { var s = side(t, g); return wl(s) + ' ' + s.us + '–' + s.them + ' ' + atw(s) + ' ' + s.opp; }
 
   // ---------- the directory ----------
   var SECS = [['ohl', 'Windsor Spitfires', 'OHL · major junior hockey'], ['lancers', 'Windsor Lancers', 'University of Windsor · OUA'], ['saints', 'St. Clair Saints', 'St. Clair College · OCAA / CJFL'],
@@ -259,14 +296,69 @@
   }
   document.getElementById('q').addEventListener('input', search);
 
+  // ---------- the bar (Local Hub) ----------
+  var barPick = '';
+  function teamChip(t, label) {
+    var b = el('button', 'tchip'); b.type = 'button'; b.appendChild(el('b', null, label || t.name));
+    var st = status(t); if (st.text) b.appendChild(el('span', st.live ? 'live' : null, st.text.replace(/^Next: /, '')));
+    b.onclick = function () { openTeam(t); };
+    return b;
+  }
+  function drawBar() {
+    var bar = document.getElementById('bar'); bar.hidden = false; bar.innerHTML = '';
+    bar.appendChild(el('span', 'lbl', 'Find a team'));
+    [['ohl', 'Spitfires'], ['lancers', 'Lancers'], ['saints', 'Saints'], ['junior', 'Junior hockey'], ['hs', 'High school'], ['search', '']].forEach(function (x) {
+      var b = el('button', 'lb' + (barPick === x[0] ? ' on' : '')); b.type = 'button'; b.dataset.k = x[0];
+      if (x[0] === 'search') { b.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>'; b.setAttribute('aria-label', 'Search for a team'); }
+      else b.textContent = x[1];
+      b.onclick = function () {
+        if (x[0] === 'ohl') { var sp = T.filter(function (t) { return t.sec === 'ohl'; })[0]; if (sp) openTeam(sp); return; }
+        barPick = barPick === x[0] ? '' : x[0]; drawDrop(); markBar();
+      };
+      bar.appendChild(b);
+    });
+    drawDrop();
+  }
+  function markBar() { [].forEach.call(document.querySelectorAll('#bar .lb'), function (b) { b.classList.toggle('on', b.dataset.k === barPick); }); }
+  function drawDrop() {
+    var d = document.getElementById('drop'); d.innerHTML = ''; d.hidden = !barPick;
+    if (!barPick) return;
+    if (barPick === 'search') {
+      var inp = el('input'); inp.type = 'search'; inp.placeholder = 'Team, school or town\u2026 try \u2018Essex\u2019'; inp.setAttribute('aria-label', 'Search for a team');
+      var out = el('div', 'chips'); d.appendChild(inp); d.appendChild(out);
+      inp.oninput = function () { out.innerHTML = ''; var v = inp.value.trim().toLowerCase().replace(/[\u2019']/g, ''); if (v.length < 2) return;
+        var w = v.split(/\s+/), hits = T.filter(function (t) { var hay = (t.name + ' ' + (t.full || '') + ' ' + t.league + ' ' + t.words).toLowerCase().replace(/[\u2019']/g, ''); return w.every(function (x) { return hay.indexOf(x) >= 0; }); });
+        hits.sort(function (a, b) { return (b.games.length ? 1 : 0) - (a.games.length ? 1 : 0); }).slice(0, 12).forEach(function (t) { out.appendChild(teamChip(t)); });
+        if (!hits.length) out.appendChild(el('div', 'none', 'No team by that name yet.')); };
+      setTimeout(function () { inp.focus(); }, 30);
+      return;
+    }
+    var list = T.filter(function (t) { return t.sec === barPick; });
+    if (barPick === 'hs') {
+      var sports = []; list.forEach(function (t) { if (sports.indexOf(t.sport) < 0) sports.push(t.sport); }); sports.sort();
+      var sc = el('div', 'chips'), schools = el('div', 'chips'); d.appendChild(sc); d.appendChild(schools);
+      sports.forEach(function (sp) { var ch = el('button', 'chip' + (hsPick === sp ? ' on' : ''), sp); ch.type = 'button';
+        ch.onclick = function () { hsPick = sp; drawDrop(); }; sc.appendChild(ch); });
+      if (!sports.length) d.appendChild(el('div', 'none', 'High school games show up here as they\u2019re scheduled.'));
+      if (hsPick) list.filter(function (t) { return t.sport === hsPick; }).sort(function (a, b) { return a.school.localeCompare(b.school); }).forEach(function (t) { schools.appendChild(teamChip(t, t.school)); });
+      return;
+    }
+    var row = el('div', 'chips'); d.appendChild(row);
+    list.slice().sort(function (a, b) { return (b.games.length ? 1 : 0) - (a.games.length ? 1 : 0); }).forEach(function (t) {
+      row.appendChild(teamChip(t, barPick === 'lancers' || barPick === 'saints' ? t.sport : t.name)); });
+  }
+
   // ---------- one team ----------
   function openTeam(t, fromLink) {
     var box = document.getElementById('team'); box.innerHTML = ''; box.hidden = false; document.getElementById('dir').hidden = true;
-    try { history.replaceState(null, '', '?team=' + t.id); } catch (e) {}
+    box.dataset.id = t.id;
+    if (!BAR) { try { history.replaceState(null, '', '?find=' + t.id); } catch (e) {} }
+    else { barPick = ''; drawDrop(); markBar(); }
     try { parent.postMessage({ pp: 'team', team: t.id }, '*'); } catch (e) {}
-    var back = el('button', 'back', '‹ All teams'); back.type = 'button'; back.onclick = closeTeam; box.appendChild(back);
+    var back = el('button', 'back', BAR ? '\u2715 Close' : '\u2039 All teams'); back.type = 'button'; back.onclick = closeTeam;
+    if (BAR) { var cb = el('div', 'closebar'); cb.appendChild(back); box.appendChild(cb); } else box.appendChild(back);
     var head = el('div', 'thead'), hl = el('div'); var h = el('h1'); h.textContent = t.full || t.name; hl.appendChild(h); hl.appendChild(el('div', 'lgl', t.league)); head.appendChild(hl);
-    if (window.PPShare) head.appendChild(PPShare.button({ title: t.full || t.name, url: SITE + '?team=' + t.id, text: (t.full || t.name) + ': schedule and scores on Powerplay Windsor' }));
+    if (window.PPShare) head.appendChild(PPShare.button({ title: t.full || t.name, url: SITE + '?find=' + t.id, text: (t.full || t.name) + ': schedule and scores on Powerplay Windsor' }));
     box.appendChild(head);
     var gs = t.games, now = Date.now();
     var live = gs.filter(function (g) { return g.status === 'live'; })[0];
@@ -279,7 +371,7 @@
     if (top) {
       var s = side(t, top);
       nb.appendChild(el('div', 'when', live ? 'Live now' + (top.detail ? ' · ' + top.detail : '') : 'Next game · ' + when(top)));
-      nb.appendChild(el('div', 'vs', live ? s.us + '–' + s.them + ' ' + s.at + ' ' + s.opp : (s.at === '@' ? 'at ' : 'vs. ') + s.opp));
+      nb.appendChild(el('div', 'vs', live ? s.us + '–' + s.them + ' ' + atw(s) + ' ' + s.opp : atw(s) + ' ' + s.opp));
       var wh = [top.location, top.note].filter(Boolean).join(' · '); if (wh) nb.appendChild(el('div', 'where', wh));
       linkRow(nb, top);
     } else {
@@ -288,9 +380,9 @@
     }
     left.appendChild(nb);
     left.appendChild(gameBox('Coming up', up.slice(live ? 0 : 1), t, 'No other games this week.'));
-    left.appendChild(gameBox('Recent scores', fin.slice(0, 8), t, 'No scores yet this week.'));
+    left.appendChild(gameBox('Recent scores', fin.slice(0, BAR ? 4 : 8), t, 'No scores yet this week.'));
     var tb = standings(t); if (tb) right.appendChild(tb);
-    var nw = news.filter(t.news).slice(0, 5);
+    var nw = news.filter(t.news).slice(0, BAR ? 3 : 5);
     var nbx = el('div', 'box news'); nbx.appendChild(el('h3', null, 'Latest news'));
     if (nw.length) nw.forEach(function (n) { var a = el('a'); a.href = n.url; a.target = /powerplaywindsor\.com/.test(n.url) ? '_top' : '_blank'; a.rel = 'noopener';
       a.appendChild(el('b', null, n.headline)); a.appendChild(el('span', null, (n.club || (n.team === 'powerplay' ? 'Powerplay Windsor' : '')) + (n.published ? ' · ' + cpDay(new Date(n.published)) : ''))); nbx.appendChild(a); });
@@ -298,10 +390,12 @@
     right.appendChild(nbx);
     grid.appendChild(left); grid.appendChild(right); box.appendChild(grid);
     box.appendChild(el('div', 'note', 'Schedules and scores update every 15 minutes.'));
-    if (!fromLink) { try { window.scrollTo(0, 0); parent.postMessage({ pp: 'scrolltop' }, '*'); } catch (e) {} }
+    if (!fromLink && !BAR) { try { window.scrollTo(0, 0); parent.postMessage({ pp: 'scrolltop' }, '*'); } catch (e) {} }
   }
   function closeTeam() {
-    document.getElementById('team').hidden = true; document.getElementById('dir').hidden = false;
+    document.getElementById('team').hidden = true; document.getElementById('team').dataset.id = '';
+    if (BAR) return;
+    document.getElementById('dir').hidden = false;
     try { history.replaceState(null, '', location.pathname + location.search.replace(/([?&])team=[^&]*&?/, '$1').replace(/[?&]$/, '')); } catch (e) {}
   }
   function linkRow(box, g) {
@@ -356,7 +450,7 @@
     wrap.appendChild(tb); b.appendChild(wrap); return b;
   }
 
-  load(); setInterval(function () { var open = !document.getElementById('team').hidden ? (location.search.match(/team=([^&]+)/) || [])[1] : ''; load().then(function () { if (open && BYID[open]) openTeam(BYID[open], true); }); }, 5 * 60000);
+  load(); setInterval(function () { var open = !document.getElementById('team').hidden ? document.getElementById('team').dataset.id : ''; load().then(function () { if (open && BYID[open]) openTeam(BYID[open], true); }); }, 5 * 60000);
 
   // inside the Local Hub: tell it how tall this is, so it never scrolls on its own
   (function () {
