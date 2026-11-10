@@ -84,6 +84,19 @@
   .news a:first-child { border-top: 0; }
   .news b { display: block; } .news span { color: var(--muted); font-size: 12.5px; }
   .note { color: var(--muted); font-size: 12px; margin-top: 14px; }
+  .media { margin-top: 14px; }
+  .mgrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+  .mcard { display: flex; flex-direction: column; gap: 4px; text-align: left; font: inherit; color: var(--text); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: none; min-width: 0; }
+  .mcard b { font-size: 13.5px; line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .mcard span { color: var(--muted); font-size: 12px; }
+  .mpic { position: relative; aspect-ratio: 16 / 9; border-radius: 8px; overflow: hidden; background: #0e2044; }
+  .mpic img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .mpic iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .mplay { position: absolute; left: 50%; top: 50%; width: 44px; height: 44px; margin: -22px 0 0 -22px; border-radius: 50%; background: rgba(11,26,51,.8); border: 2px solid #fff; }
+  .mplay::after { content: ''; position: absolute; left: 17px; top: 12px; border-left: 14px solid #fff; border-top: 9px solid transparent; border-bottom: 9px solid transparent; }
+  .mcard:hover b { text-decoration: underline; }
+  .contest { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 14px; text-decoration: none; background: linear-gradient(90deg, #2a0508, #10244a); border-color: #d4202c; }
+  .contest b { font-family: 'Bebas Neue', Impact, sans-serif; font-weight: 400; font-size: 24px; letter-spacing: .03em; } .contest span { color: #e8b021; font-weight: 800; }
   /* ?view=bar: a slim bar of leagues at the top of the Local Hub; a team opens right under it */
   html.barmode .page { max-width: none; padding: 0; }
   .bar { display: flex; align-items: center; gap: 7px; overflow-x: auto; scrollbar-width: none; padding: 9px 16px; background: #10244a; border-bottom: 1px solid var(--line); }
@@ -116,7 +129,8 @@
     .bar { padding: 8px 12px; flex-wrap: wrap; overflow: visible; gap: 6px; }
     .bar .lbl { width: 100%; font-size: 18px; margin: 0; }
     .bar .lb { font-size: 13px; padding: 7px 11px; min-height: 36px; }
-    .g { grid-template-columns: 76px minmax(0, 1fr) auto !important; } .drop { padding: 8px 12px 10px; } html.barmode .team { padding: 10px 12px 12px; }
+    .g { grid-template-columns: 76px minmax(0, 1fr) auto !important; }
+    .mgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .drop { padding: 8px 12px 10px; } html.barmode .team { padding: 10px 12px 12px; }
     .grid2 { grid-template-columns: minmax(0, 1fr); }
     .leagues { grid-template-columns: minmax(0, 1fr); }
     .g { grid-template-columns: 64px minmax(0, 1fr) auto; }
@@ -172,37 +186,51 @@
   var T = [], BYID = {};
   function addTeam(t) { if (BYID[t.id]) return BYID[t.id]; T.push(t); BYID[t.id] = t; return t; }
 
-  var games = [], news = [], std = {}, college = {}, hsStd = {};
+  var games = [], news = [], std = {}, college = {}, hsStd = {}, vids = [], snaps = [];
   function load() {
-    return Promise.all([get('local-games.json'), get('highschool.json'), get('saints.json'), get('local-news.json'), get('college-standings.json'), get('hs-standings.json')]).then(function (r) {
+    return Promise.all([get('local-games.json'), get('highschool.json'), get('saints.json'), get('local-news.json'), get('college-standings.json'), get('hs-standings.json'), get('network.json'), get('slideshows.json')]).then(function (r) {
       var lg = r[0] || {}, hs = r[1], sc = r[2];
       games = (lg.games || []).filter(function (g) { return g.team !== 'highschool' && !(sc && sc.games && g.team === 'saints' && g.sport !== 'Football'); })
         .concat(hs && hs.games ? hs.games : (lg.games || []).filter(function (g) { return g.team === 'highschool'; }))
         .concat(sc && sc.games ? sc.games.filter(function (g) { return g.sport !== 'Football'; }) : []);
       var seen = {}; games = games.filter(function (g) { var k = g.id || (g.team + g.start + g.opponent); if (seen[k]) return false; seen[k] = 1; return true; });
+      var net = r[6] || {};
+      vids = ((net.local || []).map(function (v) { return { t: v.t, u: v.u, i: v.i, p: v.p, d: v.d || '', src: v.s || 'Powerplay' }; }))
+        .concat((net.pro || []).filter(function (v) { return v.sp; }).map(function (v) { return { t: v.t.replace(/^OHL Highlights:\s*/i, 'Highlights: ').replace(/\s+@\s+/, ' at ').replace(/\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2},?\s+\d{4}\s*$/i, ''), u: v.u, i: v.i, p: v.p, src: 'OHL', sp: 1 }; }))
+        .sort(function (a, b) { return new Date(b.p) - new Date(a.p); });
+      snaps = (r[7] && r[7].slideshows) || [];
       news = (r[3] && r[3].stories) || []; std = lg.standings || {}; college = (r[4] && r[4].leagues) || {}; hsStd = (r[5] && r[5].sports) || {};
       build();
     });
   }
   function build() {
     T = []; BYID = {};
-    addTeam({ id: 'spitfires', name: 'Windsor Spitfires', league: 'OHL', sec: 'ohl', words: 'spitfires spits ohl windsor hockey',
+    var SPORTW = /football|hockey|basketball|volleyball|soccer|fastball|softball|baseball|curling|wrestling|swim|track|cross country|rugby|golf|tennis/i;
+    function sportRx(sp) { var base = sp.replace(/^(men's|women's)\s+/i, '').toLowerCase(); return base === 'football' ? /football|touchdown|\btd'?s?\b|quarterback|yards/i : new RegExp(base, 'i'); }
+    addTeam({ id: 'spitfires', name: 'Windsor Spitfires', league: 'OHL', sec: 'ohl', words: 'spitfires spits ohl windsor hockey', about: function (x) { return /spitfires|\bspits\b/i.test(x); },
       match: function (g) { return g.team === 'spitfires'; }, std: ['ohl', /spitfires/i], news: function (s) { return s.team === 'spitfires'; } });
     var lanS = LANCERS_SPORTS.slice(); games.forEach(function (g) { if (g.team === 'lancers' && lanS.indexOf(g.sport) < 0) lanS.push(g.sport); });
     lanS.forEach(function (sp) {
-      addTeam({ id: 'lancers-' + slug(sp), name: 'Lancers ' + sp, full: 'Windsor Lancers ' + sp, league: 'U Sports · OUA', sec: 'lancers', sport: sp, words: 'lancers uwindsor university of windsor oua ' + sp,
+      var lrx = sportRx(sp), women = /women/i.test(sp);
+      addTeam({ about: function (x) { return /lancer|uwindsor/i.test(x) && lrx.test(x) && (/women/i.test(x) === women || !/(men|women)/i.test(x)); }, id: 'lancers-' + slug(sp), name: 'Lancers ' + sp, full: 'Windsor Lancers ' + sp, league: 'U Sports · OUA', sec: 'lancers', sport: sp, words: 'lancers uwindsor university of windsor oua ' + sp,
         match: function (g) { return g.team === 'lancers' && g.sport === sp; }, college: [/windsor/i, sp], news: function (s) { return s.team === 'lancers' && (!s.sport || s.sport === sp); } });
     });
     var saiS = SAINTS_SPORTS.slice(); games.forEach(function (g) { if (g.team === 'saints' && saiS.indexOf(g.sport) < 0) saiS.push(g.sport); });
     saiS.forEach(function (sp) {
-      addTeam({ id: 'saints-' + slug(sp), name: 'Saints ' + sp, full: 'St. Clair Saints ' + sp, league: sp === 'Football' ? 'CJFL' : 'OCAA', sec: 'saints', sport: sp, words: 'saints st clair college ocaa ' + sp,
+      var srx = sportRx(sp), swomen = /women/i.test(sp);
+      addTeam({ about: function (x) { return /\bsaints\b|st\.? clair/i.test(x) && srx.test(x) && (/women/i.test(x) === swomen || !/(men|women)/i.test(x)); }, id: 'saints-' + slug(sp), name: 'Saints ' + sp, full: 'St. Clair Saints ' + sp, league: sp === 'Football' ? 'CJFL' : 'OCAA', sec: 'saints', sport: sp, words: 'saints st clair college ocaa ' + sp,
         match: function (g) { return g.team === 'saints' && g.sport === sp; }, std: sp === 'Football' ? ['cjfl', /st\.? clair/i] : null, college: [/st\.? clair/i, sp],
         news: function (s) { return s.team === 'saints'; } });
     });
     var clubs = JUNIOR.slice(); games.forEach(function (g) { if (g.team === 'junior' && g.club && !clubs.some(function (c) { return c[0] === g.club; })) clubs.push([g.club, g.sport || 'Junior hockey', '', '']); });
     clubs.forEach(function (c) {
       var key = c[0].split(' ')[0];   // the town: Essex, LaSalle, Lakeshore...
-      addTeam({ id: slug(c[0]), name: c[0], league: c[1], sec: 'junior', words: c[0] + ' ' + c[3] + ' junior hockey',
+      var nick = c[0].split(' ').slice(1).join(' ').replace(/'s$/, '').replace(/[.*+?^${}()|[\]\\']/g, '.?');
+      var town = c[0].split(' ')[0];
+      // Vipers, 73's / 73s, Admirals... (nicknames NHL teams share need the town too: Lakeshore Canadiens, Leamington Flyers, Wheatley Sharks)
+      var jrx = /^(canadiens|flyers|sharks|kings)$/i.test(nick) ? new RegExp('\\b' + town + '\\b[\\s\\S]{0,40}\\b' + nick + '|\\b' + town + '\\b', 'i')
+        : new RegExp('\\b' + nick + (/^\d+$/.test(nick) ? "'?s" : "'?s?") + '\\b', 'i');
+      addTeam({ about: function (x) { return jrx.test(x) && !/spitfires/i.test(x) || x.indexOf(c[0]) >= 0; }, id: slug(c[0]), name: c[0], league: c[1], sec: 'junior', words: c[0] + ' ' + c[3] + ' junior hockey',
         match: function (g) { return g.team === 'junior' && g.club === c[0]; }, std: c[2] ? [c[2], new RegExp(key.replace(/[.*+?^${}()|[\]\\']/g, '.?'), 'i')] : null,
         news: function (s) { return s.team === 'junior' && s.club === c[0]; } });
     });
@@ -210,7 +238,8 @@
     games.filter(function (g) { return g.team === 'highschool'; }).forEach(function (g) {
       [g.home, g.away].forEach(function (sch) {
         if (!sch) return;
-        addTeam({ id: 'hs-' + slug(sch) + '-' + slug(g.sport), name: sch + ' ' + g.sport, school: sch, sport: g.sport, league: 'WECSSAA', sec: 'hs', words: sch + ' high school wecssaa ' + g.sport,
+        var hrx = new RegExp('\\b' + sch.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i'), hsr = sportRx(g.sport);
+        addTeam({ about: function (x) { return hrx.test(x) && (hsr.test(x) || !SPORTW.test(x)); }, id: 'hs-' + slug(sch) + '-' + slug(g.sport), name: sch + ' ' + g.sport, school: sch, sport: g.sport, league: 'WECSSAA', sec: 'hs', words: sch + ' high school wecssaa ' + g.sport,
           match: function (x) { return x.team === 'highschool' && x.sport === g.sport && (x.home === sch || x.away === sch); }, hs: [sch, g.sport],
           news: function (s) { return new RegExp('\\b' + sch.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i').test(s.headline); } });
       });
@@ -306,7 +335,7 @@
   }
   function drawBar() {
     var bar = document.getElementById('bar'); bar.hidden = false; bar.innerHTML = '';
-    bar.appendChild(el('span', 'lbl', 'Find a team'));
+    bar.appendChild(el('span', 'lbl', qs.get('title') || 'Find a team'));
     [['ohl', 'Spitfires'], ['lancers', 'Lancers'], ['saints', 'Saints'], ['junior', 'Junior hockey'], ['hs', 'High school'], ['search', '']].forEach(function (x) {
       var b = el('button', 'lb' + (barPick === x[0] ? ' on' : '')); b.type = 'button'; b.dataset.k = x[0];
       if (x[0] === 'search') { b.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>'; b.setAttribute('aria-label', 'Search for a team'); }
@@ -382,13 +411,41 @@
     left.appendChild(gameBox('Coming up', up.slice(live ? 0 : 1), t, 'No other games this week.'));
     left.appendChild(gameBox('Recent scores', fin.slice(0, BAR ? 4 : 8), t, 'No scores yet this week.'));
     var tb = standings(t); if (tb) right.appendChild(tb);
-    var nw = news.filter(t.news).slice(0, BAR ? 3 : 5);
+    var nw = news.filter(function (n) { return !n.video && !/youtube|vimeo/.test(n.url) && (t.news(n) || (n.team === 'powerplay' && t.about && t.about(n.headline + ' ' + (n.summary || '') + ' ' + (n.cats || '')))); }).slice(0, 6);
     var nbx = el('div', 'box news'); nbx.appendChild(el('h3', null, 'Latest news'));
     if (nw.length) nw.forEach(function (n) { var a = el('a'); a.href = n.url; a.target = /powerplaywindsor\.com/.test(n.url) ? '_top' : '_blank'; a.rel = 'noopener';
       a.appendChild(el('b', null, n.headline)); a.appendChild(el('span', null, (n.club || (n.team === 'powerplay' ? 'Powerplay Windsor' : '')) + (n.published ? ' · ' + cpDay(new Date(n.published)) : ''))); nbx.appendChild(a); });
     else nbx.appendChild(el('div', 'none', 'No news this week.'));
     right.appendChild(nbx);
     grid.appendChild(left); grid.appendChild(right); box.appendChild(grid);
+    // everything else we have on them: videos (Powerplay and, for the Spitfires, the OHL's highlights) and Game Day Snaps
+    var tv = t.about ? vids.filter(function (v) { return v.sp ? t.id === 'spitfires' : t.about(v.t + ' ' + (v.d || '')); }).slice(0, 8) : [];
+    if (tv.length) {
+      var vb = el('div', 'box media'); vb.appendChild(el('h3', null, 'Videos'));
+      var vg = el('div', 'mgrid');
+      tv.forEach(function (v) {
+        var c = el('button', 'mcard'); c.type = 'button';
+        var pic = el('div', 'mpic'); if (v.i) { var im = new Image(); im.src = v.i; im.alt = ''; im.loading = 'lazy'; pic.appendChild(im); } pic.appendChild(el('span', 'mplay')); c.appendChild(pic);
+        c.appendChild(el('b', null, v.t)); c.appendChild(el('span', null, v.src + ' \u00b7 ' + cpDay(new Date(v.p))));
+        c.onclick = function () { var src = embed(v.u); if (!src) { window.open(v.u, '_blank', 'noopener'); return; }
+          pic.innerHTML = ''; var f = document.createElement('iframe'); f.src = src; f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; f.allowFullscreen = true; f.title = v.t; pic.appendChild(f); c.onclick = null; };
+        vg.appendChild(c);
+      });
+      vb.appendChild(vg); box.appendChild(vb);
+    }
+    var ts = t.about ? snaps.filter(function (sh) { return t.about(sh.title + ' ' + (sh.desc || '')); }).slice(0, 4) : [];
+    if (ts.length) {
+      var sb2 = el('div', 'box media'); sb2.appendChild(el('h3', null, 'Game Day Snaps'));
+      var sg = el('div', 'mgrid');
+      ts.forEach(function (sh) { var a = el('a', 'mcard'); a.href = sh.url; a.target = '_top';
+        var pic = el('div', 'mpic'); if (sh.cover) { var im = new Image(); im.src = sh.cover; im.alt = ''; im.loading = 'lazy'; pic.appendChild(im); } a.appendChild(pic);
+        a.appendChild(el('b', null, sh.title.replace(/^game day snaps:\s*/i, ''))); a.appendChild(el('span', null, (sh.count ? sh.count + ' photos \u00b7 ' : '') + cpDay(new Date((sh.date || '') + 'T12:00:00')))); sg.appendChild(a); });
+      sb2.appendChild(sg); box.appendChild(sb2);
+    }
+    if (t.id === 'spitfires') {
+      var ct = el('a', 'box contest'); ct.href = 'https://www.powerplaywindsor.com/scores-standings?contest=spitfires'; ct.target = '_top';
+      ct.appendChild(el('b', null, 'Win Spitfires tickets')); ct.appendChild(el('span', null, 'Enter the Powerplay ticket draw \u203a')); box.appendChild(ct);
+    }
     box.appendChild(el('div', 'note', 'Schedules and scores update every 15 minutes.'));
     if (!fromLink && !BAR) { try { window.scrollTo(0, 0); parent.postMessage({ pp: 'scrolltop' }, '*'); } catch (e) {} }
   }
@@ -397,6 +454,12 @@
     if (BAR) return;
     document.getElementById('dir').hidden = false;
     try { history.replaceState(null, '', location.pathname + location.search.replace(/([?&])team=[^&]*&?/, '$1').replace(/[?&]$/, '')); } catch (e) {}
+  }
+  function embed(u) {
+    var m = u.match(/[?&]v=([\w-]{11})/) || u.match(/youtu\.be\/([\w-]{11})/) || u.match(/\/shorts\/([\w-]{11})/);
+    if (m) return 'https://www.youtube-nocookie.com/embed/' + m[1] + '?autoplay=1&rel=0&playsinline=1';
+    m = u.match(/vimeo\.com\/(?:video\/)?(\d+)/); if (m) return 'https://player.vimeo.com/video/' + m[1] + '?autoplay=1&title=0&byline=0&portrait=0';
+    return '';
   }
   function linkRow(box, g) {
     var L = g.links || {}, row = el('div', 'links'), any = false;
@@ -455,7 +518,9 @@
   // inside the Local Hub: tell it how tall this is, so it never scrolls on its own
   (function () {
     if (window.parent === window) return; var last = 0;
-    function send() { var h = Math.ceil(document.getElementById('page').getBoundingClientRect().height); if (h && Math.abs(h - last) > 2) { last = h; try { parent.postMessage({ pp: 'height', h: h }, '*'); } catch (e) {} } }
+    var lastB = 0;
+    function send() { var h = Math.ceil(document.getElementById('page').getBoundingClientRect().height), bh = BAR ? Math.ceil(document.getElementById('bar').getBoundingClientRect().height) : 0;
+      if (h && (Math.abs(h - last) > 2 || bh !== lastB)) { last = h; lastB = bh; try { parent.postMessage({ pp: 'height', h: h, bar: bh, open: BAR && (!document.getElementById('drop').hidden || !document.getElementById('team').hidden) }, '*'); } catch (e) {} } }
     window.addEventListener('load', send); window.addEventListener('resize', send);
     if (window.ResizeObserver) new ResizeObserver(send).observe(document.getElementById('page')); setInterval(send, 1500); send();
   })();
