@@ -711,7 +711,8 @@ def _pjhl_standings(season):
         html = fetch(f"https://gamesheetstats.com/seasons/{season}/teams/{tid}/standings?configuration=45",
                      "pjhl_team_standings.html" if FIXTURES else None)
         for o in _next_payload_objects(html, marker='{"division":'):
-            if o.get("gameType") != "overall" or not isinstance(o.get("team"), dict):
+            # GameSheet now calls the season's table "regular_season" (it used to be "overall")
+            if o.get("gameType") not in ("overall", "regular_season") or not isinstance(o.get("team"), dict):
                 continue
             tm, st = o["team"], o.get("stats")
             key = (o["division"].get("title", ""), tm.get("id"))
