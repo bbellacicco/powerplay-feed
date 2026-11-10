@@ -240,6 +240,8 @@
     });
   }
   var PRO_CHIPS = [['all', 'All'], ['team', 'Our teams']].concat(LEAGUES.map(function (L) { return [L.key, L.key]; }));
+  // ?league=nhl: opens on that league (the Pro Hub's league bar)
+  var LGQ = String(qs.get('league') || '').toUpperCase(); if (LEAGUE_OF[LGQ]) { state.tab = 'pro'; state.chip = LGQ; }
   var TAGLINE = { local: 'Every Powerplay highlight and interview, in one place', pro: 'The latest from the NHL, NFL, MLB, NBA, CFL, PWHL and OHL. Pick a league, then your team' };
 
   function el(t, c, x) { var e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; }
@@ -481,6 +483,7 @@
     });
   }
   setTab(state.tab);
+  if (LEAGUE_OF[LGQ]) { state.chip = LGQ; chips(); grid(); }   // ?league= from the Pro Hub's league bar
   load();
   setInterval(function () { if (!player.classList.contains('on')) load(); }, 10 * 60000);
 })();
