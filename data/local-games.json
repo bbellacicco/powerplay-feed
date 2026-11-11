@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T18:46:42-05:00",
+ "updated": "2026-11-10T19:01:48-05:00",
  "today": "2026-11-10",
  "range": [
   "2026-11-07",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -882,9 +882,9 @@
    "home_away": "H",
    "opponent": "Mooretown Flags",
    "location": "Essex Centre Complex",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
    "note": "",
    "links": {
@@ -1839,6 +1839,17 @@
   },
   {
    "league": "pwhl",
+   "headline": "PWHL Unveils Expansion Team Identities Ahead of Their Inaugural Seasons",
+   "summary": "",
+   "published": "2026-11-10T13:30:00+00:00",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/League-ExpansionHeader-16x9_1",
+   "video": false,
+   "teams": [],
+   "url": "https://www.thepwhl.com/en/news/2026/november/10/pwhl-unveils-expansion-team-identities-ahead-of-their-inaugural-seasons",
+   "source": "thepwhl.com"
+  },
+  {
+   "league": "pwhl",
    "headline": "Vegas Vanguards Lead the Way With New Brand Launch",
    "summary": "",
    "published": "2026-11-10T13:00:00+00:00",
@@ -1887,17 +1898,6 @@
     "Detroit Clutch"
    ],
    "url": "https://www.thepwhl.com/en/teams/detroit-clutch/news/2026/november/10/detroit-clutch-finds-inspiration-from-the-history-of-the-motor-city",
-   "source": "thepwhl.com"
-  },
-  {
-   "league": "pwhl",
-   "headline": "PWHL Unveils Expansion Team Identities Ahead of Their Inaugural Seasons",
-   "summary": "",
-   "published": "2026-11-10T12:00:00+00:00",
-   "image": "https://res.cloudinary.com/pwhl-low/image/upload/c_auto,g_auto,h_800,w_1188/q_auto/f_auto/League-ExpansionHeader-16x9_1",
-   "video": false,
-   "teams": [],
-   "url": "https://www.thepwhl.com/en/news/2026/november/10/pwhl-unveils-expansion-team-identities-ahead-of-their-inaugural-seasons",
    "source": "thepwhl.com"
   },
   {
@@ -2226,42 +2226,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "AP Source: Raiders send QB Kirk Cousins to Vikings",
-   "summary": "",
-   "published": "2026-11-10T14:42-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/kirk-cousins.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/report-raiders-send-qb-kirk-cousins-to-vikings/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Coaching hire, roster decisions to headline Toronto FC’s quick off-season",
-   "summary": "Toronto FC’s off-season became a whole lot more interesting this week.",
-   "published": "2026-11-10T18:21-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Jason-Hernandez.jpg",
+   "league": "nhl",
+   "headline": "NHL to explore replay assist technology for officials",
+   "summary": "NHL commissioner Gary Bettman was quick to remind that wholesale changes won’t be coming to the way the game is officiated, but he mentioned how tech advancements might streamline everything from information to the flow ",
+   "published": "2026-11-10T17:47-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/NHL-referees.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/coaching-hire-roster-decisions-to-headline-toronto-fcs-quick-off-season/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Canucks quarter-mark report: Few bright spots in dark days of rebuild",
-   "summary": "There has been no joy for the Canucks so far. And on several nights, some essential pride has been missing too, as Vancouver crashed to its worst opening quarter in franchise history.",
-   "published": "2026-11-10T16:42-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/canucks-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canucks-quarter-mark-report-few-bright-spots-in-dark-days-of-rebuild/",
+   "url": "https://www.sportsnet.ca/nhl/article/nhl-to-explore-replay-assist-technology-for-officials/",
    "source": "Sportsnet"
   },
   {
@@ -2278,16 +2252,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "NHL to explore replay assist technology for officials",
-   "summary": "NHL commissioner Gary Bettman was quick to remind that wholesale changes won’t be coming to the way the game is officiated, but he mentioned how tech advancements might streamline everything from information to the flow ",
-   "published": "2026-11-10T17:47-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/NHL-referees.jpg",
+   "league": "nfl",
+   "headline": "AP Source: Raiders send QB Kirk Cousins to Vikings",
+   "summary": "",
+   "published": "2026-11-10T14:42-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/kirk-cousins.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/nhl-to-explore-replay-assist-technology-for-officials/",
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/report-raiders-send-qb-kirk-cousins-to-vikings/",
    "source": "Sportsnet"
   },
   {
@@ -2378,6 +2352,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Canucks quarter-mark report: Few bright spots in dark days of rebuild",
+   "summary": "There has been no joy for the Canucks so far. And on several nights, some essential pride has been missing too, as Vancouver crashed to its worst opening quarter in franchise history.",
+   "published": "2026-11-10T16:42-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/canucks-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canucks-quarter-mark-report-few-bright-spots-in-dark-days-of-rebuild/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "The story behind Jake Middleton’s tribute to his grandfather’s wartime sacrifice",
    "summary": "Jake Middleton wears his family history on his left arm, quite literally. The Flames defenceman’s grandfather served in the Second World War, and Middleton shares his love with a deeply meaningful tattoo sleeve.",
    "published": "2026-11-10T12:54-05:00",
@@ -2400,6 +2387,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/senators-recall-goalie-jackson-parsons-from-ahl-belleville/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Coaching hire, roster decisions to headline Toronto FC’s quick off-season",
+   "summary": "Toronto FC’s off-season became a whole lot more interesting this week.",
+   "published": "2026-11-10T18:21-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Jason-Hernandez.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/coaching-hire-roster-decisions-to-headline-toronto-fcs-quick-off-season/",
    "source": "Sportsnet"
   },
   {
@@ -2643,19 +2643,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Jannik Sinner plans late-December return at Saudi exhibition ahead of Australian Open",
-   "summary": "",
-   "published": "2026-11-10T08:23-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/sinner_jannik1280.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Tennis",
-   "url": "https://www.sportsnet.ca/atp/article/jannik-sinner-plans-late-december-return-at-saudi-exhibition-ahead-of-australian-open/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nfl",
    "headline": "LIONS DAILY: A familiar connection gives Detroit's newest safety a head start",
    "summary": "",
@@ -2854,7 +2841,7 @@
    "league": "nfl",
    "headline": "'A difference maker' | Bills GM Brandon Beane details how Amani Hooker trade went down and how he'll fit",
    "summary": "Bills general manager Brandon Beane on how the deal for Amani Hooker got done, how he will fit with Cole Bishop and his confidence level in the 2026 Bills.",
-   "published": "2026-11-10T18:41-05:00",
+   "published": "2026-11-10T18:46-05:00",
    "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/bills/i3sxgj1zevaiwt7o54nw.jpg",
    "video": false,
    "teams": [
