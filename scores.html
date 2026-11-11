@@ -95,7 +95,9 @@
   // the Find a team bar across the top: Spitfires, Lancers, Saints, junior hockey, high school; a team opens right under it
   // the sports guide (today's games, latest scores, Coming Up, the Pro Hub line) leads the Local Hub.
   // A team's own link (?find=essex-73s) opens that team in the Local Teams bar instead, above it
-  if (FIND) { var tbf = document.getElementById('teambar'); tbf.style.display = 'block'; tbf.src = REPO + 'teams.html' + V + '&view=bar&in=sports&title=Local%20Teams&find=' + FIND; }
+  var LEAGUE = (new URLSearchParams(location.search).get('league') || '').toLowerCase().replace(/[^a-z]/g, '');   // a league's list (from the blog strip)
+  if (FIND || /^(lancers|saints|junior|hs)$/.test(LEAGUE)) { var tbf = document.getElementById('teambar'); tbf.style.display = 'block';
+    tbf.src = REPO + 'teams.html' + V + '&view=bar&in=sports&title=Local%20Teams' + (FIND ? '&find=' + FIND : '&league=' + LEAGUE); }
   var gs = document.createElement('script'); gs.src = REPO + 'guide.js?v=' + Math.floor(Date.now() / 6e5);
   gs.onload = function () { if (window.PPGuide) PPGuide.render(document.getElementById('guide'), { target: '_top' }); };
   document.body.appendChild(gs);
