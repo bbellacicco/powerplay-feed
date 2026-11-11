@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T01:16:54-05:00",
+ "updated": "2026-11-11T01:36:36-05:00",
  "today": "2026-11-11",
  "range": [
   "2026-11-08",
@@ -58,8 +58,8 @@
    "count": 0
   },
   "cfl": {
-   "ok": true,
-   "count": 0
+   "ok": false,
+   "error": "<urlopen error _ssl.c:994: The handshake operation timed out>"
   },
   "cfl_news": {
    "ok": true,
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 36
+   "count": 37
   },
   "club_news": {
    "ok": true,
@@ -2427,16 +2427,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "pwhl",
-   "headline": "PWHL expansion clubs unveil team nicknames",
+   "league": "nhl",
+   "headline": "NHL Roundup: Predators’ Saros records 28th career shutout in win over Kings",
    "summary": "",
-   "published": "2026-11-10T08:43-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/pwhl.jpg",
+   "published": "2026-11-11T01:33-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177142680.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/pwhl/article/pwhl-expansion-clubs-unveil-team-nicknames/",
+   "url": "https://www.sportsnet.ca/nhl/article/nhl-roundup-predators-saros-records-28th-career-shutout-in-win-over-kings/",
    "source": "Sportsnet"
   },
   {
@@ -2623,6 +2623,19 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/dolphins-place-qb-malik-willis-on-ir-with-groin-strain/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "pwhl",
+   "headline": "PWHL expansion clubs unveil team nicknames",
+   "summary": "",
+   "published": "2026-11-10T08:43-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/pwhl.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/pwhl/article/pwhl-expansion-clubs-unveil-team-nicknames/",
    "source": "Sportsnet"
   },
   {
@@ -2978,10 +2991,10 @@
   },
   {
    "league": "mlb",
-   "headline": "Tigers to prioritize bullpen improvements, strikeouts this offseason",
+   "headline": "Tigers take first step prioritizing more strikeouts with big free-agent move",
    "summary": "",
-   "published": "2026-11-10T19:10-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/v1794355168/mlb/zqxzyzz5z8ebzx5xbhka",
+   "published": "2026-11-11T01:09-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/qq6he3sdeewctumhfrjd",
    "video": false,
    "teams": [
     "Detroit Tigers"
