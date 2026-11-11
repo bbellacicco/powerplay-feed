@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T21:01:41-05:00",
+ "updated": "2026-11-10T21:17:03-05:00",
  "today": "2026-11-10",
  "range": [
   "2026-11-07",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 36
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -882,10 +882,10 @@
    "home_away": "H",
    "opponent": "Mooretown Flags",
    "location": "Essex Centre Complex",
-   "status": "live",
-   "our_score": 0,
+   "status": "final",
+   "our_score": 3,
    "opp_score": 0,
-   "result": null,
+   "result": "W",
    "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960586?configuration=45"
@@ -2415,15 +2415,28 @@
   },
   {
    "league": "mlb",
-   "headline": "White Sox’s Venable, Brewers’ Murphy win MLB Manager of the Year awards",
-   "summary": "",
-   "published": "2026-11-10T19:57-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP176052330.jpg",
+   "headline": "Cashman accepts Murphy’s apology for saying 2023 Yankees had selfish culture",
+   "summary": "Yankees general manager Brian Cashman accepted Pat Murphy’s apology after the Milwaukee manager criticized New York’s 2023 team for a selfish culture minutes after the Brewers won the World Series last month.",
+   "published": "2026-11-10T21:04-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Brian-Cashman.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 6,
+   "sn_team_count": 2,
    "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/white-soxs-venable-brewers-murphy-win-mlb-manager-of-the-year-awards/",
+   "url": "https://www.sportsnet.ca/mlb/article/cashman-accepts-murphys-apology-for-saying-2023-yankees-had-selfish-culture/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Bob Boone, World Series champion and part of three-generation baseball family, dies at 78",
+   "summary": "",
+   "published": "2026-11-10T12:01-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2021/09/bob-boone-nationals-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/bob-boone-world-series-champion-and-part-of-three-generation-baseball-family-dies-at-78/",
    "source": "Sportsnet"
   },
   {
@@ -2533,6 +2546,49 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "Raptors to provide another update on Kawhi Leonard in one week",
+   "summary": "",
+   "published": "2026-11-10T12:51-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/kawhi-4.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/raptors-to-provide-another-update-on-kawhi-leonard-in-one-week/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Surprises and disappointments through first 10 games of NBA season",
+   "summary": "It might not be a huge sample size, but three weeks into the NBA season, you can see the final portrait beginning to take shape. Kai Gammage looks at the biggest surprises and disappointments 10 games into the year.",
+   "published": "2026-11-10T08:14-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/76ers.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 6,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/surprises-and-disappointments-through-first-10-games-of-nba-season/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Why Jaylen Brown versus Jayson Tatum for the first time is a big deal",
+   "summary": "",
+   "published": "2026-11-10T12:08-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/dae1af4ae3a9835dbf4aa0d2fd941d57f7e3e00341e77709e53856f43c35601c.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/why-jaylen-brown-versus-jayson-tatum-for-the-first-time-is-a-big-deal/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Maple Leafs give injury updates on Sissons, Rielly, Marchenko",
    "summary": "",
@@ -2597,75 +2653,6 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/mason-marchment-fined-for-roughing-islanders-victor-eklund/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Raptors to provide another update on Kawhi Leonard in one week",
-   "summary": "",
-   "published": "2026-11-10T12:51-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/kawhi-4.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-to-provide-another-update-on-kawhi-leonard-in-one-week/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Surprises and disappointments through first 10 games of NBA season",
-   "summary": "It might not be a huge sample size, but three weeks into the NBA season, you can see the final portrait beginning to take shape. Kai Gammage looks at the biggest surprises and disappointments 10 games into the year.",
-   "published": "2026-11-10T08:14-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/76ers.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 6,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/surprises-and-disappointments-through-first-10-games-of-nba-season/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Why Jaylen Brown versus Jayson Tatum for the first time is a big deal",
-   "summary": "",
-   "published": "2026-11-10T12:08-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/dae1af4ae3a9835dbf4aa0d2fd941d57f7e3e00341e77709e53856f43c35601c.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/why-jaylen-brown-versus-jayson-tatum-for-the-first-time-is-a-big-deal/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Bob Boone, World Series champion and part of three-generation baseball family, dies at 78",
-   "summary": "",
-   "published": "2026-11-10T12:01-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2021/09/bob-boone-nationals-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/bob-boone-world-series-champion-and-part-of-three-generation-baseball-family-dies-at-78/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "CF Montreal being put up for sale by owner Joey Saputo",
-   "summary": "",
-   "published": "2026-11-09T16:21-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2018/05/saputo_joey.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/cf-montreal-being-put-up-for-sale-by-owner-joey-saputo/",
    "source": "Sportsnet"
   },
   {
@@ -4525,14 +4512,14 @@
      {
       "name": "Essex 73's",
       "abbr": "ESS",
-      "gp": 17,
-      "w": 16,
+      "gp": 18,
+      "w": 17,
       "l": 1,
       "otl": 0,
-      "pts": 32,
-      "gf": 72,
+      "pts": 34,
+      "gf": 75,
       "ga": 22,
-      "strk": "W16"
+      "strk": "W17"
      },
      {
       "name": "Lakeshore Canadiens",
@@ -4549,14 +4536,14 @@
      {
       "name": "Mooretown Flags",
       "abbr": "MOO",
-      "gp": 19,
+      "gp": 20,
       "w": 8,
-      "l": 9,
+      "l": 10,
       "otl": 2,
       "pts": 18,
       "gf": 65,
-      "ga": 67,
-      "strk": "L2"
+      "ga": 70,
+      "strk": "L3"
      },
      {
       "name": "Dresden Kings",
