@@ -251,6 +251,8 @@
     if (BAR) drawBar(); else drawDir();
     var want = (qs.get('find') || qs.get('team') || '').toLowerCase();
     if (want && BYID[want] && !build.done) openTeam(BYID[want], true);
+    var wl = (qs.get('league') || '').toLowerCase();   // ?league=lancers|saints|junior|hs: that league's list opens in the bar
+    if (BAR && !want && !build.done && /^(lancers|saints|junior|hs)$/.test(wl)) { barPick = wl; drawDrop(); markBar(); }
     build.done = true;
   }
 
