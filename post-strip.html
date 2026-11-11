@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, indexifembedded">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>More from Powerplay | Powerplay Windsor</title>
+<!--
+  "More from Powerplay": a slim strip for the bottom of every blog story (added once to the Wix blog's Post page).
+  The newest Powerplay stories with their photos, and the Local Teams buttons (each opens that league or team in the Local Hub).
+  Embed full width in Wix: 310px tall on desktop, 290px on mobile.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #0b1a33; --card: #132b57; --line: rgba(255,255,255,.12); --text: #f2f5fb; --muted: #a9b6d0; --accent: #e8b021; }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.35 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; overflow: hidden; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { padding: 14px 16px 12px; border-top: 4px solid var(--accent); }
+  .head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
+  h2 { margin: 0; font: 400 26px/1 'Bebas Neue', Impact, 'Arial Narrow', sans-serif; letter-spacing: .03em; text-transform: uppercase; }
+  h2 em { font-style: normal; color: var(--accent); }
+  .all { color: var(--accent); font-weight: 800; font-size: 12.5px; letter-spacing: .05em; text-transform: uppercase; white-space: nowrap; }
+  .row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+  .card { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+  .pic { aspect-ratio: 16 / 9; border-radius: 8px; overflow: hidden; background: var(--card); }
+  .pic img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .card b { font-size: 14px; line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .card:hover b { text-decoration: underline; }
+  .teams { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--line); }
+  .teams .lbl { font: 400 19px/1 'Bebas Neue', Impact, sans-serif; color: var(--accent); letter-spacing: .03em; margin-right: 4px; }
+  .teams a { font-weight: 800; font-size: 13px; background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 7px 12px; }
+  .teams a:hover { border-color: var(--accent); }
+  @media (max-width: 700px) {
+    .wrap { padding: 12px 12px 10px; } h2 { font-size: 21px; white-space: nowrap; } .all { font-size: 11.5px; }
+    /* phones: the stories and the team buttons each scroll sideways in one row, so the strip stays short */
+    .row, .teams { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin-left: -12px; margin-right: -12px; padding-left: 12px; padding-right: 12px; scroll-padding-left: 12px; }
+    .row::-webkit-scrollbar, .teams::-webkit-scrollbar { display: none; }
+    .card { flex: 0 0 62%; scroll-snap-align: start; }
+    .teams { flex-wrap: nowrap; gap: 5px; } .teams > * { flex: none; scroll-snap-align: start; } .teams .lbl { font-size: 17px; } .teams a { font-size: 12.5px; padding: 6px 10px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="head"><h2>More from <em>Powerplay</em></h2><a class="all" href="https://www.powerplaywindsor.com/" target="_top">Home page ›</a></div>
+  <div class="row" id="row"></div>
+  <div class="teams">
+    <span class="lbl">Local Teams</span>
+    <a href="https://www.powerplaywindsor.com/scores-standings?find=spitfires" target="_top">Spitfires</a>
+    <a href="https://www.powerplaywindsor.com/scores-standings?league=lancers" target="_top">Lancers</a>
+    <a href="https://www.powerplaywindsor.com/scores-standings?league=saints" target="_top">Saints</a>
+    <a href="https://www.powerplaywindsor.com/scores-standings?league=junior" target="_top">Junior hockey</a>
+    <a href="https://www.powerplaywindsor.com/scores-standings?league=hs" target="_top">High school</a>
+  </div>
+</div>
+<script>
+(function () {
+  var DATA = 'https://bbellacicco.github.io/powerplay-feed/data/';
+  var GENERIC = /(1920x1080-|game-story|placeholder)/i;
+  function el(t, c, x) { var e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; }
+  function wix(u) { var m = String(u || '').match(/^(https:\/\/static\.wixstatic\.com\/media\/[^/]+)/); return m ? m[1] + '/v1/fill/w_480,h_270,al_c,q_80/photo.jpg' : u; }
+  // the newest Powerplay stories with a photo (the story being read may be one of them; that's fine)
+  fetch(DATA + 'local-news.json?t=' + Math.floor(Date.now() / 3e5)).then(function (r) { return r.json(); }).then(function (j) {
+    var list = (j.stories || []).filter(function (s) { return s.team === 'powerplay' && !s.video && /powerplaywindsor\.com/.test(s.url) && s.image && !GENERIC.test(s.image); })
+      .sort(function (a, b) { return new Date(b.published) - new Date(a.published); }).slice(0, 4);
+    var row = document.getElementById('row');
+    list.forEach(function (s) {
+      var a = el('a', 'card'); a.href = s.url; a.target = '_top';
+      var p = el('div', 'pic'), im = new Image(); im.src = wix(s.image); im.alt = ''; im.loading = 'lazy'; im.onerror = function () { im.remove(); }; p.appendChild(im); a.appendChild(p);
+      a.appendChild(el('b', null, s.headline)); row.appendChild(a);
+    });
+  }).catch(function () {});
+})();
+</script>
+</body>
+</html>
