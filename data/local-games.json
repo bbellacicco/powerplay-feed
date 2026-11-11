@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10T20:37:15-05:00",
+ "updated": "2026-11-10T21:01:41-05:00",
  "today": "2026-11-10",
  "range": [
   "2026-11-07",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 32
+   "count": 36
   },
   "club_news": {
    "ok": true,
@@ -2198,19 +2198,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "NFL trade deadline tracker: Every deal made",
-   "summary": "",
-   "published": "2026-11-03T12:00-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/amani.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-trade-deadline-tracker-follow-all-the-deals/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "Canadiens fans give Carey Price a hero’s welcome as goalie enters ring of honour",
    "summary": "The Montreal Canadiens welcomed Carey Price back to the Bell Centre with a memorable, spine-tingling ovation Tuesday night.",
@@ -2254,6 +2241,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "mlb",
+   "headline": "Blue Jays’ Atkins disappointed by Santander’s anti-Muslim posts",
+   "summary": "",
+   "published": "2026-11-10T20:48-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/05/CP174434041.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/blue-jays-atkins-disappointed-by-santanders-anti-muslim-posts/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nba",
    "headline": "Brown, Tatum keep their distance as Celtics visit 76ers for first time since trade",
    "summary": "Brown and Tatum kept their distance during pre-game warmups ahead of Tuesday’s game when the Celtics played Philadelphia for the first time since the summer trade that saw Brown surprisingly switch sides.",
@@ -2280,29 +2282,29 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "NHL, NHLPA to discuss salary-cap options in new year",
+   "league": "mlb",
+   "headline": "White Sox’s Venable, Brewers’ Murphy win MLB Manager of the Year awards",
    "summary": "",
-   "published": "2026-11-10T14:48-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/NHL-Commissioner-Gary-Bettman.jpg",
+   "published": "2026-11-10T19:57-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP176052330.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/nhl-nhlpa-to-discuss-salary-cap-options-in-new-year/",
+   "sn_team_count": 6,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/white-soxs-venable-brewers-murphy-win-mlb-manager-of-the-year-awards/",
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "NHL to explore replay assist technology for officials",
-   "summary": "NHL commissioner Gary Bettman was quick to remind that wholesale changes won’t be coming to the way the game is officiated, but he mentioned how tech advancements might streamline everything from information to the flow ",
-   "published": "2026-11-10T17:47-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/NHL-referees.jpg",
+   "league": "pwhl",
+   "headline": "PWHL expansion clubs unveil team nicknames",
+   "summary": "",
+   "published": "2026-11-10T08:43-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/pwhl.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/nhl-to-explore-replay-assist-technology-for-officials/",
+   "url": "https://www.sportsnet.ca/pwhl/article/pwhl-expansion-clubs-unveil-team-nicknames/",
    "source": "Sportsnet"
   },
   {
@@ -2358,6 +2360,32 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "NHL to explore replay assist technology for officials",
+   "summary": "NHL commissioner Gary Bettman was quick to remind that wholesale changes won’t be coming to the way the game is officiated, but he mentioned how tech advancements might streamline everything from information to the flow ",
+   "published": "2026-11-10T17:47-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/NHL-referees.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/nhl-to-explore-replay-assist-technology-for-officials/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "NHL, NHLPA to discuss salary-cap options in new year",
+   "summary": "",
+   "published": "2026-11-10T14:48-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/NHL-Commissioner-Gary-Bettman.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/nhl-nhlpa-to-discuss-salary-cap-options-in-new-year/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "mlb",
    "headline": "GM Meetings notebook: Could Blue Jays be interested in Brandon Lowe?",
    "summary": "As the Toronto Blue Jays seek to augment the offence that ranked last in MLB in runs scored, they’ve shown interest in Brandon Lowe. Shi Davidi and Ben Nicholson-Smith check in from the GM Meetings with that and more.",
@@ -2370,19 +2398,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/gm-meetings-notebook-could-blue-jays-be-interested-in-brandon-lowe/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Coaching hire, roster decisions to headline Toronto FC’s quick off-season",
-   "summary": "Toronto FC’s off-season became a whole lot more interesting this week.",
-   "published": "2026-11-10T18:21-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Jason-Hernandez.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/coaching-hire-roster-decisions-to-headline-toronto-fcs-quick-off-season/",
    "source": "Sportsnet"
   },
   {
@@ -2412,16 +2427,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "pwhl",
-   "headline": "PWHL expansion clubs unveil team nicknames",
+   "league": "nfl",
+   "headline": "NFL trade deadline tracker: Every deal made",
    "summary": "",
-   "published": "2026-11-10T08:43-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/pwhl.jpg",
+   "published": "2026-11-03T12:00-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/amani.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/pwhl/article/pwhl-expansion-clubs-unveil-team-nicknames/",
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-trade-deadline-tracker-follow-all-the-deals/",
    "source": "Sportsnet"
   },
   {
@@ -2437,6 +2452,32 @@
    "sn_team_count": 2,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/report-bills-acquire-int-leader-amani-hooker-from-titans/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Chiefs acquire WR Josh Downs from Colts",
+   "summary": "The Kansas City Chiefs are acquiring wide receiver Josh Downs from the Indianapolis Colts for a pair of draft picks, filling their biggest position of need just two days after Xavier Worthy sustained a hamstring injury i",
+   "published": "2026-11-10T16:00-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-4-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/report-chiefs-acquire-wr-josh-downs-from-colts/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Reports: 49ers acquire WR Keenan Allen from Colts for sixth-round pick",
+   "summary": "",
+   "published": "2026-11-10T13:58-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/keena.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/reports-49ers-acquire-wr-keenan-allen-from-colts-for-sixth-round-pick/",
    "source": "Sportsnet"
   },
   {
@@ -2463,6 +2504,32 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/dolphins-place-qb-malik-willis-on-ir-with-groin-strain/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Report: Broncos acquiring linebacker Daiyan Henley from Chargers",
+   "summary": "As the Denver Broncos brace for another deep playoff run, their defense just got a boost.",
+   "published": "2026-11-10T15:42-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-3-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/report-broncos-acquiring-linebacker-daiyan-henley-from-chargers/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Coaching hire, roster decisions to headline Toronto FC’s quick off-season",
+   "summary": "Toronto FC’s off-season became a whole lot more interesting this week.",
+   "published": "2026-11-10T18:21-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Jason-Hernandez.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/coaching-hire-roster-decisions-to-headline-toronto-fcs-quick-off-season/",
    "source": "Sportsnet"
   },
   {
@@ -2576,32 +2643,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "Reports: 49ers acquire WR Keenan Allen from Colts for sixth-round pick",
-   "summary": "",
-   "published": "2026-11-10T13:58-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/keena.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/reports-49ers-acquire-wr-keenan-allen-from-colts-for-sixth-round-pick/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Report: Broncos acquiring linebacker Daiyan Henley from Chargers",
-   "summary": "As the Denver Broncos brace for another deep playoff run, their defense just got a boost.",
-   "published": "2026-11-10T15:42-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-3-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/report-broncos-acquiring-linebacker-daiyan-henley-from-chargers/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "mlb",
    "headline": "Bob Boone, World Series champion and part of three-generation baseball family, dies at 78",
    "summary": "",
@@ -2612,6 +2653,19 @@
    "sn_team_count": 0,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/bob-boone-world-series-champion-and-part-of-three-generation-baseball-family-dies-at-78/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "CF Montreal being put up for sale by owner Joey Saputo",
+   "summary": "",
+   "published": "2026-11-09T16:21-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2018/05/saputo_joey.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/cf-montreal-being-put-up-for-sale-by-owner-joey-saputo/",
    "source": "Sportsnet"
   },
   {
