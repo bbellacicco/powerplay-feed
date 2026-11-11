@@ -92,6 +92,12 @@
   .field svg { width: 18px; height: 18px; stroke: var(--muted); flex: none; }
   .field input { flex: 1; min-width: 0; background: transparent; border: 0; outline: 0; color: var(--text); font: inherit; font-size: 16px; }
   .field input::placeholder { color: var(--muted); }
+  .mic { flex: none; width: 36px; height: 36px; margin-right: -8px; border: 0; border-radius: 50%; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+  .mic svg { width: 20px; height: 20px; stroke: var(--accent); }
+  .mic:hover { background: rgba(255,255,255,.08); }
+  .mic.on { background: #e5484d; animation: micpulse 1.1s infinite; } .mic.on svg { stroke: #fff; }
+  @keyframes micpulse { 50% { box-shadow: 0 0 0 7px rgba(229,72,77,.25); } }
+  .search { flex-wrap: wrap; } .michint { flex-basis: 100%; color: var(--muted); font-size: 13px; padding: 6px 4px 0; }
   html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }   /* iPhones: no enlarging the text inside the box */
   .search .btn { height: 48px; }
 
@@ -283,7 +289,9 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
     <label class="field">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
       <input id="q" type="search" placeholder="What would you like to know?" autocomplete="off" enterkeyhint="search" aria-label="Search Powerplay Windsor">
+      <button type="button" class="mic" id="mic" aria-label="Search by voice" hidden><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></button>
     </label>
+    <div class="michint" id="michint" hidden></div>
     <button class="btn" type="submit">Search</button>
   </form>
   <div class="teamswrap" id="teamswrap"><iframe id="teamsbar" title="Local Teams" scrolling="no"></iframe></div>
@@ -815,6 +823,32 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
   }, true);
 
   // ---------- search ----------
+  // voice search: tap the mic, say "when do the Spitfires play next", and it searches.
+  // (Browsers that can't do it, or block the mic inside the Wix box, get a pointer to the keyboard's own mic.)
+  (function () {
+    var SR = window.SpeechRecognition || window.webkitSpeechRecognition, mic = document.getElementById('mic'), hint = document.getElementById('michint'), q = document.getElementById('q');
+    if (!SR) return;
+    mic.hidden = false;
+    var rec = null;
+    function say(t) { hint.textContent = t; hint.hidden = !t; }
+    mic.onclick = function () {
+      if (rec) { rec.stop(); return; }
+      rec = new SR(); rec.lang = 'en-CA'; rec.interimResults = true; rec.maxAlternatives = 1;
+      mic.classList.add('on'); say('Listening\u2026 ask about a team, a score or a story.');
+      var heard = '';
+      rec.onresult = function (e) { heard = [].map.call(e.results, function (r) { return r[0].transcript; }).join(' '); q.value = heard; };
+      rec.onerror = function (e) {
+        say(e.error === 'not-allowed' || e.error === 'service-not-allowed' ? 'Your browser blocked the mic here. Tap the box and use the mic on your keyboard instead.' : e.error === 'no-speech' ? 'Didn\u2019t catch that. Tap the mic and try again.' : '');
+        if (e.error === 'not-allowed' || e.error === 'service-not-allowed') q.focus();
+      };
+      rec.onend = function () {
+        mic.classList.remove('on'); rec = null;
+        if (heard.trim()) { say(''); var f = document.getElementById('sform'); if (f.requestSubmit) f.requestSubmit(); else f.dispatchEvent(new Event('submit', { cancelable: true })); }
+        else if (hint.textContent.indexOf('Listening') === 0) say('');
+      };
+      try { rec.start(); } catch (er) { mic.classList.remove('on'); rec = null; say('Tap the box and use the mic on your keyboard instead.'); q.focus(); }
+    };
+  })();
   document.getElementById('sform').addEventListener('submit', function (e) {
     e.preventDefault();
     var v = document.getElementById('q').value.trim(); if (!v) { document.getElementById('q').focus(); return; }
