@@ -84,6 +84,9 @@
   #page > *:not(#teamswrap) { transition: filter .2s ease; }
   html.teamsopen #page > *:not(#teamswrap) { filter: blur(6px) brightness(.55); cursor: pointer; }
   html.teamsopen #page > *:not(#teamswrap) * { pointer-events: none; }
+  html.vpopen #page > *:not(#vplayer) { filter: blur(6px) brightness(.5); cursor: pointer; transition: filter .2s ease; }
+  html.vpopen #page > *:not(#vplayer) * { pointer-events: none; }
+  html.vpopen .vplayer { z-index: 30; box-shadow: 0 0 0 1px rgba(232,176,33,.5), 0 18px 50px rgba(0,0,0,.7); }
   .field { flex: 1; display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 16px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 8px; }
   .field:focus-within { border-color: var(--accent); }
   .field svg { width: 18px; height: 18px; stroke: var(--muted); flex: none; }
@@ -746,8 +749,7 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
     vcur = s; document.getElementById('vshare').style.display = '';
     vDesc(s);
     vp.classList.add('on');
-    var sec = at || document.getElementById('row-network'), page = document.getElementById('page');
-    vp.style.top = Math.max(0, Math.min(sec.offsetTop - (at ? 0 : 10), page.offsetHeight - vp.offsetHeight - 10)) + 'px';
+    placeTop();
   }
   // the video's own write-up under the player (full text from data/video-text.json, loaded the first time)
   var vtext = null, vtextP = null, vcur = null;
@@ -787,8 +789,7 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
     vcur = s; document.getElementById('vshare').style.display = '';
     vDesc(s);
     vp.classList.add('on');
-    var sec = at || document.getElementById('row-stories'), page = document.getElementById('page');
-    vp.style.top = Math.max(0, Math.min(sec.offsetTop - (at ? 0 : 10), page.offsetHeight - vp.offsetHeight - 10)) + 'px';
+    placeTop();
   }
   function playShow(sh, at) {   // at: the element to open over (the top-story box); otherwise over the Game Day Snaps row
     var fr = document.getElementById('vframe'); fr.innerHTML = ''; fr.classList.remove('pic'); fr.classList.add('gal');
@@ -797,10 +798,21 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
     var ext = document.getElementById('vext'); ext.href = sh.url; ext.textContent = 'Open full page ↗'; ext.style.display = '';
     document.getElementById('vshare').style.display = 'none'; document.getElementById('vdesc').hidden = true;
     vp.classList.add('on');
-    var sec = at || document.getElementById('row-photos'), page = document.getElementById('page');
-    vp.style.top = Math.max(0, Math.min(sec.offsetTop - (at ? 0 : 10), page.offsetHeight - vp.offsetHeight - 10)) + 'px';
+    placeTop();
   }
-  document.getElementById('vclose').onclick = function () { vp.classList.remove('on'); var fr = document.getElementById('vframe'); fr.innerHTML = ''; fr.classList.remove('gal'); fr.classList.remove('pic'); };
+  // every video, slideshow and quick post opens at the top of the page, with the rest of the page blurred behind it
+  function placeTop() {
+    vp.style.top = '10px';
+    document.documentElement.classList.add('vpopen');
+    try { vp.scrollIntoView({ block: 'start', behavior: 'smooth' }); } catch (e) { vp.scrollIntoView(true); }   // brings the top into view (also scrolls the Wix page)
+  }
+  function closePlayer() { vp.classList.remove('on'); document.documentElement.classList.remove('vpopen'); var fr = document.getElementById('vframe'); fr.innerHTML = ''; fr.classList.remove('gal'); fr.classList.remove('pic'); }
+  document.getElementById('vclose').onclick = closePlayer;
+  // a tap on the blurred page closes it
+  document.getElementById('page').addEventListener('click', function (e) {
+    if (!document.documentElement.classList.contains('vpopen') || vp.contains(e.target)) return;
+    e.preventDefault(); e.stopPropagation(); closePlayer();
+  }, true);
 
   // ---------- search ----------
   document.getElementById('sform').addEventListener('submit', function (e) {
