@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T10:01:43-05:00",
+ "updated": "2026-11-11T10:21:20-05:00",
  "today": "2026-11-11",
  "range": [
   "2026-11-08",
@@ -39,7 +39,7 @@
   },
   "lancers": {
    "ok": true,
-   "count": 45
+   "count": 52
   },
   "junior": {
    "ok": true,
@@ -1280,16 +1280,32 @@
    "id": "lancers-6486",
    "team": "lancers",
    "sport": "Curling",
-   "start": "2026-11-14T00:00:00-05:00",
-   "time_tbd": true,
-   "home_away": "A",
-   "opponent": "Guelph Bonspiel",
+   "start": "2026-11-14T09:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "McMaster Marauders",
    "location": "Guelph, ON",
    "status": "upcoming",
    "our_score": null,
    "opp_score": null,
    "result": null,
-   "note": "",
+   "note": "Guelph Invitational - Women",
+   "links": {}
+  },
+  {
+   "id": "lancers-6501",
+   "team": "lancers",
+   "sport": "Curling",
+   "start": "2026-11-14T09:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "McMaster Marauders",
+   "location": "Guelph, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Guelph Invitational - Men",
    "links": {}
   },
   {
@@ -1329,6 +1345,38 @@
     "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=174",
     "watch": "https://oua.tv/?school=Windsor"
    }
+  },
+  {
+   "id": "lancers-6498",
+   "team": "lancers",
+   "sport": "Curling",
+   "start": "2026-11-14T15:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Mowhawk College",
+   "location": "Guelph, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Guelph Invitational - Men",
+   "links": {}
+  },
+  {
+   "id": "lancers-6504",
+   "team": "lancers",
+   "sport": "Curling",
+   "start": "2026-11-14T15:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Guelph Gryphons",
+   "location": "Guelph, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Guelph Invitational - Women",
+   "links": {}
   },
   {
    "id": "lancers-6206",
@@ -2874,6 +2922,19 @@
   },
   {
    "league": "nfl",
+   "headline": "Buffalo Bills recognize these WNY high school football coaches | Week 10 2026",
+   "summary": "As part of the program, each winning coach’s program will receive $1,000 from the Buffalo Bills and Visa.",
+   "published": "2026-11-11T10:00-05:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/bills/fmjr9xcmrjgmbiytj28p.jpg",
+   "video": false,
+   "teams": [
+    "Buffalo Bills"
+   ],
+   "url": "https://www.buffalobills.com/news/buffalo-bills-recognize-these-wny-high-school-football-coaches-week-10-2026",
+   "source": "Team site"
+  },
+  {
+   "league": "nfl",
    "headline": "'A difference maker' | Bills GM Brandon Beane details how Amani Hooker trade went down and how he'll fit",
    "summary": "Bills general manager Brandon Beane on how the deal for Amani Hooker got done, how he will fit with Cole Bishop and his confidence level in the 2026 Bills.",
    "published": "2026-11-10T18:46-05:00",
@@ -2987,19 +3048,6 @@
     "Buffalo Bills"
    ],
    "url": "https://www.buffalobills.com/news/buffalo-bills-and-nfl-foundation-lisc-grassroots-field-grant-program-support-development-of-new-community-football-field-in-buffalo",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
-   "headline": "Buffalo Bills injury report vs. Vikings | Week 9",
-   "summary": "Designations for WR Joshua Palmer, LT Dion Dawkins, LG Alec Anderson, DB Jordan Hancock, DL Greg Gaines and WR Tyrell Shavers",
-   "published": "2026-11-07T14:10-05:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/bills/rxcsvppmr7di8kbnzxaj.png",
-   "video": false,
-   "teams": [
-    "Buffalo Bills"
-   ],
-   "url": "https://www.buffalobills.com/news/buffalo-bills-injury-report-vs-vikings-week-9",
    "source": "Team site"
   },
   {
