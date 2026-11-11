@@ -47,6 +47,7 @@
   .tools button, .tools span { border: 0; background: transparent; color: #fff; font: 800 14px/1 system-ui, sans-serif; padding: 9px 11px; display: flex; align-items: center; }
   .tools button { cursor: pointer; } .tools button:hover { background: rgba(255,255,255,.18); }
   .tools svg { width: 14px; height: 14px; fill: #fff; }
+  .tools #save { gap: 6px; border-right: 1px solid rgba(255,255,255,.2); } .tools #save .lbl { font-size: 13px; }
   .tools span { border-left: 1px solid rgba(255,255,255,.2); border-right: 1px solid rgba(255,255,255,.2); font-variant-numeric: tabular-nums; }
   .bar { position: absolute; left: 0; bottom: 0; height: 3px; background: var(--accent); width: 0; z-index: 3; }
 
@@ -94,6 +95,7 @@
     <div class="tools">
       <button type="button" id="play" aria-label="Play slideshow"><svg viewBox="0 0 24 24" id="playicon"><path d="M7 4v16l13-8z"/></svg></button>
       <span id="count">1 / 1</span>
+      <button type="button" id="save" aria-label="Save this photo"><svg viewBox="0 0 24 24"><path d="M11 3h2v9.6l3.3-3.3 1.4 1.4L12 16.4l-5.7-5.7 1.4-1.4 3.3 3.3zM4 18h16v2H4z"/></svg><b class="lbl">Save</b></button>
       <button type="button" id="full" aria-label="Full screen"><svg viewBox="0 0 24 24"><path d="M3 3h7v2H5v5H3zm11 0h7v7h-2V5h-5zM3 14h2v5h5v2H3zm16 0h2v7h-7v-2h5z"/></svg></button>
     </div>
     <div class="bar" id="bar"></div>
@@ -196,6 +198,21 @@
     show = first ? first.key : 'example'; base = REPO + 'slideshows/' + show + '/'; start();
   }).catch(function () { show = 'example'; base = REPO + 'slideshows/example/'; start(); });
 
+  // Save: players and parents can keep their photo (the website copy, with the Powerplay watermark).
+  // Phones: the share sheet ("Save Image"); otherwise a download; if a browser blocks both, the photo opens in a new tab
+  $('save').onclick = function () {
+    var s = slides[at]; if (!s) return;
+    var url = base + encodeURIComponent(s.file), name = (show || 'game-day-snaps') + '-' + s.file.replace(/\.[^.]+$/, '') + '.jpg';
+    var openIt = function () { var w = null; try { w = window.open(url, '_blank', 'noopener'); } catch (e) {} if (!w) location.href = url; };
+    fetch(url).then(function (r) { if (!r.ok) throw 0; return r.blob(); }).then(function (blob) {
+      var file = null; try { file = new File([blob], name, { type: 'image/jpeg' }); } catch (e) {}
+      if (file && /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) && navigator.canShare && navigator.canShare({ files: [file] })) {
+        return navigator.share({ files: [file], title: s.head || 'Game Day Snaps' }).catch(function (e) { if (e && e.name !== 'AbortError') openIt(); });
+      }
+      var a = document.createElement('a'), obj = URL.createObjectURL(blob); a.href = obj; a.download = name;
+      document.body.appendChild(a); a.click(); a.remove(); setTimeout(function () { URL.revokeObjectURL(obj); }, 4000);
+    }).catch(openIt);
+  };
   $('prev').onclick = function () { go(at - 1); };
   $('next').onclick = function () { go(at + 1); };
   $('play').onclick = function () { timer ? stop() : play(); };
