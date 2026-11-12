@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T20:01:50-05:00",
+ "updated": "2026-11-11T20:21:45-05:00",
  "today": "2026-11-11",
  "range": [
   "2026-11-08",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -809,11 +809,11 @@
    "home_away": "H",
    "opponent": "St. Thomas Stars",
    "location": "Vollmer Culture R.C., LaSalle, ON",
-   "status": "live",
-   "our_score": 1,
-   "opp_score": 3,
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
    "result": null,
-   "note": "05:57 2nd",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15676"
    },
@@ -2394,6 +2394,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "mlb",
+   "headline": "Scott Boras: ‘Sku-bull market’ emerging after slow start to free agency",
+   "summary": "",
+   "published": "2026-11-11T15:28-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2023/11/scott-boras.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/scott-boras-sku-bull-market-emerging-after-slow-start-to-free-agency/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "The story behind Jake Middleton’s tribute to his grandfather’s wartime sacrifice",
    "summary": "Jake Middleton wears his family history on his left arm, quite literally. The Flames defenceman’s grandfather served in the Second World War, and Middleton shares his love with a deeply meaningful tattoo sleeve.",
@@ -2642,32 +2655,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/canucks-quarter-mark-report-few-bright-spots-in-dark-days-of-rebuild/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Jaylen Brown gives Jayson Tatum the cold shoulder as Celtics top 76ers",
-   "summary": "Brown and Tatum kept their distance during pre-game warmups ahead of Tuesday’s game when the Celtics played Philadelphia for the first time since the summer trade that saw Brown surprisingly switch sides.",
-   "published": "2026-11-10T20:28-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/c09f3e08b2402a8c2f7507ef13511e5f178d81caa0210b9fb7fa7da1aa2d955c.jpg_newsroom_base.jpeg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/brown-tatum-keep-their-distance-as-celtics-visit-76ers-for-first-time-since-trade/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "AP source: Man U working on potential deal to hire U.S. coach Pochettino",
-   "summary": "",
-   "published": "2026-11-11T08:06-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/poch.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/premier-league/article/ap-source-man-u-working-on-potential-deal-to-hire-u-s-coach-pochettino/",
    "source": "Sportsnet"
   },
   {
@@ -3632,7 +3619,7 @@
       "l": 13,
       "otl": 3,
       "pts": 9,
-      "gf": 41,
+      "gf": 42,
       "ga": 76,
       "strk": "L3"
      }
@@ -3714,7 +3701,7 @@
       "l": 3,
       "otl": 0,
       "pts": 30,
-      "gf": 82,
+      "gf": 83,
       "ga": 54,
       "strk": "W6"
      },
@@ -3727,7 +3714,7 @@
       "otl": 2,
       "pts": 24,
       "gf": 72,
-      "ga": 60,
+      "ga": 61,
       "strk": "L1"
      },
      {
@@ -3763,7 +3750,7 @@
       "otl": 3,
       "pts": 15,
       "gf": 52,
-      "ga": 78,
+      "ga": 79,
       "strk": "L2"
      }
     ]
@@ -4094,7 +4081,7 @@
       "otl": 1,
       "pts": 29,
       "gf": 75,
-      "ga": 41,
+      "ga": 42,
       "strk": "W5"
      },
      {
@@ -4165,8 +4152,8 @@
       "l": 11,
       "otl": 1,
       "pts": 15,
-      "gf": 67,
-      "ga": 82,
+      "gf": 68,
+      "ga": 84,
       "strk": "L3"
      },
      {
@@ -4177,7 +4164,7 @@
       "l": 10,
       "otl": 0,
       "pts": 14,
-      "gf": 47,
+      "gf": 48,
       "ga": 71,
       "strk": "L2"
      },
@@ -4213,8 +4200,8 @@
       "l": 15,
       "otl": 0,
       "pts": 2,
-      "gf": 32,
-      "ga": 104,
+      "gf": 34,
+      "ga": 105,
       "strk": "L4"
      }
     ]
