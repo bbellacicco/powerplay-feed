@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T13:31:48-05:00",
+ "updated": "2026-11-12T13:51:25-05:00",
  "today": "2026-11-12",
  "range": [
   "2026-11-09",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -2243,6 +2243,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Maple Leafs decide to sit Tanev vs. Wild because of load-management plan",
+   "summary": "The Toronto Maple Leafs are in the throes of an 0-4 homestand, losing ground in the standings, and facing one of the league’s best teams Thursday. And they are choosing not to dress one of their best defencemen available",
+   "published": "2026-11-12T13:35-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/tanev.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-decide-to-sit-tanev-vs-wild-because-of-load-management-plan/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "mlb",
    "headline": "Blue Jays eye versatile Jazz Chisholm Jr. in search for offence",
    "summary": "As the Blue Jays seek to add offensive production, they’re not limiting their search to the outfield. Sportsnet’s Shi Davidi reports that the team has eyes on Jazz Chisholm Jr.",
@@ -2255,21 +2270,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/blue-jays-eye-versatile-jazz-chisholm-jr-in-search-for-offence/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Maple Leafs quarter-mark report card: Toronto needs improvement",
-   "summary": "The Maple Leafs need to hop on a Q2 heater to keep pace with a league threatening to speed away from them. Here’s a look at the first quarter of the season for the blue and white.",
-   "published": "2026-11-12T09:45-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Am34.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-quarter-mark-report-card-toronto-needs-improvement/",
    "source": "Sportsnet"
   },
   {
@@ -2404,6 +2404,36 @@
    "sn_team_count": 0,
    "sport": "Curling",
    "url": "https://www.sportsnet.ca/curling/article/olds-alberta-to-host-2028-world-mixed-doubles-curling-championship/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Maple Leafs quarter-mark report card: Toronto needs improvement",
+   "summary": "The Maple Leafs need to hop on a Q2 heater to keep pace with a league threatening to speed away from them. Here’s a look at the first quarter of the season for the blue and white.",
+   "published": "2026-11-12T09:45-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Am34.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-quarter-mark-report-card-toronto-needs-improvement/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Scout’s Analysis: How the Maple Leafs’ top prospects are developing",
+   "summary": "Scout Jason Bukala takes a look at Toronto’s prospect pipeline and identifies five players he’s keeping his eye on and provide Leafs fans a reason to have optimism for the future.",
+   "published": "2026-11-11T17:33-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/Untitled-15.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/scouts-analysis-how-the-maple-leafs-top-prospects-are-developing/",
    "source": "Sportsnet"
   },
   {
@@ -2557,21 +2587,6 @@
    "sn_team_count": 0,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/wheeler-alvarez-named-comeback-players-of-the-year/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Scout’s Analysis: How the Maple Leafs’ top prospects are developing",
-   "summary": "Scout Jason Bukala takes a look at Toronto’s prospect pipeline and identifies five players he’s keeping his eye on and provide Leafs fans a reason to have optimism for the future.",
-   "published": "2026-11-11T17:33-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/Untitled-15.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/scouts-analysis-how-the-maple-leafs-top-prospects-are-developing/",
    "source": "Sportsnet"
   },
   {
@@ -3705,6 +3720,18 @@
       "strk": "W7"
      },
      {
+      "name": "Kitchener Rangers",
+      "abbr": "KIT",
+      "gp": 20,
+      "w": 11,
+      "l": 6,
+      "otl": 3,
+      "pts": 25,
+      "gf": 67,
+      "ga": 58,
+      "strk": "W3"
+     },
+     {
       "name": "London Knights",
       "abbr": "LDN",
       "gp": 18,
@@ -3717,28 +3744,16 @@
       "strk": "L2"
      },
      {
-      "name": "Kitchener Rangers",
-      "abbr": "KIT",
-      "gp": 19,
-      "w": 10,
-      "l": 6,
-      "otl": 3,
-      "pts": 23,
-      "gf": 67,
-      "ga": 58,
-      "strk": "W2"
-     },
-     {
       "name": "Erie Otters",
       "abbr": "ER",
-      "gp": 19,
+      "gp": 20,
       "w": 10,
-      "l": 7,
+      "l": 8,
       "otl": 2,
       "pts": 22,
       "gf": 62,
       "ga": 71,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Owen Sound Attack",
