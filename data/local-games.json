@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-11T23:47:23-05:00",
- "today": "2026-11-11",
+ "updated": "2026-11-12T00:09:51-05:00",
+ "today": "2026-11-12",
  "range": [
-  "2026-11-08",
-  "2026-11-14"
+  "2026-11-09",
+  "2026-11-15"
  ],
  "teams": {
   "spitfires": {
@@ -59,7 +59,7 @@
   },
   "cfl": {
    "ok": true,
-   "count": 0
+   "count": 1
   },
   "cfl_news": {
    "ok": true,
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -111,116 +111,6 @@
   }
  },
  "games": [
-  {
-   "id": "lancers-6460",
-   "team": "lancers",
-   "sport": "Men's Volleyball",
-   "start": "2026-11-08T14:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Ohio State Buckeyes",
-   "location": "Columbus, OH",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {}
-  },
-  {
-   "id": "spitfires-ohl29173",
-   "team": "spitfires",
-   "sport": "Hockey",
-   "start": "2026-11-08T14:05:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Kingston Frontenacs",
-   "location": "Slush Puppie Place, Kingston, ON",
-   "status": "final",
-   "our_score": 4,
-   "opp_score": 3,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29173/"
-   }
-  },
-  {
-   "id": "junior-gs2960580",
-   "team": "junior",
-   "sport": "PJHL (Jr. C)",
-   "start": "2026-11-08T16:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Walpole Island Wild",
-   "location": "Libro Centre",
-   "status": "final",
-   "our_score": 11,
-   "opp_score": 1,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960580?configuration=45"
-   },
-   "club": "Amherstburg Admirals"
-  },
-  {
-   "id": "junior-ojhl16660",
-   "team": "junior",
-   "sport": "OJHL (Jr. A)",
-   "start": "2026-11-08T18:10:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Stouffville Spirit",
-   "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
-   "status": "final",
-   "our_score": 2,
-   "opp_score": 3,
-   "result": "L",
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.ojhl.ca/stats/game-center/16660"
-   },
-   "club": "Leamington Flyers"
-  },
-  {
-   "id": "junior-gojhl15672",
-   "team": "junior",
-   "sport": "GOHL (Jr. B)",
-   "start": "2026-11-08T19:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "LaSalle Vipers",
-   "location": "Chatham Memorial Arena, Chatham, ON",
-   "status": "final",
-   "our_score": 4,
-   "opp_score": 0,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.gohl.ca/stats/game-center/15672"
-   },
-   "club": "Chatham Maroons"
-  },
-  {
-   "id": "junior-gs2960583",
-   "team": "junior",
-   "sport": "PJHL (Jr. C)",
-   "start": "2026-11-08T19:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Blenheim Blades",
-   "location": "Blenheim Memorial Arena",
-   "status": "final",
-   "our_score": 4,
-   "opp_score": 1,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960583?configuration=45"
-   },
-   "club": "Essex 73's"
-  },
   {
    "id": "highschool-2026-11-09-83",
    "team": "highschool",
@@ -1489,9 +1379,134 @@
     "gamecentre": "https://www.gohl.ca/stats/game-center/15692"
    },
    "club": "LaSalle Vipers"
+  },
+  {
+   "id": "lancers-6499",
+   "team": "lancers",
+   "sport": "Curling",
+   "start": "2026-11-15T09:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Carleton Ravens",
+   "location": "Guelph, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Guelph Invitational - Women",
+   "links": {}
+  },
+  {
+   "id": "lancers-6502",
+   "team": "lancers",
+   "sport": "Curling",
+   "start": "2026-11-15T09:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Trent Excalibur",
+   "location": "Guelph, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Guelph Invitational - Men",
+   "links": {}
+  },
+  {
+   "id": "lancers-6503",
+   "team": "lancers",
+   "sport": "Curling",
+   "start": "2026-11-15T15:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "TMU Bold",
+   "location": "Guelph, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Guelph Invitational - Men",
+   "links": {}
+  },
+  {
+   "id": "lancers-6500",
+   "team": "lancers",
+   "sport": "Curling",
+   "start": "2026-11-15T15:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "TMU Bold",
+   "location": "Guelph, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "Guelph Invitational - Women",
+   "links": {}
+  },
+  {
+   "id": "spitfires-ohl29206",
+   "team": "spitfires",
+   "sport": "Hockey",
+   "start": "2026-11-15T16:05:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Saginaw Spirit",
+   "location": "WFCU Centre, Windsor",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "tickets": "https://wfcucentre.evenue.net/event/S27/G11",
+    "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29206/"
+   }
+  },
+  {
+   "id": "junior-gojhl15693",
+   "team": "junior",
+   "sport": "GOHL (Jr. B)",
+   "start": "2026-11-15T19:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Waterloo Siskins",
+   "location": "Chatham Memorial Arena, Chatham, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.gohl.ca/stats/game-center/15693"
+   },
+   "club": "Chatham Maroons"
   }
  ],
- "pro_games": [],
+ "pro_games": [
+  {
+   "id": "cfl-cfl6676",
+   "team": "cfl",
+   "sport": "CFL",
+   "start": "2026-11-15T18:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Edmonton Elks",
+   "location": "McMahon Stadium",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.cfl.ca/schedule/"
+   },
+   "away": "Montreal Alouettes",
+   "home": "Edmonton Elks",
+   "away_abbr": "MTL",
+   "home_abbr": "EDM"
+  }
+ ],
  "pro_news": [
   {
    "league": "cfl",
@@ -2213,6 +2228,19 @@
  ],
  "more_news": [
   {
+   "league": "nhl",
+   "headline": "Bouchard nets OT winner as Oilers hold off Flyers",
+   "summary": "",
+   "published": "2026-11-12T00:05-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Oilers-4.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/bouchard-nets-ot-winner-as-oilers-hold-off-flyers/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "mlb",
    "headline": "Blue Jays closer Louis Varland named AL Reliever of the Year",
    "summary": "After taking over as the Blue Jays’ closer early in the year, Louis Varland collected 35 saves on his way to the AL Reliever of the Year Award.",
@@ -2229,17 +2257,15 @@
   },
   {
    "league": "nhl",
-   "headline": "Maple Leafs have problems, but aren’t this bad",
-   "summary": "The Toronto Maple Leafs playoff hopes appear to be toast. But are they? Justin Bourne analyzes why he thinks they have a chance.",
-   "published": "2026-11-11T13:47-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Maple-Leafs-vs-Avalanche-1.jpg",
+   "headline": "Flames Takeaways: Parekh’s ability to excite a major development",
+   "summary": "The only thing missing from Zayne Parekh’s goal-of-the-year candidate was, um, the goal. Otherwise, he would have been a frontrunner.",
+   "published": "2026-11-11T23:59-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177212893.jpg",
    "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
+   "teams": [],
    "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-have-problems-but-arent-this-bad/",
+   "url": "https://www.sportsnet.ca/nhl/article/flames-takeaways-parekhs-ability-to-excite-a-major-development/",
    "source": "Sportsnet"
   },
   {
@@ -2369,15 +2395,17 @@
   },
   {
    "league": "nhl",
-   "headline": "Flames fall against Rangers as Zibanejad scores twice",
-   "summary": "",
-   "published": "2026-11-11T22:44-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Flames-2.jpg",
+   "headline": "Maple Leafs have problems, but aren’t this bad",
+   "summary": "The Toronto Maple Leafs playoff hopes appear to be toast. But are they? Justin Bourne analyzes why he thinks they have a chance.",
+   "published": "2026-11-11T13:47-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Maple-Leafs-vs-Avalanche-1.jpg",
    "video": false,
-   "teams": [],
-   "sn_team_count": 2,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/flames-fall-against-rangers-as-zibanejad-scores-twice/",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-have-problems-but-arent-this-bad/",
    "source": "Sportsnet"
   },
   {
