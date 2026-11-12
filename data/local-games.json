@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T19:16:52-05:00",
+ "updated": "2026-11-11T19:31:46-05:00",
  "today": "2026-11-11",
  "range": [
   "2026-11-08",
@@ -809,11 +809,11 @@
    "home_away": "H",
    "opponent": "St. Thomas Stars",
    "location": "Vollmer Culture R.C., LaSalle, ON",
-   "status": "live",
-   "our_score": 1,
-   "opp_score": 1,
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
    "result": null,
-   "note": "08:52 1st",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15676"
    },
@@ -2213,6 +2213,21 @@
  ],
  "more_news": [
   {
+   "league": "mlb",
+   "headline": "Blue Jays closer Louis Varland named AL Reliever of the Year",
+   "summary": "Toronto Blue Jays closer Louis Varland is taking home some hardware for his exceptional 2026 season.",
+   "published": "2026-11-11T19:27-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP176676277.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "sn_team_count": 2,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/blue-jays-closer-louis-varland-named-al-reliever-of-the-year/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Maple Leafs have problems, but aren’t this bad",
    "summary": "The Toronto Maple Leafs playoff hopes appear to be toast. But are they? Justin Bourne analyzes why he thinks they have a chance.",
@@ -2258,29 +2273,18 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Briere says Flyers have no plan to trade Michkov",
-   "summary": "The message from Daniel Briere was clear: The Flyers have no intention of moving Matvei Michkov.",
-   "published": "2026-11-11T11:00-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/michkov.jpg",
+   "league": "mlb",
+   "headline": "Yankees’ Schlittler wins AL Cy Young, Blue Jays’ Cease finishes second",
+   "summary": "",
+   "published": "2026-11-11T19:17-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/CP176931313.jpg",
    "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/briere-says-flyers-have-no-plan-to-trade-michkov/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "The story behind Jake Middleton’s tribute to his grandfather’s wartime sacrifice",
-   "summary": "Jake Middleton wears his family history on his left arm, quite literally. The Flames defenceman’s grandfather served in the Second World War, and Middleton shares his love with a deeply meaningful tattoo sleeve.",
-   "published": "2026-11-10T12:54-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/middleton.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/the-story-behind-jake-middletons-tribute-to-his-grandfathers-wartime-sacrifice/",
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "sn_team_count": 2,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/yankees-schlittler-wins-al-cy-young-blue-jays-cease-finishes-second/",
    "source": "Sportsnet"
   },
   {
@@ -2294,21 +2298,6 @@
    "sn_team_count": 0,
    "sport": "",
    "url": "https://www.sportsnet.ca/world-juniors/article/canadian-government-says-russian-players-with-visas-will-still-be-barred-from-wjc/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Raptors’ Immanuel Quickley, Collin Murray-Boyles available vs. Celtics",
-   "summary": "The Toronto Raptors are getting two key pieces back.",
-   "published": "2026-11-11T17:35-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-design-74.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-immanuel-quickley-collin-murray-boyles-available-vs-celtics/",
    "source": "Sportsnet"
   },
   {
@@ -2390,6 +2379,32 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "The story behind Jake Middleton’s tribute to his grandfather’s wartime sacrifice",
+   "summary": "Jake Middleton wears his family history on his left arm, quite literally. The Flames defenceman’s grandfather served in the Second World War, and Middleton shares his love with a deeply meaningful tattoo sleeve.",
+   "published": "2026-11-10T12:54-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/middleton.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/the-story-behind-jake-middletons-tribute-to-his-grandfathers-wartime-sacrifice/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "‘Can’t help it’: Nathan MacKinnon’s competitive fire still raging for Avalanche",
+   "summary": "",
+   "published": "2026-11-11T16:56-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-36.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/cant-help-it-nathan-mackinnons-competitive-fire-still-raging-for-avalanche/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "Amanda Nunes vs. Kayla Harrison marks a true UFC women’s blockbuster",
    "summary": "The UFC 334 showdown between Amanda Nunes and Kayla Harrison just might be the biggest women’s fight in the organization’s history. Where we go from here is unclear, so Saturday’s bout should be savoured.",
@@ -2413,19 +2428,6 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/cfl/article/mark-kilam-feels-at-home-as-elks-head-coach/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "‘Can’t help it’: Nathan MacKinnon’s competitive fire still raging for Avalanche",
-   "summary": "",
-   "published": "2026-11-11T16:56-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-36.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/cant-help-it-nathan-mackinnons-competitive-fire-still-raging-for-avalanche/",
    "source": "Sportsnet"
   },
   {
@@ -3177,8 +3179,8 @@
    "league": "mlb",
    "headline": "This year's Cy Young Award winners are ... (LIVE on MLB Network, MLB+)",
    "summary": "",
-   "published": "2026-11-11T18:52-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/my2goll1wft9tdti7pfg",
+   "published": "2026-11-11T19:16-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/tvp5famwdvanbpcrq72t",
    "video": false,
    "teams": [
     "Toronto Blue Jays"
@@ -3616,7 +3618,7 @@
       "otl": 3,
       "pts": 9,
       "gf": 41,
-      "ga": 73,
+      "ga": 74,
       "strk": "L3"
      }
     ]
@@ -3745,7 +3747,7 @@
       "l": 10,
       "otl": 3,
       "pts": 15,
-      "gf": 49,
+      "gf": 50,
       "ga": 78,
       "strk": "L2"
      }
@@ -4076,7 +4078,7 @@
       "l": 3,
       "otl": 1,
       "pts": 29,
-      "gf": 73,
+      "gf": 74,
       "ga": 41,
       "strk": "W5"
      },
@@ -4148,7 +4150,7 @@
       "l": 11,
       "otl": 1,
       "pts": 15,
-      "gf": 65,
+      "gf": 66,
       "ga": 82,
       "strk": "L3"
      },
@@ -4161,7 +4163,7 @@
       "otl": 0,
       "pts": 14,
       "gf": 47,
-      "ga": 69,
+      "ga": 70,
       "strk": "L2"
      },
      {
@@ -4197,7 +4199,7 @@
       "otl": 0,
       "pts": 2,
       "gf": 32,
-      "ga": 102,
+      "ga": 103,
       "strk": "L4"
      }
     ]
