@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T19:31:46-05:00",
+ "updated": "2026-11-11T19:46:50-05:00",
  "today": "2026-11-11",
  "range": [
   "2026-11-08",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -809,11 +809,11 @@
    "home_away": "H",
    "opponent": "St. Thomas Stars",
    "location": "Vollmer Culture R.C., LaSalle, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 1,
+   "opp_score": 2,
    "result": null,
-   "note": "",
+   "note": "17:19 2nd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15676"
    },
@@ -2244,6 +2244,21 @@
   },
   {
    "league": "mlb",
+   "headline": "Yankees’ Schlittler wins AL Cy Young, Blue Jays’ Cease finishes second",
+   "summary": "",
+   "published": "2026-11-11T19:17-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/CP176931313.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "sn_team_count": 2,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/yankees-schlittler-wins-al-cy-young-blue-jays-cease-finishes-second/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
    "headline": "As Blue Jays hunt for external adds, internal gains also key to 2027 rebound",
    "summary": "While the Blue Jays intend to add to their offence and starting pitching, the most impactful thing they can do this winter is ensure they’re set up to better leverage the talent they already have in place.",
    "published": "2026-11-11T12:28-05:00",
@@ -2273,18 +2288,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "mlb",
-   "headline": "Yankees’ Schlittler wins AL Cy Young, Blue Jays’ Cease finishes second",
-   "summary": "",
-   "published": "2026-11-11T19:17-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/CP176931313.jpg",
+   "league": "nhl",
+   "headline": "Briere says Flyers have no plan to trade Michkov",
+   "summary": "The message from Daniel Briere was clear: The Flyers have no intention of moving Matvei Michkov.",
+   "published": "2026-11-11T11:00-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/michkov.jpg",
    "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "sn_team_count": 2,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/yankees-schlittler-wins-al-cy-young-blue-jays-cease-finishes-second/",
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/briere-says-flyers-have-no-plan-to-trade-michkov/",
    "source": "Sportsnet"
   },
   {
@@ -2341,19 +2354,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Blackhawks GM Kyle Davidson defends coach Jeff Blashill amid slow start",
-   "summary": "",
-   "published": "2026-11-11T18:16-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/jeff-blashill.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/blackhawks-gm-kyle-davidson-defends-coach-jeff-blashill-amid-slow-start/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Senators’ Cousins out at least one week after hit from Capitals’ Chychrun",
    "summary": "",
    "published": "2026-11-11T12:27-05:00",
@@ -2402,6 +2402,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/cant-help-it-nathan-mackinnons-competitive-fire-still-raging-for-avalanche/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Blackhawks GM Kyle Davidson defends coach Jeff Blashill amid slow start",
+   "summary": "",
+   "published": "2026-11-11T18:16-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/jeff-blashill.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/blackhawks-gm-kyle-davidson-defends-coach-jeff-blashill-amid-slow-start/",
    "source": "Sportsnet"
   },
   {
@@ -3034,15 +3047,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Watch LIVE: Tigers prospects in Arizona Fall League action",
+   "headline": "Longtime MLB catcher Maldonado among new faces on Tigers' coaching staff for '27",
    "summary": "",
-   "published": "2026-11-11T17:32-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kdikhgkw7v8w8wdorlio",
+   "published": "2026-11-06T11:30-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/qieb7hwco4rf43gtuicb",
    "video": false,
    "teams": [
     "Detroit Tigers"
    ],
-   "url": "https://www.mlb.com/tigers/news/watch-top-prospects-in-arizona-fall-league-winter-ball-2026",
+   "url": "https://www.mlb.com/tigers/news/tigers-announce-2027-mlb-coaching-training-staffs",
    "source": "Team site"
   },
   {
@@ -3060,15 +3073,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Longtime MLB catcher Maldonado among new faces on Tigers' coaching staff for '27",
+   "headline": "'27 Rookie of the Year candidates -- one from each team",
    "summary": "",
-   "published": "2026-11-06T11:30-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/qieb7hwco4rf43gtuicb",
+   "published": "2026-11-10T11:00-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/c2tcerxcn8hcojs5hxgq",
    "video": false,
    "teams": [
     "Detroit Tigers"
    ],
-   "url": "https://www.mlb.com/tigers/news/tigers-announce-2027-mlb-coaching-training-staffs",
+   "url": "https://www.mlb.com/tigers/news/each-team-2027-rookie-of-the-year-candidate",
    "source": "Team site"
   },
   {
@@ -3095,19 +3108,6 @@
     "Detroit Tigers"
    ],
    "url": "https://www.mlb.com/milb/prospects/2026/tigers/",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
-   "headline": "'27 Rookie of the Year candidates -- one from each team",
-   "summary": "",
-   "published": "2026-11-10T11:00-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/c2tcerxcn8hcojs5hxgq",
-   "video": false,
-   "teams": [
-    "Detroit Tigers"
-   ],
-   "url": "https://www.mlb.com/tigers/news/each-team-2027-rookie-of-the-year-candidate",
    "source": "Team site"
   },
   {
@@ -3177,15 +3177,28 @@
   },
   {
    "league": "mlb",
-   "headline": "This year's Cy Young Award winners are ... (LIVE on MLB Network, MLB+)",
+   "headline": "Here are the rosters for Sunday's AFL Fall Stars Game",
    "summary": "",
-   "published": "2026-11-11T19:16-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/tvp5famwdvanbpcrq72t",
+   "published": "2026-11-08T00:14-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/wm4gzcdag1xucowe2rii",
+   "video": false,
+   "teams": [
+    "Detroit Tigers"
+   ],
+   "url": "https://www.mlb.com/tigers/news/2026-arizona-fall-league-fall-stars-game-rosters",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
+   "headline": "Cease finishes runner-up for AL Cy Young Award",
+   "summary": "",
+   "published": "2026-11-11T19:29-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/tkkgwpzhkv7c005wwald",
    "video": false,
    "teams": [
     "Toronto Blue Jays"
    ],
-   "url": "https://www.mlb.com/bluejays/news/2026-mlb-cy-young-award-winners",
+   "url": "https://www.mlb.com/bluejays/news/dylan-cease-runner-up-al-cy-young-2026",
    "source": "Team site"
   },
   {
@@ -3618,7 +3631,7 @@
       "otl": 3,
       "pts": 9,
       "gf": 41,
-      "ga": 74,
+      "ga": 76,
       "strk": "L3"
      }
     ]
@@ -3700,7 +3713,7 @@
       "otl": 0,
       "pts": 30,
       "gf": 81,
-      "ga": 53,
+      "ga": 54,
       "strk": "W6"
      },
      {
@@ -3711,7 +3724,7 @@
       "l": 4,
       "otl": 2,
       "pts": 24,
-      "gf": 71,
+      "gf": 72,
       "ga": 59,
       "strk": "L1"
      },
@@ -3747,7 +3760,7 @@
       "l": 10,
       "otl": 3,
       "pts": 15,
-      "gf": 50,
+      "gf": 52,
       "ga": 78,
       "strk": "L2"
      }
@@ -4150,7 +4163,7 @@
       "l": 11,
       "otl": 1,
       "pts": 15,
-      "gf": 66,
+      "gf": 67,
       "ga": 82,
       "strk": "L3"
      },
@@ -4199,7 +4212,7 @@
       "otl": 0,
       "pts": 2,
       "gf": 32,
-      "ga": 103,
+      "ga": 104,
       "strk": "L4"
      }
     ]
