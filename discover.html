@@ -177,6 +177,14 @@
   .minute .msub { color: #c3cde2; font-size: 12.5px; display: flex; align-items: center; gap: 4px 14px; flex-wrap: wrap; }
   .minute .mspon { display: inline-flex; align-items: center; gap: 6px; }
   .minute .mspon img { height: 22px; width: 22px; border-radius: 50%; background: #fff; object-fit: contain; }
+  /* phones: date, logo and sponsor on one tidy line */
+  @media (max-width: 700px) {
+    .minute .msub { flex-wrap: nowrap; white-space: nowrap; gap: 8px; overflow: hidden; }
+    .minute .msub .dlong, .minute .msub .pby { display: none; }
+    .minute .msub #mdate::after { content: '\00b7'; margin-left: 8px; color: #8fa0c2; }
+    .minute .mspon { gap: 5px; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+    .minute .mspon img { height: 18px; width: 18px; flex: none; }
+  }
   .minute .mbar { position: relative; height: 7px; border-radius: 4px; background: rgba(255,255,255,.16); cursor: pointer; }
   .minute .mbar i { position: absolute; left: 0; top: 0; bottom: 0; width: 0; border-radius: 4px; background: var(--accent); }
   .minute .mright { display: inline-flex; align-items: center; gap: 10px; }
@@ -190,6 +198,13 @@
   #minute .mtag { display: none; } #minute h2 { font-size: 28px; } #minute .mbody { gap: 6px; }
   @media (max-width: 700px) { #minute { padding: 10px 12px 10px 10px; gap: 11px; } #minute h2 { font-size: 22px; } #minute .mplay { width: 54px; height: 54px; } #minute .mplay img { width: 38px; height: 38px; } }
 </style>
+<script>
+// tall (portrait) photos in wide boxes: show the upper part, where faces are, instead of the middle
+document.addEventListener('load', function (e) {
+  var t = e.target;
+  if (t && t.tagName === 'IMG' && !t.closest('.ath') && t.naturalWidth && t.naturalHeight > t.naturalWidth * 1.05) t.style.objectPosition = 'center 18%';
+}, true);
+</script>
 </head>
 <body>
 <div class="wrap">
@@ -212,7 +227,7 @@
       <span class="mtag"><span class="meq"><b></b><b></b><b></b></span>Listen now</span>
       <div class="mtop"><h2>Powerplay <em>Sports Minute</em></h2><span class="mright"><span class="mtime" id="mtime">1:00</span><span id="mshare"></span></span></div>
       <div class="mbar" id="mbar"><i id="mfill"></i></div>
-      <div class="msub"><span id="mdate"></span><span class="mspon">Presented by <img src="https://bbellacicco.github.io/powerplay-feed/logos/st-clair-alumni.png" alt="" onerror="this.remove()"> St. Clair College Alumni</span></div>
+      <div class="msub"><span id="mdate"></span><span class="mspon"><span class="pby">Presented by</span> <img src="https://bbellacicco.github.io/powerplay-feed/logos/st-clair-alumni.png" alt="" onerror="this.remove()"> St. Clair College Alumni</span></div>
     </div>
     <audio id="maudio" preload="none"></audio>
   </section>
@@ -612,22 +627,31 @@
   fetch(BASE + 'data/sports-minute.json?t=' + Math.floor(Date.now() / 3e5)).then(function (r) { return r.json(); }).then(function (j) {
     var d = new Date(j.date);
     if (!j.url || isNaN(d) || Date.now() - d > 7 * 864e5) return;
-    au.src = BASE + j.url; BED = j.bed || null;
-    document.getElementById('mdate').textContent = DAY[d.getDay()] + ', ' + MON[d.getMonth()] + ' ' + d.getDate();
+    au.crossOrigin = 'anonymous'; au.src = BASE + j.url; BED = j.bed || null;
+    document.getElementById('mdate').innerHTML = '<span class="dlong">' + DAY[d.getDay()] + ', </span>' + MON[d.getMonth()] + ' ' + d.getDate();
     if (j.seconds) tm.textContent = t(j.seconds);
     box.classList.add('on');
     if (window.PPShare && !document.querySelector('#mshare .pps-btn'))
       document.getElementById('mshare').appendChild(PPShare.button({ title: 'Powerplay Sports Minute', url: 'https://www.powerplaywindsor.com/scores-standings?strip=minute', image: 'https://bbellacicco.github.io/powerplay-feed/logos/strip-minute-share.jpg', text: 'Listen to the Powerplay Sports Minute on Powerplay Windsor' }));
   }).catch(function () {});
   function setupBed() {
-    if (!BED || bed) return;
-    bed = new Audio(); bed.crossOrigin = 'anonymous'; bed.loop = false; bed.preload = 'auto'; bed.src = BASE + BED;
-    try {   // Web Audio sets the bed's level (phones ignore a plain volume setting)
+    if (ctx !== null || !window.AudioContext && !window.webkitAudioContext) return;
+    try {   // Web Audio: the bed's level (phones ignore a plain volume setting) and the voice on both speakers
       // iPhones mute Web Audio when the ring switch is on silent; 'playback' makes it play like the voice does
       try { if (navigator.audioSession) navigator.audioSession.type = 'playback'; } catch (e) {}
-      ctx = new (window.AudioContext || window.webkitAudioContext)(); gain = ctx.createGain(); gain.gain.value = 0;
-      ctx.createMediaElementSource(bed).connect(gain); gain.connect(ctx.destination); window.PPMinuteMix = { ctx: ctx, gain: gain, bed: bed };
-    } catch (e) { ctx = null; }
+      ctx = new (window.AudioContext || window.webkitAudioContext)();
+      // the voice is a one-channel (mono) file: send it to the left and right speakers equally
+      var vs = ctx.createMediaElementSource(au), both = ctx.createChannelMerger(2);
+      vs.connect(both, 0, 0); vs.connect(both, 0, 1); both.connect(ctx.destination);
+      if (BED) {
+        bed = new Audio(); bed.crossOrigin = 'anonymous'; bed.loop = false; bed.preload = 'auto'; bed.src = BASE + BED;
+        // a long read: the music picks up again after its quiet opening instead of stopping
+        bed.onended = function () { if (!au.paused && !au.ended) { bed.currentTime = 2.2; bed.play().catch(function () {}); } };
+        gain = ctx.createGain(); gain.gain.value = 0;
+        ctx.createMediaElementSource(bed).connect(gain); gain.connect(ctx.destination);
+      }
+      window.PPMinuteMix = { ctx: ctx, gain: gain, bed: bed };
+    } catch (e) { ctx = false; }
   }
   function level(v, sec) {
     if (!bed) return;
