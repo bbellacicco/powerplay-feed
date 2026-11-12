@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T15:17:16-05:00",
+ "updated": "2026-11-12T15:31:54-05:00",
  "today": "2026-11-12",
  "range": [
   "2026-11-09",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 36
   },
   "club_news": {
    "ok": true,
@@ -1510,6 +1510,28 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "Edmonton Elks Top Five Plays of the 2026 Season",
+   "summary": "",
+   "published": "2026-11-12T17:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/yTrNU2DKIzMpSlLHs6lzK/ae43bfdaf015a5b379a5772156195dff/Top5_EDM_V2.png?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/edmonton-elks-top-five-plays-of-the-2026-season",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Montreal Alouettes Top Five Plays of the 2026 Season",
+   "summary": "",
+   "published": "2026-11-12T17:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/Hv4Cgo20izeRD2OP0XO6c/7774e50e8090aaee5f74eb32a9009046/top5_MTL.png?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/montreal-alouettes-top-five-plays-of-the-2026-season",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "The Biggest Play from Every Team’s Last Grey Cup Win",
    "summary": "",
    "published": "2026-11-12T12:00:00-05:00",
@@ -1697,28 +1719,6 @@
    "video": true,
    "teams": [],
    "url": "https://www.cfl.ca/article/cfl-cinematic-recap-bc-edmonton",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "EVERY CFL Touchdown from Division Finals presented by Wegovy®",
-   "summary": "",
-   "published": "2026-11-09T22:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/3XW4Y6tMBExA8poh4JfzBj/12b8c878f607eb2cdf485a1fecd85fe9/EveryTD.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/every-cfl-touchdown-from-division-finals-presented-by-wegovy",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "CFL Plays of the Week - Division Finals 2026",
-   "summary": "",
-   "published": "2026-11-09T11:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/2zdpJ7X54kVsZOJCVn1BqV/1c7b9cae1697ee42c7189d61020439f7/image.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/cfl-plays-of-the-week-division-finals-2026",
    "source": "CFL.ca"
   },
   {
@@ -2273,6 +2273,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Standing and striking from distance is path to victory for Gane at UFC 334",
+   "summary": "UFC 334 heads to Madison Square Garden on Saturday and features undisputed title fights in the heaviest weight classes in the men’s and women’s divisions, respectively. Here are some keys to victory for the fighters.",
+   "published": "2026-11-12T15:27-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP149209375-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "",
+   "url": "https://www.sportsnet.ca/ufc/article/standing-and-striking-from-distance-is-path-to-victory-for-gane-at-ufc-334/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "The case for Wild to keep Quinn Hughes past trade deadline",
    "summary": "The Minnesota Wild are on a 126-point pace through the first quarter, even with the unresolved Quinn Hughes situation looming. Frank Seravalli looks at that and more in this edition of the notebook.",
@@ -2338,6 +2351,32 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Tretiak: Russia will seek compensation if barred from world juniors in Alberta",
+   "summary": "Russian hockey federation president Vladislav Tretiak says Russia will seek compensation from Canada if its team is barred from next month’s world junior championship in Alberta.",
+   "published": "2026-11-12T15:21-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2014/06/tretiak1280.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/world-juniors/article/tretiak-russia-will-seek-compensation-if-barred-from-world-juniors-in-alberta/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Braves sign reliever Evan Phillips to three-year, $35M deal",
+   "summary": "",
+   "published": "2026-11-12T15:18-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/05/CP170422985.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/braves-sign-reliever-evan-phillips-to-three-year-35m-deal/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Kevin Fiala to make 2026-27 debut against Islanders on Thursday",
    "summary": "Winger Kevin Fiala is set to play his first NHL game since fracturing his lower leg at the 2026 Winter Olympics.",
@@ -2364,21 +2403,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Maple Leafs recall Brendan Brisson from AHL, place Colton Sissons on IR",
-   "summary": "",
-   "published": "2026-11-12T10:35-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/07/brisson.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-recall-brendan-brisson-from-ahl-place-colton-sissons-on-ir/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "other",
    "headline": "Finland to restrict entry of Russian athletes",
    "summary": "",
@@ -2389,19 +2413,6 @@
    "sn_team_count": 0,
    "sport": "More Sports",
    "url": "https://www.sportsnet.ca/more/article/finland-to-restrict-entry-of-russian-athletes/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Longtime NBC Sports announcer Dan Hicks dead at 64",
-   "summary": "",
-   "published": "2026-11-12T11:04-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/dan-hicks.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Golf",
-   "url": "https://www.sportsnet.ca/golf/article/longtime-nbc-sports-announcer-dan-hicks-dead-at-64/",
    "source": "Sportsnet"
   },
   {
@@ -2445,6 +2456,21 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/will-quinn-hughes-stay-analyzing-the-wilds-play-through-20-games/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Maple Leafs recall Brendan Brisson from AHL, place Colton Sissons on IR",
+   "summary": "",
+   "published": "2026-11-12T10:35-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/07/brisson.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-recall-brendan-brisson-from-ahl-place-colton-sissons-on-ir/",
    "source": "Sportsnet"
   },
   {
@@ -2540,21 +2566,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/blue-jays-cease-varland-named-to-all-mlb-first-team/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Blue Jays closer Louis Varland named AL Reliever of the Year",
-   "summary": "After taking over as the Blue Jays’ closer early in the year, Louis Varland collected 35 saves on his way to the AL Reliever of the Year Award.",
-   "published": "2026-11-11T19:27-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP176676277.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "sn_team_count": 2,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/blue-jays-closer-louis-varland-named-al-reliever-of-the-year/",
    "source": "Sportsnet"
   },
   {
@@ -2669,6 +2680,19 @@
   },
   {
    "league": "other",
+   "headline": "Longtime NBC Sports announcer Dan Hicks dead at 64",
+   "summary": "",
+   "published": "2026-11-12T11:04-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/dan-hicks.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Golf",
+   "url": "https://www.sportsnet.ca/golf/article/longtime-nbc-sports-announcer-dan-hicks-dead-at-64/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
    "headline": "Olds, Alberta, to host 2028 world mixed doubles curling championship",
    "summary": "",
    "published": "2026-11-12T12:21-05:00",
@@ -2691,21 +2715,6 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/lakers-austin-reaves-exits-vs-bucks-with-left-heel-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Blue Jays motivated in starting pitching market",
-   "summary": "The starting pitching market has emerged as an early priority for the Toronto Blue Jays a week into MLB free agency, with team executives seriously exploring fits for some prominent arms.",
-   "published": "2026-11-10T20:20-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP176958811.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/blue-jays-motivated-in-starting-pitching-market/",
    "source": "Sportsnet"
   },
   {
@@ -3087,15 +3096,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Rookie royalty! McGonigle brings ROY honors back to Detroit",
+   "headline": "Watch LIVE: Tigers prospects in Arizona Fall League playoffs",
    "summary": "",
-   "published": "2026-11-10T14:33-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kmlvfgncqmti6eai6gvd",
+   "published": "2026-11-12T15:26-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/ledknss6mbk03fndajcr",
    "video": false,
    "teams": [
     "Detroit Tigers"
    ],
-   "url": "https://www.mlb.com/tigers/news/kevin-mcgonigle-wins-2026-al-rookie-of-the-year",
+   "url": "https://www.mlb.com/tigers/news/watch-arizona-fall-league-playoffs-2026",
    "source": "Team site"
   },
   {
@@ -3113,15 +3122,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Longtime MLB catcher Maldonado among new faces on Tigers' coaching staff for '27",
+   "headline": "Rookie royalty! McGonigle brings ROY honors back to Detroit",
    "summary": "",
-   "published": "2026-11-06T11:30-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/qieb7hwco4rf43gtuicb",
+   "published": "2026-11-10T14:33-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kmlvfgncqmti6eai6gvd",
    "video": false,
    "teams": [
     "Detroit Tigers"
    ],
-   "url": "https://www.mlb.com/tigers/news/tigers-announce-2027-mlb-coaching-training-staffs",
+   "url": "https://www.mlb.com/tigers/news/kevin-mcgonigle-wins-2026-al-rookie-of-the-year",
    "source": "Team site"
   },
   {
@@ -3152,15 +3161,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Watch Tigers prospects in Arizona Fall League playoffs",
+   "headline": "Longtime MLB catcher Maldonado among new faces on Tigers' coaching staff for '27",
    "summary": "",
-   "published": "2026-11-12T15:07-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/ledknss6mbk03fndajcr",
+   "published": "2026-11-06T11:30-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/qieb7hwco4rf43gtuicb",
    "video": false,
    "teams": [
     "Detroit Tigers"
    ],
-   "url": "https://www.mlb.com/tigers/news/watch-arizona-fall-league-playoffs-2026",
+   "url": "https://www.mlb.com/tigers/news/tigers-announce-2027-mlb-coaching-training-staffs",
    "source": "Team site"
   },
   {
@@ -3349,7 +3358,7 @@
    "league": "mlb",
    "headline": "Watch Blue Jays prospects in Arizona Fall League playoffs",
    "summary": "",
-   "published": "2026-11-12T15:07-05:00",
+   "published": "2026-11-12T15:26-05:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/ledknss6mbk03fndajcr",
    "video": false,
    "teams": [
@@ -3975,26 +3984,26 @@
      {
       "name": "Milton Menace",
       "abbr": "MIL",
-      "gp": 22,
-      "w": 18,
+      "gp": 23,
+      "w": 19,
       "l": 3,
       "otl": 1,
-      "pts": 37,
+      "pts": 39,
       "gf": 93,
       "ga": 45,
-      "strk": "W5"
+      "strk": "W6"
      },
      {
       "name": "King Rebellion",
       "abbr": "KNG",
-      "gp": 22,
+      "gp": 23,
       "w": 17,
-      "l": 2,
+      "l": 3,
       "otl": 3,
       "pts": 37,
       "gf": 92,
       "ga": 47,
-      "strk": "W5"
+      "strk": "L1"
      },
      {
       "name": "Toronto Patriots",
