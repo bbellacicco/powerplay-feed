@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T21:47:03-05:00",
+ "updated": "2026-11-11T22:02:06-05:00",
  "today": "2026-11-11",
  "range": [
   "2026-11-08",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 30
+   "count": 31
   },
   "club_news": {
    "ok": true,
@@ -828,10 +828,10 @@
    "home_away": "H",
    "opponent": "Dresden Kings",
    "location": "Wheatley Area Arena",
-   "status": "live",
-   "our_score": 0,
-   "opp_score": 0,
-   "result": null,
+   "status": "final",
+   "our_score": 7,
+   "opp_score": 2,
+   "result": "W",
    "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960590?configuration=45"
@@ -2243,6 +2243,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "Raptors blow 22-point lead in loss to Celtics",
+   "summary": "",
+   "published": "2026-11-11T21:58-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177254887.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 2,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/raptors-blow-22-point-lead-in-loss-to-celtics/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "mlb",
    "headline": "Yankees’ Schlittler wins AL Cy Young, Blue Jays’ Cease finishes second",
    "summary": "",
@@ -3561,6 +3576,18 @@
       "strk": "L3"
      },
      {
+      "name": "Barrie Colts",
+      "abbr": "BAR",
+      "gp": 20,
+      "w": 4,
+      "l": 13,
+      "otl": 3,
+      "pts": 11,
+      "gf": 45,
+      "ga": 76,
+      "strk": "W1"
+     },
+     {
       "name": "Brampton Steelheads",
       "abbr": "BRAM",
       "gp": 19,
@@ -3571,18 +3598,6 @@
       "gf": 52,
       "ga": 83,
       "strk": "L1"
-     },
-     {
-      "name": "Barrie Colts",
-      "abbr": "BAR",
-      "gp": 19,
-      "w": 3,
-      "l": 13,
-      "otl": 3,
-      "pts": 9,
-      "gf": 45,
-      "ga": 76,
-      "strk": "L3"
      }
     ]
    },
@@ -3705,11 +3720,11 @@
      {
       "name": "Owen Sound Attack",
       "abbr": "OS",
-      "gp": 19,
+      "gp": 20,
       "w": 6,
       "l": 10,
-      "otl": 3,
-      "pts": 15,
+      "otl": 4,
+      "pts": 16,
       "gf": 52,
       "ga": 82,
       "strk": "L2"
@@ -4511,14 +4526,14 @@
      {
       "name": "Dresden Kings",
       "abbr": "DRE",
-      "gp": 16,
+      "gp": 17,
       "w": 8,
-      "l": 7,
+      "l": 8,
       "otl": 1,
       "pts": 17,
-      "gf": 70,
-      "ga": 64,
-      "strk": "W1"
+      "gf": 72,
+      "ga": 71,
+      "strk": "L1"
      },
      {
       "name": "Blenheim Blades",
@@ -4533,6 +4548,18 @@
       "strk": "L5"
      },
      {
+      "name": "Wheatley Sharks",
+      "abbr": "WHE",
+      "gp": 19,
+      "w": 7,
+      "l": 10,
+      "otl": 2,
+      "pts": 16,
+      "gf": 59,
+      "ga": 77,
+      "strk": "W1"
+     },
+     {
       "name": "Amherstburg Admirals",
       "abbr": "AMH",
       "gp": 17,
@@ -4543,18 +4570,6 @@
       "gf": 63,
       "ga": 55,
       "strk": "W2"
-     },
-     {
-      "name": "Wheatley Sharks",
-      "abbr": "WHE",
-      "gp": 18,
-      "w": 6,
-      "l": 10,
-      "otl": 2,
-      "pts": 14,
-      "gf": 52,
-      "ga": 75,
-      "strk": "L7"
      },
      {
       "name": "Walpole Island Wild",
