@@ -64,6 +64,9 @@
 
   .cap { padding: 10px 2px 0; min-height: 120px; }
   .cap h2 { margin: 0 0 2px; font-size: 21px; line-height: 1.25; font-weight: 800; }
+  .spon { display: flex; align-items: center; gap: 10px; margin: 0 0 10px; padding: 8px 12px; border: 1px solid rgba(232,176,33,.35); border-radius: 10px; background: rgba(232,176,33,.06); font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  .spon img { height: 34px; width: auto; max-width: 160px; object-fit: contain; background: #fff; border-radius: 6px; padding: 3px 6px; }
+  .spon b { color: #fff; font-size: 14px; letter-spacing: .02em; text-transform: none; }
   .cap .credit { color: var(--muted); font-size: 12px; margin-bottom: 8px; }
   .cap p { margin: 0; color: #d4dcee; font-size: 15.5px; line-height: 1.55; }
   .msg { padding: 60px 20px; text-align: center; color: var(--muted); }
@@ -102,6 +105,7 @@
   </div>
   <div class="matchup" id="matchup"></div>
   <div class="thumbs" id="thumbs"></div>
+  <div class="spon" id="spon" hidden></div>
   <div class="cap" id="cap"><h2 id="head"></h2><div class="credit" id="credit"></div><p id="desc"></p></div>
 </div>
 <script>
@@ -118,7 +122,7 @@
     var meta = { title: '', credit: 'Powerplay Windsor', date: '' }, out = [];
     txt.split(/\r?\n/).forEach(function (line) {
       line = line.trim(); if (!line || line[0] === '#') return;
-      var m = line.match(/^(title|credit|date)\s*:\s*(.*)$/i);
+      var m = line.match(/^(title|credit|date|sponsor)\s*:\s*(.*)$/i);
       if (m) { meta[m[1].toLowerCase()] = m[2].trim(); return; }
       var p = line.split('|').map(function (x) { return x.trim(); });
       if (!/\.(jpe?g|png|webp)$/i.test(p[0])) return;
@@ -164,6 +168,13 @@
   function start() {
   fetch(base + 'captions.txt?t=' + Date.now()).then(function (r) { if (!r.ok) throw r.status; return r.text(); }).then(function (txt) {
     var d = parse(txt); meta = d.meta; slides = d.slides;
+    if (meta.sponsor) {        // "Presented by" the sponsor of this set
+      var sp = meta.sponsor.split('|').map(function (x) { return x.trim(); }), box = $('spon');
+      box.appendChild(document.createTextNode('Presented by'));
+      if (sp[1]) { var lg = new Image(); lg.src = REPO + 'logos/' + encodeURIComponent(sp[1]); lg.alt = sp[0]; lg.onerror = function () { lg.remove(); }; box.appendChild(lg); }
+      var nm = document.createElement('b'); nm.textContent = sp[0]; box.appendChild(nm);
+      box.hidden = false;
+    }
     if (!slides.length) throw 'empty';
     if (meta.title) {
       // "Game Day Snaps: Saints vs. Fanshawe": the heading stays GAME DAY SNAPS, who's playing goes under the photo
