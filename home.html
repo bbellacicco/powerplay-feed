@@ -1318,7 +1318,8 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
 })();
 </script>
 <script>
-// Powerplay Sports Minute: data/sports-minute.json {url, date}; shows for a week after it's made
+// Powerplay Sports Minute: data/sports-minute.json {url, date, seconds, bed}; shows for a week after it's made.
+// The music bed (bed) plays under the voice: up front for an intro, down while the voice talks, then up and out.
 (function () {
   var box = document.getElementById('minute'), au = document.getElementById('maudio'), btn = document.getElementById('mplay'), badge = document.getElementById('mbadge');
   var fill = document.getElementById('mfill'), tm = document.getElementById('mtime'), bar = document.getElementById('mbar');
@@ -1326,20 +1327,54 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
   var PLAY = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>', PAUSE = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>';
   var MON = ['Jan.', 'Feb.', 'March', 'April', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'];
   var DAY = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  var UP = 0.5, UNDER = 0.12, INTRO = 2400;
+  var BED = null, bed = null, ctx = null, gain = null, playing = false, started = false, timers = [];
   function t(s) { s = Math.max(0, Math.round(s || 0)); return Math.floor(s / 60) + ':' + ('0' + s % 60).slice(-2); }
   fetch(BASE + 'data/sports-minute.json?t=' + Math.floor(Date.now() / 3e5)).then(function (r) { return r.json(); }).then(function (j) {
     var d = new Date(j.date);
     if (!j.url || isNaN(d) || Date.now() - d > 7 * 864e5) return;
-    au.src = BASE + j.url;
+    au.src = BASE + j.url; BED = j.bed || null;
     document.getElementById('mdate').textContent = DAY[d.getDay()] + ', ' + MON[d.getMonth()] + ' ' + d.getDate();
     if (j.seconds) tm.textContent = t(j.seconds);
     box.classList.add('on');
   }).catch(function () {});
-  btn.onclick = function () { if (au.paused) au.play(); else au.pause(); };
-  au.onplay = function () { box.classList.add('playing'); badge.innerHTML = PAUSE; btn.setAttribute('aria-label', 'Pause'); };
-  au.onpause = au.onended = function () { box.classList.remove('playing'); badge.innerHTML = PLAY; btn.setAttribute('aria-label', 'Play the Powerplay Sports Minute'); };
+  function setupBed() {
+    if (!BED || bed) return;
+    bed = new Audio(); bed.crossOrigin = 'anonymous'; bed.loop = true; bed.preload = 'auto'; bed.src = BASE + BED;
+    try {   // Web Audio sets the bed's level (phones ignore a plain volume setting)
+      ctx = new (window.AudioContext || window.webkitAudioContext)(); gain = ctx.createGain(); gain.gain.value = 0;
+      ctx.createMediaElementSource(bed).connect(gain); gain.connect(ctx.destination);
+    } catch (e) { ctx = null; }
+  }
+  function level(v, sec) {
+    if (!bed) return;
+    if (ctx && gain) { var n = ctx.currentTime; gain.gain.cancelScheduledValues(n); gain.gain.setValueAtTime(gain.gain.value, n); gain.gain.linearRampToValueAtTime(v, n + (sec || 0.01)); }
+    else bed.volume = Math.min(1, v);
+  }
+  function later(fn, ms) { timers.push(setTimeout(fn, ms)); }
+  function clear() { timers.forEach(clearTimeout); timers = []; }
+  function ui(on) { playing = on; box.classList.toggle('playing', on); badge.innerHTML = on ? PAUSE : PLAY; btn.setAttribute('aria-label', on ? 'Pause' : 'Play the Powerplay Sports Minute'); }
+  function start() {
+    setupBed(); ui(true);
+    if (ctx && ctx.state === 'suspended') ctx.resume();
+    if (!bed) { au.play(); return; }
+    bed.play().catch(function () {});
+    if (!started && au.currentTime < 0.2) {          // from the top: music intro, then the voice
+      started = true; level(UP, 0.05);
+      later(function () { level(UNDER, 0.4); au.play(); }, INTRO);
+    } else { level(UNDER, 0.3); au.play(); }
+  }
+  function stop() { clear(); au.pause(); if (bed) bed.pause(); ui(false); }
+  btn.onclick = function () { if (playing) stop(); else start(); };
+  au.onended = function () {
+    started = false;
+    if (!bed) { ui(false); return; }
+    level(UP, 0.4);                                   // music swells, then fades out
+    later(function () { level(0, 1.6); }, 2200);
+    later(function () { bed.pause(); bed.currentTime = 0; ui(false); fill.style.width = '0%'; }, 4000);
+  };
   au.ontimeupdate = function () { if (au.duration) { fill.style.width = (100 * au.currentTime / au.duration) + '%'; tm.textContent = t(au.currentTime) + ' / ' + t(au.duration); } };
-  bar.onclick = function (e) { if (!au.duration) { au.play(); return; } var r = bar.getBoundingClientRect(); au.currentTime = au.duration * Math.min(1, Math.max(0, (e.clientX - r.left) / r.width)); };
+  bar.onclick = function (e) { if (!au.duration) { if (!playing) start(); return; } var r = bar.getBoundingClientRect(); au.currentTime = au.duration * Math.min(1, Math.max(0, (e.clientX - r.left) / r.width)); started = true; };
 })();
 </script>
 </body>
