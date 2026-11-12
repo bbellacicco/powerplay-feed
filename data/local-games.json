@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T20:47:00-05:00",
+ "updated": "2026-11-11T21:01:59-05:00",
  "today": "2026-11-11",
  "range": [
   "2026-11-08",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 30
   },
   "club_news": {
    "ok": true,
@@ -810,10 +810,10 @@
    "opponent": "St. Thomas Stars",
    "location": "Vollmer Culture R.C., LaSalle, ON",
    "status": "live",
-   "our_score": 3,
+   "our_score": 4,
    "opp_score": 3,
    "result": null,
-   "note": "04:52 3rd",
+   "note": "04:53 1st OT",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15676"
    },
@@ -2244,6 +2244,21 @@
   },
   {
    "league": "mlb",
+   "headline": "Yankees’ Schlittler wins AL Cy Young, Blue Jays’ Cease finishes second",
+   "summary": "",
+   "published": "2026-11-11T19:17-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/CP176931313.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "sn_team_count": 2,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/yankees-schlittler-wins-al-cy-young-blue-jays-cease-finishes-second/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
    "headline": "Report: Blue Jays to meet with star free agent Tarik Skubal",
    "summary": "",
    "published": "2026-11-11T11:08-05:00",
@@ -2323,19 +2338,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Senators’ Cousins out at least one week after hit from Capitals’ Chychrun",
-   "summary": "",
-   "published": "2026-11-11T12:27-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/nick-cousins.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/senators-cousins-out-at-least-one-week-after-hit-from-capitals-chychrun/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nfl",
    "headline": "Former NFL coach Rex Ryan turns himself in after alleged hit-and-run",
    "summary": "",
@@ -2361,21 +2363,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/blue-jays-exploring-relief-market-while-weighing-other-needs/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Yankees’ Schlittler wins AL Cy Young, Blue Jays’ Cease finishes second",
-   "summary": "",
-   "published": "2026-11-11T19:17-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/CP176931313.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "sn_team_count": 2,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/yankees-schlittler-wins-al-cy-young-blue-jays-cease-finishes-second/",
    "source": "Sportsnet"
   },
   {
@@ -2417,6 +2404,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/the-story-behind-jake-middletons-tribute-to-his-grandfathers-wartime-sacrifice/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Senators’ Cousins out at least one week after hit from Capitals’ Chychrun",
+   "summary": "",
+   "published": "2026-11-11T12:27-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/nick-cousins.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/senators-cousins-out-at-least-one-week-after-hit-from-capitals-chychrun/",
    "source": "Sportsnet"
   },
   {
@@ -2616,45 +2616,6 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/report-browns-turning-back-to-deshaun-watson-as-starting-qb-against-texans/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "NHL to explore replay assist technology for officials",
-   "summary": "NHL commissioner Gary Bettman was quick to remind that wholesale changes won’t be coming to the way the game is officiated, but he mentioned how tech advancements might streamline everything from information to the flow ",
-   "published": "2026-11-10T17:47-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/NHL-referees.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/nhl-to-explore-replay-assist-technology-for-officials/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "NHL, NHLPA to discuss salary-cap options in new year",
-   "summary": "",
-   "published": "2026-11-10T14:48-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/NHL-Commissioner-Gary-Bettman.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/nhl-nhlpa-to-discuss-salary-cap-options-in-new-year/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Canucks quarter-mark report card: Few bright spots in dark days of rebuild",
-   "summary": "There has been no joy for the Canucks so far. And on several nights, some essential pride has been missing too, as Vancouver crashed to its worst opening quarter in franchise history.",
-   "published": "2026-11-10T16:42-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/canucks-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canucks-quarter-mark-report-few-bright-spots-in-dark-days-of-rebuild/",
    "source": "Sportsnet"
   },
   {
@@ -3192,6 +3153,19 @@
   },
   {
    "league": "mlb",
+   "headline": "WATCH live: The 2026 MLB Awards show in Las Vegas (MLB Network/MLB.com)",
+   "summary": "",
+   "published": "2026-11-11T20:54-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/vkh04cdvr0wlksgkvvxb",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "url": "https://www.mlb.com/bluejays/news/when-is-the-mlb-awards-show-date-time-channel",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
    "headline": "Blue Jays eye Skubal, but how realistic is a deal?",
    "summary": "",
    "published": "2026-11-11T13:48-05:00",
@@ -3231,19 +3205,6 @@
   },
   {
    "league": "mlb",
-   "headline": "Could Blue Jays search for upgrade at 2B over Clement?",
-   "summary": "",
-   "published": "2026-11-09T09:53-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/hhzxvwtaunddfokcgdch",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "url": "https://www.mlb.com/bluejays/news/blue-jays-second-base-options-for-2027",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
    "headline": "Solve today's Blue Jays trivia puzzle",
    "summary": "",
    "published": "2026-02-03T10:22-05:00",
@@ -3257,15 +3218,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Watch Blue Jays prospects in Arizona Fall League playoffs",
+   "headline": "Could Blue Jays search for upgrade at 2B over Clement?",
    "summary": "",
-   "published": "2026-11-11T19:40-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/ledknss6mbk03fndajcr",
+   "published": "2026-11-09T09:53-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/hhzxvwtaunddfokcgdch",
    "video": false,
    "teams": [
     "Toronto Blue Jays"
    ],
-   "url": "https://www.mlb.com/bluejays/news/watch-arizona-fall-league-playoffs-2026",
+   "url": "https://www.mlb.com/bluejays/news/blue-jays-second-base-options-for-2027",
    "source": "Team site"
   },
   {
@@ -3292,6 +3253,19 @@
     "Toronto Blue Jays"
    ],
    "url": "https://www.mlb.com/milb/prospects/bluejays/",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
+   "headline": "Watch Blue Jays prospects in Arizona Fall League playoffs",
+   "summary": "",
+   "published": "2026-11-11T19:40-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/ledknss6mbk03fndajcr",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "url": "https://www.mlb.com/bluejays/news/watch-arizona-fall-league-playoffs-2026",
    "source": "Team site"
   },
   {
@@ -3357,19 +3331,6 @@
     "Toronto Blue Jays"
    ],
    "url": "https://www.mlb.com/bluejays/news/seiya-suzuki-blue-jays-perfect-match-free-agency",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
-   "headline": "How Vladdy can get his groove back in '27",
-   "summary": "",
-   "published": "2026-11-04T16:08-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/bcv1jnte3fbgegda72kk",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "url": "https://www.mlb.com/bluejays/news/vladimir-guerrero-jr-keys-to-bounceback-season-in-2027",
    "source": "Team site"
   }
  ],
@@ -3619,7 +3580,7 @@
       "l": 13,
       "otl": 3,
       "pts": 9,
-      "gf": 43,
+      "gf": 44,
       "ga": 76,
       "strk": "L3"
      }
@@ -3701,8 +3662,8 @@
       "l": 3,
       "otl": 0,
       "pts": 30,
-      "gf": 84,
-      "ga": 54,
+      "gf": 86,
+      "ga": 55,
       "strk": "W6"
      },
      {
@@ -3713,8 +3674,8 @@
       "l": 4,
       "otl": 2,
       "pts": 24,
-      "gf": 72,
-      "ga": 62,
+      "gf": 73,
+      "ga": 64,
       "strk": "L1"
      },
      {
@@ -3750,7 +3711,7 @@
       "otl": 3,
       "pts": 15,
       "gf": 52,
-      "ga": 80,
+      "ga": 81,
       "strk": "L2"
      }
     ]
@@ -4081,7 +4042,7 @@
       "otl": 1,
       "pts": 29,
       "gf": 75,
-      "ga": 43,
+      "ga": 44,
       "strk": "W5"
      },
      {
@@ -4164,7 +4125,7 @@
       "l": 10,
       "otl": 0,
       "pts": 14,
-      "gf": 49,
+      "gf": 50,
       "ga": 71,
       "strk": "L2"
      },
