@@ -130,23 +130,33 @@
   .rhead a.all:hover { background: var(--accent); color: #0b1a33; }
   .rhead .rright { display: flex; align-items: center; gap: 10px; flex: none; }
   /* Powerplay Sports Minute: the one-minute audio update, between the headlines and Follow Powerplay */
-  .minute { display: none; align-items: center; gap: 16px; margin: 22px 40px 6px; padding: 14px 20px; border-radius: 14px; background: linear-gradient(90deg, #132b57, #0f2247); border: 1px solid rgba(232,176,33,.35); }
+  .minute { display: none; position: relative; overflow: hidden; align-items: center; gap: 18px; margin: 24px 40px 8px; padding: 16px 22px 16px 16px; border-radius: 16px;
+    background: radial-gradient(90px 90px at 58px 50%, rgba(232,176,33,.28), rgba(232,176,33,0)), linear-gradient(90deg, #1a3770, #0f2247); border: 2px solid var(--accent); box-shadow: 0 6px 24px rgba(232,176,33,.18); }
   .minute.on { display: flex; }
-  .minute .mplay { flex: none; width: 54px; height: 54px; border-radius: 50%; border: 0; background: var(--accent); color: #0b1a33; cursor: pointer; display: grid; place-items: center; box-shadow: 0 0 0 0 rgba(232,176,33,.5); }
-  .minute.playing .mplay { animation: mpulse 1.6s infinite; }
-  @keyframes mpulse { 0% { box-shadow: 0 0 0 0 rgba(232,176,33,.5); } 70% { box-shadow: 0 0 0 12px rgba(232,176,33,0); } 100% { box-shadow: 0 0 0 0 rgba(232,176,33,0); } }
-  .minute .mplay svg { width: 24px; height: 24px; }
-  .minute .mbody { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+  .minute .mplay { position: relative; flex: none; width: 84px; height: 84px; border-radius: 50%; border: 3px solid var(--accent); background: #0b1a33; cursor: pointer; padding: 0; display: grid; place-items: center; animation: mglow 2.4s ease-in-out infinite; }
+  .minute .mplay img { width: 62px; height: 62px; object-fit: contain; transition: transform .2s; }
+  .minute .mplay:hover img { transform: scale(1.08); }
+  .minute .mplay .mbadge { position: absolute; right: -4px; bottom: -4px; width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: #0b1a33; display: grid; place-items: center; border: 3px solid #0f2247; }
+  .minute .mplay .mbadge svg { width: 15px; height: 15px; }
+  @keyframes mglow { 0%, 100% { box-shadow: 0 0 0 0 rgba(232,176,33,.55); } 50% { box-shadow: 0 0 0 10px rgba(232,176,33,0); } }
+  .minute.playing .mplay { animation: none; box-shadow: 0 0 0 4px rgba(232,176,33,.35); }
+  .minute .mbody { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 7px; }
+  .minute .mtag { align-self: flex-start; display: inline-flex; align-items: center; gap: 7px; background: #d4202c; color: #fff; font-weight: 800; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; padding: 4px 9px; border-radius: 4px; }
+  .minute .meq { display: inline-flex; align-items: flex-end; gap: 2px; height: 11px; }
+  .minute .meq b { width: 3px; height: 4px; background: #fff; border-radius: 1px; }
+  .minute.playing .meq b { animation: meq .8s ease-in-out infinite; } .minute.playing .meq b:nth-child(2) { animation-delay: .2s; } .minute.playing .meq b:nth-child(3) { animation-delay: .4s; }
+  @keyframes meq { 0%, 100% { height: 3px; } 50% { height: 11px; } }
   .minute .mtop { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
-  .minute h2 { margin: 0; font-family: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif; font-weight: 400; font-size: 28px; line-height: 1; letter-spacing: .03em; text-transform: uppercase; color: #fff; }
+  .minute h2 { margin: 0; font-family: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif; font-weight: 400; font-size: 36px; line-height: .95; letter-spacing: .03em; text-transform: uppercase; color: #fff; }
   .minute h2 em { font-style: normal; color: var(--accent); }
-  .minute .msub { color: var(--muted); font-size: 12.5px; display: flex; align-items: center; gap: 4px 14px; flex-wrap: wrap; }
+  .minute .msub { color: #c3cde2; font-size: 12.5px; display: flex; align-items: center; gap: 4px 14px; flex-wrap: wrap; }
   .minute .mspon { display: inline-flex; align-items: center; gap: 6px; }
   .minute .mspon img { height: 22px; width: 22px; border-radius: 50%; background: #fff; object-fit: contain; }
-  .minute .mbar { position: relative; height: 6px; border-radius: 3px; background: rgba(255,255,255,.14); cursor: pointer; }
-  .minute .mbar i { position: absolute; left: 0; top: 0; bottom: 0; width: 0; border-radius: 3px; background: var(--accent); }
-  .minute .mtime { color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; white-space: nowrap; }
-  @media (max-width: 700px) { .minute { margin: 16px 16px 4px; padding: 12px 14px; gap: 12px; } .minute h2 { font-size: 22px; } .minute .mplay { width: 46px; height: 46px; } .minute .msub { font-size: 11.5px; } }
+  .minute .mbar { position: relative; height: 7px; border-radius: 4px; background: rgba(255,255,255,.16); cursor: pointer; }
+  .minute .mbar i { position: absolute; left: 0; top: 0; bottom: 0; width: 0; border-radius: 4px; background: var(--accent); }
+  .minute .mtime { color: #c3cde2; font-size: 12.5px; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  @media (max-width: 700px) { .minute { margin: 18px 16px 6px; padding: 12px 14px 12px 12px; gap: 13px; } .minute h2 { font-size: 26px; } .minute .mplay { width: 68px; height: 68px; } .minute .mplay img { width: 48px; height: 48px; }
+    .minute .mplay .mbadge { width: 27px; height: 27px; } .minute .mplay .mbadge svg { width: 13px; height: 13px; } .minute .msub { font-size: 11.5px; } }
   .followband { display: flex; align-items: center; justify-content: space-between; gap: 14px 24px; flex-wrap: wrap; margin: 6px 40px 22px; padding: 18px 22px;
     border-radius: 12px; background: linear-gradient(100deg, #132b57, #0f2247); border: 1px solid rgba(255,255,255,.1); }
   .followband h2 { margin: 0; font-family: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif; font-weight: 400; font-size: 30px; line-height: 1; letter-spacing: .03em; text-transform: uppercase; color: #fff; }
@@ -318,8 +328,9 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
   <div class="feat" id="feat"></div>
 
   <section class="minute" id="minute" aria-label="Powerplay Sports Minute">
-    <button class="mplay" id="mplay" type="button" aria-label="Play the Powerplay Sports Minute"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+    <button class="mplay" id="mplay" type="button" aria-label="Play the Powerplay Sports Minute"><img src="https://bbellacicco.github.io/powerplay-feed/logos/pp-icon.png" alt=""><span class="mbadge" id="mbadge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></button>
     <div class="mbody">
+      <span class="mtag"><span class="meq"><b></b><b></b><b></b></span>Listen now</span>
       <div class="mtop"><h2>Powerplay <em>Sports Minute</em></h2><span class="mtime" id="mtime">1:00</span></div>
       <div class="mbar" id="mbar"><i id="mfill"></i></div>
       <div class="msub"><span id="mdate"></span><span class="mspon">Presented by <img src="https://bbellacicco.github.io/powerplay-feed/logos/st-clair-alumni.png" alt="" onerror="this.remove()"> St. Clair College Alumni</span></div>
@@ -1309,7 +1320,7 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
 <script>
 // Powerplay Sports Minute: data/sports-minute.json {url, date}; shows for a week after it's made
 (function () {
-  var box = document.getElementById('minute'), au = document.getElementById('maudio'), btn = document.getElementById('mplay');
+  var box = document.getElementById('minute'), au = document.getElementById('maudio'), btn = document.getElementById('mplay'), badge = document.getElementById('mbadge');
   var fill = document.getElementById('mfill'), tm = document.getElementById('mtime'), bar = document.getElementById('mbar');
   var BASE = 'https://bbellacicco.github.io/powerplay-feed/';
   var PLAY = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>', PAUSE = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>';
@@ -1325,8 +1336,8 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
     box.classList.add('on');
   }).catch(function () {});
   btn.onclick = function () { if (au.paused) au.play(); else au.pause(); };
-  au.onplay = function () { box.classList.add('playing'); btn.innerHTML = PAUSE; btn.setAttribute('aria-label', 'Pause'); };
-  au.onpause = au.onended = function () { box.classList.remove('playing'); btn.innerHTML = PLAY; btn.setAttribute('aria-label', 'Play the Powerplay Sports Minute'); };
+  au.onplay = function () { box.classList.add('playing'); badge.innerHTML = PAUSE; btn.setAttribute('aria-label', 'Pause'); };
+  au.onpause = au.onended = function () { box.classList.remove('playing'); badge.innerHTML = PLAY; btn.setAttribute('aria-label', 'Play the Powerplay Sports Minute'); };
   au.ontimeupdate = function () { if (au.duration) { fill.style.width = (100 * au.currentTime / au.duration) + '%'; tm.textContent = t(au.currentTime) + ' / ' + t(au.duration); } };
   bar.onclick = function (e) { if (!au.duration) { au.play(); return; } var r = bar.getBoundingClientRect(); au.currentTime = au.duration * Math.min(1, Math.max(0, (e.clientX - r.left) / r.width)); };
 })();
