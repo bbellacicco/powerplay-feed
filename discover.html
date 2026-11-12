@@ -617,7 +617,7 @@
     if (j.seconds) tm.textContent = t(j.seconds);
     box.classList.add('on');
     if (window.PPShare && !document.querySelector('#mshare .pps-btn'))
-      document.getElementById('mshare').appendChild(PPShare.button({ title: 'Powerplay Sports Minute', url: 'https://www.powerplaywindsor.com/', text: 'Listen to the Powerplay Sports Minute on Powerplay Windsor' }));
+      document.getElementById('mshare').appendChild(PPShare.button({ title: 'Powerplay Sports Minute', url: 'https://www.powerplaywindsor.com/scores-standings?strip=minute', image: 'https://bbellacicco.github.io/powerplay-feed/logos/strip-minute-share.jpg', text: 'Listen to the Powerplay Sports Minute on Powerplay Windsor' }));
   }).catch(function () {});
   function setupBed() {
     if (!BED || bed) return;
