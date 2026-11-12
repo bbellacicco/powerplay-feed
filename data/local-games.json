@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T18:32:22-05:00",
+ "updated": "2026-11-12T18:51:18-05:00",
  "today": "2026-11-12",
  "range": [
   "2026-11-09",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 38
+   "count": 36
   },
   "club_news": {
    "ok": true,
@@ -877,11 +877,11 @@
    "home_away": "A",
    "opponent": "Ayr Centennials",
    "location": "North Dumfries C.C., Ayr, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
-   "note": "",
+   "note": "20:00 1st",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15678"
    },
@@ -2254,36 +2254,6 @@
   },
   {
    "league": "nhl",
-   "headline": "NHL power rankings: Facing fears ahead of Friday the 13th",
-   "summary": "Spooky season isn’t over just yet. Ahead of Friday the 13th, Sportsnet’s Ryan Dixon breaks down NHL teams’ biggest fears in his latest set of power rankings.",
-   "published": "2026-11-12T11:41-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/zach-hyman.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 11,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/nhl-power-rankings-facing-fears-ahead-of-friday-the-13th/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Blue Jays ‘deeply sorry’ for Santander’s social media posts",
-   "summary": "",
-   "published": "2026-11-12T16:44-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/05/CP174434041.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/blue-jays-deeply-sorry-for-santanders-social-media-posts/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Oilers quarter-mark report card: Edmonton off to very promising start",
    "summary": "Twice before, the Oilers have managed only three regulation losses through 20 games — and both seasons ended with a Stanley Cup. Is history bound to repeat itself? Sportsnet’s Mark Spector explores in his quarter-mark re",
    "published": "2026-11-12T12:48-05:00",
@@ -2306,6 +2276,21 @@
    "sn_team_count": 2,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/cfl/article/elks-qb-fajardo-carrying-extra-motivation-into-grey-cup/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Blue Jays ‘deeply sorry’ for Santander’s social media posts",
+   "summary": "",
+   "published": "2026-11-12T16:44-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/05/CP174434041.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/blue-jays-deeply-sorry-for-santanders-social-media-posts/",
    "source": "Sportsnet"
   },
   {
@@ -2389,19 +2374,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Kevin Fiala to make season debut against Islanders",
-   "summary": "Winger Kevin Fiala is set to play his first NHL game since fracturing his lower leg at the 2026 Winter Olympics.",
-   "published": "2026-11-12T14:41-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-14.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/kevin-fiala-to-make-2026-27-debut-against-islanders-thursday/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nba",
    "headline": "Rockets’ Marcus Smart suspended three games for punch",
    "summary": "The Houston Rockets guard has been suspended for three games without pay for punching Golden State Warriors centre Charles Bassey, the NBA announced Thursday.",
@@ -2442,6 +2414,21 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/scouts-analysis-how-the-maple-leafs-top-prospects-are-developing/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "NHL power rankings: Facing fears ahead of Friday the 13th",
+   "summary": "Spooky season isn’t over just yet. Ahead of Friday the 13th, Sportsnet’s Ryan Dixon breaks down NHL teams’ biggest fears in his latest set of power rankings.",
+   "published": "2026-11-12T11:41-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/zach-hyman.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 11,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/nhl-power-rankings-facing-fears-ahead-of-friday-the-13th/",
    "source": "Sportsnet"
   },
   {
@@ -2671,21 +2658,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/mammoths-logan-cooley-will-remain-sidelined-against-st-louis/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Maple Leafs have problems, but aren’t this bad",
-   "summary": "The Toronto Maple Leafs playoff hopes appear to be toast. But are they? Justin Bourne analyzes why he thinks they have a chance.",
-   "published": "2026-11-11T13:47-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Maple-Leafs-vs-Avalanche-1.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-have-problems-but-arent-this-bad/",
    "source": "Sportsnet"
   },
   {
