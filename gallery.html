@@ -122,7 +122,7 @@
     var meta = { title: '', credit: 'Powerplay Windsor', date: '' }, out = [];
     txt.split(/\r?\n/).forEach(function (line) {
       line = line.trim(); if (!line || line[0] === '#') return;
-      var m = line.match(/^(title|credit|date|sponsor)\s*:\s*(.*)$/i);
+      var m = line.match(/^(title|credit|date|sponsor|cover|box)\s*:\s*(.*)$/i);
       if (m) { meta[m[1].toLowerCase()] = m[2].trim(); return; }
       var p = line.split('|').map(function (x) { return x.trim(); });
       if (!/\.(jpe?g|png|webp)$/i.test(p[0])) return;
