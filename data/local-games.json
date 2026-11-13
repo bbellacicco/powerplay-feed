@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T21:47:28-05:00",
+ "updated": "2026-11-12T22:02:08-05:00",
  "today": "2026-11-12",
  "range": [
   "2026-11-09",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 37
   },
   "club_news": {
    "ok": true,
@@ -914,11 +914,11 @@
    "home_away": "H",
    "opponent": "Niagara IceDogs",
    "location": "WFCU Centre, Windsor",
-   "status": "live",
+   "status": "final",
    "our_score": 4,
    "opp_score": 1,
-   "result": null,
-   "note": "00:00 3rd",
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29186/"
    }
@@ -2223,6 +2223,36 @@
   }
  ],
  "more_news": [
+  {
+   "league": "nhl",
+   "headline": "Maple Leafs fall to Wild for fifth straight home loss",
+   "summary": "",
+   "published": "2026-11-12T21:54-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-31.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-fall-to-wild-for-fifth-straight-home-loss/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Barrett’s 31 points not enough as Raptors fall to 76ers",
+   "summary": "",
+   "published": "2026-11-12T21:46-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-30.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 2,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/barretts-31-points-not-enough-as-raptors-fall-to-76ers/",
+   "source": "Sportsnet"
+  },
   {
    "league": "nhl",
    "headline": "Avalanche stars MacKinnon, Makar injured vs. Senators",
@@ -3631,14 +3661,14 @@
      {
       "name": "Niagara IceDogs",
       "abbr": "NIAG",
-      "gp": 17,
+      "gp": 18,
       "w": 7,
-      "l": 7,
+      "l": 8,
       "otl": 3,
       "pts": 17,
       "gf": 51,
       "ga": 68,
-      "strk": "L3"
+      "strk": "L4"
      },
      {
       "name": "Barrie Colts",
@@ -3670,6 +3700,18 @@
     "group": "West Division",
     "teams": [
      {
+      "name": "Windsor Spitfires",
+      "abbr": "WSR",
+      "gp": 20,
+      "w": 12,
+      "l": 5,
+      "otl": 3,
+      "pts": 27,
+      "gf": 76,
+      "ga": 59,
+      "strk": "W9"
+     },
+     {
       "name": "Soo Greyhounds",
       "abbr": "SOO",
       "gp": 21,
@@ -3680,18 +3722,6 @@
       "gf": 70,
       "ga": 69,
       "strk": "L1"
-     },
-     {
-      "name": "Windsor Spitfires",
-      "abbr": "WSR",
-      "gp": 19,
-      "w": 11,
-      "l": 5,
-      "otl": 3,
-      "pts": 25,
-      "gf": 76,
-      "ga": 59,
-      "strk": "W8"
      },
      {
       "name": "Flint Firebirds",
@@ -4275,6 +4305,18 @@
       "strk": "W7"
      },
      {
+      "name": "St. Catharines Falcons",
+      "abbr": "SCF",
+      "gp": 20,
+      "w": 15,
+      "l": 4,
+      "otl": 1,
+      "pts": 31,
+      "gf": 91,
+      "ga": 56,
+      "strk": "W2"
+     },
+     {
       "name": "Fort Erie Meteors",
       "abbr": "FEM",
       "gp": 16,
@@ -4285,18 +4327,6 @@
       "gf": 79,
       "ga": 48,
       "strk": "W2"
-     },
-     {
-      "name": "St. Catharines Falcons",
-      "abbr": "SCF",
-      "gp": 19,
-      "w": 14,
-      "l": 4,
-      "otl": 1,
-      "pts": 29,
-      "gf": 91,
-      "ga": 56,
-      "strk": "W1"
      },
      {
       "name": "Waterloo Siskins",
@@ -4337,14 +4367,14 @@
      {
       "name": "Port Colborne Sailors",
       "abbr": "PCS",
-      "gp": 16,
+      "gp": 17,
       "w": 8,
-      "l": 8,
+      "l": 9,
       "otl": 0,
       "pts": 16,
       "gf": 74,
       "ga": 87,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Hamilton Steel",
