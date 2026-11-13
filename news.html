@@ -157,7 +157,7 @@
   var TEAMS = [
     ['spitfires', 'Spitfires', '#d4202a', null, /spitfire|spits\b|\bohl\b/],
     ['lancers', 'Lancers', '#3b8ee8', /university of windsor/i, /lancer|uwindsor|university of windsor/],
-    ['saints', 'Saints', '#1f9d55', /st\.? clair/i, /saints\b|st\.? clair/],
+    ['saints', 'Saints', '#1f9d55', /st\.? clair/i, { test: function (x) { x = String(x); return /st\.?\s*clair/i.test(x) || (/\bsaints\b/i.test(x) && !/st\.?\s*anne|wecssaa|ofsaa|swossa|high school|secondary/i.test(x)); } }],   // St. Anne's Saints are high school
     ['highschool', 'High school', '#8b5cf6', /high school/i, /high school|wecssaa|secondary|holy names|villanova|st\.? joseph|assumption|brennan|kennedy|massey|walkerville|riverside|herman|forster|tecumseh vista|belle river|essex dist|kingsville|leamington dist|cardinal carter|st\.? anne|l'essor|sandwich|harrow|general amherst|north star|ste\.? cecile|lajeunesse|catholic central|lasalle .*high/],
     ['junior', 'Junior hockey', '#0891b2', /junior hockey/i, /\b(ojhl|gohl|pjhl|goj?hl)\b|junior [abc]\b|jr\.? [abc]\b|lakeshore canadiens|leamington flyers|lasalle vipers|essex 73|amherstburg admirals|wheatley sharks|blenheim|mooretown|tecumseh chiefs|belle river canadiens|kingsville kings/],
     ['more', 'Around Windsor-Essex', '#e8b021', null, null]
