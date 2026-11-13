@@ -195,8 +195,11 @@
   #minute { margin: 0 0 14px; padding: 10px 16px 10px 10px; gap: 14px; }
   #minute .mplay { width: 62px; height: 62px; } #minute .mplay img { width: 44px; height: 44px; }
   #minute .mplay .mbadge { width: 25px; height: 25px; right: -3px; bottom: -3px; } #minute .mplay .mbadge svg { width: 12px; height: 12px; }
-  #minute .mtag { display: none; } #minute h2 { font-size: 28px; } #minute .mbody { gap: 6px; }
+  #minute h2 { font-size: 28px; } #minute .mbody { gap: 6px; }
   @media (max-width: 700px) { #minute { padding: 10px 12px 10px 10px; gap: 11px; } #minute h2 { font-size: 22px; } #minute .mplay { width: 54px; height: 54px; } #minute .mplay img { width: 38px; height: 38px; } }
+  /* while the Sports Minute plays, everything else blurs */
+  html.mplaying #panels > *:not(#minute), html.mplaying .intro, html.mplaying #guide { filter: blur(6px) brightness(.6); pointer-events: none; }
+  #panels > *, .intro, #guide { transition: filter .3s; }
 </style>
 <script>
 // tall (portrait) photos in wide boxes: show the upper part, where faces are, instead of the middle
@@ -660,7 +663,7 @@ document.addEventListener('load', function (e) {
   }
   function later(fn, ms) { timers.push(setTimeout(fn, ms)); }
   function clear() { timers.forEach(clearTimeout); timers = []; }
-  function ui(on) { playing = on; box.classList.toggle('playing', on); badge.innerHTML = on ? PAUSE : PLAY; btn.setAttribute('aria-label', on ? 'Pause' : 'Play the Powerplay Sports Minute'); }
+  function ui(on) { playing = on; box.classList.toggle('playing', on); document.documentElement.classList.toggle('mplaying', on); try { parent.postMessage({ ppMinute: on ? 'play' : 'stop' }, '*'); } catch (e) {} badge.innerHTML = on ? PAUSE : PLAY; btn.setAttribute('aria-label', on ? 'Pause' : 'Play the Powerplay Sports Minute'); }
   function start() {
     setupBed(); ui(true);
     if (ctx && ctx.state === 'suspended') ctx.resume();
