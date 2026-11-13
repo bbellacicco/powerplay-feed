@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T15:16:43-05:00",
+ "updated": "2026-11-13T15:31:53-05:00",
  "today": "2026-11-13",
  "range": [
   "2026-11-10",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 36
   },
   "club_news": {
    "ok": true,
@@ -1260,6 +1260,20 @@
   },
   {
    "league": "cfl",
+   "headline": "Canadian linebackers Dublanko, Cantin-Arku look to shine at the 113th Grey Cup",
+   "summary": "",
+   "published": "2026-11-13T00:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/UJvllrh1MPokhWx8wIGXM/0d52ee6aa1782a0e230d525cbecd1b45/Joel_Dublanko_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Alouettes",
+    "Elks"
+   ],
+   "url": "https://www.cfl.ca/article/canadian-linebackers-dublanko-cantin-arku-look-to-shine-at-the-113th-grey-cup",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "5 burning questions ahead of 113th Grey Cup",
    "summary": "",
    "published": "2026-11-13T00:00:00-05:00",
@@ -1431,20 +1445,6 @@
     "Alouettes"
    ],
    "url": "https://www.cfl.ca/article/joel-dublanko-we-want-to-be-out-there-at-the-end-of-the-game-to-close-it-out",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "3 storylines to watch in the 113th Grey Cup",
-   "summary": "",
-   "published": "2026-11-11T01:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/2bVqalD5T6oEyf5MjQGA6H/8ca5ae99dea9fa644dc3fb75f049b2e1/Tyrice_Beverette_2026.jpeg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Elks",
-    "Alouettes"
-   ],
-   "url": "https://www.cfl.ca/article/3-storylines-to-watch-in-the-113th-grey-cup",
    "source": "CFL.ca"
   },
   {
@@ -2069,6 +2069,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "Report: Pelicans guard Dejounte Murray wants trade out of New Orleans",
+   "summary": "",
+   "published": "2026-11-13T15:20-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/01/Dejounte.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/report-pelicans-guard-dejounte-murray-wants-trade-out-of-new-orleans/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "Canada’s Bianca Andreescu advances to fourth consecutive WTA 125 final",
    "summary": "",
@@ -2118,19 +2131,6 @@
    "sn_team_count": 0,
    "sport": "MMA",
    "url": "https://www.sportsnet.ca/ufc/article/terrance-mckinney-apologizes-after-failing-to-make-weight-for-ufc-334/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "cfl",
-   "headline": "CFL commissioner Johnston calls Quebec ‘leading candidate’ for expansion team",
-   "summary": "",
-   "published": "2026-11-13T10:57-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/stew.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/cfl-commissioner-johnston-calls-quebec-leading-candidate-for-expansion-team/",
    "source": "Sportsnet"
   },
   {
@@ -2187,6 +2187,32 @@
    "sn_team_count": 0,
    "sport": "MMA",
    "url": "https://www.sportsnet.ca/ufc/article/ufc-334-cage-locks-gane-hokit-ready-for-heavyweight-battle/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "cfl",
+   "headline": "Elks QB Fajardo carrying extra motivation into Grey Cup",
+   "summary": "After helping Montreal win a Grey Cup, Cody Fajardo believed he had done enough to remain its starting quarterback until they decided to hand the keys to Davis Alexander. Now, with Edmonton, he gets another opportunity t",
+   "published": "2026-11-12T17:39-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Edmonton-Elks-quarterback-Cody-Fajardo.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/elks-qb-fajardo-carrying-extra-motivation-into-grey-cup/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "cfl",
+   "headline": "Keys to victory: How Elks can beat Alouettes in Grey Cup",
+   "summary": "For the first time in 11 years, the Edmonton Elks are back on the CFL’s biggest stage. To get you set, Kellen Forrest has three keys to victory for the Elks in Sunday’s Grey Cup against the Alouettes.",
+   "published": "2026-11-12T19:49-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Elks-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/keys-to-victory-how-elks-can-beat-alouettes-in-grey-cup/",
    "source": "Sportsnet"
   },
   {
@@ -2280,6 +2306,19 @@
    "sn_team_count": 0,
    "sport": "MMA",
    "url": "https://www.sportsnet.ca/ufc/article/amanda-nunes-vs-kayla-harrison-marks-a-true-ufc-womens-blockbuster/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "cfl",
+   "headline": "CFL commissioner Johnston calls Quebec ‘leading candidate’ for expansion team",
+   "summary": "",
+   "published": "2026-11-13T10:57-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/stew.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/cfl-commissioner-johnston-calls-quebec-leading-candidate-for-expansion-team/",
    "source": "Sportsnet"
   },
   {
@@ -2401,32 +2440,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/blue-jays-eye-versatile-jazz-chisholm-jr-in-search-for-offence/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "cfl",
-   "headline": "Elks QB Fajardo carrying extra motivation into Grey Cup",
-   "summary": "After helping Montreal win a Grey Cup, Cody Fajardo believed he had done enough to remain its starting quarterback until they decided to hand the keys to Davis Alexander. Now, with Edmonton, he gets another opportunity t",
-   "published": "2026-11-12T17:39-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Edmonton-Elks-quarterback-Cody-Fajardo.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/elks-qb-fajardo-carrying-extra-motivation-into-grey-cup/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "cfl",
-   "headline": "Keys to victory: How Elks can beat Alouettes in Grey Cup",
-   "summary": "For the first time in 11 years, the Edmonton Elks are back on the CFL’s biggest stage. To get you set, Kellen Forrest has three keys to victory for the Elks in Sunday’s Grey Cup against the Alouettes.",
-   "published": "2026-11-12T19:49-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Elks-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/keys-to-victory-how-elks-can-beat-alouettes-in-grey-cup/",
    "source": "Sportsnet"
   },
   {
