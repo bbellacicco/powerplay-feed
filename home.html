@@ -450,7 +450,7 @@ document.addEventListener('load', function (e) {
   // which Powerplay posts and videos belong in Lancers Lounge, Saints Nation and High School Huddle
   var THEME = {
     lancers: /lancer|uwindsor|university of windsor/i,
-    saints: /\bsaints\b|st\.? clair/i,
+    saints: { test: function (x) { x = String(x); return /st\.?\s*clair/i.test(x) || (/\bsaints\b/i.test(x) && !/st\.?\s*anne|wecssaa|ofsaa|swossa|high school|secondary/i.test(x)); } },   // St. Anne's Saints are high school
     junior: /spitfires|\bspits\b|\bohl\b|\b(ojhl|gohl|pjhl)\b|junior hockey|junior b|junior c|lakeshore canadiens|leamington flyers|lasalle vipers|\bvipers\b|essex 73|73's|amherstburg admirals|\badmirals\b|wheatley sharks|tecumseh eco|belle river canadiens/i,
     highschool: /high school|wecssaa|ofsaa|secondary|holy names|villanova|st\.? joseph|assumption|brennan|kennedy|massey|walkerville|riverside|herman|forster|tecumseh vista|belle river|essex dist|kingsville|leamington dist|cardinal carter|st\.? anne|l'essor|sandwich|harrow|general amherst|north star|ste\.? cecile|lajeunesse|catholic central|\blaj\b/i
   };
@@ -632,10 +632,10 @@ document.addEventListener('load', function (e) {
     box.appendChild(bg); box.appendChild(im); a.appendChild(box);
   }
   // the label over a Powerplay story: the blog category it's posted in (High School, OUA, OCAA...)
-  var CAT_MAP = [[/university of windsor|lancers/i, 'OUA'], [/st\.? clair|saints/i, 'OCAA'], [/high school/i, 'High School'],
+  var CAT_MAP = [[/university of windsor|lancers/i, 'OUA'], [{ test: function (x) { x = String(x); return /st\.?\s*clair/i.test(x) || (/\bsaints\b/i.test(x) && !/st\.?\s*anne|wecssaa|ofsaa|swossa|high school|secondary/i.test(x)); } }, 'OCAA'], [/high school/i, 'High School'],
     [/spitfires|\bohl\b/i, 'OHL'], [/junior/i, 'Junior Hockey'], [/photo dump/i, 'Photo Dump']];
   var CAT_SKIP = /^(powerplay today|all posts|uncategori[sz]ed|news|blog)$/i;
-  var GUESS = [[/lancer|uwindsor|university of windsor/i, 'OUA'], [/st\.? clair|saints\b/i, 'OCAA'], [/spitfire|\bohl\b/i, 'OHL'],
+  var GUESS = [[/lancer|uwindsor|university of windsor/i, 'OUA'], [{ test: function (x) { x = String(x); return /st\.?\s*clair/i.test(x) || (/\bsaints\b/i.test(x) && !/st\.?\s*anne|wecssaa|ofsaa|swossa|high school|secondary/i.test(x)); } }, 'OCAA'], [/spitfire|\bohl\b/i, 'OHL'],
     [/\bofsaa\b|wecssaa|high school|secondary school/i, 'High School'], [/\b(ojhl|gohl|pjhl)\b|junior [abc]\b/i, 'Junior Hockey'], [/photo dump/i, 'Photo Dump']];
   function storyCat(s, fallback) {
     var cats = String(s.cats || '').split(/\s*,\s*/).filter(function (c) { return c && !CAT_SKIP.test(c); });
@@ -1132,7 +1132,7 @@ document.addEventListener('load', function (e) {
       // scheduled top story (featured.txt): from its time, an older story takes the big box until a newer story is posted
       var sched = ((r[8] && r[8].featured) || []).filter(function (f) { return f.url && new Date(f.from).getTime() <= Date.now(); })
         .sort(function (a, b) { return new Date(b.from) - new Date(a.from); })[0];
-      var key = function (u) { return String(u || '').toLowerCase().replace(/[?#].*$/, '').replace(/\/$/, ''); };
+      var key = function (u) { var y = String(u || '').match(/(?:[?&]v=|youtu\.be\/|\/shorts\/)([\w-]{11})/); return y ? 'yt:' + y[1] : String(u || '').toLowerCase().replace(/[?#].*$/, '').replace(/\/$/, ''); };   // YouTube links: the video's id
       var allFeat = featItems.slice(), drop = null;   // newest first, before any scheduled story is moved up
       if (sched) {
         var pick = stories.filter(function (s) { return key(s.url) === key(sched.url) && s.image; })[0];
