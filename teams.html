@@ -221,7 +221,7 @@
     var saiS = SAINTS_SPORTS.slice(); games.forEach(function (g) { if (g.team === 'saints' && saiS.indexOf(g.sport) < 0) saiS.push(g.sport); });
     saiS.forEach(function (sp) {
       var srx = sportRx(sp), swomen = /women/i.test(sp);
-      addTeam({ about: function (x) { return /\bsaints\b|st\.? clair/i.test(x) && srx.test(x) && (/women/i.test(x) === swomen || !/(men|women)/i.test(x)); }, id: 'saints-' + slug(sp), name: 'Saints ' + sp, full: 'St. Clair Saints ' + sp, league: sp === 'Football' ? 'CJFL' : 'OCAA', sec: 'saints', sport: sp, words: 'saints st clair college ocaa ' + sp,
+      addTeam({ about: function (x) { return { test: function (x) { x = String(x); return /st\.?\s*clair/i.test(x) || (/\bsaints\b/i.test(x) && !/st\.?\s*anne|wecssaa|ofsaa|swossa|high school|secondary/i.test(x)); } }.test(x) && srx.test(x) && (/women/i.test(x) === swomen || !/(men|women)/i.test(x)); }, id: 'saints-' + slug(sp), name: 'Saints ' + sp, full: 'St. Clair Saints ' + sp, league: sp === 'Football' ? 'CJFL' : 'OCAA', sec: 'saints', sport: sp, words: 'saints st clair college ocaa ' + sp,
         match: function (g) { return g.team === 'saints' && g.sport === sp; }, std: sp === 'Football' ? ['cjfl', /st\.? clair/i] : null, college: [/st\.? clair/i, sp],
         news: function (s) { return s.team === 'saints'; } });
     });
