@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T11:17:06-05:00",
+ "updated": "2026-11-13T11:32:00-05:00",
  "today": "2026-11-13",
  "range": [
   "2026-11-10",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 36
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -1296,6 +1296,17 @@
   },
   {
    "league": "cfl",
+   "headline": "One Iconic Grey Cup Memory From Each CFL Team",
+   "summary": "",
+   "published": "2026-11-12T12:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/H2Pxy8t5VRoZM6jorRHb5/5f50fd60f4cfe204ab1c2330972cc924/Iconic_1.png?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/one-iconic-grey-cup-memory-from-each-cfl-team",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "The Biggest Play from Every Team’s Last Grey Cup Win",
    "summary": "",
    "published": "2026-11-12T12:00:00-05:00",
@@ -1433,17 +1444,6 @@
    "video": true,
    "teams": [],
    "url": "https://www.cfl.ca/article/bring-flag-football-to-your-school",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "CFL Cinematic Recap: Winnipeg @ Montreal",
-   "summary": "",
-   "published": "2026-11-10T12:30:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/4A0xuGvsbtzCUhycg1SpOS/74d551a63f4a922511a47c9cbdfeab49/EF_Thumb1.png?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/cfl-cinematic-recap-winnipeg-montreal",
    "source": "CFL.ca"
   },
   {
@@ -2049,6 +2049,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Canadiens rout Bruins but continue to surrender own blue line",
+   "summary": "The Canadiens routed the Bruins on Thursday for a 5-2 victory to move into a tie with the Lightning atop the Atlantic Division. Eric Engels highlights how, despite the win, Montreal still has plenty to clean up as the se",
+   "published": "2026-11-12T23:34-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-40.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canadiens-rout-bruins-but-continue-to-surrender-own-blue-line/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Avalanche stars MacKinnon, Makar injured vs. Senators",
    "summary": "",
    "published": "2026-11-12T21:12-05:00",
@@ -2074,16 +2087,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "Daniels, Commanders stun Giants with fourth-quarter rally",
-   "summary": "Jayden Daniels threw his third touchdown pass of the game, a 32-yarder to Stefon Diggs with 57 seconds left, and the Washington Commanders rallied to defeat the New York Giants 24-21 on Thursday night in what was essenti",
-   "published": "2026-11-12T23:37-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177262506.jpg",
+   "league": "other",
+   "headline": "Terrance McKinney apologizes after failing to make weight for UFC 334",
+   "summary": "",
+   "published": "2026-11-13T11:23-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/06/6374943118112.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/daniels-commanders-stun-giants-with-fourth-quarter-rally/",
+   "sn_team_count": 0,
+   "sport": "MMA",
+   "url": "https://www.sportsnet.ca/ufc/article/terrance-mckinney-apologizes-after-failing-to-make-weight-for-ufc-334/",
    "source": "Sportsnet"
   },
   {
@@ -2141,6 +2154,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "UFC 334 Cage Locks: Gane, Hokit ready for heavyweight battle",
+   "summary": "UFC 334 takes over Madison Square Garden on Saturday, featuring two major championship bouts. Here’s a preview of all the action.",
+   "published": "2026-11-13T09:05-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/hokit.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "MMA",
+   "url": "https://www.sportsnet.ca/ufc/article/ufc-334-cage-locks-gane-hokit-ready-for-heavyweight-battle/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "Ravens say Lamar Jackson could return in six to 10 weeks",
    "summary": "",
@@ -2154,29 +2180,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Canadiens rout Bruins but continue to surrender own blue line",
-   "summary": "The Canadiens routed the Bruins on Thursday for a 5-2 victory to move into a tie with the Lightning atop the Atlantic Division. Eric Engels highlights how, despite the win, Montreal still has plenty to clean up as the se",
-   "published": "2026-11-12T23:34-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-40.jpg",
+   "league": "nfl",
+   "headline": "Daniels, Commanders stun Giants with fourth-quarter rally",
+   "summary": "Jayden Daniels threw his third touchdown pass of the game, a 32-yarder to Stefon Diggs with 57 seconds left, and the Washington Commanders rallied to defeat the New York Giants 24-21 on Thursday night in what was essenti",
+   "published": "2026-11-12T23:37-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177262506.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canadiens-rout-bruins-but-continue-to-surrender-own-blue-line/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "UFC 334 Cage Locks: Gane, Hokit ready for heavyweight battle",
-   "summary": "UFC 334 takes over Madison Square Garden on Saturday, featuring two major championship bouts. Here’s a preview of all the action.",
-   "published": "2026-11-13T09:05-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/hokit.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/ufc-334-cage-locks-gane-hokit-ready-for-heavyweight-battle/",
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/daniels-commanders-stun-giants-with-fourth-quarter-rally/",
    "source": "Sportsnet"
   },
   {
@@ -2229,19 +2242,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/amid-the-storm-canucks-sedins-not-shying-away-from-blowback/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Hellebuyck makes 26 saves as Devils beat Capitals",
-   "summary": "",
-   "published": "2026-11-12T22:05-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-35.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/hellebuyck-makes-26-saves-as-devils-beat-capitals/",
    "source": "Sportsnet"
   },
   {
@@ -2339,34 +2339,6 @@
    "sn_team_count": 2,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/rockets-marcus-smart-suspended-three-games-for-punch/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Cade Cunningham’s 52 points help Pistons outlast Wizards in 2OT",
-   "summary": "",
-   "published": "2026-11-12T22:31-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-36.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Pistons"
-   ],
-   "sn_team_count": 2,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/cade-cunninghams-52-points-help-pistons-outlast-wizards-in-2ot/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Booker scores 30 as Suns hold on to beat Hornets",
-   "summary": "Devin Booker had 30 points, seven assists and three steals, and the Phoenix Suns beat the Charlotte Hornets 101-96 on Thursday night.",
-   "published": "2026-11-12T23:58-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/5ced5f14ac5bf0995169f6c7018f5acc3f21dc97b107d9e116a410241ffa712e.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/booker-scores-30-as-suns-hold-on-to-beat-hornets/",
    "source": "Sportsnet"
   },
   {
