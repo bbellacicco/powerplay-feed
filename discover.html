@@ -177,12 +177,15 @@
   .minute .msub { color: #c3cde2; font-size: 12.5px; display: flex; align-items: center; gap: 4px 14px; flex-wrap: wrap; }
   .minute .mspon { display: inline-flex; align-items: center; gap: 6px; }
   .minute .mspon img { height: 22px; width: 22px; border-radius: 50%; background: #fff; object-fit: contain; }
-  /* phones: date, logo and sponsor on one tidy line */
+  /* phones: everything centred, and the sponsor gets room for its full name */
   @media (max-width: 700px) {
-    .minute .msub { flex-wrap: nowrap; white-space: nowrap; gap: 8px; overflow: hidden; }
+    .minute .mbody { align-items: center; text-align: center; }
+    .minute .mtag { align-self: center; }
+    .minute .mtop { justify-content: center; }
+    .minute .mbar { width: 100%; }
+    .minute .msub { justify-content: center; flex-wrap: wrap; gap: 3px 8px; white-space: nowrap; }
     .minute .msub .dlong, .minute .msub .pby { display: none; }
-    .minute .msub #mdate::after { content: '\00b7'; margin-left: 8px; color: #8fa0c2; }
-    .minute .mspon { gap: 5px; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+    .minute .mspon { gap: 5px; }
     .minute .mspon img { height: 18px; width: 18px; flex: none; }
   }
   .minute .mbar { position: relative; height: 7px; border-radius: 4px; background: rgba(255,255,255,.16); cursor: pointer; }
