@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T18:01:59-05:00",
+ "updated": "2026-11-13T18:17:08-05:00",
  "today": "2026-11-13",
  "range": [
   "2026-11-10",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 37
+   "count": 38
   },
   "club_news": {
    "ok": true,
@@ -768,9 +768,9 @@
    "home_away": "H",
    "opponent": "Blenheim Blades",
    "location": "Atlas Tube Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
    "note": "",
    "links": {
@@ -2064,19 +2064,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Report: NHL expected to extend Texas expansion evaluation process",
-   "summary": "",
-   "published": "2026-11-13T17:01-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/bettman.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/report-nhl-expected-to-extend-texas-expansion-evaluation-process/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "‘I’m sure he will’: Oilers great Jari Kurri optimistic McDavid reaches 200 points",
    "summary": "Connor McDavid’s torrid points pace seems to have everyone talking.",
    "published": "2026-11-13T17:45-05:00",
@@ -2155,6 +2142,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Canucks activate forward Filip Chytil from injured reserve",
+   "summary": "Centre Filip Chytil has been activated from the injured reserve, the team announced Friday ahead of their showdown against the New York Rangers (Sportsnet and Sportsnet+, 9 p.m. ET / 7 p.m. PCT).",
+   "published": "2026-11-13T18:03-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/01/chytil.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canucks-activate-forward-filip-chytil-from-injured-reserve/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Babcock returns to Toronto as head coach of Oilers",
    "summary": "Mike Babcock was in a familiar place — one he hadn’t been for quite some time.",
    "published": "2026-11-13T17:36-05:00",
@@ -2166,6 +2166,19 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/babcock-returns-to-toronto-as-head-coach-of-oilers/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Report: NHL expected to extend Texas expansion evaluation process",
+   "summary": "",
+   "published": "2026-11-13T17:01-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/bettman.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/report-nhl-expected-to-extend-texas-expansion-evaluation-process/",
    "source": "Sportsnet"
   },
   {
