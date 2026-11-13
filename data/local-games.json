@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T20:32:09-05:00",
+ "updated": "2026-11-12T20:47:02-05:00",
  "today": "2026-11-12",
  "range": [
   "2026-11-09",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -879,9 +879,9 @@
    "location": "North Dumfries C.C., Ayr, ON",
    "status": "live",
    "our_score": 4,
-   "opp_score": 1,
+   "opp_score": 3,
    "result": null,
-   "note": "20:00 3rd",
+   "note": "10:48 3rd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15678"
    },
@@ -915,10 +915,10 @@
    "opponent": "Niagara IceDogs",
    "location": "WFCU Centre, Windsor",
    "status": "live",
-   "our_score": 2,
+   "our_score": 3,
    "opp_score": 1,
    "result": null,
-   "note": "07:35 2nd",
+   "note": "00:00 2nd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29186/"
    }
@@ -933,10 +933,10 @@
    "opponent": "Buffalo Jr. Sabres",
    "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
    "status": "live",
-   "our_score": 3,
+   "our_score": 4,
    "opp_score": 0,
    "result": null,
-   "note": "09:01 2nd",
+   "note": "20:00 3rd",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16669"
    },
@@ -2251,19 +2251,6 @@
   },
   {
    "league": "mlb",
-   "headline": "Cubs’ Pete Crow-Armstrong wins National League MVP",
-   "summary": "",
-   "published": "2026-11-12T19:53-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP176761012.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/cubs-pete-crow-armstrong-wins-national-league-mvp/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
    "headline": "Blue Jays ‘deeply sorry’ for Santander’s social media posts",
    "summary": "",
    "published": "2026-11-12T16:44-05:00",
@@ -2340,6 +2327,19 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/rams-place-wr-puka-nacua-on-injured-reserve-with-mcl-injury/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Blades Brown still rolling, trails Trace Crowe by 3 at new Austin tournament",
+   "summary": "",
+   "published": "2026-11-12T20:27-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/01/12a2e0d14002a25420527ff0a516ca1c84bb1b1562ec3e01c02fc61a2c68db0d.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Golf",
+   "url": "https://www.sportsnet.ca/pga/article/blades-brown-still-rolling-trails-trace-crowe-by-3-at-new-austin-tournament/",
    "source": "Sportsnet"
   },
   {
@@ -2454,6 +2454,21 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/scouts-analysis-how-the-maple-leafs-top-prospects-are-developing/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Maple Leafs decide to sit Tanev vs. Wild because of load-management plan",
+   "summary": "The Toronto Maple Leafs are in the throes of an 0-4 homestand, losing ground in the standings, and facing one of the league’s best teams Thursday. And they are choosing not to dress one of their best defencemen available",
+   "published": "2026-11-12T13:35-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/tanev.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-decide-to-sit-tanev-vs-wild-because-of-load-management-plan/",
    "source": "Sportsnet"
   },
   {
@@ -2590,10 +2605,10 @@
   },
   {
    "league": "other",
-   "headline": "Coco Gauff storms back to beat Marta Kostyuk at WTA Finals",
+   "headline": "Jessica Pegula outlasts Linda Noskova in three sets at WTA Finals, knocking out Coco Gauff",
    "summary": "Coco Gauff rallied to win the final six games of the match and beat Marta Kostyuk 6-4, 7-5 in her round-robin group at the WTA Finals on Thursday.",
    "published": "2026-11-12T20:10-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/coco.jpg",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/jessica-pegula.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
@@ -3597,7 +3612,7 @@
       "otl": 3,
       "pts": 17,
       "gf": 51,
-      "ga": 66,
+      "ga": 67,
       "strk": "L3"
      },
      {
@@ -3661,7 +3676,7 @@
       "l": 5,
       "otl": 3,
       "pts": 25,
-      "gf": 74,
+      "gf": 75,
       "ga": 59,
       "strk": "W8"
      },
@@ -3781,8 +3796,8 @@
       "l": 5,
       "otl": 0,
       "pts": 36,
-      "gf": 95,
-      "ga": 59,
+      "gf": 96,
+      "ga": 60,
       "strk": "W2"
      },
      {
@@ -3877,8 +3892,8 @@
       "l": 13,
       "otl": 2,
       "pts": 16,
-      "gf": 60,
-      "ga": 99,
+      "gf": 61,
+      "ga": 100,
       "strk": "L4"
      },
      {
@@ -3930,7 +3945,7 @@
       "l": 3,
       "otl": 0,
       "pts": 42,
-      "gf": 137,
+      "gf": 138,
       "ga": 54,
       "strk": "L1"
      },
@@ -3990,7 +4005,7 @@
       "l": 6,
       "otl": 1,
       "pts": 27,
-      "gf": 74,
+      "gf": 75,
       "ga": 42,
       "strk": "L4"
      },
@@ -4003,7 +4018,7 @@
       "otl": 3,
       "pts": 25,
       "gf": 81,
-      "ga": 81,
+      "ga": 82,
       "strk": "W3"
      },
      {
@@ -4063,7 +4078,7 @@
       "otl": 1,
       "pts": 13,
       "gf": 57,
-      "ga": 89,
+      "ga": 90,
       "strk": "L4"
      }
     ]
@@ -4178,7 +4193,7 @@
       "otl": 0,
       "pts": 16,
       "gf": 54,
-      "ga": 72,
+      "ga": 73,
       "strk": "W1"
      },
      {
@@ -4278,7 +4293,7 @@
       "l": 4,
       "otl": 3,
       "pts": 23,
-      "gf": 60,
+      "gf": 61,
       "ga": 46,
       "strk": "L1"
      },
@@ -4290,7 +4305,7 @@
       "l": 4,
       "otl": 4,
       "pts": 22,
-      "gf": 66,
+      "gf": 67,
       "ga": 63,
       "strk": "L1"
      },
@@ -4327,7 +4342,7 @@
       "otl": 3,
       "pts": 15,
       "gf": 62,
-      "ga": 86,
+      "ga": 87,
       "strk": "W1"
      },
      {
