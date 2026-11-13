@@ -1207,7 +1207,10 @@ document.addEventListener('load', function (e) {
       // the story that just left the big box leads Latest Stories, so it stays up front a while longer
       var lastTop = featItems[1] && !featItems[1].snaps && !featUrls[featItems[1].url] ? featItems[1] : null;
       // only Powerplay's own stories here: team news goes to Lancers Lounge, Saints Nation, High School Huddle and Junior Hockey
-      var rowStories = stories.filter(function (s) { return s.team === 'powerplay' && !isVid(s) && !featUrls[s.url] && (!lastTop || s.url !== lastTop.url); });
+      // What's New: Powerplay's stories, plus Spitfires news (trades, signings, announcements) but never their videos or game stories and scores
+      var SPITS_GAME = /game story|game recap|recap|post-?game|highlights|preview|game day|gameday|\bvs\.? /i;
+      var spitsNews = function (s) { return s.team === 'spitfires' && !isVid(s) && !SPITS_GAME.test(s.headline || '') && (/ohl-spitfires/i.test(s.url) || /spitfires/i.test(s.headline || '')); };   // the club's own news, not alumni or league roundups
+      var rowStories = stories.filter(function (s) { return (s.team === 'powerplay' || spitsNews(s)) && !isVid(s) && !featUrls[s.url] && (!lastTop || s.url !== lastTop.url); });
       if (lastTop && lastTop.team === 'powerplay') rowStories.unshift(lastTop);
       fill('stories', rowStories.slice(0, 15).map(function (s) {
         var who = s.team === 'junior' || s.team === 'powerplay' ? s.club || TEAM[s.team] : TEAM[s.team] + (s.sport ? ' · ' + s.sport : '');
