@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T21:32:10-05:00",
+ "updated": "2026-11-12T21:47:28-05:00",
  "today": "2026-11-12",
  "range": [
   "2026-11-09",
@@ -915,10 +915,10 @@
    "opponent": "Niagara IceDogs",
    "location": "WFCU Centre, Windsor",
    "status": "live",
-   "our_score": 3,
+   "our_score": 4,
    "opp_score": 1,
    "result": null,
-   "note": "02:06 3rd",
+   "note": "00:00 3rd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29186/"
    }
@@ -932,11 +932,11 @@
    "home_away": "H",
    "opponent": "Buffalo Jr. Sabres",
    "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
-   "status": "live",
+   "status": "final",
    "our_score": 5,
    "opp_score": 1,
-   "result": null,
-   "note": "Unofficial Final",
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16669"
    },
@@ -2278,6 +2278,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Canadiens’ Chris Kreider exits vs. Bruins with apparent injury",
+   "summary": "",
+   "published": "2026-11-12T21:32-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177095394.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canadiens-chris-kreider-exits-vs-bruins-with-apparent-injury/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "Report: Man United appoints USMNT coach Pochettino as new manager",
    "summary": "The Argentinian manager has been appointed as Manchester United’s new manager, succeeding Michael Carrick, David Ornstein of The Athletic reported Thursday.",
@@ -2340,19 +2353,6 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/rams-place-wr-puka-nacua-on-injured-reserve-with-mcl-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Blades Brown still rolling, trails Trace Crowe by 3 at new Austin tournament",
-   "summary": "",
-   "published": "2026-11-12T20:27-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/01/12a2e0d14002a25420527ff0a516ca1c84bb1b1562ec3e01c02fc61a2c68db0d.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Golf",
-   "url": "https://www.sportsnet.ca/pga/article/blades-brown-still-rolling-trails-trace-crowe-by-3-at-new-austin-tournament/",
    "source": "Sportsnet"
   },
   {
@@ -3554,38 +3554,38 @@
      {
       "name": "Kingston Frontenacs",
       "abbr": "KGN",
-      "gp": 19,
+      "gp": 20,
       "w": 13,
-      "l": 6,
+      "l": 7,
       "otl": 0,
       "pts": 26,
       "gf": 84,
       "ga": 72,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Ottawa 67's",
       "abbr": "OTT",
-      "gp": 17,
-      "w": 9,
+      "gp": 18,
+      "w": 10,
       "l": 6,
       "otl": 2,
-      "pts": 20,
+      "pts": 22,
       "gf": 63,
       "ga": 58,
-      "strk": "L2"
+      "strk": "W1"
      },
      {
       "name": "Peterborough Petes",
       "abbr": "PBO",
-      "gp": 19,
-      "w": 9,
+      "gp": 20,
+      "w": 10,
       "l": 10,
       "otl": 0,
-      "pts": 18,
+      "pts": 20,
       "gf": 66,
       "ga": 68,
-      "strk": "W1"
+      "strk": "W2"
      },
      {
       "name": "Oshawa Generals",
@@ -3617,6 +3617,18 @@
       "strk": "W2"
      },
      {
+      "name": "North Bay Battalion",
+      "abbr": "NB",
+      "gp": 20,
+      "w": 8,
+      "l": 11,
+      "otl": 1,
+      "pts": 17,
+      "gf": 70,
+      "ga": 79,
+      "strk": "W1"
+     },
+     {
       "name": "Niagara IceDogs",
       "abbr": "NIAG",
       "gp": 17,
@@ -3625,19 +3637,7 @@
       "otl": 3,
       "pts": 17,
       "gf": 51,
-      "ga": 67,
-      "strk": "L3"
-     },
-     {
-      "name": "North Bay Battalion",
-      "abbr": "NB",
-      "gp": 19,
-      "w": 7,
-      "l": 11,
-      "otl": 1,
-      "pts": 15,
-      "gf": 69,
-      "ga": 79,
+      "ga": 68,
       "strk": "L3"
      },
      {
@@ -3689,7 +3689,7 @@
       "l": 5,
       "otl": 3,
       "pts": 25,
-      "gf": 75,
+      "gf": 76,
       "ga": 59,
       "strk": "W8"
      },
@@ -3708,26 +3708,26 @@
      {
       "name": "Saginaw Spirit",
       "abbr": "SAG",
-      "gp": 19,
+      "gp": 20,
       "w": 8,
-      "l": 8,
+      "l": 9,
       "otl": 3,
       "pts": 19,
       "gf": 72,
       "ga": 72,
-      "strk": "W2"
+      "strk": "L1"
      },
      {
       "name": "Sarnia Sting",
       "abbr": "SAR",
-      "gp": 20,
+      "gp": 21,
       "w": 8,
-      "l": 11,
+      "l": 12,
       "otl": 1,
       "pts": 17,
       "gf": 76,
-      "ga": 85,
-      "strk": "W1"
+      "ga": 86,
+      "strk": "L1"
      }
     ]
    },
@@ -3953,14 +3953,14 @@
      {
       "name": "Collingwood Blues",
       "abbr": "COL",
-      "gp": 24,
-      "w": 21,
+      "gp": 25,
+      "w": 22,
       "l": 3,
       "otl": 0,
-      "pts": 42,
-      "gf": 139,
+      "pts": 44,
+      "gf": 140,
       "ga": 54,
-      "strk": "L1"
+      "strk": "W1"
      },
      {
       "name": "Milton Menace",
@@ -4013,25 +4013,25 @@
      {
       "name": "Leamington Flyers",
       "abbr": "LEA",
-      "gp": 20,
-      "w": 13,
+      "gp": 21,
+      "w": 14,
       "l": 6,
       "otl": 1,
-      "pts": 27,
+      "pts": 29,
       "gf": 76,
       "ga": 43,
-      "strk": "L4"
+      "strk": "W1"
      },
      {
       "name": "Oakville Blades",
       "abbr": "OAK",
-      "gp": 22,
+      "gp": 23,
       "w": 11,
       "l": 8,
-      "otl": 3,
-      "pts": 25,
+      "otl": 4,
+      "pts": 26,
       "gf": 81,
-      "ga": 83,
+      "ga": 84,
       "strk": "W3"
      },
      {
@@ -4085,14 +4085,14 @@
      {
       "name": "Buffalo Jr. Sabres",
       "abbr": "BUF",
-      "gp": 23,
+      "gp": 24,
       "w": 6,
-      "l": 16,
+      "l": 17,
       "otl": 1,
       "pts": 13,
       "gf": 58,
       "ga": 91,
-      "strk": "L4"
+      "strk": "L5"
      }
     ]
    }
@@ -4162,6 +4162,18 @@
       "strk": "L1"
      },
      {
+      "name": "Elmira Sugar Kings",
+      "abbr": "ELM",
+      "gp": 20,
+      "w": 9,
+      "l": 10,
+      "otl": 1,
+      "pts": 19,
+      "gf": 78,
+      "ga": 78,
+      "strk": "W3"
+     },
+     {
       "name": "Strathroy Rockets",
       "abbr": "SRY",
       "gp": 20,
@@ -4186,18 +4198,6 @@
       "strk": "W2"
      },
      {
-      "name": "Elmira Sugar Kings",
-      "abbr": "ELM",
-      "gp": 19,
-      "w": 8,
-      "l": 10,
-      "otl": 1,
-      "pts": 17,
-      "gf": 78,
-      "ga": 77,
-      "strk": "W2"
-     },
-     {
       "name": "London Nationals",
       "abbr": "LON",
       "gp": 20,
@@ -4212,14 +4212,14 @@
      {
       "name": "Woodstock Navy Vets",
       "abbr": "WNV",
-      "gp": 17,
-      "w": 7,
+      "gp": 18,
+      "w": 8,
       "l": 10,
       "otl": 0,
-      "pts": 14,
+      "pts": 16,
       "gf": 67,
       "ga": 80,
-      "strk": "L1"
+      "strk": "W1"
      },
      {
       "name": "Komoka Kings",
@@ -4236,11 +4236,11 @@
      {
       "name": "Sarnia Legionnaires",
       "abbr": "SAR",
-      "gp": 17,
+      "gp": 18,
       "w": 1,
       "l": 16,
-      "otl": 0,
-      "pts": 2,
+      "otl": 1,
+      "pts": 3,
       "gf": 38,
       "ga": 111,
       "strk": "L5"
@@ -4373,14 +4373,14 @@
      {
       "name": "Brantford Titans",
       "abbr": "BFD",
-      "gp": 20,
+      "gp": 21,
       "w": 3,
-      "l": 15,
+      "l": 16,
       "otl": 2,
       "pts": 8,
-      "gf": 64,
+      "gf": 65,
       "ga": 118,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Welland Canadians",
