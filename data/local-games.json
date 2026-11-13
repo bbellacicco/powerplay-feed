@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T19:47:02-05:00",
+ "updated": "2026-11-12T20:06:44-05:00",
  "today": "2026-11-12",
  "range": [
   "2026-11-09",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -877,11 +877,11 @@
    "home_away": "A",
    "opponent": "Ayr Centennials",
    "location": "North Dumfries C.C., Ayr, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 3,
+   "opp_score": 1,
    "result": null,
-   "note": "",
+   "note": "09:03 2nd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15678"
    },
@@ -915,7 +915,7 @@
    "opponent": "Niagara IceDogs",
    "location": "WFCU Centre, Windsor",
    "status": "live",
-   "our_score": 1,
+   "our_score": 2,
    "opp_score": 1,
    "result": null,
    "note": "00:00 1st",
@@ -936,7 +936,7 @@
    "our_score": 2,
    "opp_score": 0,
    "result": null,
-   "note": "04:40 1st",
+   "note": "20:00 2nd",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16669"
    },
@@ -2254,32 +2254,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Amid the storm, Canucks’ Sedins not shying away from blowback",
-   "summary": "Henrik and Daniel Sedin did on Thursday as they’ve always done — face the media when times are tough. If nothing else, it was a good lesson for the Canucks under their charge, writes Iain MacIntyre.",
-   "published": "2026-11-12T16:54-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/sedin.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/amid-the-storm-canucks-sedins-not-shying-away-from-blowback/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "cfl",
-   "headline": "Elks QB Fajardo carrying extra motivation into Grey Cup",
-   "summary": "After helping Montreal win a Grey Cup, Cody Fajardo believed he had done enough to remain its starting quarterback until they decided to hand the keys to Davis Alexander. Now, with Edmonton, he gets another opportunity t",
-   "published": "2026-11-12T17:39-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Edmonton-Elks-quarterback-Cody-Fajardo.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/elks-qb-fajardo-carrying-extra-motivation-into-grey-cup/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "mlb",
    "headline": "Astros’ Yordan Alvarez named American League MVP",
    "summary": "",
@@ -2290,6 +2264,19 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/astros-yordan-alvarez-named-american-league-mvp/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Cubs’ Pete Crow-Armstrong wins National League MVP",
+   "summary": "",
+   "published": "2026-11-12T19:53-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP176761012.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/cubs-pete-crow-armstrong-wins-national-league-mvp/",
    "source": "Sportsnet"
   },
   {
@@ -2334,16 +2321,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Senators’ Linus Ullmark to start vs. Avalanche",
-   "summary": "",
-   "published": "2026-11-12T11:28-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177105879.jpg",
+   "league": "nba",
+   "headline": "Rockets’ Marcus Smart suspended three games for punch",
+   "summary": "The Houston Rockets guard has been suspended for three games without pay for punching Golden State Warriors centre Charles Bassey, the NBA announced Thursday.",
+   "published": "2026-11-12T17:52-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/bassey.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/senators-linus-ullmark-to-start-vs-avalanche/",
+   "sn_team_count": 2,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/rockets-marcus-smart-suspended-three-games-for-punch/",
    "source": "Sportsnet"
   },
   {
@@ -2360,29 +2347,42 @@
    "source": "Sportsnet"
   },
   {
-   "league": "mlb",
-   "headline": "Braves sign reliever Evan Phillips to three-year, $35M deal",
-   "summary": "",
-   "published": "2026-11-12T15:18-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/05/CP170422985.jpg",
+   "league": "nfl",
+   "headline": "Rams place WR Puka Nacua on injured reserve with MCL injury",
+   "summary": "Superstar wide receiver Puka Nacua has been placed on the Rams’ injured reserve with an MCL injury, it was announced Thursday.",
+   "published": "2026-11-12T20:00-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-design-8-8.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/braves-sign-reliever-evan-phillips-to-three-year-35m-deal/",
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/rams-place-wr-puka-nacua-on-injured-reserve-with-mcl-injury/",
    "source": "Sportsnet"
   },
   {
-   "league": "nba",
-   "headline": "Rockets’ Marcus Smart suspended three games for punch",
-   "summary": "The Houston Rockets guard has been suspended for three games without pay for punching Golden State Warriors centre Charles Bassey, the NBA announced Thursday.",
-   "published": "2026-11-12T17:52-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/bassey.jpg",
+   "league": "nhl",
+   "headline": "Amid the storm, Canucks’ Sedins not shying away from blowback",
+   "summary": "Henrik and Daniel Sedin did on Thursday as they’ve always done — face the media when times are tough. If nothing else, it was a good lesson for the Canucks under their charge, writes Iain MacIntyre.",
+   "published": "2026-11-12T16:54-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/sedin.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/amid-the-storm-canucks-sedins-not-shying-away-from-blowback/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "cfl",
+   "headline": "Elks QB Fajardo carrying extra motivation into Grey Cup",
+   "summary": "After helping Montreal win a Grey Cup, Cody Fajardo believed he had done enough to remain its starting quarterback until they decided to hand the keys to Davis Alexander. Now, with Edmonton, he gets another opportunity t",
+   "published": "2026-11-12T17:39-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Edmonton-Elks-quarterback-Cody-Fajardo.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 2,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/rockets-marcus-smart-suspended-three-games-for-punch/",
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/elks-qb-fajardo-carrying-extra-motivation-into-grey-cup/",
    "source": "Sportsnet"
   },
   {
@@ -2642,19 +2642,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/report-blue-jays-to-meet-with-star-free-agent-tarik-skubal/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Report: Mammoth’s Logan Cooley will remain sidelined against St. Louis",
-   "summary": "With the Utah Mammoth in the midst of a losing skid, things won’t get any easier when they host the St. Louis Blues on Thursday as their top goal scorer is set remain out.",
-   "published": "2026-11-12T15:38-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-9-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/mammoths-logan-cooley-will-remain-sidelined-against-st-louis/",
    "source": "Sportsnet"
   },
   {
@@ -3623,7 +3610,7 @@
       "otl": 3,
       "pts": 17,
       "gf": 51,
-      "ga": 65,
+      "ga": 66,
       "strk": "L3"
      },
      {
@@ -3687,7 +3674,7 @@
       "l": 5,
       "otl": 3,
       "pts": 25,
-      "gf": 73,
+      "gf": 74,
       "ga": 59,
       "strk": "W8"
      },
@@ -4203,8 +4190,8 @@
       "l": 10,
       "otl": 0,
       "pts": 16,
-      "gf": 52,
-      "ga": 71,
+      "gf": 53,
+      "ga": 72,
       "strk": "W1"
      },
      {
@@ -4215,7 +4202,7 @@
       "l": 10,
       "otl": 0,
       "pts": 14,
-      "gf": 63,
+      "gf": 64,
       "ga": 78,
       "strk": "L1"
      },
@@ -4240,7 +4227,7 @@
       "otl": 0,
       "pts": 2,
       "gf": 36,
-      "ga": 107,
+      "ga": 108,
       "strk": "L5"
      }
     ]
@@ -4292,7 +4279,7 @@
       "l": 4,
       "otl": 1,
       "pts": 29,
-      "gf": 86,
+      "gf": 88,
       "ga": 53,
       "strk": "W1"
      },
@@ -4304,7 +4291,7 @@
       "l": 4,
       "otl": 3,
       "pts": 23,
-      "gf": 58,
+      "gf": 60,
       "ga": 46,
       "strk": "L1"
      },
@@ -4316,8 +4303,8 @@
       "l": 4,
       "otl": 4,
       "pts": 22,
-      "gf": 65,
-      "ga": 61,
+      "gf": 66,
+      "ga": 62,
       "strk": "L1"
      },
      {
@@ -4341,7 +4328,7 @@
       "otl": 0,
       "pts": 16,
       "gf": 71,
-      "ga": 82,
+      "ga": 84,
       "strk": "L1"
      },
      {
@@ -4353,7 +4340,7 @@
       "otl": 3,
       "pts": 15,
       "gf": 62,
-      "ga": 84,
+      "ga": 86,
       "strk": "W1"
      },
      {
