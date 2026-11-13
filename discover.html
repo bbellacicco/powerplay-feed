@@ -409,7 +409,7 @@ document.addEventListener('load', function (e) {
   function fillGrid(g, nodes) { g.innerHTML = ''; nodes.filter(Boolean).forEach(function (n) { g.appendChild(n); }); if (!g.children.length) g.appendChild(el('div', 'empty', 'More coming soon.')); }
 
   // ---------- LOCAL ----------
-  var CAT = [[/lancer|uwindsor|university of windsor/i, 'OUA'], [/st\.? clair|saints\b/i, 'OCAA'], [/spitfire|\bohl\b/i, 'OHL'],
+  var CAT = [[/lancer|uwindsor|university of windsor/i, 'OUA'], [{ test: function (x) { x = String(x); return /st\.?\s*clair/i.test(x) || (/\bsaints\b/i.test(x) && !/st\.?\s*anne|wecssaa|ofsaa|swossa|high school|secondary/i.test(x)); } }, 'OCAA'], [/spitfire|\bohl\b/i, 'OHL'],
     [/\bofsaa\b|wecssaa|high school|secondary school/i, 'High School'], [/\b(ojhl|gohl|pjhl)\b|junior/i, 'Junior Hockey']];
   function cat(s) { var c = String(s.cats || '').split(/\s*,\s*/).filter(function (x) { return x && !/^(powerplay today|all posts|uncategori[sz]ed|news|blog)$/i.test(x); })[0]; if (c) return c;
     var hay = s.headline + ' ' + (s.summary || ''); for (var i = 0; i < CAT.length; i++) if (CAT[i][0].test(hay)) return CAT[i][1]; return 'Powerplay'; }
@@ -475,7 +475,7 @@ document.addEventListener('load', function (e) {
     vids.sort(function (a, b) { return new Date(b.published) - new Date(a.published); });
     if (!vids.length) vids = (net && net.local || []).filter(function (v) { return v.u && v.t && v.i; }).slice(0, 3).map(function (v) { return { headline: v.t, url: v.u, image: v.i, published: v.p }; });
     // team tabs (All · Spitfires · Lancers · Saints · High school · Junior): pick one and the boxes and headlines show only that team
-    var THEME = { spitfires: /spitfire|\bspits\b|\bohl\b/i, lancers: /lancer|uwindsor|university of windsor/i, saints: /\bsaints\b|st\.? clair/i,
+    var THEME = { spitfires: /spitfire|\bspits\b|\bohl\b/i, lancers: /lancer|uwindsor|university of windsor/i, saints: { test: function (x) { x = String(x); return /st\.?\s*clair/i.test(x) || (/\bsaints\b/i.test(x) && !/st\.?\s*anne|wecssaa|ofsaa|swossa|high school|secondary/i.test(x)); } },
       highschool: /high school|wecssaa|ofsaa|secondary|holy names|villanova|st\.? joseph|assumption|brennan|kennedy|massey|walkerville|riverside|herman|forster|tecumseh vista|belle river|essex dist|kingsville|leamington dist|cardinal carter|st\.? anne|l'essor|sandwich|harrow|general amherst|north star|ste\.? cecile|lajeunesse|catholic central|\blaj\b/i,
       junior: /\b(ojhl|gohl|pjhl)\b|junior hockey|lakeshore canadiens|leamington flyers|lasalle vipers|essex 73|amherstburg admirals|wheatley sharks/i };
     function about(x, team) { return x.team === team || ((x.team === 'powerplay' || !x.team) && THEME[team].test(' ' + x.headline + ' ' + (x.summary || '') + ' ' + (x.cats || '') + ' ')); }
