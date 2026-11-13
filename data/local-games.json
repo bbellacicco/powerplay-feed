@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T21:02:07-05:00",
+ "updated": "2026-11-12T21:23:02-05:00",
  "today": "2026-11-12",
  "range": [
   "2026-11-09",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -881,7 +881,7 @@
    "our_score": 4,
    "opp_score": 3,
    "result": null,
-   "note": "01:46 3rd",
+   "note": "00:00 3rd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15678"
    },
@@ -918,7 +918,7 @@
    "our_score": 3,
    "opp_score": 1,
    "result": null,
-   "note": "00:00 2nd",
+   "note": "09:56 3rd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29186/"
    }
@@ -934,9 +934,9 @@
    "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
    "status": "live",
    "our_score": 4,
-   "opp_score": 0,
+   "opp_score": 1,
    "result": null,
-   "note": "18:13 3rd",
+   "note": "03:18 3rd",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16669"
    },
@@ -2225,6 +2225,19 @@
  "more_news": [
   {
    "league": "nhl",
+   "headline": "Avalanche stars MacKinnon, Makar injured vs. Senators",
+   "summary": "",
+   "published": "2026-11-12T21:12-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177261518.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/avalanche-stars-mackinnon-makar-injured-vs-senators/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Amid the storm, Canucks’ Sedins not shying away from blowback",
    "summary": "Henrik and Daniel Sedin did on Thursday as they’ve always done — face the media when times are tough. If nothing else, it was a good lesson for the Canucks under their charge, writes Iain MacIntyre.",
    "published": "2026-11-12T16:54-05:00",
@@ -3012,6 +3025,19 @@
   },
   {
    "league": "mlb",
+   "headline": "Here’s every ranked prospect that needs to be protected ahead of Tuesday’s 40-man deadline",
+   "summary": "",
+   "published": "2026-11-12T20:47-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/n0q9izvzsdfo224eqhm0",
+   "video": false,
+   "teams": [
+    "Detroit Tigers"
+   ],
+   "url": "https://www.mlb.com/tigers/news/rule-5-draft-prospects-protected-on-40-man-roster-2026",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
    "headline": "Rookie of the Year winner McGonigle eyes bigger things in '27",
    "summary": "",
    "published": "2026-11-12T07:40-05:00",
@@ -3021,19 +3047,6 @@
     "Detroit Tigers"
    ],
    "url": "https://www.mlb.com/tigers/news/kevin-mcgonigle-has-big-goals-for-2027-season",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
-   "headline": "Tigers take first step prioritizing more strikeouts with big free-agent move",
-   "summary": "",
-   "published": "2026-11-11T01:09-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/qq6he3sdeewctumhfrjd",
-   "video": false,
-   "teams": [
-    "Detroit Tigers"
-   ],
-   "url": "https://www.mlb.com/tigers/news/tigers-look-to-strengthen-bullpen-in-offseason",
    "source": "Team site"
   },
   {
@@ -3051,6 +3064,19 @@
   },
   {
    "league": "mlb",
+   "headline": "Tigers take first step prioritizing more strikeouts with big free-agent move",
+   "summary": "",
+   "published": "2026-11-11T01:09-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/qq6he3sdeewctumhfrjd",
+   "video": false,
+   "teams": [
+    "Detroit Tigers"
+   ],
+   "url": "https://www.mlb.com/tigers/news/tigers-look-to-strengthen-bullpen-in-offseason",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
    "headline": "Pagán agrees to 1-year, $11 million deal with Tigers (source)",
    "summary": "",
    "published": "2026-11-11T00:58-05:00",
@@ -3060,19 +3086,6 @@
     "Detroit Tigers"
    ],
    "url": "https://www.mlb.com/tigers/news/emilio-pagan-contract-with-tigers",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
-   "headline": "Rookie royalty! McGonigle brings ROY honors back to Detroit",
-   "summary": "",
-   "published": "2026-11-10T14:33-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kmlvfgncqmti6eai6gvd",
-   "video": false,
-   "teams": [
-    "Detroit Tigers"
-   ],
-   "url": "https://www.mlb.com/tigers/news/kevin-mcgonigle-wins-2026-al-rookie-of-the-year",
    "source": "Team site"
   },
   {
@@ -3090,15 +3103,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Longtime MLB catcher Maldonado among new faces on Tigers' coaching staff for '27",
+   "headline": "Rookie royalty! McGonigle brings ROY honors back to Detroit",
    "summary": "",
-   "published": "2026-11-06T11:30-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/qieb7hwco4rf43gtuicb",
+   "published": "2026-11-10T14:33-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/kmlvfgncqmti6eai6gvd",
    "video": false,
    "teams": [
     "Detroit Tigers"
    ],
-   "url": "https://www.mlb.com/tigers/news/tigers-announce-2027-mlb-coaching-training-staffs",
+   "url": "https://www.mlb.com/tigers/news/kevin-mcgonigle-wins-2026-al-rookie-of-the-year",
    "source": "Team site"
   },
   {
@@ -3125,6 +3138,19 @@
     "Detroit Tigers"
    ],
    "url": "https://www.mlb.com/milb/prospects/2026/tigers/",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
+   "headline": "Longtime MLB catcher Maldonado among new faces on Tigers' coaching staff for '27",
+   "summary": "",
+   "published": "2026-11-06T11:30-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/qieb7hwco4rf43gtuicb",
+   "video": false,
+   "teams": [
+    "Detroit Tigers"
+   ],
+   "url": "https://www.mlb.com/tigers/news/tigers-announce-2027-mlb-coaching-training-staffs",
    "source": "Team site"
   },
   {
@@ -3194,19 +3220,6 @@
   },
   {
    "league": "mlb",
-   "headline": "Kyle Hudson set to be named Tigers' first-base coach (sources)",
-   "summary": "",
-   "published": "2026-11-03T20:01-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/vyyn9oqc2jbqdwbumju2",
-   "video": false,
-   "teams": [
-    "Detroit Tigers"
-   ],
-   "url": "https://www.mlb.com/tigers/news/tigers-kyle-hudson-first-base-coach",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
    "headline": "Here's the latest from Atkins at the General Managers Meetings",
    "summary": "",
    "published": "2026-11-12T06:59-05:00",
@@ -3259,15 +3272,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Blue Jays eye Skubal, but how realistic is a deal?",
+   "headline": "Here’s every ranked prospect that needs to be protected ahead of Tuesday’s 40-man deadline",
    "summary": "",
-   "published": "2026-11-11T13:48-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/jx6n4v2acvx4wqzzwm5e",
+   "published": "2026-11-12T20:47-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/n0q9izvzsdfo224eqhm0",
    "video": false,
    "teams": [
     "Toronto Blue Jays"
    ],
-   "url": "https://www.mlb.com/bluejays/news/blue-jays-tarik-skubal-free-agency-interest-2026",
+   "url": "https://www.mlb.com/bluejays/news/rule-5-draft-prospects-protected-on-40-man-roster-2026",
    "source": "Team site"
   },
   {
@@ -3285,15 +3298,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Blue Jays GM Atkins says Santander's social media posts were 'extremely concerning, extremely disappointing'",
+   "headline": "Blue Jays eye Skubal, but how realistic is a deal?",
    "summary": "",
-   "published": "2026-11-12T17:00-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/c6hv9z6j9f68j3lnpfyy",
+   "published": "2026-11-11T13:48-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/jx6n4v2acvx4wqzzwm5e",
    "video": false,
    "teams": [
     "Toronto Blue Jays"
    ],
-   "url": "https://www.mlb.com/bluejays/news/ross-atkins-disappointed-in-anthony-santander-for-social-media-posts",
+   "url": "https://www.mlb.com/bluejays/news/blue-jays-tarik-skubal-free-agency-interest-2026",
    "source": "Team site"
   },
   {
@@ -3320,6 +3333,19 @@
     "Toronto Blue Jays"
    ],
    "url": "https://www.mlb.com/milb/prospects/bluejays/",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
+   "headline": "Blue Jays GM Atkins says Santander's social media posts were 'extremely concerning, extremely disappointing'",
+   "summary": "",
+   "published": "2026-11-12T17:00-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/c6hv9z6j9f68j3lnpfyy",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "url": "https://www.mlb.com/bluejays/news/ross-atkins-disappointed-in-anthony-santander-for-social-media-posts",
    "source": "Team site"
   },
   {
@@ -3385,19 +3411,6 @@
     "Toronto Blue Jays"
    ],
    "url": "https://www.mlb.com/bluejays/news/2026-arizona-fall-league-fall-stars-game",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
-   "headline": "These under-the-radar prospects are standing out in the Arizona Fall League",
-   "summary": "",
-   "published": "2026-11-10T13:47-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/ndici5g1cfjoud7rbvwr",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "url": "https://www.mlb.com/bluejays/news/sleeper-prospects-in-arizona-fall-league-2026",
    "source": "Team site"
   }
  ],
@@ -3547,7 +3560,7 @@
       "otl": 0,
       "pts": 26,
       "gf": 84,
-      "ga": 69,
+      "ga": 72,
       "strk": "L1"
      },
      {
@@ -3559,7 +3572,7 @@
       "otl": 2,
       "pts": 20,
       "gf": 62,
-      "ga": 57,
+      "ga": 58,
       "strk": "L2"
      },
      {
@@ -3570,7 +3583,7 @@
       "l": 10,
       "otl": 0,
       "pts": 18,
-      "gf": 63,
+      "gf": 66,
       "ga": 68,
       "strk": "W1"
      },
@@ -3700,7 +3713,7 @@
       "l": 8,
       "otl": 3,
       "pts": 19,
-      "gf": 71,
+      "gf": 72,
       "ga": 71,
       "strk": "W2"
      },
@@ -3797,7 +3810,7 @@
       "otl": 0,
       "pts": 36,
       "gf": 96,
-      "ga": 63,
+      "ga": 64,
       "strk": "W2"
      },
      {
@@ -3892,7 +3905,7 @@
       "l": 13,
       "otl": 2,
       "pts": 16,
-      "gf": 64,
+      "gf": 65,
       "ga": 100,
       "strk": "L4"
      },
@@ -3945,7 +3958,7 @@
       "l": 3,
       "otl": 0,
       "pts": 42,
-      "gf": 138,
+      "gf": 139,
       "ga": 54,
       "strk": "L1"
      },
@@ -4005,8 +4018,8 @@
       "l": 6,
       "otl": 1,
       "pts": 27,
-      "gf": 75,
-      "ga": 42,
+      "gf": 76,
+      "ga": 43,
       "strk": "L4"
      },
      {
@@ -4018,7 +4031,7 @@
       "otl": 3,
       "pts": 25,
       "gf": 81,
-      "ga": 82,
+      "ga": 83,
       "strk": "W3"
      },
      {
@@ -4077,8 +4090,8 @@
       "l": 16,
       "otl": 1,
       "pts": 13,
-      "gf": 57,
-      "ga": 90,
+      "gf": 58,
+      "ga": 91,
       "strk": "L4"
      }
     ]
@@ -4168,8 +4181,8 @@
       "l": 10,
       "otl": 1,
       "pts": 17,
-      "gf": 73,
-      "ga": 74,
+      "gf": 77,
+      "ga": 76,
       "strk": "W2"
      },
      {
@@ -4204,7 +4217,7 @@
       "l": 10,
       "otl": 0,
       "pts": 14,
-      "gf": 64,
+      "gf": 66,
       "ga": 80,
       "strk": "L1"
      },
@@ -4229,7 +4242,7 @@
       "otl": 0,
       "pts": 2,
       "gf": 38,
-      "ga": 108,
+      "ga": 110,
       "strk": "L5"
      }
     ]
@@ -4282,20 +4295,20 @@
       "otl": 1,
       "pts": 29,
       "gf": 91,
-      "ga": 54,
+      "ga": 56,
       "strk": "W1"
      },
      {
       "name": "Waterloo Siskins",
       "abbr": "WAT",
-      "gp": 17,
-      "w": 10,
+      "gp": 18,
+      "w": 11,
       "l": 4,
       "otl": 3,
-      "pts": 23,
-      "gf": 62,
+      "pts": 25,
+      "gf": 63,
       "ga": 47,
-      "strk": "L1"
+      "strk": "W1"
      },
      {
       "name": "Ayr Centennials",
@@ -4329,21 +4342,21 @@
       "l": 8,
       "otl": 0,
       "pts": 16,
-      "gf": 72,
+      "gf": 74,
       "ga": 87,
       "strk": "L1"
      },
      {
       "name": "Hamilton Steel",
       "abbr": "HAM",
-      "gp": 20,
+      "gp": 21,
       "w": 6,
-      "l": 11,
+      "l": 12,
       "otl": 3,
       "pts": 15,
       "gf": 63,
-      "ga": 88,
-      "strk": "W1"
+      "ga": 89,
+      "strk": "L1"
      },
      {
       "name": "Stoney Creek Generals",
@@ -4365,8 +4378,8 @@
       "l": 15,
       "otl": 2,
       "pts": 8,
-      "gf": 61,
-      "ga": 113,
+      "gf": 63,
+      "ga": 117,
       "strk": "W1"
      },
      {
@@ -4564,6 +4577,18 @@
       "strk": "W5"
      },
      {
+      "name": "Blenheim Blades",
+      "abbr": "BLE",
+      "gp": 16,
+      "w": 9,
+      "l": 7,
+      "otl": 0,
+      "pts": 18,
+      "gf": 61,
+      "ga": 46,
+      "strk": "W1"
+     },
+     {
       "name": "Mooretown Flags",
       "abbr": "MOO",
       "gp": 20,
@@ -4586,18 +4611,6 @@
       "gf": 72,
       "ga": 71,
       "strk": "L1"
-     },
-     {
-      "name": "Blenheim Blades",
-      "abbr": "BLE",
-      "gp": 15,
-      "w": 8,
-      "l": 7,
-      "otl": 0,
-      "pts": 16,
-      "gf": 52,
-      "ga": 45,
-      "strk": "L5"
      },
      {
       "name": "Wheatley Sharks",
@@ -4626,14 +4639,14 @@
      {
       "name": "Walpole Island Wild",
       "abbr": "WAL",
-      "gp": 15,
+      "gp": 16,
       "w": 0,
-      "l": 15,
+      "l": 16,
       "otl": 0,
       "pts": 0,
-      "gf": 15,
-      "ga": 98,
-      "strk": "L15"
+      "gf": 16,
+      "ga": 107,
+      "strk": "L16"
      }
     ]
    }
