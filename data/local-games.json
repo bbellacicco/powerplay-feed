@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T21:23:02-05:00",
+ "updated": "2026-11-12T21:32:10-05:00",
  "today": "2026-11-12",
  "range": [
   "2026-11-09",
@@ -877,11 +877,11 @@
    "home_away": "A",
    "opponent": "Ayr Centennials",
    "location": "North Dumfries C.C., Ayr, ON",
-   "status": "live",
+   "status": "final",
    "our_score": 4,
    "opp_score": 3,
-   "result": null,
-   "note": "00:00 3rd",
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15678"
    },
@@ -918,7 +918,7 @@
    "our_score": 3,
    "opp_score": 1,
    "result": null,
-   "note": "09:56 3rd",
+   "note": "02:06 3rd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29186/"
    }
@@ -933,10 +933,10 @@
    "opponent": "Buffalo Jr. Sabres",
    "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
    "status": "live",
-   "our_score": 4,
+   "our_score": 5,
    "opp_score": 1,
    "result": null,
-   "note": "03:18 3rd",
+   "note": "Unofficial Final",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16669"
    },
@@ -1509,6 +1509,17 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "GREY CUP ALL-ACCESS | Season 2 Official Trailer",
+   "summary": "",
+   "published": "2026-11-12T21:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/7EGug3vbp5WuR5kZVYuSND/fd7a9af1ace10e7d60e3b2db2a4a2149/image.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/grey-cup-all-access-season-2-official-trailer",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Edmonton Elks Top Five Plays of the 2026 Season",
    "summary": "",
    "published": "2026-11-12T17:00:00-05:00",
@@ -1693,17 +1704,6 @@
    "video": true,
    "teams": [],
    "url": "https://www.cfl.ca/article/cfl-cinematic-recap-winnipeg-montreal",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "CFL Cinematic Recap: BC @ Edmonton",
-   "summary": "",
-   "published": "2026-11-10T12:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/2LzZF5MLUWomST4lJ9d1ey/5a428c19e889c15a98f465a9addb43f3/WF_Thumb_2.png?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/cfl-cinematic-recap-bc-edmonton",
    "source": "CFL.ca"
   },
   {
@@ -3571,7 +3571,7 @@
       "l": 6,
       "otl": 2,
       "pts": 20,
-      "gf": 62,
+      "gf": 63,
       "ga": 58,
       "strk": "L2"
      },
@@ -3714,7 +3714,7 @@
       "otl": 3,
       "pts": 19,
       "gf": 72,
-      "ga": 71,
+      "ga": 72,
       "strk": "W2"
      },
      {
@@ -3804,11 +3804,11 @@
      {
       "name": "Markham Royals",
       "abbr": "MAR",
-      "gp": 23,
+      "gp": 24,
       "w": 18,
       "l": 5,
-      "otl": 0,
-      "pts": 36,
+      "otl": 1,
+      "pts": 37,
       "gf": 96,
       "ga": 64,
       "strk": "W2"
@@ -3900,14 +3900,14 @@
      {
       "name": "St. Michaels Buzzers",
       "abbr": "STM",
-      "gp": 22,
-      "w": 7,
+      "gp": 23,
+      "w": 8,
       "l": 13,
       "otl": 2,
-      "pts": 16,
+      "pts": 18,
       "gf": 65,
       "ga": 100,
-      "strk": "L4"
+      "strk": "W1"
      },
      {
       "name": "Lindsay Muskies",
@@ -4174,6 +4174,18 @@
       "strk": "W2"
      },
      {
+      "name": "LaSalle Vipers",
+      "abbr": "LAS",
+      "gp": 19,
+      "w": 9,
+      "l": 10,
+      "otl": 0,
+      "pts": 18,
+      "gf": 54,
+      "ga": 74,
+      "strk": "W2"
+     },
+     {
       "name": "Elmira Sugar Kings",
       "abbr": "ELM",
       "gp": 19,
@@ -4181,8 +4193,8 @@
       "l": 10,
       "otl": 1,
       "pts": 17,
-      "gf": 77,
-      "ga": 76,
+      "gf": 78,
+      "ga": 77,
       "strk": "W2"
      },
      {
@@ -4198,18 +4210,6 @@
       "strk": "W1"
      },
      {
-      "name": "LaSalle Vipers",
-      "abbr": "LAS",
-      "gp": 18,
-      "w": 8,
-      "l": 10,
-      "otl": 0,
-      "pts": 16,
-      "gf": 54,
-      "ga": 74,
-      "strk": "W1"
-     },
-     {
       "name": "Woodstock Navy Vets",
       "abbr": "WNV",
       "gp": 17,
@@ -4217,7 +4217,7 @@
       "l": 10,
       "otl": 0,
       "pts": 14,
-      "gf": 66,
+      "gf": 67,
       "ga": 80,
       "strk": "L1"
      },
@@ -4242,7 +4242,7 @@
       "otl": 0,
       "pts": 2,
       "gf": 38,
-      "ga": 110,
+      "ga": 111,
       "strk": "L5"
      }
     ]
@@ -4313,14 +4313,14 @@
      {
       "name": "Ayr Centennials",
       "abbr": "AYR",
-      "gp": 17,
+      "gp": 18,
       "w": 9,
-      "l": 4,
+      "l": 5,
       "otl": 4,
       "pts": 22,
       "gf": 68,
       "ga": 63,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Pelham Panthers",
@@ -4378,8 +4378,8 @@
       "l": 15,
       "otl": 2,
       "pts": 8,
-      "gf": 63,
-      "ga": 117,
+      "gf": 64,
+      "ga": 118,
       "strk": "W1"
      },
      {
