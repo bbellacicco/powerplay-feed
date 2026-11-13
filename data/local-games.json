@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T11:46:46-05:00",
+ "updated": "2026-11-13T12:02:02-05:00",
  "today": "2026-11-13",
  "range": [
   "2026-11-10",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 36
   },
   "club_news": {
    "ok": true,
@@ -1249,6 +1249,17 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "Commissioner Stewart Johnston's 2026 Media State of the League",
+   "summary": "",
+   "published": "2026-11-13T12:30:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/4y8yq0ohyHvY2PHHTt2Me2/b2746bab882f20e9a12ff6b971bfaf0a/image__1_.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/commissioner-stewart-johnston-s-2026-media-state-of-the-league",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "5 burning questions ahead of 113th Grey Cup",
    "summary": "",
    "published": "2026-11-13T00:00:00-05:00",
@@ -1433,17 +1444,6 @@
     "Alouettes"
    ],
    "url": "https://www.cfl.ca/article/prediction-time-cfl-ca-writers-113th-grey-cup-picks",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "CFL & PHE Canada putting Flag Football in Schools",
-   "summary": "",
-   "published": "2026-11-10T14:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/2WifHkag4ZhmcoO6nB0Hnn/efb6cdb06f1305f2bc7f551e14ebcf2e/PHE_video_thumb__1_.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/bring-flag-football-to-your-school",
    "source": "CFL.ca"
   },
   {
@@ -1992,21 +1992,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "mlb",
-   "headline": "Blue Jays’ Atkins coming away confident from GM Meetings",
-   "summary": "With the annual MLB GM Meetings wrapped up, the Blue Jays look ahead to improving their roster. Shi Davidi and Ben Nicholson-Smith spoke with Ross Atkins about his confidence as he leaves Las Vegas.",
-   "published": "2026-11-12T17:36-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/Atkins.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/blue-jays-atkins-coming-away-confident-from-gm-meetings/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "other",
    "headline": "Canada’s quest for Nations League hardware continues as Davies rejoins fold",
    "summary": "Canada’s quest for its first trophy under coach Jesse Marsch continues as it battles for a spot at the 2027 Concacaf Nations League Finals. John Molinaro tees up the action, with Alphonso Davies set to return.",
@@ -2017,6 +2002,19 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/soccer/article/canadas-quest-for-nations-league-hardware-continues-as-davies-rejoins-fold/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Blackhawks proving to be NHL’s most curious rebuild",
+   "summary": "Of all the rebuilding teams in the league, the Blackhawks just might be the toughest puzzle to solve. Why? Emily Sadler breaks it down.",
+   "published": "2026-11-13T11:38-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/jeff-blashill.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/blackhawks-proving-to-be-nhls-most-curious-rebuild/",
    "source": "Sportsnet"
   },
   {
@@ -2033,16 +2031,31 @@
    "source": "Sportsnet"
   },
   {
+   "league": "mlb",
+   "headline": "Blue Jays’ Atkins coming away confident from GM Meetings",
+   "summary": "With the annual MLB GM Meetings wrapped up, the Blue Jays look ahead to improving their roster. Shi Davidi and Ben Nicholson-Smith spoke with Ross Atkins about his confidence as he leaves Las Vegas.",
+   "published": "2026-11-12T17:36-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/Atkins.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/blue-jays-atkins-coming-away-confident-from-gm-meetings/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
-   "headline": "Blackhawks proving to be NHL’s most curious rebuild",
-   "summary": "Of all the rebuilding teams in the league, the Blackhawks just might be the toughest puzzle to solve. Why? Emily Sadler breaks it down.",
-   "published": "2026-11-13T11:38-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/jeff-blashill.jpg",
+   "headline": "NHL indicates Finland’s block on Russian athletes could affect future games there",
+   "summary": "",
+   "published": "2026-11-13T11:41-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-27.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
+   "sn_team_count": 0,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/blackhawks-proving-to-be-nhls-most-curious-rebuild/",
+   "url": "https://www.sportsnet.ca/nhl/article/nhl-indicates-finlands-block-on-russian-athletes-could-affect-future-games-there/",
    "source": "Sportsnet"
   },
   {
@@ -2114,21 +2127,6 @@
   },
   {
    "league": "nba",
-   "headline": "Barrett, Quickley bounce back but Raptors fall short vs. 76ers",
-   "summary": "As the Raptors try to weather the storm of injuries and a tough early schedule, RJ Barrett and Immanuel Quickley playing well is a non-negotiable. Unfortunately, their returns to form weren’t enough in another loss.",
-   "published": "2026-11-12T23:28-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/IQ-1.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 2,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/rj-barrett/article/barrett-quickley-bounce-back-but-raptors-fall-short-vs-76ers/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
    "headline": "Report: Warriors’ Jimmy Butler says he will play rehab assignment in G League",
    "summary": "",
    "published": "2026-11-13T09:53-05:00",
@@ -2164,6 +2162,21 @@
    "sn_team_count": 0,
    "sport": "MMA",
    "url": "https://www.sportsnet.ca/ufc/article/ufc-334-cage-locks-gane-hokit-ready-for-heavyweight-battle/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Barrett, Quickley bounce back but Raptors fall short vs. 76ers",
+   "summary": "As the Raptors try to weather the storm of injuries and a tough early schedule, RJ Barrett and Immanuel Quickley playing well is a non-negotiable. Unfortunately, their returns to form weren’t enough in another loss.",
+   "published": "2026-11-12T23:28-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/IQ-1.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 2,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/rj-barrett/article/barrett-quickley-bounce-back-but-raptors-fall-short-vs-76ers/",
    "source": "Sportsnet"
   },
   {
