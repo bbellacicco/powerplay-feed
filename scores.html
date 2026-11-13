@@ -52,9 +52,28 @@
     text-transform: uppercase; padding: 8px 16px; cursor: pointer; }
   .subswitch button + button { border-left: 1px solid rgba(255,255,255,.16); }
   .subswitch button[aria-pressed="true"] { background: #e8b021; color: #0b1a33; }
+  /* ?minute=1 (a shared Sports Minute link): the player at the top; everything else blurs while it plays */
+  #minuteframe { margin: 12px 0 0; padding: 0 40px; }
+  @media (max-width: 700px) { #minuteframe { padding: 0 12px; } }
+  html.mplaying body > *:not(#minuteframe) { filter: blur(6px) brightness(.6); pointer-events: none; }
+  body > * { transition: filter .3s; }
 </style>
 </head>
 <body>
+  <iframe id="minuteframe" title="Powerplay Sports Minute" scrolling="no" style="display:none;width:100%;height:0;border:0;background:transparent"></iframe>
+<script>
+(function () {
+  if (!/[?&]minute=1\b/.test(location.search)) return;
+  var f = document.getElementById('minuteframe');
+  f.src = 'minute.html?v=' + Math.floor(Date.now() / 6e5); f.style.display = 'block';
+  window.addEventListener('message', function (e) {
+    var d = e.data || {};
+    if (e.source !== f.contentWindow) return;
+    if (typeof d.ppMinuteH === 'number') f.style.height = d.ppMinuteH + 'px';
+    if (d.ppMinute) document.documentElement.classList.toggle('mplaying', d.ppMinute === 'play');
+  });
+})();
+</script>
   <iframe id="teambar" title="Local Teams" scrolling="no" style="display:none;width:100%;height:58px;border:0;background:#10244a"></iframe>
   <div class="guide" id="guide"></div>
   <div class="top" id="top">
@@ -160,5 +179,6 @@
   show(PLAY ? (start === 'spotlight' ? 'spotlight' : 'network') : PROFILE ? 'athletes' : STORY ? 'stories' : (start || 'stories'));   // opens on Stories (the first switch)
 })();
 </script>
+
 </body>
 </html>
