@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T19:16:43-05:00",
+ "updated": "2026-11-12T19:32:07-05:00",
  "today": "2026-11-12",
  "range": [
   "2026-11-09",
@@ -878,10 +878,10 @@
    "opponent": "Ayr Centennials",
    "location": "North Dumfries C.C., Ayr, ON",
    "status": "live",
-   "our_score": 1,
+   "our_score": 2,
    "opp_score": 0,
    "result": null,
-   "note": "12:02 1st",
+   "note": "01:00 1st",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15678"
    },
@@ -915,10 +915,10 @@
    "opponent": "Niagara IceDogs",
    "location": "WFCU Centre, Windsor",
    "status": "live",
-   "our_score": 0,
-   "opp_score": 0,
+   "our_score": 1,
+   "opp_score": 1,
    "result": null,
-   "note": "14:15 1st",
+   "note": "07:23 1st",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29186/"
    }
@@ -933,10 +933,10 @@
    "opponent": "Buffalo Jr. Sabres",
    "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
    "status": "live",
-   "our_score": 0,
+   "our_score": 1,
    "opp_score": 0,
    "result": null,
-   "note": "18:52 1st",
+   "note": "10:12 1st",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16669"
    },
@@ -1878,6 +1878,17 @@
   },
   {
    "league": "pwhl",
+   "headline": "PWHL Unveils Expansion Team Identities Ahead of Their Inaugural Seasons",
+   "summary": "",
+   "published": "2026-11-10T13:30:00+00:00",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/League-ExpansionHeader-16x9_1",
+   "video": false,
+   "teams": [],
+   "url": "https://www.thepwhl.com/en/news/2026/november/10/pwhl-unveils-expansion-team-identities-ahead-of-their-inaugural-seasons",
+   "source": "thepwhl.com"
+  },
+  {
+   "league": "pwhl",
    "headline": "Vegas Vanguards Lead the Way With New Brand Launch",
    "summary": "",
    "published": "2026-11-10T13:00:00+00:00",
@@ -1926,17 +1937,6 @@
     "Detroit Clutch"
    ],
    "url": "https://www.thepwhl.com/en/teams/detroit-clutch/news/2026/november/10/detroit-clutch-finds-inspiration-from-the-history-of-the-motor-city",
-   "source": "thepwhl.com"
-  },
-  {
-   "league": "pwhl",
-   "headline": "PWHL Unveils Expansion Team Identities Ahead of Their Inaugural Seasons",
-   "summary": "",
-   "published": "2026-11-10T12:00:00+00:00",
-   "image": "https://res.cloudinary.com/pwhl-low/image/upload/c_auto,g_auto,h_800,w_1188/q_auto/f_auto/League-ExpansionHeader-16x9_1",
-   "video": false,
-   "teams": [],
-   "url": "https://www.thepwhl.com/en/news/2026/november/10/pwhl-unveils-expansion-team-identities-ahead-of-their-inaugural-seasons",
    "source": "thepwhl.com"
   },
   {
@@ -2224,19 +2224,6 @@
  ],
  "more_news": [
   {
-   "league": "nhl",
-   "headline": "Amid the storm, Canucks’ Sedins not shying away from blowback",
-   "summary": "Henrik and Daniel Sedin did on Thursday as they’ve always done — face the media when times are tough. If nothing else, it was a good lesson for the Canucks under their charge, writes Iain MacIntyre.",
-   "published": "2026-11-12T16:54-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/sedin.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/amid-the-storm-canucks-sedins-not-shying-away-from-blowback/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "mlb",
    "headline": "Blue Jays’ Atkins coming away confident from GM Meetings",
    "summary": "With the annual MLB GM Meetings wrapped up, the Blue Jays look ahead to improving their roster. Shi Davidi and Ben Nicholson-Smith spoke with Ross Atkins about his confidence as he leaves Las Vegas.",
@@ -2252,16 +2239,31 @@
    "source": "Sportsnet"
   },
   {
+   "league": "mlb",
+   "headline": "Blue Jays eye versatile Jazz Chisholm Jr. in search for offence",
+   "summary": "As the Blue Jays seek to add offensive production, they’re not limiting their search to the outfield. Sportsnet’s Shi Davidi reports that the team has eyes on Jazz Chisholm Jr.",
+   "published": "2026-11-12T08:19-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/07/CP176609068.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/blue-jays-eye-versatile-jazz-chisholm-jr-in-search-for-offence/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
-   "headline": "Oilers quarter-mark report card: Edmonton off to very promising start",
-   "summary": "Twice before, the Oilers have managed only three regulation losses through 20 games — and both seasons ended with a Stanley Cup. Is history bound to repeat itself? Sportsnet’s Mark Spector explores in his quarter-mark re",
-   "published": "2026-11-12T12:48-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Draisaitl-McDavid.jpg",
+   "headline": "Amid the storm, Canucks’ Sedins not shying away from blowback",
+   "summary": "Henrik and Daniel Sedin did on Thursday as they’ve always done — face the media when times are tough. If nothing else, it was a good lesson for the Canucks under their charge, writes Iain MacIntyre.",
+   "published": "2026-11-12T16:54-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/sedin.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/oilers-quarter-mark-report-card-edmonton-off-to-very-promising-start/",
+   "url": "https://www.sportsnet.ca/nhl/article/amid-the-storm-canucks-sedins-not-shying-away-from-blowback/",
    "source": "Sportsnet"
   },
   {
@@ -2275,6 +2277,19 @@
    "sn_team_count": 2,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/cfl/article/elks-qb-fajardo-carrying-extra-motivation-into-grey-cup/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Astros’ Yordan Alvarez named American League MVP",
+   "summary": "",
+   "published": "2026-11-12T19:23-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP176076144.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/astros-yordan-alvarez-named-american-league-mvp/",
    "source": "Sportsnet"
   },
   {
@@ -2303,21 +2318,6 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/premier-league/article/report-man-united-appoints-usmnt-coach-pochettino-as-new-manager/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Maple Leafs decide to sit Tanev vs. Wild because of load-management plan",
-   "summary": "The Toronto Maple Leafs are in the throes of an 0-4 homestand, losing ground in the standings, and facing one of the league’s best teams Thursday. And they are choosing not to dress one of their best defencemen available",
-   "published": "2026-11-12T13:35-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/tanev.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-decide-to-sit-tanev-vs-wild-because-of-load-management-plan/",
    "source": "Sportsnet"
   },
   {
@@ -2387,6 +2387,60 @@
   },
   {
    "league": "nhl",
+   "headline": "The case for Wild to keep Quinn Hughes past trade deadline",
+   "summary": "The Minnesota Wild are on a 126-point pace through the first quarter, even with the unresolved Quinn Hughes situation looming. Frank Seravalli looks at that and more in this edition of the notebook.",
+   "published": "2026-11-12T12:29-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Quinn-Hughes.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/breaking-down-the-many-layers-of-the-quinn-hughes-situation-with-the-wild/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Will Quinn Hughes stay? Analyzing the Wild’s play through 20 games",
+   "summary": "Will he or won’t he? The major storyline around the Minnesota Wild this season is whether or not their star defenceman will sign a new contract. Adam Vingan explores the team’s play through one quarter to examine if they",
+   "published": "2026-11-12T12:44-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/quinn-hughes.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/will-quinn-hughes-stay-analyzing-the-wilds-play-through-20-games/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "NHL power rankings: Facing fears ahead of Friday the 13th",
+   "summary": "Spooky season isn’t over just yet. Ahead of Friday the 13th, Sportsnet’s Ryan Dixon breaks down NHL teams’ biggest fears in his latest set of power rankings.",
+   "published": "2026-11-12T11:41-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/zach-hyman.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 11,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/nhl-power-rankings-facing-fears-ahead-of-friday-the-13th/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Oilers quarter-mark report card: Edmonton off to very promising start",
+   "summary": "Twice before, the Oilers have managed only three regulation losses through 20 games — and both seasons ended with a Stanley Cup. Is history bound to repeat itself? Sportsnet’s Mark Spector explores in his quarter-mark re",
+   "published": "2026-11-12T12:48-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Draisaitl-McDavid.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/oilers-quarter-mark-report-card-edmonton-off-to-very-promising-start/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Maple Leafs quarter-mark report card: Toronto needs improvement",
    "summary": "The Maple Leafs need to hop on a Q2 heater to keep pace with a league threatening to speed away from them. Here’s a look at the first quarter of the season for the blue and white.",
    "published": "2026-11-12T09:45-05:00",
@@ -2413,47 +2467,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/scouts-analysis-how-the-maple-leafs-top-prospects-are-developing/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "NHL power rankings: Facing fears ahead of Friday the 13th",
-   "summary": "Spooky season isn’t over just yet. Ahead of Friday the 13th, Sportsnet’s Ryan Dixon breaks down NHL teams’ biggest fears in his latest set of power rankings.",
-   "published": "2026-11-12T11:41-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/zach-hyman.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 11,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/nhl-power-rankings-facing-fears-ahead-of-friday-the-13th/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "The case for Wild to keep Quinn Hughes past trade deadline",
-   "summary": "The Minnesota Wild are on a 126-point pace through the first quarter, even with the unresolved Quinn Hughes situation looming. Frank Seravalli looks at that and more in this edition of the notebook.",
-   "published": "2026-11-12T12:29-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Quinn-Hughes.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/breaking-down-the-many-layers-of-the-quinn-hughes-situation-with-the-wild/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Will Quinn Hughes stay? Analyzing the Wild’s play through 20 games",
-   "summary": "Will he or won’t he? The major storyline around the Minnesota Wild this season is whether or not their star defenceman will sign a new contract. Adam Vingan explores the team’s play through one quarter to examine if they",
-   "published": "2026-11-12T12:44-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/quinn-hughes.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/will-quinn-hughes-stay-analyzing-the-wilds-play-through-20-games/",
    "source": "Sportsnet"
   },
   {
@@ -2547,21 +2560,6 @@
    "sn_team_count": 0,
    "sport": "",
    "url": "https://www.sportsnet.ca/ufc/article/standing-and-striking-from-distance-is-path-to-victory-for-gane-at-ufc-334/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Blue Jays eye versatile Jazz Chisholm Jr. in search for offence",
-   "summary": "As the Blue Jays seek to add offensive production, they’re not limiting their search to the outfield. Sportsnet’s Shi Davidi reports that the team has eyes on Jazz Chisholm Jr.",
-   "published": "2026-11-12T08:19-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/07/CP176609068.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/blue-jays-eye-versatile-jazz-chisholm-jr-in-search-for-offence/",
    "source": "Sportsnet"
   },
   {
@@ -3571,7 +3569,7 @@
       "l": 6,
       "otl": 2,
       "pts": 20,
-      "gf": 59,
+      "gf": 60,
       "ga": 56,
       "strk": "L2"
      },
@@ -3624,8 +3622,8 @@
       "l": 7,
       "otl": 3,
       "pts": 17,
-      "gf": 50,
-      "ga": 64,
+      "gf": 51,
+      "ga": 65,
       "strk": "L3"
      },
      {
@@ -3689,8 +3687,8 @@
       "l": 5,
       "otl": 3,
       "pts": 25,
-      "gf": 72,
-      "ga": 58,
+      "gf": 73,
+      "ga": 59,
       "strk": "W8"
      },
      {
@@ -3714,7 +3712,7 @@
       "otl": 3,
       "pts": 19,
       "gf": 70,
-      "ga": 68,
+      "ga": 69,
       "strk": "W2"
      },
      {
@@ -3809,7 +3807,7 @@
       "l": 5,
       "otl": 0,
       "pts": 36,
-      "gf": 93,
+      "gf": 94,
       "ga": 59,
       "strk": "W2"
      },
@@ -3906,7 +3904,7 @@
       "otl": 2,
       "pts": 16,
       "gf": 60,
-      "ga": 97,
+      "ga": 98,
       "strk": "L4"
      },
      {
@@ -3959,7 +3957,7 @@
       "otl": 0,
       "pts": 42,
       "gf": 137,
-      "ga": 52,
+      "ga": 53,
       "strk": "L1"
      },
      {
@@ -4018,7 +4016,7 @@
       "l": 6,
       "otl": 1,
       "pts": 27,
-      "gf": 71,
+      "gf": 72,
       "ga": 42,
       "strk": "L4"
      },
@@ -4030,7 +4028,7 @@
       "l": 8,
       "otl": 3,
       "pts": 25,
-      "gf": 79,
+      "gf": 80,
       "ga": 81,
       "strk": "W3"
      },
@@ -4091,7 +4089,7 @@
       "otl": 1,
       "pts": 13,
       "gf": 57,
-      "ga": 86,
+      "ga": 87,
       "strk": "L4"
      }
     ]
@@ -4205,7 +4203,7 @@
       "l": 10,
       "otl": 0,
       "pts": 16,
-      "gf": 51,
+      "gf": 52,
       "ga": 71,
       "strk": "W1"
      },
@@ -4218,7 +4216,7 @@
       "otl": 0,
       "pts": 14,
       "gf": 62,
-      "ga": 76,
+      "ga": 77,
       "strk": "L1"
      },
      {
@@ -4241,7 +4239,7 @@
       "l": 16,
       "otl": 0,
       "pts": 2,
-      "gf": 34,
+      "gf": 35,
       "ga": 106,
       "strk": "L5"
      }
@@ -4294,7 +4292,7 @@
       "l": 4,
       "otl": 1,
       "pts": 29,
-      "gf": 84,
+      "gf": 86,
       "ga": 53,
       "strk": "W1"
      },
@@ -4307,7 +4305,7 @@
       "otl": 3,
       "pts": 23,
       "gf": 57,
-      "ga": 44,
+      "ga": 46,
       "strk": "L1"
      },
      {
@@ -4319,7 +4317,7 @@
       "otl": 4,
       "pts": 22,
       "gf": 65,
-      "ga": 60,
+      "ga": 61,
       "strk": "L1"
      },
      {
@@ -4343,7 +4341,7 @@
       "otl": 0,
       "pts": 16,
       "gf": 71,
-      "ga": 80,
+      "ga": 82,
       "strk": "L1"
      },
      {
@@ -4354,7 +4352,7 @@
       "l": 11,
       "otl": 3,
       "pts": 15,
-      "gf": 60,
+      "gf": 62,
       "ga": 83,
       "strk": "W1"
      },
