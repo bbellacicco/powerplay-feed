@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="robots" content="noindex, indexifembedded">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Spitfires ticket draw bar. publish.bat puts it online as spitfires-bar.html; the Wix header embed loads it by address
+     (https://bbellacicco.github.io/powerplay-feed/spitfires-bar.html), so changes go live with publish.bat.
+     Same 60px height. Fans enter right from the bar: a tap opens an email to powerplaysportsvideo@gmail.com
+     (subject and a short form filled in). Then the bar shows the address with a Copy email button,
+     for anyone whose email app didn't open. Shows the Spitfires' next home game by itself. -->
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;height:60px;background:#000;overflow:hidden}
+a.bar{
+  width:100%;height:60px;display:flex;align-items:center;justify-content:center;gap:12px;padding:0 10px;
+  text-decoration:none;color:#fff;background:linear-gradient(90deg,#000 0%,#2a0508 50%,#000 100%);
+  border-bottom:3px solid #d4202c;
+}
+.logo{height:42px;width:auto;flex-shrink:0;display:block}
+.txt{font-family:'Bebas Neue',Impact,'Arial Narrow',sans-serif;font-size:clamp(15px,4.2vw,26px);letter-spacing:.03em;white-space:nowrap;line-height:1}
+.txt em{font-style:normal;color:#e8b021}
+.game{font-family:Arial,sans-serif;font-size:clamp(10px,2.6vw,14px);font-weight:700;color:#d6dbe6;white-space:nowrap}
+.go{flex-shrink:0;background:#d4202c;color:#fff;font:800 clamp(11px,2.8vw,14px)/1 Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:9px 14px;border-radius:4px;white-space:nowrap}
+a.bar:hover .go{background:#e8b021;color:#000}
+.alt{display:none;align-items:center;gap:6px;flex-shrink:0}
+.alt button{background:#fff;color:#000;border:0;font:800 clamp(10px,2.6vw,13px)/1 Arial,sans-serif;padding:8px 10px;border-radius:4px;cursor:pointer;white-space:nowrap;text-decoration:none}
+body.sent .go{display:none} body.sent .alt{display:flex}
+.mid{display:flex;flex-direction:column;gap:3px;min-width:0;overflow:hidden}
+@media (max-width:360px){.ven{display:none}}
+@media (max-width:600px){
+  a.bar{gap:8px;padding:0 6px}
+  .logo{height:32px}
+  .go{padding:7px 9px}
+}
+</style>
+</head>
+<body>
+<a class="bar" id="bar" target="_blank" rel="noopener">
+  <img class="logo" src="https://bbellacicco.github.io/powerplay-feed/logos/spitfires-logo.png" alt="Windsor Spitfires" onerror="this.remove()">
+  <span class="mid">
+    <span class="txt">Win <em>Spitfires</em> tickets</span>
+    <span class="game" id="game">Sun., Nov. 15 vs. Saginaw Spirit<span class="ven"> &middot; WFCU Centre</span></span>
+  </span>
+  <span class="go">Enter &rsaquo;</span>
+  <span class="alt"><button type="button" id="cp">Copy email</button></span>
+</a>
+<script>
+/* never cut off: if the bar is still too wide for the screen, shrink the words until it fits */
+(function () {
+  var bar = document.querySelector('.bar'), t = document.querySelector('.txt'), g = document.querySelector('.game');
+  function fit() {
+    t.style.fontSize = ''; g.style.fontSize = '';
+    var a = parseFloat(getComputedStyle(t).fontSize), b = parseFloat(getComputedStyle(g).fontSize);
+    function over() { return bar.scrollWidth > bar.clientWidth || g.scrollWidth > g.clientWidth + 1 || t.scrollWidth > t.clientWidth + 1; }
+    while (over() && a > 11) { a -= 0.5; b = Math.max(8.5, b - 0.3); t.style.fontSize = a + 'px'; g.style.fontSize = b + 'px'; }
+  }
+  window.addEventListener('load', fit); window.addEventListener('resize', fit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  fit();
+  /* entering: the email opens ready to send; then the bar shows the address for anyone whose email app didn't open */
+  var EMAIL = 'powerplaysportsvideo@gmail.com', SUBJ = 'Spitfires tickets',
+      BODY = 'Hi Powerplay Windsor,\n\nPlease enter me in the Spitfires ticket contest.\n\nName:\nPhone number:\n\nThanks!';
+  bar.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(SUBJ) + '&body=' + encodeURIComponent(BODY);
+  var t0 = t.innerHTML, g0, back;
+  bar.addEventListener('click', function (e) {
+    if (e.target.closest('.alt')) { if (e.target.id === 'cp') e.preventDefault(); return; }
+    if (document.body.classList.contains('sent')) return;
+    setTimeout(function () {
+      g0 = g.innerHTML; document.body.classList.add('sent');
+      t.innerHTML = 'Email your <em>name &amp; phone</em>'; g.textContent = EMAIL; fit();
+      clearTimeout(back); back = setTimeout(function () { document.body.classList.remove('sent'); t.innerHTML = t0; g.innerHTML = g0; fit(); }, 30000);
+    }, 700);
+  });
+  document.getElementById('cp').addEventListener('click', function (e) {
+    e.preventDefault(); e.stopPropagation(); var b = this;
+    function done() { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy email'; }, 2000); }
+    if (navigator.clipboard) navigator.clipboard.writeText(EMAIL).then(done, function () { prompt('Email:', EMAIL); });
+    else prompt('Email:', EMAIL);
+  });
+  /* keeps itself current: shows the Spitfires' next home game from the feed, so this never needs re-pasting */
+  var DAYS = ['Sun.', 'Mon.', 'Tue.', 'Wed.', 'Thu.', 'Fri.', 'Sat.'], MONS = ['Jan.', 'Feb.', 'March', 'April', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'];
+  fetch('https://bbellacicco.github.io/powerplay-feed/data/spitfires-next.json?t=' + Date.now(), { cache: 'no-store' })
+    .then(function (r) { return r.json(); })
+    .then(function (d) {
+      var h = d && (d.home || d), when = h && new Date(h.start);
+      if (!h || !h.opponent || isNaN(when) || h.tbd) return;
+      var et = new Date(when.toLocaleString('en-US', { timeZone: 'America/Toronto' }));
+      g.innerHTML = '';
+      g.appendChild(document.createTextNode(DAYS[et.getDay()] + ', ' + MONS[et.getMonth()] + ' ' + et.getDate() + ' vs. ' + h.opponent));
+      var v = document.createElement('span'); v.className = 'ven'; v.innerHTML = ' &middot; '; v.appendChild(document.createTextNode(h.venue || 'WFCU Centre'));
+      g.appendChild(v); fit();
+    }).catch(function () {});
+})();
+</script>
+</body>
+</html>
