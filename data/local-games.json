@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T21:06:38-05:00",
+ "updated": "2026-11-13T21:17:05-05:00",
  "today": "2026-11-13",
  "range": [
   "2026-11-10",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 38
+   "count": 39
   },
   "club_news": {
    "ok": true,
@@ -753,7 +753,7 @@
    "our_score": 4,
    "opp_score": 3,
    "result": null,
-   "note": "08:10 3rd",
+   "note": "01:58 3rd",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16673"
    },
@@ -806,10 +806,10 @@
    "opponent": "St. Marys Lincolns",
    "location": "Pyramid R.C., St. Marys, ON",
    "status": "live",
-   "our_score": 0,
+   "our_score": 1,
    "opp_score": 2,
    "result": null,
-   "note": "03:47 2nd",
+   "note": "20:00 3rd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15685"
    },
@@ -1250,6 +1250,17 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "Get Ready for Riley Green at the Bud Light Halftime Show!",
+   "summary": "",
+   "published": "2026-11-13T21:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/3hMgvl6oAJPsxYfttZq4P4/b7f0f1080ce28600aea18a1da5c0bb9d/rgthumbnail2__1_.png?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/get-ready-for-riley-green-at-the-bud-light-halftime-show",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Commissioner Stewart Johnston's 2026 Media State of the League",
    "summary": "",
    "published": "2026-11-13T12:30:00-05:00",
@@ -1435,17 +1446,6 @@
    "video": true,
    "teams": [],
    "url": "https://www.cfl.ca/article/the-best-play-from-each-of-the-last-10-grey-cup-games",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "FINAL PLAY from the Last 10 Grey Cup Games",
-   "summary": "",
-   "published": "2026-11-11T11:45:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/4LpPR4OIWdzlvUKWYTPEGX/68ee1e9bffc8fdd528919c0fd64c74de/image.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/final-play-from-the-last-10-grey-cup-games",
    "source": "CFL.ca"
   },
   {
@@ -1966,6 +1966,19 @@
  ],
  "more_news": [
   {
+   "league": "other",
+   "headline": "Canada’s Alphonso Davies exits vs. Guatemala with injury",
+   "summary": "",
+   "published": "2026-11-13T21:14-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/davies-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/soccer/article/canadas-alphonso-davies-exits-vs-guatemala-with-injury/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Oilers superstar Connor McDavid brings his Gretzky vibe to Toronto",
    "summary": "There will never be another Wayne Gretzky, but, as Mark Spector writes, there’s definitely a Gretzkian vibe around Connor McDavid right now.",
@@ -2006,19 +2019,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/five-thoughts-about-the-nhl-at-the-quarter-mark/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Red Sox address major need with Bauers signing",
-   "summary": "The Boston Red Sox jump-started their winter and addressed a major need by inking playoff hero Jake Bauers to a four-year deal. David Singh takes a closer look at the signing.",
-   "published": "2026-11-13T14:56-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/10/CP175131869.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/red-sox-address-major-need-with-bauers-signing/",
    "source": "Sportsnet"
   },
   {
@@ -2166,6 +2166,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/prospects-report-why-canadiens-fans-should-be-really-excited-about-michael-hage/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Red Sox address major need with Bauers signing",
+   "summary": "The Boston Red Sox jump-started their winter and addressed a major need by inking playoff hero Jake Bauers to a four-year deal. David Singh takes a closer look at the signing.",
+   "published": "2026-11-13T14:56-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/10/CP175131869.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/red-sox-address-major-need-with-bauers-signing/",
    "source": "Sportsnet"
   },
   {
@@ -3322,7 +3335,7 @@
       "l": 5,
       "otl": 1,
       "pts": 27,
-      "gf": 76,
+      "gf": 77,
       "ga": 54,
       "strk": "W2"
      },
@@ -3387,7 +3400,7 @@
       "l": 5,
       "otl": 1,
       "pts": 27,
-      "gf": 76,
+      "gf": 78,
       "ga": 55,
       "strk": "W2"
      },
@@ -3424,7 +3437,7 @@
       "otl": 3,
       "pts": 11,
       "gf": 47,
-      "ga": 76,
+      "ga": 77,
       "strk": "W1"
      },
      {
@@ -3501,7 +3514,7 @@
       "otl": 1,
       "pts": 17,
       "gf": 78,
-      "ga": 86,
+      "ga": 88,
       "strk": "L1"
      }
     ]
@@ -3518,7 +3531,7 @@
       "otl": 0,
       "pts": 32,
       "gf": 90,
-      "ga": 56,
+      "ga": 57,
       "strk": "W7"
      },
      {
@@ -3529,7 +3542,7 @@
       "l": 6,
       "otl": 3,
       "pts": 25,
-      "gf": 67,
+      "gf": 68,
       "ga": 60,
       "strk": "W3"
      },
@@ -3596,7 +3609,7 @@
       "l": 3,
       "otl": 1,
       "pts": 33,
-      "gf": 95,
+      "gf": 97,
       "ga": 68,
       "strk": "W9"
      },
@@ -3608,7 +3621,7 @@
       "l": 6,
       "otl": 3,
       "pts": 29,
-      "gf": 90,
+      "gf": 91,
       "ga": 72,
       "strk": "W2"
      },
@@ -3656,7 +3669,7 @@
       "l": 11,
       "otl": 0,
       "pts": 18,
-      "gf": 64,
+      "gf": 65,
       "ga": 73,
       "strk": "L1"
      },
@@ -3669,7 +3682,7 @@
       "otl": 2,
       "pts": 18,
       "gf": 84,
-      "ga": 88,
+      "ga": 89,
       "strk": "L1"
      },
      {
@@ -3693,7 +3706,7 @@
       "otl": 2,
       "pts": 14,
       "gf": 78,
-      "ga": 109,
+      "ga": 111,
       "strk": "W1"
      },
      {
@@ -3769,7 +3782,7 @@
       "l": 3,
       "otl": 1,
       "pts": 35,
-      "gf": 116,
+      "gf": 117,
       "ga": 40,
       "strk": "W12"
      },
@@ -3842,7 +3855,7 @@
       "otl": 2,
       "pts": 16,
       "gf": 58,
-      "ga": 120,
+      "ga": 121,
       "strk": "L4"
      },
      {
@@ -3854,7 +3867,7 @@
       "otl": 2,
       "pts": 16,
       "gf": 70,
-      "ga": 123,
+      "ga": 124,
       "strk": "L4"
      },
      {
@@ -3885,7 +3898,7 @@
       "otl": 0,
       "pts": 34,
       "gf": 113,
-      "ga": 38,
+      "ga": 39,
       "strk": "W15"
      },
      {
@@ -3920,7 +3933,7 @@
       "l": 5,
       "otl": 0,
       "pts": 24,
-      "gf": 77,
+      "gf": 78,
       "ga": 50,
       "strk": "W1"
      },
@@ -4136,26 +4149,26 @@
      {
       "name": "Stoney Creek Generals",
       "abbr": "SCG",
-      "gp": 22,
-      "w": 4,
+      "gp": 23,
+      "w": 5,
       "l": 16,
       "otl": 2,
-      "pts": 10,
+      "pts": 12,
       "gf": 76,
       "ga": 100,
-      "strk": "L5"
+      "strk": "W1"
      },
      {
       "name": "Brantford Titans",
       "abbr": "BFD",
-      "gp": 21,
+      "gp": 22,
       "w": 3,
-      "l": 16,
+      "l": 17,
       "otl": 2,
       "pts": 8,
       "gf": 67,
       "ga": 129,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Welland Canadians",
