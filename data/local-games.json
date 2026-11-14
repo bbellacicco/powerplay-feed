@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T19:32:08-05:00",
+ "updated": "2026-11-13T19:52:33-05:00",
  "today": "2026-11-13",
  "range": [
   "2026-11-10",
@@ -751,9 +751,9 @@
    "location": "Eddie Bush Memorial Arena, Collingwood, Ontario",
    "status": "live",
    "our_score": 2,
-   "opp_score": 1,
+   "opp_score": 2,
    "result": null,
-   "note": "04:49 1st",
+   "note": "20:00 2nd",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16673"
    },
@@ -807,9 +807,9 @@
    "location": "Pyramid R.C., St. Marys, ON",
    "status": "live",
    "our_score": 0,
-   "opp_score": 0,
+   "opp_score": 2,
    "result": null,
-   "note": "20:00 1st",
+   "note": "10:31 1st",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15685"
    },
@@ -2089,6 +2089,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "cfl",
+   "headline": "CFL commissioner, Regina mayor exchange words over stadium turf",
+   "summary": "",
+   "published": "2026-11-13T19:49-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/cfl-commish.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/cfl-commissioner-regina-mayor-exchange-words-over-stadium-turf/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "‘I’m sure he will’: Oilers great Jari Kurri optimistic McDavid reaches 200 points",
    "summary": "Connor McDavid’s torrid points pace seems to have everyone talking.",
@@ -2138,19 +2151,6 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/soccer/article/andorra-gk-suspended-12-games-for-collision-that-led-to-player-death/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Canucks activate forward Filip Chytil from injured reserve",
-   "summary": "Centre Filip Chytil has been activated from the injured reserve, the team announced Friday ahead of their showdown against the New York Rangers (Sportsnet and Sportsnet+, 9 p.m. ET / 7 p.m. PCT).",
-   "published": "2026-11-13T18:03-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/01/chytil.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canucks-activate-forward-filip-chytil-from-injured-reserve/",
    "source": "Sportsnet"
   },
   {
@@ -3334,7 +3334,7 @@
       "otl": 2,
       "pts": 22,
       "gf": 63,
-      "ga": 60,
+      "ga": 61,
       "strk": "W1"
      },
      {
@@ -3345,8 +3345,8 @@
       "l": 10,
       "otl": 0,
       "pts": 20,
-      "gf": 66,
-      "ga": 69,
+      "gf": 67,
+      "ga": 70,
       "strk": "W2"
      },
      {
@@ -3357,8 +3357,8 @@
       "l": 8,
       "otl": 5,
       "pts": 17,
-      "gf": 57,
-      "ga": 66,
+      "gf": 58,
+      "ga": 67,
       "strk": "L2"
      }
     ]
@@ -3463,7 +3463,7 @@
       "l": 5,
       "otl": 1,
       "pts": 23,
-      "gf": 66,
+      "gf": 67,
       "ga": 50,
       "strk": "L2"
      },
@@ -3584,7 +3584,7 @@
       "otl": 1,
       "pts": 33,
       "gf": 92,
-      "ga": 65,
+      "ga": 66,
       "strk": "W9"
      },
      {
@@ -3620,7 +3620,7 @@
       "otl": 2,
       "pts": 22,
       "gf": 80,
-      "ga": 66,
+      "ga": 67,
       "strk": "W1"
      },
      {
@@ -3643,7 +3643,7 @@
       "l": 11,
       "otl": 0,
       "pts": 18,
-      "gf": 59,
+      "gf": 61,
       "ga": 72,
       "strk": "L1"
      },
@@ -3679,7 +3679,7 @@
       "l": 13,
       "otl": 2,
       "pts": 14,
-      "gf": 75,
+      "gf": 76,
       "ga": 106,
       "strk": "W1"
      },
@@ -3691,7 +3691,7 @@
       "l": 12,
       "otl": 2,
       "pts": 12,
-      "gf": 49,
+      "gf": 50,
       "ga": 87,
       "strk": "W2"
      },
@@ -3720,7 +3720,7 @@
       "l": 3,
       "otl": 0,
       "pts": 44,
-      "gf": 141,
+      "gf": 142,
       "ga": 56,
       "strk": "W1"
      },
@@ -3768,7 +3768,7 @@
       "l": 5,
       "otl": 2,
       "pts": 34,
-      "gf": 121,
+      "gf": 123,
       "ga": 68,
       "strk": "W6"
      },
@@ -3781,7 +3781,7 @@
       "otl": 1,
       "pts": 29,
       "gf": 78,
-      "ga": 44,
+      "ga": 45,
       "strk": "W1"
      },
      {
@@ -3805,7 +3805,7 @@
       "otl": 1,
       "pts": 17,
       "gf": 62,
-      "ga": 102,
+      "ga": 104,
       "strk": "L2"
      },
      {
@@ -3829,7 +3829,7 @@
       "otl": 2,
       "pts": 16,
       "gf": 57,
-      "ga": 115,
+      "ga": 117,
       "strk": "L4"
      },
      {
@@ -3871,7 +3871,7 @@
       "l": 1,
       "otl": 0,
       "pts": 34,
-      "gf": 111,
+      "gf": 113,
       "ga": 38,
       "strk": "W15"
      },
@@ -3883,7 +3883,7 @@
       "l": 3,
       "otl": 2,
       "pts": 30,
-      "gf": 75,
+      "gf": 76,
       "ga": 44,
       "strk": "W5"
      },
@@ -3896,7 +3896,7 @@
       "otl": 3,
       "pts": 25,
       "gf": 75,
-      "ga": 60,
+      "ga": 61,
       "strk": "L1"
      },
      {
@@ -3908,7 +3908,7 @@
       "otl": 0,
       "pts": 24,
       "gf": 77,
-      "ga": 48,
+      "ga": 50,
       "strk": "W1"
      },
      {
@@ -4104,8 +4104,8 @@
       "l": 9,
       "otl": 0,
       "pts": 16,
-      "gf": 74,
-      "ga": 87,
+      "gf": 75,
+      "ga": 88,
       "strk": "L2"
      },
      {
@@ -4116,8 +4116,8 @@
       "l": 12,
       "otl": 3,
       "pts": 15,
-      "gf": 63,
-      "ga": 89,
+      "gf": 64,
+      "ga": 90,
       "strk": "L1"
      },
      {
@@ -4128,7 +4128,7 @@
       "l": 16,
       "otl": 2,
       "pts": 10,
-      "gf": 67,
+      "gf": 68,
       "ga": 99,
       "strk": "L5"
      },
@@ -4141,7 +4141,7 @@
       "otl": 2,
       "pts": 8,
       "gf": 66,
-      "ga": 120,
+      "ga": 121,
       "strk": "L1"
      },
      {
