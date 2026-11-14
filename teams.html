@@ -105,6 +105,7 @@
   .bar .lbl { flex: none; font-family: 'Bebas Neue', Impact, sans-serif; font-size: 21px; letter-spacing: .03em; color: var(--accent); margin-right: 4px; white-space: nowrap; }
   .bar .lb { flex: none; font: inherit; font-size: 13.5px; font-weight: 800; color: var(--text); background: var(--card2); border: 1px solid rgba(255,255,255,.14); border-radius: 999px; padding: 8px 13px; cursor: pointer; white-space: nowrap; min-height: 38px; }
   .bar .lb:hover { border-color: var(--accent); }
+  .bar .lshort { display: none; }
   .bar .lb.on { background: #fff; color: #0b1a33; border-color: #fff; }
   .bar .lb svg { width: 15px; height: 15px; stroke: currentColor; vertical-align: -3px; }
   .drop { padding: 10px 16px 12px; border-bottom: 1px solid var(--line); background: #0d1f40; }
@@ -128,10 +129,14 @@
   .closebar.bottom .back { border: 1px solid rgba(232,176,33,.6); border-radius: 999px; padding: 9px 22px; }
   @media (max-width: 760px) {
     .page { padding: 14px 12px 20px; } h1 { font-size: 32px; }
-    /* phones: every league button in view (two short rows), no sideways scrolling to find them */
-    .bar { padding: 8px 12px; flex-wrap: wrap; overflow: visible; gap: 6px; }
-    .bar .lbl { width: 100%; font-size: 18px; margin: 0; }
-    .bar .lb { font-size: 13px; padding: 7px 11px; min-height: 36px; }
+    /* phones: the title and every league button on one slim line */
+    .bar { padding: 7px 8px; flex-wrap: nowrap; overflow: hidden; gap: 4px; }
+    .bar .lbl { font-size: 15px; line-height: .95; margin: 0 2px 0 0; width: 42px; white-space: normal; }
+    .bar .lb { flex: 1 1 auto; min-width: 0; font-size: 12px; padding: 6px 3px; min-height: 32px; text-align: center; }
+    .bar .lfull { display: none; } .bar .lshort { display: inline; }
+  }
+  @media (max-width: 350px) {
+    .bar { gap: 3px; padding: 7px 5px; } .bar .lbl { width: 36px; font-size: 13.5px; } .bar .lb { font-size: 10.5px; padding: 6px 2px; }
     .g { grid-template-columns: 76px minmax(0, 1fr) auto !important; }
     .mgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .drop { padding: 8px 12px 10px; } html.barmode .team { padding: 10px 12px 12px; }
     .grid2 { grid-template-columns: minmax(0, 1fr); }
@@ -341,9 +346,10 @@
   function drawBar() {
     var bar = document.getElementById('bar'); bar.hidden = false; bar.innerHTML = '';
     bar.appendChild(el('span', 'lbl', qs.get('title') || 'Find a team'));
-    [['ohl', 'Spitfires'], ['lancers', 'Lancers'], ['saints', 'Saints'], ['junior', 'Junior hockey'], ['hs', 'High school'], ['search', '']].forEach(function (x) {
+    [['ohl', 'Spitfires'], ['lancers', 'Lancers'], ['saints', 'Saints'], ['junior', 'Junior hockey', 'Junior'], ['hs', 'High school', 'High school']].forEach(function (x) {
       var b = el('button', 'lb' + (barPick === x[0] ? ' on' : '')); b.type = 'button'; b.dataset.k = x[0];
       if (x[0] === 'search') { b.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>'; b.setAttribute('aria-label', 'Search for a team'); }
+      else if (x[2]) b.innerHTML = '<span class="lfull">' + x[1] + '</span><span class="lshort">' + x[2] + '</span>';
       else b.textContent = x[1];
       b.onclick = function () {
         if (x[0] === 'ohl') { var sp = T.filter(function (t) { return t.sec === 'ohl'; })[0];
