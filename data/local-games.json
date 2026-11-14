@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T12:47:16-05:00",
+ "updated": "2026-11-14T13:01:55-05:00",
  "today": "2026-11-14",
  "range": [
   "2026-11-11",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 36
+   "count": 38
   },
   "club_news": {
    "ok": true,
@@ -533,7 +533,8 @@
    "result": "W",
    "note": "SO",
    "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6348"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6348",
+    "recap": "https://golancers.ca/news/2026/11/14/mens-hockey-earns-two-points-in-shootout-win-over-laurier.aspx"
    }
   },
   {
@@ -1760,19 +1761,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Canada captain Alphonso Davies out for second leg against Guatemala",
-   "summary": "",
-   "published": "2026-11-14T12:22-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/07/davies-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/soccer/article/canada-captain-alphonso-davies-out-for-second-leg-against-guatemala/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "Injured Avalanche stars MacKinnon, Makar to miss weeks",
    "summary": "",
@@ -1809,6 +1797,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/five-thoughts-about-the-nhl-at-the-quarter-mark/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Canada captain Alphonso Davies out for second leg against Guatemala",
+   "summary": "",
+   "published": "2026-11-14T12:22-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/07/davies-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/soccer/article/canada-captain-alphonso-davies-out-for-second-leg-against-guatemala/",
    "source": "Sportsnet"
   },
   {
@@ -1850,19 +1851,6 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/report-star-chiefs-running-back-kenneth-walker-iii-out-against-falcons/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Canada wins opening Nations League leg vs. Guatemala but loses captain Davies to injury",
-   "summary": "Canada defeated Guatemala 3-2 in the opening leg of a Concacaf Nations League quarterfinal on Friday night but lost captain Alphonso Davies to injury.",
-   "published": "2026-11-13T23:13-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/ca.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/soccer/article/canada-wins-opening-nations-league-leg-vs-guatemala-but-loses-captain-davies-to-injury/",
    "source": "Sportsnet"
   },
   {
@@ -1949,32 +1937,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Journeyman Gawdin stars in hometown to lead Rangers over Canucks",
-   "summary": "",
-   "published": "2026-11-13T23:52-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/4535daee75ae90225e458ec34fe58565404e685f793b857b923ac3c9d7924c38.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/journeyman-gawdin-stars-to-lead-rangers-to-win-over-canucks/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Josi lifts Predators past Golden Knights in shootout for seventh straight win",
-   "summary": "Roman Josi scored the deciding goal in the fourth round of a shootout as the Nashville Predators beat the Vegas Golden Knights 3-2 Friday night for their seventh straight win.",
-   "published": "2026-11-14T01:14-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/6f77d83f286ab4990389cc32a075dcbcf6bf32237bae75491ebbe31d6e8a6b9c.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/josi-lifts-predators-past-golden-knights-in-shootout-for-seventh-straight-win/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Report: NHL expected to extend Texas expansion evaluation process",
    "summary": "",
    "published": "2026-11-13T17:01-05:00",
@@ -2013,16 +1975,55 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nba",
-   "headline": "NBA Cup Roundup: Siakam fuels Pacers to win over Knicks",
-   "summary": "",
-   "published": "2026-11-14T00:02-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/03d61695c901edc0df2884764262b64a422098bae2299edfa89f0bbc4d7647ef.jpg",
+   "league": "cfl",
+   "headline": "Elks QB Fajardo carrying extra motivation into Grey Cup",
+   "summary": "After helping Montreal win a Grey Cup, Cody Fajardo believed he had done enough to remain its starting quarterback until they decided to hand the keys to Davis Alexander. Now, with Edmonton, he gets another opportunity t",
+   "published": "2026-11-12T17:39-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Edmonton-Elks-quarterback-Cody-Fajardo.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/elks-qb-fajardo-carrying-extra-motivation-into-grey-cup/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "cfl",
+   "headline": "Keys to victory: How Alouettes can beat Elks in Grey Cup",
+   "summary": "After falling short against the Saskatchewan Roughriders in last year’s Grey Cup, the Alouettes are back with a chance at redemption on Sunday. Here’s what the Als must do to top the Edmonton Elks in the title tilt.",
+   "published": "2026-11-13T14:01-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/alexander-alouettes.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/keys-to-victory-how-alouettes-can-beat-elks-in-grey-cup/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "cfl",
+   "headline": "Keys to victory: How Elks can beat Alouettes in Grey Cup",
+   "summary": "For the first time in 11 years, the Edmonton Elks are back on the CFL’s biggest stage. To get you set, Kellen Forrest has three keys to victory for the Elks in Sunday’s Grey Cup against the Alouettes.",
+   "published": "2026-11-12T19:49-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Elks-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/keys-to-victory-how-elks-can-beat-alouettes-in-grey-cup/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Canada wins opening Nations League leg vs. Guatemala but loses captain Davies to injury",
+   "summary": "Canada defeated Guatemala 3-2 in the opening leg of a Concacaf Nations League quarterfinal on Friday night but lost captain Alphonso Davies to injury.",
+   "published": "2026-11-13T23:13-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/ca.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/nba-cup-roundup-siakam-fuels-pacers-to-win-over-knicks/",
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/soccer/article/canada-wins-opening-nations-league-leg-vs-guatemala-but-loses-captain-davies-to-injury/",
    "source": "Sportsnet"
   },
   {
@@ -2062,6 +2063,32 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/cfl/article/cfl-commissioner-regina-mayor-exchange-words-over-stadium-turf/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Journeyman Gawdin stars in hometown to lead Rangers over Canucks",
+   "summary": "",
+   "published": "2026-11-13T23:52-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/4535daee75ae90225e458ec34fe58565404e685f793b857b923ac3c9d7924c38.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/journeyman-gawdin-stars-to-lead-rangers-to-win-over-canucks/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Josi lifts Predators past Golden Knights in shootout for seventh straight win",
+   "summary": "Roman Josi scored the deciding goal in the fourth round of a shootout as the Nashville Predators beat the Vegas Golden Knights 3-2 Friday night for their seventh straight win.",
+   "published": "2026-11-14T01:14-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/6f77d83f286ab4990389cc32a075dcbcf6bf32237bae75491ebbe31d6e8a6b9c.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/josi-lifts-predators-past-golden-knights-in-shootout-for-seventh-straight-win/",
    "source": "Sportsnet"
   },
   {
