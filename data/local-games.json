@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T21:47:09-05:00",
+ "updated": "2026-11-13T22:02:06-05:00",
  "today": "2026-11-13",
  "range": [
   "2026-11-10",
@@ -806,10 +806,10 @@
    "opponent": "St. Marys Lincolns",
    "location": "Pyramid R.C., St. Marys, ON",
    "status": "live",
-   "our_score": 3,
+   "our_score": 4,
    "opp_score": 2,
    "result": null,
-   "note": "08:23 3rd",
+   "note": "01:12 3rd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15685"
    },
@@ -2009,6 +2009,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Boeser becomes eighth player to score 500 points with Canucks",
+   "summary": "Brock Boeser has cemented his place in Vancouver Canucks history with a major milestone.",
+   "published": "2026-11-13T21:59-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Vancouver-Canucks-Brock-Boeser.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/boeser-becomes-eighth-player-to-score-500-points-with-canucks/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "mlb",
    "headline": "Blue Jays’ Anthony Santander apologizes for anti-Muslim posts",
    "summary": "",
@@ -2073,19 +2086,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/im-sure-he-will-oilers-great-jari-kurri-optimistic-mcdavid-reaches-200-points/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Report: Jake Bauers agrees to four-year, $58-million deal with Red Sox",
-   "summary": "",
-   "published": "2026-11-13T12:55-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/Milwaukee-Brewers-Jake-Bauers.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/report-jake-bauers-agrees-to-four-year-58-million-deal-with-red-sox/",
    "source": "Sportsnet"
   },
   {
@@ -2998,7 +2998,7 @@
    "headline": "Can practice at Rogers Centre stave off slump? Maple Leafs hoping so",
    "summary": "",
    "published": "2026-11-13T15:09-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/umakolecbuscfsg8l5bt",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/xecgcuuxvhz7w9ijnqcy",
    "video": false,
    "teams": [
     "Toronto Blue Jays"
@@ -3317,14 +3317,14 @@
      {
       "name": "Brantford Bulldogs",
       "abbr": "BFD",
-      "gp": 19,
+      "gp": 20,
       "w": 13,
-      "l": 5,
+      "l": 6,
       "otl": 1,
       "pts": 27,
       "gf": 77,
       "ga": 55,
-      "strk": "W2"
+      "strk": "L1"
      },
      {
       "name": "Kingston Frontenacs",
@@ -3382,14 +3382,14 @@
      {
       "name": "Sudbury Wolves",
       "abbr": "SBY",
-      "gp": 19,
-      "w": 13,
+      "gp": 20,
+      "w": 14,
       "l": 5,
       "otl": 1,
-      "pts": 27,
+      "pts": 29,
       "gf": 80,
       "ga": 55,
-      "strk": "W2"
+      "strk": "W3"
      },
      {
       "name": "North Bay Battalion",
@@ -3445,6 +3445,18 @@
     "group": "West Division",
     "teams": [
      {
+      "name": "Soo Greyhounds",
+      "abbr": "SOO",
+      "gp": 22,
+      "w": 13,
+      "l": 7,
+      "otl": 2,
+      "pts": 28,
+      "gf": 75,
+      "ga": 73,
+      "strk": "W1"
+     },
+     {
       "name": "Windsor Spitfires",
       "abbr": "WSR",
       "gp": 20,
@@ -3455,18 +3467,6 @@
       "gf": 76,
       "ga": 59,
       "strk": "W9"
-     },
-     {
-      "name": "Soo Greyhounds",
-      "abbr": "SOO",
-      "gp": 21,
-      "w": 12,
-      "l": 7,
-      "otl": 2,
-      "pts": 26,
-      "gf": 74,
-      "ga": 73,
-      "strk": "L1"
      },
      {
       "name": "Flint Firebirds",
@@ -3495,14 +3495,14 @@
      {
       "name": "Sarnia Sting",
       "abbr": "SAR",
-      "gp": 21,
+      "gp": 22,
       "w": 8,
-      "l": 12,
+      "l": 13,
       "otl": 1,
       "pts": 17,
       "gf": 78,
       "ga": 90,
-      "strk": "L1"
+      "strk": "L2"
      }
     ]
    },
@@ -3512,14 +3512,14 @@
      {
       "name": "Guelph Storm",
       "abbr": "GUE",
-      "gp": 19,
-      "w": 16,
+      "gp": 20,
+      "w": 17,
       "l": 3,
       "otl": 0,
-      "pts": 32,
+      "pts": 34,
       "gf": 91,
       "ga": 57,
-      "strk": "W7"
+      "strk": "W8"
      },
      {
       "name": "Kitchener Rangers",
@@ -3536,13 +3536,13 @@
      {
       "name": "London Knights",
       "abbr": "LDN",
-      "gp": 18,
+      "gp": 19,
       "w": 11,
       "l": 5,
-      "otl": 2,
-      "pts": 24,
+      "otl": 3,
+      "pts": 25,
       "gf": 77,
-      "ga": 68,
+      "ga": 69,
       "strk": "L2"
      },
      {
@@ -3603,14 +3603,14 @@
      {
       "name": "Wellington Dukes",
       "abbr": "WEL",
-      "gp": 22,
-      "w": 13,
+      "gp": 23,
+      "w": 14,
       "l": 6,
       "otl": 3,
-      "pts": 29,
-      "gf": 91,
+      "pts": 31,
+      "gf": 92,
       "ga": 72,
-      "strk": "W2"
+      "strk": "W3"
      },
      {
       "name": "Newmarket Hurricanes",
@@ -3639,14 +3639,14 @@
      {
       "name": "Pickering Panthers",
       "abbr": "PIC",
-      "gp": 22,
+      "gp": 23,
       "w": 10,
-      "l": 10,
+      "l": 11,
       "otl": 2,
       "pts": 22,
       "gf": 77,
       "ga": 80,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Aurora Tigers",
@@ -3663,13 +3663,13 @@
      {
       "name": "Trenton Golden Hawks",
       "abbr": "TRN",
-      "gp": 21,
+      "gp": 22,
       "w": 8,
       "l": 11,
-      "otl": 2,
-      "pts": 18,
+      "otl": 3,
+      "pts": 19,
       "gf": 84,
-      "ga": 89,
+      "ga": 90,
       "strk": "L1"
      },
      {
@@ -3764,14 +3764,14 @@
      {
       "name": "King Rebellion",
       "abbr": "KNG",
-      "gp": 23,
-      "w": 17,
+      "gp": 24,
+      "w": 18,
       "l": 3,
       "otl": 3,
-      "pts": 37,
+      "pts": 39,
       "gf": 97,
       "ga": 49,
-      "strk": "L1"
+      "strk": "W1"
      },
      {
       "name": "Burlington Cougars",
@@ -3781,8 +3781,8 @@
       "l": 5,
       "otl": 2,
       "pts": 34,
-      "gf": 128,
-      "ga": 72,
+      "gf": 129,
+      "ga": 73,
       "strk": "W6"
      },
      {
@@ -3817,8 +3817,8 @@
       "l": 13,
       "otl": 1,
       "pts": 17,
-      "gf": 66,
-      "ga": 109,
+      "gf": 67,
+      "ga": 110,
       "strk": "L2"
      },
      {
@@ -3885,32 +3885,32 @@
       "otl": 0,
       "pts": 34,
       "gf": 113,
-      "ga": 41,
+      "ga": 42,
       "strk": "W15"
      },
      {
       "name": "St. Thomas Stars",
       "abbr": "STT",
-      "gp": 19,
-      "w": 14,
+      "gp": 20,
+      "w": 15,
       "l": 3,
       "otl": 2,
-      "pts": 30,
+      "pts": 32,
       "gf": 80,
       "ga": 45,
-      "strk": "W5"
+      "strk": "W6"
      },
      {
       "name": "Listowel Cyclones",
       "abbr": "LIS",
-      "gp": 19,
+      "gp": 20,
       "w": 11,
-      "l": 5,
+      "l": 6,
       "otl": 3,
       "pts": 25,
       "gf": 76,
       "ga": 65,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Chatham Maroons",
@@ -3920,33 +3920,33 @@
       "l": 5,
       "otl": 0,
       "pts": 24,
-      "gf": 80,
+      "gf": 81,
       "ga": 50,
       "strk": "W1"
      },
      {
+      "name": "Elmira Sugar Kings",
+      "abbr": "ELM",
+      "gp": 21,
+      "w": 10,
+      "l": 10,
+      "otl": 1,
+      "pts": 21,
+      "gf": 83,
+      "ga": 81,
+      "strk": "W4"
+     },
+     {
       "name": "Stratford Warriors",
       "abbr": "SFD",
-      "gp": 15,
+      "gp": 16,
       "w": 9,
-      "l": 5,
+      "l": 6,
       "otl": 1,
       "pts": 19,
       "gf": 56,
       "ga": 56,
-      "strk": "L1"
-     },
-     {
-      "name": "Elmira Sugar Kings",
-      "abbr": "ELM",
-      "gp": 20,
-      "w": 9,
-      "l": 10,
-      "otl": 1,
-      "pts": 19,
-      "gf": 83,
-      "ga": 81,
-      "strk": "W3"
+      "strk": "L2"
      },
      {
       "name": "Strathroy Rockets",
