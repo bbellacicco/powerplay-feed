@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T18:16:44-05:00",
+ "updated": "2026-11-14T18:36:06-05:00",
  "today": "2026-11-14",
  "range": [
   "2026-11-11",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 38
+   "count": 39
   },
   "club_news": {
    "ok": true,
@@ -814,9 +814,9 @@
    "home_away": "H",
    "opponent": "Lakeshore Canadiens",
    "location": "Libro Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
    "note": "",
    "links": {
@@ -1072,6 +1072,20 @@
   },
   {
    "league": "cfl",
+   "headline": "Chris Streveler's quarterback keys to victory for the 113th Grey Cup",
+   "summary": "",
+   "published": "2026-11-14T01:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/28vM6DsoZTZt5BRBor6Hml/a23290a5b1932b2d0af0ad43568bf167/Cody_Fajardo_2026WF.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Alouettes",
+    "Elks"
+   ],
+   "url": "https://www.cfl.ca/article/chris-streveler-s-quarterback-keys-to-victory-for-the-113th-grey-cup",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "3 takeaways from the Als, Elks Grey Cup Saturday walkthroughs",
    "summary": "",
    "published": "2026-11-14T01:00:00-05:00",
@@ -1188,20 +1202,6 @@
     "Elks"
    ],
    "url": "https://www.cfl.ca/article/5-burning-questions-ahead-of-113th-grey-cup",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "5 things to know about the 113th Grey Cup",
-   "summary": "",
-   "published": "2026-11-13T00:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/6jkgMnjgLZtqQ1fT0Leckd/5ca051fd86e0caaf0113d6fc2c7c28da/Davis_Alexander_2026.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Alouettes",
-    "Elks"
-   ],
-   "url": "https://www.cfl.ca/article/5-things-to-know-about-the-113th-grey-cup",
    "source": "CFL.ca"
   },
   {
@@ -1734,6 +1734,19 @@
  "more_news": [
   {
    "league": "nhl",
+   "headline": "Jets complete second four-goal comeback of season vs. Blackhawks",
+   "summary": "",
+   "published": "2026-11-14T18:32-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Jets-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/jets-complete-second-four-goal-comeback-of-season-vs-blackhawks/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Quick Shifts: Why Zack MacEwen has been good fit for Maple Leafs",
    "summary": "The Maple Leafs’ Zack MacEwen has drive and enthusiasm that is refreshing. Luke Fox digs into what makes him a home run and 11 more observations from around the NHL in this edition of Quick Shifts.",
    "published": "2026-11-14T13:09-05:00",
@@ -2084,6 +2097,19 @@
   },
   {
    "league": "other",
+   "headline": "Lindy Duncan plays it steady in cold wind and leads at The Annika",
+   "summary": "",
+   "published": "2026-11-14T18:26-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Lindy-Duncan.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Golf",
+   "url": "https://www.sportsnet.ca/lpga/article/lindy-duncan-plays-it-steady-in-cold-wind-and-leads-at-the-annika/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
    "headline": "Mirra Andreeva beats Jessica Pegula to reach title match of WTA Finals",
    "summary": "Mirra Andreeva defeated Jessica Pegula 6-3, 6-4 to reach the title match of the WTA Finals on Saturday, becoming the first teenager to do so since 2004.",
    "published": "2026-11-14T17:21-05:00",
@@ -2227,19 +2253,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/top-japanese-free-agents-blue-jays-could-target/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Sudden FAA ground stop throws sports weekend into chaos",
-   "summary": "",
-   "published": "2026-11-13T18:24-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/e993171cc42e75a05926ceda12b14cdf9ff960b08b58a869f8173f08573ba5af.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "",
-   "url": "https://www.sportsnet.ca/nhl/article/sudden-faa-ground-stop-throws-sports-weekend-into-chaos/",
    "source": "Sportsnet"
   },
   {
@@ -3180,7 +3193,7 @@
       "l": 8,
       "otl": 3,
       "pts": 17,
-      "gf": 51,
+      "gf": 52,
       "ga": 68,
       "strk": "L4"
      },
@@ -3323,7 +3336,7 @@
       "otl": 2,
       "pts": 22,
       "gf": 62,
-      "ga": 71,
+      "ga": 72,
       "strk": "L2"
      },
      {
@@ -3354,7 +3367,7 @@
       "otl": 1,
       "pts": 37,
       "gf": 105,
-      "ga": 67,
+      "ga": 68,
       "strk": "W2"
      },
      {
@@ -3378,7 +3391,7 @@
       "otl": 3,
       "pts": 31,
       "gf": 95,
-      "ga": 76,
+      "ga": 77,
       "strk": "W3"
      },
      {
@@ -3389,7 +3402,7 @@
       "l": 9,
       "otl": 3,
       "pts": 25,
-      "gf": 74,
+      "gf": 75,
       "ga": 67,
       "strk": "W2"
      },
@@ -3598,7 +3611,7 @@
       "l": 15,
       "otl": 2,
       "pts": 16,
-      "gf": 75,
+      "gf": 76,
       "ga": 126,
       "strk": "W1"
      },
