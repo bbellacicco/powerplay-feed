@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T12:31:43-05:00",
+ "updated": "2026-11-14T12:47:16-05:00",
  "today": "2026-11-14",
  "range": [
   "2026-11-11",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 38
+   "count": 36
   },
   "club_news": {
    "ok": true,
@@ -1008,6 +1008,17 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "\"It's time to perform..\" | Montreal Alouettes",
+   "summary": "",
+   "published": "2026-11-14T13:30:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/248j8TGgp3rZYKazcjTTM2/a9c2128dc4e69521936fd6f57bbac767/Untitled-2.png?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/it-s-time-to-perform-montreal-alouettes",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "\"We're coming to win it all..\" | Edmonton Elks",
    "summary": "",
    "published": "2026-11-14T12:00:00-05:00",
@@ -1179,17 +1190,6 @@
    "video": true,
    "teams": [],
    "url": "https://www.cfl.ca/article/one-iconic-grey-cup-memory-from-each-cfl-team",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "The Biggest Play from Every Team’s Last Grey Cup Win",
-   "summary": "",
-   "published": "2026-11-12T12:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/7MSafDHS7IO1ZP1zcU72Zo/e804714e7b8fa11fb60d80534a55bca3/bigplay.png?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/the-biggest-play-from-every-team-s-last-grey-cup-win",
    "source": "CFL.ca"
   },
   {
@@ -1774,15 +1774,15 @@
   },
   {
    "league": "nhl",
-   "headline": "Canadiens’ Kreider to miss six to eight weeks with lower-body injury",
+   "headline": "Injured Avalanche stars MacKinnon, Makar to miss weeks",
    "summary": "",
-   "published": "2026-11-14T10:58-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177095394.jpg",
+   "published": "2026-11-14T12:32-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/mackinnon-makar.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
+   "sn_team_count": 2,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canadiens-kreider-to-miss-six-to-eight-weeks-with-lower-body-injury/",
+   "url": "https://www.sportsnet.ca/nhl/article/injured-avalanche-stars-mackinnon-makar-to-miss-weeks/",
    "source": "Sportsnet"
   },
   {
@@ -1824,6 +1824,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-anthony-stolarz-set-for-second-straight-start/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Canadiens’ Kreider to miss six to eight weeks with lower-body injury",
+   "summary": "",
+   "published": "2026-11-14T10:58-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177095394.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canadiens-kreider-to-miss-six-to-eight-weeks-with-lower-body-injury/",
    "source": "Sportsnet"
   },
   {
@@ -1904,19 +1917,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/blue-jays-anthony-santander-apologizes-for-anti-muslim-posts/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Sudden FAA ground stop throws sports weekend into chaos",
-   "summary": "",
-   "published": "2026-11-13T18:24-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/e993171cc42e75a05926ceda12b14cdf9ff960b08b58a869f8173f08573ba5af.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "",
-   "url": "https://www.sportsnet.ca/nhl/article/sudden-faa-ground-stop-throws-sports-weekend-into-chaos/",
    "source": "Sportsnet"
   },
   {
@@ -2093,6 +2093,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "Sudden FAA ground stop throws sports weekend into chaos",
+   "summary": "",
+   "published": "2026-11-13T18:24-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/e993171cc42e75a05926ceda12b14cdf9ff960b08b58a869f8173f08573ba5af.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "",
+   "url": "https://www.sportsnet.ca/nhl/article/sudden-faa-ground-stop-throws-sports-weekend-into-chaos/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "UFC 334 Cage Locks: Gane, Hokit ready for heavyweight battle",
    "summary": "UFC 334 takes over Madison Square Garden on Saturday, featuring two major championship bouts. Here’s a preview of all the action.",
@@ -2194,45 +2207,6 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/cfl/article/cfl-commissioner-johnston-calls-quebec-leading-candidate-for-expansion-team/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "cfl",
-   "headline": "Elks QB Fajardo carrying extra motivation into Grey Cup",
-   "summary": "After helping Montreal win a Grey Cup, Cody Fajardo believed he had done enough to remain its starting quarterback until they decided to hand the keys to Davis Alexander. Now, with Edmonton, he gets another opportunity t",
-   "published": "2026-11-12T17:39-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Edmonton-Elks-quarterback-Cody-Fajardo.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/elks-qb-fajardo-carrying-extra-motivation-into-grey-cup/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "cfl",
-   "headline": "Keys to victory: How Alouettes can beat Elks in Grey Cup",
-   "summary": "After falling short against the Saskatchewan Roughriders in last year’s Grey Cup, the Alouettes are back with a chance at redemption on Sunday. Here’s what the Als must do to top the Edmonton Elks in the title tilt.",
-   "published": "2026-11-13T14:01-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/alexander-alouettes.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/keys-to-victory-how-alouettes-can-beat-elks-in-grey-cup/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "cfl",
-   "headline": "Keys to victory: How Elks can beat Alouettes in Grey Cup",
-   "summary": "For the first time in 11 years, the Edmonton Elks are back on the CFL’s biggest stage. To get you set, Kellen Forrest has three keys to victory for the Elks in Sunday’s Grey Cup against the Alouettes.",
-   "published": "2026-11-12T19:49-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Elks-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/keys-to-victory-how-elks-can-beat-alouettes-in-grey-cup/",
    "source": "Sportsnet"
   },
   {
