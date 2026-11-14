@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T22:02:06-05:00",
+ "updated": "2026-11-13T22:20:08-05:00",
  "today": "2026-11-13",
  "range": [
   "2026-11-10",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 38
+   "count": 37
   },
   "club_news": {
    "ok": true,
@@ -805,11 +805,11 @@
    "home_away": "A",
    "opponent": "St. Marys Lincolns",
    "location": "Pyramid R.C., St. Marys, ON",
-   "status": "live",
+   "status": "final",
    "our_score": 4,
    "opp_score": 2,
-   "result": null,
-   "note": "01:12 3rd",
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15685"
    },
@@ -2461,19 +2461,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Amid the storm, Canucks’ Sedins not shying away from blowback",
-   "summary": "Henrik and Daniel Sedin did on Thursday as they’ve always done — face the media when times are tough. If nothing else, it was a good lesson for the Canucks under their charge, writes Iain MacIntyre.",
-   "published": "2026-11-12T16:54-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/sedin.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/amid-the-storm-canucks-sedins-not-shying-away-from-blowback/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nfl",
    "headline": "NOTEBOOK: Playing in Germany 'a dream come true' for St. Brown",
    "summary": "Tim Twentyman covers all the Detroit Lions news of the day including wide receiver Amon-Ra St. Brown's excitement to play in Germany, opportunities for Detroit's defensive line and more.",
@@ -3021,6 +3008,19 @@
   },
   {
    "league": "mlb",
+   "headline": "Top first-time candidates to win MVP, Cy Young in 2027",
+   "summary": "",
+   "published": "2026-11-13T22:00-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/tsbgcqxasbxuko6y1pxe",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "url": "https://www.mlb.com/bluejays/news/mlb-candidates-to-win-first-mvp-cy-young-2027",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
    "headline": "Santander issues apology for sharing hurtful social media posts",
    "summary": "",
    "published": "2026-11-13T16:58-05:00",
@@ -3047,19 +3047,6 @@
   },
   {
    "league": "mlb",
-   "headline": "Varland named 1st BBWAA AL Reliever of the Year",
-   "summary": "",
-   "published": "2026-11-11T21:26-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/v1794448588/mlb/rpvwx40lyigpulbp57t3",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "url": "https://www.mlb.com/bluejays/news/louis-varland-wins-bbwaa-al-reliever-of-the-year-award",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
    "headline": "Solve today's Blue Jays trivia puzzle",
    "summary": "",
    "published": "2026-02-03T10:22-05:00",
@@ -3073,15 +3060,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Cease finishes runner-up for AL Cy Young Award",
+   "headline": "Varland named 1st BBWAA AL Reliever of the Year",
    "summary": "",
-   "published": "2026-11-11T19:58-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/tkkgwpzhkv7c005wwald",
+   "published": "2026-11-11T21:26-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/v1794448588/mlb/rpvwx40lyigpulbp57t3",
    "video": false,
    "teams": [
     "Toronto Blue Jays"
    ],
-   "url": "https://www.mlb.com/bluejays/news/dylan-cease-runner-up-al-cy-young-2026",
+   "url": "https://www.mlb.com/bluejays/news/louis-varland-wins-bbwaa-al-reliever-of-the-year-award",
    "source": "Team site"
   },
   {
@@ -3108,6 +3095,19 @@
     "Toronto Blue Jays"
    ],
    "url": "https://www.mlb.com/milb/prospects/bluejays/",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
+   "headline": "Cease finishes runner-up for AL Cy Young Award",
+   "summary": "",
+   "published": "2026-11-11T19:58-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/tkkgwpzhkv7c005wwald",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "url": "https://www.mlb.com/bluejays/news/dylan-cease-runner-up-al-cy-young-2026",
    "source": "Team site"
   },
   {
@@ -3173,19 +3173,6 @@
     "Toronto Blue Jays"
    ],
    "url": "https://www.mlb.com/bluejays/news/blue-jays-second-base-options-for-2027",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
-   "headline": "How aggressive should Blue Jays be in fortifying 2027 rotation?",
-   "summary": "",
-   "published": "2026-11-06T15:50-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/wlugyxwlx7b7vzrn5lmk",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "url": "https://www.mlb.com/bluejays/news/tarik-skubal-kevin-gausman-options-for-blue-jays-in-2027",
    "source": "Team site"
   }
  ],
@@ -3430,14 +3417,14 @@
      {
       "name": "Barrie Colts",
       "abbr": "BAR",
-      "gp": 20,
+      "gp": 21,
       "w": 4,
-      "l": 13,
+      "l": 14,
       "otl": 3,
       "pts": 11,
       "gf": 47,
       "ga": 80,
-      "strk": "W1"
+      "strk": "L1"
      }
     ]
    },
@@ -3524,14 +3511,14 @@
      {
       "name": "Kitchener Rangers",
       "abbr": "KIT",
-      "gp": 20,
-      "w": 11,
+      "gp": 21,
+      "w": 12,
       "l": 6,
       "otl": 3,
-      "pts": 25,
+      "pts": 27,
       "gf": 71,
       "ga": 60,
-      "strk": "W3"
+      "strk": "W4"
      },
      {
       "name": "London Knights",
@@ -3750,18 +3737,6 @@
       "strk": "W6"
      },
      {
-      "name": "Toronto Patriots",
-      "abbr": "PAT",
-      "gp": 22,
-      "w": 18,
-      "l": 3,
-      "otl": 1,
-      "pts": 37,
-      "gf": 117,
-      "ga": 40,
-      "strk": "W13"
-     },
-     {
       "name": "King Rebellion",
       "abbr": "KNG",
       "gp": 24,
@@ -3772,6 +3747,18 @@
       "gf": 97,
       "ga": 49,
       "strk": "W1"
+     },
+     {
+      "name": "Toronto Patriots",
+      "abbr": "PAT",
+      "gp": 22,
+      "w": 18,
+      "l": 3,
+      "otl": 1,
+      "pts": 37,
+      "gf": 117,
+      "ga": 40,
+      "strk": "W13"
      },
      {
       "name": "Burlington Cougars",
@@ -3879,14 +3866,14 @@
      {
       "name": "St. Marys Lincolns",
       "abbr": "SMY",
-      "gp": 18,
+      "gp": 19,
       "w": 17,
-      "l": 1,
+      "l": 2,
       "otl": 0,
       "pts": 34,
       "gf": 113,
       "ga": 42,
-      "strk": "W15"
+      "strk": "L1"
      },
      {
       "name": "St. Thomas Stars",
@@ -3901,6 +3888,18 @@
       "strk": "W6"
      },
      {
+      "name": "Chatham Maroons",
+      "abbr": "CHA",
+      "gp": 18,
+      "w": 13,
+      "l": 5,
+      "otl": 0,
+      "pts": 26,
+      "gf": 81,
+      "ga": 50,
+      "strk": "W2"
+     },
+     {
       "name": "Listowel Cyclones",
       "abbr": "LIS",
       "gp": 20,
@@ -3911,18 +3910,6 @@
       "gf": 76,
       "ga": 65,
       "strk": "L2"
-     },
-     {
-      "name": "Chatham Maroons",
-      "abbr": "CHA",
-      "gp": 17,
-      "w": 12,
-      "l": 5,
-      "otl": 0,
-      "pts": 24,
-      "gf": 81,
-      "ga": 50,
-      "strk": "W1"
      },
      {
       "name": "Elmira Sugar Kings",
