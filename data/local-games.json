@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T22:20:08-05:00",
+ "updated": "2026-11-13T22:36:14-05:00",
  "today": "2026-11-13",
  "range": [
   "2026-11-10",
@@ -712,13 +712,13 @@
    "home_away": "A",
    "opponent": "Queen's Gaels",
    "location": "Kingston, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 61,
+   "opp_score": 64,
+   "result": "L",
    "note": "",
    "links": {
-    "watch": "https://oua.tv/?school=Windsor"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6205"
    }
   },
   {
@@ -730,14 +730,13 @@
    "home_away": "H",
    "opponent": "McMaster Marauders",
    "location": "Toldo Lancer Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 0,
+   "result": "W",
+   "note": "25-18, 25-23, 25-20",
    "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=174",
-    "watch": "https://oua.tv/?school=Windsor"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6246"
    }
   },
   {
@@ -787,13 +786,13 @@
    "home_away": "A",
    "opponent": "Laurier Golden Hawks",
    "location": "Waterloo, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 4,
+   "opp_score": 3,
+   "result": "W",
    "note": "",
    "links": {
-    "watch": "https://oua.tv/?school=Windsor"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6348"
    }
   },
   {
@@ -881,13 +880,13 @@
    "home_away": "A",
    "opponent": "Queen's Gaels",
    "location": "Kingston, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 69,
+   "opp_score": 77,
+   "result": "L",
    "note": "",
    "links": {
-    "watch": "https://oua.tv/?school=Windsor"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6227"
    }
   },
   {
@@ -3326,6 +3325,18 @@
       "strk": "L3"
      },
      {
+      "name": "Peterborough Petes",
+      "abbr": "PBO",
+      "gp": 21,
+      "w": 11,
+      "l": 10,
+      "otl": 0,
+      "pts": 22,
+      "gf": 72,
+      "ga": 72,
+      "strk": "W3"
+     },
+     {
       "name": "Ottawa 67's",
       "abbr": "OTT",
       "gp": 19,
@@ -3338,28 +3349,16 @@
       "strk": "L1"
      },
      {
-      "name": "Peterborough Petes",
-      "abbr": "PBO",
-      "gp": 20,
-      "w": 10,
-      "l": 10,
-      "otl": 0,
-      "pts": 20,
-      "gf": 72,
-      "ga": 72,
-      "strk": "W2"
-     },
-     {
       "name": "Oshawa Generals",
       "abbr": "OSH",
-      "gp": 19,
+      "gp": 20,
       "w": 6,
-      "l": 8,
+      "l": 9,
       "otl": 5,
       "pts": 17,
       "gf": 60,
       "ga": 72,
-      "strk": "L2"
+      "strk": "L3"
      }
     ]
    },
@@ -3763,14 +3762,14 @@
      {
       "name": "Burlington Cougars",
       "abbr": "BUR",
-      "gp": 23,
-      "w": 16,
+      "gp": 24,
+      "w": 17,
       "l": 5,
       "otl": 2,
-      "pts": 34,
+      "pts": 36,
       "gf": 129,
       "ga": 73,
-      "strk": "W6"
+      "strk": "W7"
      },
      {
       "name": "Leamington Flyers",
@@ -3799,14 +3798,14 @@
      {
       "name": "Mississauga Chargers",
       "abbr": "MIS",
-      "gp": 22,
+      "gp": 23,
       "w": 8,
-      "l": 13,
+      "l": 14,
       "otl": 1,
       "pts": 17,
       "gf": 67,
       "ga": 110,
-      "strk": "L2"
+      "strk": "L3"
      },
      {
       "name": "Georgetown Raiders",
