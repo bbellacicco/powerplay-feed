@@ -179,10 +179,18 @@
   .minute .mspon img { height: 22px; width: 22px; border-radius: 50%; background: #fff; object-fit: contain; }
   /* phones: everything centred, and the sponsor gets room for its full name */
   @media (max-width: 700px) {
-    .minute .mbody { align-items: center; text-align: center; }
-    .minute .mtag { align-self: center; }
-    .minute .mtop { justify-content: center; }
-    .minute .mbar { width: 100%; }
+    /* one line: Listen now · time · Share; then the title, the bar and the date/sponsor, all centred */
+    .minute .mbody { flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center; text-align: center; column-gap: 10px; }
+    .minute .mtop { display: contents; }
+    .minute .mtag { order: 1; align-self: center; font-size: 10px; letter-spacing: .08em; padding: 3px 7px; gap: 5px; }
+    .minute .mright { order: 2; gap: 8px; }
+    .minute .mtop h2 { order: 3; width: 100%; }
+    .minute .mbar { order: 4; width: 100%; }
+    .minute .msub { order: 5; width: 100%; }
+  }
+  @media (max-width: 350px) {
+    .minute .mright .pps-btn span { display: none; } .minute .mright .pps-btn { padding: 5px 7px; }
+    .minute .mtop h2, #minute .mtop h2 { font-size: 19px; white-space: nowrap; }
     .minute .msub { justify-content: center; flex-wrap: wrap; gap: 3px 8px; white-space: nowrap; }
     .minute .msub .dlong, .minute .msub .pby { display: none; }
     .minute .mspon { gap: 5px; }
