@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T19:02:02-05:00",
+ "updated": "2026-11-14T19:18:04-05:00",
  "today": "2026-11-14",
  "range": [
   "2026-11-11",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 37
+   "count": 38
   },
   "club_news": {
    "ok": true,
@@ -833,13 +833,12 @@
    "home_away": "A",
    "opponent": "Flint Firebirds",
    "location": "Dort Financial Center, Flint, MI",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 1,
+   "opp_score": 0,
    "result": null,
-   "note": "",
+   "note": "11:21 1st",
    "links": {
-    "tickets": "https://www.etix.com/ticket/v/18541",
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29197/"
    }
   },
@@ -1786,6 +1785,47 @@
   },
   {
    "league": "nhl",
+   "headline": "‘Bravo Winnipeg’: Hockey world reacts to Jets’ second four-goal comeback",
+   "summary": "",
+   "published": "2026-11-14T19:04-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Jets-3.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/bravo-winnipeg-hockey-world-reacts-to-jets-second-four-goal-comeback/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Maple Leafs’ Rielly scratched vs. Oilers with lower-body injury",
+   "summary": "",
+   "published": "2026-11-14T19:03-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/morgan-rielly.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/report-maple-leafs-rielly-scratched-vs-oilers-with-lower-body-injury/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Canadiens’ Mike Matheson out vs. Avalanche",
+   "summary": "The Montreal Canadiens will be without Mike Matheson on Saturday night.",
+   "published": "2026-11-14T19:05-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/mike-matheson.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canadiens-mike-matheson-out-vs-avalanche/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Injured Avalanche stars MacKinnon, Makar to miss weeks",
    "summary": "",
    "published": "2026-11-14T12:32-05:00",
@@ -1838,45 +1878,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-anthony-stolarz-set-for-second-straight-start/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Canadiens’ Kreider to miss six to eight weeks with lower-body injury",
-   "summary": "",
-   "published": "2026-11-14T10:58-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177095394.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canadiens-kreider-to-miss-six-to-eight-weeks-with-lower-body-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Islanders’ Mathew Barzal to make season debut vs. Ducks",
-   "summary": "",
-   "published": "2026-11-14T15:47-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/11/CP175262821.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/islanders-mathew-barzal-to-make-season-debut-vs-ducks/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Nations League roundup: Haaland back on target to seal Norway’s win over Wales",
-   "summary": "",
-   "published": "2026-11-14T15:03-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/haaland_erling1280.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/soccer/article/nations-league-roundup-haaland-back-on-target-to-seal-norways-win-over-wales/",
    "source": "Sportsnet"
   },
   {
@@ -1950,6 +1951,45 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/babcock-returns-to-toronto-as-head-coach-of-oilers/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Nations League roundup: Haaland back on target to seal Norway’s win over Wales",
+   "summary": "",
+   "published": "2026-11-14T15:03-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/haaland_erling1280.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/soccer/article/nations-league-roundup-haaland-back-on-target-to-seal-norways-win-over-wales/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Islanders’ Mathew Barzal to make season debut vs. Ducks",
+   "summary": "",
+   "published": "2026-11-14T15:47-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/11/CP175262821.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/islanders-mathew-barzal-to-make-season-debut-vs-ducks/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Canadiens’ Kreider to miss six to eight weeks with lower-body injury",
+   "summary": "",
+   "published": "2026-11-14T10:58-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177095394.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canadiens-kreider-to-miss-six-to-eight-weeks-with-lower-body-injury/",
    "source": "Sportsnet"
   },
   {
@@ -2199,34 +2239,6 @@
    "sn_team_count": 0,
    "sport": "MMA",
    "url": "https://www.sportsnet.ca/ufc/article/terrance-mckinney-apologizes-after-failing-to-make-weight-for-ufc-334/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "‘I’m sure he will’: Oilers great Jari Kurri optimistic McDavid reaches 200 points",
-   "summary": "Connor McDavid’s torrid points pace seems to have everyone talking.",
-   "published": "2026-11-13T17:45-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/Edmonton-Oilers-center-Connor-McDavid.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/im-sure-he-will-oilers-great-jari-kurri-optimistic-mcdavid-reaches-200-points/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Top Japanese free agents Blue Jays could target",
-   "summary": "As the Blue Jays navigate free agency, they will have interest in the available players from Japan, and that interest is more likely to be more mutual than in previous years, Nick Ashbourne writes. While there’s no guara",
-   "published": "2026-11-13T11:13-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/sato_teruaki1280.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/top-japanese-free-agents-blue-jays-could-target/",
    "source": "Sportsnet"
   },
   {
@@ -3167,8 +3179,8 @@
       "l": 8,
       "otl": 3,
       "pts": 17,
-      "gf": 53,
-      "ga": 69,
+      "gf": 54,
+      "ga": 70,
       "strk": "L4"
      },
      {
@@ -3220,7 +3232,7 @@
       "l": 5,
       "otl": 3,
       "pts": 27,
-      "gf": 76,
+      "gf": 77,
       "ga": 59,
       "strk": "W9"
      },
@@ -3233,7 +3245,7 @@
       "otl": 1,
       "pts": 25,
       "gf": 68,
-      "ga": 50,
+      "ga": 51,
       "strk": "W1"
      },
      {
@@ -3309,8 +3321,8 @@
       "l": 8,
       "otl": 2,
       "pts": 22,
-      "gf": 63,
-      "ga": 73,
+      "gf": 64,
+      "ga": 74,
       "strk": "L2"
      },
      {
@@ -3501,8 +3513,8 @@
       "l": 3,
       "otl": 1,
       "pts": 39,
-      "gf": 93,
-      "ga": 45,
+      "gf": 94,
+      "ga": 46,
       "strk": "W6"
      },
      {
@@ -3573,8 +3585,8 @@
       "l": 14,
       "otl": 1,
       "pts": 17,
-      "gf": 67,
-      "ga": 110,
+      "gf": 68,
+      "ga": 111,
       "strk": "L3"
      },
      {
@@ -3802,7 +3814,7 @@
       "otl": 1,
       "pts": 33,
       "gf": 82,
-      "ga": 45,
+      "ga": 46,
       "strk": "W7"
      },
      {
@@ -3825,7 +3837,7 @@
       "l": 1,
       "otl": 1,
       "pts": 29,
-      "gf": 79,
+      "gf": 80,
       "ga": 48,
       "strk": "W2"
      },
