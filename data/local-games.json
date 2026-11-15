@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T20:47:02-05:00",
+ "updated": "2026-11-14T21:06:03-05:00",
  "today": "2026-11-14",
  "range": [
   "2026-11-11",
@@ -689,15 +689,12 @@
    "home_away": "H",
    "opponent": "McMaster Marauders",
    "location": "Toldo Lancer Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 1,
+   "result": "W",
    "note": "",
-   "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=174",
-    "watch": "https://oua.tv/?school=Windsor"
-   }
+   "links": {}
   },
   {
    "id": "lancers-6267",
@@ -708,15 +705,12 @@
    "home_away": "H",
    "opponent": "McMaster Marauders",
    "location": "Toldo Lancer Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 1,
+   "opp_score": 3,
+   "result": "L",
    "note": "",
-   "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=174",
-    "watch": "https://oua.tv/?school=Windsor"
-   }
+   "links": {}
   },
   {
    "id": "lancers-6498",
@@ -727,10 +721,10 @@
    "home_away": "N",
    "opponent": "Mowhawk College",
    "location": "Guelph, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 6,
+   "opp_score": 7,
+   "result": "L",
    "note": "Guelph Invitational - Men",
    "links": {}
   },
@@ -743,10 +737,10 @@
    "home_away": "A",
    "opponent": "Guelph Gryphons",
    "location": "Guelph, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 6,
+   "opp_score": 7,
+   "result": "L",
    "note": "Guelph Invitational - Women",
    "links": {}
   },
@@ -759,14 +753,12 @@
    "home_away": "A",
    "opponent": "Ontario Tech Ridgebacks",
    "location": "Oshawa, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 95,
+   "opp_score": 53,
+   "result": "W",
    "note": "",
-   "links": {
-    "watch": "https://oua.tv/?school=Windsor"
-   }
+   "links": {}
   },
   {
    "id": "lancers-6292",
@@ -777,15 +769,12 @@
    "home_away": "H",
    "opponent": "Western Mustangs",
    "location": "Adie Knox Arena",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 2,
+   "result": "W",
    "note": "",
-   "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=172",
-    "watch": "https://oua.tv/?school=Windsor"
-   }
+   "links": {}
   },
   {
    "id": "lancers-6228",
@@ -796,14 +785,12 @@
    "home_away": "A",
    "opponent": "Ontario Tech Ridgebacks",
    "location": "Oshawa, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "watch": "https://oua.tv/?school=Windsor"
-   }
+   "status": "final",
+   "our_score": 73,
+   "opp_score": 67,
+   "result": "W",
+   "note": "OT",
+   "links": {}
   },
   {
    "id": "junior-gs2960621",
@@ -814,10 +801,10 @@
    "home_away": "H",
    "opponent": "Lakeshore Canadiens",
    "location": "Libro Centre",
-   "status": "live",
-   "our_score": 0,
-   "opp_score": 0,
-   "result": null,
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 6,
+   "result": "L",
    "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960621?configuration=45"
@@ -837,7 +824,7 @@
    "our_score": 1,
    "opp_score": 2,
    "result": null,
-   "note": "00:00 2nd",
+   "note": "10:44 3rd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29197/"
    }
@@ -851,11 +838,11 @@
    "home_away": "A",
    "opponent": "Strathroy Rockets",
    "location": "West Middlesex M.C., Strathroy, ON",
-   "status": "live",
-   "our_score": 3,
-   "opp_score": 0,
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
    "result": null,
-   "note": "09:19 2nd",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15692"
    },
@@ -1733,6 +1720,19 @@
  "more_news": [
   {
    "league": "nhl",
+   "headline": "Oilers’ McDavid hits 50 points, sets personal-best point streak",
+   "summary": "Connor McDavid’s first point on Saturday against the Toronto Maple Leafs was a big one.",
+   "published": "2026-11-14T20:47-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/mcdavid.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/oilers-mcdavid-hits-50-points-sets-personal-best-point-streak/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Jets complete second four-goal comeback of season vs. Blackhawks",
    "summary": "Mark Scheifele had a goal and three assists, Kyle Connor scored a goal in regulation and had the deciding shootout goal, and the Winnipeg Jets rallied from a four-goal deficit to beat the Chicago Blackhawks 5-4 on Saturd",
    "published": "2026-11-14T18:32-05:00",
@@ -1848,21 +1848,6 @@
    "sn_team_count": 2,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/cavaliers-will-play-mavericks-without-entire-usual-starting-lineup/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Raptors’ Barnes questionable vs. Knicks, Leonard still progressing",
-   "summary": "",
-   "published": "2026-11-14T13:22-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Copy-of-Untitled-Design-3.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-barnes-questionable-vs-knicks-leonard-still-progressing/",
    "source": "Sportsnet"
   },
   {
@@ -3190,7 +3175,7 @@
       "otl": 2,
       "pts": 12,
       "gf": 57,
-      "ga": 84,
+      "ga": 86,
       "strk": "W1"
      },
      {
@@ -3201,7 +3186,7 @@
       "l": 14,
       "otl": 3,
       "pts": 11,
-      "gf": 47,
+      "gf": 49,
       "ga": 81,
       "strk": "L1"
      }
@@ -3254,8 +3239,8 @@
       "l": 9,
       "otl": 3,
       "pts": 19,
-      "gf": 74,
-      "ga": 73,
+      "gf": 75,
+      "ga": 75,
       "strk": "L1"
      },
      {
@@ -3307,8 +3292,8 @@
       "l": 5,
       "otl": 3,
       "pts": 25,
-      "gf": 78,
-      "ga": 71,
+      "gf": 80,
+      "ga": 72,
       "strk": "L2"
      },
      {
@@ -3398,8 +3383,8 @@
       "l": 8,
       "otl": 2,
       "pts": 24,
-      "gf": 84,
-      "ga": 69,
+      "gf": 85,
+      "ga": 70,
       "strk": "W2"
      },
      {
@@ -3422,8 +3407,8 @@
       "l": 11,
       "otl": 0,
       "pts": 20,
-      "gf": 68,
-      "ga": 74,
+      "gf": 69,
+      "ga": 75,
       "strk": "W1"
      },
      {
@@ -3446,8 +3431,8 @@
       "l": 13,
       "otl": 2,
       "pts": 18,
-      "gf": 67,
-      "ga": 102,
+      "gf": 68,
+      "ga": 103,
       "strk": "W1"
      },
      {
@@ -3482,8 +3467,8 @@
       "l": 17,
       "otl": 3,
       "pts": 9,
-      "gf": 54,
-      "ga": 141,
+      "gf": 55,
+      "ga": 142,
       "strk": "L9"
      }
     ]
@@ -3512,7 +3497,7 @@
       "otl": 1,
       "pts": 39,
       "gf": 97,
-      "ga": 47,
+      "ga": 48,
       "strk": "W6"
      },
      {
@@ -3536,7 +3521,7 @@
       "otl": 1,
       "pts": 37,
       "gf": 123,
-      "ga": 42,
+      "ga": 43,
       "strk": "W13"
      },
      {
@@ -3583,7 +3568,7 @@
       "l": 14,
       "otl": 1,
       "pts": 17,
-      "gf": 69,
+      "gf": 70,
       "ga": 114,
       "strk": "L3"
      },
@@ -3631,7 +3616,7 @@
       "l": 17,
       "otl": 1,
       "pts": 13,
-      "gf": 60,
+      "gf": 61,
       "ga": 97,
       "strk": "L5"
      }
@@ -3722,8 +3707,8 @@
       "l": 9,
       "otl": 3,
       "pts": 19,
-      "gf": 85,
-      "ga": 82,
+      "gf": 86,
+      "ga": 83,
       "strk": "W2"
      },
      {
@@ -3734,8 +3719,8 @@
       "l": 10,
       "otl": 0,
       "pts": 18,
-      "gf": 57,
-      "ga": 74,
+      "gf": 58,
+      "ga": 75,
       "strk": "W2"
      },
      {
@@ -3811,8 +3796,8 @@
       "l": 2,
       "otl": 1,
       "pts": 33,
-      "gf": 83,
-      "ga": 47,
+      "gf": 84,
+      "ga": 50,
       "strk": "W7"
      },
      {
@@ -3835,8 +3820,8 @@
       "l": 1,
       "otl": 1,
       "pts": 29,
-      "gf": 81,
-      "ga": 49,
+      "gf": 84,
+      "ga": 50,
       "strk": "W2"
      },
      {
@@ -4108,14 +4093,14 @@
      {
       "name": "Lakeshore Canadiens",
       "abbr": "LAK",
-      "gp": 18,
-      "w": 15,
+      "gp": 19,
+      "w": 16,
       "l": 1,
       "otl": 2,
-      "pts": 32,
-      "gf": 75,
-      "ga": 34,
-      "strk": "W6"
+      "pts": 34,
+      "gf": 81,
+      "ga": 37,
+      "strk": "W7"
      },
      {
       "name": "Dresden Kings",
@@ -4168,14 +4153,14 @@
      {
       "name": "Amherstburg Admirals",
       "abbr": "AMH",
-      "gp": 18,
+      "gp": 19,
       "w": 7,
-      "l": 11,
+      "l": 12,
       "otl": 0,
       "pts": 14,
-      "gf": 64,
-      "ga": 60,
-      "strk": "L1"
+      "gf": 67,
+      "ga": 66,
+      "strk": "L2"
      },
      {
       "name": "Walpole Island Wild",
