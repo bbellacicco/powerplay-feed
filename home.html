@@ -527,6 +527,21 @@ document.addEventListener('load', function (e) {
     document.getElementById('rows').appendChild(sec);
     rowEl[r.key] = row;
   });
+  // phones: each strip title grows to fill the room it has beside the buttons (short titles like What's New get bigger), up to 36px
+  function fitHeads() {
+    var phone = window.matchMedia('(max-width: 700px)').matches;
+    [].forEach.call(document.querySelectorAll('.rhead h2'), function (h) {
+      h.style.fontSize = '';
+      if (!phone) return;
+      var room = h.clientWidth; if (!room) return;
+      var size = parseFloat(getComputedStyle(h).fontSize), max = 36;
+      h.style.fontSize = max + 'px';
+      while (h.scrollWidth > room + 0.5 && max > size) { max -= 0.5; h.style.fontSize = max + 'px'; }
+    });
+  }
+  fitHeads();
+  window.addEventListener('resize', fitHeads);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitHeads);
   // rows run in ROWS order, below the search bar: stories, the Network, Game Day Snaps, athlete profiles, then Lancers Lounge, Saints Nation and High School Huddle, then the scores
   function fill(key, nodes, emptyText) {
     var row = rowEl[key]; row.innerHTML = '';
