@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T21:32:03-05:00",
+ "updated": "2026-11-14T21:48:17-05:00",
  "today": "2026-11-14",
  "range": [
   "2026-11-11",
@@ -820,11 +820,11 @@
    "home_away": "A",
    "opponent": "Flint Firebirds",
    "location": "Dort Financial Center, Flint, MI",
-   "status": "live",
+   "status": "final",
    "our_score": 1,
    "opp_score": 4,
-   "result": null,
-   "note": "End of Game",
+   "result": "L",
+   "note": "",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29197/"
    }
@@ -842,7 +842,7 @@
    "our_score": 4,
    "opp_score": 3,
    "result": null,
-   "note": "10:29 3rd",
+   "note": "01:17 3rd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15692"
    },
@@ -3019,7 +3019,7 @@
       "l": 6,
       "otl": 1,
       "pts": 27,
-      "gf": 84,
+      "gf": 86,
       "ga": 58,
       "strk": "L1"
      },
@@ -3068,7 +3068,7 @@
       "otl": 5,
       "pts": 17,
       "gf": 63,
-      "ga": 79,
+      "ga": 81,
       "strk": "L3"
      }
     ]
@@ -3120,8 +3120,8 @@
       "l": 13,
       "otl": 2,
       "pts": 12,
-      "gf": 57,
-      "ga": 86,
+      "gf": 59,
+      "ga": 87,
       "strk": "W1"
      },
      {
@@ -3132,8 +3132,8 @@
       "l": 14,
       "otl": 3,
       "pts": 11,
-      "gf": 49,
-      "ga": 81,
+      "gf": 50,
+      "ga": 83,
       "strk": "L1"
      }
     ]
@@ -3154,28 +3154,28 @@
       "strk": "W1"
      },
      {
+      "name": "Flint Firebirds",
+      "abbr": "FLNT",
+      "gp": 19,
+      "w": 13,
+      "l": 5,
+      "otl": 1,
+      "pts": 27,
+      "gf": 72,
+      "ga": 51,
+      "strk": "W2"
+     },
+     {
       "name": "Windsor Spitfires",
       "abbr": "WSR",
-      "gp": 20,
+      "gp": 21,
       "w": 12,
-      "l": 5,
+      "l": 6,
       "otl": 3,
       "pts": 27,
       "gf": 77,
       "ga": 63,
-      "strk": "W9"
-     },
-     {
-      "name": "Flint Firebirds",
-      "abbr": "FLNT",
-      "gp": 18,
-      "w": 12,
-      "l": 5,
-      "otl": 1,
-      "pts": 25,
-      "gf": 72,
-      "ga": 51,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Saginaw Spirit",
@@ -3186,7 +3186,7 @@
       "otl": 3,
       "pts": 19,
       "gf": 78,
-      "ga": 76,
+      "ga": 77,
       "strk": "L1"
      },
      {
@@ -3214,7 +3214,7 @@
       "l": 3,
       "otl": 0,
       "pts": 34,
-      "gf": 92,
+      "gf": 93,
       "ga": 60,
       "strk": "W8"
      },
@@ -3238,7 +3238,7 @@
       "l": 5,
       "otl": 3,
       "pts": 25,
-      "gf": 81,
+      "gf": 82,
       "ga": 75,
       "strk": "L2"
      },
@@ -3263,7 +3263,7 @@
       "otl": 4,
       "pts": 16,
       "gf": 55,
-      "ga": 83,
+      "ga": 84,
       "strk": "L2"
      }
     ]
@@ -3329,8 +3329,20 @@
       "l": 8,
       "otl": 2,
       "pts": 24,
-      "gf": 85,
+      "gf": 87,
       "ga": 70,
+      "strk": "W2"
+     },
+     {
+      "name": "Aurora Tigers",
+      "abbr": "AUR",
+      "gp": 22,
+      "w": 11,
+      "l": 11,
+      "otl": 0,
+      "pts": 22,
+      "gf": 70,
+      "ga": 76,
       "strk": "W2"
      },
      {
@@ -3344,18 +3356,6 @@
       "gf": 77,
       "ga": 80,
       "strk": "L1"
-     },
-     {
-      "name": "Aurora Tigers",
-      "abbr": "AUR",
-      "gp": 21,
-      "w": 10,
-      "l": 11,
-      "otl": 0,
-      "pts": 20,
-      "gf": 70,
-      "ga": 76,
-      "strk": "W1"
      },
      {
       "name": "Trenton Golden Hawks",
@@ -3378,7 +3378,7 @@
       "otl": 2,
       "pts": 18,
       "gf": 68,
-      "ga": 103,
+      "ga": 105,
       "strk": "W1"
      },
      {
@@ -3408,14 +3408,14 @@
      {
       "name": "Toronto Warriors",
       "abbr": "TOW",
-      "gp": 23,
+      "gp": 24,
       "w": 3,
-      "l": 17,
+      "l": 18,
       "otl": 3,
       "pts": 9,
       "gf": 56,
       "ga": 143,
-      "strk": "L9"
+      "strk": "L10"
      }
     ]
    },
@@ -3466,8 +3466,8 @@
       "l": 3,
       "otl": 1,
       "pts": 37,
-      "gf": 124,
-      "ga": 43,
+      "gf": 125,
+      "ga": 44,
       "strk": "W13"
      },
      {
@@ -3562,8 +3562,8 @@
       "l": 17,
       "otl": 1,
       "pts": 13,
-      "gf": 61,
-      "ga": 98,
+      "gf": 62,
+      "ga": 99,
       "strk": "L5"
      }
     ]
@@ -3598,6 +3598,18 @@
       "strk": "W6"
      },
      {
+      "name": "Listowel Cyclones",
+      "abbr": "LIS",
+      "gp": 21,
+      "w": 12,
+      "l": 6,
+      "otl": 3,
+      "pts": 27,
+      "gf": 81,
+      "ga": 69,
+      "strk": "W1"
+     },
+     {
       "name": "Chatham Maroons",
       "abbr": "CHA",
       "gp": 18,
@@ -3608,18 +3620,6 @@
       "gf": 81,
       "ga": 50,
       "strk": "W2"
-     },
-     {
-      "name": "Listowel Cyclones",
-      "abbr": "LIS",
-      "gp": 20,
-      "w": 11,
-      "l": 6,
-      "otl": 3,
-      "pts": 25,
-      "gf": 81,
-      "ga": 69,
-      "strk": "L2"
      },
      {
       "name": "Elmira Sugar Kings",
@@ -3653,7 +3653,7 @@
       "l": 9,
       "otl": 3,
       "pts": 19,
-      "gf": 87,
+      "gf": 88,
       "ga": 83,
       "strk": "W2"
      },
@@ -3666,7 +3666,7 @@
       "otl": 0,
       "pts": 18,
       "gf": 58,
-      "ga": 76,
+      "ga": 77,
       "strk": "W2"
      },
      {
@@ -3696,14 +3696,14 @@
      {
       "name": "Komoka Kings",
       "abbr": "KOM",
-      "gp": 19,
+      "gp": 20,
       "w": 5,
-      "l": 14,
+      "l": 15,
       "otl": 0,
       "pts": 10,
       "gf": 62,
       "ga": 86,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Sarnia Legionnaires",
@@ -3749,13 +3749,13 @@
      {
       "name": "St. Catharines Falcons",
       "abbr": "SCF",
-      "gp": 20,
+      "gp": 21,
       "w": 15,
       "l": 4,
-      "otl": 1,
-      "pts": 31,
+      "otl": 2,
+      "pts": 32,
       "gf": 92,
-      "ga": 57,
+      "ga": 58,
       "strk": "W2"
      },
      {
@@ -3833,14 +3833,14 @@
      {
       "name": "Stoney Creek Generals",
       "abbr": "SCG",
-      "gp": 23,
-      "w": 5,
+      "gp": 24,
+      "w": 6,
       "l": 16,
       "otl": 2,
-      "pts": 12,
-      "gf": 77,
+      "pts": 14,
+      "gf": 78,
       "ga": 101,
-      "strk": "W1"
+      "strk": "W2"
      },
      {
       "name": "Brantford Titans",
@@ -4049,6 +4049,18 @@
       "strk": "W7"
      },
      {
+      "name": "Mooretown Flags",
+      "abbr": "MOO",
+      "gp": 21,
+      "w": 9,
+      "l": 10,
+      "otl": 2,
+      "pts": 20,
+      "gf": 72,
+      "ga": 72,
+      "strk": "W1"
+     },
+     {
       "name": "Dresden Kings",
       "abbr": "DRE",
       "gp": 18,
@@ -4071,18 +4083,6 @@
       "gf": 64,
       "ga": 53,
       "strk": "L1"
-     },
-     {
-      "name": "Mooretown Flags",
-      "abbr": "MOO",
-      "gp": 20,
-      "w": 8,
-      "l": 10,
-      "otl": 2,
-      "pts": 18,
-      "gf": 65,
-      "ga": 70,
-      "strk": "L3"
      },
      {
       "name": "Wheatley Sharks",
@@ -4111,14 +4111,14 @@
      {
       "name": "Walpole Island Wild",
       "abbr": "WAL",
-      "gp": 16,
+      "gp": 17,
       "w": 0,
-      "l": 16,
+      "l": 17,
       "otl": 0,
       "pts": 0,
-      "gf": 16,
-      "ga": 107,
-      "strk": "L16"
+      "gf": 18,
+      "ga": 114,
+      "strk": "L17"
      }
     ]
    }
