@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T17:33:33-05:00",
+ "updated": "2026-11-15T17:46:53-05:00",
  "today": "2026-11-15",
  "range": [
   "2026-11-12",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 36
   },
   "club_news": {
    "ok": true,
@@ -844,7 +844,7 @@
    "our_score": 0,
    "opp_score": 1,
    "result": null,
-   "note": "01:03 2nd",
+   "note": "00:00 2nd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29206/"
    }
@@ -858,11 +858,11 @@
    "home_away": "H",
    "opponent": "Waterloo Siskins",
    "location": "Chatham Memorial Arena, Chatham, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
-   "note": "",
+   "note": "20:00 1st",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15693"
    },
@@ -1726,6 +1726,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nfl",
+   "headline": "Raiders TE Brock Bowers exits vs. Seahawks with ankle injury",
+   "summary": "Superstar tight end Brock Bowers exited Sunday’s showdown against the Seattle Seahawks after suffering an ankle injury and was later ruled out, the team announced after halftime.",
+   "published": "2026-11-15T17:45-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/bb.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/raiders-te-brock-bowers-exits-vs-seahawks-with-ankle-injury/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Canadiens’ Anderson, Matheson to miss multiple weeks with lower-body injuries",
    "summary": "Forward Josh Anderson will be out for three to four weeks, and defenceman Mike Matheson will miss two to three weeks, both with lower-body injuries, the Canadiens announced on Sunday.",
@@ -1740,7 +1753,7 @@
   },
   {
    "league": "nba",
-   "headline": "LeBron James moves past Jason Kidd for third on NBA’s career assist list as 76ers top Pacers",
+   "headline": "LeBron James moves into third on NBA’s career assist list as 76ers top Pacers",
    "summary": "",
    "published": "2026-11-15T16:02-05:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/james_lebron1280.jpg",
@@ -1749,19 +1762,6 @@
    "sn_team_count": 2,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/lebron-james-moves-past-jason-kidd-for-third-on-nbas-career-assist-list-as-76ers-top-pacers/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Avalanche claim defenceman Mike Reilly off waivers from Hurricanes",
-   "summary": "",
-   "published": "2026-11-15T14:24-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/mike-2.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/avalanche-claim-defenceman-mike-reilly-off-waivers-from-hurricanes/",
    "source": "Sportsnet"
   },
   {
@@ -1840,6 +1840,19 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/cfl/article/grey-cup-matchup-brings-plenty-of-history-for-alouettes-gm-coach/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Canada’s Toby Fournier leads No. 5 Duke to rout of Marshall",
+   "summary": "Toby Fournier had 16 points and 10 rebounds as No. 5 Duke rolled past previously unbeaten Marshall 88-51 on Sunday.",
+   "published": "2026-11-15T17:34-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/toby.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/basketball/article/canadas-toby-fournier-leads-no-5-duke-to-rout-of-marshall/",
    "source": "Sportsnet"
   },
   {
@@ -1925,19 +1938,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Capitals’ Ryan Leonard fined for high sticking Devils’ Cody Glass",
-   "summary": "",
-   "published": "2026-11-15T12:09-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/12/CP175271131.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/capitals-ryan-leonard-fined-for-high-sticking-devils-cody-glass/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "other",
    "headline": "Three Canadians added to UFC 336 card in Toronto",
    "summary": "",
@@ -1948,6 +1948,32 @@
    "sn_team_count": 0,
    "sport": "MMA",
    "url": "https://www.sportsnet.ca/ufc/article/three-canadians-added-to-ufc-336-card-in-toronto/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Avalanche claim defenceman Mike Reilly off waivers from Hurricanes",
+   "summary": "",
+   "published": "2026-11-15T14:24-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/mike-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/avalanche-claim-defenceman-mike-reilly-off-waivers-from-hurricanes/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Capitals’ Ryan Leonard fined for high sticking Devils’ Cody Glass",
+   "summary": "",
+   "published": "2026-11-15T12:09-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/12/CP175271131.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/capitals-ryan-leonard-fined-for-high-sticking-devils-cody-glass/",
    "source": "Sportsnet"
   },
   {
@@ -2032,19 +2058,6 @@
   },
   {
    "league": "other",
-   "headline": "UFC 334 Takeaways: Ciryl Gane defends heavyweight title over Josh Hokit",
-   "summary": "The 13-fight card featured some highs and some lows, and we’re here to go over all of the big moments of the card with our UFC 334 post-fight takeaways.",
-   "published": "2026-11-15T00:56-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Gane.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/ciryl-gane-defends-heavyweight-title-over-josh-hokit-at-ufc-334/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
    "headline": "Maltais wins two bronze medals at speedskating World Cup season opener",
    "summary": "",
    "published": "2026-11-15T12:16-05:00",
@@ -2080,6 +2093,19 @@
    "sn_team_count": 0,
    "sport": "Golf",
    "url": "https://www.sportsnet.ca/pga/article/mcilroy-captures-record-tying-eighth-season-long-european-tour-title/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Harrison taps out Nunes to retain title in co-main event of UFC 334",
+   "summary": "",
+   "published": "2026-11-15T00:54-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Harrison.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "MMA",
+   "url": "https://www.sportsnet.ca/ufc/article/harrison-taps-out-nunes-to-retain-title-in-co-main-event-of-ufc-334/",
    "source": "Sportsnet"
   },
   {
@@ -2991,14 +3017,26 @@
      {
       "name": "Sudbury Wolves",
       "abbr": "SBY",
-      "gp": 20,
+      "gp": 21,
       "w": 14,
-      "l": 5,
+      "l": 6,
       "otl": 1,
       "pts": 29,
       "gf": 82,
       "ga": 59,
-      "strk": "W3"
+      "strk": "L1"
+     },
+     {
+      "name": "North Bay Battalion",
+      "abbr": "NB",
+      "gp": 21,
+      "w": 9,
+      "l": 11,
+      "otl": 1,
+      "pts": 19,
+      "gf": 74,
+      "ga": 81,
+      "strk": "W2"
      },
      {
       "name": "Niagara IceDogs",
@@ -3011,18 +3049,6 @@
       "gf": 59,
       "ga": 79,
       "strk": "L1"
-     },
-     {
-      "name": "North Bay Battalion",
-      "abbr": "NB",
-      "gp": 20,
-      "w": 8,
-      "l": 11,
-      "otl": 1,
-      "pts": 17,
-      "gf": 74,
-      "ga": 81,
-      "strk": "W1"
      },
      {
       "name": "Brampton Steelheads",
@@ -3390,7 +3416,7 @@
       "l": 5,
       "otl": 2,
       "pts": 36,
-      "gf": 129,
+      "gf": 130,
       "ga": 73,
       "strk": "W7"
      },
@@ -3475,7 +3501,7 @@
       "otl": 1,
       "pts": 13,
       "gf": 62,
-      "ga": 99,
+      "ga": 100,
       "strk": "L6"
      }
     ]
