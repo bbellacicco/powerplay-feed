@@ -487,7 +487,7 @@ document.addEventListener('load', function (e) {
   // ---------- rows ----------
   var ROWS = [
     { key: 'stories', title: 'What\u2019s New', gold: 'New', by: ['St. Clair College Alumni', 'logos/st-clair-alumni.png'], all: LINK.local, tab: 'stories' },
-    { key: 'network', title: 'Powerplay Network', by: ['Maple Leaf Pro Wrestling', 'https://static.wixstatic.com/media/0be2db_9da56760ff7c49b798008220ba008a1a~mv2.jpg/v1/fit/w_200,h_200,q_90/mlp-pro-wrestling.jpg'], all: LINK.network, tab: 'network' },
+    { key: 'spitfires', title: 'Windsor Spitfires', gold: 'Spitfires', by: null, all: SITE + 'scores-standings?find=spitfires', tab: null },
     { key: 'photos', title: 'Game Day Snaps', gold: 'Snaps', by: null, all: null, tab: null },
     { key: 'athletes', title: 'Athlete profiles', by: null, all: LINK.athletes, tab: 'athletes' },
     { key: 'lancers', title: 'Lancers Lounge', gold: 'Lounge', by: null, all: SITE + 'headlines/categories/lancers-lounge', tab: null, share: SITE + 'scores-standings?strip=lancers' },
@@ -1246,15 +1246,13 @@ document.addEventListener('load', function (e) {
       // the story that just left the big box leads Latest Stories, so it stays up front a while longer
       var lastTop = featItems[1] && !featItems[1].snaps && !featUrls[featItems[1].url] ? featItems[1] : null;
       // only Powerplay's own stories here: team news goes to Lancers Lounge, Saints Nation, High School Huddle and Junior Hockey
-      // What's New: Powerplay's stories, plus Spitfires news (trades, signings, announcements) but never their videos or game stories and scores
-      var SPITS_GAME = /game story|game recap|recap|post-?game|highlights|preview|game day|gameday|\bvs\.? /i;
-      var spitsNews = function (s) { return s.team === 'spitfires' && !isVid(s) && !SPITS_GAME.test(s.headline || '') && (/ohl-spitfires/i.test(s.url) || /spitfires/i.test(s.headline || '')); };   // the club's own news, not alumni or league roundups
-      var rowStories = stories.filter(function (s) { return (s.team === 'powerplay' || spitsNews(s)) && !isVid(s) && !featUrls[s.url] && (!lastTop || s.url !== lastTop.url); });
-      if (lastTop && lastTop.team === 'powerplay') rowStories.unshift(lastTop);
-      fill('stories', rowStories.slice(0, 15).map(function (s) {
-        var who = s.team === 'junior' || s.team === 'powerplay' ? s.club || TEAM[s.team] : TEAM[s.team] + (s.sport ? ' · ' + s.sport : '');
-        return storyCard(s, { tag: TEAM[s.team] === 'Powerplay' ? 'Powerplay' : (s.team === 'junior' ? (s.club || 'Junior') : TEAM[s.team]), sub: who + ' · ' + ago(s.published), tile: s.team === 'junior' ? (s.club || '').replace(/^(Windsor|St\. Clair)\s+/, '') : null });
-      }), 'Stories are on the way.');
+      // What's New: everything Powerplay makes (stories, quick posts and videos), newest first. Anything about the
+      // Spitfires goes to the Windsor Spitfires strip instead.
+      var SPITS_RX = /spitfires|\bspits\b/i;
+      var aboutSpits = function (x) { return x.team === 'spitfires' || SPITS_RX.test(' ' + x.headline + ' ' + (x.summary || '') + ' '); };
+      var rowStories = stories.filter(function (s) { return s.team === 'powerplay' && !isVid(s) && !aboutSpits(s) && !featUrls[s.url] && (!lastTop || s.url !== lastTop.url); });
+      var leadStory = lastTop && lastTop.team === 'powerplay' && !aboutSpits(lastTop) ? lastTop : null;   // just left the big box: stays up front a while longer
+      var storyNode = function (s) { return storyCard(s, { tag: 'Powerplay', sub: (s.club || 'Powerplay') + ' · ' + ago(s.published) }); };
       // a shared quick post (?post=<id>, passed on by the Local Hub): it opens as soon as the page loads
       if (WANT_POST && !postOpened) {
         var wp = stories.filter(function (s) { return s.post === WANT_POST; })[0];
@@ -1289,8 +1287,13 @@ document.addEventListener('load', function (e) {
       var haveV2 = {}; vids.forEach(function (v) { haveV2[vidId(v.url)] = 1; });
       (net.local || []).forEach(function (v) { if (!haveV2[vidId(v.u)]) vids.push({ headline: v.t, url: v.u, image: v.i, published: v.p.length === 10 ? v.p + 'T00:00:00' : v.p, source: v.s, video: true }); });
       vids = vids.sort(function (a, b) { return new Date(b.published) - new Date(a.published); })
-        .filter(function (v) { var k = v.headline.toLowerCase().replace(/[^a-z0-9]+/g, ''), id = vidId(v.url); if (seenV[k] || seenV[id]) return false; seenV[k] = seenV[id] = 1; return true; }).slice(0, 15);
-      fill('network', vids.map(function (v) { return storyCard(v, { play: true, sub: (v.source || 'Video') + ' · ' + ago(v.published), tile: 'Powerplay' }); }), 'Videos are on the way.');
+        .filter(function (v) { var k = v.headline.toLowerCase().replace(/[^a-z0-9]+/g, ''), id = vidId(v.url); if (seenV[k] || seenV[id]) return false; seenV[k] = seenV[id] = 1; return true; });
+      var ppVidsRow = vids.filter(function (v) { return (!v.team || v.team === 'powerplay') && !aboutSpits(v); });
+      var newsCards = rowStories.map(function (s) { return { t: new Date(s.published).getTime(), node: storyNode(s) }; })
+        .concat(ppVidsRow.map(function (v) { return { t: new Date(v.published).getTime(), node: storyCard(v, { play: true, sub: (v.source || 'Video') + ' · ' + ago(v.published), tile: 'Powerplay' }) }; }))
+        .sort(function (a, b) { return b.t - a.t; }).slice(0, 24).map(function (x) { return x.node; });
+      if (leadStory) newsCards.unshift(storyNode(leadStory));
+      fill('stories', newsCards, 'Stories are on the way.');
       // Lancers Lounge, Saints Nation, High School Huddle: every story and video about them, newest first
       // (the team's own news, Powerplay posts and Powerplay videos). Students' Lancers Lounge posts land here too.
       var allV = stories.filter(isVid).slice(), haveV3 = {};
@@ -1299,6 +1302,21 @@ document.addEventListener('load', function (e) {
       // the OHL's Spitfires game highlights (from its YouTube channel) go in Junior Hockey
       (net.pro || []).forEach(function (v) { if (v.sp && v.u && !haveV3[vidId(v.u)]) { haveV3[vidId(v.u)] = 1; allV.push({ headline: 'Highlights: ' + v.t.replace(/^OHL Highlights:\s*/i, '').replace(/\s+@\s+/, ' at ').replace(/\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2}(st|nd|rd|th)?,?\s+\d{4}\s*$/i, ''), url: v.u, image: v.i, published: v.p, source: 'OHL', video: true, team: 'spitfires' }); } });
       var pool = stories.filter(function (s) { return !isVid(s); }).concat(allV);
+      // Windsor Spitfires: everything about them, newest first: the club's news, game stories and OHL highlights,
+      // plus Powerplay's own Spitfires stories, videos and Game Day Snaps
+      var seenS = {};
+      var spItems = pool.filter(function (x) { return x.team === 'spitfires' || ((x.team === 'powerplay' || x.video || isVid(x)) && SPITS_RX.test(' ' + x.headline + ' ' + (x.summary || '') + ' ')); })
+        .filter(function (x) { var k = isVid(x) || x.video ? vidId(x.url) : x.url; if (seenS[k]) return false; seenS[k] = 1; return true; });
+      var spCards = spItems.map(function (x) {
+        var v = isVid(x) || x.video, pp = x.team === 'powerplay';
+        return { t: new Date(x.published).getTime(), node: storyCard(x, v ? { play: true, tag: 'Video', sub: (x.source || 'Video') + ' \u00b7 ' + ago(x.published), tile: 'Spitfires' }
+          : { tag: pp ? 'Powerplay' : 'Spitfires', sub: (pp ? 'Powerplay Windsor' : 'Windsor Spitfires') + ' \u00b7 ' + ago(x.published), tile: 'Spitfires' }) };
+      }).concat(shows.filter(function (sh) { return SPITS_RX.test(' ' + sh.title + ' ' + (sh.desc || '') + ' '); }).slice(0, 4).map(function (sh) {
+        var c = storyCard({ headline: sh.title, url: sh.url, image: sh.cover, published: sh.posted || sh.date + 'T12:00:00', team: 'powerplay' }, { tag: 'Game Day Snaps', sub: 'Game Day Snaps \u00b7 ' + ago(sh.posted || sh.date + 'T12:00:00'), tile: 'Spitfires' });
+        c.onclick = function (e) { e.preventDefault(); playShow(sh); };
+        return { t: new Date(sh.posted || sh.date + 'T12:00:00').getTime(), node: c };
+      })).sort(function (a, b) { return b.t - a.t; }).slice(0, 20).map(function (x) { return x.node; });
+      fill('spitfires', spCards, 'Spitfires stories are on the way.');
       [['lancers', 'Lancers', THEME.lancers, 'Lancers Lounge stories are on the way.'],
        ['saints', 'Saints', THEME.saints, 'Saints Nation stories are on the way.'],
        ['hs', 'High school', THEME.highschool, 'High school stories are on the way.'],
