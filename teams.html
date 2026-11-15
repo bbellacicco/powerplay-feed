@@ -132,11 +132,11 @@
     /* phones: the title and every league button on one slim line */
     .bar { padding: 7px 8px; flex-wrap: nowrap; overflow: hidden; gap: 4px; }
     .bar .lbl { font-size: 15px; line-height: .95; margin: 0 2px 0 0; width: 42px; white-space: normal; }
-    .bar .lb { flex: 1 1 auto; min-width: 0; font-size: 12px; padding: 6px 3px; min-height: 32px; text-align: center; }
+    .bar .lb { flex: 1 1 auto; min-width: 0; font-family: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif; font-weight: 400; font-size: clamp(13.5px, 4.1vw, 16px); letter-spacing: .04em; line-height: 1; padding: 7px 5px 6px; min-height: 32px; text-align: center; }
     .bar .lfull { display: none; } .bar .lshort { display: inline; }
   }
   @media (max-width: 350px) {
-    .bar { gap: 3px; padding: 7px 5px; } .bar .lbl { width: 36px; font-size: 13.5px; } .bar .lb { font-size: 10.5px; padding: 6px 2px; }
+    .bar { gap: 3px; padding: 7px 5px; } .bar .lbl { width: 36px; font-size: 13.5px; } .bar .lb { font-size: 13.5px; padding: 7px 3px 6px; }
     .g { grid-template-columns: 76px minmax(0, 1fr) auto !important; }
     .mgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .drop { padding: 8px 12px 10px; } html.barmode .team { padding: 10px 12px 12px; }
     .grid2 { grid-template-columns: minmax(0, 1fr); }
