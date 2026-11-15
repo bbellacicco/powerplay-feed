@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T10:16:48-05:00",
+ "updated": "2026-11-15T10:50:48-05:00",
  "today": "2026-11-15",
  "range": [
   "2026-11-12",
@@ -593,7 +593,7 @@
    "location": "Toldo Lancer Centre",
    "status": "final",
    "our_score": 3,
-   "opp_score": 1,
+   "opp_score": 2,
    "result": "W",
    "note": "",
    "links": {}
@@ -759,10 +759,10 @@
    "home_away": "N",
    "opponent": "Carleton Ravens",
    "location": "Guelph, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 1,
+   "opp_score": 9,
+   "result": "L",
    "note": "Guelph Invitational - Women",
    "links": {}
   },
@@ -775,10 +775,10 @@
    "home_away": "N",
    "opponent": "Trent Excalibur",
    "location": "Guelph, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 9,
+   "result": "L",
    "note": "Guelph Invitational - Men",
    "links": {}
   },
@@ -1695,6 +1695,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nfl",
+   "headline": "Patriots’ Maye out with injury after play also hurting Lions’ Hutchinson",
+   "summary": "",
+   "published": "2026-11-15T10:46-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/maye_drake1280.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Lions"
+   ],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/patriots-drake-maye-out-with-injury-from-same-play-that-hurt-lions-aidan-hutchinson/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "UFC 334 Takeaways: Ciryl Gane defends heavyweight title over Josh Hokit",
    "summary": "The 13-fight card featured some highs and some lows, and we’re here to go over all of the big moments of the card with our UFC 334 post-fight takeaways.",
@@ -1744,19 +1759,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/oilers-mcdavid-hits-50-points-sets-personal-best-point-streak/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Flyers’ Briere, Jones tell Michkov he’s staying",
-   "summary": "Despite some apparent bench spats with his teammates this past week and a circulating report about an interest in a change of scenery, the Philadelphia Flyers remain locked in on Matvei Michkov.",
-   "published": "2026-11-14T21:45-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Michkov-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/flyers-briere-jones-tell-michkov-hes-staying/",
    "source": "Sportsnet"
   },
   {
@@ -1835,6 +1837,19 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/giroux-stutzle-score-as-senators-top-penguins/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Flyers’ Briere, Jones tell Michkov he’s staying",
+   "summary": "Despite some apparent bench spats with his teammates this past week and a circulating report about an interest in a change of scenery, the Philadelphia Flyers remain locked in on Matvei Michkov.",
+   "published": "2026-11-14T21:45-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Michkov-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/flyers-briere-jones-tell-michkov-hes-staying/",
    "source": "Sportsnet"
   },
   {
@@ -2062,19 +2077,6 @@
    "sn_team_count": 0,
    "sport": "Tennis",
    "url": "https://www.sportsnet.ca/wta/article/dabrowski-stefani-suffer-semifinal-setback-at-wta-finals/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Canada captain Alphonso Davies out for second leg against Guatemala",
-   "summary": "",
-   "published": "2026-11-14T12:22-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/07/davies-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/soccer/article/canada-captain-alphonso-davies-out-for-second-leg-against-guatemala/",
    "source": "Sportsnet"
   },
   {
