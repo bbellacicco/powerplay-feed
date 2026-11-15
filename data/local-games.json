@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T11:18:39-05:00",
+ "updated": "2026-11-15T11:32:25-05:00",
  "today": "2026-11-15",
  "range": [
   "2026-11-12",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -380,7 +380,8 @@
    "result": "W",
    "note": "25-18, 25-23, 25-20",
    "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6246"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6246",
+    "recap": "https://golancers.ca/news/2026/11/15/womens-volleyball-lancers-open-home-schedule-with-weekend-sweep-over-mcmaster.aspx"
    }
   },
   {
@@ -597,7 +598,8 @@
    "result": "W",
    "note": "18-25, 25-14, 25-17, 24-26, 15-12",
    "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6247"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6247",
+    "recap": "https://golancers.ca/news/2026/11/15/womens-volleyball-lancers-open-home-schedule-with-weekend-sweep-over-mcmaster.aspx"
    }
   },
   {
@@ -1733,6 +1735,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nfl",
+   "headline": "Report: Buccaneers’ Baker Mayfield uncertain for Week 11 with leg injury",
+   "summary": "",
+   "published": "2026-11-15T11:17-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/11/baker.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/report-buccaneers-baker-mayfield-uncertain-for-week-11-with-leg-injury/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Flames takeaways: Wolf does best Quick impression in win over Kings",
    "summary": "Dustin Wolf did his best Jonathan Quick impression to lead the Flames over the Kings. Eric Francis details Wolf’s player-of-the-game performance and more in his takeaways from Saturday’s win.",
@@ -1785,19 +1800,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Tkachuk brothers power Panthers to win after Hall of Fame father honoured by Blues",
-   "summary": "",
-   "published": "2026-11-14T22:03-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Tkachuk.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/tkachuk-brothers-power-panthers-to-win-after-hall-of-fame-father-honoured-by-blues/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "cfl",
    "headline": "Keys to victory: How Alouettes can beat Elks in Grey Cup",
    "summary": "After falling short against the Saskatchewan Roughriders in last year’s Grey Cup, the Alouettes are back with a chance at redemption on Sunday. Here’s what the Als must do to top the Edmonton Elks in the title tilt.",
@@ -1834,6 +1836,19 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/cfl/article/grey-cup-matchup-brings-plenty-of-history-for-alouettes-gm-coach/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Tkachuk brothers power Panthers to win after Hall of Fame father honoured by Blues",
+   "summary": "",
+   "published": "2026-11-14T22:03-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Tkachuk.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/tkachuk-brothers-power-panthers-to-win-after-hall-of-fame-father-honoured-by-blues/",
    "source": "Sportsnet"
   },
   {
