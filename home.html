@@ -1291,6 +1291,13 @@ document.addEventListener('load', function (e) {
       var ppVidsRow = vids.filter(function (v) { return (!v.team || v.team === 'powerplay') && !aboutSpits(v); });
       var newsCards = rowStories.map(function (s) { return { t: new Date(s.published).getTime(), node: storyNode(s) }; })
         .concat(ppVidsRow.map(function (v) { return { t: new Date(v.published).getTime(), node: storyCard(v, { play: true, sub: (v.source || 'Video') + ' · ' + ago(v.published), tile: 'Powerplay' }) }; }))
+        .concat(((r[7] && r[7].slideshows) || []).filter(function (sh) { return !featUrls[sh.url] && !SPITS_RX.test(' ' + sh.title + ' ' + (sh.desc || '') + ' '); }).slice(0, 8).map(function (sh) {
+          // Game Day Snaps: new and relevant, so they're in What's New too (tap one and it plays right here)
+          var when = sh.posted || sh.date + 'T12:00:00';
+          var c = storyCard({ headline: sh.title, url: sh.url, image: sh.cover, published: when, team: 'powerplay' }, { tag: 'Game Day Snaps', sub: 'Game Day Snaps \u00b7 ' + ago(when), tile: 'Snaps' });
+          c.onclick = function (e) { e.preventDefault(); playShow(sh); };
+          return { t: new Date(when).getTime(), node: c };
+        }))
         .sort(function (a, b) { return b.t - a.t; }).slice(0, 24).map(function (x) { return x.node; });
       if (leadStory) newsCards.unshift(storyNode(leadStory));
       fill('stories', newsCards, 'Stories are on the way.');
