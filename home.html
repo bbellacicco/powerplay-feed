@@ -154,22 +154,26 @@
   .minute .mspon img { height: 22px; width: 22px; border-radius: 50%; background: #fff; object-fit: contain; }
   /* phones: everything centred, and the sponsor gets room for its full name */
   @media (max-width: 700px) {
-    /* one line: Listen now · time · Share; then the title, the bar and the date/sponsor, all centred */
+    /* line 1: a small Listen now on the left, the time and Share on the right; then the title, the bar, and the date and sponsor on one line */
     .minute .mbody { flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center; text-align: center; column-gap: 10px; }
     .minute .mtop { display: contents; }
-    .minute .mtag { order: 1; align-self: center; font-size: 10px; letter-spacing: .08em; padding: 3px 7px; gap: 5px; }
-    .minute .mright { order: 2; gap: 8px; }
+    .minute .mtag { order: 1; align-self: center; font-size: 9px; letter-spacing: .07em; padding: 2px 6px; gap: 4px; flex: none; }
+    .minute .mtag .meq { height: 9px; } .minute .mtag .meq b { width: 2px; }
+    .minute .mbody .mright { order: 2; gap: 6px; margin-left: auto; flex: none; }
+    .minute .mright .mtime { font-size: 11px; }
+    .minute .mright .pps-btn { padding: 3px 8px 3px 7px; font-size: 11px; gap: 4px; } .minute .mright .pps-btn svg { width: 11px; height: 11px; }
     .minute .mtop h2 { order: 3; width: 100%; }
     .minute .mbar { order: 4; width: 100%; }
-    .minute .msub { order: 5; width: 100%; }
+    .minute .mbody .msub { order: 5; width: 100%; justify-content: center; flex-wrap: nowrap; gap: 6px; white-space: nowrap; font-size: 10.5px; overflow: hidden; }
+    .minute .msub #mdate::after { content: '\00b7'; margin-left: 6px; color: #8fa0c2; }
+    .minute .msub .dlong, .minute .msub .pby { display: none; }
+    .minute .mspon { gap: 4px; }
+    .minute .mspon img { height: 16px; width: 16px; flex: none; }
   }
   @media (max-width: 350px) {
-    .minute .mright .pps-btn span { display: none; } .minute .mright .pps-btn { padding: 5px 7px; }
+    .minute .mright .pps-btn span { display: none; } .minute .mright .pps-btn { padding: 4px 6px; }
     .minute .mtop h2, #minute .mtop h2 { font-size: 19px; white-space: nowrap; }
-    .minute .msub { justify-content: center; flex-wrap: wrap; gap: 3px 8px; white-space: nowrap; }
-    .minute .msub .dlong, .minute .msub .pby { display: none; }
-    .minute .mspon { gap: 5px; }
-    .minute .mspon img { height: 18px; width: 18px; flex: none; }
+    .minute .mbody .msub { font-size: 10px; gap: 4px; }
   }
   .minute .mbar { position: relative; height: 7px; border-radius: 4px; background: rgba(255,255,255,.16); cursor: pointer; }
   .minute .mbar i { position: absolute; left: 0; top: 0; bottom: 0; width: 0; border-radius: 4px; background: var(--accent); }
@@ -718,6 +722,7 @@ document.addEventListener('load', function (e) {
     for (k in PJHL_LOGOS) if (n.indexOf(k) >= 0) return 'https://imagedelivery.net/ErrQpIaCOWR-Tz51PhN1zA/' + PJHL_LOGOS[k] + '/256';
     return '';
   }
+  var PIN_HEADS = [];   // featured.txt "headline:" lines: pinned first in the pro Headlines until their time
   function pickHeads(stories, lg, used, drop) {
     var out = [], seenTeam = {}, recent = Date.now() - 4 * 86400e3;
     // local: newest written stories, two different teams.
@@ -738,7 +743,8 @@ document.addEventListener('load', function (e) {
       return out.length >= 2;
     });
     // the story that just dropped out of the big box falls into Headlines (second slot) for its first 3 hours there
-    var ppHead = function (pp) { return { url: pp.url, headline: pp.snaps ? pp.snaps.title : pp.headline, tag: (pp.snaps ? 'Game Day Snaps' : storyCat(pp, 'Local')) + ' \u00b7 Powerplay', col: '#e8b021', local: true, logo: headLogo('powerplay'), abbr: 'Powerplay', published: pp.published }; };
+    var ppHead = function (pp) { if (pp.outside) return { url: pp.url, headline: pp.headline, tag: pp.kick || 'Pro', col: LEAGUE_COL.nfl, local: false, logo: ESPN_TEAM[(pp.kick || '').split(' \u00b7 ').pop()] ? 'https://a.espncdn.com/i/teamlogos/' + ESPN_TEAM[(pp.kick || '').split(' \u00b7 ').pop()] + '.png' : '', abbr: (pp.kick || 'Pro').split(' \u00b7 ').pop(), published: pp.published };
+      return { url: pp.url, headline: pp.snaps ? pp.snaps.title : pp.headline, tag: (pp.snaps ? 'Game Day Snaps' : storyCat(pp, 'Local')) + ' \u00b7 Powerplay', col: '#e8b021', local: true, logo: headLogo('powerplay'), abbr: 'Powerplay', published: pp.published }; };
     var dropped = drop && Date.now() - drop.at < 3 * 3600e3 && !used[drop.story.url] ? drop.story : null;
     if (dropped && out.some(function (o) { return o.url === dropped.url; })) dropped = null;   // already up there
     if (dropped && out.length) { out.splice(1); out.push(ppHead(dropped)); }
@@ -758,7 +764,9 @@ document.addEventListener('load', function (e) {
     // the national headlines rotate every 30 minutes through the latest stories, so they never sit for hours
     var turn = Math.floor(Date.now() / (30 * 60000));
     var oursPool = pro.filter(function (x) { return fanTeam(x) && new Date(x.published).getTime() > fresh; }).slice(0, 6);
-    if (oursPool.length) { var ours = oursPool[turn % oursPool.length]; out.push(proItem(ours, fanTeam(ours))); got++; }
+    var pin = PIN_HEADS[0];
+    if (pin) { out.push(proItem({ url: pin.url, headline: pin.headline, league: pin.league || 'nfl' }, pin.team || '')); got++; }
+    else if (oursPool.length) { var ours = oursPool[turn % oursPool.length]; out.push(proItem(ours, fanTeam(ours))); got++; }
     var bigPool = pro.filter(function (x) {
       return /^(nhl|nfl|mlb|nba)$/.test(x.league) && new Date(x.published).getTime() > Date.now() - 24 * 3600e3 && !(oursPool.length && oursPool.indexOf(x) >= 0);
     }).slice(0, 8);
@@ -805,7 +813,7 @@ document.addEventListener('load', function (e) {
     }
     // share buttons on the top boxes: through a powerplaywindsor.com address (story landing, slideshow page or the video in the Network)
     function feedShare(f) {
-      if (!window.PPShare) return null;
+      if (!window.PPShare || f.outside) return null;   // a story from another site: no Powerplay share link
       var vk = f.isVideo ? vkey(f.url).replace(':', '-') : '';
       var b = f.isVideo ? PPShare.button({ title: f.headline, url: SITE + 'scores-standings?tab=network&v=' + encodeURIComponent(vk), text: f.headline + ' | Powerplay Network', image: f.image || '' })
         : f.snaps ? PPShare.button({ title: f.snaps.title, url: f.snaps.url, text: f.snaps.title + ' | Powerplay Windsor', image: f.snaps.cover })
@@ -1178,6 +1186,9 @@ document.addEventListener('load', function (e) {
       var allFeat = featItems.slice(), drop = null;   // newest first, before any scheduled story is moved up
       if (sched) {
         var pick = stories.filter(function (s) { return key(s.url) === key(sched.url) && s.image; })[0];
+        // a story from another site (featured.txt line with its own headline and picture, e.g. a Lions recap)
+        if (!pick && sched.headline && sched.image) pick = { headline: sched.headline, url: sched.url, image: sched.image, summary: sched.summary || '',
+          published: sched.from, team: 'pro', kick: sched.kick || 'Pro', isVideo: !!vidEmbed(sched.url), outside: true };
         var newer = featItems.some(function (s) { return new Date(s.published) > new Date(sched.from) && key(s.url) !== key(sched.url); });
         if (pick && !newer) {
           featItems = [pick].concat(featItems.filter(function (s) { return key(s.url) !== key(sched.url); }));
@@ -1222,6 +1233,7 @@ document.addEventListener('load', function (e) {
       top = top.slice(0, 3);
       var topVid = top.filter(function (s) { return s.isVideo; })[0] || null;
       var usedTop = {}; top.slice(0, 2).forEach(function (s) { if (!s.isVideo) usedTop[s.url] = 1; });
+      PIN_HEADS = ((r[8] && r[8].heads) || []).filter(function (h) { return h.url && h.headline && new Date(h.until).getTime() > Date.now() && !usedTop[h.url]; });
       var heads = pickHeads(stories, lg, usedTop, drop);
       // a slideshow marked "box: no" goes straight to the top of Headlines for its first two days
       var noBox = ((r[7] && r[7].slideshows) || []).filter(function (sh) { return sh.nobox && sh.posted && Date.now() - new Date(sh.posted).getTime() < 48 * 3600e3; })[0];
