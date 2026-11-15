@@ -106,6 +106,7 @@
   .bar .lb { flex: none; font: inherit; font-size: 13.5px; font-weight: 800; color: var(--text); background: var(--card2); border: 1px solid rgba(255,255,255,.14); border-radius: 999px; padding: 8px 13px; cursor: pointer; white-space: nowrap; min-height: 38px; }
   .bar .lb:hover { border-color: var(--accent); }
   .bar .lshort { display: none; }
+  .bar .prow { display: none; }
   .bar .lb.on { background: #fff; color: #0b1a33; border-color: #fff; }
   .bar .lb svg { width: 15px; height: 15px; stroke: currentColor; vertical-align: -3px; }
   .drop { padding: 10px 16px 12px; border-bottom: 1px solid var(--line); background: #0d1f40; }
@@ -129,19 +130,20 @@
   .closebar.bottom .back { border: 1px solid rgba(232,176,33,.6); border-radius: 999px; padding: 9px 22px; }
   @media (max-width: 760px) {
     .page { padding: 14px 12px 20px; } h1 { font-size: 32px; }
-    /* phones: the title and every league button on one slim line */
-    .bar { padding: 7px 8px; flex-wrap: nowrap; overflow: hidden; gap: 4px; }
-    .bar .lbl { font-size: 15px; line-height: .95; margin: 0 2px 0 0; width: 42px; white-space: normal; }
-    .bar .lb { flex: 1 1 auto; min-width: 0; font-family: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif; font-weight: 400; font-size: clamp(13.5px, 4.1vw, 16px); letter-spacing: .04em; line-height: 1; padding: 7px 5px 6px; min-height: 32px; text-align: center; }
-    .bar .lfull { display: none; } .bar .lshort { display: inline; }
-  }
-  @media (max-width: 350px) {
-    .bar { gap: 3px; padding: 7px 5px; } .bar .lbl { width: 36px; font-size: 13.5px; } .bar .lb { font-size: 13.5px; padding: 7px 3px 6px; }
     .g { grid-template-columns: 76px minmax(0, 1fr) auto !important; }
     .mgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .drop { padding: 8px 12px 10px; } html.barmode .team { padding: 10px 12px 12px; }
     .grid2 { grid-template-columns: minmax(0, 1fr); }
     .leagues { grid-template-columns: minmax(0, 1fr); }
     .g { grid-template-columns: 64px minmax(0, 1fr) auto; }
+    /* phones: no title; local teams on the top row, pro leagues underneath, all square-cornered buttons spread evenly */
+    .bar { display: grid; grid-template-columns: 1.05fr 1fr .85fr .95fr 1.3fr; gap: 5px; padding: 7px 8px; overflow: visible; }
+    .bar .lbl { display: none; }
+    .bar .lb, .bar .pl { min-width: 0; font-family: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif; font-weight: 400; font-size: clamp(14px, 4.2vw, 17px); letter-spacing: .04em; line-height: 1;
+      padding: 8px 2px 7px; min-height: 32px; text-align: center; border-radius: 5px; white-space: nowrap; overflow: hidden; }
+    .bar .lfull { display: none; } .bar .lshort { display: inline; }
+    .bar .prow { display: grid; grid-column: 1 / -1; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 5px; }
+    .bar .pl { display: block; color: #c3cde2; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); text-decoration: none; font-size: clamp(13px, 3.9vw, 16px); padding: 7px 2px 6px; min-height: 28px; }
+    .bar .pl:active, .bar .pl:hover { border-color: var(--accent); color: #fff; }
   }
 </style>
 </head>
@@ -360,6 +362,13 @@
       };
       bar.appendChild(b);
     });
+    // phones (homepage only, ?pro=1): a second row straight to each pro league on the Pro Hub
+    if (qs.get('pro') === '1') {
+      var pr = el('div', 'prow');
+      [['nhl', 'NHL'], ['nfl', 'NFL'], ['nba', 'NBA'], ['mlb', 'MLB'], ['cfl', 'CFL'], ['pwhl', 'PWHL']].forEach(function (p) {
+        var a = el('a', 'pl', p[1]); a.href = 'https://www.powerplaywindsor.com/local-sports?tab=scores&league=' + p[0]; a.target = '_top'; pr.appendChild(a); });
+      bar.appendChild(pr);
+    }
     drawDrop();
   }
   function markBar() { var open = document.getElementById('team').dataset.id;
