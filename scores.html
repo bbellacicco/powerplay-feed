@@ -56,6 +56,10 @@
   #minuteframe { margin: 12px 0 0; padding: 0 40px; }
   @media (max-width: 700px) { #minuteframe { padding: 0 12px; } }
   html.mplaying body > *:not(#minuteframe) { filter: blur(6px) brightness(.6); pointer-events: none; }
+  /* a shared link: the shared item comes first and stays sharp; the rest of the Local Hub blurs until a tap */
+  html.ppfocus #guide, html.ppfocus #top, html.ppfocus #teambar:not(.focal), html.ppfocus .pane > :not(.focal) { filter: blur(6px) brightness(.55); cursor: pointer; }
+  html.ppfocus #guide *, html.ppfocus #top *, html.ppfocus #teambar:not(.focal), html.ppfocus .pane > :not(.focal) { pointer-events: none; }
+  #guide, #top, #teambar, .pane > * { transition: filter .3s; }
   body > * { transition: filter .3s; }
 </style>
 </head>
@@ -117,6 +121,23 @@
   var LEAGUE = (new URLSearchParams(location.search).get('league') || '').toLowerCase().replace(/[^a-z]/g, '');   // a league's list (from the blog strip)
   if (FIND || /^(lancers|saints|junior|hs)$/.test(LEAGUE)) { var tbf = document.getElementById('teambar'); tbf.style.display = 'block';
     tbf.src = REPO + 'teams.html' + V + '&view=bar&in=sports&title=Local%20Teams' + (FIND ? '&find=' + FIND : '&league=' + LEAGUE); }
+  // a shared link to one thing (a quick post, a story, a video, an athlete, a team): it goes first, right at the top,
+  // with the sports guide and the section switch moved underneath and the rest blurred until the visitor taps
+  var DEEP = POST ? 'home.html' : STORY ? 'local-news.html' : PLAY ? 'play' : PROFILE ? 'athletes.html' : FIND ? 'find' : '';
+  var H = document.documentElement;
+  function unfocus() {
+    if (!H.classList.contains('ppfocus')) return;
+    H.classList.remove('ppfocus');
+    [].forEach.call(document.querySelectorAll('iframe'), function (f) { try { f.contentWindow.postMessage({ pp: 'unfocus' }, '*'); } catch (e) {} });
+  }
+  if (DEEP) {
+    H.classList.add('ppfocus');
+    if (DEEP === 'find') document.getElementById('teambar').classList.add('focal');
+    else { var pn = document.getElementById('panes'); pn.parentNode.insertBefore(pn, document.getElementById('guide')); pn.parentNode.insertBefore(document.getElementById('top'), document.getElementById('guide')); }
+    document.addEventListener('click', function (e) { if (H.classList.contains('ppfocus')) { e.preventDefault(); e.stopPropagation(); unfocus(); } }, true);
+    window.addEventListener('message', function (e) { if (e.data && e.data.pp === 'unfocus') unfocus(); });
+    setTimeout(unfocus, 120000);   // never leaves the page blurred for good
+  }
   var gs = document.createElement('script'); gs.src = REPO + 'guide.js?v=' + Math.floor(Date.now() / 6e5);
   gs.onload = function () { if (window.PPGuide) PPGuide.render(document.getElementById('guide'), { target: '_top' }); };
   document.body.appendChild(gs);
@@ -128,6 +149,8 @@
       PARTS[tab].forEach(function (w) {
         var f = document.createElement('iframe');
         f.src = REPO + w[0] + V + w[3] + ((tab === 'network' || tab === 'spotlight') && PLAY ? '&play=' + encodeURIComponent(PLAY) : '') + (tab === 'athletes' && PROFILE ? '&p=' + PROFILE : '') + (tab === 'stories' && STORY && w[0] === 'local-news.html' ? '&story=' + STORY + (TEAM ? '&tab=' + TEAM : '') : '') + (tab === 'stories' && POST && w[0] === 'home.html' ? '&post=' + POST : '') + '&in=sports'; f.title = w[0].replace(/[_.].*$/, '');
+        var isFocal = DEEP && (DEEP === w[0] || (DEEP === 'play' && (w[0] === 'network.html' || w[0] === 'spotlight.html')));
+        if (isFocal) { f.classList.add('focal'); f.src += '&focus=1'; }
         f.scrolling = 'no';
         f.style.height = (phone ? w[2] : w[1]) + 'px';
         f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; f.allowFullscreen = true;
