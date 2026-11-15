@@ -119,6 +119,10 @@
   .bar .lb svg { width: 15px; height: 15px; stroke: currentColor; vertical-align: -3px; }
   .drop { padding: 10px 16px 12px; border-bottom: 1px solid var(--line); background: #0d1f40; }
   .drop[hidden] { display: none; }
+  .drop .prohead { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+  .drop .prohead b { font-family: 'Bebas Neue', Impact, sans-serif; font-weight: 400; font-size: 24px; letter-spacing: .04em; color: var(--accent); }
+  .drop .profr { display: block; width: 100%; height: 640px; border: 0; background: transparent; }
+  .bar .pl.on { background: #fff; color: #0b1a33; border-color: #fff; }
   .drop .chips + .chips { margin-top: 8px; }
   .tchip { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 1px; font: inherit; color: var(--text); background: var(--card2); border: 1px solid transparent; border-radius: 9px; padding: 7px 11px; cursor: pointer; text-align: left; min-height: 44px; justify-content: center; }
   .tchip:hover { border-color: var(--accent); }
@@ -367,16 +371,29 @@
     if (qs.get('pro') === '1') {
       var pr = el('div', 'prow');
       [['nhl', 'NHL'], ['nfl', 'NFL'], ['nba', 'NBA'], ['mlb', 'MLB'], ['cfl', 'CFL'], ['pwhl', 'PWHL']].forEach(function (p) {
-        var a = el('a', 'pl', p[1]); a.href = 'https://www.powerplaywindsor.com/local-sports?tab=scores&league=' + p[0]; a.target = '_top'; pr.appendChild(a); });
+        var a = el('a', 'pl', p[1]); a.href = 'https://www.powerplaywindsor.com/local-sports?tab=scores&league=' + p[0]; a.target = '_top'; a.dataset.k = 'pro:' + p[0];
+        // a tap opens that league's scores and standings right here, over the page (like a local team)
+        a.onclick = function (e) { e.preventDefault(); closeTeam(); barPick = barPick === 'pro:' + p[0] ? '' : 'pro:' + p[0]; drawDrop(); markBar(); };
+        pr.appendChild(a); });
       bar.appendChild(pr);
     }
     drawDrop();
   }
   function markBar() { var open = document.getElementById('team').dataset.id;
+    [].forEach.call(document.querySelectorAll('#bar .pl'), function (a) { a.classList.toggle('on', a.dataset.k === barPick); });
     [].forEach.call(document.querySelectorAll('#bar .lb'), function (b) { b.classList.toggle('on', b.dataset.k === barPick || (b.dataset.k === 'ohl' && open === 'spitfires')); }); }
   function drawDrop() {
     var d = document.getElementById('drop'); d.innerHTML = ''; d.hidden = !barPick;
     if (!barPick) return;
+    if (barPick.indexOf('pro:') === 0) {      // a pro league: its scores, standings and stats, straight from the Pro Scoreboard
+      var lg = barPick.slice(4), top = el('div', 'prohead'), x = el('button', 'back', 'Close \u2715'); x.type = 'button';
+      x.onclick = function () { barPick = ''; drawDrop(); markBar(); };
+      top.appendChild(el('b', null, lg.toUpperCase())); top.appendChild(x); d.appendChild(top);
+      var pf = el('iframe', 'profr'); pf.title = lg.toUpperCase() + ' scores'; pf.scrolling = 'no';
+      pf.src = 'https://bbellacicco.github.io/powerplay-feed/pro-games_3.html?v=' + Math.floor(Date.now() / 3600e3) + '&tab=' + lg + '&lock=1&in=sports';
+      d.appendChild(pf);
+      return;
+    }
     if (barPick === 'search') {
       var inp = el('input'); inp.type = 'search'; inp.placeholder = 'Team, school or town\u2026 try \u2018Essex\u2019'; inp.setAttribute('aria-label', 'Search for a team');
       var out = el('div', 'chips'); d.appendChild(inp); d.appendChild(out);
@@ -572,6 +589,11 @@
 
   // the homepage asks to close (someone tapped the blurred page behind the box)
   window.addEventListener('message', function (e) { if (e.data && e.data.pp === 'closeteams' && BAR) { closeTeam(); barPick = ''; drawDrop(); markBar(); } });
+  // the pro league box reports its height; its frame matches it
+  window.addEventListener('message', function (e) {
+    if (!e.data || e.data.pp !== 'height' || !(e.data.h > 30)) return;
+    var pf = document.querySelector('#drop .profr'); if (pf && e.source === pf.contentWindow) pf.style.height = Math.min(e.data.h, 6000) + 'px';
+  });
   // inside the Local Hub: tell it how tall this is, so it never scrolls on its own
   (function () {
     if (window.parent === window) return; var last = 0;
