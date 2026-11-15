@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T19:32:07-05:00",
+ "updated": "2026-11-14T19:51:06-05:00",
  "today": "2026-11-14",
  "range": [
   "2026-11-11",
@@ -837,7 +837,7 @@
    "our_score": 1,
    "opp_score": 0,
    "result": null,
-   "note": "02:06 1st",
+   "note": "00:00 1st",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29197/"
    }
@@ -851,11 +851,11 @@
    "home_away": "A",
    "opponent": "Strathroy Rockets",
    "location": "West Middlesex M.C., Strathroy, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
-   "note": "",
+   "note": "11:19 1st",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15692"
    },
@@ -1839,6 +1839,19 @@
   },
   {
    "league": "nba",
+   "headline": "Cavaliers will play Mavericks without entire usual starting lineup",
+   "summary": "The Cavaliers will be without their entire starting lineup Saturday against the Dallas Mavericks after four players were ruled out following their travel difficulties returning to Cleveland.",
+   "published": "2026-11-14T19:45-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/Harden.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/cavaliers-will-play-mavericks-without-entire-usual-starting-lineup/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
    "headline": "Raptors’ Barnes questionable vs. Knicks, Leonard still progressing",
    "summary": "",
    "published": "2026-11-14T13:22-05:00",
@@ -1853,18 +1866,55 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Maple Leafs’ Anthony Stolarz set for second straight start",
-   "summary": "",
-   "published": "2026-11-14T11:35-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/10/164778ef9ee1f08fc0c477538c5985c9e3af7df5cb6966b4bc245e2787922578.jpg",
+   "league": "other",
+   "headline": "UFC 334 Cage Locks: Gane, Hokit ready for heavyweight battle",
+   "summary": "UFC 334 takes over Madison Square Garden on Saturday, featuring two major championship bouts. Here’s a preview of all the action.",
+   "published": "2026-11-13T09:05-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/hokit.jpg",
    "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-anthony-stolarz-set-for-second-straight-start/",
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "MMA",
+   "url": "https://www.sportsnet.ca/ufc/article/ufc-334-cage-locks-gane-hokit-ready-for-heavyweight-battle/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Standing and striking from distance is path to victory for Gane at UFC 334",
+   "summary": "UFC 334 heads to Madison Square Garden on Saturday and features undisputed title fights in the heaviest weight classes in the men’s and women’s divisions, respectively. Here are some keys to victory for the fighters.",
+   "published": "2026-11-12T15:27-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP149209375-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "",
+   "url": "https://www.sportsnet.ca/ufc/article/standing-and-striking-from-distance-is-path-to-victory-for-gane-at-ufc-334/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Amanda Nunes vs. Kayla Harrison marks a true UFC women’s blockbuster",
+   "summary": "The UFC 334 showdown between Amanda Nunes and Kayla Harrison just might be the biggest women’s fight in the organization’s history. Where we go from here is unclear, so Saturday’s bout should be savoured.",
+   "published": "2026-11-11T09:55-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/nunes.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "MMA",
+   "url": "https://www.sportsnet.ca/ufc/article/amanda-nunes-vs-kayla-harrison-marks-a-true-ufc-womens-blockbuster/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Terrance McKinney apologizes after failing to make weight for UFC 334",
+   "summary": "",
+   "published": "2026-11-13T11:23-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/06/6374943118112.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "MMA",
+   "url": "https://www.sportsnet.ca/ufc/article/terrance-mckinney-apologizes-after-failing-to-make-weight-for-ufc-334/",
    "source": "Sportsnet"
   },
   {
@@ -2072,7 +2122,7 @@
   },
   {
    "league": "nfl",
-   "headline": "Report: Star Chiefs running back Kenneth Walker III out against Falcons",
+   "headline": "Star Chiefs running back Kenneth Walker III out against Falcons",
    "summary": "",
    "published": "2026-11-14T11:42-05:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Kansas-City-Chiefs-running-back-Kenneth-Walker-III.jpg",
@@ -2187,58 +2237,6 @@
    "sn_team_count": 0,
    "sport": "MMA",
    "url": "https://www.sportsnet.ca/ufc/article/macy-chiasson-hints-at-retirement-after-loss-to-bia-mesquita/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "UFC 334 Cage Locks: Gane, Hokit ready for heavyweight battle",
-   "summary": "UFC 334 takes over Madison Square Garden on Saturday, featuring two major championship bouts. Here’s a preview of all the action.",
-   "published": "2026-11-13T09:05-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/hokit.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/ufc-334-cage-locks-gane-hokit-ready-for-heavyweight-battle/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Standing and striking from distance is path to victory for Gane at UFC 334",
-   "summary": "UFC 334 heads to Madison Square Garden on Saturday and features undisputed title fights in the heaviest weight classes in the men’s and women’s divisions, respectively. Here are some keys to victory for the fighters.",
-   "published": "2026-11-12T15:27-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP149209375-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "",
-   "url": "https://www.sportsnet.ca/ufc/article/standing-and-striking-from-distance-is-path-to-victory-for-gane-at-ufc-334/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Amanda Nunes vs. Kayla Harrison marks a true UFC women’s blockbuster",
-   "summary": "The UFC 334 showdown between Amanda Nunes and Kayla Harrison just might be the biggest women’s fight in the organization’s history. Where we go from here is unclear, so Saturday’s bout should be savoured.",
-   "published": "2026-11-11T09:55-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/nunes.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/amanda-nunes-vs-kayla-harrison-marks-a-true-ufc-womens-blockbuster/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Terrance McKinney apologizes after failing to make weight for UFC 334",
-   "summary": "",
-   "published": "2026-11-13T11:23-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/06/6374943118112.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/terrance-mckinney-apologizes-after-failing-to-make-weight-for-ufc-334/",
    "source": "Sportsnet"
   },
   {
@@ -3090,7 +3088,7 @@
       "l": 6,
       "otl": 1,
       "pts": 27,
-      "gf": 78,
+      "gf": 81,
       "ga": 56,
       "strk": "L1"
      },
@@ -3139,7 +3137,7 @@
       "otl": 5,
       "pts": 17,
       "gf": 61,
-      "ga": 73,
+      "ga": 76,
       "strk": "L3"
      }
     ]
@@ -3352,8 +3350,8 @@
       "l": 5,
       "otl": 1,
       "pts": 37,
-      "gf": 107,
-      "ga": 68,
+      "gf": 108,
+      "ga": 69,
       "strk": "W2"
      },
      {
@@ -3401,7 +3399,7 @@
       "otl": 2,
       "pts": 24,
       "gf": 82,
-      "ga": 67,
+      "ga": 68,
       "strk": "W2"
      },
      {
@@ -3424,7 +3422,7 @@
       "l": 11,
       "otl": 0,
       "pts": 20,
-      "gf": 66,
+      "gf": 67,
       "ga": 73,
       "strk": "W1"
      },
@@ -3448,7 +3446,7 @@
       "l": 13,
       "otl": 2,
       "pts": 18,
-      "gf": 65,
+      "gf": 66,
       "ga": 100,
       "strk": "W1"
      },
@@ -3485,7 +3483,7 @@
       "otl": 3,
       "pts": 9,
       "gf": 53,
-      "ga": 139,
+      "ga": 140,
       "strk": "L9"
      }
     ]
@@ -3514,7 +3512,7 @@
       "otl": 1,
       "pts": 39,
       "gf": 94,
-      "ga": 46,
+      "ga": 47,
       "strk": "W6"
      },
      {
@@ -3537,7 +3535,7 @@
       "l": 3,
       "otl": 1,
       "pts": 37,
-      "gf": 117,
+      "gf": 118,
       "ga": 40,
       "strk": "W13"
      },
@@ -3585,7 +3583,7 @@
       "l": 14,
       "otl": 1,
       "pts": 17,
-      "gf": 68,
+      "gf": 69,
       "ga": 111,
       "strk": "L3"
      },
@@ -3597,8 +3595,8 @@
       "l": 15,
       "otl": 2,
       "pts": 16,
-      "gf": 76,
-      "ga": 128,
+      "gf": 77,
+      "ga": 129,
       "strk": "W1"
      },
      {
@@ -3634,7 +3632,7 @@
       "otl": 1,
       "pts": 13,
       "gf": 58,
-      "ga": 91,
+      "ga": 92,
       "strk": "L5"
      }
     ]
@@ -3688,7 +3686,7 @@
       "l": 6,
       "otl": 3,
       "pts": 25,
-      "gf": 77,
+      "gf": 79,
       "ga": 65,
       "strk": "L2"
      },
@@ -3773,7 +3771,7 @@
       "otl": 0,
       "pts": 10,
       "gf": 58,
-      "ga": 82,
+      "ga": 84,
       "strk": "L1"
      },
      {
