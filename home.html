@@ -154,10 +154,18 @@
   .minute .mspon img { height: 22px; width: 22px; border-radius: 50%; background: #fff; object-fit: contain; }
   /* phones: everything centred, and the sponsor gets room for its full name */
   @media (max-width: 700px) {
-    .minute .mbody { align-items: center; text-align: center; }
-    .minute .mtag { align-self: center; }
-    .minute .mtop { justify-content: center; }
-    .minute .mbar { width: 100%; }
+    /* one line: Listen now · time · Share; then the title, the bar and the date/sponsor, all centred */
+    .minute .mbody { flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center; text-align: center; column-gap: 10px; }
+    .minute .mtop { display: contents; }
+    .minute .mtag { order: 1; align-self: center; font-size: 10px; letter-spacing: .08em; padding: 3px 7px; gap: 5px; }
+    .minute .mright { order: 2; gap: 8px; }
+    .minute .mtop h2 { order: 3; width: 100%; }
+    .minute .mbar { order: 4; width: 100%; }
+    .minute .msub { order: 5; width: 100%; }
+  }
+  @media (max-width: 350px) {
+    .minute .mright .pps-btn span { display: none; } .minute .mright .pps-btn { padding: 5px 7px; }
+    .minute .mtop h2, #minute .mtop h2 { font-size: 19px; white-space: nowrap; }
     .minute .msub { justify-content: center; flex-wrap: wrap; gap: 3px 8px; white-space: nowrap; }
     .minute .msub .dlong, .minute .msub .pby { display: none; }
     .minute .mspon { gap: 5px; }
@@ -280,12 +288,16 @@
     .big h2 { -webkit-line-clamp: 3; margin-bottom: 0; }
 
     .btn { padding: 9px 15px; font-size: 13px; }
-    .teamswrap { margin: 14px 16px 0; height: 48px; } .teamswrap iframe { height: 48px; } .search { margin: 18px 16px 0; } .search .btn { display: none; }
+    .teamswrap { margin: 14px 16px 0; height: 86px; } .teamswrap iframe { height: 86px; } .search { margin: 18px 16px 0; } .search .btn { display: none; }
     .field { padding: 0 12px; gap: 8px; } .field input::placeholder { font-size: 15px; }
     section { margin-top: 30px; }
     .followband { margin: 4px 16px 18px; padding: 14px; }
-    .followband .pps-follow { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; gap: 8px; }
-    .followband .pps-follow a { justify-content: center; padding: 11px 8px; font-size: 13px; }
+    /* phones: all four follow buttons on one line, short names */
+    .followband { gap: 10px; }
+    .followband .pps-follow { display: flex; flex-wrap: nowrap; width: 100%; gap: 5px; }
+    .followband .pps-follow a { flex: 1 1 auto; justify-content: center; padding: 8px 6px; font-size: clamp(10px, 3.1vw, 12px); gap: 4px; min-width: 0; }
+    .followband .pps-follow a svg { width: 13px; height: 13px; flex: none; }
+    .followband .pps-follow a span { display: none; } .followband .pps-follow a::after { content: attr(data-n); white-space: nowrap; }
     /* phones: title and buttons always share the top line (title left, small round share + compact See all right, a clear gap between), sponsor underneath */
     .rhead { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 12px; row-gap: 5px; align-items: center; margin: 0 16px 10px; padding: 8px 10px 8px 12px; }
     .rhead > div:first-child { display: contents; }
@@ -1342,7 +1354,7 @@ document.addEventListener('load', function (e) {
 (function () {
   var wrap = document.getElementById('teamswrap'), f = document.getElementById('teamsbar');
   if (!wrap || /[?&]view=hub\b/.test(location.search)) return;
-  f.src = 'https://bbellacicco.github.io/powerplay-feed/teams.html?v=' + Math.floor(Date.now() / 6e5) + '&view=bar&title=' + encodeURIComponent('Local Teams');
+  f.src = 'https://bbellacicco.github.io/powerplay-feed/teams.html?v=' + Math.floor(Date.now() / 6e5) + '&view=bar&pro=1&title=' + encodeURIComponent('Local Teams');
   window.addEventListener('message', function (e) {
     if (e.source !== f.contentWindow || !e.data || e.data.pp !== 'height') return;
     if (e.data.bar) wrap.style.height = e.data.bar + 'px';
