@@ -70,6 +70,36 @@
     .view { left: 6px; right: 6px; padding: 6px; } .view .nav { width: 40px; height: 40px; margin-top: -20px; font-size: 18px; }
   }
 </style>
+<script>
+/* A shared link (?focus=1, passed on by the Local Hub): the shared item stays sharp and everything around it blurs.
+   A tap on the blurred part clears it (here and in the Local Hub around this box). */
+var PPFocus = (function () {
+  var on = /[?&]focus=1\b/.test(location.search), H = document.documentElement, used = false;
+  var css = document.createElement('style');
+  css.textContent = 'html.ppfocus .ppkeep>:not(.ppkeep):not(.ppfocal):not(script):not(style){filter:blur(6px) brightness(.55);transition:filter .3s;cursor:pointer}' +
+    'html.ppfocus .ppkeep>:not(.ppkeep):not(.ppfocal) *{pointer-events:none}';
+  document.head.appendChild(css);
+  function clear(tell) {
+    if (!H.classList.contains('ppfocus')) return;
+    H.classList.remove('ppfocus'); on = false;
+    [].forEach.call(document.querySelectorAll('.ppkeep,.ppfocal'), function (x) { x.classList.remove('ppkeep', 'ppfocal'); });
+    if (tell) try { parent.postMessage({ pp: 'unfocus' }, '*'); } catch (e) {}
+  }
+  window.addEventListener('message', function (e) { if (e.data && e.data.pp === 'unfocus') clear(false); });
+  document.addEventListener('click', function (e) {
+    if (H.classList.contains('ppfocus') && !(e.target.closest && e.target.closest('.ppfocal'))) { e.preventDefault(); e.stopPropagation(); clear(true); }
+  }, true);
+  // mark the shared item (call again if the page redraws it)
+  return function (x) {
+    if (!on || !x || (used && !H.classList.contains('ppfocus'))) return;
+    used = true;
+    [].forEach.call(document.querySelectorAll('.ppkeep,.ppfocal'), function (y) { y.classList.remove('ppkeep', 'ppfocal'); });
+    x.classList.add('ppfocal');
+    for (var p = x.parentElement; p; p = p.parentElement) p.classList.add('ppkeep');
+    H.classList.add('ppfocus');
+  };
+})();
+</script>
 </head>
 <body>
 <div class="wrap" id="wrap">
@@ -168,7 +198,7 @@
     // the profile fits inside the box (the Wix box is only as tall as two rows of cards)
     big.style.maxHeight = Math.max(320, wrap.offsetHeight - 80) + 'px';
     var place = function () {
-      var y = cardEl.offsetTop, maxY = Math.max(0, wrap.offsetHeight - view.offsetHeight - 6);
+      var y = cardEl.sharedTop ? 0 : cardEl.offsetTop, maxY = Math.max(0, wrap.offsetHeight - view.offsetHeight - 6);
       view.style.top = Math.min(y, maxY) + 'px';
     };
     place(); big.onload = place;
@@ -222,7 +252,7 @@
       if (n >= 0) {
         page = Math.floor(n / PER); grid();
         var cardEl = document.querySelectorAll('.card')[n % PER];
-        if (cardEl) open(n, cardEl);
+        if (cardEl) { if (pk && n === list.map(pkey).indexOf(pk)) cardEl.sharedTop = true; open(n, cardEl); if (cardEl.sharedTop) PPFocus(view); }
       }
     });
 })();
