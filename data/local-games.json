@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T17:04:49-05:00",
+ "updated": "2026-11-15T17:05:52-05:00",
  "today": "2026-11-15",
  "range": [
   "2026-11-12",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -808,10 +808,10 @@
    "home_away": "N",
    "opponent": "TMU Bold",
    "location": "Guelph, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 10,
+   "opp_score": 3,
+   "result": "W",
    "note": "Guelph Invitational - Men",
    "links": {}
   },
@@ -2080,19 +2080,6 @@
    "sn_team_count": 0,
    "sport": "MMA",
    "url": "https://www.sportsnet.ca/ufc/article/ufc-champ-kayla-harrison-has-major-career-decision-ahead-after-beating-nunes/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Injured Avalanche stars MacKinnon, Makar to miss weeks",
-   "summary": "",
-   "published": "2026-11-14T12:32-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/mackinnon-makar.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/injured-avalanche-stars-mackinnon-makar-to-miss-weeks/",
    "source": "Sportsnet"
   },
   {
