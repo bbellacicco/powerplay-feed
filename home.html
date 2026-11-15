@@ -1249,7 +1249,8 @@ document.addEventListener('load', function (e) {
       // What's New: everything Powerplay makes (stories, quick posts and videos), newest first. Anything about the
       // Spitfires goes to the Windsor Spitfires strip instead.
       var SPITS_RX = /spitfires|\bspits\b/i;
-      var aboutSpits = function (x) { return x.team === 'spitfires' || SPITS_RX.test(' ' + x.headline + ' ' + (x.summary || '') + ' '); };
+      // the story itself mentions them (flagged by the PC), its blog category, or the headline and summary
+      var aboutSpits = function (x) { return x.team === 'spitfires' || x.spits || SPITS_RX.test(' ' + x.headline + ' ' + (x.summary || '') + ' ' + (x.cats || '') + ' '); };
       var rowStories = stories.filter(function (s) { return s.team === 'powerplay' && !isVid(s) && !aboutSpits(s) && !featUrls[s.url] && (!lastTop || s.url !== lastTop.url); });
       var leadStory = lastTop && lastTop.team === 'powerplay' && !aboutSpits(lastTop) ? lastTop : null;   // just left the big box: stays up front a while longer
       var storyNode = function (s) { return storyCard(s, { tag: 'Powerplay', sub: (s.club || 'Powerplay') + ' · ' + ago(s.published) }); };
@@ -1296,6 +1297,11 @@ document.addEventListener('load', function (e) {
           var when = sh.posted || sh.date + 'T12:00:00';
           var c = storyCard({ headline: sh.title, url: sh.url, image: sh.cover, published: when, team: 'powerplay' }, { tag: 'Game Day Snaps', sub: 'Game Day Snaps \u00b7 ' + ago(when), tile: 'Snaps' });
           c.onclick = function (e) { e.preventDefault(); playShow(sh); };
+          if (window.PPShare) {   // Share: the slideshow's own powerplaywindsor.com page (with its cover picture on Facebook)
+            var sbn = PPShare.button({ title: sh.title, url: sh.url, text: sh.title + ' | Powerplay Windsor', image: sh.cover });
+            sbn.classList.add('mini'); sbn.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); });
+            c.insertBefore(sbn, c.firstChild);
+          }
           return { t: new Date(when).getTime(), node: c };
         }))
         .sort(function (a, b) { return b.t - a.t; }).slice(0, 24).map(function (x) { return x.node; });
@@ -1312,7 +1318,7 @@ document.addEventListener('load', function (e) {
       // Windsor Spitfires: everything about them, newest first: the club's news, game stories and OHL highlights,
       // plus Powerplay's own Spitfires stories, videos and Game Day Snaps
       var seenS = {};
-      var spItems = pool.filter(function (x) { return x.team === 'spitfires' || ((x.team === 'powerplay' || x.video || isVid(x)) && SPITS_RX.test(' ' + x.headline + ' ' + (x.summary || '') + ' ')); })
+      var spItems = pool.filter(function (x) { return x.team === 'spitfires' || ((x.team === 'powerplay' || x.video || isVid(x)) && aboutSpits(x)); })
         .filter(function (x) { var k = isVid(x) || x.video ? vidId(x.url) : x.url; if (seenS[k]) return false; seenS[k] = 1; return true; });
       var spCards = spItems.map(function (x) {
         var v = isVid(x) || x.video, pp = x.team === 'powerplay';
