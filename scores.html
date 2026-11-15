@@ -78,6 +78,22 @@
   });
 })();
 </script>
+  <iframe id="contestframe" title="Win Spitfires tickets" scrolling="no" style="display:none;width:100%;height:0;border:0;background:transparent"></iframe>
+<script>
+/* the ticket bar in the site header (?contest=spitfires, passed on as contest=1): the contest opens right at the top */
+(function () {
+  if (!/[?&]contest=1\b/.test(location.search)) return;
+  var f = document.getElementById('contestframe');
+  f.src = 'contest-strip.html?v=' + Math.floor(Date.now() / 6e5); f.style.display = 'block';
+  // same site, so it can be measured: the frame is exactly as tall as the contest box
+  function size() {
+    var h = window.innerWidth < 700 ? 340 : 200;
+    try { var st = f.contentDocument.querySelector('.strip'); if (st) h = Math.ceil(st.getBoundingClientRect().bottom + 8); } catch (e) {}
+    f.style.height = h + 'px';
+  }
+  size(); f.addEventListener('load', function () { size(); setTimeout(size, 800); setTimeout(size, 2500); }); window.addEventListener('resize', size);
+})();
+</script>
   <iframe id="teambar" title="Local Teams" scrolling="no" style="display:none;width:100%;height:58px;border:0;background:#10244a"></iframe>
   <div class="guide" id="guide"></div>
   <div class="top" id="top">
@@ -123,7 +139,8 @@
     tbf.src = REPO + 'teams.html' + V + '&view=bar&in=sports&title=Local%20Teams' + (FIND ? '&find=' + FIND : '&league=' + LEAGUE); }
   // a shared link to one thing (a quick post, a story, a video, an athlete, a team): it goes first, right at the top,
   // with the sports guide and the section switch moved underneath and the rest blurred until the visitor taps
-  var DEEP = POST ? 'home.html' : STORY ? 'local-news.html' : PLAY ? 'play' : PROFILE ? 'athletes.html' : FIND ? 'find' : '';
+  var CONTEST = /[?&]contest=1\b/.test(location.search);
+  var DEEP = CONTEST ? 'contest' : POST ? 'home.html' : STORY ? 'local-news.html' : PLAY ? 'play' : PROFILE ? 'athletes.html' : FIND ? 'find' : '';
   var H = document.documentElement;
   function unfocus() {
     if (!H.classList.contains('ppfocus')) return;
@@ -132,7 +149,8 @@
   }
   if (DEEP) {
     H.classList.add('ppfocus');
-    if (DEEP === 'find') document.getElementById('teambar').classList.add('focal');
+    if (DEEP === 'contest') document.getElementById('contestframe').classList.add('focal');
+    else if (DEEP === 'find') document.getElementById('teambar').classList.add('focal');
     else { var pn = document.getElementById('panes'); pn.parentNode.insertBefore(pn, document.getElementById('guide')); pn.parentNode.insertBefore(document.getElementById('top'), document.getElementById('guide')); }
     document.addEventListener('click', function (e) { if (H.classList.contains('ppfocus')) { e.preventDefault(); e.stopPropagation(); unfocus(); } }, true);
     window.addEventListener('message', function (e) { if (e.data && e.data.pp === 'unfocus') unfocus(); });
