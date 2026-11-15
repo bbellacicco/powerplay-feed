@@ -286,7 +286,16 @@
     .followband { margin: 4px 16px 18px; padding: 14px; }
     .followband .pps-follow { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; gap: 8px; }
     .followband .pps-follow a { justify-content: center; padding: 11px 8px; font-size: 13px; }
-    .rhead { margin: 0 16px 10px; padding: 8px 10px 8px 12px; flex-wrap: wrap; row-gap: 6px; } .rhead > div:first-child { display: contents; } .rhead h2 { font-size: 25px; order: 1; } .rhead .rright { order: 2; margin-left: auto; gap: 6px; } .rhead .by { order: 3; width: 100%; font-size: 10px; } .rhead .by .chip { height: 24px; padding: 2px 6px; } .rhead .by img { height: 19px; } .rhead a.all { padding: 5px 8px; font-size: 11px; } .rhead .pps-btn span { display: none; } .rhead .pps-btn { padding: 6px 8px; }
+    /* phones: title and buttons always share the top line (title left, small round share + compact See all right, a clear gap between), sponsor underneath */
+    .rhead { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 12px; row-gap: 5px; align-items: center; margin: 0 16px 10px; padding: 8px 10px 8px 12px; }
+    .rhead > div:first-child { display: contents; }
+    .rhead h2 { grid-column: 1; grid-row: 1; font-size: clamp(21px, 6.6vw, 26px); white-space: nowrap; min-width: 0; }
+    .rhead .rright { grid-column: 2; grid-row: 1; gap: 6px; }
+    .rhead .by { grid-column: 1 / -1; grid-row: 2; font-size: 10px; gap: 6px; }
+    .rhead .by .chip { height: 22px; padding: 2px 5px; } .rhead .by img { height: 17px; }
+    .rhead a.all { padding: 5px 7px; font-size: 10px; letter-spacing: .05em; line-height: 1; }
+    .rhead .pps-btn { width: 26px; height: 26px; padding: 0; justify-content: center; gap: 0; } .rhead .pps-btn span { display: none; } .rhead .pps-btn svg { width: 12px; height: 12px; }
+    .rhead .newbadge { font-size: 10px; padding: 4px 7px 4px 6px; margin-left: 8px; vertical-align: 3px; }
     .row { padding: 4px 16px 6px; scroll-padding-left: 16px; gap: 10px; }
     .rarrow { display: none; }
     .scard, .game { width: 220px; } .game .box { height: 128px; } .game .side img { height: 36px; width: 36px; } .game .side .sc { font-size: 22px; }
