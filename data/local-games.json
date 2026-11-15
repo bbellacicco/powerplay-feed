@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T18:47:07-05:00",
+ "updated": "2026-11-14T19:02:02-05:00",
  "today": "2026-11-14",
  "range": [
   "2026-11-11",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 39
+   "count": 37
   },
   "club_news": {
    "ok": true,
@@ -1747,21 +1747,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Quick Shifts: Why Zack MacEwen has been good fit for Maple Leafs",
-   "summary": "The Maple Leafs’ Zack MacEwen has drive and enthusiasm that is refreshing. Luke Fox digs into what makes him a home run and 11 more observations from around the NHL in this edition of Quick Shifts.",
-   "published": "2026-11-14T13:09-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177261639-1.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 6,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/quick-shifts-why-zack-macewen-has-been-good-fit-for-maple-leafs/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Mark Scheifele sets Jets’ franchise points record with goal",
    "summary": "",
    "published": "2026-11-14T17:15-05:00",
@@ -1771,19 +1756,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/mark-scheifele-sets-jets-franchise-points-record-with-goal/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Hurricanes rout Kraken to complete Finland sweep",
-   "summary": "",
-   "published": "2026-11-14T16:22-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/hurricanes-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/hurricanes-rout-kraken-to-complete-finland-sweep/",
    "source": "Sportsnet"
   },
   {
@@ -1801,17 +1773,15 @@
   },
   {
    "league": "nhl",
-   "headline": "Oilers superstar Connor McDavid brings his Gretzky vibe to Toronto",
-   "summary": "There will never be another Wayne Gretzky, but, as Mark Spector writes, there’s definitely a Gretzkian vibe around Connor McDavid right now.",
-   "published": "2026-11-13T16:44-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/McD.jpg",
+   "headline": "Hurricanes rout Kraken to complete Finland sweep",
+   "summary": "",
+   "published": "2026-11-14T16:22-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/hurricanes-1.jpg",
    "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
+   "teams": [],
    "sn_team_count": 2,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/oilers-superstar-connor-mcdavid-brings-his-gretzky-vibe-to-toronto/",
+   "url": "https://www.sportsnet.ca/nhl/article/hurricanes-rout-kraken-to-complete-finland-sweep/",
    "source": "Sportsnet"
   },
   {
@@ -1910,16 +1880,33 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "Report: Star Chiefs running back Kenneth Walker III out against Falcons",
-   "summary": "",
-   "published": "2026-11-14T11:42-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Kansas-City-Chiefs-running-back-Kenneth-Walker-III.jpg",
+   "league": "nhl",
+   "headline": "Oilers superstar Connor McDavid brings his Gretzky vibe to Toronto",
+   "summary": "There will never be another Wayne Gretzky, but, as Mark Spector writes, there’s definitely a Gretzkian vibe around Connor McDavid right now.",
+   "published": "2026-11-13T16:44-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/McD.jpg",
    "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/report-star-chiefs-running-back-kenneth-walker-iii-out-against-falcons/",
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/oilers-superstar-connor-mcdavid-brings-his-gretzky-vibe-to-toronto/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Quick Shifts: Why Zack MacEwen has been good fit for Maple Leafs",
+   "summary": "The Maple Leafs’ Zack MacEwen has drive and enthusiasm that is refreshing. Luke Fox digs into what makes him a home run and 11 more observations from around the NHL in this edition of Quick Shifts.",
+   "published": "2026-11-14T13:09-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177261639-1.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 6,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/quick-shifts-why-zack-macewen-has-been-good-fit-for-maple-leafs/",
    "source": "Sportsnet"
   },
   {
@@ -2044,6 +2031,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nfl",
+   "headline": "Report: Star Chiefs running back Kenneth Walker III out against Falcons",
+   "summary": "",
+   "published": "2026-11-14T11:42-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Kansas-City-Chiefs-running-back-Kenneth-Walker-III.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/report-star-chiefs-running-back-kenneth-walker-iii-out-against-falcons/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "Chisholm scores lone goal as AFC Toronto tops Montreal Roses for first NSL title",
    "summary": "",
@@ -2147,32 +2147,6 @@
    "sn_team_count": 0,
    "sport": "Tennis",
    "url": "https://www.sportsnet.ca/wta/article/canadas-andreescu-wins-cundinamarca-open-for-third-wta-125-title-in-past-month/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Spirit reach fifth NWSL final with comeback win over Royals",
-   "summary": "",
-   "published": "2026-11-14T15:02-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/10/Trinity-Rodman.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/soccer/article/spirit-reach-fifth-nwsl-final-with-comeback-win-over-royals/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Canada wins opening Nations League leg vs. Guatemala but loses captain Davies to injury",
-   "summary": "Canada defeated Guatemala 3-2 in the opening leg of a Concacaf Nations League quarterfinal on Friday night but lost captain Alphonso Davies to injury.",
-   "published": "2026-11-13T23:13-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/ca.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/soccer/article/canada-wins-opening-nations-league-leg-vs-guatemala-but-loses-captain-davies-to-injury/",
    "source": "Sportsnet"
   },
   {
@@ -3366,7 +3340,7 @@
       "l": 5,
       "otl": 1,
       "pts": 37,
-      "gf": 105,
+      "gf": 106,
       "ga": 68,
       "strk": "W2"
      },
@@ -3612,7 +3586,7 @@
       "otl": 2,
       "pts": 16,
       "gf": 76,
-      "ga": 126,
+      "ga": 127,
       "strk": "W1"
      },
      {
