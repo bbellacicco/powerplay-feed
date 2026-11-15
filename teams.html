@@ -106,7 +106,15 @@
   .bar .lb { flex: none; font: inherit; font-size: 13.5px; font-weight: 800; color: var(--text); background: var(--card2); border: 1px solid rgba(255,255,255,.14); border-radius: 999px; padding: 8px 13px; cursor: pointer; white-space: nowrap; min-height: 38px; }
   .bar .lb:hover { border-color: var(--accent); }
   .bar .lshort { display: none; }
-  .bar .prow { display: none; }
+  /* every screen: no title; local teams on the top row, pro leagues underneath (homepage), square-cornered buttons spread evenly */
+  .bar { display: grid; grid-template-columns: 1.05fr 1fr .85fr .95fr 1.3fr; gap: 5px; padding: 7px 8px; overflow: visible; }
+  .bar .lbl { display: none; }
+  .bar .lb, .bar .pl { min-width: 0; font-family: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif; font-weight: 400; font-size: clamp(14px, 4.2vw, 17px); letter-spacing: .04em; line-height: 1;
+      padding: 8px 2px 7px; min-height: 32px; text-align: center; border-radius: 5px; white-space: nowrap; overflow: hidden; }
+  .bar .prow { display: grid; grid-column: 1 / -1; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 5px; }
+  .bar .pl { display: block; color: #c3cde2; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); text-decoration: none; font-size: clamp(13px, 3.9vw, 16px); padding: 7px 2px 6px; min-height: 28px; }
+  .bar .pl:active, .bar .pl:hover { border-color: var(--accent); color: #fff; }
+  @media (min-width: 761px) { .bar { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 7px; padding: 9px 12px; } .bar .prow { gap: 7px; } .bar .lb { font-size: 18px; min-height: 36px; } .bar .pl { font-size: 16px; } }
   .bar .lb.on { background: #fff; color: #0b1a33; border-color: #fff; }
   .bar .lb svg { width: 15px; height: 15px; stroke: currentColor; vertical-align: -3px; }
   .drop { padding: 10px 16px 12px; border-bottom: 1px solid var(--line); background: #0d1f40; }
@@ -136,14 +144,7 @@
     .leagues { grid-template-columns: minmax(0, 1fr); }
     .g { grid-template-columns: 64px minmax(0, 1fr) auto; }
     /* phones: no title; local teams on the top row, pro leagues underneath, all square-cornered buttons spread evenly */
-    .bar { display: grid; grid-template-columns: 1.05fr 1fr .85fr .95fr 1.3fr; gap: 5px; padding: 7px 8px; overflow: visible; }
-    .bar .lbl { display: none; }
-    .bar .lb, .bar .pl { min-width: 0; font-family: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif; font-weight: 400; font-size: clamp(14px, 4.2vw, 17px); letter-spacing: .04em; line-height: 1;
-      padding: 8px 2px 7px; min-height: 32px; text-align: center; border-radius: 5px; white-space: nowrap; overflow: hidden; }
     .bar .lfull { display: none; } .bar .lshort { display: inline; }
-    .bar .prow { display: grid; grid-column: 1 / -1; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 5px; }
-    .bar .pl { display: block; color: #c3cde2; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); text-decoration: none; font-size: clamp(13px, 3.9vw, 16px); padding: 7px 2px 6px; min-height: 28px; }
-    .bar .pl:active, .bar .pl:hover { border-color: var(--accent); color: #fff; }
   }
 </style>
 </head>
