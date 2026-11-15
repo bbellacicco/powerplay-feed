@@ -162,7 +162,7 @@
         var a = document.createElement('a'); a.href = s[1]; a.target = '_blank'; a.rel = 'noopener';
         a.style.setProperty('--c', s[3]); if (s[0] === 'YouTube') a.className = 'yt';
         a.innerHTML = svg(s[4]) + '<span>' + (s[0] === 'YouTube' ? 'Subscribe on YouTube' : s[0]) + '</span>';
-        a.setAttribute('aria-label', s[2] + ' on ' + s[0]);
+        a.setAttribute('aria-label', s[2] + ' on ' + s[0]); a.setAttribute('data-n', s[0]);
         d.appendChild(a);
       });
       return d;
