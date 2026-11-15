@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T17:05:52-05:00",
+ "updated": "2026-11-15T17:16:47-05:00",
  "today": "2026-11-15",
  "range": [
   "2026-11-12",
@@ -842,9 +842,9 @@
    "location": "WFCU Centre, Windsor",
    "status": "live",
    "our_score": 0,
-   "opp_score": 0,
+   "opp_score": 1,
    "result": null,
-   "note": "18:43 2nd",
+   "note": "12:23 2nd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29206/"
    }
@@ -2938,13 +2938,13 @@
      {
       "name": "Kingston Frontenacs",
       "abbr": "KGN",
-      "gp": 21,
+      "gp": 22,
       "w": 13,
       "l": 8,
-      "otl": 0,
-      "pts": 26,
+      "otl": 1,
+      "pts": 27,
       "gf": 88,
-      "ga": 79,
+      "ga": 80,
       "strk": "L3"
      },
      {
@@ -2974,14 +2974,14 @@
      {
       "name": "Oshawa Generals",
       "abbr": "OSH",
-      "gp": 21,
-      "w": 6,
+      "gp": 22,
+      "w": 7,
       "l": 10,
       "otl": 5,
-      "pts": 17,
-      "gf": 66,
+      "pts": 19,
+      "gf": 67,
       "ga": 84,
-      "strk": "L4"
+      "strk": "W1"
      }
     ]
    },
@@ -3086,7 +3086,7 @@
       "otl": 3,
       "pts": 27,
       "gf": 77,
-      "ga": 63,
+      "ga": 64,
       "strk": "L1"
      },
      {
@@ -3097,7 +3097,7 @@
       "l": 9,
       "otl": 3,
       "pts": 21,
-      "gf": 78,
+      "gf": 79,
       "ga": 77,
       "strk": "W1"
      },
@@ -3308,14 +3308,14 @@
      {
       "name": "North York Rangers",
       "abbr": "NYR",
-      "gp": 20,
+      "gp": 21,
       "w": 5,
-      "l": 13,
+      "l": 14,
       "otl": 2,
       "pts": 12,
       "gf": 51,
       "ga": 94,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Toronto Warriors",
@@ -3347,6 +3347,18 @@
       "strk": "W1"
      },
      {
+      "name": "King Rebellion",
+      "abbr": "KNG",
+      "gp": 25,
+      "w": 19,
+      "l": 3,
+      "otl": 3,
+      "pts": 41,
+      "gf": 102,
+      "ga": 50,
+      "strk": "W2"
+     },
+     {
       "name": "Milton Menace",
       "abbr": "MIL",
       "gp": 24,
@@ -3369,18 +3381,6 @@
       "gf": 125,
       "ga": 44,
       "strk": "W14"
-     },
-     {
-      "name": "King Rebellion",
-      "abbr": "KNG",
-      "gp": 24,
-      "w": 18,
-      "l": 3,
-      "otl": 3,
-      "pts": 39,
-      "gf": 102,
-      "ga": 50,
-      "strk": "W1"
      },
      {
       "name": "Burlington Cougars",
@@ -3695,27 +3695,27 @@
       "strk": "W1"
      },
      {
+      "name": "Ayr Centennials",
+      "abbr": "AYR",
+      "gp": 19,
+      "w": 10,
+      "l": 5,
+      "otl": 4,
+      "pts": 24,
+      "gf": 73,
+      "ga": 63,
+      "strk": "W1"
+     },
+     {
       "name": "Pelham Panthers",
       "abbr": "PEL",
-      "gp": 20,
+      "gp": 21,
       "w": 10,
-      "l": 7,
+      "l": 8,
       "otl": 3,
       "pts": 23,
       "gf": 74,
       "ga": 81,
-      "strk": "L1"
-     },
-     {
-      "name": "Ayr Centennials",
-      "abbr": "AYR",
-      "gp": 18,
-      "w": 9,
-      "l": 5,
-      "otl": 4,
-      "pts": 22,
-      "gf": 73,
-      "ga": 63,
       "strk": "L2"
      },
      {
