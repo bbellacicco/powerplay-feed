@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T11:15:02-05:00",
+ "updated": "2026-11-15T14:00:02-05:00",
  "today": "2026-11-15",
  "games": [
   {
@@ -62,15 +62,17 @@
    "sport": "Women's Volleyball",
    "start": "2026-11-15T13:00:00-05:00",
    "time_tbd": false,
-   "home_away": "H",
+   "home_away": "A",
    "opponent": "Sault",
    "location": "",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 2,
+   "opp_score": 0,
    "result": null,
-   "note": "",
-   "links": {}
+   "note": "19-25, 14-25",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/wvball/2026-27/boxscores/20261115_74xh.xml"
+   }
   },
   {
    "id": "saints-presto2026-11-15-1",
