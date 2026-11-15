@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T10:50:48-05:00",
+ "updated": "2026-11-15T11:02:04-05:00",
  "today": "2026-11-15",
  "range": [
   "2026-11-12",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -595,8 +595,10 @@
    "our_score": 3,
    "opp_score": 2,
    "result": "W",
-   "note": "",
-   "links": {}
+   "note": "18-25, 25-14, 25-17, 24-26, 15-12",
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6247"
+   }
   },
   {
    "id": "lancers-6267",
@@ -611,8 +613,10 @@
    "our_score": 1,
    "opp_score": 3,
    "result": "L",
-   "note": "",
-   "links": {}
+   "note": "17-25, 15-25, 25-19, 21-25",
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6267"
+   }
   },
   {
    "id": "lancers-6498",
@@ -660,7 +664,9 @@
    "opp_score": 53,
    "result": "W",
    "note": "",
-   "links": {}
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6206"
+   }
   },
   {
    "id": "lancers-6292",
@@ -676,7 +682,9 @@
    "opp_score": 2,
    "result": "W",
    "note": "",
-   "links": {}
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6292"
+   }
   },
   {
    "id": "lancers-6228",
@@ -692,7 +700,9 @@
    "opp_score": 67,
    "result": "W",
    "note": "OT",
-   "links": {}
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6228"
+   }
   },
   {
    "id": "junior-gs2960621",
@@ -1906,6 +1916,19 @@
   },
   {
    "league": "other",
+   "headline": "Zverev opens ATP Finals with convincing win over Jodar",
+   "summary": "",
+   "published": "2026-11-15T10:46-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/zverev_alexander1280.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Tennis",
+   "url": "https://www.sportsnet.ca/atp/article/zverev-opens-atp-finals-with-convincing-win-over-jodar/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
    "headline": "Harrison taps out Nunes to retain title in co-main event of UFC 334",
    "summary": "",
    "published": "2026-11-15T00:54-05:00",
@@ -2051,32 +2074,6 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/raptors-barnes-questionable-vs-knicks-leonard-still-progressing/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Sabalenka apologizes for on-court outburst in WTA Finals loss to Svitolina",
-   "summary": "",
-   "published": "2026-11-14T21:13-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/05/Untitled-design-2026-05-26T093735.214.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Tennis",
-   "url": "https://www.sportsnet.ca/wta/article/sabalenka-apologizes-for-on-court-outburst-in-wta-finals-loss-to-svitolina/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Dabrowski, Stefani suffer semifinal setback at WTA Finals",
-   "summary": "",
-   "published": "2026-11-14T20:38-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/dabrow.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Tennis",
-   "url": "https://www.sportsnet.ca/wta/article/dabrowski-stefani-suffer-semifinal-setback-at-wta-finals/",
    "source": "Sportsnet"
   },
   {
