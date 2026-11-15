@@ -649,6 +649,12 @@ document.addEventListener('load', function (e) {
       sb.classList.add('mini'); sb.addEventListener('click', function (e) { e.preventDefault(); });
       c.appendChild(sb);
     }
+    // Powerplay's own story or quick post: Share passes along its own powerplaywindsor.com address
+    if (window.PPShare && !vid && c.tagName === 'A' && s.team === 'powerplay' && !s.snaps && s.url && s.url.indexOf(SITE) === 0 && !/game-day-snaps/.test(s.url) && !(opts && opts.noShare)) {
+      var pb = PPShare.button({ title: s.headline, url: s.url, text: s.headline + ' | Powerplay Windsor', image: s.image && !GENERIC_IMG.test(s.image) ? s.image : '' });
+      pb.classList.add('mini'); pb.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); });
+      c.appendChild(pb);
+    }
     // a video: Share opens it on powerplaywindsor.com (Local Hub > Network, playing at the top)
     if (window.PPShare && vid && !(opts && opts.noShare)) {
       var vk2 = vkey(s.url).replace(':', '-');
