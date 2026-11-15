@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T21:06:03-05:00",
+ "updated": "2026-11-14T21:17:11-05:00",
  "today": "2026-11-14",
  "range": [
   "2026-11-11",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 38
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -822,9 +822,9 @@
    "location": "Dort Financial Center, Flint, MI",
    "status": "live",
    "our_score": 1,
-   "opp_score": 2,
+   "opp_score": 3,
    "result": null,
-   "note": "10:44 3rd",
+   "note": "06:29 3rd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29197/"
    }
@@ -838,11 +838,11 @@
    "home_away": "A",
    "opponent": "Strathroy Rockets",
    "location": "West Middlesex M.C., Strathroy, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 4,
+   "opp_score": 1,
    "result": null,
-   "note": "",
+   "note": "18:58 3rd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15692"
    },
@@ -1848,58 +1848,6 @@
    "sn_team_count": 2,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/cavaliers-will-play-mavericks-without-entire-usual-starting-lineup/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "UFC 334 Cage Locks: Gane, Hokit ready for heavyweight battle",
-   "summary": "UFC 334 takes over Madison Square Garden on Saturday, featuring two major championship bouts. Here’s a preview of all the action.",
-   "published": "2026-11-13T09:05-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/hokit.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/ufc-334-cage-locks-gane-hokit-ready-for-heavyweight-battle/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Standing and striking from distance is path to victory for Gane at UFC 334",
-   "summary": "UFC 334 heads to Madison Square Garden on Saturday and features undisputed title fights in the heaviest weight classes in the men’s and women’s divisions, respectively. Here are some keys to victory for the fighters.",
-   "published": "2026-11-12T15:27-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP149209375-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "",
-   "url": "https://www.sportsnet.ca/ufc/article/standing-and-striking-from-distance-is-path-to-victory-for-gane-at-ufc-334/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Amanda Nunes vs. Kayla Harrison marks a true UFC women’s blockbuster",
-   "summary": "The UFC 334 showdown between Amanda Nunes and Kayla Harrison just might be the biggest women’s fight in the organization’s history. Where we go from here is unclear, so Saturday’s bout should be savoured.",
-   "published": "2026-11-11T09:55-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/nunes.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/amanda-nunes-vs-kayla-harrison-marks-a-true-ufc-womens-blockbuster/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Terrance McKinney apologizes after failing to make weight for UFC 334",
-   "summary": "",
-   "published": "2026-11-13T11:23-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/06/6374943118112.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/terrance-mckinney-apologizes-after-failing-to-make-weight-for-ufc-334/",
    "source": "Sportsnet"
   },
   {
@@ -3143,6 +3091,18 @@
       "strk": "W3"
      },
      {
+      "name": "Niagara IceDogs",
+      "abbr": "NIAG",
+      "gp": 19,
+      "w": 8,
+      "l": 8,
+      "otl": 3,
+      "pts": 19,
+      "gf": 56,
+      "ga": 72,
+      "strk": "W1"
+     },
+     {
       "name": "North Bay Battalion",
       "abbr": "NB",
       "gp": 20,
@@ -3153,18 +3113,6 @@
       "gf": 70,
       "ga": 79,
       "strk": "W1"
-     },
-     {
-      "name": "Niagara IceDogs",
-      "abbr": "NIAG",
-      "gp": 18,
-      "w": 7,
-      "l": 8,
-      "otl": 3,
-      "pts": 17,
-      "gf": 55,
-      "ga": 72,
-      "strk": "L4"
      },
      {
       "name": "Brampton Steelheads",
@@ -3216,7 +3164,7 @@
       "otl": 3,
       "pts": 27,
       "gf": 77,
-      "ga": 61,
+      "ga": 62,
       "strk": "W9"
      },
      {
@@ -3227,7 +3175,7 @@
       "l": 5,
       "otl": 1,
       "pts": 25,
-      "gf": 70,
+      "gf": 71,
       "ga": 51,
       "strk": "W1"
      },
@@ -3268,7 +3216,7 @@
       "l": 3,
       "otl": 0,
       "pts": 34,
-      "gf": 91,
+      "gf": 92,
       "ga": 60,
       "strk": "W8"
      },
@@ -3299,13 +3247,13 @@
      {
       "name": "Erie Otters",
       "abbr": "ER",
-      "gp": 20,
+      "gp": 21,
       "w": 10,
       "l": 8,
-      "otl": 2,
-      "pts": 22,
+      "otl": 3,
+      "pts": 23,
       "gf": 66,
-      "ga": 75,
+      "ga": 76,
       "strk": "L2"
      },
      {
@@ -3317,7 +3265,7 @@
       "otl": 4,
       "pts": 16,
       "gf": 55,
-      "ga": 82,
+      "ga": 83,
       "strk": "L2"
      }
     ]
@@ -3497,7 +3445,7 @@
       "otl": 1,
       "pts": 39,
       "gf": 97,
-      "ga": 48,
+      "ga": 49,
       "strk": "W6"
      },
      {
@@ -3568,7 +3516,7 @@
       "l": 14,
       "otl": 1,
       "pts": 17,
-      "gf": 70,
+      "gf": 71,
       "ga": 114,
       "strk": "L3"
      },
@@ -3672,7 +3620,7 @@
       "otl": 3,
       "pts": 25,
       "gf": 81,
-      "ga": 67,
+      "ga": 68,
       "strk": "L2"
      },
      {
@@ -3755,7 +3703,7 @@
       "l": 14,
       "otl": 0,
       "pts": 10,
-      "gf": 60,
+      "gf": 61,
       "ga": 86,
       "strk": "L1"
      },
@@ -3784,7 +3732,7 @@
       "l": 2,
       "otl": 1,
       "pts": 33,
-      "gf": 110,
+      "gf": 111,
       "ga": 50,
       "strk": "W5"
      },
@@ -3797,7 +3745,7 @@
       "otl": 1,
       "pts": 33,
       "gf": 84,
-      "ga": 50,
+      "ga": 51,
       "strk": "W7"
      },
      {
@@ -3820,7 +3768,7 @@
       "l": 1,
       "otl": 1,
       "pts": 29,
-      "gf": 84,
+      "gf": 85,
       "ga": 50,
       "strk": "W2"
      },
@@ -3857,7 +3805,7 @@
       "otl": 2,
       "pts": 22,
       "gf": 74,
-      "ga": 75,
+      "ga": 76,
       "strk": "L1"
      },
      {
