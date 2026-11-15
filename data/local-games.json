@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T17:16:47-05:00",
+ "updated": "2026-11-15T17:33:33-05:00",
  "today": "2026-11-15",
  "range": [
   "2026-11-12",
@@ -824,10 +824,10 @@
    "home_away": "N",
    "opponent": "TMU Bold",
    "location": "Guelph, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 5,
+   "opp_score": 6,
+   "result": "L",
    "note": "Guelph Invitational - Women",
    "links": {}
   },
@@ -844,7 +844,7 @@
    "our_score": 0,
    "opp_score": 1,
    "result": null,
-   "note": "12:23 2nd",
+   "note": "01:03 2nd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29206/"
    }
@@ -1685,6 +1685,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nfl",
+   "headline": "Hubbard helps Panthers past Saints to retain first in NFC South",
+   "summary": "",
+   "published": "2026-11-15T17:01-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/hubbard_chuba1280.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/hubbard-helps-panthers-past-saints-to-retain-first-in-nfc-south/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "Russia unable to compete at 2027 world juniors, IIHF confirms",
    "summary": "",
@@ -1713,18 +1726,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "St. Brown, Gibbs lead Lions to rout of Patriots in Munich",
-   "summary": "Detroit Lions receiver Amon-Ra St. Brown caught two touchdown passes in his German homecoming and Jahmyr Gibbs ran for 153 yards and two scores in a 35-10 win over the New England Patriots, who lost quarterback Drake May",
-   "published": "2026-11-15T12:56-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/arsb.jpg",
+   "league": "nhl",
+   "headline": "Canadiens’ Anderson, Matheson to miss multiple weeks with lower-body injuries",
+   "summary": "Forward Josh Anderson will be out for three to four weeks, and defenceman Mike Matheson will miss two to three weeks, both with lower-body injuries, the Canadiens announced on Sunday.",
+   "published": "2026-11-15T17:26-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/05/Anderson.jpg",
    "video": false,
-   "teams": [
-    "Detroit Lions"
-   ],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/st-brown-gibbs-lead-lions-rout-of-patriots-in-munich/",
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canadiens-anderson-matheson-to-miss-multiple-weeks-with-lower-body-injuries/",
    "source": "Sportsnet"
   },
   {
@@ -1751,19 +1762,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/avalanche-claim-defenceman-mike-reilly-off-waivers-from-hurricanes/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Capitals’ Ryan Leonard fined for high sticking Devils’ Cody Glass",
-   "summary": "",
-   "published": "2026-11-15T12:09-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/12/CP175271131.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/capitals-ryan-leonard-fined-for-high-sticking-devils-cody-glass/",
    "source": "Sportsnet"
   },
   {
@@ -1846,6 +1844,21 @@
   },
   {
    "league": "nfl",
+   "headline": "St. Brown, Gibbs lead Lions to rout of Patriots in Munich",
+   "summary": "Detroit Lions receiver Amon-Ra St. Brown caught two touchdown passes in his German homecoming and Jahmyr Gibbs ran for 153 yards and two scores in a 35-10 win over the New England Patriots, who lost quarterback Drake May",
+   "published": "2026-11-15T12:56-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/arsb.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Lions"
+   ],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/st-brown-gibbs-lead-lions-rout-of-patriots-in-munich/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
    "headline": "Patriots’ Maye out with injury after play also hurting Lions’ Hutchinson",
    "summary": "",
    "published": "2026-11-15T10:46-05:00",
@@ -1909,6 +1922,19 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/four-nfl-officials-pulling-double-duty-in-wake-of-faa-ground-stoppage/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Capitals’ Ryan Leonard fined for high sticking Devils’ Cody Glass",
+   "summary": "",
+   "published": "2026-11-15T12:09-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/12/CP175271131.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/capitals-ryan-leonard-fined-for-high-sticking-devils-cody-glass/",
    "source": "Sportsnet"
   },
   {
@@ -2054,32 +2080,6 @@
    "sn_team_count": 0,
    "sport": "Golf",
    "url": "https://www.sportsnet.ca/pga/article/mcilroy-captures-record-tying-eighth-season-long-european-tour-title/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Harrison taps out Nunes to retain title in co-main event of UFC 334",
-   "summary": "",
-   "published": "2026-11-15T00:54-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Harrison.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/harrison-taps-out-nunes-to-retain-title-in-co-main-event-of-ufc-334/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "UFC champ Kayla Harrison has major career decision ahead after beating Nunes",
-   "summary": "",
-   "published": "2026-11-15T09:38-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/harrison_kayla1280.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/ufc-champ-kayla-harrison-has-major-career-decision-ahead-after-beating-nunes/",
    "source": "Sportsnet"
   },
   {
@@ -2997,7 +2997,7 @@
       "otl": 1,
       "pts": 29,
       "gf": 82,
-      "ga": 58,
+      "ga": 59,
       "strk": "W3"
      },
      {
@@ -3020,7 +3020,7 @@
       "l": 11,
       "otl": 1,
       "pts": 17,
-      "gf": 73,
+      "gf": 74,
       "ga": 81,
       "strk": "W1"
      },
