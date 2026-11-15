@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T18:31:43-05:00",
+ "updated": "2026-11-15T18:47:18-05:00",
  "today": "2026-11-15",
  "range": [
   "2026-11-12",
@@ -841,10 +841,10 @@
    "opponent": "Saginaw Spirit",
    "location": "WFCU Centre, Windsor",
    "status": "live",
-   "our_score": 1,
+   "our_score": 2,
    "opp_score": 1,
    "result": null,
-   "note": "01:57 OT",
+   "note": "End of Game",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29206/"
    }
@@ -1686,8 +1686,8 @@
   },
   {
    "league": "nfl",
-   "headline": "Report: Lions’ Hutchinson feared to have serious knee injury",
-   "summary": "",
+   "headline": "AP source: Lions’ Hutchinson has season-ending knee injury",
+   "summary": "Detroit Lions edge rusher Aidan Hutchinson has a season-ending right knee injury, according to a person familiar with the situation.",
    "published": "2026-11-15T14:17-05:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/aidan-hutchinson.jpg",
    "video": false,
@@ -1697,19 +1697,6 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/report-lions-hutchinson-feared-to-have-serious-knee-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Fillier scores again as Canada beats Sweden to reach final at women’s worlds",
-   "summary": "Sarah Fillier continued her goal-scoring streak as Canada advanced to the world women’s hockey championship gold-medal game with a 3-0 win over Sweden on Sunday.",
-   "published": "2026-11-15T15:43-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/fillier_sarah1280.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/ice-hockey-world-championship/article/fillier-scores-again-as-canada-beats-sweden-to-reach-to-womens-world-hockey-final/",
    "source": "Sportsnet"
   },
   {
@@ -1762,6 +1749,34 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/ice-hockey-world-championship/article/u-s-blanks-finland-to-reach-womens-hockey-worlds-final/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Patriots’ Maye out with injury after play also hurting Lions’ Hutchinson",
+   "summary": "",
+   "published": "2026-11-15T10:46-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/maye_drake1280.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Lions"
+   ],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/patriots-drake-maye-out-with-injury-from-same-play-that-hurt-lions-aidan-hutchinson/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Takeaways: Canada’s win over Sweden sets up gold-medal test vs. USA",
+   "summary": "For the 24th time in 25 tournaments, Canada and the United States will meet in the gold-medal final at the Women’s World Championship.",
+   "published": "2026-11-15T18:39-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Canada-womens-hockey.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/wwhc/article/takeaways-canadas-win-over-sweden-sets-up-gold-medal-test-vs-usa/",
    "source": "Sportsnet"
   },
   {
@@ -1868,21 +1883,6 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/cfl/article/grey-cup-matchup-brings-plenty-of-history-for-alouettes-gm-coach/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Patriots’ Maye out with injury after play also hurting Lions’ Hutchinson",
-   "summary": "",
-   "published": "2026-11-15T10:46-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/maye_drake1280.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Lions"
-   ],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/patriots-drake-maye-out-with-injury-from-same-play-that-hurt-lions-aidan-hutchinson/",
    "source": "Sportsnet"
   },
   {
@@ -3083,7 +3083,7 @@
       "l": 6,
       "otl": 3,
       "pts": 27,
-      "gf": 78,
+      "gf": 79,
       "ga": 64,
       "strk": "L1"
      },
@@ -3096,7 +3096,7 @@
       "otl": 3,
       "pts": 21,
       "gf": 79,
-      "ga": 78,
+      "ga": 79,
       "strk": "W1"
      },
      {
@@ -3203,7 +3203,7 @@
       "l": 3,
       "otl": 1,
       "pts": 35,
-      "gf": 97,
+      "gf": 98,
       "ga": 68,
       "strk": "W10"
      },
@@ -3276,7 +3276,7 @@
       "otl": 3,
       "pts": 19,
       "gf": 84,
-      "ga": 90,
+      "ga": 91,
       "strk": "L1"
      },
      {
@@ -3388,7 +3388,7 @@
       "l": 5,
       "otl": 2,
       "pts": 36,
-      "gf": 130,
+      "gf": 131,
       "ga": 74,
       "strk": "W7"
      },
@@ -3473,7 +3473,7 @@
       "otl": 1,
       "pts": 13,
       "gf": 63,
-      "ga": 100,
+      "ga": 101,
       "strk": "L6"
      }
     ]
