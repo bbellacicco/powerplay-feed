@@ -338,7 +338,7 @@
       function walk(n) {
         if (n.standings && n.standings.entries) out.push({ group: n.name, teams: n.standings.entries.map(function (e) {
           var st = {}; (e.stats || []).forEach(function (x) { st[x.name] = x.displayValue; st['_' + x.name] = x.value; });
-          return { name: e.team.displayName, nick: e.team.shortDisplayName || e.team.name, abbr: e.team.abbreviation, logo: e.team.logos && e.team.logos[0] && e.team.logos[0].href, st: st,
+          return { id: e.team.id, name: e.team.displayName, nick: e.team.shortDisplayName || e.team.name, abbr: e.team.abbreviation, logo: e.team.logos && e.team.logos[0] && e.team.logos[0].href, st: st,
                    link: e.team.links && e.team.links[0] && e.team.links[0].href };
         }) });
         (n.children || []).forEach(walk);
@@ -445,6 +445,54 @@
       }).catch(function () { return null; });
     });
   }
+  // team leaders: "who leads the Spitfires in points", "Leafs top scorer", "Lions leading rusher"
+  var LEADW = / (lead|leads|leader|leaders|leading|top|most|best|scorer|scorers|scoring) /;
+  function statPick(n) {
+    return / goals? /.test(n) ? 'G' : / assists? /.test(n) ? 'A' : / (wins|saves|goalies?|gaa|save) /.test(n) ? 'GOALIE' : 'PTS';
+  }
+  function localLeaders(m, n) {
+    var stp = STATS ? Promise.resolve(STATS) : getJSON('stats.json').then(function (j) { STATS = j || {}; return STATS; });
+    return stp.then(function (sj) {
+      var tm = ((sj && sj.teams) || []).filter(function (x) { return norm(x.club) === norm(m.t.name); })[0];
+      if (!tm) return null;
+      var want = statPick(n), g = tm.groups.filter(function (x) { return want === 'GOALIE' ? /goal/i.test(x.title) : !/goal/i.test(x.title); })[0] || tm.groups[0];
+      var ci = g.cols.indexOf(want === 'GOALIE' ? g.cols[g.key] : want); if (ci < 0) ci = g.key;
+      var rows = g.rows.slice().sort(function (a, b) { return (Number(b.vals[ci]) || 0) - (Number(a.vals[ci]) || 0); });
+      var top = rows[0], word = { PTS: 'points', G: 'goals', A: 'assists' }[g.cols[ci]] || g.cols[ci];
+      var tied = rows.filter(function (r) { return String(r.vals[ci]) === String(top.vals[ci]); }).map(function (r) { return r.name; });
+      var who = tied.length > 1 ? tied.slice(0, -1).join(', ') + ' and ' + tied[tied.length - 1] + ' lead' : top.name + ' leads';
+      var c = card(who + ' the ' + tm.club + ' with ' + top.vals[ci] + ' ' + word + (tied.length > 1 ? ' each' : ''), g.title + ' \u00b7 ' + tm.league);
+      c.appendChild(table(g.cols, rows.map(function (r) { return { name: r.name, mark: r === top, vals: r.vals }; })));
+      if (tm.link) goLink(c, 'Full ' + tm.club + ' stats ›', tm.link);
+      return c;
+    });
+  }
+  function proLeaders(k, t, n) {
+    var y = new Date().getFullYear(), mo = new Date().getMonth() + 1;
+    var season = (k === 'nhl' || k === 'nba') ? (mo >= 8 ? y + 1 : y) : (k === 'nfl' ? (mo < 3 ? y - 1 : y) : (mo < 3 ? y - 1 : y));
+    var path = PRO[k][0].replace('/', '/leagues/');
+    return fetch('https://sports.core.api.espn.com/v2/sports/' + path + '/seasons/' + season + '/types/2/teams/' + t.id + '/leaders').then(function (r) { return r.json(); }).then(function (j) {
+      var cats = j.categories || j || [];
+      var want = {
+        nhl: / goals? /.test(n) ? ['goals'] : / assists? /.test(n) ? ['assists'] : / (wins|saves|goalie|gaa|save) /.test(n) ? ['wins', 'savePct'] : ['points'],
+        nba: / rebounds? /.test(n) ? ['reboundsPerGame', 'rebounds'] : / assists? /.test(n) ? ['assistsPerGame', 'assists'] : ['pointsPerGame', 'points'],
+        nfl: / (rush|rushing|rusher|runs?) /.test(n) ? ['rushingYards', 'rushingLeader'] : / (receiv|catch|receptions|receiver) /.test(n) ? ['receivingYards', 'receivingLeader'] : / sacks? /.test(n) ? ['sacks'] : / tackles? /.test(n) ? ['totalTackles'] : / (touchdowns?|tds?) /.test(n) ? ['passingTouchdowns', 'rushingTouchdowns'] : ['passingYards', 'passingLeader'],
+        mlb: / (home runs?|homers?|hr) /.test(n) ? ['homeRuns'] : / (rbi|rbis) /.test(n) ? ['RBIs', 'rbis'] : / (average|avg) /.test(n) ? ['avg', 'battingAverage'] : / (era|pitcher|wins) /.test(n) ? ['ERA', 'wins'] : ['homeRuns']
+      }[k];
+      var cat = cats.filter(function (c) { return want.indexOf(c.name) >= 0; })[0] || cats[0];
+      if (!cat || !cat.leaders || !cat.leaders.length) return null;
+      var ls = cat.leaders.slice(0, 5);
+      return Promise.all(ls.map(function (l) { return fetch(l.athlete.$ref.replace(/^http:/, 'https:')).then(function (r) { return r.json(); }).catch(function () { return {}; }); })).then(function (ath) {
+        var label = (cat.displayName || cat.name).toLowerCase();
+        var tied = ls.filter(function (l) { return l.displayValue === ls[0].displayValue; }).map(function (l, i) { return ath[i].displayName || ''; });
+        var who = tied.length > 1 ? tied.slice(0, -1).join(', ') + ' and ' + tied[tied.length - 1] + ' lead' : (ath[0].displayName || 'Leader') + ' leads';
+        var c = card(who + ' the ' + t.name + ' with ' + ls[0].displayValue + ' ' + label + (tied.length > 1 ? ' each' : ''), PRO[k][1] + ' · ' + (cat.displayName || cat.name) + ' · this season');
+        c.appendChild(table([cat.abbreviation || cat.shortDisplayName || ''], ls.map(function (l, i) { return { name: ath[i].displayName || '', mark: i === 0, vals: [l.displayValue] }; })));
+        if (t.link) goLink(c, t.name + ' on ESPN ›', t.link);
+        return c;
+      });
+    }).catch(function () { return null; });
+  }
   function answer(q) {
     var n = ' ' + norm(q).replace(/[^a-z0-9' %]+/g, ' ').replace(/\s+/g, ' ') + ' ';
     Object.keys(NICK).forEach(function (w) { n = n.replace(new RegExp(' ' + w + ' ', 'g'), ' ' + NICK[w] + ' '); });
@@ -453,7 +501,9 @@
     var lgKey = (n.match(/ (nhl|nfl|nba|mlb) /) || [])[1];
     var localLg = (n.match(/ (ohl|ojhl|gohl|pjhl|pwhl) /) || [])[1];
     // 1. a local team (Local Scoreboard standings)
+    var lead = LEADW.test(n) || / who has the most /.test(n);
     var lm = findLocal(n);
+    if (lm && lead) return localLeaders(lm, n).then(function (c) { return c || localAnswer(lm); });
     if (lm && (stdWord || !statWord)) return Promise.resolve(localAnswer(lm));
     // 2. a local league's standings
     if (localLg && stdWord && LG && LG.standings && LG.standings[localLg]) {
@@ -471,6 +521,7 @@
         var nk = norm(t.nick), full = norm(t.name);
         if ((n.indexOf(' ' + full + ' ') >= 0 || (nk.length > 3 && n.indexOf(' ' + nk + ' ') >= 0)) && (!found || full.length > norm(found.t.name).length)) found = { k: x.k, g: g, t: t };
       }); }); });
+      if (found && lead) return proLeaders(found.k, found.t, n).then(function (c) { return c || proTeamAnswer(found.k, found.g, found.t); });
       if (found && !statWord) return proTeamAnswer(found.k, found.g, found.t);
       if (found && statWord && / (points|pts|record) /.test(n) && n.replace(new RegExp(' (' + norm(found.t.nick) + '|' + norm(found.t.name) + ') ', 'g'), ' ').replace(/ (how|many|much|points|pts|do|does|the|have|has|record|whats|what|is|are|in|standings) /g, ' ').trim() === '') return proTeamAnswer(found.k, found.g, found.t);
       if (lgKey && stdWord && !found) return proLeagueAnswer(lgKey, all[0].gs);
