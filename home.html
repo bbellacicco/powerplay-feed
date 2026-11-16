@@ -355,7 +355,14 @@
 </style>
 <script>try{if(window.top!==window.self)document.documentElement.className+=' inwix';}catch(e){document.documentElement.className+=' inwix';}
 /* ?view=hub: the Local Hub's Stories section (What's Going On + Latest stories only) */
-if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className += ' hubview';</script>
+if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className += ' hubview';
+/* ?view=strip&strip=<key>: one homepage strip on its own (a Local Hub section: High School, Saints, Lancers, Junior) */
+(function () { var m = location.search.match(/[?&]view=strip\b/) && location.search.match(/[?&]strip=([a-z]+)/); if (!m) return;
+  document.documentElement.className += ' stripview';
+  var st = document.createElement('style');
+  st.textContent = 'html.stripview #sform,html.stripview .teamswrap,html.stripview .feat,html.stripview #feat,html.stripview .hubtitle,html.stripview #guide,html.stripview .page>section,html.stripview #row-follow,html.stripview #rows>section:not(#row-' + m[1] + '){display:none!important}' +
+    'html.stripview #rows>section{margin-top:14px}html.stripview #rows .all{display:none!important}';
+  document.head.appendChild(st); })();</script>
 <script>
 // tall (portrait) photos in wide boxes: show the upper part, where faces are, instead of the middle
 document.addEventListener('load', function (e) {
@@ -491,13 +498,13 @@ document.addEventListener('load', function (e) {
   // ---------- rows ----------
   var ROWS = [
     { key: 'stories', title: 'What\u2019s New', gold: 'New', by: ['St. Clair College Alumni', 'logos/st-clair-alumni.png'], all: LINK.local, tab: 'stories' },
-    { key: 'spitfires', title: 'Windsor Spitfires', gold: 'Spitfires', by: ['Unifor Local 444', 'logos/unifor-444.png'], all: SITE + 'scores-standings?find=spitfires', tab: null },
-    { key: 'hs', title: 'High School Huddle', gold: 'Huddle', by: ['Unifor Local 2458', 'logos/unifor-2458.png'], all: SITE + 'headlines/categories/high-school-sports', tab: null, share: SITE + 'scores-standings?strip=hs' },
-    { key: 'saints', title: 'Saints Nation', gold: 'Nation', by: ['The D’Amore Group', 'logos/damore-group.png'], all: SITE + 'headlines/categories/st-clair-athletics', tab: null, share: SITE + 'scores-standings?strip=saints' },
-    { key: 'lancers', title: 'Lancers Lounge', gold: 'Lounge', by: null, all: SITE + 'headlines/categories/lancers-lounge', tab: null, share: SITE + 'scores-standings?strip=lancers' },
+    { key: 'spitfires', title: 'Windsor Spitfires', gold: 'Spitfires', by: ['Unifor Local 444', 'logos/unifor-444.png'], all: SITE + 'scores-standings?tab=spitfires', tab: 'spitfires', share: SITE + 'scores-standings?strip=spitfires' },
+    { key: 'hs', title: 'High School Huddle', gold: 'Huddle', by: ['Unifor Local 2458', 'logos/unifor-2458.png'], all: SITE + 'scores-standings?tab=hs', tab: 'hs', share: SITE + 'scores-standings?strip=hs' },
+    { key: 'saints', title: 'Saints Nation', gold: 'Nation', by: ['The D’Amore Group', 'logos/damore-group.png'], all: SITE + 'scores-standings?tab=saints', tab: 'saints', share: SITE + 'scores-standings?strip=saints' },
+    { key: 'lancers', title: 'Lancers Lounge', gold: 'Lounge', by: null, all: SITE + 'scores-standings?tab=lancers', tab: 'lancers', share: SITE + 'scores-standings?strip=lancers' },
     { key: 'photos', title: 'Game Day Snaps', gold: 'Snaps', by: null, all: null, tab: null },
     { key: 'athletes', title: 'Athlete profiles', by: null, all: LINK.athletes, tab: 'athletes' },
-    { key: 'junior', title: 'Junior Hockey', gold: 'Hockey', by: null, all: SITE + 'headlines/categories/junior-hockey', tab: null, share: SITE + 'scores-standings?strip=junior' },
+    { key: 'junior', title: 'Junior Hockey', gold: 'Hockey', by: null, all: SITE + 'scores-standings?tab=junior', tab: 'junior', share: SITE + 'scores-standings?strip=junior' },
     { key: 'local', title: 'Local scores', by: ['Unifor Local 444', 'logos/unifor-444.png'], all: LINK.scores, tab: 'scores' },
     { key: 'pro', title: 'Pro scores', by: ['Unifor Local 2458', 'logos/unifor-2458.png'], all: LINK.pro, tab: 'pro' },
     { key: 'prohead', title: 'Pro headlines', by: ['The D’Amore Group', 'logos/damore-group.png'], all: LINK.pro, tab: 'pro-updates' }
