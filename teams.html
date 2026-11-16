@@ -52,6 +52,10 @@
   /* one team */
   .team[hidden], .dir[hidden] { display: none; }
   .back { font: inherit; font-size: 14px; font-weight: 800; color: var(--accent); background: none; border: 0; padding: 6px 0; cursor: pointer; }
+  /* a Local Hub section: one group's teams (no page heading or search), or one team's page on its own */
+  html.onlymode #dir > h1, html.onlymode #dir > .sub, html.onlymode #dir > .search, html.onlymode #results { display: none; }
+  html.onlymode .page, html.solomode .page { padding-top: 6px; }
+  html.solomode #dir { display: none !important; }
   .thead { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin: 6px 0 14px; }
   .thr { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
   .ttabs { display: flex; border: 1px solid rgba(255,255,255,.18); border-radius: 6px; overflow: hidden; }
@@ -199,6 +203,10 @@
   var TZ = 'America/Toronto';
   var qs = new URLSearchParams(location.search);
   var BAR = qs.get('view') === 'bar';                 // the slim bar at the top of the Local Hub
+  var ONLY = (qs.get('only') || '').toLowerCase();     // ?only=hs|saints|lancers|junior: just that group's teams (its Local Hub section)
+  var SOLO = qs.get('solo') === '1';                   // ?find=<team>&solo=1: that team's page on its own (the Spitfires section)
+  if (ONLY) document.documentElement.classList.add('onlymode');
+  if (SOLO) document.documentElement.classList.add('solomode');
   if (BAR) { document.documentElement.classList.add('barmode'); document.getElementById('dir').hidden = true; }
   function el(t, c, x) { var e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; }
   function get(n) { return fetch(DATA + n + '?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }); }
@@ -327,7 +335,7 @@
   var hsPick = '';
   function drawDir() {
     var box = document.getElementById('leagues'); box.innerHTML = '';
-    SECS.forEach(function (s) {
+    SECS.filter(function (s) { return !ONLY || s[0] === ONLY; }).forEach(function (s) {
       var list = T.filter(function (t) { return t.sec === s[0]; });
       var c = el('section', 'lg'); var h = el('h2'); h.innerHTML = s[1].replace(/(\S+)$/, '<em>$1</em>'); c.appendChild(h); c.appendChild(el('div', 'll', s[2]));
       if (s[0] === 'hs') {
@@ -469,7 +477,8 @@
     if (!BAR) { try { history.replaceState(null, '', '?find=' + t.id); } catch (e) {} }
     else { barPick = ''; drawDrop(); markBar(); }
     try { parent.postMessage({ pp: 'team', team: t.id }, '*'); } catch (e) {}
-    var back = el('button', 'back', BAR ? '\u2715 Close' : '\u2039 All teams'); back.type = 'button'; back.onclick = closeTeam;
+    var back = el('button', 'back', BAR ? '\u2715 Close' : ONLY ? '\u2039 Back to the teams' : '\u2039 All teams'); back.type = 'button'; back.onclick = closeTeam;
+    if (SOLO) back.style.display = 'none';
     if (BAR) { var cb = el('div', 'closebar'); cb.appendChild(back); box.appendChild(cb); } else box.appendChild(back);
     var head = el('div', 'thead'), hl = el('div'); var h = el('h1'); h.textContent = t.full || t.name; hl.appendChild(h); hl.appendChild(el('div', 'lgl', t.league)); head.appendChild(hl);
     var hr = el('div', 'thr'), tabs = el('div', 'ttabs'); hr.appendChild(tabs);
