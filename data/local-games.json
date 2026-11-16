@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T21:47:22-05:00",
+ "updated": "2026-11-15T22:06:06-05:00",
  "today": "2026-11-15",
  "range": [
   "2026-11-12",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 30
+   "count": 31
   },
   "club_news": {
    "ok": true,
@@ -1709,9 +1709,9 @@
    "home_away": "N",
    "opponent": "Edmonton Elks",
    "location": "McMahon Stadium",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "final",
+   "our_score": 30,
+   "opp_score": 37,
    "result": null,
    "note": "",
    "links": {
@@ -2451,6 +2451,19 @@
   }
  ],
  "more_news": [
+  {
+   "league": "cfl",
+   "headline": "Elks topple Alouettes to win 113th Grey Cup",
+   "summary": "The Elks, behind a revenge-fuelled Cody Fajardo, took down the Montreal Alouettes 37-30 on Sunday night to win the 113th Grey Cup in Calgary — their 15th title and first since 2015.",
+   "published": "2026-11-15T22:03-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Elks-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/elks-topple-alouettes-to-win-113th-grey-cup/",
+   "source": "Sportsnet"
+  },
   {
    "league": "nfl",
    "headline": "NFL Week 10 roundup: Vikings dominate Packers in Cousins’ return",
