@@ -624,10 +624,10 @@ document.addEventListener('load', function (e) {
   if (only !== 'pro' && only !== 'local') document.getElementById('panels').appendChild(document.getElementById('minute'));   // the Sports Minute, between the two panels
   var R = only === 'local' ? null : panel('pro', 'Around the', 'Pros', 'Our teams: Wings, Leafs, Lions, Tigers, Jays, Pistons, Raptors', PAGE.proHub, 'pro');
   // the same strips as the homepage, in the same order
-  if (L) [['What\u2019s New', PAGE.localHub + '?tab=stories', 'stories', 'news'], ['Windsor Spitfires', PAGE.localHub + '?find=spitfires', null, 'star'],
-          ['High School Huddle', SITE + 'headlines/categories/high-school-sports', null, 'news'], ['Saints Nation', SITE + 'headlines/categories/st-clair-athletics', null, 'news'],
-          ['Lancers Lounge', SITE + 'headlines/categories/lancers-lounge', null, 'news'], ['Game Day Snaps', PAGE.snaps, null, 'camera'],
-          ['Athlete Profiles', PAGE.localHub + '?tab=athletes', 'athletes', 'person'], ['Junior Hockey', SITE + 'headlines/categories/junior-hockey', null, 'news'],
+  if (L) [['What\u2019s New', PAGE.localHub + '?tab=stories', 'stories', 'news'], ['Windsor Spitfires', PAGE.localHub + '?tab=spitfires', 'spitfires', 'star'],
+          ['High School Huddle', PAGE.localHub + '?tab=hs', 'hs', 'news'], ['Saints Nation', PAGE.localHub + '?tab=saints', 'saints', 'news'],
+          ['Lancers Lounge', PAGE.localHub + '?tab=lancers', 'lancers', 'news'], ['Game Day Snaps', PAGE.snaps, null, 'camera'],
+          ['Athlete Profiles', PAGE.localHub + '?tab=athletes', 'athletes', 'person'], ['Junior Hockey', PAGE.localHub + '?tab=junior', 'junior', 'news'],
           ['Local Scores', PAGE.localHub + '?tab=scores', 'scores', 'score']]
     .forEach(function (d) { L.doors.appendChild(door(d[0], d[1], d[2], d[3], d[4])); });
   if (R) [['Pro Scoreboard', PAGE.proHub, 'pro', 'score'], ['Pro Updates', PAGE.proHub, 'pro-updates', 'news'], ['Pro Network', PAGE.proHub, 'pro-network', 'play'], ['Search the site', PAGE.search, null, 'search']]
