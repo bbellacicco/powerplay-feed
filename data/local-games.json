@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T18:47:18-05:00",
+ "updated": "2026-11-15T19:01:54-05:00",
  "today": "2026-11-15",
  "range": [
   "2026-11-12",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 37
   },
   "club_news": {
    "ok": true,
@@ -840,11 +840,11 @@
    "home_away": "H",
    "opponent": "Saginaw Spirit",
    "location": "WFCU Centre, Windsor",
-   "status": "live",
+   "status": "final",
    "our_score": 2,
    "opp_score": 1,
-   "result": null,
-   "note": "End of Game",
+   "result": "W",
+   "note": "OT",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29206/"
    }
@@ -915,6 +915,19 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "Montreal Alouettes Take The Field | 113th Grey Cup",
+   "summary": "",
+   "published": "2026-11-15T18:49:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/2bCCiePddcecCQR9qTYjeS/132786183d8f6af178ef6612a2636451/MTL_run_out.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Alouettes"
+   ],
+   "url": "https://www.cfl.ca/article/montreal-alouettes-take-the-field-113th-grey-cup",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "ONE THING MATTERS | 113th Grey Cup",
    "summary": "",
    "published": "2026-11-15T11:00:00-05:00",
@@ -933,6 +946,17 @@
    "video": false,
    "teams": [],
    "url": "https://www.cfl.ca/article/grey-cup-all-access",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Full SiriusXM Kickoff Show Ft. James Barker Band, Jim Cuddy and Greg Keelor | 113th Grey Cup",
+   "summary": "",
+   "published": "2026-11-15T00:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/1621LhNjwUwxxmxLbkz21h/db8427fae788a20e944a59a220000bd6/SXM_KICK_OFF_SHOW.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/full-siriusxm-kickoff-show-ft-james-barker-band-jim-cuddy-and-greg-keelor-113th-grey-cup",
    "source": "CFL.ca"
   },
   {
@@ -1100,28 +1124,6 @@
     "Elks"
    ],
    "url": "https://www.cfl.ca/article/canadian-linebackers-dublanko-cantin-arku-look-to-shine-at-the-113th-grey-cup",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "GREY CUP ALL-ACCESS | Season 2 Official Trailer",
-   "summary": "",
-   "published": "2026-11-12T21:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/7EGug3vbp5WuR5kZVYuSND/fd7a9af1ace10e7d60e3b2db2a4a2149/image.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/grey-cup-all-access-season-2-official-trailer",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Edmonton Elks Top Five Plays of the 2026 Season",
-   "summary": "",
-   "published": "2026-11-12T17:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/yTrNU2DKIzMpSlLHs6lzK/ae43bfdaf015a5b379a5772156195dff/Top5_EDM_V2.png?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/edmonton-elks-top-five-plays-of-the-2026-season",
    "source": "CFL.ca"
   },
   {
@@ -1713,6 +1715,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nfl",
+   "headline": "Josh Allen powers Bills past Jets for best start in 35 years",
+   "summary": "Josh Allen and the Buffalo Bills are off to the franchise’s best start in 35 years.",
+   "published": "2026-11-15T16:41-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/allen_josh1280.jpg",
+   "video": false,
+   "teams": [
+    "Buffalo Bills"
+   ],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/josh-allen-powers-bills-past-jets-for-best-start-in-35-years/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Canadiens’ Anderson, Matheson to miss multiple weeks with lower-body injuries",
    "summary": "Forward Josh Anderson will be out for three to four weeks, and defenceman Mike Matheson will miss two to three weeks, both with lower-body injuries, the Canadiens announced on Sunday.",
@@ -1749,21 +1766,6 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/ice-hockey-world-championship/article/u-s-blanks-finland-to-reach-womens-hockey-worlds-final/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Patriots’ Maye out with injury after play also hurting Lions’ Hutchinson",
-   "summary": "",
-   "published": "2026-11-15T10:46-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/maye_drake1280.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Lions"
-   ],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/patriots-drake-maye-out-with-injury-from-same-play-that-hurt-lions-aidan-hutchinson/",
    "source": "Sportsnet"
   },
   {
@@ -1808,7 +1810,7 @@
   {
    "league": "nfl",
    "headline": "Hubbard helps Panthers past Saints to retain first in NFC South",
-   "summary": "",
+   "summary": "Chuba Hubbard made long gains out of short passes, pushed through tacklers and pulled the mistake-prone Carolina Panthers out of a three-game slide.",
    "published": "2026-11-15T17:01-05:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/hubbard_chuba1280.jpg",
    "video": false,
@@ -1816,6 +1818,47 @@
    "sn_team_count": 2,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/hubbard-helps-panthers-past-saints-to-retain-first-in-nfc-south/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "St. Brown, Gibbs lead Lions to rout of Patriots in Munich",
+   "summary": "Detroit Lions receiver Amon-Ra St. Brown caught two touchdown passes in his German homecoming and Jahmyr Gibbs ran for 153 yards and two scores in a 35-10 win over the New England Patriots, who lost quarterback Drake May",
+   "published": "2026-11-15T12:56-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/arsb.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Lions"
+   ],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/st-brown-gibbs-lead-lions-rout-of-patriots-in-munich/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Mahomes throws five TD passes as Chiefs overwhelm Falcons",
+   "summary": "Patrick Mahomes threw five touchdown passes, including one to newly acquired Josh Downs and two to rookie Emmett Johnson, and the Kansas City Chiefs beat the struggling Atlanta Falcons 35-13 on Sunday to move into a firs",
+   "published": "2026-11-15T16:31-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/chiefs.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/mahomes-throws-five-td-passes-as-chiefs-overwhelm-falcons/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Watson throws for 312 yards against his old team as Browns rally past Texans",
+   "summary": "Deshaun Watson can talk all he wants about how playing the Houston Texans is just another game.",
+   "published": "2026-11-15T16:45-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/watson-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/watson-throws-for-312-yards-against-his-old-team-as-browns-rally-past-texans/",
    "source": "Sportsnet"
   },
   {
@@ -1832,18 +1875,29 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "St. Brown, Gibbs lead Lions to rout of Patriots in Munich",
-   "summary": "Detroit Lions receiver Amon-Ra St. Brown caught two touchdown passes in his German homecoming and Jahmyr Gibbs ran for 153 yards and two scores in a 35-10 win over the New England Patriots, who lost quarterback Drake May",
-   "published": "2026-11-15T12:56-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/arsb.jpg",
+   "league": "other",
+   "headline": "Teen Mirra Andreeva beats 32-year-old Elina Svitolina to win WTA Finals",
+   "summary": "Mirra Andreeva defeated Elina Svitolina 7-5, 6-3 to win the WTA Finals on Sunday without dropping a set over five matches at the season-ending championships.",
+   "published": "2026-11-15T18:04-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/mirra.jpg",
    "video": false,
-   "teams": [
-    "Detroit Lions"
-   ],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/st-brown-gibbs-lead-lions-rout-of-patriots-in-munich/",
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Tennis",
+   "url": "https://www.sportsnet.ca/wta/article/teen-mirra-andreeva-beats-32-year-old-elina-svitolina-to-win-wta-finals/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Nations League Roundup: England ends Spain’s 43-game unbeaten streak",
+   "summary": "",
+   "published": "2026-11-15T17:42-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-43.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/soccer/article/nations-league-roundup-england-ends-spains-43-game-unbeaten-streak/",
    "source": "Sportsnet"
   },
   {
@@ -1926,6 +1980,21 @@
   },
   {
    "league": "nfl",
+   "headline": "Patriots’ Maye out with injury after play also hurting Lions’ Hutchinson",
+   "summary": "",
+   "published": "2026-11-15T10:46-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/maye_drake1280.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Lions"
+   ],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/patriots-drake-maye-out-with-injury-from-same-play-that-hurt-lions-aidan-hutchinson/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
    "headline": "Four NFL officials pulling double-duty in wake of FAA ground stoppage",
    "summary": "",
    "published": "2026-11-15T14:11-05:00",
@@ -2003,32 +2072,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Mark Scheifele sets Jets’ franchise points record with goal",
-   "summary": "",
-   "published": "2026-11-14T17:15-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/02/CP175632468-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/mark-scheifele-sets-jets-franchise-points-record-with-goal/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Jets complete second four-goal comeback of season vs. Blackhawks",
-   "summary": "Mark Scheifele had a goal and three assists, Kyle Connor scored a goal in regulation and had the deciding shootout goal, and the Winnipeg Jets rallied from a four-goal deficit to beat the Chicago Blackhawks 5-4 on Saturd",
-   "published": "2026-11-14T18:32-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Jets-2.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/jets-complete-second-four-goal-comeback-of-season-vs-blackhawks/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "other",
    "headline": "Maltais wins two bronze medals at speedskating World Cup season opener",
    "summary": "",
@@ -2069,15 +2112,15 @@
   },
   {
    "league": "other",
-   "headline": "Harrison taps out Nunes to retain title in co-main event of UFC 334",
+   "headline": "Lindy Duncan delivers clutch shots to get first career LPGA Tour win in her 222nd attempt",
    "summary": "",
-   "published": "2026-11-15T00:54-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Harrison.jpg",
+   "published": "2026-11-15T16:49-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/duncan_lindy1280.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/harrison-taps-out-nunes-to-retain-title-in-co-main-event-of-ufc-334/",
+   "sport": "Golf",
+   "url": "https://www.sportsnet.ca/lpga/article/lindy-duncan-delivers-clutch-shots-to-get-first-career-lpga-tour-win-inher-222nd-attempt/",
    "source": "Sportsnet"
   },
   {
@@ -2277,6 +2320,19 @@
   },
   {
    "league": "nfl",
+   "headline": "Top 3 things we learned from Bills at Jets | Week 10",
+   "summary": "The Bills improved to 8-1 on the season and remained atop the AFC East with a 31-12 road win over the Jets.",
+   "published": "2026-11-15T18:55-05:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/bills/z13gjj78lmy2imavsbm5.jpg",
+   "video": false,
+   "teams": [
+    "Buffalo Bills"
+   ],
+   "url": "https://www.buffalobills.com/news/top-3-things-we-learned-from-bills-at-jets-week-10-x5101",
+   "source": "Team site"
+  },
+  {
+   "league": "nfl",
    "headline": "Bills 31 , Jets 12 | Final Score, recap + highlights",
    "summary": "Cook earns career-long 74-yard rushing touchdown; the longest rushing touchdown for Buffalo since LeSean McCoy’s 75-yard rush TD on Nov. 27, 2016.",
    "published": "2026-11-15T16:32-05:00",
@@ -2390,19 +2446,6 @@
     "Buffalo Bills"
    ],
    "url": "https://www.buffalobills.com/news/morgan-wallen-concert-tour-announcement-buffalo-highmark-stadium-2027",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
-   "headline": "'The opportunity here is tremendous' | Amani Hooker reacts to his first day with the Bills",
-   "summary": "Amani Hooker kicks off his tenure in Buffalo: \"I can just really feel the love here \"",
-   "published": "2026-11-11T18:05-05:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/bills/ims7dcaso0wowehip9ws.png",
-   "video": false,
-   "teams": [
-    "Buffalo Bills"
-   ],
-   "url": "https://www.buffalobills.com/news/the-opportunity-here-is-tremendous-amani-hooker-reacts-to-his-first-day-with-the-bills",
    "source": "Team site"
   },
   {
@@ -3064,6 +3107,18 @@
       "strk": "W2"
      },
      {
+      "name": "Windsor Spitfires",
+      "abbr": "WSR",
+      "gp": 22,
+      "w": 13,
+      "l": 6,
+      "otl": 3,
+      "pts": 29,
+      "gf": 79,
+      "ga": 64,
+      "strk": "W1"
+     },
+     {
       "name": "Flint Firebirds",
       "abbr": "FLNT",
       "gp": 19,
@@ -3076,25 +3131,13 @@
       "strk": "W2"
      },
      {
-      "name": "Windsor Spitfires",
-      "abbr": "WSR",
-      "gp": 21,
-      "w": 12,
-      "l": 6,
-      "otl": 3,
-      "pts": 27,
-      "gf": 79,
-      "ga": 64,
-      "strk": "L1"
-     },
-     {
       "name": "Saginaw Spirit",
       "abbr": "SAG",
-      "gp": 21,
+      "gp": 22,
       "w": 9,
       "l": 9,
-      "otl": 3,
-      "pts": 21,
+      "otl": 4,
+      "pts": 22,
       "gf": 79,
       "ga": 79,
       "strk": "W1"
