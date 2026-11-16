@@ -53,6 +53,24 @@
   .team[hidden], .dir[hidden] { display: none; }
   .back { font: inherit; font-size: 14px; font-weight: 800; color: var(--accent); background: none; border: 0; padding: 6px 0; cursor: pointer; }
   .thead { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin: 6px 0 14px; }
+  .thr { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .ttabs { display: flex; border: 1px solid rgba(255,255,255,.18); border-radius: 6px; overflow: hidden; }
+  .ttabs button { border: 0; background: transparent; color: #cfd8ea; font: inherit; font-size: 12.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; padding: 7px 11px; cursor: pointer; }
+  .ttabs button + button { border-left: 1px solid rgba(255,255,255,.18); }
+  .ttabs button.on { background: var(--accent); color: #0b1a33; }
+  .tpanes { margin-top: 14px; } .tpane[hidden] { display: none; }
+  .scorebox .vs .w { color: #22c55e; } .scorebox .vs .l { color: #ef4444; } .scorebox .vs .t { color: var(--muted); }
+  .scorebox .more, .box .more { display: inline-block; margin-top: 6px; color: var(--accent); font-weight: 800; font-size: 13px; text-decoration: none; }
+  .upnext { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--line); }
+  .upnext .un { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 2px 10px; align-items: baseline; padding: 6px 0; }
+  .upnext .un b { font-size: 13px; white-space: nowrap; } .upnext .un span { color: var(--muted); font-size: 13.5px; min-width: 0; }
+  .upnext .un.first b, .upnext .un.first span { color: var(--text); font-weight: 800; }
+  .upnext .un .more { margin: 0; }
+  .sgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+  .sgrid table { width: 100%; border-collapse: collapse; font-size: 13.5px; } .sgrid th, .sgrid td { padding: 5px 6px; text-align: right; border-bottom: 1px solid var(--line); }
+  .sgrid th:first-child, .sgrid td:first-child { text-align: left; } .sgrid th { color: var(--muted); font-size: 11.5px; letter-spacing: .05em; } .sgrid .k { color: var(--accent); font-weight: 800; }
+  .mgrid.mstrip { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(200px, 1fr); grid-template-columns: none; overflow-x: auto; scrollbar-width: thin; padding-bottom: 6px; }
+  @media (max-width: 760px) { .mgrid.mstrip { grid-auto-columns: 70%; } .ttabs button { padding: 7px 8px; font-size: 11.5px; } .thr { width: 100%; justify-content: space-between; } }
   .thead .lgl { color: var(--muted); font-weight: 700; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; }
   .grid2 { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 14px; }
   .box { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; }
@@ -122,6 +140,11 @@
   .drop .prohead { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
   .drop .prohead b { font-family: 'Bebas Neue', Impact, sans-serif; font-weight: 400; font-size: 24px; letter-spacing: .04em; color: var(--accent); }
   .drop .profr { display: block; width: 100%; height: 640px; border: 0; background: transparent; }
+  .drop .box { margin-top: 12px; }
+  .pnews .plist a { display: block; padding: 8px 0; border-top: 1px solid var(--line); text-decoration: none; color: var(--text); }
+  .pnews .plist a:first-child { border-top: 0; } .pnews .plist b { display: block; font-size: 14.5px; } .pnews .plist span { color: var(--muted); font-size: 12px; }
+  .pnews .plist a:hover b { color: var(--accent); }
+  .pup .profr { height: 520px; }
   .bar .pl.on { background: #fff; color: #0b1a33; border-color: #fff; }
   .drop .chips + .chips { margin-top: 8px; }
   .tchip { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 1px; font: inherit; color: var(--text); background: var(--card2); border: 1px solid transparent; border-radius: 9px; padding: 7px 11px; cursor: pointer; text-align: left; min-height: 44px; justify-content: center; }
@@ -201,19 +224,22 @@
   var T = [], BYID = {};
   function addTeam(t) { if (BYID[t.id]) return BYID[t.id]; T.push(t); BYID[t.id] = t; return t; }
 
-  var games = [], news = [], std = {}, college = {}, hsStd = {}, vids = [], snaps = [];
+  var games = [], news = [], std = {}, college = {}, hsStd = {}, vids = [], snaps = [], statTeams = [], proNews = [];
   function load() {
-    return Promise.all([get('local-games.json'), get('highschool.json'), get('saints.json'), get('local-news.json'), get('college-standings.json'), get('hs-standings.json'), get('network.json'), get('slideshows.json')]).then(function (r) {
+    return Promise.all([get('local-games.json'), get('highschool.json'), get('saints.json'), get('local-news.json'), get('college-standings.json'), get('hs-standings.json'), get('network.json'), get('slideshows.json'), get('stats.json').catch(function () { return null; })]).then(function (r) {
       var lg = r[0] || {}, hs = r[1], sc = r[2];
       games = (lg.games || []).filter(function (g) { return g.team !== 'highschool' && !(sc && sc.games && g.team === 'saints' && g.sport !== 'Football'); })
         .concat(hs && hs.games ? hs.games : (lg.games || []).filter(function (g) { return g.team === 'highschool'; }))
         .concat(sc && sc.games ? sc.games.filter(function (g) { return g.sport !== 'Football'; }) : []);
+      games = games.concat(lg.ahead || []);   // each team's next games after this week
       var seen = {}; games = games.filter(function (g) { var k = g.id || (g.team + g.start + g.opponent); if (seen[k]) return false; seen[k] = 1; return true; });
       var net = r[6] || {};
       vids = ((net.local || []).map(function (v) { return { t: v.t, u: v.u, i: v.i, p: v.p, d: v.d || '', src: v.s || 'Powerplay' }; }))
         .concat((net.pro || []).filter(function (v) { return v.sp; }).map(function (v) { return { t: v.t.replace(/^OHL Highlights:\s*/i, 'Highlights: ').replace(/\s+@\s+/, ' at ').replace(/\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2},?\s+\d{4}\s*$/i, ''), u: v.u, i: v.i, p: v.p, src: 'OHL', sp: 1 }; }))
         .sort(function (a, b) { return new Date(b.p) - new Date(a.p); });
       snaps = (r[7] && r[7].slideshows) || [];
+      statTeams = (r[8] && r[8].teams) || [];
+      proNews = (lg.pro_news || []).concat(lg.more_news || []);
       news = (r[3] && r[3].stories) || []; std = lg.standings || {}; college = (r[4] && r[4].leagues) || {}; hsStd = (r[5] && r[5].sports) || {};
       build();
     });
@@ -389,9 +415,26 @@
       var lg = barPick.slice(4), top = el('div', 'prohead'), x = el('button', 'back', 'Close \u2715'); x.type = 'button';
       x.onclick = function () { barPick = ''; drawDrop(); markBar(); };
       top.appendChild(el('b', null, lg.toUpperCase())); top.appendChild(x); d.appendChild(top);
-      var pf = el('iframe', 'profr'); pf.title = lg.toUpperCase() + ' scores'; pf.scrolling = 'no';
-      pf.src = 'https://bbellacicco.github.io/powerplay-feed/pro-games_3.html?v=' + Math.floor(Date.now() / 3600e3) + '&tab=' + lg + '&lock=1&in=sports';
-      d.appendChild(pf);
+      var PG = 'https://bbellacicco.github.io/powerplay-feed/pro-games_3.html?v=' + Math.floor(Date.now() / 3600e3) + '&tab=' + lg + '&lock=1&in=sports';
+      // 1. scores first (with the Standings and Stats switches)
+      var pf = el('iframe', 'profr'); pf.title = lg.toUpperCase() + ' scores'; pf.scrolling = 'no'; pf.src = PG; d.appendChild(pf);
+      // 2. headlines of the day, 3. a strip of top stories, 4. the games coming up
+      var hb = el('div', 'box pnews'); hb.appendChild(el('h3', null, 'Headlines')); var hl = el('div', 'plist'); hl.appendChild(el('div', 'none', 'Loading\u2026')); hb.appendChild(hl); d.appendChild(hb);
+      var sbx = el('div', 'box media'); sbx.appendChild(el('h3', null, 'Top stories')); var sg = el('div', 'mgrid mstrip'); sbx.appendChild(sg); d.appendChild(sbx);
+      var cu = el('div', 'box pup'); cu.appendChild(el('h3', null, 'Coming up'));
+      var uf = el('iframe', 'profr'); uf.title = lg.toUpperCase() + ' games coming up'; uf.scrolling = 'no'; uf.src = PG + '&view=upcoming'; cu.appendChild(uf); d.appendChild(cu);
+      proStories(lg).then(function (list) {
+        if (barPick !== 'pro:' + lg) return;
+        hl.innerHTML = '';
+        var heads = list.slice(0, 5), rest = list.slice(5).filter(function (a) { return a.img; }).slice(0, 10);
+        if (!heads.length) hl.appendChild(el('div', 'none', 'Headlines are on the way.'));
+        heads.forEach(function (a) { var r = el('a'); r.href = a.url; r.target = '_blank'; r.rel = 'noopener';
+          r.appendChild(el('b', null, a.headline)); r.appendChild(el('span', null, [a.src, a.at ? cpDay(new Date(a.at)) : ''].filter(Boolean).join(' \u00b7 '))); hl.appendChild(r); });
+        if (!rest.length) { sbx.hidden = true; return; }
+        rest.forEach(function (a) { var c = el('a', 'mcard'); c.href = a.url; c.target = '_blank'; c.rel = 'noopener';
+          var p = el('div', 'mpic'); var im = new Image(); im.src = a.img; im.alt = ''; im.loading = 'lazy'; im.referrerPolicy = 'no-referrer'; im.onerror = function () { p.classList.add('noimg'); im.remove(); }; p.appendChild(im); c.appendChild(p);
+          c.appendChild(el('b', null, a.headline)); c.appendChild(el('span', null, [a.src, a.at ? cpDay(new Date(a.at)) : ''].filter(Boolean).join(' \u00b7 '))); sg.appendChild(c); });
+      });
       return;
     }
     if (barPick === 'search') {
@@ -429,45 +472,65 @@
     var back = el('button', 'back', BAR ? '\u2715 Close' : '\u2039 All teams'); back.type = 'button'; back.onclick = closeTeam;
     if (BAR) { var cb = el('div', 'closebar'); cb.appendChild(back); box.appendChild(cb); } else box.appendChild(back);
     var head = el('div', 'thead'), hl = el('div'); var h = el('h1'); h.textContent = t.full || t.name; hl.appendChild(h); hl.appendChild(el('div', 'lgl', t.league)); head.appendChild(hl);
-    if (window.PPShare) head.appendChild(PPShare.button({ title: t.full || t.name, url: SITE + '?find=' + t.id, text: (t.full || t.name) + ': schedule and scores on Powerplay Windsor' }));
-    box.appendChild(head);
+    var hr = el('div', 'thr'), tabs = el('div', 'ttabs'); hr.appendChild(tabs);
+    if (window.PPShare) hr.appendChild(PPShare.button({ title: t.full || t.name, url: SITE + '?find=' + t.id, text: (t.full || t.name) + ': schedule and scores on Powerplay Windsor' }));
+    head.appendChild(hr); box.appendChild(head);
     var gs = t.games, now = Date.now();
     var live = gs.filter(function (g) { return g.status === 'live'; })[0];
     var up = gs.filter(function (g) { return g.status === 'upcoming' && new Date(g.start) > now - 3 * 3600e3; });
     var fin = gs.filter(function (g) { return g.status === 'final'; }).reverse();
     var col = function () { var d = el('div'); d.style.display = 'grid'; d.style.gap = '14px'; d.style.alignContent = 'start'; return d; };
-    // row 1: the game that matters most (live, otherwise the next one) beside the latest news
-    var top = live || up[0];
-    var nb = el('div', 'box next' + (live ? ' livebox' : ''));
-    if (top) {
-      var s = side(t, top);
-      nb.appendChild(el('div', 'when', live ? 'Live now' + (top.detail ? ' · ' + top.detail : '') : 'Next game · ' + when(top)));
-      nb.appendChild(el('div', 'vs', live ? s.us + '–' + s.them + ' ' + atw(s) + ' ' + s.opp : atw(s) + ' ' + s.opp));
-      var wh = [top.location, top.note].filter(Boolean).join(' · '); if (wh) nb.appendChild(el('div', 'where', wh));
-      linkRow(nb, top);
-    } else {
-      nb.appendChild(el('div', 'when', 'Next game'));
-      nb.appendChild(el('div', 'none', 'Nothing on the schedule this week.'));
-    }
-    var mine = function (n) { return !n.video && !/youtube|vimeo/.test(n.url) && (t.news(n) || (n.team === 'powerplay' && t.about && t.about(n.headline + ' ' + (n.summary || '') + ' ' + (n.cats || '')))); };
+    // the top: scores first. The last result (or the live game) and the games coming up, beside the latest news
+    var sb = el('div', 'box next scorebox' + (live ? ' livebox' : ''));
+    if (live) {
+      var ls = side(t, live);
+      sb.appendChild(el('div', 'when', 'Live now' + (live.detail ? ' · ' + live.detail : '')));
+      sb.appendChild(el('div', 'vs', ls.us + '–' + ls.them + ' ' + atw(ls) + ' ' + ls.opp));
+      linkRow(sb, live);
+    } else if (fin[0]) {
+      var lf = side(t, fin[0]), k = wl(lf);
+      sb.appendChild(el('div', 'when', 'Last game · ' + cpDay(new Date(fin[0].start))));
+      var lv = el('div', 'vs'); lv.appendChild(el('span', k === 'W' ? 'w' : k === 'L' ? 'l' : 't', k + ' ')); lv.appendChild(document.createTextNode(lf.us + '–' + lf.them + ' ' + atw(lf) + ' ' + lf.opp)); sb.appendChild(lv);
+      var L = fin[0].links || {}, lk = L.recap || L.boxscore || L.gamecentre;
+      if (lk) { var ra = el('a', 'more', L.recap ? 'Recap ›' : 'Box score ›'); ra.href = lk; ra.target = '_blank'; ra.rel = 'noopener'; sb.appendChild(ra); }
+    } else { sb.appendChild(el('div', 'when', 'Last game')); sb.appendChild(el('div', 'none', 'No scores yet this season.')); }
+    var nx = el('div', 'upnext'); nx.appendChild(el('div', 'when', 'Coming up'));
+    var upl = up.slice(0, 3);
+    if (upl.length) upl.forEach(function (g, n) {
+      var s2 = side(t, g), r = el('div', 'un' + (n ? '' : ' first'));
+      r.appendChild(el('b', null, when(g))); r.appendChild(el('span', null, atw(s2) + ' ' + s2.opp + (n === 0 && g.location ? ' · ' + g.location : '')));
+      var L2 = g.links || {}; if (n === 0 && (L2.tickets || L2.watch)) { var ta = el('a', 'more', L2.tickets ? 'Tickets ›' : 'Watch ›'); ta.href = L2.tickets || L2.watch; ta.target = '_blank'; ta.rel = 'noopener'; r.appendChild(ta); }
+      nx.appendChild(r);
+    });
+    else nx.appendChild(el('div', 'none', 'Nothing on the schedule this week.'));
+    sb.appendChild(nx);
+    var mine = function (n) { return !n.video && !/youtube|vimeo/.test(n.url) && (t.news(n) || (n.team === 'powerplay' && t.about && (n.spits && t.id === 'spitfires' || t.about(n.headline + ' ' + (n.summary || '') + ' ' + (n.cats || ''))))); };
     var allNews = news.filter(mine);
     var nw = allNews.slice(0, 4);
     var nbx = el('div', 'box news'); nbx.appendChild(el('h3', null, 'Latest news'));
     if (nw.length) nw.forEach(function (n) { var a = el('a'); a.href = n.url; a.target = /powerplaywindsor\.com/.test(n.url) ? '_top' : '_blank'; a.rel = 'noopener';
       a.appendChild(el('b', null, n.headline)); a.appendChild(el('span', null, (n.club || (n.team === 'powerplay' ? 'Powerplay Windsor' : '')) + (n.published ? ' · ' + cpDay(new Date(n.published)) : ''))); nbx.appendChild(a); });
     else nbx.appendChild(el('div', 'none', 'No news this week.'));
-    var row1 = el('div', 'grid2'), a1 = col(), b1 = col(); a1.appendChild(nb); b1.appendChild(nbx); row1.appendChild(a1); row1.appendChild(b1); box.appendChild(row1);
+    var row1 = el('div', 'grid2'), a1 = col(), b1 = col(); a1.appendChild(sb); b1.appendChild(nbx); row1.appendChild(a1); row1.appendChild(b1); box.appendChild(row1);
 
-    // row 2: stories and videos about them, with pictures: Powerplay's stories and videos, the team's own stories
-    // with a photo and, for the Spitfires, the OHL's game highlights. Newest first.
+    // the tabs beside Share: News (stories, videos, Game Day Snaps) · Schedule · Standings · Stats
+    var panes = el('div', 'tpanes'); box.appendChild(panes);
+    var paneList = [];
+    function addPane(name, node) { if (!node) return; var p = el('div', 'tpane'); p.appendChild(node); panes.appendChild(p);
+      var b = el('button', null, name); b.type = 'button'; tabs.appendChild(b); paneList.push([b, p]);
+      b.onclick = function (ev) { paneList.forEach(function (x) { x[0].classList.toggle('on', x[0] === b); x[1].hidden = x[0] !== b; });
+        if (ev && window.innerWidth < 760) try { p.scrollIntoView({ block: 'start', behavior: 'smooth' }); } catch (er) {} }; }
+    // News
     var tv = t.about ? vids.filter(function (v) { return v.sp ? t.id === 'spitfires' : t.about(v.t + ' ' + (v.d || '')); }) : [];
     var GEN = /(1920x1080-|game-story|placeholder|leaguestat\.com|\/logos?\/|logo_main)/i;
+    var ts = t.about ? snaps.filter(function (sh) { return t.about(sh.title + ' ' + (sh.desc || '')); }).slice(0, 4) : [];
     var items = tv.map(function (v) { return { vid: v, at: new Date(v.p).getTime() }; })
       .concat(allNews.filter(function (n) { return n.image && !GEN.test(n.image); }).map(function (n) { return { story: n, at: new Date(n.published).getTime() }; }))
-      .sort(function (a, b) { return b.at - a.at; }).slice(0, 8);
-    var mb = el('div', 'box media'); mb.appendChild(el('h3', null, 'Stories & videos'));
+      .concat(ts.map(function (sh) { return { snap: sh, at: new Date(sh.posted || (sh.date || '') + 'T12:00:00').getTime() }; }))
+      .sort(function (a, b) { return b.at - a.at; }).slice(0, 10);
+    var mb = el('div', 'box media'); mb.appendChild(el('h3', null, 'Stories, videos & photos'));
     if (items.length) {
-      var mg = el('div', 'mgrid');
+      var mg = el('div', 'mgrid mstrip');
       items.forEach(function (it) {
         if (it.vid) {
           var v = it.vid, c = el('button', 'mcard'); c.type = 'button';
@@ -476,6 +539,10 @@
           c.onclick = function () { var src = embed(v.u); if (!src) { window.open(v.u, '_blank', 'noopener'); return; }
             pic.innerHTML = ''; var f = document.createElement('iframe'); f.src = src; f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; f.allowFullscreen = true; f.title = v.t; pic.appendChild(f); c.onclick = null; };
           mg.appendChild(c);
+        } else if (it.snap) {
+          var sh = it.snap, sa = el('a', 'mcard'); sa.href = sh.url; sa.target = '_top';
+          var sp = el('div', 'mpic'); if (sh.cover) { var sim = new Image(); sim.src = sh.cover; sim.alt = ''; sim.loading = 'lazy'; sp.appendChild(sim); } sa.appendChild(sp);
+          sa.appendChild(el('b', null, sh.title.replace(/^game day snaps:\s*/i, ''))); sa.appendChild(el('span', null, 'Game Day Snaps · ' + cpDay(new Date((sh.date || '') + 'T12:00:00')))); mg.appendChild(sa);
         } else {
           var n = it.story, a = el('a', 'mcard'); a.href = n.url; a.target = /powerplaywindsor\.com/.test(n.url) ? '_top' : '_blank'; a.rel = 'noopener';
           var p2 = el('div', 'mpic'); var im2 = new Image(); im2.src = n.image; im2.alt = ''; im2.loading = 'lazy'; im2.referrerPolicy = 'no-referrer'; im2.onerror = function () { p2.classList.add('noimg'); im2.remove(); }; p2.appendChild(im2); a.appendChild(p2);
@@ -485,24 +552,16 @@
       });
       mb.appendChild(mg);
     } else mb.appendChild(el('div', 'none', 'Powerplay stories and videos about this team show up here as they’re posted.'));
-    box.appendChild(mb);
-
-    // row 3: the schedule beside the standings
-    var row3 = el('div', 'grid2'), a3 = col(), b3 = col(); row3.style.marginTop = '14px';
-    a3.appendChild(gameBox('Coming up', up.slice(live ? 0 : 1), t, 'No other games this week.'));
-    a3.appendChild(gameBox('Recent scores', fin.slice(0, BAR ? 5 : 8), t, 'No scores yet this week.'));
-    var tb = standings(t); if (tb) b3.appendChild(tb);
-    row3.appendChild(a3); if (tb) row3.appendChild(b3); else row3.style.gridTemplateColumns = 'minmax(0, 1fr)';
-    box.appendChild(row3);
-    var ts = t.about ? snaps.filter(function (sh) { return t.about(sh.title + ' ' + (sh.desc || '')); }).slice(0, 4) : [];
-    if (ts.length) {
-      var sb2 = el('div', 'box media'); sb2.appendChild(el('h3', null, 'Game Day Snaps'));
-      var sg = el('div', 'mgrid');
-      ts.forEach(function (sh) { var a = el('a', 'mcard'); a.href = sh.url; a.target = '_top';
-        var pic = el('div', 'mpic'); if (sh.cover) { var im = new Image(); im.src = sh.cover; im.alt = ''; im.loading = 'lazy'; pic.appendChild(im); } a.appendChild(pic);
-        a.appendChild(el('b', null, sh.title.replace(/^game day snaps:\s*/i, ''))); a.appendChild(el('span', null, (sh.count ? sh.count + ' photos \u00b7 ' : '') + cpDay(new Date((sh.date || '') + 'T12:00:00')))); sg.appendChild(a); });
-      sb2.appendChild(sg); box.appendChild(sb2);
-    }
+    addPane('News', mb);
+    // Schedule: every game coming up and the recent scores
+    var sch = el('div', 'grid2'), a3 = col(), b3 = col();
+    a3.appendChild(gameBox('Coming up', up, t, 'No other games this week.'));
+    b3.appendChild(gameBox('Recent scores', fin.slice(0, 10), t, 'No scores yet this week.'));
+    sch.appendChild(a3); sch.appendChild(b3);
+    addPane('Schedule', sch);
+    addPane('Standings', standings(t));
+    addPane('Stats', teamStats(t));
+    if (paneList.length) paneList[0][0].onclick();
     if (BAR) { var cb2 = el('div', 'closebar bottom'); var bk2 = el('button', 'back', '\u2715 Close'); bk2.type = 'button'; bk2.onclick = closeTeam; cb2.appendChild(bk2); box._bottom = cb2; }
     if (t.id === 'spitfires') {
       var ct = el('a', 'box contest'); ct.href = 'https://www.powerplaywindsor.com/scores-standings?contest=spitfires'; ct.target = '_top';
@@ -548,6 +607,44 @@
     });
     b.appendChild(gl); return b;
   }
+  // a pro league's stories: ESPN's league news (NHL, NFL, NBA, MLB) plus Sportsnet and the teams' own sites; our teams first
+  var ESPN_PATH = { nhl: 'hockey/nhl', nfl: 'football/nfl', nba: 'basketball/nba', mlb: 'baseball/mlb' };
+  var OURS = /red wings|maple leafs|\bleafs\b|canadiens|lions|bills|pistons|raptors|tigers|blue jays|argonauts|tiger-cats|sceptres|detroit|toronto/i;
+  var proCache = {};
+  function proStories(lg) {
+    if (proCache[lg] && Date.now() - proCache[lg].t < 10 * 60000) return Promise.resolve(proCache[lg].list);
+    var espn = ESPN_PATH[lg] ? fetch('https://site.api.espn.com/apis/site/v2/sports/' + ESPN_PATH[lg] + '/news?limit=25').then(function (r) { return r.json(); })
+      .then(function (j) { return (j.articles || []).filter(function (a) { return a.type !== 'Preview' && a.links && a.links.web; }).map(function (a) {
+        return { headline: a.headline, url: a.links.web.href.replace(/^http:/, 'https:'), img: a.images && a.images[0] && !/stitcher/.test(a.images[0].url) ? a.images[0].url : '', at: a.published, src: 'ESPN',
+                 ours: OURS.test(a.headline + ' ' + (a.categories || []).map(function (c) { return c.description || ''; }).join(' ')) }; }); }).catch(function () { return []; }) : Promise.resolve([]);
+    return espn.then(function (list) {
+      var more = proNews.filter(function (n) { return (n.league || '').toLowerCase() === lg && n.url && n.headline; }).map(function (n) {
+        return { headline: n.headline, url: n.url, img: n.image || '', at: n.published, src: n.source || '', ours: OURS.test(n.headline + ' ' + (n.teams || []).join(' ')) }; });
+      var seen = {}, all = list.concat(more).filter(function (a) { var k = a.headline.toLowerCase(); if (seen[k]) return false; seen[k] = 1; return true; })
+        .sort(function (a, b) { return new Date(b.at || 0) - new Date(a.at || 0); });
+      // headlines of the day: our teams' newest first, then the rest
+      var day = Date.now() - 36 * 3600e3, ours = all.filter(function (a) { return a.ours && new Date(a.at || 0) > day; }).slice(0, 2);
+      all = ours.concat(all.filter(function (a) { return ours.indexOf(a) < 0; }));
+      proCache[lg] = { t: Date.now(), list: all };
+      return all;
+    });
+  }
+  // the team's leaders (data/stats.json): scoring and goalies for hockey, passing/rushing/receiving for football
+  function teamStats(t) {
+    var nm = (t.full || t.name || '').toLowerCase();
+    var st = statTeams.filter(function (x) { var c = (x.club || '').toLowerCase(); return c && (c === nm || c === (t.name || '').toLowerCase() || (t.sport && nm.indexOf(c) === 0 && new RegExp((x.league || '').split(' ').pop(), 'i').test(t.sport))); })[0];
+    if (!st || !st.groups || !st.groups.length) return null;
+    var b = el('div', 'box'), gr = el('div', 'sgrid');
+    st.groups.forEach(function (g) {
+      var w = el('div'); w.appendChild(el('h3', null, g.title));
+      var tb = el('table'), th = el('tr'); th.appendChild(el('th', null, 'Player')); g.cols.forEach(function (c, i) { var x = el('th', i === g.key ? 'k' : null, c); th.appendChild(x); }); tb.appendChild(th);
+      g.rows.forEach(function (r) { var tr = el('tr'); tr.appendChild(el('td', null, r.name)); r.vals.forEach(function (v, i) { tr.appendChild(el('td', i === g.key ? 'k' : null, String(v))); }); tb.appendChild(tr); });
+      w.appendChild(tb); gr.appendChild(w);
+    });
+    b.appendChild(gr);
+    if (st.link) { var a = el('a', 'more', 'Full stats ›'); a.href = st.link; a.target = '_blank'; a.rel = 'noopener'; b.appendChild(a); }
+    return b;
+  }
   // the team's standings: its own group, with its row highlighted
   function standings(t) {
     var groups = null, re = null, title = 'Standings';
@@ -592,7 +689,7 @@
   // the pro league box reports its height; its frame matches it
   window.addEventListener('message', function (e) {
     if (!e.data || e.data.pp !== 'height' || !(e.data.h > 30)) return;
-    var pf = document.querySelector('#drop .profr'); if (pf && e.source === pf.contentWindow) pf.style.height = Math.min(e.data.h, 6000) + 'px';
+    [].forEach.call(document.querySelectorAll('#drop .profr'), function (pf) { if (e.source === pf.contentWindow) pf.style.height = Math.min(e.data.h, 6000) + 'px'; });
   });
   // inside the Local Hub: tell it how tall this is, so it never scrolls on its own
   (function () {
