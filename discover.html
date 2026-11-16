@@ -59,6 +59,13 @@
   .vplayer .desc a { color: #e8b021; }
   .vplayer .desc .more { margin-top: 6px; background: none; border: 0; padding: 0; color: #e8b021; font: inherit; font-size: 12.5px; font-weight: 800; cursor: pointer; }
   @media (max-width: 700px) { .vplayer { left: 6px; right: 6px; } .vplayer .cap .t { font-size: 13px; } }
+  .spons { display: flex; align-items: center; gap: 8px 16px; flex-wrap: wrap; padding: 0 14px 10px 18px; }
+  .spons .k { font-size: 10.5px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .spons .sp { display: inline-flex; align-items: center; gap: 7px; }
+  .spons .chip { display: inline-flex; align-items: center; background: #fff; border-radius: 4px; padding: 2px 6px; height: 26px; }
+  .spons .chip img { height: 20px; width: auto; max-width: 70px; object-fit: contain; display: block; }
+  .spons b { font-size: 12px; color: #d4dcee; white-space: nowrap; }
+  @media (max-width: 600px) { .spons { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 10px; } .spons .k { grid-column: 1 / -1; } .spons b { font-size: 11px; white-space: normal; } }
   .ltabs { display: flex; gap: 6px; padding: 0 14px 10px 18px; overflow-x: auto; scrollbar-width: none; }
   .ltabs::-webkit-scrollbar { display: none; }
   .ltab { flex: none; border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.06); color: #cfd8ea; border-radius: 999px; padding: 6px 12px;
@@ -497,16 +504,16 @@ document.addEventListener('load', function (e) {
       highschool: /high school|wecssaa|ofsaa|secondary|holy names|villanova|st\.? joseph|assumption|brennan|kennedy|massey|walkerville|riverside|herman|forster|tecumseh vista|belle river|essex dist|kingsville|leamington dist|cardinal carter|st\.? anne|l'essor|sandwich|harrow|general amherst|north star|ste\.? cecile|lajeunesse|catholic central|\blaj\b/i,
       junior: /\b(ojhl|gohl|pjhl)\b|junior hockey|lakeshore canadiens|leamington flyers|lasalle vipers|essex 73|amherstburg admirals|wheatley sharks/i };
     function about(x, team) { return x.team === team || ((x.team === 'powerplay' || !x.team) && THEME[team].test(' ' + x.headline + ' ' + (x.summary || '') + ' ' + (x.cats || '') + ' ')); }
-    if (!P.tabs) {
-      P.tabs = el('div', 'ltabs'); P.pick = 'all';
-      P.root.insertBefore(P.tabs, P.ribbon);
+    // the partners who make it happen, right above the scores ticker (the team tabs moved to the buttons below)
+    P.pick = 'all';
+    if (!P.spons) {
+      P.spons = el('div', 'spons'); P.spons.appendChild(el('span', 'k', 'Our partners'));
+      [['St. Clair College Alumni', 'st-clair-alumni.png'], ['Unifor Local 444', 'unifor-444.png'], ['Unifor Local 2458', 'unifor-2458.png'], ['The D\u2019Amore Group', 'damore-group.png']].forEach(function (x) {
+        var c = el('span', 'sp'), ch = el('span', 'chip'), im = new Image(); im.alt = x[0]; im.src = REPO + 'logos/' + x[1]; im.onerror = function () { ch.remove(); };
+        ch.appendChild(im); c.appendChild(ch); c.appendChild(el('b', null, x[0])); P.spons.appendChild(c);
+      });
+      P.root.insertBefore(P.spons, P.ribbon);
     }
-    P.tabs.innerHTML = '';
-    [['all', 'All'], ['lancers', 'Lancers Lounge'], ['saints', 'Saints Nation'], ['highschool', 'High School Huddle'], ['spitfires', 'Spitfires'], ['junior', 'Junior hockey']].forEach(function (t) {
-      var b = el('button', 'ltab' + (P.pick === t[0] ? ' on' : ''), t[1]); b.type = 'button';
-      b.onclick = function () { P.pick = t[0]; buildLocal(P, news, lg, hs, net); };
-      P.tabs.appendChild(b);
-    });
     if (P.pick !== 'all') {
       var tm = P.pick;
       var tv = vids.filter(function (v) { return THEME[tm].test(' ' + v.headline + ' '); });
@@ -616,8 +623,12 @@ document.addEventListener('load', function (e) {
   var L = only === 'pro' ? null : panel('local', 'Around', 'Windsor-Essex', 'Local stories, video and scores', PAGE.localHub, 'scores');
   if (only !== 'pro' && only !== 'local') document.getElementById('panels').appendChild(document.getElementById('minute'));   // the Sports Minute, between the two panels
   var R = only === 'local' ? null : panel('pro', 'Around the', 'Pros', 'Our teams: Wings, Leafs, Lions, Tigers, Jays, Pistons, Raptors', PAGE.proHub, 'pro');
-  if (L) [['Local Scoreboard', PAGE.localHub, 'scores', 'score'], ['Standings', PAGE.localHub, 'scores', 'table'], ['Game Day Snaps', PAGE.snaps, null, 'camera', true],
-          ['Athlete Profiles', PAGE.localHub, 'athletes', 'person'], ['Powerplay Network', PAGE.localHub, 'network', 'play'], ['Spotlight', PAGE.localHub, 'spotlight', 'star']]
+  // the same strips as the homepage, in the same order
+  if (L) [['What\u2019s New', PAGE.localHub + '?tab=stories', 'stories', 'news'], ['Windsor Spitfires', PAGE.localHub + '?find=spitfires', null, 'star'],
+          ['High School Huddle', SITE + 'headlines/categories/high-school-sports', null, 'news'], ['Saints Nation', SITE + 'headlines/categories/st-clair-athletics', null, 'news'],
+          ['Lancers Lounge', SITE + 'headlines/categories/lancers-lounge', null, 'news'], ['Game Day Snaps', PAGE.snaps, null, 'camera'],
+          ['Athlete Profiles', PAGE.localHub + '?tab=athletes', 'athletes', 'person'], ['Junior Hockey', SITE + 'headlines/categories/junior-hockey', null, 'news'],
+          ['Local Scores', PAGE.localHub + '?tab=scores', 'scores', 'score']]
     .forEach(function (d) { L.doors.appendChild(door(d[0], d[1], d[2], d[3], d[4])); });
   if (R) [['Pro Scoreboard', PAGE.proHub, 'pro', 'score'], ['Pro Updates', PAGE.proHub, 'pro-updates', 'news'], ['Pro Network', PAGE.proHub, 'pro-network', 'play'], ['Search the site', PAGE.search, null, 'search']]
     .forEach(function (d) { R.doors.appendChild(door(d[0], d[1], d[2], d[3])); });
