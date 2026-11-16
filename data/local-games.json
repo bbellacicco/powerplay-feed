@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T11:02:29-05:00",
+ "updated": "2026-11-16T11:16:45-05:00",
  "today": "2026-11-16",
  "range": [
   "2026-11-13",
@@ -99,11 +99,11 @@
   },
   "pwhl_news": {
    "ok": true,
-   "count": 26
+   "count": 27
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -1567,6 +1567,20 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "MMQB: 5 things that stood out from the 113th Grey Cup",
+   "summary": "",
+   "published": "2026-11-16T00:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/1MIwSe6b1FTbBEsMLMLb7B/8c10dee02a5b4c52279b4074668ef78b/Cody_Fajardo_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Alouettes",
+    "Elks"
+   ],
+   "url": "https://www.cfl.ca/article/mmqb-5-things-that-stood-out-from-the-113th-grey-cup",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Edmonton Elks React to Winning 113th Grey Cup",
    "summary": "",
    "published": "2026-11-16T00:00:00-05:00",
@@ -1763,20 +1777,6 @@
   },
   {
    "league": "cfl",
-   "headline": "Elks top Alouettes to capture 113th Grey Cup",
-   "summary": "",
-   "published": "2026-11-15T00:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/4c546m3D6kNFWlbidaiDXc/a9816555e9e65951451a458c54924e3e/Cody_Fajardo_2026_11.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Elks",
-    "Alouettes"
-   ],
-   "url": "https://www.cfl.ca/article/elks-top-alouettes-to-capture-113th-grey-cup",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
    "headline": "3 things you missed from the Elks' 113th Grey Cup post-game media availabilities",
    "summary": "",
    "published": "2026-11-15T00:00:00-05:00",
@@ -1827,20 +1827,6 @@
     "Alouettes"
    ],
    "url": "https://www.cfl.ca/article/geoffrey-cantin-arku-anything-short-of-the-grey-cup-is-a-disappointment",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Chris Streveler's quarterback keys to victory for the 113th Grey Cup",
-   "summary": "",
-   "published": "2026-11-14T01:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/28vM6DsoZTZt5BRBor6Hml/a23290a5b1932b2d0af0ad43568bf167/Cody_Fajardo_2026WF.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Alouettes",
-    "Elks"
-   ],
-   "url": "https://www.cfl.ca/article/chris-streveler-s-quarterback-keys-to-victory-for-the-113th-grey-cup",
    "source": "CFL.ca"
   },
   {
@@ -1959,6 +1945,43 @@
    "source": "CFL.ca"
   },
   {
+   "league": "cfl",
+   "headline": "Unveiling The New CFL Indigenous Logo",
+   "summary": "",
+   "published": "2026-09-30T09:00:00-04:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/M3ogic86rdawtsksbSVOz/4364384d63535903d3175e46c82e1786/edm_00_03_49_15__1_.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/unveiling-the-new-cfl-indigenous-logo",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "pwhl",
+   "headline": "Minnesota Frost Announce 2026-27 Unity and Theme Games, Giveaways",
+   "summary": "",
+   "published": "2026-11-17T03:34:31+00:00",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/26.11.16_MN_Unity_Theme",
+   "video": false,
+   "teams": [
+    "Minnesota Frost"
+   ],
+   "url": "https://www.thepwhl.com/en/teams/minnesota-frost/news/2026/november/15/minnesota-frost-announce-2026-27-unity-and-theme-games-giveaways",
+   "source": "thepwhl.com"
+  },
+  {
+   "league": "pwhl",
+   "headline": "Seattle Torrent Announces 2026-27 Unity and Theme Games, Giveaways",
+   "summary": "",
+   "published": "2026-11-16T15:52:21+00:00",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/202-27_Unity_Game",
+   "video": false,
+   "teams": [
+    "Seattle Torrent"
+   ],
+   "url": "https://www.thepwhl.com/en/teams/seattle-torrent/news/2026/november/16/seattle-torrent-announces-2026-27-unity-and-theme-games-giveaways",
+   "source": "thepwhl.com"
+  },
+  {
    "league": "pwhl",
    "headline": "Boston Fleet Announce 2026-27 Unity and Theme Games",
    "summary": "",
@@ -1987,25 +2010,12 @@
    "headline": "Vancouver Goldeneyes Announce 2026-27 Unity and Theme Games, Giveaways",
    "summary": "",
    "published": "2026-11-15T16:00:00+00:00",
-   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/yF1giWFA",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/VAN-UnityGameSchedule-16x9",
    "video": false,
    "teams": [
     "Vancouver Goldeneyes"
    ],
    "url": "https://www.thepwhl.com/en/teams/vancouver-goldeneyes/news/2026/november/16/vancouver-goldeneyes-announce-2026-27-unity-and-theme-games-giveaways",
-   "source": "thepwhl.com"
-  },
-  {
-   "league": "pwhl",
-   "headline": "Detroit Clutch Finds Inspiration From the History of the Motor City",
-   "summary": "",
-   "published": "2026-11-10T13:00:00+00:00",
-   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/2627-DET-BL-Moodboard-1920x1080",
-   "video": false,
-   "teams": [
-    "Detroit Clutch"
-   ],
-   "url": "https://www.thepwhl.com/en/teams/detroit-clutch/news/2026/november/10/detroit-clutch-finds-inspiration-from-the-history-of-the-motor-city",
    "source": "thepwhl.com"
   },
   {
@@ -2372,15 +2382,17 @@
   },
   {
    "league": "nhl",
-   "headline": "Draisaitl, McDavid record three points in Oilers’ win over Flyers",
-   "summary": "Leon Draisaitl scored twice and Connor McDavid had a goal and two assists, in the process tying a 42-year-old NHL milestone set by Wayne Gretzky, as the Edmonton Oilers beat the Philadelphia Flyers 5-2 on Sunday night.",
-   "published": "2026-11-15T22:44-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Oilers-vs-Flyers.jpg",
+   "headline": "Injured Maple Leafs defenceman Morgan Rielly returns to practice",
+   "summary": "",
+   "published": "2026-11-16T11:07-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/04/rielly.jpg",
    "video": false,
-   "teams": [],
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
    "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/draisaitl-mcdavid-record-three-points-each-in-oilers-win-over-flyers/",
+   "url": "https://www.sportsnet.ca/nhl/article/injured-maple-leafs-defenceman-morgan-rielly-returns-to-practice/",
    "source": "Sportsnet"
   },
   {
@@ -2411,15 +2423,15 @@
   },
   {
    "league": "nhl",
-   "headline": "Cutter Gauthier extends goal streak to nine games, leading Ducks past Flames",
-   "summary": "Cutter Gauthier extended the NHL’s longest goals streak in 29 years to nine games, and Beckett Sennecke had two goals and an assist in the Anaheim Ducks’ 6-1 victory over the Calgary Flames on Sunday night.",
-   "published": "2026-11-15T22:55-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Flames-vs-Ducks-2.jpg",
+   "headline": "Draisaitl, McDavid record three points in Oilers’ win over Flyers",
+   "summary": "Leon Draisaitl scored twice and Connor McDavid had a goal and two assists, in the process tying a 42-year-old NHL milestone set by Wayne Gretzky, as the Edmonton Oilers beat the Philadelphia Flyers 5-2 on Sunday night.",
+   "published": "2026-11-15T22:44-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Oilers-vs-Flyers.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 2,
+   "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/cutter-gauthier-extends-goal-streak-to-nine-games-leading-ducks-past-flames/",
+   "url": "https://www.sportsnet.ca/nhl/article/draisaitl-mcdavid-record-three-points-each-in-oilers-win-over-flyers/",
    "source": "Sportsnet"
   },
   {
@@ -2542,6 +2554,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Cutter Gauthier extends goal streak to nine games, leading Ducks past Flames",
+   "summary": "Cutter Gauthier extended the NHL’s longest goals streak in 29 years to nine games, and Beckett Sennecke had two goals and an assist in the Anaheim Ducks’ 6-1 victory over the Calgary Flames on Sunday night.",
+   "published": "2026-11-15T22:55-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Flames-vs-Ducks-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/cutter-gauthier-extends-goal-streak-to-nine-games-leading-ducks-past-flames/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "Report: Raiders’ Bowers not believed to have suffered serious ankle injury",
    "summary": "Although Las Vegas’ offense fell stagnant in their 21-13 loss to the defending champion Seattle Seahawks, rookie quarterback Fernando Mendoza is unlikely to be without his top target for very long.",
@@ -2578,6 +2603,19 @@
    "sn_team_count": 0,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/wnba/article/tempo-land-first-overall-pick-in-2027-wnba-draft/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "UEFA proposes Philippe Diallo as FIFA presidential election candidate",
+   "summary": "French soccer leader Philippe Diallo emerged Monday as an unexpected opponent to Gianni Infantino in what shapes to be a FIFA presidential election of three candidates.",
+   "published": "2026-11-16T11:02-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-12.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/fifa-world-cup/article/uefa-proposes-philippe-diallo-as-fifa-presidential-election-candidate/",
    "source": "Sportsnet"
   },
   {
@@ -2894,6 +2932,19 @@
   },
   {
    "league": "nfl",
+   "headline": "'We did a good job adjusting' | Bills take control of second half in 31-12 victory over York Jets",
+   "summary": "Buffalo continues to come out of the halftime break firing on all cylinders",
+   "published": "2026-11-16T11:08-05:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/bills/x6mixpbpjv4aq7s0xvlc.png",
+   "video": false,
+   "teams": [
+    "Buffalo Bills"
+   ],
+   "url": "https://www.buffalobills.com/news/we-did-a-good-job-adjusting-bills-take-control-of-second-half-in-31-12-victory-over-york-jets",
+   "source": "Team site"
+  },
+  {
+   "league": "nfl",
    "headline": "Top 3 things we learned from Bills at Jets | Week 10",
    "summary": "The Bills improved to 8-1 on the season and remained atop the AFC East with a 31-12 road win over the Jets.",
    "published": "2026-11-15T18:55-05:00",
@@ -3007,19 +3058,6 @@
     "Buffalo Bills"
    ],
    "url": "https://www.buffalobills.com/news/a-lot-of-talent-what-the-bills-are-saying-about-the-jets-leading-up-to-week-10-afc-east-matchup",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
-   "headline": "Morgan Wallen's Last Time I Checked Tour is coming to Buffalo on July 23 and 24, 2027",
-   "summary": "Register now for presale at LastTimeICheckedTour.com",
-   "published": "2026-11-12T08:59-05:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/bills/vrpx7n4t7oacwb9mqnqu.jpg",
-   "video": false,
-   "teams": [
-    "Buffalo Bills"
-   ],
-   "url": "https://www.buffalobills.com/news/morgan-wallen-concert-tour-announcement-buffalo-highmark-stadium-2027",
    "source": "Team site"
   },
   {
