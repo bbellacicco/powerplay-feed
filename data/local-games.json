@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T21:02:01-05:00",
+ "updated": "2026-11-15T21:18:01-05:00",
  "today": "2026-11-15",
  "range": [
   "2026-11-12",
@@ -858,11 +858,11 @@
    "home_away": "H",
    "opponent": "Waterloo Siskins",
    "location": "Chatham Memorial Arena, Chatham, ON",
-   "status": "live",
+   "status": "final",
    "our_score": 4,
    "opp_score": 3,
-   "result": null,
-   "note": "00:00 3rd",
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15693"
    },
@@ -1726,6 +1726,19 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "Make that TWO TD's for Joshua Cephus | 113th Grey Cup",
+   "summary": "",
+   "published": "2026-11-15T21:15:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/5KmnsVoOnF867MIe5SVdep/901de15ea53711cca35771ff482a1995/EDM_3RD_Q_THUMBNAIL.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Elks"
+   ],
+   "url": "https://www.cfl.ca/article/make-that-two-td-s-for-joshua-cephus-113th-grey-cup",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Riley Green's FULL Bud Light Halftime Show | 113th Grey Cup",
    "summary": "",
    "published": "2026-11-15T20:49:00-05:00",
@@ -1840,19 +1853,6 @@
     "Elks"
    ],
    "url": "https://www.cfl.ca/article/edmonton-elks-take-the-field-113th-grey-cup",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Cody Fajardo BULLDOZES his way in for six | 113th Grey Cup",
-   "summary": "",
-   "published": "2026-11-15T00:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/H0b1ecr8tPLm2x7GCH9C5/a23acbbdca2dbcc3f43050f2745071fb/HIGHLIGHT_2.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Elks"
-   ],
-   "url": "https://www.cfl.ca/article/cody-fajardo-bulldozes-his-way-in-for-six-113th-grey-cup",
    "source": "CFL.ca"
   },
   {
@@ -2478,6 +2478,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Oilers’ McDavid ties Gretzky’s record for fewest games to record 40 assists",
+   "summary": "Connor McDavid is showing shades of Wayne Gretzky once again.",
+   "published": "2026-11-15T21:07-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/McD-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/oilers-mcdavid-ties-gretzkys-record-for-fewest-games-to-record-40-assists/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "Takeaways: Canada’s win over Sweden sets up gold-medal test vs. USA",
    "summary": "For the 24th time in 25 tournaments, Canada and the United States will meet in the gold-medal final at the Women’s World Championship.",
@@ -2542,19 +2555,6 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/report-lions-hutchinson-feared-to-have-serious-knee-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Raiders TE Brock Bowers exits vs. Seahawks with ankle injury",
-   "summary": "Superstar tight end Brock Bowers exited Sunday’s showdown against the Seattle Seahawks after suffering an ankle injury and was later ruled out, the team announced after halftime.",
-   "published": "2026-11-15T17:45-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/bb.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/raiders-te-brock-bowers-exits-vs-seahawks-with-ankle-injury/",
    "source": "Sportsnet"
   },
   {
@@ -2770,6 +2770,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nfl",
+   "headline": "Raiders TE Brock Bowers exits vs. Seahawks with ankle injury",
+   "summary": "Superstar tight end Brock Bowers exited Sunday’s showdown against the Seattle Seahawks after suffering an ankle injury and was later ruled out, the team announced after halftime.",
+   "published": "2026-11-15T17:45-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/bb.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/raiders-te-brock-bowers-exits-vs-seahawks-with-ankle-injury/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "Jets QB Geno Smith leaves game against Bills after multiple injuries",
    "summary": "",
@@ -2819,19 +2832,6 @@
    "sn_team_count": 0,
    "sport": "MMA",
    "url": "https://www.sportsnet.ca/ufc/article/three-canadians-added-to-ufc-336-card-in-toronto/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Avalanche claim defenceman Mike Reilly off waivers from Hurricanes",
-   "summary": "",
-   "published": "2026-11-15T14:24-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/mike-2.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/avalanche-claim-defenceman-mike-reilly-off-waivers-from-hurricanes/",
    "source": "Sportsnet"
   },
   {
@@ -3969,7 +3969,7 @@
       "l": 7,
       "otl": 3,
       "pts": 31,
-      "gf": 103,
+      "gf": 105,
       "ga": 79,
       "strk": "L1"
      },
@@ -3993,7 +3993,7 @@
       "l": 8,
       "otl": 2,
       "pts": 26,
-      "gf": 92,
+      "gf": 93,
       "ga": 72,
       "strk": "W3"
      },
@@ -4054,7 +4054,7 @@
       "otl": 2,
       "pts": 14,
       "gf": 79,
-      "ga": 114,
+      "ga": 115,
       "strk": "L1"
      },
      {
@@ -4078,7 +4078,7 @@
       "otl": 3,
       "pts": 9,
       "gf": 57,
-      "ga": 151,
+      "ga": 153,
       "strk": "L11"
      }
     ]
@@ -4262,6 +4262,18 @@
       "strk": "W6"
      },
      {
+      "name": "Chatham Maroons",
+      "abbr": "CHA",
+      "gp": 19,
+      "w": 14,
+      "l": 5,
+      "otl": 0,
+      "pts": 28,
+      "gf": 85,
+      "ga": 53,
+      "strk": "W3"
+     },
+     {
       "name": "Listowel Cyclones",
       "abbr": "LIS",
       "gp": 21,
@@ -4274,16 +4286,16 @@
       "strk": "W1"
      },
      {
-      "name": "Chatham Maroons",
-      "abbr": "CHA",
-      "gp": 18,
-      "w": 13,
-      "l": 5,
-      "otl": 0,
-      "pts": 26,
-      "gf": 85,
-      "ga": 53,
-      "strk": "W2"
+      "name": "Stratford Warriors",
+      "abbr": "SFD",
+      "gp": 17,
+      "w": 10,
+      "l": 6,
+      "otl": 1,
+      "pts": 21,
+      "gf": 58,
+      "ga": 57,
+      "strk": "W1"
      },
      {
       "name": "Elmira Sugar Kings",
@@ -4294,7 +4306,7 @@
       "otl": 1,
       "pts": 21,
       "gf": 86,
-      "ga": 85,
+      "ga": 87,
       "strk": "W4"
      },
      {
@@ -4308,18 +4320,6 @@
       "gf": 59,
       "ga": 77,
       "strk": "W3"
-     },
-     {
-      "name": "Stratford Warriors",
-      "abbr": "SFD",
-      "gp": 16,
-      "w": 9,
-      "l": 6,
-      "otl": 1,
-      "pts": 19,
-      "gf": 58,
-      "ga": 57,
-      "strk": "L2"
      },
      {
       "name": "Strathroy Rockets",
@@ -4365,7 +4365,7 @@
       "l": 15,
       "otl": 0,
       "pts": 10,
-      "gf": 66,
+      "gf": 68,
       "ga": 89,
       "strk": "L2"
      },
@@ -4437,14 +4437,14 @@
      {
       "name": "Waterloo Siskins",
       "abbr": "WAT",
-      "gp": 18,
+      "gp": 19,
       "w": 11,
-      "l": 4,
+      "l": 5,
       "otl": 3,
       "pts": 25,
       "gf": 66,
       "ga": 51,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Ayr Centennials",
@@ -4521,14 +4521,14 @@
      {
       "name": "Welland Canadians",
       "abbr": "WEL",
-      "gp": 20,
+      "gp": 21,
       "w": 3,
-      "l": 17,
+      "l": 18,
       "otl": 0,
       "pts": 6,
       "gf": 46,
       "ga": 117,
-      "strk": "L1"
+      "strk": "L2"
      }
     ]
    }
