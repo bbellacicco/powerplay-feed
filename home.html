@@ -1352,15 +1352,16 @@ document.addEventListener('load', function (e) {
        ['saints', 'Saints', THEME.saints, 'Saints Nation stories are on the way.'],
        ['hs', 'High school', THEME.highschool, 'High school stories are on the way.'],
        ['junior', 'Junior', THEME.junior, 'Junior hockey stories are on the way.']].forEach(function (t) {
-        var teams = t[0] === 'hs' ? ['highschool'] : t[0] === 'junior' ? ['junior', 'spitfires'] : [t[0]], seenT = {};
+        var teams = t[0] === 'hs' ? ['highschool'] : [t[0]], seenT = {};   // the Spitfires have their own strip
         var list = pool.filter(function (x) {
+          if (t[0] === 'junior' && aboutSpits(x)) return false;   // Spitfires stories and highlights: Windsor Spitfires strip only
           if (teams.indexOf(x.team) >= 0) return true;
           if (x.team !== 'powerplay' && !isVid(x) && !x.video) return false;
           return t[2].test(' ' + x.headline + ' ' + (x.summary || '') + ' ' + (x.cats || '') + ' ');
         }).filter(function (x) { var k = isVid(x) || x.video ? vidId(x.url) : x.url; if (seenT[k]) return false; seenT[k] = 1; return true; })
           .sort(function (a, b) { return new Date(b.published) - new Date(a.published); }).slice(0, 25);
         // Game Day Snaps about them
-        var snapsT = shows.filter(function (sh) { return t[2].test(' ' + sh.title + ' ' + (sh.desc || '') + ' '); }).slice(0, 4).map(function (sh) {
+        var snapsT = shows.filter(function (sh) { return t[2].test(' ' + sh.title + ' ' + (sh.desc || '') + ' ') && !(t[0] === 'junior' && SPITS_RX.test(' ' + sh.title + ' ' + (sh.desc || '') + ' ')); }).slice(0, 4).map(function (sh) {
           var c = storyCard({ headline: sh.title, url: sh.url, image: sh.cover, published: sh.posted || sh.date + 'T12:00:00', team: 'powerplay' }, { tag: 'Game Day Snaps', sub: 'Game Day Snaps \u00b7 ' + ago(sh.posted || sh.date + 'T12:00:00'), tile: t[1] });
           c.onclick = function (e) { e.preventDefault(); playShow(sh); };
           return { t: new Date(sh.posted || sh.date + 'T12:00:00').getTime(), node: c };
