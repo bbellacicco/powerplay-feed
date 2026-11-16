@@ -67,6 +67,14 @@
   .t-junior { border-left-color: var(--junior); } .t-highschool { border-left-color: var(--highschool); }
   .t-pro { border-left-color: var(--pro); }
   table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  .answer { background: linear-gradient(135deg, #17336a, #10244a); border: 1px solid rgba(232,176,33,.55); border-left: 4px solid var(--accent); border-radius: 10px; padding: 12px 14px; margin: 0 0 14px; }
+  .answer .ak { font-size: 10.5px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+  .answer h2 { margin: 3px 0 4px; font-size: 20px; line-height: 1.2; }
+  .answer h3 { margin: 10px 0 4px; font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+  .answer .asub { margin: 2px 0; color: #d4dcee; font-size: 13.5px; }
+  .answer .atab { margin-top: 8px; } .answer .atab tr.me td { color: var(--accent); font-weight: 800; }
+  .answer .agrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 4px 18px; }
+  .answer .ago { display: inline-block; margin-top: 10px; color: var(--accent); font-weight: 800; font-size: 13px; text-decoration: none; }
   .stand { background: var(--row); border-radius: 8px; padding: 8px 10px; border-left: 3px solid var(--line); }
   .stand .meta { margin-bottom: 4px; }
   th { color: var(--muted); font-weight: 600; text-align: right; padding: 2px 4px; font-size: 11px; }
@@ -212,6 +220,7 @@
     loading = Promise.all([getJSON('local-news.json'), getJSON('local-games.json'), getJSON('college-standings.json'), getJSON('hs-standings.json'), Promise.all(espn), getJSON('search-archive.json')])
       .then(function (r) {
         var news = r[0] || {}, lg = r[1] || {}, col = r[2] || {}, hs = r[3] || {}, pro = [].concat.apply([], r[4] || []);
+        LG = lg;
         var items = [];
         // Local Hub stories
         (news.stories || []).forEach(function (s) {
@@ -312,6 +321,164 @@
 
   // ---- results
   var LIMIT = { game: 6, story: 8, table: 3 };
+
+  // ================= quick answers =================
+  // A question gets a straight answer card above the results: a league's standings ("NHL standings"),
+  // where a team sits and how many points it has ("how many points do the Spitfires have"), and a
+  // player's numbers ("Connor McDavid points"). Pro numbers come live from ESPN; local ones from the Local Scoreboard.
+  var LG = null, STATS = null;
+  var PRO = { nhl: ['hockey/nhl', 'NHL'], nfl: ['football/nfl', 'NFL'], nba: ['basketball/nba', 'NBA'], mlb: ['baseball/mlb', 'MLB'] };
+  var LOCAL_LG = { ohl: 'OHL', ojhl: 'OJHL', gohl: 'GOHL', pjhl: 'PJHL', pwhl: 'PWHL', cjfl: 'CJFL' };
+  var NICK = { leafs: 'maple leafs', wings: 'red wings', habs: 'canadiens', jays: 'blue jays', 'blue jays': 'blue jays', spits: 'spitfires', 'raps': 'raptors', 'pistons': 'pistons', 'tigers': 'tigers', 'lions': 'lions', 'bills': 'bills' };
+  var STATW = /\b(points?|pts|goals?|assists?|stats?|statistics|numbers|average|avg|ppg|rebounds?|touchdowns?|tds?|yards?|era|homers?|home runs?|hr|rbi|saves?|save percentage|sv%|gaa|shutouts?|sacks?|interceptions?)\b/;
+  var proStd = {};
+  function getStd(k) {
+    if (!proStd[k]) proStd[k] = fetch('https://site.api.espn.com/apis/v2/sports/' + PRO[k][0] + '/standings?level=3').then(function (r) { return r.json(); }).then(function (j) {
+      var out = [];
+      function walk(n) {
+        if (n.standings && n.standings.entries) out.push({ group: n.name, teams: n.standings.entries.map(function (e) {
+          var st = {}; (e.stats || []).forEach(function (x) { st[x.name] = x.displayValue; st['_' + x.name] = x.value; });
+          return { name: e.team.displayName, nick: e.team.shortDisplayName || e.team.name, abbr: e.team.abbreviation, logo: e.team.logos && e.team.logos[0] && e.team.logos[0].href, st: st,
+                   link: e.team.links && e.team.links[0] && e.team.links[0].href };
+        }) });
+        (n.children || []).forEach(walk);
+      }
+      walk(j);
+      // ESPN lists each division in order, tiebreakers included
+      return out;
+    }).catch(function () { return []; });
+    return proStd[k];
+  }
+  function proCols(k) { return k === 'nhl' ? [['GP', 'gamesPlayed'], ['W', 'wins'], ['L', 'losses'], ['OTL', 'otLosses'], ['PTS', 'points']] : k === 'nfl' ? [['W', 'wins'], ['L', 'losses'], ['T', 'ties'], ['PCT', 'winPercent']] : [['W', 'wins'], ['L', 'losses'], ['PCT', 'winPercent'], ['GB', 'gamesBehind']]; }
+  function card(title, sub) { var c = el('div', 'answer'); c.appendChild(el('div', 'ak', 'Quick answer')); c.appendChild(el('h2', null, title)); if (sub) c.appendChild(el('p', 'asub', sub)); return c; }
+  function ord(n) { n = Number(n); var s = ['th', 'st', 'nd', 'rd'], v = n % 100; return n + (s[(v - 20) % 10] || s[v] || s[0]); }
+  function table(cols, rows, mark) {
+    var t = el('table', 'atab'), h = el('tr'); h.appendChild(el('th', null, '')); cols.forEach(function (c) { h.appendChild(el('th', null, c)); }); t.appendChild(h);
+    rows.forEach(function (r) { var tr = el('tr', r.mark ? 'me' : null); tr.appendChild(el('td', null, r.name)); r.vals.forEach(function (v) { tr.appendChild(el('td', null, v == null ? '' : String(v))); }); t.appendChild(tr); });
+    return t;
+  }
+  function goLink(c, text, url) { var a = el('a', 'ago', text); a.href = url; a.target = /powerplaywindsor\.com/.test(url) ? '_top' : '_blank'; a.rel = 'noopener'; c.appendChild(a); }
+  // a local team in the Local Scoreboard's standings ("Spitfires", "Essex 73's", "Vipers")
+  function findLocal(n) {
+    var best = null;
+    Object.keys((LG && LG.standings) || {}).forEach(function (k) {
+      (LG.standings[k] || []).forEach(function (g) {
+        (g.teams || []).forEach(function (t, i) {
+          var full = norm(t.name), nick = full.replace(/^(windsor|lasalle|leamington|chatham|essex|lakeshore|amherstburg|wheatley|blenheim|sarnia|soo|flint|saginaw|london|kitchener|guelph|owen sound|erie|niagara|north bay|barrie|brantford|sudbury|kingston|ottawa|oshawa|peterborough|brampton)\s+/, '');
+          var ok = (' ' + n + ' ').indexOf(' ' + full + ' ') >= 0 || (nick.length > 3 && new RegExp('\\b' + nick.replace(/[.*+?^${}()|[\]\\']/g, '.?') + '\\b').test(n));
+          if (ok && (!best || full.length > best.t.name.length)) best = { k: k, g: g, t: t, i: i };
+        });
+      });
+    });
+    return best;
+  }
+  function localAnswer(m) {
+    var lgName = LOCAL_LG[m.k] || m.k.toUpperCase(), t = m.t, g = m.g, place = m.i + 1;
+    var rec = [t.w, t.l].concat(t.otl != null ? [t.otl] : []).join('-');
+    var c = card(t.name + ': ' + (t.pts != null ? t.pts + ' points' : rec), ord(place) + ' in the ' + (g.group.indexOf(lgName) === 0 ? g.group : lgName + ' ' + g.group) + ' (' + rec + ' in ' + t.gp + ' games' + (t.strk ? ', streak ' + t.strk : '') + ')');
+    if (place > 1 && t.pts != null) { var lead = g.teams[0]; c.appendChild(el('p', 'asub', (lead.pts - t.pts === 0 ? 'Tied with ' : (lead.pts - t.pts) + ' point' + (lead.pts - t.pts === 1 ? '' : 's') + ' behind ') + lead.name + ' for first.')); }
+    var hasOtl = g.teams[0].otl != null;
+    c.appendChild(table(hasOtl ? ['GP', 'W', 'L', 'OTL', 'PTS'] : ['GP', 'W', 'L', 'PTS'], g.teams.map(function (x) { return { name: x.name, mark: x === t, vals: hasOtl ? [x.gp, x.w, x.l, x.otl, x.pts] : [x.gp, x.w, x.l, x.pts] }; })));
+    // last result and next game from the Local Scoreboard
+    var nm = norm(t.name), mine = (LG.games || []).concat(LG.ahead || []).filter(function (x) { return norm((x.club || '') + ' ' + (x.team === 'spitfires' ? 'windsor spitfires' : '')).indexOf(nm) >= 0 || norm(x.club || '') === nm; });
+    var last = mine.filter(function (x) { return x.status === 'final'; }).pop(), next = mine.filter(function (x) { return x.status === 'upcoming'; })[0];
+    if (last) c.appendChild(el('p', 'asub', 'Last game: ' + (last.result || '') + ' ' + (last.our_score != null ? last.our_score + '-' + last.opp_score : '') + ' ' + (last.home_away === 'A' ? 'at ' : 'vs. ') + last.opponent + ' (' + when(last.start) + ')'));
+    if (next) c.appendChild(el('p', 'asub', 'Next game: ' + (next.home_away === 'A' ? 'at ' : 'vs. ') + next.opponent + ', ' + when(next.start, next.time_tbd)));
+    var id = t.name.toLowerCase().replace(/['’.]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    goLink(c, m.k === 'ohl' && /spitfires/i.test(t.name) ? 'Open the Spitfires page ›' : 'Scores and standings ›', SITE + 'scores-standings?find=' + (/spitfires/i.test(t.name) ? 'spitfires' : id));
+    return c;
+  }
+  function proLeagueAnswer(k, groups) {
+    var c = card(PRO[k][1] + ' standings', 'Live from ESPN, by division');
+    var cols = proCols(k), grid = el('div', 'agrid');
+    groups.forEach(function (g) { var w = el('div'); w.appendChild(el('h3', null, g.group)); w.appendChild(table(cols.map(function (x) { return x[0]; }), g.teams.map(function (t) { return { name: t.nick || t.name, vals: cols.map(function (x) { return t.st[x[1]]; }) }; }))); grid.appendChild(w); });
+    c.appendChild(grid);
+    goLink(c, 'Full ' + PRO[k][1] + ' standings on ESPN ›', 'https://www.espn.com/' + k + '/standings');
+    return c;
+  }
+  function proTeamAnswer(k, g, t) {
+    var i = g.teams.indexOf(t), st = t.st;
+    var head = k === 'nhl' ? st.points + ' points' : (st.overall || (st.wins + '-' + st.losses));
+    var sub = ord(i + 1) + ' in the ' + g.group + (k === 'nhl' ? ' (' + st.wins + '-' + st.losses + '-' + st.otLosses + ' in ' + st.gamesPlayed + ' games)' : '') + (st.streak ? ', streak ' + st.streak : '');
+    var c = card(t.name + ': ' + head, sub);
+    if (i > 0 && k === 'nhl') { var d = g.teams[0].st._points - st._points; c.appendChild(el('p', 'asub', (d === 0 ? 'Tied with ' : d + ' point' + (d === 1 ? '' : 's') + ' behind ') + g.teams[0].name + ' for first.')); }
+    if (i > 0 && k !== 'nhl' && st.gamesBehind && st.gamesBehind !== '-') c.appendChild(el('p', 'asub', st.gamesBehind + ' games behind ' + g.teams[0].name + '.'));
+    var cols = proCols(k);
+    c.appendChild(table(cols.map(function (x) { return x[0]; }), g.teams.map(function (x) { return { name: x.nick || x.name, mark: x === t, vals: cols.map(function (y) { return x.st[y[1]]; }) }; })));
+    if (t.link) goLink(c, t.name + ' on ESPN ›', t.link);
+    return c;
+  }
+  function playerAnswer(q) {
+    // a local player in the Local Scoreboard's team leaders (Spitfires, junior clubs, Lancers football)
+    var stp = STATS ? Promise.resolve(STATS) : getJSON('stats.json').then(function (j) { STATS = j || {}; return STATS; });
+    return stp.then(function (sj) {
+      var n = norm(q), hit2 = null;
+      ((sj && sj.teams) || []).forEach(function (tm) { (tm.groups || []).forEach(function (g) { (g.rows || []).forEach(function (r) {
+        var last = norm(r.name).split(' ').pop(); if (last.length > 2 && new RegExp('\\b' + last + '\\b').test(n) && !hit2) hit2 = { tm: tm, g: g, r: r }; }); }); });
+      if (hit2) {
+        var c = card(hit2.r.name + ' · ' + hit2.tm.club, hit2.g.title + ' (' + hit2.tm.league + ')');
+        c.appendChild(table(hit2.g.cols, [{ name: hit2.r.name, mark: true, vals: hit2.r.vals }]));
+        if (hit2.tm.link) goLink(c, 'Full team stats ›', hit2.tm.link);
+        return c;
+      }
+      // a pro player, live from ESPN
+      var who = n.replace(STATW, ' ').replace(/[^a-z' ]+/g, ' ').split(/\s+/).filter(function (w) { return w && !FILL[w] && !/^(nhl|nfl|nba|mlb|season|career|this|have|has)$/.test(w); });
+      if (!who.length) return null;
+      return fetch('https://site.web.api.espn.com/apis/common/v3/search?type=player&limit=5&query=' + encodeURIComponent(who.join(' '))).then(function (r) { return r.json(); }).then(function (j) {
+        var p = (j.items || []).filter(function (x) { return PRO[x.league] && who.every(function (w) { return norm(x.displayName).indexOf(w) >= 0; }); })[0];
+        if (!p) return null;
+        return fetch('https://site.web.api.espn.com/apis/common/v3/sports/' + PRO[p.league][0] + '/athletes/' + p.id + '/overview').then(function (r) { return r.json(); }).then(function (ov) {
+          var s2 = ov.statistics || {}, sp = (s2.splits || [])[0];
+          var team = (p.teamRelationships || [])[0];
+          var c = card(p.displayName + (team && team.displayName ? ' · ' + team.displayName : ''), PRO[p.league][1] + ' · ' + (s2.displayName || 'This season') + (sp ? ' · ' + sp.displayName : ''));
+          if (!sp) { c.appendChild(el('p', 'asub', 'No stats yet this season.')); }
+          else {
+            var labels = (s2.labels || []).slice(0, 8), vals = sp.stats.slice(0, 8);
+            var iP = labels.indexOf('PTS');
+            if (iP >= 0 && p.league === 'nhl') c.querySelector('h2').textContent += ': ' + vals[iP] + ' points';
+            c.appendChild(table(labels, [{ name: 'Season', mark: true, vals: vals }]));
+          }
+          var link = (p.links || []).filter(function (l) { return /playercard|player/.test((l.rel || []).join(' ')); })[0];
+          goLink(c, p.displayName + ' on ESPN ›', (link && link.href) || ('https://www.espn.com/' + p.league + '/player/_/id/' + p.id));
+          return c;
+        });
+      }).catch(function () { return null; });
+    });
+  }
+  function answer(q) {
+    var n = ' ' + norm(q).replace(/[^a-z0-9' %]+/g, ' ').replace(/\s+/g, ' ') + ' ';
+    Object.keys(NICK).forEach(function (w) { n = n.replace(new RegExp(' ' + w + ' ', 'g'), ' ' + NICK[w] + ' '); });
+    var stdWord = / (standings?|table|rank|ranked|ranking|place|sit|sitting|record|points|pts|first|division|conference) /.test(n);
+    var statWord = STATW.test(n);
+    var lgKey = (n.match(/ (nhl|nfl|nba|mlb) /) || [])[1];
+    var localLg = (n.match(/ (ohl|ojhl|gohl|pjhl|pwhl) /) || [])[1];
+    // 1. a local team (Local Scoreboard standings)
+    var lm = findLocal(n);
+    if (lm && (stdWord || !statWord)) return Promise.resolve(localAnswer(lm));
+    // 2. a local league's standings
+    if (localLg && stdWord && LG && LG.standings && LG.standings[localLg]) {
+      var c = card(LOCAL_LG[localLg] + ' standings', 'From the Local Scoreboard');
+      var grid = el('div', 'agrid');
+      LG.standings[localLg].forEach(function (g) { if (!g.teams || !g.teams.length) return; var w = el('div'), o = g.teams[0].otl != null; w.appendChild(el('h3', null, g.group));
+        w.appendChild(table(o ? ['GP', 'W', 'L', 'OTL', 'PTS'] : ['GP', 'W', 'L', 'PTS'], g.teams.map(function (t) { return { name: t.name, vals: o ? [t.gp, t.w, t.l, t.otl, t.pts] : [t.gp, t.w, t.l, t.pts] }; }))); grid.appendChild(w); });
+      c.appendChild(grid); return Promise.resolve(c);
+    }
+    // 3. a pro team or a pro league
+    var leagues = lgKey ? [lgKey] : Object.keys(PRO);
+    return Promise.all(leagues.map(function (k) { return getStd(k).then(function (gs) { return { k: k, gs: gs }; }); })).then(function (all) {
+      var found = null;
+      all.forEach(function (x) { x.gs.forEach(function (g) { g.teams.forEach(function (t) {
+        var nk = norm(t.nick), full = norm(t.name);
+        if ((n.indexOf(' ' + full + ' ') >= 0 || (nk.length > 3 && n.indexOf(' ' + nk + ' ') >= 0)) && (!found || full.length > norm(found.t.name).length)) found = { k: x.k, g: g, t: t };
+      }); }); });
+      if (found && !statWord) return proTeamAnswer(found.k, found.g, found.t);
+      if (found && statWord && / (points|pts|record) /.test(n) && n.replace(new RegExp(' (' + norm(found.t.nick) + '|' + norm(found.t.name) + ') ', 'g'), ' ').replace(/ (how|many|much|points|pts|do|does|the|have|has|record|whats|what|is|are|in|standings) /g, ' ').trim() === '') return proTeamAnswer(found.k, found.g, found.t);
+      if (lgKey && stdWord && !found) return proLeagueAnswer(lgKey, all[0].gs);
+      if (statWord || !found) return playerAnswer(q).then(function (pc) { return pc || (found ? proTeamAnswer(found.k, found.g, found.t) : null); });
+      return null;
+    });
+  }
+
   function gameRow(g, ws) {
     var a = el('a', 'item t-' + (g.group || 'pro')); a.href = g.url; a.target = g.url.indexOf(SITE) === 0 ? '_top' : '_blank'; a.rel = 'noopener';
     var main = el('div', 'main'), meta = el('div', 'meta');
@@ -379,6 +546,8 @@
     build().then(function (items) {
       if (norm(input.value).trim() !== norm(q).trim()) return;     // a newer search is running
       out.innerHTML = '';
+      var ans = el('div', 'ansbox'); out.appendChild(ans);
+      answer(q).then(function (c) { if (c && norm(input.value).trim() === norm(q).trim()) { ans.appendChild(c); var st = out.querySelector('.nores'); if (st) st.remove(); } }).catch(function () {});
       var now = Date.now();
       var res = items.filter(function (it) { return hit(it.hay, ws); });
       // every word must match: "Windsor Selects" never widens to everything "Windsor"
@@ -403,7 +572,7 @@
       var seenH = {}; stories = stories.filter(function (s) { var k = norm(s.headline); if (seenH[k]) return false; seenH[k] = 1; return true; });
       var tables = res.filter(function (x) { return x.kind === 'table'; });
       if (!games.length && !stories.length && !tables.length) {
-        out.appendChild(el('div', 'status', 'Nothing on “' + q.trim() + '” right now. Search covers every Powerplay story and video, plus the Spitfires, Lancers, Saints, junior hockey, high school and the pro teams in the Pro Hub.'));
+        out.appendChild(el('div', 'status nores', 'Nothing on “' + q.trim() + '” right now. Search covers every Powerplay story and video, plus the Spitfires, Lancers, Saints, junior hockey, high school and the pro teams in the Pro Hub.'));
         chips(); return;
       }
       if (ws.join(' ') !== norm(q).trim()) out.appendChild(el('div', 'status', 'Showing results for: ' + ws.join(' ')));
