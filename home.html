@@ -491,12 +491,12 @@ document.addEventListener('load', function (e) {
   // ---------- rows ----------
   var ROWS = [
     { key: 'stories', title: 'What\u2019s New', gold: 'New', by: ['St. Clair College Alumni', 'logos/st-clair-alumni.png'], all: LINK.local, tab: 'stories' },
-    { key: 'spitfires', title: 'Windsor Spitfires', gold: 'Spitfires', by: null, all: SITE + 'scores-standings?find=spitfires', tab: null },
+    { key: 'spitfires', title: 'Windsor Spitfires', gold: 'Spitfires', by: ['Unifor Local 444', 'logos/unifor-444.png'], all: SITE + 'scores-standings?find=spitfires', tab: null },
     { key: 'hs', title: 'High School Huddle', gold: 'Huddle', by: null, all: SITE + 'headlines/categories/high-school-sports', tab: null, share: SITE + 'scores-standings?strip=hs' },
-    { key: 'photos', title: 'Game Day Snaps', gold: 'Snaps', by: null, all: null, tab: null },
-    { key: 'athletes', title: 'Athlete profiles', by: null, all: LINK.athletes, tab: 'athletes' },
-    { key: 'lancers', title: 'Lancers Lounge', gold: 'Lounge', by: null, all: SITE + 'headlines/categories/lancers-lounge', tab: null, share: SITE + 'scores-standings?strip=lancers' },
     { key: 'saints', title: 'Saints Nation', gold: 'Nation', by: null, all: SITE + 'headlines/categories/st-clair-athletics', tab: null, share: SITE + 'scores-standings?strip=saints' },
+    { key: 'lancers', title: 'Lancers Lounge', gold: 'Lounge', by: null, all: SITE + 'headlines/categories/lancers-lounge', tab: null, share: SITE + 'scores-standings?strip=lancers' },
+    { key: 'photos', title: 'Game Day Snaps', gold: 'Snaps', by: ['Unifor Local 2458', 'logos/unifor-2458.png'], all: null, tab: null },
+    { key: 'athletes', title: 'Athlete profiles', by: ['The D’Amore Group', 'logos/damore-group.png'], byLabel: 'Brought to you by ', all: LINK.athletes, tab: 'athletes' },
     { key: 'junior', title: 'Junior Hockey', gold: 'Hockey', by: null, all: SITE + 'headlines/categories/junior-hockey', tab: null, share: SITE + 'scores-standings?strip=junior' },
     { key: 'local', title: 'Local scores', by: ['Unifor Local 444', 'logos/unifor-444.png'], all: LINK.scores, tab: 'scores' },
     { key: 'pro', title: 'Pro scores', by: ['Unifor Local 2458', 'logos/unifor-2458.png'], all: LINK.pro, tab: 'pro' },
@@ -514,7 +514,7 @@ document.addEventListener('load', function (e) {
     left.appendChild(h2);
     if (r.by) {
       var by = el('span', 'by'), chip = el('span', 'chip'); var im = new Image(); im.src = r.by[1]; im.alt = r.by[0]; im.onerror = function () { chip.remove(); };
-      chip.appendChild(im); by.appendChild(document.createTextNode('Presented by ')); by.appendChild(chip); by.appendChild(el('b', null, r.by[0]));
+      chip.appendChild(im); by.appendChild(document.createTextNode(r.byLabel || 'Presented by ')); by.appendChild(chip); by.appendChild(el('b', null, r.by[0]));
       left.appendChild(by);
     }
     head.appendChild(left);
