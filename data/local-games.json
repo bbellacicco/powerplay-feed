@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T19:01:54-05:00",
+ "updated": "2026-11-15T19:17:08-05:00",
  "today": "2026-11-15",
  "range": [
   "2026-11-12",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 37
+   "count": 38
   },
   "club_news": {
    "ok": true,
@@ -859,10 +859,10 @@
    "opponent": "Waterloo Siskins",
    "location": "Chatham Memorial Arena, Chatham, ON",
    "status": "live",
-   "our_score": 0,
+   "our_score": 1,
    "opp_score": 0,
    "result": null,
-   "note": "19:56 1st",
+   "note": "10:54 1st",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15693"
    },
@@ -915,6 +915,17 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "Full Canadian National Anthem Performed by Sarah McLachlan | 113th Grey Cup",
+   "summary": "",
+   "published": "2026-11-15T19:01:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/4vTX6vmUMFYzba8t1DVxEX/6e5228bfb7acbfa114180a8bda59eae7/Anthem.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/full-canadian-national-anthem-performed-by-sarah-mclachlan-113th-grey-cup",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Montreal Alouettes Take The Field | 113th Grey Cup",
    "summary": "",
    "published": "2026-11-15T18:49:00-05:00",
@@ -946,6 +957,19 @@
    "video": false,
    "teams": [],
    "url": "https://www.cfl.ca/article/grey-cup-all-access",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Edmonton Elks Take The Field | 113th Grey Cup",
+   "summary": "",
+   "published": "2026-11-15T00:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/4ZNIyw4nPDTtUd0DJntG3p/30c022ac5872c5cf59a0496e0f70dbe1/EDM_WALK_OUT.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Elks"
+   ],
+   "url": "https://www.cfl.ca/article/edmonton-elks-take-the-field-113th-grey-cup",
    "source": "CFL.ca"
   },
   {
@@ -1060,28 +1084,6 @@
     "Alouettes"
    ],
    "url": "https://www.cfl.ca/article/depth-charts-how-the-teams-will-line-up-in-the-113th-grey-cup",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Get Ready for Riley Green at the Bud Light Halftime Show!",
-   "summary": "",
-   "published": "2026-11-13T21:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/3hMgvl6oAJPsxYfttZq4P4/b7f0f1080ce28600aea18a1da5c0bb9d/rgthumbnail2__1_.png?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/get-ready-for-riley-green-at-the-bud-light-halftime-show",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Commissioner Stewart Johnston's 2026 Media State of the League",
-   "summary": "",
-   "published": "2026-11-13T12:30:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/4y8yq0ohyHvY2PHHTt2Me2/b2746bab882f20e9a12ff6b971bfaf0a/image__1_.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/commissioner-stewart-johnston-s-2026-media-state-of-the-league",
    "source": "CFL.ca"
   },
   {
@@ -2121,6 +2123,19 @@
    "sn_team_count": 0,
    "sport": "Golf",
    "url": "https://www.sportsnet.ca/lpga/article/lindy-duncan-delivers-clutch-shots-to-get-first-career-lpga-tour-win-inher-222nd-attempt/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Brewers acquire RHP Ryan Walker from Giants for two minor leaguers",
+   "summary": "",
+   "published": "2026-11-15T19:05-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-44.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/brewers-acquire-rhp-ryan-walker-from-giants-for-two-minor-leaguers/",
    "source": "Sportsnet"
   },
   {
@@ -3431,7 +3446,7 @@
       "l": 5,
       "otl": 2,
       "pts": 36,
-      "gf": 131,
+      "gf": 132,
       "ga": 74,
       "strk": "W7"
      },
@@ -3516,7 +3531,7 @@
       "otl": 1,
       "pts": 13,
       "gf": 63,
-      "ga": 101,
+      "ga": 102,
       "strk": "L6"
      }
     ]
@@ -3570,7 +3585,7 @@
       "l": 5,
       "otl": 0,
       "pts": 26,
-      "gf": 81,
+      "gf": 82,
       "ga": 50,
       "strk": "W2"
      },
@@ -3582,8 +3597,8 @@
       "l": 10,
       "otl": 1,
       "pts": 21,
-      "gf": 83,
-      "ga": 81,
+      "gf": 84,
+      "ga": 82,
       "strk": "W4"
      },
      {
@@ -3654,8 +3669,8 @@
       "l": 15,
       "otl": 0,
       "pts": 10,
-      "gf": 62,
-      "ga": 86,
+      "gf": 63,
+      "ga": 87,
       "strk": "L2"
      },
      {
@@ -3732,7 +3747,7 @@
       "otl": 3,
       "pts": 25,
       "gf": 63,
-      "ga": 47,
+      "ga": 48,
       "strk": "W1"
      },
      {
