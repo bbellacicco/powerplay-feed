@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T20:51:10-05:00",
+ "updated": "2026-11-15T21:00:02-05:00",
  "today": "2026-11-15",
  "range": [
   "2026-11-12",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 30
+   "count": 29
   },
   "club_news": {
    "ok": true,
@@ -860,9 +860,9 @@
    "location": "Chatham Memorial Arena, Chatham, ON",
    "status": "live",
    "our_score": 4,
-   "opp_score": 2,
+   "opp_score": 3,
    "result": null,
-   "note": "08:54 3rd",
+   "note": "03:28 3rd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15693"
    },
@@ -2739,8 +2739,8 @@
    "video": false,
    "teams": [],
    "sn_team_count": 0,
-   "sport": "",
-   "url": "https://www.sportsnet.ca/article/juju-watkins-drops-25-but-no-3-usc-loses-to-no-1-south-carolina/",
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/basketball/article/juju-watkins-drops-25-but-no-3-usc-loses-to-no-1-south-carolina/",
    "source": "Sportsnet"
   },
   {
@@ -2832,19 +2832,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/avalanche-claim-defenceman-mike-reilly-off-waivers-from-hurricanes/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Capitals’ Ryan Leonard fined for high sticking Devils’ Cody Glass",
-   "summary": "",
-   "published": "2026-11-15T12:09-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/12/CP175271131.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/capitals-ryan-leonard-fined-for-high-sticking-devils-cody-glass/",
    "source": "Sportsnet"
   },
   {
@@ -3983,7 +3970,7 @@
       "otl": 3,
       "pts": 31,
       "gf": 103,
-      "ga": 78,
+      "ga": 79,
       "strk": "L1"
      },
      {
@@ -4006,7 +3993,7 @@
       "l": 8,
       "otl": 2,
       "pts": 26,
-      "gf": 91,
+      "gf": 92,
       "ga": 72,
       "strk": "W3"
      },
@@ -4067,7 +4054,7 @@
       "otl": 2,
       "pts": 14,
       "gf": 79,
-      "ga": 113,
+      "ga": 114,
       "strk": "L1"
      },
      {
@@ -4090,7 +4077,7 @@
       "l": 19,
       "otl": 3,
       "pts": 9,
-      "gf": 56,
+      "gf": 57,
       "ga": 151,
       "strk": "L11"
      }
@@ -4126,14 +4113,14 @@
      {
       "name": "Milton Menace",
       "abbr": "MIL",
-      "gp": 24,
+      "gp": 25,
       "w": 19,
-      "l": 3,
+      "l": 4,
       "otl": 2,
       "pts": 40,
       "gf": 98,
       "ga": 53,
-      "strk": "W6"
+      "strk": "L1"
      },
      {
       "name": "Toronto Patriots",
@@ -4196,6 +4183,18 @@
       "strk": "W1"
      },
      {
+      "name": "Niagara Falls Canucks",
+      "abbr": "NFC",
+      "gp": 28,
+      "w": 8,
+      "l": 18,
+      "otl": 2,
+      "pts": 18,
+      "gf": 73,
+      "ga": 125,
+      "strk": "W1"
+     },
+     {
       "name": "Georgetown Raiders",
       "abbr": "GEO",
       "gp": 25,
@@ -4218,18 +4217,6 @@
       "gf": 58,
       "ga": 126,
       "strk": "L6"
-     },
-     {
-      "name": "Niagara Falls Canucks",
-      "abbr": "NFC",
-      "gp": 27,
-      "w": 7,
-      "l": 18,
-      "otl": 2,
-      "pts": 16,
-      "gf": 73,
-      "ga": 125,
-      "strk": "L5"
      },
      {
       "name": "Buffalo Jr. Sabres",
@@ -4295,7 +4282,7 @@
       "otl": 0,
       "pts": 26,
       "gf": 85,
-      "ga": 52,
+      "ga": 53,
       "strk": "W2"
      },
      {
@@ -4330,7 +4317,7 @@
       "l": 6,
       "otl": 1,
       "pts": 19,
-      "gf": 57,
+      "gf": 58,
       "ga": 57,
       "strk": "L2"
      },
@@ -4366,7 +4353,7 @@
       "l": 10,
       "otl": 0,
       "pts": 16,
-      "gf": 72,
+      "gf": 73,
       "ga": 80,
       "strk": "W1"
      },
@@ -4455,7 +4442,7 @@
       "l": 4,
       "otl": 3,
       "pts": 25,
-      "gf": 65,
+      "gf": 66,
       "ga": 51,
       "strk": "W1"
      },
@@ -4504,7 +4491,7 @@
       "otl": 0,
       "pts": 16,
       "gf": 77,
-      "ga": 99,
+      "ga": 100,
       "strk": "L3"
      },
      {
@@ -4540,7 +4527,7 @@
       "otl": 0,
       "pts": 6,
       "gf": 46,
-      "ga": 116,
+      "ga": 117,
       "strk": "L1"
      }
     ]
