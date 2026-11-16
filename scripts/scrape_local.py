@@ -40,6 +40,7 @@ from zoneinfo import ZoneInfo
 DAYS_EACH_SIDE = 3
 DAYS_BACK = DAYS_EACH_SIDE + 1    # a little extra room in the HockeyTech request
 DAYS_AHEAD = DAYS_EACH_SIDE + 1
+TEAM_AHEAD_DAYS = 21               # HockeyTech teams: three weeks ahead, so a team's next games show even past this week
 
 # Spitfires (OHL). Key is the public key chl.ca itself uses. Team 17 = Windsor.
 OHL_KEY = "f1aa699db3d81487"
@@ -124,7 +125,7 @@ def _hockeytech_games(client, key, team_id, team, sport, club="", gamecentre="",
     """Games for one team from a HockeyTech league feed (OHL, OJHL, GOHL...)."""
     url = ("https://lscluster.hockeytech.com/feed/?feed=modulekit&view=scorebar"
            f"&key={key}&client_code={client}&team_id={team_id}"
-           f"&numberofdaysback={DAYS_BACK}&numberofdaysahead={DAYS_AHEAD}"
+           f"&numberofdaysback={DAYS_BACK}&numberofdaysahead={TEAM_AHEAD_DAYS}"
            "&season_id=&limit=500&lang_code=en&fmt=json")
     data = json.loads(fetch(url, "spitfires.json" if client == "ohl" else None))
     out = []
@@ -1086,6 +1087,14 @@ def main():
 
     lo = datetime.combine(today - timedelta(days=DAYS_EACH_SIDE), datetime.min.time(), TZ)
     hi = datetime.combine(today + timedelta(days=DAYS_EACH_SIDE + 1), datetime.min.time(), TZ)
+    # games after this week: each team's next three, for its own page (Local Teams); the week's lists stay as they were
+    ahead, per = [], {}
+    for g in sorted(games, key=lambda g: g["start"]):
+        if datetime.fromisoformat(g["start"]) >= hi and g.get("status") == "upcoming":
+            k = (g["team"], g.get("club", ""), g["sport"])
+            if per.get(k, 0) < 3:
+                per[k] = per.get(k, 0) + 1
+                ahead.append(g)
     games = [g for g in games if lo <= datetime.fromisoformat(g["start"]) < hi]
     games.sort(key=lambda g: (g["start"], g["team"], g["sport"]))
 
@@ -1195,6 +1204,7 @@ def main():
         "teams": TEAMS,
         "sources": sources,
         "games": games,
+        "ahead": ahead,           # each team's next games after this week (Local Teams team pages)
         "pro_games": pro_games,   # CFL, used by pro-games.html
         "pro_news": pro_news,     # CFL and PWHL stories, used by news-feed.html
         "more_news": more_news,   # Sportsnet + club-site stories, used by news-feed.html
