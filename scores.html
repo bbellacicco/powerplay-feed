@@ -30,7 +30,7 @@
     border: 1px solid rgba(255,255,255,.16); border-radius: 3px; overflow: hidden; }
   .switch button { border: 0; border-radius: 0; background: #0e2044; color: #cfd8ea; font: inherit; font-size: 13px; font-weight: 800; letter-spacing: .08em;
     text-transform: uppercase; padding: 12px 6px; cursor: pointer; white-space: nowrap; }
-  .switch button { grid-column: span 1; }   /* computers: all six on one line */
+  .switch button { grid-column: span 1; padding-left: 4px; padding-right: 4px; }   /* computers: two rows of six */
   .switch button:hover { color: #fff; background: #15305e; }
   .switch button[aria-selected="true"] { background: #fff; color: #0b1a33; box-shadow: inset 0 -3px 0 #e8b021; }
   .top { position: relative; align-items: center; gap: 10px; }
@@ -41,7 +41,8 @@
   @media (max-width: 560px) {
     .top { padding: 16px 10px 4px; }
     .switch { max-width: none; }
-    .switch button { padding: 11px 4px; font-size: 12px; letter-spacing: .06em; grid-column: span 2; }   /* phones: three across, two rows */
+    .switch { grid-template-columns: repeat(4, 1fr); }
+    .switch button { padding: 11px 2px; font-size: 11px; letter-spacing: .04em; }   /* phones: four across */
     .top { flex-direction: column; } .sharebtn { position: static; transform: none; align-self: flex-end; }
   }
   .guide { margin: 18px 40px 0; }
@@ -100,10 +101,15 @@
     <div class="switch" role="tablist" aria-label="Section">
       <button type="button" role="tab" data-tab="scores">Scores</button>
       <button type="button" role="tab" data-tab="upcoming">Coming Up</button>
-      <button type="button" role="tab" data-tab="stories">Stories</button>
+      <button type="button" role="tab" data-tab="stories">What&rsquo;s New</button>
+      <button type="button" role="tab" data-tab="spitfires">Spitfires</button>
+      <button type="button" role="tab" data-tab="hs">High School</button>
+      <button type="button" role="tab" data-tab="saints">Saints</button>
+      <button type="button" role="tab" data-tab="lancers">Lancers</button>
+      <button type="button" role="tab" data-tab="junior">Junior</button>
+      <button type="button" role="tab" data-tab="athletes">Athletes</button>
       <button type="button" role="tab" data-tab="network">Network</button>
       <button type="button" role="tab" data-tab="spotlight">Spotlight</button>
-      <button type="button" role="tab" data-tab="athletes">Athletes</button>
     </div>
   </div>
   <div id="panes"></div>
@@ -120,6 +126,12 @@
     // a part with no name of its own goes with the named part above it (Powerplay stories = What's Going On + Every story)
     // Stories: two strips stacked, Powerplay's (with its top story) and team news, then every Powerplay story
     stories:   [['home.html', 1000, 1350, '&view=hub'], ['local-news.html', 470, 570, '&other=none&lock=1'], ['news.html', 900, 1300, '&every=1']],
+    // each homepage strip has its own section: the strip itself, then every team in it (tap one for its page)
+    spitfires: [['teams.html', 1300, 1700, '&find=spitfires&solo=1']],
+    hs:        [['home.html', 430, 430, '&view=strip&strip=hs'], ['teams.html', 700, 900, '&only=hs']],
+    saints:    [['home.html', 430, 430, '&view=strip&strip=saints'], ['teams.html', 600, 900, '&only=saints']],
+    lancers:   [['home.html', 430, 430, '&view=strip&strip=lancers'], ['teams.html', 600, 900, '&only=lancers']],
+    junior:    [['home.html', 430, 430, '&view=strip&strip=junior'], ['teams.html', 600, 900, '&only=junior']],
     spotlight: [['spotlight.html', 1250, 1180, '']],
     athletes:  [['athletes.html', 420, 380, '']],
     network:   [['network.html', 1300, 1520, '&only=local']]
@@ -209,7 +221,8 @@
     });
   });
   // share button: shares whichever section is showing (its own link opens the page on that section)
-  var NAMES = { scores: 'Local Scores', upcoming: 'Coming Up: local games', stories: 'Local Stories', spotlight: 'The Local Sports Spotlight', athletes: 'Athlete Profiles', network: 'the Powerplay Network' };
+  var NAMES = { scores: 'Local Scores', upcoming: 'Coming Up: local games', stories: 'What\u2019s New', spotlight: 'The Local Sports Spotlight', athletes: 'Athlete Profiles', network: 'the Powerplay Network',
+    spitfires: 'the Windsor Spitfires', hs: 'High School Huddle', saints: 'Saints Nation', lancers: 'Lancers Lounge', junior: 'Junior Hockey' };
   var current = 'scores';
   if (window.PPShare) {
     var sb = PPShare.button(function () { return { title: NAMES[current].replace(/^the /, 'The '), url: PPShare.link(current), text: 'Check out ' + NAMES[current] + ' on Powerplay Windsor' }; });
