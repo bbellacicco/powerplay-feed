@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T19:36:13-05:00",
+ "updated": "2026-11-15T19:47:00-05:00",
  "today": "2026-11-15",
  "range": [
   "2026-11-12",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 36
   },
   "club_news": {
    "ok": true,
@@ -915,6 +915,19 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "Tyson Philpot puts Montreal on the board! | 113th Grey Cup",
+   "summary": "",
+   "published": "2026-11-15T19:21:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/c76XLapOSKoeyD3wZfhVg/2901650f5be887f14495b6550ae4b923/MTL_1ST_TD.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Alouettes"
+   ],
+   "url": "https://www.cfl.ca/article/tyson-philpot-puts-montreal-on-the-board-113th-grey-cup",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Full Canadian National Anthem Performed by Sarah McLachlan | 113th Grey Cup",
    "summary": "",
    "published": "2026-11-15T19:01:00-05:00",
@@ -996,24 +1009,15 @@
   },
   {
    "league": "cfl",
-   "headline": "Grey Cup Quarterbacks | Strev’s Keys to Victory",
+   "headline": "Edmonton starts off with a BANG! | 113th Grey Cup",
    "summary": "",
-   "published": "2026-11-14T14:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/1tVDmhxBkApxH5mwoJpimL/7cd2b61a2e1934b72f4901138a70c24d/StrevThumbnail.png?w=640&fm=jpg&q=70",
+   "published": "2026-11-15T00:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/3vNhkZc0r9QKAT0I7Orlxc/dc528e04ecdf31299db43baecf3e3cec/HIGHLIGHT_1.jpg?w=640&fm=jpg&q=70",
    "video": true,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/grey-cup-quarterbacks-strev-s-keys-to-victory",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "\"It's time to perform..\" | Montreal Alouettes",
-   "summary": "",
-   "published": "2026-11-14T13:30:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/248j8TGgp3rZYKazcjTTM2/a9c2128dc4e69521936fd6f57bbac767/Untitled-2.png?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/it-s-time-to-perform-montreal-alouettes",
+   "teams": [
+    "Elks"
+   ],
+   "url": "https://www.cfl.ca/article/edmonton-starts-off-with-a-bang-113th-grey-cup",
    "source": "CFL.ca"
   },
   {
@@ -1744,6 +1748,19 @@
   },
   {
    "league": "nba",
+   "headline": "Spurs win 12th in a row while sending Jazz to 12th straight loss",
+   "summary": "",
+   "published": "2026-11-15T19:44-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-46.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/spurs-win-12th-in-a-row-while-sending-jazz-to-12th-straight-loss/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
    "headline": "LeBron James moves into third on NBA’s career assist list as 76ers top Pacers",
    "summary": "",
    "published": "2026-11-15T16:02-05:00",
@@ -1757,19 +1774,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Canadiens’ Anderson, Matheson to miss multiple weeks with lower-body injuries",
-   "summary": "Forward Josh Anderson will be out for three to four weeks, and defenceman Mike Matheson will miss two to three weeks, both with lower-body injuries, the Canadiens announced on Sunday.",
-   "published": "2026-11-15T17:26-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/05/Anderson.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canadiens-anderson-matheson-to-miss-multiple-weeks-with-lower-body-injuries/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Sunday Overreactions: What would Penguins rebuild mean for Crosby?",
    "summary": "Would a Penguins rebuild lead to Sidney Crosby finishing his career elsewhere? Sportsnet’s Michael Amato explores that question and more in the Sunday Overreactions.",
    "published": "2026-11-15T09:00-05:00",
@@ -1779,6 +1783,19 @@
    "sn_team_count": 4,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/sunday-overreactions-what-would-penguins-rebuild-mean-for-crosby/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Canadiens’ Anderson, Matheson to miss multiple weeks with lower-body injuries",
+   "summary": "Forward Josh Anderson will be out for three to four weeks, and defenceman Mike Matheson will miss two to three weeks, both with lower-body injuries, the Canadiens announced on Sunday.",
+   "published": "2026-11-15T17:26-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/05/Anderson.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canadiens-anderson-matheson-to-miss-multiple-weeks-with-lower-body-injuries/",
    "source": "Sportsnet"
   },
   {
@@ -3221,7 +3238,7 @@
       "otl": 1,
       "pts": 35,
       "gf": 98,
-      "ga": 69,
+      "ga": 70,
       "strk": "W10"
      },
      {
@@ -3292,7 +3309,7 @@
       "l": 11,
       "otl": 3,
       "pts": 19,
-      "gf": 85,
+      "gf": 86,
       "ga": 91,
       "strk": "L1"
      },
@@ -3406,7 +3423,7 @@
       "otl": 2,
       "pts": 36,
       "gf": 133,
-      "ga": 75,
+      "ga": 76,
       "strk": "W7"
      },
      {
@@ -3489,7 +3506,7 @@
       "l": 18,
       "otl": 1,
       "pts": 13,
-      "gf": 64,
+      "gf": 65,
       "ga": 103,
       "strk": "L6"
      }
