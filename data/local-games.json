@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T19:47:00-05:00",
+ "updated": "2026-11-15T20:02:26-05:00",
  "today": "2026-11-15",
  "range": [
   "2026-11-12",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 36
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -862,7 +862,7 @@
    "our_score": 2,
    "opp_score": 0,
    "result": null,
-   "note": "20:00 2nd",
+   "note": "09:15 2nd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15693"
    },
@@ -915,7 +915,7 @@
  "pro_news": [
   {
    "league": "cfl",
-   "headline": "Tyson Philpot puts Montreal on the board! | 113th Grey Cup",
+   "headline": "Tyson Philpot breaks MULTIPLE tackles for electric TD! | 113th Grey Cup",
    "summary": "",
    "published": "2026-11-15T19:21:00-05:00",
    "image": "https://images.ctfassets.net/yfsr4emgn242/c76XLapOSKoeyD3wZfhVg/2901650f5be887f14495b6550ae4b923/MTL_1ST_TD.jpg?w=640&fm=jpg&q=70",
@@ -923,7 +923,7 @@
    "teams": [
     "Alouettes"
    ],
-   "url": "https://www.cfl.ca/article/tyson-philpot-puts-montreal-on-the-board-113th-grey-cup",
+   "url": "https://www.cfl.ca/article/tyson-philpot-breaks-multiple-tackles-for-electric-td-113th-grey-cup",
    "source": "CFL.ca"
   },
   {
@@ -998,6 +998,19 @@
   },
   {
    "league": "cfl",
+   "headline": "Cody Fajardo BULLDOZES his way in for six | 113th Grey Cup",
+   "summary": "",
+   "published": "2026-11-15T00:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/H0b1ecr8tPLm2x7GCH9C5/a23acbbdca2dbcc3f43050f2745071fb/HIGHLIGHT_2.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Elks"
+   ],
+   "url": "https://www.cfl.ca/article/cody-fajardo-bulldozes-his-way-in-for-six-113th-grey-cup",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Full SiriusXM Kickoff Show Ft. James Barker Band, Jim Cuddy and Greg Keelor | 113th Grey Cup",
    "summary": "",
    "published": "2026-11-15T00:00:00-05:00",
@@ -1005,19 +1018,6 @@
    "video": true,
    "teams": [],
    "url": "https://www.cfl.ca/article/full-siriusxm-kickoff-show-ft-james-barker-band-jim-cuddy-and-greg-keelor-113th-grey-cup",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Edmonton starts off with a BANG! | 113th Grey Cup",
-   "summary": "",
-   "published": "2026-11-15T00:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/3vNhkZc0r9QKAT0I7Orlxc/dc528e04ecdf31299db43baecf3e3cec/HIGHLIGHT_1.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Elks"
-   ],
-   "url": "https://www.cfl.ca/article/edmonton-starts-off-with-a-bang-113th-grey-cup",
    "source": "CFL.ca"
   },
   {
@@ -1653,6 +1653,19 @@
   },
   {
    "league": "other",
+   "headline": "Tempo land first-overall pick in 2027 WNBA draft",
+   "summary": "",
+   "published": "2026-11-15T19:58-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/08/CP174680092.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/wnba/article/tempo-land-first-overall-pick-in-2027-wnba-draft/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
    "headline": "Takeaways: Canada’s win over Sweden sets up gold-medal test vs. USA",
    "summary": "For the 24th time in 25 tournaments, Canada and the United States will meet in the gold-medal final at the Women’s World Championship.",
    "published": "2026-11-15T18:39-05:00",
@@ -1716,21 +1729,6 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/raiders-te-brock-bowers-exits-vs-seahawks-with-ankle-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Josh Allen powers Bills past Jets for best start in 35 years",
-   "summary": "Josh Allen and the Buffalo Bills are off to the franchise’s best start in 35 years.",
-   "published": "2026-11-15T16:41-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/allen_josh1280.jpg",
-   "video": false,
-   "teams": [
-    "Buffalo Bills"
-   ],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/josh-allen-powers-bills-past-jets-for-best-start-in-35-years/",
    "source": "Sportsnet"
   },
   {
@@ -1866,6 +1864,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nfl",
+   "headline": "Josh Allen powers Bills past Jets for best start in 35 years",
+   "summary": "Josh Allen and the Buffalo Bills are off to the franchise’s best start in 35 years.",
+   "published": "2026-11-15T16:41-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/allen_josh1280.jpg",
+   "video": false,
+   "teams": [
+    "Buffalo Bills"
+   ],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/josh-allen-powers-bills-past-jets-for-best-start-in-35-years/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "Canada’s Toby Fournier leads No. 5 Duke to rout of Marshall",
    "summary": "Toby Fournier had 16 points and 10 rebounds as No. 5 Duke rolled past previously unbeaten Marshall 88-51 on Sunday.",
@@ -1902,45 +1915,6 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/soccer/article/nations-league-roundup-england-ends-spains-43-game-unbeaten-streak/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "cfl",
-   "headline": "Keys to victory: How Alouettes can beat Elks in Grey Cup",
-   "summary": "After falling short against the Saskatchewan Roughriders in last year’s Grey Cup, the Alouettes are back with a chance at redemption on Sunday. Here’s what the Als must do to top the Edmonton Elks in the title tilt.",
-   "published": "2026-11-13T14:01-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/alexander-alouettes.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/keys-to-victory-how-alouettes-can-beat-elks-in-grey-cup/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "cfl",
-   "headline": "Keys to victory: How Elks can beat Alouettes in Grey Cup",
-   "summary": "For the first time in 11 years, the Edmonton Elks are back on the CFL’s biggest stage. To get you set, Kellen Forrest has three keys to victory for the Elks in Sunday’s Grey Cup against the Alouettes.",
-   "published": "2026-11-12T19:49-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Elks-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/keys-to-victory-how-elks-can-beat-alouettes-in-grey-cup/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "cfl",
-   "headline": "Grey Cup matchup brings plenty of history for Alouettes’ GM, coach",
-   "summary": "Jason Maas knows all about the Alouettes’ history against Edmonton. Montreal’s head coach lived it himself.",
-   "published": "2026-11-09T14:52-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-4.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/grey-cup-matchup-brings-plenty-of-history-for-alouettes-gm-coach/",
    "source": "Sportsnet"
   },
   {
@@ -2099,19 +2073,6 @@
    "sn_team_count": 0,
    "sport": "Golf",
    "url": "https://www.sportsnet.ca/lpga/article/lindy-duncan-delivers-clutch-shots-to-get-first-career-lpga-tour-win-inher-222nd-attempt/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Brewers acquire RHP Ryan Walker from Giants for two minor leaguers",
-   "summary": "",
-   "published": "2026-11-15T19:05-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-44.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/brewers-acquire-rhp-ryan-walker-from-giants-for-two-minor-leaguers/",
    "source": "Sportsnet"
   },
   {
@@ -3238,7 +3199,7 @@
       "otl": 1,
       "pts": 35,
       "gf": 98,
-      "ga": 70,
+      "ga": 72,
       "strk": "W10"
      },
      {
@@ -3249,7 +3210,7 @@
       "l": 7,
       "otl": 3,
       "pts": 31,
-      "gf": 96,
+      "gf": 97,
       "ga": 78,
       "strk": "L1"
      },
@@ -3273,7 +3234,7 @@
       "l": 8,
       "otl": 2,
       "pts": 26,
-      "gf": 89,
+      "gf": 90,
       "ga": 71,
       "strk": "W3"
      },
@@ -3309,7 +3270,7 @@
       "l": 11,
       "otl": 3,
       "pts": 19,
-      "gf": 86,
+      "gf": 88,
       "ga": 91,
       "strk": "L1"
      },
@@ -3334,7 +3295,7 @@
       "otl": 2,
       "pts": 14,
       "gf": 78,
-      "ga": 111,
+      "ga": 112,
       "strk": "L1"
      },
      {
@@ -3358,7 +3319,7 @@
       "otl": 3,
       "pts": 9,
       "gf": 56,
-      "ga": 144,
+      "ga": 145,
       "strk": "L11"
      }
     ]
@@ -3573,7 +3534,7 @@
       "l": 10,
       "otl": 1,
       "pts": 21,
-      "gf": 85,
+      "gf": 86,
       "ga": 83,
       "strk": "W4"
      },
@@ -3598,7 +3559,7 @@
       "otl": 1,
       "pts": 19,
       "gf": 57,
-      "ga": 56,
+      "ga": 57,
       "strk": "L2"
      },
      {
@@ -3633,7 +3594,7 @@
       "l": 10,
       "otl": 0,
       "pts": 16,
-      "gf": 67,
+      "gf": 68,
       "ga": 80,
       "strk": "W1"
      },
@@ -3646,7 +3607,7 @@
       "otl": 0,
       "pts": 10,
       "gf": 64,
-      "ga": 88,
+      "ga": 89,
       "strk": "L2"
      },
      {
@@ -3771,7 +3732,7 @@
       "otl": 0,
       "pts": 16,
       "gf": 77,
-      "ga": 94,
+      "ga": 95,
       "strk": "L3"
      },
      {
@@ -3806,7 +3767,7 @@
       "l": 17,
       "otl": 0,
       "pts": 6,
-      "gf": 45,
+      "gf": 46,
       "ga": 116,
       "strk": "L1"
      }
