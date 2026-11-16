@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T19:17:08-05:00",
+ "updated": "2026-11-15T19:36:13-05:00",
  "today": "2026-11-15",
  "range": [
   "2026-11-12",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 38
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -859,10 +859,10 @@
    "opponent": "Waterloo Siskins",
    "location": "Chatham Memorial Arena, Chatham, ON",
    "status": "live",
-   "our_score": 1,
+   "our_score": 2,
    "opp_score": 0,
    "result": null,
-   "note": "10:54 1st",
+   "note": "20:00 2nd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15693"
    },
@@ -922,6 +922,17 @@
    "video": true,
    "teams": [],
    "url": "https://www.cfl.ca/article/full-canadian-national-anthem-performed-by-sarah-mclachlan-113th-grey-cup",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "The Telus Coin Toss | 113th Grey Cup",
+   "summary": "",
+   "published": "2026-11-15T19:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/5t3ATa9TnUPz9FqpHCaT7Q/409978ceaf5adb6dff85cf8e45d5061f/cointoss.png?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/the-telus-coin-toss-113th-grey-cup",
    "source": "CFL.ca"
   },
   {
@@ -1003,17 +1014,6 @@
    "video": true,
    "teams": [],
    "url": "https://www.cfl.ca/article/it-s-time-to-perform-montreal-alouettes",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "\"We're coming to win it all..\" | Edmonton Elks",
-   "summary": "",
-   "published": "2026-11-14T12:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/5Ioef2Z55nAKhkHQeFfMe/820f63bf5a02c99cde1a52bd0d7c9f89/EE_SitdownThumbnail.png?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/we-re-coming-to-win-it-all-edmonton-elks",
    "source": "CFL.ca"
   },
   {
@@ -1648,18 +1648,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nba",
-   "headline": "Raptors’ Scottie Barnes available to return vs. Knicks",
-   "summary": "",
-   "published": "2026-11-15T16:30-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/barnes.jpg",
+   "league": "other",
+   "headline": "Takeaways: Canada’s win over Sweden sets up gold-medal test vs. USA",
+   "summary": "For the 24th time in 25 tournaments, Canada and the United States will meet in the gold-medal final at the Women’s World Championship.",
+   "published": "2026-11-15T18:39-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Canada-womens-hockey.jpg",
    "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-scottie-barnes-available-to-return-vs-knicks/",
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/wwhc/article/takeaways-canadas-win-over-sweden-sets-up-gold-medal-test-vs-usa/",
    "source": "Sportsnet"
   },
   {
@@ -1732,16 +1730,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Canadiens’ Anderson, Matheson to miss multiple weeks with lower-body injuries",
-   "summary": "Forward Josh Anderson will be out for three to four weeks, and defenceman Mike Matheson will miss two to three weeks, both with lower-body injuries, the Canadiens announced on Sunday.",
-   "published": "2026-11-15T17:26-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/05/Anderson.jpg",
+   "league": "nba",
+   "headline": "Luka Doncic scores 43, Lakers stretch winning streak to eight with win over Suns",
+   "summary": "Luka Doncic scored 43 points and the Los Angeles Lakers stretched their winning streak to eight games by holding off the Phoenix Suns 131-123 on Sunday.",
+   "published": "2026-11-15T19:13-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Luka-1.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canadiens-anderson-matheson-to-miss-multiple-weeks-with-lower-body-injuries/",
+   "sn_team_count": 2,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/luka-doncic-scores-43-lakers-stretch-winning-streak-to-eight-with-win-over-suns/",
    "source": "Sportsnet"
   },
   {
@@ -1758,29 +1756,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "U.S. blanks Finland to reach women’s hockey worlds final",
-   "summary": "",
-   "published": "2026-11-15T12:53-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/hilary-knight.jpg",
+   "league": "nhl",
+   "headline": "Canadiens’ Anderson, Matheson to miss multiple weeks with lower-body injuries",
+   "summary": "Forward Josh Anderson will be out for three to four weeks, and defenceman Mike Matheson will miss two to three weeks, both with lower-body injuries, the Canadiens announced on Sunday.",
+   "published": "2026-11-15T17:26-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/05/Anderson.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
+   "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/ice-hockey-world-championship/article/u-s-blanks-finland-to-reach-womens-hockey-worlds-final/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Takeaways: Canada’s win over Sweden sets up gold-medal test vs. USA",
-   "summary": "For the 24th time in 25 tournaments, Canada and the United States will meet in the gold-medal final at the Women’s World Championship.",
-   "published": "2026-11-15T18:39-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Canada-womens-hockey.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/wwhc/article/takeaways-canadas-win-over-sweden-sets-up-gold-medal-test-vs-usa/",
+   "url": "https://www.sportsnet.ca/nhl/article/canadiens-anderson-matheson-to-miss-multiple-weeks-with-lower-body-injuries/",
    "source": "Sportsnet"
   },
   {
@@ -1797,16 +1782,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "cfl",
-   "headline": "Grey Cup preview: What you need to know about Elks vs. Alouettes",
-   "summary": "Former teammates. Division champions. An historic 12th Grey Cup clash. With Davis Alexander and the Alouettes set to face Cody Fajardo and the Elks in Calgary, here’s everything you need to know before the 113th Grey Cup",
-   "published": "2026-11-15T08:08-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/CP176498859.jpg",
+   "league": "other",
+   "headline": "U.S. blanks Finland to reach women’s hockey worlds final",
+   "summary": "",
+   "published": "2026-11-15T12:53-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/hilary-knight.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/grey-cup-preview-what-you-need-to-know-about-elks-vs-alouettes/",
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/ice-hockey-world-championship/article/u-s-blanks-finland-to-reach-womens-hockey-worlds-final/",
    "source": "Sportsnet"
   },
   {
@@ -2045,32 +2030,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/capitals-ryan-leonard-fined-for-high-sticking-devils-cody-glass/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Flyers’ Briere, Jones tell Michkov he’s staying",
-   "summary": "Despite some apparent bench spats with his teammates this past week and a circulating report about an interest in a change of scenery, the Philadelphia Flyers remain locked in on Matvei Michkov.",
-   "published": "2026-11-14T21:45-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Michkov-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/flyers-briere-jones-tell-michkov-hes-staying/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Senators looking to find fresh start for Andre Burakovsky",
-   "summary": "",
-   "published": "2026-11-14T21:19-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177066521.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/senators-looking-to-find-fresh-start-for-andre-burakovsky/",
    "source": "Sportsnet"
   },
   {
@@ -3262,7 +3221,7 @@
       "otl": 1,
       "pts": 35,
       "gf": 98,
-      "ga": 68,
+      "ga": 69,
       "strk": "W10"
      },
      {
@@ -3273,7 +3232,7 @@
       "l": 7,
       "otl": 3,
       "pts": 31,
-      "gf": 95,
+      "gf": 96,
       "ga": 78,
       "strk": "L1"
      },
@@ -3333,7 +3292,7 @@
       "l": 11,
       "otl": 3,
       "pts": 19,
-      "gf": 84,
+      "gf": 85,
       "ga": 91,
       "strk": "L1"
      },
@@ -3382,7 +3341,7 @@
       "otl": 3,
       "pts": 9,
       "gf": 56,
-      "ga": 143,
+      "ga": 144,
       "strk": "L11"
      }
     ]
@@ -3446,8 +3405,8 @@
       "l": 5,
       "otl": 2,
       "pts": 36,
-      "gf": 132,
-      "ga": 74,
+      "gf": 133,
+      "ga": 75,
       "strk": "W7"
      },
      {
@@ -3530,8 +3489,8 @@
       "l": 18,
       "otl": 1,
       "pts": 13,
-      "gf": 63,
-      "ga": 102,
+      "gf": 64,
+      "ga": 103,
       "strk": "L6"
      }
     ]
@@ -3585,7 +3544,7 @@
       "l": 5,
       "otl": 0,
       "pts": 26,
-      "gf": 82,
+      "gf": 83,
       "ga": 50,
       "strk": "W2"
      },
@@ -3597,8 +3556,8 @@
       "l": 10,
       "otl": 1,
       "pts": 21,
-      "gf": 84,
-      "ga": 82,
+      "gf": 85,
+      "ga": 83,
       "strk": "W4"
      },
      {
@@ -3621,7 +3580,7 @@
       "l": 6,
       "otl": 1,
       "pts": 19,
-      "gf": 56,
+      "gf": 57,
       "ga": 56,
       "strk": "L2"
      },
@@ -3669,8 +3628,8 @@
       "l": 15,
       "otl": 0,
       "pts": 10,
-      "gf": 63,
-      "ga": 87,
+      "gf": 64,
+      "ga": 88,
       "strk": "L2"
      },
      {
@@ -3747,7 +3706,7 @@
       "otl": 3,
       "pts": 25,
       "gf": 63,
-      "ga": 48,
+      "ga": 49,
       "strk": "W1"
      },
      {
@@ -3831,7 +3790,7 @@
       "otl": 0,
       "pts": 6,
       "gf": 45,
-      "ga": 115,
+      "ga": 116,
       "strk": "L1"
      }
     ]
