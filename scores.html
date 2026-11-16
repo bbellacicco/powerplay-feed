@@ -26,11 +26,11 @@
   html, body { overflow: hidden; }
   .top { display: flex; justify-content: center; padding: 22px 16px 6px; }
   /* six sections: a squared-off grid, three across and two rows */
-  .switch { display: grid; grid-template-columns: repeat(6, 1fr); width: 100%; max-width: 560px; gap: 1px; background: rgba(255,255,255,.16);
+  .switch { display: grid; grid-template-columns: repeat(6, 1fr); width: 100%; max-width: 900px; gap: 1px; background: rgba(255,255,255,.16);
     border: 1px solid rgba(255,255,255,.16); border-radius: 3px; overflow: hidden; }
   .switch button { border: 0; border-radius: 0; background: #0e2044; color: #cfd8ea; font: inherit; font-size: 13px; font-weight: 800; letter-spacing: .08em;
     text-transform: uppercase; padding: 12px 6px; cursor: pointer; white-space: nowrap; }
-  .switch button { grid-column: span 2; }
+  .switch button { grid-column: span 1; }   /* computers: all six on one line */
   .switch button:hover { color: #fff; background: #15305e; }
   .switch button[aria-selected="true"] { background: #fff; color: #0b1a33; box-shadow: inset 0 -3px 0 #e8b021; }
   .top { position: relative; align-items: center; gap: 10px; }
@@ -41,7 +41,7 @@
   @media (max-width: 560px) {
     .top { padding: 16px 10px 4px; }
     .switch { max-width: none; }
-    .switch button { padding: 11px 4px; font-size: 12px; letter-spacing: .06em; }
+    .switch button { padding: 11px 4px; font-size: 12px; letter-spacing: .06em; grid-column: span 2; }   /* phones: three across, two rows */
     .top { flex-direction: column; } .sharebtn { position: static; transform: none; align-self: flex-end; }
   }
   .guide { margin: 18px 40px 0; }
@@ -98,9 +98,9 @@
   <div class="guide" id="guide"></div>
   <div class="top" id="top">
     <div class="switch" role="tablist" aria-label="Section">
-      <button type="button" role="tab" data-tab="stories">Stories</button>
       <button type="button" role="tab" data-tab="scores">Scores</button>
       <button type="button" role="tab" data-tab="upcoming">Coming Up</button>
+      <button type="button" role="tab" data-tab="stories">Stories</button>
       <button type="button" role="tab" data-tab="network">Network</button>
       <button type="button" role="tab" data-tab="spotlight">Spotlight</button>
       <button type="button" role="tab" data-tab="athletes">Athletes</button>
@@ -118,7 +118,8 @@
     scores:    [['local-games_3_3.html', 760, 900, '&other=none&current=no']],
     upcoming:  [['upcoming.html', 900, 1100, '']],
     // a part with no name of its own goes with the named part above it (Powerplay stories = What's Going On + Every story)
-    stories:   [['home.html', 1000, 1350, '&view=hub', 'Powerplay stories'], ['news.html', 900, 1300, '&every=1'], ['local-news.html', 470, 570, '&other=none&lock=1', 'Team news']],
+    // Stories: two strips stacked, Powerplay's (with its top story) and team news, then every Powerplay story
+    stories:   [['home.html', 1000, 1350, '&view=hub'], ['local-news.html', 470, 570, '&other=none&lock=1'], ['news.html', 900, 1300, '&every=1']],
     spotlight: [['spotlight.html', 1250, 1180, '']],
     athletes:  [['athletes.html', 420, 380, '']],
     network:   [['network.html', 1300, 1520, '&only=local']]
@@ -157,14 +158,16 @@
     setTimeout(unfocus, 120000);   // never leaves the page blurred for good
   }
   var gs = document.createElement('script'); gs.src = REPO + 'guide.js?v=' + Math.floor(Date.now() / 6e5);
-  gs.onload = function () { if (window.PPGuide) PPGuide.render(document.getElementById('guide'), { target: '_top' }); };
+  gs.onload = function () { if (window.PPGuide) PPGuide.render(document.getElementById('guide'), { target: '_top', pro: false }); };   // local only: no Pro Hub line here
   document.body.appendChild(gs);
   var built = {}, box = document.getElementById('panes');
   function show(tab) {
-    if (!PARTS[tab]) tab = 'stories';
+    if (!PARTS[tab]) tab = 'scores';
     if (!built[tab]) {
       var pane = document.createElement('div'); pane.className = 'pane'; pane.id = 'pane-' + tab;
-      PARTS[tab].forEach(function (w) {
+      var parts = PARTS[tab].slice();
+      if (tab === 'stories' && STORY) parts.sort(function (a, b) { return (b[0] === 'local-news.html') - (a[0] === 'local-news.html'); });   // a shared team story: team news first
+      parts.forEach(function (w) {
         var f = document.createElement('iframe');
         f.src = REPO + w[0] + V + w[3] + ((tab === 'network' || tab === 'spotlight') && PLAY ? '&play=' + encodeURIComponent(PLAY) : '') + (tab === 'athletes' && PROFILE ? '&p=' + PROFILE : '') + (tab === 'stories' && STORY && w[0] === 'local-news.html' ? '&story=' + STORY + (TEAM ? '&tab=' + TEAM : '') : '') + (tab === 'stories' && POST && w[0] === 'home.html' ? '&post=' + POST : '') + '&in=sports'; f.title = w[0].replace(/[_.].*$/, '');
         var isFocal = DEEP && (DEEP === w[0] || (DEEP === 'play' && (w[0] === 'network.html' || w[0] === 'spotlight.html')));
@@ -207,7 +210,7 @@
   });
   // share button: shares whichever section is showing (its own link opens the page on that section)
   var NAMES = { scores: 'Local Scores', upcoming: 'Coming Up: local games', stories: 'Local Stories', spotlight: 'The Local Sports Spotlight', athletes: 'Athlete Profiles', network: 'the Powerplay Network' };
-  var current = 'stories';
+  var current = 'scores';
   if (window.PPShare) {
     var sb = PPShare.button(function () { return { title: NAMES[current].replace(/^the /, 'The '), url: PPShare.link(current), text: 'Check out ' + NAMES[current] + ' on Powerplay Windsor' }; });
     sb.classList.add('sharebtn'); document.getElementById('top').appendChild(sb);
@@ -217,7 +220,7 @@
   // which switch to open: ?tab= when opened directly, or the hand-off from a "See all" link elsewhere (good for 2 minutes)
   var start = new URLSearchParams(location.search).get('tab');
   try { var h = JSON.parse(localStorage.getItem('pp-tab') || 'null'); localStorage.removeItem('pp-tab'); if (!start && h && Date.now() - h.t < 120000) start = h.tab; } catch (e) {}
-  show(PLAY ? (start === 'spotlight' ? 'spotlight' : 'network') : PROFILE ? 'athletes' : STORY ? 'stories' : (start || 'stories'));   // opens on Stories (the first switch)
+  show(PLAY ? (start === 'spotlight' ? 'spotlight' : 'network') : PROFILE ? 'athletes' : STORY ? 'stories' : (start || 'scores'));   // opens on Scores (the first switch)
 })();
 </script>
 
