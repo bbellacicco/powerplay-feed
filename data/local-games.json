@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T22:47:01-05:00",
+ "updated": "2026-11-15T23:02:02-05:00",
  "today": "2026-11-15",
  "range": [
   "2026-11-12",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -1726,6 +1726,19 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "Cody Fajardo Wins 113th Grey Cup MVP Presented By Securian",
+   "summary": "",
+   "published": "2026-11-15T22:42:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/XgTmcrBtz7uRV0tytYtc8/406d218b2cc8c166a5de8b9e05152434/MVP_THUMBNAIL_GRAPHIC.jpg?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [
+    "Elks"
+   ],
+   "url": "https://www.cfl.ca/article/cody-fajardo-wins-113th-grey-cup-mvp-presented-by-securian",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "The Final Play Of The 113th Grey Cup | Edmonton Elks Wins The Grey Cup",
    "summary": "",
    "published": "2026-11-15T22:16:00-05:00",
@@ -1813,17 +1826,6 @@
   },
   {
    "league": "cfl",
-   "headline": "The Telus Coin Toss | 113th Grey Cup",
-   "summary": "",
-   "published": "2026-11-15T19:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/5t3ATa9TnUPz9FqpHCaT7Q/409978ceaf5adb6dff85cf8e45d5061f/cointoss.png?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/the-telus-coin-toss-113th-grey-cup",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
    "headline": "Grey Cup All-Access",
    "summary": "",
    "published": "2026-11-15T01:00:00-05:00",
@@ -1863,7 +1865,7 @@
    "headline": "Cody Fajardo named 113th Grey Cup Most Valuable Player presented by Securian",
    "summary": "",
    "published": "2026-11-15T01:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/6M9gFg6uW3Iu8RnR3j1wVw/1923161302467992aac855156e1614fc/GC_Cody_Fajardo_2026.jpg?w=640&fm=jpg&q=70",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/2g1pZyrdfcbN7TuCdChDkx/318efc91c46e4e0625a1a1e115bb8404/FAJARDO-MVP.jpg?w=640&fm=jpg&q=70",
    "video": false,
    "teams": [
     "Elks",
@@ -2499,31 +2501,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Tempo land first-overall pick in 2027 WNBA draft",
-   "summary": "The Toronto Tempo have landed the first-overall pick in the upcoming 2027 WNBA Draft following the lottery results on Sunday.",
-   "published": "2026-11-15T19:58-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/08/CP174680092.jpg",
+   "league": "nhl",
+   "headline": "Cutter Gauthier extends goal streak to nine games, leading Ducks past Flames",
+   "summary": "Cutter Gauthier extended the NHL’s longest goals streak in 29 years to nine games, and Beckett Sennecke had two goals and an assist in the Anaheim Ducks’ 6-1 victory over the Calgary Flames on Sunday night.",
+   "published": "2026-11-15T22:55-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Flames-vs-Ducks-2.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/wnba/article/tempo-land-first-overall-pick-in-2027-wnba-draft/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Brunson, Towns spoil Barnes’ return as Knicks beat Raptors in overtime",
-   "summary": "",
-   "published": "2026-11-15T21:16-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/raps-1.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
    "sn_team_count": 2,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/brunson-towns-spoil-barnes-return-as-knicks-beat-raptors-in-overtime/",
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/cutter-gauthier-extends-goal-streak-to-nine-games-leading-ducks-past-flames/",
    "source": "Sportsnet"
   },
   {
@@ -2615,6 +2602,34 @@
    "sn_team_count": 2,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/lebron-james-moves-past-jason-kidd-for-third-on-nbas-career-assist-list-as-76ers-top-pacers/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Tempo land first-overall pick in 2027 WNBA draft",
+   "summary": "The Toronto Tempo have landed the first-overall pick in the upcoming 2027 WNBA Draft following the lottery results on Sunday.",
+   "published": "2026-11-15T19:58-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/08/CP174680092.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/wnba/article/tempo-land-first-overall-pick-in-2027-wnba-draft/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Brunson, Towns spoil Barnes’ return as Knicks beat Raptors in overtime",
+   "summary": "",
+   "published": "2026-11-15T21:16-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/raps-1.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 2,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/brunson-towns-spoil-barnes-return-as-knicks-beat-raptors-in-overtime/",
    "source": "Sportsnet"
   },
   {
