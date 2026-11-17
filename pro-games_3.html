@@ -173,7 +173,7 @@
       <div class="sponsor"><span>Presented by <b>Unifor Local 2458</b></span></div></div></div>
     </div>
     <div class="right">
-      <div class="views" role="group" aria-label="View"><button id="v-games">Scores</button><button id="v-standings">Standings</button><button id="v-stats">Stats</button></div>
+      <div class="views" role="group" aria-label="View"><button id="v-games">Scores</button><button id="v-standings">Standings</button></div>
       <div class="updated" id="updated"></div>
     </div>
   </header>
@@ -212,7 +212,7 @@
 
   var qs = new URLSearchParams(location.search);
   var UPCOMING = qs.get('view') === 'upcoming';     // the Pro Hub's Coming Up tab
-  var view = qs.get('view') === 'standings' ? 'standings' : qs.get('view') === 'stats' ? 'stats' : 'games';
+  var view = qs.get('view') === 'standings' ? 'standings' : 'games';   // (the Stats view was dropped: each league's page has its leaders)
   var state = { tab: LEAGUES[qs.get('tab')] ? qs.get('tab') : 'all', team: 'all' };
   var LOCK = qs.get('lock') === '1' && !!LEAGUES[state.tab];   // one league only (chosen in the Pro Hub's league bar)
   // inside the Pro Hub the league bar at the top of the page picks the league, so this widget's own league row is dropped
@@ -368,7 +368,7 @@
   }
 
   function views() {
-    [['games', 'v-games'], ['standings', 'v-standings'], ['stats', 'v-stats']].forEach(function (v) {
+    [['games', 'v-games'], ['standings', 'v-standings']].forEach(function (v) {
       var b = document.getElementById(v[1]);
       b.setAttribute('aria-pressed', String(view === v[0]));
       b.onclick = function () { if (view !== v[0]) { view = v[0]; render(); } };
