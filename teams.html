@@ -426,7 +426,7 @@
       var lg = barPick.slice(4), top = el('div', 'prohead'), x = el('button', 'back', 'Close \u2715'); x.type = 'button';
       x.onclick = function () { barPick = ''; drawDrop(); markBar(); };
       top.appendChild(el('b', null, lg.toUpperCase())); top.appendChild(x); d.appendChild(top);
-      var hubl = el('a', 'more', 'Our ' + lg.toUpperCase() + ' teams, standings and stats on the Pro Hub \u203a'); hubl.href = 'https://www.powerplaywindsor.com/local-sports?tab=' + lg; hubl.target = '_top'; hubl.style.display = 'inline-block'; hubl.style.margin = '0 0 8px'; d.appendChild(hubl);
+      var hubl = el('a', 'more', lg.toUpperCase() + ' teams, standings and stats on the Pro Hub \u203a'); hubl.href = 'https://www.powerplaywindsor.com/local-sports?tab=' + lg; hubl.target = '_top'; hubl.style.display = 'inline-block'; hubl.style.margin = '0 0 8px'; d.appendChild(hubl);
       var PG = 'https://bbellacicco.github.io/powerplay-feed/pro-games_3.html?v=' + Math.floor(Date.now() / 3600e3) + '&tab=' + lg + '&lock=1&in=sports';
       // 1. scores first (with the Standings and Stats switches)
       var pf = el('iframe', 'profr'); pf.title = lg.toUpperCase() + ' scores'; pf.scrolling = 'no'; pf.src = PG; d.appendChild(pf);
@@ -639,7 +639,7 @@
         .sort(function (a, b) { return new Date(b.at || 0) - new Date(a.at || 0); });
       // headlines of the day: our teams' newest first, then the rest
       var day = Date.now() - 36 * 3600e3, ours = all.filter(function (a) { return a.ours && new Date(a.at || 0) > day; }).slice(0, 2);
-      all = ours.concat(all.filter(function (a) { return ours.indexOf(a) < 0; }));
+      // newest first, every team (our teams are featured only in the Pro Sports Guide)
       proCache[lg] = { t: Date.now(), list: all };
       return all;
     });
