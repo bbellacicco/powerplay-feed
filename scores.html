@@ -96,7 +96,6 @@
 })();
 </script>
   <iframe id="teambar" title="Local Teams" scrolling="no" style="display:none;width:100%;height:58px;border:0;background:#10244a"></iframe>
-  <div class="guide" id="guide"></div>
   <div class="top" id="top">
     <div class="switch" role="tablist" aria-label="Section">
       <button type="button" role="tab" data-tab="scores">Scores</button>
@@ -112,6 +111,7 @@
       <button type="button" role="tab" data-tab="spotlight">Spotlight</button>
     </div>
   </div>
+  <div class="guide" id="guide"></div>
   <div id="panes"></div>
 <script>
 (function () {
@@ -121,7 +121,7 @@
   // each part: the widgets in it and their heights (desktop, phone)
   var HUB = encodeURIComponent('https://www.powerplaywindsor.com/scores-standings');
   var PARTS = {
-    scores:    [['local-games_3_3.html', 760, 900, '&other=none&current=no']],
+    scores:    [],   // Scores: the sports guide (today's games, latest scores, coming up) right under the tabs; each team's page has its own scores, standings and stats
     upcoming:  [['upcoming.html', 900, 1100, '']],
     // a part with no name of its own goes with the named part above it (Powerplay stories = What's Going On + Every story)
     // Stories: two strips stacked, Powerplay's (with its top story) and team news, then every Powerplay story
@@ -209,6 +209,7 @@
       box.appendChild(pane); built[tab] = pane;
     }
     Object.keys(built).forEach(function (k) { built[k].classList.toggle('on', k === tab); });
+    document.getElementById('guide').style.display = tab === 'scores' ? '' : 'none';   // the sports guide is the Scores section
     current = tab;
     [].forEach.call(document.querySelectorAll('.switch button'), function (b) { b.setAttribute('aria-selected', String(b.getAttribute('data-tab') === tab)); });
     try { history.replaceState(null, '', '?tab=' + tab + ((tab === 'network' || tab === 'spotlight') && PLAY ? '&play=' + PLAY : '') + (tab === 'athletes' && PROFILE ? '&profile=' + PROFILE : '') + (tab === 'stories' && STORY ? '&story=' + STORY : '') + (tab === 'stories' && POST ? '&post=' + POST : '')); } catch (e) {}
