@@ -42,6 +42,7 @@ DAYS_BACK = DAYS_EACH_SIDE + 1    # a little extra room in the HockeyTech reques
 DAYS_AHEAD = DAYS_EACH_SIDE + 1
 TEAM_AHEAD_DAYS = 21               # HockeyTech teams: three weeks ahead, so a team's next games show even past this week
 SCHEDULE_AHEAD_DAYS = 14           # each team's page lists its games for the next two weeks
+LAST_GAME_DAYS = 45                # each team's page shows its last score, however long ago (looked back this far)
 
 # Spitfires (OHL). Key is the public key chl.ca itself uses. Team 17 = Windsor.
 OHL_KEY = "f1aa699db3d81487"
@@ -126,7 +127,7 @@ def _hockeytech_games(client, key, team_id, team, sport, club="", gamecentre="",
     """Games for one team from a HockeyTech league feed (OHL, OJHL, GOHL...)."""
     url = ("https://lscluster.hockeytech.com/feed/?feed=modulekit&view=scorebar"
            f"&key={key}&client_code={client}&team_id={team_id}"
-           f"&numberofdaysback={DAYS_BACK}&numberofdaysahead={TEAM_AHEAD_DAYS}"
+           f"&numberofdaysback={LAST_GAME_DAYS}&numberofdaysahead={TEAM_AHEAD_DAYS}"
            "&season_id=&limit=500&lang_code=en&fmt=json")
     data = json.loads(fetch(url, "spitfires.json" if client == "ohl" else None))
     out = []
@@ -300,7 +301,7 @@ def scrape_lancers(today):
     base = "https://golancers.ca"
     seen, out = set(), []
     # month view covers a 6-week grid; ask for each month the window touches
-    months, d = [], (today - timedelta(days=DAYS_EACH_SIDE)).replace(day=1)
+    months, d = [], (today - timedelta(days=LAST_GAME_DAYS)).replace(day=1)
     while d <= today + timedelta(days=SCHEDULE_AHEAD_DAYS):
         months.append(d)
         d = (d.replace(day=28) + timedelta(days=4)).replace(day=1)
@@ -1101,6 +1102,18 @@ def main():
             if st < two or not per.get(k):
                 per[k] = per.get(k, 0) + 1
                 ahead.append(g)
+    # each team's last score before this week (its own page shows it, however long ago)
+    last, seen_last = [], set()
+    for g in sorted(games, key=lambda g: g["start"], reverse=True):
+        if g.get("status") != "final" or datetime.fromisoformat(g["start"]) >= lo:
+            continue
+        k = (g["team"], g.get("club", ""), g["sport"])
+        if g["team"] == "highschool" or k in seen_last:
+            continue
+        seen_last.add(k)
+        last.append(g)
+        if g["team"] == "junior" and g.get("opponent"):      # a game between two of our clubs is the visitor's last game too
+            seen_last.add((g["team"], g["opponent"], g["sport"]))
     games = [g for g in games if lo <= datetime.fromisoformat(g["start"]) < hi]
     games.sort(key=lambda g: (g["start"], g["team"], g["sport"]))
 
@@ -1214,6 +1227,7 @@ def main():
         "sources": sources,
         "games": games,
         "ahead": ahead,           # each team's next games after this week (Local Teams team pages)
+        "last": last,             # each team's last score before this week (Local Teams team pages)
         "pro_games": pro_games,   # CFL, used by pro-games.html
         "pro_ahead": pro_ahead,   # PWHL games in the next two weeks past this week (Pro Hub team pages)
         "pro_news": pro_news,     # CFL and PWHL stories, used by news-feed.html
@@ -1227,7 +1241,7 @@ def main():
     if os.path.exists(OUT_FILE):
         try:
             old = json.load(open(OUT_FILE, encoding="utf-8"))
-            if (old.get("games") == games and old.get("sources") == sources and old.get("ahead") == ahead and old.get("pro_ahead") == pro_ahead
+            if (old.get("games") == games and old.get("sources") == sources and old.get("ahead") == ahead and old.get("pro_ahead") == pro_ahead and old.get("last") == last
                     and old.get("today") == payload["today"] and old.get("pro_games") == pro_games
                     and old.get("pro_news") == pro_news and old.get("more_news") == more_news and old.get("cfl_standings") == cfl_standings
                     and old.get("standings") == standings):
