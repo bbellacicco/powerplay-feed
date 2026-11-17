@@ -7,13 +7,16 @@
 <title>Pro Hub | Powerplay Windsor</title>
 <script src="share.js?v=4"></script>
 <!--
-  The Pro Hub (Wix page "Pro Hub", address /local-sports), with a switch at the top:
-    Scores    the Pro Scoreboard (games, standings)
-    Updates   the latest pro headlines for our teams
-    Network   the Pro Network videos
-  ?tab=scores|updates|network   open on that switch (old links with ?tab=pro open Scores)
+  The Pro Hub (Wix page "Pro Hub", address /local-sports), built like the Local Hub: the tabs at the top, each its own section.
+    Scores     the Pro Scoreboard (every league's games, standings and stats)
+    Coming Up  every pro game coming up
+    Headlines  the latest pro headlines for our teams
+    NHL NFL NBA MLB CFL PWHL   each league: our teams (tap one for its page: last game and what's next, news, schedule,
+                               standings, stats), the league's top stories and leaders, then its scores and standings
+    Network    the Pro Network videos
+  ?tab=scores|upcoming|updates|nhl|nfl|nba|mlb|cfl|pwhl|network   open on that tab (old ?league=nhl links open the NHL tab)
+  ?tab=nhl&team=det   that team's page
   Each widget sizes itself to fit (nothing scrolls inside the page, which traps the finger on iPhones).
-  Embed on the Wix "Pro Hub" page, full width: about 1,700px tall on desktop and on mobile.
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -26,7 +29,7 @@
   html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   .top { display: flex; justify-content: center; padding: 22px 16px 6px; }
   /* three sections: a squared-off bar */
-  .switch { display: grid; grid-template-columns: repeat(4, 1fr); width: 100%; max-width: 620px; gap: 1px; background: rgba(255,255,255,.16);
+  .switch { display: grid; grid-template-columns: repeat(5, 1fr); width: 100%; max-width: 900px; gap: 1px; background: rgba(255,255,255,.16);
     border: 1px solid rgba(255,255,255,.16); border-radius: 3px; overflow: hidden; }
   .switch button { border: 0; border-radius: 0; background: #0e2044; color: #cfd8ea; font: inherit; font-size: 13px; font-weight: 800; letter-spacing: .08em;
     text-transform: uppercase; padding: 12px 6px; cursor: pointer; white-space: nowrap; }
@@ -40,8 +43,8 @@
   @media (max-width: 560px) {
     .top { padding: 16px 10px 4px; }
     .switch { max-width: none; }
-    /* all four tabs fit across a phone: equal columns that can shrink, smaller letters, a long name may take two lines */
-    .switch { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    /* phones: five across, two rows */
+    .switch { grid-template-columns: repeat(5, minmax(0, 1fr)); }
     .switch button { padding: 10px 2px; font-size: 11px; letter-spacing: .02em; white-space: normal; line-height: 1.15; }
     .top { flex-direction: column; } .sharebtn { position: static; transform: none; align-self: flex-end; }
   }
@@ -61,12 +64,17 @@
 </style>
 </head>
 <body>
-  <div class="lbar" id="lbar" role="group" aria-label="League"><span class="lbl">Pick a league</span></div>
   <div class="top" id="top">
     <div class="switch" role="tablist" aria-label="Section">
       <button type="button" role="tab" data-tab="scores">Scores</button>
       <button type="button" role="tab" data-tab="upcoming">Coming Up</button>
-      <button type="button" role="tab" data-tab="updates">Updates</button>
+      <button type="button" role="tab" data-tab="updates">Headlines</button>
+      <button type="button" role="tab" data-tab="nhl">NHL</button>
+      <button type="button" role="tab" data-tab="nfl">NFL</button>
+      <button type="button" role="tab" data-tab="nba">NBA</button>
+      <button type="button" role="tab" data-tab="mlb">MLB</button>
+      <button type="button" role="tab" data-tab="cfl">CFL</button>
+      <button type="button" role="tab" data-tab="pwhl">PWHL</button>
       <button type="button" role="tab" data-tab="network">Network</button>
     </div>
   </div>
@@ -83,24 +91,11 @@
     updates: [['news-feed.html', 1150, 1250, '']],
     network: [['network.html', 1300, 1520, '&only=pro']]
   };
-  // the league bar: All, NHL, NFL, NBA, MLB, CFL, PWHL. Picking one rebuilds every section for that league
-  var LG = (new URLSearchParams(location.search).get('league') || '').toLowerCase();
-  var LGS = [['', 'All'], ['nhl', 'NHL'], ['nfl', 'NFL'], ['nba', 'NBA'], ['mlb', 'MLB'], ['cfl', 'CFL'], ['pwhl', 'PWHL']];
-  if (!LGS.some(function (l) { return l[0] === LG; })) LG = '';
-  function lgParam(w) {
-    if (!LG) return '';
-    return w[0] === 'network.html' ? '&league=' + LG : '&tab=' + LG + '&lock=1';
-  }
-  LGS.forEach(function (l) {
-    var b = document.createElement('button'); b.type = 'button'; b.textContent = l[1]; b.setAttribute('aria-pressed', String(l[0] === LG));
-    b.onclick = function () {
-      if (LG === l[0]) return; LG = l[0];
-      [].forEach.call(document.querySelectorAll('#lbar button'), function (x) { x.setAttribute('aria-pressed', String(x === b)); });
-      Object.keys(built).forEach(function (k) { built[k].remove(); delete built[k]; });   // every section again, for this league
-      show(current);
-    };
-    document.getElementById('lbar').appendChild(b);
-  });
+  // each league has its own section, like the Local Hub's: our teams, top stories and leaders, then its scores and standings
+  var LGS = ['nhl', 'nfl', 'nba', 'mlb', 'cfl', 'pwhl'];
+  var TEAM = (new URLSearchParams(location.search).get('team') || '').toLowerCase().replace(/[^a-z]/g, '');   // a team's own link
+  LGS.forEach(function (lg) { PARTS[lg] = [['pro-teams.html', 1500, 2100, '&lg=' + lg], ['pro-games_3.html', 760, 900, '&tab=' + lg + '&lock=1']]; });
+  function lgParam(w, tab) { return w[0] === 'pro-teams.html' && TEAM && tab === startTab ? '&team=' + TEAM : ''; }
   var built = {}, box = document.getElementById('panes');
   function show(tab) {
     if (!PARTS[tab]) tab = 'scores';
@@ -108,7 +103,7 @@
       var pane = document.createElement('div'); pane.className = 'pane'; pane.id = 'pane-' + tab;
       PARTS[tab].forEach(function (w) {
         var f = document.createElement('iframe');
-        f.src = REPO + w[0] + V + w[3] + lgParam(w) + '&in=sports'; f.title = w[0].replace(/[_.].*$/, '');
+        f.src = REPO + w[0] + V + w[3] + lgParam(w, tab) + '&in=sports'; f.title = w[0].replace(/[_.].*$/, '');
         f.scrolling = 'no';
         f.style.height = (phone ? w[2] : w[1]) + 'px';
         f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; f.allowFullscreen = true;
@@ -134,7 +129,7 @@
     Object.keys(built).forEach(function (k) { built[k].classList.toggle('on', k === tab); });
     current = tab;
     [].forEach.call(document.querySelectorAll('.switch button'), function (b) { b.setAttribute('aria-selected', String(b.getAttribute('data-tab') === tab)); });
-    try { history.replaceState(null, '', '?tab=' + tab + (LG ? '&league=' + LG : '')); } catch (e) {}
+    try { history.replaceState(null, '', '?tab=' + tab); } catch (e) {}
   }
   // each widget reports its height; its frame matches it exactly, so nothing scrolls inside the page
   window.addEventListener('message', function (e) {
@@ -144,10 +139,11 @@
     });
   });
   // share button: shares whichever section is showing (its own link opens the page on that section)
-  var NAMES = { scores: 'Pro Scores', upcoming: 'Pro Games Coming Up', updates: 'Pro Updates', network: 'the Pro Network' };
+  var NAMES = { scores: 'Pro Scores', upcoming: 'Pro Games Coming Up', updates: 'Pro Headlines', network: 'the Pro Network',
+    nhl: 'the NHL Hub', nfl: 'the NFL Hub', nba: 'the NBA Hub', mlb: 'the MLB Hub', cfl: 'the CFL Hub', pwhl: 'the PWHL Hub' };
   var current = 'scores';
   if (window.PPShare) {
-    var sb = PPShare.button(function () { return { title: NAMES[current].replace(/^the /, 'The '), url: PPShare.link(current === 'scores' ? 'pro' : 'pro-' + current) + (LG ? '&league=' + LG : ''), text: 'Check out ' + NAMES[current] + ' on Powerplay Windsor' }; });
+    var sb = PPShare.button(function () { return { title: NAMES[current].replace(/^the /, 'The '), url: LGS.indexOf(current) >= 0 ? 'https://www.powerplaywindsor.com/local-sports?tab=' + current : PPShare.link(current === 'scores' ? 'pro' : 'pro-' + current), text: 'Check out ' + NAMES[current] + ' on Powerplay Windsor' }; });
     sb.classList.add('sharebtn'); document.getElementById('top').appendChild(sb);
   }
   [].forEach.call(document.querySelectorAll('.switch button'), function (b) { b.onclick = function () { show(b.getAttribute('data-tab')); }; });
@@ -156,7 +152,10 @@
   var start = new URLSearchParams(location.search).get('tab');
   if (start === 'pro') start = 'scores';
   try { var h = JSON.parse(localStorage.getItem('pp-tab') || 'null'); if (h && /^pro/.test(h.tab)) { localStorage.removeItem('pp-tab'); if (!start && Date.now() - h.t < 120000) start = h.tab.replace(/^pro-?/, '') || 'scores'; } } catch (e) {}
-  show(start || 'scores');
+  var oldLg = (new URLSearchParams(location.search).get('league') || '').toLowerCase();   // older links: ?league=nhl
+  if (LGS.indexOf(oldLg) >= 0 && (!start || start === 'scores')) start = oldLg;
+  var startTab = PARTS[start] ? start : 'scores';
+  show(startTab);
 })();
 </script>
 </body>
