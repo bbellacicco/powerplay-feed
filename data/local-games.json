@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T19:01:49-05:00",
+ "updated": "2026-11-16T19:23:20-05:00",
  "today": "2026-11-16",
  "range": [
   "2026-11-13",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 37
+   "count": 36
   },
   "club_news": {
    "ok": true,
@@ -1310,6 +1310,25 @@
    }
   },
   {
+   "id": "spitfires-ohl29245",
+   "team": "spitfires",
+   "sport": "Hockey",
+   "start": "2026-11-27T19:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Kitchener Rangers",
+   "location": "Kitchener Memorial Auditorium, Kitchener",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "tickets": "https://kitchenerlive.evenue.net/events/RANGERS",
+    "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29245/"
+   }
+  },
+  {
    "id": "lancers-6295",
    "team": "lancers",
    "sport": "Women's Hockey",
@@ -1404,6 +1423,44 @@
    "club": "Lakeshore Canadiens"
   },
   {
+   "id": "lancers-6251",
+   "team": "lancers",
+   "sport": "Women's Volleyball",
+   "start": "2026-11-28T12:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Brock Badgers",
+   "location": "Toldo Lancer Centre",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=174",
+    "watch": "https://oua.tv/?school=Windsor"
+   }
+  },
+  {
+   "id": "lancers-6271",
+   "team": "lancers",
+   "sport": "Men's Volleyball",
+   "start": "2026-11-28T13:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Brock Badgers",
+   "location": "Toldo Lancer Centre",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=174",
+    "watch": "https://oua.tv/?school=Windsor"
+   }
+  },
+  {
    "id": "lancers-6351",
    "team": "lancers",
    "sport": "Men's Hockey",
@@ -1420,6 +1477,25 @@
    "links": {
     "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=173",
     "watch": "https://oua.tv/?school=Windsor"
+   }
+  },
+  {
+   "id": "spitfires-ohl29251",
+   "team": "spitfires",
+   "sport": "Hockey",
+   "start": "2026-11-28T18:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Erie Otters",
+   "location": "Erie Insurance Arena, Erie, PA",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "tickets": "https://www.axs.com/events/1504587/erie-otters-vs-windsor-spitfires-tickets?skin=erieotters\t\t\t\t\t\t\t",
+    "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29251/"
    }
   },
   {
@@ -1461,6 +1537,25 @@
    "club": "Amherstburg Admirals"
   },
   {
+   "id": "lancers-6296",
+   "team": "lancers",
+   "sport": "Women's Hockey",
+   "start": "2026-11-28T19:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "TMU Bold",
+   "location": "Adie Knox Arena",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=172",
+    "watch": "https://oua.tv/?school=Windsor"
+   }
+  },
+  {
    "id": "lancers-6231",
    "team": "lancers",
    "sport": "Men's Basketball",
@@ -1478,6 +1573,44 @@
     "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=171",
     "watch": "https://oua.tv/?school=Windsor"
    }
+  },
+  {
+   "id": "junior-gojhl15741",
+   "team": "junior",
+   "sport": "GOHL (Jr. B)",
+   "start": "2026-11-29T14:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "London Nationals",
+   "location": "Vollmer Culture R.C., LaSalle, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.gohl.ca/stats/game-center/15741"
+   },
+   "club": "LaSalle Vipers"
+  },
+  {
+   "id": "junior-ojhl16729",
+   "team": "junior",
+   "sport": "OJHL (Jr. A)",
+   "start": "2026-11-29T15:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "King Rebellion",
+   "location": "Zancor Centre",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.ojhl.ca/stats/game-center/16729"
+   },
+   "club": "Leamington Flyers"
   },
   {
    "id": "junior-gojhl15743",
@@ -1516,44 +1649,6 @@
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960763?configuration=45"
    },
    "club": "Lakeshore Canadiens"
-  },
-  {
-   "id": "junior-gs2960765",
-   "team": "junior",
-   "sport": "PJHL (Jr. C)",
-   "start": "2026-12-01T19:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Blenheim Blades",
-   "location": "Essex Centre Complex",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960765?configuration=45"
-   },
-   "club": "Essex 73's"
-  },
-  {
-   "id": "junior-gs2960855",
-   "team": "junior",
-   "sport": "PJHL (Jr. C)",
-   "start": "2026-12-12T19:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Blenheim Blades",
-   "location": "Libro Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960855?configuration=45"
-   },
-   "club": "Amherstburg Admirals"
   }
  ],
  "pro_games": [
@@ -1989,6 +2084,19 @@
   },
   {
    "league": "pwhl",
+   "headline": "Four Minnesota Frost Capture World Championship Gold in Denmark",
+   "summary": "",
+   "published": "2026-11-17T00:07:15+00:00",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/11.16_Pannek_Worlds_Goal",
+   "video": false,
+   "teams": [
+    "Minnesota Frost"
+   ],
+   "url": "https://www.thepwhl.com/en/teams/minnesota-frost/news/2026/november/16/four-minnesota-frost-capture-world-championship-gold-in-denmark",
+   "source": "thepwhl.com"
+  },
+  {
+   "league": "pwhl",
    "headline": "Vegas Vanguards Announce 2026-27 Unity Nights, Theme Games, and Giveaways",
    "summary": "",
    "published": "2026-11-16T18:00:00+00:00",
@@ -2011,19 +2119,6 @@
     "San Jose Sea Lions"
    ],
    "url": "https://www.thepwhl.com/en/teams/san-jose-sea-lions/news/2026/november/16/san-jose-sea-lions-announce-2026-27-unity-and-theme-games-giveaways",
-   "source": "thepwhl.com"
-  },
-  {
-   "league": "pwhl",
-   "headline": "New York Sirens Announce 2026-27 Unity and Theme Games, Giveaways",
-   "summary": "",
-   "published": "2026-11-16T17:00:00+00:00",
-   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/Sirens_Unity_Theme_Promo_Graphic2627",
-   "video": false,
-   "teams": [
-    "New York Sirens"
-   ],
-   "url": "https://www.thepwhl.com/en/teams/new-york-sirens/news/2026/november/16/new-york-sirens-announce-2026-27-unity-and-theme-games-giveaways",
    "source": "thepwhl.com"
   },
   {
@@ -2795,19 +2890,6 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/report-raiders-bowers-not-believed-to-have-suffered-serious-ankle-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "NFL Week 10 takeaways: Vikings are Super Bowl contenders with Cousins",
-   "summary": "A 30-point performance seemed foreign in the Twin Cities just a week ago, but it is now a reality once again, and if Cousins can keep the ship floating in the right direction, the Vikings will be legit Super Bowl contend",
-   "published": "2026-11-15T23:47-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Kirk-2.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-10-takeaways-vikings-are-super-bowl-contenders-with-cousins/",
    "source": "Sportsnet"
   },
   {
@@ -3933,7 +4015,7 @@
       "l": 3,
       "otl": 1,
       "pts": 37,
-      "gf": 102,
+      "gf": 103,
       "ga": 72,
       "strk": "W11"
      },
@@ -4018,7 +4100,7 @@
       "otl": 2,
       "pts": 18,
       "gf": 69,
-      "ga": 107,
+      "ga": 108,
       "strk": "L1"
      },
      {
