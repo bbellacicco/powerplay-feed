@@ -618,7 +618,86 @@ def cell(row, idx):
     return row[idx].strip() if idx is not None and idx < len(row) else ""
 
 
+# the PJHL clubs' GameSheet team ids (season 15133): each club's roster page carries every player's and goalie's numbers
+PJHL_SEASON = 15133
+PJHL_TEAM_IDS = {"Lakeshore Canadiens": 522354, "Essex 73's": 522353, "Wheatley Sharks": 522357, "Amherstburg Admirals": 522350}
+
+
+def _next_data(html):
+    """A GameSheet page's data: the strings it pushes to self.__next_f, joined."""
+    parts = re.findall(r'self\.__next_f\.push\(\[1,"((?:[^"\\]|\\.)*)"\]\)', html)
+    out = []
+    for x in parts:
+        try:
+            out.append(json.loads('"' + x + '"'))
+        except ValueError:
+            pass
+    return "".join(out)
+
+
+def _gs_list(text, key):
+    i = text.find('"%s":{"status":"success","data":' % key)
+    if i < 0:
+        return []
+    j = text.index("[", i)
+    return json.JSONDecoder().raw_decode(text, j)[0]
+
+
+def scrape_pjhl_live(now):
+    """Each PJHL club's GameSheet roster page (no export needed): its top scorers and goalies."""
+    out = []
+    for n, club in enumerate(PJHL_CLUBS):
+        tid = PJHL_TEAM_IDS.get(club)
+        if not tid:
+            continue
+        if n and not FIXTURES:
+            time.sleep(2)                       # gentle on GameSheet: one page every couple of seconds
+        html = fetch(f"https://gamesheetstats.com/seasons/{PJHL_SEASON}/teams/{tid}/roster", f"pjhl-roster-{tid}.html")
+        text = _next_data(html)
+        skaters = []
+        for r in _gs_list(text, "players"):
+            st = r.get("stats") or {}
+            gp = whole(st.get("gp")) or 0
+            if not gp:
+                continue
+            name = tidy_name(f"{r.get('firstName', '')} {r.get('lastName', '')}")
+            g, a = whole(st.get("g")) or 0, whole(st.get("a")) or 0
+            pts = whole(st.get("pts"))
+            skaters.append((name, [gp, g, a, g + a if pts is None else pts]))
+        skaters.sort(key=lambda x: (-x[1][3], -x[1][1], x[0]))
+        groups = []
+        if skaters:
+            groups.append({"title": "Scoring leaders", "cols": ["GP", "G", "A", "PTS"], "key": 3,
+                           "rows": [{"name": nm, "vals": v} for nm, v in skaters[:SKATERS_SHOWN]]})
+        gl = []
+        for r in _gs_list(text, "goalies"):
+            st = r.get("stats") or {}
+            gp = whole(st.get("gp")) or 0
+            if not gp:
+                continue
+            w, gaa = whole(st.get("wins")) or 0, num(st.get("gaa"))
+            gl.append((tidy_name(f"{r.get('firstName', '')} {r.get('lastName', '')}"), w, gp,
+                       [gp, w, "" if gaa is None else "%.2f" % gaa, save_pct(st.get("svpct"))]))
+        gl.sort(key=lambda x: (-x[1], -x[2], x[0]))
+        if gl:
+            groups.append({"title": "Goalies", "cols": ["GP", "W", "GAA", "SV%"], "key": 1,
+                           "rows": [{"name": nm, "vals": v} for nm, _, _, v in gl[:GOALIES_SHOWN]]})
+        if groups:
+            out.append({"team": "junior", "club": club, "league": PJHL_LEAGUE,
+                        "link": f"https://gamesheetstats.com/seasons/{PJHL_SEASON}/teams/{tid}/roster",
+                        "updated": now.isoformat(), "groups": groups})
+        else:
+            print(f"  {club}: no player numbers on the GameSheet roster page", file=sys.stderr)
+    if not out:
+        raise RuntimeError("no PJHL numbers on the GameSheet roster pages")
+    return out
+
+
 def scrape_pjhl(now):
+    try:                                      # GameSheet's roster pages first; a hand-uploaded export if they fail
+        return scrape_pjhl_live(now)
+    except Exception as ex:
+        print(f"  PJHL roster pages failed ({ex}); trying the export", file=sys.stderr)
     ex = read_export(PJHL_PLAYERS_CSV)
     if ex is None:
         raise FileNotFoundError("no data/pjhl-players.csv yet (export it from GameSheet and upload it to the data folder)")
