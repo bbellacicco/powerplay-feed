@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T08:47:15-05:00",
+ "updated": "2026-11-17T09:06:12-05:00",
  "today": "2026-11-17",
  "range": [
   "2026-11-14",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -2102,6 +2102,19 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "Roughriders sign quarterback Trevor Harris to one-year extension",
+   "summary": "",
+   "published": "2026-11-17T00:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/6kpCLWHLxY47TScKDznz5m/aa730a509cca2b0af6238775c5789329/Trevor_Harris_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Roughriders"
+   ],
+   "url": "https://www.cfl.ca/article/roughriders-sign-quarterback-trevor-harris-to-one-year-extension",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "CFL Plays of the Week - 113th Grey Cup",
    "summary": "",
    "published": "2026-11-16T12:05:00-05:00",
@@ -2456,19 +2469,6 @@
     "Argonauts"
    ],
    "url": "https://www.cfl.ca/article/argonauts-ink-american-linebacker-vi-jones",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Roughriders release American receiver Shemar Bridges",
-   "summary": "",
-   "published": "2026-10-15T00:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/uOctT8XfIx80iQr6xQb6i/82a742a95d9755e6e11ffacfb9f4722c/Shemar_Bridges_2026.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Roughriders"
-   ],
-   "url": "https://www.cfl.ca/article/roughriders-release-american-receiver-shemar-bridges",
    "source": "CFL.ca"
   },
   {
@@ -2881,21 +2881,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Maple Leafs’ Chayka endorses Hiller amid losing streak",
-   "summary": "As the Maple Leafs navigate a losing streak, general manager John Chayka endorsed head coach Jim Hiller and pledged to find solutions.",
-   "published": "2026-11-16T16:34-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Toronto-Maple-Leafs-head-coach-Jim-Hiller.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-chayka-endorses-hiller-amid-losing-streak/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "One question facing each NHL team at the season quarter mark",
    "summary": "While there will still be many twists and turns to come, as we hit the quarter mark of the NHL season, Rory Boylen has one big question for each team.",
    "published": "2026-11-17T08:17-05:00",
@@ -2923,6 +2908,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Maple Leafs’ Chayka endorses Hiller amid losing streak",
+   "summary": "As the Maple Leafs navigate a losing streak, general manager John Chayka endorsed head coach Jim Hiller and pledged to find solutions.",
+   "published": "2026-11-16T16:34-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Toronto-Maple-Leafs-head-coach-Jim-Hiller.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-chayka-endorses-hiller-amid-losing-streak/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "‘Sharing the vision’: Tempo GM makes case for playing in Toronto",
    "summary": "",
@@ -2936,16 +2936,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nba",
-   "headline": "NBA Roundup: Embiid’s season-high 37 points lead 76ers past Nets",
-   "summary": "Joel Embiid scored a season-high 37 points, Jaylen Brown matched his season best with 31 and the superstars provided the Philadelphia 76ers with more than enough in LeBron James’ absence to beat the Brooklyn Nets 135-123",
-   "published": "2026-11-16T22:51-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/76ers-and-Nets.jpg",
+   "league": "other",
+   "headline": "David Beckham sues after fragrance sold in gas stations, discount stores",
+   "summary": "A dispute over the sale of David Beckham perfumes has struck a sour note with the soccer star turned style icon.",
+   "published": "2026-11-17T08:45-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-41.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/embiids-season-high-37-points-lead-76ers-past-nets-without-lebron-james/",
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/david-beckham-sues-after-fragrance-sold-in-gas-stations-discount-stores/",
    "source": "Sportsnet"
   },
   {
@@ -2962,16 +2962,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "pwhl",
-   "headline": "KK Harvey named MVP at women’s world championship",
+   "league": "other",
+   "headline": "IIHF website hit by apparent hack after Russia excluded from world juniors",
    "summary": "",
-   "published": "2026-11-16T16:20-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/04/Caroline-Harvey-PWHL-Draft-Header.jpg",
+   "published": "2026-11-17T09:00-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/01/Untitled-design-2026-01-22T105424.631.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/pwhl/article/kk-harvey-named-mvp-at-womens-world-championship/",
+   "url": "https://www.sportsnet.ca/world-juniors/article/iihf-website-hit-by-apparent-hack-after-russia-excluded-from-world-juniors/",
    "source": "Sportsnet"
   },
   {
@@ -3001,6 +3001,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "pwhl",
+   "headline": "KK Harvey named MVP at women’s world championship",
+   "summary": "",
+   "published": "2026-11-16T16:20-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/04/Caroline-Harvey-PWHL-Draft-Header.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/pwhl/article/kk-harvey-named-mvp-at-womens-world-championship/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "Diallo aims to restore ‘broken’ trust in bid for FIFA presidency",
    "summary": "",
@@ -3011,32 +3024,6 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/soccer/article/diallo-aims-to-restore-broken-trust-in-bid-for-fifa-presidency/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Report: Dropkin taking injured Nichols’ spot on Team Dunstone for GSOC National",
-   "summary": "",
-   "published": "2026-11-16T12:45-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/05/dropkin_korey1280.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Curling",
-   "url": "https://www.sportsnet.ca/curling/article/report-dropkin-taking-injured-nichols-spot-on-team-dunstone-for-gsoc-national/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "David Beckham sues after fragrance sold in gas stations, discount stores",
-   "summary": "A dispute over the sale of David Beckham perfumes has struck a sour note with the soccer star turned style icon.",
-   "published": "2026-11-17T08:45-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-41.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/david-beckham-sues-after-fragrance-sold-in-gas-stations-discount-stores/",
    "source": "Sportsnet"
   },
   {
@@ -3080,6 +3067,19 @@
   },
   {
    "league": "nba",
+   "headline": "NBA Roundup: Embiid’s season-high 37 points lead 76ers past Nets",
+   "summary": "Joel Embiid scored a season-high 37 points, Jaylen Brown matched his season best with 31 and the superstars provided the Philadelphia 76ers with more than enough in LeBron James’ absence to beat the Brooklyn Nets 135-123",
+   "published": "2026-11-16T22:51-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/76ers-and-Nets.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/embiids-season-high-37-points-lead-76ers-past-nets-without-lebron-james/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
    "headline": "Antetokounmpo scores 20, Heat roll past Rockets for fifth straight win",
    "summary": "",
    "published": "2026-11-16T22:06-05:00",
@@ -3102,19 +3102,6 @@
    "sn_team_count": 2,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/bane-scores-24-as-magic-beat-celtics-to-extend-win-streak-to-four/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Boozer scores 29, Grizzlies hand Wizards eighth straight loss",
-   "summary": "Memphis rookie Cameron Boozer scored a season-high 29 points in a matchup with top draft pick AJ Dybantsa of Washington, and the Grizzlies rallied from 12 points down to hand the Wizards their eighth straight loss, 136-1",
-   "published": "2026-11-16T22:01-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-11-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/boozer-scores-29-grizzlies-hand-wizards-eighth-straight-loss/",
    "source": "Sportsnet"
   },
   {
@@ -3223,6 +3210,19 @@
   },
   {
    "league": "other",
+   "headline": "Report: Dropkin taking injured Nichols’ spot on Team Dunstone for GSOC National",
+   "summary": "",
+   "published": "2026-11-16T12:45-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/05/dropkin_korey1280.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Curling",
+   "url": "https://www.sportsnet.ca/curling/article/report-dropkin-taking-injured-nichols-spot-on-team-dunstone-for-gsoc-national/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
    "headline": "Sweden beats Finland in shootout to win bronze at women’s worlds",
    "summary": "Hilda Svensson scored the decisive shootout goal and Sweden medaled at the women’s world hockey championship for the first time since 2007 by defeating Finland 2-1 in the bronze medal final on Monday.",
    "published": "2026-11-16T12:57-05:00",
@@ -3258,19 +3258,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/oilers-activate-isaac-howard-loan-him-to-ahl-bakersfield/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Jets’ Scheifele leads NHL’s three stars after setting franchise scoring record",
-   "summary": "Winnipeg Jets centre Mark Scheifele, Minnesota Wild goaltender Jesper Wallstedt and Carolina Hurricanes left-wing Nikolaj Ehlers have been named the NHL’s three stars of the week.",
-   "published": "2026-11-16T14:23-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-19.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 3,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/jets-scheifele-leads-nhls-three-stars-after-setting-franchise-scoring-record/",
    "source": "Sportsnet"
   },
   {
