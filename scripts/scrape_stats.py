@@ -232,6 +232,51 @@ def scrape_club(entry, now):
 
 
 
+# ------------------------------------------------------------------ league leaders
+# The whole league's top scorers and goalies (team column included): the Spitfires' page shows the OHL's,
+# the Local Hub's Junior section the OJHL's and GOHL's, and the search answers "who leads the OHL in points".
+LEAGUES = [
+    ("ohl", "OHL", "ohl", "f1aa699db3d81487", "https://chl.ca/ohl/stats/players/"),
+    ("ojhl", "OJHL (Jr. A)", "ojhl", "77a0bd73d9d363d3", "https://www.ojhl.ca/stats"),
+    ("gohl", "GOHL (Jr. B)", "gojhl", "34b10d4d34d7b59a", "https://www.gohl.ca/stats"),
+]
+LEAGUE_SHOWN = 10
+
+
+def scrape_league(entry, now):
+    key, label, client, api_key, link = entry
+    sk = parse_json(fetch(api_url(client, api_key, "topscorers", ""), f"{client}-league-skaters.json"))
+    rows = []
+    for r in records(sk):
+        name, pts = player_name(r), whole(pick(r, "points"))
+        if not name or pts is None:
+            continue
+        rows.append((name, str(pick(r, "team_code", "team_name") or ""), str(pick(r, "team_name") or ""),
+                     [whole(pick(r, "games_played", "gp")) or 0, whole(pick(r, "goals")) or 0, whole(pick(r, "assists")) or 0, pts]))
+    rows.sort(key=lambda x: (-x[3][3], -x[3][1], x[0]))
+    if not rows:
+        raise RuntimeError(f"no league scorers for {label}")
+    groups = [{"title": "Scoring leaders", "cols": ["Team", "GP", "G", "A", "PTS"], "key": 4,
+               "rows": [{"name": n, "team": tn, "vals": [t] + v} for n, t, tn, v in rows[:LEAGUE_SHOWN]]}]
+    try:
+        go = parse_json(fetch(api_url(client, api_key, "topgoalies", ""), f"{client}-league-goalies.json"))
+        gl = []
+        for r in records(go):
+            gp, name = whole(pick(r, "games_played", "gp")), player_name(r)
+            if not name or not gp:
+                continue
+            gaa = num(pick(r, "goals_against_average", "gaa"))
+            gl.append((name, str(pick(r, "team_code", "team_name") or ""), str(pick(r, "team_name") or ""), whole(pick(r, "wins")) or 0, gp,
+                       "" if gaa is None else "%.2f" % gaa, save_pct(pick(r, "save_percentage", "savepct", "sv_pct"))))
+        gl = gl[:5]      # the league's own order (it applies its minimum-games rule)
+        if gl:
+            groups.append({"title": "Goalies", "cols": ["Team", "GP", "W", "GAA", "SV%"], "key": 2,
+                           "rows": [{"name": n, "team": tn, "vals": [t, gp, w, gaa, sv]} for n, t, tn, w, gp, gaa, sv in gl]})
+    except Exception as ex:
+        print(f"  {label} league goalies skipped - {ex}", file=sys.stderr)
+    return {"key": key, "league": label, "link": link, "updated": now.isoformat(), "groups": groups}
+
+
 # ------------------------------------------------------------------ Lancers football
 # golancers.ca (SIDEARM). Each game has a box score page with clean per-game tables for both teams.
 # We add up Windsor's rows from every box score dated this calendar year.
@@ -685,13 +730,28 @@ def main():
         old = previous.get((t["team"], t["club"]))
         if old and without_times([old]) == without_times([t]):
             teams[i] = dict(t, updated=old["updated"])
+    # league leaders (a failed league keeps its last numbers)
+    prev_leagues = {l["key"]: l for l in load_previous_file().get("leagues", [])}
+    leagues = []
+    for e in LEAGUES:
+        try:
+            leagues.append(scrape_league(e, now))
+            print(f"  {e[1]} leaders: ok")
+        except Exception as ex:
+            print(f"::warning::League leaders for {e[1]} failed: {ex}")
+            if prev_leagues.get(e[0]):
+                leagues.append(prev_leagues[e[0]])
+    for i, l in enumerate(leagues):
+        old = prev_leagues.get(l["key"])
+        if old and {k: v for k, v in old.items() if k != "updated"} == {k: v for k, v in l.items() if k != "updated"}:
+            leagues[i] = dict(l, updated=old["updated"])
     if not teams:
         print("::warning::No stats collected; leaving data/stats.json as it was.")
         return 0
-    if without_times(teams) == without_times(load_previous_file().get("teams", [])):
+    if without_times(teams) == without_times(load_previous_file().get("teams", [])) and without_times(leagues) == without_times(load_previous_file().get("leagues", [])):
         print("Stats unchanged; not rewriting data/stats.json.")
         return 0
-    out = {"updated": now.isoformat(), "teams": teams}
+    out = {"updated": now.isoformat(), "teams": teams, "leagues": leagues}
     os.makedirs(os.path.dirname(OUT_FILE), exist_ok=True)
     with open(OUT_FILE, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=1)
