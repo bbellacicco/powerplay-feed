@@ -511,7 +511,7 @@ document.addEventListener('load', function (e) {
   ];
   var SHARE_TEXT = { network: 'Watch the latest local highlights and interviews', local: 'Local scores', stories: 'The latest Windsor-Essex sports stories',
     lancers: 'Lancers Lounge: everything Windsor Lancers', saints: 'Saints Nation: everything St. Clair Saints', hs: 'High School Huddle: Windsor-Essex high school sports', junior: 'Junior Hockey: the Spitfires and our junior teams',
-    pro: 'Pro scores for our teams', prohead: 'Pro headlines', athletes: 'Athlete profiles', photos: 'Game Day Snaps: game reports in pictures' };
+    pro: 'Pro scores', prohead: 'Pro headlines', athletes: 'Athlete profiles', photos: 'Game Day Snaps: game reports in pictures' };
   var rowEl = {};
   ROWS.forEach(function (r) {
     var sec = el('section'); sec.id = 'row-' + r.key;
@@ -776,7 +776,7 @@ document.addEventListener('load', function (e) {
     };
     // the national headlines rotate every 30 minutes through the latest stories, so they never sit for hours
     var turn = Math.floor(Date.now() / (30 * 60000));
-    var oursPool = pro.filter(function (x) { return fanTeam(x) && new Date(x.published).getTime() > fresh; }).slice(0, 6);
+    var oursPool = [];   // no our-teams slot: our teams are featured only in the Pro Sports Guide
     var pin = PIN_HEADS[0];
     if (pin) { out.push(proItem({ url: pin.url, headline: pin.headline, league: pin.league || 'nfl' }, pin.team || '')); got++; }
     else if (oursPool.length) { var ours = oursPool[turn % oursPool.length]; out.push(proItem(ours, fanTeam(ours))); got++; }
@@ -1117,7 +1117,7 @@ document.addEventListener('load', function (e) {
     return Promise.all(Object.keys(PATHS).map(function (k) {
       return fetch('https://site.api.espn.com/apis/site/v2/sports/' + PATHS[k] + '/scoreboard?dates=' + ymd(d)).then(function (r) { return r.ok ? r.json() : { events: [] }; })
         .then(function (j) { return (j.events || []).filter(function (e) {
-          return e.competitions[0].competitors.some(function (c) { return OUR[k].indexOf(c.team.abbreviation) >= 0; }) || (e.season && e.season.type === 3);
+          return true;   // every game (our teams are featured only in the Pro Hub's Pro Sports Guide)
         }).map(function (e) { e._lg = k; return e; }); }).catch(function () { return []; });
     })).then(function (r) { return [].concat.apply([], r); });
   }
@@ -1380,11 +1380,10 @@ document.addEventListener('load', function (e) {
         }).concat(snapsT).sort(function (a, b) { return b.t - a.t; }).map(function (x) { return x.node; });
         fill(t[0], cards, t[3]);   // no score cards here: scores have their own rows and the sports guide
       });
-      // pro headlines: our teams first
+      // pro headlines: the newest, every team
       var pro = (lg.pro_news || []).concat(lg.more_news || []).filter(function (s) { return s.url && s.headline; });
       var seenP = {}; pro = pro.filter(function (s) { if (seenP[s.url]) return false; seenP[s.url] = 1; return true; });
-      pro.forEach(function (s) { s._ours = OUR_PRO.test(s.headline + ' ' + (s.teams || []).join(' ')); });
-      pro.sort(function (a, b) { return (b._ours - a._ours) || (new Date(b.published) - new Date(a.published)); });
+      pro.sort(function (a, b) { return new Date(b.published) - new Date(a.published); });   // newest first, every team
       fill('prohead', pro.slice(0, 15).map(function (s) {
         var L = (s.league || '').toUpperCase();
         return storyCard(s, { tag: L || 'Pro', tile: L || 'Pro', league: L, sub: [L, s.source, ago(s.published)].filter(Boolean).join(' · ') });
@@ -1399,7 +1398,7 @@ document.addEventListener('load', function (e) {
         return b;
       }), 'Profiles are on the way.');
     });
-    proGames().then(function (g) { fill('pro', g.map(proCard), 'No games for our pro teams in the next few days.'); });
+    proGames().then(function (g) { fill('pro', g.map(proCard), 'No pro games in the next few days.'); });
   }
   load();
   setInterval(function () { if (!vp.classList.contains('on')) load(); }, 3 * 60000);
