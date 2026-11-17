@@ -238,7 +238,7 @@
     return Promise.all([get('local-games.json'), get('highschool.json'), get('saints.json'), get('local-news.json'), get('college-standings.json'), get('hs-standings.json'), get('network.json'), get('slideshows.json'), get('stats.json').catch(function () { return null; })]).then(function (r) {
       var lg = r[0] || {}, hs = r[1], sc = r[2];
       games = (lg.games || []).filter(function (g) { return g.team !== 'highschool' && !(sc && sc.games && g.team === 'saints' && g.sport !== 'Football'); })
-        .concat(hs && hs.games ? hs.games : (lg.games || []).filter(function (g) { return g.team === 'highschool'; }))
+        .concat(hs && hs.games ? hs.games.concat(hs.ahead || []) : (lg.games || []).filter(function (g) { return g.team === 'highschool'; }))
         .concat(sc && sc.games ? sc.games.filter(function (g) { return g.sport !== 'Football'; }) : [])
         .concat(sc && sc.ahead ? sc.ahead.filter(function (g) { return g.sport !== 'Football'; }) : []);
       games = games.concat(lg.ahead || []);   // each team's next games after this week
@@ -286,7 +286,8 @@
         news: function (s) { return s.team === 'junior' && s.club === c[0]; } });
     });
     // high school: every school that shows up in a sport
-    games.filter(function (g) { return g.team === 'highschool'; }).forEach(function (g) {
+    // senior and varsity teams only (no junior high school teams)
+    games.filter(function (g) { return g.team === 'highschool' && !/^(junior|midget)\b/i.test(g.sport || ''); }).forEach(function (g) {
       [g.home, g.away].forEach(function (sch) {
         if (!sch) return;
         var hrx = new RegExp('\\b' + sch.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i'), hsr = sportRx(g.sport);
@@ -515,7 +516,7 @@
       var L2 = g.links || {}; if (n === 0 && (L2.tickets || L2.watch)) { var ta = el('a', 'more', L2.tickets ? 'Tickets ›' : 'Watch ›'); ta.href = L2.tickets || L2.watch; ta.target = '_blank'; ta.rel = 'noopener'; r.appendChild(ta); }
       nx.appendChild(r);
     });
-    else nx.appendChild(el('div', 'none', 'Nothing on the schedule this week.'));
+    else nx.appendChild(el('div', 'none', 'Nothing on the schedule yet.'));
     sb.appendChild(nx);
     var mine = function (n) { return !n.video && !/youtube|vimeo/.test(n.url) && (t.news(n) || (n.team === 'powerplay' && t.about && (n.spits && t.id === 'spitfires' || t.about(n.headline + ' ' + (n.summary || '') + ' ' + (n.cats || ''))))); };
     var allNews = news.filter(mine);
