@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T11:36:15-05:00",
+ "updated": "2026-11-17T11:46:45-05:00",
  "today": "2026-11-17",
  "range": [
   "2026-11-14",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -2115,6 +2115,19 @@
   },
   {
    "league": "cfl",
+   "headline": "Lions sign Darnell Sankey to two-year extension",
+   "summary": "",
+   "published": "2026-11-17T00:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/2EJYytrOKkAuAEI7ej5sXw/d44074c36a5e0644d72caf7cc934c535/Darnell_Sankey_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Lions"
+   ],
+   "url": "https://www.cfl.ca/article/lions-sign-darnell-sankey-to-two-year-extension",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "CFL Plays of the Week - 113th Grey Cup",
    "summary": "",
    "published": "2026-11-16T12:05:00-05:00",
@@ -2442,19 +2455,6 @@
     "Tiger-Cats"
    ],
    "url": "https://www.cfl.ca/article/tiger-cats-sign-offensive-lineman-brandon-revenberg-to-contract-extension",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Argonauts ink American linebacker Vi Jones",
-   "summary": "",
-   "published": "2026-10-19T00:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/k5aa1oaHLkD1RY95v2XdC/d09d6d3117f47a833cdc2c41be9151c3/Generic_Argonauts_Helmet_2026.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Argonauts"
-   ],
-   "url": "https://www.cfl.ca/article/argonauts-ink-american-linebacker-vi-jones",
    "source": "CFL.ca"
   },
   {
@@ -2880,19 +2880,6 @@
   },
   {
    "league": "other",
-   "headline": "Canada caps historic 2026 with emphatic victory over Guatemala",
-   "summary": "A year highlighted by a historic World Cup run ended with an emphatic Nations League win. John Molinaro covers the takeaways from the Canadian men’s two-game victory against Guatemala.",
-   "published": "2026-11-17T00:19-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Canada-and-Guatemala.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/soccer/article/canada-caps-historic-2026-with-emphatic-victory-over-guatemala/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
    "headline": "Canada’s new-look lineup shows promise, but falls short for gold",
    "summary": "The 2026 women’s worlds ushered in plenty of change for Team Canada, but the outcome remained the same. Emily Sadler covers the takeaways from another matchup that ended with the Americans taking home gold.",
    "published": "2026-11-16T18:06-05:00",
@@ -2905,16 +2892,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Struggling power play deflates Canadiens in loss to Rangers",
-   "summary": "The sooner the Canadiens can sort out their power play, the better. The unit’s struggles hadn’t been particularly costly up to this point, but an 0-for-4 showing deflated Montreal in Monday’s loss to the Rangers.",
-   "published": "2026-11-17T00:26-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177288635.jpg",
+   "league": "other",
+   "headline": "Canada caps historic 2026 with emphatic victory over Guatemala",
+   "summary": "A year highlighted by a historic World Cup run ended with an emphatic Nations League win. John Molinaro covers the takeaways from the Canadian men’s two-game victory against Guatemala.",
+   "published": "2026-11-17T00:19-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Canada-and-Guatemala.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/struggling-power-play-deflates-canadiens-in-loss-to-rangers/",
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/soccer/article/canada-caps-historic-2026-with-emphatic-victory-over-guatemala/",
    "source": "Sportsnet"
   },
   {
@@ -3049,6 +3036,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Struggling power play deflates Canadiens in loss to Rangers",
+   "summary": "The sooner the Canadiens can sort out their power play, the better. The unit’s struggles hadn’t been particularly costly up to this point, but an 0-for-4 showing deflated Montreal in Monday’s loss to the Rangers.",
+   "published": "2026-11-17T00:26-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177288635.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/struggling-power-play-deflates-canadiens-in-loss-to-rangers/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Maple Leafs’ Chayka endorses Hiller amid losing streak",
    "summary": "As the Maple Leafs navigate a losing streak, general manager John Chayka endorsed head coach Jim Hiller and pledged to find solutions.",
    "published": "2026-11-16T16:34-05:00",
@@ -3076,6 +3076,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Seven figure skaters out of Grand Prix due to Finland’s ban on Russian athletes",
+   "summary": "",
+   "published": "2026-11-17T11:30-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/mishina_galliamov1280.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Olympics",
+   "url": "https://www.sportsnet.ca/olympics/article/seven-figure-skaters-out-of-grand-prix-due-to-finlands-ban-on-russian-athletes/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "mlb",
    "headline": "Hitters would benefit from checked-swing reviews, minor-league tests suggest",
    "summary": "",
@@ -3099,6 +3112,19 @@
    "sn_team_count": 0,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/wnba/article/top-three-targets-for-tempo-with-first-pick-in-wnba-draft/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "cfl",
+   "headline": "Lions sign veteran linebacker Sankey to two-year contract extension",
+   "summary": "The B.C. Lions are rewarding Darnell Sankey for a stellar 2026 season.",
+   "published": "2026-11-17T11:43-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sankey.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/lions-sign-veteran-linebacker-sankey-to-two-year-contract-extension/",
    "source": "Sportsnet"
   },
   {
@@ -3203,19 +3229,6 @@
    "sn_team_count": 4,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/nhl-teams-feeling-crease-crunch-in-early-going/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "AP source: Patriots QB Drake Maye out indefinitely with ankle injury",
-   "summary": "",
-   "published": "2026-11-16T08:24-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/maye_drake1280-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/report-patriots-qb-drake-maye-facing-significant-leg-injury/",
    "source": "Sportsnet"
   },
   {
