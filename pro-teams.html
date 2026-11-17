@@ -99,6 +99,7 @@
   .sgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px 18px; }
   .sgrid h3 { font-size: 18px; margin-bottom: 2px; }
   .sgrid td.tm { color: var(--muted); } .sgrid .k { color: var(--accent); font-weight: 800; }
+  .tstats { display: grid; gap: 16px; } .tstats h3 { font-size: 18px; margin-bottom: 2px; } .tstats .k { color: var(--accent); font-weight: 800; } .tstats td:first-child { white-space: nowrap; }
   .stgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 14px 18px; }
   /* stories */
   .mgrid { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(200px, 1fr); overflow-x: auto; scrollbar-width: thin; gap: 10px; padding-bottom: 6px; }
@@ -274,6 +275,23 @@
           return { name: l.athlete ? l.athlete.displayName : '', team: tm.abbreviation || '', us: !!(CUR && String(CUR.info.id || CUR.espn) === String(tm.id)), val: num(l.value, l.displayValue, c.name + ' ' + c.displayName) }; }) };
       });
       return groups.length ? groups : null;
+    });
+  }
+  var proStatsP = null;
+  function teamTables(t) {
+    if (!proStatsP) proStatsP = get('stats.json');
+    return proStatsP.then(function (j) {
+      var L2 = j && j.pro && j.pro[LG], gs = L2 && L2.teams && L2.teams[String(t.info.id || t.espn || '')];
+      if (!gs || !gs.length) return null;
+      var wrap = el('div', 'tstats');
+      gs.forEach(function (g) {
+        var w = el('div'); w.appendChild(el('h3', null, g.title));
+        var sc = el('div', 'tscroll'), tb = el('table'), hr = el('tr'); hr.appendChild(el('th', null, 'Player'));
+        g.cols.forEach(function (c, i) { hr.appendChild(el('th', i === g.key ? 'k' : null, c)); }); tb.appendChild(hr);
+        g.rows.forEach(function (r) { var tr = el('tr'); tr.appendChild(el('td', null, r.name)); r.vals.forEach(function (v, i) { tr.appendChild(el('td', i === g.key ? 'k' : null, String(v))); }); tb.appendChild(tr); });
+        sc.appendChild(tb); w.appendChild(sc); wrap.appendChild(w);
+      });
+      return wrap;
     });
   }
   function leaderTables(groups, showTeam) {
@@ -490,8 +508,14 @@
     var stats = el('div'); addPane('Stats', stats);
     if (L.local) { var pl = statsLeague(); stats.appendChild(pl || (function () { var b = el('div', 'box'); b.appendChild(el('div', 'none', 'Stats for the ' + L.name + ' aren’t available yet.')); return b; })()); }
     else {
-      var tb2 = el('div', 'box'); tb2.appendChild(el('h2', null, 'Team leaders')); var tl2 = el('div'); tl2.appendChild(el('div', 'none', 'Loading…')); tb2.appendChild(tl2); stats.appendChild(tb2);
-      espnLeaders(t).then(function (gs) { tl2.innerHTML = ''; if (gs) tl2.appendChild(leaderTables(gs, false)); else tl2.appendChild(el('div', 'none', 'Team stats aren’t available right now.')); });
+      // the whole team's numbers (every player, every goalie), kept by the stats updater; ESPN's leaders if those aren't there
+      var tb2 = el('div', 'box'); var th2 = el('h2', null, 'Team stats'); tb2.appendChild(th2); var tl2 = el('div'); tl2.appendChild(el('div', 'none', 'Loading…')); tb2.appendChild(tl2); stats.appendChild(tb2);
+      teamTables(t).then(function (node) {
+        tl2.innerHTML = '';
+        if (node) { tl2.appendChild(node); return; }
+        th2.textContent = 'Team leaders';
+        espnLeaders(t).then(function (gs) { if (gs) tl2.appendChild(leaderTables(gs, false)); else tl2.appendChild(el('div', 'none', 'Team stats aren’t available right now.')); });
+      });
       var lw = el('div'); stats.appendChild(lw);
       leagueLeadersBox().then(function (b) { if (b) { b.style.marginTop = '14px'; lw.appendChild(b); } });
     }
