@@ -186,9 +186,9 @@ var PPFocus = (function () {
     ['junior', 'Junior hockey', /\b(ojhl|gohl|pjhl)\b|spitfires? jr|junior [abc]\b|jr\.? [abc]\b|lakeshore canadiens|leamington flyers|lasalle vipers|essex 73|amherstburg admirals|wheatley sharks|blenheim|mooretown/],
     ['highschool', 'High school', /high school|wecssaa|secondary|catholic central|holy names|villanova|st\.? joseph|assumption|brennan|kennedy|massey|walkerville|vincent massey|riverside|herman|forster|tecumseh vista|belle river|essex dist|kingsville|leamington dist|cardinal carter|st\.? anne|l'essor|sandwich|harrow|general amherst|north star|erie migration|ste\.? cecile|e\.?j\.? lajeunesse/],
     ['football', 'Football', /football|touchdown|\btd\b|quarterback|\bqb\b|ofc|cjfl|yates|hec crighton/],
-    ['hockey', 'Hockey', /hockey|\bgoal\b|goalie|power ?play goal|shutout|\bohl\b|ojhl|gohl|pjhl/],
+    ['hockey', 'Hockey', /hockey|goalie|shutout|\bohl\b|ojhl|gohl|pjhl|spitfires|lakeshore canadiens|leamington flyers|lasalle vipers|essex 73|amherstburg admirals|wheatley sharks|chatham maroons/],
     ['basketball', 'Basketball', /basketball|three[- ]pointer|buzzer|dunk|\bhoops?\b/],
-    ['more', 'More sports', /volleyball|soccer|baseball|softball|golf|curling|wrestling|track|rugby|lacrosse|tennis|swim|boxing|cross[- ]country|fastball/]
+    ['more', 'More sports', /volleyball|soccer|baseball|softball|slo-?pitch|slow-?pitch|golf|curling|wrestling|track (and|&) field|rugby|lacrosse|tennis|swim|boxing|cross[- ]country|fastball|ultimate|badminton|pickleball/]
   ];
   // ---------- Pro Network: leagues and their teams ----------
   // each team: "Label|strong words|weak words". Strong words name the team clearly (full name, unique nickname);
@@ -298,6 +298,19 @@ var PPFocus = (function () {
   }
   function source(v) { return v.s || (/vimeo\.com/.test(v.u) ? 'Vimeo' : 'YouTube'); }
 
+  // a video's sport: from its title when the title names one (so a soccer or slo-pitch video never lands under Hockey
+  // because its description mentions a goal or the word hockey), otherwise from its description
+  var SPORT_CHIPS = ['football', 'hockey', 'basketball', 'more'];
+  function sportOf(v) {
+    if (v._sport !== undefined) return v._sport;
+    var pick = function (txt) { txt = ' ' + norm(txt) + ' ';
+      var more = LOCAL_CHIPS.filter(function (c) { return c[0] === 'more'; })[0][2];
+      if (more.test(txt)) return 'more';                       // other sports first: "Lakeshore lacrosse" isn't hockey
+      for (var i = 0; i < SPORT_CHIPS.length; i++) { var c = LOCAL_CHIPS.filter(function (x) { return x[0] === SPORT_CHIPS[i]; })[0]; if (c[2].test(txt)) return c[0]; }
+      return ''; };
+    v._sport = pick(v.t) || pick((v.d || '') + ' ' + (v.ch || ''));
+    return v._sport;
+  }
   // ---------- filtering ----------
   function list() {
     var all = data[state.tab], q = norm(state.q).trim(), words = q ? q.split(/\s+/) : [];
@@ -305,7 +318,8 @@ var PPFocus = (function () {
       var hay = v._hay || (v._hay = ' ' + norm(v.t + ' ' + (v.d || '') + ' ' + (v.ch || '')) + ' ');
       if (state.tab === 'local' && state.chip !== 'all') {
         var rx = LOCAL_CHIPS.filter(function (c) { return c[0] === state.chip; })[0][2];
-        if (!rx.test(hay)) return false;
+        if (SPORT_CHIPS.indexOf(state.chip) >= 0) { if (sportOf(v) !== state.chip) return false; }
+        else if (!rx.test(hay)) return false;
       }
       if (state.tab === 'pro' && state.chip !== 'all') {
         if (state.chip === 'team') { if (v.g !== 'team') return false; }
