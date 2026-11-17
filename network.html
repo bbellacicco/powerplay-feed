@@ -269,7 +269,7 @@ var PPFocus = (function () {
       strong.concat(weak).forEach(function (t) { v._tm[t] = 1; });
     });
   }
-  var PRO_CHIPS = [['all', 'All'], ['team', 'Our teams']].concat(LEAGUES.map(function (L) { return [L.key, L.key]; }));
+  var PRO_CHIPS = [['all', 'All']].concat(LEAGUES.map(function (L) { return [L.key, L.key]; }));
   // ?league=nhl: opens on that league (the Pro Hub's league bar)
   var NET_LOCK = qs.get('lock') === '1' && !!String(qs.get('league') || '');
   var LGQ = String(qs.get('league') || '').toUpperCase(); if (LEAGUE_OF[LGQ]) { state.tab = 'pro'; state.chip = LGQ; }
