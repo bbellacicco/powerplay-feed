@@ -8,7 +8,8 @@
 <script src="share.js?v=4"></script>
 <!--
   The Pro Hub (Wix page "Pro Hub", address /local-sports), built like the Local Hub: the tabs at the top, each its own section.
-    Scores     the Pro Sports Guide (our teams' games today, latest scores, coming up), like the Local Sports Guide
+    Scores     the Pro Sports Guide, like the Local Sports Guide: every pro game today with the scores (and last night's),
+               then the next three days. Tap a league for just its games, then pick a team
     NHL NFL NBA MLB CFL PWHL   each league: follow your team (a drop-down of every team), our teams (tap one for its page:
                                last game and what's next, news, schedule, standings, stats), the headlines and top stories,
                                the league's leaders, its videos (the Pro Network), then its scores, games coming up and standings
@@ -144,7 +145,7 @@
   if (start === 'pro') start = 'scores';
   var gs = document.createElement('script'); gs.src = REPO + 'guide.js?v=' + Math.floor(Date.now() / 6e5);
   gs.onload = function () { if (window.PPGuide) PPGuide.render(document.getElementById('guide'), { target: '_top', mode: 'pro', tips: true,
-    kicker: 'Your pro sports guide', title: 'Our pro teams, all in one place', sub: 'Every game and score for the teams Windsor-Essex cheers for, checked around the clock.', sponsor: false }); };
+    kicker: 'Your pro sports guide', title: 'Pro sports, all in one place', sub: 'Every NHL, NFL, NBA, MLB, CFL and PWHL game and score, checked around the clock. Our teams are marked in gold.', sponsor: false }); };
   document.body.appendChild(gs);
   try { var h = JSON.parse(localStorage.getItem('pp-tab') || 'null'); if (h && /^pro/.test(h.tab)) { localStorage.removeItem('pp-tab'); if (!start && Date.now() - h.t < 120000) start = h.tab.replace(/^pro-?/, '') || 'scores'; } } catch (e) {}
   var oldLg = (new URLSearchParams(location.search).get('league') || '').toLowerCase();   // older links: ?league=nhl
