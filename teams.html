@@ -399,7 +399,7 @@
       b.onclick = function () {
         if (x[0] === 'ohl') { var sp = T.filter(function (t) { return t.sec === 'ohl'; })[0];
           if (sp && document.getElementById('team').dataset.id === 'spitfires') { closeTeam(); return; }   // tap again to close
-          if (sp) openTeam(sp); markBar(); return; }
+          barPick = ''; if (sp) openTeam(sp); markBar(); return; }   // straight from the bar: Close (no list to go back to)
         closeTeam();                                   // one box at a time: a league's list replaces any open team
         barPick = barPick === x[0] ? '' : x[0]; drawDrop(); markBar();
       };
@@ -480,9 +480,9 @@
     var box = document.getElementById('team'); box.innerHTML = ''; box.hidden = false; document.getElementById('dir').hidden = true;
     box.dataset.id = t.id;
     if (!BAR) { try { history.replaceState(null, '', '?find=' + t.id); } catch (e) {} }
-    else { barPick = ''; drawDrop(); markBar(); }
+    else { if (!fromLink) fromPick = barPick; barPick = ''; drawDrop(); markBar(); }   // remember the list it came from (kept through a refresh)
     try { parent.postMessage({ pp: 'team', team: t.id }, '*'); } catch (e) {}
-    var back = el('button', 'back', BAR ? '\u2715 Close' : ONLY ? '\u2039 Back to the teams' : '\u2039 All teams'); back.type = 'button'; back.onclick = closeTeam;
+    var back = el('button', 'back', BAR ? (fromPick ? '\u2039 Back to the list' : '\u2715 Close') : ONLY ? '\u2039 Back to the teams' : '\u2039 All teams'); back.type = 'button'; back.onclick = backToList;
     if (SOLO) back.style.display = 'none';
     if (BAR) { var cb = el('div', 'closebar'); cb.appendChild(back); box.appendChild(cb); } else box.appendChild(back);
     var head = el('div', 'thead'), hl = el('div'); var h = el('h1'); h.textContent = t.full || t.name; hl.appendChild(h); hl.appendChild(el('div', 'lgl', t.league)); head.appendChild(hl);
@@ -578,7 +578,7 @@
     addPane('Standings', standings(t));
     addPane('Stats', teamStats(t));
     if (paneList.length) paneList[0][0].onclick();
-    if (BAR) { var cb2 = el('div', 'closebar bottom'); var bk2 = el('button', 'back', '\u2715 Close'); bk2.type = 'button'; bk2.onclick = closeTeam; cb2.appendChild(bk2); box._bottom = cb2; }
+    if (BAR) { var cb2 = el('div', 'closebar bottom'); var bk2 = el('button', 'back', fromPick ? '\u2039 Back to the list' : '\u2715 Close'); bk2.type = 'button'; bk2.onclick = backToList; cb2.appendChild(bk2); box._bottom = cb2; }
     if (t.id === 'spitfires') {
       var ct = el('a', 'box contest'); ct.href = 'https://www.powerplaywindsor.com/scores-standings?contest=spitfires'; ct.target = '_top';
       ct.appendChild(el('b', null, 'Win Spitfires tickets')); ct.appendChild(el('span', null, 'Enter the Powerplay ticket draw \u203a')); box.appendChild(ct);
@@ -587,7 +587,14 @@
     box.appendChild(el('div', 'note', 'Schedules and scores update every 15 minutes.'));
     if (!fromLink && !BAR) { try { window.scrollTo(0, 0); parent.postMessage({ pp: 'scrolltop' }, '*'); } catch (e) {} }
   }
+  // the homepage bar: closing a team picked from a list (Lancers, Saints, junior, high school) goes back to that list
+  var fromPick = '';
+  function backToList() {
+    var p = BAR ? fromPick : ''; closeTeam();
+    if (p) { barPick = p; drawDrop(); markBar(); }
+  }
   function closeTeam() {
+    fromPick = '';
     document.getElementById('team').hidden = true; document.getElementById('team').dataset.id = '';
     if (BAR) { markBar(); return; }
     document.getElementById('dir').hidden = false;
