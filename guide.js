@@ -1,6 +1,7 @@
 /* Powerplay Windsor "local guide" panel: the things you can only get here, in one glance.
    Today's local games, the latest local finals and the Community Calendar, with how fresh the data is.
    Used by home.html (under the top story) and discover.html (the strip under every blog post).
+   { mode: 'pro' }: the Pro Sports Guide on the Pro Hub (our pro teams' games, scores and what's coming up).
      <script src="guide.js"></script>
      PPGuide.render(document.getElementById('guide'), { compact: false, target: '_top' });
    Data: local-games.json, saints.json, highschool.json, calendar.json (refreshes every 5 minutes). */
@@ -420,6 +421,128 @@
     return a;
   }
 
+
+  // ================= the Pro Sports Guide (the Pro Hub's Scores tab): render(box, { mode: 'pro' }) =================
+  // the same look as the local guide: our pro teams' games today (or the next day with games), their latest scores
+  // and what's coming up. NHL, NFL, NBA and MLB live from ESPN; the CFL and PWHL from data/local-games.json.
+  var PRO_PATH = { nhl: 'hockey/nhl', nfl: 'football/nfl', nba: 'basketball/nba', mlb: 'baseball/mlb' };
+  var PRO_NAME = { nhl: 'NHL', nfl: 'NFL', nba: 'NBA', mlb: 'MLB', cfl: 'CFL', pwhl: 'PWHL' };
+  var PRO_COLOR = { nhl: '#94a3b8', nfl: '#1d4ed8', nba: '#ea580c', mlb: '#0891b2', cfl: '#dc2626', pwhl: '#7c3aed' };
+  var PRO_RANK = { nhl: 0, nfl: 1, nba: 2, mlb: 3, cfl: 4, pwhl: 5 };
+  var PRO_LOCAL = { cfl: /argonauts|tiger-cats/i, pwhl: /sceptres/i };
+  function proHubLink(tab) { return PRO_HUB + '?tab=' + tab; }
+  function nick(n) { n = String(n || ''); return n.split(' ').slice(-1)[0] || n; }
+  function espnGame(lg, e) {
+    var c = e.competitions && e.competitions[0]; if (!c) return null;
+    var st = (c.status && c.status.type) || (e.status && e.status.type) || {};
+    if (/POSTPONED|CANCELED|CANCELLED/.test(st.name || '')) return null;
+    var side = function (h) { var x = c.competitors.filter(function (t) { return t.homeAway === h; })[0]; if (!x) return null;
+      var sc = x.score == null ? null : typeof x.score === 'object' ? x.score.displayValue : x.score;
+      return { abbr: x.team.abbreviation, name: x.team.shortDisplayName || x.team.name || x.team.displayName, score: sc, win: !!x.winner }; };
+    var away = side('away'), home = side('home'); if (!away || !home) return null;
+    if (PRO_OURS[lg].indexOf(away.abbr) < 0 && PRO_OURS[lg].indexOf(home.abbr) < 0) return null;
+    var ls = e.links || [], by = function (r) { var x = ls.filter(function (l) { return (l.rel || []).indexOf(r) >= 0; })[0]; return x && x.href; };
+    return { id: lg + e.id, lg: lg, start: e.date, state: st.state, detail: st.shortDetail || '', away: away, home: home, tbd: e.timeValid === false,
+             venue: c.venue && c.venue.fullName || '', link: by('summary') || by('boxscore') || by('recap') || '' };
+  }
+  function proLoad() {
+    var jobs = [];
+    Object.keys(PRO_PATH).forEach(function (lg) {
+      PRO_OURS[lg].forEach(function (ab) {      // each of our teams' season (their next games and recent scores)
+        jobs.push(fetch('https://site.api.espn.com/apis/site/v2/sports/' + PRO_PATH[lg] + '/teams/' + ab.toLowerCase() + '/schedule').then(function (r) { return r.ok ? r.json() : {}; })
+          .catch(function () { return {}; }).then(function (j) { return (j.events || []).map(function (e) { return espnGame(lg, e); }).filter(Boolean); }));
+      });
+      // today's scoreboard: the live scores, right up to the minute
+      jobs.push(fetch('https://site.api.espn.com/apis/site/v2/sports/' + PRO_PATH[lg] + '/scoreboard').then(function (r) { return r.ok ? r.json() : {}; })
+        .catch(function () { return {}; }).then(function (j) { return (j.events || []).map(function (e) { var g = espnGame(lg, e); if (g) g.fresh = true; return g; }).filter(Boolean); }));
+    });
+    jobs.push(getJSON('local-games.json').then(function (j) {
+      return ((j && j.pro_games) || []).concat((j && j.pro_ahead) || []).map(function (g) {
+        var lg = g.league || g.team; if (!PRO_LOCAL[lg] || !PRO_LOCAL[lg].test((g.home || '') + ' ' + (g.away || ''))) return null;
+        if (g.status === 'postponed' || g.status === 'cancelled') return null;
+        var fin = g.status === 'final';
+        return { id: lg + g.start + g.home, lg: lg, start: g.start, state: fin ? 'post' : g.status === 'live' ? 'in' : 'pre', detail: g.note || '', tbd: g.time_tbd,
+                 away: { abbr: g.away_abbr, name: nick(g.away), score: g.our_score, win: fin && g.our_score > g.opp_score },
+                 home: { abbr: g.home_abbr, name: nick(g.home), score: g.opp_score, win: fin && g.opp_score > g.our_score },
+                 venue: g.location || '', link: g.link || (g.links && g.links.gamecentre) || '' };
+      }).filter(Boolean);
+    }));
+    return Promise.all(jobs).then(function (r) {
+      var by = {};
+      [].concat.apply([], r).forEach(function (g) { var k = g.lg + dayKey(new Date(g.start)) + g.home.abbr + g.away.abbr; if (!by[k] || g.fresh) by[k] = g; });
+      var all = Object.keys(by).map(function (k) { return by[k]; }).sort(function (a, b) { return a.start < b.start ? -1 : 1; });
+      pro_live = all.some(function (g) { return g.state === 'in'; });
+      return { pro: all, updated: Date.now() };
+    });
+  }
+  function proRow(g, target) {
+    var a = el('a', 'pg-li pg-link'); a.href = g.link || proHubLink(g.lg); a.target = g.link ? '_blank' : target; if (g.link) a.rel = 'noopener';
+    a.style.setProperty('--c', PRO_COLOR[g.lg]); return a;
+  }
+  function proGamesCol(d, target) {
+    var col = el('div', 'pg-col'), today = dayKey(new Date()), now = Date.now();
+    var future = d.pro.filter(function (g) { return dayKey(new Date(g.start)) >= today; });
+    var day = future.some(function (g) { return dayKey(new Date(g.start)) === today; }) ? today : future.map(function (g) { return dayKey(new Date(g.start)); }).sort()[0];
+    var mine = day ? future.filter(function (g) { return dayKey(new Date(g.start)) === day; }) : [];
+    var title = day === today ? 'Today' : day === dayKey(new Date(Date.now() + 864e5)) ? 'Tomorrow' : day ? wd(day) : 'Coming up';
+    colHead(col, title + "'s games", day ? wd(day).slice(0, 3) + '., ' + cpDate(day) : '');
+    if (!mine.length) { col.appendChild(el('div', 'pg-none', 'No games on the schedule for our teams yet.')); goLink(col, 'See the full schedule', proHubLink('upcoming'), target); return col; }
+    var big = el('div', 'pg-big', String(mine.length)); big.appendChild(el('small', null, mine.length === 1 ? 'game for our teams' : 'games for our teams')); col.appendChild(big);
+    var count = {}; mine.forEach(function (g) { count[g.lg] = (count[g.lg] || 0) + 1; });
+    var chips = el('div', 'pg-chips');
+    Object.keys(count).sort(function (a, b) { return PRO_RANK[a] - PRO_RANK[b]; }).forEach(function (lg) {
+      var c = el('a', 'pg-chip'); c.href = proHubLink(lg); c.target = target; c.style.setProperty('--c', PRO_COLOR[lg]); c.appendChild(el('i'));
+      c.appendChild(document.createTextNode(PRO_NAME[lg] + ' ' + count[lg])); chips.appendChild(c);
+    });
+    col.appendChild(chips);
+    mine.sort(function (a, b) { return (a.state === 'in' ? 0 : 1) - (b.state === 'in' ? 0 : 1) || (a.start < b.start ? -1 : 1); });
+    var list = el('div');
+    mine.slice(0, 7).forEach(function (g) {
+      var li = proRow(g, target), lv = g.state === 'in', fin = g.state === 'post';
+      li.appendChild(el('div', 'pg-tm' + (lv ? ' pg-live' : fin ? ' pg-fin' : ''), lv ? 'LIVE' : fin ? 'Final' : g.tbd ? 'TBA' : cpTime(new Date(g.start))));
+      var tx = el('div', 'pg-tx');
+      if (lv || fin) { li.classList.add('pg-scored'); tx.appendChild(scoreBox([[g.away.name, g.away.score, fin && g.away.win], [g.home.name, g.home.score, fin && g.home.win]])); }
+      else tx.appendChild(el('div', 'pg-a', g.away.name + ' at ' + g.home.name));
+      tx.appendChild(el('div', 'pg-b', PRO_NAME[g.lg] + (lv && g.detail ? ' · ' + g.detail : g.venue ? ' · ' + g.venue : ''))); li.appendChild(tx); list.appendChild(li);
+    });
+    col.appendChild(list);
+    goLink(col, mine.length > 7 ? 'See all ' + mine.length + ' games' : 'See the full schedule', proHubLink('upcoming'), target);
+    return col;
+  }
+  function proFinalsCol(d, target) {
+    var col = el('div', 'pg-col'), since = Date.now() - 3 * 864e5;
+    var fin = d.pro.filter(function (g) { return g.state === 'post' && g.away.score != null && new Date(g.start).getTime() > since; }).reverse();
+    colHead(col, 'Latest scores', fin.length ? fin.length + (fin.length === 1 ? ' final' : ' finals') : '');
+    if (!fin.length) col.appendChild(el('div', 'pg-none', 'No finals for our teams in the last three days.'));
+    fin.slice(0, 6).forEach(function (g) {
+      var li = proRow(g, target); li.appendChild(el('i'));
+      var aw = +g.away.score >= +g.home.score, w = aw ? g.away : g.home, l = aw ? g.home : g.away;
+      var tx = el('div', 'pg-tx'); tx.appendChild(scoreBox([[w.name, w.score, +w.score !== +l.score], [l.name, l.score, false]]));
+      var k = dayKey(new Date(g.start)), note = /OT|SO/.test(g.detail) ? ' · ' + g.detail.replace(/^Final\/?/, '') : '';
+      tx.appendChild(el('div', 'pg-b', PRO_NAME[g.lg] + note + ' · ' + (k === dayKey(new Date()) ? 'Today' : k === dayKey(new Date(Date.now() - 864e5)) ? 'Yesterday' : wd(k))));
+      li.appendChild(tx); col.appendChild(li);
+    });
+    goLink(col, 'All pro scores', proHubLink('upcoming'), target);
+    return col;
+  }
+  function proComingCol(d, target, skip) {
+    var col = el('div', 'pg-col pg-cal'), today = dayKey(new Date()), now = Date.now();
+    var next = d.pro.filter(function (g) { var t = new Date(g.start).getTime(); return g.state === 'pre' && t > now && t < now + 15 * 864e5; });
+    var later = next.filter(function (g) { return dayKey(new Date(g.start)) !== skip; }); if (later.length) next = later;
+    colHead(col, 'Coming Up', next.length ? 'Next two weeks' : '');
+    if (!next.length) col.appendChild(el('div', 'pg-none', 'Our teams’ next games show up here as they’re scheduled.'));
+    next.slice(0, 6).forEach(function (g) {
+      var a = proRow(g, target); a.classList.add('pg-game');
+      var k = dayKey(new Date(g.start)), nd = noon(k), dt = el('div', 'pg-dt');
+      dt.appendChild(el('small', null, k === today ? 'Today' : MON[nd.getMonth()].replace('.', '').slice(0, 4))); dt.appendChild(el('b', null, String(nd.getDate()))); a.appendChild(dt);
+      var tx = el('div', 'pg-tx'); tx.appendChild(el('div', 'pg-a', g.away.name + ' at ' + g.home.name));
+      tx.appendChild(el('div', 'pg-b', [g.tbd ? 'Time TBA' : cpTime(new Date(g.start)), PRO_NAME[g.lg]].join(' · '))); a.appendChild(tx);
+      col.appendChild(a);
+    });
+    goLink(col, 'See everything coming up', proHubLink('upcoming'), target);
+    return col;
+  }
+
   function draw(box, d, o) {
     box.innerHTML = '';
     var g = el('div', 'ppg' + (o.compact ? ' compact' : ''));
@@ -444,11 +567,18 @@
     h.appendChild(rt);
     g.appendChild(h);
     var cols = el('div', 'pg-cols');
-    cols.appendChild(gamesCol(d, o.target, o.compact));
-    cols.appendChild(finalsCol(d, o.target, o.compact));
-    cols.appendChild(calCol(d, o.target, o.compact));
+    if (o.mode === 'pro') {
+      var c1 = proGamesCol(d, o.target); cols.appendChild(c1);
+      var shown = (d.pro || []).filter(function (g) { return dayKey(new Date(g.start)) >= dayKey(new Date()); }).map(function (g) { return dayKey(new Date(g.start)); }).sort()[0];
+      cols.appendChild(proFinalsCol(d, o.target));
+      cols.appendChild(proComingCol(d, o.target, shown));
+    } else {
+      cols.appendChild(gamesCol(d, o.target, o.compact));
+      cols.appendChild(finalsCol(d, o.target, o.compact));
+      cols.appendChild(calCol(d, o.target, o.compact));
+    }
     g.appendChild(cols);
-    if (o.pro !== false) g.appendChild(proLine(d.pro || [], o.target));
+    if (o.pro !== false && o.mode !== 'pro') g.appendChild(proLine(d.pro || [], o.target));
     // one line under the guide: fans send their events and story ideas
     if (o.tips !== false) {
       var tip = el('a', 'pg-tip'); tip.href = 'mailto:' + TIPS + '?subject=' + encodeURIComponent('Event / story idea for Powerplay Windsor');
@@ -467,7 +597,7 @@
     var o = opts || {}; o.target = o.target || '_top';
     if (!document.getElementById('ppg-css')) { var s = document.createElement('style'); s.id = 'ppg-css'; s.textContent = CSS; document.head.appendChild(s); }
     var last = null;
-    function go() { load().then(function (d) { last = d; redraw = function () { draw(box, d, o); if (o.onDraw) o.onDraw(); }; redraw(); }); }
+    function go() { (o.mode === 'pro' ? proLoad() : load()).then(function (d) { last = d; redraw = function () { draw(box, d, o); if (o.onDraw) o.onDraw(); }; redraw(); }); }
     var lastRun = 0;
     function tick() { if (Date.now() - lastRun >= (box_live || pro_live ? 60000 : 5 * 60000)) { lastRun = Date.now(); go(); } }
     tick();
