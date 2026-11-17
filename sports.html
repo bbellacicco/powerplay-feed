@@ -8,31 +8,29 @@
 <script src="share.js?v=4"></script>
 <!--
   The Pro Hub (Wix page "Pro Hub", address /local-sports), built like the Local Hub: the tabs at the top, each its own section.
-    Scores     the Pro Scoreboard (every league's games, standings and stats)
-    Coming Up  every pro game coming up
+    Scores     the Pro Sports Guide (our teams' games today, latest scores, coming up), like the Local Sports Guide
+    Coming Up  the Pro Scoreboard: our teams' and every league's games, yesterday to three days ahead
     Headlines  the latest pro headlines for our teams
     NHL NFL NBA MLB CFL PWHL   each league: our teams (tap one for its page: last game and what's next, news, schedule,
-                               standings, stats), the league's top stories and leaders, then its scores and standings
-    Network    the Pro Network videos
-  ?tab=scores|upcoming|updates|nhl|nfl|nba|mlb|cfl|pwhl|network   open on that tab (old ?league=nhl links open the NHL tab)
+                               standings, stats), the league's top stories and leaders, its videos (the Pro Network),
+                               then its scores and standings
+  ?tab=scores|upcoming|updates|nhl|nfl|nba|mlb|cfl|pwhl   open on that tab (old ?tab=network links open Scores; ?league=nhl opens the NHL tab)
   ?tab=nhl&team=det   that team's page
   Each widget sizes itself to fit (nothing scrolls inside the page, which traps the finger on iPhones).
 -->
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <style>
   :root { --bg: #0b1a33; --line: #1e3a6e; --text: #f2f5fb; --muted: #9fb0cf; --accent: #e8b021; }
   * { box-sizing: border-box; }
   html, body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.35 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
   /* nothing on this page scrolls by itself: on iPhones a scrolling box inside the page traps the finger */
   html, body { overflow: hidden; }
-  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   .top { display: flex; justify-content: center; padding: 22px 16px 6px; }
-  /* three sections: a squared-off bar */
-  .switch { display: grid; grid-template-columns: repeat(5, 1fr); width: 100%; max-width: 900px; gap: 1px; background: rgba(255,255,255,.16);
+  /* six sections: a squared-off grid, three across and two rows */
+  .switch { display: grid; grid-template-columns: repeat(6, 1fr); width: 100%; max-width: 900px; gap: 1px; background: rgba(255,255,255,.16);
     border: 1px solid rgba(255,255,255,.16); border-radius: 3px; overflow: hidden; }
   .switch button { border: 0; border-radius: 0; background: #0e2044; color: #cfd8ea; font: inherit; font-size: 13px; font-weight: 800; letter-spacing: .08em;
     text-transform: uppercase; padding: 12px 6px; cursor: pointer; white-space: nowrap; }
+  .switch button { grid-column: span 1; padding-left: 4px; padding-right: 4px; }   /* computers: two rows of six */
   .switch button:hover { color: #fff; background: #15305e; }
   .switch button[aria-selected="true"] { background: #fff; color: #0b1a33; box-shadow: inset 0 -3px 0 #e8b021; }
   .top { position: relative; align-items: center; gap: 10px; }
@@ -43,24 +41,20 @@
   @media (max-width: 560px) {
     .top { padding: 16px 10px 4px; }
     .switch { max-width: none; }
-    /* phones: five across, two rows */
-    .switch { grid-template-columns: repeat(5, minmax(0, 1fr)); }
-    .switch button { padding: 10px 2px; font-size: 11px; letter-spacing: .02em; white-space: normal; line-height: 1.15; }
+    .switch { grid-template-columns: repeat(4, 1fr); }
+    .switch button { padding: 11px 2px; font-size: 11px; letter-spacing: .04em; }   /* phones: four across */
     .top { flex-direction: column; } .sharebtn { position: static; transform: none; align-self: flex-end; }
   }
-  /* the league bar: pick a league and every section below shows just that league */
-  .lbar { display: flex; align-items: center; justify-content: center; gap: 6px; flex-wrap: wrap; padding: 12px 16px; background: #10244a; border-bottom: 1px solid rgba(255,255,255,.1); }
-  .lbar .lbl { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 21px; letter-spacing: .03em; color: #e8b021; margin-right: 6px; white-space: nowrap; }
-  .lbar button { font: inherit; font-size: 13.5px; font-weight: 800; letter-spacing: .04em; color: #f2f5fb; background: #132b57; border: 1px solid rgba(255,255,255,.14); border-radius: 999px; padding: 8px 14px; cursor: pointer; min-height: 38px; }
-  .lbar button:hover { border-color: #e8b021; }
-  .lbar button[aria-pressed="true"] { background: #fff; color: #0b1a33; border-color: #fff; }
-  @media (max-width: 560px) { .lbar { padding: 9px 10px; gap: 5px; } .lbar .lbl { width: 100%; text-align: center; font-size: 18px; margin: 0; } .lbar { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); } .lbar .lbl { grid-column: 1 / -1; } .lbar button { font-size: 12px; padding: 7px 0; min-height: 36px; letter-spacing: .02em; } }
+  .guide { margin: 18px 40px 0; }
+  @media (max-width: 700px) { .guide { margin: 14px 12px 0; } }
   .subswitch { display: flex; justify-content: center; gap: 0; margin: 12px auto 0; width: max-content; max-width: calc(100% - 32px);
     border: 1px solid rgba(255,255,255,.16); border-radius: 3px; overflow: hidden; }
   .subswitch button { border: 0; border-radius: 0; background: transparent; color: #9fb0cf; font: inherit; font-size: 12px; font-weight: 800; letter-spacing: .08em;
     text-transform: uppercase; padding: 8px 16px; cursor: pointer; }
   .subswitch button + button { border-left: 1px solid rgba(255,255,255,.16); }
   .subswitch button[aria-pressed="true"] { background: #e8b021; color: #0b1a33; }
+  /* ?minute=1 (a shared Sports Minute link): the player at the top; everything else blurs while it plays */
+  /* a shared link: the shared item comes first and stays sharp; the rest of the Local Hub blurs until a tap */
 </style>
 </head>
 <body>
@@ -75,9 +69,9 @@
       <button type="button" role="tab" data-tab="mlb">MLB</button>
       <button type="button" role="tab" data-tab="cfl">CFL</button>
       <button type="button" role="tab" data-tab="pwhl">PWHL</button>
-      <button type="button" role="tab" data-tab="network">Network</button>
     </div>
   </div>
+  <div class="guide" id="guide"></div>
   <div id="panes"></div>
 <script>
 (function () {
@@ -86,15 +80,15 @@
   var phone = window.innerWidth < 700;
   // each part: the widgets in it and their heights (desktop, phone)
   var PARTS = {
-    scores:  [['pro-games_3.html', 760, 900, '']],
-    upcoming: [['pro-games_3.html', 900, 1100, '&view=upcoming']],
-    updates: [['news-feed.html', 1150, 1250, '']],
-    network: [['network.html', 1300, 1520, '&only=pro']]
+    scores:  [],   // Scores: the Pro Sports Guide (our teams' games today, latest scores, coming up) right under the tabs
+    upcoming: [['pro-games_3.html', 900, 1100, '']],
+    updates: [['news-feed.html', 1150, 1250, '']]
   };
-  // each league has its own section, like the Local Hub's: our teams, top stories and leaders, then its scores and standings
+  // each league has its own section, like the Local Hub's: our teams, top stories and leaders, the league's videos
+  // (the Pro Network, just that league), then its scores and standings
   var LGS = ['nhl', 'nfl', 'nba', 'mlb', 'cfl', 'pwhl'];
   var TEAM = (new URLSearchParams(location.search).get('team') || '').toLowerCase().replace(/[^a-z]/g, '');   // a team's own link
-  LGS.forEach(function (lg) { PARTS[lg] = [['pro-teams.html', 1500, 2100, '&lg=' + lg], ['pro-games_3.html', 760, 900, '&tab=' + lg + '&lock=1']]; });
+  LGS.forEach(function (lg) { PARTS[lg] = [['pro-teams.html', 1500, 2100, '&lg=' + lg], ['network.html', 1300, 1520, '&only=pro&league=' + lg + '&lock=1'], ['pro-games_3.html', 760, 900, '&tab=' + lg + '&lock=1']]; });
   function lgParam(w, tab) { return w[0] === 'pro-teams.html' && TEAM && tab === startTab ? '&team=' + TEAM : ''; }
   var built = {}, box = document.getElementById('panes');
   function show(tab) {
@@ -127,6 +121,7 @@
       box.appendChild(pane); built[tab] = pane;
     }
     Object.keys(built).forEach(function (k) { built[k].classList.toggle('on', k === tab); });
+    document.getElementById('guide').style.display = tab === 'scores' ? '' : 'none';   // the Pro Sports Guide is the Scores section
     current = tab;
     [].forEach.call(document.querySelectorAll('.switch button'), function (b) { b.setAttribute('aria-selected', String(b.getAttribute('data-tab') === tab)); });
     try { history.replaceState(null, '', '?tab=' + tab); } catch (e) {}
@@ -139,7 +134,7 @@
     });
   });
   // share button: shares whichever section is showing (its own link opens the page on that section)
-  var NAMES = { scores: 'Pro Scores', upcoming: 'Pro Games Coming Up', updates: 'Pro Headlines', network: 'the Pro Network',
+  var NAMES = { scores: 'Pro Scores', upcoming: 'Pro Games Coming Up', updates: 'Pro Headlines',
     nhl: 'the NHL Hub', nfl: 'the NFL Hub', nba: 'the NBA Hub', mlb: 'the MLB Hub', cfl: 'the CFL Hub', pwhl: 'the PWHL Hub' };
   var current = 'scores';
   if (window.PPShare) {
@@ -151,6 +146,10 @@
   // which switch to open: ?tab= when opened directly, or the hand-off from a "See all" link elsewhere (good for 2 minutes)
   var start = new URLSearchParams(location.search).get('tab');
   if (start === 'pro') start = 'scores';
+  var gs = document.createElement('script'); gs.src = REPO + 'guide.js?v=' + Math.floor(Date.now() / 6e5);
+  gs.onload = function () { if (window.PPGuide) PPGuide.render(document.getElementById('guide'), { target: '_top', mode: 'pro', tips: true,
+    kicker: 'Your pro sports guide', title: 'Our pro teams, all in one place', sub: 'Every game and score for the teams Windsor-Essex cheers for, checked around the clock.', sponsor: false }); };
+  document.body.appendChild(gs);
   try { var h = JSON.parse(localStorage.getItem('pp-tab') || 'null'); if (h && /^pro/.test(h.tab)) { localStorage.removeItem('pp-tab'); if (!start && Date.now() - h.t < 120000) start = h.tab.replace(/^pro-?/, '') || 'scores'; } } catch (e) {}
   var oldLg = (new URLSearchParams(location.search).get('league') || '').toLowerCase();   // older links: ?league=nhl
   if (LGS.indexOf(oldLg) >= 0 && (!start || start === 'scores')) start = oldLg;
