@@ -486,7 +486,7 @@
     var mine = day ? future.filter(function (g) { return dayKey(new Date(g.start)) === day; }) : [];
     var title = day === today ? 'Today' : day === dayKey(new Date(Date.now() + 864e5)) ? 'Tomorrow' : day ? wd(day) : 'Coming up';
     colHead(col, title + "'s games", day ? wd(day).slice(0, 3) + '., ' + cpDate(day) : '');
-    if (!mine.length) { col.appendChild(el('div', 'pg-none', 'No games on the schedule for our teams yet.')); goLink(col, 'See the full schedule', proHubLink('upcoming'), target); return col; }
+    if (!mine.length) { col.appendChild(el('div', 'pg-none', 'No games on the schedule for our teams yet.')); goLink(col, 'See the NHL schedule', proHubLink('nhl'), target); return col; }
     var big = el('div', 'pg-big', String(mine.length)); big.appendChild(el('small', null, mine.length === 1 ? 'game for our teams' : 'games for our teams')); col.appendChild(big);
     var count = {}; mine.forEach(function (g) { count[g.lg] = (count[g.lg] || 0) + 1; });
     var chips = el('div', 'pg-chips');
@@ -506,7 +506,8 @@
       tx.appendChild(el('div', 'pg-b', PRO_NAME[g.lg] + (lv && g.detail ? ' · ' + g.detail : g.venue ? ' · ' + g.venue : ''))); li.appendChild(tx); list.appendChild(li);
     });
     col.appendChild(list);
-    goLink(col, mine.length > 7 ? 'See all ' + mine.length + ' games' : 'See the full schedule', proHubLink('upcoming'), target);
+    var top = mine[0].lg;   // the league with the first game: its section has the full schedule
+    goLink(col, 'See the ' + PRO_NAME[top] + ' schedule', proHubLink(top), target);
     return col;
   }
   function proFinalsCol(d, target) {
@@ -522,7 +523,8 @@
       tx.appendChild(el('div', 'pg-b', PRO_NAME[g.lg] + note + ' · ' + (k === dayKey(new Date()) ? 'Today' : k === dayKey(new Date(Date.now() - 864e5)) ? 'Yesterday' : wd(k))));
       li.appendChild(tx); col.appendChild(li);
     });
-    goLink(col, 'All pro scores', proHubLink('upcoming'), target);
+    var flg = fin[0] ? fin[0].lg : 'nhl';
+    goLink(col, 'All ' + PRO_NAME[flg] + ' scores', proHubLink(flg), target);
     return col;
   }
   function proComingCol(d, target, skip) {
@@ -539,7 +541,8 @@
       tx.appendChild(el('div', 'pg-b', [g.tbd ? 'Time TBA' : cpTime(new Date(g.start)), PRO_NAME[g.lg]].join(' · '))); a.appendChild(tx);
       col.appendChild(a);
     });
-    goLink(col, 'See everything coming up', proHubLink('upcoming'), target);
+    var clg = next[0] ? next[0].lg : 'nhl';
+    goLink(col, 'More ' + PRO_NAME[clg] + ' games coming up', proHubLink(clg), target);
     return col;
   }
 
