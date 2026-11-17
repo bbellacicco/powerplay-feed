@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T12:31:49-05:00",
+ "updated": "2026-11-17T12:52:19-05:00",
  "today": "2026-11-17",
  "range": [
   "2026-11-14",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -2102,6 +2102,17 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "EVERY CFL Touchdown From The 113th Grey Cup",
+   "summary": "",
+   "published": "2026-11-17T12:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/3Nm8PQy0ILZuRHOAsSeors/50c125b2bb0c7ace8e83c9a5bdcba29c/CFL_Touchdown_Week_X_1920x1080_EN.png?w=640&fm=jpg&q=70",
+   "video": true,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/every-cfl-touchdown-from-the-113th-grey-cup",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Roughriders sign quarterback Trevor Harris to one-year extension",
    "summary": "",
    "published": "2026-11-17T00:00:00-05:00",
@@ -2243,19 +2254,6 @@
     "Alouettes"
    ],
    "url": "https://www.cfl.ca/article/isaac-adeyemi-berglund-perfect-punch-out-to-cause-the-fumble-113th-grey-cup",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Make that TWO TD's for Joshua Cephus | 113th Grey Cup",
-   "summary": "",
-   "published": "2026-11-15T21:15:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/5KmnsVoOnF867MIe5SVdep/901de15ea53711cca35771ff482a1995/EDM_3RD_Q_THUMBNAIL.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [
-    "Elks"
-   ],
-   "url": "https://www.cfl.ca/article/make-that-two-td-s-for-joshua-cephus-113th-grey-cup",
    "source": "CFL.ca"
   },
   {
@@ -2879,22 +2877,9 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Canada caps historic 2026 with emphatic victory over Guatemala",
-   "summary": "A year highlighted by a historic World Cup run ended with an emphatic Nations League win. John Molinaro covers the takeaways from the Canadian men’s two-game victory against Guatemala.",
-   "published": "2026-11-17T00:19-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Canada-and-Guatemala.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/soccer/article/canada-caps-historic-2026-with-emphatic-victory-over-guatemala/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
-   "headline": "Maple Leafs’ Rielly to return, Bobrovsky to start against Blackhawks",
-   "summary": "Sergei Bobrovsky is getting another opportunity to prove himself.",
+   "headline": "Maple Leafs’ Bobrovsky to start, Rielly to return against Blackhawks",
+   "summary": "Sergei Bobrovsky will get the nod for the Maple Leafs against the Blackhawks Tuesday in what could be his most important start of the season. Sportsnet’s Luke Fox has more.",
    "published": "2026-11-17T12:17-05:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/bob.jpg",
    "video": false,
@@ -2920,6 +2905,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Canucks re-assign G Nikita Tolopilo to AHL one day after stellar performance",
+   "summary": "Although the start 2026 season has been one to forget for the Vancouver Canucks, that’s not to say there haven’t been reasons to express optimism — and goaltender Nikita Tolopilo is one, but he won’t be in net anytime so",
+   "published": "2026-11-17T12:40-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-23.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canucks-re-assign-g-nikita-tolopilo-to-ahl-one-day-after-stellar-performance/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "Tiger Woods commits to play Hero World Challenge in first start since 2024",
    "summary": "",
@@ -2930,6 +2928,32 @@
    "sn_team_count": 0,
    "sport": "Golf",
    "url": "https://www.sportsnet.ca/pga/article/tiger-woods-commits-to-play-hero-world-challenge-in-first-start-since-2024/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Report: White Sox, SP Dustin May agree to three-year, $52.5M deal",
+   "summary": "Coming off a surprising 84-win season and Divisional Series appearance, the Chicago White Sox have made their intentions clear moving forward by adding one of free agency’s stronger arms.",
+   "published": "2026-11-17T11:49-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-22.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/report-white-sox-sp-dustin-may-agree-to-three-year-52-5m-deal/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Panthers’ Marchand, Barkov ‘close’ to return, says Maurice",
+   "summary": "",
+   "published": "2026-11-17T11:11-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/03/brad-marchand.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/panthers-marchand-barkov-close-to-return-says-maurice/",
    "source": "Sportsnet"
   },
   {
@@ -2946,16 +2970,18 @@
    "source": "Sportsnet"
   },
   {
-   "league": "mlb",
-   "headline": "Report: White Sox, SP Dustin May agree to three-year, $52.5M deal",
-   "summary": "Coming off a surprising 84-win season and Divisional Series appearance, the Chicago White Sox have made their intentions clear moving forward by adding one of free agency’s stronger arms.",
-   "published": "2026-11-17T11:49-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-22.jpg",
+   "league": "nba",
+   "headline": "Raptors’ Scottie Barnes questionable vs. Knicks with illness",
+   "summary": "Just one game after returning from a groin injury, Scottie Barnes is back on the injury report.",
+   "published": "2026-11-17T12:45-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Scottie-B.jpg",
    "video": false,
-   "teams": [],
+   "teams": [
+    "Toronto Raptors"
+   ],
    "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/report-white-sox-sp-dustin-may-agree-to-three-year-52-5m-deal/",
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/raptors-scottie-barnes-questionable-vs-knicks-with-illness/",
    "source": "Sportsnet"
   },
   {
@@ -2985,16 +3011,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Gaudreau brothers to be honoured with statue outside childhood rink",
-   "summary": "While it’s been just over two years since Johnny and Matthew Gaudreau tragically passed away, the brothers’ legacy is already set to be recognized in their home state of New Jersey.",
-   "published": "2026-11-17T10:53-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-21.jpg",
+   "league": "other",
+   "headline": "HearingLife National preview: Will the Canadians keep winning?",
+   "summary": "As the Grand Slam of Curling returns with the HearingLife National, Canadian teams will look to keep rolling. Sportsnet’s Justin Arenburg previews the Sydney, N.S., tournament.",
+   "published": "2026-11-16T12:21-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/2026GSOCMasters-MedicineHat-606-copy.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/gaudreau-brothers-to-be-honoured-with-statue-outside-childhood-rink/",
+   "sport": "Curling",
+   "url": "https://www.sportsnet.ca/curling/article/hearinglife-national-preview-will-the-canadians-keep-winning/",
    "source": "Sportsnet"
   },
   {
@@ -3011,29 +3037,68 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "HearingLife National preview: Will the Canadians keep winning?",
-   "summary": "As the Grand Slam of Curling returns with the HearingLife National, Canadian teams will look to keep rolling. Sportsnet’s Justin Arenburg previews the Sydney, N.S., tournament.",
-   "published": "2026-11-16T12:21-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/2026GSOCMasters-MedicineHat-606-copy.jpg",
+   "league": "nhl",
+   "headline": "Gaudreau brothers to be honoured with statue outside childhood rink",
+   "summary": "While it’s been just over two years since Johnny and Matthew Gaudreau tragically passed away, the brothers’ legacy is already set to be recognized in their home state of New Jersey.",
+   "published": "2026-11-17T10:53-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-21.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
-   "sport": "Curling",
-   "url": "https://www.sportsnet.ca/curling/article/hearinglife-national-preview-will-the-canadians-keep-winning/",
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/gaudreau-brothers-to-be-honoured-with-statue-outside-childhood-rink/",
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Panthers’ Marchand, Barkov ‘close’ to return, says Maurice",
+   "league": "other",
+   "headline": "Seven figure skaters out of Grand Prix due to Finland’s ban on Russian athletes",
    "summary": "",
-   "published": "2026-11-17T11:11-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/03/brad-marchand.jpg",
+   "published": "2026-11-17T11:30-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/mishina_galliamov1280.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/panthers-marchand-barkov-close-to-return-says-maurice/",
+   "sn_team_count": 0,
+   "sport": "Olympics",
+   "url": "https://www.sportsnet.ca/olympics/article/seven-figure-skaters-out-of-grand-prix-due-to-finlands-ban-on-russian-athletes/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Diallo aims to restore ‘broken’ trust in bid for FIFA presidency",
+   "summary": "",
+   "published": "2026-11-17T08:29-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Philippe-Diallo.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/soccer/article/diallo-aims-to-restore-broken-trust-in-bid-for-fifa-presidency/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Hitters would benefit from checked-swing reviews, minor-league tests suggest",
+   "summary": "",
+   "published": "2026-11-17T08:20-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/yandy-diaz.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/hitters-would-benefit-from-checked-swing-reviews-minor-league-tests-suggest/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "cfl",
+   "headline": "Lions sign veteran linebacker Sankey to two-year contract extension",
+   "summary": "The B.C. Lions are rewarding Darnell Sankey for a stellar 2026 season.",
+   "published": "2026-11-17T11:43-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sankey.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/lions-sign-veteran-linebacker-sankey-to-two-year-contract-extension/",
    "source": "Sportsnet"
   },
   {
@@ -3079,41 +3144,28 @@
   },
   {
    "league": "other",
-   "headline": "Diallo aims to restore ‘broken’ trust in bid for FIFA presidency",
-   "summary": "",
-   "published": "2026-11-17T08:29-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Philippe-Diallo.jpg",
+   "headline": "Canada caps historic 2026 with emphatic victory over Guatemala",
+   "summary": "A year highlighted by a historic World Cup run ended with an emphatic Nations League win. John Molinaro covers the takeaways from the Canadian men’s two-game victory against Guatemala.",
+   "published": "2026-11-17T00:19-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Canada-and-Guatemala.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
    "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/soccer/article/diallo-aims-to-restore-broken-trust-in-bid-for-fifa-presidency/",
+   "url": "https://www.sportsnet.ca/soccer/article/canada-caps-historic-2026-with-emphatic-victory-over-guatemala/",
    "source": "Sportsnet"
   },
   {
    "league": "other",
-   "headline": "Seven figure skaters out of Grand Prix due to Finland’s ban on Russian athletes",
+   "headline": "WNBA Commissioner search underway with Cathy Engelbert to retire at year’s end",
    "summary": "",
-   "published": "2026-11-17T11:30-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/mishina_galliamov1280.jpg",
+   "published": "2026-11-17T11:56-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/10/CP174431750-1.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
-   "sport": "Olympics",
-   "url": "https://www.sportsnet.ca/olympics/article/seven-figure-skaters-out-of-grand-prix-due-to-finlands-ban-on-russian-athletes/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Hitters would benefit from checked-swing reviews, minor-league tests suggest",
-   "summary": "",
-   "published": "2026-11-17T08:20-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/yandy-diaz.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/hitters-would-benefit-from-checked-swing-reviews-minor-league-tests-suggest/",
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/wnba/article/wnba-commissioner-search-underway-with-cathy-engelbert-to-retire-at-years-end/",
    "source": "Sportsnet"
   },
   {
@@ -3143,32 +3195,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "WNBA Commissioner search underway with Cathy Engelbert to retire at year’s end",
-   "summary": "",
-   "published": "2026-11-17T11:56-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/10/CP174431750-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/wnba/article/wnba-commissioner-search-underway-with-cathy-engelbert-to-retire-at-years-end/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "cfl",
-   "headline": "Lions sign veteran linebacker Sankey to two-year contract extension",
-   "summary": "The B.C. Lions are rewarding Darnell Sankey for a stellar 2026 season.",
-   "published": "2026-11-17T11:43-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sankey.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/lions-sign-veteran-linebacker-sankey-to-two-year-contract-extension/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "cfl",
    "headline": "Grey Cup-champion Elks want Edmonton to revive City of Champions signs",
    "summary": "",
@@ -3192,19 +3218,6 @@
    "sn_team_count": 0,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/buster-posey-among-14-newcomers-on-hall-of-fame-ballot/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Canada’s new-look lineup shows promise, but falls short for gold",
-   "summary": "The 2026 women’s worlds ushered in plenty of change for Team Canada, but the outcome remained the same. Emily Sadler covers the takeaways from another matchup that ended with the Americans taking home gold.",
-   "published": "2026-11-16T18:06-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Canada-and-USA.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/wwhc/article/canadas-new-look-lineup-shows-promise-but-falls-short-for-gold/",
    "source": "Sportsnet"
   },
   {
@@ -3283,32 +3296,6 @@
    "sn_team_count": 0,
    "sport": "MMA",
    "url": "https://www.sportsnet.ca/ufc/article/ufc-334-matchmaker-whats-next-for-gane-harrison-and-other-key-fighters/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Oilers activate Isaac Howard, loan him to AHL Bakersfield",
-   "summary": "",
-   "published": "2026-11-16T14:15-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/isaac-howard.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/oilers-activate-isaac-howard-loan-him-to-ahl-bakersfield/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Alphonso Davies out with minor hamstring strain, says Bayern",
-   "summary": "",
-   "published": "2026-11-16T12:56-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/07/davies-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/bundesliga/article/alphonso-davies-out-with-minor-hamstring-strain-says-bayern/",
    "source": "Sportsnet"
   },
   {
@@ -4482,7 +4469,7 @@
       "l": 11,
       "otl": 0,
       "pts": 22,
-      "gf": 70,
+      "gf": 71,
       "ga": 77,
       "strk": "W2"
      },
@@ -4495,7 +4482,7 @@
       "otl": 2,
       "pts": 22,
       "gf": 78,
-      "ga": 80,
+      "ga": 81,
       "strk": "L1"
      },
      {
