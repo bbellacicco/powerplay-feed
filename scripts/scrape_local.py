@@ -41,6 +41,7 @@ DAYS_EACH_SIDE = 3
 DAYS_BACK = DAYS_EACH_SIDE + 1    # a little extra room in the HockeyTech request
 DAYS_AHEAD = DAYS_EACH_SIDE + 1
 TEAM_AHEAD_DAYS = 21               # HockeyTech teams: three weeks ahead, so a team's next games show even past this week
+SCHEDULE_AHEAD_DAYS = 14           # each team's page lists its games for the next two weeks
 
 # Spitfires (OHL). Key is the public key chl.ca itself uses. Team 17 = Windsor.
 OHL_KEY = "f1aa699db3d81487"
@@ -300,7 +301,7 @@ def scrape_lancers(today):
     seen, out = set(), []
     # month view covers a 6-week grid; ask for each month the window touches
     months, d = [], (today - timedelta(days=DAYS_EACH_SIDE)).replace(day=1)
-    while d <= today + timedelta(days=DAYS_EACH_SIDE):
+    while d <= today + timedelta(days=SCHEDULE_AHEAD_DAYS):
         months.append(d)
         d = (d.replace(day=28) + timedelta(days=4)).replace(day=1)
     for i, m in enumerate(months):
@@ -403,7 +404,9 @@ def _hs_sport(league):
 def scrape_wecssaa(today):
     """Every WECSSAA league, from the site's weekly (Sunday-Saturday) schedule."""
     base = "https://wecssaa.com"
-    weeks = sorted({today - timedelta(days=DAYS_EACH_SIDE), today + timedelta(days=DAYS_EACH_SIDE)})
+    # this week's span, plus the next two weeks for each team's own schedule
+    weeks = sorted({today - timedelta(days=DAYS_EACH_SIDE), today + timedelta(days=DAYS_EACH_SIDE),
+                    today + timedelta(days=7), today + timedelta(days=SCHEDULE_AHEAD_DAYS)})
     out, seen = [], set()
     for i, day in enumerate(weeks):
         url = f"{base}/weeklySchedule.php?schoolid=ALL&date={day.isoformat()}&leagueid=ALL&divisionid=ALL"
@@ -1087,12 +1090,15 @@ def main():
 
     lo = datetime.combine(today - timedelta(days=DAYS_EACH_SIDE), datetime.min.time(), TZ)
     hi = datetime.combine(today + timedelta(days=DAYS_EACH_SIDE + 1), datetime.min.time(), TZ)
-    # games after this week: each team's next three, for its own page (Local Teams); the week's lists stay as they were
+    # games after this week, for each team's own page (Local Teams): everything in the next two weeks,
+    # or a team's next game if it has nothing that soon; the week's lists stay as they were
+    two = datetime.combine(today + timedelta(days=SCHEDULE_AHEAD_DAYS + 1), datetime.min.time(), TZ)
     ahead, per = [], {}
     for g in sorted(games, key=lambda g: g["start"]):
-        if datetime.fromisoformat(g["start"]) >= hi and g.get("status") == "upcoming":
+        st = datetime.fromisoformat(g["start"])
+        if st >= hi and g.get("status") == "upcoming":
             k = (g["team"], g.get("club", ""), g["sport"])
-            if per.get(k, 0) < 3:
+            if st < two or not per.get(k):
                 per[k] = per.get(k, 0) + 1
                 ahead.append(g)
     games = [g for g in games if lo <= datetime.fromisoformat(g["start"]) < hi]
