@@ -761,6 +761,125 @@ def scrape_pjhl(now):
         print(f"::warning::PJHL export has no rows for: {', '.join(missing)}; teams in the file include {teams_seen[:12]}")
     return out
 
+# ------------------------------------------------------------------ pro teams (the Pro Hub's team pages)
+# Every NHL, NFL, NBA and MLB team's full player stats (not just the leaders), from ESPN's season stats for every
+# player, split by team. Refreshed every three hours; a league that fails keeps its last numbers.
+PRO_EVERY_HOURS = 3
+PRO_PATHS = {"nhl": "hockey/nhl", "nfl": "football/nfl", "nba": "basketball/nba", "mlb": "baseball/mlb"}
+# each table: title, columns (label, category, stat), the stat that says a player belongs in it, the sort, the highlighted column, max rows
+PRO_TABLES = {
+    "nhl": [
+        ("Skaters", [("GP", "general", "games"), ("G", "offensive", "goals"), ("A", "offensive", "assists"), ("PTS", "offensive", "points"),
+                     ("+/-", "general", "plusMinus"), ("PIM", "penalties", "penaltyMinutes")], "skater", ("offensive", "points"), 3, 40),
+        ("Goalies", [("GP", "general", "games"), ("W", "general", "wins"), ("L", "general", "losses"), ("OTL", "defensive", "overtimeLosses"),
+                     ("GAA", "defensive", "avgGoalsAgainst"), ("SV%", "defensive", "savePct"), ("SO", "defensive", "shutouts")], "goalie", ("general", "wins"), 1, 6),
+    ],
+    "nba": [
+        ("Players", [("GP", "general", "gamesPlayed"), ("MIN", "general", "avgMinutes"), ("PTS", "offensive", "avgPoints"), ("REB", "general", "avgRebounds"),
+                     ("AST", "offensive", "avgAssists"), ("STL", "defensive", "avgSteals"), ("BLK", "defensive", "avgBlocks"),
+                     ("FG%", "offensive", "fieldGoalPct"), ("3P%", "offensive", "threePointFieldGoalPct")], ("general", "gamesPlayed"), ("offensive", "avgPoints"), 2, 20),
+    ],
+    "nfl": [
+        ("Passing", [("CMP", "passing", "completions"), ("ATT", "passing", "passingAttempts"), ("YDS", "passing", "passingYards"),
+                     ("TD", "passing", "passingTouchdowns"), ("INT", "passing", "interceptions")], ("passing", "passingAttempts"), ("passing", "passingYards"), 2, 4),
+        ("Rushing", [("ATT", "rushing", "rushingAttempts"), ("YDS", "rushing", "rushingYards"), ("AVG", "rushing", "yardsPerRushAttempt"),
+                     ("TD", "rushing", "rushingTouchdowns")], ("rushing", "rushingAttempts"), ("rushing", "rushingYards"), 1, 8),
+        ("Receiving", [("REC", "receiving", "receptions"), ("YDS", "receiving", "receivingYards"), ("AVG", "receiving", "yardsPerReception"),
+                       ("TD", "receiving", "receivingTouchdowns")], ("receiving", "receptions"), ("receiving", "receivingYards"), 1, 10),
+        ("Defence", [("TOT", "defensive", "totalTackles"), ("SACK", "defensive", "sacks"), ("INT", "defensiveinterceptions", "interceptions"),
+                     ("PD", "defensive", "passesDefended")], ("defensive", "totalTackles"), ("defensive", "totalTackles"), 0, 12),
+    ],
+    "mlb": [
+        ("Batting", [("GP", "batting", "gamesPlayed"), ("AB", "batting", "atBats"), ("R", "batting", "runs"), ("H", "batting", "hits"),
+                     ("HR", "batting", "homeRuns"), ("RBI", "batting", "RBIs"), ("AVG", "batting", "avg"), ("OPS", "batting", "OPS")], ("batting", "atBats"), ("batting", "atBats"), 6, 20),
+        ("Pitching", [("GP", "pitching", "gamesPlayed"), ("GS", "pitching", "gamesStarted"), ("W", "pitching", "wins"), ("L", "pitching", "losses"),
+                      ("SV", "pitching", "saves"), ("IP", "pitching", "innings"), ("ERA", "pitching", "ERA"), ("K", "pitching", "strikeouts")], ("pitching", "innings"), ("pitching", "innings"), 6, 16),
+    ],
+}
+
+
+def scrape_pro_league(lg, now):
+    base = ("https://site.web.api.espn.com/apis/common/v3/sports/" + PRO_PATHS[lg] +
+            "/statistics/byathlete?region=us&lang=en&contentorigin=espn&isqualified=false&limit=1000&page=")
+    athletes, cats, page, pages = [], None, 1, 1
+    while page <= pages and page <= 5:
+        j = parse_json(fetch(base + str(page), f"espn-{lg}-{page}.json"))
+        cats = cats or [(c["name"], c.get("names") or []) for c in j.get("categories") or []]
+        athletes += j.get("athletes") or []
+        pages = int((j.get("pagination") or {}).get("pages") or 1)
+        page += 1
+    if not athletes or not cats:
+        raise RuntimeError(f"no {lg} players")
+    where = {}   # (category, stat) -> (category index, stat index)
+    for ci, (cn, names) in enumerate(cats):
+        for si, n in enumerate(names):
+            where.setdefault((cn, n), (ci, si))
+    teams = {}
+    for a in athletes:
+        ath = a.get("athlete") or {}
+        tid = str(ath.get("teamId") or "")
+        if not tid:
+            continue
+        by = {c.get("name"): c for c in a.get("categories") or []}
+        def val(cat, name, shown=False):
+            ci_si = where.get((cat, name))
+            if not ci_si:
+                return None
+            c = by.get(cats[ci_si[0]][0]) or {}
+            arr = (c.get("totals") if shown else c.get("values")) or []
+            return arr[ci_si[1]] if ci_si[1] < len(arr) else None
+        pos = ((ath.get("position") or {}).get("abbreviation") or "").upper()
+        for title, cols, need, sort, key, cap in PRO_TABLES[lg]:
+            if need == "goalie":
+                if pos != "G" or not (val("general", "games") or 0):
+                    continue
+            elif need == "skater":
+                if pos == "G" or not (val("general", "games") or 0):
+                    continue
+            elif not (val(*need) or 0):
+                continue
+            row = {"name": ath.get("displayName") or "", "vals": [val(c, n, True) or "0" for _, c, n in cols], "_s": val(*sort) or 0}
+            teams.setdefault(tid, {}).setdefault(title, []).append(row)
+    out = {}
+    for tid, groups in teams.items():
+        gl = []
+        for title, cols, need, sort, key, cap in PRO_TABLES[lg]:
+            rows = sorted(groups.get(title, []), key=lambda r: (-(r["_s"] or 0), r["name"]))[:cap]
+            if rows:
+                gl.append({"title": title, "cols": [c[0] for c in cols], "key": key,
+                           "rows": [{"name": r["name"], "vals": r["vals"]} for r in rows]})
+        if gl:
+            out[tid] = gl
+    if not out:
+        raise RuntimeError(f"no {lg} teams")
+    return {"updated": now.isoformat(), "teams": out}
+
+
+def scrape_pro(now, prev):
+    """Every ESPN league's team stats, every PRO_EVERY_HOURS hours (otherwise the last ones)."""
+    out = {}
+    for lg in PRO_PATHS:
+        old = (prev or {}).get(lg)
+        try:
+            age = (now - datetime.fromisoformat(old["updated"])).total_seconds() / 3600 if old else 99
+        except Exception:
+            age = 99
+        if old and age < PRO_EVERY_HOURS - 0.25:
+            out[lg] = old
+            continue
+        try:
+            new = scrape_pro_league(lg, now)
+            if old and old.get("teams") == new["teams"]:
+                new["updated"] = old["updated"] if age < 24 else new["updated"]
+            out[lg] = new
+            print(f"  {lg.upper()} team stats: {len(new['teams'])} teams")
+        except Exception as ex:
+            print(f"::warning::{lg.upper()} team stats failed: {ex}")
+            if old:
+                out[lg] = old
+    return out
+
+
 # ------------------------------------------------------------------ main
 def load_previous_file():
     try:
@@ -825,16 +944,18 @@ def main():
         old = prev_leagues.get(l["key"])
         if old and {k: v for k, v in old.items() if k != "updated"} == {k: v for k, v in l.items() if k != "updated"}:
             leagues[i] = dict(l, updated=old["updated"])
+    prev_pro = load_previous_file().get("pro") or {}
+    pro = scrape_pro(now, prev_pro)
     if not teams:
         print("::warning::No stats collected; leaving data/stats.json as it was.")
         return 0
-    if without_times(teams) == without_times(load_previous_file().get("teams", [])) and without_times(leagues) == without_times(load_previous_file().get("leagues", [])):
+    if without_times(teams) == without_times(load_previous_file().get("teams", [])) and without_times(leagues) == without_times(load_previous_file().get("leagues", [])) and pro == prev_pro:
         print("Stats unchanged; not rewriting data/stats.json.")
         return 0
-    out = {"updated": now.isoformat(), "teams": teams, "leagues": leagues}
+    out = {"updated": now.isoformat(), "teams": teams, "leagues": leagues, "pro": pro}
     os.makedirs(os.path.dirname(OUT_FILE), exist_ok=True)
     with open(OUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(out, f, ensure_ascii=False, indent=1)
+        json.dump(out, f, ensure_ascii=False, separators=(",", ":"))   # compact: the pro teams make it big
         f.write("\n")
     print(f"Wrote {len(teams)} clubs" + (f"; failed this run: {', '.join(failed)}" if failed else ""))
     return 0
