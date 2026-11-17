@@ -565,8 +565,6 @@
     var total = rows.filter(function (x) { return typeof x !== 'string'; }).length;
     if (shown < total) moreBtn(list, total, 'more1', 'Show all ' + total + ' games and scores');
     col.appendChild(list);
-    var lgL = PPICK.lg || (live[0] || tonight[0] || finToday[0] || finYest[0] || { lg: 'nhl' }).lg;
-    goLink(col, 'More ' + PRO_NAME[lgL] + ' scores and standings', proHubLink(lgL) + (PPICK.team ? '&team=' + PPICK.team.toLowerCase() : ''), target);
     return col;
   }
   // 2. the next three days
@@ -583,8 +581,6 @@
       byDay[k].sort(proOrder).forEach(function (g) { if (shown >= cap) return; col.appendChild(proGameLine(g, target)); shown++; });
     });
     if (shown < total) moreBtn(col, total, 'more2', 'Show all ' + total + ' games');
-    var lgL = PPICK.lg || (next[0] || { lg: 'nhl' }).lg;
-    goLink(col, 'More ' + PRO_NAME[lgL] + ' games coming up', proHubLink(lgL), target);
     return col;
   }
   var PRO_CSS = '.ppg .pg-cols.pg-two{grid-template-columns:1.25fr 1fr}' +
