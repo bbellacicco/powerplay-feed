@@ -238,10 +238,10 @@
     return Promise.all([get('local-games.json'), get('highschool.json'), get('saints.json'), get('local-news.json'), get('college-standings.json'), get('hs-standings.json'), get('network.json'), get('slideshows.json'), get('stats.json').catch(function () { return null; })]).then(function (r) {
       var lg = r[0] || {}, hs = r[1], sc = r[2];
       games = (lg.games || []).filter(function (g) { return g.team !== 'highschool' && !(sc && sc.games && g.team === 'saints' && g.sport !== 'Football'); })
-        .concat(hs && hs.games ? hs.games.concat(hs.ahead || []) : (lg.games || []).filter(function (g) { return g.team === 'highschool'; }))
+        .concat(hs && hs.games ? hs.games.concat(hs.ahead || [], hs.last || []) : (lg.games || []).filter(function (g) { return g.team === 'highschool'; }))
         .concat(sc && sc.games ? sc.games.filter(function (g) { return g.sport !== 'Football'; }) : [])
         .concat(sc && sc.ahead ? sc.ahead.filter(function (g) { return g.sport !== 'Football'; }) : []);
-      games = games.concat(lg.ahead || []);   // each team's next games after this week
+      games = games.concat(lg.ahead || [], lg.last || []);   // each team's next games after this week, and its last score before it
       var seen = {}; games = games.filter(function (g) { var k = g.id || (g.team + g.start + g.opponent); if (seen[k]) return false; seen[k] = 1; return true; });
       var net = r[6] || {};
       vids = ((net.local || []).map(function (v) { return { t: v.t, u: v.u, i: v.i, p: v.p, d: v.d || '', src: v.s || 'Powerplay' }; }))
@@ -282,7 +282,8 @@
       var jrx = /^(canadiens|flyers|sharks|kings)$/i.test(nick) ? new RegExp('\\b' + town + '\\b[\\s\\S]{0,40}\\b' + nick + '|\\b' + town + '\\b', 'i')
         : new RegExp('\\b' + nick + (/^\d+$/.test(nick) ? "'?s" : "'?s?") + '\\b', 'i');
       addTeam({ about: function (x) { return jrx.test(x) && !/spitfires/i.test(x) || x.indexOf(c[0]) >= 0; }, id: slug(c[0]), name: c[0], league: c[1], sec: 'junior', words: c[0] + ' ' + c[3] + ' junior hockey',
-        match: function (g) { return g.team === 'junior' && g.club === c[0]; }, std: c[2] ? [c[2], new RegExp(key.replace(/[.*+?^${}()|[\]\\']/g, '.?'), 'i')] : null,
+        // a game between two of our clubs is listed once (under the home club), so it counts for the visitor too
+        match: function (g) { return g.team === 'junior' && (g.club === c[0] || (g.opponent === c[0] && g.club !== c[0])); }, std: c[2] ? [c[2], new RegExp(key.replace(/[.*+?^${}()|[\]\\']/g, '.?'), 'i')] : null,
         news: function (s) { return s.team === 'junior' && s.club === c[0]; } });
     });
     // high school: every school that shows up in a sport
@@ -318,6 +319,8 @@
   function side(t, g) {   // our score, their score, opponent, home/away
     if (g.home && g.away) { var home = t.school ? g.home === t.school : true;
       return { us: home ? g.opp_score : g.our_score, them: home ? g.our_score : g.opp_score, opp: home ? g.away : g.home, at: home ? 'vs' : '@' }; }
+    if (g.team === 'junior' && g.club && g.opponent === t.name && g.club !== t.name)   // the other side of a game between two of our clubs
+      return { us: g.opp_score, them: g.our_score, opp: g.club, at: g.home_away === 'H' ? '@' : 'vs' };
     return { us: g.our_score, them: g.opp_score, opp: g.opponent, at: g.home_away === 'H' ? 'vs' : g.home_away === 'N' ? 'vs' : '@' };
   }
   function wl(s) { return s.us == null || s.them == null ? '' : s.us > s.them ? 'W' : s.us < s.them ? 'L' : 'T'; }
@@ -410,8 +413,9 @@
       var pr = el('div', 'prow');
       [['nhl', 'NHL'], ['nfl', 'NFL'], ['nba', 'NBA'], ['mlb', 'MLB'], ['cfl', 'CFL'], ['pwhl', 'PWHL']].forEach(function (p) {
         var a = el('a', 'pl', p[1]); a.href = 'https://www.powerplaywindsor.com/local-sports?tab=' + p[0]; a.target = '_top'; a.dataset.k = 'pro:' + p[0];
-        // a tap opens that league's scores and standings right here, over the page (like a local team)
-        a.onclick = function (e) { e.preventDefault(); closeTeam(); barPick = barPick === 'pro:' + p[0] ? '' : 'pro:' + p[0]; drawDrop(); markBar(); };
+        // a tap goes straight to that league's section of the Pro Hub (powerplaywindsor.com/local-sports?tab=nhl)
+        // (also left for the Pro Hub as a hand-off, the way the homepage's "See all" links do, in case the address loses ?tab)
+        a.onclick = function () { try { localStorage.setItem('pp-tab', JSON.stringify({ tab: 'pro-' + p[0], t: Date.now() })); } catch (e) {} };
         pr.appendChild(a); });
       bar.appendChild(pr);
     }
@@ -507,7 +511,7 @@
       var lv = el('div', 'vs'); lv.appendChild(el('span', k === 'W' ? 'w' : k === 'L' ? 'l' : 't', k + ' ')); lv.appendChild(document.createTextNode(lf.us + '–' + lf.them + ' ' + atw(lf) + ' ' + lf.opp)); sb.appendChild(lv);
       var L = fin[0].links || {}, lk = L.recap || L.boxscore || L.gamecentre;
       if (lk) { var ra = el('a', 'more', L.recap ? 'Recap ›' : 'Box score ›'); ra.href = lk; ra.target = '_blank'; ra.rel = 'noopener'; sb.appendChild(ra); }
-    } else { sb.appendChild(el('div', 'when', 'Last game')); sb.appendChild(el('div', 'none', 'No scores yet this season.')); }
+    } else { sb.appendChild(el('div', 'when', 'Last game')); sb.appendChild(el('div', 'none', 'No scores in the last few days.')); }
     var nx = el('div', 'upnext'); nx.appendChild(el('div', 'when', 'Coming up'));
     var upl = up.slice(0, 3);
     if (upl.length) upl.forEach(function (g, n) {
