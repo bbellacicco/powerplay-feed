@@ -767,7 +767,7 @@ def scrape_pwhl(today):
     """Every PWHL game from 3 days back to 3 days ahead, for the Pro Hub (ESPN doesn't carry the PWHL)."""
     client, key = STANDINGS_LEAGUES["pwhl"]
     url = ("https://lscluster.hockeytech.com/feed/?feed=modulekit&view=scorebar"
-           f"&key={key}&client_code={client}&numberofdaysback={DAYS_BACK}&numberofdaysahead={DAYS_AHEAD}"
+           f"&key={key}&client_code={client}&numberofdaysback={DAYS_BACK}&numberofdaysahead={SCHEDULE_AHEAD_DAYS + 1}"
            "&season_id=&limit=500&lang_code=en&fmt=json")
     data = json.loads(fetch(url, "pwhl.json" if FIXTURES else None))
     out = []
@@ -1104,7 +1104,7 @@ def main():
     games = [g for g in games if lo <= datetime.fromisoformat(g["start"]) < hi]
     games.sort(key=lambda g: (g["start"], g["team"], g["sport"]))
 
-    pro_games = []
+    pro_games, pro_ahead = [], []
     try:
         pro_games = [g for g in scrape_cfl(today)
                      if lo <= datetime.fromisoformat(g["start"]) < hi]
@@ -1147,8 +1147,11 @@ def main():
         except (OSError, ValueError):
             pass
     try:
-        pwhl = [g for g in scrape_pwhl(today) if lo <= datetime.fromisoformat(g["start"]) < hi]
+        pwhl_all = scrape_pwhl(today)
+        pwhl = [g for g in pwhl_all if lo <= datetime.fromisoformat(g["start"]) < hi]
         pro_games = pro_games + pwhl
+        # the next two weeks past this week, for the Pro Hub's PWHL team pages
+        pro_ahead = [g for g in pwhl_all if hi <= datetime.fromisoformat(g["start"]) < two]
         sources["pwhl"] = {"ok": True, "count": len(pwhl)}
         print(f"pwhl: {len(pwhl)} games")
     except Exception as ex:
@@ -1212,6 +1215,7 @@ def main():
         "games": games,
         "ahead": ahead,           # each team's next games after this week (Local Teams team pages)
         "pro_games": pro_games,   # CFL, used by pro-games.html
+        "pro_ahead": pro_ahead,   # PWHL games in the next two weeks past this week (Pro Hub team pages)
         "pro_news": pro_news,     # CFL and PWHL stories, used by news-feed.html
         "more_news": more_news,   # Sportsnet + club-site stories, used by news-feed.html
         "cfl_standings": cfl_standings,   # used by the Standings view in pro-games.html
@@ -1223,7 +1227,7 @@ def main():
     if os.path.exists(OUT_FILE):
         try:
             old = json.load(open(OUT_FILE, encoding="utf-8"))
-            if (old.get("games") == games and old.get("sources") == sources
+            if (old.get("games") == games and old.get("sources") == sources and old.get("ahead") == ahead and old.get("pro_ahead") == pro_ahead
                     and old.get("today") == payload["today"] and old.get("pro_games") == pro_games
                     and old.get("pro_news") == pro_news and old.get("more_news") == more_news and old.get("cfl_standings") == cfl_standings
                     and old.get("standings") == standings):
