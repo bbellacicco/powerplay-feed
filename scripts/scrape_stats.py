@@ -239,6 +239,7 @@ LEAGUES = [
     ("ohl", "OHL", "ohl", "f1aa699db3d81487", "https://chl.ca/ohl/stats/players/"),
     ("ojhl", "OJHL (Jr. A)", "ojhl", "77a0bd73d9d363d3", "https://www.ojhl.ca/stats"),
     ("gohl", "GOHL (Jr. B)", "gojhl", "34b10d4d34d7b59a", "https://www.gohl.ca/stats"),
+    ("pwhl", "PWHL", "pwhl", "446521baf8c38984", "https://www.thepwhl.com/en/stats/player-stats"),   # the Pro Hub's PWHL section
 ]
 LEAGUE_SHOWN = 10
 
