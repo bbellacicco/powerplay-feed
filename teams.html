@@ -102,6 +102,7 @@
   th:first-child, td:first-child { text-align: left; white-space: normal; }
   tr.us td { background: rgba(232,176,33,.16); font-weight: 800; }
   .tscroll { overflow-x: auto; }
+  .box .lgh { font-size: 22px; line-height: 1; margin: 0 0 10px; } .lgstats { margin-top: 14px; } .lgstats .sgrid td:nth-child(2) { color: var(--muted); }
   .news a { display: block; padding: 9px 0; border-top: 1px solid var(--line); text-decoration: none; }
   .news a:first-child { border-top: 0; }
   .news b { display: block; } .news span { color: var(--muted); font-size: 12.5px; }
@@ -232,13 +233,14 @@
   var T = [], BYID = {};
   function addTeam(t) { if (BYID[t.id]) return BYID[t.id]; T.push(t); BYID[t.id] = t; return t; }
 
-  var games = [], news = [], std = {}, college = {}, hsStd = {}, vids = [], snaps = [], statTeams = [], proNews = [];
+  var games = [], news = [], std = {}, college = {}, hsStd = {}, vids = [], snaps = [], statTeams = [], statLeagues = [], proNews = [];
   function load() {
     return Promise.all([get('local-games.json'), get('highschool.json'), get('saints.json'), get('local-news.json'), get('college-standings.json'), get('hs-standings.json'), get('network.json'), get('slideshows.json'), get('stats.json').catch(function () { return null; })]).then(function (r) {
       var lg = r[0] || {}, hs = r[1], sc = r[2];
       games = (lg.games || []).filter(function (g) { return g.team !== 'highschool' && !(sc && sc.games && g.team === 'saints' && g.sport !== 'Football'); })
         .concat(hs && hs.games ? hs.games : (lg.games || []).filter(function (g) { return g.team === 'highschool'; }))
-        .concat(sc && sc.games ? sc.games.filter(function (g) { return g.sport !== 'Football'; }) : []);
+        .concat(sc && sc.games ? sc.games.filter(function (g) { return g.sport !== 'Football'; }) : [])
+        .concat(sc && sc.ahead ? sc.ahead.filter(function (g) { return g.sport !== 'Football'; }) : []);
       games = games.concat(lg.ahead || []);   // each team's next games after this week
       var seen = {}; games = games.filter(function (g) { var k = g.id || (g.team + g.start + g.opponent); if (seen[k]) return false; seen[k] = 1; return true; });
       var net = r[6] || {};
@@ -246,7 +248,7 @@
         .concat((net.pro || []).filter(function (v) { return v.sp; }).map(function (v) { return { t: v.t.replace(/^OHL Highlights:\s*/i, 'Highlights: ').replace(/\s+@\s+/, ' at ').replace(/\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.?\s+\d{1,2},?\s+\d{4}\s*$/i, ''), u: v.u, i: v.i, p: v.p, src: 'OHL', sp: 1 }; }))
         .sort(function (a, b) { return new Date(b.p) - new Date(a.p); });
       snaps = (r[7] && r[7].slideshows) || [];
-      statTeams = (r[8] && r[8].teams) || [];
+      statTeams = (r[8] && r[8].teams) || []; statLeagues = (r[8] && r[8].leagues) || [];
       proNews = (lg.pro_news || []).concat(lg.more_news || []);
       news = (r[3] && r[3].stories) || []; std = lg.standings || {}; college = (r[4] && r[4].leagues) || {}; hsStd = (r[5] && r[5].sports) || {};
       build();
@@ -362,6 +364,7 @@
         }
       }
       box.appendChild(c);
+      if (s[0] === 'junior' && ONLY) ['ojhl', 'gohl'].forEach(function (k) { var lb = leagueBox(k, /leamington|lasalle|chatham/i); if (lb) box.appendChild(lb); });
     });
     search();
   }
@@ -564,7 +567,9 @@
     addPane('News', mb);
     // Schedule: every game coming up and the recent scores
     var sch = el('div', 'grid2'), a3 = col(), b3 = col();
-    a3.appendChild(gameBox('Coming up', up, t, 'No other games this week.'));
+    // the next two weeks (or the next game, if there's nothing that soon)
+    var two = up.filter(function (g) { return new Date(g.start) < now + 15 * 864e5; });
+    a3.appendChild(gameBox(two.length || !up.length ? 'Next two weeks' : 'Next game', two.length ? two : up.slice(0, 1), t, 'No games in the next two weeks.'));
     b3.appendChild(gameBox('Recent scores', fin.slice(0, 10), t, 'No scores yet this week.'));
     sch.appendChild(a3); sch.appendChild(b3);
     addPane('Schedule', sch);
@@ -639,20 +644,40 @@
     });
   }
   // the team's leaders (data/stats.json): scoring and goalies for hockey, passing/rushing/receiving for football
+  function statTables(groups, us) {
+    var gr = el('div', 'sgrid');
+    groups.forEach(function (g) {
+      var w = el('div'); w.appendChild(el('h3', null, g.title));
+      var sc = el('div', 'tscroll'), tb = el('table'), th = el('tr'); th.appendChild(el('th', null, 'Player')); g.cols.forEach(function (c, i) { var x = el('th', i === g.key ? 'k' : null, c); th.appendChild(x); }); tb.appendChild(th);
+      g.rows.forEach(function (r) { var tr = el('tr', us && r.team && us.test(r.team) ? 'us' : null); tr.appendChild(el('td', null, r.name)); r.vals.forEach(function (v, i) { tr.appendChild(el('td', i === g.key ? 'k' : null, String(v))); }); tb.appendChild(tr); });
+      sc.appendChild(tb); w.appendChild(sc); gr.appendChild(w);
+    });
+    return gr;
+  }
+  function moreLink(box, href, txt) { var a = el('a', 'more', txt || 'Full stats \u203a'); a.href = href; a.target = '_blank'; a.rel = 'noopener'; box.appendChild(a); }
+  // the league-wide leaders (data/stats.json "leagues"): OHL, OJHL, GOHL
+  function leagueKey(t) { var l = t.league || ''; return /^OHL/i.test(l) ? 'ohl' : /OJHL/i.test(l) ? 'ojhl' : /GOHL/i.test(l) ? 'gohl' : ''; }
+  function leagueBox(key, us) {
+    var L = statLeagues.filter(function (x) { return x.key === key; })[0];
+    if (!L || !L.groups || !L.groups.length) return null;
+    var b = el('div', 'box lgstats'); b.appendChild(el('h2', 'lgh', L.league + ' leaders'));
+    b.appendChild(statTables(L.groups, us));
+    if (L.link) moreLink(b, L.link, 'All ' + L.league.replace(/\s*\(.*\)/, '') + ' stats \u203a');
+    return b;
+  }
   function teamStats(t) {
     var nm = (t.full || t.name || '').toLowerCase();
     var st = statTeams.filter(function (x) { var c = (x.club || '').toLowerCase(); return c && (c === nm || c === (t.name || '').toLowerCase() || (t.sport && nm.indexOf(c) === 0 && new RegExp((x.league || '').split(' ').pop(), 'i').test(t.sport))); })[0];
-    if (!st || !st.groups || !st.groups.length) return null;
-    var b = el('div', 'box'), gr = el('div', 'sgrid');
-    st.groups.forEach(function (g) {
-      var w = el('div'); w.appendChild(el('h3', null, g.title));
-      var tb = el('table'), th = el('tr'); th.appendChild(el('th', null, 'Player')); g.cols.forEach(function (c, i) { var x = el('th', i === g.key ? 'k' : null, c); th.appendChild(x); }); tb.appendChild(th);
-      g.rows.forEach(function (r) { var tr = el('tr'); tr.appendChild(el('td', null, r.name)); r.vals.forEach(function (v, i) { tr.appendChild(el('td', i === g.key ? 'k' : null, String(v))); }); tb.appendChild(tr); });
-      w.appendChild(tb); gr.appendChild(w);
-    });
-    b.appendChild(gr);
-    if (st.link) { var a = el('a', 'more', 'Full stats ›'); a.href = st.link; a.target = '_blank'; a.rel = 'noopener'; b.appendChild(a); }
-    return b;
+    var wrap = el('div');
+    if (st && st.groups && st.groups.length) {
+      var b = el('div', 'box'); b.appendChild(el('h2', 'lgh', 'Team leaders')); b.appendChild(statTables(st.groups));
+      if (st.link) moreLink(b, st.link);
+      wrap.appendChild(b);
+    }
+    var lk = leagueKey(t), word = (t.name || '').split(' ').pop();
+    var lb = lk && leagueBox(lk, word ? new RegExp(word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i') : null);
+    if (lb) wrap.appendChild(lb);
+    return wrap.children.length ? wrap : null;
   }
   // the team's standings: its own group, with its row highlighted
   function standings(t) {
