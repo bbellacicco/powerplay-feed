@@ -28,6 +28,8 @@
   .count { color: var(--muted); font-size: 12.5px; white-space: nowrap; }
   .grid { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 10px; scroll-snap-type: x mandatory; scrollbar-width: thin; }
   .grid .card { flex: 0 0 200px; scroll-snap-align: start; }
+  /* two layers, one stacked on top of the other, scrolling sideways together */
+  .grid { display: grid; grid-template-rows: repeat(2, auto); grid-auto-flow: column; grid-auto-columns: 200px; }
   .swipe { color: var(--muted); font-size: 12px; text-align: center; padding: 2px 0; }
   .card { position: relative; border: 0; padding: 0; background: var(--row); border-radius: 8px; overflow: hidden; cursor: pointer; aspect-ratio: 3 / 4;
     border-top: 3px solid var(--accent); box-shadow: 0 2px 10px rgba(0,0,0,.25); transition: transform .15s; }
@@ -66,7 +68,7 @@
   .view .bar .acts { display: flex; gap: 6px; }
   .view .bar a { background: var(--row); color: #fff; border: 1px solid rgba(255,255,255,.3); border-radius: 999px; font-size: 12px; font-weight: 700; padding: 6px 12px; text-decoration: none; }
   @media (max-width: 560px) {
-    .grid { gap: 8px; } .grid .card { flex-basis: 165px; } h1 { font-size: 19px; }
+    .grid { gap: 8px; grid-auto-columns: 150px; } .grid .card { flex-basis: 165px; } h1 { font-size: 19px; }
     .view { left: 6px; right: 6px; padding: 6px; } .view .nav { width: 40px; height: 40px; margin-top: -20px; font-size: 18px; }
   }
 </style>
