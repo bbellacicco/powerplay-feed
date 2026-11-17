@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T02:49:43.901860+00:00",
+ "updated": "2026-11-17T04:35:53.516982+00:00",
  "teams": [
   {
    "team": "spitfires",
@@ -599,6 +599,605 @@
         18,
         12,
         "0"
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "leagues": [
+  {
+   "key": "ohl",
+   "league": "OHL",
+   "link": "https://chl.ca/ohl/stats/players/",
+   "updated": "2026-11-17T04:35:53.516982+00:00",
+   "groups": [
+    {
+     "title": "Scoring leaders",
+     "cols": [
+      "Team",
+      "GP",
+      "G",
+      "A",
+      "PTS"
+     ],
+     "key": 4,
+     "rows": [
+      {
+       "name": "Ryan Roobroeck",
+       "team": "Guelph Storm",
+       "vals": [
+        "GUE",
+        19,
+        18,
+        15,
+        33
+       ]
+      },
+      {
+       "name": "Dima Zhilkin",
+       "team": "Saginaw Spirit",
+       "vals": [
+        "SAG",
+        22,
+        17,
+        16,
+        33
+       ]
+      },
+      {
+       "name": "Michael Dec",
+       "team": "Erie Otters",
+       "vals": [
+        "ER",
+        21,
+        15,
+        17,
+        32
+       ]
+      },
+      {
+       "name": "Owen Griffin",
+       "team": "Guelph Storm",
+       "vals": [
+        "GUE",
+        19,
+        9,
+        22,
+        31
+       ]
+      },
+      {
+       "name": "Cameron Arquette",
+       "team": "Kitchener Rangers",
+       "vals": [
+        "KIT",
+        22,
+        17,
+        13,
+        30
+       ]
+      },
+      {
+       "name": "Braidy Wassilyn",
+       "team": "Saginaw Spirit",
+       "vals": [
+        "SAG",
+        22,
+        13,
+        17,
+        30
+       ]
+      },
+      {
+       "name": "Mclean Agrette",
+       "team": "Erie Otters",
+       "vals": [
+        "ER",
+        22,
+        9,
+        21,
+        30
+       ]
+      },
+      {
+       "name": "Easton Walos",
+       "team": "Sarnia Sting",
+       "vals": [
+        "SAR",
+        23,
+        12,
+        17,
+        29
+       ]
+      },
+      {
+       "name": "Pierce Mbuyi",
+       "team": "Owen Sound Attack",
+       "vals": [
+        "OS",
+        21,
+        16,
+        12,
+        28
+       ]
+      },
+      {
+       "name": "Adam Novotný",
+       "team": "Peterborough Petes",
+       "vals": [
+        "PBO",
+        20,
+        13,
+        14,
+        27
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Goalies",
+     "cols": [
+      "Team",
+      "GP",
+      "W",
+      "GAA",
+      "SV%"
+     ],
+     "key": 2,
+     "rows": [
+      {
+       "name": "Kobe Nadalin",
+       "team": "London Knights",
+       "vals": [
+        "LDN",
+        1,
+        0,
+        "0.00",
+        "1.000"
+       ]
+      },
+      {
+       "name": "Charlie Weiss",
+       "team": "London Knights",
+       "vals": [
+        "LDN",
+        1,
+        1,
+        "1.85",
+        ".909"
+       ]
+      },
+      {
+       "name": "Zach Jovanovski",
+       "team": "Guelph Storm",
+       "vals": [
+        "GUE",
+        10,
+        9,
+        "2.00",
+        ".929"
+       ]
+      },
+      {
+       "name": "Liam Edgcumbe",
+       "team": "Flint Firebirds",
+       "vals": [
+        "FLNT",
+        1,
+        1,
+        "2.00",
+        ".917"
+       ]
+      },
+      {
+       "name": "Arseni Radkov",
+       "team": "Val-d'Or Foreurs",
+       "vals": [
+        "VDO",
+        1,
+        1,
+        "2.00",
+        ".933"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "ojhl",
+   "league": "OJHL (Jr. A)",
+   "link": "https://www.ojhl.ca/stats",
+   "updated": "2026-11-17T04:35:53.516982+00:00",
+   "groups": [
+    {
+     "title": "Scoring leaders",
+     "cols": [
+      "Team",
+      "GP",
+      "G",
+      "A",
+      "PTS"
+     ],
+     "key": 4,
+     "rows": [
+      {
+       "name": "Atom Thususka",
+       "team": "Collingwood Blues",
+       "vals": [
+        "COL",
+        26,
+        16,
+        29,
+        45
+       ]
+      },
+      {
+       "name": "Ty Daniels",
+       "team": "Burlington Cougars",
+       "vals": [
+        "BUR",
+        19,
+        20,
+        24,
+        44
+       ]
+      },
+      {
+       "name": "Will Hughes",
+       "team": "Collingwood Blues",
+       "vals": [
+        "COL",
+        26,
+        17,
+        23,
+        40
+       ]
+      },
+      {
+       "name": "Jared McNeil",
+       "team": "King Rebellion",
+       "vals": [
+        "KNG",
+        25,
+        13,
+        27,
+        40
+       ]
+      },
+      {
+       "name": "Carson Hall",
+       "team": "Toronto Patriots",
+       "vals": [
+        "PAT",
+        23,
+        17,
+        22,
+        39
+       ]
+      },
+      {
+       "name": "Cayden Smith",
+       "team": "Cobourg Cougars",
+       "vals": [
+        "COB",
+        23,
+        16,
+        22,
+        38
+       ]
+      },
+      {
+       "name": "Max Morin",
+       "team": "Burlington Cougars",
+       "vals": [
+        "BUR",
+        24,
+        8,
+        29,
+        37
+       ]
+      },
+      {
+       "name": "Chance Adams",
+       "team": "Markham Royals",
+       "vals": [
+        "MAR",
+        25,
+        14,
+        22,
+        36
+       ]
+      },
+      {
+       "name": "Landon Marleau",
+       "team": "Wellington Dukes",
+       "vals": [
+        "WEL",
+        25,
+        22,
+        13,
+        35
+       ]
+      },
+      {
+       "name": "Ethan Neller",
+       "team": "Collingwood Blues",
+       "vals": [
+        "COL",
+        26,
+        19,
+        16,
+        35
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Goalies",
+     "cols": [
+      "Team",
+      "GP",
+      "W",
+      "GAA",
+      "SV%"
+     ],
+     "key": 2,
+     "rows": [
+      {
+       "name": "Nico Armellin",
+       "team": "Toronto Patriots",
+       "vals": [
+        "PAT",
+        1,
+        1,
+        "0.00",
+        "1.000"
+       ]
+      },
+      {
+       "name": "Nathan Ferriss",
+       "team": "Wellington Dukes",
+       "vals": [
+        "WEL",
+        1,
+        0,
+        "0.00",
+        "1.000"
+       ]
+      },
+      {
+       "name": "Gunner Wolfe",
+       "team": "King Rebellion",
+       "vals": [
+        "KNG",
+        10,
+        9,
+        "1.49",
+        ".945"
+       ]
+      },
+      {
+       "name": "Colten Drillen-Roach",
+       "team": "Leamington Flyers",
+       "vals": [
+        "LEA",
+        15,
+        11,
+        "1.61",
+        ".947"
+       ]
+      },
+      {
+       "name": "Peter Chlebowski",
+       "team": "Markham Royals",
+       "vals": [
+        "MAR",
+        7,
+        6,
+        "1.71",
+        ".938"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "gohl",
+   "league": "GOHL (Jr. B)",
+   "link": "https://www.gohl.ca/stats",
+   "updated": "2026-11-17T04:35:53.516982+00:00",
+   "groups": [
+    {
+     "title": "Scoring leaders",
+     "cols": [
+      "Team",
+      "GP",
+      "G",
+      "A",
+      "PTS"
+     ],
+     "key": 4,
+     "rows": [
+      {
+       "name": "Ryan Hodkinson",
+       "team": "St. Marys Lincolns",
+       "vals": [
+        "SMY",
+        18,
+        14,
+        30,
+        44
+       ]
+      },
+      {
+       "name": "Jack Samek",
+       "team": "London Nationals",
+       "vals": [
+        "LON",
+        20,
+        17,
+        20,
+        37
+       ]
+      },
+      {
+       "name": "Reid Gammage",
+       "team": "Cambridge Redhawks",
+       "vals": [
+        "CAM",
+        20,
+        15,
+        19,
+        34
+       ]
+      },
+      {
+       "name": "Blake Elzinga",
+       "team": "St. Marys Lincolns",
+       "vals": [
+        "SMY",
+        19,
+        11,
+        23,
+        34
+       ]
+      },
+      {
+       "name": "Matteo Gauthier",
+       "team": "St. Catharines Falcons",
+       "vals": [
+        "SCF",
+        21,
+        14,
+        19,
+        33
+       ]
+      },
+      {
+       "name": "Callum McAuley",
+       "team": "St. Marys Lincolns",
+       "vals": [
+        "SMY",
+        19,
+        13,
+        20,
+        33
+       ]
+      },
+      {
+       "name": "Dylan Searles",
+       "team": "Strathroy Rockets",
+       "vals": [
+        "SRY",
+        21,
+        15,
+        17,
+        32
+       ]
+      },
+      {
+       "name": "Owen Bruining",
+       "team": "St. Marys Lincolns",
+       "vals": [
+        "SMY",
+        17,
+        14,
+        18,
+        32
+       ]
+      },
+      {
+       "name": "Tyler Graham",
+       "team": "Cambridge Redhawks",
+       "vals": [
+        "CAM",
+        20,
+        19,
+        11,
+        30
+       ]
+      },
+      {
+       "name": "Brendan Gerber",
+       "team": "Elmira Sugar Kings",
+       "vals": [
+        "ELM",
+        22,
+        15,
+        15,
+        30
+       ]
+      }
+     ]
+    },
+    {
+     "title": "Goalies",
+     "cols": [
+      "Team",
+      "GP",
+      "W",
+      "GAA",
+      "SV%"
+     ],
+     "key": 2,
+     "rows": [
+      {
+       "name": "Kobe Nadalin",
+       "team": "St. Marys Lincolns",
+       "vals": [
+        "SMY",
+        11,
+        10,
+        "1.38",
+        ".936"
+       ]
+      },
+      {
+       "name": "Dylan Durno",
+       "team": "St. Thomas Stars",
+       "vals": [
+        "STT",
+        14,
+        11,
+        "1.89",
+        ".953"
+       ]
+      },
+      {
+       "name": "Kaden Lachnitt",
+       "team": "St. Catharines Falcons",
+       "vals": [
+        "SCF",
+        1,
+        1,
+        "2.00",
+        ".875"
+       ]
+      },
+      {
+       "name": "Chase Schuyler",
+       "team": "Caledonia Corvairs",
+       "vals": [
+        "CAL",
+        1,
+        1,
+        "2.00",
+        ".917"
+       ]
+      },
+      {
+       "name": "Egor Sokolov",
+       "team": "Chatham Maroons",
+       "vals": [
+        "CHA",
+        5,
+        4,
+        "2.08",
+        ".924"
        ]
       }
      ]
