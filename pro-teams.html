@@ -7,7 +7,8 @@
 <title>Pro Teams | Powerplay Windsor</title>
 <!--
   One pro league's section of the Pro Hub (powerplaywindsor.com/local-sports?tab=nhl), built like the Local Hub's sections:
-    our teams (tap one for its page: last game and what's next, latest news, then News · Schedule · Standings · Stats),
+    pick your team from every team in the league (its page: last game and what's next, latest news, then News · Schedule ·
+    Standings · Stats), the team a fan follows,
     the league's top stories, and the league's leaders.
   ?lg=nhl|nfl|nba|mlb|cfl|pwhl     the league
   ?team=det                        open that team's page right away (its own link)
@@ -40,6 +41,14 @@
   .tbtn .nm small { display: block; color: var(--muted); font-size: 12px; font-weight: 600; }
   .tbtn .nx { color: var(--muted); font-size: 12.5px; text-align: right; flex: none; max-width: 48%; }
   .tbtn .nx.live { color: var(--live); font-weight: 800; }
+  /* pick your team: every team in the league */
+  .tgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 6px; }
+  .tg { display: flex; flex-direction: column; align-items: center; gap: 4px; font: inherit; color: var(--text); background: var(--card2); border: 1px solid transparent; border-radius: 8px; padding: 8px 4px 7px; cursor: pointer; min-width: 0; }
+  .tg img { width: 34px; height: 34px; object-fit: contain; }
+  .tg .ab { display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: #0e2044; font-size: 11.5px; letter-spacing: .02em; }
+  .tg span { font-size: 12px; font-weight: 700; line-height: 1.15; text-align: center; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .tg:hover, .tg:focus-visible { border-color: var(--accent); outline: none; } .tg.mine { border-color: var(--accent); background: rgba(232,176,33,.14); }
+  @media (max-width: 760px) { .tgrid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 5px; } .tg img, .tg .ab { width: 30px; height: 30px; } .tg span { font-size: 11px; } }
   /* follow your team */
   .follow label { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
   .follow label span { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 22px; letter-spacing: .03em; text-transform: uppercase; }
@@ -153,12 +162,13 @@
     var p = {}; new Intl.DateTimeFormat('en-CA', { timeZone: TZ, weekday: 'short', month: 'numeric', day: 'numeric' }).formatToParts(d).forEach(function (x) { p[x.type] = x.value; });
     return p.weekday.replace('.', '') + '., ' + MON[+p.month - 1] + ' ' + (+p.day); }
   function when(g) { var d = new Date(g.start); return cpDay(d) + (g.tbd ? '' : ' · ' + cpTime(d)); }
+  function sc(g) { return g.us != null && g.them != null ? g.us + '–' + g.them + ' ' : ''; }   // the score, or nothing when it isn't posted yet
   function wl(g) { return g.us == null || g.them == null ? '' : g.us > g.them ? 'W' : g.us < g.them ? 'L' : 'T'; }
   function atw(g) { return g.home ? 'vs.' : 'at'; }
   function ext(a, href) { a.href = href; a.target = /powerplaywindsor\.com/.test(href) ? '_top' : '_blank'; a.rel = 'noopener'; return a; }
 
   // ---------- data ----------
-  var LGJ = null, STATS = null;
+  var LGJ = null, STATS = null, CUR = null;   // CUR: the team whose page is open (its players are highlighted in the league's leaders)
   var teams = L.teams.map(function (x) { return { id: x[0].toLowerCase(), abbr: x[0], name: x[1], rx: x[2] || new RegExp(x[1].split(' ').pop(), 'i'), games: [], info: {} }; });
   var BYID = {}; teams.forEach(function (t) { BYID[t.id] = t; });
 
@@ -169,7 +179,7 @@
     var op = c.competitors.filter(function (x) { return x !== me; })[0]; if (!me || !op) return null;
     var st = c.status && c.status.type || {}, sc = function (x) { return x.score == null ? null : Number(typeof x.score === 'object' ? x.score.value : x.score); };
     var lk = (e.links || []).filter(function (l) { return (l.rel || []).indexOf('desktop') >= 0; })[0];
-    return { start: e.date, home: me.homeAway === 'home', opp: op.team.displayName || op.team.shortDisplayName, oppShort: op.team.shortDisplayName || op.team.displayName,
+    return { eid: e.id, start: e.date, home: me.homeAway === 'home', opp: op.team.displayName || op.team.shortDisplayName, oppShort: op.team.shortDisplayName || op.team.displayName,
              status: st.state === 'post' ? (st.completed === false ? 'off' : 'final') : st.state === 'in' ? 'live' : 'upcoming',
              us: sc(me), them: sc(op), detail: st.shortDetail || '', note: /OT|SO|\//.test(st.shortDetail || '') && st.state === 'post' ? (st.shortDetail || '').replace(/^Final\/?/, '') : '',
              where: c.venue && c.venue.fullName || '', link: lk && lk.href, tbd: e.timeValid === false };
@@ -195,14 +205,25 @@
       t.info = j.team || {};
       if (t.info.displayName) t.name = t.info.displayName;
       t.games = (j.events || []).map(function (e) { return espnGame(t, e); }).filter(Boolean).sort(function (a, b) { return new Date(a.start) - new Date(b.start); });
-      return t;
+      // the season schedule doesn't carry live scores: today's scoreboard does
+      if (!t.games.some(function (g) { return g.status === 'live' || (g.status === 'final' && g.us == null); })) return t;
+      return scoreboard().then(function (sb) {
+        t.games = t.games.map(function (g) { var e = sb[g.eid]; var n = e && espnGame(t, e); return n || g; });
+        return t;
+      });
     });
+  }
+  var sbP = null, sbT = 0;
+  function scoreboard() {
+    if (!sbP || Date.now() - sbT > 60000) { sbT = Date.now();
+      sbP = getJ(ESPN + L.path + '/scoreboard').then(function (j) { var by = {}; ((j && j.events) || []).forEach(function (e) { by[e.id] = e; }); return by; }); }
+    return sbP;
   }
   function status(t) {
     var live = t.games.filter(function (g) { return g.status === 'live'; })[0];
-    if (live) return { live: true, text: 'LIVE ' + live.us + '–' + live.them + ' ' + atw(live) + ' ' + live.oppShort };
+    if (live) return { live: true, text: 'LIVE ' + sc(live) + atw(live) + ' ' + live.oppShort };
     var nx = upcoming(t)[0]; if (nx) return { text: 'Next: ' + when(nx) + ' ' + atw(nx) + ' ' + nx.oppShort };
-    var last = finals(t)[0]; if (last) return { text: 'Last: ' + wl(last) + ' ' + last.us + '–' + last.them + ' ' + atw(last) + ' ' + last.oppShort };
+    var last = finals(t)[0]; if (last) return { text: 'Last: ' + (wl(last) ? wl(last) + ' ' : '') + sc(last) + atw(last) + ' ' + last.oppShort };
     return { text: '' };
   }
   function upcoming(t) { var now = Date.now(); return t.games.filter(function (g) { return g.status === 'upcoming' && new Date(g.start) > now - 3 * 3600e3; }); }
@@ -250,7 +271,7 @@
       var groups = L.cats.map(function (k) { return cats.filter(function (c) { return c.name === k; })[0]; }).filter(function (c) { return c && c.leaders && c.leaders.length; }).map(function (c) {
         return { title: c.displayName, col: c.abbreviation || c.shortDisplayName, rows: c.leaders.slice(0, team ? 3 : 5).map(function (l) {
           var tm = l.team || (l.athlete && l.athlete.team) || {};
-          return { name: l.athlete ? l.athlete.displayName : '', team: tm.abbreviation || '', us: teams.some(function (x) { return String(x.info.id) === String(tm.id); }), val: num(l.value, l.displayValue, c.name + ' ' + c.displayName) }; }) };
+          return { name: l.athlete ? l.athlete.displayName : '', team: tm.abbreviation || '', us: !!(CUR && String(CUR.info.id || CUR.espn) === String(tm.id)), val: num(l.value, l.displayValue, c.name + ' ' + c.displayName) }; }) };
       });
       return groups.length ? groups : null;
     });
@@ -273,7 +294,7 @@
     Lg.groups.forEach(function (g) {
       var w = el('div'); w.appendChild(el('h3', null, g.title));
       var sc = el('div', 'tscroll'), tb = el('table'), th = el('tr'); th.appendChild(el('th', null, 'Player')); g.cols.forEach(function (c, i) { th.appendChild(el('th', i === g.key ? 'k' : null, c)); }); tb.appendChild(th);
-      g.rows.forEach(function (r) { var tr = el('tr', teams.some(function (t) { return t.rx.test(r.team || ''); }) ? 'us' : null); tr.appendChild(el('td', null, r.name)); r.vals.forEach(function (v, i) { tr.appendChild(el('td', i === g.key ? 'k' : i === 0 ? 'tm' : null, String(v))); }); tb.appendChild(tr); });
+      g.rows.forEach(function (r) { var tr = el('tr', CUR && CUR.rx.test(r.team || '') ? 'us' : null); tr.appendChild(el('td', null, r.name)); r.vals.forEach(function (v, i) { tr.appendChild(el('td', i === g.key ? 'k' : i === 0 ? 'tm' : null, String(v))); }); tb.appendChild(tr); });
       sc.appendChild(tb); w.appendChild(sc); gr.appendChild(w);
     });
     var b = el('div', 'box'); b.appendChild(el('h2', null, L.name + ' leaders')); b.appendChild(gr);
@@ -306,7 +327,7 @@
         if (!n) return;
         if (n.standings && n.standings.entries) out.push({ group: n.name, cols: L.cols.map(function (c) { return c[0]; }), teams: n.standings.entries.map(function (e) {
           var st = {}; (e.stats || []).forEach(function (x) { st[x.name] = x.displayValue; });
-          return { name: e.team.displayName, abbr: e.team.abbreviation, id: e.team.id, vals: L.cols.map(function (c) { return st[c[1]]; }) }; }) });
+          return { name: e.team.displayName, abbr: e.team.abbreviation, id: e.team.id, logo: e.team.logos && e.team.logos[0] && e.team.logos[0].href, vals: L.cols.map(function (c) { return st[c[1]]; }) }; }) });
         (n.children || []).forEach(walk);
       })(j);
       return out;
@@ -346,22 +367,25 @@
     if (!keep) { follow(t.id); }
     return loadTeam(t).then(function () { openTeam(t); });
   }
+  // every team in the league as a button (logo and nickname): tap one for its page. The team a fan follows is marked.
   function followBox() {
-    var b = el('div', 'box follow'), lab = el('label');
-    lab.appendChild(el('span', null, 'Follow your ' + L.name + ' team'));
-    var sel = el('select'); sel.setAttribute('aria-label', 'Pick your ' + L.name + ' team'); sel.appendChild(new Option('Pick a team…', ''));
-    lab.appendChild(sel); b.appendChild(lab);
-    b.appendChild(el('div', 'fnote', 'Your team’s page opens right away, and it stays at the top of this section on this device.'));
+    var b = el('div', 'box follow'); b.appendChild(el('h2', null, 'Pick your team'));
+    var g = el('div', 'tgrid'); g.appendChild(el('div', 'none', 'Loading teams…')); b.appendChild(g);
+    b.appendChild(el('div', 'fnote', 'Tap a team for its scores, schedule, standings, stats and news. Tap \u2606 Follow on its page and it stays at the top of this section on this device.'));
     leagueTeams().then(function (list) {
-      list.forEach(function (r) { var o = new Option(r.name, String(r.abbr || r.name).toLowerCase().replace(/[^a-z0-9]/g, '')); sel.appendChild(o); });
-      var f = followed(); if (f) sel.value = f;
-      if (followed()) sel.appendChild(new Option('Stop following', '-'));
-      sel.onchange = function () {
-        if (sel.value === '-') { follow(''); drawDir(); return; }
-        var r = list.filter(function (x) { return String(x.abbr || x.name).toLowerCase().replace(/[^a-z0-9]/g, '') === sel.value; })[0];
-        if (r) pickTeam(r);
-      };
-      if (!list.length) b.remove();
+      g.innerHTML = '';
+      if (!list.length) { b.remove(); return; }
+      var f = followed();
+      list.forEach(function (r) {
+        var id = String(r.abbr || r.name).toLowerCase().replace(/[^a-z0-9]/g, '');
+        var bt = el('button', 'tg' + (id === f ? ' mine' : '')); bt.type = 'button'; bt.title = r.name;
+        if (r.logo) { var im = new Image(); im.src = r.logo; im.alt = ''; im.loading = 'lazy'; im.onerror = function () { im.replaceWith(el('b', 'ab', r.abbr || '')); }; bt.appendChild(im); }
+        else bt.appendChild(el('b', 'ab', r.abbr || r.name.slice(0, 3).toUpperCase()));
+        var w = r.name.split(' '), two = w.length > 2 && /^(red|maple|blue|golden|white|trail|black)$/i.test(w[w.length - 2]);
+        bt.appendChild(el('span', null, w.slice(two ? -2 : -1).join(' ')));
+        bt.onclick = function () { pickTeam(r, true); };
+        g.appendChild(bt);
+      });
     });
     return b;
   }
@@ -370,22 +394,19 @@
   function drawDir() {
     var d = document.getElementById('dir'); d.innerHTML = '';
     var h = el('h1'); h.innerHTML = L.name + ' <em>Hub</em>'; d.appendChild(h);
-    d.appendChild(el('div', 'sub', 'Our teams’ scores, schedules, standings and stats, and the latest from around the ' + L.name + '.'));
+    d.appendChild(el('div', 'sub', 'Every team’s scores, schedules, standings and stats, and the latest from around the ' + L.name + '.'));
     d.appendChild(followBox());
-    var tb = el('div', 'box'); tb.appendChild(el('h2', null, 'Our teams'));
-    var tl = el('div', 'tlist');
+    // the team this fan follows (only theirs: our teams are featured in the Pro Sports Guide, nowhere else)
     var fid = followed(), mine = fid && BYID[fid];
-    var shown = teams.slice(); if (mine) { shown = [mine].concat(shown.filter(function (x) { return x !== mine; })); }
-    shown.forEach(function (t) {
-      var b = el('button', 'tbtn'); b.type = 'button';
-      if (t.info.logo) { var im = new Image(); im.src = t.info.logo; im.alt = ''; b.appendChild(im); }
-      var nm = el('span', 'nm', t.name); if (t === mine) { b.classList.add('mine'); nm.insertBefore(el('em', 'yt', 'Your team'), nm.firstChild); }
-      if (t.info.recordSummary) nm.appendChild(el('small', null, t.info.recordSummary + (t.info.standingSummary ? ' · ' + t.info.standingSummary : ''))); b.appendChild(nm);
-      var st = status(t); if (st.text) b.appendChild(el('span', 'nx' + (st.live ? ' live' : ''), st.text));
-      b.onclick = function () { openTeam(t); };
-      tl.appendChild(b);
-    });
-    tb.appendChild(tl); d.appendChild(tb);
+    if (mine) {
+      var tb = el('div', 'box'); tb.appendChild(el('h2', null, 'Your team'));
+      var b = el('button', 'tbtn mine'); b.type = 'button';
+      if (mine.info.logo) { var im = new Image(); im.src = mine.info.logo; im.alt = ''; b.appendChild(im); }
+      var nm = el('span', 'nm', mine.name); if (mine.info.recordSummary) nm.appendChild(el('small', null, mine.info.recordSummary + (mine.info.standingSummary ? ' · ' + mine.info.standingSummary : ''))); b.appendChild(nm);
+      var st = status(mine); if (st.text) b.appendChild(el('span', 'nx' + (st.live ? ' live' : ''), st.text));
+      b.onclick = function () { openTeam(mine); };
+      tb.appendChild(b); d.appendChild(tb);
+    }
     // the headlines of the day, then a strip of top stories with pictures
     var hb = el('div', 'box news'); hb.appendChild(el('h2', null, 'Headlines')); var hl = el('div'); hl.appendChild(el('div', 'none', 'Loading…')); hb.appendChild(hl); d.appendChild(hb);
     var sb = el('div', 'box'); sb.appendChild(el('h2', null, 'Top stories')); var sh = el('div'); sb.appendChild(sh); d.appendChild(sb);
@@ -402,6 +423,7 @@
 
   // ---------- one team ----------
   function openTeam(t) {
+    CUR = t;
     var box = document.getElementById('team'); box.innerHTML = ''; box.hidden = false; document.getElementById('dir').hidden = true;
     box.dataset.id = t.id;
     var bk = el('button', 'back', '‹ All ' + L.name + ' teams'); bk.type = 'button'; bk.onclick = closeTeam; box.appendChild(bk);
@@ -418,12 +440,12 @@
     var sb = el('div', 'box next' + (live ? ' livebox' : ''));
     if (live) {
       sb.appendChild(el('div', 'when', 'Live now' + (live.detail ? ' · ' + live.detail : '')));
-      sb.appendChild(el('div', 'vs', live.us + '–' + live.them + ' ' + atw(live) + ' ' + live.opp));
+      sb.appendChild(el('div', 'vs', sc(live) + atw(live) + ' ' + live.opp));
       if (live.link) sb.appendChild(ext(el('a', 'more', 'Follow live ›'), live.link));
     } else if (fin[0]) {
       var f = fin[0], k = wl(f);
       sb.appendChild(el('div', 'when', 'Last game · ' + cpDay(new Date(f.start))));
-      var vs = el('div', 'vs'); vs.appendChild(el('span', k === 'W' ? 'w' : k === 'L' ? 'l' : 't', k + ' ')); vs.appendChild(document.createTextNode(f.us + '–' + f.them + (f.note ? ' (' + f.note + ')' : '') + ' ' + atw(f) + ' ' + f.opp)); sb.appendChild(vs);
+      var vs = el('div', 'vs'); vs.appendChild(el('span', k === 'W' ? 'w' : k === 'L' ? 'l' : 't', k + ' ')); vs.appendChild(document.createTextNode(sc(f) + (f.note ? '(' + f.note + ') ' : '') + atw(f) + ' ' + f.opp)); sb.appendChild(vs);
       if (f.link) sb.appendChild(ext(el('a', 'more', 'Box score ›'), f.link));
     } else { sb.appendChild(el('div', 'when', 'Last game')); sb.appendChild(el('div', 'none', 'No games yet this season.')); }
     var nx = el('div', 'upnext'); nx.appendChild(el('div', 'when', 'Coming up'));
@@ -477,6 +499,7 @@
     try { history.replaceState(null, '', '?lg=' + LG + '&team=' + t.id); } catch (e) {}
   }
   function closeTeam() {
+    CUR = null;
     document.getElementById('team').hidden = true; document.getElementById('team').innerHTML = ''; document.getElementById('dir').hidden = false;
     try { history.replaceState(null, '', '?lg=' + LG); } catch (e) {}
     drawDir();
@@ -490,9 +513,9 @@
       r.appendChild(el('div', 'd', cpDay(d) + (g.status === 'upcoming' && !g.tbd ? '\n' + cpTime(d) : '')));
       var o = el('div', 'o', atw(g) + ' ' + g.opp); if (g.where) o.appendChild(el('small', null, g.where)); r.appendChild(o);
       var s = el('div', 's');
-      if (g.status === 'final') { var k = wl(g); s.appendChild(el('span', k === 'W' ? 'w' : k === 'L' ? 'l' : 't', k + ' ')); s.appendChild(document.createTextNode(g.us + '–' + g.them + (g.note ? ' ' + g.note : '')));
+      if (g.status === 'final') { var k = wl(g); s.appendChild(el('span', k === 'W' ? 'w' : k === 'L' ? 'l' : 't', k + ' ')); s.appendChild(document.createTextNode(sc(g).trim() + (g.note ? ' ' + g.note : '')));
         if (g.link) s.appendChild(ext(el('a', null, 'Box score ›'), g.link)); }
-      else if (g.status === 'live') { s.appendChild(el('span', 'lv', 'LIVE ')); s.appendChild(document.createTextNode(g.us + '–' + g.them)); }
+      else if (g.status === 'live') { s.appendChild(el('span', 'lv', 'LIVE ')); s.appendChild(document.createTextNode(sc(g).trim())); }
       r.appendChild(s); gl.appendChild(r);
     });
     b.appendChild(gl); return b;
