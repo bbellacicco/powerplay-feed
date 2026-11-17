@@ -12,7 +12,7 @@
                then the next three days. Tap a league for just its games, then pick a team
     NHL NFL NBA MLB CFL PWHL   each league: follow your team (a drop-down of every team), our teams (tap one for its page:
                                last game and what's next, news, schedule, standings, stats), the headlines and top stories,
-                               the league's leaders, its videos (the Pro Network), then its scores, games coming up and standings
+                               the league's leaders, then its scores, games coming up and standings
   ?tab=scores|nhl|nfl|nba|mlb|cfl|pwhl   open on that tab (old ?tab=network, upcoming and updates links open Scores; ?league=nhl opens the NHL tab)
   ?tab=nhl&team=det   that team's page
   Each widget sizes itself to fit (nothing scrolls inside the page, which traps the finger on iPhones).
@@ -81,11 +81,10 @@
   var PARTS = {
     scores:  [],   // Scores: the Pro Sports Guide (our teams' games today, latest scores, coming up) right under the tabs
   };
-  // each league has its own section, like the Local Hub's: our teams, top stories and leaders, the league's videos
-  // (the Pro Network, just that league), then its scores and standings
+  // each league has its own section, like the Local Hub's: pick your team, headlines, top stories and leaders, then its scores and standings
   var LGS = ['nhl', 'nfl', 'nba', 'mlb', 'cfl', 'pwhl'];
   var TEAM = (new URLSearchParams(location.search).get('team') || '').toLowerCase().replace(/[^a-z]/g, '');   // a team's own link
-  LGS.forEach(function (lg) { PARTS[lg] = [['pro-teams.html', 1500, 2100, '&lg=' + lg], ['network.html', 1300, 1520, '&only=pro&league=' + lg + '&lock=1'], ['pro-games_3.html', 760, 900, '&tab=' + lg + '&lock=1']]; });
+  LGS.forEach(function (lg) { PARTS[lg] = [['pro-teams.html', 1500, 2100, '&lg=' + lg], ['pro-games_3.html', 760, 900, '&tab=' + lg + '&lock=1']]; });
   function lgParam(w, tab) { return w[0] === 'pro-teams.html' && TEAM && tab === startTab ? '&team=' + TEAM : ''; }
   var built = {}, box = document.getElementById('panes');
   function show(tab) {
