@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T08:31:44-05:00",
+ "updated": "2026-11-17T08:47:15-05:00",
  "today": "2026-11-17",
  "range": [
   "2026-11-14",
@@ -35,15 +35,15 @@
  "sources": {
   "spitfires": {
    "ok": true,
-   "count": 25
+   "count": 66
   },
   "lancers": {
    "ok": true,
-   "count": 68
+   "count": 155
   },
   "junior": {
    "ok": true,
-   "count": 209
+   "count": 329
   },
   "saints": {
    "ok": true,
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -1497,6 +1497,402 @@
    "links": {}
   }
  ],
+ "last": [
+  {
+   "id": "lancers-6227",
+   "team": "lancers",
+   "sport": "Men's Basketball",
+   "start": "2026-11-13T20:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Queen's Gaels",
+   "location": "Kingston, ON",
+   "status": "final",
+   "our_score": 69,
+   "opp_score": 77,
+   "result": "L",
+   "note": "",
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6227",
+    "recap": "https://golancers.ca/news/2026/11/14/mens-basketball-lancers-look-to-bounce-back-after-loss-to-queen-s.aspx"
+   }
+  },
+  {
+   "id": "lancers-6266",
+   "team": "lancers",
+   "sport": "Men's Volleyball",
+   "start": "2026-11-13T19:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "McMaster Marauders",
+   "location": "Toldo Lancer Centre",
+   "status": "final",
+   "our_score": 1,
+   "opp_score": 3,
+   "result": "L",
+   "note": "25-20, 25-27, 21-25, 24-26",
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6266"
+   }
+  },
+  {
+   "id": "junior-gojhl15685",
+   "team": "junior",
+   "sport": "GOHL (Jr. B)",
+   "start": "2026-11-13T19:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "St. Marys Lincolns",
+   "location": "Pyramid R.C., St. Marys, ON",
+   "status": "final",
+   "our_score": 4,
+   "opp_score": 2,
+   "result": "W",
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.gohl.ca/stats/game-center/15685"
+   },
+   "club": "Chatham Maroons"
+  },
+  {
+   "id": "junior-gs2960612",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-11-13T19:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Wheatley Sharks",
+   "location": "Essex Centre Complex",
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 0,
+   "result": "W",
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960612?configuration=45"
+   },
+   "club": "Essex 73's"
+  },
+  {
+   "id": "junior-gs2960611",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-11-13T19:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Dresden Kings",
+   "location": "Lambton-Kent Memorial Centre",
+   "status": "final",
+   "our_score": 1,
+   "opp_score": 5,
+   "result": "L",
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960611?configuration=45"
+   },
+   "club": "Amherstburg Admirals"
+  },
+  {
+   "id": "lancers-6348",
+   "team": "lancers",
+   "sport": "Men's Hockey",
+   "start": "2026-11-13T19:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Laurier Golden Hawks",
+   "location": "Waterloo, ON",
+   "status": "final",
+   "our_score": 4,
+   "opp_score": 3,
+   "result": "W",
+   "note": "SO",
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6348",
+    "recap": "https://golancers.ca/news/2026/11/14/mens-hockey-earns-two-points-in-shootout-win-over-laurier.aspx"
+   }
+  },
+  {
+   "id": "junior-ojhl16673",
+   "team": "junior",
+   "sport": "OJHL (Jr. A)",
+   "start": "2026-11-13T19:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Collingwood Blues",
+   "location": "Eddie Bush Memorial Arena, Collingwood, Ontario",
+   "status": "final",
+   "our_score": 5,
+   "opp_score": 3,
+   "result": "W",
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.ojhl.ca/stats/game-center/16673"
+   },
+   "club": "Leamington Flyers"
+  },
+  {
+   "id": "junior-gs2960601",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-11-13T19:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Blenheim Blades",
+   "location": "Atlas Tube Centre",
+   "status": "final",
+   "our_score": 7,
+   "opp_score": 3,
+   "result": "W",
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960601?configuration=45"
+   },
+   "club": "Lakeshore Canadiens"
+  },
+  {
+   "id": "lancers-6205",
+   "team": "lancers",
+   "sport": "Women's Basketball",
+   "start": "2026-11-13T18:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Queen's Gaels",
+   "location": "Kingston, ON",
+   "status": "final",
+   "our_score": 61,
+   "opp_score": 64,
+   "result": "L",
+   "note": "",
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6205",
+    "recap": "https://golancers.ca/news/2026/11/14/womens-basketball-womens-basketball-comes-up-short-against-gaels.aspx"
+   }
+  },
+  {
+   "id": "lancers-6246",
+   "team": "lancers",
+   "sport": "Women's Volleyball",
+   "start": "2026-11-13T18:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "McMaster Marauders",
+   "location": "Toldo Lancer Centre",
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 0,
+   "result": "W",
+   "note": "25-18, 25-23, 25-20",
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6246",
+    "recap": "https://golancers.ca/news/2026/11/15/mens-volleyball-windsor-drops-back-to-back-games-to-mcmaster.aspx"
+   }
+  },
+  {
+   "id": "spitfires-ohl29186",
+   "team": "spitfires",
+   "sport": "Hockey",
+   "start": "2026-11-12T19:05:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Niagara IceDogs",
+   "location": "WFCU Centre, Windsor",
+   "status": "final",
+   "our_score": 4,
+   "opp_score": 1,
+   "result": "W",
+   "note": "",
+   "links": {
+    "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29186/"
+   }
+  },
+  {
+   "id": "junior-gojhl15678",
+   "team": "junior",
+   "sport": "GOHL (Jr. B)",
+   "start": "2026-11-12T19:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Ayr Centennials",
+   "location": "North Dumfries C.C., Ayr, ON",
+   "status": "final",
+   "our_score": 4,
+   "opp_score": 3,
+   "result": "W",
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.gohl.ca/stats/game-center/15678"
+   },
+   "club": "LaSalle Vipers"
+  },
+  {
+   "id": "lancers-6291",
+   "team": "lancers",
+   "sport": "Women's Hockey",
+   "start": "2026-11-07T19:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Toronto Varsity Blues",
+   "location": "Adie Knox Arena",
+   "status": "final",
+   "our_score": 5,
+   "opp_score": 2,
+   "result": "W",
+   "note": "",
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6291",
+    "recap": "https://golancers.ca/news/2026/11/8/womens-hockey-windsor-dominates-visiting-varsity-blues.aspx"
+   }
+  },
+  {
+   "id": "lancers-6497",
+   "team": "lancers",
+   "sport": "Football",
+   "start": "2026-11-07T13:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Western Mustangs",
+   "location": "London, ON",
+   "status": "final",
+   "our_score": 33,
+   "opp_score": 43,
+   "result": "L",
+   "note": "OUA Semi-Finals",
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6497",
+    "recap": "https://golancers.ca/news/2026/11/7/lancer-football-season-ends-with-semi-final-loss-to-western.aspx"
+   }
+  },
+  {
+   "id": "lancers-6387",
+   "team": "lancers",
+   "sport": "Cross Country",
+   "start": "2026-10-31T11:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "OUA Championships",
+   "location": "Malden Park",
+   "status": "final",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "W - 2nd, M - 5th",
+   "links": {
+    "recap": "https://golancers.ca/news/2026/10/31/lancers-claim-silver-at-oua-cross-country-championships.aspx"
+   }
+  },
+  {
+   "id": "lancers-6495",
+   "team": "lancers",
+   "sport": "Women's Soccer",
+   "start": "2026-10-21T19:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Brock Badgers",
+   "location": "St. Catharines, ON",
+   "status": "final",
+   "our_score": 0,
+   "opp_score": 1,
+   "result": "L",
+   "note": "OUA Playoffs - Round 1",
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6495",
+    "recap": "https://golancers.ca/news/2026/10/22/womens-soccer-lancers-wrap-up-season-with-loss-to-brock-in-first-round-playoff-game.aspx"
+   }
+  },
+  {
+   "id": "lancers-6199",
+   "team": "lancers",
+   "sport": "Men's Soccer",
+   "start": "2026-10-18T16:15:00-04:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Waterloo Warriors",
+   "location": "Waterloo, ON",
+   "status": "final",
+   "our_score": 0,
+   "opp_score": 0,
+   "result": "T",
+   "note": "",
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6199",
+    "recap": "https://golancers.ca/news/2026/10/19/mens-soccer-lancers-end-season-with-scoreless-draw-against-waterloo.aspx"
+   }
+  },
+  {
+   "id": "lancers-6494",
+   "team": "lancers",
+   "sport": "Softball",
+   "start": "2026-10-17T17:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "Western Mustangs",
+   "location": "Ottawa, ON",
+   "status": "final",
+   "our_score": 0,
+   "opp_score": 8,
+   "result": "L",
+   "note": "OUS Championships",
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6494",
+    "recap": "https://golancers.ca/news/2026/10/18/softball-wraps-up-season-at-ous-championships.aspx"
+   }
+  },
+  {
+   "id": "lancers-6396",
+   "team": "lancers",
+   "sport": "Golf",
+   "start": "2026-10-16T00:00:00-04:00",
+   "time_tbd": true,
+   "home_away": "A",
+   "opponent": "OUA Championships",
+   "location": "Ottawa, ON",
+   "status": "final",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "W - 6th, M - 13th",
+   "links": {
+    "recap": "https://golancers.ca/news/2026/10/19/lancer-golf-closes-out-season-at-oua-championships.aspx"
+   }
+  },
+  {
+   "id": "saints-cjfl45932111",
+   "team": "saints",
+   "sport": "Football",
+   "start": "2026-10-10T00:00:00-04:00",
+   "time_tbd": true,
+   "home_away": "H",
+   "opponent": "London Beefeaters",
+   "location": "Acumen Stadium, Windsor, ON, Canada",
+   "status": "final",
+   "our_score": 19,
+   "opp_score": 26,
+   "result": "L",
+   "note": "CJFL",
+   "links": {
+    "gamecentre": "https://www.cjfl.org/game/show/45932111"
+   }
+  },
+  {
+   "id": "lancers-6407",
+   "team": "lancers",
+   "sport": "Baseball",
+   "start": "2026-10-03T15:00:00-04:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "McMaster Marauders",
+   "location": "Lacasse Park",
+   "status": "final",
+   "our_score": 7,
+   "opp_score": 6,
+   "result": "W",
+   "note": "",
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6407",
+    "recap": "https://golancers.ca/news/2026/10/5/baseball-lancer-baseball-closes-out-2026-with-sweep-of-marauders.aspx"
+   }
+  }
+ ],
  "pro_games": [
   {
    "id": "cfl-cfl6676",
@@ -2628,6 +3024,19 @@
    "sn_team_count": 0,
    "sport": "Curling",
    "url": "https://www.sportsnet.ca/curling/article/report-dropkin-taking-injured-nichols-spot-on-team-dunstone-for-gsoc-national/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "David Beckham sues after fragrance sold in gas stations, discount stores",
+   "summary": "A dispute over the sale of David Beckham perfumes has struck a sour note with the soccer star turned style icon.",
+   "published": "2026-11-17T08:45-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-41.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/david-beckham-sues-after-fragrance-sold-in-gas-stations-discount-stores/",
    "source": "Sportsnet"
   },
   {
