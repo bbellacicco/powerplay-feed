@@ -226,7 +226,7 @@ def _next_payload_objects(html, marker='{"gameId":'):
 
 
 def _gamesheet_games(season, team_id, club, sport, now):
-    url = f"https://gamesheetstats.com/seasons/{season}/teams/{team_id}/schedule?configuration=45"
+    url = f"https://gamesheetstats.com/seasons/{season}/teams/{team_id}/schedule"   # no ?configuration: robots.txt asks crawlers to skip those
     html = fetch(url, f"pjhl_{team_id}.html" if FIXTURES else None)
     out, seen = [], set()
     for g in _next_payload_objects(html):
