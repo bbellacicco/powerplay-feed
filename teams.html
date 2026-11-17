@@ -64,7 +64,7 @@
   .ttabs button.on { background: var(--accent); color: #0b1a33; }
   .tpanes { margin-top: 14px; } .tpane[hidden] { display: none; }
   .scorebox .vs .w { color: #22c55e; } .scorebox .vs .l { color: #ef4444; } .scorebox .vs .t { color: var(--muted); }
-  .scorebox .more, .box .more { display: inline-block; margin-top: 6px; color: var(--accent); font-weight: 800; font-size: 13px; text-decoration: none; }
+  .scorebox .more, .box .more, .drop > .more { display: inline-block; margin-top: 6px; color: var(--accent); font-weight: 800; font-size: 13px; text-decoration: none; }
   .upnext { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--line); }
   .upnext .un { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 2px 10px; align-items: baseline; padding: 6px 0; }
   .upnext .un b { font-size: 13px; white-space: nowrap; } .upnext .un span { color: var(--muted); font-size: 13.5px; min-width: 0; }
@@ -408,7 +408,7 @@
     if (qs.get('pro') === '1') {
       var pr = el('div', 'prow');
       [['nhl', 'NHL'], ['nfl', 'NFL'], ['nba', 'NBA'], ['mlb', 'MLB'], ['cfl', 'CFL'], ['pwhl', 'PWHL']].forEach(function (p) {
-        var a = el('a', 'pl', p[1]); a.href = 'https://www.powerplaywindsor.com/local-sports?tab=scores&league=' + p[0]; a.target = '_top'; a.dataset.k = 'pro:' + p[0];
+        var a = el('a', 'pl', p[1]); a.href = 'https://www.powerplaywindsor.com/local-sports?tab=' + p[0]; a.target = '_top'; a.dataset.k = 'pro:' + p[0];
         // a tap opens that league's scores and standings right here, over the page (like a local team)
         a.onclick = function (e) { e.preventDefault(); closeTeam(); barPick = barPick === 'pro:' + p[0] ? '' : 'pro:' + p[0]; drawDrop(); markBar(); };
         pr.appendChild(a); });
@@ -426,6 +426,7 @@
       var lg = barPick.slice(4), top = el('div', 'prohead'), x = el('button', 'back', 'Close \u2715'); x.type = 'button';
       x.onclick = function () { barPick = ''; drawDrop(); markBar(); };
       top.appendChild(el('b', null, lg.toUpperCase())); top.appendChild(x); d.appendChild(top);
+      var hubl = el('a', 'more', 'Our ' + lg.toUpperCase() + ' teams, standings and stats on the Pro Hub \u203a'); hubl.href = 'https://www.powerplaywindsor.com/local-sports?tab=' + lg; hubl.target = '_top'; hubl.style.display = 'inline-block'; hubl.style.margin = '0 0 8px'; d.appendChild(hubl);
       var PG = 'https://bbellacicco.github.io/powerplay-feed/pro-games_3.html?v=' + Math.floor(Date.now() / 3600e3) + '&tab=' + lg + '&lock=1&in=sports';
       // 1. scores first (with the Standings and Stats switches)
       var pf = el('iframe', 'profr'); pf.title = lg.toUpperCase() + ' scores'; pf.scrolling = 'no'; pf.src = PG; d.appendChild(pf);
