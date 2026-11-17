@@ -630,7 +630,7 @@ document.addEventListener('load', function (e) {
           ['Athlete Profiles', PAGE.localHub + '?tab=athletes', 'athletes', 'person'], ['Junior Hockey', PAGE.localHub + '?tab=junior', 'junior', 'news'],
           ['Local Scores', PAGE.localHub + '?tab=scores', 'scores', 'score']]
     .forEach(function (d) { L.doors.appendChild(door(d[0], d[1], d[2], d[3], d[4])); });
-  if (R) [['Pro Scoreboard', PAGE.proHub, 'pro', 'score'], ['Pro Updates', PAGE.proHub, 'pro-updates', 'news'], ['Pro Network', PAGE.proHub, 'pro-network', 'play'], ['Search the site', PAGE.search, null, 'search']]
+  if (R) [['Pro Sports Guide', PAGE.proHub, 'pro', 'score'], ['Pro Headlines', PAGE.proHub, 'pro-updates', 'news'], ['NHL Hub', PAGE.proHub, 'pro-nhl', 'play'], ['Search the site', PAGE.search, null, 'search']]
     .forEach(function (d) { R.doors.appendChild(door(d[0], d[1], d[2], d[3])); });
 
   Promise.all([getJSON('local-news.json'), getJSON('local-games.json'), getJSON('highschool.json'), getJSON('network.json'), getJSON('team-logos.json')]).then(function (r) {
