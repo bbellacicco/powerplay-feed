@@ -598,11 +598,11 @@ document.addEventListener('load', function (e) {
     var seenU = {}; pro = pro.filter(function (x) { if (seenU[x.url]) return false; seenU[x.url] = 1; return true; });
     var ours = pro.filter(function (x) { return fanOf(x) && !x.video && x.image; });
     var big = pro.filter(function (x) { return /^(nhl|nfl|mlb|nba)$/.test(x.league) && !x.video && x.image; });
-    var story = pickOne(ours.length ? ours : big, 3);
+    var story = pickOne(big.length ? big : pro.filter(function (x) { return !x.video && x.image; }), 3);   // every team (ours are featured only in the Pro Sports Guide)
     // video: newest from our teams' own channels (Pro Network), else any pro video
     var pv = (net && net.pro || []).filter(function (v) { return v.u && v.t && v.i; }).sort(function (a, b) { return new Date(b.p) - new Date(a.p); });
     var mine = pv.filter(function (v) { return fanChannel(v.ch); });
-    var vv = pickOne(mine.length ? mine : pv, 3), video = vv && { headline: vv.t, url: vv.u, image: vv.i, ch: vv.ch };
+    var vv = pickOne(pv, 3), video = vv && { headline: vv.t, url: vv.u, image: vv.i, ch: vv.ch };
     var heads = [], usedU = {}; if (story) usedU[story.url] = 1;
     var add = function (x) {
       if (heads.length >= 4 || usedU[x.url]) return; usedU[x.url] = 1;
