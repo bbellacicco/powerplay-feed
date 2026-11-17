@@ -369,7 +369,7 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
 // tall (portrait) photos in wide boxes: show the upper part, where faces are, instead of the middle
 document.addEventListener('load', function (e) {
   var t = e.target;
-  if (t && t.tagName === 'IMG' && !t.closest('.ath') && t.naturalWidth && t.naturalHeight > t.naturalWidth * 1.05) t.style.objectPosition = 'center 18%';
+  if (t && t.tagName === 'IMG' && !t.closest('.ath') && t.naturalWidth && t.naturalHeight > t.naturalWidth * 1.05) t.style.objectPosition = t.naturalHeight > t.naturalWidth * 1.5 ? 'center 18%' : 'center 40%';   // tall phone shots: near the top; ordinary portrait photos: the middle, where faces usually are
 }, true);
 </script>
 </head>
