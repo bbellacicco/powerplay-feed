@@ -250,6 +250,10 @@ def _gamesheet_games(season, team_id, club, sport, now):
         elif st == "in_progress":
             if now - start > timedelta(hours=4):
                 note = "Score not posted yet"
+            elif not (to_int(us.get("goals")) or to_int(them.get("goals")) or us.get("goalDetails") or them.get("goalDetails")):
+                # many PJHL rinks keep a paper sheet and enter it after the game: GameSheet says "in progress" at 0-0 the
+                # whole night. Showing 0-0 would be wrong, so it stays a game that has started, with no score
+                note = "In progress"
             else:
                 status, our, opp = "live", to_int(us.get("goals")), to_int(them.get("goals"))
         elif "postpon" in st:
