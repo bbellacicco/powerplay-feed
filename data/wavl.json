@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-17T00:00:01-05:00",
- "today": "2026-11-17",
+ "updated": "2026-11-18T00:00:02-05:00",
+ "today": "2026-11-18",
  "source": "https://wavl.net",
  "leagues": [
   {
@@ -1058,13 +1058,13 @@
    "url": "https://wavl.net/standings?league=tues&seasonId=2",
    "nights": [
     {
-     "date": "2026-11-17",
-     "week": "Season 2 · Week 3 · Tuesday, November 17",
+     "date": "2026-11-24",
+     "week": "Season 2 · Week 4 · Tuesday, November 24",
      "gyms": [
       {
        "gym": "Bellewood",
        "addr": "2500 Labelle St",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
        "tier": "1",
        "time": "6:30",
        "teams": [
@@ -1072,7 +1072,34 @@
          "num": "1",
          "name": "Grant and Friends",
          "home": true,
-         "rank": "5"
+         "rank": "7"
+        },
+        {
+         "num": "4",
+         "name": "Phounstars",
+         "home": false,
+         "rank": "1"
+        },
+        {
+         "num": "7",
+         "name": "Rock Bottom",
+         "home": false,
+         "rank": "3"
+        }
+       ]
+      },
+      {
+       "gym": "John Campbell",
+       "addr": "1255 Tecumseh Rd E",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
+       "tier": "1",
+       "time": "6:30",
+       "teams": [
+        {
+         "num": "3",
+         "name": "Lord of the Swings",
+         "home": true,
+         "rank": "6"
         },
         {
          "num": "6",
@@ -1081,35 +1108,8 @@
          "rank": "4"
         },
         {
-         "num": "8",
-         "name": "Haikyu Tuesday",
-         "home": false,
-         "rank": "8"
-        }
-       ]
-      },
-      {
-       "gym": "John Campbell",
-       "addr": "1255 Tecumseh Rd E",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
-       "tier": "1",
-       "time": "6:30",
-       "teams": [
-        {
-         "num": "7",
-         "name": "Rock Bottom",
-         "home": true,
-         "rank": "3"
-        },
-        {
-         "num": "3",
-         "name": "Lord of the Swings",
-         "home": false,
-         "rank": "7"
-        },
-        {
-         "num": "5",
-         "name": "Miami Vice",
+         "num": "9",
+         "name": "Stranger Swings",
          "home": false,
          "rank": "9"
         }
@@ -1118,75 +1118,48 @@
       {
        "gym": "Roseland",
        "addr": "620 Cabana Rd East",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
        "tier": "1",
        "time": "6:30",
        "teams": [
         {
-         "num": "4",
-         "name": "Phounstars",
-         "home": true,
-         "rank": "1"
-        },
-        {
          "num": "2",
          "name": "A Block 2 Late",
-         "home": false,
+         "home": true,
          "rank": "2"
         },
         {
-         "num": "9",
-         "name": "Stranger Swings",
+         "num": "5",
+         "name": "Miami Vice",
          "home": false,
-         "rank": "6"
+         "rank": "8"
+        },
+        {
+         "num": "8",
+         "name": "Haikyu Tuesday",
+         "home": false,
+         "rank": "5"
         }
        ]
       },
       {
        "gym": "Central",
        "addr": "700 Norfolk St",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
        "tier": "2",
        "time": "6:30",
        "teams": [
-        {
-         "num": "7",
-         "name": "Noble Nonsense",
-         "home": true,
-         "rank": "7"
-        },
         {
          "num": "3",
          "name": "Call B4U Dig",
-         "home": false,
-         "rank": "5"
-        },
-        {
-         "num": "5",
-         "name": "No Mo Dolla$",
-         "home": false,
-         "rank": "8"
-        }
-       ]
-      },
-      {
-       "gym": "Roseville",
-       "addr": "6265 Roseville Garden",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
-       "tier": "2",
-       "time": "6:30",
-       "teams": [
-        {
-         "num": "4",
-         "name": "A Knights Tail",
          "home": true,
-         "rank": "2"
+         "rank": "6"
         },
         {
-         "num": "2",
-         "name": "Arther Not Author",
+         "num": "6",
+         "name": "Big Dig Energy Tues",
          "home": false,
-         "rank": "6"
+         "rank": "3"
         },
         {
          "num": "9",
@@ -1197,9 +1170,36 @@
        ]
       },
       {
+       "gym": "Roseville",
+       "addr": "6265 Roseville Garden",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
+       "tier": "2",
+       "time": "6:30",
+       "teams": [
+        {
+         "num": "2",
+         "name": "Arther Not Author",
+         "home": true,
+         "rank": "8"
+        },
+        {
+         "num": "5",
+         "name": "No Mo Dolla$",
+         "home": false,
+         "rank": "7"
+        },
+        {
+         "num": "8",
+         "name": "Surprisingly Athletic",
+         "home": false,
+         "rank": "4"
+        }
+       ]
+      },
+      {
        "gym": "St Christopher",
        "addr": "1213 EC Row E",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
        "tier": "2",
        "time": "6:30",
        "teams": [
@@ -1210,23 +1210,23 @@
          "rank": "1"
         },
         {
-         "num": "6",
-         "name": "Big Dig Energy Tues",
+         "num": "4",
+         "name": "A Knights Tail",
          "home": false,
-         "rank": "4"
+         "rank": "2"
         },
         {
-         "num": "8",
-         "name": "Surprisingly Athletic",
+         "num": "7",
+         "name": "Noble Nonsense",
          "home": false,
-         "rank": "3"
+         "rank": "5"
         }
        ]
       },
       {
        "gym": "Corpus Christie",
        "addr": "910 Raymo Rd",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
        "tier": "3",
        "time": "6:30",
        "teams": [
@@ -1234,44 +1234,44 @@
          "num": "1",
          "name": "Dat Pass",
          "home": true,
-         "rank": "6"
-        },
-        {
-         "num": "6",
-         "name": "See You in Court",
-         "home": false,
          "rank": "7"
         },
         {
-         "num": "8",
-         "name": "Mudseals",
+         "num": "4",
+         "name": "Practice Safe Sets",
          "home": false,
-         "rank": "1"
+         "rank": "6"
+        },
+        {
+         "num": "7",
+         "name": "Moose Knuckles",
+         "home": false,
+         "rank": "8"
         }
        ]
       },
       {
        "gym": "Hetherington",
        "addr": "8800 Menard St",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
        "tier": "3",
        "time": "6:30",
        "teams": [
         {
-         "num": "7",
-         "name": "Moose Knuckles",
-         "home": true,
-         "rank": "8"
-        },
-        {
          "num": "3",
          "name": "Prison Spike",
-         "home": false,
+         "home": true,
          "rank": "9"
         },
         {
-         "num": "5",
-         "name": "Dig Pic",
+         "num": "6",
+         "name": "See You in Court",
+         "home": false,
+         "rank": "5"
+        },
+        {
+         "num": "9",
+         "name": "Critical Hit",
          "home": false,
          "rank": "4"
         }
@@ -1280,88 +1280,88 @@
       {
        "gym": "Sandwich West #1",
        "addr": "2055 Wyoming Ave",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
        "tier": "3",
        "time": "6:30",
        "teams": [
         {
-         "num": "4",
-         "name": "Practice Safe Sets",
-         "home": true,
-         "rank": "5"
-        },
-        {
          "num": "2",
          "name": "Alani",
-         "home": false,
-         "rank": "3"
+         "home": true,
+         "rank": "1"
         },
         {
-         "num": "9",
-         "name": "Critical Hit",
+         "num": "5",
+         "name": "Dig Pic",
          "home": false,
          "rank": "2"
+        },
+        {
+         "num": "8",
+         "name": "Mudseals",
+         "home": false,
+         "rank": "3"
         }
        ]
       },
       {
        "gym": "Mcwilliam",
        "addr": "1901 EC Row Ave E",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
        "tier": "4",
        "time": "6:30",
        "teams": [
         {
-         "num": "7",
-         "name": "AJ's Gang",
-         "home": true,
-         "rank": "2"
-        },
-        {
          "num": "3",
          "name": "Don't Get Mike'd",
-         "home": false,
-         "rank": "6"
+         "home": true,
+         "rank": "8"
         },
         {
-         "num": "5",
-         "name": "Volleyology",
+         "num": "6",
+         "name": "To the Macks",
          "home": false,
          "rank": "3"
+        },
+        {
+         "num": "9",
+         "name": "Better Friends",
+         "home": false,
+         "rank": "7"
         }
        ]
       },
       {
        "gym": "Northwood",
        "addr": "1100 Northwood St",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
        "tier": "4",
        "time": "6:30",
        "teams": [
         {
-         "num": "4",
-         "name": "Spike Wasowski",
-         "home": true,
-         "rank": "4"
-        },
-        {
          "num": "2",
          "name": "Block N Load",
-         "home": false,
-         "rank": "8"
+         "home": true,
+         "rank": "9"
         },
         {
-         "num": "9",
-         "name": "Better Friends",
+         "num": "5",
+         "name": "Volleyology",
          "home": false,
-         "rank": "9"
+         "rank": "1"
+        },
+        {
+         "num": "8",
+         "name": "NaUGHty Six Pack",
+         "home": false,
+         "rank": "6"
         }
        ]
       },
       {
        "gym": "OLPH",
        "addr": "775 Capitol St",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
        "tier": "4",
        "time": "6:30",
        "teams": [
@@ -1369,53 +1369,53 @@
          "num": "1",
          "name": "A Means First",
          "home": true,
-         "rank": "1"
-        },
-        {
-         "num": "6",
-         "name": "To the Macks",
-         "home": false,
          "rank": "5"
         },
         {
-         "num": "8",
-         "name": "NaUGHty Six Pack",
+         "num": "4",
+         "name": "Spike Wasowski",
          "home": false,
-         "rank": "7"
+         "rank": "2"
+        },
+        {
+         "num": "7",
+         "name": "AJ's Gang",
+         "home": false,
+         "rank": "4"
         }
        ]
       },
       {
        "gym": "Davis",
        "addr": "2855 Rivard Ave",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
        "tier": "5",
        "time": "6:30",
        "teams": [
         {
-         "num": "7",
-         "name": "Sets with Lights On",
-         "home": true,
-         "rank": "2"
-        },
-        {
          "num": "3",
          "name": "Logans Run",
-         "home": false,
+         "home": true,
          "rank": "1"
         },
         {
-         "num": "5",
-         "name": "Aerially Inept",
+         "num": "6",
+         "name": "Gold Diggers",
          "home": false,
-         "rank": "7"
+         "rank": "4"
+        },
+        {
+         "num": "9",
+         "name": "Little Giants",
+         "home": false,
+         "rank": "2"
         }
        ]
       },
       {
        "gym": "St Joseph",
        "addr": "9381 N Townline Rd",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
        "tier": "5",
        "time": "6:30",
        "teams": [
@@ -1423,13 +1423,40 @@
          "num": "1",
          "name": "Passing Pinoys",
          "home": true,
-         "rank": "4"
+         "rank": "5"
         },
         {
-         "num": "6",
-         "name": "Gold Diggers",
+         "num": "4",
+         "name": "The Setsy Smashers",
+         "home": false,
+         "rank": "6"
+        },
+        {
+         "num": "7",
+         "name": "Sets with Lights On",
          "home": false,
          "rank": "3"
+        }
+       ]
+      },
+      {
+       "gym": "Westview",
+       "addr": "1375 California Ave",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
+       "tier": "5",
+       "time": "6:30",
+       "teams": [
+        {
+         "num": "2",
+         "name": "Project Egoist",
+         "home": true,
+         "rank": "8"
+        },
+        {
+         "num": "5",
+         "name": "Aerially Inept",
+         "home": false,
+         "rank": "7"
         },
         {
          "num": "8",
@@ -1440,90 +1467,63 @@
        ]
       },
       {
-       "gym": "Westview",
-       "addr": "1375 California Ave",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
-       "tier": "5",
-       "time": "6:30",
-       "teams": [
-        {
-         "num": "4",
-         "name": "The Setsy Smashers",
-         "home": true,
-         "rank": "6"
-        },
-        {
-         "num": "2",
-         "name": "Project Egoist",
-         "home": false,
-         "rank": "8"
-        },
-        {
-         "num": "9",
-         "name": "Little Giants",
-         "home": false,
-         "rank": "5"
-        }
-       ]
-      },
-      {
        "gym": "Prince Edward",
        "addr": "949 Giles Blvd E",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
        "tier": "6",
        "time": "6:30",
        "teams": [
         {
-         "num": "4",
-         "name": "Kim's Boys",
-         "home": true,
-         "rank": "6"
-        },
-        {
          "num": "2",
          "name": "Dewey Blox Spikes Hard",
-         "home": false,
+         "home": true,
          "rank": "2"
         },
         {
-         "num": "9",
-         "name": "Spaghetti and Vballs",
+         "num": "5",
+         "name": "Dive Hard",
          "home": false,
          "rank": "5"
+        },
+        {
+         "num": "8",
+         "name": "Ride the Hod Tues",
+         "home": false,
+         "rank": "6"
         }
        ]
       },
       {
        "gym": "Southwood",
        "addr": "1355 Cabana Rd W",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
        "tier": "6",
        "time": "6:30",
        "teams": [
         {
-         "num": "7",
-         "name": "Moynes the Merrier",
-         "home": true,
-         "rank": "1"
-        },
-        {
          "num": "3",
          "name": "Smackdown",
-         "home": false,
+         "home": true,
          "rank": "9"
         },
         {
-         "num": "5",
-         "name": "Dive Hard",
+         "num": "6",
+         "name": "Aburg Bangers",
          "home": false,
-         "rank": "4"
+         "rank": "7"
+        },
+        {
+         "num": "9",
+         "name": "Spaghetti and Vballs",
+         "home": false,
+         "rank": "3"
         }
        ]
       },
       {
        "gym": "St James",
        "addr": "1601 St James St",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
        "tier": "6",
        "time": "6:30",
        "teams": [
@@ -1531,53 +1531,53 @@
          "num": "1",
          "name": "Here Comes the Boom Tues",
          "home": true,
-         "rank": "3"
+         "rank": "4"
         },
         {
-         "num": "6",
-         "name": "Aburg Bangers",
+         "num": "4",
+         "name": "Kim's Boys",
          "home": false,
          "rank": "8"
         },
         {
-         "num": "8",
-         "name": "Ride the Hod Tues",
+         "num": "7",
+         "name": "Moynes the Merrier",
          "home": false,
-         "rank": "7"
+         "rank": "1"
         }
        ]
       },
       {
        "gym": "St Andre",
        "addr": "13765 St Gregorys Rd",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
        "tier": "7",
        "time": "6:30",
        "teams": [
         {
-         "num": "7",
-         "name": "Block Her I Dont Even Know Her",
-         "home": true,
-         "rank": "9"
-        },
-        {
          "num": "3",
          "name": "HC United",
-         "home": false,
+         "home": true,
          "rank": "8"
         },
         {
-         "num": "5",
-         "name": "Servivers",
+         "num": "6",
+         "name": "Ace Hole",
          "home": false,
-         "rank": "4"
+         "rank": "2"
+        },
+        {
+         "num": "9",
+         "name": "Chewblockas",
+         "home": false,
+         "rank": "6"
         }
        ]
       },
       {
        "gym": "St Anne",
        "addr": "1140 Monmouth",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
        "tier": "7",
        "time": "6:30",
        "teams": [
@@ -1588,10 +1588,37 @@
          "rank": "7"
         },
         {
-         "num": "6",
-         "name": "Ace Hole",
+         "num": "4",
+         "name": "The Unstable Ones",
          "home": false,
-         "rank": "2"
+         "rank": "5"
+        },
+        {
+         "num": "7",
+         "name": "Block Her I Dont Even Know Her",
+         "home": false,
+         "rank": "9"
+        }
+       ]
+      },
+      {
+       "gym": "St Gabriel",
+       "addr": "1400 Roselawn Blvd",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
+       "tier": "7",
+       "time": "6:30",
+       "teams": [
+        {
+         "num": "2",
+         "name": "But Did You Die",
+         "home": true,
+         "rank": "4"
+        },
+        {
+         "num": "5",
+         "name": "Servivers",
+         "home": false,
+         "rank": "3"
         },
         {
          "num": "8",
@@ -1602,50 +1629,50 @@
        ]
       },
       {
-       "gym": "St Gabriel",
-       "addr": "1400 Roselawn Blvd",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
-       "tier": "7",
-       "time": "6:30",
-       "teams": [
-        {
-         "num": "4",
-         "name": "The Unstable Ones",
-         "home": true,
-         "rank": "6"
-        },
-        {
-         "num": "2",
-         "name": "But Did You Die",
-         "home": false,
-         "rank": "3"
-        },
-        {
-         "num": "9",
-         "name": "Chewblockas",
-         "home": false,
-         "rank": "5"
-        }
-       ]
-      },
-      {
        "gym": "Hugh Beaton",
        "addr": "2229 Chilver Rd",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
        "tier": "8",
        "time": "6:30",
        "teams": [
         {
-         "num": "4",
-         "name": "Hitten Kittens",
+         "num": "2",
+         "name": "Set U Next Tues",
+         "home": true,
+         "rank": "8"
+        },
+        {
+         "num": "5",
+         "name": "Bump n Grind",
+         "home": false,
+         "rank": "7"
+        },
+        {
+         "num": "8",
+         "name": "Court Cowboys",
+         "home": false,
+         "rank": "6"
+        }
+       ]
+      },
+      {
+       "gym": "Notre Dame",
+       "addr": "2751 Partington Ave",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
+       "tier": "8",
+       "time": "6:30",
+       "teams": [
+        {
+         "num": "3",
+         "name": "Lib My Balls",
          "home": true,
          "rank": "2"
         },
         {
-         "num": "2",
-         "name": "Set U Next Tues",
+         "num": "6",
+         "name": "Volley Eagles",
          "home": false,
-         "rank": "7"
+         "rank": "9"
         },
         {
          "num": "9",
@@ -1656,36 +1683,9 @@
        ]
       },
       {
-       "gym": "Notre Dame",
-       "addr": "2751 Partington Ave",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
-       "tier": "8",
-       "time": "6:30",
-       "teams": [
-        {
-         "num": "7",
-         "name": "Serve N Turf",
-         "home": true,
-         "rank": "6"
-        },
-        {
-         "num": "3",
-         "name": "Lib My Balls",
-         "home": false,
-         "rank": "3"
-        },
-        {
-         "num": "5",
-         "name": "Bump n Grind",
-         "home": false,
-         "rank": "8"
-        }
-       ]
-      },
-      {
        "gym": "St Angela",
        "addr": "816 Ellis St E",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
        "tier": "8",
        "time": "6:30",
        "teams": [
@@ -1693,17 +1693,17 @@
          "num": "1",
          "name": "Ballz and Dollz",
          "home": true,
+         "rank": "3"
+        },
+        {
+         "num": "4",
+         "name": "Hitten Kittens",
+         "home": false,
          "rank": "1"
         },
         {
-         "num": "6",
-         "name": "Volley Eagles",
-         "home": false,
-         "rank": "9"
-        },
-        {
-         "num": "8",
-         "name": "Court Cowboys",
+         "num": "7",
+         "name": "Serve N Turf",
          "home": false,
          "rank": "5"
         }
@@ -1712,7 +1712,7 @@
       {
        "gym": "Calcutta",
        "addr": "1860 Chandler Ave",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
        "tier": "9",
        "time": "6:30",
        "teams": [
@@ -1720,107 +1720,107 @@
          "num": "1",
          "name": "Not Quite Perfect",
          "home": true,
-         "rank": "1"
-        },
-        {
-         "num": "6",
-         "name": "Net positive",
-         "home": false,
          "rank": "3"
         },
         {
-         "num": "8",
-         "name": "All For Fun",
+         "num": "4",
+         "name": "Net Ballerz",
          "home": false,
-         "rank": "2"
+         "rank": "4"
+        },
+        {
+         "num": "7",
+         "name": "Rock out with your Block Out",
+         "home": false,
+         "rank": "6"
         }
        ]
       },
       {
        "gym": "David Maxwell",
        "addr": "1648 Francois Rd",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
        "tier": "9",
        "time": "6:30",
        "teams": [
-        {
-         "num": "4",
-         "name": "Net Ballerz",
-         "home": true,
-         "rank": "5"
-        },
         {
          "num": "2",
          "name": "Hidden Volley Ranch",
-         "home": false,
-         "rank": "9"
-        },
-        {
-         "num": "9",
-         "name": "Make Up Sets",
-         "home": false,
-         "rank": "8"
-        }
-       ]
-      },
-      {
-       "gym": "Prince Elizabeth",
-       "addr": "5399 Raymond Ave",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
-       "tier": "9",
-       "time": "6:30",
-       "teams": [
-        {
-         "num": "7",
-         "name": "Rock out with your Block Out",
          "home": true,
-         "rank": "6"
-        },
-        {
-         "num": "3",
-         "name": "Spike Girls",
-         "home": false,
-         "rank": "4"
+         "rank": "8"
         },
         {
          "num": "5",
          "name": "Show Me Your Tips",
          "home": false,
          "rank": "7"
-        }
-       ]
-      },
-      {
-       "gym": "Glenwood",
-       "addr": "1601 Norfolk St",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
-       "tier": "10",
-       "time": "6:30",
-       "teams": [
-        {
-         "num": "7",
-         "name": "Rough Sets",
-         "home": true,
-         "rank": "3"
         },
         {
-         "num": "3",
-         "name": "Bump Set Chucks",
-         "home": false,
-         "rank": "2"
-        },
-        {
-         "num": "5",
-         "name": "Nothin' But Net",
+         "num": "8",
+         "name": "All For Fun",
          "home": false,
          "rank": "1"
         }
        ]
       },
       {
+       "gym": "Prince Elizabeth",
+       "addr": "5399 Raymond Ave",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
+       "tier": "9",
+       "time": "6:30",
+       "teams": [
+        {
+         "num": "3",
+         "name": "Spike Girls",
+         "home": true,
+         "rank": "5"
+        },
+        {
+         "num": "6",
+         "name": "Net positive",
+         "home": false,
+         "rank": "2"
+        },
+        {
+         "num": "9",
+         "name": "Make Up Sets",
+         "home": false,
+         "rank": "9"
+        }
+       ]
+      },
+      {
+       "gym": "Glenwood",
+       "addr": "1601 Norfolk St",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
+       "tier": "10",
+       "time": "6:30",
+       "teams": [
+        {
+         "num": "3",
+         "name": "Bump Set Chucks",
+         "home": true,
+         "rank": "2"
+        },
+        {
+         "num": "6",
+         "name": "Big Mamas Brigade",
+         "home": false,
+         "rank": "5"
+        },
+        {
+         "num": "9",
+         "name": "Sets with Benefits",
+         "home": false,
+         "rank": "8"
+        }
+       ]
+      },
+      {
        "gym": "Lassaline",
        "addr": "3145 Wildwood Dr",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
        "tier": "10",
        "time": "6:30",
        "teams": [
@@ -1831,50 +1831,50 @@
          "rank": "4"
         },
         {
-         "num": "6",
-         "name": "Big Mamas Brigade",
+         "num": "4",
+         "name": "All Set",
          "home": false,
-         "rank": "5"
+         "rank": "9"
         },
         {
-         "num": "8",
-         "name": "Take the Tip",
+         "num": "7",
+         "name": "Rough Sets",
          "home": false,
-         "rank": "6"
+         "rank": "3"
         }
        ]
       },
       {
        "gym": "OLMC",
        "addr": "4401 Mt Royal Dr",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
        "tier": "10",
        "time": "6:30",
        "teams": [
         {
-         "num": "4",
-         "name": "All Set",
-         "home": true,
-         "rank": "7"
-        },
-        {
          "num": "2",
          "name": "Bound by Gravity",
-         "home": false,
-         "rank": "8"
+         "home": true,
+         "rank": "6"
         },
         {
-         "num": "9",
-         "name": "Sets with Benefits",
+         "num": "5",
+         "name": "Nothin' But Net",
          "home": false,
-         "rank": "9"
+         "rank": "1"
+        },
+        {
+         "num": "8",
+         "name": "Take the Tip",
+         "home": false,
+         "rank": "7"
         }
        ]
       },
       {
        "gym": "General Brock",
        "addr": "3312 Sandwich St",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
        "tier": "11",
        "time": "6:30",
        "teams": [
@@ -1885,70 +1885,70 @@
          "rank": "7"
         },
         {
-         "num": "6",
-         "name": "Setting Ducks",
+         "num": "4",
+         "name": "Foreign Family",
          "home": false,
-         "rank": "5"
+         "rank": "1"
         },
         {
-         "num": "8",
-         "name": "Billions Must Ball",
+         "num": "7",
+         "name": "CJ's Misfits",
          "home": false,
-         "rank": "6"
+         "rank": "9"
         }
        ]
       },
       {
        "gym": "Lasalle Public #1",
        "addr": "1600 Mayfair Ave",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
        "tier": "11",
        "time": "6:30",
        "teams": [
         {
-         "num": "7",
-         "name": "CJ's Misfits",
-         "home": true,
-         "rank": "9"
-        },
-        {
          "num": "3",
          "name": "Net Tips and Chill",
-         "home": false,
+         "home": true,
          "rank": "8"
         },
         {
-         "num": "5",
-         "name": "One Bump at a Time",
+         "num": "6",
+         "name": "Setting Ducks",
          "home": false,
-         "rank": "1"
+         "rank": "2"
+        },
+        {
+         "num": "9",
+         "name": "One Night Sets",
+         "home": false,
+         "rank": "3"
         }
        ]
       },
       {
        "gym": "Queen Victoria",
        "addr": "1376 Victoria Ave",
-       "week": "Season 2 · Week 3 · Tuesday, November 17",
+       "week": "Season 2 · Week 4 · Tuesday, November 24",
        "tier": "11",
        "time": "6:30",
        "teams": [
         {
-         "num": "4",
-         "name": "Foreign Family",
-         "home": true,
-         "rank": "2"
-        },
-        {
          "num": "2",
          "name": "No Dig-nity",
-         "home": false,
-         "rank": "3"
+         "home": true,
+         "rank": "5"
         },
         {
-         "num": "9",
-         "name": "One Night Sets",
+         "num": "5",
+         "name": "One Bump at a Time",
          "home": false,
          "rank": "4"
+        },
+        {
+         "num": "8",
+         "name": "Billions Must Ball",
+         "home": false,
+         "rank": "6"
         }
        ]
       }
