@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T22:02:57-05:00",
+ "updated": "2026-11-17T22:16:56-05:00",
  "today": "2026-11-17",
  "range": [
   "2026-11-14",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -2845,6 +2845,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "Raptors falter late in second straight loss to Knicks",
+   "summary": "Jalen Brunson drilled a three-pointer with 1:25 left to play as the New York Knicks escaped with a 111-102 win over the Toronto Raptors on Tuesday for the second game in a row.",
+   "published": "2026-11-17T22:15-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/raps-1-1.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 2,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/raptors-falter-late-in-second-straight-loss-to-knicks/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "Homan, Einarson open with wins at Grand Slam of Curling National stop",
    "summary": "",
@@ -2868,6 +2883,32 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/oilers-mcdavid-extends-point-streak-to-hit-historic-milestone/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Boucher nets winner in debut, Senators cool off Jets",
+   "summary": "Tyler Boucher scored the game-winner in his NHL debut to lift the Ottawa Senators to a 2-1 victory over the Winnipeg Jets on Tuesday.",
+   "published": "2026-11-17T22:04-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-21.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/boucher-nets-winner-in-debut-senators-cool-off-jets/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Ducks’ Cutter Gauthier extends goal streak to 10 games",
+   "summary": "With a second-period marker against the St. Louis Blues, the Anaheim Ducks centre became the first player since Mario Lemieux in March/April 1993 to score 17 goals over a 10-game span, per Sportsnet Stats.",
+   "published": "2026-11-17T22:07-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/gauthier-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/ducks-cutter-gauthier-extends-goal-streak-to-10-games/",
    "source": "Sportsnet"
   },
   {
@@ -2927,19 +2968,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Flames’ Sam Honzek out week-to-week in AHL with wrist injury",
-   "summary": "",
-   "published": "2026-11-17T21:09-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/11/honzek.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/flames-sam-honzek-out-week-to-week-in-ahl-with-wrist-injury/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "mlb",
    "headline": "Yankees’ Bednar, Twins’ Jeffers accept $23.15-million qualifying offers",
    "summary": "",
@@ -2950,19 +2978,6 @@
    "sn_team_count": 7,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/yankees-bednar-twins-jeffers-accept-23-15-million-qualifying-offers/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "IIHF website hit by cyberattack after Russia excluded from world juniors",
-   "summary": "",
-   "published": "2026-11-17T09:00-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/01/Untitled-design-2026-01-22T105424.631.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/world-juniors/article/iihf-website-hit-by-apparent-hack-after-russia-excluded-from-world-juniors/",
    "source": "Sportsnet"
   },
   {
@@ -3004,6 +3019,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/flames-huberdeau-seeks-more-answers-as-he-returns-to-action/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "IIHF website hit by cyberattack after Russia excluded from world juniors",
+   "summary": "",
+   "published": "2026-11-17T09:00-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/01/Untitled-design-2026-01-22T105424.631.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/world-juniors/article/iihf-website-hit-by-apparent-hack-after-russia-excluded-from-world-juniors/",
    "source": "Sportsnet"
   },
   {
@@ -3212,45 +3240,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/devils-kovacevic-out-four-to-six-weeks-mantha-about-a-month/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Blues’ Jecho cleared to return from NHL/NHLPA player assistance program",
-   "summary": "",
-   "published": "2026-11-17T15:40-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/01/Adam-Jecho.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/blues-jecho-cleared-to-return-from-nhl-nhlpa-player-assistance-program/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Bryson DeChambeau to join European tour after LIV’s demise",
-   "summary": "",
-   "published": "2026-11-17T08:06-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/Bryson.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Golf",
-   "url": "https://www.sportsnet.ca/pga/article/bryson-dechambeau-to-join-european-tour-after-livs-demise/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Nations League roundup: Portugal wins behind new No. 7, Norway stuns Denmark",
-   "summary": "Portugal had a goal from its new No. 7 and the grit to hold on with 10 players in a 3-2 win against Wales in the Nations League on Tuesday, but it was another shaky display following Cristiano Ronaldo’s retirement from t",
-   "published": "2026-11-17T17:19-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-14-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/soccer/article/portugal-wins-with-goal-from-new-no-7-in-nations-league-norway-stuns-denmark/",
    "source": "Sportsnet"
   },
   {
