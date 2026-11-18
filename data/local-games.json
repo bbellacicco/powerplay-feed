@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T21:16:43-05:00",
+ "updated": "2026-11-17T21:35:50-05:00",
  "today": "2026-11-17",
  "range": [
   "2026-11-14",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 32
+   "count": 31
   },
   "club_news": {
    "ok": true,
@@ -469,10 +469,10 @@
    "home_away": "H",
    "opponent": "Lakeshore Canadiens",
    "location": "Essex Centre Complex",
-   "status": "live",
-   "our_score": 0,
-   "opp_score": 0,
-   "result": null,
+   "status": "final",
+   "our_score": 5,
+   "opp_score": 1,
+   "result": "W",
    "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960651?configuration=45"
@@ -3228,19 +3228,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Diallo aims to restore ‘broken’ trust in bid for FIFA presidency",
-   "summary": "",
-   "published": "2026-11-17T08:29-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Philippe-Diallo.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/soccer/article/diallo-aims-to-restore-broken-trust-in-bid-for-fifa-presidency/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nfl",
    "headline": "KEY QUESTIONS: Will Joseph make his 2026 debut Sunday vs. Buccaneers?",
    "summary": "Tim Twentyman covers all the key questions from Detroit Lions head coach Dan Campbell's Tuesday press conference.",
@@ -3686,7 +3673,7 @@
    "league": "mlb",
    "headline": "Here's a look at which ranked prospects got 40-man roster spots",
    "summary": "",
-   "published": "2026-11-17T19:54-05:00",
+   "published": "2026-11-17T21:15-05:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/n0q9izvzsdfo224eqhm0",
    "video": false,
    "teams": [
@@ -4380,6 +4367,18 @@
       "strk": "W1"
      },
      {
+      "name": "Newmarket Hurricanes",
+      "abbr": "NMH",
+      "gp": 25,
+      "w": 13,
+      "l": 9,
+      "otl": 3,
+      "pts": 29,
+      "gf": 79,
+      "ga": 69,
+      "strk": "W4"
+     },
+     {
       "name": "Stouffville Spirit",
       "abbr": "STO",
       "gp": 23,
@@ -4390,18 +4389,6 @@
       "gf": 93,
       "ga": 72,
       "strk": "W4"
-     },
-     {
-      "name": "Newmarket Hurricanes",
-      "abbr": "NMH",
-      "gp": 24,
-      "w": 12,
-      "l": 9,
-      "otl": 3,
-      "pts": 27,
-      "gf": 78,
-      "ga": 69,
-      "strk": "W3"
      },
      {
       "name": "Aurora Tigers",
@@ -4478,14 +4465,14 @@
      {
       "name": "Toronto Warriors",
       "abbr": "TOW",
-      "gp": 26,
+      "gp": 27,
       "w": 3,
-      "l": 20,
+      "l": 21,
       "otl": 3,
       "pts": 9,
       "gf": 59,
-      "ga": 155,
-      "strk": "L12"
+      "ga": 156,
+      "strk": "L13"
      }
     ]
    },
@@ -5097,26 +5084,26 @@
      {
       "name": "Essex 73's",
       "abbr": "ESS",
-      "gp": 19,
-      "w": 18,
+      "gp": 20,
+      "w": 19,
       "l": 1,
       "otl": 0,
-      "pts": 36,
-      "gf": 78,
-      "ga": 22,
-      "strk": "W18"
+      "pts": 38,
+      "gf": 83,
+      "ga": 23,
+      "strk": "W19"
      },
      {
       "name": "Lakeshore Canadiens",
       "abbr": "LAK",
-      "gp": 19,
+      "gp": 20,
       "w": 16,
-      "l": 1,
+      "l": 2,
       "otl": 2,
       "pts": 34,
-      "gf": 81,
-      "ga": 37,
-      "strk": "W7"
+      "gf": 82,
+      "ga": 42,
+      "strk": "L1"
      },
      {
       "name": "Blenheim Blades",
