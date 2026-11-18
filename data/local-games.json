@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T04:01:49-05:00",
+ "updated": "2026-11-18T05:32:30-05:00",
  "today": "2026-11-18",
  "range": [
   "2026-11-15",
@@ -38,8 +38,8 @@
    "count": 66
   },
   "lancers": {
-   "ok": true,
-   "count": 156
+   "ok": false,
+   "error": "The read operation timed out"
   },
   "junior": {
    "ok": true,
@@ -862,25 +862,6 @@
    "club": "Wheatley Sharks"
   },
   {
-   "id": "lancers-6250",
-   "team": "lancers",
-   "sport": "Women's Volleyball",
-   "start": "2026-11-27T18:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Brock Badgers",
-   "location": "Toldo Lancer Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=174",
-    "watch": "https://oua.tv/?school=Windsor"
-   }
-  },
-  {
    "id": "spitfires-ohl29245",
    "team": "spitfires",
    "sport": "Hockey",
@@ -897,62 +878,6 @@
    "links": {
     "tickets": "https://kitchenerlive.evenue.net/events/RANGERS",
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29245/"
-   }
-  },
-  {
-   "id": "lancers-6295",
-   "team": "lancers",
-   "sport": "Women's Hockey",
-   "start": "2026-11-27T19:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Toronto Varsity Blues",
-   "location": "Toronto, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "watch": "https://oua.tv/?school=Windsor"
-   }
-  },
-  {
-   "id": "lancers-6350",
-   "team": "lancers",
-   "sport": "Men's Hockey",
-   "start": "2026-11-27T19:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Guelph Gryphons",
-   "location": "Adie Knox Arena",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=173",
-    "watch": "https://oua.tv/?school=Windsor"
-   }
-  },
-  {
-   "id": "lancers-6270",
-   "team": "lancers",
-   "sport": "Men's Volleyball",
-   "start": "2026-11-27T19:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Brock Badgers",
-   "location": "Toldo Lancer Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=174",
-    "watch": "https://oua.tv/?school=Windsor"
    }
   },
   {
@@ -994,63 +919,6 @@
    "club": "Lakeshore Canadiens"
   },
   {
-   "id": "lancers-6251",
-   "team": "lancers",
-   "sport": "Women's Volleyball",
-   "start": "2026-11-28T12:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Brock Badgers",
-   "location": "Toldo Lancer Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=174",
-    "watch": "https://oua.tv/?school=Windsor"
-   }
-  },
-  {
-   "id": "lancers-6271",
-   "team": "lancers",
-   "sport": "Men's Volleyball",
-   "start": "2026-11-28T13:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Brock Badgers",
-   "location": "Toldo Lancer Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=174",
-    "watch": "https://oua.tv/?school=Windsor"
-   }
-  },
-  {
-   "id": "lancers-6351",
-   "team": "lancers",
-   "sport": "Men's Hockey",
-   "start": "2026-11-28T16:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Laurier Golden Hawks",
-   "location": "Adie Knox Arena",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=173",
-    "watch": "https://oua.tv/?school=Windsor"
-   }
-  },
-  {
    "id": "spitfires-ohl29251",
    "team": "spitfires",
    "sport": "Hockey",
@@ -1067,25 +935,6 @@
    "links": {
     "tickets": "https://www.axs.com/events/1504587/erie-otters-vs-windsor-spitfires-tickets?skin=erieotters\t\t\t\t\t\t\t",
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29251/"
-   }
-  },
-  {
-   "id": "lancers-6209",
-   "team": "lancers",
-   "sport": "Women's Basketball",
-   "start": "2026-11-28T18:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Western Mustangs",
-   "location": "Toldo Lancer Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=171",
-    "watch": "https://oua.tv/?school=Windsor"
    }
   },
   {
@@ -1106,44 +955,6 @@
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960739?configuration=45"
    },
    "club": "Amherstburg Admirals"
-  },
-  {
-   "id": "lancers-6296",
-   "team": "lancers",
-   "sport": "Women's Hockey",
-   "start": "2026-11-28T19:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "TMU Bold",
-   "location": "Adie Knox Arena",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=172",
-    "watch": "https://oua.tv/?school=Windsor"
-   }
-  },
-  {
-   "id": "lancers-6231",
-   "team": "lancers",
-   "sport": "Men's Basketball",
-   "start": "2026-11-28T20:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Western Mustangs",
-   "location": "Toldo Lancer Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=171",
-    "watch": "https://oua.tv/?school=Windsor"
-   }
   },
   {
    "id": "junior-gojhl15741",
@@ -1277,22 +1088,6 @@
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960769?configuration=45"
    },
    "club": "Wheatley Sharks"
-  },
-  {
-   "id": "lancers-6505",
-   "team": "lancers",
-   "sport": "Track and Field",
-   "start": "2026-12-04T00:00:00-05:00",
-   "time_tbd": true,
-   "home_away": "A",
-   "opponent": "SVSU Holiday Open",
-   "location": "University Center, MI",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {}
   }
  ],
  "last": [
@@ -1353,136 +1148,6 @@
    "club": "Amherstburg Admirals"
   },
   {
-   "id": "lancers-6228",
-   "team": "lancers",
-   "sport": "Men's Basketball",
-   "start": "2026-11-14T18:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Ontario Tech Ridgebacks",
-   "location": "Oshawa, ON",
-   "status": "final",
-   "our_score": 73,
-   "opp_score": 67,
-   "result": "W",
-   "note": "OT",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6228",
-    "recap": "https://golancers.ca/news/2026/11/15/mens-basketball-earns-first-win-of-the-season.aspx"
-   }
-  },
-  {
-   "id": "lancers-6292",
-   "team": "lancers",
-   "sport": "Women's Hockey",
-   "start": "2026-11-14T16:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Western Mustangs",
-   "location": "Adie Knox Arena",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 2,
-   "result": "W",
-   "note": "OT",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6292",
-    "recap": "https://golancers.ca/news/2026/11/15/womens-hockey-mitani-goal-lifts-lancers-over-mustangs-in-overtime.aspx"
-   }
-  },
-  {
-   "id": "lancers-6206",
-   "team": "lancers",
-   "sport": "Women's Basketball",
-   "start": "2026-11-14T16:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Ontario Tech Ridgebacks",
-   "location": "Oshawa, ON",
-   "status": "final",
-   "our_score": 95,
-   "opp_score": 53,
-   "result": "W",
-   "note": "",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6206",
-    "recap": "https://golancers.ca/news/2026/11/15/womens-basketball-lancers-wrap-up-road-trip-with-strong-win-over-ridgebacks.aspx"
-   }
-  },
-  {
-   "id": "lancers-6498",
-   "team": "lancers",
-   "sport": "Curling",
-   "start": "2026-11-14T15:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Mowhawk College",
-   "location": "Guelph, ON",
-   "status": "final",
-   "our_score": 6,
-   "opp_score": 7,
-   "result": "L",
-   "note": "Guelph Invitational - Men",
-   "links": {
-    "recap": "https://golancers.ca/news/2026/11/16/lancer-curling-competes-at-guelph-bonspiel.aspx"
-   }
-  },
-  {
-   "id": "lancers-6267",
-   "team": "lancers",
-   "sport": "Men's Volleyball",
-   "start": "2026-11-14T14:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "McMaster Marauders",
-   "location": "Toldo Lancer Centre",
-   "status": "final",
-   "our_score": 1,
-   "opp_score": 3,
-   "result": "L",
-   "note": "17-25, 15-25, 25-19, 21-25",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6267"
-   }
-  },
-  {
-   "id": "lancers-6247",
-   "team": "lancers",
-   "sport": "Women's Volleyball",
-   "start": "2026-11-14T13:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "McMaster Marauders",
-   "location": "Toldo Lancer Centre",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 2,
-   "result": "W",
-   "note": "18-25, 25-14, 25-17, 24-26, 15-12",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6247",
-    "recap": "https://golancers.ca/news/2026/11/15/mens-volleyball-windsor-drops-back-to-back-games-to-mcmaster.aspx"
-   }
-  },
-  {
-   "id": "lancers-6388",
-   "team": "lancers",
-   "sport": "Cross Country",
-   "start": "2026-11-14T00:00:00-05:00",
-   "time_tbd": true,
-   "home_away": "A",
-   "opponent": "U SPORTS Championships",
-   "location": "Hamilton, ON",
-   "status": "final",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "W - 7th, M - 9th",
-   "links": {
-    "recap": "https://golancers.ca/news/2026/11/15/cross-country-quanz-alkerton-named-u-sports-all-canadians.aspx"
-   }
-  },
-  {
    "id": "junior-gojhl15685",
    "team": "junior",
    "sport": "GOHL (Jr. B)",
@@ -1521,25 +1186,6 @@
    "club": "Essex 73's"
   },
   {
-   "id": "lancers-6348",
-   "team": "lancers",
-   "sport": "Men's Hockey",
-   "start": "2026-11-13T19:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Laurier Golden Hawks",
-   "location": "Waterloo, ON",
-   "status": "final",
-   "our_score": 4,
-   "opp_score": 3,
-   "result": "W",
-   "note": "SO",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6348",
-    "recap": "https://golancers.ca/news/2026/11/14/mens-hockey-earns-two-points-in-shootout-win-over-laurier.aspx"
-   }
-  },
-  {
    "id": "junior-ojhl16673",
    "team": "junior",
    "sport": "OJHL (Jr. A)",
@@ -1559,100 +1205,6 @@
    "club": "Leamington Flyers"
   },
   {
-   "id": "lancers-6497",
-   "team": "lancers",
-   "sport": "Football",
-   "start": "2026-11-07T13:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Western Mustangs",
-   "location": "London, ON",
-   "status": "final",
-   "our_score": 33,
-   "opp_score": 43,
-   "result": "L",
-   "note": "OUA Semi-Finals",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6497",
-    "recap": "https://golancers.ca/news/2026/11/7/lancer-football-season-ends-with-semi-final-loss-to-western.aspx"
-   }
-  },
-  {
-   "id": "lancers-6495",
-   "team": "lancers",
-   "sport": "Women's Soccer",
-   "start": "2026-10-21T19:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Brock Badgers",
-   "location": "St. Catharines, ON",
-   "status": "final",
-   "our_score": 0,
-   "opp_score": 1,
-   "result": "L",
-   "note": "OUA Playoffs - Round 1",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6495",
-    "recap": "https://golancers.ca/news/2026/10/22/womens-soccer-lancers-wrap-up-season-with-loss-to-brock-in-first-round-playoff-game.aspx"
-   }
-  },
-  {
-   "id": "lancers-6199",
-   "team": "lancers",
-   "sport": "Men's Soccer",
-   "start": "2026-10-18T16:15:00-04:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Waterloo Warriors",
-   "location": "Waterloo, ON",
-   "status": "final",
-   "our_score": 0,
-   "opp_score": 0,
-   "result": "T",
-   "note": "",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6199",
-    "recap": "https://golancers.ca/news/2026/10/19/mens-soccer-lancers-end-season-with-scoreless-draw-against-waterloo.aspx"
-   }
-  },
-  {
-   "id": "lancers-6494",
-   "team": "lancers",
-   "sport": "Softball",
-   "start": "2026-10-17T17:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Western Mustangs",
-   "location": "Ottawa, ON",
-   "status": "final",
-   "our_score": 0,
-   "opp_score": 8,
-   "result": "L",
-   "note": "OUS Championships",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6494",
-    "recap": "https://golancers.ca/news/2026/10/18/softball-wraps-up-season-at-ous-championships.aspx"
-   }
-  },
-  {
-   "id": "lancers-6396",
-   "team": "lancers",
-   "sport": "Golf",
-   "start": "2026-10-16T00:00:00-04:00",
-   "time_tbd": true,
-   "home_away": "A",
-   "opponent": "OUA Championships",
-   "location": "Ottawa, ON",
-   "status": "final",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "W - 6th, M - 13th",
-   "links": {
-    "recap": "https://golancers.ca/news/2026/10/19/lancer-golf-closes-out-season-at-oua-championships.aspx"
-   }
-  },
-  {
    "id": "saints-cjfl45932111",
    "team": "saints",
    "sport": "Football",
@@ -1668,25 +1220,6 @@
    "note": "CJFL",
    "links": {
     "gamecentre": "https://www.cjfl.org/game/show/45932111"
-   }
-  },
-  {
-   "id": "lancers-6407",
-   "team": "lancers",
-   "sport": "Baseball",
-   "start": "2026-10-03T15:00:00-04:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "McMaster Marauders",
-   "location": "Lacasse Park",
-   "status": "final",
-   "our_score": 7,
-   "opp_score": 6,
-   "result": "W",
-   "note": "",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6407",
-    "recap": "https://golancers.ca/news/2026/10/5/baseball-lancer-baseball-closes-out-2026-with-sweep-of-marauders.aspx"
    }
   }
  ],
