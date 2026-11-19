@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T13:16:46-05:00",
+ "updated": "2026-11-19T13:36:19-05:00",
  "today": "2026-11-19",
  "range": [
   "2026-11-16",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 30
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -2179,8 +2179,8 @@
    "league": "pwhl",
    "headline": "PWHL Announces Largest Takeover Tour™ to Date With 24 Games Across 19 Cities",
    "summary": "",
-   "published": "2026-11-19T12:00:00+00:00",
-   "image": "https://res.cloudinary.com/pwhl-low/image/upload/c_auto,g_auto,h_400,w_792/q_auto/f_auto/PWHLTakeoverTourHeader_16x9",
+   "published": "2026-11-19T15:00:00+00:00",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/PWHLTakeoverTourHeader_16x9",
    "video": false,
    "teams": [],
    "url": "https://www.thepwhl.com/en/news/2026/november/19/pwhl-announces-largest-takeover-tour-to-date-with-24-games-across-19-cities",
@@ -2457,6 +2457,36 @@
  "more_news": [
   {
    "league": "nhl",
+   "headline": "Sources: Edvinsson passed on offer sheets to avoid staying in Detroit",
+   "summary": "Sources say Simon Edvinsson has refused offer sheets because he doesn’t want to allow Detroit to match. Frank Seravalli has the latest on the saga.",
+   "published": "2026-11-19T12:39-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/01/Detroit-Red-Wings-defenseman-Simon-Edvinsson.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Red Wings"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/sources-edvinsson-passed-on-offer-sheets-to-avoid-staying-in-detroit/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "McKenna promoted, Nylander dropped as Maple Leafs mix lines",
+   "summary": "After Tuesday’s embarrassing loss in Chicago, Toronto Maple Leafs coach Jim Hiller stated that lineup tweaks were coming. Now that they’re here, Luke Fox breaks down the fallout.",
+   "published": "2026-11-19T13:18-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-42.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/mckenna-promoted-nylander-dropped-as-maple-leafs-mix-lines/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "NHL power rankings: Checking in on all 32 coaches",
    "summary": "It’s the time of year when the axe can start to fall around the NHL. Ryan Dixon uses this week’s power rankings as a coach check for all 32 clubs.",
    "published": "2026-11-19T11:39-05:00",
@@ -2485,15 +2515,17 @@
   },
   {
    "league": "nhl",
-   "headline": "Scout’s Analysis: Looking at the top Calder Trophy candidates",
-   "summary": "With enough games to get an idea of who the early front-runners are, Jason Bukala writes about five rookies making a strong case for the Calder Trophy.",
-   "published": "2026-11-19T09:38-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled.jpg",
+   "headline": "What we know (and don’t know) about Maple Leafs’ 2027 first-round pick",
+   "summary": "In March 2025, the Toronto Maple Leafs pulled off a couple of big moves in quick succession in pursuit of a playoff run, trading away a pair of first-round picks. Two years later, they’re about to pay the price.",
+   "published": "2026-11-19T13:16-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/05/chayka.jpg",
    "video": false,
-   "teams": [],
-   "sn_team_count": 0,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/scouts-analysis-looking-at-the-top-calder-trophy-candidates/",
+   "url": "https://www.sportsnet.ca/nhl/article/what-we-know-and-dont-know-about-maple-leafs-2027-first-round-pick/",
    "source": "Sportsnet"
   },
   {
@@ -2509,36 +2541,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/four-left-handed-relievers-blue-jays-could-target-in-free-agency/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Sources: Edvinsson passed on offer sheets to avoid staying in Detroit",
-   "summary": "Sources say Simon Edvinsson has refused offer sheets because he doesn’t want to allow Detroit to match. Frank Seravalli has the latest on the saga.",
-   "published": "2026-11-19T12:39-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/01/Detroit-Red-Wings-defenseman-Simon-Edvinsson.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Red Wings"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/sources-edvinsson-passed-on-offer-sheets-to-avoid-staying-in-detroit/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Raptors ‘don’t anticipate’ setbacks once Kawhi Leonard returns",
-   "summary": "The Raptors could use good news in the worst way, especially about Kawhi Leonard. Michael Grange paints the entire picture of the star’s injury and why there’s “hope” of a return sooner rather than later.",
-   "published": "2026-11-19T09:40-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/kahwi.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-dont-anticipate-setbacks-once-kawhi-leonard-returns/",
    "source": "Sportsnet"
   },
   {
@@ -2646,6 +2648,34 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "Raptors ‘don’t anticipate’ setbacks once Kawhi Leonard returns",
+   "summary": "The Raptors could use good news in the worst way, especially about Kawhi Leonard. Michael Grange paints the entire picture of the star’s injury and why there’s “hope” of a return sooner rather than later.",
+   "published": "2026-11-19T09:40-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/kahwi.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/raptors-dont-anticipate-setbacks-once-kawhi-leonard-returns/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Scout’s Analysis: Looking at the top Calder Trophy candidates",
+   "summary": "With enough games to get an idea of who the early front-runners are, Jason Bukala writes about five rookies making a strong case for the Calder Trophy.",
+   "published": "2026-11-19T09:38-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/scouts-analysis-looking-at-the-top-calder-trophy-candidates/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "Can Prochazka bounce back at UFC Qatar, stop Stirling’s rapid rise?",
    "summary": "The octagon returns on Saturday with a 12-fight card featuring plenty of title implications. Adam Martin breaks down the top storylines heading into UFC Qatar.",
@@ -2682,6 +2712,45 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/mls/article/mls-cup-playoffs-preview-whitecaps-canadas-lone-hope/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "MLS newcomers Lewandowski, Griezmann, Embolo join top-paid players",
+   "summary": "Robert Lewandowski, Antoine Griezmann and Breel Embolo are among the five highest-paid players in Major League Soccer after moving to the U.S. this summer, part of a transfer window that boosted MLS compensation by nearl",
+   "published": "2026-11-19T13:31-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/Lewandowski-.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/mls-newcomers-lewandowski-griezmann-embolo-join-top-paid-players/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "France’s Diallo, Japan’s Tashima challenging Infantino in FIFA election",
+   "summary": "",
+   "published": "2026-11-19T13:06-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-12.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/fifa-world-cup/article/frances-diallo-japans-tashima-challenging-infantino-in-fifa-election/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Charges dismissed against Floyd Mayweather Jr. over bad cheque",
+   "summary": "A Las Vegas court dismissed felony charges against Floyd Mayweather Jr. on Wednesday at the request of prosecutors, following allegations the boxer wrote a bad cheque to purchase a watch, according to court records.",
+   "published": "2026-11-19T13:32-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/Untitled-design-18-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "MMA More Sports",
+   "url": "https://www.sportsnet.ca/more/article/charges-dismissed-against-floyd-mayweather-jr-over-bad-cheque/",
    "source": "Sportsnet"
   },
   {
@@ -2766,19 +2835,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Canadiens’ Bolduc exits vs. Devils with upper-body injury",
-   "summary": "Forward Zachary Bolduc exited Wednesday’s game against the New Jersey Devils after suffering an apparent injury, the team told Sportsnet’s Eric Engels.",
-   "published": "2026-11-18T22:16-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/bold.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canadiens-bolduc-exits-vs-devils-with-apparent-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Penguins GM Dubas won’t sacrifice future to make playoffs",
    "summary": "",
    "published": "2026-11-18T13:04-05:00",
@@ -2801,21 +2857,6 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/pwhl/article/sarah-nurse-feeling-healthy-excited-as-goldeneyes-prep-for-second-season/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Raptors’ Collin Murray-Boyles exits vs. Wizards due to illness",
-   "summary": "Forward Collin Murray-Boyles exited the Raptors’ game against the Washington Wizards due to illness, it was announced midway through the second quarter.",
-   "published": "2026-11-18T20:32-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CMB.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-collin-murray-boyles-exits-vs-wizards-due-to-illness/",
    "source": "Sportsnet"
   },
   {
