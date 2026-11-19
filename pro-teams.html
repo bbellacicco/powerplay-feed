@@ -134,6 +134,15 @@
 <script src="share.js"></script>
 <script>
 (function () {
+  // ESPN doesn't always list a group best-first (the NBA's come worst-first): playoff seed, then points, then win percentage
+  function ppSort(es) {
+    var v = function (e, k) { var x = (e.stats || []).filter(function (s) { return s.name === k; })[0]; return x && x.value != null ? Number(x.value) : NaN; };
+    return es.slice().sort(function (a, b) {
+      var sa = v(a, 'playoffSeed'), sb = v(b, 'playoffSeed'); if (sa > 0 && sb > 0 && sa !== sb) return sa - sb;
+      var pa = v(a, 'points'), pb = v(b, 'points'); if (!isNaN(pa) && !isNaN(pb) && pa !== pb) return pb - pa;
+      return (v(b, 'winPercent') || 0) - (v(a, 'winPercent') || 0);
+    });
+  }
   var DATA = 'https://bbellacicco.github.io/powerplay-feed/data/';
   var SITE = 'https://www.powerplaywindsor.com/local-sports';
   var TZ = 'America/Toronto';
@@ -377,7 +386,7 @@
       var out = [];
       (function walk(n) {
         if (!n) return;
-        if (n.standings && n.standings.entries) out.push({ group: n.name, cols: L.cols.map(function (c) { return c[0]; }), teams: n.standings.entries.map(function (e) {
+        if (n.standings && n.standings.entries) out.push({ group: n.name, cols: L.cols.map(function (c) { return c[0]; }), teams: ppSort(n.standings.entries).map(function (e) {
           var st = {}; (e.stats || []).forEach(function (x) { st[x.name] = x.displayValue; });
           return { name: e.team.displayName, abbr: e.team.abbreviation, id: e.team.id, logo: e.team.logos && e.team.logos[0] && e.team.logos[0].href, vals: L.cols.map(function (c) { return st[c[1]]; }) }; }) });
         (n.children || []).forEach(walk);
