@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18T21:21:17-05:00",
+ "updated": "2026-11-18T21:33:05-05:00",
  "today": "2026-11-18",
  "range": [
   "2026-11-15",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 32
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -3022,6 +3022,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Wild keep winning big with best start in franchise history",
+   "summary": "The Minnesota Wild have had few opportunities this season to give their fans a glimpse of what has been one of the most completed and connected teams in the NHL, with an imbalanced early schedule that has them on the roa",
+   "published": "2026-11-18T18:23-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/wild.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/wild-keep-winning-big-with-best-start-in-franchise-history/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "NOTEBOOK: Gibbs vs. Bucs' top-ranked run defense a matchup to watch Sunday",
    "summary": "Tim Twentyman covers all the Detroit Lions news of the day including running back Jahmyr Gibbs being named NFC Offensive Player of the Week, preparing for the Tampa Bay Buccaneers and more.",
@@ -4211,14 +4224,14 @@
      {
       "name": "Trenton Golden Hawks",
       "abbr": "TRN",
-      "gp": 23,
+      "gp": 24,
       "w": 8,
-      "l": 11,
+      "l": 12,
       "otl": 4,
       "pts": 20,
       "gf": 89,
       "ga": 98,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "St. Michaels Buzzers",
@@ -4286,6 +4299,18 @@
       "strk": "W1"
      },
      {
+      "name": "Milton Menace",
+      "abbr": "MIL",
+      "gp": 26,
+      "w": 20,
+      "l": 4,
+      "otl": 2,
+      "pts": 42,
+      "gf": 101,
+      "ga": 54,
+      "strk": "W1"
+     },
+     {
       "name": "King Rebellion",
       "abbr": "KNG",
       "gp": 25,
@@ -4296,18 +4321,6 @@
       "gf": 102,
       "ga": 50,
       "strk": "W2"
-     },
-     {
-      "name": "Milton Menace",
-      "abbr": "MIL",
-      "gp": 25,
-      "w": 19,
-      "l": 4,
-      "otl": 2,
-      "pts": 40,
-      "gf": 101,
-      "ga": 54,
-      "strk": "L1"
      },
      {
       "name": "Toronto Patriots",
@@ -4473,6 +4486,18 @@
       "strk": "W1"
      },
      {
+      "name": "Elmira Sugar Kings",
+      "abbr": "ELM",
+      "gp": 23,
+      "w": 11,
+      "l": 11,
+      "otl": 1,
+      "pts": 23,
+      "gf": 92,
+      "ga": 90,
+      "strk": "W1"
+     },
+     {
       "name": "Stratford Warriors",
       "abbr": "SFD",
       "gp": 17,
@@ -4483,18 +4508,6 @@
       "gf": 58,
       "ga": 57,
       "strk": "W1"
-     },
-     {
-      "name": "Elmira Sugar Kings",
-      "abbr": "ELM",
-      "gp": 22,
-      "w": 10,
-      "l": 11,
-      "otl": 1,
-      "pts": 21,
-      "gf": 92,
-      "ga": 90,
-      "strk": "L1"
      },
      {
       "name": "LaSalle Vipers",
@@ -4535,14 +4548,14 @@
      {
       "name": "London Nationals",
       "abbr": "LON",
-      "gp": 20,
+      "gp": 21,
       "w": 8,
-      "l": 11,
+      "l": 12,
       "otl": 1,
       "pts": 17,
       "gf": 72,
       "ga": 90,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Komoka Kings",
