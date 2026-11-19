@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-18T23:51:23-05:00",
- "today": "2026-11-18",
+ "updated": "2026-11-19T00:07:28-05:00",
+ "today": "2026-11-19",
  "range": [
-  "2026-11-15",
-  "2026-11-21"
+  "2026-11-16",
+  "2026-11-22"
  ],
  "teams": {
   "spitfires": {
@@ -59,7 +59,7 @@
   },
   "cfl": {
    "ok": true,
-   "count": 1
+   "count": 0
   },
   "cfl_news": {
    "ok": true,
@@ -91,7 +91,7 @@
   },
   "pwhl": {
    "ok": true,
-   "count": 0
+   "count": 1
   },
   "cfl_standings": {
    "ok": true,
@@ -111,115 +111,6 @@
   }
  },
  "games": [
-  {
-   "id": "lancers-6499",
-   "team": "lancers",
-   "sport": "Curling",
-   "start": "2026-11-15T09:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Carleton Ravens",
-   "location": "Guelph, ON",
-   "status": "final",
-   "our_score": 1,
-   "opp_score": 9,
-   "result": "L",
-   "note": "Guelph Invitational - Women",
-   "links": {
-    "recap": "https://golancers.ca/news/2026/11/16/lancer-curling-competes-at-guelph-bonspiel.aspx"
-   }
-  },
-  {
-   "id": "lancers-6502",
-   "team": "lancers",
-   "sport": "Curling",
-   "start": "2026-11-15T09:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Trent Excalibur",
-   "location": "Guelph, ON",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 9,
-   "result": "L",
-   "note": "Guelph Invitational - Men",
-   "links": {
-    "recap": "https://golancers.ca/news/2026/11/16/lancer-curling-competes-at-guelph-bonspiel.aspx"
-   }
-  },
-  {
-   "id": "lancers-6503",
-   "team": "lancers",
-   "sport": "Curling",
-   "start": "2026-11-15T15:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "TMU Bold",
-   "location": "Guelph, ON",
-   "status": "final",
-   "our_score": 10,
-   "opp_score": 3,
-   "result": "W",
-   "note": "Guelph Invitational - Men",
-   "links": {
-    "recap": "https://golancers.ca/news/2026/11/16/lancer-curling-competes-at-guelph-bonspiel.aspx"
-   }
-  },
-  {
-   "id": "lancers-6500",
-   "team": "lancers",
-   "sport": "Curling",
-   "start": "2026-11-15T15:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "TMU Bold",
-   "location": "Guelph, ON",
-   "status": "final",
-   "our_score": 5,
-   "opp_score": 6,
-   "result": "L",
-   "note": "Guelph Invitational - Women",
-   "links": {
-    "recap": "https://golancers.ca/news/2026/11/16/lancer-curling-competes-at-guelph-bonspiel.aspx"
-   }
-  },
-  {
-   "id": "spitfires-ohl29206",
-   "team": "spitfires",
-   "sport": "Hockey",
-   "start": "2026-11-15T16:05:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Saginaw Spirit",
-   "location": "WFCU Centre, Windsor",
-   "status": "final",
-   "our_score": 2,
-   "opp_score": 1,
-   "result": "W",
-   "note": "OT",
-   "links": {
-    "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29206/"
-   }
-  },
-  {
-   "id": "junior-gojhl15693",
-   "team": "junior",
-   "sport": "GOHL (Jr. B)",
-   "start": "2026-11-15T19:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Waterloo Siskins",
-   "location": "Chatham Memorial Arena, Chatham, ON",
-   "status": "final",
-   "our_score": 4,
-   "opp_score": 3,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.gohl.ca/stats/game-center/15693"
-   },
-   "club": "Chatham Maroons"
-  },
   {
    "id": "junior-gs2960651",
    "team": "junior",
@@ -687,9 +578,7 @@
     "gamecentre": "https://www.gohl.ca/stats/game-center/15714"
    },
    "club": "Chatham Maroons"
-  }
- ],
- "ahead": [
+  },
   {
    "id": "junior-gs2960703",
    "team": "junior",
@@ -765,7 +654,9 @@
     "gamecentre": "https://www.gohl.ca/stats/game-center/15722"
    },
    "club": "Chatham Maroons"
-  },
+  }
+ ],
+ "ahead": [
   {
    "id": "junior-gojhl15725",
    "team": "junior",
@@ -1279,6 +1170,25 @@
    "club": "Wheatley Sharks"
   },
   {
+   "id": "junior-ojhl16736",
+   "team": "junior",
+   "sport": "OJHL (Jr. A)",
+   "start": "2026-12-03T19:10:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Burlington Cougars",
+   "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.ojhl.ca/stats/game-center/16736"
+   },
+   "club": "Leamington Flyers"
+  },
+  {
    "id": "lancers-6505",
    "team": "lancers",
    "sport": "Track and Field",
@@ -1297,6 +1207,61 @@
  ],
  "last": [
   {
+   "id": "junior-gojhl15693",
+   "team": "junior",
+   "sport": "GOHL (Jr. B)",
+   "start": "2026-11-15T19:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Waterloo Siskins",
+   "location": "Chatham Memorial Arena, Chatham, ON",
+   "status": "final",
+   "our_score": 4,
+   "opp_score": 3,
+   "result": "W",
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.gohl.ca/stats/game-center/15693"
+   },
+   "club": "Chatham Maroons"
+  },
+  {
+   "id": "spitfires-ohl29206",
+   "team": "spitfires",
+   "sport": "Hockey",
+   "start": "2026-11-15T16:05:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Saginaw Spirit",
+   "location": "WFCU Centre, Windsor",
+   "status": "final",
+   "our_score": 2,
+   "opp_score": 1,
+   "result": "W",
+   "note": "OT",
+   "links": {
+    "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29206/"
+   }
+  },
+  {
+   "id": "lancers-6503",
+   "team": "lancers",
+   "sport": "Curling",
+   "start": "2026-11-15T15:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "N",
+   "opponent": "TMU Bold",
+   "location": "Guelph, ON",
+   "status": "final",
+   "our_score": 10,
+   "opp_score": 3,
+   "result": "W",
+   "note": "Guelph Invitational - Men",
+   "links": {
+    "recap": "https://golancers.ca/news/2026/11/16/lancer-curling-competes-at-guelph-bonspiel.aspx"
+   }
+  },
+  {
    "id": "junior-gojhl15692",
    "team": "junior",
    "sport": "GOHL (Jr. B)",
@@ -1314,24 +1279,6 @@
     "gamecentre": "https://www.gohl.ca/stats/game-center/15692"
    },
    "club": "LaSalle Vipers"
-  },
-  {
-   "id": "spitfires-ohl29197",
-   "team": "spitfires",
-   "sport": "Hockey",
-   "start": "2026-11-14T19:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Flint Firebirds",
-   "location": "Dort Financial Center, Flint, MI",
-   "status": "final",
-   "our_score": 1,
-   "opp_score": 4,
-   "result": "L",
-   "note": "",
-   "links": {
-    "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29197/"
-   }
   },
   {
    "id": "junior-gs2960621",
@@ -1410,24 +1357,6 @@
    }
   },
   {
-   "id": "lancers-6498",
-   "team": "lancers",
-   "sport": "Curling",
-   "start": "2026-11-14T15:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Mowhawk College",
-   "location": "Guelph, ON",
-   "status": "final",
-   "our_score": 6,
-   "opp_score": 7,
-   "result": "L",
-   "note": "Guelph Invitational - Men",
-   "links": {
-    "recap": "https://golancers.ca/news/2026/11/16/lancer-curling-competes-at-guelph-bonspiel.aspx"
-   }
-  },
-  {
    "id": "lancers-6267",
    "team": "lancers",
    "sport": "Men's Volleyball",
@@ -1481,25 +1410,6 @@
    "links": {
     "recap": "https://golancers.ca/news/2026/11/15/cross-country-quanz-alkerton-named-u-sports-all-canadians.aspx"
    }
-  },
-  {
-   "id": "junior-gojhl15685",
-   "team": "junior",
-   "sport": "GOHL (Jr. B)",
-   "start": "2026-11-13T19:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "St. Marys Lincolns",
-   "location": "Pyramid R.C., St. Marys, ON",
-   "status": "final",
-   "our_score": 4,
-   "opp_score": 2,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.gohl.ca/stats/game-center/15685"
-   },
-   "club": "Chatham Maroons"
   },
   {
    "id": "junior-gs2960612",
@@ -1692,30 +1602,6 @@
  ],
  "pro_games": [
   {
-   "id": "cfl-cfl6676",
-   "team": "cfl",
-   "sport": "CFL",
-   "start": "2026-11-15T18:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Edmonton Elks",
-   "location": "McMahon Stadium",
-   "status": "final",
-   "our_score": 30,
-   "opp_score": 37,
-   "result": null,
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.cfl.ca/schedule/"
-   },
-   "away": "Montreal Alouettes",
-   "home": "Edmonton Elks",
-   "away_abbr": "MTL",
-   "home_abbr": "EDM"
-  }
- ],
- "pro_ahead": [
-  {
    "league": "pwhl",
    "start": "2026-11-22T21:50:00-05:00",
    "status": "upcoming",
@@ -1729,7 +1615,9 @@
    "note": "",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/353"
-  },
+  }
+ ],
+ "pro_ahead": [
   {
    "league": "pwhl",
    "start": "2026-11-23T13:30:00-05:00",
@@ -2654,19 +2542,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "mlb",
-   "headline": "Rob Manfred says MLB owners won’t compromise on a salary cap",
-   "summary": "",
-   "published": "2026-11-18T15:49-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/02/manfred.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/rob-manfred-says-mlb-owners-wont-compromise-on-a-salary-cap/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "Flames’ Huberdeau dishes trio of assists in first AHL rehab game",
    "summary": "",
@@ -2690,6 +2565,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/canadiens-bolduc-exits-vs-devils-with-apparent-injury/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "HearingLife National Day 2 Takeaways: Jacobs’ strong eighth end leads to win over Mouat",
+   "summary": "Just like at the Olympics, Brad Jacobs once again came up clutch to beat Bruce Mouat on Wednesday. Justin Arenburg has that and more in his takeaways from the second day of action at the HearingLife National.",
+   "published": "2026-11-18T23:09-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/2026GSOCNational-Sydney-266-copy.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "",
+   "url": "https://www.sportsnet.ca/curling/article/hearinglife-national-day-2-takeaways-jacobs-strong-eighth-end-leads-to-win-over-mouat/",
    "source": "Sportsnet"
   },
   {
@@ -2773,16 +2661,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "HearingLife National Day 2 Takeaways: Jacobs’ strong eighth end leads to win over Mouat",
-   "summary": "Just like at the Olympics, Brad Jacobs once again came up clutch to beat Bruce Mouat on Wednesday. Justin Arenburg has that and more in his takeaways from the second day of action at the HearingLife National.",
-   "published": "2026-11-18T23:09-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/2026GSOCNational-Sydney-266-copy.jpg",
+   "league": "mlb",
+   "headline": "Rob Manfred says MLB owners won’t compromise on a salary cap",
+   "summary": "",
+   "published": "2026-11-18T15:49-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/02/manfred.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
-   "sport": "",
-   "url": "https://www.sportsnet.ca/curling/article/hearinglife-national-day-2-takeaways-jacobs-strong-eighth-end-leads-to-win-over-mouat/",
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/rob-manfred-says-mlb-owners-wont-compromise-on-a-salary-cap/",
    "source": "Sportsnet"
   },
   {
@@ -2850,6 +2738,19 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/pwhl/article/sarah-nurse-feeling-healthy-excited-as-goldeneyes-prep-for-second-season/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "MLS Cup Playoffs preview: Whitecaps Canada’s lone hope",
+   "summary": "The Whitecaps are Canada’s lone hope in the 2026 MLS Cup Playoffs, while Lionel Messi and Inter Miami are looking to defend their title. John Molinaro has everything you need to know before the playoffs begin on Thursday",
+   "published": "2026-11-18T17:31-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/emmanuel-sabbi.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/mls-cup-playoffs-preview-whitecaps-canadas-lone-hope/",
    "source": "Sportsnet"
   },
   {
@@ -2941,19 +2842,6 @@
    "sn_team_count": 0,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/ncaa-mens-basketball/article/thomas-jr-scores-30-as-no-8-houston-topples-no-1-florida-in-players-era-8-semifinals/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "MLS Cup Playoffs preview: Whitecaps Canada’s lone hope",
-   "summary": "The Whitecaps are Canada’s lone hope in the 2026 MLS Cup Playoffs, while Lionel Messi and Inter Miami are looking to defend their title. John Molinaro has everything you need to know before the playoffs begin on Thursday",
-   "published": "2026-11-18T17:31-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/emmanuel-sabbi.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/mls-cup-playoffs-preview-whitecaps-canadas-lone-hope/",
    "source": "Sportsnet"
   },
   {
