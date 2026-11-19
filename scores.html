@@ -24,6 +24,7 @@
   html, body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.35 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
   /* nothing on this page scrolls by itself: on iPhones a scrolling box inside the page traps the finger */
   html, body { overflow: hidden; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }   /* iPhones don't enlarge the tab labels past the screen */
   .top { display: flex; justify-content: center; padding: 22px 16px 6px; }
   /* six sections: a squared-off grid, three across and two rows */
   .switch { display: grid; grid-template-columns: repeat(6, 1fr); width: 100%; max-width: 900px; gap: 1px; background: rgba(255,255,255,.16);
@@ -41,8 +42,9 @@
   @media (max-width: 560px) {
     .top { padding: 16px 10px 4px; }
     .switch { max-width: none; }
-    .switch { grid-template-columns: repeat(4, 1fr); }
-    .switch button { padding: 11px 2px; font-size: 11px; letter-spacing: .04em; }   /* phones: four across */
+    /* phones: four equal columns that never grow past the screen; a long name (High School) takes two lines */
+    .switch { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .switch button { padding: 10px 2px; font-size: 10.5px; letter-spacing: .02em; white-space: normal; line-height: 1.15; min-width: 0; }
     .top { flex-direction: column; } .sharebtn { position: static; transform: none; align-self: flex-end; }
   }
   .guide { margin: 18px 40px 0; }
