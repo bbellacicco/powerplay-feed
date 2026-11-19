@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T14:31:48-05:00",
+ "updated": "2026-11-19T14:52:42-05:00",
  "today": "2026-11-19",
  "range": [
   "2026-11-16",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -1864,6 +1864,19 @@
   },
   {
    "league": "cfl",
+   "headline": "Tiger-Cats extend offensive players Harris, Taylor and Biggins",
+   "summary": "",
+   "published": "2026-11-19T00:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/5Ka1LzTJhYmqziPt0ZtJfN/42bc250c4c7478c27f5d0373c0c692e5/Ticats_Helmet_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Tiger-Cats"
+   ],
+   "url": "https://www.cfl.ca/article/tiger-cats-extend-offensive-players-harris-taylor-and-biggins",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Riders sign Nationals Andersen, Bell, Hoskins, and Mimbs",
    "summary": "",
    "published": "2026-11-19T00:00:00-05:00",
@@ -1961,19 +1974,6 @@
    "video": true,
    "teams": [],
    "url": "https://www.cfl.ca/article/every-cfl-touchdown-from-the-113th-grey-cup",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Roughriders sign quarterback Trevor Harris to one-year extension",
-   "summary": "",
-   "published": "2026-11-17T00:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/6kpCLWHLxY47TScKDznz5m/aa730a509cca2b0af6238775c5789329/Trevor_Harris_2026.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Roughriders"
-   ],
-   "url": "https://www.cfl.ca/article/roughriders-sign-quarterback-trevor-harris-to-one-year-extension",
    "source": "CFL.ca"
   },
   {
@@ -2179,8 +2179,8 @@
    "league": "pwhl",
    "headline": "PWHL Announces Largest Takeover Tour™ to Date With 24 Games Across 19 Cities",
    "summary": "",
-   "published": "2026-11-19T15:00:00+00:00",
-   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/PWHLTakeoverTourHeader_16x9",
+   "published": "2026-11-19T12:00:00+00:00",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/c_auto,g_auto,h_400,w_792/q_auto/f_auto/PWHLTakeoverTourHeader_16x9",
    "video": false,
    "teams": [],
    "url": "https://www.thepwhl.com/en/news/2026/november/19/pwhl-announces-largest-takeover-tour-to-date-with-24-games-across-19-cities",
@@ -2570,6 +2570,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nfl",
+   "headline": "Two small studies find a clue in the quest to help diagnose CTE in the living",
+   "summary": "Scientists stumbled onto a hint that measuring a toxic protein tied to Alzheimer’s disease just might one day be useful in diagnosing a different brain disease in football players and others who have suffered repeated bl",
+   "published": "2026-11-19T14:32-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CTE.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football Hockey",
+   "url": "https://www.sportsnet.ca/nfl/article/two-small-studies-find-a-clue-in-the-quest-to-help-diagnose-cte-in-the-living/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "cfl",
    "headline": "Blue Bombers fire head coach Mike O’Shea",
    "summary": "",
@@ -2619,19 +2632,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/jets-dylan-demelo-out-four-to-six-weeks-with-lower-body-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "pwhl",
-   "headline": "PWHL bringing games to 19 neutral-site markets in fourth season",
-   "summary": "Detroit captain Hilary Knight, Vancouver rookie Caroline Harvey, New York’s Sarah Fillier and their fellow PWHL stars could be playing in a city near you.",
-   "published": "2026-11-19T10:13-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Takeover-Tour.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/pwhl/article/pwhl-bringing-games-to-19-neutral-site-markets-in-fourth-season/",
    "source": "Sportsnet"
   },
   {
@@ -2777,6 +2777,19 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/world-juniors/article/putin-criticizes-disregard-for-ruling-after-russia-barred-from-world-juniors/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "pwhl",
+   "headline": "PWHL bringing games to 19 neutral-site markets in fourth season",
+   "summary": "Detroit captain Hilary Knight, Vancouver rookie Caroline Harvey, New York’s Sarah Fillier and their fellow PWHL stars could be playing in a city near you.",
+   "published": "2026-11-19T10:13-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Takeover-Tour.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/pwhl/article/pwhl-bringing-games-to-19-neutral-site-markets-in-fourth-season/",
    "source": "Sportsnet"
   },
   {
