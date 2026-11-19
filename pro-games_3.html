@@ -186,6 +186,15 @@
 </div>
 <script>
 (function () {
+  // ESPN doesn't always list a group best-first (the NBA's come worst-first): playoff seed, then points, then win percentage
+  function ppSort(es) {
+    var v = function (e, k) { var x = (e.stats || []).filter(function (s) { return s.name === k; })[0]; return x && x.value != null ? Number(x.value) : NaN; };
+    return es.slice().sort(function (a, b) {
+      var sa = v(a, 'playoffSeed'), sb = v(b, 'playoffSeed'); if (sa > 0 && sb > 0 && sa !== sb) return sa - sb;
+      var pa = v(a, 'points'), pb = v(b, 'points'); if (!isNaN(pa) && !isNaN(pb) && pa !== pb) return pb - pa;
+      return (v(b, 'winPercent') || 0) - (v(a, 'winPercent') || 0);
+    });
+  }
   var TZ = 'America/Toronto';
   var DAYS_BACK = 1, DAYS_AHEAD = 3;   // yesterday (current scores) through three days from now (Coming Up)
   var LEAGUES = {
@@ -392,7 +401,7 @@
         var groups = [];
         (function walk(n, parent) {
           if (n.standings && n.standings.entries && n.standings.entries.length) {
-            groups.push({ group: n.name, conf: parent && parent.name, teams: n.standings.entries.map(function (e) {
+            groups.push({ group: n.name, conf: parent && parent.name, teams: ppSort(n.standings.entries).map(function (e) {
               var st = {}; e.stats.forEach(function (x) { if (!(x.abbreviation in st)) st[x.abbreviation] = x; });
               var v = function (a) { return st[a] ? st[a].displayValue : ''; };
               var num = function (a) { return st[a] ? Number(st[a].value) : 0; };
