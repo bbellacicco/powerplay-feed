@@ -96,6 +96,15 @@
 </div>
 <script>
 (function () {
+  // ESPN doesn't always list a group best-first (the NBA's come worst-first): playoff seed, then points, then win percentage
+  function ppSort(es) {
+    var v = function (e, k) { var x = (e.stats || []).filter(function (s) { return s.name === k; })[0]; return x && x.value != null ? Number(x.value) : NaN; };
+    return es.slice().sort(function (a, b) {
+      var sa = v(a, 'playoffSeed'), sb = v(b, 'playoffSeed'); if (sa > 0 && sb > 0 && sa !== sb) return sa - sb;
+      var pa = v(a, 'points'), pb = v(b, 'points'); if (!isNaN(pa) && !isNaN(pb) && pa !== pb) return pb - pa;
+      return (v(b, 'winPercent') || 0) - (v(a, 'winPercent') || 0);
+    });
+  }
   var BASE = 'https://bbellacicco.github.io/powerplay-feed/data/';
   var qs = new URLSearchParams(location.search);
   var BAR = qs.get('mode') === 'bar';
@@ -336,7 +345,7 @@
     if (!proStd[k]) proStd[k] = fetch('https://site.api.espn.com/apis/v2/sports/' + PRO[k][0] + '/standings?level=3').then(function (r) { return r.json(); }).then(function (j) {
       var out = [];
       function walk(n) {
-        if (n.standings && n.standings.entries) out.push({ group: n.name, teams: n.standings.entries.map(function (e) {
+        if (n.standings && n.standings.entries) out.push({ group: n.name, teams: ppSort(n.standings.entries).map(function (e) {
           var st = {}; (e.stats || []).forEach(function (x) { st[x.name] = x.displayValue; st['_' + x.name] = x.value; });
           return { id: e.team.id, name: e.team.displayName, nick: e.team.shortDisplayName || e.team.name, abbr: e.team.abbreviation, logo: e.team.logos && e.team.logos[0] && e.team.logos[0].href, st: st,
                    link: e.team.links && e.team.links[0] && e.team.links[0].href };
