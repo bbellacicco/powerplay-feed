@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T11:07:50-05:00",
+ "updated": "2026-11-19T11:17:03-05:00",
  "today": "2026-11-19",
  "range": [
   "2026-11-16",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -2172,8 +2172,8 @@
    "league": "pwhl",
    "headline": "PWHL Announces Largest Takeover Tour™ to Date With 24 Games Across 19 Cities",
    "summary": "",
-   "published": "2026-11-19T12:00:00+00:00",
-   "image": "https://res.cloudinary.com/pwhl-low/image/upload/c_auto,g_auto,h_400,w_792/q_auto/f_auto/PWHLTakeoverTourHeader_16x9",
+   "published": "2026-11-19T15:00:00+00:00",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/PWHLTakeoverTourHeader_16x9",
    "video": false,
    "teams": [],
    "url": "https://www.thepwhl.com/en/news/2026/november/19/pwhl-announces-largest-takeover-tour-to-date-with-24-games-across-19-cities",
@@ -2503,6 +2503,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Scout’s Analysis: Looking at the top Calder Trophy candidates",
+   "summary": "With enough games to get an idea of who the early front-runners are, Jason Bukala writes about five rookies making a strong case for the Calder Trophy.",
+   "published": "2026-11-19T09:38-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/scouts-analysis-looking-at-the-top-calder-trophy-candidates/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nba",
    "headline": "Raptors ‘don’t anticipate’ setbacks once Kawhi Leonard returns",
    "summary": "The Raptors could use good news in the worst way, especially about Kawhi Leonard. Michael Grange paints the entire picture of the star’s injury and why there’s “hope” of a return sooner rather than later.",
@@ -2528,19 +2541,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/things-we-think-we-know-oilers-forging-different-identity-under-babcock/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Scout’s Analysis: Looking at the top Calder Trophy candidates",
-   "summary": "With enough games to get an idea of who the early front-runners are, Jason Bukala writes about five rookies making a strong case for the Calder Trophy.",
-   "published": "2026-11-19T09:38-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/scouts-analysis-looking-at-the-top-calder-trophy-candidates/",
    "source": "Sportsnet"
   },
   {
@@ -2663,6 +2663,32 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nfl",
+   "headline": "NFL Week 11 Pick ‘Em: Texans need win in pivotal divisional clash",
+   "summary": "The stars will be out on primetime in Week 11, and that’s all we can ask for as football fans. From lopsided matchups to heavyweight tilts, Evan Davidson gives his picks for the full NFL slate.",
+   "published": "2026-11-19T08:04-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/stroud.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-11-pick-em-texans-need-win-in-pivotal-divisional-clash/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "MLS Cup Playoffs preview: Whitecaps Canada’s lone hope",
+   "summary": "The Whitecaps are Canada’s lone hope in the 2026 MLS Cup Playoffs, while Lionel Messi and Inter Miami are looking to defend their title. John Molinaro has everything you need to know before the playoffs begin on Thursday",
+   "published": "2026-11-18T17:31-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/emmanuel-sabbi.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/mls-cup-playoffs-preview-whitecaps-canadas-lone-hope/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Revisiting pre-season questions: Matthews back, but Maple Leafs struggling",
    "summary": "Auston Matthews has answered whether or not he can return to form. As for the rest of the pre-season Maple Leafs questions? Justin Bourne takes a look at what has gone wrong for the team.",
@@ -2678,16 +2704,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "NFL Week 11 Pick ‘Em: Texans need win in pivotal divisional clash",
-   "summary": "The stars will be out on primetime in Week 11, and that’s all we can ask for as football fans. From lopsided matchups to heavyweight tilts, Evan Davidson gives his picks for the full NFL slate.",
-   "published": "2026-11-19T08:04-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/stroud.jpg",
+   "league": "nhl",
+   "headline": "Canucks’ Brock Boeser embracing leadership role amid rebuilding season",
+   "summary": "The Canucks may not have a captain, but they certainly have a leader. Iain MacIntyre breaks down Brock Boeser’s evolution from first-line sidekick to outspoken leader in the dressing room.",
+   "published": "2026-11-18T21:51-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/boeser.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-11-pick-em-texans-need-win-in-pivotal-divisional-clash/",
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canucks-brock-boeser-embracing-leadership-role-amid-rebuilding-season/",
    "source": "Sportsnet"
   },
   {
@@ -2718,19 +2744,6 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/bruins-beat-red-wings-spoil-detroits-centennial-celebration-game/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "MLS Cup Playoffs preview: Whitecaps Canada’s lone hope",
-   "summary": "The Whitecaps are Canada’s lone hope in the 2026 MLS Cup Playoffs, while Lionel Messi and Inter Miami are looking to defend their title. John Molinaro has everything you need to know before the playoffs begin on Thursday",
-   "published": "2026-11-18T17:31-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/emmanuel-sabbi.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/mls-cup-playoffs-preview-whitecaps-canadas-lone-hope/",
    "source": "Sportsnet"
   },
   {
