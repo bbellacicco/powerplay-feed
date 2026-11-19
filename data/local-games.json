@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T15:46:50-05:00",
+ "updated": "2026-11-19T16:06:17-05:00",
  "today": "2026-11-19",
  "range": [
   "2026-11-16",
@@ -98,8 +98,8 @@
    "count": 9
   },
   "pwhl_news": {
-   "ok": false,
-   "error": "<urlopen error _ssl.c:994: The handshake operation timed out>"
+   "ok": true,
+   "count": 23
   },
   "sportsnet": {
    "ok": true,
@@ -2544,6 +2544,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nfl",
+   "headline": "Rams’ Puka Nacua suspended three games for conduct violation",
+   "summary": "",
+   "published": "2026-11-19T15:49-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Puka.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/rams-puka-nacua-suspended-three-games-for-conduct-violation/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Bedard to remain out while Blackhawks weigh rehab vs. surgery",
    "summary": "The Chicago Blackhawks franchise player remain on the sidelines while the team decided on a course of action.",
@@ -2558,19 +2571,6 @@
   },
   {
    "league": "nfl",
-   "headline": "Ravens send Marlon Humphrey home, de-activate him against Panthers",
-   "summary": "The Baltimore Ravens have sent home and deactivated Marlon Humphrey ahead of Sunday’s match against the Carolina Panthers.",
-   "published": "2026-11-19T12:26-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-41-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/ravens-send-marlon-humphrey-home-de-activate-him-against-panthers/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
    "headline": "Two small studies find a clue in the quest to help diagnose CTE in the living",
    "summary": "Scientists stumbled onto a hint that measuring a toxic protein tied to Alzheimer’s disease just might one day be useful in diagnosing a different brain disease in football players and others who have suffered repeated bl",
    "published": "2026-11-19T14:32-05:00",
@@ -2580,6 +2580,19 @@
    "sn_team_count": 0,
    "sport": "Football Hockey",
    "url": "https://www.sportsnet.ca/nfl/article/two-small-studies-find-a-clue-in-the-quest-to-help-diagnose-cte-in-the-living/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Ravens send Marlon Humphrey home, de-activate him against Panthers",
+   "summary": "The Baltimore Ravens have sent home and deactivated Marlon Humphrey ahead of Sunday’s match against the Carolina Panthers.",
+   "published": "2026-11-19T12:26-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-41-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/ravens-send-marlon-humphrey-home-de-activate-him-against-panthers/",
    "source": "Sportsnet"
   },
   {
@@ -2632,19 +2645,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/blue-jackets-head-coach-rick-bowness-set-to-return-from-health-issue/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Cowboys’ defensive coordinator speaks after play-calling duties pulled",
-   "summary": "",
-   "published": "2026-11-19T13:12-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/christian-parker.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/cowboys-defensive-coordinator-speaks-after-play-calling-duties-pulled/",
    "source": "Sportsnet"
   },
   {
@@ -2751,6 +2751,19 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/nfl-week-11-pick-em-texans-need-win-in-pivotal-divisional-clash/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Cowboys’ defensive coordinator speaks after play-calling duties pulled",
+   "summary": "",
+   "published": "2026-11-19T13:12-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/christian-parker.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/cowboys-defensive-coordinator-speaks-after-play-calling-duties-pulled/",
    "source": "Sportsnet"
   },
   {
@@ -2881,19 +2894,6 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/belichick-kraft-advance-in-election-process-for-pro-football-hall-of-fame/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Canucks’ Brock Boeser embracing leadership role amid rebuilding season",
-   "summary": "The Canucks may not have a captain, but they certainly have a leader. Iain MacIntyre breaks down Brock Boeser’s evolution from first-line sidekick to outspoken leader in the dressing room.",
-   "published": "2026-11-18T21:51-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/boeser.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canucks-brock-boeser-embracing-leadership-role-amid-rebuilding-season/",
    "source": "Sportsnet"
   },
   {
