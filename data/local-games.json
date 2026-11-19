@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T15:31:41-05:00",
+ "updated": "2026-11-19T15:46:50-05:00",
  "today": "2026-11-19",
  "range": [
   "2026-11-16",
@@ -98,8 +98,8 @@
    "count": 9
   },
   "pwhl_news": {
-   "ok": true,
-   "count": 23
+   "ok": false,
+   "error": "<urlopen error _ssl.c:994: The handshake operation timed out>"
   },
   "sportsnet": {
    "ok": true,
@@ -2583,6 +2583,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Report: WNBA’s Sparks nearing record $750-million sale",
+   "summary": "",
+   "published": "2026-11-19T14:02-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/03/WNBA-generic.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/wnba/article/report-wnbas-sparks-nearing-record-750-million-sale/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "cfl",
    "headline": "Blue Bombers fire head coach Mike O’Shea",
    "summary": "",
@@ -2619,19 +2632,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/blue-jackets-head-coach-rick-bowness-set-to-return-from-health-issue/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Report: WNBA’s Sparks nearing record $750-million sale",
-   "summary": "",
-   "published": "2026-11-19T14:02-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/03/WNBA-generic.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/wnba/article/report-wnbas-sparks-nearing-record-750-million-sale/",
    "source": "Sportsnet"
   },
   {
