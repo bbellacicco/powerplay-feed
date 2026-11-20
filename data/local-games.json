@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T19:32:15-05:00",
+ "updated": "2026-11-19T19:51:19-05:00",
  "today": "2026-11-19",
  "range": [
   "2026-11-16",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 30
   },
   "club_news": {
    "ok": true,
@@ -143,7 +143,7 @@
    "our_score": 2,
    "opp_score": 1,
    "result": null,
-   "note": "05:15 1st",
+   "note": "20:00 2nd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15702"
    },
@@ -159,10 +159,10 @@
    "opponent": "Soo Greyhounds",
    "location": "WFCU Centre, Windsor",
    "status": "live",
-   "our_score": 2,
+   "our_score": 3,
    "opp_score": 0,
    "result": null,
-   "note": "07:08 1st",
+   "note": "00:00 1st",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29213/"
    }
@@ -180,7 +180,7 @@
    "our_score": 0,
    "opp_score": 0,
    "result": null,
-   "note": "10:37 1st",
+   "note": "20:00 2nd",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16692"
    },
@@ -2470,19 +2470,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "How Scheifele proved doubters wrong and etched name into Jets lore",
-   "summary": "Mark Scheifele “was doubted right away” after being drafted. No one is now, after the Jets’ captain passed Dale Hawerchuk as the franchise’s all-time points leader, writes Jeff Hamilton.",
-   "published": "2026-11-19T17:48-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/04/Mark-Scheifele.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/how-scheifele-proved-doubters-wrong-and-etched-name-into-jets-lore/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nfl",
    "headline": "Rams’ Puka Nacua suspended three games for conduct violation",
    "summary": "Los Angeles Rams receiver Puka Nacua has been suspended for three games for violating the NFL’s personal conduct policy, and he will serve the ban while already on injured reserve.",
@@ -2591,33 +2578,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nba",
-   "headline": "Raptors ‘don’t anticipate’ setbacks once Kawhi Leonard returns",
-   "summary": "The Raptors could use good news in the worst way, especially about Kawhi Leonard. Michael Grange paints the entire picture of the star’s injury and why there’s “hope” of a return sooner rather than later.",
-   "published": "2026-11-19T09:40-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/kahwi.jpg",
+   "league": "nhl",
+   "headline": "How Scheifele proved doubters wrong and etched name into Jets lore",
+   "summary": "Mark Scheifele “was doubted right away” after being drafted. No one is now, after the Jets’ captain passed Dale Hawerchuk as the franchise’s all-time points leader, writes Jeff Hamilton.",
+   "published": "2026-11-19T17:48-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/04/Mark-Scheifele.jpg",
    "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
+   "teams": [],
    "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-dont-anticipate-setbacks-once-kawhi-leonard-returns/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Four left-handed relievers Blue Jays could target in free agency",
-   "summary": "The Blue Jays’ top two off-season priorities are clear, but if there was a close third, it’s finding a lefty leverage reliever. Arden Zwelling looks into who Toronto could target in free agency.",
-   "published": "2026-11-19T08:39-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Alex-Vesia.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/four-left-handed-relievers-blue-jays-could-target-in-free-agency/",
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/how-scheifele-proved-doubters-wrong-and-etched-name-into-jets-lore/",
    "source": "Sportsnet"
   },
   {
@@ -2703,6 +2673,36 @@
    "source": "Sportsnet"
   },
   {
+   "league": "mlb",
+   "headline": "Four left-handed relievers Blue Jays could target in free agency",
+   "summary": "The Blue Jays’ top two off-season priorities are clear, but if there was a close third, it’s finding a lefty leverage reliever. Arden Zwelling looks into who Toronto could target in free agency.",
+   "published": "2026-11-19T08:39-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Alex-Vesia.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/four-left-handed-relievers-blue-jays-could-target-in-free-agency/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Raptors ‘don’t anticipate’ setbacks once Kawhi Leonard returns",
+   "summary": "The Raptors could use good news in the worst way, especially about Kawhi Leonard. Michael Grange paints the entire picture of the star’s injury and why there’s “hope” of a return sooner rather than later.",
+   "published": "2026-11-19T09:40-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/kahwi.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/raptors-dont-anticipate-setbacks-once-kawhi-leonard-returns/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "Can Prochazka bounce back at UFC Qatar, stop Stirling’s rapid rise?",
    "summary": "The octagon returns on Saturday with a 12-fight card featuring plenty of title implications. Adam Martin breaks down the top storylines heading into UFC Qatar.",
@@ -2752,6 +2752,19 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/mls/article/mls-cup-playoffs-preview-whitecaps-canadas-lone-hope/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Coach Jesse Marsch believes Canada can climb into FIFA’s top 20",
+   "summary": "Jesse Marsch believes this is just the beginning for Canada’s men’s soccer team.",
+   "published": "2026-11-19T19:28-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-27-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/soccer/article/coach-jesse-marsch-believes-canada-can-climb-into-fifas-top-20/",
    "source": "Sportsnet"
   },
   {
@@ -2845,58 +2858,6 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/pwhl/article/pwhl-bringing-games-to-19-neutral-site-markets-in-fourth-season/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Spurs’ Harper diagnosed with hip strain, expected to miss two to three weeks",
-   "summary": "",
-   "published": "2026-11-19T15:28-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-46.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/spurs-harper-diagnosed-with-hip-strain-expected-to-miss-two-to-three-weeks/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Cowboys’ defensive coordinator speaks after play-calling duties pulled",
-   "summary": "",
-   "published": "2026-11-19T13:12-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/christian-parker.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/cowboys-defensive-coordinator-speaks-after-play-calling-duties-pulled/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "MLS newcomers Lewandowski, Griezmann, Embolo join top-paid players",
-   "summary": "Robert Lewandowski, Antoine Griezmann and Breel Embolo are among the five highest-paid players in Major League Soccer after moving to the U.S. this summer, part of a transfer window that boosted MLS compensation by nearl",
-   "published": "2026-11-19T13:31-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/Lewandowski-.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/mls-newcomers-lewandowski-griezmann-embolo-join-top-paid-players/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "France’s Diallo, Japan’s Tashima challenging Infantino in FIFA election",
-   "summary": "",
-   "published": "2026-11-19T13:06-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-12.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/fifa-world-cup/article/frances-diallo-japans-tashima-challenging-infantino-in-fifa-election/",
    "source": "Sportsnet"
   },
   {
@@ -3239,15 +3200,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Tigers add fast-rising prospect Graham to 40-man roster, DFA Vierling",
+   "headline": "Ranking the Top 30 prospects from the '26 Fall League campaign",
    "summary": "",
-   "published": "2026-11-17T19:59-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/dxxooxq3a3vtkn9c65b1",
+   "published": "2026-11-19T19:00-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/im6tenc3jwrnrf6zegbu",
    "video": false,
    "teams": [
     "Detroit Tigers"
    ],
-   "url": "https://www.mlb.com/tigers/news/tigers-peyton-graham-40-man-roster-matt-vierling-designated-for-assignment",
+   "url": "https://www.mlb.com/tigers/news/top-30-arizona-fall-league-prospects-2026",
    "source": "Team site"
   },
   {
@@ -3265,6 +3226,19 @@
   },
   {
    "league": "mlb",
+   "headline": "Tigers add fast-rising prospect Graham to 40-man roster, DFA Vierling",
+   "summary": "",
+   "published": "2026-11-17T19:59-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/dxxooxq3a3vtkn9c65b1",
+   "video": false,
+   "teams": [
+    "Detroit Tigers"
+   ],
+   "url": "https://www.mlb.com/tigers/news/tigers-peyton-graham-40-man-roster-matt-vierling-designated-for-assignment",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
    "headline": "Pagán going to make Tigers ‘better in a number of ways’",
    "summary": "",
    "published": "2026-11-17T17:44-05:00",
@@ -3274,19 +3248,6 @@
     "Detroit Tigers"
    ],
    "url": "https://www.mlb.com/tigers/news/emilio-pagan-signs-one-year-deal-with-tigers",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
-   "headline": "Dingler, Greene, McGonigle take home Silver Slugger Awards",
-   "summary": "",
-   "published": "2026-11-17T19:05-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/x9szd1inkn185mqitwmg",
-   "video": false,
-   "teams": [
-    "Detroit Tigers"
-   ],
-   "url": "https://www.mlb.com/tigers/news/2026-silver-slugger-award-winners",
    "source": "Team site"
   },
   {
@@ -3304,15 +3265,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Pagán, Tigers finalize 1-year, $11.5 million deal",
+   "headline": "Dingler, Greene, McGonigle take home Silver Slugger Awards",
    "summary": "",
-   "published": "2026-11-17T15:05-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/ta5kj5cw6wew9ocowmar",
+   "published": "2026-11-17T19:05-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/x9szd1inkn185mqitwmg",
    "video": false,
    "teams": [
     "Detroit Tigers"
    ],
-   "url": "https://www.mlb.com/tigers/news/emilio-pagan-contract-with-tigers",
+   "url": "https://www.mlb.com/tigers/news/2026-silver-slugger-award-winners",
    "source": "Team site"
   },
   {
@@ -3339,6 +3300,19 @@
     "Detroit Tigers"
    ],
    "url": "https://www.mlb.com/milb/prospects/2026/tigers/",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
+   "headline": "Pagán, Tigers finalize 1-year, $11.5 million deal",
+   "summary": "",
+   "published": "2026-11-17T15:05-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/ta5kj5cw6wew9ocowmar",
+   "video": false,
+   "teams": [
+    "Detroit Tigers"
+   ],
+   "url": "https://www.mlb.com/tigers/news/emilio-pagan-contract-with-tigers",
    "source": "Team site"
   },
   {
@@ -3404,19 +3378,6 @@
     "Detroit Tigers"
    ],
    "url": "https://www.mlb.com/tigers/news/kevin-mcgonigle-wins-2026-al-rookie-of-the-year",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
-   "headline": "Longtime MLB catcher Maldonado among new faces on Tigers' coaching staff for '27",
-   "summary": "",
-   "published": "2026-11-06T11:30-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/qieb7hwco4rf43gtuicb",
-   "video": false,
-   "teams": [
-    "Detroit Tigers"
-   ],
-   "url": "https://www.mlb.com/tigers/news/tigers-announce-2027-mlb-coaching-training-staffs",
    "source": "Team site"
   },
   {
@@ -3838,7 +3799,7 @@
       "otl": 3,
       "pts": 19,
       "gf": 60,
-      "ga": 79,
+      "ga": 80,
       "strk": "L1"
      },
      {
@@ -3862,7 +3823,7 @@
       "otl": 3,
       "pts": 13,
       "gf": 53,
-      "ga": 83,
+      "ga": 84,
       "strk": "W1"
      }
     ]
@@ -3879,7 +3840,7 @@
       "otl": 2,
       "pts": 30,
       "gf": 80,
-      "ga": 79,
+      "ga": 80,
       "strk": "W2"
      },
      {
@@ -3890,7 +3851,7 @@
       "l": 6,
       "otl": 3,
       "pts": 29,
-      "gf": 81,
+      "gf": 82,
       "ga": 64,
       "strk": "W1"
      },
@@ -3902,7 +3863,7 @@
       "l": 5,
       "otl": 1,
       "pts": 27,
-      "gf": 72,
+      "gf": 73,
       "ga": 53,
       "strk": "W2"
      },
@@ -3914,7 +3875,7 @@
       "l": 9,
       "otl": 4,
       "pts": 22,
-      "gf": 79,
+      "gf": 80,
       "ga": 80,
       "strk": "W1"
      },
@@ -4430,7 +4391,7 @@
       "l": 15,
       "otl": 0,
       "pts": 12,
-      "gf": 70,
+      "gf": 71,
       "ga": 90,
       "strk": "W1"
      },
@@ -4443,7 +4404,7 @@
       "otl": 1,
       "pts": 3,
       "gf": 39,
-      "ga": 113,
+      "ga": 114,
       "strk": "L5"
      }
     ]
@@ -4471,8 +4432,8 @@
       "l": 1,
       "otl": 1,
       "pts": 33,
-      "gf": 91,
-      "ga": 51,
+      "gf": 92,
+      "ga": 52,
       "strk": "W4"
      },
      {
@@ -4543,8 +4504,8 @@
       "l": 12,
       "otl": 3,
       "pts": 17,
-      "gf": 70,
-      "ga": 94,
+      "gf": 71,
+      "ga": 95,
       "strk": "W1"
      },
      {
