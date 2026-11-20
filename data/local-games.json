@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-19T23:46:44-05:00",
- "today": "2026-11-19",
+ "updated": "2026-11-20T00:06:57-05:00",
+ "today": "2026-11-20",
  "range": [
-  "2026-11-16",
-  "2026-11-22"
+  "2026-11-17",
+  "2026-11-23"
  ],
  "teams": {
   "spitfires": {
@@ -91,7 +91,7 @@
   },
   "pwhl": {
    "ok": true,
-   "count": 1
+   "count": 5
   },
   "cfl_standings": {
    "ok": true,
@@ -1201,6 +1201,82 @@
    "result": null,
    "note": "",
    "links": {}
+  },
+  {
+   "id": "junior-ojhl16742",
+   "team": "junior",
+   "sport": "OJHL (Jr. A)",
+   "start": "2026-12-04T19:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Lindsay Muskies",
+   "location": "Lindsay Rec Complex, Lindsay, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.ojhl.ca/stats/game-center/16742"
+   },
+   "club": "Leamington Flyers"
+  },
+  {
+   "id": "junior-gs2960778",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-12-04T19:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Mooretown Flags",
+   "location": "Atlas Tube Centre",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960778?configuration=45"
+   },
+   "club": "Lakeshore Canadiens"
+  },
+  {
+   "id": "junior-gojhl15753",
+   "team": "junior",
+   "sport": "GOHL (Jr. B)",
+   "start": "2026-12-04T19:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Listowel Cyclones",
+   "location": "Steve Kerr M.C., Listowel, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.gohl.ca/stats/game-center/15753"
+   },
+   "club": "Chatham Maroons"
+  },
+  {
+   "id": "junior-gs2960787",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-12-04T19:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Dresden Kings",
+   "location": "Lambton-Kent Memorial Centre",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960787?configuration=45"
+   },
+   "club": "Wheatley Sharks"
   }
  ],
  "last": [
@@ -1613,9 +1689,7 @@
    "note": "",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/353"
-  }
- ],
- "pro_ahead": [
+  },
   {
    "league": "pwhl",
    "start": "2026-11-23T13:30:00-05:00",
@@ -1675,7 +1749,9 @@
    "note": "",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/356"
-  },
+  }
+ ],
+ "pro_ahead": [
   {
    "league": "pwhl",
    "start": "2026-11-24T13:30:00-05:00",
@@ -2483,15 +2559,15 @@
   },
   {
    "league": "nhl",
-   "headline": "Hutson strikes twice, including OT winner, as Canadiens beat Hurricanes",
-   "summary": "",
-   "published": "2026-11-19T22:11-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Hutson.jpg",
+   "headline": "Lane Hutson leads Canadiens to gutsiest win of season",
+   "summary": "The Hurricanes tried to push them. But Lane Hutson and the Canadiens didn’t just get up and push back, they pushed the Hurricanes over in a way they haven’t been able to in recent memory.",
+   "published": "2026-11-19T23:47-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/canadiens-1.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 2,
+   "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/hutson-strikes-twice-including-ot-winner-as-canadiens-beat-hurricanes/",
+   "url": "https://www.sportsnet.ca/nhl/article/lane-hutson-leads-canadiens-to-gutsiest-win-of-the-season/",
    "source": "Sportsnet"
   },
   {
