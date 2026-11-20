@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T15:31:43-05:00",
+ "updated": "2026-11-20T15:53:02-05:00",
  "today": "2026-11-20",
  "range": [
   "2026-11-17",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -2612,16 +2612,18 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Support from Flames says plenty about Huberdeau’s reputation",
-   "summary": "Everything you need to know about how beloved Jonathan Huberdeau is in the Flames organization was on full display when the 33-year-old was warming up for his first AHL game. Eric Francis has the story.",
-   "published": "2026-11-19T23:54-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/Calgary-Flames-left-wing-Jonathan-Huberdeau.jpg",
+   "league": "nba",
+   "headline": "Report: Raptors’ Kawhi Leonard out at least two more weeks",
+   "summary": "",
+   "published": "2026-11-20T15:46-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Leonard.jpg",
    "video": false,
-   "teams": [],
+   "teams": [
+    "Toronto Raptors"
+   ],
    "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/support-from-flames-says-plenty-of-huberdeaus-reputation/",
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/report-raptors-kawhi-leonard-out-at-least-two-more-weeks/",
    "source": "Sportsnet"
   },
   {
@@ -2773,6 +2775,21 @@
   },
   {
    "league": "nfl",
+   "headline": "Bills rule out Benford, Williams for game against Dolphins",
+   "summary": "The Buffalo Bills on Friday ruled out starting cornerback Christian Benford and backup linebacker Dorian Williams from playing against the Miami Dolphins on Sunday.",
+   "published": "2026-11-20T15:37-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/12/CB.jpg",
+   "video": false,
+   "teams": [
+    "Buffalo Bills"
+   ],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/bills-rule-out-benford-williams-for-game-against-dolphins/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
    "headline": "Rams’ Nacua undergoes MCL surgery, likely to miss rest of season",
    "summary": "The Los Angeles Rams will be without their superstar wide receiver for several months.",
    "published": "2026-11-20T12:20-05:00",
@@ -2799,19 +2816,6 @@
   },
   {
    "league": "nfl",
-   "headline": "Jets’ Smith expected to play, Cooper Jr. ruled out against Chargers",
-   "summary": "Although it initially appeared the New York Jets’ offence would take a significant hit moving forward after both their starting quarterback and rookie first-round receiver departed in Week 10 — they avoided the worst-cas",
-   "published": "2026-11-20T11:22-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-4-2.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/jets-smith-expected-to-play-cooper-jr-ruled-out-against-chargers/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
    "headline": "Chiefs’ Kenneth Walker ruled out vs. Cardinals",
    "summary": "The Kansas City Chiefs will remain without their star running back on Sunday.",
    "published": "2026-11-20T15:24-05:00",
@@ -2821,6 +2825,32 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/chiefs-kenneth-walker-ruled-out-vs-cardinals/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "NFL Week 11 Pick ‘Em: Lions start life without Hutchinson",
+   "summary": "The stars will be out on primetime in Week 11, and that’s all we can ask for as football fans. From lopsided matchups to heavyweight tilts, Evan Davidson gives his picks for the full NFL slate.",
+   "published": "2026-11-19T08:04-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Lions-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-11-pick-em-texans-need-win-in-pivotal-divisional-clash/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Support from Flames says plenty about Huberdeau’s reputation",
+   "summary": "Everything you need to know about how beloved Jonathan Huberdeau is in the Flames organization was on full display when the 33-year-old was warming up for his first AHL game. Eric Francis has the story.",
+   "published": "2026-11-19T23:54-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/Calgary-Flames-left-wing-Jonathan-Huberdeau.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/support-from-flames-says-plenty-of-huberdeaus-reputation/",
    "source": "Sportsnet"
   },
   {
@@ -2882,36 +2912,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "What we know (and don’t know) about Maple Leafs’ 2027 first-round pick",
-   "summary": "In March 2025, the Toronto Maple Leafs pulled off a couple of big moves in quick succession in pursuit of a playoff run, trading away a pair of first-round picks. Two years later, they’re about to pay the price.",
-   "published": "2026-11-19T13:16-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/05/chayka.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/what-we-know-and-dont-know-about-maple-leafs-2027-first-round-pick/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Rory McIlroy attends Maple Leafs game, reads starting lineup",
-   "summary": "",
-   "published": "2026-11-19T21:17-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-29-2.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Golf Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/rory-mcilroy-attends-maple-leafs-game-reads-starting-lineup/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "other",
    "headline": "CF Montreal signs Mexican forward Daniel Rios through 2028-29 season",
    "summary": "CF Montréal has signed forward Daniel Rios to a contract extension through the 2028-29 season with an option for 2029-30, the Major League Soccer club announced Friday.",
@@ -2939,17 +2939,15 @@
   },
   {
    "league": "nba",
-   "headline": "Raptors ‘don’t anticipate’ setbacks once Kawhi Leonard returns",
-   "summary": "The Raptors could use good news in the worst way, especially about Kawhi Leonard. Michael Grange paints the entire picture of the star’s injury and why there’s “hope” of a return sooner rather than later.",
-   "published": "2026-11-19T09:40-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/kahwi.jpg",
+   "headline": "Report: Pacers’ Tyrese Haliburton out at least two more weeks",
+   "summary": "Tyrese Haliburton is set to miss at least the next two weeks as he continues to recover from a left hamstring strain, ESPN’s Shams Charania reported Friday.",
+   "published": "2026-11-20T15:41-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/hali-1.jpg",
    "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
+   "teams": [],
    "sn_team_count": 1,
    "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-dont-anticipate-setbacks-once-kawhi-leonard-returns/",
+   "url": "https://www.sportsnet.ca/nba/article/report-pacers-tyrese-haliburton-out-at-least-two-more-weeks/",
    "source": "Sportsnet"
   },
   {
@@ -3021,16 +3019,16 @@
   },
   {
    "league": "nfl",
-   "headline": "NFL Week 11 Pick ‘Em: Lions start life without Hutchinson",
-   "summary": "The stars will be out on primetime in Week 11, and that’s all we can ask for as football fans. From lopsided matchups to heavyweight tilts, Evan Davidson gives his picks for the full NFL slate.",
-   "published": "2026-11-19T08:04-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Lions-2.jpg",
+   "headline": "Lions vs. Buccaneers injury report: Nov. 20",
+   "summary": "Lions vs. Buccaneers injury report and game designations for Friday, November 20.",
+   "published": "2026-11-20T15:30-05:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/py22bharzbojs0vhs4sr.png",
    "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-11-pick-em-texans-need-win-in-pivotal-divisional-clash/",
-   "source": "Sportsnet"
+   "teams": [
+    "Detroit Lions"
+   ],
+   "url": "https://www.detroitlions.com/news/lions-vs-buccaneers-injury-report-nov-20-mays-joseph-reed",
+   "source": "Team site"
   },
   {
    "league": "nfl",
@@ -3212,19 +3210,6 @@
     "Detroit Lions"
    ],
    "url": "https://www.detroitlions.com/news/nfc-north-where-all-four-teams-stand-heading-into-week-11-gibbs-mcneill-cousins",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
-   "headline": "KEY QUESTIONS: Will Joseph make his 2026 debut Sunday vs. Buccaneers?",
-   "summary": "Tim Twentyman covers all the key questions from Detroit Lions head coach Dan Campbell's Tuesday press conference.",
-   "published": "2026-11-17T13:28-05:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/pinkzcc0pwtptsidet7b.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Lions"
-   ],
-   "url": "https://www.detroitlions.com/news/key-questions-will-joseph-make-his-2026-debut-sunday-vs-bucs-hutchinson-wheat-reed",
    "source": "Team site"
   },
   {
