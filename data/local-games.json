@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T22:31:52-05:00",
+ "updated": "2026-11-19T22:47:21-05:00",
  "today": "2026-11-19",
  "range": [
   "2026-11-16",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 30
   },
   "club_news": {
    "ok": true,
@@ -195,11 +195,11 @@
    "home_away": "H",
    "opponent": "Blenheim Blades",
    "location": "Harrow Arena",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "In progress",
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 5,
+   "result": "L",
+   "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960653?configuration=45"
    },
@@ -2455,7 +2455,7 @@
  "more_news": [
   {
    "league": "nhl",
-   "headline": "Kempe scores shootout winner, Kings hand Maple Leafs eighth straight loss",
+   "headline": "Maple Leafs get a point but fall to Kings in shootout",
    "summary": "",
    "published": "2026-11-19T22:13-05:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-60.jpg",
@@ -2505,6 +2505,47 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/morrissey-nets-ot-winner-for-first-goal-of-season-as-jets-beat-islanders/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Maple Leafs’ Auston Matthews ‘fine’ despite weird fall in OT",
+   "summary": "Even though the Toronto Maple Leafs lost their eighth straight contest on Thursday, they don’t need to worry about the health of their captain.",
+   "published": "2026-11-19T22:30-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-63.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-auston-matthews-fine-despite-weird-fall-in-ot/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Senators blow late lead, fall to Flyers in OT",
+   "summary": "",
+   "published": "2026-11-19T22:12-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/flyers-sens.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/senators-blow-late-lead-fall-to-flyers-in-ot/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "HearingLife National Day 3 Takeaways: Dunstone continues to dominate Casper",
+   "summary": "",
+   "published": "2026-11-19T22:26-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/2026GSOCNational-Sydney-327-copy.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "",
+   "url": "https://www.sportsnet.ca/curling/article/hearinglife-national-day-3-takeaways-dunstone-continues-to-dominate-casper/",
    "source": "Sportsnet"
   },
   {
@@ -2564,19 +2605,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "mlb",
-   "headline": "Rockies acquire Luis Castillo, Davis Martin from White Sox",
-   "summary": "",
-   "published": "2026-11-19T19:51-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/luis-castillo.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/report-rockies-acquire-luis-castillo-davis-martin-from-white-sox/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nfl",
    "headline": "Two small studies find a clue in the quest to help diagnose CTE in the living",
    "summary": "Scientists stumbled onto a hint that measuring a toxic protein tied to Alzheimer’s disease just might one day be useful in diagnosing a different brain disease in football players and others who have suffered repeated bl",
@@ -2587,32 +2615,6 @@
    "sn_team_count": 0,
    "sport": "Football Hockey",
    "url": "https://www.sportsnet.ca/nfl/article/two-small-studies-find-a-clue-in-the-quest-to-help-diagnose-cte-in-the-living/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "cfl",
-   "headline": "Blue Bombers fire head coach Mike O’Shea",
-   "summary": "",
-   "published": "2026-11-19T08:45-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2014/06/oshea720.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/cfl/article/blue-bombers-fire-head-coach-mike-oshea/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Report: WNBA’s Sparks nearing record $750-million sale",
-   "summary": "",
-   "published": "2026-11-19T14:02-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/03/WNBA-generic.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/wnba/article/report-wnbas-sparks-nearing-record-750-million-sale/",
    "source": "Sportsnet"
   },
   {
@@ -2728,6 +2730,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "mlb",
+   "headline": "Rockies acquire Luis Castillo, Davis Martin from White Sox",
+   "summary": "",
+   "published": "2026-11-19T19:51-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/luis-castillo.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/report-rockies-acquire-luis-castillo-davis-martin-from-white-sox/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nba",
    "headline": "Raptors ‘don’t anticipate’ setbacks once Kawhi Leonard returns",
    "summary": "The Raptors could use good news in the worst way, especially about Kawhi Leonard. Michael Grange paints the entire picture of the star’s injury and why there’s “hope” of a return sooner rather than later.",
@@ -2740,6 +2755,21 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/raptors-dont-anticipate-setbacks-once-kawhi-leonard-returns/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Efficient Martin getting more minutes as injuries pile up for Raptors",
+   "summary": "",
+   "published": "2026-11-19T17:11-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/martin.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/efficient-martin-getting-more-minutes-as-injuries-pile-up-for-raptors/",
    "source": "Sportsnet"
   },
   {
@@ -2796,6 +2826,19 @@
   },
   {
    "league": "other",
+   "headline": "FC Cincinnati rallies to beat Orlando City in Eastern Conference wild-card match",
+   "summary": "",
+   "published": "2026-11-19T22:32-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/FC-Cincinnati-.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/cincinnati-rallies-to-beat-orlando-city-in-eastern-conference-wild-card-match/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
    "headline": "Coach Jesse Marsch believes Canada can climb into FIFA’s top 20",
    "summary": "Jesse Marsch believes this is just the beginning for Canada’s men’s soccer team.",
    "published": "2026-11-19T19:28-05:00",
@@ -2805,21 +2848,6 @@
    "sn_team_count": 1,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/soccer/article/coach-jesse-marsch-believes-canada-can-climb-into-fifas-top-20/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Efficient Martin getting more minutes as injuries pile up for Raptors",
-   "summary": "",
-   "published": "2026-11-19T17:11-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/martin.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/efficient-martin-getting-more-minutes-as-injuries-pile-up-for-raptors/",
    "source": "Sportsnet"
   },
   {
@@ -2833,45 +2861,6 @@
    "sn_team_count": 0,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/ncaa-mens-basketball/article/lsu-president-instructs-coach-will-wade-to-sit-embattled-transfer-rj-luis-jr/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Ravens send Marlon Humphrey home, de-activate him against Panthers",
-   "summary": "The Ravens are deactivating cornerback Marlon Humphrey for this weekend’s game at Carolina after the veteran said on his podcast that “criminals” are among the things Baltimore is best at making.",
-   "published": "2026-11-19T12:26-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-41-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/ravens-send-marlon-humphrey-home-de-activate-him-against-panthers/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Cowboys’ defensive coordinator speaks after play-calling duties pulled",
-   "summary": "",
-   "published": "2026-11-19T13:12-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/christian-parker.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/cowboys-defensive-coordinator-speaks-after-play-calling-duties-pulled/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Blue Jackets head coach Rick Bowness set to return from health issue",
-   "summary": "",
-   "published": "2026-11-19T15:21-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/03/bowness_rick1280.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/blue-jackets-head-coach-rick-bowness-set-to-return-from-health-issue/",
    "source": "Sportsnet"
   },
   {
@@ -4753,6 +4742,18 @@
       "strk": "L1"
      },
      {
+      "name": "Blenheim Blades",
+      "abbr": "BLE",
+      "gp": 19,
+      "w": 11,
+      "l": 8,
+      "otl": 0,
+      "pts": 22,
+      "gf": 74,
+      "ga": 60,
+      "strk": "W2"
+     },
+     {
       "name": "Mooretown Flags",
       "abbr": "MOO",
       "gp": 22,
@@ -4763,18 +4764,6 @@
       "gf": 81,
       "ga": 72,
       "strk": "W2"
-     },
-     {
-      "name": "Blenheim Blades",
-      "abbr": "BLE",
-      "gp": 18,
-      "w": 10,
-      "l": 8,
-      "otl": 0,
-      "pts": 20,
-      "gf": 69,
-      "ga": 57,
-      "strk": "W1"
      },
      {
       "name": "Dresden Kings",
@@ -4803,14 +4792,14 @@
      {
       "name": "Amherstburg Admirals",
       "abbr": "AMH",
-      "gp": 19,
+      "gp": 20,
       "w": 7,
-      "l": 12,
+      "l": 13,
       "otl": 0,
       "pts": 14,
-      "gf": 67,
-      "ga": 66,
-      "strk": "L2"
+      "gf": 70,
+      "ga": 71,
+      "strk": "L3"
      },
      {
       "name": "Walpole Island Wild",
