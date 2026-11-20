@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T21:46:59-05:00",
+ "updated": "2026-11-19T22:01:54-05:00",
  "today": "2026-11-19",
  "range": [
   "2026-11-16",
@@ -176,11 +176,11 @@
    "home_away": "H",
    "opponent": "Toronto Patriots",
    "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
-   "status": "live",
+   "status": "final",
    "our_score": 4,
    "opp_score": 1,
-   "result": null,
-   "note": "Unofficial Final",
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16692"
    },
@@ -214,14 +214,13 @@
    "home_away": "H",
    "opponent": "Western Mustangs",
    "location": "Adie Knox Arena",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 1,
+   "result": "W",
    "note": "",
    "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=173",
-    "watch": "https://oua.tv/?school=Windsor"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6349"
    }
   },
   {
@@ -2456,17 +2455,15 @@
  "more_news": [
   {
    "league": "nhl",
-   "headline": "Sources: Edvinsson passed on offer sheets to avoid staying in Detroit",
-   "summary": "Sources say Simon Edvinsson has refused offer sheets because he doesn’t want to allow Detroit to match. Frank Seravalli has the latest on the saga.",
-   "published": "2026-11-19T12:39-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/01/Detroit-Red-Wings-defenseman-Simon-Edvinsson.jpg",
+   "headline": "Morrissey nets OT winner for first goal of season as Jets beat Islanders",
+   "summary": "",
+   "published": "2026-11-19T21:57-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-62.jpg",
    "video": false,
-   "teams": [
-    "Detroit Red Wings"
-   ],
-   "sn_team_count": 1,
+   "teams": [],
+   "sn_team_count": 2,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/sources-edvinsson-passed-on-offer-sheets-to-avoid-staying-in-detroit/",
+   "url": "https://www.sportsnet.ca/nhl/article/morrissey-nets-ot-winner-for-first-goal-of-season-as-jets-beat-islanders/",
    "source": "Sportsnet"
   },
   {
@@ -2575,6 +2572,21 @@
    "sn_team_count": 0,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/wnba/article/report-wnbas-sparks-nearing-record-750-million-sale/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Sources: Edvinsson passed on offer sheets to avoid staying in Detroit",
+   "summary": "Sources say Simon Edvinsson has refused offer sheets because he doesn’t want to allow Detroit to match. Frank Seravalli has the latest on the saga.",
+   "published": "2026-11-19T12:39-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/01/Detroit-Red-Wings-defenseman-Simon-Edvinsson.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Red Wings"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/sources-edvinsson-passed-on-offer-sheets-to-avoid-staying-in-detroit/",
    "source": "Sportsnet"
   },
   {
@@ -2819,19 +2831,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/blue-jackets-head-coach-rick-bowness-set-to-return-from-health-issue/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Avalanche’s Landeskog, Kelly fined for incidents with Mammoth",
-   "summary": "",
-   "published": "2026-11-19T14:26-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/CP175158303.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/avalanches-landeskog-kelly-fined-for-incidents-with-mammoth/",
    "source": "Sportsnet"
   },
   {
@@ -4125,14 +4124,14 @@
      {
       "name": "Toronto Patriots",
       "abbr": "PAT",
-      "gp": 23,
+      "gp": 24,
       "w": 19,
-      "l": 3,
+      "l": 4,
       "otl": 1,
       "pts": 39,
       "gf": 126,
       "ga": 48,
-      "strk": "W14"
+      "strk": "L1"
      },
      {
       "name": "Burlington Cougars",
@@ -4149,14 +4148,14 @@
      {
       "name": "Leamington Flyers",
       "abbr": "LEA",
-      "gp": 22,
-      "w": 15,
+      "gp": 23,
+      "w": 16,
       "l": 6,
       "otl": 1,
-      "pts": 31,
+      "pts": 33,
       "gf": 85,
       "ga": 47,
-      "strk": "W2"
+      "strk": "W3"
      },
      {
       "name": "Oakville Blades",
