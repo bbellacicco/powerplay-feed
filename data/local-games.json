@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T13:01:44-05:00",
+ "updated": "2026-11-20T13:21:39-05:00",
  "today": "2026-11-20",
  "range": [
   "2026-11-17",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -1875,6 +1875,19 @@
   },
   {
    "league": "cfl",
+   "headline": "Roughriders sign Nationals Klassen, Odemwingie and Sombach",
+   "summary": "",
+   "published": "2026-11-20T00:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/6ly4GOPPDAeENxzVsfHh5x/37c58e5c5bc04d4cea807bbb9a39008f/Sask_Helmet_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Roughriders"
+   ],
+   "url": "https://www.cfl.ca/article/roughriders-sign-nationals-klassen-odemwingie-and-sombach",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "5 top plays from the 113th Grey Cup",
    "summary": "",
    "published": "2026-11-19T00:00:00-05:00",
@@ -2000,19 +2013,6 @@
     "Stampeders"
    ],
    "url": "https://www.cfl.ca/article/stampeders-sign-american-defensive-linemen-frazier-hills-and-manns",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Stampeders sign Americans Farr, Foreman, Janneh Jr., and Smith",
-   "summary": "",
-   "published": "2026-11-19T00:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/2Q4eb2d2fXvhZxAh6OMmRd/8793fed11d9c18fb0ed3b45270564bc1/Generic_Stampeders_Helmet_2026.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Stampeders"
-   ],
-   "url": "https://www.cfl.ca/article/stampeders-sign-americans-farr-foreman-janneh-jr-and-smith",
    "source": "CFL.ca"
   },
   {
@@ -2625,6 +2625,34 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Hiller: Maple Leafs’ Marchenko could be ‘close’ to return",
+   "summary": "",
+   "published": "2026-11-20T13:18-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/marchenko-1.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/hiller-maple-leafs-marchenko-could-be-close-to-return/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Colts release QB Daniel Jones, Anthony Richardson to start",
+   "summary": "The Colts have released the 29-year-old quarterback, with backup Anthony Richardson set to start in the coming weeks, head coach Shane Steichen announced Friday.",
+   "published": "2026-11-20T13:19-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177231501.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/colts-release-qb-daniel-jones-anthony-richardson-to-start/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "Rams’ Nacua undergoes MCL surgery, will miss ‘a couple months’",
    "summary": "The Los Angeles Rams will be without their superstar wide receiver for several months.",
@@ -2639,41 +2667,17 @@
   },
   {
    "league": "nhl",
-   "headline": "Two Oilers streaks snapped in stingy loss to Lightning",
-   "summary": "Two Oilers streaks were put to bed in a stingy loss to the Lightning on Thursday. The defeat marked Edmonton’s first road regulation loss of the season, and the first game in which Connor McDavid was unable to crack the ",
-   "published": "2026-11-19T23:30-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/McDavid-2.jpg",
+   "headline": "Kings’ Kempe fined for high-sticking Maple Leafs’ Joshua",
+   "summary": "Adrian Kempe lost a chunk of change Friday.",
+   "published": "2026-11-20T13:09-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/11/Los-Angeles-Kings-right-wing-Adrian-Kempe.jpg",
    "video": false,
-   "teams": [],
-   "sn_team_count": 1,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 2,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/two-oilers-streaks-snapped-in-stingy-loss-to-lightning/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Canucks abandon winning form as short-lived streak comes to end",
-   "summary": "The backbone, fortitude and discipline that allowed the Canucks to build a two-game win streak were wholly absent in Seattle.",
-   "published": "2026-11-20T02:45-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-66.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canucks-abandon-winning-form-as-short-lived-streak-comes-to-end/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Lane Hutson leads Canadiens to gutsiest win of season",
-   "summary": "The Hurricanes tried to push them. But Lane Hutson and the Canadiens didn’t just get up and push back, they pushed the Hurricanes over in a way they haven’t been able to in recent memory.",
-   "published": "2026-11-19T23:47-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/canadiens-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/lane-hutson-leads-canadiens-to-gutsiest-win-of-the-season/",
+   "url": "https://www.sportsnet.ca/nhl/article/kings-kempe-fined-for-high-sticking-maple-leafs-joshua/",
    "source": "Sportsnet"
   },
   {
@@ -2716,6 +2720,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Two Oilers streaks snapped in stingy loss to Lightning",
+   "summary": "Two Oilers streaks were put to bed in a stingy loss to the Lightning on Thursday. The defeat marked Edmonton’s first road regulation loss of the season, and the first game in which Connor McDavid was unable to crack the ",
+   "published": "2026-11-19T23:30-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/McDavid-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/two-oilers-streaks-snapped-in-stingy-loss-to-lightning/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "Jets’ Smith expected to play, Cooper Jr. ruled out against Chargers",
    "summary": "Although it initially appeared the New York Jets’ offence would take a significant hit moving forward after both their starting quarterback and rookie first-round receiver departed in Week 10 — they avoided the worst-cas",
@@ -2752,6 +2769,32 @@
    "sn_team_count": 2,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/stroud-texans-roll-past-colts/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Lane Hutson leads Canadiens to gutsiest win of season",
+   "summary": "The Hurricanes tried to push them. But Lane Hutson and the Canadiens didn’t just get up and push back, they pushed the Hurricanes over in a way they haven’t been able to in recent memory.",
+   "published": "2026-11-19T23:47-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/canadiens-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/lane-hutson-leads-canadiens-to-gutsiest-win-of-the-season/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Canucks abandon winning form as short-lived streak comes to end",
+   "summary": "The backbone, fortitude and discipline that allowed the Canucks to build a two-game win streak were wholly absent in Seattle.",
+   "published": "2026-11-20T02:45-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-66.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canucks-abandon-winning-form-as-short-lived-streak-comes-to-end/",
    "source": "Sportsnet"
   },
   {
@@ -2907,6 +2950,19 @@
    "sn_team_count": 0,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/pitcher-turned-actor-lance-broadway-dies-at-age-43/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Shohei Ohtani and New Balance extend their deal through his playing career",
+   "summary": "Shohei Ohtani and New Balance have agreed to extend their contract through the remainder of the Los Angeles Dodgers superstar’s playing career.",
+   "published": "2026-11-20T13:00-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-7-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/shohei-ohtani-and-new-balance-extend-their-deal-through-his-playing-career/",
    "source": "Sportsnet"
   },
   {
