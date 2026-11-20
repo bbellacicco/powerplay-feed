@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T12:31:44-05:00",
+ "updated": "2026-11-20T12:46:47-05:00",
  "today": "2026-11-20",
  "range": [
   "2026-11-17",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 32
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -2279,8 +2279,8 @@
    "league": "pwhl",
    "headline": "PWHL Announces Largest Takeover Tour™ to Date With 24 Games Across 19 Cities",
    "summary": "",
-   "published": "2026-11-19T12:00:00+00:00",
-   "image": "https://res.cloudinary.com/pwhl-low/image/upload/c_auto,g_auto,h_400,w_792/q_auto/f_auto/PWHLTakeoverTourHeader_16x9",
+   "published": "2026-11-19T15:00:00+00:00",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/PWHLTakeoverTourHeader_16x9",
    "video": false,
    "teams": [],
    "url": "https://www.thepwhl.com/en/news/2026/november/19/pwhl-announces-largest-takeover-tour-to-date-with-24-games-across-19-cities",
@@ -2571,6 +2571,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Rory McIlroy, sports psychologist Bob Rotella meet with Maple Leafs",
+   "summary": "Rory McIlroy, a six-time major winner and one of the best drivers in golf history, took some time Friday morning to talk to the Maple Leafs after showing up to Thursday night’s shootout loss to the Los Angeles Kings, per",
+   "published": "2026-11-20T12:44-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/rory.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/rory-mcilroy-sports-psychologist-bob-rotella-meet-with-maple-leafs/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "Prospects Report: Why Wolves rookie Kash Kwajah looks like a ‘franchise player’",
    "summary": "Kash Kwajah is becoming one of the top prospects for the 2028 NHL Draft after a great start to his major-junior career with the Sudbury Wolves along with an outstanding performance at the World U17 Challenge. He has to b",
@@ -2585,19 +2600,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Drew Doughty opens up about free agency, trade noise, asking price, injury",
-   "summary": "At age 36, Drew Doughty is ready for a pay cut. But he wants to go back to Cali in 2027-28. Luke Fox caught up with the longtime Kings defenceman about free agency and more.",
-   "published": "2026-11-20T00:31-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/doughty.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/drew-doughty-opens-up-about-free-agency-trade-noise-asking-price-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Support from Flames says plenty about Huberdeau’s reputation",
    "summary": "Everything you need to know about how beloved Jonathan Huberdeau is in the Flames organization was on full display when the 33-year-old was warming up for his first AHL game. Eric Francis has the story.",
    "published": "2026-11-19T23:54-05:00",
@@ -2607,6 +2609,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/support-from-flames-says-plenty-of-huberdeaus-reputation/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Drew Doughty opens up about free agency, trade noise, asking price, injury",
+   "summary": "At age 36, Drew Doughty is ready for a pay cut. But he wants to go back to Cali in 2027-28. Luke Fox caught up with the longtime Kings defenceman about free agency and more.",
+   "published": "2026-11-20T00:31-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/doughty.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/drew-doughty-opens-up-about-free-agency-trade-noise-asking-price-injury/",
    "source": "Sportsnet"
   },
   {
