@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T21:16:49-05:00",
+ "updated": "2026-11-19T21:31:57-05:00",
  "today": "2026-11-19",
  "range": [
   "2026-11-16",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 29
+   "count": 28
   },
   "club_news": {
    "ok": true,
@@ -162,7 +162,7 @@
    "our_score": 3,
    "opp_score": 0,
    "result": null,
-   "note": "08:58 3rd",
+   "note": "End of Game",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29213/"
    }
@@ -178,9 +178,9 @@
    "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
    "status": "live",
    "our_score": 2,
-   "opp_score": 0,
+   "opp_score": 1,
    "result": null,
-   "note": "07:46 3rd",
+   "note": "01:42 3rd",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16692"
    },
@@ -2178,8 +2178,8 @@
    "league": "pwhl",
    "headline": "PWHL Announces Largest Takeover Tour™ to Date With 24 Games Across 19 Cities",
    "summary": "",
-   "published": "2026-11-19T12:00:00+00:00",
-   "image": "https://res.cloudinary.com/pwhl-low/image/upload/c_auto,g_auto,h_400,w_792/q_auto/f_auto/PWHLTakeoverTourHeader_16x9",
+   "published": "2026-11-19T15:00:00+00:00",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/PWHLTakeoverTourHeader_16x9",
    "video": false,
    "teams": [],
    "url": "https://www.thepwhl.com/en/news/2026/november/19/pwhl-announces-largest-takeover-tour-to-date-with-24-games-across-19-cities",
@@ -2470,6 +2470,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Rory McIlroy attends Maple Leafs game, reads starting lineup",
+   "summary": "",
+   "published": "2026-11-19T21:17-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-29-2.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Golf Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/rory-mcilroy-attends-maple-leafs-game-reads-starting-lineup/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "Rams’ Puka Nacua suspended three games for conduct violation",
    "summary": "Los Angeles Rams receiver Puka Nacua has been suspended for three games for violating the NFL’s personal conduct policy, and he will serve the ban while already on injured reserve.",
@@ -2521,21 +2536,6 @@
    "sn_team_count": 2,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/report-rockies-acquire-luis-castillo-davis-martin-from-white-sox/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Blue Jays claim Cairo off waivers, designate Lee for assignment",
-   "summary": "The Toronto Blue Jays continued to shuffle the margins of their 40-man roster on Thursday.",
-   "published": "2026-11-19T16:07-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/03/chase-lee.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/blue-jays-claim-cairo-off-waivers-designate-lee-for-assignment/",
    "source": "Sportsnet"
   },
   {
@@ -2832,19 +2832,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/avalanches-landeskog-kelly-fined-for-incidents-with-mammoth/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Jets’ Dylan DeMelo out four to six weeks with lower-body injury",
-   "summary": "The Winnipeg Jets will be without Dylan DeMelo for a while.",
-   "published": "2026-11-19T11:52-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/04/Winnipeg-Jets-defenseman-Dylan-DeMelo.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/jets-dylan-demelo-out-four-to-six-weeks-with-lower-body-injury/",
    "source": "Sportsnet"
   },
   {
@@ -3810,7 +3797,7 @@
       "otl": 3,
       "pts": 13,
       "gf": 53,
-      "ga": 88,
+      "ga": 89,
       "strk": "W1"
      }
     ]
@@ -3850,7 +3837,7 @@
       "l": 5,
       "otl": 1,
       "pts": 27,
-      "gf": 77,
+      "gf": 78,
       "ga": 53,
       "strk": "W2"
      },
@@ -4143,7 +4130,7 @@
       "l": 3,
       "otl": 1,
       "pts": 39,
-      "gf": 125,
+      "gf": 126,
       "ga": 46,
       "strk": "W14"
      },
@@ -4168,7 +4155,7 @@
       "otl": 1,
       "pts": 31,
       "gf": 83,
-      "ga": 46,
+      "ga": 47,
       "strk": "W2"
      },
      {
@@ -4373,26 +4360,26 @@
      {
       "name": "Komoka Kings",
       "abbr": "KOM",
-      "gp": 21,
-      "w": 6,
+      "gp": 22,
+      "w": 7,
       "l": 15,
       "otl": 0,
-      "pts": 12,
+      "pts": 14,
       "gf": 74,
       "ga": 93,
-      "strk": "W1"
+      "strk": "W2"
      },
      {
       "name": "Sarnia Legionnaires",
       "abbr": "SAR",
-      "gp": 18,
+      "gp": 19,
       "w": 1,
-      "l": 16,
+      "l": 17,
       "otl": 1,
       "pts": 3,
       "gf": 42,
       "ga": 117,
-      "strk": "L5"
+      "strk": "L6"
      }
     ]
    },
@@ -4414,14 +4401,14 @@
      {
       "name": "Fort Erie Meteors",
       "abbr": "FEM",
-      "gp": 18,
-      "w": 16,
+      "gp": 19,
+      "w": 17,
       "l": 1,
       "otl": 1,
-      "pts": 33,
+      "pts": 35,
       "gf": 100,
       "ga": 55,
-      "strk": "W4"
+      "strk": "W5"
      },
      {
       "name": "Caledonia Corvairs",
@@ -4448,6 +4435,18 @@
       "strk": "W2"
      },
      {
+      "name": "Waterloo Siskins",
+      "abbr": "WAT",
+      "gp": 20,
+      "w": 12,
+      "l": 5,
+      "otl": 3,
+      "pts": 27,
+      "gf": 72,
+      "ga": 51,
+      "strk": "W1"
+     },
+     {
       "name": "Ayr Centennials",
       "abbr": "AYR",
       "gp": 20,
@@ -4458,18 +4457,6 @@
       "gf": 76,
       "ga": 63,
       "strk": "W2"
-     },
-     {
-      "name": "Waterloo Siskins",
-      "abbr": "WAT",
-      "gp": 19,
-      "w": 11,
-      "l": 5,
-      "otl": 3,
-      "pts": 25,
-      "gf": 72,
-      "ga": 51,
-      "strk": "L1"
      },
      {
       "name": "Pelham Panthers",
@@ -4486,14 +4473,14 @@
      {
       "name": "Hamilton Steel",
       "abbr": "HAM",
-      "gp": 22,
+      "gp": 23,
       "w": 7,
-      "l": 12,
+      "l": 13,
       "otl": 3,
       "pts": 17,
       "gf": 74,
       "ga": 103,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Port Colborne Sailors",
@@ -4534,14 +4521,14 @@
      {
       "name": "Welland Canadians",
       "abbr": "WEL",
-      "gp": 21,
+      "gp": 22,
       "w": 3,
-      "l": 18,
+      "l": 19,
       "otl": 0,
       "pts": 6,
       "gf": 46,
       "ga": 123,
-      "strk": "L2"
+      "strk": "L3"
      }
     ]
    }
@@ -4726,6 +4713,18 @@
       "strk": "L1"
      },
      {
+      "name": "Mooretown Flags",
+      "abbr": "MOO",
+      "gp": 22,
+      "w": 10,
+      "l": 10,
+      "otl": 2,
+      "pts": 22,
+      "gf": 81,
+      "ga": 72,
+      "strk": "W2"
+     },
+     {
       "name": "Blenheim Blades",
       "abbr": "BLE",
       "gp": 18,
@@ -4748,18 +4747,6 @@
       "gf": 81,
       "ga": 77,
       "strk": "L1"
-     },
-     {
-      "name": "Mooretown Flags",
-      "abbr": "MOO",
-      "gp": 21,
-      "w": 9,
-      "l": 10,
-      "otl": 2,
-      "pts": 20,
-      "gf": 72,
-      "ga": 72,
-      "strk": "W1"
      },
      {
       "name": "Wheatley Sharks",
@@ -4788,14 +4775,14 @@
      {
       "name": "Walpole Island Wild",
       "abbr": "WAL",
-      "gp": 17,
+      "gp": 18,
       "w": 0,
-      "l": 17,
+      "l": 18,
       "otl": 0,
       "pts": 0,
       "gf": 18,
-      "ga": 114,
-      "strk": "L17"
+      "ga": 123,
+      "strk": "L18"
      }
     ]
    }
