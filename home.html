@@ -742,19 +742,30 @@ document.addEventListener('load', function (e) {
     var out = [], seenTeam = {}, recent = Date.now() - 4 * 86400e3;
     // local: newest written stories, two different teams.
     // Lancers: men's hockey comes first when there's a men's hockey story from the last two days
-    var cand = stories.filter(function (s) { return !used[s.url] && !isVid(s) && !s.video && s.team !== 'highschool'; });   // videos (the UWindsor student ones too) stay in their strips
+    var cand = stories.filter(function (s) { return !used[s.url] && ((!isVid(s) && !s.video) || s.team === 'powerplay') && s.team !== 'highschool'; });   // Powerplay's own videos count; team videos (the UWindsor student ones too) stay in their strips
     var isMensHockey = function (s) { var t = (s.sport || '') + ' ' + s.headline; return /hockey/i.test(t) && !/women/i.test(t); };
     var lanMen = cand.filter(function (s) { return s.team === 'lancers' && isMensHockey(s) && Date.now() - new Date(s.published).getTime() < 2 * 86400e3; })[0];
     if (lanMen) cand = cand.map(function (s) { return s.team === 'lancers' && s !== lanMen && !seenTeam.lanSwap ? (seenTeam.lanSwap = 1, lanMen) : s; })
       .filter(function (s, i, a) { return a.indexOf(s) === i; });
     delete seenTeam.lanSwap;
-    cand.some(function (s) {
+    // Buddy's rule: nothing more than two days old while something newer can take its place.
+    // Newest first; two different teams when both are fresh, the two newest fresh ones otherwise, older only to fill a gap
+    cand.sort(function (a, b) { return new Date(b.published) - new Date(a.published); });
+    var fresh = Date.now() - 2 * 86400e3, isFresh = function (s) { return new Date(s.published).getTime() >= fresh; };
+    var picked = [];
+    var take = function (list, distinct) { list.some(function (s) {
+      if (picked.length >= 2) return true;
+      if (picked.indexOf(s) >= 0) return false;
       var key = s.team === 'junior' ? s.club : s.team;
-      if (seenTeam[key]) return false;
-      seenTeam[key] = 1;
+      if (distinct && seenTeam[key]) return false;
+      seenTeam[key] = 1; picked.push(s); return picked.length >= 2; }); };
+    take(cand.filter(isFresh), false); take(cand, true); take(cand, false);   // fresh: simply the two newest
+    picked.sort(function (a, b) { return new Date(b.published) - new Date(a.published); });
+    picked.some(function (s) {
       var tag = s.team === 'powerplay' ? [storyCat(s, 'Local'), 'Powerplay', '#e8b021'] : (LOCAL_TAG[s.team] || ['Local', s.club || '', '#e8b021']);
       if (s.team === 'junior') tag = ['Junior', (s.club || '').replace(/^(Windsor|St\. Clair)\s+/, ''), tag[2]];
-      out.push({ url: s.url, headline: s.headline, tag: tag[0] + (tag[1] ? ' \u00b7 ' + tag[1] : ''), col: tag[2], local: true, logo: headLogo(s.team, s.club), abbr: tag[1] || tag[0], published: s.published });
+      var vk = isVid(s) || s.video ? vkey(s.url).replace(':', '-') : '';   // a Powerplay video: its own page on the site (it plays there)
+      out.push({ url: vk ? SITE + 'scores-standings?tab=network&v=' + vk : s.url, headline: s.headline, tag: tag[0] + (tag[1] ? ' \u00b7 ' + tag[1] : ''), col: tag[2], local: true, logo: headLogo(s.team, s.club), abbr: tag[1] || tag[0], published: s.published });
       return out.length >= 2;
     });
     // the story that just dropped out of the big box falls into Headlines (second slot) for its first 3 hours there
@@ -883,7 +894,7 @@ document.addEventListener('load', function (e) {
     vcur = s; document.getElementById('vshare').style.display = '';
     vDesc(s);
     vp.classList.add('on');
-    placeTop();
+    placeTop(at || cardEl);
   }
   // the video's own write-up under the player (full text from data/video-text.json, loaded the first time)
   var vtext = null, vtextP = null, vcur = null;
@@ -923,7 +934,7 @@ document.addEventListener('load', function (e) {
     vcur = s; document.getElementById('vshare').style.display = '';
     vDesc(s);
     vp.classList.add('on');
-    placeTop();
+    placeTop(at);
   }
   function playShow(sh, at) {   // at: the element to open over (the top-story box); otherwise over the Game Day Snaps row
     var fr = document.getElementById('vframe'); fr.innerHTML = ''; fr.classList.remove('pic'); fr.classList.add('gal');
@@ -932,13 +943,22 @@ document.addEventListener('load', function (e) {
     var ext = document.getElementById('vext'); ext.href = sh.url; ext.textContent = 'Open full page ↗'; ext.style.display = '';
     document.getElementById('vshare').style.display = 'none'; document.getElementById('vdesc').hidden = true;
     vp.classList.add('on');
-    placeTop();
+    placeTop(at);
   }
   // every video, slideshow and quick post opens at the top of the page, with the rest of the page blurred behind it
-  function placeTop() {
-    vp.style.top = '10px';
+  // the player opens right where it was tapped (over that strip), so the visitor stays where they were on the page;
+  // with nothing to anchor to (a shared link), at the top
+  function placeTop(at) {
+    var top = 10;
+    try {
+      if (at && at.getBoundingClientRect) {
+        var base = (vp.offsetParent || document.body).getBoundingClientRect().top;
+        top = Math.max(10, Math.round(at.getBoundingClientRect().top - base));
+      }
+    } catch (e) {}
+    vp.style.top = top + 'px';
     document.documentElement.classList.add('vpopen');
-    try { vp.scrollIntoView({ block: 'start', behavior: 'smooth' }); } catch (e) { vp.scrollIntoView(true); }   // brings the top into view (also scrolls the Wix page)
+    try { vp.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); } catch (e) { vp.scrollIntoView(false); }   // only moves if part of it is off screen
   }
   function closePlayer() { vp.classList.remove('on'); document.documentElement.classList.remove('vpopen'); var fr = document.getElementById('vframe'); fr.innerHTML = ''; fr.classList.remove('gal'); fr.classList.remove('pic'); }
   document.getElementById('vclose').onclick = closePlayer;
@@ -1294,7 +1314,7 @@ document.addEventListener('load', function (e) {
         var sm = c.querySelector('.sm'); if (sm) sm.remove();   // just who's playing under the picture
         // NEW only on the newest one
         if (n === 0 && Date.now() - new Date(sh.date + 'T12:00:00').getTime() < 3 * 864e5) { var pc = c.querySelector('.pic'); if (pc) pc.appendChild(el('span', 'newbadge', 'NEW')); }
-        c.onclick = function (e) { e.preventDefault(); playShow(sh); };
+        c.onclick = function (e) { e.preventDefault(); playShow(sh, c.closest('section')); };
         if (window.PPShare) {      // Share: the slideshow's own powerplaywindsor.com page (with its cover picture on Facebook)
           var sb2 = PPShare.button({ title: sh.title, url: sh.url, text: sh.title + ' | Powerplay Windsor', image: sh.cover });
           sb2.classList.add('mini'); sb2.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); });
@@ -1323,7 +1343,7 @@ document.addEventListener('load', function (e) {
           // Game Day Snaps: new and relevant, so they're in What's New too (tap one and it plays right here)
           var when = sh.posted || sh.date + 'T12:00:00';
           var c = storyCard({ headline: sh.title, url: sh.url, image: sh.cover, published: when, team: 'powerplay' }, { tag: 'Game Day Snaps', sub: 'Game Day Snaps \u00b7 ' + ago(when), tile: 'Snaps' });
-          c.onclick = function (e) { e.preventDefault(); playShow(sh); };
+          c.onclick = function (e) { e.preventDefault(); playShow(sh, c.closest('section')); };
           if (window.PPShare) {   // Share: the slideshow's own powerplaywindsor.com page (with its cover picture on Facebook)
             var sbn = PPShare.button({ title: sh.title, url: sh.url, text: sh.title + ' | Powerplay Windsor', image: sh.cover });
             sbn.classList.add('mini'); sbn.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); });
@@ -1353,7 +1373,7 @@ document.addEventListener('load', function (e) {
           : { tag: pp ? 'Powerplay' : 'Spitfires', sub: (pp ? 'Powerplay Windsor' : 'Windsor Spitfires') + ' \u00b7 ' + ago(x.published), tile: 'Spitfires' }) };
       }).concat(shows.filter(function (sh) { return SPITS_RX.test(' ' + sh.title + ' ' + (sh.desc || '') + ' '); }).slice(0, 4).map(function (sh) {
         var c = storyCard({ headline: sh.title, url: sh.url, image: sh.cover, published: sh.posted || sh.date + 'T12:00:00', team: 'powerplay' }, { tag: 'Game Day Snaps', sub: 'Game Day Snaps \u00b7 ' + ago(sh.posted || sh.date + 'T12:00:00'), tile: 'Spitfires' });
-        c.onclick = function (e) { e.preventDefault(); playShow(sh); };
+        c.onclick = function (e) { e.preventDefault(); playShow(sh, c.closest('section')); };
         return { t: new Date(sh.posted || sh.date + 'T12:00:00').getTime(), node: c };
       })).sort(function (a, b) { return b.t - a.t; }).slice(0, 20).map(function (x) { return x.node; });
       fill('spitfires', spCards, 'Spitfires stories are on the way.');
@@ -1372,7 +1392,7 @@ document.addEventListener('load', function (e) {
         // Game Day Snaps about them
         var snapsT = shows.filter(function (sh) { return t[2].test(' ' + sh.title + ' ' + (sh.desc || '') + ' ') && !(t[0] === 'junior' && SPITS_RX.test(' ' + sh.title + ' ' + (sh.desc || '') + ' ')); }).slice(0, 4).map(function (sh) {
           var c = storyCard({ headline: sh.title, url: sh.url, image: sh.cover, published: sh.posted || sh.date + 'T12:00:00', team: 'powerplay' }, { tag: 'Game Day Snaps', sub: 'Game Day Snaps \u00b7 ' + ago(sh.posted || sh.date + 'T12:00:00'), tile: t[1] });
-          c.onclick = function (e) { e.preventDefault(); playShow(sh); };
+          c.onclick = function (e) { e.preventDefault(); playShow(sh, c.closest('section')); };
           return { t: new Date(sh.posted || sh.date + 'T12:00:00').getTime(), node: c };
         });
         var cards = list.map(function (x) {
