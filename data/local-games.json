@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T21:32:12-05:00",
+ "updated": "2026-11-20T21:38:43-05:00",
  "today": "2026-11-20",
  "range": [
   "2026-11-17",
@@ -305,11 +305,11 @@
    "home_away": "A",
    "opponent": "Sarnia Sting",
    "location": "Progressive Auto Sales Arena, Sarnia",
-   "status": "live",
+   "status": "final",
    "our_score": 2,
    "opp_score": 4,
-   "result": null,
-   "note": "End of Game",
+   "result": "L",
+   "note": "",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29222/"
    }
@@ -380,10 +380,10 @@
    "opponent": "Woodstock Navy Vets",
    "location": "Reeves C.C., Woodstock, ON",
    "status": "live",
-   "our_score": 1,
+   "our_score": 2,
    "opp_score": 1,
    "result": null,
-   "note": "10:14 3rd",
+   "note": "07:02 3rd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15710"
    },
@@ -2615,6 +2615,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Line brawl breaks out between Michigan, Michigan State",
+   "summary": "",
+   "published": "2026-11-20T21:33-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2023/07/Hockey-Puck-Generic-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/hockey/article/line-brawl-breaks-out-between-michigan-michigan-state/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "mlb",
    "headline": "Report: Mets’ first offer to Skubal was for nine years, $400M",
    "summary": "",
@@ -2640,21 +2653,6 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/report-raptors-kawhi-leonard-out-at-least-two-more-weeks/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Raptors rookie Allen Graves making first career start vs. Pistons",
-   "summary": "",
-   "published": "2026-11-20T19:17-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-68.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-rookie-allen-graves-making-first-career-start-vs-pistons/",
    "source": "Sportsnet"
   },
   {
@@ -2813,6 +2811,19 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/pwhl/article/maltais-eldridge-bring-new-look-to-montreal-victoire-as-poulin-recovers-from-surgery/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Shai Gilgeous-Alexander launches fashion program with two universities",
+   "summary": "Shai Gilgeous-Alexander is giving the fashion designers of tomorrow a massive opportunity.",
+   "published": "2026-11-20T21:34-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-10-3.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/shai-gilgeous-alexander-launches-fashion-program-with-two-universities/",
    "source": "Sportsnet"
   },
   {
@@ -2999,19 +3010,6 @@
    "sn_team_count": 0,
    "sport": "MMA",
    "url": "https://www.sportsnet.ca/ufc/article/can-prochazka-bounce-back-at-ufc-qatar-stop-stirlings-rapid-rise/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Support from Flames says plenty about Huberdeau’s reputation",
-   "summary": "Everything you need to know about how beloved Jonathan Huberdeau is in the Flames organization was on full display when the 33-year-old was warming up for his first AHL game. Eric Francis has the story.",
-   "published": "2026-11-19T23:54-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/Calgary-Flames-left-wing-Jonathan-Huberdeau.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/support-from-flames-says-plenty-of-huberdeaus-reputation/",
    "source": "Sportsnet"
   },
   {
@@ -3856,30 +3854,6 @@
     "group": "East Division",
     "teams": [
      {
-      "name": "Gatineau Olympiques",
-      "abbr": "GAT",
-      "gp": 0,
-      "w": 0,
-      "l": 0,
-      "otl": 0,
-      "pts": 0,
-      "gf": 3,
-      "ga": 3,
-      "strk": ""
-     },
-     {
-      "name": "Blainville-Boisbriand Armada",
-      "abbr": "BLB",
-      "gp": 0,
-      "w": 0,
-      "l": 0,
-      "otl": 0,
-      "pts": 0,
-      "gf": 0,
-      "ga": 0,
-      "strk": ""
-     },
-     {
       "name": "Kingston Frontenacs",
       "abbr": "KGN",
       "gp": 23,
@@ -3918,13 +3892,13 @@
      {
       "name": "Ottawa 67's",
       "abbr": "OTT",
-      "gp": 21,
+      "gp": 22,
       "w": 10,
       "l": 9,
-      "otl": 2,
-      "pts": 22,
+      "otl": 3,
+      "pts": 23,
       "gf": 68,
-      "ga": 77,
+      "ga": 78,
       "strk": "L3"
      },
      {
@@ -3938,6 +3912,30 @@
       "gf": 70,
       "ga": 89,
       "strk": "W1"
+     },
+     {
+      "name": "Gatineau Olympiques",
+      "abbr": "GAT",
+      "gp": 1,
+      "w": 1,
+      "l": 0,
+      "otl": 0,
+      "pts": 2,
+      "gf": 4,
+      "ga": 3,
+      "strk": "W1"
+     },
+     {
+      "name": "Blainville-Boisbriand Armada",
+      "abbr": "BLB",
+      "gp": 0,
+      "w": 0,
+      "l": 0,
+      "otl": 0,
+      "pts": 0,
+      "gf": 0,
+      "ga": 0,
+      "strk": ""
      }
     ]
    },
@@ -3977,7 +3975,7 @@
       "otl": 2,
       "pts": 20,
       "gf": 80,
-      "ga": 88,
+      "ga": 89,
       "strk": "W2"
      },
      {
@@ -4001,7 +3999,7 @@
       "otl": 3,
       "pts": 13,
       "gf": 54,
-      "ga": 93,
+      "ga": 94,
       "strk": "L1"
      }
     ]
@@ -4012,14 +4010,14 @@
      {
       "name": "Windsor Spitfires",
       "abbr": "WSR",
-      "gp": 23,
+      "gp": 24,
       "w": 14,
-      "l": 6,
+      "l": 7,
       "otl": 3,
       "pts": 31,
       "gf": 84,
       "ga": 68,
-      "strk": "W2"
+      "strk": "L1"
      },
      {
       "name": "Soo Greyhounds",
@@ -4054,20 +4052,20 @@
       "otl": 4,
       "pts": 22,
       "gf": 86,
-      "ga": 88,
+      "ga": 89,
       "strk": "L1"
      },
      {
       "name": "Sarnia Sting",
       "abbr": "SAR",
-      "gp": 23,
-      "w": 8,
+      "gp": 24,
+      "w": 9,
       "l": 13,
       "otl": 2,
-      "pts": 18,
+      "pts": 20,
       "gf": 86,
       "ga": 97,
-      "strk": "L2"
+      "strk": "W1"
      }
     ]
    },
@@ -4082,7 +4080,7 @@
       "l": 4,
       "otl": 0,
       "pts": 34,
-      "gf": 97,
+      "gf": 98,
       "ga": 61,
       "strk": "L1"
      },
@@ -4094,7 +4092,7 @@
       "l": 6,
       "otl": 3,
       "pts": 31,
-      "gf": 86,
+      "gf": 87,
       "ga": 65,
       "strk": "W6"
      },
@@ -4118,7 +4116,7 @@
       "l": 8,
       "otl": 3,
       "pts": 25,
-      "gf": 78,
+      "gf": 79,
       "ga": 83,
       "strk": "W1"
      },
@@ -4209,8 +4207,8 @@
       "l": 11,
       "otl": 0,
       "pts": 24,
-      "gf": 79,
-      "ga": 87,
+      "gf": 80,
+      "ga": 88,
       "strk": "W3"
      },
      {
@@ -4233,7 +4231,7 @@
       "l": 12,
       "otl": 4,
       "pts": 20,
-      "gf": 96,
+      "gf": 97,
       "ga": 99,
       "strk": "L2"
      },
@@ -4246,7 +4244,7 @@
       "otl": 3,
       "pts": 19,
       "gf": 73,
-      "ga": 118,
+      "ga": 119,
       "strk": "L1"
      },
      {
@@ -4269,8 +4267,8 @@
       "l": 14,
       "otl": 2,
       "pts": 12,
-      "gf": 59,
-      "ga": 98,
+      "gf": 60,
+      "ga": 99,
       "strk": "L2"
      },
      {
@@ -4322,7 +4320,7 @@
       "l": 3,
       "otl": 3,
       "pts": 41,
-      "gf": 106,
+      "gf": 107,
       "ga": 54,
       "strk": "W2"
      },
@@ -4347,7 +4345,7 @@
       "otl": 2,
       "pts": 38,
       "gf": 137,
-      "ga": 80,
+      "ga": 81,
       "strk": "W8"
      },
      {
@@ -4521,7 +4519,7 @@
       "l": 10,
       "otl": 0,
       "pts": 20,
-      "gf": 60,
+      "gf": 61,
       "ga": 78,
       "strk": "W3"
      },
@@ -4546,7 +4544,7 @@
       "otl": 0,
       "pts": 18,
       "gf": 74,
-      "ga": 81,
+      "ga": 82,
       "strk": "W2"
      },
      {
