@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T22:03:37-05:00",
+ "updated": "2026-11-20T22:20:55-05:00",
  "today": "2026-11-20",
  "range": [
   "2026-11-17",
@@ -379,11 +379,11 @@
    "home_away": "A",
    "opponent": "Woodstock Navy Vets",
    "location": "Reeves C.C., Woodstock, ON",
-   "status": "live",
+   "status": "final",
    "our_score": 2,
    "opp_score": 1,
-   "result": null,
-   "note": "Unofficial Final",
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15710"
    },
@@ -2570,21 +2570,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nba",
-   "headline": "Raptors great Kyle Lowry shares lofty expectation for Scottie Barnes",
-   "summary": "",
-   "published": "2026-11-20T20:36-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-69.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-great-kyle-lowry-shares-lofty-expectation-for-scottie-barnes/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "Maple Leafs look to draw inspiration from McIlroy’s journey",
    "summary": "The Toronto Maple Leafs are looking beyond the hockey world for inspiration as they try to chart their way back into the win column.",
@@ -2612,6 +2597,21 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-coach-jim-hiller-under-the-microscope-after-winless-streak/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Raptors great Kyle Lowry shares lofty expectation for Scottie Barnes",
+   "summary": "",
+   "published": "2026-11-20T20:36-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-69.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/raptors-great-kyle-lowry-shares-lofty-expectation-for-scottie-barnes/",
    "source": "Sportsnet"
   },
   {
@@ -2709,21 +2709,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Hiller: Maple Leafs’ Marchenko could be ‘close’ to return",
-   "summary": "",
-   "published": "2026-11-20T13:18-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/marchenko-1.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/hiller-maple-leafs-marchenko-could-be-close-to-return/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Nemec gets unlikely assist from Flames equipment manager Ben Dumaine",
    "summary": "here aren’t many equipment managers who get to celebrate a highlight-reel assist, get a shoutout on Sportsnet and have an NHL defenceman searching for a fine bottle of wine for them.",
    "published": "2026-11-20T18:04-05:00",
@@ -2772,6 +2757,21 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/ohl/article/prospects-report-why-wolves-rookie-kash-kwajah-looks-like-a-franchise-player/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Hiller: Maple Leafs’ Marchenko could be ‘close’ to return",
+   "summary": "",
+   "published": "2026-11-20T13:18-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/marchenko-1.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/hiller-maple-leafs-marchenko-could-be-close-to-return/",
    "source": "Sportsnet"
   },
   {
@@ -4154,14 +4154,14 @@
      {
       "name": "Cobourg Cougars",
       "abbr": "COB",
-      "gp": 23,
+      "gp": 24,
       "w": 19,
-      "l": 3,
+      "l": 4,
       "otl": 1,
       "pts": 39,
       "gf": 109,
       "ga": 82,
-      "strk": "W12"
+      "strk": "L1"
      },
      {
       "name": "Wellington Dukes",
@@ -4202,14 +4202,14 @@
      {
       "name": "Aurora Tigers",
       "abbr": "AUR",
-      "gp": 23,
+      "gp": 24,
       "w": 12,
-      "l": 11,
+      "l": 12,
       "otl": 0,
       "pts": 24,
       "gf": 80,
       "ga": 88,
-      "strk": "W3"
+      "strk": "L1"
      },
      {
       "name": "Pickering Panthers",
@@ -4226,26 +4226,38 @@
      {
       "name": "Trenton Golden Hawks",
       "abbr": "TRN",
-      "gp": 24,
-      "w": 8,
+      "gp": 25,
+      "w": 9,
       "l": 12,
       "otl": 4,
-      "pts": 20,
-      "gf": 97,
+      "pts": 22,
+      "gf": 98,
       "ga": 99,
-      "strk": "L2"
+      "strk": "W1"
      },
      {
       "name": "St. Michaels Buzzers",
       "abbr": "STM",
-      "gp": 25,
+      "gp": 26,
       "w": 8,
-      "l": 14,
+      "l": 15,
       "otl": 3,
       "pts": 19,
       "gf": 73,
-      "ga": 119,
-      "strk": "L1"
+      "ga": 120,
+      "strk": "L2"
+     },
+     {
+      "name": "North York Rangers",
+      "abbr": "NYR",
+      "gp": 22,
+      "w": 6,
+      "l": 14,
+      "otl": 2,
+      "pts": 14,
+      "gf": 60,
+      "ga": 99,
+      "strk": "W1"
      },
      {
       "name": "Lindsay Muskies",
@@ -4258,18 +4270,6 @@
       "gf": 82,
       "ga": 119,
       "strk": "L3"
-     },
-     {
-      "name": "North York Rangers",
-      "abbr": "NYR",
-      "gp": 21,
-      "w": 5,
-      "l": 14,
-      "otl": 2,
-      "pts": 12,
-      "gf": 60,
-      "ga": 99,
-      "strk": "L2"
      },
      {
       "name": "Toronto Warriors",
@@ -4303,26 +4303,26 @@
      {
       "name": "Milton Menace",
       "abbr": "MIL",
-      "gp": 26,
-      "w": 20,
+      "gp": 27,
+      "w": 21,
       "l": 4,
       "otl": 2,
-      "pts": 42,
+      "pts": 44,
       "gf": 108,
       "ga": 57,
-      "strk": "W1"
+      "strk": "W2"
      },
      {
       "name": "King Rebellion",
       "abbr": "KNG",
-      "gp": 25,
-      "w": 19,
+      "gp": 26,
+      "w": 20,
       "l": 3,
       "otl": 3,
-      "pts": 41,
+      "pts": 43,
       "gf": 107,
       "ga": 54,
-      "strk": "W2"
+      "strk": "W3"
      },
      {
       "name": "Toronto Patriots",
@@ -4339,14 +4339,14 @@
      {
       "name": "Burlington Cougars",
       "abbr": "BUR",
-      "gp": 25,
+      "gp": 26,
       "w": 18,
-      "l": 5,
+      "l": 6,
       "otl": 2,
       "pts": 38,
       "gf": 137,
       "ga": 81,
-      "strk": "W8"
+      "strk": "L1"
      },
      {
       "name": "Leamington Flyers",
@@ -4385,6 +4385,18 @@
       "strk": "W1"
      },
      {
+      "name": "Georgetown Raiders",
+      "abbr": "GEO",
+      "gp": 27,
+      "w": 8,
+      "l": 17,
+      "otl": 2,
+      "pts": 18,
+      "gf": 85,
+      "ga": 134,
+      "strk": "W1"
+     },
+     {
       "name": "Niagara Falls Canucks",
       "abbr": "NFC",
       "gp": 29,
@@ -4397,28 +4409,16 @@
       "strk": "L1"
      },
      {
-      "name": "Georgetown Raiders",
-      "abbr": "GEO",
-      "gp": 26,
-      "w": 7,
-      "l": 17,
-      "otl": 2,
-      "pts": 16,
-      "gf": 85,
-      "ga": 134,
-      "strk": "L2"
-     },
-     {
       "name": "Caledon Admirals",
       "abbr": "CAL",
-      "gp": 26,
+      "gp": 27,
       "w": 7,
-      "l": 17,
+      "l": 18,
       "otl": 2,
       "pts": 16,
       "gf": 59,
       "ga": 136,
-      "strk": "L7"
+      "strk": "L8"
      },
      {
       "name": "Buffalo Jr. Sabres",
@@ -4514,14 +4514,14 @@
      {
       "name": "LaSalle Vipers",
       "abbr": "LAS",
-      "gp": 20,
-      "w": 10,
+      "gp": 21,
+      "w": 11,
       "l": 10,
       "otl": 0,
-      "pts": 20,
+      "pts": 22,
       "gf": 61,
       "ga": 78,
-      "strk": "W3"
+      "strk": "W4"
      },
      {
       "name": "Strathroy Rockets",
@@ -4538,14 +4538,14 @@
      {
       "name": "Woodstock Navy Vets",
       "abbr": "WNV",
-      "gp": 19,
+      "gp": 20,
       "w": 9,
-      "l": 10,
+      "l": 11,
       "otl": 0,
       "pts": 18,
       "gf": 74,
       "ga": 82,
-      "strk": "W2"
+      "strk": "L1"
      },
      {
       "name": "London Nationals",
