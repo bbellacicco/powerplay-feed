@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T19:01:52-05:00",
+ "updated": "2026-11-20T19:16:45-05:00",
  "today": "2026-11-20",
  "range": [
   "2026-11-17",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 36
   },
   "club_news": {
    "ok": true,
@@ -305,13 +305,12 @@
    "home_away": "A",
    "opponent": "Sarnia Sting",
    "location": "Progressive Auto Sales Arena, Sarnia",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 1,
    "result": null,
-   "note": "",
+   "note": "13:31 1st",
    "links": {
-    "tickets": "https://tickets.sarniasting.com/",
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29222/"
    }
   },
@@ -2895,6 +2894,32 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Andreescu gives Canada early lead, Brazil responds in BJK Cup playoff tie",
+   "summary": "Bianca Andreescu gave Canada a 1-0 lead in its Billie Jean King Cup playoff tie with host Brazil with a 6-3, 6-1 win over Nauhany Silva on Friday.",
+   "published": "2026-11-20T15:19-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-10-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Tennis",
+   "url": "https://www.sportsnet.ca/tennis/article/andreescu-gives-canada-early-lead-in-bjk-cup-tie-with-host-brazil/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "ATP Finals semifinals are set: Alcaraz vs. Shelton and Zverev vs. Medvedev",
+   "summary": "Carlos Alcaraz didn’t appear bothered by his various physical issues in a 6-4, 6-1 victory over home player Flavio Cobolli at the ATP Finals on Friday.",
+   "published": "2026-11-20T16:32-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177304150-scaled.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Tennis",
+   "url": "https://www.sportsnet.ca/atp/article/atp-finals-semifinals-are-set-alcaraz-vs-shelton-and-zverev-vs-medvedev/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Support from Flames says plenty about Huberdeau’s reputation",
    "summary": "Everything you need to know about how beloved Jonathan Huberdeau is in the Flames organization was on full display when the 33-year-old was warming up for his first AHL game. Eric Francis has the story.",
@@ -2976,19 +3001,6 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/mls/article/cf-montreal-signs-mexican-forward-daniel-rios-through-2028-29-season/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Alcaraz eases past Cobolli at ATP Finals despite injury",
-   "summary": "Carlos Alcaraz didn’t appear bothered by his various physical issues in a 6-4, 6-1 victory over home player Flavio Cobolli at the ATP Finals on Friday.",
-   "published": "2026-11-20T09:28-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Alcaraz.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Tennis",
-   "url": "https://www.sportsnet.ca/atp/article/alcaraz-eases-past-cobolli-at-atp-finals-despite-injury/",
    "source": "Sportsnet"
   },
   {
@@ -3880,7 +3892,7 @@
       "otl": 0,
       "pts": 0,
       "gf": 0,
-      "ga": 0,
+      "ga": 1,
       "strk": ""
      },
      {
@@ -3903,8 +3915,8 @@
       "l": 8,
       "otl": 1,
       "pts": 29,
-      "gf": 94,
-      "ga": 82,
+      "gf": 95,
+      "ga": 83,
       "strk": "W1"
      },
      {
@@ -3939,7 +3951,7 @@
       "l": 9,
       "otl": 2,
       "pts": 22,
-      "gf": 65,
+      "gf": 66,
       "ga": 74,
       "strk": "L3"
      },
@@ -3951,8 +3963,8 @@
       "l": 10,
       "otl": 5,
       "pts": 19,
-      "gf": 67,
-      "ga": 84,
+      "gf": 68,
+      "ga": 85,
       "strk": "W1"
      }
     ]
@@ -3993,7 +4005,7 @@
       "otl": 2,
       "pts": 20,
       "gf": 77,
-      "ga": 85,
+      "ga": 86,
       "strk": "W2"
      },
      {
@@ -4017,7 +4029,7 @@
       "otl": 3,
       "pts": 13,
       "gf": 53,
-      "ga": 89,
+      "ga": 90,
       "strk": "L1"
      }
     ]
@@ -4034,7 +4046,7 @@
       "otl": 3,
       "pts": 31,
       "gf": 82,
-      "ga": 64,
+      "ga": 65,
       "strk": "W2"
      },
      {
@@ -4070,7 +4082,7 @@
       "otl": 4,
       "pts": 22,
       "gf": 82,
-      "ga": 83,
+      "ga": 84,
       "strk": "L1"
      },
      {
@@ -4081,7 +4093,7 @@
       "l": 13,
       "otl": 2,
       "pts": 18,
-      "gf": 82,
+      "gf": 83,
       "ga": 95,
       "strk": "L2"
      }
@@ -4098,7 +4110,7 @@
       "l": 4,
       "otl": 0,
       "pts": 34,
-      "gf": 93,
+      "gf": 94,
       "ga": 60,
       "strk": "L1"
      },
@@ -4110,7 +4122,7 @@
       "l": 6,
       "otl": 3,
       "pts": 31,
-      "gf": 83,
+      "gf": 84,
       "ga": 62,
       "strk": "W6"
      },
@@ -4134,7 +4146,7 @@
       "l": 8,
       "otl": 3,
       "pts": 25,
-      "gf": 73,
+      "gf": 74,
       "ga": 79,
       "strk": "W1"
      },
@@ -4213,7 +4225,7 @@
       "l": 8,
       "otl": 2,
       "pts": 28,
-      "gf": 93,
+      "gf": 94,
       "ga": 72,
       "strk": "W4"
      },
@@ -4226,7 +4238,7 @@
       "otl": 0,
       "pts": 24,
       "gf": 75,
-      "ga": 79,
+      "ga": 80,
       "strk": "W3"
      },
      {
@@ -4285,7 +4297,7 @@
       "l": 14,
       "otl": 2,
       "pts": 12,
-      "gf": 51,
+      "gf": 52,
       "ga": 94,
       "strk": "L2"
      },
@@ -4411,7 +4423,7 @@
       "otl": 2,
       "pts": 18,
       "gf": 73,
-      "ga": 125,
+      "ga": 126,
       "strk": "W1"
      },
      {
@@ -4626,8 +4638,8 @@
       "l": 2,
       "otl": 1,
       "pts": 35,
-      "gf": 111,
-      "ga": 50,
+      "gf": 112,
+      "ga": 51,
       "strk": "W6"
      },
      {
@@ -4650,8 +4662,8 @@
       "l": 4,
       "otl": 2,
       "pts": 32,
-      "gf": 92,
-      "ga": 58,
+      "gf": 93,
+      "ga": 59,
       "strk": "W2"
      },
      {
