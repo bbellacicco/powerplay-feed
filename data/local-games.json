@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T12:31:42-05:00",
+ "updated": "2026-11-21T12:47:24-05:00",
  "today": "2026-11-21",
  "range": [
   "2026-11-18",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -2663,18 +2663,18 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nba",
-   "headline": "Raptors takeaways: Barnes, Graves dominate to end skid with win over Pistons",
-   "summary": "The Raptors ended a six-game skid on Friday with a win over the Pistons thanks to big games from Scottie Barnes and Allen Graves. Steven Loung highlights some key takeaways from the much-needed victory.",
-   "published": "2026-11-20T23:13-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-41-2.jpg",
+   "league": "nhl",
+   "headline": "Maple Leafs scratch Oliver Ekman-Larsson against Blue Jackets",
+   "summary": "Oliver Ekman-Larsson is taking a seat in the press box.",
+   "published": "2026-11-21T11:39-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Toronto-Maple-Leafs-Oliver-Ekman-Larsson.jpg",
    "video": false,
    "teams": [
-    "Toronto Raptors"
+    "Toronto Maple Leafs"
    ],
    "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-takeaways-barnes-graves-dominate-to-end-skid-with-win-over-pistons/",
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-scratch-oliver-ekman-larsson-against-blue-jackets/",
    "source": "Sportsnet"
   },
   {
@@ -2694,17 +2694,15 @@
   },
   {
    "league": "nhl",
-   "headline": "Maple Leafs scratch Oliver Ekman-Larsson against Blue Jackets",
-   "summary": "Oliver Ekman-Larsson is taking a seat in the press box.",
-   "published": "2026-11-21T11:39-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Toronto-Maple-Leafs-Oliver-Ekman-Larsson.jpg",
+   "headline": "Canucks forward Elias Pettersson out against Wild with upper-body injury",
+   "summary": "A tough test for the Vancouver Canucks just got even tougher.",
+   "published": "2026-11-21T12:43-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/canucks-11.jpg",
    "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
+   "teams": [],
    "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-scratch-oliver-ekman-larsson-against-blue-jackets/",
+   "url": "https://www.sportsnet.ca/nhl/article/canucks-forward-elias-pettersson-out-against-wild-with-upper-body-injury/",
    "source": "Sportsnet"
   },
   {
@@ -2803,16 +2801,18 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Line brawl breaks out between Michigan, Michigan State",
-   "summary": "",
-   "published": "2026-11-20T21:33-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/Michael-Hage-Michigan.jpg",
+   "league": "nba",
+   "headline": "Raptors takeaways: Barnes, Graves dominate to end skid with win over Pistons",
+   "summary": "The Raptors ended a six-game skid on Friday with a win over the Pistons thanks to big games from Scottie Barnes and Allen Graves. Steven Loung highlights some key takeaways from the much-needed victory.",
+   "published": "2026-11-20T23:13-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-41-2.jpg",
    "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/hockey/article/line-brawl-breaks-out-between-michigan-michigan-state/",
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/raptors-takeaways-barnes-graves-dominate-to-end-skid-with-win-over-pistons/",
    "source": "Sportsnet"
   },
   {
@@ -2926,6 +2926,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Line brawl breaks out between Michigan, Michigan State",
+   "summary": "",
+   "published": "2026-11-20T21:33-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/Michael-Hage-Michigan.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/hockey/article/line-brawl-breaks-out-between-michigan-michigan-state/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nba",
    "headline": "James Harden scores 51 points to propel Cavaliers past Pacers",
    "summary": "James Harden’s game has evolved over the past couple seasons where he is counted on more for getting open shots for teammates than being the prolific scorer he was during his first 12 years in the league.",
@@ -3014,32 +3027,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/drew-doughty-opens-up-about-free-agency-trade-noise-asking-price-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Friday Four: Sorting surprising teams into contenders or pretenders",
-   "summary": "The Jets, Rangers, Islanders and Predators are among the teams exceeding expectations to start the season. Michael Amato takes a look at each team to determine whether they are contenders or pretenders.",
-   "published": "2026-11-20T08:10-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Winnipeg-Jets-Dawson-Mercer-19-celebrates-his-goal-against-the-New-Jersey-Devils-with-Josh-Morrissey-44.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 4,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/friday-four-sorting-surprising-teams-into-contenders-or-pretenders/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Prospects Report: Why Wolves rookie Kash Kwajah looks like a ‘franchise player’",
-   "summary": "Kash Kwajah is becoming one of the top prospects for the 2028 NHL Draft after a great start to his major-junior career with the Sudbury Wolves along with an outstanding performance at the World U17 Challenge. He has to b",
-   "published": "2026-11-20T09:07-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/kash.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/ohl/article/prospects-report-why-wolves-rookie-kash-kwajah-looks-like-a-franchise-player/",
    "source": "Sportsnet"
   },
   {
