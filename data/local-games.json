@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T10:18:34-05:00",
+ "updated": "2026-11-21T10:50:47-05:00",
  "today": "2026-11-21",
  "range": [
   "2026-11-18",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -322,13 +322,13 @@
    "home_away": "A",
    "opponent": "Waterloo Warriors",
    "location": "Waterloo, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Score not posted yet",
+   "status": "final",
+   "our_score": 1,
+   "opp_score": 3,
+   "result": "L",
+   "note": "",
    "links": {
-    "watch": "https://oua.tv/?school=Windsor"
+    "boxscore": "https://golancers.ca/schedule.aspx?schedule=232"
    }
   },
   {
@@ -2805,6 +2805,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Maple Leafs coach Jim Hiller under the microscope after winless streak",
+   "summary": "Maple Leafs head coach Jim Hiller is under the microscope, and so Justin Bourne thought it was the right time to assess how he’s lead the team to where they are, what can change, and what that means for this season in ge",
+   "published": "2026-11-20T12:22-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-44-1.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-coach-jim-hiller-under-the-microscope-after-winless-streak/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "JuJu Watkins loses voice, finds form to leads USC over Baylor",
    "summary": "",
@@ -2841,21 +2856,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/yankees-non-tender-2024-al-rookie-of-the-year-luis-gil/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Maple Leafs coach Jim Hiller under the microscope after winless streak",
-   "summary": "Maple Leafs head coach Jim Hiller is under the microscope, and so Justin Bourne thought it was the right time to assess how he’s lead the team to where they are, what can change, and what that means for this season in ge",
-   "published": "2026-11-20T12:22-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-44-1.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-coach-jim-hiller-under-the-microscope-after-winless-streak/",
    "source": "Sportsnet"
   },
   {
@@ -3081,19 +3081,6 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/canadian-premier-league/article/cpl-final-preview-snow-bowl-rematch-heats-up-calgary/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Nations League draw offers World Cup rematches between Spain-France, England-Norway",
-   "summary": "",
-   "published": "2026-11-20T08:05-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/ueaf.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/soccer/article/nations-league-draw-offers-world-cup-rematches-between-spain-france-england-norway/",
    "source": "Sportsnet"
   },
   {
