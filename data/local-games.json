@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-20T23:36:22-05:00",
- "today": "2026-11-20",
+ "updated": "2026-11-21T00:06:59-05:00",
+ "today": "2026-11-21",
  "range": [
-  "2026-11-17",
-  "2026-11-23"
+  "2026-11-18",
+  "2026-11-24"
  ],
  "teams": {
   "spitfires": {
@@ -91,7 +91,7 @@
   },
   "pwhl": {
    "ok": true,
-   "count": 5
+   "count": 9
   },
   "cfl_standings": {
    "ok": true,
@@ -111,25 +111,6 @@
   }
  },
  "games": [
-  {
-   "id": "junior-gs2960651",
-   "team": "junior",
-   "sport": "PJHL (Jr. C)",
-   "start": "2026-11-17T19:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Lakeshore Canadiens",
-   "location": "Essex Centre Complex",
-   "status": "final",
-   "our_score": 5,
-   "opp_score": 1,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960651?configuration=45"
-   },
-   "club": "Essex 73's"
-  },
   {
    "id": "junior-gojhl15702",
    "team": "junior",
@@ -1266,9 +1247,66 @@
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960787?configuration=45"
    },
    "club": "Wheatley Sharks"
+  },
+  {
+   "id": "spitfires-ohl29278",
+   "team": "spitfires",
+   "sport": "Hockey",
+   "start": "2026-12-05T19:05:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Kitchener Rangers",
+   "location": "WFCU Centre, Windsor",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "tickets": "https://wfcucentre.evenue.net/event/S27/G15",
+    "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29278/"
+   }
+  },
+  {
+   "id": "junior-gs2960804",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-12-05T19:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Mooretown Flags",
+   "location": "Mooretown Sports Complex",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960804?configuration=45"
+   },
+   "club": "Essex 73's"
   }
  ],
  "last": [
+  {
+   "id": "junior-gs2960651",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-11-17T19:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Lakeshore Canadiens",
+   "location": "Essex Centre Complex",
+   "status": "final",
+   "our_score": 5,
+   "opp_score": 1,
+   "result": "W",
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960651?configuration=45"
+   },
+   "club": "Essex 73's"
+  },
   {
    "id": "junior-gojhl15693",
    "team": "junior",
@@ -1475,25 +1513,6 @@
    }
   },
   {
-   "id": "junior-gs2960612",
-   "team": "junior",
-   "sport": "PJHL (Jr. C)",
-   "start": "2026-11-13T19:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Wheatley Sharks",
-   "location": "Essex Centre Complex",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 0,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960612?configuration=45"
-   },
-   "club": "Essex 73's"
-  },
-  {
    "id": "lancers-6348",
    "team": "lancers",
    "sport": "Men's Hockey",
@@ -1530,6 +1549,25 @@
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16673"
    },
    "club": "Leamington Flyers"
+  },
+  {
+   "id": "junior-gs2960590",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-11-11T19:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Dresden Kings",
+   "location": "Wheatley Area Arena",
+   "status": "final",
+   "our_score": 7,
+   "opp_score": 2,
+   "result": "W",
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960590?configuration=45"
+   },
+   "club": "Wheatley Sharks"
   },
   {
    "id": "lancers-6497",
@@ -1738,9 +1776,7 @@
    "note": "",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/356"
-  }
- ],
- "pro_ahead": [
+  },
   {
    "league": "pwhl",
    "start": "2026-11-24T13:30:00-05:00",
@@ -1800,7 +1836,9 @@
    "note": "",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/359"
-  },
+  }
+ ],
+ "pro_ahead": [
   {
    "league": "pwhl",
    "start": "2026-11-25T13:00:00-05:00",
@@ -1845,6 +1883,51 @@
    "note": "",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/364"
+  },
+  {
+   "league": "pwhl",
+   "start": "2026-12-05T15:00:00-05:00",
+   "status": "upcoming",
+   "home": "Vancouver Goldeneyes",
+   "away": "Seattle Torrent",
+   "home_abbr": "VAN",
+   "away_abbr": "SEA",
+   "our_score": null,
+   "opp_score": null,
+   "location": "Pacific Coliseum | Vancouver",
+   "note": "",
+   "time_tbd": false,
+   "link": "https://www.thepwhl.com/en/stats/game-center/365"
+  },
+  {
+   "league": "pwhl",
+   "start": "2026-12-05T19:00:00-05:00",
+   "status": "upcoming",
+   "home": "Montréal Victoire",
+   "away": "Hamilton Havoc",
+   "home_abbr": "MTL",
+   "away_abbr": "HAM",
+   "our_score": null,
+   "opp_score": null,
+   "location": "Place Bell | Laval",
+   "note": "",
+   "time_tbd": false,
+   "link": "https://www.thepwhl.com/en/stats/game-center/366"
+  },
+  {
+   "league": "pwhl",
+   "start": "2026-12-05T19:00:00-05:00",
+   "status": "upcoming",
+   "home": "San Jose Sea Lions",
+   "away": "Minnesota Frost",
+   "home_abbr": "SJ",
+   "away_abbr": "MIN",
+   "our_score": null,
+   "opp_score": null,
+   "location": "SAP Center | San Jose",
+   "note": "",
+   "time_tbd": false,
+   "link": "https://www.thepwhl.com/en/stats/game-center/367"
   }
  ],
  "pro_news": [
