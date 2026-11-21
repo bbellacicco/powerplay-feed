@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T15:50:56-05:00",
+ "updated": "2026-11-21T16:01:42-05:00",
  "today": "2026-11-21",
  "range": [
   "2026-11-18",
@@ -58,8 +58,8 @@
    "count": 0
   },
   "cfl": {
-   "ok": false,
-   "error": "<urlopen error _ssl.c:994: The handshake operation timed out>"
+   "ok": true,
+   "count": 0
   },
   "cfl_news": {
    "ok": true,
@@ -437,10 +437,11 @@
    "our_score": null,
    "opp_score": null,
    "result": null,
-   "note": "",
+   "note": "In progress",
    "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=171",
-    "watch": "https://oua.tv/?school=Windsor"
+    "gamecentre": "https://oua.tv/?school=Windsor",
+    "watch": "https://oua.tv/?school=Windsor",
+    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=171"
    }
   },
   {
@@ -456,10 +457,11 @@
    "our_score": null,
    "opp_score": null,
    "result": null,
-   "note": "",
+   "note": "In progress",
    "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=172",
-    "watch": "https://oua.tv/?school=Windsor"
+    "gamecentre": "https://women.oua.hockeytech.com/stats/daily-schedule/2026-11-21?league=4&season=194&division=-1",
+    "watch": "https://oua.tv/?school=Windsor",
+    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=172"
    }
   },
   {
@@ -1712,141 +1714,6 @@
   }
  ],
  "pro_games": [
-  {
-   "league": "pwhl",
-   "start": "2026-11-22T21:50:00-05:00",
-   "status": "upcoming",
-   "home": "Vegas Vanguards",
-   "away": "Minnesota Frost",
-   "home_abbr": "VGS",
-   "away_abbr": "MIN",
-   "our_score": null,
-   "opp_score": null,
-   "location": "America First Center | Henderson",
-   "note": "",
-   "time_tbd": false,
-   "link": "https://www.thepwhl.com/en/stats/game-center/353"
-  },
-  {
-   "league": "pwhl",
-   "start": "2026-11-23T13:30:00-05:00",
-   "status": "upcoming",
-   "home": "Ottawa Charge",
-   "away": "Detroit Clutch",
-   "home_abbr": "OTT",
-   "away_abbr": "DET",
-   "our_score": null,
-   "opp_score": null,
-   "location": "Morgan Firestone Arena | Ancaster",
-   "note": "",
-   "time_tbd": false,
-   "link": "https://www.thepwhl.com/en/stats/game-center/360"
-  },
-  {
-   "league": "pwhl",
-   "start": "2026-11-23T16:00:00-05:00",
-   "status": "upcoming",
-   "home": "Minnesota Frost",
-   "away": "Vancouver Goldeneyes",
-   "home_abbr": "MIN",
-   "away_abbr": "VAN",
-   "our_score": null,
-   "opp_score": null,
-   "location": "America First Center | Henderson",
-   "note": "",
-   "time_tbd": false,
-   "link": "https://www.thepwhl.com/en/stats/game-center/354"
-  },
-  {
-   "league": "pwhl",
-   "start": "2026-11-23T17:30:00-05:00",
-   "status": "upcoming",
-   "home": "Hamilton Havoc",
-   "away": "Toronto Sceptres",
-   "home_abbr": "HAM",
-   "away_abbr": "TOR",
-   "our_score": null,
-   "opp_score": null,
-   "location": "Morgan Firestone Arena | Ancaster",
-   "note": "",
-   "time_tbd": false,
-   "link": "https://www.thepwhl.com/en/stats/game-center/361"
-  },
-  {
-   "league": "pwhl",
-   "start": "2026-11-23T18:00:00-05:00",
-   "status": "upcoming",
-   "home": "Boston Fleet",
-   "away": "New York Sirens",
-   "home_abbr": "BOS",
-   "away_abbr": "NY",
-   "our_score": null,
-   "opp_score": null,
-   "location": "Boston Sports Institute | Wellesley",
-   "note": "",
-   "time_tbd": false,
-   "link": "https://www.thepwhl.com/en/stats/game-center/356"
-  },
-  {
-   "league": "pwhl",
-   "start": "2026-11-24T13:30:00-05:00",
-   "status": "upcoming",
-   "home": "Detroit Clutch",
-   "away": "Hamilton Havoc",
-   "home_abbr": "DET",
-   "away_abbr": "HAM",
-   "our_score": null,
-   "opp_score": null,
-   "location": "Morgan Firestone Arena | Ancaster",
-   "note": "",
-   "time_tbd": false,
-   "link": "https://www.thepwhl.com/en/stats/game-center/362"
-  },
-  {
-   "league": "pwhl",
-   "start": "2026-11-24T15:00:00-05:00",
-   "status": "upcoming",
-   "home": "Vancouver Goldeneyes",
-   "away": "Vegas Vanguards",
-   "home_abbr": "VAN",
-   "away_abbr": "VGS",
-   "our_score": null,
-   "opp_score": null,
-   "location": "America First Center | Henderson",
-   "note": "",
-   "time_tbd": false,
-   "link": "https://www.thepwhl.com/en/stats/game-center/355"
-  },
-  {
-   "league": "pwhl",
-   "start": "2026-11-24T16:00:00-05:00",
-   "status": "upcoming",
-   "home": "New York Sirens",
-   "away": "Montréal Victoire",
-   "home_abbr": "NY",
-   "away_abbr": "MTL",
-   "our_score": null,
-   "opp_score": null,
-   "location": "Boston Sports Institute | Wellesley",
-   "note": "",
-   "time_tbd": false,
-   "link": "https://www.thepwhl.com/en/stats/game-center/357"
-  },
-  {
-   "league": "pwhl",
-   "start": "2026-11-24T19:00:00-05:00",
-   "status": "upcoming",
-   "home": "Toronto Sceptres",
-   "away": "Ottawa Charge",
-   "home_abbr": "TOR",
-   "away_abbr": "OTT",
-   "our_score": null,
-   "opp_score": null,
-   "location": "Mattamy Athletic Centre | Toronto",
-   "note": "",
-   "time_tbd": false,
-   "link": "https://www.thepwhl.com/en/stats/game-center/359"
-  },
   {
    "league": "pwhl",
    "start": "2026-11-22T21:50:00-05:00",
@@ -3430,6 +3297,19 @@
   },
   {
    "league": "nfl",
+   "headline": "Bills Roster Moves Nov. 21",
+   "summary": "",
+   "published": "2026-11-21T15:59-05:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/bills/khj0y07yrnsaasynp8su.jpg",
+   "video": false,
+   "teams": [
+    "Buffalo Bills"
+   ],
+   "url": "https://www.buffalobills.com/news/bills-roster-moves-nov-21",
+   "source": "Team site"
+  },
+  {
+   "league": "nfl",
    "headline": "Buffalo Bills injury report vs. Dolphins | Week 11",
    "summary": "Joe Brady ruled out two players, listed one player as doubtful and three others as questionable for Sunday's game against the Dolphins.",
    "published": "2026-11-20T13:36-05:00",
@@ -3543,19 +3423,6 @@
     "Buffalo Bills"
    ],
    "url": "https://www.buffalobills.com/news/top-storylines-for-bills-vs-dolphins-week-11",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
-   "headline": "Buffalo Bills recognize these WNY high school football coaches | Week 11 2026",
-   "summary": "As part of the program, each winning coach’s program will receive $1,000 from the Buffalo Bills and Visa.",
-   "published": "2026-11-18T10:00-05:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/bills/nfxg8hhyukotoosekjmr.jpg",
-   "video": false,
-   "teams": [
-    "Buffalo Bills"
-   ],
-   "url": "https://www.buffalobills.com/news/buffalo-bills-recognize-these-wny-high-school-football-coaches-week-11-2026",
    "source": "Team site"
   },
   {
