@@ -301,9 +301,69 @@ def scrape_junior(now):
 # ------------------------------------------------------------------ Lancers
 
 
+def _lancers_schedules(base):
+    """SIDEARM sport shortname -> that sport's schedule page (shows every result,
+    used as the result link until golancers.ca posts a box score)."""
+    try:
+        data = json.loads(fetch(base + "/services/sportnames.ashx"))
+    except Exception:
+        return {}
+    out = {}
+    for s in data.get("sports") or []:
+        i = s.get("sportInfo") or {}
+        if i.get("sport_shortname") and i.get("schedule_id"):
+            out[i["sport_shortname"]] = f"{base}/schedule.aspx?schedule={i['schedule_id']}"
+    return out
+
+
+def _lancers_live(base):
+    """golancers.ca only posts a score on its calendar once a game is over. Its live
+    stats feed (services/livestats.ashx, the same one the site's own scoreboard reads)
+    carries games while they're on. Returns {calendar game id: (our, opp, detail)}.
+    The feed's field names aren't fixed across SIDEARM sites, so read it loosely."""
+    try:
+        data = json.loads(fetch(base + "/services/livestats.ashx"))
+    except Exception:
+        return {}
+    games = data.get("Games") or data.get("games") or (data if isinstance(data, list) else [])
+    out = {}
+    for g in games:
+        if not isinstance(g, dict):
+            continue
+        flat = {k.lower(): v for k, v in g.items()}
+        gid = None
+        for k in ("gameid", "game_id", "scheduleid", "schedule_id", "id"):
+            if to_int(flat.get(k)) is not None:
+                gid = to_int(flat[k])
+                break
+        def side(*names):
+            for n in names:
+                v = flat.get(n)
+                if isinstance(v, dict):
+                    v = {k.lower(): x for k, x in v.items()}
+                    v = v.get("score") if "score" in v else v.get("points")
+                if to_int(v) is not None:
+                    return to_int(v)
+            return None
+        home = side("homescore", "home_score", "hometeam", "home_team", "home")
+        away = side("visitingscore", "visitorscore", "awayscore", "visiting_score", "away_score",
+                    "visitingteam", "visitorteam", "awayteam", "visiting_team", "away_team", "visitor", "away")
+        if gid is None or home is None or away is None:
+            continue
+        if str(flat.get("iscomplete") or flat.get("is_complete") or "").lower() == "true":
+            continue
+        ours_home = str(flat.get("location_indicator") or flat.get("ishome") or flat.get("is_home") or "").upper() in ("H", "TRUE")
+        detail = " ".join(str(flat.get(k) or "") for k in ("period", "clock", "status") if flat.get(k)).strip()
+        out[gid] = (home, away, detail, ours_home, "location_indicator" in flat or "ishome" in flat or "is_home" in flat)
+    return out
+
+
 def scrape_lancers(today):
     base = "https://golancers.ca"
     seen, out = set(), []
+    now = datetime.now(TZ)
+    schedules = _lancers_schedules(base) if not FIXTURES else {}
+    live = _lancers_live(base) if not FIXTURES else {}
     # month view covers a 6-week grid; ask for each month the window touches
     months, d = [], (today - timedelta(days=LAST_GAME_DAYS)).replace(day=1)
     while d <= today + timedelta(days=SCHEDULE_AHEAD_DAYS):
@@ -345,9 +405,35 @@ def scrape_lancers(today):
                     if u:
                         links[k] = u if u.startswith("http") else base + u
                 media = e.get("media") or {}
+                stats_url = ((media.get("stats") or {}).get("url")) or ""
+                # golancers.ca's live-stats link points at an old date on the OUA schedule; use the game's own day
+                stats_url = re.sub(r"/daily-schedule/\d{4}-\d{2}-\d{2}", "/daily-schedule/" + start.date().isoformat(), stats_url)
+                watch_url = ((media.get("video") or {}).get("url")) or ""
+                if status == "upcoming" and not time_tbd and start <= now < start + timedelta(hours=4):
+                    lv = live.get(e["id"])
+                    if lv:
+                        home, away, detail, ours_home, known = lv
+                        if not known:
+                            ours_home = ha != "A"
+                        status = "live"
+                        our, opp = (home, away) if ours_home else (away, home)
+                        if detail:
+                            note_bits.insert(0, detail)
+                    else:
+                        # started, but no live score from golancers.ca: show it as under way
+                        # (no made-up 0-0) and point fans to the live stats / stream
+                        note_bits.insert(0, "In progress")
+                    links["gamecentre"] = stats_url or watch_url
+                    links["watch"] = watch_url
+                elif status == "upcoming" and start < now - timedelta(hours=4):
+                    note_bits.insert(0, "Score not posted yet")
                 if status == "upcoming":
                     links["tickets"] = ((media.get("tickets") or {}).get("url")) or ""
-                    links["watch"] = ((media.get("video") or {}).get("url")) or ""
+                    links["watch"] = watch_url
+                if status == "final" and not links:
+                    # golancers.ca posts box scores late (or never for some sports); until it does,
+                    # the result links to that sport's schedule page, which lists the score
+                    links["boxscore"] = schedules.get(e["sport"]["shortname"], "")
                 out.append(game(
                     "lancers", e["sport"]["title"], start, time_tbd, ha,
                     (e.get("opponent") or {}).get("title") or "TBA",
