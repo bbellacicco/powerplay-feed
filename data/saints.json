@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T15:45:01-05:00",
+ "updated": "2026-11-21T16:00:01-05:00",
  "today": "2026-11-21",
  "games": [
   {
@@ -119,12 +119,14 @@
    "home_away": "A",
    "opponent": "Redeemer",
    "location": "",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
-   "note": "",
-   "links": {}
+   "note": "Set 1",
+   "links": {
+    "boxscore": "https://www.saintsathletics.ca/sports/mvball/2026-27/boxscores/20261121_q5ln.xml"
+   }
   }
  ],
  "ahead": [
