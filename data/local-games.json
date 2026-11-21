@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T15:31:47-05:00",
+ "updated": "2026-11-21T15:50:56-05:00",
  "today": "2026-11-21",
  "range": [
   "2026-11-18",
@@ -58,8 +58,8 @@
    "count": 0
   },
   "cfl": {
-   "ok": true,
-   "count": 0
+   "ok": false,
+   "error": "<urlopen error _ssl.c:994: The handshake operation timed out>"
   },
   "cfl_news": {
    "ok": true,
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -1846,6 +1846,141 @@
    "note": "",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/359"
+  },
+  {
+   "league": "pwhl",
+   "start": "2026-11-22T21:50:00-05:00",
+   "status": "upcoming",
+   "home": "Vegas Vanguards",
+   "away": "Minnesota Frost",
+   "home_abbr": "VGS",
+   "away_abbr": "MIN",
+   "our_score": null,
+   "opp_score": null,
+   "location": "America First Center | Henderson",
+   "note": "",
+   "time_tbd": false,
+   "link": "https://www.thepwhl.com/en/stats/game-center/353"
+  },
+  {
+   "league": "pwhl",
+   "start": "2026-11-23T13:30:00-05:00",
+   "status": "upcoming",
+   "home": "Ottawa Charge",
+   "away": "Detroit Clutch",
+   "home_abbr": "OTT",
+   "away_abbr": "DET",
+   "our_score": null,
+   "opp_score": null,
+   "location": "Morgan Firestone Arena | Ancaster",
+   "note": "",
+   "time_tbd": false,
+   "link": "https://www.thepwhl.com/en/stats/game-center/360"
+  },
+  {
+   "league": "pwhl",
+   "start": "2026-11-23T16:00:00-05:00",
+   "status": "upcoming",
+   "home": "Minnesota Frost",
+   "away": "Vancouver Goldeneyes",
+   "home_abbr": "MIN",
+   "away_abbr": "VAN",
+   "our_score": null,
+   "opp_score": null,
+   "location": "America First Center | Henderson",
+   "note": "",
+   "time_tbd": false,
+   "link": "https://www.thepwhl.com/en/stats/game-center/354"
+  },
+  {
+   "league": "pwhl",
+   "start": "2026-11-23T17:30:00-05:00",
+   "status": "upcoming",
+   "home": "Hamilton Havoc",
+   "away": "Toronto Sceptres",
+   "home_abbr": "HAM",
+   "away_abbr": "TOR",
+   "our_score": null,
+   "opp_score": null,
+   "location": "Morgan Firestone Arena | Ancaster",
+   "note": "",
+   "time_tbd": false,
+   "link": "https://www.thepwhl.com/en/stats/game-center/361"
+  },
+  {
+   "league": "pwhl",
+   "start": "2026-11-23T18:00:00-05:00",
+   "status": "upcoming",
+   "home": "Boston Fleet",
+   "away": "New York Sirens",
+   "home_abbr": "BOS",
+   "away_abbr": "NY",
+   "our_score": null,
+   "opp_score": null,
+   "location": "Boston Sports Institute | Wellesley",
+   "note": "",
+   "time_tbd": false,
+   "link": "https://www.thepwhl.com/en/stats/game-center/356"
+  },
+  {
+   "league": "pwhl",
+   "start": "2026-11-24T13:30:00-05:00",
+   "status": "upcoming",
+   "home": "Detroit Clutch",
+   "away": "Hamilton Havoc",
+   "home_abbr": "DET",
+   "away_abbr": "HAM",
+   "our_score": null,
+   "opp_score": null,
+   "location": "Morgan Firestone Arena | Ancaster",
+   "note": "",
+   "time_tbd": false,
+   "link": "https://www.thepwhl.com/en/stats/game-center/362"
+  },
+  {
+   "league": "pwhl",
+   "start": "2026-11-24T15:00:00-05:00",
+   "status": "upcoming",
+   "home": "Vancouver Goldeneyes",
+   "away": "Vegas Vanguards",
+   "home_abbr": "VAN",
+   "away_abbr": "VGS",
+   "our_score": null,
+   "opp_score": null,
+   "location": "America First Center | Henderson",
+   "note": "",
+   "time_tbd": false,
+   "link": "https://www.thepwhl.com/en/stats/game-center/355"
+  },
+  {
+   "league": "pwhl",
+   "start": "2026-11-24T16:00:00-05:00",
+   "status": "upcoming",
+   "home": "New York Sirens",
+   "away": "Montréal Victoire",
+   "home_abbr": "NY",
+   "away_abbr": "MTL",
+   "our_score": null,
+   "opp_score": null,
+   "location": "Boston Sports Institute | Wellesley",
+   "note": "",
+   "time_tbd": false,
+   "link": "https://www.thepwhl.com/en/stats/game-center/357"
+  },
+  {
+   "league": "pwhl",
+   "start": "2026-11-24T19:00:00-05:00",
+   "status": "upcoming",
+   "home": "Toronto Sceptres",
+   "away": "Ottawa Charge",
+   "home_abbr": "TOR",
+   "away_abbr": "OTT",
+   "our_score": null,
+   "opp_score": null,
+   "location": "Mattamy Athletic Centre | Toronto",
+   "note": "",
+   "time_tbd": false,
+   "link": "https://www.thepwhl.com/en/stats/game-center/359"
   }
  ],
  "pro_ahead": [
@@ -2664,6 +2799,19 @@
  "more_news": [
   {
    "league": "nhl",
+   "headline": "Nathan MacKinnon’s injury timeline extended to 12 weeks, says coach",
+   "summary": "",
+   "published": "2026-11-21T15:40-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/05/natemac.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/nathan-mackinnons-injury-timeline-extended-to-12-weeks-says-coach/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Quick Shifts: How should Maple Leafs handle Gavin McKenna?",
    "summary": "Gavin McKenna has been a hot topic amongst Maple Leafs faithful since he was drafted. Sportsnet’s Luke Fox dives into the buzz around the 18-year-old and more in his latest Quick Shifts.",
    "published": "2026-11-21T08:15-05:00",
@@ -2706,16 +2854,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "NFL Week 11 preview: 49ers-Vikings showdown pits strength vs. strength",
-   "summary": "It’s best-on-best this Sunday, as the Vikings defence goes up against the 49ers offence. Kellen Forrest breaks down the heavyweight clash and more in his Week 11 preview.",
-   "published": "2026-11-21T13:20-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Dallas-Turner.jpg",
+   "league": "nhl",
+   "headline": "Oilers’ Zach Hyman exits against Hurricanes due to illness",
+   "summary": "",
+   "published": "2026-11-21T15:31-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Oilers-vs-Hurricanes.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-11-preview-49ers-vikings-showdown-pits-strength-vs-strength/",
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/oilers-zach-hyman-exits-against-hurricanes-due-to-illness/",
    "source": "Sportsnet"
   },
   {
@@ -2799,19 +2947,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Nick Cousins returning to Senators lineup against Kings",
-   "summary": "Centre Nick Cousins is returning to the Senators’ lineup Saturday against the Los Angeles Kings (Sportsnet ONE and Sportsnet+, 7 p.m. ET / 5 p.m. PCT), the team announced after morning skate.",
-   "published": "2026-11-21T11:24-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/cousins.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/nick-cousins-returning-to-senators-lineup-against-kings/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "other",
    "headline": "Premier League roundup: Manchester City’s winless run hits four games in draw against Fulham",
    "summary": "",
@@ -2822,6 +2957,32 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/premier-league/article/manchester-citys-winless-run-hits-four-games-with-draw-against-fulham/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "NFL Week 11 preview: 49ers-Vikings showdown pits strength vs. strength",
+   "summary": "It’s best-on-best this Sunday, as the Vikings defence goes up against the 49ers offence. Kellen Forrest breaks down the heavyweight clash and more in his Week 11 preview.",
+   "published": "2026-11-21T13:20-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Dallas-Turner.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-11-preview-49ers-vikings-showdown-pits-strength-vs-strength/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Nick Cousins returning to Senators lineup against Kings",
+   "summary": "Centre Nick Cousins is returning to the Senators’ lineup Saturday against the Los Angeles Kings (Sportsnet ONE and Sportsnet+, 7 p.m. ET / 5 p.m. PCT), the team announced after morning skate.",
+   "published": "2026-11-21T11:24-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/cousins.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/nick-cousins-returning-to-senators-lineup-against-kings/",
    "source": "Sportsnet"
   },
   {
@@ -3005,19 +3166,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-coach-jim-hiller-under-the-microscope-after-winless-streak/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "JuJu Watkins loses voice, finds form to leads USC over Baylor",
-   "summary": "",
-   "published": "2026-11-21T08:28-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/juju-watkins-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/basketball/article/juju-watkins-loses-voice-finds-form-to-leads-usc-over-baylor/",
    "source": "Sportsnet"
   },
   {
