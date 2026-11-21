@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T10:50:47-05:00",
+ "updated": "2026-11-21T11:17:29-05:00",
  "today": "2026-11-21",
  "range": [
   "2026-11-18",
@@ -232,11 +232,11 @@
    "location": "Toldo Lancer Centre",
    "status": "final",
    "our_score": 90,
-   "opp_score": 46,
+   "opp_score": 48,
    "result": "W",
    "note": "",
    "links": {
-    "boxscore": "https://golancers.ca/schedule.aspx?schedule=229"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6207"
    }
   },
   {
@@ -252,9 +252,9 @@
    "our_score": 2,
    "opp_score": 3,
    "result": "L",
-   "note": "",
+   "note": "9-25, 25-17, 20-25, 25-22, 8-15",
    "links": {
-    "boxscore": "https://golancers.ca/schedule.aspx?schedule=231"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6248"
    }
   },
   {
@@ -323,12 +323,12 @@
    "opponent": "Waterloo Warriors",
    "location": "Waterloo, ON",
    "status": "final",
-   "our_score": 1,
+   "our_score": 2,
    "opp_score": 3,
    "result": "L",
-   "note": "",
+   "note": "14-25, 22-25, 25-19, 25-23, 12-15",
    "links": {
-    "boxscore": "https://golancers.ca/schedule.aspx?schedule=232"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6268"
    }
   },
   {
@@ -346,7 +346,7 @@
    "result": "W",
    "note": "",
    "links": {
-    "boxscore": "https://golancers.ca/schedule.aspx?schedule=233"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6293"
    }
   },
   {
@@ -383,7 +383,7 @@
    "result": "W",
    "note": "",
    "links": {
-    "boxscore": "https://golancers.ca/schedule.aspx?schedule=230"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6229"
    }
   },
   {
@@ -2371,8 +2371,8 @@
    "league": "pwhl",
    "headline": "PWHL Announces Largest Takeover Tour™ to Date With 24 Games Across 19 Cities",
    "summary": "",
-   "published": "2026-11-19T12:00:00+00:00",
-   "image": "https://res.cloudinary.com/pwhl-low/image/upload/c_auto,g_auto,h_400,w_792/q_auto/f_auto/PWHLTakeoverTourHeader_16x9",
+   "published": "2026-11-19T15:00:00+00:00",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/PWHLTakeoverTourHeader_16x9",
    "video": false,
    "teams": [],
    "url": "https://www.thepwhl.com/en/news/2026/november/19/pwhl-announces-largest-takeover-tour-to-date-with-24-games-across-19-cities",
@@ -2739,6 +2739,19 @@
   },
   {
    "league": "other",
+   "headline": "Alcaraz shakes off thigh injury to reach championship match at ATP Finals",
+   "summary": "Carlos Alcaraz had his left thigh wrapped up, and still, the seven-time Grand Slam champion produced solid tennis when he needed it most.",
+   "published": "2026-11-21T11:09-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-52.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Tennis",
+   "url": "https://www.sportsnet.ca/atp/article/alcaraz-shakes-off-thigh-injury-to-reach-championship-match-at-atp-finals/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
    "headline": "HearingLife National Day 4 Takeaways: Homan’s magic might be back",
    "summary": "Up to this point in the season, Team Rachel Homan has struggled. But on Friday night, she found her magic once again.",
    "published": "2026-11-20T23:17-05:00",
@@ -2789,19 +2802,6 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/report-raptors-kawhi-leonard-out-at-least-two-more-weeks/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Verstappen takes Las Vegas GP pole after Antonelli’s five-place grid penalty",
-   "summary": "",
-   "published": "2026-11-21T00:32-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/verstappen.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Auto Racing",
-   "url": "https://www.sportsnet.ca/formula-1/article/verstappen-takes-las-vegas-gp-pole-after-antonellis-five-place-grid-penalty/",
    "source": "Sportsnet"
   },
   {
@@ -2856,6 +2856,19 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/yankees-non-tender-2024-al-rookie-of-the-year-luis-gil/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Verstappen takes Las Vegas GP pole after Antonelli’s five-place grid penalty",
+   "summary": "",
+   "published": "2026-11-21T00:32-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/verstappen.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Auto Racing",
+   "url": "https://www.sportsnet.ca/formula-1/article/verstappen-takes-las-vegas-gp-pole-after-antonellis-five-place-grid-penalty/",
    "source": "Sportsnet"
   },
   {
@@ -3085,16 +3098,16 @@
   },
   {
    "league": "nfl",
-   "headline": "NFL Week 11 Pick ‘Em: Lions start life without Hutchinson",
-   "summary": "The stars will be out on primetime in Week 11, and that’s all we can ask for as football fans. From lopsided matchups to heavyweight tilts, Evan Davidson gives his picks for the full NFL slate.",
-   "published": "2026-11-19T08:04-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Lions-2.jpg",
+   "headline": "Lions vs. Buccaneers: How to watch, listen and follow",
+   "summary": "The Detroit Lions host the Tampa Bay Buccaneers on Sunday, Nov. 22 at 1 p.m. EST. Here is everything you need to keep up with the action.",
+   "published": "2026-11-21T11:00-05:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/i72nkyfrviwau8atmvaw.jpg",
    "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-11-pick-em-texans-need-win-in-pivotal-divisional-clash/",
-   "source": "Sportsnet"
+   "teams": [
+    "Detroit Lions"
+   ],
+   "url": "https://www.detroitlions.com/news/lions-vs-buccaneers-how-to-watch-listen-and-follow-2026",
+   "source": "Team site"
   },
   {
    "league": "nfl",
@@ -3276,19 +3289,6 @@
     "Detroit Lions"
    ],
    "url": "https://www.detroitlions.com/news/lions-vs-buccaneers-practice-report-nov-18-reed-joseph-rakestraw",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
-   "headline": "LIONS DAILY: Goff on TeSlaa: 'The role that he's found in our offense is so important'",
-   "summary": "",
-   "published": "2026-11-18T10:30-05:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/ksupjm7w70lv2cjdjawy.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Lions"
-   ],
-   "url": "https://www.detroitlions.com/news/lions-daily-goff-on-teslaa-the-role-that-he-s-found-in-our-offense-is-so-important",
    "source": "Team site"
   },
   {
