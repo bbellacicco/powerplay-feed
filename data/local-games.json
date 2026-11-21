@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T09:47:13-05:00",
+ "updated": "2026-11-21T10:01:47-05:00",
  "today": "2026-11-21",
  "range": [
   "2026-11-18",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 36
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -218,7 +218,7 @@
    "our_score": null,
    "opp_score": null,
    "result": null,
-   "note": "",
+   "note": "Score not posted yet",
    "links": {}
   },
   {
@@ -235,7 +235,9 @@
    "opp_score": 46,
    "result": "W",
    "note": "",
-   "links": {}
+   "links": {
+    "boxscore": "https://golancers.ca/schedule.aspx?schedule=229"
+   }
   },
   {
    "id": "lancers-6248",
@@ -251,7 +253,9 @@
    "opp_score": 3,
    "result": "L",
    "note": "",
-   "links": {}
+   "links": {
+    "boxscore": "https://golancers.ca/schedule.aspx?schedule=231"
+   }
   },
   {
    "id": "junior-gs2960661",
@@ -322,7 +326,7 @@
    "our_score": null,
    "opp_score": null,
    "result": null,
-   "note": "",
+   "note": "Score not posted yet",
    "links": {
     "watch": "https://oua.tv/?school=Windsor"
    }
@@ -341,7 +345,9 @@
    "opp_score": 0,
    "result": "W",
    "note": "",
-   "links": {}
+   "links": {
+    "boxscore": "https://golancers.ca/schedule.aspx?schedule=233"
+   }
   },
   {
    "id": "junior-gojhl15710",
@@ -376,7 +382,9 @@
    "opp_score": 86,
    "result": "W",
    "note": "",
-   "links": {}
+   "links": {
+    "boxscore": "https://golancers.ca/schedule.aspx?schedule=230"
+   }
   },
   {
    "id": "lancers-6249",
@@ -2687,21 +2695,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Maple Leafs coach Jim Hiller under the microscope after winless streak",
-   "summary": "Maple Leafs head coach Jim Hiller is under the microscope, and so Justin Bourne thought it was the right time to assess how he’s lead the team to where they are, what can change, and what that means for this season in ge",
-   "published": "2026-11-20T12:22-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-44-1.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-coach-jim-hiller-under-the-microscope-after-winless-streak/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nba",
    "headline": "Raptors great Kyle Lowry shares lofty expectation for Scottie Barnes",
    "summary": "",
@@ -2714,6 +2707,19 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/raptors-great-kyle-lowry-shares-lofty-expectation-for-scottie-barnes/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Manchester City’s winless run hits four games with draw against Fulham",
+   "summary": "",
+   "published": "2026-11-21T09:50-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/erling-haaland.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/premier-league/article/manchester-citys-winless-run-hits-four-games-with-draw-against-fulham/",
    "source": "Sportsnet"
   },
   {
@@ -2810,6 +2816,34 @@
    "source": "Sportsnet"
   },
   {
+   "league": "mlb",
+   "headline": "2024 AL Rookie of the Year Luis Gil among among 44 non-tendered",
+   "summary": "",
+   "published": "2026-11-20T18:00-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-67.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/yankees-non-tender-2024-al-rookie-of-the-year-luis-gil/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Maple Leafs coach Jim Hiller under the microscope after winless streak",
+   "summary": "Maple Leafs head coach Jim Hiller is under the microscope, and so Justin Bourne thought it was the right time to assess how he’s lead the team to where they are, what can change, and what that means for this season in ge",
+   "published": "2026-11-20T12:22-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-44-1.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-coach-jim-hiller-under-the-microscope-after-winless-streak/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nba",
    "headline": "James Harden scores 51 points to propel Cavaliers past Pacers",
    "summary": "James Harden’s game has evolved over the past couple seasons where he is counted on more for getting open shots for teammates than being the prolific scorer he was during his first 12 years in the league.",
@@ -2872,21 +2906,6 @@
    "sn_team_count": 0,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/2026-nba-cup-schedule-scores-standings/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Quick Shifts: How should Maple Leafs handle Gavin McKenna?",
-   "summary": "Gavin McKenna has been a hot topic amongst Maple Leafs faithful since he was drafted. Sportsnet’s Luke Fox dives into the buzz around the 18-year-old and more in his latest Quick Shifts.",
-   "published": "2026-11-21T08:15-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Toronto-Maple-Leafs-Gavin-McKenna.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/quick-shifts-how-should-maple-leafs-handle-gavin-mckenna/",
    "source": "Sportsnet"
   },
   {
@@ -3086,32 +3105,6 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/colts-release-qb-daniel-jones-anthony-richardson-to-start/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Report: Patriots QB Drake Maye has fractured fibula",
-   "summary": "Tests have shown that Drake Maye fractured his right fibula, ESPN’s Adam Schefter and Mike Reiss reported on Friday.",
-   "published": "2026-11-20T14:16-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/maye_drake1280-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/report-patriots-qb-drake-maye-has-fractured-fibula/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Rams’ Nacua undergoes MCL surgery, likely to miss rest of season",
-   "summary": "The Los Angeles Rams will be without their superstar wide receiver for several months.",
-   "published": "2026-11-20T12:20-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Puka.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/rams-nacua-undergoes-mcl-surgery-will-miss-a-couple-months/",
    "source": "Sportsnet"
   },
   {
