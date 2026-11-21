@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T15:16:46-05:00",
+ "updated": "2026-11-21T15:31:47-05:00",
  "today": "2026-11-21",
  "range": [
   "2026-11-18",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 32
+   "count": 31
   },
   "club_news": {
    "ok": true,
@@ -396,10 +396,10 @@
    "opponent": "Waterloo Warriors",
    "location": "Waterloo, ON",
    "status": "live",
-   "our_score": 1,
+   "our_score": 2,
    "opp_score": 1,
    "result": null,
-   "note": "3",
+   "note": "4",
    "links": {
     "gamecentre": "https://oua.tv/?school=Windsor",
     "watch": "https://oua.tv/?school=Windsor"
@@ -418,8 +418,9 @@
    "our_score": null,
    "opp_score": null,
    "result": null,
-   "note": "",
+   "note": "In progress",
    "links": {
+    "gamecentre": "https://oua.tv/?school=Windsor",
     "watch": "https://oua.tv/?school=Windsor"
    }
   },
@@ -2692,6 +2693,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Canucks have openings with Pettersson injured, Sasson gone",
+   "summary": "The struggling team will be without both centres when they play the Minnesota Wild Saturday night at Rogers Arena.",
+   "published": "2026-11-21T15:27-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/01/Untitled-design-copy-2-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canucks-have-openings-with-pettersson-injured-sasson-gone/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "NFL Week 11 preview: 49ers-Vikings showdown pits strength vs. strength",
    "summary": "It’s best-on-best this Sunday, as the Vikings defence goes up against the 49ers offence. Kellen Forrest breaks down the heavyweight clash and more in his Week 11 preview.",
@@ -3004,32 +3018,6 @@
    "sn_team_count": 0,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/basketball/article/juju-watkins-loses-voice-finds-form-to-leads-usc-over-baylor/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Twins trade former first-overall pick Royce Lewis to Dodgers",
-   "summary": "",
-   "published": "2026-11-20T17:53-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-37-2.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/report-twins-trade-royce-lewis-to-dodgers/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "2024 AL Rookie of the Year Luis Gil among among 44 non-tendered",
-   "summary": "",
-   "published": "2026-11-20T18:00-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-67.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/yankees-non-tender-2024-al-rookie-of-the-year-luis-gil/",
    "source": "Sportsnet"
   },
   {
