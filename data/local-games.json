@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T20:47:19-05:00",
+ "updated": "2026-11-20T21:05:55-05:00",
  "today": "2026-11-20",
  "range": [
   "2026-11-17",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -286,11 +286,11 @@
    "home_away": "H",
    "opponent": "Walpole Island Wild",
    "location": "Atlas Tube Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "In progress",
+   "status": "final",
+   "our_score": 11,
+   "opp_score": 0,
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960661?configuration=45"
    },
@@ -309,7 +309,7 @@
    "our_score": 2,
    "opp_score": 4,
    "result": null,
-   "note": "00:00 2nd",
+   "note": "13:30 3rd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29222/"
    }
@@ -379,11 +379,11 @@
    "home_away": "A",
    "opponent": "Woodstock Navy Vets",
    "location": "Reeves C.C., Woodstock, ON",
-   "status": "live",
-   "our_score": 1,
-   "opp_score": 0,
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
    "result": null,
-   "note": "09:00 2nd",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15710"
    },
@@ -2555,21 +2555,6 @@
  ],
  "more_news": [
   {
-   "league": "nhl",
-   "headline": "Maple Leafs look to draw inspiration from McIlroy’s journey",
-   "summary": "The Toronto Maple Leafs are looking beyond the hockey world for inspiration as they try to chart their way back into the win column.",
-   "published": "2026-11-20T17:17-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Rory-McIlroy-of-Northern-Ireland-gives-a-thumbs-up-after-winning-the-Masters.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-look-to-draw-inspiration-from-mcilroys-journey/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "mlb",
    "headline": "Blue Jays cut Davis Schneider, creating space for future adds",
    "summary": "Davis Schneider’s Toronto Blue Jays tenure started with dramatics only to come to an end rather quietly.",
@@ -2585,6 +2570,36 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "Raptors great Kyle Lowry shares lofty expectation for Scottie Barnes",
+   "summary": "",
+   "published": "2026-11-20T20:36-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-69.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/raptors-great-kyle-lowry-shares-lofty-expectation-for-scottie-barnes/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Maple Leafs look to draw inspiration from McIlroy’s journey",
+   "summary": "The Toronto Maple Leafs are looking beyond the hockey world for inspiration as they try to chart their way back into the win column.",
+   "published": "2026-11-20T17:17-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Rory-McIlroy-of-Northern-Ireland-gives-a-thumbs-up-after-winning-the-Masters.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-look-to-draw-inspiration-from-mcilroys-journey/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Maple Leafs coach Jim Hiller under the microscope after winless streak",
    "summary": "Maple Leafs head coach Jim Hiller is under the microscope, and so Justin Bourne thought it was the right time to assess how he’s lead the team to where they are, what can change, and what that means for this season in ge",
@@ -2597,19 +2612,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-coach-jim-hiller-under-the-microscope-after-winless-streak/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Nemec gets unlikely assist from Flames equipment manager Ben Dumaine",
-   "summary": "here aren’t many equipment managers who get to celebrate a highlight-reel assist, get a shoutout on Sportsnet and have an NHL defenceman searching for a fine bottle of wine for them.",
-   "published": "2026-11-20T18:04-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/SImon-Nemec.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/nemec-gets-unlikely-assist-from-flames-equipment-manager-ben-dumaine/",
    "source": "Sportsnet"
   },
   {
@@ -2670,6 +2672,19 @@
   },
   {
    "league": "mlb",
+   "headline": "2024 AL Rookie of the Year Luis Gil among among 44 non-tendered",
+   "summary": "",
+   "published": "2026-11-20T18:00-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-9-67.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/yankees-non-tender-2024-al-rookie-of-the-year-luis-gil/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
    "headline": "Players reject MLB’s international draft proposal; ask for higher bonus pools",
    "summary": "",
    "published": "2026-11-20T14:32-05:00",
@@ -2711,15 +2726,15 @@
   },
   {
    "league": "nhl",
-   "headline": "Canucks trade Max Sasson to Rangers for fourth-round pick",
-   "summary": "",
-   "published": "2026-11-20T18:19-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-38-2.jpg",
+   "headline": "Nemec gets unlikely assist from Flames equipment manager Ben Dumaine",
+   "summary": "here aren’t many equipment managers who get to celebrate a highlight-reel assist, get a shoutout on Sportsnet and have an NHL defenceman searching for a fine bottle of wine for them.",
+   "published": "2026-11-20T18:04-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/SImon-Nemec.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 2,
+   "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canucks-trade-max-sasson-to-rangers-for-fourth-round-pick/",
+   "url": "https://www.sportsnet.ca/nhl/article/nemec-gets-unlikely-assist-from-flames-equipment-manager-ben-dumaine/",
    "source": "Sportsnet"
   },
   {
@@ -2759,6 +2774,19 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/ohl/article/prospects-report-why-wolves-rookie-kash-kwajah-looks-like-a-franchise-player/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Canucks trade Max Sasson to Rangers for fourth-round pick",
+   "summary": "",
+   "published": "2026-11-20T18:19-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-38-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canucks-trade-max-sasson-to-rangers-for-fourth-round-pick/",
    "source": "Sportsnet"
   },
   {
@@ -2984,21 +3012,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/support-from-flames-says-plenty-of-huberdeaus-reputation/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Kings’ Kempe fined for high-sticking Maple Leafs’ Joshua",
-   "summary": "Adrian Kempe lost a chunk of change Friday.",
-   "published": "2026-11-20T13:09-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/11/Los-Angeles-Kings-right-wing-Adrian-Kempe.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/kings-kempe-fined-for-high-sticking-maple-leafs-joshua/",
    "source": "Sportsnet"
   },
   {
@@ -3850,7 +3863,7 @@
       "l": 0,
       "otl": 0,
       "pts": 0,
-      "gf": 2,
+      "gf": 3,
       "ga": 3,
       "strk": ""
      },
@@ -3911,7 +3924,7 @@
       "otl": 2,
       "pts": 22,
       "gf": 68,
-      "ga": 76,
+      "ga": 77,
       "strk": "L3"
      },
      {
@@ -3951,7 +3964,7 @@
       "l": 9,
       "otl": 3,
       "pts": 21,
-      "gf": 66,
+      "gf": 69,
       "ga": 83,
       "strk": "W1"
      },
@@ -3964,7 +3977,7 @@
       "otl": 2,
       "pts": 20,
       "gf": 79,
-      "ga": 86,
+      "ga": 87,
       "strk": "W2"
      },
      {
@@ -3976,7 +3989,7 @@
       "otl": 3,
       "pts": 13,
       "gf": 62,
-      "ga": 96,
+      "ga": 97,
       "strk": "L1"
      },
      {
@@ -4028,7 +4041,7 @@
       "l": 5,
       "otl": 1,
       "pts": 29,
-      "gf": 78,
+      "gf": 79,
       "ga": 55,
       "strk": "W3"
      },
@@ -4081,7 +4094,7 @@
       "l": 6,
       "otl": 3,
       "pts": 31,
-      "gf": 84,
+      "gf": 85,
       "ga": 64,
       "strk": "W6"
      },
@@ -4118,7 +4131,7 @@
       "otl": 4,
       "pts": 20,
       "gf": 60,
-      "ga": 90,
+      "ga": 93,
       "strk": "W2"
      }
     ]
@@ -4137,7 +4150,7 @@
       "otl": 1,
       "pts": 41,
       "gf": 112,
-      "ga": 73,
+      "ga": 74,
       "strk": "W4"
      },
      {
@@ -4149,7 +4162,7 @@
       "otl": 1,
       "pts": 39,
       "gf": 107,
-      "ga": 80,
+      "ga": 81,
       "strk": "W12"
      },
      {
@@ -4160,7 +4173,7 @@
       "l": 7,
       "otl": 3,
       "pts": 33,
-      "gf": 108,
+      "gf": 109,
       "ga": 83,
       "strk": "W1"
      },
@@ -4220,7 +4233,7 @@
       "l": 12,
       "otl": 4,
       "pts": 20,
-      "gf": 93,
+      "gf": 94,
       "ga": 99,
       "strk": "L2"
      },
@@ -4233,7 +4246,7 @@
       "otl": 3,
       "pts": 19,
       "gf": 73,
-      "ga": 115,
+      "ga": 116,
       "strk": "L1"
      },
      {
@@ -4285,7 +4298,7 @@
       "l": 4,
       "otl": 0,
       "pts": 46,
-      "gf": 149,
+      "gf": 150,
       "ga": 60,
       "strk": "W1"
      },
@@ -4297,7 +4310,7 @@
       "l": 4,
       "otl": 2,
       "pts": 42,
-      "gf": 106,
+      "gf": 107,
       "ga": 55,
       "strk": "W1"
      },
@@ -4418,7 +4431,7 @@
       "otl": 1,
       "pts": 13,
       "gf": 66,
-      "ga": 104,
+      "ga": 105,
       "strk": "L7"
      }
     ]
@@ -4448,7 +4461,7 @@
       "l": 3,
       "otl": 2,
       "pts": 32,
-      "gf": 83,
+      "gf": 84,
       "ga": 47,
       "strk": "W6"
      },
@@ -4473,7 +4486,7 @@
       "otl": 3,
       "pts": 27,
       "gf": 83,
-      "ga": 72,
+      "ga": 73,
       "strk": "W1"
      },
      {
@@ -4597,7 +4610,7 @@
       "l": 2,
       "otl": 1,
       "pts": 35,
-      "gf": 114,
+      "gf": 116,
       "ga": 51,
       "strk": "W6"
      },
@@ -4622,7 +4635,7 @@
       "otl": 2,
       "pts": 32,
       "gf": 93,
-      "ga": 61,
+      "ga": 63,
       "strk": "W2"
      },
      {
@@ -4894,14 +4907,14 @@
      {
       "name": "Lakeshore Canadiens",
       "abbr": "LAK",
-      "gp": 20,
-      "w": 16,
+      "gp": 21,
+      "w": 17,
       "l": 2,
       "otl": 2,
-      "pts": 34,
-      "gf": 82,
+      "pts": 36,
+      "gf": 93,
       "ga": 42,
-      "strk": "L1"
+      "strk": "W1"
      },
      {
       "name": "Blenheim Blades",
@@ -4966,14 +4979,14 @@
      {
       "name": "Walpole Island Wild",
       "abbr": "WAL",
-      "gp": 18,
+      "gp": 19,
       "w": 0,
-      "l": 18,
+      "l": 19,
       "otl": 0,
       "pts": 0,
       "gf": 18,
-      "ga": 123,
-      "strk": "L18"
+      "ga": 134,
+      "strk": "L19"
      }
     ]
    }
