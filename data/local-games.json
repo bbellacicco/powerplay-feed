@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T13:47:50-05:00",
+ "updated": "2026-11-21T14:01:48-05:00",
  "today": "2026-11-21",
  "range": [
   "2026-11-18",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -395,12 +395,13 @@
    "home_away": "A",
    "opponent": "Waterloo Warriors",
    "location": "Waterloo, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
-   "note": "",
+   "note": "1",
    "links": {
+    "gamecentre": "https://oua.tv/?school=Windsor",
     "watch": "https://oua.tv/?school=Windsor"
    }
   },
@@ -2812,6 +2813,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "mlb",
+   "headline": "Reports: Mets agree to eight-year extension with OF A.J. Ewing",
+   "summary": "The New York Mets are making a significant commitment to one of their promising young players, agreeing to an eight-year, $95 million contract extension with outfielder A.J. Ewing, according to multiple reports.",
+   "published": "2026-11-21T13:52-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/07/francisco-lindor.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/reports-mets-agree-to-eight-year-extension-with-of-a-j-ewing/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nba",
    "headline": "Raptors great Kyle Lowry shares lofty expectation for Scottie Barnes",
    "summary": "",
@@ -2955,6 +2969,32 @@
   },
   {
    "league": "other",
+   "headline": "Canada’s Maltais, Dubreuil win bronze at speedskating World Cup event in Japan",
+   "summary": "Canadian veterans Valérie Maltais and Laurent Dubreuil each earned a bronze medal on Saturday at an ISU World Cup Speed Skating event.",
+   "published": "2026-11-21T13:31-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-53.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Olympics",
+   "url": "https://www.sportsnet.ca/olympics/article/canadas-maltais-dubreuil-win-bronze-at-speedskating-world-cup-event-in-japan/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Canada wins four short-track speedskating medals at World Tour",
+   "summary": "Courtney Sarault, Florence Brunelle, Mathieu Pelletier and Félix Roussel helped Canada earn four medals at the ISU Short Track World Tour Saturday.",
+   "published": "2026-11-21T13:53-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-54.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "",
+   "url": "https://www.sportsnet.ca/olympics/article/canada-wins-four-short-track-speedskating-medals-at-world-tour/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
    "headline": "HearingLife National Day 4 Takeaways: Homan’s magic might be back",
    "summary": "Up to this point in the season, Team Rachel Homan has struggled. But on Friday night, she found her magic once again.",
    "published": "2026-11-20T23:17-05:00",
@@ -2977,45 +3017,6 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/hockey/article/line-brawl-breaks-out-between-michigan-michigan-state/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "James Harden scores 51 points to propel Cavaliers past Pacers",
-   "summary": "James Harden’s game has evolved over the past couple seasons where he is counted on more for getting open shots for teammates than being the prolific scorer he was during his first 12 years in the league.",
-   "published": "2026-11-20T22:24-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-42-2.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/james-harden-scores-51-points-to-propel-cavaliers-past-pacers/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Luka Doncic scores 25, Lakers barely hold off Kings on LaVine’s miss at buzzer",
-   "summary": "",
-   "published": "2026-11-21T00:46-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/kings-lakers.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/luka-doncic-scores-25-lakers-barely-hold-off-kings-on-lavines-miss-at-buzzer/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "NBA Cup Roundup: Wagner scores 35 including game-winner as Magic squeak past Nets",
-   "summary": "Franz Wagner scored 35 points, including a game-winning jumper with 2.4 seconds left, and the Orlando Magic beat the Brooklyn Nets 113-111 in an NBA Cup game on Friday night.",
-   "published": "2026-11-20T22:54-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Franz-Wagner.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/wagner-scores-35-including-game-winner-as-magic-squeak-past-nets/",
    "source": "Sportsnet"
   },
   {
@@ -3096,6 +3097,19 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/canadian-premier-league/article/cpl-final-preview-snow-bowl-rematch-heats-up-calgary/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "NFL Week 11 Pick ‘Em: Lions start life without Hutchinson",
+   "summary": "The stars will be out on primetime in Week 11, and that’s all we can ask for as football fans. From lopsided matchups to heavyweight tilts, Evan Davidson gives his picks for the full NFL slate.",
+   "published": "2026-11-19T08:04-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Lions-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-11-pick-em-texans-need-win-in-pivotal-divisional-clash/",
    "source": "Sportsnet"
   },
   {
