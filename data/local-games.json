@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T18:31:52-05:00",
+ "updated": "2026-11-21T18:47:25-05:00",
  "today": "2026-11-21",
  "range": [
   "2026-11-18",
@@ -385,7 +385,8 @@
    "result": "W",
    "note": "",
    "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6229"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6229",
+    "recap": "https://golancers.ca/news/2026/11/20/mens-basketball-mens-basketball-wins-second-straight-game-with-win-over-laurier.aspx"
    }
   },
   {
@@ -416,10 +417,10 @@
    "opponent": "Waterloo Warriors",
    "location": "Waterloo, ON",
    "status": "live",
-   "our_score": 1,
+   "our_score": 2,
    "opp_score": 2,
    "result": null,
-   "note": "4",
+   "note": "5",
    "links": {
     "gamecentre": "https://oua.tv/?school=Windsor",
     "watch": "https://oua.tv/?school=Windsor"
@@ -513,11 +514,11 @@
    "home_away": "A",
    "opponent": "Mississauga Chargers",
    "location": "Port Credit Memorial Arena, Mississauga, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
-   "note": "",
+   "note": "20:00 1st",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16702"
    },
@@ -2995,6 +2996,21 @@
   },
   {
    "league": "mlb",
+   "headline": "Blue Jays cut Davis Schneider, creating space for future adds",
+   "summary": "Davis Schneider’s Toronto Blue Jays tenure started with dramatics only to come to an end rather quietly.",
+   "published": "2026-11-20T18:36-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/04/CP171765344.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/blue-jays-non-tender-davis-schneider-retain-seven-other-players/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
    "headline": "AP source: Mets agree to eight-year extension with OF A.J. Ewing",
    "summary": "The New York Mets are making a significant commitment to one of their promising young players, agreeing to an eight-year, $95 million contract extension with outfielder A.J. Ewing, according to multiple reports.",
    "published": "2026-11-21T13:52-05:00",
@@ -3004,19 +3020,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/reports-mets-agree-to-eight-year-extension-with-of-a-j-ewing/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Ducks place Sennecke on injured reserve, recall Myatovic",
-   "summary": "The Anaheim Ducks have placed Beckett Sennecke on injured reserve with an upper-body injury and called up Nico Myatovic.",
-   "published": "2026-11-21T14:25-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-55.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/ducks-place-sennecke-on-injured-reserve-recall-myatovic/",
    "source": "Sportsnet"
   },
   {
@@ -3032,21 +3035,6 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/raptors-great-kyle-lowry-shares-lofty-expectation-for-scottie-barnes/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Blue Jays cut Davis Schneider, creating space for future adds",
-   "summary": "Davis Schneider’s Toronto Blue Jays tenure started with dramatics only to come to an end rather quietly.",
-   "published": "2026-11-20T18:36-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/04/CP171765344.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/blue-jays-non-tender-davis-schneider-retain-seven-other-players/",
    "source": "Sportsnet"
   },
   {
@@ -3107,6 +3095,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-coach-jim-hiller-under-the-microscope-after-winless-streak/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Ducks place Sennecke on injured reserve, recall Myatovic",
+   "summary": "The Anaheim Ducks have placed Beckett Sennecke on injured reserve with an upper-body injury and called up Nico Myatovic.",
+   "published": "2026-11-21T14:25-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-55.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/ducks-place-sennecke-on-injured-reserve-recall-myatovic/",
    "source": "Sportsnet"
   },
   {
