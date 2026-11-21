@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T18:01:45-05:00",
+ "updated": "2026-11-21T18:20:56-05:00",
  "today": "2026-11-21",
  "range": [
   "2026-11-18",
@@ -50,8 +50,8 @@
    "count": 9
   },
   "highschool": {
-   "ok": true,
-   "count": 53
+   "ok": false,
+   "error": "HTTP Error 403: Forbidden"
   },
   "sheet": {
    "ok": true,
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -236,7 +236,8 @@
    "result": "W",
    "note": "",
    "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6207"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6207",
+    "recap": "https://golancers.ca/news/2026/11/20/womens-basketball-womens-basketball-dominates-both-end-of-the-court-in-win-over-laurier.aspx"
    }
   },
   {
@@ -346,7 +347,8 @@
    "result": "W",
    "note": "",
    "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6293"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6293",
+    "recap": "https://golancers.ca/news/2026/11/20/womens-hockey-esterbrooks-scores-hat-trick-lancers-shut-out-badgers.aspx"
    }
   },
   {
@@ -415,9 +417,9 @@
    "location": "Waterloo, ON",
    "status": "live",
    "our_score": 1,
-   "opp_score": 1,
+   "opp_score": 2,
    "result": null,
-   "note": "3",
+   "note": "4",
    "links": {
     "gamecentre": "https://oua.tv/?school=Windsor",
     "watch": "https://oua.tv/?school=Windsor"
@@ -1113,306 +1115,6 @@
    "club": "Lakeshore Canadiens"
   },
   {
-   "id": "highschool-2026-11-30-2",
-   "team": "highschool",
-   "sport": "Varsity Girls Hockey",
-   "start": "2026-11-30T14:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Tecumseh Vista Academy",
-   "location": "Tecumseh Arena",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "A/AA",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Belle River",
-   "home": "Tecumseh Vista Academy"
-  },
-  {
-   "id": "highschool-2026-11-30-3",
-   "team": "highschool",
-   "sport": "Varsity Girls Hockey",
-   "start": "2026-11-30T16:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Erie Migration",
-   "location": "Kingsville Arena",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "A/AA",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Essex",
-   "home": "Erie Migration"
-  },
-  {
-   "id": "highschool-2026-12-01-4",
-   "team": "highschool",
-   "sport": "Varsity Boys Hockey",
-   "start": "2026-12-01T14:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Villanova",
-   "location": "Vollmer Culture and Recreation Complex",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier One",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "St. Joseph's",
-   "home": "Villanova"
-  },
-  {
-   "id": "highschool-2026-12-01-5",
-   "team": "highschool",
-   "sport": "Varsity Girls Hockey",
-   "start": "2026-12-01T14:45:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "L'Essor",
-   "location": "Tecumseh Arena",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "AAA",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Holy Names",
-   "home": "L'Essor"
-  },
-  {
-   "id": "highschool-2026-12-01-6",
-   "team": "highschool",
-   "sport": "Varsity Girls Hockey",
-   "start": "2026-12-01T15:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Belle River",
-   "location": "Atlas Tube Recreation Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "A/AA",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "St. Joseph's",
-   "home": "Belle River"
-  },
-  {
-   "id": "highschool-2026-12-01-7",
-   "team": "highschool",
-   "sport": "Varsity Boys Hockey",
-   "start": "2026-12-01T15:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Cardinal Carter",
-   "location": "Nature Fresh Farms Recreation Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier One",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "L'Essor",
-   "home": "Cardinal Carter"
-  },
-  {
-   "id": "highschool-2026-12-01-8",
-   "team": "highschool",
-   "sport": "Junior Girls Volleyball",
-   "start": "2026-12-01T16:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Tecumseh Vista Academy",
-   "location": "Tecumseh Vista Academy",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Herman",
-   "home": "Tecumseh Vista Academy"
-  },
-  {
-   "id": "highschool-2026-12-01-9",
-   "team": "highschool",
-   "sport": "Junior Girls Volleyball",
-   "start": "2026-12-01T16:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Assumption",
-   "location": "Assumption School",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Kennedy",
-   "home": "Assumption"
-  },
-  {
-   "id": "highschool-2026-12-01-10",
-   "team": "highschool",
-   "sport": "Junior Boys Basketball",
-   "start": "2026-12-01T16:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "L'Essor",
-   "location": "L'Essor",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Essex",
-   "home": "L'Essor"
-  },
-  {
-   "id": "highschool-2026-12-01-11",
-   "team": "highschool",
-   "sport": "Junior Boys Basketball",
-   "start": "2026-12-01T16:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Sandwich",
-   "location": "Sandwich",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Leamington",
-   "home": "Sandwich"
-  },
-  {
-   "id": "highschool-2026-12-01-12",
-   "team": "highschool",
-   "sport": "Junior Boys Basketball",
-   "start": "2026-12-01T16:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Cardinal Carter",
-   "location": "Cardinal Carter",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Belle River",
-   "home": "Cardinal Carter"
-  },
-  {
-   "id": "highschool-2026-12-01-13",
-   "team": "highschool",
-   "sport": "Senior Girls Volleyball",
-   "start": "2026-12-01T17:20:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Tecumseh Vista Academy",
-   "location": "Tecumseh Vista Academy",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Herman",
-   "home": "Tecumseh Vista Academy"
-  },
-  {
-   "id": "highschool-2026-12-01-14",
-   "team": "highschool",
-   "sport": "Senior Girls Volleyball",
-   "start": "2026-12-01T17:20:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Assumption",
-   "location": "Assumption School",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Kennedy",
-   "home": "Assumption"
-  },
-  {
-   "id": "highschool-2026-12-01-15",
-   "team": "highschool",
-   "sport": "Senior Boys Basketball",
-   "start": "2026-12-01T17:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "L'Essor",
-   "location": "L'Essor",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Maranatha",
-   "home": "L'Essor"
-  },
-  {
-   "id": "highschool-2026-12-01-16",
-   "team": "highschool",
-   "sport": "Senior Boys Basketball",
-   "start": "2026-12-01T17:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Sandwich",
-   "location": "Sandwich",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Leamington",
-   "home": "Sandwich"
-  },
-  {
    "id": "junior-gs2960765",
    "team": "junior",
    "sport": "PJHL (Jr. C)",
@@ -1430,146 +1132,6 @@
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960765?configuration=45"
    },
    "club": "Essex 73's"
-  },
-  {
-   "id": "highschool-2026-12-02-17",
-   "team": "highschool",
-   "sport": "Varsity Girls Hockey",
-   "start": "2026-12-02T14:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Tecumseh Vista Academy",
-   "location": "Tecumseh Arena",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "A/AA",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Essex",
-   "home": "Tecumseh Vista Academy"
-  },
-  {
-   "id": "highschool-2026-12-02-18",
-   "team": "highschool",
-   "sport": "Varsity Boys Hockey",
-   "start": "2026-12-02T14:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Belle River",
-   "location": "Atlas Tube Recreation Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier One",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Brennan",
-   "home": "Belle River"
-  },
-  {
-   "id": "highschool-2026-12-02-19",
-   "team": "highschool",
-   "sport": "Varsity Boys Hockey",
-   "start": "2026-12-02T14:45:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Sandwich",
-   "location": "Vollmer Culture and Recreation Complex",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier One",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Holy Names",
-   "home": "Sandwich"
-  },
-  {
-   "id": "highschool-2026-12-02-20",
-   "team": "highschool",
-   "sport": "Varsity Boys Hockey",
-   "start": "2026-12-02T14:45:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Massey",
-   "location": "Vollmer Culture and Recreation Complex",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier Two - Non-Contact",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Lajeunesse",
-   "home": "Massey"
-  },
-  {
-   "id": "highschool-2026-12-02-21",
-   "team": "highschool",
-   "sport": "Varsity Girls Hockey",
-   "start": "2026-12-02T15:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "North Star",
-   "location": "Libro Credit Union Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "A/AA",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Cardinal Carter",
-   "home": "North Star"
-  },
-  {
-   "id": "highschool-2026-12-02-22",
-   "team": "highschool",
-   "sport": "Varsity Girls Hockey",
-   "start": "2026-12-02T15:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "St. Anne",
-   "location": "Atlas Tube Recreation Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "AAA",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Villanova",
-   "home": "St. Anne"
-  },
-  {
-   "id": "highschool-2026-12-02-23",
-   "team": "highschool",
-   "sport": "Varsity Boys Hockey",
-   "start": "2026-12-02T15:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "St. Joseph's",
-   "location": "WFCU - AM800",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier One",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Villanova",
-   "home": "St. Joseph's"
   },
   {
    "id": "junior-gojhl15747",
@@ -1608,586 +1170,6 @@
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960769?configuration=45"
    },
    "club": "Wheatley Sharks"
-  },
-  {
-   "id": "highschool-2026-12-03-24",
-   "team": "highschool",
-   "sport": "Varsity Boys Hockey",
-   "start": "2026-12-03T14:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "St. Anne",
-   "location": "Atlas Tube Recreation Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier One",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Sandwich",
-   "home": "St. Anne"
-  },
-  {
-   "id": "highschool-2026-12-03-25",
-   "team": "highschool",
-   "sport": "Varsity Girls Hockey",
-   "start": "2026-12-03T15:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Cardinal Carter",
-   "location": "Nature Fresh Farms Recreation Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "A/AA",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Erie Migration",
-   "home": "Cardinal Carter"
-  },
-  {
-   "id": "highschool-2026-12-03-26",
-   "team": "highschool",
-   "sport": "Varsity Boys Hockey",
-   "start": "2026-12-03T15:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "L'Essor",
-   "location": "Tecumseh Arena",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier One",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Tecumseh Vista Academy",
-   "home": "L'Essor"
-  },
-  {
-   "id": "highschool-2026-12-03-27",
-   "team": "highschool",
-   "sport": "Varsity Boys Hockey",
-   "start": "2026-12-03T15:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Cardinal Carter",
-   "location": "Nature Fresh Farms Recreation Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier One",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "North Star",
-   "home": "Cardinal Carter"
-  },
-  {
-   "id": "highschool-2026-12-03-28",
-   "team": "highschool",
-   "sport": "Varsity Girls Hockey",
-   "start": "2026-12-03T15:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Villanova",
-   "location": "Vollmer Culture and Recreation Complex",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "AAA",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "L'Essor",
-   "home": "Villanova"
-  },
-  {
-   "id": "highschool-2026-12-03-29",
-   "team": "highschool",
-   "sport": "Varsity Girls Hockey",
-   "start": "2026-12-03T15:15:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Holy Names",
-   "location": "South Windsor Arena (Capri)",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "AAA",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Sandwich",
-   "home": "Holy Names"
-  },
-  {
-   "id": "highschool-2026-12-03-30",
-   "team": "highschool",
-   "sport": "Varsity Girls Hockey",
-   "start": "2026-12-03T15:40:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "St. Joseph's",
-   "location": "WFCU - Grenon",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "A/AA",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Tecumseh Vista Academy",
-   "home": "St. Joseph's"
-  },
-  {
-   "id": "highschool-2026-12-03-31",
-   "team": "highschool",
-   "sport": "Senior Boys Basketball",
-   "start": "2026-12-03T16:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "UMEI",
-   "location": "UMEI",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 3",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Westview Freedom Academy",
-   "home": "UMEI"
-  },
-  {
-   "id": "highschool-2026-12-03-32",
-   "team": "highschool",
-   "sport": "Senior Boys Basketball",
-   "start": "2026-12-03T16:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Lamothe-Cadillac",
-   "location": "Lamothe Cadillac",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 3",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Ste. Cecile",
-   "home": "Lamothe-Cadillac"
-  },
-  {
-   "id": "highschool-2026-12-03-33",
-   "team": "highschool",
-   "sport": "Senior Girls Volleyball",
-   "start": "2026-12-03T16:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "L'Essor",
-   "location": "L'Essor",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 1",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "St. Joseph's",
-   "home": "L'Essor"
-  },
-  {
-   "id": "highschool-2026-12-03-34",
-   "team": "highschool",
-   "sport": "Senior Girls Volleyball",
-   "start": "2026-12-03T16:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "North Star",
-   "location": "North Star",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Brennan",
-   "home": "North Star"
-  },
-  {
-   "id": "highschool-2026-12-03-35",
-   "team": "highschool",
-   "sport": "Senior Girls Volleyball",
-   "start": "2026-12-03T16:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Assumption",
-   "location": "Assumption School",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Herman",
-   "home": "Assumption"
-  },
-  {
-   "id": "highschool-2026-12-03-36",
-   "team": "highschool",
-   "sport": "Varsity Girls Hockey",
-   "start": "2026-12-03T16:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Essex",
-   "location": "Essex",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "A/AA",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Lajeunesse",
-   "home": "Essex"
-  },
-  {
-   "id": "highschool-2026-12-03-37",
-   "team": "highschool",
-   "sport": "Senior Boys Basketball",
-   "start": "2026-12-03T16:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Riverside",
-   "location": "Riverside",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 1",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Massey",
-   "home": "Riverside"
-  },
-  {
-   "id": "highschool-2026-12-03-38",
-   "team": "highschool",
-   "sport": "Junior Boys Basketball",
-   "start": "2026-12-03T16:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Brennan",
-   "location": "Brennan",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "North Star",
-   "home": "Brennan"
-  },
-  {
-   "id": "highschool-2026-12-03-39",
-   "team": "highschool",
-   "sport": "Senior Boys Basketball",
-   "start": "2026-12-03T16:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Walkerville",
-   "location": "Walkerville",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Maranatha",
-   "home": "Walkerville"
-  },
-  {
-   "id": "highschool-2026-12-03-40",
-   "team": "highschool",
-   "sport": "Senior Boys Basketball",
-   "start": "2026-12-03T16:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Catholic Central",
-   "location": "Catholic Central",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Sandwich",
-   "home": "Catholic Central"
-  },
-  {
-   "id": "highschool-2026-12-03-41",
-   "team": "highschool",
-   "sport": "Senior Boys Basketball",
-   "start": "2026-12-03T16:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Tecumseh Vista Academy",
-   "location": "Tecumseh Vista Academy",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Cardinal Carter",
-   "home": "Tecumseh Vista Academy"
-  },
-  {
-   "id": "highschool-2026-12-03-42",
-   "team": "highschool",
-   "sport": "Senior Girls Volleyball",
-   "start": "2026-12-03T16:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Westview Freedom Academy",
-   "location": "Westview Freedom Academy",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Group 3",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "UMEI",
-   "home": "Westview Freedom Academy"
-  },
-  {
-   "id": "highschool-2026-12-03-43",
-   "team": "highschool",
-   "sport": "Senior Girls Volleyball",
-   "start": "2026-12-03T16:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Ste. Cecile",
-   "location": "Ste. Cecile",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Group 3",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Lamothe-Cadillac",
-   "home": "Ste. Cecile"
-  },
-  {
-   "id": "highschool-2026-12-03-44",
-   "team": "highschool",
-   "sport": "Junior Girls Volleyball",
-   "start": "2026-12-03T17:20:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "L'Essor",
-   "location": "L'Essor",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 1",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "St. Joseph's",
-   "home": "L'Essor"
-  },
-  {
-   "id": "highschool-2026-12-03-45",
-   "team": "highschool",
-   "sport": "Junior Girls Volleyball",
-   "start": "2026-12-03T17:20:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Assumption",
-   "location": "Assumption School",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Herman",
-   "home": "Assumption"
-  },
-  {
-   "id": "highschool-2026-12-03-46",
-   "team": "highschool",
-   "sport": "Junior Girls Volleyball",
-   "start": "2026-12-03T17:20:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "North Star",
-   "location": "North Star",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Brennan",
-   "home": "North Star"
-  },
-  {
-   "id": "highschool-2026-12-03-47",
-   "team": "highschool",
-   "sport": "Senior Boys Basketball",
-   "start": "2026-12-03T17:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Villanova",
-   "location": "Villanova",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 1",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Assumption",
-   "home": "Villanova"
-  },
-  {
-   "id": "highschool-2026-12-03-48",
-   "team": "highschool",
-   "sport": "Junior Boys Basketball",
-   "start": "2026-12-03T17:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Tecumseh Vista Academy",
-   "location": "Tecumseh Vista Academy",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Cardinal Carter",
-   "home": "Tecumseh Vista Academy"
-  },
-  {
-   "id": "highschool-2026-12-03-49",
-   "team": "highschool",
-   "sport": "Junior Boys Basketball",
-   "start": "2026-12-03T17:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Catholic Central",
-   "location": "Catholic Central",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Sandwich",
-   "home": "Catholic Central"
-  },
-  {
-   "id": "highschool-2026-12-03-50",
-   "team": "highschool",
-   "sport": "Senior Boys Basketball",
-   "start": "2026-12-03T17:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Brennan",
-   "location": "Brennan",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 2",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "North Star",
-   "home": "Brennan"
-  },
-  {
-   "id": "highschool-2026-12-03-51",
-   "team": "highschool",
-   "sport": "Junior Boys Basketball",
-   "start": "2026-12-03T17:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Villanova",
-   "location": "Villanova",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 1",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Assumption",
-   "home": "Villanova"
-  },
-  {
-   "id": "highschool-2026-12-03-52",
-   "team": "highschool",
-   "sport": "Junior Boys Basketball",
-   "start": "2026-12-03T17:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "Riverside",
-   "location": "Riverside",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Tier 1",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Massey",
-   "home": "Riverside"
   },
   {
    "id": "junior-ojhl16736",
@@ -3801,6 +2783,21 @@
   },
   {
    "league": "nhl",
+   "headline": "Maple Leafs scratch Oliver Ekman-Larsson against Blue Jackets",
+   "summary": "Oliver Ekman-Larsson is taking a seat in the press box.",
+   "published": "2026-11-21T11:39-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Toronto-Maple-Leafs-Oliver-Ekman-Larsson.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-scratch-oliver-ekman-larsson-against-blue-jackets/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Oilers’ Zach Hyman exits against Hurricanes due to migraine",
    "summary": "",
    "published": "2026-11-21T15:31-05:00",
@@ -3836,21 +2833,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/canucks-forward-elias-pettersson-out-against-wild-with-upper-body-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Maple Leafs scratch Oliver Ekman-Larsson against Blue Jackets",
-   "summary": "Oliver Ekman-Larsson is taking a seat in the press box.",
-   "published": "2026-11-21T11:39-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Toronto-Maple-Leafs-Oliver-Ekman-Larsson.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-scratch-oliver-ekman-larsson-against-blue-jackets/",
    "source": "Sportsnet"
   },
   {
@@ -3931,6 +2913,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/canadiens-defenceman-david-reinbacher-draws-in-against-flyers/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Tyler Herro scores career-high 50 points but Bucks still lose to 76ers",
+   "summary": "Tyler Herro let his final shot of the game fly and — just as the Bucks guard had felt throughout his career-best game — thought it was good.",
+   "published": "2026-11-21T18:00-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-1-4.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/tyler-herro-scores-career-high-50-points-but-bucks-still-lose-to-76ers/",
    "source": "Sportsnet"
   },
   {
@@ -5257,8 +4252,8 @@
       "l": 8,
       "otl": 3,
       "pts": 27,
-      "gf": 79,
-      "ga": 83,
+      "gf": 80,
+      "ga": 84,
       "strk": "W2"
      },
      {
@@ -5269,8 +4264,8 @@
       "l": 11,
       "otl": 4,
       "pts": 20,
-      "gf": 61,
-      "ga": 94,
+      "gf": 62,
+      "ga": 95,
       "strk": "L1"
      }
     ]
@@ -5325,7 +4320,7 @@
       "otl": 3,
       "pts": 31,
       "gf": 84,
-      "ga": 77,
+      "ga": 78,
       "strk": "W5"
      },
      {
@@ -5509,7 +4504,7 @@
       "l": 8,
       "otl": 4,
       "pts": 30,
-      "gf": 95,
+      "gf": 96,
       "ga": 87,
       "strk": "W5"
      },
