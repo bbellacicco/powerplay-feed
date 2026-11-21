@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T21:46:52-05:00",
+ "updated": "2026-11-20T22:03:37-05:00",
  "today": "2026-11-20",
  "range": [
   "2026-11-17",
@@ -323,11 +323,11 @@
    "home_away": "A",
    "opponent": "Dresden Kings",
    "location": "Lambton-Kent Memorial Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "In progress",
+   "status": "final",
+   "our_score": 2,
+   "opp_score": 3,
+   "result": "L",
+   "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960672?configuration=45"
    },
@@ -383,7 +383,7 @@
    "our_score": 2,
    "opp_score": 1,
    "result": null,
-   "note": "01:22 3rd",
+   "note": "Unofficial Final",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15710"
    },
@@ -3856,26 +3856,26 @@
      {
       "name": "Kingston Frontenacs",
       "abbr": "KGN",
-      "gp": 23,
-      "w": 14,
+      "gp": 24,
+      "w": 15,
       "l": 8,
       "otl": 1,
-      "pts": 29,
+      "pts": 31,
       "gf": 99,
       "ga": 85,
-      "strk": "W1"
+      "strk": "W2"
      },
      {
       "name": "Brantford Bulldogs",
       "abbr": "BFD",
-      "gp": 22,
-      "w": 14,
+      "gp": 23,
+      "w": 15,
       "l": 7,
       "otl": 1,
-      "pts": 29,
+      "pts": 31,
       "gf": 90,
       "ga": 64,
-      "strk": "L1"
+      "strk": "W1"
      },
      {
       "name": "Peterborough Petes",
@@ -3904,14 +3904,14 @@
      {
       "name": "Oshawa Generals",
       "abbr": "OSH",
-      "gp": 22,
+      "gp": 23,
       "w": 7,
-      "l": 10,
+      "l": 11,
       "otl": 5,
       "pts": 19,
       "gf": 70,
       "ga": 89,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Gatineau Olympiques",
@@ -3945,14 +3945,14 @@
      {
       "name": "Sudbury Wolves",
       "abbr": "SBY",
-      "gp": 22,
+      "gp": 23,
       "w": 14,
-      "l": 7,
+      "l": 8,
       "otl": 1,
       "pts": 29,
       "gf": 86,
       "ga": 69,
-      "strk": "L2"
+      "strk": "L3"
      },
      {
       "name": "Niagara IceDogs",
@@ -4046,14 +4046,14 @@
      {
       "name": "Saginaw Spirit",
       "abbr": "SAG",
-      "gp": 23,
+      "gp": 24,
       "w": 9,
-      "l": 10,
+      "l": 11,
       "otl": 4,
       "pts": 22,
       "gf": 86,
       "ga": 89,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Sarnia Sting",
@@ -4111,14 +4111,14 @@
      {
       "name": "Erie Otters",
       "abbr": "ER",
-      "gp": 22,
-      "w": 11,
+      "gp": 23,
+      "w": 12,
       "l": 8,
       "otl": 3,
-      "pts": 25,
+      "pts": 27,
       "gf": 79,
       "ga": 83,
-      "strk": "W1"
+      "strk": "W2"
      },
      {
       "name": "Owen Sound Attack",
@@ -4142,14 +4142,14 @@
      {
       "name": "Markham Royals",
       "abbr": "MAR",
-      "gp": 26,
-      "w": 20,
+      "gp": 27,
+      "w": 21,
       "l": 5,
       "otl": 1,
-      "pts": 41,
-      "gf": 113,
+      "pts": 43,
+      "gf": 114,
       "ga": 75,
-      "strk": "W4"
+      "strk": "W5"
      },
      {
       "name": "Cobourg Cougars",
@@ -4160,19 +4160,19 @@
       "otl": 1,
       "pts": 39,
       "gf": 109,
-      "ga": 81,
+      "ga": 82,
       "strk": "W12"
      },
      {
       "name": "Wellington Dukes",
       "abbr": "WEL",
-      "gp": 25,
+      "gp": 26,
       "w": 15,
       "l": 7,
-      "otl": 3,
-      "pts": 33,
+      "otl": 4,
+      "pts": 34,
       "gf": 110,
-      "ga": 84,
+      "ga": 85,
       "strk": "W1"
      },
      {
@@ -4214,14 +4214,14 @@
      {
       "name": "Pickering Panthers",
       "abbr": "PIC",
-      "gp": 24,
-      "w": 10,
+      "gp": 25,
+      "w": 11,
       "l": 12,
       "otl": 2,
-      "pts": 22,
+      "pts": 24,
       "gf": 86,
       "ga": 85,
-      "strk": "L2"
+      "strk": "W1"
      },
      {
       "name": "Trenton Golden Hawks",
@@ -4274,14 +4274,14 @@
      {
       "name": "Toronto Warriors",
       "abbr": "TOW",
-      "gp": 27,
+      "gp": 28,
       "w": 3,
-      "l": 21,
+      "l": 22,
       "otl": 3,
       "pts": 9,
       "gf": 59,
       "ga": 162,
-      "strk": "L13"
+      "strk": "L14"
      }
     ]
    },
@@ -4308,7 +4308,7 @@
       "l": 4,
       "otl": 2,
       "pts": 42,
-      "gf": 107,
+      "gf": 108,
       "ga": 57,
       "strk": "W1"
      },
@@ -4404,7 +4404,7 @@
       "l": 17,
       "otl": 2,
       "pts": 16,
-      "gf": 84,
+      "gf": 85,
       "ga": 134,
       "strk": "L2"
      },
@@ -4417,7 +4417,7 @@
       "otl": 2,
       "pts": 16,
       "gf": 59,
-      "ga": 135,
+      "ga": 136,
       "strk": "L7"
      },
      {
@@ -4454,14 +4454,14 @@
      {
       "name": "St. Thomas Stars",
       "abbr": "STT",
-      "gp": 20,
-      "w": 15,
+      "gp": 21,
+      "w": 16,
       "l": 3,
       "otl": 2,
-      "pts": 32,
+      "pts": 34,
       "gf": 85,
       "ga": 47,
-      "strk": "W6"
+      "strk": "W7"
      },
      {
       "name": "Chatham Maroons",
@@ -4478,14 +4478,26 @@
      {
       "name": "Listowel Cyclones",
       "abbr": "LIS",
-      "gp": 21,
+      "gp": 22,
       "w": 12,
-      "l": 6,
+      "l": 7,
       "otl": 3,
       "pts": 27,
       "gf": 83,
       "ga": 74,
-      "strk": "W1"
+      "strk": "L1"
+     },
+     {
+      "name": "Stratford Warriors",
+      "abbr": "SFD",
+      "gp": 18,
+      "w": 11,
+      "l": 6,
+      "otl": 1,
+      "pts": 23,
+      "gf": 67,
+      "ga": 58,
+      "strk": "W2"
      },
      {
       "name": "Elmira Sugar Kings",
@@ -4497,18 +4509,6 @@
       "pts": 23,
       "gf": 92,
       "ga": 90,
-      "strk": "W1"
-     },
-     {
-      "name": "Stratford Warriors",
-      "abbr": "SFD",
-      "gp": 17,
-      "w": 10,
-      "l": 6,
-      "otl": 1,
-      "pts": 21,
-      "gf": 67,
-      "ga": 58,
       "strk": "W1"
      },
      {
@@ -4574,14 +4574,14 @@
      {
       "name": "Sarnia Legionnaires",
       "abbr": "SAR",
-      "gp": 19,
+      "gp": 20,
       "w": 1,
-      "l": 17,
+      "l": 18,
       "otl": 1,
       "pts": 3,
       "gf": 43,
       "ga": 126,
-      "strk": "L6"
+      "strk": "L7"
      }
     ]
    },
@@ -4893,14 +4893,14 @@
      {
       "name": "Essex 73's",
       "abbr": "ESS",
-      "gp": 20,
+      "gp": 21,
       "w": 19,
       "l": 1,
-      "otl": 0,
-      "pts": 38,
-      "gf": 83,
-      "ga": 23,
-      "strk": "W19"
+      "otl": 1,
+      "pts": 39,
+      "gf": 85,
+      "ga": 26,
+      "strk": "L1"
      },
      {
       "name": "Lakeshore Canadiens",
@@ -4941,14 +4941,14 @@
      {
       "name": "Dresden Kings",
       "abbr": "DRE",
-      "gp": 19,
-      "w": 9,
+      "gp": 20,
+      "w": 10,
       "l": 8,
       "otl": 2,
-      "pts": 20,
-      "gf": 81,
-      "ga": 77,
-      "strk": "L1"
+      "pts": 22,
+      "gf": 84,
+      "ga": 79,
+      "strk": "W1"
      },
      {
       "name": "Wheatley Sharks",
