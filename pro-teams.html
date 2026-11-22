@@ -74,9 +74,15 @@
   .next.livebox { border-color: var(--live); } .next.livebox .when { color: var(--live); }
   .vs .w { color: #22c55e; } .vs .l { color: #ef4444; } .vs .t { color: var(--muted); }
   .upnext { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--line); }
-  .upnext .un { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 2px 10px; align-items: baseline; padding: 6px 0; }
-  .upnext .un b { font-size: 13px; white-space: nowrap; } .upnext .un span { color: var(--muted); font-size: 13.5px; min-width: 0; }
-  .upnext .un.first b, .upnext .un.first span { color: var(--text); font-weight: 800; }
+  /* each game coming up: the date on its own line, the opponent under it, the rink in small print (never squeezed into a column) */
+  .upnext .un { display: flex; align-items: center; gap: 12px; padding: 8px 0; }
+  .upnext .un + .un { border-top: 1px solid rgba(255,255,255,.06); }
+  .upnext .unw { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+  .upnext .un .ud { color: var(--muted); font-size: 12.5px; font-weight: 800; }
+  .upnext .un .uo { color: var(--text); font-size: 15px; font-weight: 700; line-height: 1.25; }
+  .upnext .un .uv { color: var(--muted); font-size: 12.5px; line-height: 1.3; }
+  .upnext .un.first .ud { color: var(--accent); } .upnext .un.first .uo { font-weight: 800; font-size: 16px; }
+  .upnext .un .more { margin: 0; flex: none; }
   .news a { display: block; padding: 9px 0; border-top: 1px solid var(--line); text-decoration: none; }
   .news a:first-of-type { border-top: 0; }
   .news b { display: block; } .news span { color: var(--muted); font-size: 12.5px; }
@@ -530,7 +536,7 @@
       if (f.link) sb.appendChild(ext(el('a', 'more', 'Box score ›'), f.link));
     } else { sb.appendChild(el('div', 'when', 'Last game')); sb.appendChild(el('div', 'none', 'No games yet this season.')); }
     var nx = el('div', 'upnext'); nx.appendChild(el('div', 'when', 'Coming up'));
-    if (up.length) up.slice(0, 3).forEach(function (g, n) { var r = el('div', 'un' + (n ? '' : ' first')); r.appendChild(el('b', null, when(g))); r.appendChild(el('span', null, atw(g) + ' ' + g.opp + (n === 0 && g.where ? ' · ' + g.where : ''))); nx.appendChild(r); });
+    if (up.length) up.slice(0, 3).forEach(function (g, n) { var r = el('div', 'un' + (n ? '' : ' first')), w = el('div', 'unw'); w.appendChild(el('span', 'ud', when(g))); w.appendChild(el('span', 'uo', atw(g) + ' ' + g.opp)); if (n === 0 && g.where) w.appendChild(el('span', 'uv', g.where)); r.appendChild(w); nx.appendChild(r); });
     else nx.appendChild(el('div', 'none', 'Nothing on the schedule yet.'));
     sb.appendChild(nx);
     var nb = el('div', 'box news'); nb.appendChild(el('h3', null, 'Latest news')); var nl = el('div'); nl.appendChild(el('div', 'none', 'Loading…')); nb.appendChild(nl);
