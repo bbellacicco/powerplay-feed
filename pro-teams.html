@@ -159,6 +159,16 @@
            cats: ['pointsPerGame', 'reboundsPerGame', 'assistsPerGame', 'stealsPerGame', 'blocksPerGame', '3PointsMadePerGame'], cols: [['W', 'wins'], ['L', 'losses'], ['PCT', 'winPercent'], ['GB', 'gamesBehind']] },
     mlb: { name: 'MLB', path: 'baseball/mlb', teams: [['det', 'Detroit Tigers'], ['tor', 'Toronto Blue Jays']],
            cats: ['avg', 'homeRuns', 'RBIs', 'ERA', 'wins', 'strikeouts', 'saves'], cols: [['W', 'wins'], ['L', 'losses'], ['PCT', 'winPercent'], ['GB', 'gamesBehind']] },
+    // U.S. college: the Big Ten (Michigan and Michigan State), from ESPN. group = ESPN's Big Ten id for that sport;
+    // ESPN's college standings repeat each stat for home and road, so the columns are read by stat type
+    ncaaf: { name: 'NCAA Football', short: 'NCAA FB', path: 'football/college-football', group: 5, web: 'college-football', college: true, scope: 'Big Ten',
+             teams: [['mich', 'Michigan Wolverines', null, 130], ['msu', 'Michigan State Spartans', null, 127]],
+             cats: ['passingYards', 'rushingYards', 'receivingYards', 'passingTouchdowns', 'sacks', 'interceptions'],
+             cols: [['CONF', 'vsconf'], ['OVERALL', 'total'], ['PF', 'pointsfor'], ['PA', 'pointsagainst'], ['STRK', 'streak']] },
+    ncaam: { name: 'NCAA Basketball', short: 'NCAA BB', path: 'basketball/mens-college-basketball', group: 7, web: 'mens-college-basketball', college: true, scope: 'Big Ten',
+             teams: [['mich', 'Michigan Wolverines', null, 130], ['msu', 'Michigan State Spartans', null, 127]],
+             cats: ['pointsPerGame', 'reboundsPerGame', 'assistsPerGame', 'stealsPerGame', 'blocksPerGame', '3PointsMadePerGame'],
+             cols: [['OVERALL', 'total'], ['CONF', 'vsconf'], ['PPG', 'avgpointsfor'], ['OPP', 'avgpointsagainst'], ['STRK', 'streak']] },
     cfl: { name: 'CFL', teams: [['TOR', 'Toronto Argonauts', /argonauts|\bargos\b/i], ['HAM', 'Hamilton Tiger-Cats', /tiger-cats|ticats/i]], local: true },
     pwhl: { name: 'PWHL', teams: [['TOR', 'Toronto Sceptres', /sceptres/i]], local: true }
   }[LG];
@@ -184,7 +194,8 @@
 
   // ---------- data ----------
   var LGJ = null, STATS = null, CUR = null;   // CUR: the team whose page is open (its players are highlighted in the league's leaders)
-  var teams = L.teams.map(function (x) { return { id: x[0].toLowerCase(), abbr: x[0], name: x[1], rx: x[2] || new RegExp(x[1].split(' ').pop(), 'i'), games: [], info: {} }; });
+  var teams = L.teams.map(function (x) { return { id: x[0].toLowerCase(), abbr: x[0], name: x[1], rx: x[2] || new RegExp(x[1].split(' ').pop(), 'i'), espn: x[3], games: [], info: x[3] ? { id: x[3] } : {} }; });
+  var GRP = L.group ? '?groups=' + L.group + '&limit=200' : '';   // college: the Big Ten's games (ESPN's college scoreboard is otherwise the Top 25)
   var BYID = {}; teams.forEach(function (t) { BYID[t.id] = t; });
 
   // an ESPN game, from the team's side
@@ -231,7 +242,7 @@
   var sbP = null, sbT = 0;
   function scoreboard() {
     if (!sbP || Date.now() - sbT > 60000) { sbT = Date.now();
-      sbP = getJ(ESPN + L.path + '/scoreboard').then(function (j) { var by = {}; ((j && j.events) || []).forEach(function (e) { by[e.id] = e; }); return by; }); }
+      sbP = getJ(ESPN + L.path + '/scoreboard' + GRP).then(function (j) { var by = {}; ((j && j.events) || []).forEach(function (e) { by[e.id] = e; }); return by; }); }
     return sbP;
   }
   function status(t) {
@@ -367,7 +378,7 @@
     return espnLeaders().then(function (gs) {
       if (!gs) return null;
       var b = el('div', 'box'); b.appendChild(el('h2', null, L.name + ' leaders')); b.appendChild(leaderTables(gs, true));
-      b.appendChild(ext(el('a', 'more', 'All ' + L.name + ' stats on ESPN ›'), 'https://www.espn.com/' + LG + '/stats'));
+      b.appendChild(ext(el('a', 'more', 'All ' + L.name + ' stats on ESPN ›'), 'https://www.espn.com/' + (L.web || LG) + '/stats'));
       return b;
     });
   }
@@ -382,12 +393,12 @@
         teams: (g.teams || []).map(function (r) { return { name: r.name, abbr: r.abbr, vals: LG === 'cfl' ? [r.gp, r.w, r.l, r.t, r.pts] : [r.gp, r.w, r.l, r.otl, r.pts] }; }) }; }));
       return stdP;
     }
-    stdP = getJ('https://site.api.espn.com/apis/v2/sports/' + L.path + '/standings?level=3').then(function (j) {
+    stdP = getJ('https://site.api.espn.com/apis/v2/sports/' + L.path + '/standings' + (L.group ? '?group=' + L.group : '?level=3')).then(function (j) {
       var out = [];
       (function walk(n) {
         if (!n) return;
-        if (n.standings && n.standings.entries) out.push({ group: n.name, cols: L.cols.map(function (c) { return c[0]; }), teams: ppSort(n.standings.entries).map(function (e) {
-          var st = {}; (e.stats || []).forEach(function (x) { st[x.name] = x.displayValue; });
+        if (n.standings && n.standings.entries) out.push({ group: n.name, cols: L.cols.map(function (c) { return c[0]; }), teams: (L.college ? n.standings.entries : ppSort(n.standings.entries)).map(function (e) {
+          var st = {}; (e.stats || []).forEach(function (x) { if (L.college) st[x.type] = x.displayValue; else st[x.name] = x.displayValue; });
           return { name: e.team.displayName, abbr: e.team.abbreviation, id: e.team.id, logo: e.team.logos && e.team.logos[0] && e.team.logos[0].href, vals: L.cols.map(function (c) { return st[c[1]]; }) }; }) });
         (n.children || []).forEach(walk);
       })(j);
@@ -460,7 +471,7 @@
   function drawDir() {
     var d = document.getElementById('dir'); d.innerHTML = '';
     var h = el('h1'); h.innerHTML = L.name + ' <em>Hub</em>'; d.appendChild(h);
-    d.appendChild(el('div', 'sub', 'Every team’s scores, schedules, standings and stats, and the latest from around the ' + L.name + '.'));
+    d.appendChild(el('div', 'sub', L.scope ? 'Michigan, Michigan State and every ' + L.scope + ' team: scores, schedules, standings and stats, and the latest from around ' + L.name.replace('NCAA ', 'college ').toLowerCase() + '.' : 'Every team’s scores, schedules, standings and stats, and the latest from around the ' + L.name + '.'));
     // the teams this fan follows (only theirs: our teams are featured in the Pro Sports Guide, nowhere else)
     var mine = followedList().map(function (id) { return BYID[id]; }).filter(Boolean);
     if (mine.length) {
@@ -496,7 +507,7 @@
     CUR = t;
     var box = document.getElementById('team'); box.innerHTML = ''; box.hidden = false; document.getElementById('dir').hidden = true;
     box.dataset.id = t.id;
-    var bk = el('button', 'back', '‹ All ' + L.name + ' teams'); bk.type = 'button'; bk.onclick = closeTeam; box.appendChild(bk);
+    var bk = el('button', 'back', '‹ All ' + (L.scope || L.name) + ' teams'); bk.type = 'button'; bk.onclick = closeTeam; box.appendChild(bk);
     var head = el('div', 'thead'), hl = el('div'); hl.appendChild(el('h1', null, t.name));
     hl.appendChild(el('div', 'lgl', L.name + (t.info.recordSummary ? ' · ' + t.info.recordSummary : '') + (t.info.standingSummary ? ' · ' + t.info.standingSummary : ''))); head.appendChild(hl);
     var hr = el('div', 'thr'), tabs = el('div', 'ttabs'); hr.appendChild(tabs);
