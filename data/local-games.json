@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T14:31:44-05:00",
+ "updated": "2026-11-22T14:46:46-05:00",
  "today": "2026-11-22",
  "range": [
   "2026-11-19",
@@ -103,11 +103,14 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 32
   },
   "club_news": {
-   "ok": true,
-   "count": 55
+   "ok": false,
+   "count": 55,
+   "errors": {
+    "Toronto Blue Jays": "<urlopen error _ssl.c:994: The handshake operation timed out>"
+   }
   }
  },
  "games": [
@@ -2909,6 +2912,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "Raptors’ Rajakovic ‘very confident’ Murray-Boyles will return vs. Bucks",
+   "summary": "Head coach Darko Rajakovic told reporters on Sunday that he’s “very confident” forward Collin Murray-Boyles will play Monday against the Bucks (Sportsnet ONE and Sportsnet+, 7:30 p.m. ET / 5:30 p.m. PCT).",
+   "published": "2026-11-22T14:44-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/cmb-1.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/raptors-rajakovic-very-confident-murray-boyles-will-return-vs-bucks/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Panthers place Reinhardt on waivers with Barkov nearing return",
    "summary": "The Florida Panthers are clearing roster space by placing Cole Reinhardt on waivers, Blackhawks.",
@@ -2975,19 +2993,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Canadiens loan Brett Berard, David Reinbacher to AHL",
-   "summary": "Forward Brett Berard and defenceman David Reinbacher have been loaned to the American Hockey League’s Laval Rocket, the team announced Sunday.",
-   "published": "2026-11-22T10:18-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-85.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canadiens-loan-brett-berard-david-reinbacher-to-ahl/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Fans frustrated as Maple Leafs losses mount",
    "summary": "The Maple Leafs’ slump was all but busted. Until Zach Werenski’s dagger stunned the crowd at Scotiabank Arena.",
    "published": "2026-11-22T00:23-05:00",
@@ -3012,6 +3017,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/blackhawks-connor-bedard-to-undergo-shoulder-surgery/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Canadiens loan Brett Berard, David Reinbacher to AHL",
+   "summary": "Forward Brett Berard and defenceman David Reinbacher have been loaned to the American Hockey League’s Laval Rocket, the team announced Sunday.",
+   "published": "2026-11-22T10:18-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-design-1-85.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canadiens-loan-brett-berard-david-reinbacher-to-ahl/",
    "source": "Sportsnet"
   },
   {
@@ -4103,8 +4121,8 @@
       "l": 8,
       "otl": 1,
       "pts": 31,
-      "gf": 99,
-      "ga": 85,
+      "gf": 100,
+      "ga": 86,
       "strk": "W2"
      },
      {
@@ -4175,8 +4193,8 @@
       "l": 0,
       "otl": 0,
       "pts": 0,
-      "gf": 0,
-      "ga": 0,
+      "gf": 1,
+      "ga": 1,
       "strk": ""
      }
     ]
@@ -4205,7 +4223,7 @@
       "otl": 3,
       "pts": 23,
       "gf": 71,
-      "ga": 85,
+      "ga": 88,
       "strk": "W2"
      },
      {
@@ -4216,7 +4234,7 @@
       "l": 11,
       "otl": 3,
       "pts": 21,
-      "gf": 81,
+      "gf": 84,
       "ga": 90,
       "strk": "W2"
      },
@@ -4269,7 +4287,7 @@
       "l": 9,
       "otl": 2,
       "pts": 30,
-      "gf": 85,
+      "gf": 87,
       "ga": 84,
       "strk": "L2"
      },
@@ -4306,7 +4324,7 @@
       "otl": 2,
       "pts": 20,
       "gf": 86,
-      "ga": 99,
+      "ga": 101,
       "strk": "W1"
      }
     ]
@@ -4389,7 +4407,7 @@
       "l": 5,
       "otl": 1,
       "pts": 43,
-      "gf": 115,
+      "gf": 116,
       "ga": 76,
       "strk": "W5"
      },
@@ -4587,7 +4605,7 @@
       "otl": 2,
       "pts": 38,
       "gf": 138,
-      "ga": 82,
+      "ga": 83,
       "strk": "L1"
      },
      {
@@ -4726,7 +4744,7 @@
       "otl": 3,
       "pts": 27,
       "gf": 84,
-      "ga": 74,
+      "ga": 75,
       "strk": "L1"
      },
      {
@@ -4785,7 +4803,7 @@
       "l": 11,
       "otl": 0,
       "pts": 18,
-      "gf": 74,
+      "gf": 75,
       "ga": 83,
       "strk": "L1"
      },
@@ -4839,7 +4857,7 @@
       "otl": 1,
       "pts": 39,
       "gf": 120,
-      "ga": 52,
+      "ga": 53,
       "strk": "W8"
      },
      {
@@ -4862,7 +4880,7 @@
       "l": 4,
       "otl": 1,
       "pts": 35,
-      "gf": 91,
+      "gf": 92,
       "ga": 59,
       "strk": "W1"
      },
