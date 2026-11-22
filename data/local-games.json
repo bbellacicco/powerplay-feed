@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T19:35:59-05:00",
+ "updated": "2026-11-21T19:46:45-05:00",
  "today": "2026-11-21",
  "range": [
   "2026-11-18",
@@ -416,13 +416,13 @@
    "home_away": "A",
    "opponent": "Waterloo Warriors",
    "location": "Waterloo, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Score not posted yet",
+   "status": "final",
+   "our_score": 2,
+   "opp_score": 3,
+   "result": "L",
+   "note": "25-19, 16-25, 23-25, 25-21, 12-15",
    "links": {
-    "watch": "https://oua.tv/?school=Windsor"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6269"
    }
   },
   {
@@ -452,15 +452,13 @@
    "home_away": "H",
    "opponent": "Guelph Gryphons",
    "location": "Adie Knox Arena",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "In progress",
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 2,
+   "result": "W",
+   "note": "",
    "links": {
-    "gamecentre": "https://women.oua.hockeytech.com/stats/daily-schedule/2026-11-21?league=4&season=194&division=-1",
-    "watch": "https://oua.tv/?school=Windsor",
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=172"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6294"
    }
   },
   {
@@ -515,7 +513,7 @@
    "our_score": 2,
    "opp_score": 0,
    "result": null,
-   "note": "04:52 1st",
+   "note": "00:00 1st",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16702"
    },
@@ -531,10 +529,10 @@
    "opponent": "Peterborough Petes",
    "location": "WFCU Centre, Windsor",
    "status": "live",
-   "our_score": 1,
+   "our_score": 2,
    "opp_score": 0,
    "result": null,
-   "note": "04:05 1st",
+   "note": "00:51 1st",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29227/"
    }
@@ -549,10 +547,10 @@
    "opponent": "Komoka Kings",
    "location": "Komoka Wellness Centre, Middlesex Centre, ON",
    "status": "live",
-   "our_score": 1,
+   "our_score": 2,
    "opp_score": 0,
    "result": null,
-   "note": "08:25 1st",
+   "note": "03:01 1st",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15714"
    },
@@ -3985,7 +3983,7 @@
       "otl": 0,
       "pts": 26,
       "gf": 84,
-      "ga": 74,
+      "ga": 75,
       "strk": "W5"
      },
      {
@@ -4097,7 +4095,7 @@
       "l": 16,
       "otl": 3,
       "pts": 13,
-      "gf": 54,
+      "gf": 55,
       "ga": 94,
       "strk": "L2"
      }
@@ -4114,7 +4112,7 @@
       "l": 7,
       "otl": 3,
       "pts": 31,
-      "gf": 85,
+      "gf": 86,
       "ga": 68,
       "strk": "L1"
      },
@@ -4192,7 +4190,7 @@
       "otl": 3,
       "pts": 33,
       "gf": 87,
-      "ga": 65,
+      "ga": 66,
       "strk": "W7"
      },
      {
@@ -4367,7 +4365,7 @@
       "otl": 2,
       "pts": 14,
       "gf": 82,
-      "ga": 119,
+      "ga": 121,
       "strk": "L3"
      },
      {
@@ -4431,7 +4429,7 @@
       "l": 4,
       "otl": 1,
       "pts": 39,
-      "gf": 126,
+      "gf": 128,
       "ga": 48,
       "strk": "L1"
      },
@@ -4570,7 +4568,7 @@
       "l": 5,
       "otl": 0,
       "pts": 30,
-      "gf": 93,
+      "gf": 94,
       "ga": 56,
       "strk": "W4"
      },
@@ -4667,7 +4665,7 @@
       "otl": 0,
       "pts": 14,
       "gf": 74,
-      "ga": 94,
+      "ga": 95,
       "strk": "W2"
      },
      {
@@ -4679,7 +4677,7 @@
       "otl": 1,
       "pts": 3,
       "gf": 43,
-      "ga": 128,
+      "ga": 129,
       "strk": "L7"
      }
     ]
@@ -4707,7 +4705,7 @@
       "l": 1,
       "otl": 1,
       "pts": 35,
-      "gf": 102,
+      "gf": 103,
       "ga": 55,
       "strk": "W5"
      },
