@@ -562,6 +562,166 @@ def scrape_lancers_football(now):
             "updated": now.isoformat(), "groups": groups}
 
 
+# ------------------------------------------------------------------ Lancers hockey, basketball, volleyball
+# golancers.ca's season stats page for each sport (SIDEARM): each player table cell carries a data-label
+# (GP, G, A, PTS...). golancers.ca asks robots for 30 seconds between pages, so each run refreshes at most
+# two sports (the ones whose numbers are oldest) and keeps the rest as they were.
+LANCERS_STATS = [   # (sport as on the site's schedule, page slug)
+    ("Men's Hockey", "mens-ice-hockey"), ("Women's Hockey", "womens-ice-hockey"),
+    ("Men's Basketball", "mens-basketball"), ("Women's Basketball", "womens-basketball"),
+    ("Men's Volleyball", "mens-volleyball"), ("Women's Volleyball", "womens-volleyball"),
+]
+LANCERS_PER_RUN, LANCERS_DELAY, LANCERS_SHOWN = 2, 30, 8
+
+
+class _LabelTables(HTMLParser):
+    """Every <table>: its caption and its body rows as {data-label: text}; the player name cell is "_name"."""
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.tables, self._t, self._row, self._cell, self._cap, self._body = [], None, None, None, None, False
+
+    def handle_starttag(self, tag, attrs):
+        a = dict(attrs)
+        if tag == "table":
+            self._t = {"caption": "", "rows": []}
+            self.tables.append(self._t)
+        elif self._t is None:
+            return
+        elif tag == "caption":
+            self._cap = []
+        elif tag == "tbody":
+            self._body = True
+        elif tag == "tr" and self._body:
+            self._row = {}
+        elif tag in ("td", "th") and self._row is not None:
+            lab = a.get("data-label") or ("_name" if "text-no-wrap" in (a.get("class") or "") or tag == "th" and "_name" not in self._row else "")
+            self._cell = [lab, []]
+
+    def handle_endtag(self, tag):
+        if self._t is None:
+            return
+        if tag == "caption" and self._cap is not None:
+            self._t["caption"] = " ".join("".join(self._cap).split())
+            self._cap = None
+        elif tag in ("td", "th") and self._cell is not None:
+            if self._cell[0] and self._row is not None and self._cell[0] not in self._row:
+                self._row[self._cell[0]] = " ".join("".join(self._cell[1]).split())
+            self._cell = None
+        elif tag == "tr" and self._row is not None:
+            if self._row:
+                self._t["rows"].append(self._row)
+            self._row = None
+        elif tag == "tbody":
+            self._body = False
+        elif tag == "table":
+            self._t = None
+
+    def handle_data(self, data):
+        if self._cap is not None:
+            self._cap.append(data)
+        if self._cell is not None:
+            self._cell[1].append(data)
+
+
+def _lancer_name(txt):
+    """'Grace, Luke 32 Grace' / 'Eikelboom, Emily Eikelboom, Emily' -> 'Luke Grace' / 'Emily Eikelboom'."""
+    m = re.match(r"\s*([^,\d]+?),\s*([^\d,]+?)\s*(?:\d|\1|$)", txt or "")
+    return f"{m.group(2).strip()} {m.group(1).strip()}" if m else (txt or "").strip()
+
+
+def _num(v):
+    try:
+        return float(str(v).replace(",", "").strip() or "nan")
+    except ValueError:
+        return float("nan")
+
+
+def _lancers_group(table, title, want, key, sort_by=None, min_gp=1):
+    """want: the columns to show, in order, when the table has them; key: the one the list is sorted by."""
+    rows = [r for r in table["rows"] if r.get("_name") and not re.search(r"^(total|team|opponent)", r["_name"], re.I)]
+    if not rows:
+        return None
+    cols = [c for c in want if any(c in r for r in rows)]
+    sort_by = sort_by or key
+    if sort_by not in cols and not any(sort_by in r for r in rows):
+        return None
+    gp = next((c for c in ("GP", "SP", "GP-GS") if any(c in r for r in rows)), None)
+    rows = [r for r in rows if not gp or _num(str(r.get(gp, "1")).split("-")[0]) >= min_gp]
+    rows.sort(key=lambda r: -(_num(r.get(sort_by)) if _num(r.get(sort_by)) == _num(r.get(sort_by)) else -1e9))
+    rows = rows[:LANCERS_SHOWN]
+    if not rows:
+        return None
+    return {"title": title, "cols": cols, "key": cols.index(key) if key in cols else 0,
+            "rows": [{"name": _lancer_name(r["_name"]), "vals": [r.get(c, "") for c in cols]} for r in rows]}
+
+
+def _lancers_sport_stats(sport, slug, now):
+    link = f"{LANCERS_BASE}/sports/{slug}/stats"
+    html = fetch(link, f"lancers-{slug}.html")
+    p = _LabelTables()
+    p.feed(html)
+    tabs = {t["caption"]: t for t in p.tables if t["caption"].lower().startswith("individual")}
+    def find(*words):
+        for cap, t in tabs.items():
+            if all(w.lower() in cap.lower() for w in words) and "conference" not in cap.lower() and "high" not in cap.lower():
+                return t
+        return None
+    groups = []
+    if "Hockey" in sport:
+        t = find("skater")
+        if t:
+            groups.append(_lancers_group(t, "Scoring", ["GP", "G", "A", "PTS", "+/-", "PPG"], "PTS"))
+        t = find("goal")
+        if t:
+            groups.append(_lancers_group(t, "Goaltending", ["GP-GS", "GP", "W", "L", "GA", "AVG", "SV", "SV%"], "SV%", min_gp=1))
+    elif "Basketball" in sport:
+        t = find("average") or find("player")
+        if t:
+            groups.append(_lancers_group(t, "Per game", ["GP", "PTS/G", "REB/G", "AST/G", "FG%"], "PTS/G"))
+    elif "Volleyball" in sport:
+        t = find("offensive")
+        if t:
+            groups.append(_lancers_group(t, "Attack", ["SP", "K", "K/S", "PCT", "PTS"], "K"))
+            groups.append(_lancers_group(t, "Setting", ["SP", "A", "A/S", "SA"], "A"))
+        t = find("defensive")
+        if t:
+            groups.append(_lancers_group(t, "Defence", ["SP", "DIG", "DIG/S", "BLK"], "DIG"))
+    groups = [g for g in groups if g]
+    if not groups:
+        raise RuntimeError(f"no player tables found for {sport}")
+    return {"team": "lancers", "club": f"Windsor Lancers {sport}", "league": f"OUA {sport.lower()}", "sport": sport,
+            "link": link, "note": "Season stats from golancers.ca.", "updated": now.isoformat(), "groups": groups}
+
+
+def scrape_lancers_sports(now, previous):
+    """Refresh the two Lancers sports whose numbers are oldest; the rest keep their last numbers."""
+    def age(e):
+        old = previous.get(("lancers", f"Windsor Lancers {e[0]}"))
+        return (old or {}).get("checked") or ""
+    out, done = [], 0
+    for sport, slug in sorted(LANCERS_STATS, key=age):
+        key = ("lancers", f"Windsor Lancers {sport}")
+        if done < LANCERS_PER_RUN:
+            if done and not FIXTURES:
+                time.sleep(LANCERS_DELAY)
+            done += 1
+            try:
+                got = _lancers_sport_stats(sport, slug, now)
+                got["checked"] = now.isoformat()
+                out.append(got)
+                print(f"  Lancers {sport}: ok")
+                continue
+            except Exception as ex:
+                print(f"  Lancers {sport}: {ex}")
+                if previous.get(key):
+                    out.append(dict(previous[key], checked=now.isoformat()))
+                continue
+        if previous.get(key):
+            out.append(previous[key])
+    return out
+
+
 # ------------------------------------------------------------------ PJHL (hand-uploaded GameSheet exports)
 PJHL_CLUBS = ["Lakeshore Canadiens", "Essex 73's", "Wheatley Sharks", "Amherstburg Admirals"]
 PJHL_LEAGUE = "PJHL (Jr. C)"
@@ -907,8 +1067,9 @@ def main():
     jobs = [([(e[0], e[1])], (lambda e=e: scrape_club(e, now))) for e in TEAMS]
     jobs.append(([("lancers", "Windsor Lancers")], lambda: scrape_lancers_football(now)))
     jobs.append(([("junior", c) for c in PJHL_CLUBS], lambda: scrape_pjhl(now)))
+    jobs.append(([("lancers", f"Windsor Lancers {sp}") for sp, _ in LANCERS_STATS], lambda: scrape_lancers_sports(now, previous)))
     for keys, run in jobs:
-        label = keys[0][1] if len(keys) == 1 else "PJHL clubs"
+        label = keys[0][1] if len(keys) == 1 else "PJHL clubs" if keys[0][0] == "junior" else "Lancers sports"
         try:
             got = run()
             teams.extend(got if isinstance(got, list) else [got])
