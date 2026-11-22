@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T19:16:58-05:00",
+ "updated": "2026-11-21T19:35:59-05:00",
  "today": "2026-11-21",
  "range": [
   "2026-11-18",
@@ -398,13 +398,13 @@
    "home_away": "A",
    "opponent": "Waterloo Warriors",
    "location": "Waterloo, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "Score not posted yet",
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 1,
+   "result": "W",
+   "note": "19-25, 25-15, 25-15, 25-21",
    "links": {
-    "watch": "https://oua.tv/?school=Windsor"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6249"
    }
   },
   {
@@ -420,9 +420,8 @@
    "our_score": null,
    "opp_score": null,
    "result": null,
-   "note": "In progress",
+   "note": "Score not posted yet",
    "links": {
-    "gamecentre": "https://oua.tv/?school=Windsor",
     "watch": "https://oua.tv/?school=Windsor"
    }
   },
@@ -435,15 +434,13 @@
    "home_away": "H",
    "opponent": "Lakehead Thunderwolves",
    "location": "Toldo Lancer Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "In progress",
+   "status": "final",
+   "our_score": 75,
+   "opp_score": 34,
+   "result": "W",
+   "note": "",
    "links": {
-    "gamecentre": "https://oua.tv/?school=Windsor",
-    "watch": "https://oua.tv/?school=Windsor",
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=171"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6208"
    }
   },
   {
@@ -515,10 +512,10 @@
    "opponent": "Mississauga Chargers",
    "location": "Port Credit Memorial Arena, Mississauga, ON",
    "status": "live",
-   "our_score": 0,
+   "our_score": 2,
    "opp_score": 0,
    "result": null,
-   "note": "18:48 1st",
+   "note": "04:52 1st",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16702"
    },
@@ -534,10 +531,10 @@
    "opponent": "Peterborough Petes",
    "location": "WFCU Centre, Windsor",
    "status": "live",
-   "our_score": 0,
+   "our_score": 1,
    "opp_score": 0,
    "result": null,
-   "note": "16:34 1st",
+   "note": "04:05 1st",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29227/"
    }
@@ -551,11 +548,11 @@
    "home_away": "A",
    "opponent": "Komoka Kings",
    "location": "Komoka Wellness Centre, Middlesex Centre, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 1,
+   "opp_score": 0,
    "result": null,
-   "note": "",
+   "note": "08:25 1st",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15714"
    },
@@ -2955,6 +2952,32 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Miller scores as Revolution beat Union in Game 1 of best-of-three series",
+   "summary": "",
+   "published": "2026-11-21T19:21-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Revolution.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/miller-scores-as-revolution-beat-union-in-game-1-of-best-of-three-series/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Joaquin Valiente scores twice, FC Dallas beats Timbers in series opener",
+   "summary": "Joaquín Valiente scored two second-half goals in a 2-minute span, Samuel Sarver added a stoppage-time goal and FC Dallas beat the Portland Timbers 3-0 on Saturday in Game 1 of their best-of-three series in the first roun",
+   "published": "2026-11-21T19:25-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-3-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/joaquin-valiente-scores-twice-dallas-beats-timbers-in-series-opener/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nba",
    "headline": "Tyler Herro scores career-high 50 points but Bucks still lose to 76ers",
    "summary": "Tyler Herro let his final shot of the game fly and — just as the Bucks guard had felt throughout his career-best game — thought it was good.",
@@ -3086,36 +3109,6 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/raptors-great-kyle-lowry-shares-lofty-expectation-for-scottie-barnes/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Report: Raptors’ Kawhi Leonard out at least two more weeks",
-   "summary": "",
-   "published": "2026-11-20T15:46-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Leonard.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/report-raptors-kawhi-leonard-out-at-least-two-more-weeks/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Maple Leafs look to draw inspiration from McIlroy’s journey",
-   "summary": "The Toronto Maple Leafs are looking beyond the hockey world for inspiration as they try to chart their way back into the win column.",
-   "published": "2026-11-20T17:17-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Rory-McIlroy-of-Northern-Ireland-gives-a-thumbs-up-after-winning-the-Masters.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-look-to-draw-inspiration-from-mcilroys-journey/",
    "source": "Sportsnet"
   },
   {
@@ -3992,7 +3985,7 @@
       "otl": 0,
       "pts": 26,
       "gf": 84,
-      "ga": 73,
+      "ga": 74,
       "strk": "W5"
      },
      {
@@ -4121,7 +4114,7 @@
       "l": 7,
       "otl": 3,
       "pts": 31,
-      "gf": 84,
+      "gf": 85,
       "ga": 68,
       "strk": "L1"
      },
@@ -4462,7 +4455,7 @@
       "l": 6,
       "otl": 1,
       "pts": 33,
-      "gf": 85,
+      "gf": 87,
       "ga": 47,
       "strk": "W3"
      },
@@ -4487,7 +4480,7 @@
       "otl": 1,
       "pts": 19,
       "gf": 72,
-      "ga": 114,
+      "ga": 116,
       "strk": "W1"
      },
      {
@@ -4577,7 +4570,7 @@
       "l": 5,
       "otl": 0,
       "pts": 30,
-      "gf": 92,
+      "gf": 93,
       "ga": 56,
       "strk": "W4"
      },
@@ -4674,7 +4667,7 @@
       "otl": 0,
       "pts": 14,
       "gf": 74,
-      "ga": 93,
+      "ga": 94,
       "strk": "W2"
      },
      {
@@ -4686,7 +4679,7 @@
       "otl": 1,
       "pts": 3,
       "gf": 43,
-      "ga": 126,
+      "ga": 128,
       "strk": "L7"
      }
     ]
@@ -4702,7 +4695,7 @@
       "l": 2,
       "otl": 1,
       "pts": 37,
-      "gf": 116,
+      "gf": 117,
       "ga": 51,
       "strk": "W7"
      },
@@ -4714,7 +4707,7 @@
       "l": 1,
       "otl": 1,
       "pts": 35,
-      "gf": 100,
+      "gf": 102,
       "ga": 55,
       "strk": "W5"
      },
@@ -4775,7 +4768,7 @@
       "otl": 3,
       "pts": 23,
       "gf": 75,
-      "ga": 85,
+      "ga": 86,
       "strk": "L3"
      },
      {
