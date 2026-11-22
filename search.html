@@ -252,7 +252,7 @@
           if (!s.url || !s.headline) return;
           var lab = LEAGUE[s.league] || (s.league || '').toUpperCase();
           items.push({ kind: 'story', group: 'pro', who: lab + (s.source ? ' · ' + s.source : ''), headline: s.headline, summary: s.summary || '', url: s.url,
-            image: s.image, video: s.video, published: s.published, hub: 'Pro Hub',
+            image: s.image, video: s.video, published: s.published, hub: 'National Hub',
             hay: norm([lab, s.headline, s.summary, (s.teams || []).join(' '), s.source].join(' ')) });
         });
         // Local Scoreboard games
