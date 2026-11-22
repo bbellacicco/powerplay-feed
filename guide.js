@@ -89,7 +89,7 @@
     '.ppg .pg-pros{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;gap:8px}' + '.ppg .pg-pros .pg-pg{min-width:0;justify-content:center;gap:4px 6px;padding:6px 6px;font-size:12.5px}' + '.ppg .pg-pros .pg-pg em{width:100%;text-align:center;font-size:9.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}' + '.ppg .pg-tm2{gap:3px}.ppg .pg-tm2 img{width:18px;height:18px}.ppg .pg-prog{width:100%;text-align:center}' + '.ppg .pg-row{flex-wrap:nowrap;gap:4px;font-size:12px;letter-spacing:-.01em}.ppg .pg-row .pg-at{font-size:10.5px}.ppg .pg-pros .pg-pg{padding:6px 3px;overflow:hidden}.ppg .pg-ab{font-size:10.5px}.ppg .pg-big3 .pg-at{display:none}.ppg .pg-big3 .pg-row{gap:5px}}';
   var PRO_HUB = 'https://www.powerplaywindsor.com/local-sports';
   var PRO_LG = { nfl: 'football/nfl', nhl: 'hockey/nhl', nba: 'basketball/nba', mlb: 'baseball/mlb' };
-  var PRO_OURS = { nhl: ['DET', 'TOR', 'MTL'], nba: ['DET', 'TOR'], nfl: ['DET', 'BUF'], mlb: ['DET', 'TOR'] };
+  var PRO_OURS = { nhl: ['DET', 'TOR', 'MTL'], nba: ['DET', 'TOR'], nfl: ['DET', 'BUF'], mlb: ['DET', 'TOR'], ncaaf: ['MICH', 'MSU'], ncaam: ['MICH', 'MSU'] };
 
   function el(t, c, x) { var e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; }
   function getJSON(n) { return fetch(DATA + n + '?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }); }
@@ -372,7 +372,7 @@
 
   function proLine(list, target) {
     var a = el('div', 'pg-pro');
-    var l = el('a', 'pg-prol'); l.href = PRO_HUB; l.target = target; l.appendChild(el('b', null, 'Pro Hub')); l.appendChild(el('span', null, 'Presented by Scarehouse Windsor')); a.appendChild(l);
+    var l = el('a', 'pg-prol'); l.href = PRO_HUB; l.target = target; l.appendChild(el('b', null, 'National Hub')); l.appendChild(el('span', null, 'Presented by Scarehouse Windsor')); a.appendChild(l);
     var gs = el('div', 'pg-pros');
     if (!list.length) { var nn = el('span', 'pg-pg', 'Wings, Leafs, Habs, Lions, Bills, Pistons, Raptors, Tigers and Jays'); nn.style.gridColumn = '1 / -1'; nn.style.whiteSpace = 'normal'; nn.style.textAlign = 'center'; gs.appendChild(nn); }
     list.forEach(function (g) {
@@ -427,10 +427,12 @@
   // tonight's games, today's finals and last night's scores), and the next three days. Our teams' games come first
   // in each group. Tap a league to see just its games, then pick a team from the drop-down.
   // NHL, NFL, NBA and MLB live from ESPN's scoreboards; the CFL and PWHL from data/local-games.json.
-  var PRO_PATH = { nhl: 'hockey/nhl', nfl: 'football/nfl', nba: 'basketball/nba', mlb: 'baseball/mlb' };
-  var PRO_NAME = { nhl: 'NHL', nfl: 'NFL', nba: 'NBA', mlb: 'MLB', cfl: 'CFL', pwhl: 'PWHL' };
-  var PRO_COLOR = { nhl: '#94a3b8', nfl: '#1d4ed8', nba: '#ea580c', mlb: '#0891b2', cfl: '#dc2626', pwhl: '#7c3aed' };
-  var PRO_RANK = { nhl: 0, nfl: 1, nba: 2, mlb: 3, cfl: 4, pwhl: 5 };
+  // U.S. college: the Big Ten's games (ESPN group 5 = Big Ten football, 7 = Big Ten men's basketball), Michigan and Michigan State marked as ours
+  var PRO_PATH = { nhl: 'hockey/nhl', nfl: 'football/nfl', nba: 'basketball/nba', mlb: 'baseball/mlb', ncaaf: 'football/college-football', ncaam: 'basketball/mens-college-basketball' };
+  var PRO_GROUP = { ncaaf: 5, ncaam: 7 };
+  var PRO_NAME = { nhl: 'NHL', nfl: 'NFL', nba: 'NBA', mlb: 'MLB', cfl: 'CFL', pwhl: 'PWHL', ncaaf: 'NCAA FB', ncaam: 'NCAA BB' };
+  var PRO_COLOR = { nhl: '#94a3b8', nfl: '#1d4ed8', nba: '#ea580c', mlb: '#0891b2', cfl: '#dc2626', pwhl: '#7c3aed', ncaaf: '#a3e635', ncaam: '#2dd4bf' };
+  var PRO_RANK = { nhl: 0, nfl: 1, nba: 2, mlb: 3, cfl: 4, pwhl: 5, ncaaf: 6, ncaam: 7 };
   var PRO_LOCAL = { cfl: /argonauts|tiger-cats/i, pwhl: /sceptres/i };
   var PPICK = { lg: '', team: '', more1: false, more2: false };   // the league and team picked, and "show all"
   function proHubLink(tab) { return PRO_HUB + '?tab=' + tab; }
@@ -453,7 +455,7 @@
     var days = [-1, 0, 1, 2, 3].map(function (n) { return dayKey(new Date(now.getTime() + n * 864e5)); });
     Object.keys(PRO_PATH).forEach(function (lg) {
       days.forEach(function (k) {
-        jobs.push(fetch('https://site.api.espn.com/apis/site/v2/sports/' + PRO_PATH[lg] + '/scoreboard?dates=' + k.replace(/-/g, '') + (lg === 'nba' || lg === 'nhl' ? '&limit=100' : ''))
+        jobs.push(fetch('https://site.api.espn.com/apis/site/v2/sports/' + PRO_PATH[lg] + '/scoreboard?dates=' + k.replace(/-/g, '') + (lg === 'nba' || lg === 'nhl' ? '&limit=100' : '') + (PRO_GROUP[lg] ? '&groups=' + PRO_GROUP[lg] + '&limit=200' : ''))
           .then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; })
           .then(function (j) { return (j.events || []).map(function (e) { return espnGame(lg, e); }).filter(Boolean); }));
       });
@@ -512,7 +514,7 @@
     var chips = el('div', 'pg-chips');
     var all = el('button', 'pg-chip' + (!PPICK.lg ? ' pg-on' : ''), 'All'); all.type = 'button'; all.style.setProperty('--c', '#e8b021');
     all.onclick = function (e) { e.preventDefault(); e.stopPropagation(); PPICK = { lg: '', team: '' }; if (redraw) redraw(); }; chips.appendChild(all);
-    ['nhl', 'nfl', 'nba', 'mlb', 'cfl', 'pwhl'].forEach(function (lg) {
+    ['nhl', 'nfl', 'nba', 'mlb', 'cfl', 'pwhl', 'ncaaf', 'ncaam'].forEach(function (lg) {
       var on = d.pro.some(function (g) { return g.lg === lg; }); if (!on) return;
       var c = el('button', 'pg-chip' + (PPICK.lg === lg ? ' pg-on' : '')); c.type = 'button'; c.style.setProperty('--c', PRO_COLOR[lg]); c.appendChild(el('i'));
       c.appendChild(document.createTextNode(PRO_NAME[lg] + (count[lg] ? ' ' + count[lg] : '')));
