@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
 <!--
   Coming Up (Local Hub tab): every local game on ONE day, nothing before or after.
-  Opens on today; the day buttons pick another day (as far ahead as the schedules go).
+  Opens on today; the day buttons pick any of the next seven days.
   Data: local-games.json (Spitfires, Lancers, junior hockey), saints.json (St. Clair), highschool.json (WECSSAA).
   ?day=2026-10-22 opens on that day.
   Events & games strip on top: Community Calendar posts (calendar.json), topped up with upcoming home games; (the collector reads each post's "When:" line; past events are dropped).
@@ -173,10 +173,11 @@
     getJSON('calendar.json').then(function (c) { calData = c; if (games.length) drawCal(calData); });
     Promise.all([getJSON('local-games.json'), getJSON('saints.json'), getJSON('highschool.json')]).then(function (r) {
       var lg = r[0] || {}, sc = r[1], hs = r[2];
-      var all = (lg.games || []).slice();
+      // this week's games plus each source's games further ahead ("ahead"), so all seven days are filled
+      var all = (lg.games || []).concat(lg.ahead || []);
       if (sc && sc.games) all = all.filter(function (g) { return !(g.team === 'saints' && g.sport !== 'Football'); })
-        .concat(sc.games.filter(function (g) { return g.sport !== 'Football'; }));
-      if (hs && hs.games) all = all.filter(function (g) { return g.team !== 'highschool'; }).concat(hs.games);
+        .concat(sc.games.concat(sc.ahead || []).filter(function (g) { return g.sport !== 'Football'; }));
+      if (hs && hs.games) all = all.filter(function (g) { return g.team !== 'highschool'; }).concat(hs.games, hs.ahead || []);
       var seen = {};
       games = all.filter(function (g) { var k = g.id || (g.team + g.start + g.opponent); if (seen[k]) return false; seen[k] = 1; return true; });
       draw();
@@ -186,10 +187,9 @@
 
   function draw() {
     var today = dayKey(new Date());
-    // the day buttons: today and every later day that has games (as far ahead as the schedules go)
-    var keys = {}; games.forEach(function (g) { var k = dayKey(new Date(g.start)); if (k >= today) keys[k] = 1; });
-    keys[today] = 1;
-    var list = Object.keys(keys).sort().slice(0, 7);
+    // the day buttons: the next seven days, today first, every day shown (a day with no games says so)
+    var keys = {}, list = [];
+    for (var i = 0; i < 7; i++) { var k0 = dayKey(new Date(noon(today).getTime() + i * 864e5)); if (list.indexOf(k0) < 0) { list.push(k0); keys[k0] = 1; } }
     if (!day) day = qs.get('day') && keys[qs.get('day')] ? qs.get('day') : today;
     if (list.indexOf(day) < 0) day = today;
     var bar = document.getElementById('days'); bar.innerHTML = '';
