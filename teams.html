@@ -66,10 +66,15 @@
   .scorebox .vs .w { color: #22c55e; } .scorebox .vs .l { color: #ef4444; } .scorebox .vs .t { color: var(--muted); }
   .scorebox .more, .box .more, .drop > .more { display: inline-block; margin-top: 6px; color: var(--accent); font-weight: 800; font-size: 13px; text-decoration: none; }
   .upnext { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--line); }
-  .upnext .un { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 2px 10px; align-items: baseline; padding: 6px 0; }
-  .upnext .un b { font-size: 13px; white-space: nowrap; } .upnext .un span { color: var(--muted); font-size: 13.5px; min-width: 0; }
-  .upnext .un.first b, .upnext .un.first span { color: var(--text); font-weight: 800; }
-  .upnext .un .more { margin: 0; }
+  /* each game coming up: the date on its own line, the opponent under it, the rink in small print (never squeezed into a column) */
+  .upnext .un { display: flex; align-items: center; gap: 12px; padding: 8px 0; }
+  .upnext .un + .un { border-top: 1px solid rgba(255,255,255,.06); }
+  .upnext .unw { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+  .upnext .un .ud { color: var(--muted); font-size: 12.5px; font-weight: 800; }
+  .upnext .un .uo { color: var(--text); font-size: 15px; font-weight: 700; line-height: 1.25; }
+  .upnext .un .uv { color: var(--muted); font-size: 12.5px; line-height: 1.3; }
+  .upnext .un.first .ud { color: var(--accent); } .upnext .un.first .uo { font-weight: 800; font-size: 16px; }
+  .upnext .un .more { margin: 0; flex: none; }
   .sgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
   .sgrid table { width: 100%; border-collapse: collapse; font-size: 13.5px; } .sgrid th, .sgrid td { padding: 5px 6px; text-align: right; border-bottom: 1px solid var(--line); }
   .sgrid th:first-child, .sgrid td:first-child { text-align: left; } .sgrid th { color: var(--muted); font-size: 11.5px; letter-spacing: .05em; } .sgrid .k { color: var(--accent); font-weight: 800; }
@@ -735,7 +740,9 @@
     var upl = up.slice(0, 3);
     if (upl.length) upl.forEach(function (g, n) {
       var s2 = side(t, g), r = el('div', 'un' + (n ? '' : ' first'));
-      r.appendChild(el('b', null, when(g))); r.appendChild(el('span', null, atw(s2) + ' ' + s2.opp + (n === 0 && g.location ? ' · ' + g.location : '')));
+      var w = el('div', 'unw'); w.appendChild(el('span', 'ud', when(g))); w.appendChild(el('span', 'uo', atw(s2) + ' ' + s2.opp));
+      if (n === 0 && g.location) w.appendChild(el('span', 'uv', g.location));
+      r.appendChild(w);
       var L2 = g.links || {}; if (n === 0 && (L2.tickets || L2.watch)) { var ta = el('a', 'more', L2.tickets ? 'Tickets ›' : 'Watch ›'); ta.href = L2.tickets || L2.watch; ta.target = '_blank'; ta.rel = 'noopener'; r.appendChild(ta); }
       nx.appendChild(r);
     });
