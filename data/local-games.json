@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T20:17:17-05:00",
+ "updated": "2026-11-21T20:31:49-05:00",
  "today": "2026-11-21",
  "range": [
   "2026-11-18",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 32
+   "count": 30
   },
   "club_news": {
    "ok": true,
@@ -470,11 +470,11 @@
    "home_away": "A",
    "opponent": "Blenheim Blades",
    "location": "Blenheim Memorial Arena",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "In progress",
+   "status": "final",
+   "our_score": 4,
+   "opp_score": 6,
+   "result": "L",
+   "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960681?configuration=45"
    },
@@ -511,7 +511,7 @@
    "our_score": 3,
    "opp_score": 0,
    "result": null,
-   "note": "09:07 2nd",
+   "note": "00:00 2nd",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16702"
    },
@@ -530,7 +530,7 @@
    "our_score": 4,
    "opp_score": 2,
    "result": null,
-   "note": "12:36 2nd",
+   "note": "05:07 2nd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29227/"
    }
@@ -545,10 +545,10 @@
    "opponent": "Komoka Kings",
    "location": "Komoka Wellness Centre, Middlesex Centre, ON",
    "status": "live",
-   "our_score": 2,
-   "opp_score": 0,
+   "our_score": 4,
+   "opp_score": 1,
    "result": null,
-   "note": "12:12 2nd",
+   "note": "03:31 2nd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15714"
    },
@@ -2746,6 +2746,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Devils’ Hellebuyck pulled midway through first period after allowing four goals",
+   "summary": "After a decorated tenure with the Winnipeg Jets, veteran goalie Connor Hellebuyck decided it was time for a new chapter and was traded the New Jersey Devils — where he’s been stellar, outside of a few exceptions.",
+   "published": "2026-11-21T20:20-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-4-3.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/devils-hellebuyck-pulled-midway-through-first-period-after-allowing-four-goals/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Jaroslav Halak eyeing return to NHL after three-year absence, agent says",
    "summary": "Sometimes retirement doesn’t officially mean it’s the end of the road, and that’s the case for yet another former NHL’er.",
    "published": "2026-11-21T18:47-05:00",
@@ -2768,19 +2781,6 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/canadian-premier-league/article/cavalry-fc-defeats-atletico-ottawa-to-claim-cpl-title-and-historic-double/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Oilers’ Zach Hyman exits against Hurricanes due to migraine",
-   "summary": "",
-   "published": "2026-11-21T15:31-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Oilers-vs-Hurricanes.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/oilers-zach-hyman-exits-against-hurricanes-due-to-illness/",
    "source": "Sportsnet"
   },
   {
@@ -2854,6 +2854,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Oilers’ Zach Hyman exits against Hurricanes due to migraine",
+   "summary": "",
+   "published": "2026-11-21T15:31-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Oilers-vs-Hurricanes.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/oilers-zach-hyman-exits-against-hurricanes-due-to-illness/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Canucks have openings with Pettersson injured, Sasson gone",
    "summary": "The struggling team will be without both centres when they play the Minnesota Wild Saturday night at Rogers Arena.",
    "published": "2026-11-21T15:27-05:00",
@@ -2876,34 +2889,6 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/capitals-claim-goalie-clay-stevenson-off-waivers-from-jets/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Maple Leafs scratch Oliver Ekman-Larsson against Blue Jackets",
-   "summary": "Oliver Ekman-Larsson is taking a seat in the press box.",
-   "published": "2026-11-21T11:39-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Toronto-Maple-Leafs-Oliver-Ekman-Larsson.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-scratch-oliver-ekman-larsson-against-blue-jackets/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Nick Cousins returning to Senators lineup against Kings",
-   "summary": "Centre Nick Cousins is returning to the Senators’ lineup Saturday against the Los Angeles Kings (Sportsnet ONE and Sportsnet+, 7 p.m. ET / 5 p.m. PCT), the team announced after morning skate.",
-   "published": "2026-11-21T11:24-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/cousins.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/nick-cousins-returning-to-senators-lineup-against-kings/",
    "source": "Sportsnet"
   },
   {
@@ -2945,19 +2930,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/canucks-place-gallagher-on-ir-recall-mueller-quillan-tolopilo-from-ahl/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Canadiens defenceman David Reinbacher draws in against Flyers",
-   "summary": "David Reinbacher is back.",
-   "published": "2026-11-21T11:16-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-Design-2026-10-17T110724.481.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canadiens-defenceman-david-reinbacher-draws-in-against-flyers/",
    "source": "Sportsnet"
   },
   {
@@ -4209,7 +4181,7 @@
       "l": 8,
       "otl": 3,
       "pts": 27,
-      "gf": 82,
+      "gf": 83,
       "ga": 84,
       "strk": "W2"
      },
@@ -4222,7 +4194,7 @@
       "otl": 4,
       "pts": 20,
       "gf": 62,
-      "ga": 97,
+      "ga": 98,
       "strk": "L1"
      }
     ]
@@ -4360,7 +4332,7 @@
       "l": 16,
       "otl": 2,
       "pts": 14,
-      "gf": 82,
+      "gf": 83,
       "ga": 121,
       "strk": "L3"
      },
@@ -4426,7 +4398,7 @@
       "otl": 1,
       "pts": 39,
       "gf": 128,
-      "ga": 48,
+      "ga": 49,
       "strk": "L1"
      },
      {
@@ -4540,8 +4512,8 @@
       "l": 2,
       "otl": 0,
       "pts": 34,
-      "gf": 113,
-      "ga": 42,
+      "gf": 114,
+      "ga": 43,
       "strk": "L1"
      },
      {
@@ -4564,8 +4536,8 @@
       "l": 5,
       "otl": 0,
       "pts": 30,
-      "gf": 94,
-      "ga": 56,
+      "gf": 96,
+      "ga": 57,
       "strk": "W4"
      },
      {
@@ -4588,8 +4560,8 @@
       "l": 6,
       "otl": 1,
       "pts": 23,
-      "gf": 67,
-      "ga": 58,
+      "gf": 68,
+      "ga": 59,
       "strk": "W2"
      },
      {
@@ -4601,7 +4573,7 @@
       "otl": 1,
       "pts": 23,
       "gf": 93,
-      "ga": 90,
+      "ga": 91,
       "strk": "W1"
      },
      {
@@ -4624,7 +4596,7 @@
       "l": 10,
       "otl": 3,
       "pts": 19,
-      "gf": 88,
+      "gf": 89,
       "ga": 85,
       "strk": "L1"
      },
@@ -4660,8 +4632,8 @@
       "l": 15,
       "otl": 0,
       "pts": 14,
-      "gf": 74,
-      "ga": 95,
+      "gf": 75,
+      "ga": 97,
       "strk": "W2"
      },
      {
@@ -4713,7 +4685,7 @@
       "l": 4,
       "otl": 1,
       "pts": 33,
-      "gf": 88,
+      "gf": 89,
       "ga": 58,
       "strk": "L2"
      },
@@ -4774,7 +4746,7 @@
       "otl": 0,
       "pts": 18,
       "gf": 83,
-      "ga": 104,
+      "ga": 105,
       "strk": "W1"
      },
      {
@@ -4786,7 +4758,7 @@
       "otl": 3,
       "pts": 17,
       "gf": 76,
-      "ga": 104,
+      "ga": 105,
       "strk": "L1"
      },
      {
@@ -4797,7 +4769,7 @@
       "l": 16,
       "otl": 2,
       "pts": 16,
-      "gf": 85,
+      "gf": 86,
       "ga": 104,
       "strk": "W3"
      },
@@ -5010,14 +4982,14 @@
      {
       "name": "Blenheim Blades",
       "abbr": "BLE",
-      "gp": 19,
-      "w": 11,
+      "gp": 20,
+      "w": 12,
       "l": 8,
       "otl": 0,
-      "pts": 22,
-      "gf": 74,
-      "ga": 60,
-      "strk": "W2"
+      "pts": 24,
+      "gf": 80,
+      "ga": 64,
+      "strk": "W3"
      },
      {
       "name": "Mooretown Flags",
@@ -5046,14 +5018,14 @@
      {
       "name": "Wheatley Sharks",
       "abbr": "WHE",
-      "gp": 20,
+      "gp": 21,
       "w": 7,
-      "l": 11,
+      "l": 12,
       "otl": 2,
       "pts": 16,
-      "gf": 59,
-      "ga": 80,
-      "strk": "L1"
+      "gf": 63,
+      "ga": 86,
+      "strk": "L2"
      },
      {
       "name": "Amherstburg Admirals",
