@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T14:46:46-05:00",
+ "updated": "2026-11-22T15:07:53-05:00",
  "today": "2026-11-22",
  "range": [
   "2026-11-19",
@@ -106,11 +106,8 @@
    "count": 32
   },
   "club_news": {
-   "ok": false,
-   "count": 55,
-   "errors": {
-    "Toronto Blue Jays": "<urlopen error _ssl.c:994: The handshake operation timed out>"
-   }
+   "ok": true,
+   "count": 55
   }
  },
  "games": [
@@ -2488,6 +2485,19 @@
   },
   {
    "league": "pwhl",
+   "headline": "Fleet Announce Saulnier and Schepers As Alternate Captains",
+   "summary": "",
+   "published": "2026-11-22T19:15:00+00:00",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/BOS-Saulnier-Schepers-AlternateCaptains",
+   "video": false,
+   "teams": [
+    "Boston Fleet"
+   ],
+   "url": "https://www.thepwhl.com/en/teams/boston-fleet/news/2026/november/22/fleet-announce-saulnier-and-schepers-as-alternate-captains",
+   "source": "thepwhl.com"
+  },
+  {
+   "league": "pwhl",
    "headline": "Ottawa Charge Announce Jocelyne Larocque As Captain, Rebecca Leslie and Gabbie Hughes As Alternates",
    "summary": "",
    "published": "2026-11-22T17:10:00+00:00",
@@ -2534,19 +2544,6 @@
     "Vegas Vanguards"
    ],
    "url": "https://www.thepwhl.com/en/teams/vegas-vanguards/news/2026/november/20/vegas-vanguards-announce-ambrose-as-captain-scamurra-and-janecke-as-alternates",
-   "source": "thepwhl.com"
-  },
-  {
-   "league": "pwhl",
-   "headline": "How Laila Edwards Is Preparing to Lean Into Life  With the San Jose Sea Lions",
-   "summary": "",
-   "published": "2026-11-20T17:00:00+00:00",
-   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/copy_of_260930_pwhl_13_laila_edwards_0692-edit",
-   "video": false,
-   "teams": [
-    "San Jose Sea Lions"
-   ],
-   "url": "https://www.thepwhl.com/en/teams/san-jose-sea-lions/news/2026/november/20/how-laila-edwards-is-preparing-to-lean-into-life-with-the-san-jose-sea-lions",
    "source": "thepwhl.com"
   },
   {
@@ -4121,8 +4118,8 @@
       "l": 8,
       "otl": 1,
       "pts": 31,
-      "gf": 100,
-      "ga": 86,
+      "gf": 101,
+      "ga": 87,
       "strk": "W2"
      },
      {
@@ -4157,7 +4154,7 @@
       "l": 9,
       "otl": 3,
       "pts": 23,
-      "gf": 68,
+      "gf": 69,
       "ga": 78,
       "strk": "L3"
      },
@@ -4182,7 +4179,7 @@
       "otl": 0,
       "pts": 2,
       "gf": 4,
-      "ga": 3,
+      "ga": 4,
       "strk": "W1"
      },
      {
@@ -4193,8 +4190,8 @@
       "l": 0,
       "otl": 0,
       "pts": 0,
-      "gf": 1,
-      "ga": 1,
+      "gf": 2,
+      "ga": 2,
       "strk": ""
      }
     ]
@@ -4223,7 +4220,7 @@
       "otl": 3,
       "pts": 23,
       "gf": 71,
-      "ga": 88,
+      "ga": 89,
       "strk": "W2"
      },
      {
@@ -4234,7 +4231,7 @@
       "l": 11,
       "otl": 3,
       "pts": 21,
-      "gf": 84,
+      "gf": 85,
       "ga": 90,
       "strk": "W2"
      },
@@ -4568,8 +4565,8 @@
       "l": 4,
       "otl": 2,
       "pts": 44,
-      "gf": 108,
-      "ga": 57,
+      "gf": 109,
+      "ga": 58,
       "strk": "W2"
      },
      {
@@ -4676,8 +4673,8 @@
       "l": 18,
       "otl": 2,
       "pts": 16,
-      "gf": 59,
-      "ga": 136,
+      "gf": 60,
+      "ga": 137,
       "strk": "L8"
      },
      {
@@ -4857,7 +4854,7 @@
       "otl": 1,
       "pts": 39,
       "gf": 120,
-      "ga": 53,
+      "ga": 54,
       "strk": "W8"
      },
      {
@@ -4880,7 +4877,7 @@
       "l": 4,
       "otl": 1,
       "pts": 35,
-      "gf": 92,
+      "gf": 93,
       "ga": 59,
       "strk": "W1"
      },
