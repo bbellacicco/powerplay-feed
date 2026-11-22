@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T17:01:53-05:00",
+ "updated": "2026-11-22T17:16:49-05:00",
  "today": "2026-11-22",
  "range": [
   "2026-11-19",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 31
   },
   "club_news": {
    "ok": true,
@@ -2933,19 +2933,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "Dak Prescott accounts for five TDs as Cowboys roll to victory over Titans",
-   "summary": "Dak Prescott threw four touchdown passes and ran for a score, and the Dallas Cowboys reached the end zone on their first six drives in a 51-30 victory over the Tennessee Titans on Sunday.",
-   "published": "2026-11-22T16:19-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/dak.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/dak-prescott-accounts-for-five-tds-as-cowboys-roll-to-victory-over-titans/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "Maple Leafs recall centre Raty from Marlies, Roslovic day-to-day",
    "summary": "Centre Aatu Raty was recalled from the Toronto Marlies ahead of practice Sunday, the team announced. The Leafs later announced that forward Jack Roslovic was being listed as day-to-day with an upper-body injury.",
@@ -3014,19 +3001,6 @@
    "sn_team_count": 2,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/nfl-week-11-preview-49ers-vikings-showdown-pits-strength-vs-strength/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Takeaways: Alina Paetz plays hero to claim first GSOC title with new team",
-   "summary": "In curling, it’s not about making every shot — just the timely ones. And Switzerland’s Alina Paetz did just that to win her first GSOC title as a skip at the HearingLife National, writes Sportsnet’s Justin Arenburg.",
-   "published": "2026-11-22T12:31-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/alina-paetz.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "",
-   "url": "https://www.sportsnet.ca/curling/article/alina-paetz-beats-miku-nihira-to-claim-first-gsoc-title-with-new-team/",
    "source": "Sportsnet"
   },
   {
@@ -4126,28 +4100,28 @@
     "group": "East Division",
     "teams": [
      {
+      "name": "Brantford Bulldogs",
+      "abbr": "BFD",
+      "gp": 24,
+      "w": 16,
+      "l": 7,
+      "otl": 1,
+      "pts": 33,
+      "gf": 94,
+      "ga": 66,
+      "strk": "W2"
+     },
+     {
       "name": "Kingston Frontenacs",
       "abbr": "KGN",
-      "gp": 24,
+      "gp": 25,
       "w": 15,
-      "l": 8,
+      "l": 9,
       "otl": 1,
       "pts": 31,
       "gf": 102,
       "ga": 90,
-      "strk": "W2"
-     },
-     {
-      "name": "Brantford Bulldogs",
-      "abbr": "BFD",
-      "gp": 23,
-      "w": 15,
-      "l": 7,
-      "otl": 1,
-      "pts": 31,
-      "gf": 94,
-      "ga": 66,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Peterborough Petes",
@@ -4200,14 +4174,14 @@
      {
       "name": "Blainville-Boisbriand Armada",
       "abbr": "BLB",
-      "gp": 0,
-      "w": 0,
+      "gp": 1,
+      "w": 1,
       "l": 0,
       "otl": 0,
-      "pts": 0,
+      "pts": 2,
       "gf": 5,
       "ga": 3,
-      "strk": ""
+      "strk": "W1"
      }
     ]
    },
@@ -4253,14 +4227,14 @@
      {
       "name": "Brampton Steelheads",
       "abbr": "BRAM",
-      "gp": 23,
+      "gp": 24,
       "w": 6,
-      "l": 14,
+      "l": 15,
       "otl": 3,
       "pts": 15,
       "gf": 66,
       "ga": 102,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Barrie Colts",
