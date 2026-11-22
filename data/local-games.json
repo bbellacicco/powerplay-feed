@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T18:03:47-05:00",
+ "updated": "2026-11-22T18:16:46-05:00",
  "today": "2026-11-22",
  "range": [
   "2026-11-19",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -572,11 +572,11 @@
    "home_away": "H",
    "opponent": "Mooretown Flags",
    "location": "Libro Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "In progress",
+   "status": "final",
+   "our_score": 2,
+   "opp_score": 3,
+   "result": "L",
+   "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960703?configuration=45"
    },
@@ -592,10 +592,10 @@
    "opponent": "Niagara Falls Canucks",
    "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
    "status": "live",
-   "our_score": 0,
+   "our_score": 1,
    "opp_score": 0,
    "result": null,
-   "note": "20:00 1st",
+   "note": "17:33 1st",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16707"
    },
@@ -614,7 +614,7 @@
    "our_score": null,
    "opp_score": null,
    "result": null,
-   "note": "",
+   "note": "In progress",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960705?configuration=45"
    },
@@ -2933,6 +2933,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Takeaways: Alina Paetz plays hero to claim first GSOC title with new team",
+   "summary": "In curling, it’s not about making every shot — just the timely ones. And Switzerland’s Alina Paetz did just that to win her first GSOC title as a skip at the HearingLife National, writes Sportsnet’s Justin Arenburg.",
+   "published": "2026-11-22T12:31-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/alina-paetz.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "",
+   "url": "https://www.sportsnet.ca/curling/article/alina-paetz-beats-miku-nihira-to-claim-first-gsoc-title-with-new-team/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "Steelers’ DK Metcalf ejected against Eagles after eye-poke",
    "summary": "Pittsburgh Steelers wide receiver DK Metcalf was ejected from Sunday’s game against the Philadelphia Eagles for poking defensive back Cooper DeJean in the eye.",
@@ -4602,7 +4615,7 @@
       "l": 6,
       "otl": 1,
       "pts": 35,
-      "gf": 90,
+      "gf": 91,
       "ga": 47,
       "strk": "W4"
      },
@@ -4651,7 +4664,7 @@
       "otl": 2,
       "pts": 18,
       "gf": 75,
-      "ga": 128,
+      "ga": 129,
       "strk": "L1"
      },
      {
@@ -5187,14 +5200,14 @@
      {
       "name": "Mooretown Flags",
       "abbr": "MOO",
-      "gp": 23,
-      "w": 10,
+      "gp": 24,
+      "w": 11,
       "l": 11,
       "otl": 2,
-      "pts": 22,
-      "gf": 83,
-      "ga": 78,
-      "strk": "L1"
+      "pts": 24,
+      "gf": 86,
+      "ga": 80,
+      "strk": "W1"
      },
      {
       "name": "Wheatley Sharks",
@@ -5211,14 +5224,14 @@
      {
       "name": "Amherstburg Admirals",
       "abbr": "AMH",
-      "gp": 20,
+      "gp": 21,
       "w": 7,
-      "l": 13,
+      "l": 14,
       "otl": 0,
       "pts": 14,
-      "gf": 70,
-      "ga": 71,
-      "strk": "L3"
+      "gf": 72,
+      "ga": 74,
+      "strk": "L4"
      },
      {
       "name": "Walpole Island Wild",
