@@ -50,7 +50,7 @@
 <body>
 <div class="strip">
   <a class="head" href="https://www.powerplaywindsor.com/local-sports" target="_top">
-    <div><div class="k">Pro Hub</div><h1>Our pro teams, <em>live</em></h1></div>
+    <div><div class="k">National Hub</div><h1>Our pro teams, <em>live</em></h1></div>
     <div class="by">Presented by <b>Unifor Local 2458</b></div>
   </a>
   <div class="games" id="games"><div class="empty">Loading scores…</div></div>
@@ -101,7 +101,7 @@
       var next = all.filter(function (g) { return g.state === 'pre' && new Date(g.start) > now; }).sort(function (a, b) { return a.start.localeCompare(b.start); });
       var pick = live.concat(finToday, finY.length && live.length + finToday.length < 2 ? finY : [], next).slice(0, 2);
       var box = document.getElementById('games'); box.innerHTML = '';
-      if (!pick.length) box.appendChild(el('div', 'empty', 'Red Wings, Leafs, Habs, Lions, Bills, Pistons, Raptors, Tigers and Jays: every score in the Pro Hub.'));
+      if (!pick.length) box.appendChild(el('div', 'empty', 'Red Wings, Leafs, Habs, Lions, Bills, Pistons, Raptors, Tigers and Jays: every score in the National Hub.'));
       pick.forEach(function (g) { box.appendChild(card(g)); });
       setTimeout(load, live.length ? 60000 : 5 * 60000);
     });
