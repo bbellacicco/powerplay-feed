@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T20:02:23-05:00",
+ "updated": "2026-11-21T20:17:17-05:00",
  "today": "2026-11-21",
  "range": [
   "2026-11-18",
@@ -489,15 +489,13 @@
    "home_away": "H",
    "opponent": "Lakehead Thunderwolves",
    "location": "Toldo Lancer Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "In progress",
+   "status": "final",
+   "our_score": 64,
+   "opp_score": 70,
+   "result": "L",
+   "note": "",
    "links": {
-    "gamecentre": "https://oua.tv/?school=Windsor",
-    "watch": "https://oua.tv/?school=Windsor",
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=171"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6230"
    }
   },
   {
@@ -510,10 +508,10 @@
    "opponent": "Mississauga Chargers",
    "location": "Port Credit Memorial Arena, Mississauga, ON",
    "status": "live",
-   "our_score": 2,
+   "our_score": 3,
    "opp_score": 0,
    "result": null,
-   "note": "15:43 2nd",
+   "note": "09:07 2nd",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16702"
    },
@@ -529,10 +527,10 @@
    "opponent": "Peterborough Petes",
    "location": "WFCU Centre, Windsor",
    "status": "live",
-   "our_score": 2,
-   "opp_score": 0,
+   "our_score": 4,
+   "opp_score": 2,
    "result": null,
-   "note": "10:07 2nd",
+   "note": "12:36 2nd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29227/"
    }
@@ -546,11 +544,11 @@
    "home_away": "A",
    "opponent": "Komoka Kings",
    "location": "Komoka Wellness Centre, Middlesex Centre, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 2,
+   "opp_score": 0,
    "result": null,
-   "note": "",
+   "note": "12:12 2nd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15714"
    },
@@ -3980,8 +3978,8 @@
       "l": 10,
       "otl": 0,
       "pts": 26,
-      "gf": 84,
-      "ga": 75,
+      "gf": 86,
+      "ga": 77,
       "strk": "W5"
      },
      {
@@ -4094,7 +4092,7 @@
       "otl": 3,
       "pts": 13,
       "gf": 56,
-      "ga": 95,
+      "ga": 96,
       "strk": "L2"
      }
     ]
@@ -4110,8 +4108,8 @@
       "l": 7,
       "otl": 3,
       "pts": 31,
-      "gf": 86,
-      "ga": 68,
+      "gf": 88,
+      "ga": 70,
       "strk": "L1"
      },
      {
@@ -4187,7 +4185,7 @@
       "l": 6,
       "otl": 3,
       "pts": 33,
-      "gf": 88,
+      "gf": 89,
       "ga": 67,
       "strk": "W7"
      },
@@ -4211,7 +4209,7 @@
       "l": 8,
       "otl": 3,
       "pts": 27,
-      "gf": 81,
+      "gf": 82,
       "ga": 84,
       "strk": "W2"
      },
@@ -4224,7 +4222,7 @@
       "otl": 4,
       "pts": 20,
       "gf": 62,
-      "ga": 96,
+      "ga": 97,
       "strk": "L1"
      }
     ]
@@ -4451,7 +4449,7 @@
       "l": 6,
       "otl": 1,
       "pts": 33,
-      "gf": 87,
+      "gf": 88,
       "ga": 47,
       "strk": "W3"
      },
@@ -4476,7 +4474,7 @@
       "otl": 1,
       "pts": 19,
       "gf": 72,
-      "ga": 116,
+      "ga": 117,
       "strk": "W1"
      },
      {
@@ -4602,7 +4600,7 @@
       "l": 11,
       "otl": 1,
       "pts": 23,
-      "gf": 92,
+      "gf": 93,
       "ga": 90,
       "strk": "W1"
      },
@@ -4627,7 +4625,7 @@
       "otl": 3,
       "pts": 19,
       "gf": 88,
-      "ga": 84,
+      "ga": 85,
       "strk": "L1"
      },
      {
@@ -4675,7 +4673,7 @@
       "otl": 1,
       "pts": 3,
       "gf": 43,
-      "ga": 130,
+      "ga": 133,
       "strk": "L7"
      }
     ]
@@ -4703,7 +4701,7 @@
       "l": 1,
       "otl": 1,
       "pts": 35,
-      "gf": 104,
+      "gf": 107,
       "ga": 55,
       "strk": "W5"
      },
@@ -4716,7 +4714,7 @@
       "otl": 1,
       "pts": 33,
       "gf": 88,
-      "ga": 57,
+      "ga": 58,
       "strk": "L2"
      },
      {
@@ -4787,7 +4785,7 @@
       "l": 13,
       "otl": 3,
       "pts": 17,
-      "gf": 75,
+      "gf": 76,
       "ga": 104,
       "strk": "L1"
      },
