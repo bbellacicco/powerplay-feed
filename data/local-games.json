@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T18:47:25-05:00",
+ "updated": "2026-11-21T19:01:45-05:00",
  "today": "2026-11-21",
  "range": [
   "2026-11-18",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 31
   },
   "club_news": {
    "ok": true,
@@ -416,11 +416,11 @@
    "home_away": "A",
    "opponent": "Waterloo Warriors",
    "location": "Waterloo, ON",
-   "status": "live",
-   "our_score": 2,
-   "opp_score": 2,
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
    "result": null,
-   "note": "5",
+   "note": "In progress",
    "links": {
     "gamecentre": "https://oua.tv/?school=Windsor",
     "watch": "https://oua.tv/?school=Windsor"
@@ -533,13 +533,12 @@
    "home_away": "H",
    "opponent": "Peterborough Petes",
    "location": "WFCU Centre, Windsor",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
-   "note": "",
+   "note": "20:00 1st",
    "links": {
-    "tickets": "https://wfcucentre.evenue.net/event/S27/G13",
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29227/"
    }
   },
@@ -2715,49 +2714,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Quick Shifts: How should Maple Leafs handle Gavin McKenna?",
-   "summary": "Gavin McKenna has been a hot topic amongst Maple Leafs faithful since he was drafted. Sportsnet’s Luke Fox dives into the buzz around the 18-year-old and more in his latest Quick Shifts.",
-   "published": "2026-11-21T08:15-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Toronto-Maple-Leafs-Gavin-McKenna.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/quick-shifts-how-should-maple-leafs-handle-gavin-mckenna/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Potential Blue Jays targets after non-tender deadline",
-   "summary": "While the Blue Jays are linked to players at the top of the market, the team’s off-season won’t solely consist of shopping for big-ticket additions. Nick Ashbourne looks at some targets Toronto could consider after the n",
-   "published": "2026-11-21T13:26-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/nando.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/potential-blue-jays-targets-after-non-tender-deadline/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Canucks have openings with Pettersson injured, Sasson gone",
-   "summary": "The struggling team will be without both centres when they play the Minnesota Wild Saturday night at Rogers Arena.",
-   "published": "2026-11-21T15:27-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/01/Untitled-design-copy-2-2.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canucks-have-openings-with-pettersson-injured-sasson-gone/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Blackhawks’ Kaiser ejected for hit that injures Flames’ Pospisil",
    "summary": "",
    "published": "2026-11-21T17:39-05:00",
@@ -2767,6 +2723,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/blackhawks-kaiser-ejected-for-hit-that-injures-flames-pospisil/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Jaroslav Halak eyeing return to NHL after three-year absence, agent says",
+   "summary": "Sometimes retirement doesn’t officially mean it’s the end of the road, and that’s the case for yet another former NHL’er.",
+   "published": "2026-11-21T18:47-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-2-4.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/jaroslav-halak-eyeing-return-to-nhl-after-three-year-absence-agent-says/",
    "source": "Sportsnet"
   },
   {
@@ -2824,19 +2793,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Canucks forward Elias Pettersson out against Wild with upper-body injury",
-   "summary": "A tough test for the Vancouver Canucks just got even tougher.",
-   "published": "2026-11-21T12:43-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/canucks-11.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canucks-forward-elias-pettersson-out-against-wild-with-upper-body-injury/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "other",
    "headline": "Anna and Olivia Melnyk, daughters of ex-Senators owner, join Tempo ownership",
    "summary": "",
@@ -2847,6 +2803,47 @@
    "sn_team_count": 0,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/wnba/article/anna-and-olivia-melnyk-daughters-of-ex-senators-owner-join-tempo-ownership/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Sam Rinzel’s overtime goal lifts Blackhawks over Flames",
+   "summary": "",
+   "published": "2026-11-21T18:59-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177314960.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/sam-rinzels-overtime-goal-lifts-blackhawks-over-flames/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Potential Blue Jays targets after non-tender deadline",
+   "summary": "While the Blue Jays are linked to players at the top of the market, the team’s off-season won’t solely consist of shopping for big-ticket additions. Nick Ashbourne looks at some targets Toronto could consider after the n",
+   "published": "2026-11-21T13:26-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/nando.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/potential-blue-jays-targets-after-non-tender-deadline/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Canucks have openings with Pettersson injured, Sasson gone",
+   "summary": "The struggling team will be without both centres when they play the Minnesota Wild Saturday night at Rogers Arena.",
+   "published": "2026-11-21T15:27-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/01/Untitled-design-copy-2-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canucks-have-openings-with-pettersson-injured-sasson-gone/",
    "source": "Sportsnet"
   },
   {
@@ -2873,6 +2870,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/nick-cousins-returning-to-senators-lineup-against-kings/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Canucks forward Elias Pettersson out against Wild with upper-body injury",
+   "summary": "A tough test for the Vancouver Canucks just got even tougher.",
+   "published": "2026-11-21T12:43-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/canucks-11.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canucks-forward-elias-pettersson-out-against-wild-with-upper-body-injury/",
    "source": "Sportsnet"
   },
   {
@@ -2983,6 +2993,19 @@
   },
   {
    "league": "other",
+   "headline": "Canada loses to Brazil in Billie Jean King Cup playoff tie",
+   "summary": "",
+   "published": "2026-11-21T18:49-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177186510.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Tennis",
+   "url": "https://www.sportsnet.ca/tennis/article/canada-loses-to-brazil-in-billie-jean-king-cup-playoff-tie/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
    "headline": "Zverev to face Alcaraz in championship match at ATP Finals",
    "summary": "Carlos Alcaraz had his left thigh wrapped up, and still, the seven-time Grand Slam champion produced solid tennis when he needed it most.",
    "published": "2026-11-21T11:09-05:00",
@@ -3039,21 +3062,6 @@
   },
   {
    "league": "nba",
-   "headline": "Raptors takeaways: Barnes, Graves dominate to end skid with win over Pistons",
-   "summary": "The Raptors ended a six-game skid on Friday with a win over the Pistons thanks to big games from Scottie Barnes and Allen Graves. Steven Loung highlights some key takeaways from the much-needed victory.",
-   "published": "2026-11-20T23:13-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-41-2.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-takeaways-barnes-graves-dominate-to-end-skid-with-win-over-pistons/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
    "headline": "Report: Raptors’ Kawhi Leonard out at least two more weeks",
    "summary": "",
    "published": "2026-11-20T15:46-05:00",
@@ -3095,58 +3103,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-coach-jim-hiller-under-the-microscope-after-winless-streak/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Ducks place Sennecke on injured reserve, recall Myatovic",
-   "summary": "The Anaheim Ducks have placed Beckett Sennecke on injured reserve with an upper-body injury and called up Nico Myatovic.",
-   "published": "2026-11-21T14:25-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-55.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/ducks-place-sennecke-on-injured-reserve-recall-myatovic/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Canada’s Maltais, Dubreuil win bronze at speedskating World Cup event in Japan",
-   "summary": "Canadian veterans Valérie Maltais and Laurent Dubreuil each earned a bronze medal on Saturday at an ISU World Cup Speed Skating event.",
-   "published": "2026-11-21T13:31-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-53.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Olympics",
-   "url": "https://www.sportsnet.ca/olympics/article/canadas-maltais-dubreuil-win-bronze-at-speedskating-world-cup-event-in-japan/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Canada wins four short-track speedskating medals at World Tour",
-   "summary": "Courtney Sarault, Florence Brunelle, Mathieu Pelletier and Félix Roussel helped Canada earn four medals at the ISU Short Track World Tour Saturday.",
-   "published": "2026-11-21T13:53-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-54.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "",
-   "url": "https://www.sportsnet.ca/olympics/article/canada-wins-four-short-track-speedskating-medals-at-world-tour/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "NFL Week 11 Pick ‘Em: Lions start life without Hutchinson",
-   "summary": "The stars will be out on primetime in Week 11, and that’s all we can ask for as football fans. From lopsided matchups to heavyweight tilts, Evan Davidson gives his picks for the full NFL slate.",
-   "published": "2026-11-19T08:04-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Lions-2.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-11-pick-em-texans-need-win-in-pivotal-divisional-clash/",
    "source": "Sportsnet"
   },
   {
@@ -4315,14 +4271,14 @@
      {
       "name": "Newmarket Hurricanes",
       "abbr": "NMH",
-      "gp": 26,
+      "gp": 27,
       "w": 14,
-      "l": 9,
+      "l": 10,
       "otl": 3,
       "pts": 31,
       "gf": 84,
       "ga": 79,
-      "strk": "W5"
+      "strk": "L1"
      },
      {
       "name": "Stouffville Spirit",
@@ -4500,14 +4456,14 @@
      {
       "name": "Oakville Blades",
       "abbr": "OAK",
-      "gp": 25,
-      "w": 13,
+      "gp": 26,
+      "w": 14,
       "l": 8,
       "otl": 4,
-      "pts": 30,
+      "pts": 32,
       "gf": 97,
       "ga": 87,
-      "strk": "W5"
+      "strk": "W6"
      },
      {
       "name": "Mississauga Chargers",
