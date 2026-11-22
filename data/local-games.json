@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T20:31:49-05:00",
+ "updated": "2026-11-21T20:51:06-05:00",
  "today": "2026-11-21",
  "range": [
   "2026-11-18",
@@ -255,7 +255,8 @@
    "result": "L",
    "note": "9-25, 25-17, 20-25, 25-22, 8-15",
    "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6248"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6248",
+    "recap": "https://golancers.ca/news/2026/11/21/womens-volleyball-lancers-split-weekend-in-waterloo.aspx"
    }
   },
   {
@@ -404,7 +405,8 @@
    "result": "W",
    "note": "19-25, 25-15, 25-15, 25-21",
    "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6249"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6249",
+    "recap": "https://golancers.ca/news/2026/11/21/womens-volleyball-lancers-split-weekend-in-waterloo.aspx"
    }
   },
   {
@@ -508,10 +510,10 @@
    "opponent": "Mississauga Chargers",
    "location": "Port Credit Memorial Arena, Mississauga, ON",
    "status": "live",
-   "our_score": 3,
+   "our_score": 4,
    "opp_score": 0,
    "result": null,
-   "note": "00:00 2nd",
+   "note": "18:28 3rd",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16702"
    },
@@ -530,7 +532,7 @@
    "our_score": 4,
    "opp_score": 2,
    "result": null,
-   "note": "05:07 2nd",
+   "note": "00:20 2nd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29227/"
    }
@@ -544,11 +546,11 @@
    "home_away": "A",
    "opponent": "Komoka Kings",
    "location": "Komoka Wellness Centre, Middlesex Centre, ON",
-   "status": "live",
-   "our_score": 4,
-   "opp_score": 1,
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
    "result": null,
-   "note": "03:31 2nd",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15714"
    },
@@ -2736,7 +2738,7 @@
    "headline": "Blackhawks’ Kaiser ejected for hit that injures Flames’ Pospisil",
    "summary": "",
    "published": "2026-11-21T17:39-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/01/pospisil.jpg",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/wyatt-kaiser.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 1,
@@ -4162,6 +4164,18 @@
       "strk": "W7"
      },
      {
+      "name": "Erie Otters",
+      "abbr": "ER",
+      "gp": 24,
+      "w": 13,
+      "l": 8,
+      "otl": 3,
+      "pts": 29,
+      "gf": 83,
+      "ga": 84,
+      "strk": "W3"
+     },
+     {
       "name": "London Knights",
       "abbr": "LDN",
       "gp": 22,
@@ -4174,28 +4188,16 @@
       "strk": "L1"
      },
      {
-      "name": "Erie Otters",
-      "abbr": "ER",
-      "gp": 23,
-      "w": 12,
-      "l": 8,
-      "otl": 3,
-      "pts": 27,
-      "gf": 83,
-      "ga": 84,
-      "strk": "W2"
-     },
-     {
       "name": "Owen Sound Attack",
       "abbr": "OS",
-      "gp": 23,
+      "gp": 24,
       "w": 8,
-      "l": 11,
+      "l": 12,
       "otl": 4,
       "pts": 20,
       "gf": 62,
       "ga": 98,
-      "strk": "L1"
+      "strk": "L2"
      }
     ]
    }
@@ -4236,7 +4238,7 @@
       "l": 7,
       "otl": 4,
       "pts": 34,
-      "gf": 110,
+      "gf": 111,
       "ga": 85,
       "strk": "W1"
      },
@@ -4261,7 +4263,7 @@
       "otl": 2,
       "pts": 30,
       "gf": 96,
-      "ga": 74,
+      "ga": 75,
       "strk": "W5"
      },
      {
@@ -4332,8 +4334,8 @@
       "l": 16,
       "otl": 2,
       "pts": 14,
-      "gf": 83,
-      "ga": 121,
+      "gf": 84,
+      "ga": 122,
       "strk": "L3"
      },
      {
@@ -4397,8 +4399,8 @@
       "l": 4,
       "otl": 1,
       "pts": 39,
-      "gf": 128,
-      "ga": 49,
+      "gf": 129,
+      "ga": 50,
       "strk": "L1"
      },
      {
@@ -4421,7 +4423,7 @@
       "l": 6,
       "otl": 1,
       "pts": 33,
-      "gf": 88,
+      "gf": 89,
       "ga": 47,
       "strk": "W3"
      },
@@ -4446,7 +4448,7 @@
       "otl": 1,
       "pts": 19,
       "gf": 72,
-      "ga": 117,
+      "ga": 118,
       "strk": "W1"
      },
      {
@@ -4572,7 +4574,7 @@
       "l": 11,
       "otl": 1,
       "pts": 23,
-      "gf": 93,
+      "gf": 96,
       "ga": 91,
       "strk": "W1"
      },
@@ -4597,7 +4599,7 @@
       "otl": 3,
       "pts": 19,
       "gf": 89,
-      "ga": 85,
+      "ga": 88,
       "strk": "L1"
      },
      {
@@ -4644,8 +4646,8 @@
       "l": 18,
       "otl": 1,
       "pts": 3,
-      "gf": 43,
-      "ga": 133,
+      "gf": 44,
+      "ga": 134,
       "strk": "L7"
      }
     ]
@@ -4673,8 +4675,8 @@
       "l": 1,
       "otl": 1,
       "pts": 35,
-      "gf": 107,
-      "ga": 55,
+      "gf": 108,
+      "ga": 56,
       "strk": "W5"
      },
      {
@@ -4685,8 +4687,8 @@
       "l": 4,
       "otl": 1,
       "pts": 33,
-      "gf": 89,
-      "ga": 58,
+      "gf": 90,
+      "ga": 59,
       "strk": "L2"
      },
      {
@@ -4757,8 +4759,8 @@
       "l": 13,
       "otl": 3,
       "pts": 17,
-      "gf": 76,
-      "ga": 105,
+      "gf": 77,
+      "ga": 106,
       "strk": "L1"
      },
      {
