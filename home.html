@@ -514,8 +514,7 @@ document.addEventListener('load', function (e) {
     { key: 'photos', title: 'Game Day Snaps', gold: 'Snaps', by: null, all: null, tab: null },
     { key: 'athletes', title: 'Athlete profiles', by: null, all: LINK.athletes, tab: 'athletes' },
     { key: 'junior', title: 'Junior Hockey', gold: 'Hockey', by: null, all: SITE + 'scores-standings?tab=junior', tab: 'junior', share: SITE + 'scores-standings?strip=junior' },
-    // sits at the very top of the page (moved under the Find a team bar below): live games, today's games, the latest scores
-    { key: 'local', title: 'Today\u2019s Scores', gold: 'Scores', by: ['Unifor Local 444', 'logos/unifor-444.png'], all: LINK.scores, tab: 'scores' },
+    { key: 'local', title: 'Local scores', by: ['Unifor Local 444', 'logos/unifor-444.png'], all: LINK.scores, tab: 'scores' },
     { key: 'pro', title: 'National scores', gold: 'scores', by: ['Unifor Local 2458', 'logos/unifor-2458.png'], all: LINK.pro, tab: 'pro' },
     { key: 'prohead', title: 'National headlines', gold: 'headlines', by: ['The D’Amore Group', 'logos/damore-group.png'], all: LINK.pro, tab: 'pro' }
   ];
@@ -568,8 +567,6 @@ document.addEventListener('load', function (e) {
     document.getElementById('rows').appendChild(sec);
     rowEl[r.key] = row;
   });
-  // the scores go first: right under the Find a team bar, before the headlines, so they're there the moment the app opens
-  (function () { var sec = document.getElementById('row-local'), ht = document.querySelector('.hubtitle'); if (sec && ht) { sec.classList.add('toprow'); ht.parentNode.insertBefore(sec, ht); } })();
   // phones: each strip title grows to fill the room it has beside the buttons (short titles like What's New get bigger), up to 36px
   function fitHeads() {
     var phone = window.matchMedia('(max-width: 700px)').matches;
@@ -1076,10 +1073,8 @@ document.addEventListener('load', function (e) {
     var recent = games.filter(function (g) { return g.status === 'final' && g.our_score != null && new Date(g.start).getTime() >= since; }).sort(byP);
     var next = games.filter(function (g) { return g.status === 'upcoming' && new Date(g.start).getTime() >= now - 3 * 3600e3; })
       .sort(function (a, b) { return a.start < b.start ? -1 : a.start > b.start ? 1 : priority(a) - priority(b); });
-    // the top of the page: live games first, then the rest of today's games, the last day's scores, then what's next
-    var today = dayKey(new Date());
-    var todayNext = next.filter(function (g) { return dayKey(new Date(g.start)) === today; }), later = next.filter(function (g) { return dayKey(new Date(g.start)) !== today; });
-    return live.concat(todayNext, recent, later).slice(0, 16);
+    // live games stay out of this row until they're final (the sports guide above shows them live)
+    return recent.concat(next).slice(0, 14);
   }
 
   // ---------- team logos on local score cards (where we have them) ----------
