@@ -317,44 +317,34 @@ def _lancers_schedules(base):
 
 
 def _lancers_live(base):
-    """golancers.ca only posts a score on its calendar once a game is over. Its live
-    stats feed (services/livestats.ashx, the same one the site's own scoreboard reads)
-    carries games while they're on. Returns {calendar game id: (our, opp, detail)}.
-    The feed's field names aren't fixed across SIDEARM sites, so read it loosely."""
+    """golancers.ca only posts a score on its calendar once a game is over (often hours later).
+    Its live stats feed (services/livestats.ashx, what the site's own scoreboard reads) carries
+    games while they're on: {"Games": [{"GameId": <calendar id>, "HasStarted", "IsComplete",
+    "Period", "PeriodName", "Link", "HomeTeam": {"Id", "Score"}, "VisitingTeam": {...}}]}.
+    The team "Name" fields are unreliable; "Id" says which side is Windsor.
+    Returns {calendar id: dict(home, away, ours_home or None, detail, complete, link)}."""
     try:
         data = json.loads(fetch(base + "/services/livestats.ashx"))
     except Exception:
         return {}
-    games = data.get("Games") or data.get("games") or (data if isinstance(data, list) else [])
     out = {}
-    for g in games:
-        if not isinstance(g, dict):
+    for g in data.get("Games") or []:
+        gid = to_int(g.get("GameId"))
+        h, v = g.get("HomeTeam") or {}, g.get("VisitingTeam") or {}
+        home, away = to_int(h.get("Score")), to_int(v.get("Score"))
+        if gid is None or home is None or away is None or not g.get("HasStarted"):
             continue
-        flat = {k.lower(): v for k, v in g.items()}
-        gid = None
-        for k in ("gameid", "game_id", "scheduleid", "schedule_id", "id"):
-            if to_int(flat.get(k)) is not None:
-                gid = to_int(flat[k])
-                break
-        def side(*names):
-            for n in names:
-                v = flat.get(n)
-                if isinstance(v, dict):
-                    v = {k.lower(): x for k, x in v.items()}
-                    v = v.get("score") if "score" in v else v.get("points")
-                if to_int(v) is not None:
-                    return to_int(v)
-            return None
-        home = side("homescore", "home_score", "hometeam", "home_team", "home")
-        away = side("visitingscore", "visitorscore", "awayscore", "visiting_score", "away_score",
-                    "visitingteam", "visitorteam", "awayteam", "visiting_team", "away_team", "visitor", "away")
-        if gid is None or home is None or away is None:
-            continue
-        if str(flat.get("iscomplete") or flat.get("is_complete") or "").lower() == "true":
-            continue
-        ours_home = str(flat.get("location_indicator") or flat.get("ishome") or flat.get("is_home") or "").upper() in ("H", "TRUE")
-        detail = " ".join(str(flat.get(k) or "") for k in ("period", "clock", "status") if flat.get(k)).strip()
-        out[gid] = (home, away, detail, ours_home, "location_indicator" in flat or "ishome" in flat or "is_home" in flat)
+        hid, vid = str(h.get("Id") or "").upper(), str(v.get("Id") or "").upper()
+        ours_home = True if "WINDSOR" in hid else False if "WINDSOR" in vid else None
+        per, name = to_int(g.get("Period")), (g.get("PeriodName") or "").strip()
+        detail = ""
+        if per and not g.get("IsComplete"):
+            if name.lower() in ("set", "game", "inning"):
+                detail = f"{name} {per}"
+            else:
+                detail = {1: "1st", 2: "2nd", 3: "3rd", 4: "4th"}.get(per, "OT")
+        out[gid] = {"home": home, "away": away, "ours_home": ours_home, "detail": detail,
+                    "complete": bool(g.get("IsComplete")), "link": g.get("Link") or ""}
     return out
 
 
@@ -409,26 +399,31 @@ def scrape_lancers(today):
                 # golancers.ca's live-stats link points at an old date on the OUA schedule; use the game's own day
                 stats_url = re.sub(r"/daily-schedule/\d{4}-\d{2}-\d{2}", "/daily-schedule/" + start.date().isoformat(), stats_url)
                 watch_url = ((media.get("video") or {}).get("url")) or ""
-                if status == "upcoming" and not time_tbd and start <= now < start + timedelta(hours=4):
-                    lv = live.get(e["id"])
-                    if lv:
-                        home, away, detail, ours_home, known = lv
-                        if not known:
-                            ours_home = ha != "A"
-                        status = "live"
-                        our, opp = (home, away) if ours_home else (away, home)
-                        if detail:
-                            note_bits.insert(0, detail)
+                lv = live.get(e["id"]) if status == "upcoming" else None
+                if lv:
+                    ours_home = lv["ours_home"] if lv["ours_home"] is not None else ha != "A"
+                    our, opp = (lv["home"], lv["away"]) if ours_home else (lv["away"], lv["home"])
+                    if lv["complete"]:
+                        # over, but the calendar hasn't caught up: take the final from the live stats
+                        status = "final"
+                        result = "W" if our > opp else "L" if our < opp else "T"
+                        links["boxscore"] = lv["link"]
                     else:
-                        # started, but no live score from golancers.ca: show it as under way
-                        # (no made-up 0-0) and point fans to the live stats / stream
-                        note_bits.insert(0, "In progress")
+                        status = "live"
+                        if lv["detail"]:
+                            note_bits.insert(0, lv["detail"])
+                        links["gamecentre"] = lv["link"] or stats_url or watch_url
+                        links["watch"] = watch_url
+                elif status == "upcoming" and not time_tbd and start <= now < start + timedelta(hours=4):
+                    # started, but no live score from golancers.ca: show it as under way
+                    # (no made-up 0-0) and point fans to the live stats / stream
+                    note_bits.insert(0, "In progress")
                     links["gamecentre"] = stats_url or watch_url
                     links["watch"] = watch_url
                 elif status == "upcoming" and start < now - timedelta(hours=4):
                     note_bits.insert(0, "Score not posted yet")
-                if status == "upcoming":
-                    links["tickets"] = ((media.get("tickets") or {}).get("url")) or ""
+                if status in ("upcoming", "live"):
+                    links["tickets"] = ((media.get("tickets") or {}).get("url")) or "" if status == "upcoming" else ""
                     links["watch"] = watch_url
                 if status == "final" and not links:
                     # golancers.ca posts box scores late (or never for some sports); until it does,
