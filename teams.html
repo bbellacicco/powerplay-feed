@@ -77,6 +77,23 @@
   @media (max-width: 760px) { .mgrid.mstrip { grid-auto-columns: 70%; } .ttabs { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); width: 100%; } .ttabs button { padding: 8px 2px; font-size: 11px; letter-spacing: .02em; } .thr { width: 100%; justify-content: space-between; } }
   .thead .spos { margin-top: 6px; display: inline-block; background: rgba(232,176,33,.14); color: var(--accent); font-weight: 800; font-size: 13.5px; border-radius: 8px; padding: 4px 9px; }
   .pickgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 6px; }
+  /* strips (homepage look): one row that swipes sideways */
+  .swrap { position: relative; }
+  .hstrip { display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x proximity; padding: 2px 0 8px; scrollbar-width: thin; -webkit-overflow-scrolling: touch; }
+  .hstrip > * { flex: 0 0 auto; scroll-snap-align: start; }
+  .hstrip .pick { width: 150px; min-height: 64px; }
+  .sarr { position: absolute; top: 50%; transform: translateY(-60%); z-index: 2; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); background: #0b1a33e6; color: #fff; font: 800 20px/1 system-ui; cursor: pointer; display: none; }
+  .sarr.l { left: -6px; } .sarr.r { right: -6px; }
+  @media (hover: hover) and (min-width: 700px) { .swrap:hover .sarr { display: block; } }
+  .gcard { width: 172px; display: flex; flex-direction: column; gap: 4px; background: var(--card2); border-radius: 10px; border-top: 3px solid var(--accent); padding: 10px 11px; cursor: pointer; color: var(--text); text-decoration: none; }
+  .gcard:hover { outline: 1px solid var(--accent); }
+  .gcard .gtop { display: flex; flex-direction: column; gap: 2px; font-size: 11px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+  .gcard .gsp { color: var(--accent); line-height: 1.2; }
+  .gcard .gst { color: var(--muted); text-transform: none; letter-spacing: 0; font-size: 12px; } .gcard .gst.live { color: var(--live); }
+  .gcard .gop { font-weight: 800; font-size: 14px; line-height: 1.25; min-height: 35px; }
+  .gcard .gsc { font-size: 20px; font-weight: 900; } .gcard .gsc .w { color: var(--win); } .gcard .gsc .l { color: #ff8080; } .gcard .gsc .t { color: var(--muted); }
+  .gcard .gnt { color: var(--muted); font-size: 12px; }
+  .gcard .glk { color: var(--accent); font-size: 12px; font-weight: 800; margin-top: auto; text-decoration: none; }
   .pick { display: flex; flex-direction: column; justify-content: center; gap: 2px; text-align: left; font: inherit; color: var(--text); background: var(--card2); border: 1px solid transparent; border-radius: 9px; padding: 9px 11px; cursor: pointer; min-height: 52px; min-width: 0; }
   .pick:hover, .pick:focus-visible { border-color: var(--accent); outline: none; }
   .pick b { font-size: 14px; line-height: 1.2; }
@@ -378,7 +395,7 @@
           b.onclick = function () { openTeam(t); };
           pg.appendChild(b);
         });
-        c.appendChild(pg);
+        pg.className = 'hstrip'; c.appendChild(swipe(pg));
       } else {
         var tl = el('div', 'tlist');
         // teams with games this week get a full row (next game or last score); Lancers and Saints sports
@@ -413,31 +430,40 @@
     function part(title, arr) {
       if (!arr.length) return;
       b.appendChild(el('h4', null, title));
-      var gl = el('div', 'glist');
+      var st = el('div', 'hstrip');
       arr.forEach(function (x) {
-        var t = x[0], g = x[1], sd = side(t, g), r = el('div', 'g'), d = new Date(g.start);
-        r.appendChild(el('div', 'd', cpDay(d) + (g.status !== 'final' && !g.time_tbd ? '\n' + cpTime(d) : ''))); r.lastChild.style.whiteSpace = 'pre-line';
-        var o = el('div', 'o');
-        o.appendChild(el('span', 'sp', sec === 'hs' ? g.sport : sec === 'junior' ? t.name : (t.sport || '')));
-        o.appendChild(document.createTextNode(sec === 'hs' ? g.away + ' at ' + g.home : (sd.at === '@' ? 'at ' : 'vs. ') + sd.opp));
-        if (g.note && g.status !== 'final') o.appendChild(el('small', null, g.note));
-        r.appendChild(o);
-        var sc = el('div', 's');
-        if (g.status === 'final' && sd.us != null && sd.them != null) {
-          if (sec === 'hs') sc.appendChild(document.createTextNode(g.our_score + '–' + g.opp_score));   // away–home
-          else { var k = wl(sd); sc.appendChild(el('span', k === 'W' ? 'w' : k === 'L' ? 'l' : 't', k + ' ')); sc.appendChild(document.createTextNode(sd.us + '–' + sd.them)); }
-          var L = g.links || {}, lk = L.recap || L.boxscore || L.gamecentre;
-          if (lk) { var a = el('a', null, L.recap ? 'Recap ›' : 'Box score ›'); a.href = lk; a.target = '_blank'; a.rel = 'noopener'; sc.appendChild(a); }
-        } else if (g.status === 'final') sc.appendChild(el('span', 't', 'Final'));
-        else if (g.status === 'live') { sc.appendChild(el('span', 'l', 'LIVE ')); sc.appendChild(document.createTextNode(sd.us + '–' + sd.them)); }
-        r.appendChild(sc);
-        r.style.cursor = 'pointer'; r.onclick = function (e) { if (e.target.closest('a')) return; openTeam(t); };
-        gl.appendChild(r);
+        var t = x[0], g = x[1], sd = side(t, g), d = new Date(g.start), L = g.links || {};
+        var lk = g.status === 'final' ? (L.recap || L.boxscore || L.gamecentre) : g.status === 'live' ? (L.gamecentre || L.watch) : '';
+        var c = el('div', 'gcard'); c.style.borderTopColor = TC[t.sec] || 'var(--accent)';
+        var top = el('div', 'gtop');
+        top.appendChild(el('span', 'gsp', sec === 'hs' ? g.sport : sec === 'junior' ? t.name : (t.sport || '')));
+        var today = dayKey(d) === dayKey(new Date());
+        top.appendChild(el('span', 'gst' + (g.status === 'live' ? ' live' : ''), g.status === 'live' ? 'Live' + (g.note ? ' \u00b7 ' + g.note : '') : g.status === 'final' ? 'Final' + (today ? '' : ' \u00b7 ' + cpDay(d)) : cpDay(d) + (g.time_tbd ? '' : ' \u00b7 ' + cpTime(d))));
+        c.appendChild(top);
+        c.appendChild(el('div', 'gop', sec === 'hs' ? g.away + ' at ' + g.home : (sd.at === '@' ? 'at ' : 'vs. ') + sd.opp));
+        if ((g.status === 'final' || g.status === 'live') && sd.us != null && sd.them != null) {
+          var scx = el('div', 'gsc');
+          if (sec === 'hs') scx.appendChild(document.createTextNode(g.our_score + '–' + g.opp_score));
+          else { var k = wl(sd); if (g.status === 'final') scx.appendChild(el('span', k === 'W' ? 'w' : k === 'L' ? 'l' : 't', k + ' ')); scx.appendChild(document.createTextNode(sd.us + '–' + sd.them)); }
+          c.appendChild(scx);
+        } else if (g.status !== 'final' && (g.note || g.location)) c.appendChild(el('div', 'gnt', g.note || g.location));
+        if (lk) { var a = el('a', 'glk', g.status === 'final' ? (L.recap ? 'Recap ›' : 'Box score ›') : 'Watch live ›'); a.href = lk; a.target = '_blank'; a.rel = 'noopener'; c.appendChild(a); }
+        c.onclick = function (e) { if (e.target.closest('a')) return; openTeam(t); };
+        st.appendChild(c);
       });
-      b.appendChild(gl);
+      b.appendChild(swipe(st));
     }
     part('Results', res); part('Coming up', up);
     return b;
+  }
+  // a sideways strip with arrows on desktop (phones swipe)
+  var TC = { lancers: '#3b8ee8', saints: '#1f9d55', junior: '#0891b2', hs: '#8b5cf6', ohl: '#d4202a' };
+  function swipe(row) {
+    var w = el('div', 'swrap'), l = el('button', 'sarr l', '\u2039'), r = el('button', 'sarr r', '\u203a'); l.type = r.type = 'button';
+    l.setAttribute('aria-label', 'Scroll left'); r.setAttribute('aria-label', 'Scroll right');
+    l.onclick = function () { row.scrollBy({ left: -row.clientWidth * 0.8, behavior: 'smooth' }); };
+    r.onclick = function () { row.scrollBy({ left: row.clientWidth * 0.8, behavior: 'smooth' }); };
+    w.appendChild(l); w.appendChild(row); w.appendChild(r); return w;
   }
   function search() {
     var v = document.getElementById('q').value.trim().toLowerCase().replace(/[’']/g, ''), out = document.getElementById('results'); out.innerHTML = '';
