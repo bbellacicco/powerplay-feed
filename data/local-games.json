@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T22:16:48-05:00",
+ "updated": "2026-11-21T22:32:11-05:00",
  "today": "2026-11-21",
  "range": [
   "2026-11-18",
@@ -2886,7 +2886,20 @@
   },
   {
    "league": "nhl",
-   "headline": "Devils’ Hellebuyck pulled midway through first period after allowing four goals",
+   "headline": "Elias Lindholm’s first NHL four-goal game carries Bruins to win over Capitals",
+   "summary": "Elias Lindholm had the first four-goal game of his NHL career to carry the Boston Bruins past the Washington Capitals 7-5 on Saturday.",
+   "published": "2026-11-21T22:23-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-7-3.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "",
+   "url": "https://www.sportsnet.ca/nhl/article/elias-lindholms-first-nhl-four-goal-game-carries-bruins-to-win-over-capitals/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Neighbours has five assists, Blues chase Hellebuyck early in win over Devils",
    "summary": "After a decorated tenure with the Winnipeg Jets, veteran goalie Connor Hellebuyck decided it was time for a new chapter and was traded the New Jersey Devils — where he’s been stellar, outside of a few exceptions.",
    "published": "2026-11-21T20:20-05:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-4-3.jpg",
@@ -2941,7 +2954,7 @@
   {
    "league": "other",
    "headline": "Cavalry FC defeats Atletico Ottawa to claim CPL title and historic double",
-   "summary": "Cavalry FC defeated Atletico Ottawa 3-2 to claim the Canadian Premier League title and an unprecedented double in the soccer league.",
+   "summary": "Cavalry FC earned a historic soccer double in the Canadian Premier League with a 3-2 win over Atletico Ottawa for the North Star Cup on Saturday.",
    "published": "2026-11-21T17:43-05:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-27.jpg",
    "video": false,
@@ -3094,19 +3107,6 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/premier-league/article/manchester-citys-winless-run-hits-four-games-with-draw-against-fulham/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Brian Ortega retires from UFC after 12-year career",
-   "summary": "Following a unanimous decision loss to Dan Hooker at UFC Fight Night Qatar, Brian Ortega laid down his gloves and announced that he would be retiring from the UFC after a 12-year career.",
-   "published": "2026-11-21T15:05-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/ortega.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/brian-ortega-retires-from-ufc-after-12-year-career/",
    "source": "Sportsnet"
   },
   {
@@ -4263,14 +4263,26 @@
      {
       "name": "Wellington Dukes",
       "abbr": "WEL",
-      "gp": 26,
-      "w": 15,
+      "gp": 27,
+      "w": 16,
       "l": 7,
       "otl": 4,
-      "pts": 34,
+      "pts": 36,
       "gf": 112,
       "ga": 86,
-      "strk": "W1"
+      "strk": "W2"
+     },
+     {
+      "name": "Stouffville Spirit",
+      "abbr": "STO",
+      "gp": 25,
+      "w": 14,
+      "l": 8,
+      "otl": 3,
+      "pts": 31,
+      "gf": 97,
+      "ga": 76,
+      "strk": "W5"
      },
      {
       "name": "Newmarket Hurricanes",
@@ -4283,18 +4295,6 @@
       "gf": 84,
       "ga": 79,
       "strk": "L1"
-     },
-     {
-      "name": "Stouffville Spirit",
-      "abbr": "STO",
-      "gp": 24,
-      "w": 14,
-      "l": 8,
-      "otl": 2,
-      "pts": 30,
-      "gf": 97,
-      "ga": 76,
-      "strk": "W5"
      },
      {
       "name": "Aurora Tigers",
