@@ -149,6 +149,14 @@ def _hockeytech_games(client, key, team_id, team, sport, club="", gamecentre="",
                 result = "W"
             else:
                 result = {"OT": "OTL", "SO": "SOL"}.get(note, "L")
+        elif code in ("2", "3") and re.match(r"0?0:00\s*(3rd|OT|\d?OT)\b", g.get("GameStatusString") or "", re.I) \
+                and our is not None and opp is not None and our != opp:
+            # the clock has run out with a winner, but the league hasn't signed off on the game sheet yet
+            # (HockeyTech can sit at "00:00 3rd" for a long while): it's over, so show it as a final
+            status = "final"
+            if period == 4:
+                note = "OT"
+            result = "W" if our > opp else ("OTL" if note == "OT" else "L")
         elif code in ("2", "3"):
             status = "live"
             note = g.get("GameStatusString", "")
