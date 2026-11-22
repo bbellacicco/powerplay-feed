@@ -614,7 +614,7 @@ document.addEventListener('load', function (e) {
     pro.forEach(add);
     var sf = story && fanOf(story);
     fillGrid(P.grid, [story && storyBox(story, sf ? sf[0] : (story.league || 'Pro').toUpperCase(), (story.source ? story.source + ' · ' : '') + 'Read it ›'),
-      video && videoBox(video, video.ch || 'Pro video'), heads.length && headsBox('Pro headlines', heads)]);
+      video && videoBox(video, video.ch || 'Pro video'), heads.length && headsBox('National headlines', heads)]);
     proScores().then(function (items) { ribbon(P.ribbon, items); });
   }
 
@@ -630,7 +630,7 @@ document.addEventListener('load', function (e) {
           ['Athlete Profiles', PAGE.localHub + '?tab=athletes', 'athletes', 'person'], ['Junior Hockey', PAGE.localHub + '?tab=junior', 'junior', 'news'],
           ['Local Scores', PAGE.localHub + '?tab=scores', 'scores', 'score']]
     .forEach(function (d) { L.doors.appendChild(door(d[0], d[1], d[2], d[3], d[4])); });
-  if (R) [['Pro Sports Guide', PAGE.proHub, 'pro', 'score'], ['NFL Hub', PAGE.proHub, 'pro-nfl', 'news'], ['NHL Hub', PAGE.proHub, 'pro-nhl', 'play'], ['Search the site', PAGE.search, null, 'search']]
+  if (R) [['National Sports Guide', PAGE.proHub, 'pro', 'score'], ['NFL Hub', PAGE.proHub, 'pro-nfl', 'news'], ['NHL Hub', PAGE.proHub, 'pro-nhl', 'play'], ['Search the site', PAGE.search, null, 'search']]
     .forEach(function (d) { R.doors.appendChild(door(d[0], d[1], d[2], d[3])); });
 
   Promise.all([getJSON('local-news.json'), getJSON('local-games.json'), getJSON('highschool.json'), getJSON('network.json'), getJSON('team-logos.json')]).then(function (r) {
