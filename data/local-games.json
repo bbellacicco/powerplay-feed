@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T17:16:49-05:00",
+ "updated": "2026-11-22T17:36:19-05:00",
  "today": "2026-11-22",
  "range": [
   "2026-11-19",
@@ -591,11 +591,11 @@
    "home_away": "H",
    "opponent": "Niagara Falls Canucks",
    "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
-   "note": "",
+   "note": "20:00 1st",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16707"
    },
@@ -3153,6 +3153,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Thorbjornsen, Hojgaard share 54-hole lead at rain-delayed RSM Classic",
+   "summary": "Rasmus Hojgaard took an important step toward keeping his PGA Tour card when he made a 25-foot birdie putt on the last hole for a 5-under 65 on Sunday, giving him a share of the 54-hole lead with Michael Thorbjornsen at ",
+   "published": "2026-11-22T17:27-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/michael.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Golf",
+   "url": "https://www.sportsnet.ca/pga/article/thorbjornsen-hojgaard-share-54-hole-lead-at-rain-delayed-rsm-classic/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Blackhawks’ Connor Bedard to undergo shoulder surgery",
    "summary": "",
@@ -3243,19 +3256,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/fowler-shows-hes-human-as-canadiens-fall-to-flyers-in-final-minute/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Scheifele passes Hawerchuk for most goals in Jets history",
-   "summary": "",
-   "published": "2026-11-21T21:15-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/02/CP175632468-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/scheifele-passes-hawerchuk-for-most-goals-in-jets-history/",
    "source": "Sportsnet"
   },
   {
@@ -4537,38 +4537,38 @@
      {
       "name": "Collingwood Blues",
       "abbr": "COL",
-      "gp": 28,
+      "gp": 29,
       "w": 24,
-      "l": 4,
+      "l": 5,
       "otl": 0,
       "pts": 48,
       "gf": 155,
       "ga": 66,
-      "strk": "W2"
+      "strk": "L1"
      },
      {
       "name": "Milton Menace",
       "abbr": "MIL",
-      "gp": 27,
-      "w": 21,
+      "gp": 28,
+      "w": 22,
       "l": 4,
       "otl": 2,
-      "pts": 44,
+      "pts": 46,
       "gf": 115,
       "ga": 59,
-      "strk": "W2"
+      "strk": "W3"
      },
      {
       "name": "King Rebellion",
       "abbr": "KNG",
-      "gp": 26,
-      "w": 20,
+      "gp": 27,
+      "w": 21,
       "l": 3,
       "otl": 3,
-      "pts": 43,
+      "pts": 45,
       "gf": 113,
       "ga": 57,
-      "strk": "W3"
+      "strk": "W4"
      },
      {
       "name": "Toronto Patriots",
@@ -4657,14 +4657,14 @@
      {
       "name": "Caledon Admirals",
       "abbr": "CAL",
-      "gp": 27,
+      "gp": 28,
       "w": 7,
-      "l": 18,
+      "l": 19,
       "otl": 2,
       "pts": 16,
       "gf": 61,
       "ga": 143,
-      "strk": "L8"
+      "strk": "L9"
      },
      {
       "name": "Buffalo Jr. Sabres",
@@ -4837,14 +4837,14 @@
      {
       "name": "Cambridge Redhawks",
       "abbr": "CAM",
-      "gp": 22,
+      "gp": 23,
       "w": 19,
-      "l": 2,
+      "l": 3,
       "otl": 1,
       "pts": 39,
       "gf": 121,
       "ga": 54,
-      "strk": "W8"
+      "strk": "L1"
      },
      {
       "name": "Fort Erie Meteors",
@@ -4861,14 +4861,14 @@
      {
       "name": "Caledonia Corvairs",
       "abbr": "CAL",
-      "gp": 22,
-      "w": 17,
+      "gp": 23,
+      "w": 18,
       "l": 4,
       "otl": 1,
-      "pts": 35,
+      "pts": 37,
       "gf": 93,
       "ga": 60,
-      "strk": "W1"
+      "strk": "W2"
      },
      {
       "name": "St. Catharines Falcons",
