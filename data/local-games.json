@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T12:48:02-05:00",
+ "updated": "2026-11-22T13:01:44-05:00",
  "today": "2026-11-22",
  "range": [
   "2026-11-19",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -214,12 +214,14 @@
    "home_away": "H",
    "opponent": "Blue & Gold Meet",
    "location": "Dennis Fairall Fieldhouse",
-   "status": "upcoming",
+   "status": "final",
    "our_score": null,
    "opp_score": null,
    "result": null,
-   "note": "Score not posted yet",
-   "links": {}
+   "note": "",
+   "links": {
+    "boxscore": "https://golancers.ca/schedule.aspx?schedule=239"
+   }
   },
   {
    "id": "lancers-6207",
@@ -2908,19 +2910,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Fowler shows he’s human as Canadiens fall to Flyers in final minute",
-   "summary": "Jacob Fowler has already proven he can handle just about anything this league can shoot at him. But on Saturday, the young netminder allowed a late goal that sank the Canadiens against the Flyers.",
-   "published": "2026-11-21T23:56-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177315917.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/fowler-shows-hes-human-as-canadiens-fall-to-flyers-in-final-minute/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Maple Leafs recall centre Raty from Marlies, Roslovic day-to-day",
    "summary": "Centre Aatu Raty was recalled from the Toronto Marlies ahead of practice Sunday, the team announced. The Leafs later announced that forward Jack Roslovic was being listed as day-to-day with an upper-body injury.",
    "published": "2026-11-22T11:19-05:00",
@@ -3027,6 +3016,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Knies spurs Blue Jackets comeback in emotional return to Toronto",
+   "summary": "Spurred by Matthew Knies’ crowd-silencing moment, the Blue Jackets pulled out a stunning comeback over the Maple Leafs. Sonny Sachdeva has more on the emotional return to Toronto for the former Maple Leaf.",
+   "published": "2026-11-22T00:28-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/6408720670112.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/knies-spurs-blue-jackets-comeback-in-emotional-return-to-toronto/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Red Wings adjusting ask for Dylan Larkin",
    "summary": "",
    "published": "2026-11-21T21:30-05:00",
@@ -3057,15 +3059,15 @@
   },
   {
    "league": "nhl",
-   "headline": "Knies spurs Blue Jackets comeback in emotional return to Toronto",
-   "summary": "Spurred by Matthew Knies’ crowd-silencing moment, the Blue Jackets pulled out a stunning comeback over the Maple Leafs. Sonny Sachdeva has more on the emotional return to Toronto for the former Maple Leaf.",
-   "published": "2026-11-22T00:28-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/6408720670112.jpg",
+   "headline": "Fowler shows he’s human as Canadiens fall to Flyers in final minute",
+   "summary": "Jacob Fowler has already proven he can handle just about anything this league can shoot at him. But on Saturday, the young netminder allowed a late goal that sank the Canadiens against the Flyers.",
+   "published": "2026-11-21T23:56-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177315917.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/knies-spurs-blue-jackets-comeback-in-emotional-return-to-toronto/",
+   "url": "https://www.sportsnet.ca/nhl/article/fowler-shows-hes-human-as-canadiens-fall-to-flyers-in-final-minute/",
    "source": "Sportsnet"
   },
   {
@@ -3186,19 +3188,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "F1 presses on with Qatar and Abu Dhabi finale despite rising tensions",
-   "summary": "There was a chance for a short time that the Las Vegas Grand Prix could be the final Formula 1 race of the season.",
-   "published": "2026-11-22T08:27-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/12/F1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Auto Racing",
-   "url": "https://www.sportsnet.ca/formula-1/article/f1-presses-on-with-qatar-and-abu-dhabi-finale-despite-rising-tensions/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "mlb",
    "headline": "Potential Blue Jays targets after non-tender deadline",
    "summary": "While the Blue Jays are linked to players at the top of the market, the team’s off-season won’t solely consist of shopping for big-ticket additions. Nick Ashbourne looks at some targets Toronto could consider after the n",
@@ -3211,6 +3200,19 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/potential-blue-jays-targets-after-non-tender-deadline/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "F1 presses on with Qatar and Abu Dhabi finale despite rising tensions",
+   "summary": "There was a chance for a short time that the Las Vegas Grand Prix could be the final Formula 1 race of the season.",
+   "published": "2026-11-22T08:27-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/12/F1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Auto Racing",
+   "url": "https://www.sportsnet.ca/formula-1/article/f1-presses-on-with-qatar-and-abu-dhabi-finale-despite-rising-tensions/",
    "source": "Sportsnet"
   },
   {
@@ -3276,19 +3278,6 @@
    "sn_team_count": 2,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/wembanyama-has-50-points-19-rebounds-as-spurs-roll-past-pelicans/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "NBA Roundup: East-leading 76ers survive challenge from last-place Bucks",
-   "summary": "Tyler Herro let his final shot of the game fly and — just as the Bucks guard had felt throughout his career-best game — thought it was good.",
-   "published": "2026-11-21T18:00-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-1-4.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/tyler-herro-scores-career-high-50-points-but-bucks-still-lose-to-76ers/",
    "source": "Sportsnet"
   },
   {
