@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T21:31:46-05:00",
+ "updated": "2026-11-21T22:05:46-05:00",
  "today": "2026-11-21",
  "range": [
   "2026-11-18",
@@ -509,11 +509,11 @@
    "home_away": "A",
    "opponent": "Mississauga Chargers",
    "location": "Port Credit Memorial Arena, Mississauga, ON",
-   "status": "live",
+   "status": "final",
    "our_score": 5,
    "opp_score": 0,
-   "result": null,
-   "note": "00:00 3rd",
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16702"
    },
@@ -528,11 +528,11 @@
    "home_away": "H",
    "opponent": "Peterborough Petes",
    "location": "WFCU Centre, Windsor",
-   "status": "live",
-   "our_score": 5,
-   "opp_score": 3,
-   "result": null,
-   "note": "01:41 3rd",
+   "status": "final",
+   "our_score": 6,
+   "opp_score": 4,
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29227/"
    }
@@ -546,11 +546,11 @@
    "home_away": "A",
    "opponent": "Komoka Kings",
    "location": "Komoka Wellness Centre, Middlesex Centre, ON",
-   "status": "live",
+   "status": "final",
    "our_score": 8,
    "opp_score": 3,
-   "result": null,
-   "note": "00:10 3rd",
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15714"
    },
@@ -2683,6 +2683,21 @@
  "more_news": [
   {
    "league": "nhl",
+   "headline": "Maple Leafs lose to Blue Jackets, extend winless skid",
+   "summary": "",
+   "published": "2026-11-21T22:04-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Leafs-5.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-lose-to-blue-jackets-extend-winless-skid/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Oilers get reality check in loss to defending champion Hurricanes",
    "summary": "Saturday’s loss to the Hurricanes was an honest exposure of where the Oilers stand against the best in the business. “In the end, we didn’t measure up today.”",
    "published": "2026-11-21T17:32-05:00",
@@ -2705,6 +2720,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/blackhawks-connor-bedard-to-undergo-shoulder-surgery/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Canadiens give up late goal, fall to Flyers",
+   "summary": "",
+   "published": "2026-11-21T21:55-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177315535.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canadiens-give-up-late-goal-fall-to-flyers/",
    "source": "Sportsnet"
   },
   {
@@ -2735,6 +2763,36 @@
   },
   {
    "league": "nhl",
+   "headline": "Maple Leafs’ Gavin McKenna not going to world juniors",
+   "summary": "Considering the Toronto Maple Leafs sit last in the Atlantic Division, they’re in no position to take any risks, and they certainly won’t with their young star.",
+   "published": "2026-11-21T21:45-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-6-3.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-gavin-mckenna-wont-play-in-world-juniors/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Red Wings adjusting ask for Dylan Larkin",
+   "summary": "",
+   "published": "2026-11-21T21:30-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177124210.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Red Wings"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/red-wings-adjusting-ask-for-dylan-larkin/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Senators showing interest in Penguins’ Rakell, Rust",
    "summary": "",
    "published": "2026-11-21T21:29-05:00",
@@ -2757,45 +2815,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/scheifele-passes-hawerchuk-for-most-goals-in-jets-history/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Nathan MacKinnon’s injury timeline extended to 12 weeks, says coach",
-   "summary": "",
-   "published": "2026-11-21T15:40-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/05/natemac.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/nathan-mackinnons-injury-timeline-extended-to-12-weeks-says-coach/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Devils’ Hellebuyck pulled midway through first period after allowing four goals",
-   "summary": "After a decorated tenure with the Winnipeg Jets, veteran goalie Connor Hellebuyck decided it was time for a new chapter and was traded the New Jersey Devils — where he’s been stellar, outside of a few exceptions.",
-   "published": "2026-11-21T20:20-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-4-3.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/devils-hellebuyck-pulled-midway-through-first-period-after-allowing-four-goals/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Jaroslav Halak eyeing return to NHL after three-year absence, agent says",
-   "summary": "Sometimes retirement doesn’t officially mean it’s the end of the road, and that’s the case for yet another former NHL’er.",
-   "published": "2026-11-21T18:47-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-2-4.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/jaroslav-halak-eyeing-return-to-nhl-after-three-year-absence-agent-says/",
    "source": "Sportsnet"
   },
   {
@@ -2827,19 +2846,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Wild’s Quinn Hughes out against Canucks",
-   "summary": "Quinn Hughes won’t take the ice against his former team.",
-   "published": "2026-11-21T13:44-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/hughes.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/wilds-quinn-hughes-out-against-canucks/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "other",
    "headline": "Anna and Olivia Melnyk, daughters of ex-Senators owner, join Tempo ownership",
    "summary": "",
@@ -2850,6 +2856,32 @@
    "sn_team_count": 0,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/wnba/article/anna-and-olivia-melnyk-daughters-of-ex-senators-owner-join-tempo-ownership/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Jaroslav Halak eyeing return to NHL after three-year absence, agent says",
+   "summary": "Sometimes retirement doesn’t officially mean it’s the end of the road, and that’s the case for yet another former NHL’er.",
+   "published": "2026-11-21T18:47-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-2-4.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/jaroslav-halak-eyeing-return-to-nhl-after-three-year-absence-agent-says/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Devils’ Hellebuyck pulled midway through first period after allowing four goals",
+   "summary": "After a decorated tenure with the Winnipeg Jets, veteran goalie Connor Hellebuyck decided it was time for a new chapter and was traded the New Jersey Devils — where he’s been stellar, outside of a few exceptions.",
+   "published": "2026-11-21T20:20-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-4-3.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/devils-hellebuyck-pulled-midway-through-first-period-after-allowing-four-goals/",
    "source": "Sportsnet"
   },
   {
@@ -2869,7 +2901,20 @@
   },
   {
    "league": "nhl",
-   "headline": "Blackhawks’ Kaiser ejected for hit that injures Flames’ Pospisil",
+   "headline": "Nathan MacKinnon’s injury timeline extended to 12 weeks, says coach",
+   "summary": "",
+   "published": "2026-11-21T15:40-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/05/natemac.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/nathan-mackinnons-injury-timeline-extended-to-12-weeks-says-coach/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Blackhawks’ Kaiser to have hearing for hit that injures Flames’ Pospisil",
    "summary": "",
    "published": "2026-11-21T17:39-05:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/wyatt-kaiser.jpg",
@@ -2878,6 +2923,45 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/blackhawks-kaiser-ejected-for-hit-that-injures-flames-pospisil/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Cavalry FC defeats Atletico Ottawa to claim CPL title and historic double",
+   "summary": "Cavalry FC defeated Atletico Ottawa 3-2 to claim the Canadian Premier League title and an unprecedented double in the soccer league.",
+   "published": "2026-11-21T17:43-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-27.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/canadian-premier-league/article/cavalry-fc-defeats-atletico-ottawa-to-claim-cpl-title-and-historic-double/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Miller scores as Revolution beat Union in Game 1 of best-of-three series",
+   "summary": "",
+   "published": "2026-11-21T19:21-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Revolution.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/miller-scores-as-revolution-beat-union-in-game-1-of-best-of-three-series/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Joaquin Valiente scores twice, FC Dallas beats Timbers in series opener",
+   "summary": "Joaquín Valiente scored two second-half goals in a 2-minute span, Samuel Sarver added a stoppage-time goal and FC Dallas beat the Portland Timbers 3-0 on Saturday in Game 1 of their best-of-three series in the first roun",
+   "published": "2026-11-21T19:25-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-3-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/joaquin-valiente-scores-twice-dallas-beats-timbers-in-series-opener/",
    "source": "Sportsnet"
   },
   {
@@ -2921,19 +3005,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Canucks forward Elias Pettersson out against Wild with upper-body injury",
-   "summary": "A tough test for the Vancouver Canucks just got even tougher.",
-   "published": "2026-11-21T12:43-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/canucks-11.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canucks-forward-elias-pettersson-out-against-wild-with-upper-body-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Maple Leafs upgrade injured Marchenko, Blankenburg to day-to-day",
    "summary": "Injured forward Kirill Marchenko was upgraded to day-to-day by the Maple Leafs in a wide-ranging health update on Saturday, the team announced.",
    "published": "2026-11-21T10:14-05:00",
@@ -2958,45 +3029,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/canucks-place-gallagher-on-ir-recall-mueller-quillan-tolopilo-from-ahl/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Cavalry FC defeats Atletico Ottawa to claim CPL title and historic double",
-   "summary": "Cavalry FC defeated Atletico Ottawa 3-2 to claim the Canadian Premier League title and an unprecedented double in the soccer league.",
-   "published": "2026-11-21T17:43-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-27.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/canadian-premier-league/article/cavalry-fc-defeats-atletico-ottawa-to-claim-cpl-title-and-historic-double/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Miller scores as Revolution beat Union in Game 1 of best-of-three series",
-   "summary": "",
-   "published": "2026-11-21T19:21-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Revolution.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/miller-scores-as-revolution-beat-union-in-game-1-of-best-of-three-series/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Joaquin Valiente scores twice, FC Dallas beats Timbers in series opener",
-   "summary": "Joaquín Valiente scored two second-half goals in a 2-minute span, Samuel Sarver added a stoppage-time goal and FC Dallas beat the Portland Timbers 3-0 on Saturday in Game 1 of their best-of-three series in the first roun",
-   "published": "2026-11-21T19:25-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-3-2.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/mls/article/joaquin-valiente-scores-twice-dallas-beats-timbers-in-series-opener/",
    "source": "Sportsnet"
   },
   {
@@ -3075,34 +3107,6 @@
    "sn_team_count": 0,
    "sport": "Tennis",
    "url": "https://www.sportsnet.ca/tennis/article/canada-loses-to-brazil-in-billie-jean-king-cup-playoff-tie/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Zverev to face Alcaraz in championship match at ATP Finals",
-   "summary": "Carlos Alcaraz had his left thigh wrapped up, and still, the seven-time Grand Slam champion produced solid tennis when he needed it most.",
-   "published": "2026-11-21T11:09-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-52.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Tennis",
-   "url": "https://www.sportsnet.ca/atp/article/alcaraz-shakes-off-thigh-injury-to-reach-championship-match-at-atp-finals/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Blue Jays cut Davis Schneider, creating space for future adds",
-   "summary": "Davis Schneider’s Toronto Blue Jays tenure started with dramatics only to come to an end rather quietly.",
-   "published": "2026-11-20T18:36-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/04/CP171765344.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/blue-jays-non-tender-davis-schneider-retain-seven-other-players/",
    "source": "Sportsnet"
   },
   {
@@ -3973,14 +3977,14 @@
      {
       "name": "Peterborough Petes",
       "abbr": "PBO",
-      "gp": 23,
+      "gp": 24,
       "w": 13,
-      "l": 10,
+      "l": 11,
       "otl": 0,
       "pts": 26,
-      "gf": 87,
-      "ga": 78,
-      "strk": "W5"
+      "gf": 88,
+      "ga": 79,
+      "strk": "L1"
      },
      {
       "name": "Ottawa 67's",
@@ -4091,8 +4095,8 @@
       "l": 16,
       "otl": 3,
       "pts": 13,
-      "gf": 56,
-      "ga": 97,
+      "gf": 57,
+      "ga": 98,
       "strk": "L2"
      }
     ]
@@ -4103,14 +4107,14 @@
      {
       "name": "Windsor Spitfires",
       "abbr": "WSR",
-      "gp": 24,
-      "w": 14,
+      "gp": 25,
+      "w": 15,
       "l": 7,
       "otl": 3,
-      "pts": 31,
-      "gf": 89,
-      "ga": 71,
-      "strk": "L1"
+      "pts": 33,
+      "gf": 90,
+      "ga": 72,
+      "strk": "W1"
      },
      {
       "name": "Soo Greyhounds",
@@ -4185,8 +4189,8 @@
       "l": 6,
       "otl": 3,
       "pts": 33,
-      "gf": 90,
-      "ga": 67,
+      "gf": 91,
+      "ga": 68,
       "strk": "W7"
      },
      {
@@ -4265,7 +4269,7 @@
       "otl": 4,
       "pts": 34,
       "gf": 111,
-      "ga": 85,
+      "ga": 86,
       "strk": "W1"
      },
      {
@@ -4288,7 +4292,7 @@
       "l": 8,
       "otl": 2,
       "pts": 30,
-      "gf": 96,
+      "gf": 97,
       "ga": 75,
       "strk": "W5"
      },
@@ -4355,14 +4359,14 @@
      {
       "name": "Lindsay Muskies",
       "abbr": "LIN",
-      "gp": 24,
+      "gp": 25,
       "w": 6,
-      "l": 16,
+      "l": 17,
       "otl": 2,
       "pts": 14,
       "gf": 84,
-      "ga": 123,
-      "strk": "L3"
+      "ga": 125,
+      "strk": "L4"
      },
      {
       "name": "Toronto Warriors",
@@ -4420,14 +4424,14 @@
      {
       "name": "Toronto Patriots",
       "abbr": "PAT",
-      "gp": 24,
-      "w": 19,
+      "gp": 25,
+      "w": 20,
       "l": 4,
       "otl": 1,
-      "pts": 39,
-      "gf": 130,
+      "pts": 41,
+      "gf": 132,
       "ga": 50,
-      "strk": "L1"
+      "strk": "W1"
      },
      {
       "name": "Burlington Cougars",
@@ -4444,14 +4448,14 @@
      {
       "name": "Leamington Flyers",
       "abbr": "LEA",
-      "gp": 23,
-      "w": 16,
+      "gp": 24,
+      "w": 17,
       "l": 6,
       "otl": 1,
-      "pts": 33,
+      "pts": 35,
       "gf": 90,
       "ga": 47,
-      "strk": "W3"
+      "strk": "W4"
      },
      {
       "name": "Oakville Blades",
@@ -4468,14 +4472,14 @@
      {
       "name": "Mississauga Chargers",
       "abbr": "MIS",
-      "gp": 24,
+      "gp": 25,
       "w": 9,
-      "l": 14,
+      "l": 15,
       "otl": 1,
       "pts": 19,
       "gf": 72,
       "ga": 119,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Georgetown Raiders",
@@ -4541,7 +4545,7 @@
       "otl": 0,
       "pts": 34,
       "gf": 116,
-      "ga": 45,
+      "ga": 46,
       "strk": "L1"
      },
      {
@@ -4559,14 +4563,14 @@
      {
       "name": "Chatham Maroons",
       "abbr": "CHA",
-      "gp": 20,
-      "w": 15,
+      "gp": 21,
+      "w": 16,
       "l": 5,
       "otl": 0,
-      "pts": 30,
+      "pts": 32,
       "gf": 100,
       "ga": 59,
-      "strk": "W4"
+      "strk": "W5"
      },
      {
       "name": "Listowel Cyclones",
@@ -4588,7 +4592,7 @@
       "l": 6,
       "otl": 1,
       "pts": 23,
-      "gf": 70,
+      "gf": 71,
       "ga": 61,
       "strk": "W2"
      },
@@ -4601,7 +4605,7 @@
       "otl": 1,
       "pts": 23,
       "gf": 96,
-      "ga": 93,
+      "ga": 94,
       "strk": "W1"
      },
      {
@@ -4624,7 +4628,7 @@
       "l": 10,
       "otl": 3,
       "pts": 19,
-      "gf": 91,
+      "gf": 92,
       "ga": 88,
       "strk": "L1"
      },
@@ -4655,14 +4659,14 @@
      {
       "name": "Komoka Kings",
       "abbr": "KOM",
-      "gp": 22,
+      "gp": 23,
       "w": 7,
-      "l": 15,
+      "l": 16,
       "otl": 0,
       "pts": 14,
       "gf": 77,
       "ga": 101,
-      "strk": "W2"
+      "strk": "L1"
      },
      {
       "name": "Sarnia Legionnaires",
@@ -4708,14 +4712,14 @@
      {
       "name": "Caledonia Corvairs",
       "abbr": "CAL",
-      "gp": 21,
-      "w": 16,
+      "gp": 22,
+      "w": 17,
       "l": 4,
       "otl": 1,
-      "pts": 33,
+      "pts": 35,
       "gf": 91,
       "ga": 59,
-      "strk": "L2"
+      "strk": "W1"
      },
      {
       "name": "St. Catharines Falcons",
@@ -4792,14 +4796,14 @@
      {
       "name": "Hamilton Steel",
       "abbr": "HAM",
-      "gp": 23,
+      "gp": 24,
       "w": 7,
-      "l": 13,
+      "l": 14,
       "otl": 3,
       "pts": 17,
       "gf": 77,
       "ga": 107,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Brantford Titans",
@@ -5020,28 +5024,28 @@
       "strk": "W3"
      },
      {
-      "name": "Mooretown Flags",
-      "abbr": "MOO",
-      "gp": 22,
-      "w": 10,
-      "l": 10,
+      "name": "Dresden Kings",
+      "abbr": "DRE",
+      "gp": 21,
+      "w": 11,
+      "l": 8,
       "otl": 2,
-      "pts": 22,
-      "gf": 81,
-      "ga": 72,
+      "pts": 24,
+      "gf": 90,
+      "ga": 81,
       "strk": "W2"
      },
      {
-      "name": "Dresden Kings",
-      "abbr": "DRE",
-      "gp": 20,
+      "name": "Mooretown Flags",
+      "abbr": "MOO",
+      "gp": 23,
       "w": 10,
-      "l": 8,
+      "l": 11,
       "otl": 2,
       "pts": 22,
-      "gf": 84,
-      "ga": 79,
-      "strk": "W1"
+      "gf": 83,
+      "ga": 78,
+      "strk": "L1"
      },
      {
       "name": "Wheatley Sharks",
