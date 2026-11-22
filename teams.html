@@ -76,6 +76,19 @@
   .mgrid.mstrip { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(200px, 1fr); grid-template-columns: none; overflow-x: auto; scrollbar-width: thin; padding-bottom: 6px; }
   @media (max-width: 760px) { .mgrid.mstrip { grid-auto-columns: 70%; } .ttabs { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); width: 100%; } .ttabs button { padding: 8px 2px; font-size: 11px; letter-spacing: .02em; } .thr { width: 100%; justify-content: space-between; } }
   .thead .spos { margin-top: 6px; display: inline-block; background: rgba(232,176,33,.14); color: var(--accent); font-weight: 800; font-size: 13.5px; border-radius: 8px; padding: 4px 9px; }
+  /* the section's teams as tiles (like the National Hub's Pick your team): a sport icon, or the club's logo */
+  .tgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: 6px; }
+  .tg { display: flex; flex-direction: column; align-items: center; gap: 4px; font: inherit; color: var(--text); background: var(--card2); border: 1px solid transparent; border-radius: 9px; padding: 9px 5px 8px; cursor: pointer; min-width: 0; text-align: center; }
+  .tg:hover, .tg:focus-visible { border-color: var(--accent); outline: none; }
+  .tg.on { border-color: var(--accent); background: rgba(232,176,33,.14); }
+  .tg.quiet { opacity: .66; }
+  .tg .ic { width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; }
+  .tg .ic svg, .tg .ic img { width: 38px; height: 38px; object-fit: contain; }
+  .tg b { font-size: 12.5px; line-height: 1.15; }
+  .tg small { color: var(--muted); font-size: 11px; line-height: 1.2; }
+  .tg small.live { color: var(--live); font-weight: 800; }
+  .tgsub { margin: 14px 0 8px; color: var(--muted); font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+  @media (max-width: 520px) { .tgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; } .tg .ic, .tg .ic svg, .tg .ic img { width: 32px; height: 32px; } .tg b { font-size: 11.5px; } .tg small { font-size: 10.5px; } }
   .pickgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 6px; }
   /* strips (homepage look): one row that swipes sideways */
   .swrap { position: relative; }
@@ -358,6 +371,57 @@
   function res(t, g) { var s = side(t, g); if (s.us == null || s.them == null) return cpDay(new Date(g.start)) + ' · ' + s.opp;   // meets and tournaments: no score
     return wl(s) + ' ' + s.us + '–' + s.them + ' ' + atw(s) + ' ' + s.opp; }
 
+
+  // ---------- sport icons (drawn here, no outside images) and club logos ----------
+  var JR_LOGOS = {
+    'Chatham Maroons': 'https://bbellacicco.github.io/powerplay-feed/logos/junior/chatham-maroons.png',
+    "Essex 73's": 'https://bbellacicco.github.io/powerplay-feed/logos/junior/essex-73s.png',
+    'LaSalle Vipers': 'https://assets.leaguestat.com/gojhl/logos/50x50/19.png',
+    'Leamington Flyers': 'https://assets.leaguestat.com/ojhl/logos/50x50/19.png',
+    'Amherstburg Admirals': 'https://imagedelivery.net/ErrQpIaCOWR-Tz51PhN1zA/cff8047d-808d-4925-36de-4f3a0f83f100/256',
+    'Lakeshore Canadiens': 'https://imagedelivery.net/ErrQpIaCOWR-Tz51PhN1zA/463ba5c9-0f2d-4d2c-d205-56d34ab32100/256',
+    'Wheatley Sharks': 'https://imagedelivery.net/ErrQpIaCOWR-Tz51PhN1zA/9a13d52f-6120-4c7c-b14c-32e488f0f000/256'
+  };
+  var HS_LOGOS = {"assumption": "acchs", "belle river": "brdhs", "brennan": "fjbhs", "cardinal carter": "ccss", "catholic central": "cchs", "erie migration": "em", "essex": "edhs", "herman": "hss", "holy names": "hnchs", "kennedy": "kci", "l'essor": "lss", "lajeunesse": "ejles", "lamothe-cadillac": "eslc", "leamington": "ldss", "maranatha": "mca", "massey": "vmss", "north star": "nshs", "riverside": "rss", "sandwich": "sss", "st. anne": "sachs", "st. joseph's": "sjchs", "ste. cecile": "ascis", "tecumseh vista academy": "tva", "umei": "umei", "villanova": "vcss", "walkerville": "wci", "westview freedom academy": "wfa", "windsor islamic": "wihs"};
+  function hsLogo(name) { var f = HS_LOGOS[String(name || '').toLowerCase().replace(/’/g, "'").trim()]; return f ? 'https://bbellacicco.github.io/powerplay-feed/logos/hs/' + f + '.png' : ''; }
+  var ICONS = {
+    basketball: '<circle cx="24" cy="24" r="19" fill="#ef7d22"/><g fill="none" stroke="#3a1a05" stroke-width="2"><circle cx="24" cy="24" r="19"/><path d="M5 24h38M24 5v38M10.5 10.5c6 5 6 22 0 27M37.5 10.5c-6 5-6 22 0 27"/></g>',
+    volleyball: '<circle cx="24" cy="24" r="19" fill="#f8fafc"/><g fill="none" stroke="#1e3a8a" stroke-width="2"><circle cx="24" cy="24" r="19"/><path d="M24 24c0-8 4-15 11-18M24 24c-7 4-15 4-20-1M24 24c6 4 9 11 8 18"/></g><path d="M24 24c0-8 4-15 11-18a19 19 0 0 1 8 17c-6-2-13-1-19 1z" fill="#facc15" opacity=".85"/>',
+    football: '<ellipse cx="24" cy="24" rx="20" ry="12" transform="rotate(-35 24 24)" fill="#8b4513" stroke="#4a2408" stroke-width="2"/><path d="M17 31l14-14" stroke="#fff" stroke-width="2"/><path d="M20 25l3 3M23 22l3 3M26 19l3 3" stroke="#fff" stroke-width="2"/>',
+    soccer: '<circle cx="24" cy="24" r="19" fill="#fff" stroke="#111" stroke-width="2"/><path d="M24 15l7 5-3 8h-8l-3-8z" fill="#111"/><path d="M24 15V6M31 20l8-3M28 28l5 8M20 28l-5 8M17 20l-8-3" stroke="#111" stroke-width="2"/>',
+    softball: '<circle cx="24" cy="24" r="19" fill="#e6f25a" stroke="#7c8a10" stroke-width="2"/><g fill="none" stroke="#c81e1e" stroke-width="2" stroke-dasharray="3 2"><path d="M11 10c6 8 6 20 0 28M37 10c-6 8-6 20 0 28"/></g>',
+    baseball: '<circle cx="24" cy="24" r="19" fill="#fff" stroke="#9ca3af" stroke-width="2"/><g fill="none" stroke="#c81e1e" stroke-width="2" stroke-dasharray="3 2"><path d="M11 10c6 8 6 20 0 28M37 10c-6 8-6 20 0 28"/></g>',
+    hockey: '<g stroke-linecap="round"><path d="M9 6l19 27" stroke="#d6a76a" stroke-width="4"/><path d="M28 33l7 1" stroke="#111" stroke-width="5"/><path d="M39 6L20 33" stroke="#e5e7eb" stroke-width="4"/><path d="M20 33l-7 1" stroke="#111" stroke-width="5"/></g><ellipse cx="24" cy="41" rx="8" ry="3" fill="#111"/><ellipse cx="24" cy="39.5" rx="8" ry="3" fill="#374151"/>',
+    curling: '<ellipse cx="24" cy="34" rx="18" ry="7" fill="#6b7280"/><rect x="6" y="26" width="36" height="8" fill="#6b7280"/><ellipse cx="24" cy="26" rx="18" ry="7" fill="#9ca3af"/><rect x="6" y="28" width="36" height="3" fill="#c81e1e"/><path d="M20 26v-9h14v4" fill="none" stroke="#c81e1e" stroke-width="4" stroke-linecap="round"/>',
+    track: '<circle cx="24" cy="27" r="16" fill="#fff" stroke="#e8b021" stroke-width="3"/><rect x="20" y="4" width="8" height="5" rx="1" fill="#e8b021"/><path d="M24 27V16M24 27l7 5" stroke="#111" stroke-width="2.5" stroke-linecap="round"/>',
+    cross: '<path d="M3 40l13-18 8 9 7-12 14 21z" fill="#22c55e"/><path d="M31 19l5 7-3-1-2 3-3-4" fill="#fff"/><circle cx="36" cy="10" r="5" fill="#facc15"/>',
+    golf: '<path d="M16 42V6" stroke="#e5e7eb" stroke-width="2.5"/><path d="M17 6l16 6-16 6z" fill="#ef4444"/><ellipse cx="24" cy="42" rx="16" ry="3" fill="#22c55e"/><circle cx="30" cy="38" r="3.5" fill="#fff"/>',
+    wrestling: '<circle cx="24" cy="28" r="12" fill="#e8b021" stroke="#8a6508" stroke-width="2"/><path d="M14 4l10 12 10-12" fill="none" stroke="#2563eb" stroke-width="5"/><text x="24" y="33" text-anchor="middle" font-size="13" font-weight="800" fill="#8a6508">1</text>',
+    swim: '<g fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"><path d="M4 30c5-4 8-4 13 0s8 4 13 0 8-4 14 0M4 38c5-4 8-4 13 0s8 4 13 0 8-4 14 0"/></g><circle cx="30" cy="16" r="4.5" fill="#fff"/><path d="M10 24l10-8 8 5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>',
+    rugby: '<ellipse cx="24" cy="24" rx="20" ry="13" transform="rotate(-35 24 24)" fill="#f8fafc" stroke="#9ca3af" stroke-width="2"/><path d="M13 35L35 13" stroke="#16a34a" stroke-width="4"/>',
+    tennis: '<circle cx="24" cy="24" r="19" fill="#d9f45a"/><path d="M8 13c9 4 9 18 0 22M40 13c-9 4-9 18 0 22" fill="none" stroke="#fff" stroke-width="2.5"/>',
+    badminton: '<circle cx="18" cy="34" r="6" fill="#fff"/><path d="M14 30l10-24 14 14-24 10z" fill="none" stroke="#e5e7eb" stroke-width="2"/>',
+    other: '<path d="M14 6h20v10a10 10 0 0 1-20 0z" fill="#e8b021"/><path d="M14 9H7a6 6 0 0 0 7 8M34 9h7a6 6 0 0 1-7 8" fill="none" stroke="#e8b021" stroke-width="2.5"/><rect x="21" y="25" width="6" height="8" fill="#e8b021"/><rect x="14" y="33" width="20" height="6" rx="1" fill="#e8b021"/>'
+  };
+  function sportKey(sp) {
+    sp = String(sp || '').toLowerCase();
+    return /basketball/.test(sp) ? 'basketball' : /volleyball/.test(sp) ? 'volleyball' : /soccer/.test(sp) ? 'soccer' : /rugby/.test(sp) ? 'rugby' : /football/.test(sp) ? 'football'
+      : /softball|fastball|slo-?pitch/.test(sp) ? 'softball' : /baseball/.test(sp) ? 'baseball' : /hockey/.test(sp) ? 'hockey' : /curling/.test(sp) ? 'curling'
+      : /cross country/.test(sp) ? 'cross' : /track|field/.test(sp) ? 'track' : /golf/.test(sp) ? 'golf' : /wrestl/.test(sp) ? 'wrestling' : /swim/.test(sp) ? 'swim'
+      : /tennis/.test(sp) ? 'tennis' : /badminton/.test(sp) ? 'badminton' : 'other';
+  }
+  function iconNode(sp) { var d = el('span', 'ic'); d.innerHTML = '<svg viewBox="0 0 48 48" aria-hidden="true">' + ICONS[sportKey(sp)] + '</svg>'; return d; }
+  function logoNode(src, fallbackSport) {
+    var d = el('span', 'ic'); if (!src) return iconNode(fallbackSport);
+    var im = new Image(); im.src = src; im.alt = ''; im.loading = 'lazy'; im.onerror = function () { d.replaceWith(iconNode(fallbackSport)); }; d.appendChild(im); return d;
+  }
+  function tile(icon, label, t, on) {
+    var b = el('button', 'tg' + (on ? ' on' : '') + (t && !t.games.length ? ' quiet' : '')); b.type = 'button';
+    b.appendChild(icon); b.appendChild(el('b', null, label));
+    if (t) { var st = status(t); b.appendChild(el('small', st.live ? 'live' : null, (st.text || 'No games this week').replace(/^Next: /, '').replace(/^Last: /, ''))); b.onclick = function () { openTeam(t); }; }
+    return b;
+  }
+  function shortSport(sp) { return String(sp || '').replace(/^Senior\s+/i, 'Sr. ').replace(/^Varsity\s+/i, ''); }
   // ---------- the directory ----------
   var SECS = [['ohl', 'Windsor Spitfires', 'OHL · major junior hockey'], ['lancers', 'Windsor Lancers', 'University of Windsor · OUA'], ['saints', 'St. Clair Saints', 'St. Clair College · OCAA / CJFL'],
     ['junior', 'Junior Hockey', 'OJHL · GOHL · PJHL'], ['hs', 'High School', 'WECSSAA · pick a sport, then a school']];
@@ -374,7 +438,27 @@
     SECS.filter(function (s) { return !ONLY || s[0] === ONLY; }).forEach(function (s) {
       var list = T.filter(function (t) { return t.sec === s[0]; });
       var c = el('section', 'lg'); var h = el('h2'); h.innerHTML = s[1].replace(/(\S+)$/, '<em>$1</em>'); c.appendChild(h); c.appendChild(el('div', 'll', s[2]));
-      if (s[0] === 'hs') {
+      if (s[0] === 'hs' && ONLY) {
+        // high school: a tile per sport (its icon); tap one for its schools (their crests)
+        var hsports = []; list.forEach(function (t) { if (hsports.indexOf(t.sport) < 0) hsports.push(t.sport); }); hsports.sort();
+        var sg = el('div', 'tgrid'), shead = el('div', 'tgsub'), sch = el('div', 'tgrid');
+        function hpick(sp) {
+          hsPick = sp; sg.innerHTML = ''; drawSports();
+          shead.textContent = sp + ' \u00b7 pick a school'; sch.innerHTML = '';
+          list.filter(function (t) { return t.sport === sp; }).sort(function (a, b) { return a.school.localeCompare(b.school); })
+            .forEach(function (t) { sch.appendChild(tile(logoNode(hsLogo(t.school), sp), t.school, t)); });
+        }
+        function drawSports() {
+          hsports.forEach(function (sp) {
+            var n = list.filter(function (t) { return t.sport === sp && t.games.length; }).length;
+            var b = tile(iconNode(sp), shortSport(sp), null, hsPick === sp); b.appendChild(el('small', null, n ? n + ' schools playing' : 'Pick a school'));
+            b.onclick = function () { hpick(sp); }; sg.appendChild(b);
+          });
+        }
+        drawSports(); c.appendChild(sg); c.appendChild(shead); c.appendChild(sch);
+        if (!hsports.length) c.appendChild(el('div', 'none', 'High school games show up here as they’re scheduled.'));
+        else if (hsPick && hsports.indexOf(hsPick) >= 0) hpick(hsPick);
+      } else if (s[0] === 'hs') {
         var sports = []; list.forEach(function (t) { if (sports.indexOf(t.sport) < 0) sports.push(t.sport); }); sports.sort();
         var chips = el('div', 'chips'), schools = el('div', 'tlist hsschools');
         function pick(sp) { hsPick = sp; [].forEach.call(chips.children, function (x) { x.classList.toggle('on', x.textContent === sp); }); schools.innerHTML = '';
@@ -384,18 +468,15 @@
         if (!sports.length) c.appendChild(el('div', 'none', 'High school games show up here as they’re scheduled.'));
         else if (hsPick && sports.indexOf(hsPick) >= 0) pick(hsPick);
       } else if (ONLY) {
-        // the section's own page (Local Hub): every team as a compact button up top, then the whole group's
-        // results and games coming up underneath
-        var pg = el('div', 'pickgrid');
-        var order = list.slice().sort(function (a, b) { return (b.games.length ? 1 : 0) - (a.games.length ? 1 : 0); });
-        order.forEach(function (t) {
-          var b = el('button', 'pick' + (t.games.length ? '' : ' quiet')); b.type = 'button';
-          b.appendChild(el('b', null, s[0] === 'junior' ? t.name : (t.sport || t.name)));
-          var st = status(t); b.appendChild(el('span', st.live ? 'live' : null, st.text || (s[0] === 'junior' ? t.league : 'No games this week')));
-          b.onclick = function () { openTeam(t); };
-          pg.appendChild(b);
+        // the section's own page (Local Hub): every team as a tile (a sport icon, or the club's logo), then the
+        // group's results and games coming up, then its strip
+        var tg = el('div', 'tgrid');
+        list.slice().sort(function (a, b) { return (b.games.length ? 1 : 0) - (a.games.length ? 1 : 0); }).forEach(function (t) {
+          var icon = s[0] === 'junior' ? logoNode(JR_LOGOS[t.name], 'hockey') : iconNode(t.sport || 'hockey');
+          tg.appendChild(tile(icon, s[0] === 'junior' ? t.name.replace(/^(\S+)\s/, '$1\n') : (t.sport || t.name), t));
         });
-        pg.className = 'hstrip'; c.appendChild(swipe(pg));
+        [].forEach.call(tg.querySelectorAll('b'), function (x) { x.style.whiteSpace = 'pre-line'; });
+        c.appendChild(tg);
       } else {
         var tl = el('div', 'tlist');
         // teams with games this week get a full row (next game or last score); Lancers and Saints sports
