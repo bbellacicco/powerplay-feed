@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T16:31:45-05:00",
+ "updated": "2026-11-22T16:46:49-05:00",
  "today": "2026-11-22",
  "range": [
   "2026-11-19",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 32
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -2855,6 +2855,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Canada’s Team Brad Jacobs defeats Team Schwaller for first GSOC title since 2020",
+   "summary": "Canada’s Team Brad Jacobs has finally accomplished one of the goals they vied for when they first formed this team before the 2024-25 season: Win a Grand Slam of Curling title.",
+   "published": "2026-11-22T16:35-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/2026GSOCNational-Sydney-683-scaled.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Curling",
+   "url": "https://www.sportsnet.ca/curling/article/canadas-team-brad-jacobs-defeats-team-schwaller-for-first-gsoc-title-since-2020/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Blackhawks’ Kaiser suspended three games for hit on Flames’ Pospisil",
    "summary": "The Chicago Blackhawks defenceman has been suspended three games for an illegal check to the head of Calgary Flames forward Martin Pospisil, the NHL’s department of player safety announced Sunday after a hearing for the ",
@@ -2923,6 +2936,21 @@
   },
   {
    "league": "nfl",
+   "headline": "Bills’ defence feasts in win over injury-depleted Dolphins",
+   "summary": "Greg Rousseau had two sacks and Buffalo’s defence bailed out the offence in a 26-9 win over the injury-depleted Miami Dolphins Sunday.",
+   "published": "2026-11-22T16:41-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/bills-1.jpg",
+   "video": false,
+   "teams": [
+    "Buffalo Bills"
+   ],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/bills-defence-feasts-in-win-over-injury-depleted-dolphins/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
    "headline": "Legendary NFL broadcaster, linebacker Tom Jackson dead at 75",
    "summary": "Tom Jackson, an NFL linebacker who later became known for his work at ESPN alongside Chris Berman, died Friday, the network announced. He was 75.",
    "published": "2026-11-22T10:51-05:00",
@@ -2965,6 +2993,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nfl",
+   "headline": "NFL Week 11 preview: 49ers-Vikings showdown pits strength vs. strength",
+   "summary": "It’s best-on-best this Sunday, as the Vikings defence goes up against the 49ers offence. Kellen Forrest breaks down the heavyweight clash and more in his Week 11 preview.",
+   "published": "2026-11-21T13:20-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Dallas-Turner.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-11-preview-49ers-vikings-showdown-pits-strength-vs-strength/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "Takeaways: Alina Paetz plays hero to claim first GSOC title with new team",
    "summary": "In curling, it’s not about making every shot — just the timely ones. And Switzerland’s Alina Paetz did just that to win her first GSOC title as a skip at the HearingLife National, writes Sportsnet’s Justin Arenburg.",
@@ -2979,30 +3020,15 @@
   },
   {
    "league": "nhl",
-   "headline": "Fans frustrated as Maple Leafs losses mount",
-   "summary": "The Maple Leafs’ slump was all but busted. Until Zach Werenski’s dagger stunned the crowd at Scotiabank Arena.",
-   "published": "2026-11-22T00:23-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/maple-leafs.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/fans-frustrated-as-maple-leaf-losses-mount/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "NFL Week 11 preview: 49ers-Vikings showdown pits strength vs. strength",
-   "summary": "It’s best-on-best this Sunday, as the Vikings defence goes up against the 49ers offence. Kellen Forrest breaks down the heavyweight clash and more in his Week 11 preview.",
-   "published": "2026-11-21T13:20-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Dallas-Turner.jpg",
+   "headline": "Bussi makes 25 saves to help Hurricanes down Rangers",
+   "summary": "Jackson Blake put Carolina ahead and Brandon Bussi made 25 saves and the Carolina Hurricanes defeated the New York Rangers 5-2 on Sunday.",
+   "published": "2026-11-22T15:53-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design.png",
    "video": false,
    "teams": [],
    "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-11-preview-49ers-vikings-showdown-pits-strength-vs-strength/",
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/bussi-makes-25-saves-to-help-hurricanes-down-rangers/",
    "source": "Sportsnet"
   },
   {
@@ -3033,19 +3059,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/red-wings-adjusting-ask-for-dylan-larkin/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Bussi makes 25 saves to help Hurricanes down Rangers",
-   "summary": "Jackson Blake put Carolina ahead and Brandon Bussi made 25 saves and the Carolina Hurricanes defeated the New York Rangers 5-2 on Sunday.",
-   "published": "2026-11-22T15:53-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design.png",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/bussi-makes-25-saves-to-help-hurricanes-down-rangers/",
    "source": "Sportsnet"
   },
   {
@@ -3154,6 +3167,21 @@
   },
   {
    "league": "nhl",
+   "headline": "Fans frustrated as Maple Leafs losses mount",
+   "summary": "The Maple Leafs’ slump was all but busted. Until Zach Werenski’s dagger stunned the crowd at Scotiabank Arena.",
+   "published": "2026-11-22T00:23-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/maple-leafs.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/fans-frustrated-as-maple-leaf-losses-mount/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Canadiens loan Brett Berard, David Reinbacher to AHL",
    "summary": "Forward Brett Berard and defenceman David Reinbacher have been loaned to the American Hockey League’s Laval Rocket, the team announced Sunday.",
    "published": "2026-11-22T10:18-05:00",
@@ -3257,17 +3285,17 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Max Verstappen calls out George Russell after Las Vegas Grand Prix win",
-   "summary": "",
-   "published": "2026-11-22T00:54-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177316439.jpg",
+   "league": "nfl",
+   "headline": "RECAP: Lions vs. Buccaneers",
+   "summary": "Tim Twentyman recaps the Detroit Lions’ 31-21 victory over the Tampa Bay Buccaneers.",
+   "published": "2026-11-22T16:38-05:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/fgrqmqcab75rhbmvbaaz.jpg",
    "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Auto Racing",
-   "url": "https://www.sportsnet.ca/formula-1/article/max-verstappen-wins-the-las-vegas-grand-prix-for-the-third-time-in-four-years/",
-   "source": "Sportsnet"
+   "teams": [
+    "Detroit Lions"
+   ],
+   "url": "https://www.detroitlions.com/news/recap-lions-vs-buccaneers-goff-gibbs-williams",
+   "source": "Team site"
   },
   {
    "league": "nfl",
@@ -3449,19 +3477,6 @@
     "Detroit Lions"
    ],
    "url": "https://www.detroitlions.com/news/detroit-lions-celebrate-nfl-s-salute-to-service-initiative-honoring-military-members-veterans-and-their-families",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
-   "headline": "LIONS DAILY: Receivers have embraced the dirty work, and it's paying off",
-   "summary": "",
-   "published": "2026-11-19T10:00-05:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/qkl3ow6rmrs41zsclzex.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Lions"
-   ],
-   "url": "https://www.detroitlions.com/news/lions-daily-receivers-have-embraced-the-dirty-work-and-it-s-paying-off",
    "source": "Team site"
   },
   {
@@ -4119,7 +4134,7 @@
       "otl": 1,
       "pts": 31,
       "gf": 101,
-      "ga": 89,
+      "ga": 90,
       "strk": "W2"
      },
      {
@@ -4190,7 +4205,7 @@
       "l": 0,
       "otl": 0,
       "pts": 0,
-      "gf": 4,
+      "gf": 5,
       "ga": 2,
       "strk": ""
      }
@@ -4212,28 +4227,28 @@
       "strk": "L3"
      },
      {
+      "name": "North Bay Battalion",
+      "abbr": "NB",
+      "gp": 24,
+      "w": 10,
+      "l": 11,
+      "otl": 3,
+      "pts": 23,
+      "gf": 89,
+      "ga": 90,
+      "strk": "W3"
+     },
+     {
       "name": "Niagara IceDogs",
       "abbr": "NIAG",
-      "gp": 22,
+      "gp": 23,
       "w": 10,
-      "l": 9,
+      "l": 10,
       "otl": 3,
       "pts": 23,
       "gf": 71,
       "ga": 93,
-      "strk": "W2"
-     },
-     {
-      "name": "North Bay Battalion",
-      "abbr": "NB",
-      "gp": 23,
-      "w": 9,
-      "l": 11,
-      "otl": 3,
-      "pts": 21,
-      "gf": 89,
-      "ga": 90,
-      "strk": "W2"
+      "strk": "L1"
      },
      {
       "name": "Brampton Steelheads",
@@ -4416,7 +4431,7 @@
       "l": 4,
       "otl": 1,
       "pts": 39,
-      "gf": 112,
+      "gf": 114,
       "ga": 83,
       "strk": "L1"
      },
@@ -4513,7 +4528,7 @@
       "otl": 2,
       "pts": 14,
       "gf": 61,
-      "ga": 102,
+      "ga": 104,
       "strk": "W1"
      },
      {
@@ -4554,7 +4569,7 @@
       "otl": 0,
       "pts": 48,
       "gf": 155,
-      "ga": 63,
+      "ga": 64,
       "strk": "W2"
      },
      {
@@ -4577,7 +4592,7 @@
       "l": 3,
       "otl": 3,
       "pts": 43,
-      "gf": 110,
+      "gf": 111,
       "ga": 57,
       "strk": "W3"
      },
@@ -4735,14 +4750,14 @@
      {
       "name": "Listowel Cyclones",
       "abbr": "LIS",
-      "gp": 22,
-      "w": 12,
+      "gp": 23,
+      "w": 13,
       "l": 7,
       "otl": 3,
-      "pts": 27,
+      "pts": 29,
       "gf": 88,
       "ga": 78,
-      "strk": "L1"
+      "strk": "W1"
      },
      {
       "name": "Stratford Warriors",
@@ -4795,11 +4810,11 @@
      {
       "name": "Woodstock Navy Vets",
       "abbr": "WNV",
-      "gp": 20,
+      "gp": 21,
       "w": 9,
       "l": 11,
-      "otl": 0,
-      "pts": 18,
+      "otl": 1,
+      "pts": 19,
       "gf": 78,
       "ga": 87,
       "strk": "L1"
