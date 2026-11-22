@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T19:01:45-05:00",
+ "updated": "2026-11-21T19:16:58-05:00",
  "today": "2026-11-21",
  "range": [
   "2026-11-18",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -518,7 +518,7 @@
    "our_score": 0,
    "opp_score": 0,
    "result": null,
-   "note": "20:00 1st",
+   "note": "18:48 1st",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16702"
    },
@@ -537,7 +537,7 @@
    "our_score": 0,
    "opp_score": 0,
    "result": null,
-   "note": "20:00 1st",
+   "note": "16:34 1st",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29227/"
    }
@@ -2701,6 +2701,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Blackhawks’ Connor Bedard to undergo shoulder surgery",
+   "summary": "",
+   "published": "2026-11-21T19:10-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/bedard.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/blackhawks-connor-bedard-to-undergo-shoulder-surgery/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Nathan MacKinnon’s injury timeline extended to 12 weeks, says coach",
    "summary": "",
    "published": "2026-11-21T15:40-05:00",
@@ -2793,19 +2806,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Anna and Olivia Melnyk, daughters of ex-Senators owner, join Tempo ownership",
-   "summary": "",
-   "published": "2026-11-21T14:10-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/melnyks.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/wnba/article/anna-and-olivia-melnyk-daughters-of-ex-senators-owner-join-tempo-ownership/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "Sam Rinzel’s overtime goal lifts Blackhawks over Flames",
    "summary": "",
@@ -2831,6 +2831,34 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/potential-blue-jays-targets-after-non-tender-deadline/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Anna and Olivia Melnyk, daughters of ex-Senators owner, join Tempo ownership",
+   "summary": "",
+   "published": "2026-11-21T14:10-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/melnyks.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/wnba/article/anna-and-olivia-melnyk-daughters-of-ex-senators-owner-join-tempo-ownership/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Quick Shifts: How should Maple Leafs handle Gavin McKenna?",
+   "summary": "Gavin McKenna has been a hot topic amongst Maple Leafs faithful since he was drafted. Sportsnet’s Luke Fox dives into the buzz around the 18-year-old and more in his latest Quick Shifts.",
+   "published": "2026-11-21T08:15-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Toronto-Maple-Leafs-Gavin-McKenna.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/quick-shifts-how-should-maple-leafs-handle-gavin-mckenna/",
    "source": "Sportsnet"
   },
   {
@@ -3088,21 +3116,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-look-to-draw-inspiration-from-mcilroys-journey/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Maple Leafs coach Jim Hiller under the microscope after winless streak",
-   "summary": "Maple Leafs head coach Jim Hiller is under the microscope, and so Justin Bourne thought it was the right time to assess how he’s lead the team to where they are, what can change, and what that means for this season in ge",
-   "published": "2026-11-20T12:22-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-44-1.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-coach-jim-hiller-under-the-microscope-after-winless-streak/",
    "source": "Sportsnet"
   },
   {
@@ -4168,14 +4181,14 @@
      {
       "name": "Guelph Storm",
       "abbr": "GUE",
-      "gp": 22,
-      "w": 18,
+      "gp": 23,
+      "w": 19,
       "l": 4,
       "otl": 0,
-      "pts": 36,
+      "pts": 38,
       "gf": 102,
       "ga": 63,
-      "strk": "W1"
+      "strk": "W2"
      },
      {
       "name": "Kitchener Rangers",
@@ -4192,14 +4205,14 @@
      {
       "name": "London Knights",
       "abbr": "LDN",
-      "gp": 21,
+      "gp": 22,
       "w": 12,
-      "l": 6,
+      "l": 7,
       "otl": 3,
       "pts": 27,
       "gf": 88,
       "ga": 82,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Erie Otters",
@@ -4209,7 +4222,7 @@
       "l": 8,
       "otl": 3,
       "pts": 27,
-      "gf": 80,
+      "gf": 81,
       "ga": 84,
       "strk": "W2"
      },
@@ -4222,7 +4235,7 @@
       "otl": 4,
       "pts": 20,
       "gf": 62,
-      "ga": 95,
+      "ga": 96,
       "strk": "L1"
      }
     ]
@@ -4774,7 +4787,7 @@
       "otl": 0,
       "pts": 18,
       "gf": 83,
-      "ga": 102,
+      "ga": 103,
       "strk": "W1"
      },
      {
@@ -4797,7 +4810,7 @@
       "l": 16,
       "otl": 2,
       "pts": 16,
-      "gf": 83,
+      "gf": 84,
       "ga": 104,
       "strk": "W3"
      },
