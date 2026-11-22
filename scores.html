@@ -128,12 +128,13 @@
     // a part with no name of its own goes with the named part above it (Powerplay stories = What's Going On + Every story)
     // Stories: two strips stacked, Powerplay's (with its top story) and team news, then every Powerplay story
     stories:   [['home.html', 1000, 1350, '&view=hub'], ['local-news.html', 470, 570, '&other=none&lock=1'], ['news.html', 900, 1300, '&every=1']],
-    // each homepage strip has its own section: the strip itself, then every team in it (tap one for its page)
+    // each team section: its teams up top (tap one for its page: schedule, standings, stats, news), the group's
+    // results and games coming up under them, then the homepage strip
     spitfires: [['teams.html', 1300, 1700, '&find=spitfires&solo=1']],
-    hs:        [['home.html', 430, 430, '&view=strip&strip=hs'], ['teams.html', 700, 900, '&only=hs']],
-    saints:    [['home.html', 430, 430, '&view=strip&strip=saints'], ['teams.html', 600, 900, '&only=saints']],
-    lancers:   [['home.html', 430, 430, '&view=strip&strip=lancers'], ['teams.html', 600, 900, '&only=lancers']],
-    junior:    [['home.html', 430, 430, '&view=strip&strip=junior'], ['teams.html', 600, 900, '&only=junior']],
+    hs:        [['teams.html', 900, 1300, '&only=hs'], ['home.html', 430, 430, '&view=strip&strip=hs']],
+    saints:    [['teams.html', 900, 1300, '&only=saints'], ['home.html', 430, 430, '&view=strip&strip=saints']],
+    lancers:   [['teams.html', 900, 1300, '&only=lancers'], ['home.html', 430, 430, '&view=strip&strip=lancers']],
+    junior:    [['teams.html', 900, 1300, '&only=junior'], ['home.html', 430, 430, '&view=strip&strip=junior']],
     spotlight: [['spotlight.html', 1250, 1180, '']],
     athletes:  [['athletes.html', 420, 380, '']],
     network:   [['network.html', 1300, 1520, '&only=local']]
