@@ -4,7 +4,7 @@
 <meta name="robots" content="noindex, indexifembedded">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pro Hub | Powerplay Windsor</title>
+<title>National Hub | Powerplay Windsor</title>
 <script src="share.js?v=4"></script>
 <!--
   The Pro Hub (Wix page "Pro Hub", address /local-sports), built like the Local Hub: the tabs at the top, each its own section.
@@ -57,7 +57,8 @@
   /* ?minute=1 (a shared Sports Minute link): the player at the top; everything else blurs while it plays */
   /* a shared link: the shared item comes first and stays sharp; the rest of the Local Hub blurs until a tap */
   /* the Pro Hub's seven tabs: one row on computers (phones: four across, like the Local Hub) */
-  @media (min-width: 561px) { .pro7 .switch { grid-template-columns: repeat(7, 1fr); } }
+  @media (min-width: 561px) { .pro7 .switch { grid-template-columns: repeat(9, 1fr); } }
+  @media (max-width: 560px) { .pro7 .switch { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
 </style>
 </head>
 <body>
@@ -70,6 +71,8 @@
       <button type="button" role="tab" data-tab="mlb">MLB</button>
       <button type="button" role="tab" data-tab="cfl">CFL</button>
       <button type="button" role="tab" data-tab="pwhl">PWHL</button>
+      <button type="button" role="tab" data-tab="ncaaf">NCAA FB</button>
+      <button type="button" role="tab" data-tab="ncaam">NCAA BB</button>
     </div>
   </div>
   <div class="guide" id="guide"></div>
@@ -87,6 +90,8 @@
   var LGS = ['nhl', 'nfl', 'nba', 'mlb', 'cfl', 'pwhl'];
   var TEAM = (new URLSearchParams(location.search).get('team') || '').toLowerCase().replace(/[^a-z]/g, '');   // a team's own link
   LGS.forEach(function (lg) { PARTS[lg] = [['pro-teams.html', 1500, 2100, '&lg=' + lg], ['pro-games_3.html', 760, 900, '&tab=' + lg + '&lock=1']]; });
+  // U.S. college (the Big Ten: Michigan and Michigan State): the league page carries its own scores and standings
+  ['ncaaf', 'ncaam'].forEach(function (lg) { LGS.push(lg); PARTS[lg] = [['pro-teams.html', 1500, 2100, '&lg=' + lg]]; });
   function lgParam(w, tab) { return w[0] === 'pro-teams.html' && TEAM && tab === startTab ? '&team=' + TEAM : ''; }
   var built = {}, box = document.getElementById('panes');
   function show(tab) {
@@ -132,8 +137,8 @@
     });
   });
   // share button: shares whichever section is showing (its own link opens the page on that section)
-  var NAMES = { scores: 'the Pro Sports Guide',
-    nhl: 'the NHL Hub', nfl: 'the NFL Hub', nba: 'the NBA Hub', mlb: 'the MLB Hub', cfl: 'the CFL Hub', pwhl: 'the PWHL Hub' };
+  var NAMES = { scores: 'the National Sports Guide',
+    nhl: 'the NHL Hub', nfl: 'the NFL Hub', nba: 'the NBA Hub', mlb: 'the MLB Hub', cfl: 'the CFL Hub', pwhl: 'the PWHL Hub', ncaaf: 'the NCAA Football Hub', ncaam: 'the NCAA Basketball Hub' };
   var current = 'scores';
   if (window.PPShare) {
     var sb = PPShare.button(function () { return { title: NAMES[current].replace(/^the /, 'The '), url: LGS.indexOf(current) >= 0 ? 'https://www.powerplaywindsor.com/local-sports?tab=' + current : PPShare.link(current === 'scores' ? 'pro' : 'pro-' + current), text: 'Check out ' + NAMES[current] + ' on Powerplay Windsor' }; });
@@ -146,7 +151,7 @@
   if (start === 'pro') start = 'scores';
   var gs = document.createElement('script'); gs.src = REPO + 'guide.js?v=' + Math.floor(Date.now() / 6e5);
   gs.onload = function () { if (window.PPGuide) PPGuide.render(document.getElementById('guide'), { target: '_top', mode: 'pro', tips: true,
-    kicker: 'Your pro sports guide', title: 'Pro sports, all in one place', sub: 'Every NHL, NFL, NBA, MLB, CFL and PWHL game and score, checked around the clock. Our teams are marked in gold.', sponsor: false }); };
+    kicker: 'Your national sports guide', title: 'National sports, all in one place', sub: 'Every NHL, NFL, NBA, MLB, CFL and PWHL game and score, plus Big Ten football and basketball, checked around the clock. Our teams are marked in gold.', sponsor: false }); };
   document.body.appendChild(gs);
   try { var h = JSON.parse(localStorage.getItem('pp-tab') || 'null'); if (h && /^pro/.test(h.tab)) { localStorage.removeItem('pp-tab'); if (!start && Date.now() - h.t < 120000) start = h.tab.replace(/^pro-?/, '') || 'scores'; } } catch (e) {}
   var oldLg = (new URLSearchParams(location.search).get('league') || '').toLowerCase();   // older links: ?league=nhl
