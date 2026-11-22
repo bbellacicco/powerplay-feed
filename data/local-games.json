@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T21:01:45-05:00",
+ "updated": "2026-11-21T21:17:20-05:00",
  "today": "2026-11-21",
  "range": [
   "2026-11-18",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 30
+   "count": 31
   },
   "club_news": {
    "ok": true,
@@ -510,10 +510,10 @@
    "opponent": "Mississauga Chargers",
    "location": "Port Credit Memorial Arena, Mississauga, ON",
    "status": "live",
-   "our_score": 4,
+   "our_score": 5,
    "opp_score": 0,
    "result": null,
-   "note": "11:07 3rd",
+   "note": "02:25 3rd",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16702"
    },
@@ -532,7 +532,7 @@
    "our_score": 4,
    "opp_score": 2,
    "result": null,
-   "note": "18:18 3rd",
+   "note": "08:32 3rd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29227/"
    }
@@ -547,10 +547,10 @@
    "opponent": "Komoka Kings",
    "location": "Komoka Wellness Centre, Middlesex Centre, ON",
    "status": "live",
-   "our_score": 5,
-   "opp_score": 1,
+   "our_score": 6,
+   "opp_score": 2,
    "result": null,
-   "note": "14:40 3rd",
+   "note": "06:43 3rd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15714"
    },
@@ -2708,6 +2708,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Sam Rinzel’s overtime goal lifts Blackhawks over Flames",
+   "summary": "",
+   "published": "2026-11-21T18:59-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177314960.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/sam-rinzels-overtime-goal-lifts-blackhawks-over-flames/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "Michigan beats previously undefeated No. 4 UCLA in triple overtime",
    "summary": "",
@@ -2731,19 +2744,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/nathan-mackinnons-injury-timeline-extended-to-12-weeks-says-coach/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Blackhawks’ Kaiser ejected for hit that injures Flames’ Pospisil",
-   "summary": "",
-   "published": "2026-11-21T17:39-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/wyatt-kaiser.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/blackhawks-kaiser-ejected-for-hit-that-injures-flames-pospisil/",
    "source": "Sportsnet"
   },
   {
@@ -2800,15 +2800,15 @@
   },
   {
    "league": "nhl",
-   "headline": "Sam Rinzel’s overtime goal lifts Blackhawks over Flames",
-   "summary": "",
-   "published": "2026-11-21T18:59-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177314960.jpg",
+   "headline": "Francis: Kaiser hit on Flames’ Pospisil deserves suspension",
+   "summary": "The hit was egregious, the player was prone and the punishment should be significant. Eric Francis argues why the hit that injured Martin Pospisil deserves a suspension.",
+   "published": "2026-11-21T21:02-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/01/pospisil.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 2,
+   "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/sam-rinzels-overtime-goal-lifts-blackhawks-over-flames/",
+   "url": "https://www.sportsnet.ca/nhl/article/francis-kaiser-hit-on-flames-pospisil-deserves-suspension/",
    "source": "Sportsnet"
   },
   {
@@ -2852,6 +2852,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/quick-shifts-how-should-maple-leafs-handle-gavin-mckenna/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Blackhawks’ Kaiser ejected for hit that injures Flames’ Pospisil",
+   "summary": "",
+   "published": "2026-11-21T17:39-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/wyatt-kaiser.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/blackhawks-kaiser-ejected-for-hit-that-injures-flames-pospisil/",
    "source": "Sportsnet"
   },
   {
@@ -4423,7 +4436,7 @@
       "l": 6,
       "otl": 1,
       "pts": 33,
-      "gf": 89,
+      "gf": 90,
       "ga": 47,
       "strk": "W3"
      },
@@ -4448,7 +4461,7 @@
       "otl": 1,
       "pts": 19,
       "gf": 72,
-      "ga": 118,
+      "ga": 119,
       "strk": "W1"
      },
      {
@@ -4514,7 +4527,7 @@
       "l": 2,
       "otl": 0,
       "pts": 34,
-      "gf": 115,
+      "gf": 116,
       "ga": 45,
       "strk": "L1"
      },
@@ -4538,8 +4551,8 @@
       "l": 5,
       "otl": 0,
       "pts": 30,
-      "gf": 97,
-      "ga": 57,
+      "gf": 98,
+      "ga": 58,
       "strk": "W4"
      },
      {
@@ -4563,7 +4576,7 @@
       "otl": 1,
       "pts": 23,
       "gf": 70,
-      "ga": 60,
+      "ga": 61,
       "strk": "W2"
      },
      {
@@ -4634,8 +4647,8 @@
       "l": 15,
       "otl": 0,
       "pts": 14,
-      "gf": 75,
-      "ga": 98,
+      "gf": 76,
+      "ga": 99,
       "strk": "W2"
      },
      {
@@ -4647,7 +4660,7 @@
       "otl": 1,
       "pts": 3,
       "gf": 44,
-      "ga": 136,
+      "ga": 137,
       "strk": "L7"
      }
     ]
@@ -4658,14 +4671,14 @@
      {
       "name": "Cambridge Redhawks",
       "abbr": "CAM",
-      "gp": 21,
-      "w": 18,
+      "gp": 22,
+      "w": 19,
       "l": 2,
       "otl": 1,
-      "pts": 37,
-      "gf": 119,
+      "pts": 39,
+      "gf": 120,
       "ga": 52,
-      "strk": "W7"
+      "strk": "W8"
      },
      {
       "name": "Fort Erie Meteors",
@@ -4675,7 +4688,7 @@
       "l": 1,
       "otl": 1,
       "pts": 35,
-      "gf": 110,
+      "gf": 111,
       "ga": 56,
       "strk": "W5"
      },
@@ -4730,26 +4743,38 @@
      {
       "name": "Pelham Panthers",
       "abbr": "PEL",
-      "gp": 22,
+      "gp": 23,
       "w": 10,
-      "l": 9,
+      "l": 10,
       "otl": 3,
       "pts": 23,
       "gf": 76,
-      "ga": 88,
-      "strk": "L3"
+      "ga": 89,
+      "strk": "L4"
      },
      {
       "name": "Port Colborne Sailors",
       "abbr": "PCS",
-      "gp": 20,
+      "gp": 21,
       "w": 9,
-      "l": 11,
+      "l": 12,
       "otl": 0,
       "pts": 18,
       "gf": 83,
       "ga": 106,
-      "strk": "W1"
+      "strk": "L1"
+     },
+     {
+      "name": "Stoney Creek Generals",
+      "abbr": "SCG",
+      "gp": 26,
+      "w": 8,
+      "l": 16,
+      "otl": 2,
+      "pts": 18,
+      "gf": 87,
+      "ga": 104,
+      "strk": "W4"
      },
      {
       "name": "Hamilton Steel",
@@ -4762,18 +4787,6 @@
       "gf": 77,
       "ga": 107,
       "strk": "L1"
-     },
-     {
-      "name": "Stoney Creek Generals",
-      "abbr": "SCG",
-      "gp": 25,
-      "w": 7,
-      "l": 16,
-      "otl": 2,
-      "pts": 16,
-      "gf": 87,
-      "ga": 104,
-      "strk": "W3"
      },
      {
       "name": "Brantford Titans",
