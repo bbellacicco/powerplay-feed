@@ -35,7 +35,7 @@
   html.hubview .hubtitle h1 span { color: var(--accent); }
   html.hubview .hubtitle .n { color: var(--muted); font-size: 13px; }
   html.hubview .feat { padding-top: 16px; }
-  html.hubview #guide, html.hubview #sform, html.hubview #rows > section:not(#row-stories), html.hubview .page > section, html.hubview #row-stories .all { display: none !important; }
+  html.hubview #row-local, html.hubview #guide, html.hubview #sform, html.hubview #rows > section:not(#row-stories), html.hubview .page > section, html.hubview #row-stories .all { display: none !important; }
   @media (max-width: 760px) { html.hubview .hubtitle { padding: 18px 16px 0; } html.hubview .hubtitle h1 { font-size: 21px; } }
 
   /* ---------- top stories: one big feature + two beside it (same as the News page) ---------- */
@@ -103,6 +103,7 @@
 
   /* ---------- rows ---------- */
   section { position: relative; margin-top: 38px; }
+  section.toprow { margin-top: 16px; }
   /* strip headings: each in its own framed plate so it stands apart from the page */
   .rhead { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 0 40px 12px; padding: 9px 14px 9px 16px;
     background: linear-gradient(90deg, #17336a, #10244a); border-left: 4px solid var(--accent); border-radius: 4px; box-shadow: 0 6px 18px rgba(0,0,0,.35); }
@@ -362,7 +363,7 @@ if (/[?&]view=hub\b/.test(location.search)) document.documentElement.className +
 (function () { var m = location.search.match(/[?&]view=strip\b/) && location.search.match(/[?&]strip=([a-z]+)/); if (!m) return;
   document.documentElement.className += ' stripview';
   var st = document.createElement('style');
-  st.textContent = 'html.stripview #sform,html.stripview .teamswrap,html.stripview .feat,html.stripview #feat,html.stripview .hubtitle,html.stripview #guide,html.stripview .page>section,html.stripview #row-follow,html.stripview #rows>section:not(#row-' + m[1] + '){display:none!important}' +
+  st.textContent = 'html.stripview #row-local.toprow,html.stripview #sform,html.stripview .teamswrap,html.stripview .feat,html.stripview #feat,html.stripview .hubtitle,html.stripview #guide,html.stripview .page>section,html.stripview #row-follow,html.stripview #rows>section:not(#row-' + m[1] + '){display:none!important}' +
     'html.stripview #rows>section{margin-top:14px}html.stripview #rows .all{display:none!important}';
   document.head.appendChild(st); })();</script>
 <script>
@@ -508,7 +509,8 @@ document.addEventListener('load', function (e) {
     { key: 'photos', title: 'Game Day Snaps', gold: 'Snaps', by: null, all: null, tab: null },
     { key: 'athletes', title: 'Athlete profiles', by: null, all: LINK.athletes, tab: 'athletes' },
     { key: 'junior', title: 'Junior Hockey', gold: 'Hockey', by: null, all: SITE + 'scores-standings?tab=junior', tab: 'junior', share: SITE + 'scores-standings?strip=junior' },
-    { key: 'local', title: 'Local scores', by: ['Unifor Local 444', 'logos/unifor-444.png'], all: LINK.scores, tab: 'scores' },
+    // sits at the very top of the page (moved under the Find a team bar below): live games, today's games, the latest scores
+    { key: 'local', title: 'Today\u2019s Scores', gold: 'Scores', by: ['Unifor Local 444', 'logos/unifor-444.png'], all: LINK.scores, tab: 'scores' },
     { key: 'pro', title: 'Pro scores', by: ['Unifor Local 2458', 'logos/unifor-2458.png'], all: LINK.pro, tab: 'pro' },
     { key: 'prohead', title: 'Pro headlines', by: ['The D’Amore Group', 'logos/damore-group.png'], all: LINK.pro, tab: 'pro' }
   ];
@@ -553,6 +555,8 @@ document.addEventListener('load', function (e) {
     document.getElementById('rows').appendChild(sec);
     rowEl[r.key] = row;
   });
+  // the scores go first: right under the Find a team bar, before the headlines, so they're there the moment the app opens
+  (function () { var sec = document.getElementById('row-local'), ht = document.querySelector('.hubtitle'); if (sec && ht) { sec.classList.add('toprow'); ht.parentNode.insertBefore(sec, ht); } })();
   // phones: each strip title grows to fill the room it has beside the buttons (short titles like What's New get bigger), up to 36px
   function fitHeads() {
     var phone = window.matchMedia('(max-width: 700px)').matches;
@@ -1059,8 +1063,10 @@ document.addEventListener('load', function (e) {
     var recent = games.filter(function (g) { return g.status === 'final' && g.our_score != null && new Date(g.start).getTime() >= since; }).sort(byP);
     var next = games.filter(function (g) { return g.status === 'upcoming' && new Date(g.start).getTime() >= now - 3 * 3600e3; })
       .sort(function (a, b) { return a.start < b.start ? -1 : a.start > b.start ? 1 : priority(a) - priority(b); });
-    // live games stay out of this row until they're final (the sports guide above shows them live)
-    return recent.concat(next).slice(0, 14);
+    // the top of the page: live games first, then the rest of today's games, the last day's scores, then what's next
+    var today = dayKey(new Date());
+    var todayNext = next.filter(function (g) { return dayKey(new Date(g.start)) === today; }), later = next.filter(function (g) { return dayKey(new Date(g.start)) !== today; });
+    return live.concat(todayNext, recent, later).slice(0, 16);
   }
 
   // ---------- team logos on local score cards (where we have them) ----------
