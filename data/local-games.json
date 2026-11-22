@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-21T23:46:44-05:00",
- "today": "2026-11-21",
+ "updated": "2026-11-22T00:07:07-05:00",
+ "today": "2026-11-22",
  "range": [
-  "2026-11-18",
-  "2026-11-24"
+  "2026-11-19",
+  "2026-11-25"
  ],
  "teams": {
   "spitfires": {
@@ -91,7 +91,7 @@
   },
   "pwhl": {
    "ok": true,
-   "count": 9
+   "count": 10
   },
   "cfl_standings": {
    "ok": true,
@@ -651,9 +651,7 @@
    },
    "away": "Villanova",
    "home": "St. Anne"
-  }
- ],
- "ahead": [
+  },
   {
    "id": "junior-gojhl15725",
    "team": "junior",
@@ -710,7 +708,9 @@
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960712?configuration=45"
    },
    "club": "Wheatley Sharks"
-  },
+  }
+ ],
+ "ahead": [
   {
    "id": "junior-ojhl16715",
    "team": "junior",
@@ -1314,6 +1314,101 @@
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960804?configuration=45"
    },
    "club": "Essex 73's"
+  },
+  {
+   "id": "junior-ojhl16752",
+   "team": "junior",
+   "sport": "OJHL (Jr. A)",
+   "start": "2026-12-06T14:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Caledon Admirals",
+   "location": "Mayfield Recreation Complex, Caledon, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.ojhl.ca/stats/game-center/16752"
+   },
+   "club": "Leamington Flyers"
+  },
+  {
+   "id": "junior-gojhl15764",
+   "team": "junior",
+   "sport": "GOHL (Jr. B)",
+   "start": "2026-12-06T14:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "London Nationals",
+   "location": "Vollmer Culture R.C., LaSalle, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.gohl.ca/stats/game-center/15764"
+   },
+   "club": "LaSalle Vipers"
+  },
+  {
+   "id": "junior-gs2960811",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-12-06T14:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Dresden Kings",
+   "location": "Lambton-Kent Memorial Centre",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960811?configuration=45"
+   },
+   "club": "Lakeshore Canadiens"
+  },
+  {
+   "id": "spitfires-ohl29284",
+   "team": "spitfires",
+   "sport": "Hockey",
+   "start": "2026-12-06T16:05:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Brantford Bulldogs",
+   "location": "WFCU Centre, Windsor",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "tickets": "https://wfcucentre.evenue.net/event/S27/G16",
+    "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29284/"
+   }
+  },
+  {
+   "id": "junior-gojhl15766",
+   "team": "junior",
+   "sport": "GOHL (Jr. B)",
+   "start": "2026-12-06T19:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Fort Erie Meteors",
+   "location": "Chatham Memorial Arena, Chatham, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.gohl.ca/stats/game-center/15766"
+   },
+   "club": "Chatham Maroons"
   }
  ],
  "last": [
@@ -1865,9 +1960,7 @@
    "note": "",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/359"
-  }
- ],
- "pro_ahead": [
+  },
   {
    "league": "pwhl",
    "start": "2026-11-25T13:00:00-05:00",
@@ -1882,7 +1975,9 @@
    "note": "",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/358"
-  },
+  }
+ ],
+ "pro_ahead": [
   {
    "league": "pwhl",
    "start": "2026-11-29T20:00:00-05:00",
@@ -1957,6 +2052,51 @@
    "note": "",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/367"
+  },
+  {
+   "league": "pwhl",
+   "start": "2026-12-06T14:00:00-05:00",
+   "status": "upcoming",
+   "home": "Ottawa Charge",
+   "away": "Toronto Sceptres",
+   "home_abbr": "OTT",
+   "away_abbr": "TOR",
+   "our_score": null,
+   "opp_score": null,
+   "location": "Canadian Tire Centre | Ottawa",
+   "note": "",
+   "time_tbd": false,
+   "link": "https://www.thepwhl.com/en/stats/game-center/368"
+  },
+  {
+   "league": "pwhl",
+   "start": "2026-12-06T15:00:00-05:00",
+   "status": "upcoming",
+   "home": "New York Sirens",
+   "away": "Boston Fleet",
+   "home_abbr": "NY",
+   "away_abbr": "BOS",
+   "our_score": null,
+   "opp_score": null,
+   "location": "Prudential Center | Newark",
+   "note": "",
+   "time_tbd": false,
+   "link": "https://www.thepwhl.com/en/stats/game-center/369"
+  },
+  {
+   "league": "pwhl",
+   "start": "2026-12-06T20:00:00-05:00",
+   "status": "upcoming",
+   "home": "Vegas Vanguards",
+   "away": "Detroit Clutch",
+   "home_abbr": "VGS",
+   "away_abbr": "DET",
+   "our_score": null,
+   "opp_score": null,
+   "location": "T-Mobile Arena | Las Vegas",
+   "note": "",
+   "time_tbd": false,
+   "link": "https://www.thepwhl.com/en/stats/game-center/370"
   }
  ],
  "pro_news": [
@@ -2711,15 +2851,15 @@
   },
   {
    "league": "nhl",
-   "headline": "Canadiens give up late goal, fall to Flyers",
+   "headline": "Fowler shows he’s human as Canadiens fall to Flyers in final minute",
    "summary": "",
-   "published": "2026-11-21T21:55-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177315535.jpg",
+   "published": "2026-11-21T23:56-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177315917.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 2,
+   "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canadiens-give-up-late-goal-fall-to-flyers/",
+   "url": "https://www.sportsnet.ca/nhl/article/fowler-shows-hes-human-as-canadiens-fall-to-flyers-in-final-minute/",
    "source": "Sportsnet"
   },
   {
