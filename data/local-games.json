@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T11:06:22-05:00",
+ "updated": "2026-11-23T11:16:49-05:00",
  "today": "2026-11-23",
  "range": [
   "2026-11-20",
@@ -67,7 +67,7 @@
   },
   "standings_ohl": {
    "ok": true,
-   "count": 20
+   "count": 21
   },
   "standings_ojhl": {
    "ok": true,
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -2735,6 +2735,19 @@
  "more_news": [
   {
    "league": "nhl",
+   "headline": "Watch Live: Canadiens GM Kent Hughes speaks after acquiring Dylan Larkin",
+   "summary": "Montreal Canadiens general manager Kent Hughes will speak to the media on Monday morning, following the team’s blockbuster trade Sunday night to acquire Dylan Larkin from the Detroit Red Wings.",
+   "published": "2026-11-23T11:02-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/07/hughes.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/watch-live-canadiens-gm-kent-hughes-speaks-after-acquiring-dylan-larkin/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Engels: Larkin worth hefty price Canadiens paid Red Wings",
    "summary": "The Canadiens and GM Kent Hughes pulled off the practically impossible, acquiring Dylan Larkin to fill a burning hole on their roster. Eric Engels explains why Montreal was right to pay the price in Sunday’s trade with t",
    "published": "2026-11-23T00:28-05:00",
@@ -2774,19 +2787,6 @@
    "sn_team_count": 0,
    "sport": "",
    "url": "https://www.sportsnet.ca/curling/article/takeaways-dust-still-hasnt-settled-from-olympic-feud-for-jacobs-eriksson/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "NFL Week 11 takeaways: 49ers deliver statement win over Vikings",
-   "summary": "The 49ers declared themselves the most complete club in the league on Sunday. Emily Sadler breaks down their statement win over the Vikings and much more in her Week 11 takeaways.",
-   "published": "2026-11-23T01:38-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/49ers-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-11-takeaways-49ers-deliver-statement-win-over-vikings/",
    "source": "Sportsnet"
   },
   {
@@ -2992,6 +2992,19 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/cfl/article/blue-bombers-sign-linebacker-jacob-roberts-to-one-year-contract/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Union’s Cavan Sullivan wins MLS Young Player of the Year award",
+   "summary": "",
+   "published": "2026-11-23T11:06-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/sullivan_cavan1280.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/unions-cavan-sullivan-wins-mls-young-player-of-the-year-award/",
    "source": "Sportsnet"
   },
   {
@@ -4096,6 +4109,18 @@
       "pts": 21,
       "gf": 74,
       "ga": 92,
+      "strk": "W1"
+     },
+     {
+      "name": "Blainville-Boisbriand Armada",
+      "abbr": "BLB",
+      "gp": 1,
+      "w": 1,
+      "l": 0,
+      "otl": 0,
+      "pts": 2,
+      "gf": 5,
+      "ga": 3,
       "strk": "W1"
      }
     ]
