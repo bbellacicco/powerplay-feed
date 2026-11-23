@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T16:08:21-05:00",
+ "updated": "2026-11-23T16:16:49-05:00",
  "today": "2026-11-23",
  "range": [
   "2026-11-20",
@@ -1756,21 +1756,6 @@
   },
   {
    "league": "pwhl",
-   "start": "2026-11-23T13:30:00-05:00",
-   "status": "live",
-   "home": "Ottawa Charge",
-   "away": "Detroit Clutch",
-   "home_abbr": "OTT",
-   "away_abbr": "DET",
-   "our_score": 1,
-   "opp_score": 2,
-   "location": "Morgan Firestone Arena | Ancaster",
-   "note": "00:00 1st OT",
-   "time_tbd": false,
-   "link": "https://www.thepwhl.com/en/stats/game-center/360"
-  },
-  {
-   "league": "pwhl",
    "start": "2026-11-23T16:00:00-05:00",
    "status": "live",
    "home": "Minnesota Frost",
@@ -1780,7 +1765,7 @@
    "our_score": 0,
    "opp_score": 0,
    "location": "America First Center | Henderson",
-   "note": "20:00 1st",
+   "note": "12:45 1st",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/354"
   },
@@ -1813,6 +1798,21 @@
    "note": "",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/356"
+  },
+  {
+   "league": "pwhl",
+   "start": "2026-11-23T13:30:00-05:00",
+   "status": "final",
+   "home": "Ottawa Charge",
+   "away": "Detroit Clutch",
+   "home_abbr": "OTT",
+   "away_abbr": "DET",
+   "our_score": 1,
+   "opp_score": 2,
+   "location": "Morgan Firestone Arena | Ancaster",
+   "note": "OT",
+   "time_tbd": false,
+   "link": "https://www.thepwhl.com/en/stats/game-center/360"
   },
   {
    "league": "pwhl",
@@ -2420,6 +2420,17 @@
   },
   {
    "league": "pwhl",
+   "headline": "Vegas Vanguards Announce Training Camp Roster Updates - Nov. 23, 2026",
+   "summary": "",
+   "published": "2026-11-23T09:15:00+00:00",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_337/q_auto/f_auto/Roster_Update_Graphic",
+   "video": false,
+   "teams": [],
+   "url": "https://www.thepwhl.com/en/news/2026/november/23/vegas-vanguards-announce-training-camp-roster-updates---nov-23-2026",
+   "source": "thepwhl.com"
+  },
+  {
+   "league": "pwhl",
    "headline": "Minnesota Edges Vegas 2-1 in Preseason Opener",
    "summary": "",
    "published": "2026-11-23T06:03:54+00:00",
@@ -2618,7 +2629,7 @@
   },
   {
    "league": "pwhl",
-   "headline": "Sirens Extend KřížOvá and NyléN Persson Contracts",
+   "headline": "Sirens Extend Kří\u0000žOvá and NyléN Persson Contracts",
    "summary": "",
    "published": "2026-10-13T17:45:00+00:00",
    "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_337/q_auto/f_auto/maja_x_krisova_ext",
@@ -2679,19 +2690,6 @@
     "Vancouver Goldeneyes"
    ],
    "url": "https://www.thepwhl.com/en/teams/vancouver-goldeneyes/news/2026/october/07/vancouver-goldeneyes-announce-2026-27-training-camp-roster",
-   "source": "thepwhl.com"
-  },
-  {
-   "league": "pwhl",
-   "headline": "Ottawa Charge Announce 2026-27 Training Camp Roster",
-   "summary": "",
-   "published": "2026-10-07T15:00:00+00:00",
-   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_337/q_auto/f_auto/Charge_Training-camp-roster_header-2026-27",
-   "video": false,
-   "teams": [
-    "Ottawa Charge"
-   ],
-   "url": "https://www.thepwhl.com/en/teams/ottawa-charge/news/2026/october/07/ottawa-charge-announce-2026-27-training-camp-roster",
    "source": "thepwhl.com"
   },
   {
@@ -2876,14 +2874,14 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Steelers’ Metcalf denies trying to poke Eagles’ DeJean in eye",
+   "league": "nfl",
+   "headline": "Report: Steelers’ Metcalf denies eye poke, won’t be suspended by NFL",
    "summary": "",
    "published": "2026-11-23T12:30-05:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/dk-metcalf.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
+   "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/steelers-metcalf-denies-trying-to-poke-eagles-dejean-in-eye/",
    "source": "Sportsnet"
@@ -4894,6 +4892,30 @@
       "strk": "1W"
      },
      {
+      "name": "Ottawa Charge",
+      "abbr": "OTT",
+      "gp": 1,
+      "w": 1,
+      "l": 0,
+      "otl": 0,
+      "pts": 2,
+      "gf": 2,
+      "ga": 1,
+      "strk": "1W"
+     },
+     {
+      "name": "Detroit Clutch",
+      "abbr": "DET",
+      "gp": 1,
+      "w": 0,
+      "l": 0,
+      "otl": 1,
+      "pts": 1,
+      "gf": 1,
+      "ga": 2,
+      "strk": "1L"
+     },
+     {
       "name": "Boston Fleet",
       "abbr": "BOS",
       "gp": 0,
@@ -4930,18 +4952,6 @@
       "strk": ""
      },
      {
-      "name": "Ottawa Charge",
-      "abbr": "OTT",
-      "gp": 0,
-      "w": 0,
-      "l": 0,
-      "otl": 0,
-      "pts": 0,
-      "gf": 2,
-      "ga": 1,
-      "strk": ""
-     },
-     {
       "name": "Toronto Sceptres",
       "abbr": "TOR",
       "gp": 0,
@@ -4975,18 +4985,6 @@
       "pts": 0,
       "gf": 0,
       "ga": 0,
-      "strk": ""
-     },
-     {
-      "name": "Detroit Clutch",
-      "abbr": "DET",
-      "gp": 0,
-      "w": 0,
-      "l": 0,
-      "otl": 0,
-      "pts": 0,
-      "gf": 1,
-      "ga": 2,
       "strk": ""
      },
      {
