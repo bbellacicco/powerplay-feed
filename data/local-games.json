@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T13:16:42-05:00",
+ "updated": "2026-11-23T13:36:22-05:00",
  "today": "2026-11-23",
  "range": [
   "2026-11-20",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -1757,15 +1757,15 @@
   {
    "league": "pwhl",
    "start": "2026-11-23T13:30:00-05:00",
-   "status": "upcoming",
+   "status": "live",
    "home": "Ottawa Charge",
    "away": "Detroit Clutch",
    "home_abbr": "OTT",
    "away_abbr": "DET",
-   "our_score": null,
-   "opp_score": null,
+   "our_score": 0,
+   "opp_score": 0,
    "location": "Morgan Firestone Arena | Ancaster",
-   "note": "",
+   "note": "18:26 1st",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/360"
   },
@@ -2807,6 +2807,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Maple Leafs’ Stolarz to start, Ekman-Larsson back in against Islanders",
+   "summary": "The Toronto Maple Leafs may have a new No. 1.",
+   "published": "2026-11-23T13:26-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/10/Stolarz.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-stolarz-to-start-ekman-larsson-back-in-against-islanders/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "mlb",
    "headline": "AP source: Mets sign first baseman Paul Goldschmidt to one-year deal",
    "summary": "The first baseman has signed a free-agent deal with the New York Mets, Jon Heyman of the New York Post reported on Monday.",
@@ -2856,19 +2871,6 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/fifa-world-cup/article/fifa-picks-u-s-to-host-2031-womens-world-cup-england-for-2035/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Canucks’ inconsistency re-emerges in loss to Blackhawks",
-   "summary": "The Canucks suffered a frustrating loss to the Blackhawks on Sunday night. Iain McIntyre breaks down what’s causing the team’s erratic play.",
-   "published": "2026-11-23T01:06-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Canucks-and-Blackhawks.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canucks-inconsistency-re-emerges-in-stupefying-loss-to-blackhawks/",
    "source": "Sportsnet"
   },
   {
@@ -2942,6 +2944,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Blues’ Thomas, Stars’ Oettinger, Blackhawks’ Rinzel named NHL’s stars of the week",
+   "summary": "St. Louis Blues centre Robert Thomas, Dallas Stars goaltender Jake Oettinger and Chicago Blackhawks defenceman Sam Rinzel have been named the NHL’s three stars of the week.",
+   "published": "2026-11-23T13:28-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-49-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 3,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/blues-thomas-stars-oettinger-blackhawks-rinzel-named-nhls-stars-of-the-week/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "‘Cup contender’: Hockey fans react to Canadiens’ blockbuster Larkin trade",
    "summary": "",
    "published": "2026-11-22T21:15-05:00",
@@ -2966,6 +2981,19 @@
    "sn_team_count": 2,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/nfl-week-11-takeaways-49ers-deliver-statement-win-over-vikings/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "World Series champion Brewers’ full playoff share down from 2025",
+   "summary": "A full post-season share for the World Series champion Milwaukee Brewers was $493,044, and the total players’ pool amount of roughly $114.5 million was down from the previous two seasons.",
+   "published": "2026-11-23T13:25-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/brewers.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/world-series-champion-brewers-full-playoff-share-down-from-2025/",
    "source": "Sportsnet"
   },
   {
@@ -3020,6 +3048,19 @@
    "sn_team_count": 0,
    "sport": "",
    "url": "https://www.sportsnet.ca/curling/article/alina-paetz-beats-miku-nihira-to-claim-first-gsoc-title-with-new-team/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Canucks’ inconsistency re-emerges in loss to Blackhawks",
+   "summary": "The Canucks suffered a frustrating loss to the Blackhawks on Sunday night. Iain McIntyre breaks down what’s causing the team’s erratic play.",
+   "published": "2026-11-23T01:06-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Canucks-and-Blackhawks.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canucks-inconsistency-re-emerges-in-stupefying-loss-to-blackhawks/",
    "source": "Sportsnet"
   },
   {
@@ -3139,32 +3180,6 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/steelers-dk-metcalf-ejected-against-eagles-after-eye-poke/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Mexican fans boo 49ers’ Bosa after his remarks about cheering at games",
-   "summary": "San Francisco 49ers defensive end Nick Bosa was heavily booed on Sunday night by fans at Estadio Azteca, a few days after his comments about Mexican crowd behavior during a 2022 game sparked outrage in the country.",
-   "published": "2026-11-22T20:47-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-28.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/mexican-fans-boo-49ers-bosa-after-his-remarks-about-cheering-at-games/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "NFL defends incomplete pass ruling on Washington’s would-be TD for Jaguars",
-   "summary": "Parker Washington thought he caught the ball for a crucial touchdown in the fourth quarter, and Jacksonville Jaguars coach Liam Coen was confident enough that he challenged the initial call of an incomplete pass.",
-   "published": "2026-11-22T21:49-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-1-5.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-defends-incomplete-pass-ruling-on-washingtons-would-be-td-for-jaguars/",
    "source": "Sportsnet"
   },
   {
