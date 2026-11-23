@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T19:01:54-05:00",
+ "updated": "2026-11-22T19:16:52-05:00",
  "today": "2026-11-22",
  "range": [
   "2026-11-19",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 32
+   "count": 31
   },
   "club_news": {
    "ok": true,
@@ -593,9 +593,9 @@
    "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
    "status": "live",
    "our_score": 2,
-   "opp_score": 1,
+   "opp_score": 2,
    "result": null,
-   "note": "20:00 2nd",
+   "note": "10:01 2nd",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16707"
    },
@@ -3156,6 +3156,19 @@
   },
   {
    "league": "other",
+   "headline": "Cincinnati beats Supporters’ Shield winner Nashville to open series",
+   "summary": "Roman Celentano made six saves for his fourth clean sheet of the season and Cincinnati took advantage of an own goal to earn a 1-0 victory over Nashville on Sunday to begin a best-of-three series.",
+   "published": "2026-11-22T19:01-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-10-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/mls/article/cincinnati-beats-supporters-shield-winner-nashville-to-open-series/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
    "headline": "Premier League roundup: Liverpool spoils Pochettino’s Man United debut",
    "summary": "High-flying Brighton was brought down to earth by Hull and missed out on the chance to close the gap on Premier League leader Arsenal after a 2-0 loss on Sunday.",
    "published": "2026-11-22T11:53-05:00",
@@ -3248,30 +3261,17 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Rossi, Buium help take down former team in Canucks’ gritty win over Wild",
-   "summary": "Down a couple of centres but up in intensity and resilience, the Canucks rallied three times to earn a win in one of their best performances of the season.",
-   "published": "2026-11-22T02:35-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/canucks-3.jpg",
+   "league": "nfl",
+   "headline": "NOTEBOOK: Lions 'on the next one' after Week 11 win over Bucs",
+   "summary": "Tim Twentyman covers all the news from the Detroit Lions’ 31-21 victory over the Tampa Bay Buccaneers.",
+   "published": "2026-11-22T19:02-05:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/biey2ekpavyzfbx7af4e.jpg",
    "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/rossi-buium-help-take-down-former-team-in-canucks-gritty-win-over-wild/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Knies spurs Blue Jackets comeback in emotional return to Toronto",
-   "summary": "Spurred by Matthew Knies’ crowd-silencing moment, the Blue Jackets pulled out a stunning comeback over the Maple Leafs. Sonny Sachdeva has more on the emotional return to Toronto for the former Maple Leaf.",
-   "published": "2026-11-22T00:28-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/6408720670112.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/knies-spurs-blue-jackets-comeback-in-emotional-return-to-toronto/",
-   "source": "Sportsnet"
+   "teams": [
+    "Detroit Lions"
+   ],
+   "url": "https://www.detroitlions.com/news/notebook-lions-on-next-one-after-week-11-win-over-tampa-bay-clark-wonnum",
+   "source": "Team site"
   },
   {
    "league": "nfl",
@@ -3453,19 +3453,6 @@
     "Detroit Lions"
    ],
    "url": "https://www.detroitlions.com/news/lions-vs-buccaneers-practice-report-nov-19-reed-joseph-rakestraw",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
-   "headline": "10 takeaways from Petzing, Sheppard & Fipp",
-   "summary": "Catch up on all the news from the coordinator media sessions with Drew Petzing, Kelvin Sheppard and Dave Fipp.",
-   "published": "2026-11-19T14:17-05:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/moqetp8ixa8df6izb5z0.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Lions"
-   ],
-   "url": "https://www.detroitlions.com/news/10-takeaways-from-petzing-sheppard-fipp-goff-laporta-joseph",
    "source": "Team site"
   },
   {
@@ -4146,7 +4133,7 @@
       "l": 11,
       "otl": 0,
       "pts": 26,
-      "gf": 90,
+      "gf": 91,
       "ga": 79,
       "strk": "L1"
      },
@@ -4378,7 +4365,7 @@
       "otl": 3,
       "pts": 27,
       "gf": 88,
-      "ga": 84,
+      "ga": 85,
       "strk": "L1"
      },
      {
@@ -4618,7 +4605,7 @@
       "otl": 1,
       "pts": 35,
       "gf": 92,
-      "ga": 48,
+      "ga": 49,
       "strk": "W4"
      },
      {
@@ -4654,7 +4641,7 @@
       "otl": 2,
       "pts": 18,
       "gf": 85,
-      "ga": 136,
+      "ga": 137,
       "strk": "W1"
      },
      {
@@ -4665,7 +4652,7 @@
       "l": 19,
       "otl": 2,
       "pts": 18,
-      "gf": 76,
+      "gf": 77,
       "ga": 130,
       "strk": "L1"
      },
@@ -4689,7 +4676,7 @@
       "l": 20,
       "otl": 1,
       "pts": 13,
-      "gf": 68,
+      "gf": 69,
       "ga": 107,
       "strk": "L8"
      }
@@ -4709,7 +4696,7 @@
       "otl": 0,
       "pts": 34,
       "gf": 116,
-      "ga": 47,
+      "ga": 48,
       "strk": "L2"
      },
      {
@@ -4768,7 +4755,7 @@
       "l": 11,
       "otl": 1,
       "pts": 25,
-      "gf": 97,
+      "gf": 98,
       "ga": 94,
       "strk": "W2"
      },
