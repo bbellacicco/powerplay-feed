@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T00:46:52-05:00",
+ "updated": "2026-11-23T01:06:46-05:00",
  "today": "2026-11-23",
  "range": [
   "2026-11-20",
@@ -1742,7 +1742,7 @@
   {
    "league": "pwhl",
    "start": "2026-11-22T21:50:00-05:00",
-   "status": "live",
+   "status": "final",
    "home": "Vegas Vanguards",
    "away": "Minnesota Frost",
    "home_abbr": "VGS",
@@ -1750,7 +1750,7 @@
    "our_score": 2,
    "opp_score": 1,
    "location": "America First Center | Henderson",
-   "note": "Unofficial Final",
+   "note": "",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/353"
   },
@@ -2937,6 +2937,19 @@
   },
   {
    "league": "nfl",
+   "headline": "Mexican fans boo 49ers’ Bosa after his remarks about cheering at games",
+   "summary": "San Francisco 49ers defensive end Nick Bosa was heavily booed on Sunday night by fans at Estadio Azteca, a few days after his comments about Mexican crowd behavior during a 2022 game sparked outrage in the country.",
+   "published": "2026-11-22T20:47-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-28.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/mexican-fans-boo-49ers-bosa-after-his-remarks-about-cheering-at-games/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
    "headline": "NFL defends incomplete pass ruling on Washington’s would-be TD for Jaguars",
    "summary": "Parker Washington thought he caught the ball for a crucial touchdown in the fourth quarter, and Jacksonville Jaguars coach Liam Coen was confident enough that he challenged the initial call of an incomplete pass.",
    "published": "2026-11-22T21:49-05:00",
@@ -2946,19 +2959,6 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/nfl-defends-incomplete-pass-ruling-on-washingtons-would-be-td-for-jaguars/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Chargers’ Herbert in concussion protocol, status for Week 12 unclear",
-   "summary": "Despite defeating the Baltimore Ravens in Week 10 to take home their first victory of the season, the Los Angeles Chargers’ situation went from bad to worse just a week later.",
-   "published": "2026-11-22T20:08-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Hebert.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/chargers-herbert-in-concussion-protocol-status-for-week-12-unclear/",
    "source": "Sportsnet"
   },
   {
@@ -4907,6 +4907,18 @@
     "group": "PWHL",
     "teams": [
      {
+      "name": "Minnesota Frost",
+      "abbr": "MIN",
+      "gp": 1,
+      "w": 1,
+      "l": 0,
+      "otl": 0,
+      "pts": 3,
+      "gf": 2,
+      "ga": 1,
+      "strk": "1W"
+     },
+     {
       "name": "Boston Fleet",
       "abbr": "BOS",
       "gp": 0,
@@ -4916,18 +4928,6 @@
       "pts": 0,
       "gf": 0,
       "ga": 0,
-      "strk": ""
-     },
-     {
-      "name": "Minnesota Frost",
-      "abbr": "MIN",
-      "gp": 0,
-      "w": 0,
-      "l": 0,
-      "otl": 0,
-      "pts": 0,
-      "gf": 2,
-      "ga": 1,
       "strk": ""
      },
      {
@@ -5027,18 +5027,6 @@
       "strk": ""
      },
      {
-      "name": "Vegas Vanguards",
-      "abbr": "VGS",
-      "gp": 0,
-      "w": 0,
-      "l": 0,
-      "otl": 0,
-      "pts": 0,
-      "gf": 1,
-      "ga": 2,
-      "strk": ""
-     },
-     {
       "name": "San Jose Sea Lions",
       "abbr": "SJ",
       "gp": 0,
@@ -5049,6 +5037,18 @@
       "gf": 0,
       "ga": 0,
       "strk": ""
+     },
+     {
+      "name": "Vegas Vanguards",
+      "abbr": "VGS",
+      "gp": 1,
+      "w": 0,
+      "l": 1,
+      "otl": 0,
+      "pts": 0,
+      "gf": 1,
+      "ga": 2,
+      "strk": "1L"
      }
     ]
    }
