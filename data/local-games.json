@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T18:16:49-05:00",
+ "updated": "2026-11-23T18:36:21-05:00",
  "today": "2026-11-23",
  "range": [
   "2026-11-20",
@@ -99,7 +99,7 @@
   },
   "pwhl_news": {
    "ok": true,
-   "count": 26
+   "count": 27
   },
   "sportsnet": {
    "ok": true,
@@ -1756,31 +1756,16 @@
   },
   {
    "league": "pwhl",
-   "start": "2026-11-23T16:00:00-05:00",
-   "status": "live",
-   "home": "Minnesota Frost",
-   "away": "Vancouver Goldeneyes",
-   "home_abbr": "MIN",
-   "away_abbr": "VAN",
-   "our_score": 4,
-   "opp_score": 1,
-   "location": "America First Center | Henderson",
-   "note": "05:00 3rd",
-   "time_tbd": false,
-   "link": "https://www.thepwhl.com/en/stats/game-center/354"
-  },
-  {
-   "league": "pwhl",
    "start": "2026-11-23T17:30:00-05:00",
    "status": "live",
    "home": "Hamilton Havoc",
    "away": "Toronto Sceptres",
    "home_abbr": "HAM",
    "away_abbr": "TOR",
-   "our_score": 1,
-   "opp_score": 1,
+   "our_score": 2,
+   "opp_score": 3,
    "location": "Morgan Firestone Arena | Ancaster",
-   "note": "00:00 1st",
+   "note": "13:37 2nd",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/361"
   },
@@ -1795,9 +1780,24 @@
    "our_score": 1,
    "opp_score": 1,
    "location": "Boston Sports Institute | Wellesley",
-   "note": "13:11 1st",
+   "note": "02:56 1st",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/356"
+  },
+  {
+   "league": "pwhl",
+   "start": "2026-11-23T16:00:00-05:00",
+   "status": "live",
+   "home": "Minnesota Frost",
+   "away": "Vancouver Goldeneyes",
+   "home_abbr": "MIN",
+   "away_abbr": "VAN",
+   "our_score": 4,
+   "opp_score": 1,
+   "location": "America First Center | Henderson",
+   "note": "Unofficial Final",
+   "time_tbd": false,
+   "link": "https://www.thepwhl.com/en/stats/game-center/354"
   },
   {
    "league": "pwhl",
@@ -2394,6 +2394,17 @@
   },
   {
    "league": "pwhl",
+   "headline": "Ottawa Rallies for 2-1 Win Over Detroit to Open Preseason",
+   "summary": "",
+   "published": "2026-11-23T22:59:13+00:00",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/CREDIT_PWHL_-_Detroit_vs_Ottawa_-_Nov._23_Preseason_04",
+   "video": false,
+   "teams": [],
+   "url": "https://www.thepwhl.com/en/news/2026/november/23/ottawa-rallies-for-2-1-win-over-detroit-to-open-preseason",
+   "source": "thepwhl.com"
+  },
+  {
+   "league": "pwhl",
    "headline": "San Jose Sea Lions Sign California Native Justine Reyes",
    "summary": "",
    "published": "2026-11-23T18:00:00+00:00",
@@ -2416,6 +2427,17 @@
     "Hamilton Havoc"
    ],
    "url": "https://www.thepwhl.com/en/teams/hamilton-havoc/news/2026/november/20/building-the-havoc-s-new-logo-in-steel",
+   "source": "thepwhl.com"
+  },
+  {
+   "league": "pwhl",
+   "headline": "Hamilton Havoc Announce Jenner As Captain, Clark and MüLler As Alternates",
+   "summary": "",
+   "published": "2026-11-23T14:55:00+00:00",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/HAM_CaptainAnnounce_16x9",
+   "video": false,
+   "teams": [],
+   "url": "https://www.thepwhl.com/en/news/2026/november/23/hamilton-havoc-announce-jenner-as-captain-clark-and-m-ller-as-alternates",
    "source": "thepwhl.com"
   },
   {
@@ -2464,19 +2486,6 @@
     "Hamilton Havoc"
    ],
    "url": "https://www.thepwhl.com/en/teams/hamilton-havoc/news/2026/november/22/hamilton-havoc-announce-training-camp-roster-updates---nov-22-2026",
-   "source": "thepwhl.com"
-  },
-  {
-   "league": "pwhl",
-   "headline": "Fleet Announce Saulnier and Schepers As Alternate Captains",
-   "summary": "",
-   "published": "2026-11-22T19:15:00+00:00",
-   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/BOS-Saulnier-Schepers-AlternateCaptains",
-   "video": false,
-   "teams": [
-    "Boston Fleet"
-   ],
-   "url": "https://www.thepwhl.com/en/teams/boston-fleet/news/2026/november/22/fleet-announce-saulnier-and-schepers-as-alternate-captains",
    "source": "thepwhl.com"
   },
   {
@@ -4949,8 +4958,8 @@
       "l": 0,
       "otl": 0,
       "pts": 0,
-      "gf": 1,
-      "ga": 1,
+      "gf": 2,
+      "ga": 3,
       "strk": ""
      },
      {
@@ -4985,8 +4994,8 @@
       "l": 0,
       "otl": 0,
       "pts": 0,
-      "gf": 1,
-      "ga": 1,
+      "gf": 3,
+      "ga": 2,
       "strk": ""
      },
      {
