@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T20:06:22-05:00",
+ "updated": "2026-11-22T20:16:51-05:00",
  "today": "2026-11-22",
  "range": [
   "2026-11-19",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 31
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -595,7 +595,7 @@
    "our_score": 5,
    "opp_score": 4,
    "result": null,
-   "note": "09:41 3rd",
+   "note": "03:54 3rd",
    "links": {
     "gamecentre": "https://www.ojhl.ca/stats/game-center/16707"
    },
@@ -629,11 +629,11 @@
    "home_away": "A",
    "opponent": "St. Thomas Stars",
    "location": "Joe Thornton C.C., St. Thomas, ON",
-   "status": "live",
-   "our_score": 2,
-   "opp_score": 3,
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
    "result": null,
-   "note": "00:23 1st",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15722"
    },
@@ -2853,18 +2853,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nba",
-   "headline": "Why Raptors need to build on skid-busting win over Pistons",
-   "summary": "Losing streaks are often magnified when they happen in the early stages of the season, but the Raptors have put themselves in a hole. Michael Grange explains why they need to start turning their season around now.",
-   "published": "2026-11-22T18:25-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Barnes-no1.jpg",
+   "league": "nfl",
+   "headline": "NFL Week 11 roundup: Panthers outlast Ravens in thriller",
+   "summary": "Bryce Young threw for 254 yards and two touchdowns, Chuba Hubbard ran for 120 yards and two more scores and the Carolina Panthers made a late defensive stop to beat Baltimore 35-33 on Sunday, sending the Ravens to their ",
+   "published": "2026-11-22T16:48-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/panthers-1.jpg",
    "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/why-raptors-need-to-build-on-skid-busting-win-over-pistons/",
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-11-roundup-panthers-outlast-ravens-in-thriller/",
    "source": "Sportsnet"
   },
   {
@@ -2964,17 +2962,17 @@
   },
   {
    "league": "nba",
-   "headline": "Raptors’ Rajakovic ‘very confident’ Murray-Boyles will return vs. Bucks",
-   "summary": "Head coach Darko Rajakovic told reporters on Sunday that he’s “very confident” forward Collin Murray-Boyles will play Monday against the Bucks (Sportsnet ONE and Sportsnet+, 7:30 p.m. ET / 5:30 p.m. PCT).",
-   "published": "2026-11-22T14:44-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/cmb-1.jpg",
+   "headline": "Why Raptors need to build on skid-busting win over Pistons",
+   "summary": "Losing streaks are often magnified when they happen in the early stages of the season, but the Raptors have put themselves in a hole. Michael Grange explains why they need to start turning their season around now.",
+   "published": "2026-11-22T18:25-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Barnes-no1.jpg",
    "video": false,
    "teams": [
     "Toronto Raptors"
    ],
    "sn_team_count": 1,
    "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-rajakovic-very-confident-murray-boyles-will-return-vs-bucks/",
+   "url": "https://www.sportsnet.ca/nba/article/why-raptors-need-to-build-on-skid-busting-win-over-pistons/",
    "source": "Sportsnet"
   },
   {
@@ -2988,19 +2986,6 @@
    "sn_team_count": 0,
    "sport": "Curling",
    "url": "https://www.sportsnet.ca/curling/article/canadas-team-brad-jacobs-defeats-team-schwaller-for-first-gsoc-title-since-2020/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "NFL Week 11 roundup: Panthers outlast Ravens in thriller",
-   "summary": "Bryce Young threw for 254 yards and two touchdowns, Chuba Hubbard ran for 120 yards and two more scores and the Carolina Panthers made a late defensive stop to beat Baltimore 35-33 on Sunday, sending the Ravens to their ",
-   "published": "2026-11-22T16:48-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/panthers-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-11-roundup-panthers-outlast-ravens-in-thriller/",
    "source": "Sportsnet"
   },
   {
@@ -3076,6 +3061,19 @@
   },
   {
    "league": "nfl",
+   "headline": "Chargers’ Herbert in concussion protocol, status for Week 12 unclear",
+   "summary": "Despite defeating the Baltimore Ravens in Week 10 to take home their first victory of the season, the Los Angeles Chargers’ situation went from bad to worse just a week later.",
+   "published": "2026-11-22T20:08-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Hebert.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/chargers-herbert-in-concussion-protocol-status-for-week-12-unclear/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
    "headline": "Mahomes, Chiefs rout Cardinals for third straight win",
    "summary": "Patrick Mahomes threw for 324 yards and three touchdowns in just over three quarters, Travis Kelce caught two of the TD passes, and the Kansas City Chiefs whipped the Arizona Cardinals 34-7 on Sunday to take some momentu",
    "published": "2026-11-22T16:06-05:00",
@@ -3111,6 +3109,21 @@
    "sn_team_count": 2,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/report-ravens-tried-to-trade-for-qb-daniel-jones-before-deadline/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Raptors’ Rajakovic ‘very confident’ Murray-Boyles will return vs. Bucks",
+   "summary": "Head coach Darko Rajakovic told reporters on Sunday that he’s “very confident” forward Collin Murray-Boyles will play Monday against the Bucks (Sportsnet ONE and Sportsnet+, 7:30 p.m. ET / 5:30 p.m. PCT).",
+   "published": "2026-11-22T14:44-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/cmb-1.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/raptors-rajakovic-very-confident-murray-boyles-will-return-vs-bucks/",
    "source": "Sportsnet"
   },
   {
@@ -4157,7 +4170,7 @@
       "l": 11,
       "otl": 5,
       "pts": 19,
-      "gf": 72,
+      "gf": 73,
       "ga": 92,
       "strk": "L1"
      },
@@ -4288,7 +4301,7 @@
       "otl": 1,
       "pts": 29,
       "gf": 83,
-      "ga": 59,
+      "ga": 60,
       "strk": "L1"
      },
      {
@@ -4419,7 +4432,7 @@
       "l": 7,
       "otl": 4,
       "pts": 36,
-      "gf": 115,
+      "gf": 116,
       "ga": 86,
       "strk": "W2"
      },
@@ -4528,7 +4541,7 @@
       "otl": 3,
       "pts": 9,
       "gf": 59,
-      "ga": 165,
+      "ga": 166,
       "strk": "L14"
      }
     ]
@@ -4635,14 +4648,14 @@
      {
       "name": "Georgetown Raiders",
       "abbr": "GEO",
-      "gp": 27,
+      "gp": 28,
       "w": 8,
-      "l": 17,
+      "l": 18,
       "otl": 2,
       "pts": 18,
       "gf": 85,
       "ga": 140,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Niagara Falls Canucks",
@@ -4671,14 +4684,14 @@
      {
       "name": "Buffalo Jr. Sabres",
       "abbr": "BUF",
-      "gp": 27,
-      "w": 6,
+      "gp": 28,
+      "w": 7,
       "l": 20,
       "otl": 1,
-      "pts": 13,
+      "pts": 15,
       "gf": 72,
       "ga": 107,
-      "strk": "L8"
+      "strk": "W1"
      }
     ]
    }
@@ -4695,7 +4708,7 @@
       "l": 3,
       "otl": 0,
       "pts": 34,
-      "gf": 117,
+      "gf": 118,
       "ga": 50,
       "strk": "L2"
      },
@@ -4756,7 +4769,7 @@
       "otl": 1,
       "pts": 25,
       "gf": 100,
-      "ga": 95,
+      "ga": 96,
       "strk": "W2"
      },
      {
@@ -4892,7 +4905,7 @@
       "l": 5,
       "otl": 3,
       "pts": 27,
-      "gf": 74,
+      "gf": 75,
       "ga": 51,
       "strk": "W1"
      },
@@ -4977,7 +4990,7 @@
       "otl": 0,
       "pts": 6,
       "gf": 48,
-      "ga": 131,
+      "ga": 132,
       "strk": "L4"
      }
     ]
