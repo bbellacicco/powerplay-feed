@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T09:31:44-05:00",
+ "updated": "2026-11-23T10:01:52-05:00",
  "today": "2026-11-23",
  "range": [
   "2026-11-20",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 32
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -1940,21 +1940,6 @@
    "league": "pwhl",
    "start": "2026-12-05T19:00:00-05:00",
    "status": "upcoming",
-   "home": "Montréal Victoire",
-   "away": "Hamilton Havoc",
-   "home_abbr": "MTL",
-   "away_abbr": "HAM",
-   "our_score": null,
-   "opp_score": null,
-   "location": "Place Bell | Laval",
-   "note": "",
-   "time_tbd": false,
-   "link": "https://www.thepwhl.com/en/stats/game-center/366"
-  },
-  {
-   "league": "pwhl",
-   "start": "2026-12-05T19:00:00-05:00",
-   "status": "upcoming",
    "home": "San Jose Sea Lions",
    "away": "Minnesota Frost",
    "home_abbr": "SJ",
@@ -1965,6 +1950,21 @@
    "note": "",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/367"
+  },
+  {
+   "league": "pwhl",
+   "start": "2026-12-05T19:00:00-05:00",
+   "status": "upcoming",
+   "home": "Montréal Victoire",
+   "away": "Hamilton Havoc",
+   "home_abbr": "MTL",
+   "away_abbr": "HAM",
+   "our_score": null,
+   "opp_score": null,
+   "location": "Place Bell | Laval",
+   "note": "",
+   "time_tbd": false,
+   "link": "https://www.thepwhl.com/en/stats/game-center/366"
   },
   {
    "league": "pwhl",
@@ -2966,6 +2966,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "cfl",
+   "headline": "Blue Bombers sign linebacker Jacob Roberts to one-year contract",
+   "summary": "",
+   "published": "2026-11-23T09:46-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/roberts_jacob1280.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/cfl/article/blue-bombers-sign-linebacker-jacob-roberts-to-one-year-contract/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "Arsenal’s Arteta provides ‘encouraging’ injury update on David Raya",
    "summary": "David Raya’s shoulder injury isn’t as serious as initially feared, Arsenal manager Mikel Arteta said Monday, but the Spain goalkeeper still requires further tests to discover the exact nature of the problem.",
@@ -2976,6 +2989,19 @@
    "sn_team_count": 0,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/premier-league/article/arsenals-arteta-provides-encouraging-injury-update-on-david-raya/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Real Madrid striker Endrick sidelined with muscle injury",
+   "summary": "Real Madrid striker Endrick is not expected to be in the squad for the Champions League match against PSV Eindhoven on Tuesday because of a muscle injury.",
+   "published": "2026-11-23T09:40-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/endric.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/la-liga/article/real-madrid-striker-endrick-sidelined-with-muscle-injury/",
    "source": "Sportsnet"
   },
   {
