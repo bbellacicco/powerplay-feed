@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-22T23:51:17-05:00",
- "today": "2026-11-22",
+ "updated": "2026-11-23T00:07:00-05:00",
+ "today": "2026-11-23",
  "range": [
-  "2026-11-19",
-  "2026-11-25"
+  "2026-11-20",
+  "2026-11-26"
  ],
  "teams": {
   "spitfires": {
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -111,100 +111,6 @@
   }
  },
  "games": [
-  {
-   "id": "junior-gojhl15702",
-   "team": "junior",
-   "sport": "GOHL (Jr. B)",
-   "start": "2026-11-19T19:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "London Nationals",
-   "location": "Chatham Memorial Arena, Chatham, ON",
-   "status": "final",
-   "our_score": 7,
-   "opp_score": 3,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.gohl.ca/stats/game-center/15702"
-   },
-   "club": "Chatham Maroons"
-  },
-  {
-   "id": "spitfires-ohl29213",
-   "team": "spitfires",
-   "sport": "Hockey",
-   "start": "2026-11-19T19:05:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Soo Greyhounds",
-   "location": "WFCU Centre, Windsor",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 0,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29213/"
-   }
-  },
-  {
-   "id": "junior-ojhl16692",
-   "team": "junior",
-   "sport": "OJHL (Jr. A)",
-   "start": "2026-11-19T19:10:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Toronto Patriots",
-   "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
-   "status": "final",
-   "our_score": 4,
-   "opp_score": 1,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.ojhl.ca/stats/game-center/16692"
-   },
-   "club": "Leamington Flyers"
-  },
-  {
-   "id": "junior-gs2960653",
-   "team": "junior",
-   "sport": "PJHL (Jr. C)",
-   "start": "2026-11-19T19:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Blenheim Blades",
-   "location": "Harrow Arena",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 5,
-   "result": "L",
-   "note": "",
-   "links": {
-    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960653?configuration=45"
-   },
-   "club": "Amherstburg Admirals"
-  },
-  {
-   "id": "lancers-6349",
-   "team": "lancers",
-   "sport": "Men's Hockey",
-   "start": "2026-11-19T19:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Western Mustangs",
-   "location": "Adie Knox Arena",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 1,
-   "result": "W",
-   "note": "",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6349",
-    "recap": "https://golancers.ca/news/2026/11/20/mens-hockey-lancers-power-past-mustangs-for-fourth-consecutive-victory.aspx"
-   }
-  },
   {
    "id": "lancers-6474",
    "team": "lancers",
@@ -715,9 +621,7 @@
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960712?configuration=45"
    },
    "club": "Wheatley Sharks"
-  }
- ],
- "ahead": [
+  },
   {
    "id": "junior-ojhl16715",
    "team": "junior",
@@ -755,7 +659,9 @@
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960720?configuration=45"
    },
    "club": "Wheatley Sharks"
-  },
+  }
+ ],
+ "ahead": [
   {
    "id": "lancers-6250",
    "team": "lancers",
@@ -1420,6 +1326,100 @@
  ],
  "last": [
   {
+   "id": "lancers-6349",
+   "team": "lancers",
+   "sport": "Men's Hockey",
+   "start": "2026-11-19T19:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Western Mustangs",
+   "location": "Adie Knox Arena",
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 1,
+   "result": "W",
+   "note": "",
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6349",
+    "recap": "https://golancers.ca/news/2026/11/20/mens-hockey-lancers-power-past-mustangs-for-fourth-consecutive-victory.aspx"
+   }
+  },
+  {
+   "id": "junior-gs2960653",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-11-19T19:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Blenheim Blades",
+   "location": "Harrow Arena",
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 5,
+   "result": "L",
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960653?configuration=45"
+   },
+   "club": "Amherstburg Admirals"
+  },
+  {
+   "id": "junior-ojhl16692",
+   "team": "junior",
+   "sport": "OJHL (Jr. A)",
+   "start": "2026-11-19T19:10:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Toronto Patriots",
+   "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
+   "status": "final",
+   "our_score": 4,
+   "opp_score": 1,
+   "result": "W",
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.ojhl.ca/stats/game-center/16692"
+   },
+   "club": "Leamington Flyers"
+  },
+  {
+   "id": "spitfires-ohl29213",
+   "team": "spitfires",
+   "sport": "Hockey",
+   "start": "2026-11-19T19:05:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Soo Greyhounds",
+   "location": "WFCU Centre, Windsor",
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 0,
+   "result": "W",
+   "note": "",
+   "links": {
+    "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29213/"
+   }
+  },
+  {
+   "id": "junior-gojhl15702",
+   "team": "junior",
+   "sport": "GOHL (Jr. B)",
+   "start": "2026-11-19T19:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "London Nationals",
+   "location": "Chatham Memorial Arena, Chatham, ON",
+   "status": "final",
+   "our_score": 7,
+   "opp_score": 3,
+   "result": "W",
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.gohl.ca/stats/game-center/15702"
+   },
+   "club": "Chatham Maroons"
+  },
+  {
    "id": "junior-gs2960651",
    "team": "junior",
    "sport": "PJHL (Jr. C)",
@@ -1437,43 +1437,6 @@
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960651?configuration=45"
    },
    "club": "Essex 73's"
-  },
-  {
-   "id": "junior-gojhl15693",
-   "team": "junior",
-   "sport": "GOHL (Jr. B)",
-   "start": "2026-11-15T19:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Waterloo Siskins",
-   "location": "Chatham Memorial Arena, Chatham, ON",
-   "status": "final",
-   "our_score": 4,
-   "opp_score": 3,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.gohl.ca/stats/game-center/15693"
-   },
-   "club": "Chatham Maroons"
-  },
-  {
-   "id": "spitfires-ohl29206",
-   "team": "spitfires",
-   "sport": "Hockey",
-   "start": "2026-11-15T16:05:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Saginaw Spirit",
-   "location": "WFCU Centre, Windsor",
-   "status": "final",
-   "our_score": 2,
-   "opp_score": 1,
-   "result": "W",
-   "note": "OT",
-   "links": {
-    "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29206/"
-   }
   },
   {
    "id": "lancers-6503",
@@ -1511,25 +1474,6 @@
     "gamecentre": "https://www.gohl.ca/stats/game-center/15692"
    },
    "club": "LaSalle Vipers"
-  },
-  {
-   "id": "junior-gs2960621",
-   "team": "junior",
-   "sport": "PJHL (Jr. C)",
-   "start": "2026-11-14T19:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Lakeshore Canadiens",
-   "location": "Libro Centre",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 6,
-   "result": "L",
-   "note": "",
-   "links": {
-    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960621?configuration=45"
-   },
-   "club": "Amherstburg Admirals"
   },
   {
    "id": "lancers-6228",
@@ -1642,44 +1586,6 @@
    "links": {
     "recap": "https://golancers.ca/news/2026/11/15/cross-country-quanz-alkerton-named-u-sports-all-canadians.aspx"
    }
-  },
-  {
-   "id": "lancers-6348",
-   "team": "lancers",
-   "sport": "Men's Hockey",
-   "start": "2026-11-13T19:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Laurier Golden Hawks",
-   "location": "Waterloo, ON",
-   "status": "final",
-   "our_score": 4,
-   "opp_score": 3,
-   "result": "W",
-   "note": "SO",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6348",
-    "recap": "https://golancers.ca/news/2026/11/14/mens-hockey-earns-two-points-in-shootout-win-over-laurier.aspx"
-   }
-  },
-  {
-   "id": "junior-ojhl16673",
-   "team": "junior",
-   "sport": "OJHL (Jr. A)",
-   "start": "2026-11-13T19:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Collingwood Blues",
-   "location": "Eddie Bush Memorial Arena, Collingwood, Ontario",
-   "status": "final",
-   "our_score": 5,
-   "opp_score": 3,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.ojhl.ca/stats/game-center/16673"
-   },
-   "club": "Leamington Flyers"
   },
   {
    "id": "junior-gs2960590",
@@ -1841,10 +1747,10 @@
    "away": "Minnesota Frost",
    "home_abbr": "VGS",
    "away_abbr": "MIN",
-   "our_score": 1,
+   "our_score": 2,
    "opp_score": 1,
    "location": "America First Center | Henderson",
-   "note": "15:00 3rd",
+   "note": "07:35 3rd",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/353"
   },
@@ -3100,6 +3006,32 @@
   },
   {
    "league": "nhl",
+   "headline": "Bussi makes 25 saves to help Hurricanes down Rangers",
+   "summary": "Jackson Blake put Carolina ahead and Brandon Bussi made 25 saves and the Carolina Hurricanes defeated the New York Rangers 5-2 on Sunday.",
+   "published": "2026-11-22T15:53-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design.png",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/bussi-makes-25-saves-to-help-hurricanes-down-rangers/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Blackhawks’ Kaiser suspended three games for hit on Flames’ Pospisil",
+   "summary": "The Chicago Blackhawks defenceman has been suspended three games for an illegal check to the head of Calgary Flames forward Martin Pospisil, the NHL’s department of player safety announced Sunday after a hearing for the ",
+   "published": "2026-11-22T13:57-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/kaiser.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/blackhawks-kaiser-suspended-three-games-for-hit-on-flames-pospisil/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Maple Leafs recall centre Raty from Marlies, Roslovic day-to-day",
    "summary": "Centre Aatu Raty was recalled from the Toronto Marlies ahead of practice Sunday, the team announced. The Leafs later announced that forward Jack Roslovic was being listed as day-to-day with an upper-body injury.",
    "published": "2026-11-22T11:19-05:00",
@@ -3124,19 +3056,6 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/panthers-place-reinhardt-on-waivers-with-barkov-nearing-return/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Bussi makes 25 saves to help Hurricanes down Rangers",
-   "summary": "Jackson Blake put Carolina ahead and Brandon Bussi made 25 saves and the Carolina Hurricanes defeated the New York Rangers 5-2 on Sunday.",
-   "published": "2026-11-22T15:53-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design.png",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/bussi-makes-25-saves-to-help-hurricanes-down-rangers/",
    "source": "Sportsnet"
   },
   {
@@ -3169,8 +3088,8 @@
   },
   {
    "league": "nba",
-   "headline": "Cooper Flagg saves Mavericks with late free throws to hold off Jazz comeback",
-   "summary": "",
+   "headline": "NBA Roundup: Flagg’s clutch free throws lift Mavs over Jazz",
+   "summary": "Cooper Flagg scored 28 points and made the game-winning free throws with 3.7 seconds left to lift Dallas over Utah after they squandered an 18-point lead in the fourth quarter.",
    "published": "2026-11-22T22:08-05:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Cooper-Flagg.jpg",
    "video": false,
@@ -5020,7 +4939,7 @@
       "l": 0,
       "otl": 0,
       "pts": 0,
-      "gf": 1,
+      "gf": 2,
       "ga": 1,
       "strk": ""
      },
@@ -5129,7 +5048,7 @@
       "otl": 0,
       "pts": 0,
       "gf": 1,
-      "ga": 1,
+      "ga": 2,
       "strk": ""
      },
      {
