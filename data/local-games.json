@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T20:47:34-05:00",
+ "updated": "2026-11-22T21:01:51-05:00",
  "today": "2026-11-22",
  "range": [
   "2026-11-19",
@@ -610,11 +610,11 @@
    "home_away": "A",
    "opponent": "Blenheim Blades",
    "location": "Blenheim Memorial Arena",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "In progress",
+   "status": "final",
+   "our_score": 4,
+   "opp_score": 2,
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960705?configuration=45"
    },
@@ -629,11 +629,11 @@
    "home_away": "A",
    "opponent": "St. Thomas Stars",
    "location": "Joe Thornton C.C., St. Thomas, ON",
-   "status": "live",
-   "our_score": 4,
-   "opp_score": 3,
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
    "result": null,
-   "note": "06:32 2nd",
+   "note": "",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15722"
    },
@@ -2840,6 +2840,21 @@
  ],
  "more_news": [
   {
+   "league": "nhl",
+   "headline": "Canadiens acquire Dylan Larkin from Red Wings",
+   "summary": "",
+   "published": "2026-11-22T20:51-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/CP177065117.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Red Wings"
+   ],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canadiens-acquire-dylan-larkin-from-red-wings/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "mlb",
    "headline": "Report: Tarik Skubal agrees to record nine-year, $450M deal with Mets",
    "summary": "",
@@ -2975,19 +2990,6 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/why-raptors-need-to-build-on-skid-busting-win-over-pistons/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Takeaways: Jacobs makes most of gift from ‘curling gods’ to claim GSOC National title",
-   "summary": "It was about time for Team Brad Jacobs, in multiple ways. Justin Arenburg has the takeaways from the Alberta-based squad’s first Slam title together.",
-   "published": "2026-11-22T16:35-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Brad-Jacobs.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Curling",
-   "url": "https://www.sportsnet.ca/curling/article/canadas-team-brad-jacobs-defeats-team-schwaller-for-first-gsoc-title-since-2020/",
    "source": "Sportsnet"
   },
   {
@@ -4180,14 +4182,14 @@
      {
       "name": "Oshawa Generals",
       "abbr": "OSH",
-      "gp": 23,
-      "w": 7,
+      "gp": 24,
+      "w": 8,
       "l": 11,
       "otl": 5,
-      "pts": 19,
+      "pts": 21,
       "gf": 74,
       "ga": 92,
-      "strk": "L1"
+      "strk": "W1"
      },
      {
       "name": "Gatineau Olympiques",
@@ -4310,14 +4312,14 @@
      {
       "name": "Flint Firebirds",
       "abbr": "FLNT",
-      "gp": 21,
+      "gp": 22,
       "w": 14,
-      "l": 6,
+      "l": 7,
       "otl": 1,
       "pts": 29,
       "gf": 83,
       "ga": 61,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Sarnia Sting",
@@ -4447,7 +4449,7 @@
       "l": 7,
       "otl": 4,
       "pts": 36,
-      "gf": 117,
+      "gf": 118,
       "ga": 86,
       "strk": "W2"
      },
@@ -4556,7 +4558,7 @@
       "otl": 3,
       "pts": 9,
       "gf": 59,
-      "ga": 167,
+      "ga": 168,
       "strk": "L14"
      }
     ]
@@ -4724,7 +4726,7 @@
       "otl": 0,
       "pts": 34,
       "gf": 119,
-      "ga": 50,
+      "ga": 51,
       "strk": "L2"
      },
      {
@@ -4736,7 +4738,7 @@
       "otl": 2,
       "pts": 34,
       "gf": 88,
-      "ga": 51,
+      "ga": 52,
       "strk": "W7"
      },
      {
@@ -4747,7 +4749,7 @@
       "l": 5,
       "otl": 0,
       "pts": 32,
-      "gf": 104,
+      "gf": 105,
       "ga": 62,
       "strk": "W5"
      },
@@ -4783,7 +4785,7 @@
       "l": 11,
       "otl": 1,
       "pts": 25,
-      "gf": 100,
+      "gf": 101,
       "ga": 97,
       "strk": "W2"
      },
@@ -4920,7 +4922,7 @@
       "l": 5,
       "otl": 3,
       "pts": 27,
-      "gf": 76,
+      "gf": 77,
       "ga": 52,
       "strk": "W1"
      },
@@ -5005,7 +5007,7 @@
       "otl": 0,
       "pts": 6,
       "gf": 49,
-      "ga": 133,
+      "ga": 134,
       "strk": "L4"
      }
     ]
@@ -5169,14 +5171,14 @@
      {
       "name": "Essex 73's",
       "abbr": "ESS",
-      "gp": 21,
-      "w": 19,
+      "gp": 22,
+      "w": 20,
       "l": 1,
       "otl": 1,
-      "pts": 39,
-      "gf": 85,
-      "ga": 26,
-      "strk": "L1"
+      "pts": 41,
+      "gf": 89,
+      "ga": 28,
+      "strk": "W1"
      },
      {
       "name": "Lakeshore Canadiens",
@@ -5193,14 +5195,14 @@
      {
       "name": "Blenheim Blades",
       "abbr": "BLE",
-      "gp": 20,
+      "gp": 21,
       "w": 12,
-      "l": 8,
+      "l": 9,
       "otl": 0,
       "pts": 24,
-      "gf": 80,
-      "ga": 64,
-      "strk": "W3"
+      "gf": 82,
+      "ga": 68,
+      "strk": "L1"
      },
      {
       "name": "Dresden Kings",
