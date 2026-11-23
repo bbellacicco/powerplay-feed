@@ -255,6 +255,9 @@
   .ath img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
 
   /* video player (Network row) and full-screen profile viewer */
+  /* a close button that's always on screen, in the top corner over the video or slideshow (the one under it can end up below the fold on a phone) */
+  .vplayer .vx { position: absolute; top: 8px; right: 8px; z-index: 5; width: 40px; height: 40px; border-radius: 50%; border: 2px solid #fff; background: rgba(11,26,51,.85); color: #fff; font: 800 18px/1 system-ui, sans-serif; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,.5); }
+  .vplayer .vx:hover { background: var(--accent); color: #0b1a33; border-color: var(--accent); }
   .vplayer { position: absolute; left: 40px; right: 40px; z-index: 8; background: #000; border-radius: 10px; overflow: hidden; box-shadow: 0 14px 44px rgba(0,0,0,.65); display: none; }
   .vplayer.on { display: block; }
   .vplayer .fr { position: relative; aspect-ratio: 16 / 9; max-height: 70vh; margin: 0 auto; }
@@ -434,6 +437,7 @@ document.addEventListener('load', function (e) {
   </section>
 
   <div class="vplayer" id="vplayer" role="dialog" aria-label="Video player">
+    <button type="button" class="vx" id="vx" aria-label="Close">&#10005;</button>
     <div class="fr" id="vframe"></div>
     <div class="cap"><div class="t" id="vtitle"></div><span id="vshare"></span><a class="ghost" id="vext" target="_blank" rel="noopener" href="#">Open full page &#8599;</a><button class="ghost" type="button" id="vclose">&#10005; Close</button></div>
     <div class="desc" id="vdesc" hidden><div class="txt" id="vdtxt"></div><button type="button" class="more" id="vdmore">Show more</button></div>
@@ -977,6 +981,8 @@ document.addEventListener('load', function (e) {
   }
   function closePlayer() { vp.classList.remove('on'); document.documentElement.classList.remove('vpopen'); var fr = document.getElementById('vframe'); fr.innerHTML = ''; fr.classList.remove('gal'); fr.classList.remove('pic'); }
   document.getElementById('vclose').onclick = closePlayer;
+  document.getElementById('vx').onclick = closePlayer;
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && document.documentElement.classList.contains('vpopen')) closePlayer(); });
   // a tap on the blurred page closes it
   document.getElementById('page').addEventListener('click', function (e) {
     if (!document.documentElement.classList.contains('vpopen') || vp.contains(e.target)) return;
