@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22T18:51:24-05:00",
+ "updated": "2026-11-22T19:01:54-05:00",
  "today": "2026-11-22",
  "range": [
   "2026-11-19",
@@ -629,11 +629,11 @@
    "home_away": "A",
    "opponent": "St. Thomas Stars",
    "location": "Joe Thornton C.C., St. Thomas, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
-   "note": "",
+   "note": "20:00 1st",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15722"
    },
@@ -3470,6 +3470,19 @@
   },
   {
    "league": "nfl",
+   "headline": "Top 3 things we learned from Bills vs. Dolphins | Week 11",
+   "summary": "Playing from in front, Shakir & Moore's big day and Tommy Doman on his fake punt pass",
+   "published": "2026-11-22T18:52-05:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/bills/aisrtbx3cmkx8dnnsrjz.jpg",
+   "video": false,
+   "teams": [
+    "Buffalo Bills"
+   ],
+   "url": "https://www.buffalobills.com/news/top-3-things-we-learned-from-bills-vs-dolphins-x6397",
+   "source": "Team site"
+  },
+  {
+   "league": "nfl",
    "headline": "Bills 26, Dolphins 9 | Final Score, recap + highlights",
    "summary": "James Cook III and Josh Allen are the first pair of teammates in NFL history with at least 10 rushing touchdowns in three consecutive seasons",
    "published": "2026-11-22T16:26-05:00",
@@ -3583,19 +3596,6 @@
     "Buffalo Bills"
    ],
    "url": "https://www.buffalobills.com/news/bills-activate-wr-tyrell-shavers-to-53-man-roster",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
-   "headline": "The Bills host local 2026 Thanksgiving events to give back to the community",
-   "summary": "Rookies and veterans all head out into Western New York to help families in need",
-   "published": "2026-11-18T15:07-05:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/bills/e6uqw094hcuunqg9c8nu.jpg",
-   "video": false,
-   "teams": [
-    "Buffalo Bills"
-   ],
-   "url": "https://www.buffalobills.com/news/the-bills-host-local-2026-thanksgiving-events-to-give-back-to-the-community",
    "source": "Team site"
   },
   {
@@ -4146,7 +4146,7 @@
       "l": 11,
       "otl": 0,
       "pts": 26,
-      "gf": 89,
+      "gf": 90,
       "ga": 79,
       "strk": "L1"
      },
@@ -4378,7 +4378,7 @@
       "otl": 3,
       "pts": 27,
       "gf": 88,
-      "ga": 83,
+      "ga": 84,
       "strk": "L1"
      },
      {
