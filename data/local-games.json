@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T16:46:47-05:00",
+ "updated": "2026-11-23T17:01:43-05:00",
  "today": "2026-11-23",
  "range": [
   "2026-11-20",
@@ -1765,7 +1765,7 @@
    "our_score": 1,
    "opp_score": 0,
    "location": "America First Center | Henderson",
-   "note": "00:04 1st",
+   "note": "18:48 2nd",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/354"
   },
@@ -1810,7 +1810,7 @@
    "our_score": 1,
    "opp_score": 2,
    "location": "Morgan Firestone Arena | Ancaster",
-   "note": "OT",
+   "note": "",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/360"
   },
@@ -2040,6 +2040,19 @@
   },
   {
    "league": "cfl",
+   "headline": "Argonauts sign Rayam, Davis and McKellar",
+   "summary": "",
+   "published": "2026-11-23T00:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/6pDSEcaEubYk4kBIs2z70q/1627557fb569875c22cde0c17c53614b/Solomon_Davis_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Argonauts"
+   ],
+   "url": "https://www.cfl.ca/article/argonauts-sign-rayam-davis-and-mckellar",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Blue Bombers sign American linebacker Jacob Roberts",
    "summary": "",
    "published": "2026-11-23T00:00:00-05:00",
@@ -2049,6 +2062,19 @@
     "Blue Bombers"
    ],
    "url": "https://www.cfl.ca/article/blue-bombers-sign-american-linebacker-jacob-roberts",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Stampeders extend Nationals Sibley, Schechinger, and Warrack",
+   "summary": "",
+   "published": "2026-11-23T00:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/2ggh7bryHeDpvCck07YOJE/cc397834f766766f42a08b912feb26c6/Generic_Stampeders_Helmet_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Stampeders"
+   ],
+   "url": "https://www.cfl.ca/article/stampeders-extend-nationals-sibley-schechinger-and-warrack",
    "source": "CFL.ca"
   },
   {
@@ -2165,32 +2191,6 @@
     "Blue Bombers"
    ],
    "url": "https://www.cfl.ca/article/blue-bombers-sign-eight-americans",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Tiger-Cats sign offensive linemen Bakyne Coly and Jimto Obidegwu",
-   "summary": "",
-   "published": "2026-11-19T00:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/4rOxNlENTgJ9xIRPQd5BFv/bd928191b5fad6ab09fa944a7859605e/Bakyne_Coly_2026.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Tiger-Cats"
-   ],
-   "url": "https://www.cfl.ca/article/tiger-cats-sign-offensive-linemen-bakyne-coly-and-jimto-obidegwu",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Tiger-Cats extend offensive players Harris, Taylor and Biggins",
-   "summary": "",
-   "published": "2026-11-19T00:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/5Ka1LzTJhYmqziPt0ZtJfN/42bc250c4c7478c27f5d0373c0c692e5/Ticats_Helmet_2026.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Tiger-Cats"
-   ],
-   "url": "https://www.cfl.ca/article/tiger-cats-extend-offensive-players-harris-taylor-and-biggins",
    "source": "CFL.ca"
   },
   {
@@ -4880,6 +4880,18 @@
     "group": "PWHL",
     "teams": [
      {
+      "name": "Ottawa Charge",
+      "abbr": "OTT",
+      "gp": 1,
+      "w": 1,
+      "l": 0,
+      "otl": 0,
+      "pts": 3,
+      "gf": 2,
+      "ga": 1,
+      "strk": "1W"
+     },
+     {
       "name": "Minnesota Frost",
       "abbr": "MIN",
       "gp": 1,
@@ -4890,30 +4902,6 @@
       "gf": 2,
       "ga": 2,
       "strk": "1W"
-     },
-     {
-      "name": "Ottawa Charge",
-      "abbr": "OTT",
-      "gp": 1,
-      "w": 1,
-      "l": 0,
-      "otl": 0,
-      "pts": 2,
-      "gf": 2,
-      "ga": 1,
-      "strk": "1W"
-     },
-     {
-      "name": "Detroit Clutch",
-      "abbr": "DET",
-      "gp": 1,
-      "w": 0,
-      "l": 0,
-      "otl": 1,
-      "pts": 1,
-      "gf": 1,
-      "ga": 2,
-      "strk": "1L"
      },
      {
       "name": "Boston Fleet",
@@ -5010,6 +4998,18 @@
       "gf": 0,
       "ga": 0,
       "strk": ""
+     },
+     {
+      "name": "Detroit Clutch",
+      "abbr": "DET",
+      "gp": 1,
+      "w": 0,
+      "l": 1,
+      "otl": 0,
+      "pts": 0,
+      "gf": 1,
+      "ga": 2,
+      "strk": "1L"
      },
      {
       "name": "Vegas Vanguards",
