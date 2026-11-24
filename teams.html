@@ -787,7 +787,7 @@
         } else if (it.snap) {
           var sh = it.snap, sa = el('a', 'mcard'); sa.href = sh.url; sa.target = '_top';
           var sp = el('div', 'mpic'); if (sh.cover) { var sim = new Image(); sim.src = sh.cover; sim.alt = ''; sim.loading = 'lazy'; sp.appendChild(sim); } sa.appendChild(sp);
-          sa.appendChild(el('b', null, sh.title.replace(/^game day snaps:\s*/i, ''))); sa.appendChild(el('span', null, 'Game Day Snaps · ' + cpDay(new Date((sh.date || '') + 'T12:00:00')))); mg.appendChild(sa);
+          sa.appendChild(el('b', null, sh.title.replace(/^(game day|community) snaps:\s*/i, ''))); sa.appendChild(el('span', null, (/^community snaps/i.test(sh.title) ? 'Community Snaps' : 'Game Day Snaps') + ' · ' + cpDay(new Date((sh.date || '') + 'T12:00:00')))); mg.appendChild(sa);
         } else {
           var n = it.story, a = el('a', 'mcard'); a.href = n.url; a.target = /powerplaywindsor\.com/.test(n.url) ? '_top' : '_blank'; a.rel = 'noopener';
           var p2 = el('div', 'mpic'); var im2 = new Image(); im2.src = n.image; im2.alt = ''; im2.loading = 'lazy'; im2.referrerPolicy = 'no-referrer'; im2.onerror = function () { p2.classList.add('noimg'); im2.remove(); }; p2.appendChild(im2); a.appendChild(p2);
