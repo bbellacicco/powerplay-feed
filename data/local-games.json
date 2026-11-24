@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T18:46:48-05:00",
+ "updated": "2026-11-23T19:01:56-05:00",
  "today": "2026-11-23",
  "range": [
   "2026-11-20",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -1762,10 +1762,10 @@
    "away": "Toronto Sceptres",
    "home_abbr": "HAM",
    "away_abbr": "TOR",
-   "our_score": 2,
-   "opp_score": 3,
+   "our_score": 3,
+   "opp_score": 4,
    "location": "Morgan Firestone Arena | Ancaster",
-   "note": "07:52 2nd",
+   "note": "00:00 2nd",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/361"
   },
@@ -1777,27 +1777,12 @@
    "away": "New York Sirens",
    "home_abbr": "BOS",
    "away_abbr": "NY",
-   "our_score": 1,
+   "our_score": 2,
    "opp_score": 1,
    "location": "Boston Sports Institute | Wellesley",
-   "note": "00:00 1st",
+   "note": "18:17 2nd",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/356"
-  },
-  {
-   "league": "pwhl",
-   "start": "2026-11-23T16:00:00-05:00",
-   "status": "live",
-   "home": "Minnesota Frost",
-   "away": "Vancouver Goldeneyes",
-   "home_abbr": "MIN",
-   "away_abbr": "VAN",
-   "our_score": 4,
-   "opp_score": 1,
-   "location": "America First Center | Henderson",
-   "note": "Unofficial Final",
-   "time_tbd": false,
-   "link": "https://www.thepwhl.com/en/stats/game-center/354"
   },
   {
    "league": "pwhl",
@@ -1813,6 +1798,21 @@
    "note": "",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/360"
+  },
+  {
+   "league": "pwhl",
+   "start": "2026-11-23T16:00:00-05:00",
+   "status": "final",
+   "home": "Minnesota Frost",
+   "away": "Vancouver Goldeneyes",
+   "home_abbr": "MIN",
+   "away_abbr": "VAN",
+   "our_score": 4,
+   "opp_score": 1,
+   "location": "America First Center | Henderson",
+   "note": "",
+   "time_tbd": false,
+   "link": "https://www.thepwhl.com/en/stats/game-center/354"
   },
   {
    "league": "pwhl",
@@ -2744,19 +2744,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Uncovering three key concerns facing the Oilers",
-   "summary": "There are always concerns, and we’re here to sleuth them out.",
-   "published": "2026-11-23T14:57-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/hyman.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/uncovering-three-key-concerns-facing-the-oilers/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "‘This is where I want to be’: Aatu Raty excited for fresh start with Maple Leafs",
    "summary": "Aatu Raty is back where it all began: on Long Island with Jim Hiller coaching him. The difference being that he’ll be doing so in a Maple Leafs jersey for the first time. Luke Fox talks to the centreman ahead of his Leaf",
    "published": "2026-11-23T14:58-05:00",
@@ -2802,30 +2789,30 @@
   },
   {
    "league": "nhl",
-   "headline": "Red Wings steer toward brighter future with blockbuster Larkin deal",
-   "summary": "By making an important adjustment, the Red Wings have steered toward a brighter future. Ryan Dixon examines the Larkin deal from Detroit’s perspective and checks on other storylines from this past weekend in the NHL.",
-   "published": "2026-11-23T11:29-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/wings.jpg",
+   "headline": "Uncovering three key concerns facing the Oilers",
+   "summary": "There are always concerns, and we’re here to sleuth them out.",
+   "published": "2026-11-23T14:57-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/hyman.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/uncovering-three-key-concerns-facing-the-oilers/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Dylan Larkin’s agent breaks down trade between Canadiens, Red Wings",
+   "summary": "",
+   "published": "2026-11-23T18:51-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177321759.jpg",
    "video": false,
    "teams": [
     "Detroit Red Wings"
    ],
    "sn_team_count": 2,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/red-wings-steer-toward-brighter-future-with-blockbuster-larkin-deal/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Dylan Larkin to make Canadiens debut against Kings on Sportsnet+",
-   "summary": "",
-   "published": "2026-11-23T11:31-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/dylan-larkin.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/dylan-larkin-to-make-canadiens-debut-against-kings/",
+   "url": "https://www.sportsnet.ca/nhl/article/dylan-larkins-agent-breaks-down-trade-between-canadiens-red-wings/",
    "source": "Sportsnet"
   },
   {
@@ -2949,6 +2936,21 @@
    "sn_team_count": 0,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/mlb-rumour-roundup-free-agent-extravaganza-expected-after-skubal-signing/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Red Wings steer toward brighter future with blockbuster Larkin deal",
+   "summary": "By making an important adjustment, the Red Wings have steered toward a brighter future. Ryan Dixon examines the Larkin deal from Detroit’s perspective and checks on other storylines from this past weekend in the NHL.",
+   "published": "2026-11-23T11:29-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/wings.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Red Wings"
+   ],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/red-wings-steer-toward-brighter-future-with-blockbuster-larkin-deal/",
    "source": "Sportsnet"
   },
   {
@@ -3175,17 +3177,17 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Arsenal’s Arteta provides ‘encouraging’ injury update on David Raya",
-   "summary": "David Raya’s shoulder injury isn’t as serious as initially feared, Arsenal manager Mikel Arteta said Monday, but the Spain goalkeeper still requires further tests to discover the exact nature of the problem.",
-   "published": "2026-11-23T09:27-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/raya.jpg",
+   "league": "nfl",
+   "headline": "KEY QUESTIONS: How are Lions approaching quick turnaround to Thanksgiving game?",
+   "summary": "Tim Twentyman covers all the key questions from Detroit Lions head coach Dan Campbell's Monday press conference.",
+   "published": "2026-11-23T18:55-05:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/vikikt4sgzvirefjwjvy.jpg",
    "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/premier-league/article/arsenals-arteta-provides-encouraging-injury-update-on-david-raya/",
-   "source": "Sportsnet"
+   "teams": [
+    "Detroit Lions"
+   ],
+   "url": "https://www.detroitlions.com/news/key-questions-detroit-lions-quick-turnaround-thanksgiving-day-game",
+   "source": "Team site"
   },
   {
    "league": "nfl",
@@ -3367,19 +3369,6 @@
     "Detroit Lions"
    ],
    "url": "https://www.detroitlions.com/news/reed-taking-mindful-approach-as-he-works-toward-return",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
-   "headline": "Lions vs. Buccaneers Week 11 preview | The Official Detroit Lions Podcast",
-   "summary": "Tim Twentyman and Brooke Kirchhofer discuss Detroit’s 'next man up' mentality, talk to Tampa Bay senior writer and editor Scott Smith about Sunday’s Buccaneers-Lions matchup and sit down with running back Jahmyr Gibbs.",
-   "published": "2026-11-20T07:00-05:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/idywsscuxrqk9tycomnw.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Lions"
-   ],
-   "url": "https://www.detroitlions.com/news/lions-vs-buccaneers-week-11-preview-the-official-detroit-lions-podcast-gibbs",
    "source": "Team site"
   },
   {
@@ -4891,6 +4880,18 @@
     "group": "PWHL",
     "teams": [
      {
+      "name": "Vancouver Goldeneyes",
+      "abbr": "VAN",
+      "gp": 1,
+      "w": 1,
+      "l": 0,
+      "otl": 0,
+      "pts": 3,
+      "gf": 4,
+      "ga": 1,
+      "strk": "1W"
+     },
+     {
       "name": "Ottawa Charge",
       "abbr": "OTT",
       "gp": 1,
@@ -4905,14 +4906,14 @@
      {
       "name": "Minnesota Frost",
       "abbr": "MIN",
-      "gp": 1,
+      "gp": 2,
       "w": 1,
-      "l": 0,
+      "l": 1,
       "otl": 0,
       "pts": 3,
       "gf": 3,
       "ga": 5,
-      "strk": "1W"
+      "strk": "1L"
      },
      {
       "name": "Boston Fleet",
@@ -4923,7 +4924,7 @@
       "otl": 0,
       "pts": 0,
       "gf": 1,
-      "ga": 1,
+      "ga": 2,
       "strk": ""
      },
      {
@@ -4946,7 +4947,7 @@
       "l": 0,
       "otl": 0,
       "pts": 0,
-      "gf": 1,
+      "gf": 2,
       "ga": 1,
       "strk": ""
      },
@@ -4958,8 +4959,8 @@
       "l": 0,
       "otl": 0,
       "pts": 0,
-      "gf": 2,
-      "ga": 3,
+      "gf": 3,
+      "ga": 4,
       "strk": ""
      },
      {
@@ -4975,18 +4976,6 @@
       "strk": ""
      },
      {
-      "name": "Vancouver Goldeneyes",
-      "abbr": "VAN",
-      "gp": 0,
-      "w": 0,
-      "l": 0,
-      "otl": 0,
-      "pts": 0,
-      "gf": 4,
-      "ga": 1,
-      "strk": ""
-     },
-     {
       "name": "Hamilton Havoc",
       "abbr": "HAM",
       "gp": 0,
@@ -4994,8 +4983,8 @@
       "l": 0,
       "otl": 0,
       "pts": 0,
-      "gf": 3,
-      "ga": 2,
+      "gf": 4,
+      "ga": 3,
       "strk": ""
      },
      {
