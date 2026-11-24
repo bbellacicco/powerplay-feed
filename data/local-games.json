@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T20:46:44-05:00",
+ "updated": "2026-11-23T21:06:17-05:00",
  "today": "2026-11-23",
  "range": [
   "2026-11-20",
@@ -1756,21 +1756,6 @@
   },
   {
    "league": "pwhl",
-   "start": "2026-11-23T18:00:00-05:00",
-   "status": "live",
-   "home": "Boston Fleet",
-   "away": "New York Sirens",
-   "home_abbr": "BOS",
-   "away_abbr": "NY",
-   "our_score": 5,
-   "opp_score": 3,
-   "location": "Boston Sports Institute | Wellesley",
-   "note": "Unofficial Final",
-   "time_tbd": false,
-   "link": "https://www.thepwhl.com/en/stats/game-center/356"
-  },
-  {
-   "league": "pwhl",
    "start": "2026-11-23T13:30:00-05:00",
    "status": "final",
    "home": "Ottawa Charge",
@@ -1813,6 +1798,21 @@
    "note": "",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/361"
+  },
+  {
+   "league": "pwhl",
+   "start": "2026-11-23T18:00:00-05:00",
+   "status": "final",
+   "home": "Boston Fleet",
+   "away": "New York Sirens",
+   "home_abbr": "BOS",
+   "away_abbr": "NY",
+   "our_score": 5,
+   "opp_score": 3,
+   "location": "Boston Sports Institute | Wellesley",
+   "note": "",
+   "time_tbd": false,
+   "link": "https://www.thepwhl.com/en/stats/game-center/356"
   },
   {
    "league": "pwhl",
@@ -4825,6 +4825,18 @@
       "strk": "1W"
      },
      {
+      "name": "New York Sirens",
+      "abbr": "NY",
+      "gp": 1,
+      "w": 1,
+      "l": 0,
+      "otl": 0,
+      "pts": 3,
+      "gf": 5,
+      "ga": 3,
+      "strk": "1W"
+     },
+     {
       "name": "Hamilton Havoc",
       "abbr": "HAM",
       "gp": 1,
@@ -4861,18 +4873,6 @@
       "strk": "1L"
      },
      {
-      "name": "Boston Fleet",
-      "abbr": "BOS",
-      "gp": 0,
-      "w": 0,
-      "l": 0,
-      "otl": 0,
-      "pts": 0,
-      "gf": 3,
-      "ga": 5,
-      "strk": ""
-     },
-     {
       "name": "Montréal Victoire",
       "abbr": "MTL",
       "gp": 0,
@@ -4882,18 +4882,6 @@
       "pts": 0,
       "gf": 0,
       "ga": 0,
-      "strk": ""
-     },
-     {
-      "name": "New York Sirens",
-      "abbr": "NY",
-      "gp": 0,
-      "w": 0,
-      "l": 0,
-      "otl": 0,
-      "pts": 0,
-      "gf": 5,
-      "ga": 3,
       "strk": ""
      },
      {
@@ -4942,6 +4930,18 @@
       "pts": 0,
       "gf": 1,
       "ga": 2,
+      "strk": "1L"
+     },
+     {
+      "name": "Boston Fleet",
+      "abbr": "BOS",
+      "gp": 1,
+      "w": 0,
+      "l": 1,
+      "otl": 0,
+      "pts": 0,
+      "gf": 3,
+      "ga": 5,
       "strk": "1L"
      },
      {
