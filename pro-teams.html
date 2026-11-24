@@ -66,6 +66,9 @@
   .ttabs button { border: 0; background: transparent; color: #cfd8ea; font: inherit; font-size: 12.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; padding: 7px 11px; cursor: pointer; }
   .ttabs button + button { border-left: 1px solid rgba(255,255,255,.18); }
   .ttabs button.on { background: var(--accent); color: #0b1a33; }
+  .lgtabs .ttabs { margin-bottom: 12px; width: max-content; max-width: 100%; }
+  .lgtabs .ttabs button { padding: 9px 22px; font-size: 13px; }
+  .lgtabs .lgpane[hidden] { display: none; }
   .tpanes { margin-top: 14px; } .tpane[hidden] { display: none; }
   .grid2 { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 14px; }
   .next { background: linear-gradient(100deg, #17336a, #10244a); border-color: rgba(232,176,33,.45); }
@@ -494,6 +497,8 @@
       tb.appendChild(tl); d.appendChild(tb);
     }
     d.appendChild(followBox());
+    // right under the teams: the league's standings and stats, on tabs
+    d.appendChild(leagueTabs());
     // the headlines of the day, then a strip of top stories with pictures
     var hb = el('div', 'box news'); hb.appendChild(el('h2', null, 'Headlines')); var hl = el('div'); hl.appendChild(el('div', 'none', 'Loading…')); hb.appendChild(hl); d.appendChild(hb);
     var sb = el('div', 'box'); sb.appendChild(el('h2', null, 'Top stories')); var sh = el('div'); sb.appendChild(sh); d.appendChild(sb);
@@ -504,8 +509,41 @@
       heads.forEach(function (a) { var x = ext(el('a'), a.url); x.appendChild(el('b', null, a.headline)); x.appendChild(el('span', null, [a.src, a.at ? cpDay(new Date(a.at)) : ''].filter(Boolean).join(' · '))); hl.appendChild(x); });
       if (rest.length) sh.appendChild(storyStrip(rest)); else sb.remove();
     });
-    var lb = el('div'); d.appendChild(lb);
-    leagueLeadersBox().then(function (b) { if (b) { b.style.marginTop = '14px'; lb.appendChild(b); } });
+  }
+  // Standings | Stats for the whole league (the team pages have their own)
+  function leagueTabs() {
+    var box = el('div', 'box lgtabs'), bar = el('div', 'ttabs'), panes = el('div');
+    box.appendChild(bar); box.appendChild(panes);
+    var list = [];
+    function add(name, fill) {
+      var b = el('button', null, name); b.type = 'button'; bar.appendChild(b);
+      var p = el('div', 'lgpane'); p.hidden = true; p.appendChild(el('div', 'none', 'Loading…')); panes.appendChild(p);
+      var done = false;
+      b.onclick = function () {
+        list.forEach(function (x) { x[0].classList.toggle('on', x[0] === b); x[1].hidden = x[0] !== b; });
+        if (!done) { done = true; fill(p); }
+      };
+      list.push([b, p]);
+    }
+    add('Standings', function (p) {
+      standingsData().then(function (gs) {
+        p.innerHTML = '';
+        if (!gs || !gs.length) { p.appendChild(el('div', 'none', 'Standings aren’t available right now.')); return; }
+        var none = { id: '\u0000', info: {}, rx: /(?!)/ };   // no team marked: every team is treated the same here
+        var grid = el('div', 'stgrid'); gs.forEach(function (g) { grid.appendChild(stdTable(g, none)); }); p.appendChild(grid);
+      });
+    });
+    add('Stats', function (p) {
+      leagueLeadersBox().then(function (b) {
+        p.innerHTML = '';
+        if (!b) { p.appendChild(el('div', 'none', 'Stats for the ' + L.name + ' aren’t available right now.')); return; }
+        b.classList.remove('box'); b.style.padding = '0'; b.style.border = '0'; b.style.background = 'none';
+        var h = b.querySelector('h2'); if (h) h.remove();
+        p.appendChild(b);
+      });
+    });
+    list[0][0].onclick();
+    return box;
   }
 
   // ---------- one team ----------
