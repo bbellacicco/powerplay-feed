@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T15:01:52-05:00",
+ "updated": "2026-11-24T15:16:50-05:00",
  "today": "2026-11-24",
  "range": [
   "2026-11-21",
@@ -99,7 +99,7 @@
   },
   "pwhl_news": {
    "ok": true,
-   "count": 27
+   "count": 26
   },
   "sportsnet": {
    "ok": true,
@@ -1713,22 +1713,22 @@
    "our_score": 2,
    "opp_score": 1,
    "location": "Morgan Firestone Arena | Ancaster",
-   "note": "00:34 2nd",
+   "note": "00:00 2nd",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/362"
   },
   {
    "league": "pwhl",
    "start": "2026-11-24T15:00:00-05:00",
-   "status": "upcoming",
+   "status": "live",
    "home": "Vancouver Goldeneyes",
    "away": "Vegas Vanguards",
    "home_abbr": "VAN",
    "away_abbr": "VGS",
-   "our_score": null,
-   "opp_score": null,
+   "our_score": 0,
+   "opp_score": 2,
    "location": "America First Center | Henderson",
-   "note": "",
+   "note": "15:32 1st",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/355"
   },
@@ -1955,6 +1955,19 @@
   },
   {
    "league": "cfl",
+   "headline": "Roughriders sign American defensive back Jyron Gilmore",
+   "summary": "",
+   "published": "2026-11-24T00:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/75G5jb9xg6p4GZAi2EI7xd/0c95d2f88686682db13fe7efa70e2053/Generic_Roughriders_Helmet_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Roughriders"
+   ],
+   "url": "https://www.cfl.ca/article/roughriders-sign-american-defensive-back-jyron-gilmore",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Tiger-Cats extend American defensive back Quavian White",
    "summary": "",
    "published": "2026-11-24T00:00:00-05:00",
@@ -2054,19 +2067,6 @@
     "Roughriders"
    ],
    "url": "https://www.cfl.ca/article/riders-extend-national-long-snapper-mike-benson",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Blue Bombers extend Global punter Jamieson Sheahan",
-   "summary": "",
-   "published": "2026-11-23T00:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/1lePks9BsBxTsuAYWkwI8A/19d167a2714a1ae55685ba585d0d42fc/Jamieson_Sheahan_2026.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Blue Bombers"
-   ],
-   "url": "https://www.cfl.ca/article/blue-bombers-extend-global-punter-jamieson-sheahan",
    "source": "CFL.ca"
   },
   {
@@ -2339,17 +2339,6 @@
    "video": false,
    "teams": [],
    "url": "https://www.thepwhl.com/en/news/2026/november/23/second-period-outburst-leads-vancouver-over-minnesota",
-   "source": "thepwhl.com"
-  },
-  {
-   "league": "pwhl",
-   "headline": "Ottawa Rallies for 2-1 Win Over Detroit to Open Preseason",
-   "summary": "",
-   "published": "2026-11-23T22:59:13+00:00",
-   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/CREDIT_PWHL_-_Detroit_vs_Ottawa_-_Nov._23_Preseason_04",
-   "video": false,
-   "teams": [],
-   "url": "https://www.thepwhl.com/en/news/2026/november/23/ottawa-rallies-for-2-1-win-over-detroit-to-open-preseason",
    "source": "thepwhl.com"
   },
   {
@@ -2728,6 +2717,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Auger-Aliassime, Draxl lose as Czechia downs Canada in Davis Cup quarterfinal",
+   "summary": "",
+   "published": "2026-11-24T15:05-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/augeraliassime_felix1280.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Tennis",
+   "url": "https://www.sportsnet.ca/tennis/article/auger-aliassime-draxl-lose-as-czechia-downs-canada-in-davis-cup-quarterfinal/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Panthers’ Cole Schwindt, Wild’s Calvin Pickard hit waivers",
    "summary": "",
@@ -2738,19 +2740,6 @@
    "sn_team_count": 3,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/panthers-cole-schwindt-wilds-calvin-pickard-hit-waivers/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Machac beats Draxl, Czechia leads Canada in Davis Cup Final 8 quarterfinal",
-   "summary": "Tomas Machac defeated Liam Draxl 6-2, 3-6, 6-2 Tuesday to give Czechia an early 1-0 lead over Canada in their Davis Cup Final 8 quarterfinal tie.",
-   "published": "2026-11-24T13:09-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Draxl.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Tennis",
-   "url": "https://www.sportsnet.ca/atp/article/machac-beats-draxl-czechia-leads-canada-in-davis-cup-final-8-quarterfinal/",
    "source": "Sportsnet"
   },
   {
@@ -2796,7 +2785,7 @@
   },
   {
    "league": "mlb",
-   "headline": "Report: Freddy Peralta joins Orioles on five-year, $125-million deal",
+   "headline": "Freddy Peralta joins Orioles on five-year deal reportedly worth $125 million",
    "summary": "",
    "published": "2026-11-24T10:07-05:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP176841711.jpg",
@@ -4812,7 +4801,7 @@
       "l": 0,
       "otl": 0,
       "pts": 3,
-      "gf": 4,
+      "gf": 5,
       "ga": 1,
       "strk": "1W"
      },
@@ -4921,7 +4910,7 @@
       "otl": 0,
       "pts": 0,
       "gf": 1,
-      "ga": 2,
+      "ga": 3,
       "strk": "1L"
      },
      {
