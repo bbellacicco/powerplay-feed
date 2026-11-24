@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T17:31:49-05:00",
+ "updated": "2026-11-24T17:46:53-05:00",
  "today": "2026-11-24",
  "range": [
   "2026-11-21",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 36
   },
   "club_news": {
    "ok": true,
@@ -1704,21 +1704,6 @@
   },
   {
    "league": "pwhl",
-   "start": "2026-11-24T15:00:00-05:00",
-   "status": "live",
-   "home": "Vancouver Goldeneyes",
-   "away": "Vegas Vanguards",
-   "home_abbr": "VAN",
-   "away_abbr": "VGS",
-   "our_score": 6,
-   "opp_score": 8,
-   "location": "America First Center | Henderson",
-   "note": "02:44 3rd",
-   "time_tbd": false,
-   "link": "https://www.thepwhl.com/en/stats/game-center/355"
-  },
-  {
-   "league": "pwhl",
    "start": "2026-11-24T16:00:00-05:00",
    "status": "live",
    "home": "New York Sirens",
@@ -1728,7 +1713,7 @@
    "our_score": 3,
    "opp_score": 0,
    "location": "Boston Sports Institute | Wellesley",
-   "note": "01:18 2nd",
+   "note": "00:00 2nd",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/357"
   },
@@ -1746,6 +1731,21 @@
    "note": "",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/359"
+  },
+  {
+   "league": "pwhl",
+   "start": "2026-11-24T15:00:00-05:00",
+   "status": "live",
+   "home": "Vancouver Goldeneyes",
+   "away": "Vegas Vanguards",
+   "home_abbr": "VAN",
+   "away_abbr": "VGS",
+   "our_score": 6,
+   "opp_score": 8,
+   "location": "America First Center | Henderson",
+   "note": "Unofficial Final",
+   "time_tbd": false,
+   "link": "https://www.thepwhl.com/en/stats/game-center/355"
   },
   {
    "league": "pwhl",
@@ -2879,6 +2879,19 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/packers-activate-micah-parsons-for-season-debut/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "pwhl",
+   "headline": "PWHL Roundup: Muller leads Havoc over Clutch in pre-season action",
+   "summary": "",
+   "published": "2026-11-24T17:39-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/04/Charge-vs-Fleet-2.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/pwhl/article/pwhl-roundup-muller-leads-havoc-over-clutch-in-pre-season-action/",
    "source": "Sportsnet"
   },
   {
