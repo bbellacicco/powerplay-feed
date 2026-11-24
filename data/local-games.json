@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-23T23:47:09-05:00",
- "today": "2026-11-23",
+ "updated": "2026-11-24T00:07:07-05:00",
+ "today": "2026-11-24",
  "range": [
-  "2026-11-20",
-  "2026-11-26"
+  "2026-11-21",
+  "2026-11-27"
  ],
  "teams": {
   "spitfires": {
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 30
+   "count": 31
   },
   "club_news": {
    "ok": true,
@@ -111,194 +111,6 @@
   }
  },
  "games": [
-  {
-   "id": "lancers-6474",
-   "team": "lancers",
-   "sport": "Track and Field",
-   "start": "2026-11-20T00:00:00-05:00",
-   "time_tbd": true,
-   "home_away": "H",
-   "opponent": "Blue & Gold Meet",
-   "location": "Dennis Fairall Fieldhouse",
-   "status": "final",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "recap": "https://golancers.ca/news/2026/11/23/track-and-field-three-records-broken-one-lancer-qualifies-for-u-sports-championships-at-blue-gold-meet.aspx"
-   }
-  },
-  {
-   "id": "lancers-6207",
-   "team": "lancers",
-   "sport": "Women's Basketball",
-   "start": "2026-11-20T18:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Laurier Golden Hawks",
-   "location": "Toldo Lancer Centre",
-   "status": "final",
-   "our_score": 90,
-   "opp_score": 48,
-   "result": "W",
-   "note": "",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6207",
-    "recap": "https://golancers.ca/news/2026/11/20/womens-basketball-womens-basketball-dominates-both-end-of-the-court-in-win-over-laurier.aspx"
-   }
-  },
-  {
-   "id": "lancers-6248",
-   "team": "lancers",
-   "sport": "Women's Volleyball",
-   "start": "2026-11-20T18:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Waterloo Warriors",
-   "location": "Waterloo, ON",
-   "status": "final",
-   "our_score": 2,
-   "opp_score": 3,
-   "result": "L",
-   "note": "9-25, 25-17, 20-25, 25-22, 8-15",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6248",
-    "recap": "https://golancers.ca/news/2026/11/21/womens-volleyball-lancers-split-weekend-in-waterloo.aspx"
-   }
-  },
-  {
-   "id": "junior-gs2960661",
-   "team": "junior",
-   "sport": "PJHL (Jr. C)",
-   "start": "2026-11-20T19:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Walpole Island Wild",
-   "location": "Atlas Tube Centre",
-   "status": "final",
-   "our_score": 11,
-   "opp_score": 0,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960661?configuration=45"
-   },
-   "club": "Lakeshore Canadiens"
-  },
-  {
-   "id": "spitfires-ohl29222",
-   "team": "spitfires",
-   "sport": "Hockey",
-   "start": "2026-11-20T19:05:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Sarnia Sting",
-   "location": "Progressive Auto Sales Arena, Sarnia",
-   "status": "final",
-   "our_score": 2,
-   "opp_score": 4,
-   "result": "L",
-   "note": "",
-   "links": {
-    "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29222/"
-   }
-  },
-  {
-   "id": "junior-gs2960672",
-   "team": "junior",
-   "sport": "PJHL (Jr. C)",
-   "start": "2026-11-20T19:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Dresden Kings",
-   "location": "Lambton-Kent Memorial Centre",
-   "status": "final",
-   "our_score": 2,
-   "opp_score": 3,
-   "result": "L",
-   "note": "",
-   "links": {
-    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960672?configuration=45"
-   },
-   "club": "Essex 73's"
-  },
-  {
-   "id": "lancers-6268",
-   "team": "lancers",
-   "sport": "Men's Volleyball",
-   "start": "2026-11-20T19:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Waterloo Warriors",
-   "location": "Waterloo, ON",
-   "status": "final",
-   "our_score": 2,
-   "opp_score": 3,
-   "result": "L",
-   "note": "14-25, 22-25, 25-19, 25-23, 12-15",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6268",
-    "recap": "https://golancers.ca/news/2026/11/22/mens-volleyball-mens-volleyball-loses-a-pair-of-five-set-games-to-waterloo.aspx"
-   }
-  },
-  {
-   "id": "lancers-6293",
-   "team": "lancers",
-   "sport": "Women's Hockey",
-   "start": "2026-11-20T19:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Brock Badgers",
-   "location": "Adie Knox Arena",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 0,
-   "result": "W",
-   "note": "",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6293",
-    "recap": "https://golancers.ca/news/2026/11/20/womens-hockey-esterbrooks-scores-hat-trick-lancers-shut-out-badgers.aspx"
-   }
-  },
-  {
-   "id": "junior-gojhl15710",
-   "team": "junior",
-   "sport": "GOHL (Jr. B)",
-   "start": "2026-11-20T19:45:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Woodstock Navy Vets",
-   "location": "Reeves C.C., Woodstock, ON",
-   "status": "final",
-   "our_score": 2,
-   "opp_score": 1,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.gohl.ca/stats/game-center/15710"
-   },
-   "club": "LaSalle Vipers"
-  },
-  {
-   "id": "lancers-6229",
-   "team": "lancers",
-   "sport": "Men's Basketball",
-   "start": "2026-11-20T20:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Laurier Golden Hawks",
-   "location": "Toldo Lancer Centre",
-   "status": "final",
-   "our_score": 91,
-   "opp_score": 86,
-   "result": "W",
-   "note": "",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6229",
-    "recap": "https://golancers.ca/news/2026/11/20/mens-basketball-mens-basketball-wins-second-straight-game-with-win-over-laurier.aspx"
-   }
-  },
   {
    "id": "lancers-6249",
    "team": "lancers",
@@ -659,9 +471,7 @@
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960720?configuration=45"
    },
    "club": "Wheatley Sharks"
-  }
- ],
- "ahead": [
+  },
   {
    "id": "lancers-6250",
    "team": "lancers",
@@ -679,25 +489,6 @@
    "links": {
     "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=174",
     "watch": "https://oua.tv/?school=Windsor"
-   }
-  },
-  {
-   "id": "spitfires-ohl29245",
-   "team": "spitfires",
-   "sport": "Hockey",
-   "start": "2026-11-27T19:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Kitchener Rangers",
-   "location": "Kitchener Memorial Auditorium, Kitchener",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "tickets": "https://kitchenerlive.evenue.net/events/RANGERS",
-    "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29245/"
    }
   },
   {
@@ -719,41 +510,22 @@
    }
   },
   {
-   "id": "lancers-6350",
-   "team": "lancers",
-   "sport": "Men's Hockey",
-   "start": "2026-11-27T19:30:00-05:00",
+   "id": "spitfires-ohl29245",
+   "team": "spitfires",
+   "sport": "Hockey",
+   "start": "2026-11-27T19:00:00-05:00",
    "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Guelph Gryphons",
-   "location": "Adie Knox Arena",
+   "home_away": "A",
+   "opponent": "Kitchener Rangers",
+   "location": "Kitchener Memorial Auditorium, Kitchener",
    "status": "upcoming",
    "our_score": null,
    "opp_score": null,
    "result": null,
    "note": "",
    "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=173",
-    "watch": "https://oua.tv/?school=Windsor"
-   }
-  },
-  {
-   "id": "lancers-6270",
-   "team": "lancers",
-   "sport": "Men's Volleyball",
-   "start": "2026-11-27T19:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Brock Badgers",
-   "location": "Toldo Lancer Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "",
-   "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=174",
-    "watch": "https://oua.tv/?school=Windsor"
+    "tickets": "https://kitchenerlive.evenue.net/events/RANGERS",
+    "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29245/"
    }
   },
   {
@@ -794,6 +566,46 @@
    },
    "club": "Lakeshore Canadiens"
   },
+  {
+   "id": "lancers-6350",
+   "team": "lancers",
+   "sport": "Men's Hockey",
+   "start": "2026-11-27T19:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Guelph Gryphons",
+   "location": "Adie Knox Arena",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=173",
+    "watch": "https://oua.tv/?school=Windsor"
+   }
+  },
+  {
+   "id": "lancers-6270",
+   "team": "lancers",
+   "sport": "Men's Volleyball",
+   "start": "2026-11-27T19:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Brock Badgers",
+   "location": "Toldo Lancer Centre",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=174",
+    "watch": "https://oua.tv/?school=Windsor"
+   }
+  }
+ ],
+ "ahead": [
   {
    "id": "lancers-6251",
    "team": "lancers",
@@ -1322,9 +1134,235 @@
     "gamecentre": "https://www.gohl.ca/stats/game-center/15766"
    },
    "club": "Chatham Maroons"
+  },
+  {
+   "id": "spitfires-ohl29286",
+   "team": "spitfires",
+   "sport": "Hockey",
+   "start": "2026-12-08T18:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "London Knights",
+   "location": "Canada Life Place, London, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "tickets": "https://www.ticketmaster.ca/london-knights-tickets/artist/829717",
+    "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29286/"
+   }
+  },
+  {
+   "id": "junior-gs2960820",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-12-08T19:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Dresden Kings",
+   "location": "Essex Centre Complex",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960820?configuration=45"
+   },
+   "club": "Essex 73's"
   }
  ],
  "last": [
+  {
+   "id": "lancers-6229",
+   "team": "lancers",
+   "sport": "Men's Basketball",
+   "start": "2026-11-20T20:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Laurier Golden Hawks",
+   "location": "Toldo Lancer Centre",
+   "status": "final",
+   "our_score": 91,
+   "opp_score": 86,
+   "result": "W",
+   "note": "",
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6229",
+    "recap": "https://golancers.ca/news/2026/11/20/mens-basketball-mens-basketball-wins-second-straight-game-with-win-over-laurier.aspx"
+   }
+  },
+  {
+   "id": "junior-gojhl15710",
+   "team": "junior",
+   "sport": "GOHL (Jr. B)",
+   "start": "2026-11-20T19:45:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Woodstock Navy Vets",
+   "location": "Reeves C.C., Woodstock, ON",
+   "status": "final",
+   "our_score": 2,
+   "opp_score": 1,
+   "result": "W",
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.gohl.ca/stats/game-center/15710"
+   },
+   "club": "LaSalle Vipers"
+  },
+  {
+   "id": "lancers-6268",
+   "team": "lancers",
+   "sport": "Men's Volleyball",
+   "start": "2026-11-20T19:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Waterloo Warriors",
+   "location": "Waterloo, ON",
+   "status": "final",
+   "our_score": 2,
+   "opp_score": 3,
+   "result": "L",
+   "note": "14-25, 22-25, 25-19, 25-23, 12-15",
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6268",
+    "recap": "https://golancers.ca/news/2026/11/22/mens-volleyball-mens-volleyball-loses-a-pair-of-five-set-games-to-waterloo.aspx"
+   }
+  },
+  {
+   "id": "lancers-6293",
+   "team": "lancers",
+   "sport": "Women's Hockey",
+   "start": "2026-11-20T19:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Brock Badgers",
+   "location": "Adie Knox Arena",
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 0,
+   "result": "W",
+   "note": "",
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6293",
+    "recap": "https://golancers.ca/news/2026/11/20/womens-hockey-esterbrooks-scores-hat-trick-lancers-shut-out-badgers.aspx"
+   }
+  },
+  {
+   "id": "junior-gs2960672",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-11-20T19:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Dresden Kings",
+   "location": "Lambton-Kent Memorial Centre",
+   "status": "final",
+   "our_score": 2,
+   "opp_score": 3,
+   "result": "L",
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960672?configuration=45"
+   },
+   "club": "Essex 73's"
+  },
+  {
+   "id": "spitfires-ohl29222",
+   "team": "spitfires",
+   "sport": "Hockey",
+   "start": "2026-11-20T19:05:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Sarnia Sting",
+   "location": "Progressive Auto Sales Arena, Sarnia",
+   "status": "final",
+   "our_score": 2,
+   "opp_score": 4,
+   "result": "L",
+   "note": "",
+   "links": {
+    "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29222/"
+   }
+  },
+  {
+   "id": "junior-gs2960661",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-11-20T19:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Walpole Island Wild",
+   "location": "Atlas Tube Centre",
+   "status": "final",
+   "our_score": 11,
+   "opp_score": 0,
+   "result": "W",
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960661?configuration=45"
+   },
+   "club": "Lakeshore Canadiens"
+  },
+  {
+   "id": "lancers-6207",
+   "team": "lancers",
+   "sport": "Women's Basketball",
+   "start": "2026-11-20T18:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Laurier Golden Hawks",
+   "location": "Toldo Lancer Centre",
+   "status": "final",
+   "our_score": 90,
+   "opp_score": 48,
+   "result": "W",
+   "note": "",
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6207",
+    "recap": "https://golancers.ca/news/2026/11/20/womens-basketball-womens-basketball-dominates-both-end-of-the-court-in-win-over-laurier.aspx"
+   }
+  },
+  {
+   "id": "lancers-6248",
+   "team": "lancers",
+   "sport": "Women's Volleyball",
+   "start": "2026-11-20T18:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Waterloo Warriors",
+   "location": "Waterloo, ON",
+   "status": "final",
+   "our_score": 2,
+   "opp_score": 3,
+   "result": "L",
+   "note": "9-25, 25-17, 20-25, 25-22, 8-15",
+   "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6248",
+    "recap": "https://golancers.ca/news/2026/11/21/womens-volleyball-lancers-split-weekend-in-waterloo.aspx"
+   }
+  },
+  {
+   "id": "lancers-6474",
+   "team": "lancers",
+   "sport": "Track and Field",
+   "start": "2026-11-20T00:00:00-05:00",
+   "time_tbd": true,
+   "home_away": "H",
+   "opponent": "Blue & Gold Meet",
+   "location": "Dennis Fairall Fieldhouse",
+   "status": "final",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "recap": "https://golancers.ca/news/2026/11/23/track-and-field-three-records-broken-one-lancer-qualifies-for-u-sports-championships-at-blue-gold-meet.aspx"
+   }
+  },
   {
    "id": "lancers-6349",
    "team": "lancers",
@@ -1383,24 +1421,6 @@
    "club": "Leamington Flyers"
   },
   {
-   "id": "spitfires-ohl29213",
-   "team": "spitfires",
-   "sport": "Hockey",
-   "start": "2026-11-19T19:05:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Soo Greyhounds",
-   "location": "WFCU Centre, Windsor",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 0,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29213/"
-   }
-  },
-  {
    "id": "junior-gojhl15702",
    "team": "junior",
    "sport": "GOHL (Jr. B)",
@@ -1420,25 +1440,6 @@
    "club": "Chatham Maroons"
   },
   {
-   "id": "junior-gs2960651",
-   "team": "junior",
-   "sport": "PJHL (Jr. C)",
-   "start": "2026-11-17T19:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Lakeshore Canadiens",
-   "location": "Essex Centre Complex",
-   "status": "final",
-   "our_score": 5,
-   "opp_score": 1,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960651?configuration=45"
-   },
-   "club": "Essex 73's"
-  },
-  {
    "id": "lancers-6503",
    "team": "lancers",
    "sport": "Curling",
@@ -1454,119 +1455,6 @@
    "note": "Guelph Invitational - Men",
    "links": {
     "recap": "https://golancers.ca/news/2026/11/16/lancer-curling-competes-at-guelph-bonspiel.aspx"
-   }
-  },
-  {
-   "id": "junior-gojhl15692",
-   "team": "junior",
-   "sport": "GOHL (Jr. B)",
-   "start": "2026-11-14T19:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Strathroy Rockets",
-   "location": "West Middlesex M.C., Strathroy, ON",
-   "status": "final",
-   "our_score": 5,
-   "opp_score": 3,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.gohl.ca/stats/game-center/15692"
-   },
-   "club": "LaSalle Vipers"
-  },
-  {
-   "id": "lancers-6228",
-   "team": "lancers",
-   "sport": "Men's Basketball",
-   "start": "2026-11-14T18:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Ontario Tech Ridgebacks",
-   "location": "Oshawa, ON",
-   "status": "final",
-   "our_score": 73,
-   "opp_score": 67,
-   "result": "W",
-   "note": "OT",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6228",
-    "recap": "https://golancers.ca/news/2026/11/15/mens-basketball-earns-first-win-of-the-season.aspx"
-   }
-  },
-  {
-   "id": "lancers-6292",
-   "team": "lancers",
-   "sport": "Women's Hockey",
-   "start": "2026-11-14T16:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Western Mustangs",
-   "location": "Adie Knox Arena",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 2,
-   "result": "W",
-   "note": "OT",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6292",
-    "recap": "https://golancers.ca/news/2026/11/15/womens-hockey-mitani-goal-lifts-lancers-over-mustangs-in-overtime.aspx"
-   }
-  },
-  {
-   "id": "lancers-6206",
-   "team": "lancers",
-   "sport": "Women's Basketball",
-   "start": "2026-11-14T16:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Ontario Tech Ridgebacks",
-   "location": "Oshawa, ON",
-   "status": "final",
-   "our_score": 95,
-   "opp_score": 53,
-   "result": "W",
-   "note": "",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6206",
-    "recap": "https://golancers.ca/news/2026/11/15/womens-basketball-lancers-wrap-up-road-trip-with-strong-win-over-ridgebacks.aspx"
-   }
-  },
-  {
-   "id": "lancers-6267",
-   "team": "lancers",
-   "sport": "Men's Volleyball",
-   "start": "2026-11-14T14:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "McMaster Marauders",
-   "location": "Toldo Lancer Centre",
-   "status": "final",
-   "our_score": 1,
-   "opp_score": 3,
-   "result": "L",
-   "note": "17-25, 15-25, 25-19, 21-25",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6267"
-   }
-  },
-  {
-   "id": "lancers-6247",
-   "team": "lancers",
-   "sport": "Women's Volleyball",
-   "start": "2026-11-14T13:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "McMaster Marauders",
-   "location": "Toldo Lancer Centre",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 2,
-   "result": "W",
-   "note": "18-25, 25-14, 25-17, 24-26, 15-12",
-   "links": {
-    "boxscore": "https://golancers.ca/boxscore.aspx?id=6247",
-    "recap": "https://golancers.ca/news/2026/11/15/mens-volleyball-windsor-drops-back-to-back-games-to-mcmaster.aspx"
    }
   },
   {
@@ -2010,6 +1898,21 @@
    "note": "",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/370"
+  },
+  {
+   "league": "pwhl",
+   "start": "2026-12-08T19:00:00-05:00",
+   "status": "upcoming",
+   "home": "Toronto Sceptres",
+   "away": "Hamilton Havoc",
+   "home_abbr": "TOR",
+   "away_abbr": "HAM",
+   "our_score": null,
+   "opp_score": null,
+   "location": "Coca-Cola Coliseum | Toronto",
+   "note": "",
+   "time_tbd": false,
+   "link": "https://www.thepwhl.com/en/stats/game-center/371"
   }
  ],
  "pro_news": [
@@ -2772,19 +2675,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Ullmark leads Senators to win over Flames",
-   "summary": "Linus Ullmark continued his impressive start to the season on Monday, making 34 saves to lead the Ottawa Senators to a 2-1 victory over the Calgary Flames.",
-   "published": "2026-11-23T22:54-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/ullmark.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/ullmark-leads-senators-to-win-over-flames/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Vilardi nets hat trick as Jets power past Mammoth",
    "summary": "",
    "published": "2026-11-23T22:32-05:00",
@@ -2794,6 +2684,45 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/vilardi-nets-hat-trick-as-jets-power-past-mammoth/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Flames takeaways: Pushback after Frost’s injury can’t erase slow start",
+   "summary": "After being badly outplayed in the first period on Monday, a hit that forced Morgan Frost to exit seemed to wake the Flames up. But they couldn’t solve Linus Ullmark in a loss to the Senators.",
+   "published": "2026-11-23T23:48-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177327247.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/flames-takeaways-pushback-after-frosts-injury-cant-erase-slow-start/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "‘We got Larkin!’: Dylan Larkin makes Canadiens debut against Kings",
+   "summary": "",
+   "published": "2026-11-23T11:31-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/6b04d93ba88c9c3c154e02d5jpeg.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/dylan-larkin-to-make-canadiens-debut-against-kings/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Ullmark leads Senators to win over Flames",
+   "summary": "Linus Ullmark continued his impressive start to the season on Monday, making 34 saves to lead the Ottawa Senators to a 2-1 victory over the Calgary Flames.",
+   "published": "2026-11-23T22:54-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/ullmark.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/ullmark-leads-senators-to-win-over-flames/",
    "source": "Sportsnet"
   },
   {
@@ -2810,16 +2739,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "‘We got Larkin!’: Dylan Larkin makes Canadiens debut against Kings",
-   "summary": "",
-   "published": "2026-11-23T11:31-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/6b04d93ba88c9c3c154e02d5jpeg.jpg",
+   "league": "nfl",
+   "headline": "Daniels’ game-winning drive helps Commanders knock off Bengals",
+   "summary": "Jayden Daniels connected with rookie Antonio Williams on two long pass plays, moving the Commanders 64 yards in 34 seconds to set up Drew Stevens’ 26-yard field goal as time expired, and the Washington Commanders stunned",
+   "published": "2026-11-23T23:54-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-10-3.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/dylan-larkin-to-make-canadiens-debut-against-kings/",
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/daniels-game-winning-drive-helps-commanders-knock-off-bengals/",
    "source": "Sportsnet"
   },
   {
@@ -2861,32 +2790,6 @@
    "sn_team_count": 2,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/report-trevor-rogers-agrees-to-five-year-deal-with-cubs/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "MLB players counter that owners should share revenues without a salary cap",
-   "summary": "",
-   "published": "2026-11-23T14:44-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/manfred_rob1280.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/mlb-players-counter-that-owners-should-share-revenues-without-a-salary-cap/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Four fights added to UFC 336 Toronto card",
-   "summary": "The promotion announced Monday that four new fights have been added to the UFC 336: Van vs. Kape card, scheduled for Jan. 30 at Scotiabank Arena.",
-   "published": "2026-11-23T17:11-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/gable.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "MMA",
-   "url": "https://www.sportsnet.ca/ufc/article/four-fights-added-to-ufc-336-toronto-card/",
    "source": "Sportsnet"
   },
   {
@@ -3025,6 +2928,19 @@
    "sn_team_count": 0,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/mlb-rumour-roundup-free-agent-extravaganza-expected-after-skubal-signing/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "MLB players counter that owners should share revenues without a salary cap",
+   "summary": "",
+   "published": "2026-11-23T14:44-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/manfred_rob1280.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/mlb-players-counter-that-owners-should-share-revenues-without-a-salary-cap/",
    "source": "Sportsnet"
   },
   {
