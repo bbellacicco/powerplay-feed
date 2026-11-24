@@ -502,7 +502,9 @@ document.addEventListener('load', function (e) {
     lancers: /lancer|uwindsor|university of windsor/i,
     // St. Anne's Saints (and anything WECSSAA / SWOSSA / OFSAA) are high school, even when a quick post was tagged Saints
     saints: { test: function (x) { x = String(x); if (/st\.?\s*anne|wecssaa|ofsaa|swossa/i.test(x) && !/st\.?\s*clair college/i.test(x)) return false; return /st\.?\s*clair/i.test(x) || (/\bsaints\b/i.test(x) && !/high school|secondary/i.test(x)); } },
-    junior: /spitfires|\bspits\b|\bohl\b|\b(ojhl|gohl|pjhl)\b|junior hockey|junior b|junior c|lakeshore canadiens|leamington flyers|lasalle vipers|\bvipers\b|essex 73|73's|amherstburg admirals|\badmirals\b|wheatley sharks|tecumseh eco|belle river canadiens/i,
+    // junior hockey: a club's name alone isn't enough when the story is plainly another sport (an Essex football story is not the 73's)
+    junior: { rx: /spitfires|\bspits\b|\bohl\b|\b(ojhl|gohl|pjhl)\b|junior hockey|junior b|junior c|lakeshore canadiens|leamington flyers|lasalle vipers|\bvipers\b|essex 73|73's|amherstburg admirals|\badmirals\b|wheatley sharks|tecumseh eco|belle river canadiens/i, test: function (x) { x = String(x); if (!this.rx.test(x)) return false;
+      return !(/football|basketball|volleyball|soccer|baseball|softball|rugby|wrestling|cross country|track and field|high school|secondary|wecssaa|swossa|ofsaa|red raiders/i.test(x) && !/hockey|\b(ohl|ojhl|gohl|pjhl)\b|junior [abc]\b|puck|goalie|power play/i.test(x)); } },
     highschool: /high school|wecssaa|ofsaa|secondary|holy names|villanova|st\.? joseph|assumption|brennan|kennedy|massey|walkerville|riverside|herman|forster|tecumseh vista|belle river|essex dist|kingsville|leamington dist|cardinal carter|st\.? anne|l'essor|sandwich|harrow|general amherst|north star|ste\.? cecile|lajeunesse|catholic central|\blaj\b/i
   };
   function isVid(s) { return s.source === 'YouTube' || s.source === 'Vimeo'; }
@@ -1475,10 +1477,14 @@ document.addEventListener('load', function (e) {
   if (window.parent === window || !/[?&]in=sports\b/.test(location.search)) return;
   var last = 0;
   function send() {
-    var h = Math.ceil(document.getElementById('page').getBoundingClientRect().height);
+    var pg = document.getElementById('page').getBoundingClientRect(), h = Math.ceil(pg.height);
+    // an open post, video or slideshow floats over the page: when it runs past the bottom (a long post on a computer), count it too
+    var vp = document.getElementById('vplayer');
+    if (vp && vp.classList.contains('on')) h = Math.max(h, Math.ceil(vp.getBoundingClientRect().bottom - pg.top) + 24);
     if (h && Math.abs(h - last) > 2) { last = h; try { parent.postMessage({ pp: 'height', h: h }, '*'); } catch (e) {} }
   }
   window.addEventListener('load', send); window.addEventListener('resize', send);
+  if (window.ResizeObserver && document.getElementById('vplayer')) new ResizeObserver(send).observe(document.getElementById('vplayer'));
   if (window.ResizeObserver) new ResizeObserver(send).observe(document.getElementById('page'));
   setInterval(send, 1500); send();
 })();
