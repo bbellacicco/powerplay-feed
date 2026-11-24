@@ -4,7 +4,7 @@
 <meta name="robots" content="noindex, indexifembedded">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Win Spitfires Tickets | Powerplay Windsor</title>
+<title>Win Two Spitfires Tickets | Powerplay Windsor</title>
 <!--
   Contest strip (embed first on the Local Hub page): win tickets to a Windsor Spitfires game.
   Fans enter by email (powerplaysportsvideo@gmail.com, subject and a short form filled in for them).
@@ -79,10 +79,10 @@
   <img class="logo" src="logos/spitfires-logo.png" alt="Windsor Spitfires">
   <div class="txt">
     <div class="k">Contest<span class="kpp">· Powerplay Windsor</span></div>
-    <h1 id="hl">Win tickets to a <em>Windsor Spitfires</em> game</h1>
+    <h1 id="hl">Win two tickets to a <em>Windsor Spitfires</em> game</h1>
   </div>
   <div class="next" id="next" hidden></div>
-  <div class="line" id="line">Email your <b>name and phone number</b> to <b>powerplaysportsvideo@gmail.com</b> with the subject ‘Spitfires tickets’ for your chance to win.</div>
+  <div class="line" id="line">Email your <b>name and phone number</b> to <b>powerplaysportsvideo@gmail.com</b> with the subject ‘Spitfires tickets’ by <b>10 a.m. on game day</b>. The winner will be notified by 2 p.m.</div>
   <div class="acts">
     <a class="enter" id="enter" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13zm2.2.5 7.8 6 7.8-6H4.2zM20 7.6l-7.4 5.7a1 1 0 0 1-1.2 0L4 7.6V18h16V7.6z"/></svg>Enter by email</a>
     <div class="share" id="share"><span>Share</span></div>
@@ -94,7 +94,7 @@
   var EMAIL = 'powerplaysportsvideo@gmail.com';
   var qs = new URLSearchParams(location.search);
   var SHARE = qs.get('share') || 'https://www.powerplaywindsor.com/scores-standings?contest=spitfires';
-  var TITLE = 'Win tickets to a Windsor Spitfires game';
+  var TITLE = 'Win two tickets to a Windsor Spitfires game';
   if (qs.get('headline')) { document.getElementById('hl').textContent = qs.get('headline'); TITLE = qs.get('headline'); }
   if (qs.get('line')) document.getElementById('line').textContent = qs.get('line');
 
