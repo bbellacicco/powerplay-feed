@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T17:46:53-05:00",
+ "updated": "2026-11-24T18:01:45-05:00",
  "today": "2026-11-24",
  "range": [
   "2026-11-21",
@@ -1713,7 +1713,7 @@
    "our_score": 3,
    "opp_score": 0,
    "location": "Boston Sports Institute | Wellesley",
-   "note": "00:00 2nd",
+   "note": "13:32 3rd",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/357"
   },
@@ -1734,21 +1734,6 @@
   },
   {
    "league": "pwhl",
-   "start": "2026-11-24T15:00:00-05:00",
-   "status": "live",
-   "home": "Vancouver Goldeneyes",
-   "away": "Vegas Vanguards",
-   "home_abbr": "VAN",
-   "away_abbr": "VGS",
-   "our_score": 6,
-   "opp_score": 8,
-   "location": "America First Center | Henderson",
-   "note": "Unofficial Final",
-   "time_tbd": false,
-   "link": "https://www.thepwhl.com/en/stats/game-center/355"
-  },
-  {
-   "league": "pwhl",
    "start": "2026-11-24T13:30:00-05:00",
    "status": "final",
    "home": "Detroit Clutch",
@@ -1761,6 +1746,21 @@
    "note": "",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/362"
+  },
+  {
+   "league": "pwhl",
+   "start": "2026-11-24T15:00:00-05:00",
+   "status": "final",
+   "home": "Vancouver Goldeneyes",
+   "away": "Vegas Vanguards",
+   "home_abbr": "VAN",
+   "away_abbr": "VGS",
+   "our_score": 6,
+   "opp_score": 8,
+   "location": "America First Center | Henderson",
+   "note": "",
+   "time_tbd": false,
+   "link": "https://www.thepwhl.com/en/stats/game-center/355"
   },
   {
    "league": "pwhl",
@@ -4814,6 +4814,18 @@
     "group": "PWHL",
     "teams": [
      {
+      "name": "Vancouver Goldeneyes",
+      "abbr": "VAN",
+      "gp": 2,
+      "w": 2,
+      "l": 0,
+      "otl": 0,
+      "pts": 6,
+      "gf": 12,
+      "ga": 7,
+      "strk": "2W"
+     },
+     {
       "name": "Hamilton Havoc",
       "abbr": "HAM",
       "gp": 2,
@@ -4826,15 +4838,15 @@
       "strk": "2W"
      },
      {
-      "name": "Vancouver Goldeneyes",
-      "abbr": "VAN",
+      "name": "Ottawa Charge",
+      "abbr": "OTT",
       "gp": 1,
       "w": 1,
       "l": 0,
       "otl": 0,
       "pts": 3,
-      "gf": 12,
-      "ga": 7,
+      "gf": 2,
+      "ga": 1,
       "strk": "1W"
      },
      {
@@ -4847,18 +4859,6 @@
       "pts": 3,
       "gf": 5,
       "ga": 6,
-      "strk": "1W"
-     },
-     {
-      "name": "Ottawa Charge",
-      "abbr": "OTT",
-      "gp": 1,
-      "w": 1,
-      "l": 0,
-      "otl": 0,
-      "pts": 3,
-      "gf": 2,
-      "ga": 1,
       "strk": "1W"
      },
      {
@@ -4910,18 +4910,6 @@
       "strk": ""
      },
      {
-      "name": "Vegas Vanguards",
-      "abbr": "VGS",
-      "gp": 1,
-      "w": 0,
-      "l": 1,
-      "otl": 0,
-      "pts": 0,
-      "gf": 7,
-      "ga": 10,
-      "strk": "1L"
-     },
-     {
       "name": "Boston Fleet",
       "abbr": "BOS",
       "gp": 1,
@@ -4955,6 +4943,18 @@
       "pts": 0,
       "gf": 3,
       "ga": 5,
+      "strk": "2L"
+     },
+     {
+      "name": "Vegas Vanguards",
+      "abbr": "VGS",
+      "gp": 2,
+      "w": 0,
+      "l": 2,
+      "otl": 0,
+      "pts": 0,
+      "gf": 7,
+      "ga": 10,
       "strk": "2L"
      }
     ]
