@@ -185,6 +185,8 @@
       // "Game Day Snaps: Saints vs. Fanshawe": the heading stays GAME DAY SNAPS, who's playing goes under the photo
       var game = meta.title.indexOf(':') > 0 ? meta.title.slice(meta.title.indexOf(':') + 1).trim() : meta.title;
       $('matchup').textContent = game;
+      // "Community Snaps: ..." (a community story told in photos): the heading says Community Snaps
+      if (/^community snaps/i.test(meta.title)) { $('title').innerHTML = 'Community <em>Snaps</em>'; document.title = 'Community Snaps | Powerplay Windsor'; }
       // the game day after the matchup: from captions.txt (date: 2026-10-18), or the slideshow list
       var MON = ['Jan.', 'Feb.', 'March', 'April', 'May', 'June', 'July', 'Aug.', 'Sept.', 'Oct.', 'Nov.', 'Dec.'];
       var putDate = function (iso) { var p = String(iso || '').match(/^(\d{4})-(\d{2})-(\d{2})/); if (p) $('matchup').textContent = game + ' \u00b7 ' + MON[+p[2] - 1] + ' ' + (+p[3]); };
