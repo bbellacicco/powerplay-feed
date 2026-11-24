@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T19:51:24-05:00",
+ "updated": "2026-11-23T20:01:46-05:00",
  "today": "2026-11-23",
  "range": [
   "2026-11-20",
@@ -1756,21 +1756,6 @@
   },
   {
    "league": "pwhl",
-   "start": "2026-11-23T17:30:00-05:00",
-   "status": "live",
-   "home": "Hamilton Havoc",
-   "away": "Toronto Sceptres",
-   "home_abbr": "HAM",
-   "away_abbr": "TOR",
-   "our_score": 3,
-   "opp_score": 4,
-   "location": "Morgan Firestone Arena | Ancaster",
-   "note": "01:15 3rd",
-   "time_tbd": false,
-   "link": "https://www.thepwhl.com/en/stats/game-center/361"
-  },
-  {
-   "league": "pwhl",
    "start": "2026-11-23T18:00:00-05:00",
    "status": "live",
    "home": "Boston Fleet",
@@ -1778,11 +1763,26 @@
    "home_abbr": "BOS",
    "away_abbr": "NY",
    "our_score": 3,
-   "opp_score": 1,
+   "opp_score": 2,
    "location": "Boston Sports Institute | Wellesley",
-   "note": "00:00 2nd",
+   "note": "14:45 3rd",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/356"
+  },
+  {
+   "league": "pwhl",
+   "start": "2026-11-23T17:30:00-05:00",
+   "status": "live",
+   "home": "Hamilton Havoc",
+   "away": "Toronto Sceptres",
+   "home_abbr": "HAM",
+   "away_abbr": "TOR",
+   "our_score": 3,
+   "opp_score": 5,
+   "location": "Morgan Firestone Arena | Ancaster",
+   "note": "Unofficial Final",
+   "time_tbd": false,
+   "link": "https://www.thepwhl.com/en/stats/game-center/361"
   },
   {
    "league": "pwhl",
@@ -4858,7 +4858,7 @@
       "l": 0,
       "otl": 0,
       "pts": 0,
-      "gf": 1,
+      "gf": 2,
       "ga": 3,
       "strk": ""
      },
@@ -4883,7 +4883,7 @@
       "otl": 0,
       "pts": 0,
       "gf": 3,
-      "ga": 1,
+      "ga": 2,
       "strk": ""
      },
      {
@@ -4895,7 +4895,7 @@
       "otl": 0,
       "pts": 0,
       "gf": 3,
-      "ga": 4,
+      "ga": 5,
       "strk": ""
      },
      {
@@ -4918,7 +4918,7 @@
       "l": 0,
       "otl": 0,
       "pts": 0,
-      "gf": 4,
+      "gf": 5,
       "ga": 3,
       "strk": ""
      },
