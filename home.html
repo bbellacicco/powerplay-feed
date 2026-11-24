@@ -517,7 +517,7 @@ document.addEventListener('load', function (e) {
     { key: 'hs', title: 'High School Huddle', gold: 'Huddle', by: ['Unifor Local 2458', 'logos/unifor-2458.png'], all: SITE + 'scores-standings?tab=hs', tab: 'hs', share: SITE + 'scores-standings?strip=hs' },
     { key: 'saints', title: 'Saints Nation', gold: 'Nation', by: ['The D’Amore Group', 'logos/damore-group.png'], all: SITE + 'scores-standings?tab=saints', tab: 'saints', share: SITE + 'scores-standings?strip=saints' },
     { key: 'lancers', title: 'Lancers Lounge', gold: 'Lounge', by: null, all: SITE + 'scores-standings?tab=lancers', tab: 'lancers', share: SITE + 'scores-standings?strip=lancers' },
-    { key: 'photos', title: 'Game Day Snaps', gold: 'Snaps', by: null, all: null, tab: null },
+    { key: 'photos', title: 'Community Snaps', gold: 'Snaps', by: null, all: SITE + 'scores-standings?strip=photos', tab: 'photos', share: SITE + 'scores-standings?strip=photos' },
     { key: 'athletes', title: 'Athlete profiles', by: null, all: LINK.athletes, tab: 'athletes' },
     { key: 'junior', title: 'Junior Hockey', gold: 'Hockey', by: null, all: SITE + 'scores-standings?tab=junior', tab: 'junior', share: SITE + 'scores-standings?strip=junior' },
     { key: 'local', title: 'Local scores', by: ['Unifor Local 444', 'logos/unifor-444.png'], all: LINK.scores, tab: 'scores' },
@@ -526,7 +526,7 @@ document.addEventListener('load', function (e) {
   ];
   var SHARE_TEXT = { network: 'Watch the latest local highlights and interviews', local: 'Local scores', stories: 'The latest Windsor-Essex sports stories',
     lancers: 'Lancers Lounge: everything Windsor Lancers', saints: 'Saints Nation: everything St. Clair Saints', hs: 'High School Huddle: Windsor-Essex high school sports', junior: 'Junior Hockey: the Spitfires and our junior teams',
-    pro: 'National scores', prohead: 'National headlines', athletes: 'Athlete profiles', photos: 'Game Day Snaps: game reports in pictures' };
+    pro: 'National scores', prohead: 'National headlines', athletes: 'Athlete profiles', photos: 'Community Snaps: Windsor-Essex sports and community in pictures' };
   var rowEl = {};
   ROWS.forEach(function (r) {
     var sec = el('section'); sec.id = 'row-' + r.key;
@@ -791,7 +791,7 @@ document.addEventListener('load', function (e) {
     });
     // the story that just dropped out of the big box falls into Headlines (second slot) for its first 3 hours there
     var ppHead = function (pp) { if (pp.outside) return { url: pp.url, headline: pp.headline, tag: pp.kick || 'Pro', col: LEAGUE_COL.nfl, local: false, logo: ESPN_TEAM[(pp.kick || '').split(' \u00b7 ').pop()] ? 'https://a.espncdn.com/i/teamlogos/' + ESPN_TEAM[(pp.kick || '').split(' \u00b7 ').pop()] + '.png' : '', abbr: (pp.kick || 'Pro').split(' \u00b7 ').pop(), published: pp.published };
-      return { url: pp.url, headline: pp.snaps ? pp.snaps.title : pp.headline, tag: (pp.snaps ? 'Game Day Snaps' : storyCat(pp, 'Local')) + ' \u00b7 Powerplay', col: '#e8b021', local: true, logo: headLogo('powerplay'), abbr: 'Powerplay', published: pp.published }; };
+      return { url: pp.url, headline: pp.snaps ? pp.snaps.title : pp.headline, tag: (pp.snaps ? snapsName(pp.snaps) : storyCat(pp, 'Local')) + ' \u00b7 Powerplay', col: '#e8b021', local: true, logo: headLogo('powerplay'), abbr: 'Powerplay', published: pp.published }; };
     var dropped = drop && Date.now() - drop.at < 3 * 3600e3 && !used[drop.story.url] ? drop.story : null;
     if (dropped && out.some(function (o) { return o.url === dropped.url; })) dropped = null;   // already up there
     if (dropped && out.length) { out.splice(1); out.push(ppHead(dropped)); }
@@ -957,6 +957,8 @@ document.addEventListener('load', function (e) {
     vp.classList.add('on');
     placeTop(at);
   }
+  // a photo set's series: Game Day Snaps (game reports), or Community Snaps when its title says so
+  function snapsName(sh) { return /^community snaps/i.test((sh && sh.title) || '') ? 'Community Snaps' : 'Game Day Snaps'; }
   function playShow(sh, at) {   // at: the element to open over (the top-story box); otherwise over the Game Day Snaps row
     var fr = document.getElementById('vframe'); fr.innerHTML = ''; fr.classList.remove('pic'); fr.classList.add('gal');
     var f = document.createElement('iframe'); f.src = REPO + 'gallery.html?show=' + encodeURIComponent(sh.key); f.allow = 'fullscreen'; f.allowFullscreen = true; f.title = sh.title; fr.appendChild(f);
@@ -1233,8 +1235,8 @@ document.addEventListener('load', function (e) {
       // until a newer story (or slideshow) is posted. "posted" comes from publish.py (when the slideshow first went up).
       ((r[7] && r[7].slideshows) || []).slice(0, 3).forEach(function (sh) {
         if (!sh.posted || !sh.cover || sh.nobox) return;   // "box: no" in captions.txt: Headlines and the Snaps row only
-        featItems.push({ headline: sh.title.replace(/^game day snaps:\s*/i, ''), url: sh.url, image: sh.cover, summary: sh.desc || '',
-          published: sh.posted, team: 'powerplay', snaps: sh, kick: 'Game Day Snaps' + (sh.count ? ' \u00b7 ' + sh.count + ' photos' : '') });
+        featItems.push({ headline: sh.title.replace(/^(game day|community) snaps:\s*/i, ''), url: sh.url, image: sh.cover, summary: sh.desc || '',
+          published: sh.posted, team: 'powerplay', snaps: sh, kick: snapsName(sh) + (sh.count ? ' \u00b7 ' + sh.count + ' photos' : '') });
       });
       featItems.sort(function (a, b) { return new Date(b.published) - new Date(a.published); });
       // scheduled top story (featured.txt): from its time, an older story takes the big box until a newer story is posted
@@ -1298,7 +1300,7 @@ document.addEventListener('load', function (e) {
       if (noBox && heads.length) {
         var locals = heads.filter(function (h) { return h.local; });
         if (locals.length >= 2) heads.splice(heads.indexOf(locals[locals.length - 1]), 1);   // keeps two local and two pro headlines
-        heads.unshift({ url: noBox.url, headline: noBox.title.replace(/^game day snaps:\s*/i, ''), tag: 'Game Day Snaps \u00b7 Powerplay', col: '#e8b021',
+        heads.unshift({ url: noBox.url, headline: noBox.title.replace(/^(game day|community) snaps:\s*/i, ''), tag: snapsName(noBox) + ' \u00b7 Powerplay', col: '#e8b021',
           local: true, logo: headLogo('powerplay'), abbr: 'Snaps', published: noBox.posted });
       }
       if (spBumped && heads.length && Date.now() - new Date(spBumped.published).getTime() < 36 * 3600e3) {   // the bumped Spitfires highlights lead Headlines
@@ -1332,7 +1334,7 @@ document.addEventListener('load', function (e) {
       // Game Day Snaps (game reports in pictures): newest first; tap one and it plays right here
       var shows = (r[7] && r[7].slideshows) || [];
       fill("photos", shows.slice(0, 12).map(function (sh, n) {
-        var c = storyCard({ headline: sh.title.replace(/^game day snaps:\s*/i, '') + ' \u00b7\u00a0' + cpDate(new Date(sh.date + 'T12:00:00')).replace(' ', '\u00a0'), url: sh.url, image: sh.cover, published: sh.date + 'T12:00:00', team: 'powerplay' },
+        var c = storyCard({ headline: sh.title.replace(/^(game day|community) snaps:\s*/i, '') + ' \u00b7\u00a0' + cpDate(new Date(sh.date + 'T12:00:00')).replace(' ', '\u00a0'), url: sh.url, image: sh.cover, published: sh.date + 'T12:00:00', team: 'powerplay' },
           {});
         var sm = c.querySelector('.sm'); if (sm) sm.remove();   // just who's playing under the picture
         // NEW only on the newest one
@@ -1348,10 +1350,6 @@ document.addEventListener('load', function (e) {
       // "NEW" beside the strip title
       var h2p = document.querySelector('#row-photos h2');
       if (h2p && !h2p.querySelector('.newbadge')) h2p.appendChild(el('span', 'newbadge', 'NEW'));
-      if (shows.length && window.PPShare && !document.querySelector('#row-photos .pps-btn')) {
-        var rr2 = document.querySelector('#row-photos .rright');
-        rr2.insertBefore(PPShare.button({ title: shows[0].title, url: shows[0].url, image: shows[0].cover, text: shows[0].title + ' on Powerplay Windsor' }), rr2.firstChild);
-      }
       // Powerplay Network: newest YouTube/Vimeo videos
       var vids = stories.filter(isVid), seenV = {};
       top.slice(0, heads.length >= 3 ? 2 : 3).forEach(function (t) { if (t.isVideo) { seenV[vidId(t.url)] = 1; seenV[t.headline.toLowerCase().replace(/[^a-z0-9]+/g, '')] = 1; } });   // already featured at the top
@@ -1365,7 +1363,7 @@ document.addEventListener('load', function (e) {
         .concat(((r[7] && r[7].slideshows) || []).filter(function (sh) { return !featUrls[sh.url] && !SPITS_RX.test(' ' + sh.title + ' ' + (sh.desc || '') + ' '); }).slice(0, 8).map(function (sh) {
           // Game Day Snaps: new and relevant, so they're in What's New too (tap one and it plays right here)
           var when = sh.posted || sh.date + 'T12:00:00';
-          var c = storyCard({ headline: sh.title, url: sh.url, image: sh.cover, published: when, team: 'powerplay' }, { tag: 'Game Day Snaps', sub: 'Game Day Snaps \u00b7 ' + ago(when), tile: 'Snaps' });
+          var c = storyCard({ headline: sh.title, url: sh.url, image: sh.cover, published: when, team: 'powerplay' }, { tag: snapsName(sh), sub: snapsName(sh) + ' \u00b7 ' + ago(when), tile: 'Snaps' });
           c.onclick = function (e) { e.preventDefault(); playShow(sh, c.closest('section')); };
           if (window.PPShare) {   // Share: the slideshow's own powerplaywindsor.com page (with its cover picture on Facebook)
             var sbn = PPShare.button({ title: sh.title, url: sh.url, text: sh.title + ' | Powerplay Windsor', image: sh.cover });
@@ -1395,7 +1393,7 @@ document.addEventListener('load', function (e) {
         return { t: new Date(x.published).getTime(), node: storyCard(x, v ? { play: true, tag: 'Video', sub: (x.source || 'Video') + ' \u00b7 ' + ago(x.published), tile: 'Spitfires' }
           : { tag: pp ? 'Powerplay' : 'Spitfires', sub: (pp ? 'Powerplay Windsor' : 'Windsor Spitfires') + ' \u00b7 ' + ago(x.published), tile: 'Spitfires' }) };
       }).concat(shows.filter(function (sh) { return SPITS_RX.test(' ' + sh.title + ' ' + (sh.desc || '') + ' '); }).slice(0, 4).map(function (sh) {
-        var c = storyCard({ headline: sh.title, url: sh.url, image: sh.cover, published: sh.posted || sh.date + 'T12:00:00', team: 'powerplay' }, { tag: 'Game Day Snaps', sub: 'Game Day Snaps \u00b7 ' + ago(sh.posted || sh.date + 'T12:00:00'), tile: 'Spitfires' });
+        var c = storyCard({ headline: sh.title, url: sh.url, image: sh.cover, published: sh.posted || sh.date + 'T12:00:00', team: 'powerplay' }, { tag: snapsName(sh), sub: snapsName(sh) + ' \u00b7 ' + ago(sh.posted || sh.date + 'T12:00:00'), tile: 'Spitfires' });
         c.onclick = function (e) { e.preventDefault(); playShow(sh, c.closest('section')); };
         return { t: new Date(sh.posted || sh.date + 'T12:00:00').getTime(), node: c };
       })).sort(function (a, b) { return b.t - a.t; }).slice(0, 20).map(function (x) { return x.node; });
@@ -1414,7 +1412,7 @@ document.addEventListener('load', function (e) {
           .sort(function (a, b) { return new Date(b.published) - new Date(a.published); }).slice(0, 25);
         // Game Day Snaps about them
         var snapsT = shows.filter(function (sh) { return t[2].test(' ' + sh.title + ' ' + (sh.desc || '') + ' ') && !(t[0] === 'junior' && SPITS_RX.test(' ' + sh.title + ' ' + (sh.desc || '') + ' ')); }).slice(0, 4).map(function (sh) {
-          var c = storyCard({ headline: sh.title, url: sh.url, image: sh.cover, published: sh.posted || sh.date + 'T12:00:00', team: 'powerplay' }, { tag: 'Game Day Snaps', sub: 'Game Day Snaps \u00b7 ' + ago(sh.posted || sh.date + 'T12:00:00'), tile: t[1] });
+          var c = storyCard({ headline: sh.title, url: sh.url, image: sh.cover, published: sh.posted || sh.date + 'T12:00:00', team: 'powerplay' }, { tag: snapsName(sh), sub: snapsName(sh) + ' \u00b7 ' + ago(sh.posted || sh.date + 'T12:00:00'), tile: t[1] });
           c.onclick = function (e) { e.preventDefault(); playShow(sh, c.closest('section')); };
           return { t: new Date(sh.posted || sh.date + 'T12:00:00').getTime(), node: c };
         });
