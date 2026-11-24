@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T13:31:56-05:00",
+ "updated": "2026-11-24T13:46:55-05:00",
  "today": "2026-11-24",
  "range": [
   "2026-11-21",
@@ -1711,9 +1711,9 @@
    "home_abbr": "DET",
    "away_abbr": "HAM",
    "our_score": 0,
-   "opp_score": 0,
+   "opp_score": 1,
    "location": "Morgan Firestone Arena | Ancaster",
-   "note": "20:00 1st",
+   "note": "05:47 1st",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/362"
   },
@@ -2943,32 +2943,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Ullmark leads Senators to win over Flames",
-   "summary": "Linus Ullmark continued his impressive start to the season on Monday, making 34 saves to lead the Ottawa Senators to a 2-1 victory over the Calgary Flames.",
-   "published": "2026-11-23T22:54-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/ullmark.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/ullmark-leads-senators-to-win-over-flames/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Vilardi nets hat trick as Jets power past Mammoth",
-   "summary": "",
-   "published": "2026-11-23T22:32-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-5-4.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/vilardi-nets-hat-trick-as-jets-power-past-mammoth/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Larkin leaves Canadiens debut ‘excited’ despite loss to Kings",
    "summary": "Dylan Larkin’s first night as a Canadien gave him plenty to look forward to, as he left the rink “excited about the future” despite a loss to the Kings.",
    "published": "2026-11-24T00:43-05:00",
@@ -2978,36 +2952,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/larkin-leaves-canadiens-debut-excited-despite-loss-to-kings/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Dylan Larkin’s agent breaks down trade between Canadiens, Red Wings",
-   "summary": "",
-   "published": "2026-11-23T18:51-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177321759.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Red Wings"
-   ],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/dylan-larkins-agent-breaks-down-trade-between-canadiens-red-wings/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Raptors miss opportunity to build momentum with loss to Bucks",
-   "summary": "The Raptors had a golden opportunity to build momentum against the NBA’s worst team. Instead, they suffered a tough loss to Milwaukee that raised bigger questions about their identity.",
-   "published": "2026-11-24T01:14-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/raptors-bucks.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 2,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-miss-opportunity-to-build-momentum-with-loss-to-bucks/",
    "source": "Sportsnet"
   },
   {
@@ -3114,6 +3058,62 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/agent-says-crosby-wants-to-be-a-penguin-forever/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Vilardi nets hat trick as Jets power past Mammoth",
+   "summary": "",
+   "published": "2026-11-23T22:32-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-5-4.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/vilardi-nets-hat-trick-as-jets-power-past-mammoth/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Ullmark leads Senators to win over Flames",
+   "summary": "Linus Ullmark continued his impressive start to the season on Monday, making 34 saves to lead the Ottawa Senators to a 2-1 victory over the Calgary Flames.",
+   "published": "2026-11-23T22:54-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/ullmark.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/ullmark-leads-senators-to-win-over-flames/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Raptors miss opportunity to build momentum with loss to Bucks",
+   "summary": "The Raptors had a golden opportunity to build momentum against the NBA’s worst team. Instead, they suffered a tough loss to Milwaukee that raised bigger questions about their identity.",
+   "published": "2026-11-24T01:14-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/raptors-bucks.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 2,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/raptors-miss-opportunity-to-build-momentum-with-loss-to-bucks/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Dylan Larkin’s agent breaks down trade between Canadiens, Red Wings",
+   "summary": "",
+   "published": "2026-11-23T18:51-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177321759.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Red Wings"
+   ],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/dylan-larkins-agent-breaks-down-trade-between-canadiens-red-wings/",
    "source": "Sportsnet"
   },
   {
@@ -4852,7 +4852,7 @@
       "otl": 0,
       "pts": 3,
       "gf": 5,
-      "ga": 3,
+      "ga": 4,
       "strk": "1W"
      },
      {
@@ -4923,7 +4923,7 @@
       "l": 1,
       "otl": 0,
       "pts": 0,
-      "gf": 1,
+      "gf": 2,
       "ga": 2,
       "strk": "1L"
      },
