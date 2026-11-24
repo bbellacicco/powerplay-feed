@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T13:02:11-05:00",
+ "updated": "2026-11-24T13:21:28-05:00",
  "today": "2026-11-24",
  "range": [
   "2026-11-21",
@@ -1705,15 +1705,15 @@
   {
    "league": "pwhl",
    "start": "2026-11-24T13:30:00-05:00",
-   "status": "live",
+   "status": "upcoming",
    "home": "Detroit Clutch",
    "away": "Hamilton Havoc",
    "home_abbr": "DET",
    "away_abbr": "HAM",
-   "our_score": 0,
-   "opp_score": 0,
+   "our_score": null,
+   "opp_score": null,
    "location": "Morgan Firestone Arena | Ancaster",
-   "note": "20:00 1st",
+   "note": "",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/362"
   },
@@ -2715,6 +2715,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Machac beats Draxl, Czechia leads Canada in Davis Cup Final 8 quarterfinal",
+   "summary": "Tomas Machac defeated Liam Draxl 6-2, 3-6, 6-2 Tuesday to give Czechia an early 1-0 lead over Canada in their Davis Cup Final 8 quarterfinal tie.",
+   "published": "2026-11-24T13:09-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Draxl.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Tennis",
+   "url": "https://www.sportsnet.ca/atp/article/machac-beats-draxl-czechia-leads-canada-in-davis-cup-final-8-quarterfinal/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Oilers’ Nugent-Hopkins back in lineup, Hyman remains out vs. Golden Knights",
    "summary": "Ryan Nugent-Hopkins is back.",
@@ -2808,19 +2821,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Lightning forward Conor Geekie out four to five months with shoulder injury",
-   "summary": "The Tampa Bay Lightning have a hole at forward.",
-   "published": "2026-11-24T10:32-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/conor-geekie.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/lightning-forward-conor-geekie-out-four-to-five-months-with-shoulder-injury/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "mlb",
    "headline": "MLB off-season transaction tracker: The top free-agent signings and trades",
    "summary": "",
@@ -2834,16 +2834,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Davis Cup Finals preview: Canada faces uphill battle against Czechia",
-   "summary": "Led by Felix Auger-Aliassime, Canada is back in the Davis Cup Finals. But it has a tall task ahead in its quest to win a second international championship, writes Sportsnet’s Nate Simpson.",
-   "published": "2026-11-23T12:14-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/liam-draxl.jpg",
+   "league": "nhl",
+   "headline": "Lightning forward Conor Geekie out four to five months with shoulder injury",
+   "summary": "The Tampa Bay Lightning have a hole at forward.",
+   "published": "2026-11-24T10:32-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/conor-geekie.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 0,
-   "sport": "Tennis",
-   "url": "https://www.sportsnet.ca/atp/article/davis-cup-finals-preview-canada-faces-uphill-battle-against-czechia/",
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/lightning-forward-conor-geekie-out-four-to-five-months-with-shoulder-injury/",
    "source": "Sportsnet"
   },
   {
@@ -2857,6 +2857,19 @@
    "sn_team_count": 1,
    "sport": "Soccer",
    "url": "https://www.sportsnet.ca/soccer/article/canadas-saliba-set-for-ankle-surgery-as-national-teams-injury-list-grows/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Davis Cup Finals preview: Canada faces uphill battle against Czechia",
+   "summary": "Led by Felix Auger-Aliassime, Canada is back in the Davis Cup Finals. But it has a tall task ahead in its quest to win a second international championship, writes Sportsnet’s Nate Simpson.",
+   "published": "2026-11-23T12:14-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/liam-draxl.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Tennis",
+   "url": "https://www.sportsnet.ca/atp/article/davis-cup-finals-preview-canada-faces-uphill-battle-against-czechia/",
    "source": "Sportsnet"
   },
   {
@@ -2998,6 +3011,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "Report: Timberwolves guard Donte DiVincenzo targeting return around new year",
+   "summary": "",
+   "published": "2026-11-24T13:05-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/10/Donte.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/report-timberwolves-guard-donte-divincenzo-targeting-return-around-new-year/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "mlb",
    "headline": "Guardians agree to one-year deal with LHP Kris Bubic",
    "summary": "The Cleveland Guardians have added a former all-star arm.",
@@ -3086,32 +3112,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/uncovering-three-key-concerns-facing-the-oilers/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "NHL Roundup: Hellebuyck bounces back as Devils beat Blue Jackets",
-   "summary": "",
-   "published": "2026-11-24T01:36-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177327650.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/nhl-roundup-hellebuyck-bounces-back-as-devils-beat-blue-jackets/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Flames’ Morgan Frost exits vs. Senators with upper-body injury",
-   "summary": "",
-   "published": "2026-11-23T21:41-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177094543.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/flames-morgan-frost-exits-vs-senators-with-upper-body-injury/",
    "source": "Sportsnet"
   },
   {
