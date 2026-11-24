@@ -337,7 +337,8 @@
       // Vipers, 73's / 73s, Admirals... (nicknames NHL teams share need the town too: Lakeshore Canadiens, Leamington Flyers, Wheatley Sharks)
       var jrx = /^(canadiens|flyers|sharks|kings)$/i.test(nick) ? new RegExp('\\b' + town + '\\b[\\s\\S]{0,40}\\b' + nick + '|\\b' + town + '\\b', 'i')
         : new RegExp('\\b' + nick + (/^\d+$/.test(nick) ? "'?s" : "'?s?") + '\\b', 'i');
-      addTeam({ about: function (x) { return jrx.test(x) && !/spitfires/i.test(x) || x.indexOf(c[0]) >= 0; }, id: slug(c[0]), name: c[0], league: c[1], sec: 'junior', words: c[0] + ' ' + c[3] + ' junior hockey',
+      addTeam({ about: function (x) { if (/football|basketball|volleyball|soccer|baseball|softball|rugby|high school|secondary|wecssaa|swossa|ofsaa|red raiders/i.test(x) && !/hockey|\b(ojhl|gohl|pjhl)\b|junior [abc]\b|puck|goalie/i.test(x)) return false;   // another sport, not the club
+          return jrx.test(x) && !/spitfires/i.test(x) || x.indexOf(c[0]) >= 0; }, id: slug(c[0]), name: c[0], league: c[1], sec: 'junior', words: c[0] + ' ' + c[3] + ' junior hockey',
         // a game between two of our clubs is listed once (under the home club), so it counts for the visitor too
         match: function (g) { return g.team === 'junior' && (g.club === c[0] || (g.opponent === c[0] && g.club !== c[0])); }, std: c[2] ? [c[2], new RegExp(key.replace(/[.*+?^${}()|[\]\\']/g, '.?'), 'i')] : null,
         news: function (s) { return s.team === 'junior' && s.club === c[0]; } });
@@ -813,7 +814,7 @@
     if (BAR) { var cb2 = el('div', 'closebar bottom'); var bk2 = el('button', 'back', fromPick ? '\u2039 Back to the list' : '\u2715 Close'); bk2.type = 'button'; bk2.onclick = backToList; cb2.appendChild(bk2); box._bottom = cb2; }
     if (t.id === 'spitfires') {
       var ct = el('a', 'box contest'); ct.href = 'https://www.powerplaywindsor.com/scores-standings?contest=spitfires'; ct.target = '_top';
-      ct.appendChild(el('b', null, 'Win Spitfires tickets')); ct.appendChild(el('span', null, 'Enter the Powerplay ticket draw \u203a')); box.appendChild(ct);
+      ct.appendChild(el('b', null, 'Win two Spitfires tickets')); ct.appendChild(el('span', null, 'Enter by 10 a.m. on game day \u203a')); box.appendChild(ct);
     }
     if (box._bottom) box.appendChild(box._bottom);
     box.appendChild(el('div', 'note', 'Schedules and scores update every 15 minutes.'));
