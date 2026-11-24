@@ -71,6 +71,10 @@
   .cap p { margin: 0; color: #d4dcee; font-size: 15.5px; line-height: 1.55; }
   .msg { padding: 60px 20px; text-align: center; color: var(--muted); }
 
+  /* a way out: in full screen, and when the slideshow is open on its own (iPhones open it in a new tab) */
+  .gx { position: fixed; top: 10px; right: 10px; z-index: 6; width: 42px; height: 42px; border-radius: 50%; border: 2px solid #fff; background: rgba(11,26,51,.85); color: #fff; font: 800 19px/1 system-ui, sans-serif; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,.5); }
+  .gx[hidden] { display: none; }
+  .wrap:fullscreen .gx { display: block; }
   /* full screen: photo fills the screen, caption stays readable */
   .wrap:fullscreen { max-width: none; height: 100vh; display: flex; flex-direction: column; background: #000; padding: 10px 16px; }
   .wrap:fullscreen .top { display: none; }
@@ -89,6 +93,7 @@
 </head>
 <body>
 <div class="wrap" id="wrap">
+  <button type="button" class="gx" id="gx" aria-label="Close" hidden>&#10005;</button>
   <div class="top"><h1 id="title">Game Day <em>Snaps</em></h1><div class="topr" id="topr"><div class="sub">Powerplay Windsor</div></div></div>
   <div class="stage" id="stage">
     <div class="bg" id="bg"></div>
@@ -234,6 +239,15 @@
     else window.open(location.href, '_blank');   // iPhone: open the slideshow on its own, full width
   };
   document.addEventListener('keydown', function (e) { if (e.key === 'ArrowLeft') go(at - 1); if (e.key === 'ArrowRight') go(at + 1); });
+  // the close button: leaves full screen; on its own page, goes back to where the visitor came from (or Powerplay's homepage)
+  var alone = window.top === window.self;
+  if (alone) $('gx').hidden = false;
+  $('gx').onclick = function () {
+    if (document.fullscreenElement) { document.exitFullscreen(); return; }
+    if (window.opener) { try { window.close(); } catch (e) {} }
+    if (history.length > 1) history.back();
+    else location.href = 'https://www.powerplaywindsor.com/';
+  };
   // swipe on phones
   var x0 = null;
   $('stage').addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
