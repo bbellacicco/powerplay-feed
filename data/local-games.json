@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T12:48:38-05:00",
+ "updated": "2026-11-24T13:02:11-05:00",
  "today": "2026-11-24",
  "range": [
   "2026-11-21",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 36
   },
   "club_news": {
    "ok": true,
@@ -1705,15 +1705,15 @@
   {
    "league": "pwhl",
    "start": "2026-11-24T13:30:00-05:00",
-   "status": "upcoming",
+   "status": "live",
    "home": "Detroit Clutch",
    "away": "Hamilton Havoc",
    "home_abbr": "DET",
    "away_abbr": "HAM",
-   "our_score": null,
-   "opp_score": null,
+   "our_score": 0,
+   "opp_score": 0,
    "location": "Morgan Firestone Arena | Ancaster",
-   "note": "",
+   "note": "20:00 1st",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/362"
   },
@@ -1931,6 +1931,30 @@
   },
   {
    "league": "cfl",
+   "headline": "All 9 teams' top pending free agents",
+   "summary": "",
+   "published": "2026-11-24T00:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/787Jlj8VpTv1qvKqzrjTX1/1b42d6ed489876adbe06d01c469cdcb3/Justin_McInnis_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/all-9-teams-top-pending-free-agents",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Stampeders sign National offensive lineman Tyler Packer",
+   "summary": "",
+   "published": "2026-11-24T00:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/7prYua3Da7QTkfO5GqkoPT/d479b6c0dd644fad680d147022e5c5dc/Stamps_Helmet.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Stampeders"
+   ],
+   "url": "https://www.cfl.ca/article/stampeders-sign-national-offensive-lineman-tyler-packer",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Tiger-Cats extend American defensive back Quavian White",
    "summary": "",
    "published": "2026-11-24T00:00:00-05:00",
@@ -1940,6 +1964,19 @@
     "Tiger-Cats"
    ],
    "url": "https://www.cfl.ca/article/tiger-cats-extend-american-defensive-back-quavian-white",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Alouettes sign 10 Americans",
+   "summary": "",
+   "published": "2026-11-24T00:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/5oxAkWy8C7osaeNOWfWrPG/b0bf82d99b3fbcb264381b093ef9ddb2/Generic_Alouettes_Helmet_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Alouettes"
+   ],
+   "url": "https://www.cfl.ca/article/alouettes-sign-10-americans",
    "source": "CFL.ca"
   },
   {
@@ -2047,19 +2084,6 @@
   },
   {
    "league": "cfl",
-   "headline": "Roughriders sign Nationals Klassen, Odemwingie and Sombach",
-   "summary": "",
-   "published": "2026-11-20T00:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/6ly4GOPPDAeENxzVsfHh5x/37c58e5c5bc04d4cea807bbb9a39008f/Sask_Helmet_2026.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Roughriders"
-   ],
-   "url": "https://www.cfl.ca/article/roughriders-sign-nationals-klassen-odemwingie-and-sombach",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
    "headline": "5 top plays from the 113th Grey Cup",
    "summary": "",
    "published": "2026-11-19T00:00:00-05:00",
@@ -2094,19 +2118,6 @@
     "Blue Bombers"
    ],
    "url": "https://www.cfl.ca/article/who-will-be-the-next-head-coach-of-the-blue-bombers",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Blue Bombers sign defensive back Damion Harvey Jr.",
-   "summary": "",
-   "published": "2026-11-19T00:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/5K2A1nvHlQ8QFXNXMMJf3d/b930769cc6e9eed81c4324a950f6ddc5/Blue_Bombers_Helmet_2026.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Blue Bombers"
-   ],
-   "url": "https://www.cfl.ca/article/blue-bombers-sign-defensive-back-damion-harvey-jr",
    "source": "CFL.ca"
   },
   {
@@ -2282,17 +2293,6 @@
    "video": false,
    "teams": [],
    "url": "https://www.cfl.ca/article/saskatchewan-artists-bring-cfl-s-indigenous-logos-to-life-through-mural",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "CFL & Capital Power Bring Football to Indigenous Youth | Truth and Reconciliation",
-   "summary": "",
-   "published": "2026-09-27T08:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/12NplMOl0eI7JFPMmI4O3q/d9b9de40429af80b008a94a6142365dc/edm_00_01_18_02.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/cfl-capital-power-bring-football-to-indigenous-youth-truth-and-reconciliation",
    "source": "CFL.ca"
   },
   {
@@ -2631,6 +2631,36 @@
  ],
  "more_news": [
   {
+   "league": "mlb",
+   "headline": "Griffin, Gausman emerging as names to watch in Blue Jays’ search for starter",
+   "summary": "While the Blue Jays have yet to make a move, industry sources say they remain busy and motivated behind the scenes as they search for starting pitching.",
+   "published": "2026-11-24T12:41-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/griffin.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/griffin-gausman-emerging-as-names-to-watch-in-blue-jays-search-for-starter/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Examining William Nylander’s uneven start to season",
+   "summary": "William Nylander’s play has taken a dip this month for the Maple Leafs. Sportsnet’s Adam Vingan dives deeper into the winger’s uneven season to date.",
+   "published": "2026-11-24T12:55-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/william-nylander.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/examining-william-nylanders-uneven-start-to-season/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "What comes next as dust settles on Canadiens’ Dylan Larkin deal?",
    "summary": "The Dylan Larkin trade is sure to send ripples through the Atlantic Division and NHL as a whole. Sportsnet’s Emily Sadler sorts through what could come next after the blockbuster deal.",
@@ -2656,36 +2686,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/young-feisty-senators-look-like-a-true-contender-but-will-soon-be-tested/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Griffin, Gausman emerging as names to watch in Blue Jays’ search for starter",
-   "summary": "While the Blue Jays have yet to make a move, industry sources say they remain busy and motivated behind the scenes as they search for starting pitching.",
-   "published": "2026-11-24T12:41-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/griffin.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/griffin-gausman-emerging-as-names-to-watch-in-blue-jays-search-for-starter/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "McKenna’s clutch winner helps Maple Leafs end skid",
-   "summary": "Fitting that the teenager with boundless confidence was the one to deliver for a veteran group that was slowly losing theirs.",
-   "published": "2026-11-24T00:30-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Gavin-McKenna.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/mckennas-clutch-winner-helps-maple-leafs-end-skid/",
    "source": "Sportsnet"
   },
   {
@@ -2847,34 +2847,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Singer offers tearful apology for O Canada flub at Leafs-Islanders game in New York",
-   "summary": "",
-   "published": "2026-11-24T10:57-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177327578.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/singer-offers-tearful-apology-for-o-canada-flub-at-leafs-islanders-game-in-new-york/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Blackhawks’ Bedard out four months after undergoing shoulder surgery",
-   "summary": "",
-   "published": "2026-11-23T21:38-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/bedard.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/blackhawks-bedard-out-four-months-after-undergoing-shoulder-surgery/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "other",
    "headline": "Canada’s Saliba set for ankle surgery as national team’s injury list grows",
    "summary": "",
@@ -2898,6 +2870,49 @@
    "sn_team_count": 0,
    "sport": "",
    "url": "https://www.sportsnet.ca/olympics/article/alpine-ski-biathlon-federations-merge-in-bid-to-reshape-winter-sport-in-canada/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Blackhawks’ Bedard out four months after undergoing shoulder surgery",
+   "summary": "",
+   "published": "2026-11-23T21:38-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/bedard.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/blackhawks-bedard-out-four-months-after-undergoing-shoulder-surgery/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Singer offers tearful apology for O Canada flub at Leafs-Islanders game in New York",
+   "summary": "",
+   "published": "2026-11-24T10:57-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177327578.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/singer-offers-tearful-apology-for-o-canada-flub-at-leafs-islanders-game-in-new-york/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "McKenna’s clutch winner helps Maple Leafs end skid",
+   "summary": "Fitting that the teenager with boundless confidence was the one to deliver for a veteran group that was slowly losing theirs.",
+   "published": "2026-11-24T00:30-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Gavin-McKenna.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/mckennas-clutch-winner-helps-maple-leafs-end-skid/",
    "source": "Sportsnet"
   },
   {
