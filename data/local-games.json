@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T16:02:42-05:00",
+ "updated": "2026-11-24T16:16:49-05:00",
  "today": "2026-11-24",
  "range": [
   "2026-11-21",
@@ -1710,25 +1710,25 @@
    "away": "Vegas Vanguards",
    "home_abbr": "VAN",
    "away_abbr": "VGS",
-   "our_score": 2,
+   "our_score": 3,
    "opp_score": 3,
    "location": "America First Center | Henderson",
-   "note": "20:00 2nd",
+   "note": "12:01 2nd",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/355"
   },
   {
    "league": "pwhl",
    "start": "2026-11-24T16:00:00-05:00",
-   "status": "upcoming",
+   "status": "live",
    "home": "New York Sirens",
    "away": "Montréal Victoire",
    "home_abbr": "NY",
    "away_abbr": "MTL",
-   "our_score": null,
-   "opp_score": null,
+   "our_score": 0,
+   "opp_score": 0,
    "location": "Boston Sports Institute | Wellesley",
-   "note": "",
+   "note": "13:28 1st",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/357"
   },
@@ -1750,7 +1750,7 @@
   {
    "league": "pwhl",
    "start": "2026-11-24T13:30:00-05:00",
-   "status": "live",
+   "status": "final",
    "home": "Detroit Clutch",
    "away": "Hamilton Havoc",
    "home_abbr": "DET",
@@ -1758,7 +1758,7 @@
    "our_score": 3,
    "opp_score": 2,
    "location": "Morgan Firestone Arena | Ancaster",
-   "note": "Unofficial Final",
+   "note": "",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/362"
   },
@@ -3437,8 +3437,8 @@
    "league": "mlb",
    "headline": "Tigers agree to 1-year deal with versatile infielder Kim (source)",
    "summary": "",
-   "published": "2026-11-24T14:01-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/tvcnoapnntlvk3vsesl1",
+   "published": "2026-11-24T15:52-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/chaa8ozntixlnclm17lr",
    "video": false,
    "teams": [
     "Detroit Tigers"
@@ -4799,6 +4799,18 @@
     "group": "PWHL",
     "teams": [
      {
+      "name": "Hamilton Havoc",
+      "abbr": "HAM",
+      "gp": 2,
+      "w": 2,
+      "l": 0,
+      "otl": 0,
+      "pts": 6,
+      "gf": 8,
+      "ga": 5,
+      "strk": "2W"
+     },
+     {
       "name": "Vancouver Goldeneyes",
       "abbr": "VAN",
       "gp": 1,
@@ -4807,7 +4819,7 @@
       "otl": 0,
       "pts": 3,
       "gf": 7,
-      "ga": 3,
+      "ga": 4,
       "strk": "1W"
      },
      {
@@ -4832,18 +4844,6 @@
       "pts": 3,
       "gf": 2,
       "ga": 1,
-      "strk": "1W"
-     },
-     {
-      "name": "Hamilton Havoc",
-      "abbr": "HAM",
-      "gp": 1,
-      "w": 1,
-      "l": 0,
-      "otl": 0,
-      "pts": 3,
-      "gf": 8,
-      "ga": 5,
       "strk": "1W"
      },
      {
@@ -4883,18 +4883,6 @@
       "strk": ""
      },
      {
-      "name": "Detroit Clutch",
-      "abbr": "DET",
-      "gp": 1,
-      "w": 0,
-      "l": 1,
-      "otl": 0,
-      "pts": 0,
-      "gf": 3,
-      "ga": 5,
-      "strk": "1L"
-     },
-     {
       "name": "San Jose Sea Lions",
       "abbr": "SJ",
       "gp": 0,
@@ -4914,7 +4902,7 @@
       "l": 1,
       "otl": 0,
       "pts": 0,
-      "gf": 3,
+      "gf": 4,
       "ga": 5,
       "strk": "1L"
      },
@@ -4941,6 +4929,18 @@
       "gf": 3,
       "ga": 5,
       "strk": "1L"
+     },
+     {
+      "name": "Detroit Clutch",
+      "abbr": "DET",
+      "gp": 2,
+      "w": 0,
+      "l": 2,
+      "otl": 0,
+      "pts": 0,
+      "gf": 3,
+      "ga": 5,
+      "strk": "2L"
      }
     ]
    }
