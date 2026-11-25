@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T22:32:34-05:00",
+ "updated": "2026-11-24T22:47:00-05:00",
  "today": "2026-11-24",
  "range": [
   "2026-11-21",
@@ -99,11 +99,11 @@
   },
   "pwhl_news": {
    "ok": true,
-   "count": 26
+   "count": 27
   },
   "sportsnet": {
    "ok": true,
-   "count": 36
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -2302,6 +2302,17 @@
   },
   {
    "league": "pwhl",
+   "headline": "Toronto Ends Preseason With Win Over Ottawa",
+   "summary": "",
+   "published": "2026-11-25T03:28:07+00:00",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/5A4A4018",
+   "video": false,
+   "teams": [],
+   "url": "https://www.thepwhl.com/en/news/2026/november/24/toronto-ends-preseason-with-win-over-ottawa",
+   "source": "thepwhl.com"
+  },
+  {
+   "league": "pwhl",
    "headline": "Minnesota Frost Announce Roster Updates – Nov. 24, 2026",
    "summary": "",
    "published": "2026-11-25T01:58:44+00:00",
@@ -2764,6 +2775,19 @@
   },
   {
    "league": "other",
+   "headline": "No. 1 South Carolina stifles No. 7 UConn in Final Four rematch",
+   "summary": "",
+   "published": "2026-11-24T22:38-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/staley.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/basketball/article/no-1-south-carolina-stifles-no-7-uconn-in-final-four-rematch/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
    "headline": "Indiana tumbles out of field in College Football Playoff rankings",
    "summary": "",
    "published": "2026-11-24T20:49-05:00",
@@ -2773,19 +2797,6 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/ncaa-mens-football/article/indiana-tumbles-out-of-field-in-college-football-playoff-rankings/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Broncos suspend RB J.K. Dobbins for ‘conduct detrimental’ to team",
-   "summary": "",
-   "published": "2026-11-24T16:59-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/11/Untitled-design-41-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/broncos-suspend-rb-j-k-dobbins-for-conduct-detrimental-to-team/",
    "source": "Sportsnet"
   },
   {
@@ -2921,19 +2932,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Michigan drops plans to hire new AD Trev Alberts",
-   "summary": "Michigan announced Tuesday that it has made the expensive decision — at least $21 million — to back out of plans to hire Trev Alberts of Texas A&M as its next athletic director.",
-   "published": "2026-11-24T17:23-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Texas-Gov.-Greg-Abbott-left-and-Texas-AM-Athletic-Director-Trev-Alberts.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/ncaa-mens-football/article/michigan-drops-plans-to-hire-new-ad-trev-alberts/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nfl",
    "headline": "Packers activate Micah Parsons for season debut",
    "summary": "Micah Parsons is set to make his season debut on Wednesday night.",
@@ -2944,6 +2942,45 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/packers-activate-micah-parsons-for-season-debut/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "AP Source: Brandon Aiyuk visits Commanders on Wednesday",
+   "summary": "",
+   "published": "2026-11-24T18:49-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/08/aiyuk_brandon1280.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/ap-source-brandon-aiyuk-set-to-visit-commanders-on-wednesday/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Broncos suspend RB J.K. Dobbins for ‘conduct detrimental’ to team",
+   "summary": "",
+   "published": "2026-11-24T16:59-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/11/Untitled-design-41-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/broncos-suspend-rb-j-k-dobbins-for-conduct-detrimental-to-team/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Michigan drops plans to hire new AD Trev Alberts",
+   "summary": "Michigan announced Tuesday that it has made the expensive decision — at least $21 million — to back out of plans to hire Trev Alberts of Texas A&M as its next athletic director.",
+   "published": "2026-11-24T17:23-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Texas-Gov.-Greg-Abbott-left-and-Texas-AM-Athletic-Director-Trev-Alberts.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/ncaa-mens-football/article/michigan-drops-plans-to-hire-new-ad-trev-alberts/",
    "source": "Sportsnet"
   },
   {
@@ -2983,19 +3020,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/lightning-forward-conor-geekie-out-four-to-five-months-with-shoulder-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "AP Source: Brandon Aiyuk visits Commanders on Wednesday",
-   "summary": "",
-   "published": "2026-11-24T18:49-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/08/aiyuk_brandon1280.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/ap-source-brandon-aiyuk-set-to-visit-commanders-on-wednesday/",
    "source": "Sportsnet"
   },
   {
@@ -3078,34 +3102,6 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/jalen-duren-practices-with-pistons-will-begin-rehab-assignment-in-next-step-to-return-from-injury/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Blackhawks’ Bedard out four months after undergoing shoulder surgery",
-   "summary": "",
-   "published": "2026-11-23T21:38-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/bedard.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/blackhawks-bedard-out-four-months-after-undergoing-shoulder-surgery/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Singer offers tearful apology for O Canada flub at Leafs-Islanders game in New York",
-   "summary": "",
-   "published": "2026-11-24T10:57-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177327578.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/singer-offers-tearful-apology-for-o-canada-flub-at-leafs-islanders-game-in-new-york/",
    "source": "Sportsnet"
   },
   {
@@ -3474,6 +3470,19 @@
   },
   {
    "league": "mlb",
+   "headline": "Let's build a lineup of MLB's best 25-and-under stars",
+   "summary": "",
+   "published": "2026-11-24T22:22-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/iwpiaxzm84numxa1fotj",
+   "video": false,
+   "teams": [
+    "Detroit Tigers"
+   ],
+   "url": "https://www.mlb.com/tigers/news/best-players-in-mlb-25-and-under-heading-into-2027",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
    "headline": "Melton signs 6-year, $46.5 million contract extension with Tigers",
    "summary": "",
    "published": "2026-11-24T11:20-05:00",
@@ -3483,19 +3492,6 @@
     "Detroit Tigers"
    ],
    "url": "https://www.mlb.com/tigers/news/tigers-troy-melton-contract-extension",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
-   "headline": "What Melton's extension represents for Tigers",
-   "summary": "",
-   "published": "2026-11-23T12:00-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/v1795405365/mlb/srovqcyxhj0mvga8wad7",
-   "video": false,
-   "teams": [
-    "Detroit Tigers"
-   ],
-   "url": "https://www.mlb.com/tigers/news/what-troy-melton-extension-means-for-tigers",
    "source": "Team site"
   },
   {
@@ -3513,15 +3509,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Why the 2026 rookie class might have been the best ever",
+   "headline": "What Melton's extension represents for Tigers",
    "summary": "",
-   "published": "2026-11-23T19:26-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/cw9p4lhtusd8l1yhi58k",
+   "published": "2026-11-23T12:00-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/v1795405365/mlb/srovqcyxhj0mvga8wad7",
    "video": false,
    "teams": [
     "Detroit Tigers"
    ],
-   "url": "https://www.mlb.com/tigers/news/analyzing-success-of-2026-mlb-rookie-class",
+   "url": "https://www.mlb.com/tigers/news/what-troy-melton-extension-means-for-tigers",
    "source": "Team site"
   },
   {
@@ -3548,6 +3544,19 @@
     "Detroit Tigers"
    ],
    "url": "https://www.mlb.com/milb/prospects/2026/tigers/",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
+   "headline": "Why the 2026 rookie class might have been the best ever",
+   "summary": "",
+   "published": "2026-11-23T19:26-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/cw9p4lhtusd8l1yhi58k",
+   "video": false,
+   "teams": [
+    "Detroit Tigers"
+   ],
+   "url": "https://www.mlb.com/tigers/news/analyzing-success-of-2026-mlb-rookie-class",
    "source": "Team site"
   },
   {
@@ -3613,19 +3622,6 @@
     "Detroit Tigers"
    ],
    "url": "https://www.mlb.com/tigers/news/emilio-pagan-signs-one-year-deal-with-tigers",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
-   "headline": "Dingler, Greene, McGonigle take home Silver Slugger Awards",
-   "summary": "",
-   "published": "2026-11-17T19:05-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/x9szd1inkn185mqitwmg",
-   "video": false,
-   "teams": [
-    "Detroit Tigers"
-   ],
-   "url": "https://www.mlb.com/tigers/news/2026-silver-slugger-award-winners",
    "source": "Team site"
   },
   {
