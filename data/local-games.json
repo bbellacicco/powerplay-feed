@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T13:06:32-05:00",
+ "updated": "2026-11-25T13:16:58-05:00",
  "today": "2026-11-25",
  "range": [
   "2026-11-22",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 37
+   "count": 36
   },
   "club_news": {
    "ok": true,
@@ -1760,10 +1760,10 @@
    "away": "Boston Fleet",
    "home_abbr": "MTL",
    "away_abbr": "BOS",
-   "our_score": 0,
-   "opp_score": 0,
+   "our_score": 1,
+   "opp_score": 1,
    "location": "Boston Sports Institute | Wellesley",
-   "note": "20:00 1st",
+   "note": "12:55 1st",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/358"
   }
@@ -2674,19 +2674,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Oilers show natural signs of fatigue in loss to Vegas after taxing road trip",
-   "summary": "The Oilers looked tired, performed tired, and made tired mistakes in a loss to the Golden Knights on Tuesday, It’s just not easy for a team to be at its best after a six-game Eastern road swing.",
-   "published": "2026-11-24T23:56-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/mcdavid-4.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/oilers-show-natural-signs-of-fatigue-in-loss-to-vegas-after-taxing-road-trip/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Maple Leafs recall goaltender Artur Akhtyamov from Marlies",
    "summary": "",
    "published": "2026-11-25T10:50-05:00",
@@ -2830,6 +2817,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/avalanches-cale-makar-hopes-to-return-vs-canadiens/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Oilers show natural signs of fatigue in loss to Vegas after taxing road trip",
+   "summary": "The Oilers looked tired, performed tired, and made tired mistakes in a loss to the Golden Knights on Tuesday, It’s just not easy for a team to be at its best after a six-game Eastern road swing.",
+   "published": "2026-11-24T23:56-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/mcdavid-4.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/oilers-show-natural-signs-of-fatigue-in-loss-to-vegas-after-taxing-road-trip/",
    "source": "Sportsnet"
   },
   {
@@ -3049,6 +3049,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "What comes next as dust settles on Canadiens’ Dylan Larkin deal?",
+   "summary": "The Dylan Larkin trade is sure to send ripples through the Atlantic Division and NHL as a whole. Sportsnet’s Emily Sadler sorts through what could come next after the blockbuster deal.",
+   "published": "2026-11-24T11:05-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/6b04d93ba88c9c3c154e02d5jpeg.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Red Wings"
+   ],
+   "sn_team_count": 4,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/what-comes-next-as-dust-settles-on-canadiens-dylan-larkin-deal/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "mlb",
    "headline": "Breaking down Orioles’ swift signing of starter Freddy Peralta",
    "summary": "The starting pitching market is moving quickly — and the Orioles are the latest team to jump in with a five-year deal for Freddy Peralta. Sportsnet’s David Singh breaks down the reported signing.",
@@ -3098,34 +3113,6 @@
    "sn_team_count": 0,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/mlb-off-season-transaction-tracker-the-top-free-agent-signings-and-trades/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "What comes next as dust settles on Canadiens’ Dylan Larkin deal?",
-   "summary": "The Dylan Larkin trade is sure to send ripples through the Atlantic Division and NHL as a whole. Sportsnet’s Emily Sadler sorts through what could come next after the blockbuster deal.",
-   "published": "2026-11-24T11:05-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/dylan-larkin-1.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Red Wings"
-   ],
-   "sn_team_count": 4,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/what-comes-next-as-dust-settles-on-canadiens-dylan-larkin-deal/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Young, feisty Senators look like a true contender, but will soon be tested",
-   "summary": "The Senators have been giving teams hell from the get-go this season.",
-   "published": "2026-11-24T10:17-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-3-4.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/young-feisty-senators-look-like-a-true-contender-but-will-soon-be-tested/",
    "source": "Sportsnet"
   },
   {
@@ -4863,8 +4850,8 @@
       "l": 0,
       "otl": 0,
       "pts": 3,
-      "gf": 3,
-      "ga": 0,
+      "gf": 4,
+      "ga": 1,
       "strk": "1W"
      },
      {
@@ -4947,8 +4934,8 @@
       "l": 1,
       "otl": 0,
       "pts": 0,
-      "gf": 3,
-      "ga": 5,
+      "gf": 4,
+      "ga": 6,
       "strk": "1L"
      },
      {
