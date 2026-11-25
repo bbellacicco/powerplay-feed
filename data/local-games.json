@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T00:07:16-05:00",
+ "updated": "2026-11-25T00:36:39-05:00",
  "today": "2026-11-25",
  "range": [
   "2026-11-22",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 36
+   "count": 38
   },
   "club_news": {
    "ok": true,
@@ -2831,18 +2831,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "What comes next as dust settles on Canadiens’ Dylan Larkin deal?",
-   "summary": "The Dylan Larkin trade is sure to send ripples through the Atlantic Division and NHL as a whole. Sportsnet’s Emily Sadler sorts through what could come next after the blockbuster deal.",
-   "published": "2026-11-24T11:05-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/dylan-larkin-1.jpg",
+   "league": "nba",
+   "headline": "2026 NBA Cup: Schedule, scores, standings",
+   "summary": "",
+   "published": "2026-10-30T21:14-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/New-York-Knicks-center-Karl-Anthony-Towns-32-celebrates-with-teammates-after-his-teams-victory-against-the-San-Antonio-Spurs.jpg",
    "video": false,
-   "teams": [
-    "Detroit Red Wings"
-   ],
-   "sn_team_count": 4,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/what-comes-next-as-dust-settles-on-canadiens-dylan-larkin-deal/",
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/2026-nba-cup-schedule-scores-standings/",
    "source": "Sportsnet"
   },
   {
@@ -2871,19 +2869,6 @@
    "sn_team_count": 2,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/tatum-scores-41-to-help-celtics-snap-four-game-skid-with-win-over-wizards/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "MLB off-season transaction tracker: The top free-agent signings and trades",
-   "summary": "",
-   "published": "2026-11-19T19:57-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/peralta.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/mlb-off-season-transaction-tracker-the-top-free-agent-signings-and-trades/",
    "source": "Sportsnet"
   },
   {
@@ -2927,15 +2912,30 @@
   },
   {
    "league": "mlb",
-   "headline": "Report: Reds, C Tyler Stephenson agree to three-year, $30M deal",
+   "headline": "MLB off-season transaction tracker: The top free-agent signings and trades",
    "summary": "",
-   "published": "2026-11-24T21:01-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/04/86ddff8e7119d73fece663a297fcb5280097b8f24f89cc36cdeb856e47f6689c.jpg",
+   "published": "2026-11-19T19:57-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/peralta.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
+   "sn_team_count": 0,
    "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/report-reds-c-tyler-stephenson-agree-to-three-year-30m-deal/",
+   "url": "https://www.sportsnet.ca/mlb/article/mlb-off-season-transaction-tracker-the-top-free-agent-signings-and-trades/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "What comes next as dust settles on Canadiens’ Dylan Larkin deal?",
+   "summary": "The Dylan Larkin trade is sure to send ripples through the Atlantic Division and NHL as a whole. Sportsnet’s Emily Sadler sorts through what could come next after the blockbuster deal.",
+   "published": "2026-11-24T11:05-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/dylan-larkin-1.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Red Wings"
+   ],
+   "sn_team_count": 4,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/what-comes-next-as-dust-settles-on-canadiens-dylan-larkin-deal/",
    "source": "Sportsnet"
   },
   {
@@ -3003,6 +3003,19 @@
    "sn_team_count": 0,
    "sport": "Tennis",
    "url": "https://www.sportsnet.ca/atp/article/jannik-sinner-undergoes-minor-surgery-on-troublesome-right-knee/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Report: Reds, C Tyler Stephenson agree to three-year, $30M deal",
+   "summary": "",
+   "published": "2026-11-24T21:01-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/04/86ddff8e7119d73fece663a297fcb5280097b8f24f89cc36cdeb856e47f6689c.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/report-reds-c-tyler-stephenson-agree-to-three-year-30m-deal/",
    "source": "Sportsnet"
   },
   {
@@ -3123,18 +3136,29 @@
    "source": "Sportsnet"
   },
   {
-   "league": "mlb",
-   "headline": "Griffin, Gausman emerging as names to watch in Blue Jays’ search for starter",
-   "summary": "While the Blue Jays have yet to make a move, industry sources say they remain busy and motivated behind the scenes as they search for starting pitching.",
-   "published": "2026-11-24T12:41-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/griffin.jpg",
+   "league": "other",
+   "headline": "Alpine ski, biathlon federations merge in bid to reshape winter sport in Canada",
+   "summary": "",
+   "published": "2026-11-24T08:39-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2021/11/Brodie-Seger-.jpg",
    "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "",
+   "url": "https://www.sportsnet.ca/olympics/article/alpine-ski-biathlon-federations-merge-in-bid-to-reshape-winter-sport-in-canada/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Elizabeth Williams elected as next WNBPA president",
+   "summary": "Elizabeth Williams is set to fill the shoes of former WNBPA president Nneka Ogwumike.",
+   "published": "2026-11-24T15:32-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP176303184.jpg",
+   "video": false,
+   "teams": [],
    "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/griffin-gausman-emerging-as-names-to-watch-in-blue-jays-search-for-starter/",
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/wnba/article/report-elizabeth-williams-elected-as-next-wnbpa-president/",
    "source": "Sportsnet"
   },
   {
