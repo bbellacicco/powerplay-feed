@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T15:17:01-05:00",
+ "updated": "2026-11-25T15:36:48-05:00",
  "today": "2026-11-25",
  "range": [
   "2026-11-22",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -1761,9 +1761,9 @@
    "home_abbr": "MTL",
    "away_abbr": "BOS",
    "our_score": 3,
-   "opp_score": 4,
+   "opp_score": 5,
    "location": "Boston Sports Institute | Wellesley",
-   "note": "05:10 3rd",
+   "note": "Unofficial Final",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/358"
   }
@@ -2632,6 +2632,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Friendly stretch in schedule gives slumping Oilers time to regroup",
+   "summary": "The Edmonton Oilers will have plenty of time to unwind over the next month. Mark Spector checks in ahead of a two-day break with some news and notes.",
+   "published": "2026-11-25T15:17-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Draisaitl.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/friendly-stretch-in-schedule-gives-slumping-oilers-time-to-regroup/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "mlb",
    "headline": "Why Taira’s repertoire should translate with Blue Jays",
    "summary": "When the Blue Jays signed Kaima Taira on Tuesday, they made a large bet on a player who hasn’t stepped on an MLB mound. Nick Ashbourne digs deep on the Japanese right-hander’s seemingly MLB-ready repertoire.",
@@ -2702,6 +2715,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Patrik Laine has knee surgery after having setback in training",
+   "summary": "",
+   "published": "2026-11-25T15:26-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/patrik-laine.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/patrik-laine-has-knee-surgery-after-having-setback-in-training/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Maple Leafs recall goaltender Artur Akhtyamov from Marlies",
    "summary": "",
    "published": "2026-11-25T10:50-05:00",
@@ -2742,19 +2768,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "mlb",
-   "headline": "Reports: Alec Bohm agrees to two-year, $20M contract with Royals",
-   "summary": "",
-   "published": "2026-11-25T10:48-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/CP177011174.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/reports-alec-bohm-agrees-to-two-year-20m-contract-with-royals/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "cfl",
    "headline": "CFL awards 2028 Grey Cup to home of reigning champion Edmonton Elks",
    "summary": "The Canadian Football League awarded the 2028 Grey Cup to Edmonton on Thursday, marking the sixth time the city will host the championship game.",
@@ -2765,21 +2778,6 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/cfl/article/cfl-awards-2028-grey-cup-to-home-of-reigning-champion-edmonton-elks/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Maple Leafs’ Marchenko, Sissons practise in regular sweaters",
-   "summary": "",
-   "published": "2026-11-25T13:49-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/marchenko-1.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-marchenko-sissons-practised-in-regular-sweaters-wednesday/",
    "source": "Sportsnet"
   },
   {
@@ -2823,6 +2821,21 @@
   },
   {
    "league": "nhl",
+   "headline": "Maple Leafs’ Marchenko, Sissons practise in regular sweaters",
+   "summary": "",
+   "published": "2026-11-25T13:49-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/marchenko-1.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-marchenko-sissons-practised-in-regular-sweaters-wednesday/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Penguins’ Malkin in, Chinakhov remains out vs. Flames",
    "summary": "",
    "published": "2026-11-25T11:53-05:00",
@@ -2858,6 +2871,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/avalanches-cale-makar-hopes-to-return-vs-canadiens/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Reports: Alec Bohm agrees to two-year, $20M contract with Royals",
+   "summary": "",
+   "published": "2026-11-25T10:48-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/CP177011174.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/reports-alec-bohm-agrees-to-two-year-20m-contract-with-royals/",
    "source": "Sportsnet"
   },
   {
@@ -4796,7 +4822,7 @@
       "l": 0,
       "otl": 0,
       "pts": 3,
-      "gf": 7,
+      "gf": 8,
       "ga": 3,
       "strk": "1W"
      },
@@ -4881,7 +4907,7 @@
       "otl": 0,
       "pts": 0,
       "gf": 6,
-      "ga": 9,
+      "ga": 10,
       "strk": "1L"
      },
      {
