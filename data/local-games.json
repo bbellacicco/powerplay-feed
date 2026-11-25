@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T19:01:56-05:00",
+ "updated": "2026-11-24T19:17:34-05:00",
  "today": "2026-11-24",
  "range": [
   "2026-11-21",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 36
   },
   "club_news": {
    "ok": true,
@@ -1705,15 +1705,15 @@
   {
    "league": "pwhl",
    "start": "2026-11-24T19:00:00-05:00",
-   "status": "upcoming",
+   "status": "live",
    "home": "Toronto Sceptres",
    "away": "Ottawa Charge",
    "home_abbr": "TOR",
    "away_abbr": "OTT",
-   "our_score": null,
-   "opp_score": null,
+   "our_score": 0,
+   "opp_score": 1,
    "location": "Mattamy Athletic Centre | Toronto",
-   "note": "",
+   "note": "15:21 1st",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/359"
   },
@@ -2725,6 +2725,19 @@
   },
   {
    "league": "other",
+   "headline": "Champions League Roundup: Bellingham sparks Madrid, Man City underwhelms",
+   "summary": "Another stirring comeback win for Real Madrid. More disappointment for Manchester City.",
+   "published": "2026-11-24T17:50-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Jude-Bellingham.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/champions-league/article/champions-league-roundup-bellingham-sparks-madrid-man-city-underwhelms/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
    "headline": "Auger-Aliassime, Draxl lose as Czechia downs Canada in Davis Cup quarterfinal",
    "summary": "",
    "published": "2026-11-24T15:05-05:00",
@@ -2776,6 +2789,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Elizabeth Williams elected as next WNBPA president",
+   "summary": "Elizabeth Williams is set to fill the shoes of former WNBPA president Nneka Ogwumike.",
+   "published": "2026-11-24T15:32-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP176303184.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/wnba/article/report-elizabeth-williams-elected-as-next-wnbpa-president/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Hage says he plans to sign with Red Wings after college season",
    "summary": "",
@@ -2788,19 +2814,6 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/hage-says-he-plans-to-sign-with-red-wings-after-college-season/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Elizabeth Williams elected as next WNBPA president",
-   "summary": "Elizabeth Williams is set to fill the shoes of former WNBPA president Nneka Ogwumike.",
-   "published": "2026-11-24T15:32-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP176303184.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/wnba/article/report-elizabeth-williams-elected-as-next-wnbpa-president/",
    "source": "Sportsnet"
   },
   {
@@ -4845,7 +4858,7 @@
       "otl": 0,
       "pts": 3,
       "gf": 2,
-      "ga": 1,
+      "ga": 2,
       "strk": "1W"
      },
      {
@@ -4916,7 +4929,7 @@
       "l": 1,
       "otl": 0,
       "pts": 0,
-      "gf": 3,
+      "gf": 4,
       "ga": 5,
       "strk": "1L"
      },
