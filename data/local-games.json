@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T11:17:46-05:00",
+ "updated": "2026-11-25T11:32:41-05:00",
  "today": "2026-11-25",
  "range": [
   "2026-11-22",
@@ -99,7 +99,7 @@
   },
   "pwhl_news": {
    "ok": true,
-   "count": 26
+   "count": 25
   },
   "sportsnet": {
    "ok": true,
@@ -1938,6 +1938,19 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "Tiger-Cats extend Global punter Nikolas Constantinou",
+   "summary": "",
+   "published": "2026-11-25T00:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/3OjkksKpGV4keTmoglVwDw/40609794664ae4c1cc3efdf04b099298/Nik_Cost_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Tiger-Cats"
+   ],
+   "url": "https://www.cfl.ca/article/tiger-cats-extend-global-punter-nikolas-constantinou",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Blue Bombers extend Chris-Ike, Kelly, Ayers and Vanterpool",
    "summary": "",
    "published": "2026-11-25T00:00:00-05:00",
@@ -2090,19 +2103,6 @@
     "Blue Bombers"
    ],
    "url": "https://www.cfl.ca/article/blue-bombers-sign-american-linebacker-jacob-roberts",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Stampeders extend Nationals Sibley, Schechinger, and Warrack",
-   "summary": "",
-   "published": "2026-11-23T00:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/2ggh7bryHeDpvCck07YOJE/cc397834f766766f42a08b912feb26c6/Generic_Stampeders_Helmet_2026.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Stampeders"
-   ],
-   "url": "https://www.cfl.ca/article/stampeders-extend-nationals-sibley-schechinger-and-warrack",
    "source": "CFL.ca"
   },
   {
@@ -2366,17 +2366,6 @@
    "video": false,
    "teams": [],
    "url": "https://www.thepwhl.com/en/news/2026/november/24/montr-al-blanks-new-york-in-preseason-action",
-   "source": "thepwhl.com"
-  },
-  {
-   "league": "pwhl",
-   "headline": "Vancouver Takes Down Vegas in High-Scoring Thriller",
-   "summary": "",
-   "published": "2026-11-24T23:55:54+00:00",
-   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/VANvsVGS_zk_2026-11-24_0400",
-   "video": false,
-   "teams": [],
-   "url": "https://www.thepwhl.com/en/news/2026/november/24/vancouver-takes-down-vegas-in-high-scoring-thriller",
    "source": "thepwhl.com"
   },
   {
@@ -2656,6 +2645,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "What Maple Leafs can learn from Dylan Larkin trade",
+   "summary": "There are two doors standing before the 2026-27 Toronto Maple Leafs and their ride-or-dies.",
+   "published": "2026-11-25T11:27-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/dylan-larkin-1.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/what-maple-leafs-can-learn-from-dylan-larkin-trade/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "NFL Week 12 Pick ‘Em: Thanksgiving delivers a loaded slate",
    "summary": "The NFL is giving us plenty to be thankful for, with a loaded American Thanksgiving schedule and some intriguing matchups sprinkled throughout the rest of Week 12.",
@@ -2681,21 +2685,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/baseball/article/blue-jays-sign-japanese-righty-kaima-taira-to-five-year-80-million-deal/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Examining William Nylander’s uneven start to season",
-   "summary": "William Nylander’s play has taken a dip this month for the Maple Leafs. Sportsnet’s Adam Vingan dives deeper into the winger’s uneven season to date.",
-   "published": "2026-11-24T12:55-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/william-nylander.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/examining-william-nylanders-uneven-start-to-season/",
    "source": "Sportsnet"
   },
   {
@@ -2939,6 +2928,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nhl",
+   "headline": "Examining William Nylander’s uneven start to season",
+   "summary": "William Nylander’s play has taken a dip this month for the Maple Leafs. Sportsnet’s Adam Vingan dives deeper into the winger’s uneven season to date.",
+   "published": "2026-11-24T12:55-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/william-nylander.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/examining-william-nylanders-uneven-start-to-season/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nba",
    "headline": "Cunningham-less Pistons hand Magic first NBA Cup loss",
    "summary": "Isaiah Joe had 21 points and Daniss Jenkins added 15 to spur the Detroit Pistons past the Orlando Magic 104-86 in an NBA Cup game Tuesday night.",
@@ -3137,19 +3141,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/report-reds-c-tyler-stephenson-agree-to-three-year-30m-deal/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "Packers activate Micah Parsons for season debut",
-   "summary": "Micah Parsons is set to make his season debut on Wednesday night.",
-   "published": "2026-11-24T14:57-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/09/Parons.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/packers-activate-micah-parsons-for-season-debut/",
    "source": "Sportsnet"
   },
   {
