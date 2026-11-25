@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T12:20:10-05:00",
+ "updated": "2026-11-25T12:46:59-05:00",
  "today": "2026-11-25",
  "range": [
   "2026-11-22",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 37
+   "count": 38
   },
   "club_news": {
    "ok": true,
@@ -2370,6 +2370,17 @@
   },
   {
    "league": "pwhl",
+   "headline": "Vancouver Takes Down Vegas in High-Scoring Thriller",
+   "summary": "",
+   "published": "2026-11-24T23:55:54+00:00",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/VANvsVGS_zk_2026-11-24_0400",
+   "video": false,
+   "teams": [],
+   "url": "https://www.thepwhl.com/en/news/2026/november/24/vancouver-takes-down-vegas-in-high-scoring-thriller",
+   "source": "thepwhl.com"
+  },
+  {
+   "league": "pwhl",
    "headline": "New York Sirens Announce Training Camp Roster Update - Nov. 24, 2026",
    "summary": "",
    "published": "2026-11-24T19:20:26+00:00",
@@ -2615,19 +2626,6 @@
    ],
    "url": "https://www.thepwhl.com/en/teams/vegas-vanguards/news/2026/october/07/pwhl-las-vegas-announce-2026-27-training-camp-roster",
    "source": "thepwhl.com"
-  },
-  {
-   "league": "pwhl",
-   "headline": "PWHL San Jose Announce 2026-27 Training Camp Roster",
-   "summary": "",
-   "published": "2026-10-07T18:00:00+00:00",
-   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_337/q_auto/f_auto/SJ_Training_Camp_Rosters_1200x800",
-   "video": false,
-   "teams": [
-    "San Jose Sea Lions"
-   ],
-   "url": "https://www.thepwhl.com/en/teams/san-jose-sea-lions/news/2026/october/07/pwhl-san-jose-announce-2026-27-training-camp-roster",
-   "source": "thepwhl.com"
   }
  ],
  "more_news": [
@@ -2743,6 +2741,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Flames’ Frost not available to play vs. Penguins, Pospisil still out",
+   "summary": "The Calgary Flames will have to look for a bounce-back win against the Pittsburgh Penguins on Wednesday without the services of Morgan Frost and Martin Pospisil",
+   "published": "2026-11-25T12:39-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Frost.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/flames-frost-not-available-to-play-vs-penguins-pospisil-still-out/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Panthers get Barkov, Marchand back from injury vs. Senators",
    "summary": "The Florida Panthers are getting a major boost to their lineup.",
    "published": "2026-11-25T11:11-05:00",
@@ -2781,19 +2792,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "Steelers benching Aaron Rodgers vs. Broncos",
-   "summary": "",
-   "published": "2026-11-24T23:23-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/aaron-rodgers.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/steelers-benching-aaron-rodgers-vs-broncos/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "mlb",
    "headline": "Blue Jays sign Japanese righty Kaima Taira to five-year, $80-million deal",
    "summary": "The Blue Jays have made their first major move of the off-season. Star Japanese right-hander Kaima Taira is headed to Toronto on a five-year, $80-million deal, industry sources told Sportsnet.",
@@ -2806,6 +2804,19 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/baseball/article/blue-jays-sign-japanese-righty-kaima-taira-to-five-year-80-million-deal/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Steelers benching Aaron Rodgers vs. Broncos",
+   "summary": "",
+   "published": "2026-11-24T23:23-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/aaron-rodgers.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/steelers-benching-aaron-rodgers-vs-broncos/",
    "source": "Sportsnet"
   },
   {
