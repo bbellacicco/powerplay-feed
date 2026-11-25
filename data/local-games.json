@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T18:46:46-05:00",
+ "updated": "2026-11-24T19:01:56-05:00",
  "today": "2026-11-24",
  "range": [
   "2026-11-21",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 36
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -1719,21 +1719,6 @@
   },
   {
    "league": "pwhl",
-   "start": "2026-11-24T16:00:00-05:00",
-   "status": "live",
-   "home": "New York Sirens",
-   "away": "Montréal Victoire",
-   "home_abbr": "NY",
-   "away_abbr": "MTL",
-   "our_score": 3,
-   "opp_score": 0,
-   "location": "Boston Sports Institute | Wellesley",
-   "note": "Unofficial Final",
-   "time_tbd": false,
-   "link": "https://www.thepwhl.com/en/stats/game-center/357"
-  },
-  {
-   "league": "pwhl",
    "start": "2026-11-24T13:30:00-05:00",
    "status": "final",
    "home": "Detroit Clutch",
@@ -1761,6 +1746,21 @@
    "note": "",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/355"
+  },
+  {
+   "league": "pwhl",
+   "start": "2026-11-24T16:00:00-05:00",
+   "status": "final",
+   "home": "New York Sirens",
+   "away": "Montréal Victoire",
+   "home_abbr": "NY",
+   "away_abbr": "MTL",
+   "our_score": 3,
+   "opp_score": 0,
+   "location": "Boston Sports Institute | Wellesley",
+   "note": "",
+   "time_tbd": false,
+   "link": "https://www.thepwhl.com/en/stats/game-center/357"
   },
   {
    "league": "pwhl",
@@ -2302,6 +2302,17 @@
   },
   {
    "league": "pwhl",
+   "headline": "Vancouver Takes Down Vegas in High-Scoring Thriller",
+   "summary": "",
+   "published": "2026-11-24T23:55:54+00:00",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/VANvsVGS_zk_2026-11-24_0400",
+   "video": false,
+   "teams": [],
+   "url": "https://www.thepwhl.com/en/news/2026/november/24/vancouver-takes-down-vegas-in-high-scoring-thriller",
+   "source": "thepwhl.com"
+  },
+  {
+   "league": "pwhl",
    "headline": "Hamilton Edges Detroit in Preseason Finale",
    "summary": "",
    "published": "2026-11-24T22:20:19+00:00",
@@ -2333,17 +2344,6 @@
    "video": false,
    "teams": [],
    "url": "https://www.thepwhl.com/en/news/2026/november/23/roberts-takes-charge-as-new-york-defeats-boston",
-   "source": "thepwhl.com"
-  },
-  {
-   "league": "pwhl",
-   "headline": "Vaslet’S Pair Leads Hamilton to Win Over Toronto",
-   "summary": "",
-   "published": "2026-11-24T02:05:22+00:00",
-   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_225/q_auto/f_auto/1123PWHLTORHAM088",
-   "video": false,
-   "teams": [],
-   "url": "https://www.thepwhl.com/en/news/2026/november/23/vaslet-s-pair-leads-hamilton-to-win-over-toronto",
    "source": "thepwhl.com"
   },
   {
@@ -2696,19 +2696,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "mlb",
-   "headline": "Breaking down Orioles’ swift signing of starter Freddy Peralta",
-   "summary": "The starting pitching market is moving quickly — and the Orioles are the latest team to jump in with a five-year deal for Freddy Peralta. Sportsnet’s David Singh breaks down the reported signing.",
-   "published": "2026-11-24T11:45-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/freddy-peralta.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/breaking-down-orioles-swift-signing-of-starter-freddy-peralta/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nba",
    "headline": "Raptors’ Kawhi Leonard begins individual on-court workouts",
    "summary": "",
@@ -2750,16 +2737,29 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Panthers’ Cole Schwindt, Wild’s Calvin Pickard hit waivers",
+   "league": "nfl",
+   "headline": "AP Source: Brandon Aiyuk set to visit Commanders on Wednesday",
    "summary": "",
-   "published": "2026-11-24T14:26-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/calvin-pickard.jpg",
+   "published": "2026-11-24T18:49-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/08/aiyuk_brandon1280.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 3,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/panthers-cole-schwindt-wilds-calvin-pickard-hit-waivers/",
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/ap-source-brandon-aiyuk-set-to-visit-commanders-on-wednesday/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Broncos suspend RB J.K. Dobbins for ‘conduct detrimental’ to team",
+   "summary": "",
+   "published": "2026-11-24T16:59-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/11/Untitled-design-41-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/broncos-suspend-rb-j-k-dobbins-for-conduct-detrimental-to-team/",
    "source": "Sportsnet"
   },
   {
@@ -2792,19 +2792,6 @@
   },
   {
    "league": "other",
-   "headline": "Jannik Sinner undergoes ‘minor’ surgery on troublesome right knee",
-   "summary": "Jannik Sinner has undergone a “minor” operation on his bothersome right knee after it didn’t respond well enough to other treatments, the Italian tennis star said Tuesday.",
-   "published": "2026-11-24T12:38-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/05/jannik-sinner-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Tennis",
-   "url": "https://www.sportsnet.ca/atp/article/jannik-sinner-undergoes-minor-surgery-on-troublesome-right-knee/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
    "headline": "Elizabeth Williams elected as next WNBPA president",
    "summary": "Elizabeth Williams is set to fill the shoes of former WNBPA president Nneka Ogwumike.",
    "published": "2026-11-24T15:32-05:00",
@@ -2827,6 +2814,19 @@
    "sn_team_count": 0,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/mlb-off-season-transaction-tracker-the-top-free-agent-signings-and-trades/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Breaking down Orioles’ swift signing of starter Freddy Peralta",
+   "summary": "The starting pitching market is moving quickly — and the Orioles are the latest team to jump in with a five-year deal for Freddy Peralta. Sportsnet’s David Singh breaks down the reported signing.",
+   "published": "2026-11-24T11:45-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/freddy-peralta.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/breaking-down-orioles-swift-signing-of-starter-freddy-peralta/",
    "source": "Sportsnet"
   },
   {
@@ -3003,6 +3003,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Jannik Sinner undergoes ‘minor’ surgery on troublesome right knee",
+   "summary": "Jannik Sinner has undergone a “minor” operation on his bothersome right knee after it didn’t respond well enough to other treatments, the Italian tennis star said Tuesday.",
+   "published": "2026-11-24T12:38-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/05/jannik-sinner-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Tennis",
+   "url": "https://www.sportsnet.ca/atp/article/jannik-sinner-undergoes-minor-surgery-on-troublesome-right-knee/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Blackhawks’ Bedard out four months after undergoing shoulder surgery",
    "summary": "",
@@ -3082,32 +3095,6 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/report-timberwolves-guard-donte-divincenzo-targeting-return-around-new-year/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Guardians agree to one-year deal with LHP Kris Bubic",
-   "summary": "The Cleveland Guardians have added a former all-star arm.",
-   "published": "2026-11-24T11:02-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/05/01b7baa042e616d801c43ce705660b7f64a2307f6e221bf103c7d5dd48281eb0.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/guardians-agree-to-one-year-deal-with-lhp-kris-bubic/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Yankees finalize one-year contracts with left-handed relievers Suter, Hill",
-   "summary": "",
-   "published": "2026-11-24T12:34-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/suter_brent1280.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/yankees-finalize-one-year-contracts-with-left-handed-relievers-suter-hill/",
    "source": "Sportsnet"
   },
   {
@@ -4838,6 +4825,18 @@
       "strk": "2W"
      },
      {
+      "name": "Montréal Victoire",
+      "abbr": "MTL",
+      "gp": 1,
+      "w": 1,
+      "l": 0,
+      "otl": 0,
+      "pts": 3,
+      "gf": 3,
+      "ga": 0,
+      "strk": "1W"
+     },
+     {
       "name": "Ottawa Charge",
       "abbr": "OTT",
       "gp": 1,
@@ -4852,14 +4851,14 @@
      {
       "name": "New York Sirens",
       "abbr": "NY",
-      "gp": 1,
+      "gp": 2,
       "w": 1,
-      "l": 0,
+      "l": 1,
       "otl": 0,
       "pts": 3,
       "gf": 5,
       "ga": 6,
-      "strk": "1W"
+      "strk": "1L"
      },
      {
       "name": "Minnesota Frost",
@@ -4872,18 +4871,6 @@
       "gf": 3,
       "ga": 5,
       "strk": "1L"
-     },
-     {
-      "name": "Montréal Victoire",
-      "abbr": "MTL",
-      "gp": 0,
-      "w": 0,
-      "l": 0,
-      "otl": 0,
-      "pts": 0,
-      "gf": 3,
-      "ga": 0,
-      "strk": ""
      },
      {
       "name": "Seattle Torrent",
