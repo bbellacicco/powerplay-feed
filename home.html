@@ -275,6 +275,11 @@
   .scard { position: relative; } .scard > .pps-btn.mini { position: absolute; right: 6px; top: 6px; z-index: 4; padding: 5px 8px; font-size: 11px; background: rgba(11,26,51,.82); border-color: rgba(255,255,255,.35); }
   .vplayer .cap #vshare .pps-btn { background: var(--accent); color: #0b1a33; border-color: var(--accent); }
   .vplayer .desc { background: #10244a; border-top: 1px solid rgba(255,255,255,.08); padding: 10px 12px 12px; font-size: 13.5px; line-height: 1.45; color: #dbe3f2; }
+  .vplayer .spon { background: #10244a; padding: 8px 12px 0; font-size: 12.5px; color: #a9b8d6; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .vplayer .spon[hidden] { display: none; }
+  .vplayer .spon img { height: 30px; width: auto; max-width: 120px; object-fit: contain; background: #fff; border-radius: 4px; padding: 2px 4px; }
+  .vplayer .spon b { color: #fff; font-weight: 600; }
+  .scard .spn { font-size: 11px; color: #8fa1c4; margin-top: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .vplayer .desc .txt { white-space: pre-line; overflow-wrap: anywhere; }
   .vplayer .desc.clip .txt { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
   .vplayer .desc a { color: var(--accent); }
@@ -440,6 +445,7 @@ document.addEventListener('load', function (e) {
     <button type="button" class="vx" id="vx" aria-label="Close">&#10005;</button>
     <div class="fr" id="vframe"></div>
     <div class="cap"><div class="t" id="vtitle"></div><span id="vshare"></span><a class="ghost" id="vext" target="_blank" rel="noopener" href="#">Open full page &#8599;</a><button class="ghost" type="button" id="vclose">&#10005; Close</button></div>
+    <div class="spon" id="vspon" hidden></div>
     <div class="desc" id="vdesc" hidden><div class="txt" id="vdtxt"></div><button type="button" class="more" id="vdmore">Show more</button></div>
   </div>
   <div class="fsv" id="fsv" role="dialog" aria-label="Athlete profile">
@@ -700,7 +706,17 @@ document.addEventListener('load', function (e) {
     c.appendChild(pic);
     c.appendChild(el('div', 'hl', s.headline));
     c.appendChild(el('div', 'sm', (opts && opts.sub) || ago(s.published)));
+    if (s.sponsor) c.appendChild(el('div', 'spn', 'Presented by ' + s.sponsor));   // a sponsor from the phone sheet
     return c;
+  }
+  // the sponsor line in the open post: "Presented by" with its logo
+  function vSponsor(s) {
+    var b = document.getElementById('vspon'); b.innerHTML = '';
+    if (!s || !s.sponsor) { b.hidden = true; return; }
+    b.appendChild(document.createTextNode('Presented by '));
+    if (s.slogo) { var li = new Image(); li.src = s.slogo; li.alt = ''; li.referrerPolicy = 'no-referrer'; li.onerror = function () { li.remove(); }; b.appendChild(li); }
+    b.appendChild(el('b', null, s.sponsor));
+    b.hidden = false;
   }
 
   // ---------- top stories: one big feature + two beside it ----------
@@ -923,6 +939,7 @@ document.addEventListener('load', function (e) {
   var vtext = null, vtextP = null, vcur = null;
   function vkey(u) { var m = String(u || '').match(/(?:[?&]v=|youtu\.be\/|\/shorts\/)([\w-]{11})/); if (m) return m[1]; m = String(u || '').match(/vimeo\.com\/(?:video\/)?(\d+)/); return m ? 'vimeo:' + m[1] : ''; }
   function vDesc(s) {
+    vSponsor(s);
     if (!vtext) {
       if (!vtextP) vtextP = getJSON('video-text.json').then(function (j) { vtext = (j && j.text) || {}; });
       vtextP.then(function () { if (vp.classList.contains('on') && vcur === s) vDesc(s); });
@@ -966,7 +983,7 @@ document.addEventListener('load', function (e) {
     var f = document.createElement('iframe'); f.src = REPO + 'gallery.html?show=' + encodeURIComponent(sh.key); f.allow = 'fullscreen'; f.allowFullscreen = true; f.title = sh.title; fr.appendChild(f);
     document.getElementById('vtitle').textContent = sh.title;
     var ext = document.getElementById('vext'); ext.href = sh.url; ext.textContent = 'Open full page ↗'; ext.style.display = '';
-    document.getElementById('vshare').style.display = 'none'; document.getElementById('vdesc').hidden = true;
+    document.getElementById('vshare').style.display = 'none'; document.getElementById('vdesc').hidden = true; document.getElementById('vspon').hidden = true;
     vp.classList.add('on');
     placeTop(at);
   }
