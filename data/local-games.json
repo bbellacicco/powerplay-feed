@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T15:47:08-05:00",
+ "updated": "2026-11-25T16:01:58-05:00",
  "today": "2026-11-25",
  "range": [
   "2026-11-22",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 32
   },
   "club_news": {
    "ok": true,
@@ -1755,7 +1755,7 @@
   {
    "league": "pwhl",
    "start": "2026-11-25T13:00:00-05:00",
-   "status": "live",
+   "status": "final",
    "home": "Montréal Victoire",
    "away": "Boston Fleet",
    "home_abbr": "MTL",
@@ -1763,7 +1763,7 @@
    "our_score": 3,
    "opp_score": 5,
    "location": "Boston Sports Institute | Wellesley",
-   "note": "Unofficial Final",
+   "note": "",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/358"
   }
@@ -2820,6 +2820,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "pwhl",
+   "headline": "Ljungblom has four points as Victoire down Fleet in pre-season action",
+   "summary": "",
+   "published": "2026-11-25T15:59-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/marie-philip-poulin.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/pwhl/article/ljungblom-has-four-points-as-victoire-down-fleet-in-pre-season-action/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Maple Leafs’ Marchenko, Sissons practise in regular sweaters",
    "summary": "",
@@ -3024,45 +3037,6 @@
   },
   {
    "league": "other",
-   "headline": "Champions League Roundup: Bellingham sparks Madrid, Man City underwhelms",
-   "summary": "Another stirring comeback win for Real Madrid. More disappointment for Manchester City.",
-   "published": "2026-11-24T17:50-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Jude-Bellingham.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/champions-league/article/champions-league-roundup-bellingham-sparks-madrid-man-city-underwhelms/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "No. 1 South Carolina stifles No. 7 UConn in Final Four rematch",
-   "summary": "",
-   "published": "2026-11-24T22:38-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/staley.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/basketball/article/no-1-south-carolina-stifles-no-7-uconn-in-final-four-rematch/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Indiana tumbles out of field in College Football Playoff rankings",
-   "summary": "",
-   "published": "2026-11-24T20:49-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/01/Cignetti.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/ncaa-mens-football/article/indiana-tumbles-out-of-field-in-college-football-playoff-rankings/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
    "headline": "Raheem Sterling gets suspended jail sentence for dangerous driving",
    "summary": "",
    "published": "2026-11-25T09:13-05:00",
@@ -3075,17 +3049,30 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "French tennis player Arthur Rinderknech charged with refusing to give doping sample",
+   "league": "nfl",
+   "headline": "Statements on the passing of Martha Firestone Ford",
    "summary": "",
-   "published": "2026-11-25T08:25-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/rinderknech_arthur1280.jpg",
+   "published": "2026-11-25T15:48-05:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/hj3gc0498z7gmaahcqik.jpg",
    "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Tennis",
-   "url": "https://www.sportsnet.ca/atp/article/french-tennis-player-arthur-rinderknech-charged-with-refusing-to-give-doping-sample/",
-   "source": "Sportsnet"
+   "teams": [
+    "Detroit Lions"
+   ],
+   "url": "https://www.detroitlions.com/news/statements-on-the-passing-of-martha-firestone-ford",
+   "source": "Team site"
+  },
+  {
+   "league": "nfl",
+   "headline": "Lions vs. Bears injury report: Nov. 25",
+   "summary": "Lions vs. Bears injury report and game designations for Wednesday, November 25.",
+   "published": "2026-11-25T15:45-05:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/svccxcsczq3ad6qjrtjk.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Lions"
+   ],
+   "url": "https://www.detroitlions.com/news/lions-vs-bears-injury-report-nov-25-wonnum-clark-laporta",
+   "source": "Team site"
   },
   {
    "league": "nfl",
@@ -3254,32 +3241,6 @@
     "Detroit Lions"
    ],
    "url": "https://www.detroitlions.com/news/recap-lions-vs-buccaneers-goff-gibbs-williams",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
-   "headline": "INACTIVES: Lions vs. Buccaneers",
-   "summary": "Tim Twentyman reports on inactives for Sunday's Lions-Buccaneers matchup.",
-   "published": "2026-11-22T11:30-05:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/bktm58ilebxzg1eyjocy.png",
-   "video": false,
-   "teams": [
-    "Detroit Lions"
-   ],
-   "url": "https://www.detroitlions.com/news/inactives-lions-vs-buccaneers-joseph-reed-rakestraw",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
-   "headline": "LIONS DAILY: D-line aims to prove doubters wrong vs NFL's top run game",
-   "summary": "",
-   "published": "2026-11-22T10:00-05:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/lions/wghtlhes5qgqorjahace.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Lions"
-   ],
-   "url": "https://www.detroitlions.com/news/lions-daily-d-line-aims-to-prove-doubters-wrong-vs-nfl-s-top-run-game",
    "source": "Team site"
   },
   {
@@ -4791,6 +4752,18 @@
     "group": "PWHL",
     "teams": [
      {
+      "name": "Montréal Victoire",
+      "abbr": "MTL",
+      "gp": 2,
+      "w": 2,
+      "l": 0,
+      "otl": 0,
+      "pts": 6,
+      "gf": 8,
+      "ga": 3,
+      "strk": "2W"
+     },
+     {
       "name": "Vancouver Goldeneyes",
       "abbr": "VAN",
       "gp": 2,
@@ -4813,18 +4786,6 @@
       "gf": 8,
       "ga": 5,
       "strk": "2W"
-     },
-     {
-      "name": "Montréal Victoire",
-      "abbr": "MTL",
-      "gp": 1,
-      "w": 1,
-      "l": 0,
-      "otl": 0,
-      "pts": 3,
-      "gf": 8,
-      "ga": 3,
-      "strk": "1W"
      },
      {
       "name": "Toronto Sceptres",
@@ -4899,18 +4860,6 @@
       "strk": ""
      },
      {
-      "name": "Boston Fleet",
-      "abbr": "BOS",
-      "gp": 1,
-      "w": 0,
-      "l": 1,
-      "otl": 0,
-      "pts": 0,
-      "gf": 6,
-      "ga": 10,
-      "strk": "1L"
-     },
-     {
       "name": "Detroit Clutch",
       "abbr": "DET",
       "gp": 2,
@@ -4931,6 +4880,18 @@
       "otl": 0,
       "pts": 0,
       "gf": 7,
+      "ga": 10,
+      "strk": "2L"
+     },
+     {
+      "name": "Boston Fleet",
+      "abbr": "BOS",
+      "gp": 2,
+      "w": 0,
+      "l": 2,
+      "otl": 0,
+      "pts": 0,
+      "gf": 6,
       "ga": 10,
       "strk": "2L"
      }
