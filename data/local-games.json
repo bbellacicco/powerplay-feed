@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T12:46:59-05:00",
+ "updated": "2026-11-25T13:06:32-05:00",
  "today": "2026-11-25",
  "range": [
   "2026-11-22",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 38
+   "count": 37
   },
   "club_news": {
    "ok": true,
@@ -1755,15 +1755,15 @@
   {
    "league": "pwhl",
    "start": "2026-11-25T13:00:00-05:00",
-   "status": "upcoming",
+   "status": "live",
    "home": "Montréal Victoire",
    "away": "Boston Fleet",
    "home_abbr": "MTL",
    "away_abbr": "BOS",
-   "our_score": null,
-   "opp_score": null,
+   "our_score": 0,
+   "opp_score": 0,
    "location": "Boston Sports Institute | Wellesley",
-   "note": "",
+   "note": "20:00 1st",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/358"
   }
@@ -1938,6 +1938,19 @@
  "pro_news": [
   {
    "league": "cfl",
+   "headline": "Alouettes extend two Nationals and five Americans",
+   "summary": "",
+   "published": "2026-11-25T00:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/2rii0lNkWzdYW24PwEVxyT/a1eb0dd94d2102550152ae75701911ea/Kylan_Guidry_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Alouettes"
+   ],
+   "url": "https://www.cfl.ca/article/alouettes-extend-two-nationals-and-five-americans",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Tiger-Cats extend Global punter Nikolas Constantinou",
    "summary": "",
    "published": "2026-11-25T00:00:00-05:00",
@@ -2090,19 +2103,6 @@
     "Argonauts"
    ],
    "url": "https://www.cfl.ca/article/argonauts-sign-rayam-davis-and-mckellar",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Blue Bombers sign American linebacker Jacob Roberts",
-   "summary": "",
-   "published": "2026-11-23T00:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/2i85wO5Pra3UqeYkgUyH2r/48837d1a0d115e68832029675fed3a6a/Jacob_Roberts_2026.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Blue Bombers"
-   ],
-   "url": "https://www.cfl.ca/article/blue-bombers-sign-american-linebacker-jacob-roberts",
    "source": "CFL.ca"
   },
   {
@@ -2701,6 +2701,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "mlb",
+   "headline": "Report: MLB files lawsuit against union in federal court",
+   "summary": "",
+   "published": "2026-11-25T12:42-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/manfred.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/report-mlb-files-lawsuit-against-union-in-federal-court/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "IIHF to challenge Russia ruling by CAS at Switzerland’s supreme court",
    "summary": "",
@@ -2779,19 +2792,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nba",
-   "headline": "NBA announces $11B initiative for arena development in Europe",
-   "summary": "",
-   "published": "2026-11-25T08:55-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/07/silver.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/nba-announces-11b-initiative-for-arena-development-in-europe/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "mlb",
    "headline": "Blue Jays sign Japanese righty Kaima Taira to five-year, $80-million deal",
    "summary": "The Blue Jays have made their first major move of the off-season. Star Japanese right-hander Kaima Taira is headed to Toronto on a five-year, $80-million deal, industry sources told Sportsnet.",
@@ -2808,8 +2808,8 @@
   },
   {
    "league": "nfl",
-   "headline": "Steelers benching Aaron Rodgers vs. Broncos",
-   "summary": "",
+   "headline": "Steelers excuse Aaron Rodgers from practice after benching",
+   "summary": "Aaron Rodgers has seen just about everything in 22 years in the NFL. Just not this.",
    "published": "2026-11-24T23:23-05:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/aaron-rodgers.jpg",
    "video": false,
@@ -2871,6 +2871,19 @@
    "sn_team_count": 0,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/2026-nba-cup-schedule-scores-standings/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "NBA announces $11B initiative for arena development in Europe",
+   "summary": "",
+   "published": "2026-11-25T08:55-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/07/silver.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/nba-announces-11b-initiative-for-arena-development-in-europe/",
    "source": "Sportsnet"
   },
   {
@@ -3113,34 +3126,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/young-feisty-senators-look-like-a-true-contender-but-will-soon-be-tested/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "pwhl",
-   "headline": "PWHL Roundup: Goldeneyes’ Caroline Harvey shines in pre-season debut",
-   "summary": "",
-   "published": "2026-11-24T17:39-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/harvey.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/pwhl/article/pwhl-roundup-goldeneyes-caroline-harvey-shines-in-pre-season-debut/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Hage says he plans to sign with Red Wings after college season",
-   "summary": "",
-   "published": "2026-11-24T12:21-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/04/Michigan-forward-Michael-Hage.jpg",
-   "video": false,
-   "teams": [
-    "Detroit Red Wings"
-   ],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/hage-says-he-plans-to-sign-with-red-wings-after-college-season/",
    "source": "Sportsnet"
   },
   {
