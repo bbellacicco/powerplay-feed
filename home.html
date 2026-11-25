@@ -516,7 +516,9 @@ document.addEventListener('load', function (e) {
     { key: 'spitfires', title: 'Windsor Spitfires', gold: 'Spitfires', by: ['Unifor Local 444', 'logos/unifor-444.png'], all: SITE + 'scores-standings?tab=spitfires', tab: 'spitfires', share: SITE + 'scores-standings?strip=spitfires' },
     { key: 'hs', title: 'High School Huddle', gold: 'Huddle', by: ['Unifor Local 2458', 'logos/unifor-2458.png'], all: SITE + 'scores-standings?tab=hs', tab: 'hs', share: SITE + 'scores-standings?strip=hs' },
     { key: 'saints', title: 'Saints Nation', gold: 'Nation', by: ['The D’Amore Group', 'logos/damore-group.png'], all: SITE + 'scores-standings?tab=saints', tab: 'saints', share: SITE + 'scores-standings?strip=saints' },
-    { key: 'lancers', title: 'Lancers Lounge', gold: 'Lounge', by: null, all: SITE + 'scores-standings?tab=lancers', tab: 'lancers', share: SITE + 'scores-standings?strip=lancers' },
+    { key: 'lancers', title: 'Windsor Lancers', gold: 'Lancers', by: null, all: SITE + 'scores-standings?tab=lancers', tab: 'lancers', share: SITE + 'scores-standings?strip=lancers' },
+    // Lancers Lounge: what UWindsor students make through their classwork (stories and videos), apart from the Lancers' own posts
+    { key: 'lounge', title: 'Lancers Lounge', gold: 'Lounge', by: null, all: SITE + 'scores-standings?tab=lancers', tab: 'lancers', share: SITE + 'scores-standings?strip=lounge' },
     { key: 'photos', title: 'Community Snaps', gold: 'Snaps', by: null, all: SITE + 'scores-standings?strip=photos', tab: 'photos', share: SITE + 'scores-standings?strip=photos' },
     { key: 'athletes', title: 'Athlete profiles', by: null, all: LINK.athletes, tab: 'athletes' },
     { key: 'junior', title: 'Junior Hockey', gold: 'Hockey', by: null, all: SITE + 'scores-standings?tab=junior', tab: 'junior', share: SITE + 'scores-standings?strip=junior' },
@@ -525,7 +527,7 @@ document.addEventListener('load', function (e) {
     { key: 'prohead', title: 'National headlines', gold: 'headlines', by: ['The D’Amore Group', 'logos/damore-group.png'], all: LINK.pro, tab: 'pro' }
   ];
   var SHARE_TEXT = { network: 'Watch the latest local highlights and interviews', local: 'Local scores', stories: 'The latest Windsor-Essex sports stories',
-    lancers: 'Lancers Lounge: everything Windsor Lancers', saints: 'Saints Nation: everything St. Clair Saints', hs: 'High School Huddle: Windsor-Essex high school sports', junior: 'Junior Hockey: the Spitfires and our junior teams',
+    lancers: 'Windsor Lancers: everything the Lancers post', lounge: 'Lancers Lounge: stories and videos by UWindsor students', saints: 'Saints Nation: everything St. Clair Saints', hs: 'High School Huddle: Windsor-Essex high school sports', junior: 'Junior Hockey: the Spitfires and our junior teams',
     pro: 'National scores', prohead: 'National headlines', athletes: 'Athlete profiles', photos: 'Community Snaps: Windsor-Essex sports and community in pictures' };
   var rowEl = {};
   ROWS.forEach(function (r) {
@@ -1398,12 +1400,15 @@ document.addEventListener('load', function (e) {
         return { t: new Date(sh.posted || sh.date + 'T12:00:00').getTime(), node: c };
       })).sort(function (a, b) { return b.t - a.t; }).slice(0, 20).map(function (x) { return x.node; });
       fill('spitfires', spCards, 'Spitfires stories are on the way.');
-      [['lancers', 'Lancers', THEME.lancers, 'Lancers Lounge stories are on the way.'],
+      [['lancers', 'Lancers', THEME.lancers, 'Lancers stories are on the way.'],
+       ['lounge', 'Lancers', THEME.lancers, 'Student stories and videos are on the way.'],
        ['saints', 'Saints', THEME.saints, 'Saints Nation stories are on the way.'],
        ['hs', 'High school', THEME.highschool, 'High school stories are on the way.'],
        ['junior', 'Junior', THEME.junior, 'Junior hockey stories are on the way.']].forEach(function (t) {
-        var teams = t[0] === 'hs' ? ['highschool'] : [t[0]], seenT = {};   // the Spitfires have their own strip
+        var teams = t[0] === 'hs' ? ['highschool'] : t[0] === 'lounge' ? ['lancers'] : [t[0]], seenT = {};   // the Spitfires have their own strip
         var list = pool.filter(function (x) {
+          if (t[0] === 'lounge') return !!x.student;     // Lancers Lounge: only what the students make
+          if (t[0] === 'lancers' && x.student) return false;   // Windsor Lancers: the Lancers' own posts (and Powerplay's), not the students'
           if (t[0] === 'junior' && aboutSpits(x)) return false;   // Spitfires stories and highlights: Windsor Spitfires strip only
           if (teams.indexOf(x.team) >= 0) return true;
           if (x.team !== 'powerplay' && !isVid(x) && !x.video) return false;
@@ -1411,7 +1416,7 @@ document.addEventListener('load', function (e) {
         }).filter(function (x) { var k = isVid(x) || x.video ? vidId(x.url) : x.url; if (seenT[k]) return false; seenT[k] = 1; return true; })
           .sort(function (a, b) { return new Date(b.published) - new Date(a.published); }).slice(0, 25);
         // Game Day Snaps about them
-        var snapsT = shows.filter(function (sh) { return t[2].test(' ' + sh.title + ' ' + (sh.desc || '') + ' ') && !(t[0] === 'junior' && SPITS_RX.test(' ' + sh.title + ' ' + (sh.desc || '') + ' ')); }).slice(0, 4).map(function (sh) {
+        var snapsT = shows.filter(function (sh) { return t[0] !== 'lounge' && t[2].test(' ' + sh.title + ' ' + (sh.desc || '') + ' ') && !(t[0] === 'junior' && SPITS_RX.test(' ' + sh.title + ' ' + (sh.desc || '') + ' ')); }).slice(0, 4).map(function (sh) {
           var c = storyCard({ headline: sh.title, url: sh.url, image: sh.cover, published: sh.posted || sh.date + 'T12:00:00', team: 'powerplay' }, { tag: snapsName(sh), sub: snapsName(sh) + ' \u00b7 ' + ago(sh.posted || sh.date + 'T12:00:00'), tile: t[1] });
           c.onclick = function (e) { e.preventDefault(); playShow(sh, c.closest('section')); };
           return { t: new Date(sh.posted || sh.date + 'T12:00:00').getTime(), node: c };
