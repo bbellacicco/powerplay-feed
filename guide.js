@@ -685,6 +685,39 @@
     setTimeout(function () { track.scrollLeft = o._tick || 0; }, 0);
     return wrap;
   }
+  // a league tab's Scores: every game, day by day (last night, today, the next few days)
+  function proScores(d, target, o) {
+    var sec = el('div', 'pt-scores');
+    var today = dayKey(new Date()), days = {};
+    d.pro.forEach(function (g) { var k = dayKey(new Date(g.start)); (days[k] = days[k] || []).push(g); });
+    var keys = Object.keys(days).sort();
+    keys = keys.filter(function (k) { return k >= today; }).concat(keys.filter(function (k) { return k < today; }).reverse());   // today first, then what's next, then last night
+    if (!keys.length) { sec.appendChild(el('div', 'pt-none', 'No games on the schedule right now.')); return sec; }
+    keys.forEach(function (k) {
+      var name = k === today ? 'Today' : k === dayKey(new Date(Date.now() - 864e5)) ? 'Yesterday' : k === dayKey(new Date(Date.now() + 864e5)) ? 'Tomorrow' : wd(k);
+      var h = el('div', 'pt-dh'); h.appendChild(el('b', null, name)); h.appendChild(el('span', null, cpDate(k) + ' \u00b7 ' + days[k].length + (days[k].length === 1 ? ' game' : ' games')));
+      sec.appendChild(h);
+      var order = function (a, b) { return (a.state === 'in' ? 0 : 1) - (b.state === 'in' ? 0 : 1) || (a.start < b.start ? -1 : 1); };
+      if (o.league) {
+        var grid = el('div', 'pt-grid');
+        days[k].sort(order).forEach(function (g) { grid.appendChild(tkCard(g, target, o)); });
+        sec.appendChild(grid);
+        return;
+      }
+      // All: each league under its own label, the busiest first (live games, then the most games)
+      var by = {}; days[k].forEach(function (g) { (by[g.lg] = by[g.lg] || []).push(g); });
+      Object.keys(by).sort(function (a, b) {
+        var la = by[a].filter(function (g) { return g.state === 'in'; }).length, lb = by[b].filter(function (g) { return g.state === 'in'; }).length;
+        return lb - la || by[b].length - by[a].length || lgRank(a) - lgRank(b);
+      }).forEach(function (lg) {
+        var lb = el('div', 'pt-dl', lgName(lg)); lb.style.setProperty('--c', lgColor(lg)); sec.appendChild(lb);
+        var grid = el('div', 'pt-grid');
+        by[lg].sort(order).forEach(function (g) { grid.appendChild(tkCard(g, target, o)); });
+        sec.appendChild(grid);
+      });
+    });
+    return sec;
+  }
   function newsAgo(p) {
     var m = Math.round((Date.now() - new Date(p).getTime()) / 60000);
     if (isNaN(m)) return '';
@@ -696,7 +729,10 @@
     var seen = {}, items = proNews.filter(function (x) { if (!x || !x.headline || !x.url || seen[x.url] || !PRO_NAME[x.league] || (o.league && x.league !== o.league)) return false; /* the hub's leagues only */ seen[x.url] = 1; return true; })
       .sort(function (a, b) { return a.published < b.published ? 1 : -1; });
     if (!items.length) return null;
-    var lead = items.filter(function (x) { return x.image; })[0] || items[0];
+    // the big box (Scores tab): the big leagues only, never a PWHL item or a roster / training-camp notice
+    var MINOR = /\b(roster|training camp|camp roster|transactions?|signs? |re-signs?|released|waivers)\b/i;
+    var big = function (x) { return o.league || (/^(nfl|nhl|nba|mlb|ncaaf|ncaam)$/.test(x.league) && !MINOR.test(x.headline)); };
+    var lead = items.filter(function (x) { return x.image && big(x); })[0] || items.filter(function (x) { return x.image && x.league !== 'pwhl'; })[0] || items[0];
     var rest = items.filter(function (x) { return x !== lead; }).slice(0, 6);
     var box = el('div', 'pt-top');
     var a = el('a', 'pt-lead'); a.href = lead.url; a.target = '_blank'; a.rel = 'noopener';
@@ -763,6 +799,11 @@
     '.pt-lgl{flex:none;scroll-snap-align:start;display:flex;align-items:center;padding:0 10px 0 4px;font-size:15px;font-weight:900;letter-spacing:.06em;color:#fff;border-left:3px solid var(--c,#e8b021);margin-left:4px}' +
     '.pt-track .pt-lgl:first-child{margin-left:0}' +
     '.pt-loc .pt-r{grid-template-columns:12px minmax(0,104px) 26px}.pt-loc .pt-ab{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:13.5px}.pt-loc .pt-dot{width:10px;height:10px;margin:0 1px}' +
+    '.pt-scores{display:none}.showscores .pt-scores{display:block}.showscores .pt-news,.showscores .pt-wrap{display:none}.showscores .pt-dh:first-child{margin-top:2px}' +
+    '.pt-dh{display:flex;align-items:baseline;gap:10px;margin:16px 0 8px}.pt-dh b{font-size:16px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}.pt-dh span{font-size:12.5px;color:#9fb0cf}' +
+    '.pt-dl{margin:10px 0 6px;padding-left:8px;border-left:3px solid var(--c,#e8b021);font-size:12.5px;font-weight:900;letter-spacing:.08em;color:#cfd8ea}' +
+    '.pt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));gap:8px}.pt-grid .pt-card{min-width:0}' +
+    '@media (max-width:760px){.pt-grid{grid-template-columns:1fr 1fr;gap:6px}.pt-grid .pt-card{padding:8px}.pt-grid .pt-r{grid-template-columns:18px 34px 22px;font-size:13px}.pt-grid .pt-lg{width:18px;height:18px}}' +
     '.pt-sec .pt-arr{align-self:center;height:64px}' +
     '.pt-sec{margin:0 0 18px}.pt-sh{font-size:15px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#cfd8ea;margin:0 0 9px}' +
     '.pt-sc2{flex:none;scroll-snap-align:start;width:250px;display:block;text-align:left;font:inherit;color:#f2f5fb;text-decoration:none;background:#0f2148;border:1px solid rgba(255,255,255,.1);border-radius:8px;overflow:hidden;cursor:pointer;padding:0 0 10px}' +
@@ -852,6 +893,7 @@
       var ss = proStoryStrip(o, news); if (ss) news.appendChild(ss);
       var vs = proVideoStrip(o); if (vs) news.appendChild(vs);
       if (!tp && !ss && !vs) news.appendChild(el('div', 'pt-none', 'Stories are on the way.'));
+      box.appendChild(proScores(d, o.target, o));
       return;   // the National Hub: scores bar, then the news (no guide below)
     }
     var g = el('div', 'ppg' + (o.compact ? ' compact' : ''));
