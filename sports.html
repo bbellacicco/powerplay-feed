@@ -48,6 +48,9 @@
   }
   .guide { margin: 18px 40px 0; }
   /* Scores tab, under the guide: every league's standings and stats */
+  #allbar { margin: 14px 40px 0; }
+  #guide { margin-top: 12px; }
+  @media (max-width: 700px) { #allbar { margin: 12px 12px 0; } }
   .tables { margin: 22px 40px 0; }
   /* a league tab */
   .lgpane { margin: 14px 40px 0; }
@@ -55,7 +58,7 @@
   .lgbar button { font: inherit; font-size: 12.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: #cfd8ea; background: #13264d; border: 1px solid rgba(255,255,255,.14); border-radius: 999px; padding: 8px 15px; cursor: pointer; }
   .lgbar button[aria-pressed="true"] { background: #fff; color: #0b1a33; border-color: #fff; }
   .lgsel { margin-left: auto; min-width: 200px; font: inherit; font-size: 14px; font-weight: 700; color: #f2f5fb; background: #13264d; border: 1px solid rgba(255,255,255,.25); border-radius: 8px; padding: 8px 10px; }
-  .lgguide.nonews .pt-news { display: none; }
+  .lgguide.nonews .pt-news, .lgguide.nonews .pt-scores { display: none; }
   .lgtables[hidden] { display: none; }
   .lgtables iframe { display: block; width: 100%; border: 0; background: var(--bg); }
   @media (max-width: 700px) { .lgpane { margin: 12px 12px 0; } .lgsel { margin-left: 0; flex: 1 1 100%; } }
@@ -82,7 +85,7 @@
 <body>
   <div class="top pro7" id="top">
     <div class="switch" role="tablist" aria-label="Section">
-      <button type="button" role="tab" data-tab="scores">Scores</button>
+      <button type="button" role="tab" data-tab="scores">All</button>
       <button type="button" role="tab" data-tab="nhl">NHL</button>
       <button type="button" role="tab" data-tab="nfl">NFL</button>
       <button type="button" role="tab" data-tab="nba">NBA</button>
@@ -93,8 +96,8 @@
       <button type="button" role="tab" data-tab="ncaam">NCAA BB</button>
     </div>
   </div>
+  <div class="allbar lgbar" id="allbar"><button type="button" data-m="news" aria-pressed="true">News</button><button type="button" data-m="scores" aria-pressed="false">Scores</button></div>
   <div class="guide" id="guide"></div>
-  <div class="tables" id="tables"></div>
   <div id="panes"></div>
 <script>
 (function () {
@@ -146,8 +149,7 @@
     }
     Object.keys(built).forEach(function (k) { built[k].classList.toggle('on', k === tab); });
     document.getElementById('guide').style.display = tab === 'scores' ? '' : 'none';   // the Pro Sports Guide is the Scores section
-    document.getElementById('tables').style.display = tab === 'scores' ? '' : 'none';
-    if (tab === 'scores') buildTables();
+    document.getElementById('allbar').style.display = tab === 'scores' ? '' : 'none';
     current = tab;
     [].forEach.call(document.querySelectorAll('.switch button'), function (b) { b.setAttribute('aria-selected', String(b.getAttribute('data-tab') === tab)); });
     try { history.replaceState(null, '', '?tab=' + tab); } catch (e) {}
@@ -158,11 +160,11 @@
   function buildLeague(lg) {
     var pane = document.createElement('div'); pane.className = 'pane lgpane'; pane.id = 'pane-' + lg;
     var bar = document.createElement('div'); bar.className = 'lgbar';
-    var bNews = document.createElement('button'), bTab = document.createElement('button');
-    bNews.type = bTab.type = 'button'; bNews.textContent = 'News'; bTab.textContent = 'Standings & Stats';
+    var bNews = document.createElement('button'), bSc = document.createElement('button'), bTab = document.createElement('button');
+    bNews.type = bSc.type = bTab.type = 'button'; bNews.textContent = 'News'; bSc.textContent = 'Scores'; bTab.textContent = 'Standings & Stats';
     var sel = document.createElement('select'); sel.className = 'lgsel'; sel.setAttribute('aria-label', 'Pick your team');
     var o0 = document.createElement('option'); o0.value = ''; o0.textContent = 'Your team…'; sel.appendChild(o0);
-    bar.appendChild(bNews); bar.appendChild(bTab); bar.appendChild(sel); pane.appendChild(bar);
+    bar.appendChild(bNews); bar.appendChild(bSc); bar.appendChild(bTab); bar.appendChild(sel); pane.appendChild(bar);
     var g = document.createElement('div'); g.className = 'lgguide'; pane.appendChild(g);
     var tw = document.createElement('div'); tw.className = 'lgtables'; tw.hidden = true;
     var f = document.createElement('iframe'); f.scrolling = 'no'; f.title = LGNAME[lg] + ' standings, stats and teams';
@@ -170,11 +172,13 @@
     f.src = REPO + 'pro-teams.html' + V + '&lg=' + lg + '&view=league&in=sports' + (TEAM && lg === startTab ? '&team=' + TEAM : '');
     tw.appendChild(f); pane.appendChild(tw); LGFRAME[lg] = { f: f, sel: sel, mode: mode };
     function mode(m) {
-      g.classList.toggle('nonews', m !== 'news');
-      tw.hidden = m === 'news';
-      bNews.setAttribute('aria-pressed', String(m === 'news')); bTab.setAttribute('aria-pressed', String(m === 'tables'));
+      g.classList.toggle('nonews', m !== 'news' && m !== 'scores');
+      g.classList.toggle('showscores', m === 'scores');
+      tw.hidden = m === 'news' || m === 'scores';
+      bNews.setAttribute('aria-pressed', String(m === 'news')); bSc.setAttribute('aria-pressed', String(m === 'scores')); bTab.setAttribute('aria-pressed', String(m === 'tables'));
     }
     bNews.onclick = function () { mode('news'); };
+    bSc.onclick = function () { mode('scores'); };
     bTab.onclick = function () { sel.value = ''; try { f.contentWindow.postMessage({ pp: 'team', i: '' }, '*'); } catch (e) {} mode('tables'); };
     sel.onchange = function () {
       if (sel.value === '') return;
@@ -198,7 +202,15 @@
       if (e.data.pp === 'teamclosed') { x.sel.value = ''; x.mode('tables'); }
     });
   });
-  // Scores tab: Standings | Stats for any league, one league at a time
+  // All: News | Scores
+  [].forEach.call(document.querySelectorAll('#allbar button'), function (b) {
+    b.onclick = function () {
+      var m = b.getAttribute('data-m');
+      document.getElementById('guide').classList.toggle('showscores', m === 'scores');
+      [].forEach.call(document.querySelectorAll('#allbar button'), function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+    };
+  });
+  // (no longer shown) Standings | Stats for any league, one league at a time
   var tablesBuilt = false;
   function buildTables() {
     if (tablesBuilt) return; tablesBuilt = true;
