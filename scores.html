@@ -100,7 +100,7 @@
   <iframe id="teambar" title="Local Teams" scrolling="no" style="display:none;width:100%;height:58px;border:0;background:#10244a"></iframe>
   <div class="top" id="top">
     <div class="switch" role="tablist" aria-label="Section">
-      <button type="button" role="tab" data-tab="scores">Scores</button>
+      <button type="button" role="tab" data-tab="scores">All</button>
       <button type="button" role="tab" data-tab="upcoming">Coming Up</button>
       <button type="button" role="tab" data-tab="stories">What&rsquo;s New</button>
       <button type="button" role="tab" data-tab="spitfires">Spitfires</button>
@@ -178,7 +178,7 @@
     setTimeout(unfocus, 120000);   // never leaves the page blurred for good
   }
   var gs = document.createElement('script'); gs.src = REPO + 'guide.js?v=' + Math.floor(Date.now() / 6e5);
-  gs.onload = function () { if (window.PPGuide) PPGuide.render(document.getElementById('guide'), { target: '_top', pro: false }); };   // local only: no Pro Hub line here
+  gs.onload = function () { if (window.PPGuide) PPGuide.render(document.getElementById('guide'), { target: '_top', pro: false, ticker: true }); };   // local only: no Pro Hub line here
   document.body.appendChild(gs);
   var built = {}, box = document.getElementById('panes');
   function show(tab) {
