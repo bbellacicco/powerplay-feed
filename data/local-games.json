@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T20:17:06-05:00",
+ "updated": "2026-11-25T20:37:02-05:00",
  "today": "2026-11-25",
  "range": [
   "2026-11-22",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 32
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -220,7 +220,7 @@
    "our_score": 2,
    "opp_score": 3,
    "result": null,
-   "note": "03:37 2nd",
+   "note": "20:00 3rd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15725"
    },
@@ -236,10 +236,10 @@
    "opponent": "Kitchener Rangers",
    "location": "WFCU Centre, Windsor",
    "status": "live",
-   "our_score": 3,
-   "opp_score": 1,
+   "our_score": 4,
+   "opp_score": 2,
    "result": null,
-   "note": "06:02 2nd",
+   "note": "00:34 2nd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29238/"
    }
@@ -2684,6 +2684,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "Jannik Sinner won’t play at 2027 Australian Open",
+   "summary": "",
+   "published": "2026-11-25T20:17-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/Shapo.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Tennis",
+   "url": "https://www.sportsnet.ca/atp/article/jannik-sinner-wont-play-at-2027-australian-open/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "Steelers cut Aaron Rodgers after he claims McCarthy slept in meetings",
    "summary": "Aaron Rodgers is done with the Pittsburgh Steelers.",
@@ -2694,19 +2707,6 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/aaron-rodgers-says-he-wont-return-to-steelers-mccarthy-sleeping-in-meetings/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Patrik Laine has knee surgery after having setback in training",
-   "summary": "",
-   "published": "2026-11-25T15:26-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/patrik-laine.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/patrik-laine-has-knee-surgery-after-having-setback-in-training/",
    "source": "Sportsnet"
   },
   {
@@ -2830,6 +2830,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-recall-goaltender-artur-akhtyamov-from-marlies/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Patrik Laine has knee surgery after having setback in training",
+   "summary": "",
+   "published": "2026-11-25T15:26-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/patrik-laine.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/patrik-laine-has-knee-surgery-after-having-setback-in-training/",
    "source": "Sportsnet"
   },
   {
@@ -2966,6 +2979,19 @@
   },
   {
    "league": "mlb",
+   "headline": "AP source: Orioles bring back Luis Robert Jr. on one-year, $12M deal",
+   "summary": "",
+   "published": "2026-11-25T20:18-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/LRJ.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/ap-source-orioles-bring-back-luis-robert-jr-on-one-year-12m-deal/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
    "headline": "Cubs’ Pete Crow-Armstrong to receive a record in pre-arbitration bonus pool",
    "summary": "",
    "published": "2026-11-25T18:26-05:00",
@@ -2979,7 +3005,7 @@
   },
   {
    "league": "mlb",
-   "headline": "Report: Marlins, Gary Sanchez agree to one-year, $6.5M deal",
+   "headline": "AP source: Marlins, Gary Sanchez agree to one-year, $6.5M deal",
    "summary": "",
    "published": "2026-11-25T18:08-05:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-10-6.jpg",
@@ -3014,21 +3040,6 @@
    "sn_team_count": 0,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/cfl/article/all-star-ol-nicastro-signs-multi-year-extension-with-argos/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Raptors’ Kawhi Leonard begins individual on-court workouts",
-   "summary": "",
-   "published": "2026-11-24T16:26-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Leonard.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-kawhi-leonard-begins-individual-on-court-workouts/",
    "source": "Sportsnet"
   },
   {
@@ -4010,8 +4021,8 @@
       "l": 7,
       "otl": 3,
       "pts": 33,
-      "gf": 93,
-      "ga": 73,
+      "gf": 94,
+      "ga": 74,
       "strk": "W1"
      },
      {
@@ -4035,7 +4046,7 @@
       "otl": 1,
       "pts": 29,
       "gf": 88,
-      "ga": 66,
+      "ga": 67,
       "strk": "L2"
      },
      {
@@ -4058,7 +4069,7 @@
       "l": 11,
       "otl": 4,
       "pts": 22,
-      "gf": 91,
+      "gf": 92,
       "ga": 94,
       "strk": "L2"
      }
@@ -4087,8 +4098,8 @@
       "l": 6,
       "otl": 3,
       "pts": 35,
-      "gf": 92,
-      "ga": 71,
+      "gf": 93,
+      "ga": 72,
       "strk": "W8"
      },
      {
@@ -4442,7 +4453,7 @@
       "l": 4,
       "otl": 0,
       "pts": 34,
-      "gf": 125,
+      "gf": 126,
       "ga": 53,
       "strk": "L3"
      },
@@ -4551,7 +4562,7 @@
       "otl": 1,
       "pts": 17,
       "gf": 77,
-      "ga": 103,
+      "ga": 104,
       "strk": "L2"
      },
      {
