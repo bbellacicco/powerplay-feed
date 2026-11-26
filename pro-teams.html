@@ -479,6 +479,7 @@
   // ---------- the section: our teams, top stories, leaders ----------
   function drawDir() {
     var d = document.getElementById('dir'); d.innerHTML = '';
+    if (qs.get('view') === 'tables') { d.appendChild(leagueTabs()); return; }   // the National Hub's Scores tab: just Standings | Stats
     var h = el('h1'); h.innerHTML = L.name + ' <em>Hub</em>'; d.appendChild(h);
     d.appendChild(el('div', 'sub', L.scope ? 'Michigan, Michigan State and every ' + L.scope + ' team: scores, schedules, standings and stats, and the latest from around ' + L.name.replace('NCAA ', 'college ').toLowerCase() + '.' : 'Every team’s scores, schedules, standings and stats, and the latest from around the ' + L.name + '.'));
     // the teams this fan follows (only theirs: our teams are featured in the Pro Sports Guide, nowhere else)
