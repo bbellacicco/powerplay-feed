@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T00:08:04-05:00",
+ "updated": "2026-11-26T00:32:32-05:00",
  "today": "2026-11-26",
  "range": [
   "2026-11-23",
@@ -106,8 +106,11 @@
    "count": 37
   },
   "club_news": {
-   "ok": true,
-   "count": 55
+   "ok": false,
+   "count": 55,
+   "errors": {
+    "Toronto Blue Jays": "<urlopen error _ssl.c:994: The handshake operation timed out>"
+   }
   }
  },
  "games": [
