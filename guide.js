@@ -435,7 +435,7 @@
   var PRO_RANK = { nhl: 0, nfl: 1, nba: 2, mlb: 3, cfl: 4, pwhl: 5, ncaaf: 6, ncaam: 7 };
   var PRO_LOCAL = { cfl: /argonauts|tiger-cats/i, pwhl: /sceptres/i };
   var PPICK = { lg: '', team: '', more1: false, more2: false };
-  var proNews = [], proVids = [], TICK_LG = '', tickScroll = 0, vidOpen = null;   // the National Hub's top: news, the scores bar's league and where it was scrolled   // the league and team picked, and "show all"
+  var proNews = [], proVids = [];   // the National Hub's top: news, the scores bar's league and where it was scrolled   // the league and team picked, and "show all"
   function proHubLink(tab) { return PRO_HUB + '?tab=' + tab; }
   function nick(n) { n = String(n || ''); var w = n.split(' '), two = w.length > 2 && /^(red|maple|blue|golden|white|trail|black|tiger)$/i.test(w[w.length - 2]); return w.slice(two ? -2 : -1).join(' ') || n; }
   function espnGame(lg, e) {
@@ -451,10 +451,10 @@
              ours: PRO_OURS[lg].indexOf(away.abbr) >= 0 || PRO_OURS[lg].indexOf(home.abbr) >= 0,
              venue: c.venue && c.venue.fullName || '', link: by('summary') || by('boxscore') || by('recap') || '' };
   }
-  function proLoad() {
+  function proLoad(only) {
     var jobs = [], now = new Date();
     var days = [-1, 0, 1, 2, 3].map(function (n) { return dayKey(new Date(now.getTime() + n * 864e5)); });
-    Object.keys(PRO_PATH).forEach(function (lg) {
+    Object.keys(PRO_PATH).filter(function (lg) { return !only || lg === only; }).forEach(function (lg) {
       days.forEach(function (k) {
         jobs.push(fetch('https://site.api.espn.com/apis/site/v2/sports/' + PRO_PATH[lg] + '/scoreboard?dates=' + k.replace(/-/g, '') + (lg === 'nba' || lg === 'nhl' ? '&limit=100' : '') + (PRO_GROUP[lg] ? '&groups=' + PRO_GROUP[lg] + '&limit=200' : ''))
           .then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; })
@@ -465,7 +465,7 @@
     jobs.push(getJSON('local-games.json').then(function (j) {
       proNews = ((j && j.pro_news) || []).concat((j && j.more_news) || []);
       return ((j && j.pro_games) || []).concat((j && j.pro_ahead) || []).map(function (g) {
-        var lg = g.league || g.team; if (!PRO_LOCAL[lg] || g.status === 'postponed' || g.status === 'cancelled') return null;
+        var lg = g.league || g.team; if (!PRO_LOCAL[lg] || (only && lg !== only) || g.status === 'postponed' || g.status === 'cancelled') return null;
         var fin = g.status === 'final';
         return { lg: lg, start: g.start, state: fin ? 'post' : g.status === 'live' ? 'in' : 'pre', detail: g.note || '', tbd: g.time_tbd,
                  ours: PRO_LOCAL[lg].test((g.home || '') + ' ' + (g.away || '')),
@@ -609,9 +609,9 @@
     if (showScore) r.appendChild(el('span', 'pt-sc', t.score == null ? '' : String(t.score)));
     return r;
   }
-  function tkCard(g, target) {
+  function tkCard(g, target, o) {
     var lv = g.state === 'in', fin = g.state === 'post', sc = (lv || fin) && g.away.score != null && g.home.score != null;
-    var a = el('a', 'pt-card' + (lv ? ' pt-livec' : '') + (g.ours ? ' pt-ours' : ''));
+    var a = el('a', 'pt-card' + (lv ? ' pt-livec' : '') + (g.ours && !(o && o.league) ? ' pt-ours' : ''));   /* our teams stand out on Scores only */
     a.href = g.link || proHubLink(g.lg); a.target = g.link ? '_blank' : target; if (g.link) a.rel = 'noopener';
     var rows = el('div', 'pt-rows');
     rows.appendChild(tkTeam(g.away, g, sc, fin && !g.away.win && g.home.win));
@@ -625,37 +625,38 @@
     a.appendChild(st);
     return a;
   }
-  function proTicker(d, target) {
+  function proTicker(d, target, o) {
     var wrap = el('div', 'pt-wrap');
     var today = dayKey(new Date()), yest = dayKey(new Date(Date.now() - 864e5));
-    var have = {}; d.pro.forEach(function (g) { have[g.lg] = 1; });
-    var chips = el('div', 'pt-chips');
-    [''].concat(Object.keys(PRO_RANK).filter(function (lg) { return have[lg]; })).forEach(function (lg) {
-      var c = el('button', 'pt-chip' + (TICK_LG === lg ? ' pt-on' : ''), lg ? PRO_NAME[lg] : 'All'); c.type = 'button';
-      if (lg) c.style.setProperty('--c', PRO_COLOR[lg]);
-      c.onclick = function (e) { e.preventDefault(); TICK_LG = lg; tickScroll = 0; if (redraw) redraw(); };
-      chips.appendChild(c);
-    });
-    wrap.appendChild(chips);
-    var list = d.pro.filter(function (g) { return !TICK_LG || g.lg === TICK_LG; });
     var k = function (g) { return dayKey(new Date(g.start)); };
-    var live = list.filter(function (g) { return g.state === 'in'; });
-    var upToday = list.filter(function (g) { return g.state === 'pre' && k(g) === today; });
-    var fins = list.filter(function (g) { return g.state === 'post' && (k(g) === today || k(g) === yest); }).sort(function (a, b) { return a.start < b.start ? 1 : -1; });
-    var later = list.filter(function (g) { return g.state === 'pre' && k(g) > today; });
-    var byOurs = function (a, b) { return (b.ours ? 1 : 0) - (a.ours ? 1 : 0); };
-    var cards = live.sort(byOurs).concat(upToday, fins, later).slice(0, 60);
+    var byOurs = function (a, b) { return o.league ? 0 : (b.ours ? 1 : 0) - (a.ours ? 1 : 0); };
+    // each league's cards: live, the rest of today, last night's finals, then what's next
+    var groups = {};
+    d.pro.forEach(function (g) { (groups[g.lg] = groups[g.lg] || []).push(g); });
+    var lgs = Object.keys(groups).map(function (lg) {
+      var list = groups[lg];
+      var live = list.filter(function (g) { return g.state === 'in'; }).sort(byOurs);
+      var upToday = list.filter(function (g) { return g.state === 'pre' && k(g) === today; });
+      var fins = list.filter(function (g) { return g.state === 'post' && (k(g) === today || k(g) === yest); }).sort(function (a, b) { return a.start < b.start ? 1 : -1; });
+      var later = list.filter(function (g) { return g.state === 'pre' && k(g) > today; });
+      var todayN = list.filter(function (g) { return k(g) === today; }).length;
+      // the busiest league goes first: live games, then today's games (a big NFL Sunday, a full NBA night)
+      return { lg: lg, cards: live.concat(upToday, fins, later.slice(0, o.league ? 20 : 8)).slice(0, o.league ? 40 : 18), w: live.length * 100 + todayN * 10 + (fins.length ? 1 : 0) };
+    }).filter(function (x) { return x.cards.length; }).sort(function (a, b) { return b.w - a.w || PRO_RANK[a.lg] - PRO_RANK[b.lg]; });
     var row = el('div', 'pt-row'), track = el('div', 'pt-track');
-    if (!cards.length) track.appendChild(el('div', 'pt-none', 'No games on the schedule right now.'));
-    cards.forEach(function (g) { track.appendChild(tkCard(g, target)); });
+    if (!lgs.length) track.appendChild(el('div', 'pt-none', 'No games on the schedule right now.'));
+    lgs.forEach(function (x) {
+      if (!o.league) { var lb = el('div', 'pt-lgl', PRO_NAME[x.lg]); lb.style.setProperty('--c', PRO_COLOR[x.lg]); track.appendChild(lb); }
+      x.cards.forEach(function (g) { track.appendChild(tkCard(g, target, o)); });
+    });
     var prev = el('button', 'pt-arr pt-prev', '‹'), next = el('button', 'pt-arr pt-next', '›');
     prev.type = next.type = 'button'; prev.setAttribute('aria-label', 'Earlier games'); next.setAttribute('aria-label', 'More games');
     prev.onclick = function () { track.scrollBy({ left: -track.clientWidth * 0.85, behavior: 'smooth' }); };
     next.onclick = function () { track.scrollBy({ left: track.clientWidth * 0.85, behavior: 'smooth' }); };
-    track.addEventListener('scroll', function () { tickScroll = track.scrollLeft; });
+    track.addEventListener('scroll', function () { o._tick = track.scrollLeft; });
     row.appendChild(prev); row.appendChild(track); row.appendChild(next);
     wrap.appendChild(row);
-    setTimeout(function () { track.scrollLeft = tickScroll; }, 0);
+    setTimeout(function () { track.scrollLeft = o._tick || 0; }, 0);
     return wrap;
   }
   function newsAgo(p) {
@@ -665,8 +666,8 @@
     var h = Math.round(m / 60); if (h < 24) return h + (h === 1 ? ' hour ago' : ' hours ago');
     var dd = Math.round(h / 24); return dd + (dd === 1 ? ' day ago' : ' days ago');
   }
-  function proTop() {
-    var seen = {}, items = proNews.filter(function (x) { if (!x || !x.headline || !x.url || seen[x.url] || !PRO_NAME[x.league]) return false; /* the hub's leagues only */ seen[x.url] = 1; return true; })
+  function proTop(o) {
+    var seen = {}, items = proNews.filter(function (x) { if (!x || !x.headline || !x.url || seen[x.url] || !PRO_NAME[x.league] || (o.league && x.league !== o.league)) return false; /* the hub's leagues only */ seen[x.url] = 1; return true; })
       .sort(function (a, b) { return a.published < b.published ? 1 : -1; });
     if (!items.length) return null;
     var lead = items.filter(function (x) { return x.image; })[0] || items[0];
@@ -733,6 +734,8 @@
     '.pt-heads li a:hover .pt-ht{color:#e8b021}' +
     '.pt-ht{display:block;font-size:14px;font-weight:600;line-height:1.35}' +
     '.pt-hm{display:block;font-size:11.5px;color:#8fa1c4;margin-top:3px}' +
+    '.pt-lgl{flex:none;scroll-snap-align:start;display:flex;align-items:center;padding:0 10px 0 4px;font-size:15px;font-weight:900;letter-spacing:.06em;color:#fff;border-left:3px solid var(--c,#e8b021);margin-left:4px}' +
+    '.pt-track .pt-lgl:first-child{margin-left:0}' +
     '.pt-sec .pt-arr{align-self:center;height:64px}' +
     '.pt-sec{margin:0 0 18px}.pt-sh{font-size:15px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#cfd8ea;margin:0 0 9px}' +
     '.pt-sc2{flex:none;scroll-snap-align:start;width:250px;display:block;text-align:left;font:inherit;color:#f2f5fb;text-decoration:none;background:#0f2148;border:1px solid rgba(255,255,255,.1);border-radius:8px;overflow:hidden;cursor:pointer;padding:0 0 10px}' +
@@ -766,10 +769,10 @@
     return pic;
   }
   // Top stories: the stories with pictures after the big one and the headlines
-  function proStoryStrip() {
-    var seen = {}, items = proNews.filter(function (x) { if (!x || !x.headline || !x.url || !x.image || seen[x.url] || !PRO_NAME[x.league]) return false; seen[x.url] = 1; return true; })
+  function proStoryStrip(o, box) {
+    var seen = {}, items = proNews.filter(function (x) { if (!x || !x.headline || !x.url || !x.image || seen[x.url] || !PRO_NAME[x.league] || (o.league && x.league !== o.league)) return false; seen[x.url] = 1; return true; })
       .sort(function (a, b) { return a.published < b.published ? 1 : -1; });
-    var used = {}; [].forEach.call(document.querySelectorAll('.pt-top a'), function (a) { used[a.href] = 1; });
+    var used = {}; [].forEach.call(box.querySelectorAll('.pt-top a'), function (a) { used[a.href] = 1; });
     items = items.filter(function (x) { return !used[x.url]; }).slice(0, 16);
     if (!items.length) return null;
     return ptStrip('Top stories', items.map(function (x) {
@@ -781,18 +784,20 @@
     }));
   }
   // Videos: the newest from the leagues, teams and networks; they play right here, above the strip
-  function proVideoStrip() {
-    var vids = proVids.filter(function (v) { return v && v.u && /[?&]v=([\w-]{11})/.test(v.u); }).slice(0, 20);
+  var VID_LG = { nhl: /^(NHL|Red Wings|Maple Leafs)$/, nfl: /^(NFL|Lions)$/, nba: /^(NBA|Pistons|Raptors)$/, mlb: /^(MLB|Tigers|Blue Jays)$/, cfl: /^CFL$/, pwhl: /^PWHL$/ };
+  function proVideoStrip(o) {
+    if (o.league && !VID_LG[o.league]) return null;
+    var vids = proVids.filter(function (v) { return v && v.u && /[?&]v=([\w-]{11})/.test(v.u) && (!o.league || VID_LG[o.league].test(v.ch || '')); }).slice(0, 20);
     if (!vids.length) return null;
     var player = el('div', 'pt-player'); player.hidden = true;
     function play(v) {
-      var id = v.u.match(/[?&]v=([\w-]{11})/)[1]; vidOpen = v;
+      var id = v.u.match(/[?&]v=([\w-]{11})/)[1]; o._vid = v;
       player.innerHTML = '';
       var fr = el('div', 'pt-pfr'), f = document.createElement('iframe');
       f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0'; f.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; f.allowFullscreen = true; f.title = v.t;
       fr.appendChild(f); player.appendChild(fr);
       var cap = el('div', 'pt-pcap'); cap.appendChild(el('b', null, v.t));
-      var x = el('button', 'pt-px', '✕ Close'); x.type = 'button'; x.onclick = function () { vidOpen = null; player.innerHTML = ''; player.hidden = true; };
+      var x = el('button', 'pt-px', '✕ Close'); x.type = 'button'; x.onclick = function () { o._vid = null; player.innerHTML = ''; player.hidden = true; };
       cap.appendChild(x); player.appendChild(cap);
       player.hidden = false;
       try { player.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); } catch (e) {}
@@ -806,16 +811,20 @@
       return b;
     }));
     sec.insertBefore(player, sec.children[1]);
-    if (vidOpen) setTimeout(function () { play(vidOpen); }, 0);
+    if (o._vid) setTimeout(function () { play(o._vid); }, 0);
     return sec;
   }
   function draw(box, d, o) {
-    if (o.mode === 'pro' && vidOpen && box.querySelector('.pt-player iframe')) return;   // a video is playing: the refresh waits
+    if (o.mode === 'pro' && o._vid && box.querySelector('.pt-player iframe')) return;   // a video is playing: the refresh waits
     box.innerHTML = '';
     if (o.mode === 'pro') {
-      box.appendChild(proTicker(d, o.target)); var tp = proTop(); if (tp) box.appendChild(tp);
-      var ss = proStoryStrip(); if (ss) box.appendChild(ss);
-      var vs = proVideoStrip(); if (vs) box.appendChild(vs);
+      box.appendChild(proTicker(d, o.target, o));
+      var news = el('div', 'pt-news'); box.appendChild(news);
+      var tp = proTop(o); if (tp) news.appendChild(tp);
+      var ss = proStoryStrip(o, news); if (ss) news.appendChild(ss);
+      var vs = proVideoStrip(o); if (vs) news.appendChild(vs);
+      if (!tp && !ss && !vs) news.appendChild(el('div', 'pt-none', 'Stories are on the way.'));
+      return;   // the National Hub: scores bar, then the news (no guide below)
     }
     var g = el('div', 'ppg' + (o.compact ? ' compact' : ''));
     var h = el('div', 'pg-gh'), l = el('div');
@@ -869,7 +878,7 @@
     var o = opts || {}; o.target = o.target || '_top';
     if (!document.getElementById('ppg-css')) { var s = document.createElement('style'); s.id = 'ppg-css'; s.textContent = CSS + PRO_CSS; document.head.appendChild(s); }
     var last = null;
-    function go() { (o.mode === 'pro' ? proLoad() : load()).then(function (d) { last = d; redraw = function () { draw(box, d, o); if (o.onDraw) o.onDraw(); }; redraw(); }); }
+    function go() { (o.mode === 'pro' ? proLoad(o.league) : load()).then(function (d) { last = d; redraw = function () { draw(box, d, o); if (o.onDraw) o.onDraw(); }; redraw(); }); }
     var lastRun = 0;
     function tick() { if (Date.now() - lastRun >= (box_live || pro_live ? 60000 : 5 * 60000)) { lastRun = Date.now(); go(); } }
     tick();
