@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T19:32:14-05:00",
+ "updated": "2026-11-25T19:47:02-05:00",
  "today": "2026-11-25",
  "range": [
   "2026-11-22",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 32
+   "count": 30
   },
   "club_news": {
    "ok": true,
@@ -216,11 +216,11 @@
    "home_away": "H",
    "opponent": "Stratford Warriors",
    "location": "Vollmer Culture R.C., LaSalle, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 1,
+   "opp_score": 1,
    "result": null,
-   "note": "",
+   "note": "18:55 2nd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15725"
    },
@@ -239,7 +239,7 @@
    "our_score": 3,
    "opp_score": 1,
    "result": null,
-   "note": "05:23 1st",
+   "note": "00:00 1st",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29238/"
    }
@@ -2801,19 +2801,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "pwhl",
-   "headline": "Ljungblom has four points as Victoire down Fleet in pre-season action",
-   "summary": "",
-   "published": "2026-11-25T15:59-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/marie-philip-poulin.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/pwhl/article/ljungblom-has-four-points-as-victoire-down-fleet-in-pre-season-action/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "What Maple Leafs can learn from Dylan Larkin trade",
    "summary": "There are two doors standing before the 2026-27 Toronto Maple Leafs and their ride-or-dies.",
@@ -2826,32 +2813,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/what-maple-leafs-can-learn-from-dylan-larkin-trade/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Panthers get Barkov, Marchand back from injury vs. Senators",
-   "summary": "The Florida Panthers are getting a major boost to their lineup.",
-   "published": "2026-11-25T11:11-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/04/sasha.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/panthers-get-barkov-marchand-back-in-lineup-vs-senators/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Scout’s Analysis: How five of the Canucks’ top prospects are developing",
-   "summary": "The Vancouver Canucks are in full rebuild mode, so keeping tabs on their top prospects is key to understanding how the plan is going. Scout Jason Bukala takes a closer look at five Canucks prospects and how they’re playi",
-   "published": "2026-11-25T13:21-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/caleb-malhotra.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/scouts-analysis-how-five-of-the-canucks-top-prospects-are-developing/",
    "source": "Sportsnet"
   },
   {
@@ -2885,29 +2846,42 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Flames’ Frost not available to play vs. Penguins, Pospisil still out",
-   "summary": "The Calgary Flames will have to look for a bounce-back win against the Pittsburgh Penguins on Wednesday without the services of Morgan Frost and Martin Pospisil",
-   "published": "2026-11-25T12:39-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Frost.jpg",
+   "league": "pwhl",
+   "headline": "Ljungblom has four points as Victoire down Fleet in pre-season action",
+   "summary": "",
+   "published": "2026-11-25T15:59-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/marie-philip-poulin.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 1,
+   "sn_team_count": 0,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/flames-frost-not-available-to-play-vs-penguins-pospisil-still-out/",
+   "url": "https://www.sportsnet.ca/pwhl/article/ljungblom-has-four-points-as-victoire-down-fleet-in-pre-season-action/",
    "source": "Sportsnet"
   },
   {
    "league": "nhl",
-   "headline": "Penguins’ Malkin in, Chinakhov remains out vs. Flames",
-   "summary": "",
-   "published": "2026-11-25T11:53-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/02/CP175596748-1.jpg",
+   "headline": "Panthers get Barkov, Marchand back from injury vs. Senators",
+   "summary": "The Florida Panthers are getting a major boost to their lineup.",
+   "published": "2026-11-25T11:11-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/04/sasha.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 2,
+   "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/penguins-malkin-in-chinakhov-remains-out-vs-flames/",
+   "url": "https://www.sportsnet.ca/nhl/article/panthers-get-barkov-marchand-back-in-lineup-vs-senators/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Scout’s Analysis: How five of the Canucks’ top prospects are developing",
+   "summary": "The Vancouver Canucks are in full rebuild mode, so keeping tabs on their top prospects is key to understanding how the plan is going. Scout Jason Bukala takes a closer look at five Canucks prospects and how they’re playi",
+   "published": "2026-11-25T13:21-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/06/caleb-malhotra.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/scouts-analysis-how-five-of-the-canucks-top-prospects-are-developing/",
    "source": "Sportsnet"
   },
   {
@@ -2989,21 +2963,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "mlb",
-   "headline": "Blue Jays sign Japanese righty Kaima Taira to five-year, $80-million deal",
-   "summary": "The Blue Jays have made their first major move of the off-season. Star Japanese right-hander Kaima Taira is headed to Toronto on a five-year, $80-million deal, industry sources told Sportsnet.",
-   "published": "2026-11-24T14:25-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/kaima-taira.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/baseball/article/blue-jays-sign-japanese-righty-kaima-taira-to-five-year-80-million-deal/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "cfl",
    "headline": "All-star OL Nicastro signs multi-year extension with Argos",
    "summary": "The Toronto Argonauts have re-signed offensive lineman Peter Nicastro to a multi-year deal, the CFL club announced Wednesday.",
@@ -3029,6 +2988,19 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/raptors-kawhi-leonard-begins-individual-on-court-workouts/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "2026 NBA Cup: Schedule, scores, standings",
+   "summary": "",
+   "published": "2026-10-30T21:14-04:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/New-York-Knicks-center-Karl-Anthony-Towns-32-celebrates-with-teammates-after-his-teams-victory-against-the-San-Antonio-Spurs.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/2026-nba-cup-schedule-scores-standings/",
    "source": "Sportsnet"
   },
   {
@@ -3358,9 +3330,9 @@
   },
   {
    "league": "mlb",
-   "headline": "Tigers agree to 1-year deal with veteran righty Gausman (source)",
+   "headline": "Tigers agree to 1-year deal with veteran righty Gausman (sources)",
    "summary": "",
-   "published": "2026-11-25T18:36-05:00",
+   "published": "2026-11-25T19:33-05:00",
    "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/qyhe2yfdxvyrwy5vx714",
    "video": false,
    "teams": [
@@ -3880,8 +3852,8 @@
       "l": 7,
       "otl": 1,
       "pts": 33,
-      "gf": 95,
-      "ga": 66,
+      "gf": 96,
+      "ga": 67,
       "strk": "W2"
      },
      {
@@ -3945,8 +3917,8 @@
       "l": 8,
       "otl": 1,
       "pts": 29,
-      "gf": 86,
-      "ga": 70,
+      "gf": 87,
+      "ga": 71,
       "strk": "L3"
      },
      {
@@ -4034,8 +4006,8 @@
       "l": 7,
       "otl": 1,
       "pts": 29,
-      "gf": 86,
-      "ga": 63,
+      "gf": 87,
+      "ga": 64,
       "strk": "L2"
      },
      {
@@ -4058,8 +4030,8 @@
       "l": 11,
       "otl": 4,
       "pts": 22,
-      "gf": 88,
-      "ga": 92,
+      "gf": 89,
+      "ga": 93,
       "strk": "L2"
      }
     ]
@@ -4442,7 +4414,7 @@
       "l": 4,
       "otl": 0,
       "pts": 34,
-      "gf": 120,
+      "gf": 121,
       "ga": 51,
       "strk": "L3"
      },
@@ -4551,7 +4523,7 @@
       "otl": 1,
       "pts": 17,
       "gf": 75,
-      "ga": 98,
+      "ga": 99,
       "strk": "L2"
      },
      {
