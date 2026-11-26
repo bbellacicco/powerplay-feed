@@ -47,6 +47,14 @@
     .top { flex-direction: column; } .sharebtn { position: static; transform: none; align-self: flex-end; }
   }
   .guide { margin: 18px 40px 0; }
+  /* Scores tab, under the guide: every league's standings and stats */
+  .tables { margin: 22px 40px 0; }
+  .tables h2 { margin: 0 0 10px; font-size: 15px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; color: #cfd8ea; }
+  .tables .lgs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; }
+  .tables .lgs button { font: inherit; font-size: 12px; font-weight: 800; letter-spacing: .06em; color: #cfd8ea; background: #13264d; border: 1px solid rgba(255,255,255,.14); border-radius: 999px; padding: 6px 13px; cursor: pointer; }
+  .tables .lgs button[aria-pressed="true"] { background: #fff; color: #0b1a33; border-color: #fff; }
+  .tables iframe { display: block; width: 100%; border: 0; background: var(--bg); }
+  @media (max-width: 700px) { .tables { margin: 18px 12px 0; } }
   @media (max-width: 700px) { .guide { margin: 14px 12px 0; } }
   .subswitch { display: flex; justify-content: center; gap: 0; margin: 12px auto 0; width: max-content; max-width: calc(100% - 32px);
     border: 1px solid rgba(255,255,255,.16); border-radius: 3px; overflow: hidden; }
@@ -76,11 +84,12 @@
     </div>
   </div>
   <div class="guide" id="guide"></div>
+  <div class="tables" id="tables"></div>
   <div id="panes"></div>
 <script>
 (function () {
   var REPO = 'https://bbellacicco.github.io/powerplay-feed/';
-  var V = '?v=' + Math.floor(Date.now() / 3600e3);   // a fresh copy of each widget every hour
+  var V = '?v=' + Math.floor(Date.now() / 600e3);   // a fresh copy of each widget every 10 minutes
   var phone = window.innerWidth < 700;
   // each part: the widgets in it and their heights (desktop, phone)
   var PARTS = {
@@ -125,14 +134,35 @@
     }
     Object.keys(built).forEach(function (k) { built[k].classList.toggle('on', k === tab); });
     document.getElementById('guide').style.display = tab === 'scores' ? '' : 'none';   // the Pro Sports Guide is the Scores section
+    document.getElementById('tables').style.display = tab === 'scores' ? '' : 'none';
+    if (tab === 'scores') buildTables();
     current = tab;
     [].forEach.call(document.querySelectorAll('.switch button'), function (b) { b.setAttribute('aria-selected', String(b.getAttribute('data-tab') === tab)); });
     try { history.replaceState(null, '', '?tab=' + tab); } catch (e) {}
   }
+  // Scores tab: Standings | Stats for any league, one league at a time
+  var tablesBuilt = false;
+  function buildTables() {
+    if (tablesBuilt) return; tablesBuilt = true;
+    var t = document.getElementById('tables'); t.innerHTML = '';
+    var h = document.createElement('h2'); h.textContent = 'Standings & stats'; t.appendChild(h);
+    var bar = document.createElement('div'); bar.className = 'lgs'; t.appendChild(bar);
+    var f = document.createElement('iframe'); f.scrolling = 'no'; f.title = 'Standings and stats'; f.style.height = (phone ? 1400 : 1000) + 'px'; t.appendChild(f);
+    var NM = { nhl: 'NHL', nfl: 'NFL', nba: 'NBA', mlb: 'MLB', cfl: 'CFL', pwhl: 'PWHL', ncaaf: 'NCAA FB', ncaam: 'NCAA BB' };
+    var pick = function (lg) {
+      f.src = REPO + 'pro-teams.html' + V + '&lg=' + lg + '&view=tables&in=sports';
+      [].forEach.call(bar.children, function (b) { b.setAttribute('aria-pressed', String(b.dataset.lg === lg)); });
+    };
+    ['nhl', 'nfl', 'nba', 'mlb', 'cfl', 'pwhl', 'ncaaf', 'ncaam'].forEach(function (lg) {
+      var b = document.createElement('button'); b.type = 'button'; b.textContent = NM[lg]; b.dataset.lg = lg;
+      b.onclick = function () { pick(lg); }; bar.appendChild(b);
+    });
+    pick('nhl');
+  }
   // each widget reports its height; its frame matches it exactly, so nothing scrolls inside the page
   window.addEventListener('message', function (e) {
     if (!e.data || e.data.pp !== 'height' || !(e.data.h > 50)) return;
-    [].forEach.call(document.querySelectorAll('.pane iframe'), function (f) {
+    [].forEach.call(document.querySelectorAll('.pane iframe, .tables iframe'), function (f) {
       if (f.contentWindow === e.source) f.style.height = Math.min(e.data.h, 4000) + 'px';
     });
   });
