@@ -597,6 +597,31 @@
 
 
   // ---------- National Hub top, like theScore / TSN: a bar of score cards, then the big story and the headlines ----------
+  // the Local Hub's score bar: our groups instead of leagues
+  var LOC_NAME = { spitfires: 'Spitfires', lancers: 'Lancers', saints: 'Saints', junior: 'Junior', highschool: 'High School' };
+  var LOC_COLOR = { spitfires: '#d4202a', lancers: '#3b8ee8', saints: '#1f9d55', junior: '#0891b2', highschool: '#8b5cf6' };
+  var LOC_RANK = { spitfires: 0, lancers: 1, saints: 2, junior: 3, highschool: 4 };
+  var LOC_TAB = { spitfires: 'spitfires', lancers: 'lancers', saints: 'saints', junior: 'junior', highschool: 'hs' };
+  function lgName(lg) { return PRO_NAME[lg] || LOC_NAME[lg] || ''; }
+  function lgColor(lg) { return PRO_COLOR[lg] || LOC_COLOR[lg] || '#64748b'; }
+  function lgRank(lg) { return lg in PRO_RANK ? PRO_RANK[lg] : 10 + (LOC_RANK[lg] || 0); }
+  function shortTeam(n) {   // "Kitchener Rangers" -> "Rangers", "St. Clair Saints" -> "Saints"; schools stay as they are
+    n = String(n || '').trim(); var w = n.split(/\s+/);
+    if (w.length < 2 || /\b(secondary|catholic|collegiate|high|school|academy|ss|chs|ci)\b/i.test(n)) return n;
+    var two = /^(red|maple|blue|golden|white|black|sea|st\.?)$/i.test(w[w.length - 2]) && w.length > 2;
+    return w.slice(two ? -2 : -1).join(' ');
+  }
+  function localTickerGames(d) {
+    return (d.games || []).map(function (g) {
+      var sd = sides(g), fin = g.status === 'final', lv = g.status === 'live';
+      var as = sd[2], hs = sd[3], hasSc = as != null && hs != null && as !== '' && hs !== '';
+      var ln = g.links || {};
+      return { lg: g.team, start: g.start, state: fin ? 'post' : lv ? 'in' : 'pre', detail: g.note || '', tbd: g.time_tbd, local: true,
+               away: { name: shortTeam(sd[0]), score: hasSc ? as : null, win: fin && hasSc && +as > +hs },
+               home: { name: shortTeam(sd[1]), score: hasSc ? hs : null, win: fin && hasSc && +hs > +as },
+               link: ln.gamecentre || ln.boxscore || ln.recap || g.link || '', hub: HUB + '?tab=' + (LOC_TAB[g.team] || 'scores') };
+    }).filter(function (g) { return g.start && LOC_NAME[g.lg] && !/postponed|cancel/i.test(g.note || ''); });
+  }
   function tkDay(g) {
     var k = dayKey(new Date(g.start)), t = dayKey(new Date());
     return k === t ? 'Today' : k === dayKey(new Date(Date.now() - 864e5)) ? 'Yest.' : k === dayKey(new Date(Date.now() + 864e5)) ? 'Tmrw' : cpDate(k);
@@ -604,15 +629,16 @@
   function tkTeam(t, g, showScore, lose) {
     var r = el('div', 'pt-r' + (lose ? ' pt-lose' : ''));
     if (t.logo) { var im = new Image(); im.src = t.logo; im.alt = ''; im.loading = 'lazy'; im.className = 'pt-lg'; im.onerror = function () { im.replaceWith(el('span', 'pt-dot')); }; r.appendChild(im); }
-    else { var d = el('span', 'pt-dot'); d.style.background = PRO_COLOR[g.lg]; r.appendChild(d); }
-    r.appendChild(el('b', 'pt-ab', t.abbr || nick(t.full || t.name).slice(0, 3).toUpperCase()));
+    else { var d = el('span', 'pt-dot'); d.style.background = lgColor(g.lg); r.appendChild(d); }
+    r.appendChild(el('b', 'pt-ab', g.local ? t.name : (t.abbr || nick(t.full || t.name).slice(0, 3).toUpperCase())));
     if (showScore) r.appendChild(el('span', 'pt-sc', t.score == null ? '' : String(t.score)));
     return r;
   }
   function tkCard(g, target, o) {
     var lv = g.state === 'in', fin = g.state === 'post', sc = (lv || fin) && g.away.score != null && g.home.score != null;
     var a = el('a', 'pt-card' + (lv ? ' pt-livec' : '') + (g.ours && !(o && o.league) ? ' pt-ours' : ''));   /* our teams stand out on Scores only */
-    a.href = g.link || proHubLink(g.lg); a.target = g.link ? '_blank' : target; if (g.link) a.rel = 'noopener';
+    a.href = g.link || g.hub || proHubLink(g.lg); a.target = g.link ? '_blank' : target; if (g.link) a.rel = 'noopener';
+    if (g.local) a.classList.add('pt-loc');
     var rows = el('div', 'pt-rows');
     rows.appendChild(tkTeam(g.away, g, sc, fin && !g.away.win && g.home.win));
     rows.appendChild(tkTeam(g.home, g, sc, fin && !g.home.win && g.away.win));
@@ -621,7 +647,7 @@
     if (lv) { st.appendChild(el('span', 'pt-lv', 'LIVE')); st.appendChild(el('span', 'pt-s2', (g.detail || '').replace(/ - /, ' '))); }
     else if (fin) { st.appendChild(el('span', 'pt-s1', /OT|SO/.test(g.detail) ? g.detail.replace(/^Final\/?/, 'F/') : 'Final')); st.appendChild(el('span', 'pt-s2', tkDay(g))); }
     else { st.appendChild(el('span', 'pt-s1', g.tbd ? 'TBA' : cpTime(new Date(g.start)).replace(' a.m.', ' AM').replace(' p.m.', ' PM'))); st.appendChild(el('span', 'pt-s2', tkDay(g))); }
-    st.appendChild(el('span', 'pt-lgn', PRO_NAME[g.lg]));
+    st.appendChild(el('span', 'pt-lgn', lgName(g.lg)));
     a.appendChild(st);
     return a;
   }
@@ -637,16 +663,16 @@
       var list = groups[lg];
       var live = list.filter(function (g) { return g.state === 'in'; }).sort(byOurs);
       var upToday = list.filter(function (g) { return g.state === 'pre' && k(g) === today; });
-      var fins = list.filter(function (g) { return g.state === 'post' && (k(g) === today || k(g) === yest); }).sort(function (a, b) { return a.start < b.start ? 1 : -1; });
+      var fins = list.filter(function (g) { return g.state === 'post' && (k(g) === today || k(g) === yest || (g.local && k(g) >= dayKey(new Date(Date.now() - 3 * 864e5)))); }).sort(function (a, b) { return a.start < b.start ? 1 : -1; });
       var later = list.filter(function (g) { return g.state === 'pre' && k(g) > today; });
       var todayN = list.filter(function (g) { return k(g) === today; }).length;
       // the busiest league goes first: live games, then today's games (a big NFL Sunday, a full NBA night)
       return { lg: lg, cards: live.concat(upToday, fins, later.slice(0, o.league ? 20 : 8)).slice(0, o.league ? 40 : 18), w: live.length * 100 + todayN * 10 + (fins.length ? 1 : 0) };
-    }).filter(function (x) { return x.cards.length; }).sort(function (a, b) { return b.w - a.w || PRO_RANK[a.lg] - PRO_RANK[b.lg]; });
+    }).filter(function (x) { return x.cards.length; }).sort(function (a, b) { return b.w - a.w || lgRank(a.lg) - lgRank(b.lg); });
     var row = el('div', 'pt-row'), track = el('div', 'pt-track');
     if (!lgs.length) track.appendChild(el('div', 'pt-none', 'No games on the schedule right now.'));
     lgs.forEach(function (x) {
-      if (!o.league) { var lb = el('div', 'pt-lgl', PRO_NAME[x.lg]); lb.style.setProperty('--c', PRO_COLOR[x.lg]); track.appendChild(lb); }
+      if (!o.league) { var lb = el('div', 'pt-lgl', lgName(x.lg)); lb.style.setProperty('--c', lgColor(x.lg)); track.appendChild(lb); }
       x.cards.forEach(function (g) { track.appendChild(tkCard(g, target, o)); });
     });
     var prev = el('button', 'pt-arr pt-prev', '‹'), next = el('button', 'pt-arr pt-next', '›');
@@ -736,6 +762,7 @@
     '.pt-hm{display:block;font-size:11.5px;color:#8fa1c4;margin-top:3px}' +
     '.pt-lgl{flex:none;scroll-snap-align:start;display:flex;align-items:center;padding:0 10px 0 4px;font-size:15px;font-weight:900;letter-spacing:.06em;color:#fff;border-left:3px solid var(--c,#e8b021);margin-left:4px}' +
     '.pt-track .pt-lgl:first-child{margin-left:0}' +
+    '.pt-loc .pt-r{grid-template-columns:12px minmax(0,104px) 26px}.pt-loc .pt-ab{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:13.5px}.pt-loc .pt-dot{width:10px;height:10px;margin:0 1px}' +
     '.pt-sec .pt-arr{align-self:center;height:64px}' +
     '.pt-sec{margin:0 0 18px}.pt-sh{font-size:15px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#cfd8ea;margin:0 0 9px}' +
     '.pt-sc2{flex:none;scroll-snap-align:start;width:250px;display:block;text-align:left;font:inherit;color:#f2f5fb;text-decoration:none;background:#0f2148;border:1px solid rgba(255,255,255,.1);border-radius:8px;overflow:hidden;cursor:pointer;padding:0 0 10px}' +
@@ -817,6 +844,7 @@
   function draw(box, d, o) {
     if (o.mode === 'pro' && o._vid && box.querySelector('.pt-player iframe')) return;   // a video is playing: the refresh waits
     box.innerHTML = '';
+    if (o.mode !== 'pro' && o.ticker) box.appendChild(proTicker({ pro: localTickerGames(d) }, o.target, o));   // the Local Hub: score bar, then the guide
     if (o.mode === 'pro') {
       box.appendChild(proTicker(d, o.target, o));
       var news = el('div', 'pt-news'); box.appendChild(news);
