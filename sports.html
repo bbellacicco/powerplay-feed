@@ -49,6 +49,16 @@
   .guide { margin: 18px 40px 0; }
   /* Scores tab, under the guide: every league's standings and stats */
   .tables { margin: 22px 40px 0; }
+  /* a league tab */
+  .lgpane { margin: 14px 40px 0; }
+  .lgbar { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: 0 0 12px; }
+  .lgbar button { font: inherit; font-size: 12.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: #cfd8ea; background: #13264d; border: 1px solid rgba(255,255,255,.14); border-radius: 999px; padding: 8px 15px; cursor: pointer; }
+  .lgbar button[aria-pressed="true"] { background: #fff; color: #0b1a33; border-color: #fff; }
+  .lgsel { margin-left: auto; min-width: 200px; font: inherit; font-size: 14px; font-weight: 700; color: #f2f5fb; background: #13264d; border: 1px solid rgba(255,255,255,.25); border-radius: 8px; padding: 8px 10px; }
+  .lgguide.nonews .pt-news { display: none; }
+  .lgtables[hidden] { display: none; }
+  .lgtables iframe { display: block; width: 100%; border: 0; background: var(--bg); }
+  @media (max-width: 700px) { .lgpane { margin: 12px 12px 0; } .lgsel { margin-left: 0; flex: 1 1 100%; } }
   .tables h2 { margin: 0 0 10px; font-size: 15px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; color: #cfd8ea; }
   .tables .lgs { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; }
   .tables .lgs button { font: inherit; font-size: 12px; font-weight: 800; letter-spacing: .06em; color: #cfd8ea; background: #13264d; border: 1px solid rgba(255,255,255,.14); border-radius: 999px; padding: 6px 13px; cursor: pointer; }
@@ -98,13 +108,15 @@
   // each league has its own section, like the Local Hub's: pick your team, headlines, top stories and leaders, then its scores and standings
   var LGS = ['nhl', 'nfl', 'nba', 'mlb', 'cfl', 'pwhl'];
   var TEAM = (new URLSearchParams(location.search).get('team') || '').toLowerCase().replace(/[^a-z]/g, '');   // a team's own link
-  LGS.forEach(function (lg) { PARTS[lg] = [['pro-teams.html', 1500, 2100, '&lg=' + lg], ['pro-games_3.html', 760, 900, '&tab=' + lg + '&lock=1']]; });
+  // each league tab: its scores bar, then News (big story, headlines, top stories, videos) or Standings & Stats, and a team drop-down
+  LGS.forEach(function (lg) { PARTS[lg] = 'league'; });
   // U.S. college (the Big Ten: Michigan and Michigan State): the league page carries its own scores and standings
-  ['ncaaf', 'ncaam'].forEach(function (lg) { LGS.push(lg); PARTS[lg] = [['pro-teams.html', 1500, 2100, '&lg=' + lg]]; });
+  ['ncaaf', 'ncaam'].forEach(function (lg) { LGS.push(lg); PARTS[lg] = 'league'; });
   function lgParam(w, tab) { return w[0] === 'pro-teams.html' && TEAM && tab === startTab ? '&team=' + TEAM : ''; }
   var built = {}, box = document.getElementById('panes');
   function show(tab) {
     if (!PARTS[tab]) tab = 'scores';
+    if (!built[tab] && PARTS[tab] === 'league') { built[tab] = buildLeague(tab); box.appendChild(built[tab]); }
     if (!built[tab]) {
       var pane = document.createElement('div'); pane.className = 'pane'; pane.id = 'pane-' + tab;
       PARTS[tab].forEach(function (w) {
@@ -140,6 +152,52 @@
     [].forEach.call(document.querySelectorAll('.switch button'), function (b) { b.setAttribute('aria-selected', String(b.getAttribute('data-tab') === tab)); });
     try { history.replaceState(null, '', '?tab=' + tab); } catch (e) {}
   }
+  // a league tab: [News] [Standings & Stats] and "Your team", the scores bar, then the news or the tables / team page
+  var LGNAME = { nhl: 'NHL', nfl: 'NFL', nba: 'NBA', mlb: 'MLB', cfl: 'CFL', pwhl: 'PWHL', ncaaf: 'NCAA football', ncaam: 'NCAA basketball' };
+  var LGFRAME = {};
+  function buildLeague(lg) {
+    var pane = document.createElement('div'); pane.className = 'pane lgpane'; pane.id = 'pane-' + lg;
+    var bar = document.createElement('div'); bar.className = 'lgbar';
+    var bNews = document.createElement('button'), bTab = document.createElement('button');
+    bNews.type = bTab.type = 'button'; bNews.textContent = 'News'; bTab.textContent = 'Standings & Stats';
+    var sel = document.createElement('select'); sel.className = 'lgsel'; sel.setAttribute('aria-label', 'Pick your team');
+    var o0 = document.createElement('option'); o0.value = ''; o0.textContent = 'Your team…'; sel.appendChild(o0);
+    bar.appendChild(bNews); bar.appendChild(bTab); bar.appendChild(sel); pane.appendChild(bar);
+    var g = document.createElement('div'); g.className = 'lgguide'; pane.appendChild(g);
+    var tw = document.createElement('div'); tw.className = 'lgtables'; tw.hidden = true;
+    var f = document.createElement('iframe'); f.scrolling = 'no'; f.title = LGNAME[lg] + ' standings, stats and teams';
+    f.style.height = (phone ? 1400 : 1000) + 'px';
+    f.src = REPO + 'pro-teams.html' + V + '&lg=' + lg + '&view=league&in=sports' + (TEAM && lg === startTab ? '&team=' + TEAM : '');
+    tw.appendChild(f); pane.appendChild(tw); LGFRAME[lg] = { f: f, sel: sel, mode: mode };
+    function mode(m) {
+      g.classList.toggle('nonews', m !== 'news');
+      tw.hidden = m === 'news';
+      bNews.setAttribute('aria-pressed', String(m === 'news')); bTab.setAttribute('aria-pressed', String(m === 'tables'));
+    }
+    bNews.onclick = function () { mode('news'); };
+    bTab.onclick = function () { sel.value = ''; try { f.contentWindow.postMessage({ pp: 'team', i: '' }, '*'); } catch (e) {} mode('tables'); };
+    sel.onchange = function () {
+      if (sel.value === '') return;
+      try { f.contentWindow.postMessage({ pp: 'team', i: +sel.value }, '*'); } catch (e) {}
+      mode('team'); bTab.setAttribute('aria-pressed', 'false');
+    };
+    mode(TEAM && lg === startTab ? 'team' : 'news');
+    var go = function () { if (window.PPGuide) PPGuide.render(g, { target: '_top', mode: 'pro', league: lg }); else setTimeout(go, 300); };
+    go();
+    return pane;
+  }
+  // the league's team list (from its Standings page) fills the drop-down
+  window.addEventListener('message', function (e) {
+    if (!e.data) return;
+    Object.keys(LGFRAME).forEach(function (lg) {
+      var x = LGFRAME[lg]; if (x.f.contentWindow !== e.source) return;
+      if (e.data.pp === 'teams' && e.data.list) {
+        while (x.sel.options.length > 1) x.sel.remove(1);
+        e.data.list.forEach(function (t) { var op = document.createElement('option'); op.value = t.i; op.textContent = t.name; x.sel.appendChild(op); });
+      }
+      if (e.data.pp === 'teamclosed') { x.sel.value = ''; x.mode('tables'); }
+    });
+  });
   // Scores tab: Standings | Stats for any league, one league at a time
   var tablesBuilt = false;
   function buildTables() {
