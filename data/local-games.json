@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-25T23:46:55-05:00",
- "today": "2026-11-25",
+ "updated": "2026-11-26T00:08:04-05:00",
+ "today": "2026-11-26",
  "range": [
-  "2026-11-22",
-  "2026-11-28"
+  "2026-11-23",
+  "2026-11-29"
  ],
  "teams": {
   "spitfires": {
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 36
+   "count": 37
   },
   "club_news": {
    "ok": true,
@@ -111,82 +111,6 @@
   }
  },
  "games": [
-  {
-   "id": "junior-gs2960703",
-   "team": "junior",
-   "sport": "PJHL (Jr. C)",
-   "start": "2026-11-22T16:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Mooretown Flags",
-   "location": "Libro Centre",
-   "status": "final",
-   "our_score": 2,
-   "opp_score": 3,
-   "result": "L",
-   "note": "",
-   "links": {
-    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960703?configuration=45"
-   },
-   "club": "Amherstburg Admirals"
-  },
-  {
-   "id": "junior-ojhl16707",
-   "team": "junior",
-   "sport": "OJHL (Jr. A)",
-   "start": "2026-11-22T18:10:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Niagara Falls Canucks",
-   "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
-   "status": "final",
-   "our_score": 6,
-   "opp_score": 4,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.ojhl.ca/stats/game-center/16707"
-   },
-   "club": "Leamington Flyers"
-  },
-  {
-   "id": "junior-gs2960705",
-   "team": "junior",
-   "sport": "PJHL (Jr. C)",
-   "start": "2026-11-22T19:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Blenheim Blades",
-   "location": "Blenheim Memorial Arena",
-   "status": "final",
-   "our_score": 4,
-   "opp_score": 2,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960705?configuration=45"
-   },
-   "club": "Essex 73's"
-  },
-  {
-   "id": "junior-gojhl15722",
-   "team": "junior",
-   "sport": "GOHL (Jr. B)",
-   "start": "2026-11-22T19:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "St. Thomas Stars",
-   "location": "Joe Thornton C.C., St. Thomas, ON",
-   "status": "final",
-   "our_score": 7,
-   "opp_score": 4,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.gohl.ca/stats/game-center/15722"
-   },
-   "club": "Chatham Maroons"
-  },
   {
    "id": "highschool-2026-11-24-1",
    "team": "highschool",
@@ -584,9 +508,7 @@
     "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=171",
     "watch": "https://oua.tv/?school=Windsor"
    }
-  }
- ],
- "ahead": [
+  },
   {
    "id": "junior-gojhl15741",
    "team": "junior",
@@ -662,7 +584,9 @@
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960763?configuration=45"
    },
    "club": "Lakeshore Canadiens"
-  },
+  }
+ ],
+ "ahead": [
   {
    "id": "junior-gs2960765",
    "team": "junior",
@@ -1041,6 +965,63 @@
    "club": "Wheatley Sharks"
   },
   {
+   "id": "spitfires-ohl29294",
+   "team": "spitfires",
+   "sport": "Hockey",
+   "start": "2026-12-10T19:05:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Ottawa 67's",
+   "location": "WFCU Centre, Windsor",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "tickets": "https://wfcucentre.evenue.net/event/S27/G17",
+    "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29294/"
+   }
+  },
+  {
+   "id": "junior-ojhl16761",
+   "team": "junior",
+   "sport": "OJHL (Jr. A)",
+   "start": "2026-12-10T19:10:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Toronto Patriots",
+   "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.ojhl.ca/stats/game-center/16761"
+   },
+   "club": "Leamington Flyers"
+  },
+  {
+   "id": "junior-gs2960831",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-12-10T19:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Walpole Island Wild",
+   "location": "Walpole Island Complex",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960831?configuration=45"
+   },
+   "club": "Essex 73's"
+  },
+  {
    "id": "junior-gs2960855",
    "team": "junior",
    "sport": "PJHL (Jr. C)",
@@ -1165,23 +1146,80 @@
  ],
  "last": [
   {
-   "id": "junior-gojhl15714",
+   "id": "junior-gojhl15722",
    "team": "junior",
    "sport": "GOHL (Jr. B)",
-   "start": "2026-11-21T19:15:00-05:00",
+   "start": "2026-11-22T19:30:00-05:00",
    "time_tbd": false,
    "home_away": "A",
-   "opponent": "Komoka Kings",
-   "location": "Komoka Wellness Centre, Middlesex Centre, ON",
+   "opponent": "St. Thomas Stars",
+   "location": "Joe Thornton C.C., St. Thomas, ON",
    "status": "final",
-   "our_score": 8,
-   "opp_score": 3,
+   "our_score": 7,
+   "opp_score": 4,
    "result": "W",
    "note": "",
    "links": {
-    "gamecentre": "https://www.gohl.ca/stats/game-center/15714"
+    "gamecentre": "https://www.gohl.ca/stats/game-center/15722"
    },
    "club": "Chatham Maroons"
+  },
+  {
+   "id": "junior-gs2960705",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-11-22T19:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Blenheim Blades",
+   "location": "Blenheim Memorial Arena",
+   "status": "final",
+   "our_score": 4,
+   "opp_score": 2,
+   "result": "W",
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960705?configuration=45"
+   },
+   "club": "Essex 73's"
+  },
+  {
+   "id": "junior-ojhl16707",
+   "team": "junior",
+   "sport": "OJHL (Jr. A)",
+   "start": "2026-11-22T18:10:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Niagara Falls Canucks",
+   "location": "Nature Fresh Farms Recreation Centre, Leamington, ON",
+   "status": "final",
+   "our_score": 6,
+   "opp_score": 4,
+   "result": "W",
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.ojhl.ca/stats/game-center/16707"
+   },
+   "club": "Leamington Flyers"
+  },
+  {
+   "id": "junior-gs2960703",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-11-22T16:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Mooretown Flags",
+   "location": "Libro Centre",
+   "status": "final",
+   "our_score": 2,
+   "opp_score": 3,
+   "result": "L",
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960703?configuration=45"
+   },
+   "club": "Amherstburg Admirals"
   },
   {
    "id": "spitfires-ohl29227",
@@ -1200,25 +1238,6 @@
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29227/"
    }
-  },
-  {
-   "id": "junior-ojhl16702",
-   "team": "junior",
-   "sport": "OJHL (Jr. A)",
-   "start": "2026-11-21T19:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Mississauga Chargers",
-   "location": "Port Credit Memorial Arena, Mississauga, ON",
-   "status": "final",
-   "our_score": 5,
-   "opp_score": 0,
-   "result": "W",
-   "note": "",
-   "links": {
-    "gamecentre": "https://www.ojhl.ca/stats/game-center/16702"
-   },
-   "club": "Leamington Flyers"
   },
   {
    "id": "lancers-6230",
@@ -1354,25 +1373,6 @@
    "club": "LaSalle Vipers"
   },
   {
-   "id": "junior-gs2960672",
-   "team": "junior",
-   "sport": "PJHL (Jr. C)",
-   "start": "2026-11-20T19:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "A",
-   "opponent": "Dresden Kings",
-   "location": "Lambton-Kent Memorial Centre",
-   "status": "final",
-   "our_score": 2,
-   "opp_score": 3,
-   "result": "L",
-   "note": "",
-   "links": {
-    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960672?configuration=45"
-   },
-   "club": "Essex 73's"
-  },
-  {
    "id": "junior-gs2960661",
    "team": "junior",
    "sport": "PJHL (Jr. C)",
@@ -1427,25 +1427,6 @@
     "boxscore": "https://golancers.ca/boxscore.aspx?id=6349",
     "recap": "https://golancers.ca/news/2026/11/20/mens-hockey-lancers-power-past-mustangs-for-fourth-consecutive-victory.aspx"
    }
-  },
-  {
-   "id": "junior-gs2960653",
-   "team": "junior",
-   "sport": "PJHL (Jr. C)",
-   "start": "2026-11-19T19:30:00-05:00",
-   "time_tbd": false,
-   "home_away": "H",
-   "opponent": "Blenheim Blades",
-   "location": "Harrow Arena",
-   "status": "final",
-   "our_score": 3,
-   "opp_score": 5,
-   "result": "L",
-   "note": "",
-   "links": {
-    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960653?configuration=45"
-   },
-   "club": "Amherstburg Admirals"
   },
   {
    "id": "lancers-6503",
@@ -1618,21 +1599,6 @@
  "pro_games": [
   {
    "league": "pwhl",
-   "start": "2026-11-22T21:50:00-05:00",
-   "status": "final",
-   "home": "Vegas Vanguards",
-   "away": "Minnesota Frost",
-   "home_abbr": "VGS",
-   "away_abbr": "MIN",
-   "our_score": 2,
-   "opp_score": 1,
-   "location": "America First Center | Henderson",
-   "note": "",
-   "time_tbd": false,
-   "link": "https://www.thepwhl.com/en/stats/game-center/353"
-  },
-  {
-   "league": "pwhl",
    "start": "2026-11-23T13:30:00-05:00",
    "status": "final",
    "home": "Ottawa Charge",
@@ -1765,9 +1731,7 @@
    "note": "",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/358"
-  }
- ],
- "pro_ahead": [
+  },
   {
    "league": "pwhl",
    "start": "2026-11-29T20:00:00-05:00",
@@ -1782,7 +1746,9 @@
    "note": "",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/363"
-  },
+  }
+ ],
+ "pro_ahead": [
   {
    "league": "pwhl",
    "start": "2026-11-30T16:00:00-05:00",
@@ -1932,6 +1898,21 @@
    "note": "",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/377"
+  },
+  {
+   "league": "pwhl",
+   "start": "2026-12-10T22:00:00-05:00",
+   "status": "upcoming",
+   "home": "Vegas Vanguards",
+   "away": "Minnesota Frost",
+   "home_abbr": "VGS",
+   "away_abbr": "MIN",
+   "our_score": null,
+   "opp_score": null,
+   "location": "T-Mobile Arena | Las Vegas",
+   "note": "",
+   "time_tbd": false,
+   "link": "https://www.thepwhl.com/en/stats/game-center/378"
   }
  ],
  "pro_news": [
@@ -2644,6 +2625,19 @@
   },
   {
    "league": "nfl",
+   "headline": "Blake Corum leads Rams’ dominant rushing attack in win over Packers",
+   "summary": "Blake Corum rushed for a career-high 184 yards and a touchdown, Kyren Williams ran for another score and the Los Angeles Rams used a relentless ground game to pound out their fifth consecutive victory, 26-13 over the Gre",
+   "published": "2026-11-25T23:53-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/corum.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/blake-corum-leads-rams-dominant-rushing-attack-in-win-over-packers/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
    "headline": "Steelers cut Aaron Rodgers after he claims McCarthy slept in meetings",
    "summary": "Aaron Rodgers is done with the Pittsburgh Steelers.",
    "published": "2026-11-25T14:23-05:00",
@@ -2684,19 +2678,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Demidov could practise with Canadiens Friday, GM says",
-   "summary": "",
-   "published": "2026-11-25T22:54-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP176307434.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/demidov-could-practise-with-canadiens-friday-gm-says/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "other",
    "headline": "Jannik Sinner won’t play at 2027 Australian Open",
    "summary": "",
@@ -2707,6 +2688,19 @@
    "sn_team_count": 0,
    "sport": "Tennis",
    "url": "https://www.sportsnet.ca/atp/article/jannik-sinner-wont-play-at-2027-australian-open/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Canadiens’ Kaiden Guhle exits vs. Avalanche with apparent injury",
+   "summary": "Defenceman Kaiden Guhle exited Wednesday’s game against the Colorado Avalanche after suffering an apparent injury and the team announced that he would not return.",
+   "published": "2026-11-25T23:46-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/guhle.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canadiens-kaiden-guhle-exits-vs-avalanche-with-apparent-injury/",
    "source": "Sportsnet"
   },
   {
@@ -2823,6 +2817,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Demidov could practise with Canadiens Friday, GM says",
+   "summary": "",
+   "published": "2026-11-25T22:54-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP176307434.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/demidov-could-practise-with-canadiens-friday-gm-says/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Ducks’ Cutter Gauthier becomes first American to score 21 goals in 14 games",
    "summary": "",
    "published": "2026-11-25T23:27-05:00",
@@ -2927,7 +2934,7 @@
   },
   {
    "league": "nba",
-   "headline": "Knicks blow by Cavs in fourth, win sixth straight",
+   "headline": "NBA Roundup: Knicks blow by Cavs in fourth, win sixth straight",
    "summary": "Jose Alvarado and Mikal Bridges scored season bests and the New York Knicks rode a blitz by their bench to victory over the Cleveland Cavaliers.",
    "published": "2026-11-25T22:27-05:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-21-2.jpg",
@@ -3068,19 +3075,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/report-marlins-gary-sanchez-agree-to-one-year-6-5m-deal/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Champions League Roundup: Injury-flush PSG, Bayern stumble",
-   "summary": "Barcelona edged closer to the Champions League knockouts with a 4-1 win against Sabah on Wednesday.",
-   "published": "2026-11-25T16:08-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/psg-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/champions-league/article/champions-league-roundup-barcelona-routs-sabah/",
    "source": "Sportsnet"
   },
   {
