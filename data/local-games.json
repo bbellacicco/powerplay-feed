@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T19:02:02-05:00",
+ "updated": "2026-11-25T19:21:39-05:00",
  "today": "2026-11-25",
  "range": [
   "2026-11-22",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -218,9 +218,9 @@
    "location": "Vollmer Culture R.C., LaSalle, ON",
    "status": "live",
    "our_score": 0,
-   "opp_score": 0,
+   "opp_score": 1,
    "result": null,
-   "note": "20:00 1st",
+   "note": "06:36 1st",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15725"
    },
@@ -235,13 +235,12 @@
    "home_away": "H",
    "opponent": "Kitchener Rangers",
    "location": "WFCU Centre, Windsor",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 1,
+   "opp_score": 1,
    "result": null,
-   "note": "",
+   "note": "12:22 1st",
    "links": {
-    "tickets": "https://wfcucentre.evenue.net/event/S27/G14",
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29238/"
    }
   },
@@ -258,7 +257,7 @@
    "our_score": null,
    "opp_score": null,
    "result": null,
-   "note": "",
+   "note": "In progress",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960712?configuration=45"
    },
@@ -1971,7 +1970,7 @@
   },
   {
    "league": "cfl",
-   "headline": "Lions extend American defensive back Robert Carter Jr., sign National offensive lineman Bosse",
+   "headline": "Lions extend American defensive back Robert Carter Jr., sign National John Bosse",
    "summary": "",
    "published": "2026-11-25T00:00:00-05:00",
    "image": "https://images.ctfassets.net/yfsr4emgn242/3MztKBeLh4xACQnXdZhKqv/6a65d9599459a610f869ed3607df1666/Robert_Carter_Jr.jpg?w=640&fm=jpg&q=70",
@@ -2019,6 +2018,19 @@
     "Tiger-Cats"
    ],
    "url": "https://www.cfl.ca/article/tiger-cats-sign-american-running-back-barika-kpeenu",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
+   "headline": "Argonauts extend American running back Samuel Hicks",
+   "summary": "",
+   "published": "2026-11-25T00:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/2Md3CPoiyaZuIv77YsaD5d/85680b747574e4ad9af88c22e24885d6/Samuel_Hicks_2026.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [
+    "Argonauts"
+   ],
+   "url": "https://www.cfl.ca/article/argonauts-extend-american-running-back-samuel-hicks",
    "source": "CFL.ca"
   },
   {
@@ -2098,19 +2110,6 @@
     "Stampeders"
    ],
    "url": "https://www.cfl.ca/article/stampeders-sign-national-offensive-lineman-tyler-packer",
-   "source": "CFL.ca"
-  },
-  {
-   "league": "cfl",
-   "headline": "Roughriders sign American defensive back Jyron Gilmore",
-   "summary": "",
-   "published": "2026-11-24T00:00:00-05:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/75G5jb9xg6p4GZAi2EI7xd/0c95d2f88686682db13fe7efa70e2053/Generic_Roughriders_Helmet_2026.jpg?w=640&fm=jpg&q=70",
-   "video": false,
-   "teams": [
-    "Roughriders"
-   ],
-   "url": "https://www.cfl.ca/article/roughriders-sign-american-defensive-back-jyron-gilmore",
    "source": "CFL.ca"
   },
   {
@@ -2616,19 +2615,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "Steelers cut Aaron Rodgers after he claims McCarthy slept in meetings",
-   "summary": "Aaron Rodgers is done with the Pittsburgh Steelers.",
-   "published": "2026-11-25T14:23-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/12/Untitled-design-2025-12-15T234132.844.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/aaron-rodgers-says-he-wont-return-to-steelers-mccarthy-sleeping-in-meetings/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "mlb",
    "headline": "Why Taira’s repertoire should translate with Blue Jays",
    "summary": "When the Blue Jays signed Kaima Taira on Tuesday, they made a large bet on a player who hasn’t stepped on an MLB mound. Nick Ashbourne digs deep on the Japanese right-hander’s seemingly MLB-ready repertoire.",
@@ -2806,7 +2792,7 @@
    "headline": "MLB off-season transaction tracker: The top free-agent signings and trades",
    "summary": "",
    "published": "2026-11-19T19:57-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/peralta.jpg",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/Kevin-Gausman.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
@@ -3437,15 +3423,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Let's build a lineup of MLB's best 25-and-under stars",
+   "headline": "Each MLB club's best prospect acquired via trade",
    "summary": "",
-   "published": "2026-11-24T22:22-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/iwpiaxzm84numxa1fotj",
+   "published": "2026-11-25T19:00-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/sseryeerewlty070rl3r",
    "video": false,
    "teams": [
     "Detroit Tigers"
    ],
-   "url": "https://www.mlb.com/tigers/news/best-players-in-mlb-25-and-under-heading-into-2027",
+   "url": "https://www.mlb.com/tigers/news/best-prospects-who-were-trade-acquisitions",
    "source": "Team site"
   },
   {
@@ -3463,15 +3449,15 @@
   },
   {
    "league": "mlb",
-   "headline": "Melton signs 6-year, $46.5 million contract extension with Tigers",
+   "headline": "Let's build a lineup of MLB's best 25-and-under stars",
    "summary": "",
-   "published": "2026-11-24T11:20-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/qynti3bmf9dhut02kem7",
+   "published": "2026-11-24T22:22-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/iwpiaxzm84numxa1fotj",
    "video": false,
    "teams": [
     "Detroit Tigers"
    ],
-   "url": "https://www.mlb.com/tigers/news/tigers-troy-melton-contract-extension",
+   "url": "https://www.mlb.com/tigers/news/best-players-in-mlb-25-and-under-heading-into-2027",
    "source": "Team site"
   },
   {
@@ -3498,6 +3484,19 @@
     "Detroit Tigers"
    ],
    "url": "https://www.mlb.com/milb/prospects/2026/tigers/",
+   "source": "Team site"
+  },
+  {
+   "league": "mlb",
+   "headline": "Melton signs 6-year, $46.5 million contract extension with Tigers",
+   "summary": "",
+   "published": "2026-11-24T11:20-05:00",
+   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/qynti3bmf9dhut02kem7",
+   "video": false,
+   "teams": [
+    "Detroit Tigers"
+   ],
+   "url": "https://www.mlb.com/tigers/news/tigers-troy-melton-contract-extension",
    "source": "Team site"
   },
   {
@@ -3563,19 +3562,6 @@
     "Detroit Tigers"
    ],
    "url": "https://www.mlb.com/tigers/news/top-30-arizona-fall-league-prospects-2026",
-   "source": "Team site"
-  },
-  {
-   "league": "mlb",
-   "headline": "Tigers add fast-rising prospect Graham to 40-man roster, DFA Vierling",
-   "summary": "",
-   "published": "2026-11-17T19:59-05:00",
-   "image": "https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/dxxooxq3a3vtkn9c65b1",
-   "video": false,
-   "teams": [
-    "Detroit Tigers"
-   ],
-   "url": "https://www.mlb.com/tigers/news/tigers-peyton-graham-40-man-roster-matt-vierling-designated-for-assignment",
    "source": "Team site"
   },
   {
@@ -3907,7 +3893,7 @@
       "l": 7,
       "otl": 1,
       "pts": 33,
-      "gf": 94,
+      "gf": 95,
       "ga": 66,
       "strk": "W2"
      },
@@ -3973,7 +3959,7 @@
       "otl": 1,
       "pts": 29,
       "gf": 86,
-      "ga": 69,
+      "ga": 70,
       "strk": "L3"
      },
      {
@@ -4037,8 +4023,8 @@
       "l": 7,
       "otl": 3,
       "pts": 33,
-      "gf": 90,
-      "ga": 72,
+      "gf": 91,
+      "ga": 73,
       "strk": "W1"
      },
      {
@@ -4061,8 +4047,8 @@
       "l": 7,
       "otl": 1,
       "pts": 29,
-      "gf": 83,
-      "ga": 61,
+      "gf": 86,
+      "ga": 62,
       "strk": "L2"
      },
      {
@@ -4085,8 +4071,8 @@
       "l": 11,
       "otl": 4,
       "pts": 22,
-      "gf": 86,
-      "ga": 89,
+      "gf": 87,
+      "ga": 92,
       "strk": "L2"
      }
     ]
@@ -4114,8 +4100,8 @@
       "l": 6,
       "otl": 3,
       "pts": 35,
-      "gf": 91,
-      "ga": 68,
+      "gf": 92,
+      "ga": 69,
       "strk": "W8"
      },
      {
@@ -4469,7 +4455,7 @@
       "l": 4,
       "otl": 0,
       "pts": 34,
-      "gf": 119,
+      "gf": 120,
       "ga": 51,
       "strk": "L3"
      },
@@ -4529,7 +4515,7 @@
       "l": 6,
       "otl": 1,
       "pts": 25,
-      "gf": 72,
+      "gf": 73,
       "ga": 61,
       "strk": "W3"
      },
@@ -4542,7 +4528,7 @@
       "otl": 0,
       "pts": 22,
       "gf": 61,
-      "ga": 78,
+      "ga": 79,
       "strk": "W4"
      },
      {
@@ -4578,7 +4564,7 @@
       "otl": 1,
       "pts": 17,
       "gf": 75,
-      "ga": 97,
+      "ga": 98,
       "strk": "L2"
      },
      {
