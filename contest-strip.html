@@ -49,6 +49,8 @@
   .share svg { width: 15px; height: 15px; fill: currentColor; }
   .share .copy { white-space: nowrap; width: auto; padding: 0 12px; border-radius: 999px; font-size: 12px; font-weight: 800; gap: 6px; }
   .share .copy.ok { border-color: #2ecc71; color: #2ecc71; }
+  .line.thanks { background: rgba(46,204,113,.12); border: 1px solid rgba(46,204,113,.45); border-radius: 10px; padding: 8px 12px; color: var(--text); }
+  .line.thanks b { color: #2ecc71; white-space: normal; }
   .alt { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 6px; }
   .alt[hidden] { display: none; }
   .alt span { color: var(--muted); font-size: 11.5px; font-weight: 700; width: 100%; text-align: center; }
@@ -129,6 +131,10 @@
   document.getElementById('gmail').href = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(EMAIL) + '&su=' + encodeURIComponent('Spitfires tickets') + '&body=' + encodeURIComponent(body);
   var altT;
   document.getElementById('enter').addEventListener('click', function () {
+    // right away: thank them (the entry itself is the email they send)
+    var ln = document.getElementById('line');
+    ln.className = 'line thanks';
+    ln.innerHTML = '<b>Thanks for entering and supporting local sports!</b> Just hit Send on your email to finish your entry. Good luck!';
     var alt = document.getElementById('alt'), sh = document.getElementById('share');
     setTimeout(function () { alt.hidden = false; sh.style.display = 'none'; }, 700);
     clearTimeout(altT); altT = setTimeout(function () { alt.hidden = true; sh.style.display = ''; }, 30000);
