@@ -119,7 +119,7 @@
 <script>
 (function () {
   var REPO = 'https://bbellacicco.github.io/powerplay-feed/';
-  var V = '?v=' + Math.floor(Date.now() / 3600e3);   // a fresh copy of each widget every hour
+  var V = '?v=' + Math.floor(Date.now() / 600e3);   // a fresh copy of each widget every 10 minutes, so a publish shows up quickly
   var phone = window.innerWidth < 700;
   // each part: the widgets in it and their heights (desktop, phone)
   var HUB = encodeURIComponent('https://www.powerplaywindsor.com/scores-standings');
