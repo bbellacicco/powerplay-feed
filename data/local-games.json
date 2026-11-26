@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T00:32:32-05:00",
+ "updated": "2026-11-26T00:46:58-05:00",
  "today": "2026-11-26",
  "range": [
   "2026-11-23",
@@ -106,11 +106,8 @@
    "count": 37
   },
   "club_news": {
-   "ok": false,
-   "count": 55,
-   "errors": {
-    "Toronto Blue Jays": "<urlopen error _ssl.c:994: The handshake operation timed out>"
-   }
+   "ok": true,
+   "count": 55
   }
  },
  "games": [
@@ -2598,17 +2595,15 @@
   },
   {
    "league": "nhl",
-   "headline": "Canucks fall to Red Wings as Finnie, Arvidsson have three points each",
-   "summary": "",
-   "published": "2026-11-25T22:22-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/2e637f142a369963742acb0964bb11ef940089e432edad2d1827b5daf6473521.jpg",
+   "headline": "Canucks Takeaways: Costly mistakes add up in loss to Red Wings",
+   "summary": "The last-place Canucks have no margin for error, but the mistakes persist.",
+   "published": "2026-11-26T00:39-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/canucks-red-wings.jpg",
    "video": false,
-   "teams": [
-    "Detroit Red Wings"
-   ],
-   "sn_team_count": 2,
+   "teams": [],
+   "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canucks-fall-to-red-wings-as-finnie-arvidsson-have-three-points-each/",
+   "url": "https://www.sportsnet.ca/nhl/article/canucks-takeaways-costly-mistakes-add-up-in-loss-to-red-wings/",
    "source": "Sportsnet"
   },
   {
@@ -2624,6 +2619,47 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-notebook-marchenko-ready-mckennas-ice-time-bobrovskys-reset/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Avalanche rout Canadiens behind two goals from Toews",
+   "summary": "Devon Toews scored twice in a 1:33 span during the second period, Mackenzie Blackwood stopped 27 shots and the refreshed Colorado Avalanche beat the Montreal Canadiens 6-0 on Wednesday night.",
+   "published": "2026-11-26T00:38-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/avs-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/avalanche-rout-canadiens-behind-two-goals-from-toews/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "Why Taira’s repertoire should translate with Blue Jays",
+   "summary": "When the Blue Jays signed Kaima Taira on Tuesday, they made a large bet on a player who hasn’t stepped on an MLB mound. Nick Ashbourne digs deep on the Japanese right-hander’s seemingly MLB-ready repertoire.",
+   "published": "2026-11-25T12:11-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/kaima-taira-1.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/why-tairas-repertoire-should-translate-with-blue-jays/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Friendly stretch in schedule gives slumping Oilers time to regroup",
+   "summary": "The Edmonton Oilers will have plenty of time to unwind over the next month. Mark Spector checks in ahead of a two-day break with some news and notes.",
+   "published": "2026-11-25T15:17-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Draisaitl.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/friendly-stretch-in-schedule-gives-slumping-oilers-time-to-regroup/",
    "source": "Sportsnet"
   },
   {
@@ -2734,47 +2770,6 @@
   },
   {
    "league": "nhl",
-   "headline": "Mammoth’s win gives Wild first regulation loss in 16 games to end franchise-best run",
-   "summary": "",
-   "published": "2026-11-25T23:32-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-10-10.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/mammoths-win-gives-wild-first-regulation-loss-in-16-games-to-end-franchise-best-run/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Why Taira’s repertoire should translate with Blue Jays",
-   "summary": "When the Blue Jays signed Kaima Taira on Tuesday, they made a large bet on a player who hasn’t stepped on an MLB mound. Nick Ashbourne digs deep on the Japanese right-hander’s seemingly MLB-ready repertoire.",
-   "published": "2026-11-25T12:11-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/kaima-taira-1.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/why-tairas-repertoire-should-translate-with-blue-jays/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Friendly stretch in schedule gives slumping Oilers time to regroup",
-   "summary": "The Edmonton Oilers will have plenty of time to unwind over the next month. Mark Spector checks in ahead of a two-day break with some news and notes.",
-   "published": "2026-11-25T15:17-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Draisaitl.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/friendly-stretch-in-schedule-gives-slumping-oilers-time-to-regroup/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "What Maple Leafs can learn from Dylan Larkin trade",
    "summary": "There are two doors standing before the 2026-27 Toronto Maple Leafs and their ride-or-dies.",
    "published": "2026-11-25T11:27-05:00",
@@ -2881,6 +2876,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/scouts-analysis-how-five-of-the-canucks-top-prospects-are-developing/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Mammoth’s win gives Wild first regulation loss in 16 games to end franchise-best run",
+   "summary": "",
+   "published": "2026-11-25T23:32-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-10-10.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 2,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/mammoths-win-gives-wild-first-regulation-loss-in-16-games-to-end-franchise-best-run/",
    "source": "Sportsnet"
   },
   {
@@ -3065,19 +3073,6 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/pwhl/article/ljungblom-has-four-points-as-victoire-down-fleet-in-pre-season-action/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "AP source: Marlins, Gary Sanchez agree to one-year, $6.5M deal",
-   "summary": "",
-   "published": "2026-11-25T18:08-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Untitled-Design-10-6.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/report-marlins-gary-sanchez-agree-to-one-year-6-5m-deal/",
    "source": "Sportsnet"
   },
   {
