@@ -34,6 +34,7 @@
   .results:empty { display: none; }
   /* league sections */
   .leagues { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 14px; margin-top: 18px; }
+  .leagues.one { grid-template-columns: minmax(0, 1fr); }
   .lg { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px; }
   .lg h2 { font-size: 24px; line-height: 1; }
   .lg .ll { color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; margin: 3px 0 10px; }
@@ -450,6 +451,7 @@
   var hsPick = '';
   function drawDir() {
     var box = document.getElementById('leagues'); box.innerHTML = '';
+    box.classList.toggle('one', !!ONLY);   // a Local Hub tab: the teams on top, Schedule & results under them (stacked on desktop too)
     SECS.filter(function (s) { return !ONLY || s[0] === ONLY; }).forEach(function (s) {
       var list = T.filter(function (t) { return t.sec === s[0]; });
       var c = el('section', 'lg'); var h = el('h2'); h.innerHTML = s[1].replace(/(\S+)$/, '<em>$1</em>'); c.appendChild(h); c.appendChild(el('div', 'll', s[2]));
