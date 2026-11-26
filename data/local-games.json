@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T21:32:06-05:00",
+ "updated": "2026-11-25T21:51:30-05:00",
  "today": "2026-11-25",
  "range": [
   "2026-11-22",
@@ -253,11 +253,11 @@
    "home_away": "H",
    "opponent": "Essex 73's",
    "location": "Wheatley Area Arena",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "In progress",
+   "status": "final",
+   "our_score": 3,
+   "opp_score": 8,
+   "result": "L",
+   "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960712?configuration=45"
    },
@@ -2952,19 +2952,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "AP Source: Commanders sign WR Brandon Aiyuk to practice squad",
-   "summary": "After more than two years away from football, Brandon Aiyuk seems primed to finally make his NFL return.",
-   "published": "2026-11-25T13:36-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/08/San-Francisco-49ers-wide-receiver-Brandon-Aiyuk.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/report-commanders-sign-wr-brandon-aiyuk-to-practice-squad/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "mlb",
    "headline": "AP source: Marlins, Gary Sanchez agree to one-year, $6.5M deal",
    "summary": "",
@@ -3001,6 +2988,19 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/ap-source-orioles-bring-back-luis-robert-jr-on-one-year-12m-deal/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "AP Source: Commanders sign WR Brandon Aiyuk to practice squad",
+   "summary": "After more than two years away from football, Brandon Aiyuk seems primed to finally make his NFL return.",
+   "published": "2026-11-25T13:36-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/08/San-Francisco-49ers-wide-receiver-Brandon-Aiyuk.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/report-commanders-sign-wr-brandon-aiyuk-to-practice-squad/",
    "source": "Sportsnet"
   },
   {
@@ -3899,14 +3899,14 @@
      {
       "name": "Brantford Bulldogs",
       "abbr": "BFD",
-      "gp": 24,
-      "w": 16,
+      "gp": 25,
+      "w": 17,
       "l": 7,
       "otl": 1,
-      "pts": 33,
+      "pts": 35,
       "gf": 101,
       "ga": 67,
-      "strk": "W2"
+      "strk": "W3"
      },
      {
       "name": "Kingston Frontenacs",
@@ -3964,14 +3964,14 @@
      {
       "name": "Sudbury Wolves",
       "abbr": "SBY",
-      "gp": 23,
+      "gp": 24,
       "w": 14,
-      "l": 8,
+      "l": 9,
       "otl": 1,
       "pts": 29,
       "gf": 87,
       "ga": 76,
-      "strk": "L3"
+      "strk": "L4"
      },
      {
       "name": "North Bay Battalion",
@@ -4053,14 +4053,26 @@
      {
       "name": "Flint Firebirds",
       "abbr": "FLNT",
-      "gp": 22,
+      "gp": 23,
       "w": 14,
-      "l": 7,
+      "l": 8,
       "otl": 1,
       "pts": 29,
       "gf": 88,
       "ga": 69,
-      "strk": "L2"
+      "strk": "L3"
+     },
+     {
+      "name": "Saginaw Spirit",
+      "abbr": "SAG",
+      "gp": 25,
+      "w": 10,
+      "l": 11,
+      "otl": 4,
+      "pts": 24,
+      "gf": 94,
+      "ga": 94,
+      "strk": "W1"
      },
      {
       "name": "Sarnia Sting",
@@ -4073,18 +4085,6 @@
       "gf": 91,
       "ga": 101,
       "strk": "W2"
-     },
-     {
-      "name": "Saginaw Spirit",
-      "abbr": "SAG",
-      "gp": 24,
-      "w": 9,
-      "l": 11,
-      "otl": 4,
-      "pts": 22,
-      "gf": 94,
-      "ga": 94,
-      "strk": "L2"
      }
     ]
    },
@@ -4116,28 +4116,28 @@
       "strk": "W8"
      },
      {
-      "name": "Erie Otters",
-      "abbr": "ER",
+      "name": "London Knights",
+      "abbr": "LDN",
       "gp": 24,
       "w": 13,
       "l": 8,
       "otl": 3,
       "pts": 29,
-      "gf": 83,
-      "ga": 86,
-      "strk": "W3"
-     },
-     {
-      "name": "London Knights",
-      "abbr": "LDN",
-      "gp": 23,
-      "w": 12,
-      "l": 8,
-      "otl": 3,
-      "pts": 27,
       "gf": 90,
       "ga": 87,
-      "strk": "L2"
+      "strk": "W1"
+     },
+     {
+      "name": "Erie Otters",
+      "abbr": "ER",
+      "gp": 25,
+      "w": 13,
+      "l": 9,
+      "otl": 3,
+      "pts": 29,
+      "gf": 83,
+      "ga": 86,
+      "strk": "L1"
      },
      {
       "name": "Owen Sound Attack",
@@ -4912,14 +4912,14 @@
      {
       "name": "Essex 73's",
       "abbr": "ESS",
-      "gp": 22,
-      "w": 20,
+      "gp": 23,
+      "w": 21,
       "l": 1,
       "otl": 1,
-      "pts": 41,
-      "gf": 89,
-      "ga": 28,
-      "strk": "W1"
+      "pts": 43,
+      "gf": 97,
+      "ga": 31,
+      "strk": "W2"
      },
      {
       "name": "Lakeshore Canadiens",
@@ -4934,16 +4934,28 @@
       "strk": "W1"
      },
      {
+      "name": "Mooretown Flags",
+      "abbr": "MOO",
+      "gp": 25,
+      "w": 12,
+      "l": 11,
+      "otl": 2,
+      "pts": 26,
+      "gf": 88,
+      "ga": 81,
+      "strk": "W2"
+     },
+     {
       "name": "Blenheim Blades",
       "abbr": "BLE",
-      "gp": 21,
+      "gp": 22,
       "w": 12,
-      "l": 9,
+      "l": 10,
       "otl": 0,
       "pts": 24,
-      "gf": 82,
-      "ga": 68,
-      "strk": "L1"
+      "gf": 83,
+      "ga": 70,
+      "strk": "L2"
      },
      {
       "name": "Dresden Kings",
@@ -4958,28 +4970,16 @@
       "strk": "W2"
      },
      {
-      "name": "Mooretown Flags",
-      "abbr": "MOO",
-      "gp": 24,
-      "w": 11,
-      "l": 11,
-      "otl": 2,
-      "pts": 24,
-      "gf": 86,
-      "ga": 80,
-      "strk": "W1"
-     },
-     {
       "name": "Wheatley Sharks",
       "abbr": "WHE",
-      "gp": 21,
+      "gp": 22,
       "w": 7,
-      "l": 12,
+      "l": 13,
       "otl": 2,
       "pts": 16,
-      "gf": 63,
-      "ga": 86,
-      "strk": "L2"
+      "gf": 66,
+      "ga": 94,
+      "strk": "L3"
      },
      {
       "name": "Amherstburg Admirals",
