@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26T16:47:29-05:00",
+ "updated": "2026-11-26T17:02:03-05:00",
  "today": "2026-11-26",
  "range": [
   "2026-11-23",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -2027,6 +2027,17 @@
   },
   {
    "league": "cfl",
+   "headline": "Who were the top 10 Canadian players in 2026?",
+   "summary": "",
+   "published": "2026-11-25T00:00:00-05:00",
+   "image": "https://images.ctfassets.net/yfsr4emgn242/2ncexdUBGgyF7dZs3SuvM3/25a1d04ef0cb5d2635427db149b7a4e7/Nathan_Rourke_2026C.jpg?w=640&fm=jpg&q=70",
+   "video": false,
+   "teams": [],
+   "url": "https://www.cfl.ca/article/who-were-the-top-10-canadian-players-in-2026",
+   "source": "CFL.ca"
+  },
+  {
+   "league": "cfl",
    "headline": "Lions extend American defensive back Robert Carter Jr., sign National John Bosse",
    "summary": "",
    "published": "2026-11-25T00:00:00-05:00",
@@ -2283,15 +2294,17 @@
    "source": "CFL.ca"
   },
   {
-   "league": "cfl",
-   "headline": "Football, Community & Truth and Reconciliation",
+   "league": "pwhl",
+   "headline": "New York Sirens Announce Training Camp Roster Update - Nov. 26, 2026",
    "summary": "",
-   "published": "2026-09-30T14:00:00-04:00",
-   "image": "https://images.ctfassets.net/yfsr4emgn242/6pefeGXa31u6rscbjxR0Dy/672fa074918116b4e462dab866096a67/Timeline_1_00_01_38_19__1_.jpg?w=640&fm=jpg&q=70",
-   "video": true,
-   "teams": [],
-   "url": "https://www.cfl.ca/article/football-community-truth-and-reconciliation",
-   "source": "CFL.ca"
+   "published": "2026-11-26T21:42:42+00:00",
+   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_337/q_auto/f_auto/ROSTER_UPDATE",
+   "video": false,
+   "teams": [
+    "New York Sirens"
+   ],
+   "url": "https://www.thepwhl.com/en/teams/new-york-sirens/news/2026/november/26/new-york-sirens-announce-training-camp-roster-update---nov-26-2026",
+   "source": "thepwhl.com"
   },
   {
    "league": "pwhl",
@@ -2564,19 +2577,6 @@
    ],
    "url": "https://www.thepwhl.com/en/teams/new-york-sirens/news/2026/november/04/sirens-sign-first-round-pick-emma-peschel-to-three-year-contract",
    "source": "thepwhl.com"
-  },
-  {
-   "league": "pwhl",
-   "headline": "Seattle Torrent Sign Second-Round Draft Pick Sydney Morrow",
-   "summary": "",
-   "published": "2026-10-21T18:10:24+00:00",
-   "image": "https://res.cloudinary.com/pwhl-low/image/upload/ar_1.7777777777777777,c_auto,w_337/q_auto/f_auto/Morrow_Signed",
-   "video": false,
-   "teams": [
-    "Seattle Torrent"
-   ],
-   "url": "https://www.thepwhl.com/en/teams/seattle-torrent/news/2026/october/21/seattle-torrent-sign-second-round-draft-pick-sydney-morrow",
-   "source": "thepwhl.com"
   }
  ],
  "more_news": [
@@ -2591,6 +2591,21 @@
    "sn_team_count": 0,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/real-kypers-trade-board-3-0-which-star-player-could-move-next/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Williams and Odunze lead Bears to Thanksgiving comeback over Lions",
+   "summary": "Caleb Williams threw a go-ahead, six-yard touchdown pass to Rome Odunze with three seconds left to give the Chicago Bears their first lead of the game in a 39-35 win over the Detroit Lions on Thursday to break a first-pl",
+   "published": "2026-11-26T16:53-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Odunze.jpg",
+   "video": false,
+   "teams": [
+    "Detroit Lions"
+   ],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/williams-and-odunze-lead-bears-to-thanksgiving-comeback-over-lions/",
    "source": "Sportsnet"
   },
   {
@@ -2634,21 +2649,6 @@
    "sn_team_count": 6,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/checking-in-on-the-nhl-playoff-picture-at-u-s-thanksgiving/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Raptors aiming to remain steady through weight of expectations",
-   "summary": "Rightly or wrongly, adding Kawhi Leonard creates expectations whether he plays or not. Now it’s up to the Raptors to prove they’re the team they thought they were when making the move, writes Michael Grange.",
-   "published": "2026-11-26T08:42-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Rajakovic-and-Leonard.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-aiming-to-remain-steady-through-weight-of-expectations/",
    "source": "Sportsnet"
   },
   {
@@ -2784,6 +2784,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "Raptors aiming to remain steady through weight of expectations",
+   "summary": "Rightly or wrongly, adding Kawhi Leonard creates expectations whether he plays or not. Now it’s up to the Raptors to prove they’re the team they thought they were when making the move, writes Michael Grange.",
+   "published": "2026-11-26T08:42-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Rajakovic-and-Leonard.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/raptors-aiming-to-remain-steady-through-weight-of-expectations/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "NFL Week 12 Pick ‘Em: Thanksgiving delivers a loaded slate",
    "summary": "The NFL is giving us plenty to be thankful for, with a loaded American Thanksgiving schedule and some intriguing matchups sprinkled throughout the rest of Week 12.",
@@ -2823,19 +2838,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "Steelers cut Aaron Rodgers after he claims McCarthy slept in meetings",
-   "summary": "Aaron Rodgers is done with the Pittsburgh Steelers.",
-   "published": "2026-11-25T14:23-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/12/Untitled-design-2025-12-15T234132.844.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/aaron-rodgers-says-he-wont-return-to-steelers-mccarthy-sleeping-in-meetings/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nhl",
    "headline": "Maple Leafs Notebook: Marchenko ready, McKenna’s ice time, Bobrovsky’s reset",
    "summary": "Kirill Marchenko is poised to make his return to the Maple Leafs lineup, giving the team a much-needed offensive boost, plus rookie Gavin McKenna continues to adjust to his evolving role, and Sergei Bobrovsky looks set t",
@@ -2848,6 +2850,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/maple-leafs-notebook-marchenko-ready-mckennas-ice-time-bobrovskys-reset/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Steelers cut Aaron Rodgers after he claims McCarthy slept in meetings",
+   "summary": "Aaron Rodgers is done with the Pittsburgh Steelers.",
+   "published": "2026-11-25T14:23-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/12/Untitled-design-2025-12-15T234132.844.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/aaron-rodgers-says-he-wont-return-to-steelers-mccarthy-sleeping-in-meetings/",
    "source": "Sportsnet"
   },
   {
