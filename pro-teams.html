@@ -432,6 +432,13 @@
     var l = followedList().filter(function (x) { return x !== id; }); if (on) l.push(id);
     try { if (l.length) localStorage.setItem(FKEY, l.join(',')); else localStorage.removeItem(FKEY); } catch (e) {}
   }
+  var LEAGUE_LIST = [];
+  // the hub's team drop-down: open that team's page here (or back to Standings | Stats)
+  window.addEventListener('message', function (e) {
+    if (!e.data || e.data.pp !== 'team') return;
+    if (e.data.i == null || e.data.i === '') { if (CUR) closeTeam(); return; }
+    var r = LEAGUE_LIST[e.data.i]; if (r) pickTeam(r, true);
+  });
   function leagueTeams() {
     return standingsData().then(function (gs) {
       var seen = {}, out = [];
@@ -480,6 +487,14 @@
   function drawDir() {
     var d = document.getElementById('dir'); d.innerHTML = '';
     if (qs.get('view') === 'tables') { d.appendChild(leagueTabs()); return; }   // the National Hub's Scores tab: just Standings | Stats
+    if (qs.get('view') === 'league') {   // a National Hub league tab: Standings | Stats; its team drop-down (on the hub) opens a team here
+      d.appendChild(leagueTabs());
+      leagueTeams().then(function (list) {
+        LEAGUE_LIST = list;
+        try { parent.postMessage({ pp: 'teams', lg: LG, list: list.map(function (r, i) { return { i: i, name: r.name }; }) }, '*'); } catch (e) {}
+      });
+      return;
+    }
     var h = el('h1'); h.innerHTML = L.name + ' <em>Hub</em>'; d.appendChild(h);
     d.appendChild(el('div', 'sub', L.scope ? 'Michigan, Michigan State and every ' + L.scope + ' team: scores, schedules, standings and stats, and the latest from around ' + L.name.replace('NCAA ', 'college ').toLowerCase() + '.' : 'Every team’s scores, schedules, standings and stats, and the latest from around the ' + L.name + '.'));
     // the teams this fan follows (only theirs: our teams are featured in the Pro Sports Guide, nowhere else)
@@ -636,6 +651,7 @@
     CUR = null;
     document.getElementById('team').hidden = true; document.getElementById('team').innerHTML = ''; document.getElementById('dir').hidden = false;
     try { history.replaceState(null, '', '?lg=' + LG); } catch (e) {}
+    try { if (qs.get('view') === 'league') parent.postMessage({ pp: 'teamclosed' }, '*'); } catch (e) {}
     drawDir();
   }
   function gameBox(title, list, empty) {
