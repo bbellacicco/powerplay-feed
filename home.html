@@ -781,7 +781,7 @@ document.addEventListener('load', function (e) {
     var out = [], seenTeam = {}, recent = Date.now() - 4 * 86400e3;
     // local: newest written stories, two different teams.
     // Lancers: men's hockey comes first when there's a men's hockey story from the last two days
-    var cand = stories.filter(function (s) { return !used[s.url] && ((!isVid(s) && !s.video) || s.team === 'powerplay') && s.team !== 'highschool'; });   // Powerplay's own videos count; team videos (the UWindsor student ones too) stay in their strips
+    var cand = stories.filter(function (s) { return !used[s.url] && !s.archive && ((!isVid(s) && !s.video) || s.team === 'powerplay') && s.team !== 'highschool'; });   // Powerplay's own videos count; team videos (the UWindsor student ones too) stay in their strips
     var isMensHockey = function (s) { var t = (s.sport || '') + ' ' + s.headline; return /hockey/i.test(t) && !/women/i.test(t); };
     var lanMen = cand.filter(function (s) { return s.team === 'lancers' && isMensHockey(s) && Date.now() - new Date(s.published).getTime() < 2 * 86400e3; })[0];
     if (lanMen) cand = cand.map(function (s) { return s.team === 'lancers' && s !== lanMen && !seenTeam.lanSwap ? (seenTeam.lanSwap = 1, lanMen) : s; })
@@ -1342,7 +1342,7 @@ document.addEventListener('load', function (e) {
       var SPITS_RX = /spitfires|\bspits\b/i;
       // the story itself mentions them (flagged by the PC), its blog category, or the headline and summary
       var aboutSpits = function (x) { return x.team === 'spitfires' || x.spits || SPITS_RX.test(' ' + x.headline + ' ' + (x.summary || '') + ' ' + (x.cats || '') + ' '); };
-      var rowStories = stories.filter(function (s) { return s.team === 'powerplay' && !isVid(s) && !aboutSpits(s) && !featUrls[s.url] && (!lastTop || s.url !== lastTop.url); });
+      var rowStories = stories.filter(function (s) { return s.team === 'powerplay' && !s.archive && !isVid(s) && !aboutSpits(s) && !featUrls[s.url] && (!lastTop || s.url !== lastTop.url); });
       var leadStory = lastTop && lastTop.team === 'powerplay' && !aboutSpits(lastTop) ? lastTop : null;   // just left the big box: stays up front a while longer
       var storyNode = function (s) { return storyCard(s, { tag: 'Powerplay', sub: (s.club || 'Powerplay') + ' · ' + ago(s.published) }); };
       // a shared quick post (?post=<id>, passed on by the Local Hub): it opens as soon as the page loads
@@ -1425,6 +1425,7 @@ document.addEventListener('load', function (e) {
         var teams = t[0] === 'hs' ? ['highschool'] : t[0] === 'lounge' ? ['lancers'] : [t[0]], seenT = {};   // the Spitfires have their own strip
         var list = pool.filter(function (x) {
           if (t[0] === 'lounge') return !!x.student;     // Lancers Lounge: only what the students make
+          if (x.archive) return false;     // older Lancers Lounge posts: that strip only
           if (t[0] === 'lancers' && x.student) return false;   // Windsor Lancers: the Lancers' own posts (and Powerplay's), not the students'
           if (t[0] === 'junior' && aboutSpits(x)) return false;   // Spitfires stories and highlights: Windsor Spitfires strip only
           if (teams.indexOf(x.team) >= 0) return true;
