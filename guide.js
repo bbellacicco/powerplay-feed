@@ -611,14 +611,62 @@
     var two = /^(red|maple|blue|golden|white|black|sea|st\.?)$/i.test(w[w.length - 2]) && w.length > 2;
     return w.slice(two ? -2 : -1).join(' ');
   }
+  // logos for the local bar: our teams, the junior clubs and the high schools; everyone else gets a lettered badge
+  var LOGO = 'https://bbellacicco.github.io/powerplay-feed/logos/';
+  var JR_LOGO = { 'chatham maroons': LOGO + 'junior/chatham-maroons.png', "essex 73's": LOGO + 'junior/essex-73s.png', 'lasalle vipers': LOGO + 'jr-lasalle-vipers.png',
+    'leamington flyers': LOGO + 'jr-leamington-flyers.png', 'amherstburg admirals': LOGO + 'jr-amherstburg-admirals.jpg', 'lakeshore canadiens': LOGO + 'jr-lakeshore-canadiens.png',
+    'wheatley sharks': LOGO + 'jr-wheatley-sharks.png',
+    // OJHL opponents
+    'georgetown raiders': LOGO + 'junior/ojhl-georgetown-raiders.png',
+    'aurora tigers': LOGO + 'junior/ojhl-aurora-tigers.png',
+    'king rebellion': LOGO + 'junior/ojhl-king-rebellion.png',
+    'milton menace': LOGO + 'junior/ojhl-milton-menace.png',
+    'stouffville spirit': LOGO + 'junior/ojhl-stouffville-spirit.png',
+    'wellington dukes': LOGO + 'junior/ojhl-wellington-dukes.png',
+    'collingwood blues': LOGO + 'junior/ojhl-collingwood-blues.png',
+    'burlington cougars': LOGO + 'junior/ojhl-burlington-cougars.png',
+    'niagara falls canucks': LOGO + 'junior/ojhl-niagara-falls-canucks.png',
+    'oakville blades': LOGO + 'junior/ojhl-oakville-blades.png',
+    'buffalo jr. sabres': LOGO + 'junior/ojhl-buffalo-jr-sabres.png',
+    'toronto patriots': LOGO + 'junior/ojhl-toronto-patriots.png',
+    // PJHL opponents
+    'dresden kings': LOGO + 'junior/pjhl-dresden-kings.png',
+    'walpole island wild': LOGO + 'junior/pjhl-walpole-island-wild.png',
+    // GOHL opponents
+    'strathroy rockets': LOGO + 'junior/gohl-strathroy-rockets.png',
+    'komoka kings': LOGO + 'junior/gohl-komoka-kings.png',
+    'kitchener-waterloo siskins': LOGO + 'junior/gohl-kw-siskins.png',
+    'kw siskins': LOGO + 'junior/gohl-kw-siskins.png',
+    'elmira sugar kings': LOGO + 'junior/gohl-elmira-sugar-kings.png',
+    'london nationals': LOGO + 'junior/gohl-london-nationals.png',
+    'ayr centennials': LOGO + 'junior/gohl-ayr-centennials.png',
+    'st. thomas stars': LOGO + 'junior/gohl-st-thomas-stars.png',
+    'sarnia legionnaires': LOGO + 'junior/gohl-sarnia-legionnaires.png',
+    'st. marys lincolns': LOGO + 'junior/gohl-st-marys-lincolns.png',
+    'st. catharines falcons': LOGO + 'junior/gohl-st-catharines-falcons.png',
+    'listowel cyclones': LOGO + 'junior/gohl-listowel-cyclones.png',
+    'stratford warriors': LOGO + 'junior/gohl-stratford-warriors.png' };
+  var HS_CREST = {"assumption": "acchs", "belle river": "brdhs", "brennan": "fjbhs", "cardinal carter": "ccss", "catholic central": "cchs", "erie migration": "em", "essex": "edhs", "herman": "hss", "holy names": "hnchs", "kennedy": "kci", "l'essor": "lss", "lajeunesse": "ejles", "lamothe-cadillac": "eslc", "leamington": "ldss", "maranatha": "mca", "massey": "vmss", "north star": "nshs", "riverside": "rss", "sandwich": "sss", "st. anne": "sachs", "st. joseph's": "sjchs", "ste. cecile": "ascis", "tecumseh vista": "tva", "umei": "umei", "villanova": "vcss", "walkerville": "wci", "westview": "wfa", "windsor islamic": "wihs"};
+  function localLogo(name, group) {
+    var n = String(name || '').toLowerCase().replace(/\u2019/g, "'").trim();
+    if (/spitfires/.test(n)) return LOGO + 'spitfires-logo.png';
+    if (/lancers/.test(n)) return LOGO + 'lancers-logo.png';
+    if (/st\.? clair|^saints$/.test(n) && group === 'saints') return LOGO + 'saints-logo.png';
+    if (JR_LOGO[n]) return JR_LOGO[n];
+    if (group === 'highschool') {
+      var keys = Object.keys(HS_CREST).sort(function (a, b) { return b.length - a.length; });
+      for (var i = 0; i < keys.length; i++) if (n.indexOf(keys[i]) >= 0) return LOGO + 'hs/' + HS_CREST[keys[i]] + '.png';
+    }
+    return '';
+  }
   function localTickerGames(d) {
     return (d.games || []).map(function (g) {
       var sd = sides(g), fin = g.status === 'final', lv = g.status === 'live';
       var as = sd[2], hs = sd[3], hasSc = as != null && hs != null && as !== '' && hs !== '';
       var ln = g.links || {};
       return { lg: g.team, start: g.start, state: fin ? 'post' : lv ? 'in' : 'pre', detail: g.note || '', tbd: g.time_tbd, local: true,
-               away: { name: shortTeam(sd[0]), score: hasSc ? as : null, win: fin && hasSc && +as > +hs },
-               home: { name: shortTeam(sd[1]), score: hasSc ? hs : null, win: fin && hasSc && +hs > +as },
+               away: { name: shortTeam(sd[0]), score: hasSc ? as : null, win: fin && hasSc && +as > +hs, logo: localLogo(sd[0], g.team) },
+               home: { name: shortTeam(sd[1]), score: hasSc ? hs : null, win: fin && hasSc && +hs > +as, logo: localLogo(sd[1], g.team) },
                link: ln.gamecentre || ln.boxscore || ln.recap || g.link || '', hub: HUB + '?tab=' + (LOC_TAB[g.team] || 'scores') };
     }).filter(function (g) { return g.start && LOC_NAME[g.lg] && !/postponed|cancel/i.test(g.note || ''); });
   }
@@ -628,8 +676,13 @@
   }
   function tkTeam(t, g, showScore, lose) {
     var r = el('div', 'pt-r' + (lose ? ' pt-lose' : ''));
-    if (t.logo) { var im = new Image(); im.src = t.logo; im.alt = ''; im.loading = 'lazy'; im.className = 'pt-lg'; im.onerror = function () { im.replaceWith(el('span', 'pt-dot')); }; r.appendChild(im); }
-    else { var d = el('span', 'pt-dot'); d.style.background = lgColor(g.lg); r.appendChild(d); }
+    var badge = function () {   // a lettered badge in a colour of its own (the local teams without a logo)
+      if (!g.local) { var dt = el('span', 'pt-dot'); dt.style.background = lgColor(g.lg); return dt; }
+      var nm = String(t.name || '?'), h = 0; for (var i = 0; i < nm.length; i++) h = (h * 31 + nm.charCodeAt(i)) % 360;
+      var b = el('span', 'pt-mono', nm.replace(/[^A-Za-z0-9]/g, '').charAt(0).toUpperCase() || '?'); b.style.background = 'hsl(' + h + ',55%,38%)'; return b;
+    };
+    if (t.logo) { var im = new Image(); im.src = t.logo; im.alt = ''; im.loading = 'lazy'; im.className = 'pt-lg'; im.onerror = function () { im.replaceWith(badge()); }; r.appendChild(im); }
+    else r.appendChild(badge());
     r.appendChild(el('b', 'pt-ab', g.local ? t.name : (t.abbr || nick(t.full || t.name).slice(0, 3).toUpperCase())));
     if (showScore) r.appendChild(el('span', 'pt-sc', t.score == null ? '' : String(t.score)));
     return r;
@@ -798,7 +851,8 @@
     '.pt-hm{display:block;font-size:11.5px;color:#8fa1c4;margin-top:3px}' +
     '.pt-lgl{flex:none;scroll-snap-align:start;display:flex;align-items:center;padding:0 10px 0 4px;font-size:15px;font-weight:900;letter-spacing:.06em;color:#fff;border-left:3px solid var(--c,#e8b021);margin-left:4px}' +
     '.pt-track .pt-lgl:first-child{margin-left:0}' +
-    '.pt-loc .pt-r{grid-template-columns:12px minmax(0,104px) 26px}.pt-loc .pt-ab{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:13.5px}.pt-loc .pt-dot{width:10px;height:10px;margin:0 1px}' +
+    '.pt-loc .pt-r{grid-template-columns:24px minmax(0,100px) 26px}.pt-loc .pt-ab{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:14px}.pt-loc .pt-lg{width:24px;height:24px;border-radius:4px}' +
+    '.pt-mono{display:flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;color:#fff;font-size:12px;font-weight:900;box-shadow:inset 0 0 0 2px rgba(255,255,255,.18)}' +
     '.pt-scores{display:none}.showscores .pt-scores{display:block}.showscores .pt-news,.showscores .pt-wrap{display:none}.showscores .pt-dh:first-child{margin-top:2px}' +
     '.pt-dh{display:flex;align-items:baseline;gap:10px;margin:16px 0 8px}.pt-dh b{font-size:16px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}.pt-dh span{font-size:12.5px;color:#9fb0cf}' +
     '.pt-dl{margin:10px 0 6px;padding-left:8px;border-left:3px solid var(--c,#e8b021);font-size:12.5px;font-weight:900;letter-spacing:.08em;color:#cfd8ea}' +
