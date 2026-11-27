@@ -664,7 +664,10 @@
       var sd = sides(g), fin = g.status === 'final', lv = g.status === 'live';
       var as = sd[2], hs = sd[3], hasSc = as != null && hs != null && as !== '' && hs !== '';
       var ln = g.links || {};
-      return { lg: g.team, start: g.start, state: fin ? 'post' : lv ? 'in' : 'pre', detail: g.note || '', tbd: g.time_tbd, local: true,
+      // started, but the league hasn't posted a score (many junior rinks enter the paper sheet after the game)
+      var started = !fin && !lv && new Date(g.start).getTime() < Date.now() - 10 * 60000 && /in progress|not posted/i.test(g.note || '');
+      var pending = started ? (Date.now() - new Date(g.start).getTime() > 2.5 * 3600e3 ? 'Score to come' : 'In progress') : '';
+      return { lg: g.team, start: g.start, state: fin ? 'post' : lv ? 'in' : 'pre', detail: g.note || '', tbd: g.time_tbd, local: true, pending: pending,
                away: { name: shortTeam(sd[0]), score: hasSc ? as : null, win: fin && hasSc && +as > +hs, logo: localLogo(sd[0], g.team) },
                home: { name: shortTeam(sd[1]), score: hasSc ? hs : null, win: fin && hasSc && +hs > +as, logo: localLogo(sd[1], g.team) },
                link: ln.gamecentre || ln.boxscore || ln.recap || g.link || '', hub: HUB + '?tab=' + (LOC_TAB[g.team] || 'scores') };
@@ -699,6 +702,7 @@
     var st = el('div', 'pt-st');
     if (lv) { st.appendChild(el('span', 'pt-lv', 'LIVE')); st.appendChild(el('span', 'pt-s2', (g.detail || '').replace(/ - /, ' '))); }
     else if (fin) { st.appendChild(el('span', 'pt-s1', /OT|SO/.test(g.detail) ? g.detail.replace(/^Final\/?/, 'F/') : 'Final')); st.appendChild(el('span', 'pt-s2', tkDay(g))); }
+    else if (g.pending) { st.appendChild(el('span', 'pt-s1 pt-pend', g.pending)); st.appendChild(el('span', 'pt-s2', tkDay(g))); }
     else { st.appendChild(el('span', 'pt-s1', g.tbd ? 'TBA' : cpTime(new Date(g.start)).replace(' a.m.', ' AM').replace(' p.m.', ' PM'))); st.appendChild(el('span', 'pt-s2', tkDay(g))); }
     st.appendChild(el('span', 'pt-lgn', lgName(g.lg)));
     a.appendChild(st);
@@ -941,7 +945,8 @@
     return sec;
   }
   // everything fits: three-digit scores, a small live bug, and phone score grids with the status on top
-  PRO_CSS += '.pt-r{grid-template-columns:22px 40px 32px}.pt-sc{min-width:0}' +
+  PRO_CSS += '.pt-pend{color:#e8b021;font-size:11px}' +
+    '.pt-r{grid-template-columns:22px 40px 32px}.pt-sc{min-width:0}' +
     '.pt-lv{font-size:9px;padding:1px 4px;letter-spacing:.06em}.pt-st{font-size:11px;gap:2px}.pt-s2{max-width:74px;overflow:hidden;text-overflow:ellipsis}' +
     '.pt-loc .pt-r{grid-template-columns:24px minmax(0,96px) 30px}' +
     '@media (max-width:760px){.pt-card{gap:8px}.pt-r{grid-template-columns:20px 36px 30px;font-size:13.5px}.pt-loc .pt-r{grid-template-columns:22px minmax(0,86px) 28px}.pt-loc .pt-ab{font-size:13px}' +
