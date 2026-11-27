@@ -32,6 +32,7 @@
   .switch button { border: 0; border-radius: 0; background: #0e2044; color: #cfd8ea; font: inherit; font-size: 13px; font-weight: 800; letter-spacing: .08em;
     text-transform: uppercase; padding: 12px 6px; cursor: pointer; white-space: nowrap; }
   .switch button { grid-column: span 1; padding-left: 4px; padding-right: 4px; }   /* computers: two rows of six */
+  .switch button:last-child { grid-column: span 2; }   /* eleven tabs: the last one fills the row (two rows of six; phones, three rows of four) */
   .switch button:hover { color: #fff; background: #15305e; }
   .switch button[aria-selected="true"] { background: #fff; color: #0b1a33; box-shadow: inset 0 -3px 0 #e8b021; }
   .top { position: relative; align-items: center; gap: 10px; }
@@ -101,7 +102,6 @@
   <div class="top" id="top">
     <div class="switch" role="tablist" aria-label="Section">
       <button type="button" role="tab" data-tab="scores">All</button>
-      <button type="button" role="tab" data-tab="upcoming">Coming Up</button>
       <button type="button" role="tab" data-tab="stories">What&rsquo;s New</button>
       <button type="button" role="tab" data-tab="spitfires">Spitfires</button>
       <button type="button" role="tab" data-tab="hs">High School</button>
@@ -124,8 +124,7 @@
   // each part: the widgets in it and their heights (desktop, phone)
   var HUB = encodeURIComponent('https://www.powerplaywindsor.com/scores-standings');
   var PARTS = {
-    scores:    [],   // Scores: the sports guide (today's games, latest scores, coming up) right under the tabs; each team's page has its own scores, standings and stats
-    upcoming:  [['upcoming.html', 900, 1100, '']],
+    scores:    [['upcoming.html', 900, 1100, '']],   // All: the score bar and guide header, then Coming Up (any of the next seven days, events on top)   // Scores: the sports guide (today's games, latest scores, coming up) right under the tabs; each team's page has its own scores, standings and stats
     // a part with no name of its own goes with the named part above it (Powerplay stories = What's Going On + Every story)
     // Stories: two strips stacked, Powerplay's (with its top story) and team news, then every Powerplay story
     stories:   [['home.html', 1000, 1350, '&view=hub'], ['local-news.html', 470, 570, '&other=none&lock=1'], ['news.html', 900, 1300, '&every=1']],
@@ -178,7 +177,7 @@
     setTimeout(unfocus, 120000);   // never leaves the page blurred for good
   }
   var gs = document.createElement('script'); gs.src = REPO + 'guide.js?v=' + Math.floor(Date.now() / 6e5);
-  gs.onload = function () { if (window.PPGuide) PPGuide.render(document.getElementById('guide'), { target: '_top', pro: false, ticker: true }); };   // local only: no Pro Hub line here
+  gs.onload = function () { if (window.PPGuide) PPGuide.render(document.getElementById('guide'), { target: '_top', pro: false, ticker: true, cols: false }); };   // local only: no Pro Hub line here
   document.body.appendChild(gs);
   var built = {}, box = document.getElementById('panes');
   function show(tab) {
