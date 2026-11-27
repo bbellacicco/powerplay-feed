@@ -150,6 +150,8 @@
   th:first-child, td:first-child { text-align: left; white-space: normal; }
   tr.us td { background: rgba(232,176,33,.16); font-weight: 800; }
   .tscroll { overflow-x: auto; }
+  /* phones: stat tables fit the screen (smaller type, tighter columns) instead of running off the side */
+  @media (max-width: 480px) { table, .sgrid table { font-size: 12px; } th, td, .sgrid th, .sgrid td { padding: 5px 3px; } th, .sgrid th { font-size: 10px; letter-spacing: 0; } td:first-child, th:first-child { white-space: normal; text-align: left; } .sgrid { gap: 10px; } }
   .box .lgh { font-size: 22px; line-height: 1; margin: 0 0 10px; } .lgstats { margin-top: 14px; } .lgstats .sgrid td:nth-child(2) { color: var(--muted); }
   .news a { display: block; padding: 9px 0; border-top: 1px solid var(--line); text-decoration: none; }
   .news a:first-child { border-top: 0; }
