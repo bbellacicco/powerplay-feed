@@ -105,6 +105,8 @@
   th:first-child, td:first-child { text-align: left; white-space: normal; }
   tr.us td { background: rgba(232,176,33,.16); font-weight: 800; }
   .tscroll { overflow-x: auto; }
+  /* phones: tables fit the screen */
+  @media (max-width: 480px) { table { font-size: 12px; } th, td { padding: 5px 3px; } th { font-size: 10px; letter-spacing: 0; } td:first-child, th:first-child { white-space: normal; text-align: left; } }
   .sgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px 18px; }
   .sgrid h3 { font-size: 18px; margin-bottom: 2px; }
   .sgrid td.tm { color: var(--muted); } .sgrid .k { color: var(--accent); font-weight: 800; }
