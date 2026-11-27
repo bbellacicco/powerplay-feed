@@ -940,6 +940,15 @@
     if (o._vid) setTimeout(function () { play(o._vid); }, 0);
     return sec;
   }
+  // everything fits: three-digit scores, a small live bug, and phone score grids with the status on top
+  PRO_CSS += '.pt-r{grid-template-columns:22px 40px 32px}.pt-sc{min-width:0}' +
+    '.pt-lv{font-size:9px;padding:1px 4px;letter-spacing:.06em}.pt-st{font-size:11px;gap:2px}.pt-s2{max-width:74px;overflow:hidden;text-overflow:ellipsis}' +
+    '.pt-loc .pt-r{grid-template-columns:24px minmax(0,96px) 30px}' +
+    '@media (max-width:760px){.pt-card{gap:8px}.pt-r{grid-template-columns:20px 36px 30px;font-size:13.5px}.pt-loc .pt-r{grid-template-columns:22px minmax(0,86px) 28px}.pt-loc .pt-ab{font-size:13px}' +
+    '.pt-grid .pt-card{display:grid;grid-template-columns:minmax(0,1fr);gap:6px;padding:8px 9px}' +
+    '.pt-grid .pt-st{order:-1;display:flex;justify-content:flex-start;align-items:center;gap:6px;white-space:nowrap;overflow:hidden}' +
+    '.pt-grid .pt-st .pt-lgn{margin-left:auto}.pt-grid .pt-s2{max-width:none}' +
+    '.pt-grid .pt-r{grid-template-columns:20px minmax(0,1fr) 30px}}';
   function draw(box, d, o) {
     if (o.mode === 'pro' && o._vid && box.querySelector('.pt-player iframe')) return;   // a video is playing: the refresh waits
     box.innerHTML = '';
