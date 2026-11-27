@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T09:16:59-05:00",
+ "updated": "2026-11-27T09:32:31-05:00",
  "today": "2026-11-27",
  "range": [
   "2026-11-24",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 36
   },
   "club_news": {
    "ok": true,
@@ -2604,18 +2604,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nfl",
-   "headline": "Tyler Bass hits 57-yard field goal as time expires to lift Bills past Chiefs",
-   "summary": "",
-   "published": "2026-11-26T23:45-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/bills-2.jpg",
+   "league": "other",
+   "headline": "Prospects Report: Why Caleb Malhotra can be ‘impact player’ for Canucks",
+   "summary": "Caleb Malhotra has taken big strides in recent weeks at Boston University. @ Mike Koreen takes a look at the top Canucks prospect and what he could bring to Vancouver.",
+   "published": "2026-11-27T09:17-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/manny.jpg",
    "video": false,
-   "teams": [
-    "Buffalo Bills"
-   ],
-   "sn_team_count": 2,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/tyler-bass-hits-57-yard-field-goal-as-time-expires-to-lift-bills-past-chiefs/",
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/prospects-report-why-caleb-malhotra-can-be-impact-player-for-canucks/",
    "source": "Sportsnet"
   },
   {
@@ -2633,6 +2631,21 @@
   },
   {
    "league": "nfl",
+   "headline": "Tyler Bass hits 57-yard field goal as time expires to lift Bills past Chiefs",
+   "summary": "",
+   "published": "2026-11-26T23:45-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/bills-2.jpg",
+   "video": false,
+   "teams": [
+    "Buffalo Bills"
+   ],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/tyler-bass-hits-57-yard-field-goal-as-time-expires-to-lift-bills-past-chiefs/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
    "headline": "Eagles complete 21-point comeback with late field goal to stun Cowboys",
    "summary": "",
    "published": "2026-11-26T20:48-05:00",
@@ -2642,19 +2655,6 @@
    "sn_team_count": 2,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/elliotts-field-goal-gives-eagles-stunning-comeback-win-over-cowboys/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Schenn, Canucks aiming to revive effort level amid challenging stretch",
-   "summary": "For all the Canucks’ projected problems in Year 1 of the rebuild, effort was not supposed to be one of them.",
-   "published": "2026-11-26T19:48-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/schenn.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/schenn-canucks-aiming-to-revive-effort-level-amid-challenging-stretch/",
    "source": "Sportsnet"
   },
   {
@@ -2815,6 +2815,19 @@
    "sn_team_count": 0,
    "sport": "Golf",
    "url": "https://www.sportsnet.ca/lpga/article/canadas-brooke-henderson-taking-lessons-fresh-mentality-into-2027/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Schenn, Canucks aiming to revive effort level amid challenging stretch",
+   "summary": "For all the Canucks’ projected problems in Year 1 of the rebuild, effort was not supposed to be one of them.",
+   "published": "2026-11-26T19:48-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/schenn.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/schenn-canucks-aiming-to-revive-effort-level-amid-challenging-stretch/",
    "source": "Sportsnet"
   },
   {
@@ -2983,19 +2996,6 @@
   },
   {
    "league": "other",
-   "headline": "European roundup: Bournemouth tops Europa League, AC Milan rallies",
-   "summary": "High-flying Bournemouth extended its winning streak to 10 games by coming from a goal down to defeat Celta Vigo 2-1 in the Europa League despite being reduced to 10 men in Spain on Thursday.",
-   "published": "2026-11-26T17:43-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/bmouth.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/soccer/article/european-roundup-bournemouth-tops-europa-league-ac-milan-rallies/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
    "headline": "FIFA says it has been victim of cyberattack on ‘information’",
    "summary": "",
    "published": "2026-11-26T09:15-05:00",
@@ -3037,17 +3037,28 @@
   },
   {
    "league": "mlb",
-   "headline": "Report: Tigers, Kevin Gausman agree to one-year, $25M deal",
-   "summary": "The veteran right-hander agreed to a one-year, $25-million deal with the Tigers on Wednesday, according to ESPN’s Jeff Passan.",
-   "published": "2026-11-25T18:36-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/09/Gausman-cubs.jpg",
+   "headline": "CBA negotiation watch: The latest proposals between MLB, MLBPA",
+   "summary": "",
+   "published": "2026-11-26T19:01-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/01/CP175453033-1.jpg",
    "video": false,
-   "teams": [
-    "Detroit Tigers"
-   ],
-   "sn_team_count": 1,
+   "teams": [],
+   "sn_team_count": 0,
    "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/report-tigers-kevin-gausman-agree-to-one-year-25m-deal/",
+   "url": "https://www.sportsnet.ca/mlb/article/cba-negotiation-watch-the-latest-proposals-between-mlb-mlbpa/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "MLB off-season transaction tracker: The top free-agent signings and trades",
+   "summary": "",
+   "published": "2026-11-19T19:57-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/Kevin-Gausman.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/mlb-off-season-transaction-tracker-the-top-free-agent-signings-and-trades/",
    "source": "Sportsnet"
   },
   {
