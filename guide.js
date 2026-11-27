@@ -985,7 +985,7 @@
       cols.appendChild(finalsCol(d, o.target, o.compact));
       cols.appendChild(calCol(d, o.target, o.compact));
     }
-    g.appendChild(cols);
+    if (o.cols !== false) g.appendChild(cols);   // the Local Hub's All tab: the score bar and the 7-day Coming Up do the columns' job
     // our pro teams appear only in the Pro Sports Guide (the Pro Hub), so the local guide has no Pro Hub line
     if (o.pro === true && o.mode !== 'pro') g.appendChild(proLine(d.pro || [], o.target));
     // one line under the guide: fans send their events and story ideas
