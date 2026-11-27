@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-26T23:47:06-05:00",
- "today": "2026-11-26",
+ "updated": "2026-11-27T00:11:09-05:00",
+ "today": "2026-11-27",
  "range": [
-  "2026-11-23",
-  "2026-11-29"
+  "2026-11-24",
+  "2026-11-30"
  ],
  "teams": {
   "spitfires": {
@@ -91,7 +91,7 @@
   },
   "pwhl": {
    "ok": true,
-   "count": 10
+   "count": 7
   },
   "cfl_standings": {
    "ok": true,
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 36
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -1022,6 +1022,63 @@
    "club": "Essex 73's"
   },
   {
+   "id": "junior-ojhl16770",
+   "team": "junior",
+   "sport": "OJHL (Jr. A)",
+   "start": "2026-12-11T19:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Niagara Falls Canucks",
+   "location": "Gale Centre, Niagara Falls, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.ojhl.ca/stats/game-center/16770"
+   },
+   "club": "Leamington Flyers"
+  },
+  {
+   "id": "junior-gs2960833",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-12-11T19:00:00-05:00",
+   "time_tbd": false,
+   "home_away": "H",
+   "opponent": "Amherstburg Admirals",
+   "location": "Atlas Tube Centre",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960833?configuration=45"
+   },
+   "club": "Lakeshore Canadiens"
+  },
+  {
+   "id": "junior-gojhl15780",
+   "team": "junior",
+   "sport": "GOHL (Jr. B)",
+   "start": "2026-12-11T19:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Stratford Warriors",
+   "location": "William Allman Memorial Arena, Stratford, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://www.gohl.ca/stats/game-center/15780"
+   },
+   "club": "LaSalle Vipers"
+  },
+  {
    "id": "junior-gs2960855",
    "team": "junior",
    "sport": "PJHL (Jr. C)",
@@ -1599,66 +1656,6 @@
  "pro_games": [
   {
    "league": "pwhl",
-   "start": "2026-11-23T13:30:00-05:00",
-   "status": "final",
-   "home": "Ottawa Charge",
-   "away": "Detroit Clutch",
-   "home_abbr": "OTT",
-   "away_abbr": "DET",
-   "our_score": 1,
-   "opp_score": 2,
-   "location": "Morgan Firestone Arena | Ancaster",
-   "note": "",
-   "time_tbd": false,
-   "link": "https://www.thepwhl.com/en/stats/game-center/360"
-  },
-  {
-   "league": "pwhl",
-   "start": "2026-11-23T16:00:00-05:00",
-   "status": "final",
-   "home": "Minnesota Frost",
-   "away": "Vancouver Goldeneyes",
-   "home_abbr": "MIN",
-   "away_abbr": "VAN",
-   "our_score": 4,
-   "opp_score": 1,
-   "location": "America First Center | Henderson",
-   "note": "",
-   "time_tbd": false,
-   "link": "https://www.thepwhl.com/en/stats/game-center/354"
-  },
-  {
-   "league": "pwhl",
-   "start": "2026-11-23T17:30:00-05:00",
-   "status": "final",
-   "home": "Hamilton Havoc",
-   "away": "Toronto Sceptres",
-   "home_abbr": "HAM",
-   "away_abbr": "TOR",
-   "our_score": 3,
-   "opp_score": 5,
-   "location": "Morgan Firestone Arena | Ancaster",
-   "note": "",
-   "time_tbd": false,
-   "link": "https://www.thepwhl.com/en/stats/game-center/361"
-  },
-  {
-   "league": "pwhl",
-   "start": "2026-11-23T18:00:00-05:00",
-   "status": "final",
-   "home": "Boston Fleet",
-   "away": "New York Sirens",
-   "home_abbr": "BOS",
-   "away_abbr": "NY",
-   "our_score": 5,
-   "opp_score": 3,
-   "location": "Boston Sports Institute | Wellesley",
-   "note": "",
-   "time_tbd": false,
-   "link": "https://www.thepwhl.com/en/stats/game-center/356"
-  },
-  {
-   "league": "pwhl",
    "start": "2026-11-24T13:30:00-05:00",
    "status": "final",
    "home": "Detroit Clutch",
@@ -1746,9 +1743,7 @@
    "note": "",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/363"
-  }
- ],
- "pro_ahead": [
+  },
   {
    "league": "pwhl",
    "start": "2026-11-30T16:00:00-05:00",
@@ -1763,7 +1758,9 @@
    "note": "",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/364"
-  },
+  }
+ ],
+ "pro_ahead": [
   {
    "league": "pwhl",
    "start": "2026-12-05T15:00:00-05:00",
@@ -2581,16 +2578,18 @@
  ],
  "more_news": [
   {
-   "league": "other",
+   "league": "nfl",
    "headline": "Tyler Bass hits 57-yard field goal as time expires to lift Bills past Chiefs",
    "summary": "",
    "published": "2026-11-26T23:45-05:00",
    "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/bills-2.jpg",
    "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "",
-   "url": "https://www.sportsnet.ca/article/tyler-bass-hits-57-yard-field-goal-as-time-expires-to-lift-bills-past-chiefs/",
+   "teams": [
+    "Buffalo Bills"
+   ],
+   "sn_team_count": 2,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/tyler-bass-hits-57-yard-field-goal-as-time-expires-to-lift-bills-past-chiefs/",
    "source": "Sportsnet"
   },
   {
@@ -2742,21 +2741,6 @@
   },
   {
    "league": "nhl",
-   "headline": "NHL power rankings: Scoring records to keep an eye on",
-   "summary": "With offence everywhere in the NHL right now, the golden age of goals is upon us. Ryan Dixon uses this week’s power rankings to highlight some club records that could be in danger of falling.",
-   "published": "2026-11-26T12:20-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Draisaitl-McDavid.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Maple Leafs"
-   ],
-   "sn_team_count": 7,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/nhl-power-rankings-scoring-records-to-keep-an-eye-on/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
    "headline": "Checking in on the NHL playoff picture at U.S. Thanksgiving",
    "summary": "American Thanksgiving has long served as an unofficial measuring stick to gauge teams’ likelihood of making the playoffs. Emily Sadler evaluates the NHL’s post-season picture.",
    "published": "2026-11-26T12:13-05:00",
@@ -2766,6 +2750,19 @@
    "sn_team_count": 6,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/checking-in-on-the-nhl-playoff-picture-at-u-s-thanksgiving/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Schenn, Canucks aiming to revive effort level amid challenging stretch",
+   "summary": "For all the Canucks’ projected problems in Year 1 of the rebuild, effort was not supposed to be one of them.",
+   "published": "2026-11-26T19:48-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/schenn.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/schenn-canucks-aiming-to-revive-effort-level-amid-challenging-stretch/",
    "source": "Sportsnet"
   },
   {
@@ -2792,6 +2789,21 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/aaron-rodgers-says-he-wont-return-to-steelers-mccarthy-sleeping-in-meetings/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "NHL power rankings: Scoring records to keep an eye on",
+   "summary": "With offence everywhere in the NHL right now, the golden age of goals is upon us. Ryan Dixon uses this week’s power rankings to highlight some club records that could be in danger of falling.",
+   "published": "2026-11-26T12:20-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Draisaitl-McDavid.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Maple Leafs"
+   ],
+   "sn_team_count": 7,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/nhl-power-rankings-scoring-records-to-keep-an-eye-on/",
    "source": "Sportsnet"
   },
   {
@@ -3037,34 +3049,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "mlb",
-   "headline": "Why Taira’s repertoire should translate with Blue Jays",
-   "summary": "When the Blue Jays signed Kaima Taira on Tuesday, they made a large bet on a player who hasn’t stepped on an MLB mound. Nick Ashbourne digs deep on the Japanese right-hander’s seemingly MLB-ready repertoire.",
-   "published": "2026-11-25T12:11-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/kaima-taira-1.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/why-tairas-repertoire-should-translate-with-blue-jays/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Longtime Canadiens defenceman Jeff Petry announces retirement",
-   "summary": "The defenceman announced his retirement from professional hockey on Thursday.",
-   "published": "2026-11-26T16:16-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2022/07/Petry-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/longtime-canadien-defenceman-jeff-petry-announces-retirement/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nfl",
    "headline": "NOTEBOOK: Lions look to clean up 'self-inflicted wounds' after loss to Bears",
    "summary": "Tim Twentyman covers all the news from the Detroit Lions’ 39-35 loss to the Chicago Bears.",
@@ -3261,6 +3245,19 @@
   },
   {
    "league": "nfl",
+   "headline": "Bills 13, Chiefs 10 | Final Score, recap + highlights",
+   "summary": "James Cook III has 32 carries for 117 yards and a touchdown on the ground. Cook’s total was the most rushing yards any player has had against Kansas City this season,",
+   "published": "2026-11-27T00:08-05:00",
+   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/bills/msq1flm96yahlj9on8gn.png",
+   "video": false,
+   "teams": [
+    "Buffalo Bills"
+   ],
+   "url": "https://www.buffalobills.com/news/bills-13-chiefs-10-final-score-recap-highlights",
+   "source": "Team site"
+  },
+  {
+   "league": "nfl",
    "headline": "Buffalo Bills vs. Kansas City Chiefs | Where to watch, stream and listen | NFL Thanksgiving 2026",
    "summary": "TV Channel, Streaming and Radio for Bills vs. Chiefs on Thanksgiving",
    "published": "2026-11-26T19:30-05:00",
@@ -3374,19 +3371,6 @@
     "Buffalo Bills"
    ],
    "url": "https://www.buffalobills.com/news/all-eyes-are-on-us-the-bills-share-their-excitement-ahead-of-thanksgiving-matchup-with-the-chiefs",
-   "source": "Team site"
-  },
-  {
-   "league": "nfl",
-   "headline": "Top Storylines for Bills vs. Chiefs | Week 12 Thanksgiving",
-   "summary": "Bills insider Chris Brown highlights the key factors in the upcoming rivalry matchup",
-   "published": "2026-11-24T11:43-05:00",
-   "image": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/bills/rwidkm8kl8brl7psgwru.png",
-   "video": false,
-   "teams": [
-    "Buffalo Bills"
-   ],
-   "url": "https://www.buffalobills.com/news/top-storylines-for-bills-vs-chiefs-week-12-thanksgiving",
    "source": "Team site"
   },
   {
@@ -3944,14 +3928,14 @@
      {
       "name": "Ottawa 67's",
       "abbr": "OTT",
-      "gp": 23,
-      "w": 10,
+      "gp": 24,
+      "w": 11,
       "l": 10,
       "otl": 3,
-      "pts": 23,
+      "pts": 25,
       "gf": 74,
       "ga": 85,
-      "strk": "L4"
+      "strk": "W1"
      },
      {
       "name": "Oshawa Generals",
@@ -4021,14 +4005,14 @@
      {
       "name": "Barrie Colts",
       "abbr": "BAR",
-      "gp": 25,
+      "gp": 26,
       "w": 5,
-      "l": 17,
+      "l": 18,
       "otl": 3,
       "pts": 13,
       "gf": 60,
       "ga": 103,
-      "strk": "L3"
+      "strk": "L4"
      }
     ]
    },
