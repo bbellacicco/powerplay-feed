@@ -786,7 +786,8 @@
     var MINOR = /\b(roster|training camp|camp roster|transactions?|signs? |re-signs?|released|waivers)\b/i;
     var big = function (x) { return o.league || (/^(nfl|nhl|nba|mlb|ncaaf|ncaam)$/.test(x.league) && !MINOR.test(x.headline)); };
     var lead = items.filter(function (x) { return x.image && big(x); })[0] || items.filter(function (x) { return x.image && x.league !== 'pwhl'; })[0] || items[0];
-    var rest = items.filter(function (x) { return x !== lead; }).slice(0, 6);
+    // Headlines: no roster / training-camp notices anywhere; on All, no PWHL either (it has its own tab)
+    var rest = items.filter(function (x) { return x !== lead && !MINOR.test(x.headline) && (o.league || x.league !== 'pwhl'); }).slice(0, 6);
     var box = el('div', 'pt-top');
     var a = el('a', 'pt-lead'); a.href = lead.url; a.target = '_blank'; a.rel = 'noopener';
     if (lead.image) { var im = new Image(); im.src = lead.image; im.alt = ''; im.referrerPolicy = 'no-referrer'; im.onerror = function () { im.remove(); }; a.appendChild(im); }
@@ -895,7 +896,10 @@
     var seen = {}, items = proNews.filter(function (x) { if (!x || !x.headline || !x.url || !x.image || seen[x.url] || !PRO_NAME[x.league] || (o.league && x.league !== o.league)) return false; seen[x.url] = 1; return true; })
       .sort(function (a, b) { return a.published < b.published ? 1 : -1; });
     var used = {}; [].forEach.call(box.querySelectorAll('.pt-top a'), function (a) { used[a.href] = 1; });
-    items = items.filter(function (x) { return !used[x.url]; }).slice(0, 16);
+    var MINOR2 = /\b(roster|training camp|transactions?|waivers)\b/i;
+    items = items.filter(function (x) { return !used[x.url] && !MINOR2.test(x.headline); });
+    if (!o.league) items = items.filter(function (x) { return x.league !== 'pwhl'; }).concat(items.filter(function (x) { return x.league === 'pwhl'; }));   // All: PWHL at the end
+    items = items.slice(0, 16);
     if (!items.length) return null;
     return ptStrip('Top stories', items.map(function (x) {
       var a = el('a', 'pt-sc2'); a.href = x.url; a.target = '_blank'; a.rel = 'noopener';
