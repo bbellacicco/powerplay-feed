@@ -193,6 +193,8 @@
   /* the homepage's logo bar: seven logos in one row */
   .bar.logobar { grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 6px; padding: 7px 8px; }
   .bar.logobar .lgscores { flex-direction: column; gap: 0; padding: 3px 2px; } .bar.logobar .lgscores svg { height: 26px !important; width: 30px !important; }
+  /* phones: two rows of four, so every logo (and Scores) is big enough to read */
+  @media (max-width: 760px) { .bar.logobar { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; } .bar.logobar .lg { height: 44px; } .bar.logobar .lgscores svg { height: 24px !important; width: 30px !important; } .bar.logobar .lgcap { font-size: 10.5px; } }
   .bar.logobar .lgcap { font-size: 9.5px; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; color: #e8b021; line-height: 1; margin-top: 1px; }
   .bar.logobar .lg { display: flex; align-items: center; justify-content: center; height: 46px; min-width: 0; padding: 5px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 8px; cursor: pointer; font: inherit; color: #fff; text-decoration: none; }
   .bar.logobar .lg:hover, .bar.logobar .lg:focus-visible { border-color: var(--accent); outline: none; }
