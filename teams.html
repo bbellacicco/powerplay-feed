@@ -191,14 +191,17 @@
   .bar .lb.on { background: #fff; color: #0b1a33; border-color: #fff; }
   .bar .lb svg { width: 15px; height: 15px; stroke: currentColor; vertical-align: -3px; }
   /* the homepage's logo bar: seven logos in one row */
-  .bar.logobar { grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px; padding: 7px 8px; }
+  .bar.logobar { grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 6px; padding: 7px 8px; }
+  .bar.logobar .lgscores { flex-direction: column; gap: 0; padding: 3px 2px; } .bar.logobar .lgscores svg { height: 26px !important; width: 30px !important; }
+  .bar.logobar .lgcap { font-size: 9.5px; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; color: #e8b021; line-height: 1; margin-top: 1px; }
   .bar.logobar .lg { display: flex; align-items: center; justify-content: center; height: 46px; min-width: 0; padding: 5px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 8px; cursor: pointer; font: inherit; color: #fff; text-decoration: none; }
   .bar.logobar .lg:hover, .bar.logobar .lg:focus-visible { border-color: var(--accent); outline: none; }
   .bar.logobar .lg.on { background: #fff; border-color: #fff; }
   .bar.logobar .lg img, .bar.logobar .lg svg { max-width: 100%; max-height: 34px; width: auto; height: 34px; object-fit: contain; }
   .bar.logobar .lg svg { width: 34px; }
   .bar.logobar .lgtxt { font-family: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif; font-weight: 400; font-size: clamp(12px, 3.6vw, 17px); letter-spacing: .02em; overflow: hidden; white-space: nowrap; }
-  @media (min-width: 761px) { .bar.logobar { gap: 10px; padding: 9px 12px; } .bar.logobar .lg { height: 54px; } .bar.logobar .lg img, .bar.logobar .lg svg { height: 40px; max-height: 40px; } .bar.logobar .lg svg { width: 40px; } }
+  @media (min-width: 761px) { .bar.logobar .lgscores svg { height: 34px !important; width: 40px !important; } .bar.logobar .lgcap { font-size: 11px; }
+    .bar.logobar { gap: 10px; padding: 9px 12px; } .bar.logobar .lg { height: 54px; } .bar.logobar .lg img, .bar.logobar .lg svg { height: 40px; max-height: 40px; } .bar.logobar .lg svg { width: 40px; } }
   .drop { padding: 10px 16px 12px; border-bottom: 1px solid var(--line); background: #0d1f40; }
   .drop[hidden] { display: none; }
   .drop .prohead { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
@@ -598,10 +601,21 @@
     ['junior', 'Junior hockey', ''],
     ['pro:nhl', 'NHL', 'https://a.espncdn.com/i/teamlogos/leagues/500/nhl.png'],
     ['pro:nba', 'NBA', 'https://a.espncdn.com/i/teamlogos/leagues/500/nba.png'],
-    ['pro:nfl', 'NFL', 'https://a.espncdn.com/i/teamlogos/leagues/500/nfl.png']];
+    ['pro:nfl', 'NFL', 'https://a.espncdn.com/i/teamlogos/leagues/500/nfl.png'],
+    ['scores', 'Scores: every game, local and national', '']];
   function drawLogoBar(bar) {
     bar.classList.add('logobar');
     BAR_LOGOS.forEach(function (x) {
+      if (x[0] === 'scores') {   // every score, local and national, on one page
+        var sb = el('a', 'lg lgscores'); sb.href = 'https://www.powerplaywindsor.com/scores-standings?tab=allscores'; sb.target = '_top';
+        sb.title = x[1]; sb.setAttribute('aria-label', x[1]);
+        sb.innerHTML = '<svg viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="9" width="38" height="26" rx="5" fill="#0b1a33" stroke="#e8b021" stroke-width="3"/>' +
+          '<text x="16" y="28" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="15" fill="#fff">2</text>' +
+          '<text x="24" y="27" text-anchor="middle" font-family="Arial,sans-serif" font-weight="900" font-size="12" fill="#e8b021">:</text>' +
+          '<text x="32" y="28" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="15" fill="#fff">1</text>' +
+          '<path d="M17 35v6M31 35v6" stroke="#e8b021" stroke-width="3" stroke-linecap="round"/></svg><span class="lgcap">Scores</span>';
+        bar.appendChild(sb); return;
+      }
       var pro = x[0].indexOf('pro:') === 0, b = el(pro ? 'a' : 'button', 'lg' + (barPick === x[0] ? ' on' : ''));
       b.dataset.k = x[0]; b.title = x[1]; b.setAttribute('aria-label', x[1]);
       if (!x[2]) b.innerHTML = '<svg viewBox="0 0 48 48" aria-hidden="true">' + ICONS.hockey + '</svg>';
