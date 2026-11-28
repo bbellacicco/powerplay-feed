@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-28T12:32:08-05:00",
+ "updated": "2026-11-28T12:46:58-05:00",
  "today": "2026-11-28",
  "range": [
   "2026-11-25",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 36
+   "count": 37
   },
   "club_news": {
    "ok": true,
@@ -344,9 +344,9 @@
    "location": "Toldo Lancer Centre",
    "status": "live",
    "our_score": 0,
-   "opp_score": 0,
+   "opp_score": 1,
    "result": null,
-   "note": "Set 1",
+   "note": "Set 2",
    "links": {
     "gamecentre": "https://sidearmstats.com/uwindsor/wvball/",
     "watch": "https://oua.tv/?school=Windsor"
@@ -2735,6 +2735,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "other",
+   "headline": "European roundup: Bayern stays unbeaten in Bundesliga",
+   "summary": "Bayern Munich overcame an injury crisis and a red card for captain Joshua Kimmich to emerge unbeaten in the Bundesliga on Saturday, when Manchester United, Real Madrid, Paris Saint-Germain, Lazio and Inter Milan were all",
+   "published": "2026-11-28T12:33-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Bayern-Munich.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/soccer/article/european-roundup-bayern-stay-unbeaten-in-bundesliga/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "Report: Teams ‘don’t foresee’ Aaron Rodgers playing again barring injuries",
    "summary": "",
@@ -2776,19 +2789,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Canadiens notebook: Guhle’s absence tests defensive depth, Demidov nears return",
-   "summary": "The Canadiens will be without Kaiden Guhle against the Golden Knights, adding to their defensive challenges with Mike Matheson already sidelined. Meanwhile, Ivan Demidov inches closer to a return as Montreal looks to get",
-   "published": "2026-11-27T17:11-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/11/CP173548270.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canadiens-notebook-guhles-absence-tests-defensive-depth-demidov-nears-return/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "mlb",
    "headline": "MLB off-season transaction tracker: The top free-agent signings and trades",
    "summary": "",
@@ -2799,6 +2799,19 @@
    "sn_team_count": 0,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/mlb-off-season-transaction-tracker-the-top-free-agent-signings-and-trades/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
+   "headline": "Canadiens notebook: Guhle’s absence tests defensive depth, Demidov nears return",
+   "summary": "The Canadiens will be without Kaiden Guhle against the Golden Knights, adding to their defensive challenges with Mike Matheson already sidelined. Meanwhile, Ivan Demidov inches closer to a return as Montreal looks to get",
+   "published": "2026-11-27T17:11-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/11/CP173548270.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canadiens-notebook-guhles-absence-tests-defensive-depth-demidov-nears-return/",
    "source": "Sportsnet"
   },
   {
