@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-27T23:51:03-05:00",
- "today": "2026-11-27",
+ "updated": "2026-11-28T00:07:33-05:00",
+ "today": "2026-11-28",
  "range": [
-  "2026-11-24",
-  "2026-11-30"
+  "2026-11-25",
+  "2026-12-01"
  ],
  "teams": {
   "spitfires": {
@@ -91,7 +91,7 @@
   },
   "pwhl": {
    "ok": true,
-   "count": 7
+   "count": 3
   },
   "cfl_standings": {
    "ok": true,
@@ -111,26 +111,6 @@
   }
  },
  "games": [
-  {
-   "id": "highschool-2026-11-24-1",
-   "team": "highschool",
-   "sport": "Varsity Girls Hockey",
-   "start": "2026-11-24T15:00:00-05:00",
-   "time_tbd": false,
-   "home_away": "N",
-   "opponent": "St. Anne",
-   "location": "St. Anne",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "AAA",
-   "links": {
-    "standings": "https://wecssaa.com/viewScores.php"
-   },
-   "away": "Villanova",
-   "home": "St. Anne"
-  },
   {
    "id": "junior-gojhl15725",
    "team": "junior",
@@ -344,13 +324,13 @@
    "home_away": "H",
    "opponent": "Brock Badgers",
    "location": "Toldo Lancer Centre",
-   "status": "live",
-   "our_score": 2,
-   "opp_score": 2,
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
    "result": null,
-   "note": "Set 5",
+   "note": "Score not posted yet",
    "links": {
-    "gamecentre": "https://sidearmstats.com/uwindsor/mvball/",
+    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=174",
     "watch": "https://oua.tv/?school=Windsor"
    }
   },
@@ -581,9 +561,7 @@
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960763?configuration=45"
    },
    "club": "Lakeshore Canadiens"
-  }
- ],
- "ahead": [
+  },
   {
    "id": "junior-gs2960765",
    "team": "junior",
@@ -602,7 +580,9 @@
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960765?configuration=45"
    },
    "club": "Essex 73's"
-  },
+  }
+ ],
+ "ahead": [
   {
    "id": "junior-gojhl15747",
    "team": "junior",
@@ -1093,6 +1073,44 @@
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960855?configuration=45"
    },
    "club": "Amherstburg Admirals"
+  },
+  {
+   "id": "spitfires-ohl29303",
+   "team": "spitfires",
+   "sport": "Hockey",
+   "start": "2026-12-12T19:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Barrie Colts",
+   "location": "Sadlon Arena, Barrie, ON",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "tickets": "https://barriecolts.ticketpro.ca/en/pages/BarrieColts_Games",
+    "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29303/"
+   }
+  },
+  {
+   "id": "junior-gs2960868",
+   "team": "junior",
+   "sport": "PJHL (Jr. C)",
+   "start": "2026-12-12T19:30:00-05:00",
+   "time_tbd": false,
+   "home_away": "A",
+   "opponent": "Mooretown Flags",
+   "location": "Mooretown Sports Complex",
+   "status": "upcoming",
+   "our_score": null,
+   "opp_score": null,
+   "result": null,
+   "note": "",
+   "links": {
+    "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960868?configuration=45"
+   },
+   "club": "Wheatley Sharks"
   },
   {
    "id": "lancers-6372",
@@ -1653,66 +1671,6 @@
  "pro_games": [
   {
    "league": "pwhl",
-   "start": "2026-11-24T13:30:00-05:00",
-   "status": "final",
-   "home": "Detroit Clutch",
-   "away": "Hamilton Havoc",
-   "home_abbr": "DET",
-   "away_abbr": "HAM",
-   "our_score": 3,
-   "opp_score": 2,
-   "location": "Morgan Firestone Arena | Ancaster",
-   "note": "",
-   "time_tbd": false,
-   "link": "https://www.thepwhl.com/en/stats/game-center/362"
-  },
-  {
-   "league": "pwhl",
-   "start": "2026-11-24T15:00:00-05:00",
-   "status": "final",
-   "home": "Vancouver Goldeneyes",
-   "away": "Vegas Vanguards",
-   "home_abbr": "VAN",
-   "away_abbr": "VGS",
-   "our_score": 6,
-   "opp_score": 8,
-   "location": "America First Center | Henderson",
-   "note": "",
-   "time_tbd": false,
-   "link": "https://www.thepwhl.com/en/stats/game-center/355"
-  },
-  {
-   "league": "pwhl",
-   "start": "2026-11-24T16:00:00-05:00",
-   "status": "final",
-   "home": "New York Sirens",
-   "away": "Montréal Victoire",
-   "home_abbr": "NY",
-   "away_abbr": "MTL",
-   "our_score": 3,
-   "opp_score": 0,
-   "location": "Boston Sports Institute | Wellesley",
-   "note": "",
-   "time_tbd": false,
-   "link": "https://www.thepwhl.com/en/stats/game-center/357"
-  },
-  {
-   "league": "pwhl",
-   "start": "2026-11-24T19:00:00-05:00",
-   "status": "final",
-   "home": "Toronto Sceptres",
-   "away": "Ottawa Charge",
-   "home_abbr": "TOR",
-   "away_abbr": "OTT",
-   "our_score": 0,
-   "opp_score": 4,
-   "location": "Mattamy Athletic Centre | Toronto",
-   "note": "",
-   "time_tbd": false,
-   "link": "https://www.thepwhl.com/en/stats/game-center/359"
-  },
-  {
-   "league": "pwhl",
    "start": "2026-11-25T13:00:00-05:00",
    "status": "final",
    "home": "Montréal Victoire",
@@ -1907,6 +1865,66 @@
    "note": "",
    "time_tbd": false,
    "link": "https://www.thepwhl.com/en/stats/game-center/378"
+  },
+  {
+   "league": "pwhl",
+   "start": "2026-12-12T12:00:00-05:00",
+   "status": "upcoming",
+   "home": "Detroit Clutch",
+   "away": "New York Sirens",
+   "home_abbr": "DET",
+   "away_abbr": "NY",
+   "our_score": null,
+   "opp_score": null,
+   "location": "Little Caesars Arena | Detroit",
+   "note": "",
+   "time_tbd": false,
+   "link": "https://www.thepwhl.com/en/stats/game-center/373"
+  },
+  {
+   "league": "pwhl",
+   "start": "2026-12-12T14:00:00-05:00",
+   "status": "upcoming",
+   "home": "Montréal Victoire",
+   "away": "San Jose Sea Lions",
+   "home_abbr": "MTL",
+   "away_abbr": "SJ",
+   "our_score": null,
+   "opp_score": null,
+   "location": "Place Bell | Laval",
+   "note": "",
+   "time_tbd": false,
+   "link": "https://www.thepwhl.com/en/stats/game-center/379"
+  },
+  {
+   "league": "pwhl",
+   "start": "2026-12-12T19:00:00-05:00",
+   "status": "upcoming",
+   "home": "Toronto Sceptres",
+   "away": "Boston Fleet",
+   "home_abbr": "TOR",
+   "away_abbr": "BOS",
+   "our_score": null,
+   "opp_score": null,
+   "location": "Coca-Cola Coliseum | Toronto",
+   "note": "",
+   "time_tbd": false,
+   "link": "https://www.thepwhl.com/en/stats/game-center/380"
+  },
+  {
+   "league": "pwhl",
+   "start": "2026-12-12T21:00:00-05:00",
+   "status": "upcoming",
+   "home": "Vancouver Goldeneyes",
+   "away": "Vegas Vanguards",
+   "home_abbr": "VAN",
+   "away_abbr": "VGS",
+   "our_score": null,
+   "opp_score": null,
+   "location": "Pacific Coliseum | Vancouver",
+   "note": "",
+   "time_tbd": false,
+   "link": "https://www.thepwhl.com/en/stats/game-center/381"
   }
  ],
  "pro_news": [
@@ -2578,15 +2596,15 @@
  "more_news": [
   {
    "league": "nhl",
-   "headline": "Oilers drop fifth straight as Kraken rally with three third-period goals",
-   "summary": "",
-   "published": "2026-11-27T23:08-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177350229.jpg",
+   "headline": "Oilers’ top power-play unit ‘not good enough’ in fifth straight loss",
+   "summary": "The Oilers felt like the game should have been out of reach by the third period. Hockey’s best power play simply didn’t produce — that unit owns this loss.",
+   "published": "2026-11-28T00:02-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/oilers-7.jpg",
    "video": false,
    "teams": [],
-   "sn_team_count": 2,
+   "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/oilers-drop-fifth-straight-as-kraken-rally-with-two-third-period-goals/",
+   "url": "https://www.sportsnet.ca/nhl/article/oilers-top-power-play-unit-not-good-enough-in-fifth-straight-loss/",
    "source": "Sportsnet"
   },
   {
