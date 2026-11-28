@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T21:21:09-05:00",
+ "updated": "2026-11-27T21:32:01-05:00",
  "today": "2026-11-27",
  "range": [
   "2026-11-24",
@@ -275,7 +275,7 @@
    "our_score": 0,
    "opp_score": 1,
    "result": null,
-   "note": "02:55 3rd",
+   "note": "End of Game",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29245/"
    }
@@ -290,10 +290,10 @@
    "opponent": "Listowel Cyclones",
    "location": "Steve Kerr M.C., Listowel, ON",
    "status": "live",
-   "our_score": 1,
+   "our_score": 3,
    "opp_score": 3,
    "result": null,
-   "note": "20:00 3rd",
+   "note": "10:56 3rd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15729"
    },
@@ -308,11 +308,11 @@
    "home_away": "A",
    "opponent": "Dresden Kings",
    "location": "Lambton-Kent Memorial Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
-   "result": null,
-   "note": "In progress",
+   "status": "final",
+   "our_score": 8,
+   "opp_score": 3,
+   "result": "W",
+   "note": "",
    "links": {
     "gamecentre": "https://gamesheetstats.com/seasons/15133/games/2960732?configuration=45"
    },
@@ -2971,6 +2971,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "Warriors’ Curry progressing from oblique injury, will be evaluated again next week",
+   "summary": "",
+   "published": "2026-11-27T21:25-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Curry.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/warriors-curry-progressing-from-oblique-injury-will-be-evaluated-again-next-week/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "other",
    "headline": "Curling power rankings: Where teams stand halfway through GSOC season",
    "summary": "It’s hard to believe, but we’re already through three of the five Grand Slam of Curling events for the 2026-27 season, a season that will be finished before Christmas this year.",
@@ -3007,21 +3020,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/hockey/article/ukraine-urges-countries-to-follow-canadas-lead-in-barring-russian-athletes/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Raptors’ Nate Bittle ready to return, build on Summer League buzz",
-   "summary": "Nate Bittle created buzz in Summer League, but an injury meant waiting to capitalize on it. Blake Murphy caught up with the rookie ahead of his return to the court and his path forward with the Raptors organization.",
-   "published": "2026-11-27T09:15-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Nate-Bittle-Raptors.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-nate-bittle-ready-to-return-build-on-summer-league-buzz/",
    "source": "Sportsnet"
   },
   {
@@ -3874,7 +3872,7 @@
       "otl": 1,
       "pts": 35,
       "gf": 103,
-      "ga": 70,
+      "ga": 71,
       "strk": "W3"
      },
      {
@@ -4027,7 +4025,7 @@
       "l": 8,
       "otl": 1,
       "pts": 29,
-      "gf": 93,
+      "gf": 95,
       "ga": 73,
       "strk": "L3"
      },
@@ -4052,7 +4050,7 @@
       "otl": 2,
       "pts": 22,
       "gf": 95,
-      "ga": 106,
+      "ga": 108,
       "strk": "W2"
      }
     ]
@@ -4068,7 +4066,7 @@
       "l": 5,
       "otl": 0,
       "pts": 38,
-      "gf": 110,
+      "gf": 111,
       "ga": 73,
       "strk": "L1"
      },
@@ -4105,7 +4103,7 @@
       "otl": 3,
       "pts": 29,
       "gf": 87,
-      "ga": 91,
+      "ga": 92,
       "strk": "L1"
      },
      {
@@ -4116,7 +4114,7 @@
       "l": 12,
       "otl": 4,
       "pts": 20,
-      "gf": 65,
+      "gf": 66,
       "ga": 100,
       "strk": "L2"
      }
@@ -4135,7 +4133,7 @@
       "l": 5,
       "otl": 1,
       "pts": 45,
-      "gf": 123,
+      "gf": 124,
       "ga": 76,
       "strk": "W6"
      },
@@ -4190,14 +4188,14 @@
      {
       "name": "Aurora Tigers",
       "abbr": "AUR",
-      "gp": 25,
-      "w": 13,
+      "gp": 26,
+      "w": 14,
       "l": 12,
       "otl": 0,
-      "pts": 26,
+      "pts": 28,
       "gf": 90,
       "ga": 89,
-      "strk": "W1"
+      "strk": "W2"
      },
      {
       "name": "Pickering Panthers",
@@ -4207,7 +4205,7 @@
       "l": 12,
       "otl": 2,
       "pts": 24,
-      "gf": 86,
+      "gf": 87,
       "ga": 89,
       "strk": "W1"
      },
@@ -4226,14 +4224,26 @@
      {
       "name": "St. Michaels Buzzers",
       "abbr": "STM",
-      "gp": 27,
+      "gp": 28,
       "w": 8,
-      "l": 16,
+      "l": 17,
       "otl": 3,
       "pts": 19,
       "gf": 74,
       "ga": 126,
-      "strk": "L3"
+      "strk": "L4"
+     },
+     {
+      "name": "Lindsay Muskies",
+      "abbr": "LIN",
+      "gp": 26,
+      "w": 7,
+      "l": 17,
+      "otl": 2,
+      "pts": 16,
+      "gf": 87,
+      "ga": 126,
+      "strk": "W1"
      },
      {
       "name": "North York Rangers",
@@ -4244,20 +4254,8 @@
       "otl": 2,
       "pts": 14,
       "gf": 65,
-      "ga": 104,
+      "ga": 105,
       "strk": "L1"
-     },
-     {
-      "name": "Lindsay Muskies",
-      "abbr": "LIN",
-      "gp": 25,
-      "w": 6,
-      "l": 17,
-      "otl": 2,
-      "pts": 14,
-      "gf": 87,
-      "ga": 126,
-      "strk": "L4"
      },
      {
       "name": "Toronto Warriors",
@@ -4284,7 +4282,7 @@
       "l": 5,
       "otl": 0,
       "pts": 48,
-      "gf": 157,
+      "gf": 159,
       "ga": 68,
       "strk": "L1"
      },
@@ -4321,7 +4319,7 @@
       "otl": 2,
       "pts": 42,
       "gf": 150,
-      "ga": 94,
+      "ga": 96,
       "strk": "W2"
      },
      {
@@ -4369,7 +4367,7 @@
       "otl": 1,
       "pts": 21,
       "gf": 79,
-      "ga": 134,
+      "ga": 135,
       "strk": "W1"
      },
      {
@@ -4387,14 +4385,14 @@
      {
       "name": "Niagara Falls Canucks",
       "abbr": "NFC",
-      "gp": 30,
+      "gp": 31,
       "w": 8,
-      "l": 20,
+      "l": 21,
       "otl": 2,
       "pts": 18,
       "gf": 80,
       "ga": 141,
-      "strk": "L2"
+      "strk": "L3"
      },
      {
       "name": "Buffalo Jr. Sabres",
@@ -4460,7 +4458,7 @@
       "otl": 2,
       "pts": 34,
       "gf": 93,
-      "ga": 55,
+      "ga": 56,
       "strk": "L1"
      },
      {
@@ -4472,7 +4470,7 @@
       "otl": 3,
       "pts": 29,
       "gf": 91,
-      "ga": 79,
+      "ga": 81,
       "strk": "W1"
      },
      {
@@ -4495,7 +4493,7 @@
       "l": 7,
       "otl": 1,
       "pts": 25,
-      "gf": 77,
+      "gf": 78,
       "ga": 68,
       "strk": "L1"
      },
@@ -4507,7 +4505,7 @@
       "l": 10,
       "otl": 0,
       "pts": 24,
-      "gf": 67,
+      "gf": 69,
       "ga": 84,
       "strk": "W5"
      },
@@ -4567,7 +4565,7 @@
       "l": 20,
       "otl": 1,
       "pts": 3,
-      "gf": 49,
+      "gf": 50,
       "ga": 147,
       "strk": "L9"
      }
@@ -4596,7 +4594,7 @@
       "l": 1,
       "otl": 1,
       "pts": 37,
-      "gf": 113,
+      "gf": 115,
       "ga": 59,
       "strk": "W6"
      },
@@ -4657,7 +4655,7 @@
       "otl": 3,
       "pts": 25,
       "gf": 82,
-      "ga": 91,
+      "ga": 92,
       "strk": "W1"
      },
      {
@@ -4669,7 +4667,7 @@
       "otl": 0,
       "pts": 18,
       "gf": 86,
-      "ga": 108,
+      "ga": 110,
       "strk": "L1"
      },
      {
@@ -4699,23 +4697,23 @@
      {
       "name": "Brantford Titans",
       "abbr": "BFD",
-      "gp": 23,
-      "w": 3,
+      "gp": 24,
+      "w": 4,
       "l": 18,
       "otl": 2,
-      "pts": 8,
+      "pts": 10,
       "gf": 70,
       "ga": 134,
-      "strk": "L3"
+      "strk": "W1"
      },
      {
       "name": "Welland Canadians",
       "abbr": "WEL",
-      "gp": 24,
+      "gp": 25,
       "w": 3,
       "l": 21,
-      "otl": 0,
-      "pts": 6,
+      "otl": 1,
+      "pts": 7,
       "gf": 51,
       "ga": 137,
       "strk": "L5"
@@ -4893,14 +4891,14 @@
      {
       "name": "Lakeshore Canadiens",
       "abbr": "LAK",
-      "gp": 21,
-      "w": 17,
+      "gp": 22,
+      "w": 18,
       "l": 2,
       "otl": 2,
-      "pts": 36,
-      "gf": 93,
-      "ga": 42,
-      "strk": "W1"
+      "pts": 38,
+      "gf": 101,
+      "ga": 45,
+      "strk": "W2"
      },
      {
       "name": "Mooretown Flags",
@@ -4929,14 +4927,14 @@
      {
       "name": "Dresden Kings",
       "abbr": "DRE",
-      "gp": 21,
+      "gp": 22,
       "w": 11,
-      "l": 8,
+      "l": 9,
       "otl": 2,
       "pts": 24,
-      "gf": 90,
-      "ga": 81,
-      "strk": "W2"
+      "gf": 93,
+      "ga": 89,
+      "strk": "L1"
      },
      {
       "name": "Wheatley Sharks",
