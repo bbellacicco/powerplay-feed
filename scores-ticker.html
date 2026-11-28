@@ -230,9 +230,10 @@ function order(items, max){
 // ---------- drawing (same seamless loop as ticker.html)
 // tapping a score: local games open the Local Scores page, pro games the Pro tab of the Local Sports Hub
 var LINK_LOCAL = 'https://www.powerplaywindsor.com/scores-standings', LINK_PRO = 'https://www.powerplaywindsor.com/local-sports?tab=pro';
+var LINK_ALL = 'https://www.powerplaywindsor.com/scores-standings?tab=allscores';
 function node(it){
   var w = document.createElement('a'); w.className = 'ticker-item'; w.target = '_top';
-  w.href = it.pro ? LINK_PRO : LINK_LOCAL;
+  w.href = LINK_ALL;   // every score, local and national, on one page
   var b = document.createElement('span');
   b.className = 'badge badge-' + it.kind;
   b.textContent = it.kind === 'live' ? 'Live' : it.kind === 'final' ? 'Final' : (it.today ? 'Today' : 'Next');
