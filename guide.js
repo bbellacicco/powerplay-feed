@@ -667,7 +667,7 @@
       // started, but the league hasn't posted a score (many junior rinks enter the paper sheet after the game)
       var started = !fin && !lv && new Date(g.start).getTime() < Date.now() - 10 * 60000 && /in progress|not posted/i.test(g.note || '');
       var pending = started ? (Date.now() - new Date(g.start).getTime() > 2.5 * 3600e3 ? 'Score to come' : 'In progress') : '';
-      return { lg: g.team, start: g.start, state: fin ? 'post' : lv ? 'in' : 'pre', detail: g.note || '', tbd: g.time_tbd, local: true, pending: pending,
+      return { lg: g.team, start: g.start, state: fin ? 'post' : lv ? 'in' : 'pre', detail: g.note || '', tbd: g.time_tbd, local: true, pending: pending, sport: String(g.sport || '').replace(/^Men's /, 'M. ').replace(/^Women's /, 'W. ').replace(/^Senior /, 'Sr. ').replace(/\s*\(.*\)/, ''),
                away: { name: shortTeam(sd[0]), score: hasSc ? as : null, win: fin && hasSc && +as > +hs, logo: localLogo(sd[0], g.team) },
                home: { name: shortTeam(sd[1]), score: hasSc ? hs : null, win: fin && hasSc && +hs > +as, logo: localLogo(sd[1], g.team) },
                link: ln.gamecentre || ln.boxscore || ln.recap || g.link || '', hub: HUB + '?tab=' + (LOC_TAB[g.team] || 'scores') };
@@ -701,10 +701,10 @@
     a.appendChild(rows);
     var st = el('div', 'pt-st');
     if (lv) { st.appendChild(el('span', 'pt-lv', 'LIVE')); st.appendChild(el('span', 'pt-s2', (g.detail || '').replace(/ - /, ' '))); }
-    else if (fin) { st.appendChild(el('span', 'pt-s1', /OT|SO/.test(g.detail) ? g.detail.replace(/^Final\/?/, 'F/') : 'Final')); st.appendChild(el('span', 'pt-s2', tkDay(g))); }
-    else if (g.pending) { st.appendChild(el('span', 'pt-s1 pt-pend', g.pending)); st.appendChild(el('span', 'pt-s2', tkDay(g))); }
-    else { st.appendChild(el('span', 'pt-s1', g.tbd ? 'TBA' : cpTime(new Date(g.start)).replace(' a.m.', ' AM').replace(' p.m.', ' PM'))); st.appendChild(el('span', 'pt-s2', tkDay(g))); }
-    st.appendChild(el('span', 'pt-lgn', lgName(g.lg)));
+    else if (fin) { st.appendChild(el('span', 'pt-s1', /OT|SO/.test(g.detail) ? g.detail.replace(/^Final\/?/, 'F/') : 'Final')); st.appendChild(el('span', 'pt-s2 pt-day', tkDay(g))); }
+    else if (g.pending) { st.appendChild(el('span', 'pt-s1 pt-pend', g.pending)); st.appendChild(el('span', 'pt-s2 pt-day', tkDay(g))); }
+    else { st.appendChild(el('span', 'pt-s1', g.tbd ? 'TBA' : cpTime(new Date(g.start)).replace(' a.m.', ' AM').replace(' p.m.', ' PM'))); st.appendChild(el('span', 'pt-s2 pt-day', tkDay(g))); }
+    st.appendChild(el('span', 'pt-lgn', g.local && g.sport && g.lg !== 'spitfires' ? g.sport : lgName(g.lg)));   // local: the sport (W. Volleyball, GOHL)
     a.appendChild(st);
     return a;
   }
@@ -765,6 +765,7 @@
       var by = {}; days[k].forEach(function (g) { (by[g.lg] = by[g.lg] || []).push(g); });
       Object.keys(by).sort(function (a, b) {
         var la = by[a].filter(function (g) { return g.state === 'in'; }).length, lb = by[b].filter(function (g) { return g.state === 'in'; }).length;
+        if (o.all && !!LOC_NAME[a] !== !!LOC_NAME[b]) return LOC_NAME[a] ? -1 : 1;   // the all-scores page: our local teams first
         return lb - la || by[b].length - by[a].length || lgRank(a) - lgRank(b);
       }).forEach(function (lg) {
         var lb = el('div', 'pt-dl', lgName(lg)); lb.style.setProperty('--c', lgColor(lg)); sec.appendChild(lb);
@@ -945,7 +946,8 @@
     return sec;
   }
   // everything fits: three-digit scores, a small live bug, and phone score grids with the status on top
-  PRO_CSS += '.pt-pend{color:#e8b021;font-size:11px}' +
+  PRO_CSS += '.pt-pend{color:#e8b021;font-size:11px}.pt-grid .pt-day{display:none}' +   /* score grids sit under a day heading */
+   ''+
     '.pt-r{grid-template-columns:22px 40px 32px}.pt-sc{min-width:0}' +
     '.pt-lv{font-size:9px;padding:1px 4px;letter-spacing:.06em}.pt-st{font-size:11px;gap:2px}.pt-s2{max-width:74px;overflow:hidden;text-overflow:ellipsis}' +
     '.pt-loc .pt-r{grid-template-columns:24px minmax(0,96px) 30px}' +
@@ -1028,5 +1030,34 @@
     setInterval(function () { if (last) { [].forEach.call(box.querySelectorAll('.pg-fresh'), function (fr) { var t = ago(last.updated); fr.lastChild.textContent = fr.classList.contains('pg-fm') ? t.replace(/^Updated /, '') : t; }); } }, 60000);
   }
 
-  window.PPGuide = { render: render };
+  // every score, local and national, day by day (the page the scores ticker opens)
+  function allScores(box, opts) {
+    if (!box) return;
+    var o = { all: true, target: '_top' };
+    if (!document.getElementById('ppg-css')) { var s2 = document.createElement('style'); s2.id = 'ppg-css'; s2.textContent = CSS + PRO_CSS; document.head.appendChild(s2); }
+    var lastRun = 0, live = false;
+    function go() {
+      Promise.all([load(), proLoad()]).then(function (r) {
+        var lo = dayKey(new Date(Date.now() - 864e5)), hi = dayKey(new Date(Date.now() + 3 * 864e5));
+        var local = localTickerGames(r[0]).filter(function (g) { var k = dayKey(new Date(g.start)); return k >= lo && k <= hi; });
+        var all = local.concat(r[1].pro);
+        live = all.some(function (g) { return g.state === 'in'; });
+        box.innerHTML = '';
+        var head = el('div', 'pt-allh'); head.appendChild(el('div', 'pt-allk', 'Powerplay Windsor'));
+        head.appendChild(el('h1', null, 'Scores')); head.appendChild(el('div', 'pt-alls', 'Every local game and every NHL, NFL, NBA, MLB, CFL and PWHL score, updated live.'));
+        box.appendChild(head);
+        var sc = proScores({ pro: all }, o.target, o); sc.style.display = 'block'; box.appendChild(sc);
+        if (opts && opts.onDraw) opts.onDraw();
+      });
+    }
+    function tick() { if (Date.now() - lastRun >= (live ? 60000 : 5 * 60000)) { lastRun = Date.now(); go(); } }
+    tick(); setInterval(tick, 15000);
+  }
+  PRO_CSS += '.pt-allh{margin:4px 0 6px}.pt-allk{color:#e8b021;font-size:11.5px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}' +
+    '.pt-allh h1{margin:2px 0 2px;font-size:30px;font-weight:900;letter-spacing:.02em}.pt-alls{color:#9fb0cf;font-size:13px}' +
+    '.pt-allh + .pt-scores .pt-grid .pt-card{display:grid;grid-template-columns:minmax(0,1fr);gap:6px;padding:8px 10px}' +
+    '.pt-allh + .pt-scores .pt-grid .pt-st{order:-1;display:flex;justify-content:flex-start;align-items:center;gap:6px;white-space:nowrap;overflow:hidden}' +
+    '.pt-allh + .pt-scores .pt-grid .pt-st .pt-lgn{margin-left:auto}.pt-allh + .pt-scores .pt-grid .pt-s2{max-width:none}' +
+    '.pt-allh + .pt-scores .pt-grid .pt-r{grid-template-columns:22px minmax(0,1fr) 32px}';
+  window.PPGuide = { render: render, allScores: allScores };
 })();
