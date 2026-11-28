@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T21:02:16-05:00",
+ "updated": "2026-11-27T21:21:09-05:00",
  "today": "2026-11-27",
  "range": [
   "2026-11-24",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 33
   },
   "club_news": {
    "ok": true,
@@ -275,7 +275,7 @@
    "our_score": 0,
    "opp_score": 1,
    "result": null,
-   "note": "12:53 3rd",
+   "note": "02:55 3rd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29245/"
    }
@@ -289,11 +289,11 @@
    "home_away": "A",
    "opponent": "Listowel Cyclones",
    "location": "Steve Kerr M.C., Listowel, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 1,
+   "opp_score": 3,
    "result": null,
-   "note": "",
+   "note": "20:00 3rd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15729"
    },
@@ -347,15 +347,14 @@
    "home_away": "H",
    "opponent": "Brock Badgers",
    "location": "Toldo Lancer Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
-   "note": "In progress",
+   "note": "Set 1",
    "links": {
-    "gamecentre": "https://oua.tv/?school=Windsor",
-    "watch": "https://oua.tv/?school=Windsor",
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=174"
+    "gamecentre": "https://sidearmstats.com/uwindsor/mvball/",
+    "watch": "https://oua.tv/?school=Windsor"
    }
   },
   {
@@ -2784,19 +2783,6 @@
    "source": "Sportsnet"
   },
   {
-   "league": "nhl",
-   "headline": "Flyers’ Matvei Michkov doesn’t play vs. Canucks after violating team rules",
-   "summary": "The Philadelphia Flyers are keeping Matvei Michkov out of the lineup for Friday’s game against the Vancouver Canucks.",
-   "published": "2026-11-27T13:05-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/michkov.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 2,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/flyers-matvei-michkov-wont-play-vs-canucks-after-violating-team-rules/",
-   "source": "Sportsnet"
-  },
-  {
    "league": "nfl",
    "headline": "Chargers’ Herbert ruled out against Patriots, Uiagalelei to make career debut",
    "summary": "",
@@ -3888,7 +3874,7 @@
       "otl": 1,
       "pts": 35,
       "gf": 103,
-      "ga": 69,
+      "ga": 70,
       "strk": "W3"
      },
      {
@@ -3899,8 +3885,8 @@
       "l": 9,
       "otl": 1,
       "pts": 31,
-      "gf": 108,
-      "ga": 92,
+      "gf": 109,
+      "ga": 93,
       "strk": "L1"
      },
      {
@@ -3911,8 +3897,8 @@
       "l": 11,
       "otl": 0,
       "pts": 30,
-      "gf": 101,
-      "ga": 88,
+      "gf": 102,
+      "ga": 89,
       "strk": "W2"
      },
      {
@@ -3959,14 +3945,14 @@
      {
       "name": "North Bay Battalion",
       "abbr": "NB",
-      "gp": 24,
-      "w": 10,
+      "gp": 25,
+      "w": 11,
       "l": 11,
       "otl": 3,
-      "pts": 23,
+      "pts": 25,
       "gf": 93,
       "ga": 90,
-      "strk": "W3"
+      "strk": "W4"
      },
      {
       "name": "Niagara IceDogs",
@@ -3983,14 +3969,14 @@
      {
       "name": "Brampton Steelheads",
       "abbr": "BRAM",
-      "gp": 24,
+      "gp": 25,
       "w": 6,
-      "l": 15,
+      "l": 16,
       "otl": 3,
       "pts": 15,
       "gf": 66,
       "ga": 106,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Barrie Colts",
@@ -4041,8 +4027,8 @@
       "l": 8,
       "otl": 1,
       "pts": 29,
-      "gf": 91,
-      "ga": 72,
+      "gf": 93,
+      "ga": 73,
       "strk": "L3"
      },
      {
@@ -4065,8 +4051,8 @@
       "l": 13,
       "otl": 2,
       "pts": 22,
-      "gf": 94,
-      "ga": 104,
+      "gf": 95,
+      "ga": 106,
       "strk": "W2"
      }
     ]
@@ -4082,8 +4068,8 @@
       "l": 5,
       "otl": 0,
       "pts": 38,
-      "gf": 108,
-      "ga": 71,
+      "gf": 110,
+      "ga": 73,
       "strk": "L1"
      },
      {
@@ -4118,8 +4104,8 @@
       "l": 9,
       "otl": 3,
       "pts": 29,
-      "gf": 85,
-      "ga": 89,
+      "gf": 87,
+      "ga": 91,
       "strk": "L1"
      },
      {
@@ -4130,7 +4116,7 @@
       "l": 12,
       "otl": 4,
       "pts": 20,
-      "gf": 64,
+      "gf": 65,
       "ga": 100,
       "strk": "L2"
      }
@@ -4149,7 +4135,7 @@
       "l": 5,
       "otl": 1,
       "pts": 45,
-      "gf": 122,
+      "gf": 123,
       "ga": 76,
       "strk": "W6"
      },
@@ -4209,7 +4195,7 @@
       "l": 12,
       "otl": 0,
       "pts": 26,
-      "gf": 89,
+      "gf": 90,
       "ga": 89,
       "strk": "W1"
      },
@@ -4246,7 +4232,7 @@
       "otl": 3,
       "pts": 19,
       "gf": 74,
-      "ga": 125,
+      "ga": 126,
       "strk": "L3"
      },
      {
@@ -4269,7 +4255,7 @@
       "l": 17,
       "otl": 2,
       "pts": 14,
-      "gf": 86,
+      "gf": 87,
       "ga": 126,
       "strk": "L4"
      },
@@ -4310,7 +4296,7 @@
       "l": 3,
       "otl": 3,
       "pts": 47,
-      "gf": 119,
+      "gf": 120,
       "ga": 59,
       "strk": "W5"
      },
@@ -4323,7 +4309,7 @@
       "otl": 2,
       "pts": 46,
       "gf": 116,
-      "ga": 60,
+      "ga": 61,
       "strk": "W3"
      },
      {
@@ -4383,7 +4369,7 @@
       "otl": 1,
       "pts": 21,
       "gf": 79,
-      "ga": 133,
+      "ga": 134,
       "strk": "W1"
      },
      {
@@ -4407,7 +4393,7 @@
       "otl": 2,
       "pts": 18,
       "gf": 80,
-      "ga": 140,
+      "ga": 141,
       "strk": "L2"
      },
      {
@@ -4449,7 +4435,7 @@
       "l": 4,
       "otl": 0,
       "pts": 36,
-      "gf": 133,
+      "gf": 134,
       "ga": 55,
       "strk": "W1"
      },
@@ -4473,7 +4459,7 @@
       "l": 4,
       "otl": 2,
       "pts": 34,
-      "gf": 92,
+      "gf": 93,
       "ga": 55,
       "strk": "L1"
      },
@@ -4570,7 +4556,7 @@
       "otl": 0,
       "pts": 14,
       "gf": 79,
-      "ga": 106,
+      "ga": 107,
       "strk": "L1"
      },
      {
@@ -4582,7 +4568,7 @@
       "otl": 1,
       "pts": 3,
       "gf": 49,
-      "ga": 146,
+      "ga": 147,
       "strk": "L9"
      }
     ]
@@ -4610,7 +4596,7 @@
       "l": 1,
       "otl": 1,
       "pts": 37,
-      "gf": 111,
+      "gf": 113,
       "ga": 59,
       "strk": "W6"
      },
@@ -4683,7 +4669,7 @@
       "otl": 0,
       "pts": 18,
       "gf": 86,
-      "ga": 106,
+      "ga": 108,
       "strk": "L1"
      },
      {
@@ -4718,7 +4704,7 @@
       "l": 18,
       "otl": 2,
       "pts": 8,
-      "gf": 69,
+      "gf": 70,
       "ga": 134,
       "strk": "L3"
      },
@@ -4731,7 +4717,7 @@
       "otl": 0,
       "pts": 6,
       "gf": 51,
-      "ga": 136,
+      "ga": 137,
       "strk": "L5"
      }
     ]
