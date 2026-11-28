@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T22:03:15-05:00",
+ "updated": "2026-11-27T22:18:09-05:00",
  "today": "2026-11-27",
  "range": [
   "2026-11-24",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 34
+   "count": 35
   },
   "club_news": {
    "ok": true,
@@ -348,10 +348,10 @@
    "opponent": "Brock Badgers",
    "location": "Toldo Lancer Centre",
    "status": "live",
-   "our_score": 1,
+   "our_score": 2,
    "opp_score": 0,
    "result": null,
-   "note": "Set 2",
+   "note": "Set 3",
    "links": {
     "gamecentre": "https://sidearmstats.com/uwindsor/mvball/",
     "watch": "https://oua.tv/?school=Windsor"
@@ -2825,6 +2825,19 @@
   },
   {
    "league": "mlb",
+   "headline": "Report: Japanese RHP Hiromi Itoh agrees to contract with Cubs",
+   "summary": "",
+   "published": "2026-11-27T21:45-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP166094959.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/report-japanese-rhp-hiromi-itoh-agrees-to-contract-with-cubs/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
    "headline": "‘Opens up some potential’: Fans react to Jazz Chisholm Jr. joining Blue Jays",
    "summary": "",
    "published": "2026-11-27T16:21-05:00",
@@ -3946,11 +3959,11 @@
      {
       "name": "Sudbury Wolves",
       "abbr": "SBY",
-      "gp": 24,
+      "gp": 25,
       "w": 14,
       "l": 9,
-      "otl": 1,
-      "pts": 29,
+      "otl": 2,
+      "pts": 30,
       "gf": 88,
       "ga": 78,
       "strk": "L4"
@@ -3994,14 +4007,14 @@
      {
       "name": "Barrie Colts",
       "abbr": "BAR",
-      "gp": 26,
-      "w": 5,
+      "gp": 27,
+      "w": 6,
       "l": 18,
       "otl": 3,
-      "pts": 13,
+      "pts": 15,
       "gf": 62,
       "ga": 104,
-      "strk": "L4"
+      "strk": "W1"
      }
     ]
    },
@@ -4074,6 +4087,18 @@
     "group": "Midwest Division",
     "teams": [
      {
+      "name": "Guelph Storm",
+      "abbr": "GUE",
+      "gp": 25,
+      "w": 20,
+      "l": 5,
+      "otl": 0,
+      "pts": 40,
+      "gf": 112,
+      "ga": 73,
+      "strk": "W1"
+     },
+     {
       "name": "Kitchener Rangers",
       "abbr": "KIT",
       "gp": 27,
@@ -4084,18 +4109,6 @@
       "gf": 99,
       "ga": 72,
       "strk": "W10"
-     },
-     {
-      "name": "Guelph Storm",
-      "abbr": "GUE",
-      "gp": 24,
-      "w": 19,
-      "l": 5,
-      "otl": 0,
-      "pts": 38,
-      "gf": 112,
-      "ga": 73,
-      "strk": "L1"
      },
      {
       "name": "London Knights",
@@ -4112,14 +4125,14 @@
      {
       "name": "Erie Otters",
       "abbr": "ER",
-      "gp": 25,
+      "gp": 26,
       "w": 13,
-      "l": 9,
+      "l": 10,
       "otl": 3,
       "pts": 29,
       "gf": 87,
       "ga": 93,
-      "strk": "L1"
+      "strk": "L2"
      },
      {
       "name": "Owen Sound Attack",
@@ -4143,14 +4156,14 @@
      {
       "name": "Markham Royals",
       "abbr": "MAR",
-      "gp": 28,
-      "w": 22,
+      "gp": 29,
+      "w": 23,
       "l": 5,
       "otl": 1,
-      "pts": 45,
+      "pts": 47,
       "gf": 126,
       "ga": 76,
-      "strk": "W6"
+      "strk": "W7"
      },
      {
       "name": "Cobourg Cougars",
@@ -4160,7 +4173,7 @@
       "l": 5,
       "otl": 2,
       "pts": 42,
-      "gf": 125,
+      "gf": 126,
       "ga": 96,
       "strk": "L1"
      },
@@ -4233,7 +4246,7 @@
       "otl": 4,
       "pts": 24,
       "gf": 106,
-      "ga": 110,
+      "ga": 111,
       "strk": "L1"
      },
      {
@@ -4292,14 +4305,14 @@
      {
       "name": "Collingwood Blues",
       "abbr": "COL",
-      "gp": 29,
-      "w": 24,
+      "gp": 30,
+      "w": 25,
       "l": 5,
       "otl": 0,
-      "pts": 48,
+      "pts": 50,
       "gf": 161,
       "ga": 69,
-      "strk": "L1"
+      "strk": "W1"
      },
      {
       "name": "King Rebellion",
@@ -4328,14 +4341,14 @@
      {
       "name": "Burlington Cougars",
       "abbr": "BUR",
-      "gp": 29,
+      "gp": 30,
       "w": 20,
-      "l": 7,
+      "l": 8,
       "otl": 2,
       "pts": 42,
       "gf": 151,
       "ga": 98,
-      "strk": "W2"
+      "strk": "L1"
      },
      {
       "name": "Toronto Patriots",
@@ -4376,14 +4389,14 @@
      {
       "name": "Mississauga Chargers",
       "abbr": "MIS",
-      "gp": 27,
+      "gp": 28,
       "w": 10,
-      "l": 16,
+      "l": 17,
       "otl": 1,
       "pts": 21,
       "gf": 79,
       "ga": 137,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Georgetown Raiders",
@@ -4453,6 +4466,18 @@
       "strk": "W2"
      },
      {
+      "name": "St. Thomas Stars",
+      "abbr": "STT",
+      "gp": 23,
+      "w": 17,
+      "l": 4,
+      "otl": 2,
+      "pts": 36,
+      "gf": 95,
+      "ga": 56,
+      "strk": "W1"
+     },
+     {
       "name": "Chatham Maroons",
       "abbr": "CHA",
       "gp": 22,
@@ -4463,18 +4488,6 @@
       "gf": 107,
       "ga": 63,
       "strk": "W6"
-     },
-     {
-      "name": "St. Thomas Stars",
-      "abbr": "STT",
-      "gp": 22,
-      "w": 16,
-      "l": 4,
-      "otl": 2,
-      "pts": 34,
-      "gf": 95,
-      "ga": 56,
-      "strk": "L1"
      },
      {
       "name": "Listowel Cyclones",
@@ -4575,14 +4588,14 @@
      {
       "name": "Sarnia Legionnaires",
       "abbr": "SAR",
-      "gp": 22,
+      "gp": 23,
       "w": 1,
-      "l": 20,
+      "l": 21,
       "otl": 1,
       "pts": 3,
       "gf": 50,
       "ga": 149,
-      "strk": "L9"
+      "strk": "L10"
      }
     ]
    },
