@@ -22,6 +22,7 @@
   .head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
   h2 { margin: 0; font: 400 26px/1 'Bebas Neue', Impact, 'Arial Narrow', sans-serif; letter-spacing: .03em; text-transform: uppercase; }
   h2 em { font-style: normal; color: var(--accent); }
+  .alls { display: flex; gap: 16px; } @media (max-width: 700px) { .alls { gap: 14px; } .head { flex-wrap: wrap; row-gap: 4px; } }
   .all { color: var(--accent); font-weight: 800; font-size: 12.5px; letter-spacing: .05em; text-transform: uppercase; white-space: nowrap; }
   .row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
   .card { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
@@ -45,7 +46,7 @@
 </head>
 <body>
 <div class="wrap">
-  <div class="head"><h2>More from <em>Powerplay</em></h2><a class="all" href="https://www.powerplaywindsor.com/" target="_top">Home page ›</a></div>
+  <div class="head"><h2>More from <em>Powerplay</em></h2><span class="alls"><a class="all" href="https://www.powerplaywindsor.com/scores-standings?tab=allscores" target="_top">Scores ›</a><a class="all" href="https://www.powerplaywindsor.com/" target="_top">Home page ›</a></span></div>
   <div class="row" id="row"></div>
   <div class="teams">
     <span class="lbl">Local Teams</span>
