@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-28T13:17:02-05:00",
+ "updated": "2026-11-28T13:36:34-05:00",
  "today": "2026-11-28",
  "range": [
   "2026-11-25",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 37
+   "count": 36
   },
   "club_news": {
    "ok": true,
@@ -238,7 +238,7 @@
    "result": "L",
    "note": "",
    "links": {
-    "boxscore": "https://golancers.ca/schedule.aspx?schedule=233"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6295"
    }
   },
   {
@@ -312,6 +312,7 @@
    "result": "L",
    "note": "",
    "links": {
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6350",
     "recap": "https://golancers.ca/news/2026/11/27/mens-hockey-mens-hockey-drops-friday-night-contest-to-gryphons.aspx"
    }
   },
@@ -328,9 +329,9 @@
    "our_score": 3,
    "opp_score": 2,
    "result": "W",
-   "note": "",
+   "note": "25-18, 21-25, 27-25, 29-27, 10-15",
    "links": {
-    "boxscore": "https://golancers.ca/schedule.aspx?schedule=232"
+    "boxscore": "https://golancers.ca/boxscore.aspx?id=6270"
    }
   },
   {
@@ -365,10 +366,11 @@
    "our_score": null,
    "opp_score": null,
    "result": null,
-   "note": "",
+   "note": "In progress",
    "links": {
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=174",
-    "watch": "https://oua.tv/?school=Windsor"
+    "gamecentre": "https://oua.tv/?school=Windsor",
+    "watch": "https://oua.tv/?school=Windsor",
+    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=174"
    }
   },
   {
@@ -2638,6 +2640,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nfl",
+   "headline": "NFL Week 12 preview: Purdy-less 49ers host Seahawks",
+   "summary": "Mac Jones is being thrust into the spotlight Sunday as the 49ers host the Seahawks. Kellen Forrest breaks down how Jones might fare in the big NFC West clash and more in his Week 12 preview.",
+   "published": "2026-11-28T13:22-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/10/SN-TEMPLATE-5.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/nfl-week-12-preview-purdy-less-49ers-host-seahawks/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Oilers’ top power-play unit ‘not good enough’ in fifth straight loss",
    "summary": "The Oilers felt like the game should have been out of reach by the third period. Hockey’s best power play simply didn’t produce — that unit owns this loss.",
@@ -2648,21 +2663,6 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/oilers-top-power-play-unit-not-good-enough-in-fifth-straight-loss/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Scottie Barnes shines in win, but Raptors eliminated from NBA Cup",
-   "summary": "The Raptors didn’t advance in the NBA Cup, but the biggest priority on Friday was getting a long-awaited win on home court. Mission accomplished.",
-   "published": "2026-11-28T00:30-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/barnes-2.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/scottie-barnes-shines-in-win-but-raptors-eliminated-from-nba-cup/",
    "source": "Sportsnet"
   },
   {
@@ -2710,6 +2710,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Canucks place centre Elias Pettersson on injured reserve",
+   "summary": "The Vancouver Canucks have placed star centre Elias Pettersson on injured reserve with an upper-body injury.",
+   "published": "2026-11-28T13:23-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-6-5.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/vancouver-canucks-place-centre-elias-pettersson-on-injured-reserve/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Devils’ Connor Hellebuyck to start against Jets",
    "summary": "Connor Hellebuyck will get a chance to play against his former team.",
    "published": "2026-11-27T12:54-05:00",
@@ -2732,6 +2745,19 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/right-hander-tyler-mahle-signs-two-year-40m-deal-with-braves/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Premier League roundup: Man United jeered by fans after second straight loss",
+   "summary": "Manchester United fans jeered and left early as Mauricio Pochettino’s first home game as head coach ended in a 4-0 loss to Brentford in the Premier League on Saturday.",
+   "published": "2026-11-28T13:31-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-7-5.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/premier-league/article/premier-league-roundup-man-united-jeered-by-fans-after-second-straight-loss/",
    "source": "Sportsnet"
   },
   {
@@ -2761,6 +2787,60 @@
    "source": "Sportsnet"
   },
   {
+   "league": "mlb",
+   "headline": "MLB off-season transaction tracker: The top free-agent signings and trades",
+   "summary": "",
+   "published": "2026-11-19T19:57-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/Kevin-Gausman.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/mlb-off-season-transaction-tracker-the-top-free-agent-signings-and-trades/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "MLB’s top remaining free agents: Suzuki, Arozarena headline list",
+   "summary": "It’s a good time to take stock of the best players remaining for teams looking to do some weekend shopping.",
+   "published": "2026-11-27T08:33-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Seiya-Suzuki.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/mlbs-top-remaining-free-agents-suzuki-arozarena-headline-list/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "Report: Loveland expected to avoid IR, week-to-week with MCL sprain",
+   "summary": "",
+   "published": "2026-11-28T13:28-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Colston-Loveland.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/report-loveland-expected-to-avoid-ir-week-to-week-with-mcl-sprain/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nba",
+   "headline": "Scottie Barnes shines in win, but Raptors eliminated from NBA Cup",
+   "summary": "The Raptors didn’t advance in the NBA Cup, but the biggest priority on Friday was getting a long-awaited win on home court. Mission accomplished.",
+   "published": "2026-11-28T00:30-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/barnes-2.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/scottie-barnes-shines-in-win-but-raptors-eliminated-from-nba-cup/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nba",
    "headline": "Raptors to play Bucks, Hornets after being eliminated from NBA Cup",
    "summary": "",
@@ -2786,19 +2866,6 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/lakers-luka-doncic-shoved-by-fan-after-loss-to-spurs/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "MLB off-season transaction tracker: The top free-agent signings and trades",
-   "summary": "",
-   "published": "2026-11-19T19:57-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/Kevin-Gausman.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/mlb-off-season-transaction-tracker-the-top-free-agent-signings-and-trades/",
    "source": "Sportsnet"
   },
   {
@@ -2924,6 +2991,19 @@
   },
   {
    "league": "other",
+   "headline": "European roundup: Bayern stays unbeaten in Bundesliga",
+   "summary": "Bayern Munich overcame an injury crisis and a red card for captain Joshua Kimmich to emerge unbeaten in the Bundesliga on Saturday, when Manchester United, Real Madrid, Paris Saint-Germain, Lazio and Inter Milan were all",
+   "published": "2026-11-28T12:33-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Bayern-Munich.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/soccer/article/european-roundup-bayern-stay-unbeaten-in-bundesliga/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
    "headline": "Alcaraz, Spain through to Davis Cup final after win over Britain",
    "summary": "Carlos Alcaraz powered Spain to the Davis Cup final on Saturday and it will play Italy for the title.",
    "published": "2026-11-28T10:15-05:00",
@@ -2998,103 +3078,6 @@
    "sn_team_count": 2,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/inspired-steelers-move-on-from-rodgers-exit-with-win-over-broncos/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "AP source: Japanese RHP Hiromi Itoh agrees to contract with Cubs",
-   "summary": "",
-   "published": "2026-11-27T21:45-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP166094959.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/report-japanese-rhp-hiromi-itoh-agrees-to-contract-with-cubs/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "‘Opens up some potential’: Fans react to Jazz Chisholm Jr. joining Blue Jays",
-   "summary": "",
-   "published": "2026-11-27T16:21-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/10/CP175101366.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/opens-up-some-potential-fans-react-to-jazz-chisholm-jr-joining-blue-jays/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "MLB’s top remaining free agents: Suzuki, Arozarena headline list",
-   "summary": "It’s a good time to take stock of the best players remaining for teams looking to do some weekend shopping.",
-   "published": "2026-11-27T08:33-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Seiya-Suzuki.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/mlbs-top-remaining-free-agents-suzuki-arozarena-headline-list/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "Blue Jays make Kaima Taira signing offical",
-   "summary": "Kaima Taira is officially a member of the Toronto Blue Jays.",
-   "published": "2026-11-27T14:46-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/kaima-taira-1.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/blue-jays-make-kaima-taira-signing-offical/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Matchups set for NBA Cup knockout round",
-   "summary": "Friday’s slate of games wrapped up NBA Cup group action and finalized the field for the knockout stage of the fourth edition of the league’s in-season tourney.",
-   "published": "2026-11-28T00:18-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/celts.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/matchups-set-for-nba-cup-knockout-round/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "NBA Cup roundup: Grizzlies beat Timberwolves to win group",
-   "summary": "",
-   "published": "2026-11-28T00:08-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP177350892.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/nba-cup-roundup-grizzlies-beat-timberwolves-to-win-group/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nba",
-   "headline": "Raptors’ Ja’Kobe Walter exits vs. Nets with quad injury",
-   "summary": "Shooting guard Ja’Kobe Walter exited Friday’s game against the Brooklyn Nets after suffering a right quad contusion, the team announced.",
-   "published": "2026-11-27T21:31-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/JK.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Raptors"
-   ],
-   "sn_team_count": 1,
-   "sport": "Basketball",
-   "url": "https://www.sportsnet.ca/nba/article/raptors-jakobe-walter-exits-vs-nets-with-quad-injury/",
    "source": "Sportsnet"
   },
   {
