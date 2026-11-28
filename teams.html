@@ -237,6 +237,12 @@
     /* phones: no title; local teams on the top row, pro leagues underneath, all square-cornered buttons spread evenly */
     .bar .lfull { display: none; } .bar .lshort { display: inline; }
   }
+  /* phones (and iPhones' wider system font): tables always fit. Fixed columns: the name takes a third, the numbers share the rest */
+  @media (max-width: 480px) { .tscroll { overflow-x: visible; } table, .sgrid table { table-layout: fixed; font-size: 11.5px; }
+    th, td, .sgrid th, .sgrid td { padding: 5px 2px; overflow: hidden; text-overflow: ellipsis; }
+    th:first-child, td:first-child { width: 34%; } th, .sgrid th { font-size: 9.5px; letter-spacing: 0; white-space: normal; overflow: visible; overflow-wrap: anywhere; line-height: 1.15; vertical-align: bottom; } }
+  /* phones: the team page's tab strip (News, Schedule, Standings, Stats) never runs into the next box */
+  @media (max-width: 560px) { .ttabs button { font-size: clamp(9px, 2.7vw, 11px); letter-spacing: 0; padding: 9px 1px; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; } }
 </style>
 </head>
 <body>
