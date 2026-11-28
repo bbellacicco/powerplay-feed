@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T21:32:01-05:00",
+ "updated": "2026-11-27T21:48:46-05:00",
  "today": "2026-11-27",
  "range": [
   "2026-11-24",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -290,7 +290,7 @@
    "opponent": "Listowel Cyclones",
    "location": "Steve Kerr M.C., Listowel, ON",
    "status": "live",
-   "our_score": 3,
+   "our_score": 4,
    "opp_score": 3,
    "result": null,
    "note": "10:56 3rd",
@@ -348,10 +348,10 @@
    "opponent": "Brock Badgers",
    "location": "Toldo Lancer Centre",
    "status": "live",
-   "our_score": 0,
+   "our_score": 1,
    "opp_score": 0,
    "result": null,
-   "note": "Set 1",
+   "note": "Set 2",
    "links": {
     "gamecentre": "https://sidearmstats.com/uwindsor/mvball/",
     "watch": "https://oua.tv/?school=Windsor"
@@ -2688,6 +2688,21 @@
    "source": "Sportsnet"
   },
   {
+   "league": "nba",
+   "headline": "Raptors’ Ja’Kobe Walter exits vs. Nets with quad injury",
+   "summary": "Shooting guard Ja’Kobe Walter exited Friday’s game against the Brooklyn Nets after suffering a right quad contusion, the team announced.",
+   "published": "2026-11-27T21:31-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/JK.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Raptors"
+   ],
+   "sn_team_count": 1,
+   "sport": "Basketball",
+   "url": "https://www.sportsnet.ca/nba/article/raptors-jakobe-walter-exits-vs-nets-with-quad-injury/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Senators rout Lightning in historic win for Linus Ullmark",
    "summary": "Linus Ullmark stopped 18 shots, Michael Amadio had a goal and two assists and Tim Stutzle scored twice as the Ottawa Senators defeated the Tampa Bay Lightning 6-2 on Friday.",
@@ -2711,19 +2726,6 @@
    "sn_team_count": 2,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/flames-squander-lead-against-devils-as-jack-hughes-steals-spotlight/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nfl",
-   "headline": "49ers rule out QB Brock Purdy vs. Seahawks, Mac Jones to start",
-   "summary": "QB Brock Purdy has been ruled out for Sunday’s game against the Seattle Seahawks, putting Mac Jones in line to start, head coach Kyle Shanahan announced Friday.",
-   "published": "2026-11-27T17:37-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-13-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Football",
-   "url": "https://www.sportsnet.ca/nfl/article/49ers-rule-out-qb-brock-purdy-vs-seahawks-mac-jones-to-start/",
    "source": "Sportsnet"
   },
   {
@@ -2780,6 +2782,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/friday-four-whats-behind-capitals-slow-start/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nfl",
+   "headline": "49ers rule out QB Brock Purdy vs. Seahawks, Mac Jones to start",
+   "summary": "QB Brock Purdy has been ruled out for Sunday’s game against the Seattle Seahawks, putting Mac Jones in line to start, head coach Kyle Shanahan announced Friday.",
+   "published": "2026-11-27T17:37-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/Sportsnet-frame-13-1.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Football",
+   "url": "https://www.sportsnet.ca/nfl/article/49ers-rule-out-qb-brock-purdy-vs-seahawks-mac-jones-to-start/",
    "source": "Sportsnet"
   },
   {
@@ -3878,26 +3893,26 @@
      {
       "name": "Kingston Frontenacs",
       "abbr": "KGN",
-      "gp": 25,
-      "w": 15,
+      "gp": 26,
+      "w": 16,
       "l": 9,
       "otl": 1,
-      "pts": 31,
+      "pts": 33,
       "gf": 109,
       "ga": 93,
-      "strk": "L1"
+      "strk": "W1"
      },
      {
       "name": "Peterborough Petes",
       "abbr": "PBO",
-      "gp": 26,
+      "gp": 27,
       "w": 15,
-      "l": 11,
+      "l": 12,
       "otl": 0,
       "pts": 30,
       "gf": 102,
       "ga": 89,
-      "strk": "W2"
+      "strk": "L1"
      },
      {
       "name": "Ottawa 67's",
@@ -3914,14 +3929,14 @@
      {
       "name": "Oshawa Generals",
       "abbr": "OSH",
-      "gp": 24,
+      "gp": 25,
       "w": 8,
-      "l": 11,
+      "l": 12,
       "otl": 5,
       "pts": 21,
       "gf": 77,
       "ga": 97,
-      "strk": "W1"
+      "strk": "L1"
      }
     ]
    },
@@ -3937,7 +3952,7 @@
       "otl": 1,
       "pts": 29,
       "gf": 88,
-      "ga": 77,
+      "ga": 78,
       "strk": "L4"
      },
      {
@@ -3955,13 +3970,13 @@
      {
       "name": "Niagara IceDogs",
       "abbr": "NIAG",
-      "gp": 23,
+      "gp": 24,
       "w": 10,
       "l": 10,
-      "otl": 3,
-      "pts": 23,
+      "otl": 4,
+      "pts": 24,
       "gf": 74,
-      "ga": 96,
+      "ga": 97,
       "strk": "L1"
      },
      {
@@ -3984,7 +3999,7 @@
       "l": 18,
       "otl": 3,
       "pts": 13,
-      "gf": 61,
+      "gf": 62,
       "ga": 104,
       "strk": "L4"
      }
@@ -4008,26 +4023,26 @@
      {
       "name": "Soo Greyhounds",
       "abbr": "SOO",
-      "gp": 26,
-      "w": 14,
+      "gp": 27,
+      "w": 15,
       "l": 10,
       "otl": 2,
-      "pts": 30,
+      "pts": 32,
       "gf": 92,
       "ga": 92,
-      "strk": "L3"
+      "strk": "W1"
      },
      {
       "name": "Flint Firebirds",
       "abbr": "FLNT",
-      "gp": 23,
-      "w": 14,
+      "gp": 24,
+      "w": 15,
       "l": 8,
       "otl": 1,
-      "pts": 29,
+      "pts": 31,
       "gf": 95,
       "ga": 73,
-      "strk": "L3"
+      "strk": "W1"
      },
      {
       "name": "Saginaw Spirit",
@@ -4044,14 +4059,14 @@
      {
       "name": "Sarnia Sting",
       "abbr": "SAR",
-      "gp": 25,
+      "gp": 26,
       "w": 10,
-      "l": 13,
+      "l": 14,
       "otl": 2,
       "pts": 22,
       "gf": 95,
       "ga": 108,
-      "strk": "W2"
+      "strk": "L1"
      }
     ]
    },
@@ -4066,7 +4081,7 @@
       "l": 5,
       "otl": 0,
       "pts": 38,
-      "gf": 111,
+      "gf": 112,
       "ga": 73,
       "strk": "L1"
      },
@@ -4085,14 +4100,14 @@
      {
       "name": "London Knights",
       "abbr": "LDN",
-      "gp": 24,
-      "w": 13,
+      "gp": 25,
+      "w": 14,
       "l": 8,
       "otl": 3,
-      "pts": 29,
-      "gf": 93,
+      "pts": 31,
+      "gf": 94,
       "ga": 90,
-      "strk": "W1"
+      "strk": "W2"
      },
      {
       "name": "Erie Otters",
@@ -4103,7 +4118,7 @@
       "otl": 3,
       "pts": 29,
       "gf": 87,
-      "ga": 92,
+      "ga": 93,
       "strk": "L1"
      },
      {
@@ -4133,7 +4148,7 @@
       "l": 5,
       "otl": 1,
       "pts": 45,
-      "gf": 124,
+      "gf": 126,
       "ga": 76,
       "strk": "W6"
      },
@@ -4282,8 +4297,8 @@
       "l": 5,
       "otl": 0,
       "pts": 48,
-      "gf": 159,
-      "ga": 68,
+      "gf": 160,
+      "ga": 69,
       "strk": "L1"
      },
      {
@@ -4295,7 +4310,7 @@
       "otl": 3,
       "pts": 47,
       "gf": 120,
-      "ga": 59,
+      "ga": 61,
       "strk": "W5"
      },
      {
@@ -4306,7 +4321,7 @@
       "l": 4,
       "otl": 2,
       "pts": 46,
-      "gf": 116,
+      "gf": 118,
       "ga": 61,
       "strk": "W3"
      },
@@ -4318,8 +4333,8 @@
       "l": 7,
       "otl": 2,
       "pts": 42,
-      "gf": 150,
-      "ga": 96,
+      "gf": 151,
+      "ga": 97,
       "strk": "W2"
      },
      {
@@ -4367,7 +4382,7 @@
       "otl": 1,
       "pts": 21,
       "gf": 79,
-      "ga": 135,
+      "ga": 137,
       "strk": "W1"
      },
      {
@@ -4433,7 +4448,7 @@
       "l": 4,
       "otl": 0,
       "pts": 36,
-      "gf": 134,
+      "gf": 137,
       "ga": 55,
       "strk": "W1"
      },
@@ -4457,7 +4472,7 @@
       "l": 4,
       "otl": 2,
       "pts": 34,
-      "gf": 93,
+      "gf": 94,
       "ga": 56,
       "strk": "L1"
      },
@@ -4470,7 +4485,19 @@
       "otl": 3,
       "pts": 29,
       "gf": 91,
-      "ga": 81,
+      "ga": 82,
+      "strk": "W1"
+     },
+     {
+      "name": "Stratford Warriors",
+      "abbr": "SFD",
+      "gp": 21,
+      "w": 13,
+      "l": 7,
+      "otl": 1,
+      "pts": 27,
+      "gf": 78,
+      "ga": 68,
       "strk": "W1"
      },
      {
@@ -4486,18 +4513,6 @@
       "strk": "W3"
      },
      {
-      "name": "Stratford Warriors",
-      "abbr": "SFD",
-      "gp": 20,
-      "w": 12,
-      "l": 7,
-      "otl": 1,
-      "pts": 25,
-      "gf": 78,
-      "ga": 68,
-      "strk": "L1"
-     },
-     {
       "name": "LaSalle Vipers",
       "abbr": "LAS",
       "gp": 22,
@@ -4505,7 +4520,7 @@
       "l": 10,
       "otl": 0,
       "pts": 24,
-      "gf": 69,
+      "gf": 70,
       "ga": 84,
       "strk": "W5"
      },
@@ -4554,7 +4569,7 @@
       "otl": 0,
       "pts": 14,
       "gf": 79,
-      "ga": 107,
+      "ga": 110,
       "strk": "L1"
      },
      {
@@ -4566,7 +4581,7 @@
       "otl": 1,
       "pts": 3,
       "gf": 50,
-      "ga": 147,
+      "ga": 148,
       "strk": "L9"
      }
     ]
@@ -4594,8 +4609,8 @@
       "l": 1,
       "otl": 1,
       "pts": 37,
-      "gf": 115,
-      "ga": 59,
+      "gf": 116,
+      "ga": 60,
       "strk": "W6"
      },
      {
@@ -4649,14 +4664,14 @@
      {
       "name": "Pelham Panthers",
       "abbr": "PEL",
-      "gp": 24,
+      "gp": 25,
       "w": 11,
-      "l": 10,
+      "l": 11,
       "otl": 3,
       "pts": 25,
       "gf": 82,
       "ga": 92,
-      "strk": "W1"
+      "strk": "L1"
      },
      {
       "name": "Port Colborne Sailors",
@@ -4666,8 +4681,8 @@
       "l": 12,
       "otl": 0,
       "pts": 18,
-      "gf": 86,
-      "ga": 110,
+      "gf": 87,
+      "ga": 111,
       "strk": "L1"
      },
      {
