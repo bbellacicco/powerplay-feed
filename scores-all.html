@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, indexifembedded">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scores | Powerplay Windsor</title>
+<!--
+  Every score in one place: our local teams first, then the NHL, NFL, NBA, MLB, CFL, PWHL and Big Ten, day by day
+  (today, what's next, then last night). Opened by a tap on the scores ticker (Local Hub ?tab=allscores).
+-->
+<style>
+  html, body { margin: 0; background: #0b1a33; color: #f2f5fb; font: 14px/1.35 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  .wrap { padding: 12px 40px 24px; }
+  @media (max-width: 700px) { .wrap { padding: 10px 12px 20px; } }
+</style>
+</head>
+<body>
+<div class="wrap" id="all"><div style="color:#9fb0cf;padding:20px 0">Loading scores&hellip;</div></div>
+<script>
+(function () {
+  var s = document.createElement('script'); s.src = 'guide.js?v=' + Math.floor(Date.now() / 6e5);
+  s.onload = function () { if (window.PPGuide && PPGuide.allScores) PPGuide.allScores(document.getElementById('all')); };
+  document.body.appendChild(s);
+})();
+// inside the Local Hub: report the height so nothing scrolls inside the page
+(function () {
+  if (window.parent === window || !/[?&]in=sports\b/.test(location.search)) return;
+  var css = document.createElement('style'); css.textContent = 'html,body{overflow:hidden!important;height:auto!important}';
+  document.head.appendChild(css);
+  var last = 0;
+  function send() {
+    var h = Math.ceil(document.body.getBoundingClientRect().height);
+    if (h && Math.abs(h - last) > 2) { last = h; try { parent.postMessage({ pp: 'height', h: h }, '*'); } catch (e) {} }
+  }
+  window.addEventListener('load', send); window.addEventListener('resize', send);
+  if (window.ResizeObserver) new ResizeObserver(send).observe(document.body);
+  setInterval(send, 1500); send();
+})();
+</script>
+</body>
+</html>
