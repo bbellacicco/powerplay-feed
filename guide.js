@@ -647,12 +647,22 @@
     'listowel cyclones': LOGO + 'junior/gohl-listowel-cyclones.png',
     'stratford warriors': LOGO + 'junior/gohl-stratford-warriors.png' };
   var HS_CREST = {"assumption": "acchs", "belle river": "brdhs", "brennan": "fjbhs", "cardinal carter": "ccss", "catholic central": "cchs", "erie migration": "em", "essex": "edhs", "herman": "hss", "holy names": "hnchs", "kennedy": "kci", "l'essor": "lss", "lajeunesse": "ejles", "lamothe-cadillac": "eslc", "leamington": "ldss", "maranatha": "mca", "massey": "vmss", "north star": "nshs", "riverside": "rss", "sandwich": "sss", "st. anne": "sachs", "st. joseph's": "sjchs", "ste. cecile": "ascis", "tecumseh vista": "tva", "umei": "umei", "villanova": "vcss", "walkerville": "wci", "westview": "wfa", "windsor islamic": "wihs"};
+  // OUA opponents (the Lancers' games): matched on the school's own word
+  var OUA_LOGO = [[/brock/, 'brock-badgers'], [/carleton/, 'carleton-ravens'], [/guelph/, 'guelph-gryphons'], [/lakehead/, 'lakehead-thunderwolves'],
+    [/laurier/, 'laurier-golden-hawks'], [/mcmaster/, 'mcmaster-marauders'], [/ottawa|gee-gees/, 'ottawa-gee-gees'], [/queen/, 'queens-gaels'],
+    [/\btmu\b|toronto metropolitan|ryerson/, 'tmu-bold'], [/varsity blues|^toronto$|university of toronto/, 'toronto-varsity-blues'],
+    [/waterloo/, 'waterloo-warriors'], [/western/, 'western-mustangs'], [/\byork\b/, 'york-lions']];
+  // OCAA opponents (the Saints' games)
+  var OCAA_LOGO = [[/conestoga/, 'conestoga-condors'], [/durham/, 'durham-lords'], [/humber/, 'humber-hawks'], [/lambton/, 'lambton-lions'],
+    [/mohawk/, 'mohawk-mountaineers'], [/niagara/, 'niagara-knights'], [/redeemer/, 'redeemer-royals'], [/sault/, 'sault-cougars'], [/seneca/, 'seneca-sting']];
   function localLogo(name, group) {
     var n = String(name || '').toLowerCase().replace(/\u2019/g, "'").trim();
     if (/spitfires/.test(n)) return LOGO + 'spitfires-logo.png';
     if (/lancers/.test(n)) return LOGO + 'lancers-logo.png';
     if (/st\.? clair|^saints$/.test(n) && group === 'saints') return LOGO + 'saints-logo.png';
     if (JR_LOGO[n]) return JR_LOGO[n];
+    if (group === 'saints') { for (var ci = 0; ci < OCAA_LOGO.length; ci++) if (OCAA_LOGO[ci][0].test(n)) return LOGO + 'ocaa/ocaa-' + OCAA_LOGO[ci][1] + '.png'; }
+    if (group === 'lancers') { for (var oi = 0; oi < OUA_LOGO.length; oi++) if (OUA_LOGO[oi][0].test(n)) return LOGO + 'oua/oua-' + OUA_LOGO[oi][1] + '.png'; }
     if (group === 'highschool') {
       var keys = Object.keys(HS_CREST).sort(function (a, b) { return b.length - a.length; });
       for (var i = 0; i < keys.length; i++) if (n.indexOf(keys[i]) >= 0) return LOGO + 'hs/' + HS_CREST[keys[i]] + '.png';
@@ -748,9 +758,21 @@
     var today = dayKey(new Date()), days = {};
     d.pro.forEach(function (g) { var k = dayKey(new Date(g.start)); (days[k] = days[k] || []).push(g); });
     var keys = Object.keys(days).sort();
-    keys = keys.filter(function (k) { return k >= today; }).concat(keys.filter(function (k) { return k < today; }).reverse());   // today first, then what's next, then last night
     if (!keys.length) { sec.appendChild(el('div', 'pt-none', 'No games on the schedule right now.')); return sec; }
+    // one day at a time: day buttons across the top (yesterday, today, the days ahead), opening on today
+    if (!o._day || keys.indexOf(o._day) < 0) o._day = keys.indexOf(today) >= 0 ? today : (keys.filter(function (k) { return k > today; })[0] || keys[keys.length - 1]);
+    var dbar = el('div', 'pt-days');
     keys.forEach(function (k) {
+      var b = el('button', 'pt-dbtn'); b.type = 'button';
+      b.appendChild(el('b', null, k === today ? 'Today' : k === dayKey(new Date(Date.now() - 864e5)) ? 'Yesterday' : k === dayKey(new Date(Date.now() + 864e5)) ? 'Tomorrow' : wd(k).slice(0, 3)));
+      b.appendChild(el('small', null, cpDate(k)));
+      b.setAttribute('aria-pressed', String(k === o._day));
+      b.onclick = function () { o._day = k; var n = proScores(d, target, o); n.style.display = sec.style.display; sec.replaceWith(n); };
+      dbar.appendChild(b);
+    });
+    sec.appendChild(dbar);
+    setTimeout(function () { var on = dbar.querySelector('[aria-pressed="true"]'); if (on && on.scrollIntoView) dbar.scrollLeft = Math.max(0, on.offsetLeft - 8); }, 0);
+    [o._day].forEach(function (k) {
       var name = k === today ? 'Today' : k === dayKey(new Date(Date.now() - 864e5)) ? 'Yesterday' : k === dayKey(new Date(Date.now() + 864e5)) ? 'Tomorrow' : wd(k);
       var h = el('div', 'pt-dh'); h.appendChild(el('b', null, name)); h.appendChild(el('span', null, cpDate(k) + ' \u00b7 ' + days[k].length + (days[k].length === 1 ? ' game' : ' games')));
       sec.appendChild(h);
@@ -861,6 +883,10 @@
     '.pt-mono{display:flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;color:#fff;font-size:12px;font-weight:900;box-shadow:inset 0 0 0 2px rgba(255,255,255,.18)}' +
     '.pt-scores{display:none}.showscores .pt-scores{display:block}.showscores .pt-news,.showscores .pt-wrap{display:none}.showscores .pt-dh:first-child{margin-top:2px}' +
     '.pt-dh{display:flex;align-items:baseline;gap:10px;margin:16px 0 8px}.pt-dh b{font-size:16px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}.pt-dh span{font-size:12.5px;color:#9fb0cf}' +
+    '.pt-days{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin:4px 0 6px;padding-bottom:2px}.pt-days::-webkit-scrollbar{display:none}' +
+    '.pt-dbtn{flex:none;font:inherit;text-align:center;color:#f2f5fb;background:#13264d;border:1px solid rgba(255,255,255,.14);border-radius:6px;padding:7px 12px;cursor:pointer;min-width:70px}' +
+    '.pt-dbtn b{display:block;font-size:13px}.pt-dbtn small{display:block;font-size:11px;color:#9fb0cf;font-weight:600}' +
+    '.pt-dbtn[aria-pressed="true"]{background:#fff;color:#0b1a33;border-color:#fff;box-shadow:inset 0 -3px 0 #e8b021}.pt-dbtn[aria-pressed="true"] small{color:#3a4a6b}' +
     '.pt-dl{margin:10px 0 6px;padding-left:8px;border-left:3px solid var(--c,#e8b021);font-size:12.5px;font-weight:900;letter-spacing:.08em;color:#cfd8ea}' +
     '.pt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));gap:8px}.pt-grid .pt-card{min-width:0}' +
     '@media (max-width:760px){.pt-grid{grid-template-columns:1fr 1fr;gap:6px}.pt-grid .pt-card{padding:8px}.pt-grid .pt-r{grid-template-columns:18px 34px 22px;font-size:13px}.pt-grid .pt-lg{width:18px;height:18px}}' +
