@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27T20:17:06-05:00",
+ "updated": "2026-11-27T20:32:07-05:00",
  "today": "2026-11-27",
  "range": [
   "2026-11-24",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 33
+   "count": 34
   },
   "club_news": {
    "ok": true,
@@ -274,9 +274,9 @@
    "location": "Kitchener Memorial Auditorium, Kitchener",
    "status": "live",
    "our_score": 0,
-   "opp_score": 0,
+   "opp_score": 1,
    "result": null,
-   "note": "09:08 2nd",
+   "note": "00:00 2nd",
    "links": {
     "gamecentre": "https://chl.ca/ohl-spitfires/gamecentre/29245/"
    }
@@ -290,11 +290,11 @@
    "home_away": "A",
    "opponent": "Listowel Cyclones",
    "location": "Steve Kerr M.C., Listowel, ON",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 1,
    "result": null,
-   "note": "",
+   "note": "20:00 2nd",
    "links": {
     "gamecentre": "https://www.gohl.ca/stats/game-center/15729"
    },
@@ -2626,15 +2626,15 @@
   },
   {
    "league": "nhl",
-   "headline": "Canadiens notebook: Guhle’s absence tests defensive depth, Demidov nears return",
-   "summary": "The Canadiens will be without Kaiden Guhle against the Golden Knights, adding to their defensive challenges with Mike Matheson already sidelined. Meanwhile, Ivan Demidov inches closer to a return as Montreal looks to get",
-   "published": "2026-11-27T17:11-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/11/CP173548270.jpg",
+   "headline": "Sources: Flyers’ Michkov scratched after another altercation with teammates",
+   "summary": "",
+   "published": "2026-11-27T20:19-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/03/Matvei-Michkov.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 1,
    "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/canadiens-notebook-guhles-absence-tests-defensive-depth-demidov-nears-return/",
+   "url": "https://www.sportsnet.ca/nhl/article/sources-flyers-michkov-scratched-after-another-altercation-with-teammates/",
    "source": "Sportsnet"
   },
   {
@@ -2678,6 +2678,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Canadiens notebook: Guhle’s absence tests defensive depth, Demidov nears return",
+   "summary": "The Canadiens will be without Kaiden Guhle against the Golden Knights, adding to their defensive challenges with Mike Matheson already sidelined. Meanwhile, Ivan Demidov inches closer to a return as Montreal looks to get",
+   "published": "2026-11-27T17:11-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/11/CP173548270.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/canadiens-notebook-guhles-absence-tests-defensive-depth-demidov-nears-return/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Senators rout Lightning in historic win for Linus Ullmark",
    "summary": "Linus Ullmark stopped 18 shots, Michael Amadio had a goal and two assists and Tim Stutzle scored twice as the Ottawa Senators defeated the Tampa Bay Lightning 6-2 on Friday.",
    "published": "2026-11-27T18:02-05:00",
@@ -2713,21 +2726,6 @@
    "sn_team_count": 1,
    "sport": "Football",
    "url": "https://www.sportsnet.ca/nfl/article/49ers-rule-out-qb-brock-purdy-vs-seahawks-mac-jones-to-start/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "‘Opens up some potential’: Fans react to Jazz Chisholm Jr. joining Blue Jays",
-   "summary": "",
-   "published": "2026-11-27T16:21-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/10/CP175101366.jpg",
-   "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
-   "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/opens-up-some-potential-fans-react-to-jazz-chisholm-jr-joining-blue-jays/",
    "source": "Sportsnet"
   },
   {
@@ -2823,6 +2821,21 @@
    "sn_team_count": 0,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/mlb-off-season-transaction-tracker-the-top-free-agent-signings-and-trades/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "mlb",
+   "headline": "‘Opens up some potential’: Fans react to Jazz Chisholm Jr. joining Blue Jays",
+   "summary": "",
+   "published": "2026-11-27T16:21-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2025/10/CP175101366.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/opens-up-some-potential-fans-react-to-jazz-chisholm-jr-joining-blue-jays/",
    "source": "Sportsnet"
   },
   {
@@ -3887,7 +3900,7 @@
       "l": 9,
       "otl": 1,
       "pts": 31,
-      "gf": 105,
+      "gf": 107,
       "ga": 92,
       "strk": "L1"
      },
@@ -3900,7 +3913,7 @@
       "otl": 0,
       "pts": 30,
       "gf": 101,
-      "ga": 85,
+      "ga": 87,
       "strk": "W2"
      },
      {
@@ -3924,7 +3937,7 @@
       "otl": 5,
       "pts": 21,
       "gf": 76,
-      "ga": 95,
+      "ga": 96,
       "strk": "W1"
      }
     ]
@@ -3952,7 +3965,7 @@
       "l": 11,
       "otl": 3,
       "pts": 23,
-      "gf": 90,
+      "gf": 91,
       "ga": 90,
       "strk": "W3"
      },
@@ -3964,8 +3977,8 @@
       "l": 10,
       "otl": 3,
       "pts": 23,
-      "gf": 72,
-      "ga": 94,
+      "gf": 74,
+      "ga": 95,
       "strk": "L1"
      },
      {
@@ -3977,7 +3990,7 @@
       "otl": 3,
       "pts": 15,
       "gf": 66,
-      "ga": 103,
+      "ga": 104,
       "strk": "L1"
      },
      {
@@ -4006,7 +4019,7 @@
       "otl": 3,
       "pts": 33,
       "gf": 94,
-      "ga": 79,
+      "ga": 80,
       "strk": "L1"
      },
      {
@@ -4017,7 +4030,7 @@
       "l": 10,
       "otl": 2,
       "pts": 30,
-      "gf": 90,
+      "gf": 91,
       "ga": 91,
       "strk": "L3"
      },
@@ -4070,7 +4083,7 @@
       "l": 5,
       "otl": 0,
       "pts": 38,
-      "gf": 107,
+      "gf": 108,
       "ga": 70,
       "strk": "L1"
      },
@@ -4082,7 +4095,7 @@
       "l": 6,
       "otl": 3,
       "pts": 37,
-      "gf": 98,
+      "gf": 99,
       "ga": 72,
       "strk": "W9"
      },
@@ -4094,8 +4107,8 @@
       "l": 8,
       "otl": 3,
       "pts": 29,
-      "gf": 91,
-      "ga": 88,
+      "gf": 92,
+      "ga": 90,
       "strk": "W1"
      },
      {
@@ -4107,7 +4120,7 @@
       "otl": 3,
       "pts": 29,
       "gf": 84,
-      "ga": 88,
+      "ga": 89,
       "strk": "L1"
      },
      {
@@ -4234,7 +4247,7 @@
       "otl": 3,
       "pts": 19,
       "gf": 74,
-      "ga": 124,
+      "ga": 125,
       "strk": "L3"
      },
      {
@@ -4257,7 +4270,7 @@
       "l": 17,
       "otl": 2,
       "pts": 14,
-      "gf": 85,
+      "gf": 86,
       "ga": 126,
       "strk": "L4"
      },
@@ -4437,7 +4450,7 @@
       "l": 4,
       "otl": 0,
       "pts": 36,
-      "gf": 131,
+      "gf": 132,
       "ga": 53,
       "strk": "W1"
      },
@@ -4497,7 +4510,7 @@
       "l": 7,
       "otl": 1,
       "pts": 25,
-      "gf": 76,
+      "gf": 77,
       "ga": 68,
       "strk": "L1"
      },
@@ -4558,7 +4571,7 @@
       "otl": 0,
       "pts": 14,
       "gf": 77,
-      "ga": 104,
+      "ga": 105,
       "strk": "L1"
      },
      {
@@ -4599,7 +4612,7 @@
       "otl": 1,
       "pts": 37,
       "gf": 111,
-      "ga": 57,
+      "ga": 58,
       "strk": "W6"
      },
      {
@@ -4659,7 +4672,7 @@
       "otl": 3,
       "pts": 25,
       "gf": 82,
-      "ga": 90,
+      "ga": 91,
       "strk": "W1"
      },
      {
@@ -4670,7 +4683,7 @@
       "l": 12,
       "otl": 0,
       "pts": 18,
-      "gf": 84,
+      "gf": 85,
       "ga": 106,
       "strk": "L1"
      },
