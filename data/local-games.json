@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-28T12:02:00-05:00",
+ "updated": "2026-11-28T12:24:32-05:00",
  "today": "2026-11-28",
  "range": [
   "2026-11-25",
@@ -103,7 +103,7 @@
   },
   "sportsnet": {
    "ok": true,
-   "count": 35
+   "count": 36
   },
   "club_news": {
    "ok": true,
@@ -342,15 +342,14 @@
    "home_away": "H",
    "opponent": "Brock Badgers",
    "location": "Toldo Lancer Centre",
-   "status": "upcoming",
-   "our_score": null,
-   "opp_score": null,
+   "status": "live",
+   "our_score": 0,
+   "opp_score": 0,
    "result": null,
-   "note": "In progress",
+   "note": "Set 1",
    "links": {
-    "gamecentre": "https://oua.tv/?school=Windsor",
-    "watch": "https://oua.tv/?school=Windsor",
-    "tickets": "https://golancers.universitytickets.com/w/default.aspx?cid=174"
+    "gamecentre": "https://sidearmstats.com/uwindsor/wvball/",
+    "watch": "https://oua.tv/?school=Windsor"
    }
   },
   {
@@ -2595,6 +2594,21 @@
  ],
  "more_news": [
   {
+   "league": "mlb",
+   "headline": "Blue Jays remain active as Adrian Morejon ponders next move",
+   "summary": "The market for left-handed relief is moving quickly — and the Blue Jays are squarely in the mix to land Adrian Morejon. Sportsnet’s Ben Nicholson-Smith has the latest on the free-agency picture.",
+   "published": "2026-11-28T11:37-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/adrian-morejon.jpg",
+   "video": false,
+   "teams": [
+    "Toronto Blue Jays"
+   ],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/blue-jays-remain-active-as-adrian-morejon-ponders-next-move/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nhl",
    "headline": "Quick Shifts: Maple Leafs in tricky spot with No. 3 goalie Akhtyamov",
    "summary": "At some point, the Maple Leafs will have to find out what they have in netminder Artur Akhtyamov, last season’s Calder Cup MVP. Sportsnet’s Luke Fox dives into Toronto’s goalie situation and more in his latest Quick Shif",
@@ -2611,18 +2625,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "mlb",
-   "headline": "Blue Jays remain active as Adrian Morejon ponders next move",
-   "summary": "The market for left-handed relief is moving quickly — and the Blue Jays are squarely in the mix to land Adrian Morejon. Sportsnet’s Ben Nicholson-Smith has the latest on the free-agency picture.",
-   "published": "2026-11-28T11:37-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/adrian-morejon.jpg",
+   "league": "other",
+   "headline": "Olympic, World Cup berths at stake for Canada in Concacaf W Championship",
+   "summary": "The Canadian women’s soccer team can kill two very big birds with one stone. @ John Molinaro explains what Canada will need to do to clinch Olympic and World Cup berths at this weekend’s Concacaf championship.",
+   "published": "2026-11-27T11:47-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/07/Cloe-Lacasse-1.jpg",
    "video": false,
-   "teams": [
-    "Toronto Blue Jays"
-   ],
+   "teams": [],
    "sn_team_count": 1,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/blue-jays-remain-active-as-adrian-morejon-ponders-next-move/",
+   "sport": "Soccer",
+   "url": "https://www.sportsnet.ca/soccer/article/olympic-world-cup-berths-at-stake-for-canada-at-concacaf-w-championship/",
    "source": "Sportsnet"
   },
   {
@@ -2651,19 +2663,6 @@
    "sn_team_count": 1,
    "sport": "Basketball",
    "url": "https://www.sportsnet.ca/nba/article/scottie-barnes-shines-in-win-but-raptors-eliminated-from-nba-cup/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "other",
-   "headline": "Olympic, World Cup berths at stake for Canada in Concacaf W Championship",
-   "summary": "The Canadian women’s soccer team can kill two very big birds with one stone. @ John Molinaro explains what Canada will need to do to clinch Olympic and World Cup berths at this weekend’s Concacaf championship.",
-   "published": "2026-11-27T11:47-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2024/07/Cloe-Lacasse-1.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 1,
-   "sport": "Soccer",
-   "url": "https://www.sportsnet.ca/soccer/article/olympic-world-cup-berths-at-stake-for-canada-at-concacaf-w-championship/",
    "source": "Sportsnet"
   },
   {
@@ -2723,6 +2722,19 @@
    "source": "Sportsnet"
   },
   {
+   "league": "mlb",
+   "headline": "Right-hander Tyler Mahle signs two-year, $40M deal with Braves",
+   "summary": "",
+   "published": "2026-11-28T12:03-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/CP176970655.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 1,
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/right-hander-tyler-mahle-signs-two-year-40m-deal-with-braves/",
+   "source": "Sportsnet"
+  },
+  {
    "league": "nfl",
    "headline": "Report: Teams ‘don’t foresee’ Aaron Rodgers playing again barring injuries",
    "summary": "",
@@ -2777,29 +2789,16 @@
    "source": "Sportsnet"
   },
   {
-   "league": "other",
-   "headline": "Alcaraz, Spain through to Davis Cup final after win over Britain",
-   "summary": "Carlos Alcaraz powered Spain to the Davis Cup final on Saturday and it will play Italy for the title.",
-   "published": "2026-11-28T10:15-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/carlos.jpg",
+   "league": "mlb",
+   "headline": "MLB off-season transaction tracker: The top free-agent signings and trades",
+   "summary": "",
+   "published": "2026-11-19T19:57-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/Kevin-Gausman.jpg",
    "video": false,
    "teams": [],
    "sn_team_count": 0,
-   "sport": "Tennis",
-   "url": "https://www.sportsnet.ca/tennis/article/alcaraz-spain-through-to-davis-cup-final-after-win-over-britain/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "nhl",
-   "headline": "Sam Cosentino’s 2027 NHL Draft Rankings: November Edition",
-   "summary": "As November comes to an end, Sam Cosentino shares his first ranking of the top 32 NHL Draft prospects this season, starting with a familiar name at the top.",
-   "published": "2026-11-27T11:01-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-23.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Hockey",
-   "url": "https://www.sportsnet.ca/nhl/article/sam-cosentinos-2027-nhl-draft-rankings-november-edition/",
+   "sport": "Baseball",
+   "url": "https://www.sportsnet.ca/mlb/article/mlb-off-season-transaction-tracker-the-top-free-agent-signings-and-trades/",
    "source": "Sportsnet"
   },
   {
@@ -2871,6 +2870,19 @@
   },
   {
    "league": "nhl",
+   "headline": "Sam Cosentino’s 2027 NHL Draft Rankings: November Edition",
+   "summary": "As November comes to an end, Sam Cosentino shares his first ranking of the top 32 NHL Draft prospects this season, starting with a familiar name at the top.",
+   "published": "2026-11-27T11:01-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/10/Untitled-23.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Hockey",
+   "url": "https://www.sportsnet.ca/nhl/article/sam-cosentinos-2027-nhl-draft-rankings-november-edition/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "nhl",
    "headline": "Who players would pick to officiate an NHL game among their teammates",
    "summary": "The recent nationwide grounding in the U.S. opened up peculiar possibilities. As unorthodox as NHL players stepping in to officiate. It never got to that. But if it ever did, Sportsnet asked players which teammates they’",
    "published": "2026-11-27T13:15-05:00",
@@ -2895,6 +2907,19 @@
    "sn_team_count": 1,
    "sport": "Hockey",
    "url": "https://www.sportsnet.ca/nhl/article/friday-four-whats-behind-capitals-slow-start/",
+   "source": "Sportsnet"
+  },
+  {
+   "league": "other",
+   "headline": "Alcaraz, Spain through to Davis Cup final after win over Britain",
+   "summary": "Carlos Alcaraz powered Spain to the Davis Cup final on Saturday and it will play Italy for the title.",
+   "published": "2026-11-28T10:15-05:00",
+   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/11/carlos.jpg",
+   "video": false,
+   "teams": [],
+   "sn_team_count": 0,
+   "sport": "Tennis",
+   "url": "https://www.sportsnet.ca/tennis/article/alcaraz-spain-through-to-davis-cup-final-after-win-over-britain/",
    "source": "Sportsnet"
   },
   {
@@ -2988,19 +3013,6 @@
    "sn_team_count": 1,
    "sport": "Baseball",
    "url": "https://www.sportsnet.ca/mlb/article/opens-up-some-potential-fans-react-to-jazz-chisholm-jr-joining-blue-jays/",
-   "source": "Sportsnet"
-  },
-  {
-   "league": "mlb",
-   "headline": "MLB off-season transaction tracker: The top free-agent signings and trades",
-   "summary": "",
-   "published": "2026-11-19T19:57-05:00",
-   "image": "https://www.sportsnet.ca/wp-content/uploads/2026/08/Kevin-Gausman.jpg",
-   "video": false,
-   "teams": [],
-   "sn_team_count": 0,
-   "sport": "Baseball",
-   "url": "https://www.sportsnet.ca/mlb/article/mlb-off-season-transaction-tracker-the-top-free-agent-signings-and-trades/",
    "source": "Sportsnet"
   },
   {
